@@ -54,7 +54,7 @@ tools/                    既有母图生成脚本和网站数据校验
 
 1. 创建 GitHub 仓库 `mechgouki/luoyang-city`（公开）。
 2. 上传上述文件到默认分支 `main`。
-3. 在仓库 `Settings → Pages → Build and deployment` 选择 **GitHub Actions**，本仓库已经包含部署工作流。
+3. 在仓库 `Settings → Pages → Build and deployment` 选择 **GitHub Actions**，本仓库已经包含部署工作流。首次必须由仓库管理员启用 Pages。
 4. 推送到 `main` 后，可在 `Actions` 查看验证与 Pages 发布状态；部署成功后访问 `https://mechgouki.github.io/luoyang-city/`。
 
 如果暂时不启用 Actions，也可在 Pages 中使用 `Deploy from a branch → main / (root)` 直接发布静态文件，二者选一种即可。

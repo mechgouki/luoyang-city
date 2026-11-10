@@ -30,6 +30,8 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Assemble complete research atlas PDF
+        run: python tools/assemble_pdf.py
       - uses: actions/upload-pages-artifact@v4
         with:
           path: .
