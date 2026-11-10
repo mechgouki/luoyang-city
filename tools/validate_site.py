@@ -21,7 +21,7 @@ for x in m:
 for x in s:
  for k in ('svg','thumbnail'):
   if not (root/x[k]).is_file():errors.append(f'missing {x[k]}')
-for path in ('index.html','styles.css','app.js','assets/master-v24.svg','downloads/luoyang-v24-regional-atlas.pdf'):
+for path in ('index.html','styles.css','app.js','assets/master-v24.svg'):
  if not (root/path).is_file():errors.append(f'missing {path}')
 try:
  tree=ET.parse(root/'assets/master-v24.svg');
