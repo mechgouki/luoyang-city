@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#172e2a">
+  <meta name="description" content="北魏洛阳文献地图：以《洛阳伽蓝记》为核心，探索宫城、寺院、街市与历史地理的证据关系。">
+  <title>北魏洛阳 · 文献地图</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand" role="banner">
+      <div class="brand-seal" aria-hidden="true">洛</div>
+      <div class="brand-words"><span class="brand-overline">NORTHERN WEI · LUOYANG</span><strong>北魏洛阳文献地图</strong></div>
+    </div>
+    <nav aria-label="主导航" class="topnav">
+      <a href="#map" data-nav="map" class="is-current">交互地图</a>
+      <a href="#atlas" data-nav="atlas">分区图册</a>
+      <a href="#issues" data-nav="issues">史料争议</a>
+      <a href="#about" data-nav="about">研究说明</a>
+    </nav>
+    <a class="github-link" href="https://github.com/mechgouki/luoyang-city" target="_blank" rel="noopener noreferrer" title="项目 GitHub 仓库"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.11.76-.24.76-.54v-2.1c-3.09.67-3.74-1.31-3.74-1.31-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.67.08-.67 1.11.08 1.7 1.14 1.7 1.14.98 1.68 2.56 1.19 3.18.9.1-.71.39-1.19.7-1.46-2.46-.28-5.05-1.23-5.05-5.48 0-1.21.43-2.2 1.14-2.97-.11-.28-.49-1.42.11-2.96 0 0 .93-.3 3.05 1.13A10.63 10.63 0 0 1 12 6.46c.94 0 1.87.13 2.75.37 2.12-1.43 3.04-1.13 3.04-1.13.61 1.54.23 2.68.12 2.96.71.77 1.14 1.76 1.14 2.97 0 4.26-2.6 5.2-5.07 5.47.4.34.75 1 .75 2.02v2.97c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8z"/></svg><span>GitHub</span></a>
+  </header>
+
+  <main id="page-map" class="page page-map">
+    <div class="map-header">
+      <div><div class="eyebrow">历史研究项目 <span class="eyebrow-dot"></span> 交互图册 · v2.4</div><h1>洛阳城的空间记忆</h1><p>从《洛阳伽蓝记》走进北魏都城。每个地点，都可以追溯到文字。</p></div>
+      <div class="period-note"><span class="period-mark">研究时间层</span><strong>516—528 年</strong><small>盛时综合 · 并非单年实测图</small></div>
+    </div>
+    <div class="workspace">
+      <aside class="sidebar" id="filters-panel">
+        <div class="sidebar-top"><h2>探索城市</h2><button id="close-filters" class="icon-btn hide-desktop" aria-label="关闭区域选择">×</button></div>
+        <label class="search-label" for="place-search">地点检索</label>
+        <div class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.7" cy="10.7" r="7.2"/><path d="m16 16 5 5"/></svg><input id="place-search" type="search" placeholder="寺院、里坊、官署、编号…" autocomplete="off"/></div>
+        <div id="search-results" class="search-results" role="listbox" aria-label="检索结果" hidden></div>
+        <div class="section-title"><span>区域索引</span><span class="quiet">R01 — R11</span></div>
+        <div id="region-list" class="region-list"><p class="muted">正在加载区域…</p></div>
+        <div class="sidebar-bottom"><span class="small-cap">文献与空间</span><p>图面中的范围和布局是研究表达，不代表实际测绘坐标。未知地点仍可能有明确的文献归属。</p></div>
+      </aside>
+
+      <section class="map-container" aria-label="北魏洛阳城文献复原地图">
+        <div class="map-tools">
+          <button id="filter-toggle" class="tool-btn hide-desktop" title="区域">☰</button>
+          <button id="zoom-in" class="tool-btn" title="放大" aria-label="放大">+</button>
+          <button id="zoom-out" class="tool-btn" title="缩小" aria-label="缩小">−</button>
+          <button id="home-map" class="tool-btn home-btn" title="回全城">全城</button>
+          <div class="map-tools-divider"></div><span id="map-status" class="map-status">全城 · 文献关系图</span>
+        </div>
+        <div id="map-viewport" class="map-viewport"><div class="map-loading"><span class="loading-spinner"></span><span>地图加载中…</span></div></div>
+        <div id="map-tooltip" class="map-tooltip" role="tooltip" hidden></div>
+        <div class="map-foot"><span>北 ↑</span><span>可拖动 · 滚轮缩放 · 点击建筑群</span><span>非实测比例尺</span></div>
+        <div class="map-corner">《洛阳伽蓝记》 · 文献复原</div>
+      </section>
+
+      <aside class="inspector" id="inspector">
+        <div class="inspector-top"><div class="eyebrow">EVIDENCE & INTERPRETATION</div><button id="close-inspector" class="icon-btn hide-desktop" aria-label="关闭详情">×</button></div>
+        <div id="inspector-body"><div class="empty-inspector"><div class="glyph">文</div><h2>从一处地点开始</h2><p>点击地图上的地点，或者检索永宁寺、景明寺、御道、太尉府，查看记载与采用的复原解释。</p><div class="tips"><span>文献来源</span><span>相对方位</span><span>争议记录</span></div><button id="explore-yongning" class="primary-btn">查看永宁寺 <span>↗</span></button></div></div>
+      </aside>
+    </div>
+    <div class="bottom-disclaimer">本图为持续修订的文献复原图，地图上的坐标、尺寸和未知院界不代表历史测量数据。<span>研究基线 v2.4 · 原始记录 339 条</span></div>
+  </main>
+
+  <main id="page-atlas" class="page page-article" hidden>
+    <div class="article-header"><div class="eyebrow">ATLAS · 37 SHEETS</div><h1>从全城到街巷</h1><p>同一套绘图母图，分区细读。独立关系栏与未定位说明不参与地理拼接。</p></div>
+    <div class="sheet-filter" id="sheet-tabs"><button data-category="全部" class="selected">全部</button><button data-category="区域">区域</button><button data-category="详图">详图</button><button data-category="街区">街区</button><button data-category="附图">附图与索引</button></div>
+    <div id="sheets-grid" class="sheets-grid"></div>
+    <div class="download-band"><div><strong>获取完整研究图册</strong><p>保留全部 37 页图版，便于离线阅读和注释。</p></div><a href="https://chatgpt.com/library?file_id=libfile_ab9cd98359b08191bf8586b192c49d24&account_id=personal" target="_blank" rel="noopener noreferrer">查看 v2.4 PDF（ChatGPT Library）<span>↗</span></a></div>
+  </main>
+
+  <main id="page-issues" class="page page-article" hidden>
+    <div class="article-header"><div class="eyebrow">RESEARCH NOTES · 30 QUESTIONS</div><h1>仍在讨论的洛阳</h1><p>“本版采用”不是“历史已定论”。保留异文、校注和不同解释所支持的布局。</p></div>
+    <div class="issues-layout"><div id="issues-list" class="issues-list"></div><article id="issue-detail" class="issue-detail"><h2>选择一个研究问题</h2><p class="muted">点击左侧争议，查看目前采用的画法、支持依据和尚待解决的部分。</p></article></div>
+  </main>
+
+  <main id="page-about" class="page page-article" hidden>
+    <div class="article-header"><div class="eyebrow">ABOUT THE PROJECT</div><h1>让文献说明地图</h1><p>北魏洛阳的研究型平面复原，而不是以想象填满历史留白的建筑模型。</p></div>
+    <div class="about-grid"><section><h2>研究对象</h2><p>以《洛阳伽蓝记》五卷为主要文本，结合范祥雍校注、周祖谟校释、相关历史地理文献与历代复原图，建立地点、关系、年代和异说的可追溯记录。</p><h2>时间与尺度</h2><p>本版以 516—528 年河阴之变前为“盛时综合”研究时层。位置采用相对绘图坐标，没有经过实测地理配准；绘图大小不能直接换算古里或现代米数。</p><h2>图面原则</h2><p>有方位依据的地点可以画进地图；只有所属、数量或名称的内容进入附记。文献的直接陈述、后世校注、现代绘图假设分别标示。</p></section><aside class="about-facts"><div><small>研究基线</small><strong>v2.4</strong></div><div><small>已登记地点与对象</small><strong>339</strong></div><div><small>图册页数</small><strong>37</strong></div><div><small>待研究争议</small><strong>30</strong></div><p>研究仍在进行。资料许可与史料引文来源请见仓库文档，未经核查的推断不会标作既定史实。</p></aside></div>
+  </main>
+  <footer class="global-footer"><span>北魏洛阳文献地图 · 洛阳伽蓝记研究</span><span>公开研究预览 · v2.4</span><a href="https://github.com/mechgouki/luoyang-city" target="_blank" rel="noopener noreferrer">GitHub 源码与讨论 ↗</a></footer>
+</body>
+</html>
