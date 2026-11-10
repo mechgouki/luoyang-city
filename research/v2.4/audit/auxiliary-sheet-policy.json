@@ -1,0 +1,1141 @@
+{
+  "schema_version": "1.0",
+  "scope": "v2.4 rollout auxiliary sheets; source review only",
+  "baseline_scene": "luoyang-v23/deliverables/data/scene.json",
+  "baseline_scene_sha256": "7abe14df6c58296fdf623cfec5b6334c2b7dc8661836846c9885b92c6ccefce4",
+  "source_review": [
+    "luoyang-v23/deliverables/build_plan.py",
+    "luoyang-v23/deliverables/data/scene.json",
+    "luoyang-v24-pilot/deliverables/display-policy.json",
+    "luoyang-v24-pilot/deliverables/s06-constraints.json"
+  ],
+  "historical_decisions_changed": false,
+  "baseline_files_modified": false,
+  "implementation_note": "sidebar is a list of {title,text,tone}; summary contains the same text without headings. Tone names are semantic hints for the new palette, not evidence levels.",
+  "global_replacements": [
+    {
+      "target": "legend(), temporal(), node(), group(), compound()",
+      "old": "● 528年前已有时证 / ○ 年代未明 / □ 宅第或后出记名",
+      "replacement": "图符与配色表示类型；年代、后出名称和解释条件用文字短注。",
+      "reason": "上一轮已确认类别、关系与年代分别编码。"
+    },
+    {
+      "target": "region_svg() sidebar",
+      "old": "时层符号",
+      "replacement": "图例与阅读",
+      "reason": "需与新的类别图符一致。"
+    },
+    {
+      "target": "region_svg()/wide_region_svg() footer",
+      "old": "虚线范围、院界、门距和路形均为试绘",
+      "replacement": "图符不表示占地；开放名录不表示边界。道路与水系形状仍为示意。",
+      "reason": "不再保留普遍院界试绘，不能让旧说明继续为被删几何背书。"
+    },
+    {
+      "target": "street_svg()/wide_street_svg() header",
+      "old": "第一批 / 第二批街区平面深化",
+      "replacement": "街区平面 · 统一图式应用",
+      "reason": "当前是跨批次推广；原 batch 字段可保留在历史数据中。"
+    },
+    {
+      "target": "street_svg() footer",
+      "old": "本批约束与修订见《v2.3 第二批街区深化说明》；前批校核另保留。",
+      "replacement": "本轮显示规则与出处见随图说明；此前校核记录保留。",
+      "reason": "新输出应指向本轮说明，避免误报版本。"
+    },
+    {
+      "target": "glyph() office/hall/house",
+      "old": "图符内分格线",
+      "replacement": "类型标志或简化殿形；取消可误读为柱网、开间的格线。",
+      "reason": "本项目未据文献确定这些开间尺寸。"
+    },
+    {
+      "target": "compound() yongning/jingming/house",
+      "old": "闭合院框、类型房块、任意内址",
+      "replacement": "世界层保留群级标志；有据内部关系与未定位目录放在独立栏。",
+      "reason": "页面排版不能生成古代建筑几何。"
+    }
+  ],
+  "render_invariants": [
+    "所有 world_crop 页调用同一母图；原有地理锚点不因排版改变。",
+    "独立附图 A/B/C/D 与 D01、D07 的非地理栏不进入世界坐标拼接。",
+    "原单位、异文、校补与时层条件保留；精简侧栏不能删掉采用条件。",
+    "类别颜色与图符不自动表示证据强弱、年代或建筑完工状态。",
+    "D01 的页面替换与 D07、S06 的新增须在索引中明确。",
+    "实际退离母图的说明统一进入附录 E；区域/街区用稳定对象编号和 E 条目互相引用，不因移出而丢失原有方位或时相。"
+  ],
+  "sheets": {
+    "D01": {
+      "code": "D01",
+      "title": "永宁寺：四邻与院内关系",
+      "purpose": "采用上轮永宁样板，地理裁切与无尺度内部关系分栏。",
+      "render_mode": "pilot_yongning_page",
+      "baseline_slug": "d00_yongning_court",
+      "baseline_bbox": [
+        4950,
+        4485,
+        910,
+        955
+      ],
+      "sidebar": [
+        {
+          "title": "院内关系",
+          "text": "佛殿在塔北；相对东西位置、塔殿间距与严格轴线仍未确定。",
+          "tone": "temple"
+        },
+        {
+          "title": "门制目录",
+          "text": "北门一道无屋；南楼三重、东西楼两重。三阁道单列校读，不确定为三个门洞。",
+          "tone": "temple"
+        },
+        {
+          "title": "规模与院界",
+          "text": "僧房楼观“千余间”仅记规模；院墙形状、门距与房舍分布未定。",
+          "tone": "muted"
+        },
+        {
+          "title": "门外环境",
+          "text": "槐树与绿水有文献记载；具体水线、桥位及逐层三户六窗继续留在说明中。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "旧 D01 的紧裁切仅适用于旧院内试绘，不能继续把新类型图符放大成院落。",
+        "上轮 D01 使用较大的四邻裁切并另设关系栏；该版面变化须记为页面替换，不宣称沿用旧 D01 bbox。",
+        "不要恢复同轴线、对称房块、四门居中、南门三开口。"
+      ],
+      "must_preserve": [
+        "殿在塔北。",
+        "四向门制与门楼层数。",
+        "九层木塔与僧房楼观规模。",
+        "院外环境文字记述。"
+      ],
+      "text_replacements": [
+        {
+          "old": "塔殿暂同轴，院界、占地、门居中均为试绘。",
+          "replacement": "塔殿只保留南北关系，院形、间距与门位未定。"
+        },
+        {
+          "old": "南门三道／三阁道的平面表达暂用三道开口",
+          "replacement": "三阁道保留校读，不确定为三个并排门洞。"
+        },
+        {
+          "old": "图中少量虚线房块只示类型",
+          "replacement": "房舍规模以文字列示，分布未定。"
+        }
+      ],
+      "summary": [
+        "佛殿在塔北；相对东西位置、塔殿间距与严格轴线仍未确定。",
+        "北门一道无屋；南楼三重、东西楼两重。三阁道单列校读，不确定为三个门洞。",
+        "僧房楼观“千余间”仅记规模；院墙形状、门距与房舍分布未定。",
+        "槐树与绿水有文献记载；具体水线、桥位及逐层三户六窗继续留在说明中。"
+      ],
+      "pilot_bbox": [
+        4350,
+        3850,
+        2860,
+        2200
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "central_office_alternatives"
+        ],
+        "entity_ids": [
+          "ic_yongning"
+        ],
+        "label": "四邻的替代官署记载见附录 E；院内关系以本页独立示意为准。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "D02": {
+      "code": "D02",
+      "title": "永宁寺与四邻详图",
+      "purpose": "保留既有四邻地理详图，与 D01 的独立内部关系示意分工。",
+      "render_mode": "world_crop",
+      "baseline_slug": "d01_yongning_neighbors",
+      "baseline_bbox": [
+        4350,
+        4080,
+        2910,
+        1650
+      ],
+      "sidebar": [
+        {
+          "title": "四邻方位",
+          "text": "寺东太尉府、西对永康里、北邻御史台、南界昭玄曹；沿用既有母图关系。",
+          "tone": "temple"
+        },
+        {
+          "title": "道路侧别",
+          "text": "太尉府位于御道西侧采用既有段落承接候选；寺东关系与道路侧别分开阅读。",
+          "tone": "office"
+        },
+        {
+          "title": "内部关系另页",
+          "text": "永宁院内构成详见 D01；本图使用寺院群级标志，不叠加门距、院形或对称房块。",
+          "tone": "muted"
+        },
+        {
+          "title": "量距与占地",
+          "text": "原文量距保留原单位；图面间距、官署占地和建筑边界仍是未定事项。 替代官署记载见附录 E。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "旧摘要关于寺内四门关系和院界试绘的承诺必须更新。",
+        "保留太尉府及永康里相关解释标记；更换图式不等于解决位置争议。"
+      ],
+      "must_preserve": [
+        "四邻名物与方位。",
+        "御道及宫前阊阖的参照。",
+        "景乐寺的既有候选位置及其标记。"
+      ],
+      "text_replacements": [
+        {
+          "old": "寺内只细化正文可支持的殿塔与四门关系；院界、间距和开口形状均为试绘。",
+          "replacement": "本页只示寺与四邻；院内关系独立见 D01，未定院形不进入地理拼接。"
+        }
+      ],
+      "summary": [
+        "寺东太尉府、西对永康里、北邻御史台、南界昭玄曹；沿用既有母图关系。",
+        "太尉府位于御道西侧采用既有段落承接候选；寺东关系与道路侧别分开阅读。",
+        "永宁院内构成详见 D01；本图使用寺院群级标志，不叠加门距、院形或对称房块。",
+        "原文量距保留原单位；图面间距、官署占地和建筑边界仍是未定事项。 替代官署记载见附录 E。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "central_office_alternatives"
+        ],
+        "entity_ids": [],
+        "label": "替代官署记载见附录 E。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "D03": {
+      "code": "D03",
+      "title": "宫苑池台与景阳山关系详图",
+      "purpose": "保持宫苑群、池台关系与校读候选，弱化无据园界。",
+      "render_mode": "world_crop",
+      "baseline_slug": "d02_palace_gardens",
+      "baseline_bbox": [
+        4900,
+        1950,
+        2900,
+        2110
+      ],
+      "sidebar": [
+        {
+          "title": "千秋门候选",
+          "text": "千秋为宫西门；西对城阊阖采用后出记载，同高仍属绘图选择。",
+          "tone": "office"
+        },
+        {
+          "title": "西游园与里程",
+          "text": "西游园保留千秋门内道北；瑶光至千秋二里仅记原单位，不换算图面距离。",
+          "tone": "palace"
+        },
+        {
+          "title": "景阳山群",
+          "text": "山、池、殿阁关系沿用周校候选并保留标记；池形、园界与内部尺度未定。",
+          "tone": "palace"
+        },
+        {
+          "title": "另列未定位项",
+          "text": "钓台殿所在台／山有异解；百果园另记山南，柰林群仍留未定说明。 未定位宫苑名物见附录 E。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "各池的椭圆轮廓应按新图例作为水体标志处理，不能继续暗示已知池形。",
+        "钓台殿说明卡位于宫区某处只是排版，不能因裁切而变成宫内定点。",
+        "百果园与清暑殿的前后次序未给；移入旁注时保留“山南”的关系。",
+        "千秋门与城阊阖的连线是文献关系，不可改成道路。"
+      ],
+      "must_preserve": [
+        "宫西门与后出西对记载的层次差别。",
+        "西游园的门内道北关系。",
+        "周校景阳山群候选。",
+        "凌云台与八角井的台上关系。",
+        "钓台殿、柰林、百果园未定项。"
+      ],
+      "text_replacements": [
+        {
+          "old": "各池分别显示",
+          "replacement": "各池分别登记，池形与尺度未定"
+        }
+      ],
+      "summary": [
+        "千秋为宫西门；西对城阊阖采用后出记载，同高仍属绘图选择。",
+        "西游园保留千秋门内道北；瑶光至千秋二里仅记原单位，不换算图面距离。",
+        "山、池、殿阁关系沿用周校候选并保留标记；池形、园界与内部尺度未定。",
+        "钓台殿所在台／山有异解；百果园另记山南，柰林群仍留未定说明。 未定位宫苑名物见附录 E。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "central_nailin_group",
+          "central_diaotai_alternative",
+          "central_baiguo_unordered"
+        ],
+        "entity_ids": [],
+        "label": "未定位宫苑名物见附录 E。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "D04": {
+      "code": "D04",
+      "title": "建春两桥—建阳里：寺群与桥道关系",
+      "purpose": "保持两桥、道路、水道和里属的拓扑关系。",
+      "render_mode": "world_crop",
+      "baseline_slug": "D-east-jianchun-jianyang",
+      "baseline_bbox": [
+        7720,
+        2170,
+        2520,
+        2130
+      ],
+      "sidebar": [
+        {
+          "title": "两桥与通行",
+          "text": "第一桥示意跨南流谷水；东石桥保留南北通行，桥北大道两侧为建阳与绥民。",
+          "tone": "office"
+        },
+        {
+          "title": "道路与水道",
+          "text": "水道折点、桥距和道路直线均为关系示意；门外一里余保留原文单位。",
+          "tone": "water"
+        },
+        {
+          "title": "租场解释层",
+          "text": "常满仓租场与南租场采用范注同址候选；正文未明言的限制继续标注。",
+          "tone": "muted"
+        },
+        {
+          "title": "桥梁时相",
+          "text": "527 年第一桥颓毁另列时间信息；综合图中的桥符号只表达通行联系。 里内与跨区附记见附录 E。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "不得将两个桥符号的朝向、长度与具体结构当作建筑平面。",
+        "不因采用同址候选而删除租场身份解释。",
+        "不要把 527 年状态推广到整个 516 至 528 年前综合时层。"
+      ],
+      "must_preserve": [
+        "两桥不同的通行表达。",
+        "建阳、绥民及寺群的归属关系。",
+        "租场身份候选。",
+        "桥毁时间注记。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "第一桥示意跨南流谷水；东石桥保留南北通行，桥北大道两侧为建阳与绥民。",
+        "水道折点、桥距和道路直线均为关系示意；门外一里余保留原文单位。",
+        "常满仓租场与南租场采用范注同址候选；正文未明言的限制继续标注。",
+        "527 年第一桥颓毁另列时间信息；综合图中的桥符号只表达通行联系。 里内与跨区附记见附录 E。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "east_jianyang_temples",
+          "east_suimin_house_note",
+          "east_taiwei_stupa_crossnote"
+        ],
+        "entity_ids": [],
+        "label": "里内与跨区附记见附录 E。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "D05": {
+      "code": "D05",
+      "title": "景明—台学：寺学与礼制旧迹",
+      "purpose": "保留景明周边的区域关系；寺内构成移交 D07。",
+      "render_mode": "world_crop",
+      "baseline_slug": "D-south-jingming-ritual",
+      "baseline_bbox": [
+        6300,
+        7000,
+        3930,
+        1930
+      ],
+      "sidebar": [
+        {
+          "title": "景明构成另页",
+          "text": "景明三池、水功设施与七层塔始造记述详见 D07；本页不赋予院内坐标。",
+          "tone": "temple"
+        },
+        {
+          "title": "塔与年代",
+          "text": "七层塔始造有记，528 年前竣工未证；灵台砖塔仅附同址关系，造塔年未记。",
+          "tone": "muted"
+        },
+        {
+          "title": "礼制旧迹关系",
+          "text": "灵台东为辟雍，明堂在辟雍西南，募征活动点在明堂北；不补坛基形制。",
+          "tone": "ritual"
+        },
+        {
+          "title": "所属与路侧",
+          "text": "学堂、劝学里和寺群分别标注所属；报德等处路侧未定，原文尺度保留原单位。 未定位寺群及砖塔附记见附录 E；景明构成见 D07。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "旧标题中的“三池”可能使读者期待院内平面，建议改为区域关系标题。",
+        "必须同步移除旧 compound 内三池南排、水功东南角与中央塔位置。",
+        "灵台砖塔不能因塔图符变得完整而被解读为盛时已竣工。",
+        "报德参考组不能由说明框的左右位置取得道路侧别。"
+      ],
+      "must_preserve": [
+        "旧 D05 的景明—台学区域范围。",
+        "秦太公二寺与相关寺学里属。",
+        "礼制旧迹的相对方位。",
+        "两种塔的不同年代限制。"
+      ],
+      "text_replacements": [
+        {
+          "old": "景明—台学｜三池、寺学与礼制旧迹",
+          "replacement": "景明—台学｜寺学与礼制旧迹；寺内构成见 D07。"
+        }
+      ],
+      "summary": [
+        "景明三池、水功设施与七层塔始造记述详见 D07；本页不赋予院内坐标。",
+        "七层塔始造有记，528 年前竣工未证；灵台砖塔仅附同址关系，造塔年未记。",
+        "灵台东为辟雍，明堂在辟雍西南，募征活动点在明堂北；不补坛基形制。",
+        "学堂、劝学里和寺群分别标注所属；报德等处路侧未定，原文尺度保留原单位。 未定位寺群及砖塔附记见附录 E；景明构成见 D07。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "south_quanxue_temples",
+          "south_baode_unassigned",
+          "south_lingtai_stupa_note"
+        ],
+        "entity_ids": [
+          "v3_jingming"
+        ],
+        "label": "未定位寺群及砖塔附记见附录 E；景明构成见 D07。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "D06": {
+      "code": "D06",
+      "title": "大市四向：皇女台关系细图",
+      "purpose": "保持四向行业与皇女台候选，移开无侧别名录。",
+      "render_mode": "world_crop",
+      "baseline_slug": "D_west_market_axes",
+      "baseline_bbox": [
+        1120,
+        5150,
+        3240,
+        3320
+      ],
+      "sidebar": [
+        {
+          "title": "四向行业",
+          "text": "四向行业来自正文；里内铺面、作坊和同侧两里的先后次序均未确定。",
+          "tone": "market"
+        },
+        {
+          "title": "皇女台候选",
+          "text": "沿用市南主读，保留东南异文；台西县、台东宅按周本候选标示。",
+          "tone": "ritual"
+        },
+        {
+          "title": "未定位名录",
+          "text": "阜财／准财、金肆侧别未记；开善只知在阜财内，附记排列不产生方位。",
+          "tone": "muted"
+        },
+        {
+          "title": "版本与尺度",
+          "text": "范本电子断句仍待纸本核对；市界、坊界、门距和店铺尺度不由符号补足。 无侧别里名与寺属见附录 E。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "四向里群可留在其有据方向侧，但内部名单不用闭合小地块表示。",
+        "阜财、金肆与开善必须保持图外附记或明显非空间名录。",
+        "皇女台平面符号不意味着复原出具体坛台形状。"
+      ],
+      "must_preserve": [
+        "大市与四向行业。",
+        "皇女台南／东南异文。",
+        "县、宅位置的采用条件。",
+        "市场里名异名与归属。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "四向行业来自正文；里内铺面、作坊和同侧两里的先后次序均未确定。",
+        "沿用市南主读，保留东南异文；台西县、台东宅按周本候选标示。",
+        "阜财／准财、金肆侧别未记；开善只知在阜财内，附记排列不产生方位。",
+        "范本电子断句仍待纸本核对；市界、坊界、门距和店铺尺度不由符号补足。 无侧别里名与寺属见附录 E。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "market_unlocated_wards"
+        ],
+        "entity_ids": [],
+        "label": "无侧别里名与寺属见附录 E。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "S01": {
+      "code": "S01",
+      "title": "宫前御道：永宁寺与四邻",
+      "purpose": "把四邻、宫前官署与原文量距合在同一地理阅读页。",
+      "render_mode": "world_crop",
+      "baseline_slug": "palace-yongning",
+      "baseline_bbox": [
+        4320,
+        3830,
+        3370,
+        1980
+      ],
+      "sidebar": [
+        {
+          "title": "四邻与御道",
+          "text": "永宁在宫门南、御道西；东太尉府、西对永康里、北御史台、南昭玄曹。",
+          "tone": "temple"
+        },
+        {
+          "title": "官署候选",
+          "text": "寺东太尉府仍在御道西侧候选位置；道路侧别来自段落承接，继续保留解释标记。",
+          "tone": "office"
+        },
+        {
+          "title": "原文量距",
+          "text": "宫门南一里仅保留文字量距；起讫、古里折算及院落占地未统一。",
+          "tone": "muted"
+        },
+        {
+          "title": "内部与序列",
+          "text": "院内构成见 D01；官署南向序列不推出等距、紧邻或全部临御道。 替代官署记载与胡统路侧问题见附录 E。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "统一类别颜色后，官署不能因寺院原编号而继续套寺符号。",
+        "旧永宁 compound 内的虚构几何必须同时从本页移除。",
+        "新的同色图例不承担年代编码，年代改为短注。"
+      ],
+      "must_preserve": [
+        "宫前御道与四邻关系。",
+        "太尉府道西候选。",
+        "宫门南一里。",
+        "官署南向序列的精度限制。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "永宁在宫门南、御道西；东太尉府、西对永康里、北御史台、南昭玄曹。",
+        "寺东太尉府仍在御道西侧候选位置；道路侧别来自段落承接，继续保留解释标记。",
+        "宫门南一里仅保留文字量距；起讫、古里折算及院落占地未统一。",
+        "院内构成见 D01；官署南向序列不推出等距、紧邻或全部临御道。 替代官署记载与胡统路侧问题见附录 E。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "central_office_alternatives",
+          "central_hutong_roadside_unknown"
+        ],
+        "entity_ids": [],
+        "label": "替代官署记载与胡统路侧问题见附录 E。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "S02": {
+      "code": "S02",
+      "title": "建春门：两桥、建阳与水道",
+      "purpose": "保留两桥及水道联系，区分文献关系与单年状态。",
+      "render_mode": "world_crop",
+      "baseline_slug": "jianchun-two-bridges",
+      "baseline_bbox": [
+        7650,
+        2220,
+        2850,
+        2270
+      ],
+      "sidebar": [
+        {
+          "title": "两桥通行",
+          "text": "建春门石桥按谷水关系作东西通行示意；东石桥保留正文南北通行。",
+          "tone": "office"
+        },
+        {
+          "title": "水道联系",
+          "text": "谷水南流至建春桥附近，再向东与阳渠相接；岸线和转折点仍为示意。",
+          "tone": "water"
+        },
+        {
+          "title": "租场候选",
+          "text": "采用范注的两租场同址解释，并继续注明正文未明言同址。",
+          "tone": "muted"
+        },
+        {
+          "title": "里程与时间",
+          "text": "门外一里余保留原单位；桥毁、柱没另列时相，通行符号不等于单年状态。 里内与跨区附记见附录 E。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "两桥与水道须由共同母图产生，不能在本页单独修正线形。",
+        "527 年第一桥颓毁的原有注记不能因新版旁注变短而丢失。",
+        "不得用描粗桥形替代桥梁实体是否存续的时间说明。"
+      ],
+      "must_preserve": [
+        "两桥通行方向。",
+        "桥北大道。",
+        "租场同址候选。",
+        "原单位和桥柱时相。"
+      ],
+      "text_replacements": [
+        {
+          "old": "本轮实际改图",
+          "replacement": "两桥通行"
+        }
+      ],
+      "summary": [
+        "建春门石桥按谷水关系作东西通行示意；东石桥保留正文南北通行。",
+        "谷水南流至建春桥附近，再向东与阳渠相接；岸线和转折点仍为示意。",
+        "采用范注的两租场同址解释，并继续注明正文未明言同址。",
+        "门外一里余保留原单位；桥毁、柱没另列时相，通行符号不等于单年状态。 里内与跨区附记见附录 E。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "east_jianyang_temples",
+          "east_suimin_house_note",
+          "east_taiwei_stupa_crossnote"
+        ],
+        "entity_ids": [],
+        "label": "里内与跨区附记见附录 E。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "S03": {
+      "code": "S03",
+      "title": "宣阳门外：景明与城南台学",
+      "purpose": "连接门道、寺群与台学；寺内构成不回贴地理图。",
+      "render_mode": "world_crop",
+      "baseline_slug": "xuanyang-jingming-schools",
+      "baseline_bbox": [
+        5520,
+        6630,
+        4780,
+        2630
+      ],
+      "sidebar": [
+        {
+          "title": "道路与寺院",
+          "text": "景明在宣阳门外、御道东；大统只知在景明西，秦太公二寺的东西关系分别保留。",
+          "tone": "temple"
+        },
+        {
+          "title": "构成与年代",
+          "text": "三池、水功设施和七层塔目录见 D07；始造与竣工未证分别说明。",
+          "tone": "muted"
+        },
+        {
+          "title": "台学关系",
+          "text": "灵台东为辟雍，明堂在辟雍西南，募征活动点在明堂北；学堂与里属分开。",
+          "tone": "ritual"
+        },
+        {
+          "title": "未定几何",
+          "text": "方五百步保留原文单位；报德路侧、坊界及灵台砖塔造年仍待核定。 无定位寺群及砖塔附记见附录 E；景明构成见 D07。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "把景明内部构成移到图外后，仍须在本页保留 D07 交叉索引，避免信息被误认删除。",
+        "大统在景明西不等于已确定在御道西。",
+        "旧塔位、池排布及磨轮位置不得随着母图裁切继续保留。"
+      ],
+      "must_preserve": [
+        "景明的宣阳门外、御道东关系。",
+        "大统与秦太公二寺相关方向。",
+        "台学旧迹关系。",
+        "方五百步与砖塔未定年代。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "景明在宣阳门外、御道东；大统只知在景明西，秦太公二寺的东西关系分别保留。",
+        "三池、水功设施和七层塔目录见 D07；始造与竣工未证分别说明。",
+        "灵台东为辟雍，明堂在辟雍西南，募征活动点在明堂北；学堂与里属分开。",
+        "方五百步保留原文单位；报德路侧、坊界及灵台砖塔造年仍待核定。 无定位寺群及砖塔附记见附录 E；景明构成见 D07。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "south_quanxue_temples",
+          "south_baode_unassigned",
+          "south_lingtai_stupa_note",
+          "south_zhaofu_unfixed"
+        ],
+        "entity_ids": [
+          "v3_jingming"
+        ],
+        "label": "无定位寺群及砖塔附记见附录 E；景明构成见 D07。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "S04": {
+      "code": "S04",
+      "title": "城西大市：四向行业与寿丘宽域",
+      "purpose": "保留有据方向与宽域；内部分布以名录表示。",
+      "render_mode": "world_crop",
+      "baseline_slug": "west-market-shouqiu",
+      "baseline_bbox": [
+        240,
+        4570,
+        4280,
+        4630
+      ],
+      "sidebar": [
+        {
+          "title": "门道与行业",
+          "text": "大市在西阳门外四里、御道南；东工巧屠贩、南丝竹乐艺、西酿酒、北售棺赁车。",
+          "tone": "market"
+        },
+        {
+          "title": "寿丘宽域",
+          "text": "延酤／退酤以西、张方沟以东，南临洛水、北达芒山；本窗仅见南段，原里数不折算。",
+          "tone": "house"
+        },
+        {
+          "title": "十里与异名",
+          "text": "阜财／准财、金肆侧别未记；开善属阜财。齐谐、乐律／乐肆、延酤／退酤不增作独立里。",
+          "tone": "muted"
+        },
+        {
+          "title": "皇女台与宅第",
+          "text": "皇女台采用市南主读并留东南异文；河间、东平仍用盛时王宅名称，后改寺另注。 里内名录、路侧未定与王宅附记见附录 E。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "图窗不能包含完整寿丘范围，应保留“只见南段”。",
+        "四向功能不能画成排他的功能分区或逐店地块。",
+        "河间、东平的晚出寺名不能通过旧实心/空心图例反向变成盛时寺院。",
+        "同名异名关系和范电子断句待核项必须保留在图外资料说明。"
+      ],
+      "must_preserve": [
+        "门外四里及御道南。",
+        "四向行业。",
+        "寿丘四至与原尺度。",
+        "十里、异名与皇女台候选。",
+        "王宅时间层。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "大市在西阳门外四里、御道南；东工巧屠贩、南丝竹乐艺、西酿酒、北售棺赁车。",
+        "延酤／退酤以西、张方沟以东，南临洛水、北达芒山；本窗仅见南段，原里数不折算。",
+        "阜财／准财、金肆侧别未记；开善属阜财。齐谐、乐律／乐肆、延酤／退酤不增作独立里。",
+        "皇女台采用市南主读并留东南异文；河间、东平仍用盛时王宅名称，后改寺另注。 里内名录、路侧未定与王宅附记见附录 E。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "market_unlocated_wards",
+          "shouqiu_residences",
+          "yinian_houses",
+          "wangdianyu_unknown_roadside",
+          "yongming_east_of_dajue"
+        ],
+        "entity_ids": [],
+        "label": "里内名录、路侧未定与王宅附记见附录 E。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "S05": {
+      "code": "S05",
+      "title": "城北两门：承明与金墉",
+      "purpose": "保留北门方向、接门通行关系与金墉无定位名物。",
+      "render_mode": "world_crop_wide",
+      "baseline_slug": "north-gates-jinyong",
+      "baseline_bbox": [
+        3000,
+        780,
+        5850,
+        2450
+      ],
+      "sidebar": [
+        {
+          "title": "两门与北墙",
+          "text": "大夏在西、广莫在东；两门间城上宫观相连，门距、同高与建筑栋数未记。",
+          "tone": "palace"
+        },
+        {
+          "title": "门外寺群",
+          "text": "禅虚御道西，“外”为周校补；阅武场不定侧。凝玄在广莫御道东、永平里，范作凝圆。",
+          "tone": "temple"
+        },
+        {
+          "title": "承明与王南",
+          "text": "承明当金墉城前东西大道，保留门外短接段；王南只附记通行关系，“城前”不改为正南。",
+          "tone": "office"
+        },
+        {
+          "title": "金墉内部",
+          "text": "光极门与殿列为无序名物；门侧、轴线未记，后出金墉图说单列。 金墉名物、王南通行及门外附记见附录 E。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "金墉名物卡即使位于城框中也不意味着门殿内址，宜用开放名录而非院块。",
+        "不得利用“城前”给承明与金墉增加确定南北关系。",
+        "北墙连绵宫观的装饰符号不能暗示建筑总数。",
+        "本页原为横向宽幅，3–4 条短注置下栏可保持阅读密度。"
+      ],
+      "must_preserve": [
+        "大夏西、广莫东。",
+        "连绵宫观记述。",
+        "寺群道路侧与校补。",
+        "承明门通行解释。",
+        "金墉未定位名物。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "大夏在西、广莫在东；两门间城上宫观相连，门距、同高与建筑栋数未记。",
+        "禅虚御道西，“外”为周校补；阅武场不定侧。凝玄在广莫御道东、永平里，范作凝圆。",
+        "承明当金墉城前东西大道，保留门外短接段；王南只附记通行关系，“城前”不改为正南。",
+        "光极门与殿列为无序名物；门侧、轴线未记，后出金墉图说单列。 金墉名物、王南通行及门外附记见附录 E。"
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "central_jinyong_internal_names",
+          "north_wangnan_chengming_access",
+          "chanxu_front_ground",
+          "wenyi_houses"
+        ],
+        "entity_ids": [],
+        "label": "金墉名物、王南通行及门外附记见附录 E。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "A": {
+      "code": "A",
+      "title": "郭外与未定位记录",
+      "purpose": "按已知地域归类的名录，保留全部未落点记录。",
+      "render_mode": "independent_index",
+      "baseline_slug": null,
+      "baseline_bbox": null,
+      "sidebar": [
+        {
+          "title": "分组名录",
+          "text": "按仅知地域或无地址分组；组内顺序不表示方位、距离或先后。",
+          "tone": "office"
+        },
+        {
+          "title": "寺名与时层",
+          "text": "年代未明、后出名称分别短注；类型颜色不承担年代证明。",
+          "tone": "muted"
+        },
+        {
+          "title": "同名问题",
+          "text": "两处白马、崇虚与崇立等关系继续保留，不凭同名或卷次合并地点。",
+          "tone": "muted"
+        },
+        {
+          "title": "与母图关系",
+          "text": "本页不参与全城拼接；新增地址证据后再进入地理图。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "appendix_svg() 的 group() 原来使用闭合虚线框和时间圆点；统一为开放名录与文字时注。",
+        "地名编号和全部原始记录保留，移出母图不等于删除资料。"
+      ],
+      "must_preserve": [
+        "原有七组地域名录。",
+        "齐献武王寺记名层。",
+        "两处白马身份关系未定。",
+        "晋阳三级寺、洛水神宅不作洛阳地图点。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "按仅知地域或无地址分组；组内顺序不表示方位、距离或先后。",
+        "年代未明、后出名称分别短注；类型颜色不承担年代证明。",
+        "两处白马、崇虚与崇立等关系继续保留，不凭同名或卷次合并地点。",
+        "本页不参与全城拼接；新增地址证据后再进入地理图。"
+      ]
+    },
+    "B": {
+      "code": "B",
+      "title": "长分桥—千金堰：区位与水工叙事",
+      "purpose": "两个独立关系层分别表达桥堰区位和中朝追叙。",
+      "render_mode": "independent_relation_panel",
+      "baseline_slug": "A_west_bridge_weir",
+      "baseline_bbox": null,
+      "sidebar": [
+        {
+          "title": "桥堰方位",
+          "text": "长分桥在城西阊阖门外七里；千金堰在桥西，距桥里程未记。",
+          "tone": "water"
+        },
+        {
+          "title": "原单位与图式",
+          "text": "七里保留原单位；桥式、朝向、长度、堰形和图面间距不由示意确定。",
+          "tone": "muted"
+        },
+        {
+          "title": "追叙分层",
+          "text": "下半水工叙述保留中朝时层；箭头表示记述联系，不接入北魏河道底图。",
+          "tone": "water"
+        },
+        {
+          "title": "桥名与旧迹",
+          "text": "长分／张方／张夫人保留桥名异说；夕阳亭作为汉旧迹附记。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "保留独立 coordinate_frame，所有图元不得被合并进世界 scene。",
+        "水体符号要与主图共享样式但明确无地理线形含义。",
+        "同一桥的不同名称不能生成多个桥点。",
+        "不要把水工追叙与千金堰之间补出原文未定的连接。"
+      ],
+      "must_preserve": [
+        "桥西关系。",
+        "城门外七里。",
+        "桥名异说与汉旧迹。",
+        "中朝水工追叙。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "长分桥在城西阊阖门外七里；千金堰在桥西，距桥里程未记。",
+        "七里保留原单位；桥式、朝向、长度、堰形和图面间距不由示意确定。",
+        "下半水工叙述保留中朝时层；箭头表示记述联系，不接入北魏河道底图。",
+        "长分／张方／张夫人保留桥名异说；夕阳亭作为汉旧迹附记。"
+      ]
+    },
+    "C": {
+      "code": "C",
+      "title": "河间王琛宅：文柏堂与迎风馆",
+      "purpose": "通过所属层级表示王宅构成，不编造院落形状。",
+      "render_mode": "independent_membership_panel",
+      "baseline_slug": "A_hejian_residence",
+      "baseline_bbox": null,
+      "sidebar": [
+        {
+          "title": "王宅构成",
+          "text": "文柏堂属于王宅记述；迎风馆明确建在后园，采用所属层级表达。",
+          "tone": "house"
+        },
+        {
+          "title": "前后与方向",
+          "text": "“后园”是相对称谓；绝对朝向、主轴及两建筑的相互方位未记。",
+          "tone": "muted"
+        },
+        {
+          "title": "形制比拟",
+          "text": "文柏堂形如徽音殿仅保留文字比拟，不转成相同尺寸或具体平面。",
+          "tone": "house"
+        },
+        {
+          "title": "后出寺园层",
+          "text": "河阴之后的寺名、池渠、石磴、飞梁另注，不补入盛时宅园几何。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "宅和园的封闭框原已声明为所属，但新版更宜改开放括线或层级标题。",
+        "取消 hall 图符内柱网，不以格线推开间。",
+        "图上的左右并排只用于排版，不得附东西方向箭头或北针。",
+        "主图仍使用盛时王宅名称；关系页可列后出寺名但必须带时注。"
+      ],
+      "must_preserve": [
+        "文柏堂与王宅所属。",
+        "迎风馆在后园。",
+        "“形如徽音殿”比拟。",
+        "后出寺园描写另分时层。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "文柏堂属于王宅记述；迎风馆明确建在后园，采用所属层级表达。",
+        "“后园”是相对称谓；绝对朝向、主轴及两建筑的相互方位未记。",
+        "文柏堂形如徽音殿仅保留文字比拟，不转成相同尺寸或具体平面。",
+        "河阴之后的寺名、池渠、石磴、飞梁另注，不补入盛时宅园几何。"
+      ]
+    },
+    "D": {
+      "code": "D",
+      "title": "北邙与崇立寺：未定位信息",
+      "purpose": "保留粗略山域、僧籍记名与寺名异文。",
+      "render_mode": "independent_unlocated_index",
+      "baseline_slug": "A_north_unlocated",
+      "baseline_bbox": null,
+      "sidebar": [
+        {
+          "title": "北邙山域",
+          "text": "冯王、齐献武王两寺只落实到北邙山上；相互方位、里程与范围未给。",
+          "tone": "temple"
+        },
+        {
+          "title": "名称与年代",
+          "text": "冯王寺盛时年代未定；齐献武王寺保留记名层，分别用文字说明。",
+          "tone": "muted"
+        },
+        {
+          "title": "崇立寺记载",
+          "text": "518 年惠生取经条有崇立寺记名；寺址无明文，不能据卷五定位城北。",
+          "tone": "temple"
+        },
+        {
+          "title": "异文待辨",
+          "text": "崇立／崇灵等异文保留；不自动等同崇虚，待地址证据后再落图。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "北邙所属框只能表示粗略地域，不可封成一个实测山体或两寺地块。",
+        "崇立寺在本页的排版位置不成为洛阳地址。",
+        "寺符号类别不能消除后出名称或年代未明的限制。"
+      ],
+      "must_preserve": [
+        "北邙山上记述。",
+        "两寺不同的时层疑点。",
+        "518 年僧籍记名。",
+        "崇立／崇灵异文。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "冯王、齐献武王两寺只落实到北邙山上；相互方位、里程与范围未给。",
+        "冯王寺盛时年代未定；齐献武王寺保留记名层，分别用文字说明。",
+        "518 年惠生取经条有崇立寺记名；寺址无明文，不能据卷五定位城北。",
+        "崇立／崇灵等异文保留；不自动等同崇虚，待地址证据后再落图。"
+      ]
+    },
+    "D07": {
+      "code": "D07",
+      "title": "景明寺：道路关系与寺内构成",
+      "purpose": "沿用上轮新增寺级页，构成目录与母图位置分开。",
+      "render_mode": "pilot_jingming_page",
+      "baseline_slug": null,
+      "baseline_bbox": null,
+      "sidebar": [
+        {
+          "title": "地理参照",
+          "text": "景明在宣阳门外一里、御道东；方五百步保留原文单位。",
+          "tone": "temple"
+        },
+        {
+          "title": "建筑与连接",
+          "text": "复殿重房、浮道相通保留为构成记述；栋数与内部坐标未定。",
+          "tone": "temple"
+        },
+        {
+          "title": "三池与水功",
+          "text": "池水 × 3 只表示数量；碾磑、舂簸保留类型与功能，不推院内布局。",
+          "tone": "water"
+        },
+        {
+          "title": "七层塔时相",
+          "text": "正光始造有记，盛时截点前竣工未证；不能据此断言一直在建。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "新 D07 不替换旧 D05 的区域范围。",
+        "构成目录行序不产生南北方位。",
+        "塔、池、水功设施均不能由目录排版回贴到院内坐标。"
+      ],
+      "must_preserve": [
+        "宣阳门外与御道东关系。",
+        "原文一里、方五百步。",
+        "复殿重房、三池与水功记述。",
+        "塔始造及竣工未证。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "景明在宣阳门外一里、御道东；方五百步保留原文单位。",
+        "复殿重房、浮道相通保留为构成记述；栋数与内部坐标未定。",
+        "池水 × 3 只表示数量；碾磑、舂簸保留类型与功能，不推院内布局。",
+        "正光始造有记，盛时截点前竣工未证；不能据此断言一直在建。"
+      ],
+      "pilot_bbox": [
+        5250,
+        6410,
+        3100,
+        2810
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [],
+        "entity_ids": [
+          "v3_jingming"
+        ],
+        "label": "本页构成目录与附录 E 的景明条相互参照，不生成院内坐标。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    },
+    "S06": {
+      "code": "S06",
+      "title": "洛南：永桥、四夷馆里与市场",
+      "purpose": "沿用上轮首版，主图表达东西侧，图外说明安置与时相。",
+      "render_mode": "pilot_luosouth_page",
+      "baseline_slug": null,
+      "baseline_bbox": null,
+      "sidebar": [
+        {
+          "title": "馆里方向",
+          "text": "御道东四馆、道西四里；各组内部采用无序名单，不画四组隔街正对。",
+          "tone": "office"
+        },
+        {
+          "title": "安置时间",
+          "text": "金陵、燕然两段记三年后赐宅；扶桑、崦嵫两段未记等待年数。",
+          "tone": "muted"
+        },
+        {
+          "title": "市场与所属",
+          "text": "四通市＝永桥市仅知洛水南，路侧未定；鱼鳖市另按归正里巷市登记。",
+          "tone": "market"
+        },
+        {
+          "title": "迁居与寺名",
+          "text": "萧宝夤旧宅与永安里后宅分期；萧正德宅改归正寺、慕义里菩提寺保留未定年代。",
+          "tone": "muted"
+        }
+      ],
+      "cautions": [
+        "保留 25 条约束及修正的电子定位，不覆盖原始登记。",
+        "四通市不得从图外附记返回御道东点位。",
+        "两岸华表不推出总数为二；圜丘只作南方参照。",
+        "道东白象、狮子二坊另列时相，不能合成全盛期动物场景。"
+      ],
+      "must_preserve": [
+        "永桥跨洛水。",
+        "四馆四里的东西关系及无序名单。",
+        "安置关系中的年限差别。",
+        "市场别称与身份未决。",
+        "宅寺转换、迁居及菩提寺所属。"
+      ],
+      "text_replacements": [],
+      "summary": [
+        "御道东四馆、道西四里；各组内部采用无序名单，不画四组隔街正对。",
+        "金陵、燕然两段记三年后赐宅；扶桑、崦嵫两段未记等待年数。",
+        "四通市＝永桥市仅知洛水南，路侧未定；鱼鳖市另按归正里巷市登记。",
+        "萧宝夤旧宅与永安里后宅分期；萧正德宅改归正寺、慕义里菩提寺保留未定年代。"
+      ],
+      "pilot_bbox": [
+        4100,
+        8720,
+        4350,
+        2230
+      ],
+      "appendix_e_reference": {
+        "feature_keys": [
+          "losouth_market_unassigned",
+          "losouth_ward_temples",
+          "losouth_guizheng_market",
+          "losouth_animals"
+        ],
+        "entity_ids": [],
+        "label": "市场、寺属、迁居与二坊时相详见附录 E 及 S06 约束说明。",
+        "condition": "Only reference entries actually moved into appendix E by the root semantic display policy."
+      }
+    }
+  },
+  "appendix_e_policy": {
+    "title": "附录 E：从地理图移出的说明与未定位名录",
+    "purpose": "集中容纳退出世界地图的名录、构成、替代解释与时间说明，按对象稳定标识互相索引。",
+    "coordinate_frame": "appendix:E",
+    "can_span_multiple_pages": true,
+    "geometry_policy": "Entries have page-layout coordinates only and cannot be pasted into the world scene.",
+    "selection_policy": "Root semantic display policy selects actual entries; per-sheet appendix_e_reference fields are matching suggestions, not instructions to remove every named group.",
+    "distinction_from_appendix_A": "A 保留旧有郭外及未定位地域总索引；E 记录本轮从地理图退离的说明，重复实体用交叉索引处理，不增实体数量。",
+    "pilot_template_reference_policy": "D01、D07、S06 固定模板可在页脚/旁注加入 E 引用，无需变动既有图形几何。"
+  }
+}

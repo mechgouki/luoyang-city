@@ -1,0 +1,2448 @@
+{
+  "review_id": "v2.4-rollout-independent-baseline",
+  "baseline_path": "/workspace/scratch/3705edbfbae5/luoyang-v23/deliverables/data",
+  "baseline_hashes": {
+    "scene.json": "7abe14df6c58296fdf623cfec5b6334c2b7dc8661836846c9885b92c6ccefce4",
+    "places.json": "c03a0d906578fda85e2ac9d9e0063bf37ce19cfdbb204c2403f4af55b8ca5e28",
+    "prosperity_overrides.json": "7db1956a383638d948ceb1db980c6805420240fdfedda9a193931dce6c577290"
+  },
+  "source_records": 339,
+  "feature_count": 246,
+  "feature_kinds": {
+    "area": 27,
+    "group": 42,
+    "node": 95,
+    "relation": 42,
+    "pool": 9,
+    "text": 22,
+    "compound": 3,
+    "road": 3,
+    "water": 3
+  },
+  "source_coordinates_all_null": true,
+  "duplicate_primary_feature_ids": [],
+  "duplicate_feature_keys": [],
+  "invalid_entity_references": [],
+  "world_size": [
+    12000,
+    11000
+  ],
+  "coordinate_policy": "drawing coordinates only; geographic coordinates remain null; standalone panels use independent frames",
+  "temporal_scope": "516 to before the Heyin incident in 528; documentary composite",
+  "views": {
+    "regions": [
+      {
+        "number": "R01",
+        "slug": "07_north_suburbs",
+        "title": "北门郊区 · 两条御道与闻义里",
+        "bbox": [
+          4250,
+          780,
+          7550,
+          1250
+        ]
+      },
+      {
+        "number": "R02",
+        "slug": "05_west_gates_temples",
+        "title": "城西门道 · 寺院与宅第",
+        "bbox": [
+          1180,
+          2400,
+          3330,
+          3850
+        ]
+      },
+      {
+        "number": "R03",
+        "slug": "01_central_gardens",
+        "title": "宫苑与城内西北",
+        "bbox": [
+          4040,
+          1660,
+          4100,
+          2450
+        ]
+      },
+      {
+        "number": "R04",
+        "slug": "04-east-north",
+        "title": "城东北｜建春门、两桥与建阳里",
+        "bbox": [
+          7700,
+          2100,
+          4200,
+          2750
+        ]
+      },
+      {
+        "number": "R05",
+        "slug": "06_west_market_shouqiu",
+        "title": "大市与寿丘 · 里坊和宽域",
+        "bbox": [
+          260,
+          4900,
+          4250,
+          4300
+        ]
+      },
+      {
+        "number": "R06",
+        "slug": "02_inner_west",
+        "title": "西阳门内与永宁寺西邻",
+        "bbox": [
+          4140,
+          3810,
+          2360,
+          2890
+        ]
+      },
+      {
+        "number": "R07",
+        "slug": "03_palace_front",
+        "title": "宫前御道与永宁、景乐",
+        "bbox": [
+          4140,
+          3870,
+          4040,
+          3110
+        ]
+      },
+      {
+        "number": "R08",
+        "slug": "04_inner_east",
+        "title": "东阳、清阳与开阳门内",
+        "bbox": [
+          6500,
+          4110,
+          1710,
+          2870
+        ]
+      },
+      {
+        "number": "R09",
+        "slug": "05-east-south",
+        "title": "城东南｜东阳、清阳门外诸里",
+        "bbox": [
+          7700,
+          4050,
+          4200,
+          2700
+        ]
+      },
+      {
+        "number": "R10",
+        "slug": "06-south-temples",
+        "title": "城南｜景明、王宅、寺学与礼制遗构",
+        "bbox": [
+          4100,
+          6630,
+          6250,
+          2600
+        ]
+      },
+      {
+        "number": "R11",
+        "slug": "07-luosouth",
+        "title": "洛南｜永桥、四夷馆里与市场",
+        "bbox": [
+          4100,
+          8720,
+          4350,
+          2230
+        ]
+      }
+    ],
+    "detail_regions": [
+      {
+        "number": "D01",
+        "slug": "d00_yongning_court",
+        "title": "永宁寺院内平面详图",
+        "bbox": [
+          4950,
+          4485,
+          910,
+          955
+        ]
+      },
+      {
+        "number": "D02",
+        "slug": "d01_yongning_neighbors",
+        "title": "永宁寺与四邻详图",
+        "bbox": [
+          4350,
+          4080,
+          2910,
+          1650
+        ]
+      },
+      {
+        "number": "D03",
+        "slug": "d02_palace_gardens",
+        "title": "宫苑池台与景阳山关系详图",
+        "bbox": [
+          4900,
+          1950,
+          2900,
+          2110
+        ]
+      },
+      {
+        "number": "D04",
+        "slug": "D-east-jianchun-jianyang",
+        "title": "建春两桥—建阳里｜寺群、土台与桥道关系",
+        "bbox": [
+          7720,
+          2170,
+          2520,
+          2130
+        ]
+      },
+      {
+        "number": "D05",
+        "slug": "D-south-jingming-ritual",
+        "title": "景明—台学｜三池、寺学与礼制旧迹",
+        "bbox": [
+          6300,
+          7000,
+          3930,
+          1930
+        ]
+      },
+      {
+        "number": "D06",
+        "slug": "D_west_market_axes",
+        "title": "大市四向 · 皇女台关系细图",
+        "bbox": [
+          1120,
+          5150,
+          3240,
+          3320
+        ]
+      }
+    ],
+    "street_sheets": [
+      {
+        "number": "S01",
+        "slug": "palace-yongning",
+        "title": "宫前御道 - 永宁寺与四邻",
+        "bbox": [
+          4320,
+          3830,
+          3370,
+          1980
+        ]
+      },
+      {
+        "number": "S02",
+        "slug": "jianchun-two-bridges",
+        "title": "建春门 - 两桥、建阳与水道",
+        "bbox": [
+          7650,
+          2220,
+          2850,
+          2270
+        ]
+      },
+      {
+        "number": "S03",
+        "slug": "xuanyang-jingming-schools",
+        "title": "宣阳门外 - 景明与城南台学",
+        "bbox": [
+          5520,
+          6630,
+          4780,
+          2630
+        ]
+      },
+      {
+        "number": "S04",
+        "slug": "west-market-shouqiu",
+        "title": "城西大市 - 四向行业与寿丘宽域",
+        "bbox": [
+          240,
+          4570,
+          4280,
+          4630
+        ]
+      },
+      {
+        "number": "S05",
+        "slug": "north-gates-jinyong",
+        "title": "城北两门 - 承明与金墉",
+        "bbox": [
+          3000,
+          780,
+          5850,
+          2450
+        ]
+      }
+    ],
+    "standalone_panels": [
+      {
+        "number": "B",
+        "slug": "A_west_bridge_weir",
+        "title": "长分桥—千金堰 · 区位与水工叙事"
+      },
+      {
+        "number": "C",
+        "slug": "A_hejian_residence",
+        "title": "河间王琛宅 · 文柏堂与迎风馆"
+      },
+      {
+        "number": "D",
+        "slug": "A_north_unlocated",
+        "title": "北邙与崇立寺 · 保留未定位信息"
+      }
+    ]
+  },
+  "standalone_appendix_A": "郭外与未定位记录（由appendix_svg生成，不在standalone_panels数组）",
+  "expected_baseline_atlas_pages": 27,
+  "expected_rollout_before_extra_legend_pages": 29,
+  "rollout_count_note": "母图1 + R11 + D7 + S6 + A-D4 = 29；L01或审查页另加。D01替换、D07与S06新增。",
+  "primary_world_anchors": [
+    {
+      "id": "ic_yaoguang",
+      "kind": "node",
+      "feature_index": 2,
+      "anchor": [
+        4750,
+        3410
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_qianqiu_gate",
+      "kind": "node",
+      "feature_index": 3,
+      "anchor": [
+        5260,
+        3550
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_liangfeng_guan",
+      "kind": "node",
+      "feature_index": 7,
+      "anchor": [
+        5580,
+        2270
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_lingyun_platform",
+      "kind": "node",
+      "feature_index": 8,
+      "anchor": [
+        5580,
+        2630
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_xuanci",
+      "kind": "node",
+      "feature_index": 10,
+      "anchor": [
+        5960,
+        2600
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_lingzhi",
+      "kind": "node",
+      "feature_index": 11,
+      "anchor": [
+        6320,
+        2600
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_jiafu",
+      "kind": "node",
+      "feature_index": 12,
+      "anchor": [
+        6320,
+        2250
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_xuanguang",
+      "kind": "node",
+      "feature_index": 13,
+      "anchor": [
+        6320,
+        2960
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_jiulong",
+      "kind": "node",
+      "feature_index": 14,
+      "anchor": [
+        5960,
+        2930
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_jiuhua",
+      "kind": "node",
+      "feature_index": 21,
+      "anchor": [
+        6980,
+        2360
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_penglai",
+      "kind": "node",
+      "feature_index": 22,
+      "anchor": [
+        7420,
+        2360
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_hualin_ice",
+      "kind": "node",
+      "feature_index": 23,
+      "anchor": [
+        6610,
+        2360
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_jingyang_hill",
+      "kind": "node",
+      "feature_index": 26,
+      "anchor": [
+        7020,
+        2900
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_henge",
+      "kind": "node",
+      "feature_index": 27,
+      "anchor": [
+        6650,
+        2900
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_xihe",
+      "kind": "node",
+      "feature_index": 28,
+      "anchor": [
+        7410,
+        2900
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_qingshu",
+      "kind": "node",
+      "feature_index": 29,
+      "anchor": [
+        7020,
+        3180
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_linwei",
+      "kind": "node",
+      "feature_index": 30,
+      "anchor": [
+        6640,
+        3180
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_linjian",
+      "kind": "node",
+      "feature_index": 31,
+      "anchor": [
+        7420,
+        3180
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_sinong",
+      "kind": "node",
+      "feature_index": 41,
+      "anchor": [
+        6750,
+        3960
+      ],
+      "regional_views": [
+        "R03",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_henan_yin",
+      "kind": "node",
+      "feature_index": 42,
+      "anchor": [
+        7120,
+        3650
+      ],
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "ic_taipu",
+      "kind": "node",
+      "feature_index": 46,
+      "anchor": [
+        5360,
+        4210
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_chenghuang",
+      "kind": "node",
+      "feature_index": 47,
+      "anchor": [
+        5670,
+        4210
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_wuku",
+      "kind": "node",
+      "feature_index": 48,
+      "anchor": [
+        5960,
+        4210
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_youwei",
+      "kind": "node",
+      "feature_index": 52,
+      "anchor": [
+        5920,
+        4460
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_zuowei",
+      "kind": "node",
+      "feature_index": 53,
+      "anchor": [
+        6300,
+        4460
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_yushi",
+      "kind": "node",
+      "feature_index": 54,
+      "anchor": [
+        5450,
+        4335
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_yongning",
+      "kind": "compound",
+      "feature_index": 55,
+      "anchor": [
+        5400.0,
+        4940.0
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_yuancha_house",
+      "kind": "node",
+      "feature_index": 57,
+      "anchor": [
+        4720,
+        5240
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_taiwei",
+      "kind": "node",
+      "feature_index": 58,
+      "anchor": [
+        5900,
+        4880
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_zhaoxuan",
+      "kind": "node",
+      "feature_index": 59,
+      "anchor": [
+        5450,
+        5430
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_jiangzuo",
+      "kind": "node",
+      "feature_index": 60,
+      "anchor": [
+        5920,
+        5350
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_jiuji",
+      "kind": "node",
+      "feature_index": 61,
+      "anchor": [
+        5870,
+        5680
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_taishe",
+      "kind": "node",
+      "feature_index": 62,
+      "anchor": [
+        5920,
+        6000
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_lingyin",
+      "kind": "node",
+      "feature_index": 63,
+      "anchor": [
+        5880,
+        6370
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_situ",
+      "kind": "node",
+      "feature_index": 64,
+      "anchor": [
+        6320,
+        4870
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_guozixue",
+      "kind": "node",
+      "feature_index": 65,
+      "anchor": [
+        6360,
+        5260
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_zongzheng",
+      "kind": "node",
+      "feature_index": 66,
+      "anchor": [
+        6310,
+        5600
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_taimiao",
+      "kind": "node",
+      "feature_index": 67,
+      "anchor": [
+        6380,
+        5930
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_hujun",
+      "kind": "node",
+      "feature_index": 68,
+      "anchor": [
+        6310,
+        6250
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_yiguan",
+      "kind": "node",
+      "feature_index": 69,
+      "anchor": [
+        6360,
+        6560
+      ],
+      "regional_views": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "ic_yijing_well",
+      "kind": "node",
+      "feature_index": 84,
+      "anchor": [
+        6750,
+        4240
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "ic_jingle",
+      "kind": "node",
+      "feature_index": 85,
+      "anchor": [
+        6750,
+        4870
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "ic_gaozhao_house",
+      "kind": "node",
+      "feature_index": 86,
+      "anchor": [
+        7110,
+        4870
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "ic_daoguan",
+      "kind": "node",
+      "feature_index": 89,
+      "anchor": [
+        7140,
+        4450
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "ic_taicang_wei",
+      "kind": "node",
+      "feature_index": 90,
+      "anchor": [
+        7490,
+        4450
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "ic_zhaoyi",
+      "kind": "node",
+      "feature_index": 91,
+      "anchor": [
+        7520,
+        4990
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "ic_songming",
+      "kind": "node",
+      "feature_index": 98,
+      "anchor": [
+        7160,
+        5940
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "ic_xiufan",
+      "kind": "node",
+      "feature_index": 99,
+      "anchor": [
+        7510,
+        5940
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "ic_jinglin_garden",
+      "kind": "node",
+      "feature_index": 101,
+      "anchor": [
+        7300,
+        6450
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "ic_jinglin",
+      "kind": "node",
+      "feature_index": 102,
+      "anchor": [
+        7650,
+        6450
+      ],
+      "regional_views": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "v2_weichang",
+      "kind": "node",
+      "feature_index": 113,
+      "anchor": [
+        8860,
+        3110
+      ],
+      "regional_views": [
+        "R04"
+      ]
+    },
+    {
+      "id": "office_luoyang",
+      "kind": "node",
+      "feature_index": 115,
+      "anchor": [
+        9830,
+        2750
+      ],
+      "regional_views": [
+        "R04"
+      ]
+    },
+    {
+      "id": "v2_lingying",
+      "kind": "node",
+      "feature_index": 117,
+      "anchor": [
+        10710,
+        2750
+      ],
+      "regional_views": [
+        "R04"
+      ]
+    },
+    {
+      "id": "bridge_qili",
+      "kind": "node",
+      "feature_index": 119,
+      "anchor": [
+        11310,
+        2700
+      ],
+      "regional_views": [
+        "R04"
+      ]
+    },
+    {
+      "id": "gate_sanmen",
+      "kind": "node",
+      "feature_index": 120,
+      "anchor": [
+        11650,
+        3000
+      ],
+      "regional_views": [
+        "R04"
+      ]
+    },
+    {
+      "id": "bridge_jianchun",
+      "kind": "node",
+      "feature_index": 125,
+      "anchor": [
+        8130,
+        3550
+      ],
+      "regional_views": [
+        "R03",
+        "R04"
+      ]
+    },
+    {
+      "id": "bridge_eaststone",
+      "kind": "node",
+      "feature_index": 126,
+      "anchor": [
+        9250,
+        3650
+      ],
+      "regional_views": [
+        "R04"
+      ]
+    },
+    {
+      "id": "v2_mingxuan",
+      "kind": "node",
+      "feature_index": 129,
+      "anchor": [
+        8230,
+        3820
+      ],
+      "regional_views": [
+        "R04"
+      ]
+    },
+    {
+      "id": "v2_longhua",
+      "kind": "node",
+      "feature_index": 130,
+      "anchor": [
+        8770,
+        3820
+      ],
+      "regional_views": [
+        "R04"
+      ]
+    },
+    {
+      "id": "v2_changmancang",
+      "kind": "node",
+      "feature_index": 132,
+      "anchor": [
+        8770,
+        4140
+      ],
+      "regional_views": [
+        "R04",
+        "R09"
+      ]
+    },
+    {
+      "id": "v2_dongan_taxfield",
+      "kind": "node",
+      "feature_index": 134,
+      "anchor": [
+        8250,
+        4190
+      ],
+      "regional_views": [
+        "R04",
+        "R09"
+      ]
+    },
+    {
+      "id": "v2_zhuangyan",
+      "kind": "node",
+      "feature_index": 136,
+      "anchor": [
+        8300,
+        4500
+      ],
+      "regional_views": [
+        "R04",
+        "R09"
+      ]
+    },
+    {
+      "id": "v2_qintaishangjun",
+      "kind": "node",
+      "feature_index": 139,
+      "anchor": [
+        9900,
+        4480
+      ],
+      "regional_views": [
+        "R04",
+        "R09"
+      ]
+    },
+    {
+      "id": "v2_zhengshi",
+      "kind": "node",
+      "feature_index": 142,
+      "anchor": [
+        8450,
+        5060
+      ],
+      "regional_views": [
+        "R09"
+      ]
+    },
+    {
+      "id": "office_dianyu",
+      "kind": "node",
+      "feature_index": 143,
+      "anchor": [
+        9070,
+        5060
+      ],
+      "regional_views": [
+        "R09"
+      ]
+    },
+    {
+      "id": "v2_pingdeng",
+      "kind": "node",
+      "feature_index": 146,
+      "anchor": [
+        8510,
+        5880
+      ],
+      "regional_views": [
+        "R09"
+      ]
+    },
+    {
+      "id": "tomb_suqin",
+      "kind": "node",
+      "feature_index": 148,
+      "anchor": [
+        9330,
+        5895
+      ],
+      "regional_views": [
+        "R09"
+      ]
+    },
+    {
+      "id": "v2_baoming",
+      "kind": "node",
+      "feature_index": 149,
+      "anchor": [
+        9900,
+        5915
+      ],
+      "regional_views": [
+        "R09"
+      ]
+    },
+    {
+      "id": "market_small",
+      "kind": "node",
+      "feature_index": 151,
+      "anchor": [
+        10990,
+        5935
+      ],
+      "regional_views": [
+        "R09"
+      ]
+    },
+    {
+      "id": "v2_jingning",
+      "kind": "node",
+      "feature_index": 153,
+      "anchor": [
+        8660,
+        6430
+      ],
+      "regional_views": [
+        "R09"
+      ]
+    },
+    {
+      "id": "v2_jianzhong",
+      "kind": "node",
+      "feature_index": 154,
+      "anchor": [
+        9750,
+        6430
+      ],
+      "regional_views": [
+        "R09"
+      ]
+    },
+    {
+      "id": "li_zhonggan",
+      "kind": "node",
+      "feature_index": 156,
+      "anchor": [
+        4450,
+        7290
+      ],
+      "regional_views": [
+        "R05",
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_gaoyang",
+      "kind": "compound",
+      "feature_index": 157,
+      "anchor": [
+        4465.0,
+        7965.0
+      ],
+      "regional_views": [
+        "R05",
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_jingming",
+      "kind": "compound",
+      "feature_index": 158,
+      "anchor": [
+        6900.0,
+        7620.0
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_datong",
+      "kind": "node",
+      "feature_index": 159,
+      "anchor": [
+        5700,
+        7450
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "house_gaoxian",
+      "kind": "node",
+      "feature_index": 160,
+      "anchor": [
+        5700,
+        7850
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_qintaigong_w",
+      "kind": "node",
+      "feature_index": 164,
+      "anchor": [
+        6720,
+        8480
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_qintaigong_e",
+      "kind": "node",
+      "feature_index": 165,
+      "anchor": [
+        7240,
+        8480
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_hanguozixue",
+      "kind": "node",
+      "feature_index": 168,
+      "anchor": [
+        8240,
+        7400
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_zhengjue",
+      "kind": "node",
+      "feature_index": 172,
+      "anchor": [
+        9590,
+        8220
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_lingtai",
+      "kind": "node",
+      "feature_index": 173,
+      "anchor": [
+        8190,
+        8550
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_biyong",
+      "kind": "node",
+      "feature_index": 174,
+      "anchor": [
+        9570,
+        8550
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "v3_mingtang",
+      "kind": "node",
+      "feature_index": 175,
+      "anchor": [
+        8970,
+        8790
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "altar_yuanqiu",
+      "kind": "node",
+      "feature_index": 185,
+      "anchor": [
+        6100,
+        10810
+      ],
+      "regional_views": [
+        "R11"
+      ]
+    },
+    {
+      "id": "v3_muzheng",
+      "kind": "node",
+      "feature_index": 193,
+      "anchor": [
+        8970,
+        8470
+      ],
+      "regional_views": [
+        "R10"
+      ]
+    },
+    {
+      "id": "w_dajue",
+      "kind": "node",
+      "feature_index": 206,
+      "anchor": [
+        2250,
+        3830
+      ],
+      "regional_views": [
+        "R02"
+      ]
+    },
+    {
+      "id": "w_rongjue",
+      "kind": "node",
+      "feature_index": 207,
+      "anchor": [
+        3640,
+        3830
+      ],
+      "regional_views": [
+        "R02"
+      ]
+    },
+    {
+      "id": "w_linhuaizhai",
+      "kind": "node",
+      "feature_index": 209,
+      "anchor": [
+        2860,
+        3940
+      ],
+      "regional_views": [
+        "R02"
+      ]
+    },
+    {
+      "id": "w_fayun",
+      "kind": "node",
+      "feature_index": 210,
+      "anchor": [
+        2860,
+        4400
+      ],
+      "regional_views": [
+        "R02"
+      ]
+    },
+    {
+      "id": "w_baoguang",
+      "kind": "node",
+      "feature_index": 211,
+      "anchor": [
+        3670,
+        4400
+      ],
+      "regional_views": [
+        "R02"
+      ]
+    },
+    {
+      "id": "w_baima_xiyang",
+      "kind": "node",
+      "feature_index": 215,
+      "anchor": [
+        2720,
+        5130
+      ],
+      "regional_views": [
+        "R02",
+        "R05"
+      ]
+    },
+    {
+      "id": "w_xuanzhong",
+      "kind": "node",
+      "feature_index": 216,
+      "anchor": [
+        3620,
+        5130
+      ],
+      "regional_views": [
+        "R02",
+        "R05"
+      ]
+    },
+    {
+      "id": "w_chongjue",
+      "kind": "node",
+      "feature_index": 218,
+      "anchor": [
+        3620,
+        5840
+      ],
+      "regional_views": [
+        "R02",
+        "R05"
+      ]
+    },
+    {
+      "id": "w_lingxian",
+      "kind": "node",
+      "feature_index": 227,
+      "anchor": [
+        2375,
+        7900
+      ],
+      "regional_views": [
+        "R05"
+      ]
+    },
+    {
+      "id": "w_heyang",
+      "kind": "node",
+      "feature_index": 228,
+      "anchor": [
+        1550,
+        7900
+      ],
+      "regional_views": [
+        "R05"
+      ]
+    },
+    {
+      "id": "w_hougang",
+      "kind": "node",
+      "feature_index": 229,
+      "anchor": [
+        3300,
+        7900
+      ],
+      "regional_views": [
+        "R05"
+      ]
+    },
+    {
+      "id": "n_chanxu",
+      "kind": "node",
+      "feature_index": 230,
+      "anchor": [
+        4680,
+        1100
+      ],
+      "regional_views": [
+        "R01"
+      ]
+    },
+    {
+      "id": "n_ningxuan",
+      "kind": "node",
+      "feature_index": 234,
+      "anchor": [
+        8040,
+        1260
+      ],
+      "regional_views": [
+        "R01"
+      ]
+    },
+    {
+      "id": "gate_chengming",
+      "kind": "gate",
+      "anchor": [
+        4400,
+        2350
+      ],
+      "side": "w",
+      "regional_views": [
+        "R03"
+      ]
+    },
+    {
+      "id": "gate_changhe_west",
+      "kind": "gate",
+      "anchor": [
+        4400,
+        3550
+      ],
+      "side": "w",
+      "regional_views": [
+        "R02",
+        "R03"
+      ]
+    },
+    {
+      "id": "gate_xiyang",
+      "kind": "gate",
+      "anchor": [
+        4400,
+        4750
+      ],
+      "side": "w",
+      "regional_views": [
+        "R02",
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "gate_ximing",
+      "kind": "gate",
+      "anchor": [
+        4400,
+        6100
+      ],
+      "side": "w",
+      "regional_views": [
+        "R02",
+        "R05",
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "gate_jianchun",
+      "kind": "gate",
+      "anchor": [
+        7800,
+        3550
+      ],
+      "side": "e",
+      "regional_views": [
+        "R03",
+        "R04"
+      ]
+    },
+    {
+      "id": "gate_dongyang",
+      "kind": "gate",
+      "anchor": [
+        7800,
+        4750
+      ],
+      "side": "e",
+      "regional_views": [
+        "R04",
+        "R07",
+        "R08",
+        "R09"
+      ]
+    },
+    {
+      "id": "gate_qingyang",
+      "kind": "gate",
+      "anchor": [
+        7800,
+        6100
+      ],
+      "side": "e",
+      "regional_views": [
+        "R07",
+        "R08",
+        "R09"
+      ]
+    },
+    {
+      "id": "gate_daxia",
+      "kind": "gate",
+      "anchor": [
+        5000,
+        1800
+      ],
+      "side": "n",
+      "regional_views": [
+        "R01",
+        "R03"
+      ]
+    },
+    {
+      "id": "gate_guangmo",
+      "kind": "gate",
+      "anchor": [
+        7200,
+        1800
+      ],
+      "side": "n",
+      "regional_views": [
+        "R01",
+        "R03"
+      ]
+    },
+    {
+      "id": "gate_jinyang",
+      "kind": "gate",
+      "anchor": [
+        4750,
+        6800
+      ],
+      "side": "s",
+      "regional_views": [
+        "R07",
+        "R10"
+      ]
+    },
+    {
+      "id": "gate_xuanyang",
+      "kind": "gate",
+      "anchor": [
+        6100,
+        6800
+      ],
+      "side": "s",
+      "regional_views": [
+        "R07",
+        "R10"
+      ]
+    },
+    {
+      "id": "gate_pingchang",
+      "kind": "gate",
+      "anchor": [
+        6800,
+        6800
+      ],
+      "side": "s",
+      "regional_views": [
+        "R07",
+        "R08",
+        "R10"
+      ]
+    },
+    {
+      "id": "gate_kaiyang",
+      "kind": "gate",
+      "anchor": [
+        7500,
+        6800
+      ],
+      "side": "s",
+      "regional_views": [
+        "R07",
+        "R08",
+        "R10"
+      ]
+    },
+    {
+      "id": "ic_changhe_palace",
+      "kind": "gate",
+      "anchor": [
+        6100,
+        3950
+      ],
+      "side": "s",
+      "regional_views": [
+        "R03",
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "bridge_yong",
+      "kind": "bridge",
+      "anchor": [
+        6100,
+        9000
+      ],
+      "regional_views": [
+        "R10",
+        "R11"
+      ],
+      "anchor_source": "build_plan.py bridge_scene()"
+    }
+  ],
+  "regional_overlap_checks": [
+    {
+      "views": [
+        "R01",
+        "R03"
+      ],
+      "intersection": [
+        4250,
+        1660,
+        3890,
+        370
+      ],
+      "shared_primary_ids": [
+        "gate_daxia",
+        "gate_guangmo"
+      ]
+    },
+    {
+      "views": [
+        "R02",
+        "R03"
+      ],
+      "intersection": [
+        4040,
+        2400,
+        470,
+        1710
+      ],
+      "shared_primary_ids": [
+        "gate_changhe_west"
+      ]
+    },
+    {
+      "views": [
+        "R02",
+        "R05"
+      ],
+      "intersection": [
+        1180,
+        4900,
+        3330,
+        1350
+      ],
+      "shared_primary_ids": [
+        "w_baima_xiyang",
+        "w_xuanzhong",
+        "w_chongjue",
+        "gate_ximing"
+      ]
+    },
+    {
+      "views": [
+        "R02",
+        "R06"
+      ],
+      "intersection": [
+        4140,
+        3810,
+        370,
+        2440
+      ],
+      "shared_primary_ids": [
+        "gate_xiyang",
+        "gate_ximing"
+      ]
+    },
+    {
+      "views": [
+        "R02",
+        "R07"
+      ],
+      "intersection": [
+        4140,
+        3870,
+        370,
+        2380
+      ],
+      "shared_primary_ids": [
+        "gate_xiyang",
+        "gate_ximing"
+      ]
+    },
+    {
+      "views": [
+        "R03",
+        "R04"
+      ],
+      "intersection": [
+        7700,
+        2100,
+        440,
+        2010
+      ],
+      "shared_primary_ids": [
+        "bridge_jianchun",
+        "gate_jianchun"
+      ]
+    },
+    {
+      "views": [
+        "R03",
+        "R06"
+      ],
+      "intersection": [
+        4140,
+        3810,
+        2360,
+        300
+      ],
+      "shared_primary_ids": [
+        "ic_changhe_palace"
+      ]
+    },
+    {
+      "views": [
+        "R03",
+        "R07"
+      ],
+      "intersection": [
+        4140,
+        3870,
+        4000,
+        240
+      ],
+      "shared_primary_ids": [
+        "ic_sinong",
+        "ic_changhe_palace"
+      ]
+    },
+    {
+      "views": [
+        "R03",
+        "R09"
+      ],
+      "intersection": [
+        7700,
+        4050,
+        440,
+        60
+      ],
+      "shared_primary_ids": []
+    },
+    {
+      "views": [
+        "R04",
+        "R07"
+      ],
+      "intersection": [
+        7700,
+        3870,
+        480,
+        980
+      ],
+      "shared_primary_ids": [
+        "gate_dongyang"
+      ]
+    },
+    {
+      "views": [
+        "R04",
+        "R08"
+      ],
+      "intersection": [
+        7700,
+        4110,
+        510,
+        740
+      ],
+      "shared_primary_ids": [
+        "gate_dongyang"
+      ]
+    },
+    {
+      "views": [
+        "R04",
+        "R09"
+      ],
+      "intersection": [
+        7700,
+        4050,
+        4200,
+        800
+      ],
+      "shared_primary_ids": [
+        "v2_changmancang",
+        "v2_dongan_taxfield",
+        "v2_zhuangyan",
+        "v2_qintaishangjun",
+        "gate_dongyang"
+      ]
+    },
+    {
+      "views": [
+        "R05",
+        "R06"
+      ],
+      "intersection": [
+        4140,
+        4900,
+        370,
+        1800
+      ],
+      "shared_primary_ids": [
+        "gate_ximing"
+      ]
+    },
+    {
+      "views": [
+        "R05",
+        "R07"
+      ],
+      "intersection": [
+        4140,
+        4900,
+        370,
+        2080
+      ],
+      "shared_primary_ids": [
+        "gate_ximing"
+      ]
+    },
+    {
+      "views": [
+        "R05",
+        "R10"
+      ],
+      "intersection": [
+        4100,
+        6630,
+        410,
+        2570
+      ],
+      "shared_primary_ids": [
+        "li_zhonggan",
+        "v3_gaoyang"
+      ]
+    },
+    {
+      "views": [
+        "R05",
+        "R11"
+      ],
+      "intersection": [
+        4100,
+        8720,
+        410,
+        480
+      ],
+      "shared_primary_ids": []
+    },
+    {
+      "views": [
+        "R06",
+        "R07"
+      ],
+      "intersection": [
+        4140,
+        3870,
+        2360,
+        2830
+      ],
+      "shared_primary_ids": [
+        "ic_taipu",
+        "ic_chenghuang",
+        "ic_wuku",
+        "ic_youwei",
+        "ic_zuowei",
+        "ic_yushi",
+        "ic_yongning",
+        "ic_yuancha_house",
+        "ic_taiwei",
+        "ic_zhaoxuan",
+        "ic_jiangzuo",
+        "ic_jiuji",
+        "ic_taishe",
+        "ic_lingyin",
+        "ic_situ",
+        "ic_guozixue",
+        "ic_zongzheng",
+        "ic_taimiao",
+        "ic_hujun",
+        "ic_yiguan",
+        "gate_xiyang",
+        "gate_ximing",
+        "ic_changhe_palace"
+      ]
+    },
+    {
+      "views": [
+        "R06",
+        "R10"
+      ],
+      "intersection": [
+        4140,
+        6630,
+        2360,
+        70
+      ],
+      "shared_primary_ids": []
+    },
+    {
+      "views": [
+        "R07",
+        "R08"
+      ],
+      "intersection": [
+        6500,
+        4110,
+        1680,
+        2870
+      ],
+      "shared_primary_ids": [
+        "ic_yijing_well",
+        "ic_jingle",
+        "ic_gaozhao_house",
+        "ic_daoguan",
+        "ic_taicang_wei",
+        "ic_zhaoyi",
+        "ic_songming",
+        "ic_xiufan",
+        "ic_jinglin_garden",
+        "ic_jinglin",
+        "gate_dongyang",
+        "gate_qingyang",
+        "gate_pingchang",
+        "gate_kaiyang"
+      ]
+    },
+    {
+      "views": [
+        "R07",
+        "R09"
+      ],
+      "intersection": [
+        7700,
+        4050,
+        480,
+        2700
+      ],
+      "shared_primary_ids": [
+        "gate_dongyang",
+        "gate_qingyang"
+      ]
+    },
+    {
+      "views": [
+        "R07",
+        "R10"
+      ],
+      "intersection": [
+        4140,
+        6630,
+        4040,
+        350
+      ],
+      "shared_primary_ids": [
+        "gate_jinyang",
+        "gate_xuanyang",
+        "gate_pingchang",
+        "gate_kaiyang"
+      ]
+    },
+    {
+      "views": [
+        "R08",
+        "R09"
+      ],
+      "intersection": [
+        7700,
+        4110,
+        510,
+        2640
+      ],
+      "shared_primary_ids": [
+        "gate_dongyang",
+        "gate_qingyang"
+      ]
+    },
+    {
+      "views": [
+        "R08",
+        "R10"
+      ],
+      "intersection": [
+        6500,
+        6630,
+        1710,
+        350
+      ],
+      "shared_primary_ids": [
+        "gate_pingchang",
+        "gate_kaiyang"
+      ]
+    },
+    {
+      "views": [
+        "R09",
+        "R10"
+      ],
+      "intersection": [
+        7700,
+        6630,
+        2650,
+        120
+      ],
+      "shared_primary_ids": []
+    },
+    {
+      "views": [
+        "R10",
+        "R11"
+      ],
+      "intersection": [
+        4100,
+        8720,
+        4350,
+        510
+      ],
+      "shared_primary_ids": [
+        "bridge_yong"
+      ]
+    }
+  ],
+  "pilot_anchor_comparison": [
+    {
+      "id": "ic_changhe_palace",
+      "pilot_anchor": [
+        6100,
+        3950
+      ],
+      "published_anchor": [
+        6100,
+        3950
+      ],
+      "matches": true
+    },
+    {
+      "id": "gate_xiyang",
+      "pilot_anchor": [
+        4400,
+        4750
+      ],
+      "published_anchor": [
+        4400,
+        4750
+      ],
+      "matches": true
+    },
+    {
+      "id": "ic_yongning",
+      "pilot_anchor": [
+        5400.0,
+        4940.0
+      ],
+      "published_anchor": [
+        5400.0,
+        4940.0
+      ],
+      "matches": true
+    },
+    {
+      "id": "ic_yushi",
+      "pilot_anchor": [
+        5450,
+        4335
+      ],
+      "published_anchor": [
+        5450,
+        4335
+      ],
+      "matches": true
+    },
+    {
+      "id": "ic_zhaoxuan",
+      "pilot_anchor": [
+        5450,
+        5430
+      ],
+      "published_anchor": [
+        5450,
+        5430
+      ],
+      "matches": true
+    },
+    {
+      "id": "ic_taiwei",
+      "pilot_anchor": [
+        5900,
+        4880
+      ],
+      "published_anchor": [
+        5900,
+        4880
+      ],
+      "matches": true
+    },
+    {
+      "id": "ic_yongkang",
+      "pilot_anchor": [
+        4720.0,
+        5195.0
+      ],
+      "published_anchor": [
+        4720.0,
+        5195.0
+      ],
+      "matches": true
+    },
+    {
+      "id": "ic_jingle",
+      "pilot_anchor": [
+        6750,
+        4870
+      ],
+      "published_anchor": [
+        6750,
+        4870
+      ],
+      "matches": true
+    },
+    {
+      "id": "bridge_yong",
+      "pilot_anchor": [
+        6100,
+        9000
+      ],
+      "published_anchor": [
+        6100,
+        9000
+      ],
+      "matches": true
+    },
+    {
+      "id": "gate_xuanyang",
+      "pilot_anchor": [
+        6100,
+        6800
+      ],
+      "published_anchor": [
+        6100,
+        6800
+      ],
+      "matches": true
+    },
+    {
+      "id": "v3_jingming",
+      "pilot_anchor": [
+        6900.0,
+        7620.0
+      ],
+      "published_anchor": [
+        6900.0,
+        7620.0
+      ],
+      "matches": true
+    }
+  ],
+  "primary_anchors_outside_all_R_views": [],
+  "prior_drawing_coverage": {
+    "mapped_or_grouped_records": 324,
+    "main_scene_records": 300,
+    "main_scene_node_or_compound_records": 113,
+    "temple_records": 86
+  },
+  "prior_register_only_ids": [
+    "ic_sanji_jinyang",
+    "xref_ningxiantang",
+    "water_yi",
+    "xref_chenghuang",
+    "li_fucai",
+    "house_yuanshikang",
+    "garden_zhuolong",
+    "excluded_luozhiyuan_house",
+    "li_yongan",
+    "w_shitasi_claim",
+    "e_shiguan",
+    "r_songgao",
+    "r_guankou",
+    "r_chanjian",
+    "outer_wards_scope"
+  ],
+  "findings": [
+    {
+      "id": "I24-01",
+      "classification": "baseline_input_risk",
+      "target": "luoyang-v23/data/scene.json",
+      "finding": "非发布工作 scene 只有3张街区页；已发布 deliverables/data/scene.json 有5张。",
+      "required_action": "以本清单指向的发布 scene 为只读输入；不可重新拼回较早的3页工作 scene。"
+    },
+    {
+      "id": "I24-02",
+      "classification": "inherited_display_gap",
+      "target": "build_plan.py bridge_scene() / base_roads[luosouth]",
+      "finding": "永桥图符范围 y=8850..9150；桥南御道从 y=9200 起，存在50绘图单位的图符接续断口。桥锚点仍为(6100,9000)，跨洛水中心一致。",
+      "geometry": {
+        "bridge_anchor": [
+          6100,
+          9000
+        ],
+        "bridge_south_symbol_end": [
+          6100,
+          9150
+        ],
+        "south_road_start": [
+          6100,
+          9200
+        ],
+        "drawing_gap": 50
+      },
+      "required_action": "不要把该继承断口当作新地图的历史断路；若以显示短接线处理，需记录为图符接续，不改变桥锚点或引入历史长度。"
+    },
+    {
+      "id": "I24-03",
+      "classification": "verified_local_topology",
+      "target": "bridge_jianchun / east_gushui_local / east_yangqu",
+      "finding": "建春石桥锚点(8130,3550)在南流谷水上；谷水终点与阳渠起点同为(8130,3650)。",
+      "required_action": "新样式应保留该拓扑和桥东西通行图符。不可把两桥改为同向图符。"
+    },
+    {
+      "id": "I24-04",
+      "classification": "verified_local_topology",
+      "target": "bridge_eaststone / bridge_north_avenue / bridge_eaststone_south_road",
+      "finding": "东石桥锚点(9250,3650)在阳渠上；旧桥图符北端3600、南端3700分别接北、南道路端点。",
+      "required_action": "更改图符大小时确认两端仍连接或以图式短接线衔接，不改变桥锚点。"
+    },
+    {
+      "id": "I24-05",
+      "classification": "inherited_evidence_limit",
+      "target": "gate_pingchang",
+      "finding": "平昌门有门位示意，但没有配套接门道路；现成数据不支持为齐整补上一条道路。",
+      "required_action": "保留为无新增道路的门符；门位本身仍属示意。"
+    },
+    {
+      "id": "I24-06",
+      "classification": "relation_not_road",
+      "target": "central_qianqiu_citygate_alignment",
+      "finding": "千秋门与城西阊阖之间只有后出文献关系线，不是道路；本条 note 明确如此。",
+      "required_action": "关系线与道路带保持不同画法，不因两门同高而补通连续道路。"
+    },
+    {
+      "id": "I24-07",
+      "classification": "sidecar_required",
+      "target": "losouth_market_unassigned / central_office_alternatives / east_taiwei_stupa_crossnote / south_baode_unassigned / market_unlocated_wards",
+      "finding": "这些 group 均位于 world 框，但原注已声明道路侧、地址或全局方位未定；框的图面位置会产生额外地理含义。",
+      "required_action": "移到相应分区侧栏或独立附记，并在登记中使用 sidebar/panel 坐标系。不得为维持300条主图覆盖而强保为地点。"
+    },
+    {
+      "id": "I24-08",
+      "classification": "symbol_count_risk",
+      "target": "build_plan.py bridge_scene() / v3_yong_huabiao",
+      "finding": "旧桥旁在x=6200的南北岸各画一个圆点，容易被理解为总数恰为二且均在桥东。",
+      "required_action": "依v2.4样板转为两岸归属旁注，避免新增数量与桥侧断言。"
+    },
+    {
+      "id": "I24-09",
+      "classification": "details_semantics_change",
+      "target": "detail_regions D01 / pilot D01,D07,S06",
+      "finding": "旧D01是母图永宁院内裁切；样板D01为四邻地理栏加独立内部关系栏，不能再将整页当连续母图裁切。D07为新增，D05仍保留区域用途。",
+      "required_action": "sheet registry 明确 mixed geographic/relationship panels；只用地理栏作拼接。新增S06对应R11视窗。"
+    },
+    {
+      "id": "I24-10",
+      "classification": "coverage_not_geometry",
+      "target": "drawing-register.json / verification.json",
+      "finding": "旧版324条画入图或名录，15条仅登记；300条world引用、113条world节点/compound的数值不应成为新图式必须维持的地图点数。",
+      "required_action": "完整保留339条原记录；允许未定位项转图外，但每条须记录显示去向。原来86条T编号寺院在至少一张图/名录可读，不能静默丢失。"
+    }
+  ],
+  "validation_specification": [
+    {
+      "check": "frozen_inputs",
+      "expected": {
+        "scene.json": "7abe14df6c58296fdf623cfec5b6334c2b7dc8661836846c9885b92c6ccefce4",
+        "places.json": "c03a0d906578fda85e2ac9d9e0063bf37ce19cfdbb204c2403f4af55b8ca5e28",
+        "prosperity_overrides.json": "7db1956a383638d948ceb1db980c6805420240fdfedda9a193931dce6c577290"
+      },
+      "meaning": "发布快照与339条原记录不改写"
+    },
+    {
+      "check": "source_id_set",
+      "expected_count": 339,
+      "meaning": "新登记覆盖原ID全集；没有凭图式新造历史实体"
+    },
+    {
+      "check": "primary_anchors",
+      "reference": "primary_world_anchors",
+      "meaning": "仍在世界地图显示的同一对象使用原锚点；转旁注要登记为demoted_to_sidecar而不是挪到另一世界坐标"
+    },
+    {
+      "check": "regional_windows",
+      "reference": "views.regions",
+      "meaning": "11个R视窗保留；同一对象在交叠区由同一母图裁切，侧栏不能当作世界坐标参与拼接"
+    },
+    {
+      "check": "pilot_anchors",
+      "reference": "pilot_anchor_comparison",
+      "meaning": "上轮11个样板锚点均与发布快照吻合"
+    },
+    {
+      "check": "topology_regression",
+      "finding_ids": [
+        "I24-02",
+        "I24-03",
+        "I24-04",
+        "I24-05",
+        "I24-06"
+      ],
+      "meaning": "保留桥水跨越/道路连接与有意未接通处，区分显示接续与新的历史道路"
+    },
+    {
+      "check": "coverage_register",
+      "reference": "prior_register_only_ids",
+      "meaning": "所有339项有新显示去向或明确register_only；不得以300或113为须恢复的地图点配额"
+    },
+    {
+      "check": "separate_frames",
+      "meaning": "A–D、D01右栏、D07构成目录、S06关系目录使用独立坐标；不得进母图世界距离"
+    },
+    {
+      "check": "pdf_visual_checks",
+      "meaning": "最终母图、11区、六个街区及新旧详图至少检查缩小可读性、标签裁切、桥道接续和旁注溢出；源数据计数不能代替图面审查"
+    }
+  ]
+}

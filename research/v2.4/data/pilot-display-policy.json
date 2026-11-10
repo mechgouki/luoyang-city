@@ -1,0 +1,148 @@
+{
+  "version": "2.4-pilot-1",
+  "complete_city_release": false,
+  "baseline": "v2.3 published scene",
+  "coordinate_policy": "drawing coordinates only; geographic coordinates remain null; standalone panels use independent frames",
+  "baseline_feature_count": 246,
+  "geographic_coordinates_added": false,
+  "baseline_geometry_modified": false,
+  "temporal_scope": "516 to before the Heyin incident in 528; documentary composite",
+  "views": [
+    {
+      "sheet": "D01",
+      "bbox": [
+        4350,
+        3850,
+        2860,
+        2200
+      ],
+      "scope": "Yongning and documented neighbours; selected theme"
+    },
+    {
+      "sheet": "D07",
+      "bbox": [
+        5250,
+        6410,
+        3100,
+        2810
+      ],
+      "scope": "new Jingming temple-level theme; D05 retained"
+    },
+    {
+      "sheet": "S06",
+      "bbox": [
+        4100,
+        8720,
+        4350,
+        2230
+      ],
+      "scope": "same R11 viewport; nonspatial items moved to sidecars"
+    }
+  ],
+  "anchors": {
+    "ic_changhe_palace": {
+      "xy": [
+        6100,
+        3950
+      ],
+      "basis": "unchanged v2.3 gate anchor"
+    },
+    "gate_xiyang": {
+      "xy": [
+        4400,
+        4750
+      ],
+      "basis": "unchanged v2.3 gate anchor"
+    },
+    "ic_yongning": {
+      "xy": [
+        5400.0,
+        4940.0
+      ],
+      "basis": "unchanged v2.3 display anchor; not geographic coordinates"
+    },
+    "ic_yushi": {
+      "xy": [
+        5450,
+        4335
+      ],
+      "basis": "unchanged v2.3 display anchor; not geographic coordinates"
+    },
+    "ic_zhaoxuan": {
+      "xy": [
+        5450,
+        5430
+      ],
+      "basis": "unchanged v2.3 display anchor; not geographic coordinates"
+    },
+    "ic_taiwei": {
+      "xy": [
+        5900,
+        4880
+      ],
+      "basis": "unchanged v2.3 display anchor; not geographic coordinates"
+    },
+    "ic_yongkang": {
+      "xy": [
+        4720.0,
+        5195.0
+      ],
+      "basis": "unchanged v2.3 display anchor; not geographic coordinates"
+    },
+    "ic_jingle": {
+      "xy": [
+        6750,
+        4870
+      ],
+      "basis": "unchanged v2.3 display anchor; not geographic coordinates"
+    },
+    "bridge_yong": {
+      "xy": [
+        6100,
+        9000
+      ],
+      "basis": "unchanged v2.3 bridge anchor"
+    },
+    "gate_xuanyang": {
+      "xy": [
+        6100,
+        6800
+      ],
+      "basis": "unchanged v2.3 gate anchor"
+    },
+    "v3_jingming": {
+      "xy": [
+        6900.0,
+        7620.0
+      ],
+      "basis": "unchanged v2.3 display anchor; not geographic coordinates"
+    }
+  },
+  "rendering_changes": [
+    "temple type mark distinguished from tower and hall",
+    "no building bay grids",
+    "Yongning detailed internal relationships shown in a separate nonscale inset",
+    "Jingming pools, water-power facilities, and tower do not receive internal map positions",
+    "Sitong/Yongqiao market displayed outside map because road side is not recorded",
+    "Yuanqiu is a direction cue, not a restored altar footprint",
+    "two shores with huabiao does not become a total count of two",
+    "colour encodes functional type; dating and interpretation use text"
+  ],
+  "reproduction": "python3 build_pilot.py; requires Inkscape, Pillow, pypdf, Noto CJK fonts, and DejaVu fonts",
+  "third_party_images": [
+    {
+      "file": "heijo-late-2016.jpg",
+      "use": "attributed low-resolution scholarly comparison; no redistribution of original report"
+    },
+    {
+      "file": "maynooth-map2.png",
+      "license": "CC BY-NC 4.0",
+      "credit": "Arnold Horner, IHTA no.7, Maynooth, Map 2, RIA, 1995"
+    },
+    {
+      "file": "plos-fig15.png",
+      "license": "CC BY",
+      "credit": "Sun R, Liu W (2025), PLOS ONE 20(5): e0320159, Fig. 15"
+    }
+  ]
+}

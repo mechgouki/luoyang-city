@@ -1,0 +1,908 @@
+{
+  "status": "S06 pilot constraints; no coordinates added",
+  "baseline": "luoyang-v23/deliverables/data/scene.json",
+  "constraints_count": 25,
+  "original_records_modified": false,
+  "source_verification": {
+    "local_xml": "/workspace/scratch/3705edbfbae5/luoyang-v11/research/B12n0077.xml",
+    "xml_id": "B12n0077",
+    "edition_header_date": "2025-01-30 02:14:01 +0800",
+    "sha256": "0b9513c84e3590a0a74cb5e6840d4e5225719a228faed18e4654ac244a78efc2",
+    "method": "Manually inspected lb lines; first and last referenced lb existence checked programmatically. Quotations separate ancient text from Zhou inline commentary."
+  },
+  "baseline_feature_keys": [
+    "losouth_west_wards",
+    "losouth_four_wards",
+    "losouth_ward_temples",
+    "losouth_guizheng_market",
+    "losouth_four_lodgings",
+    "losouth_animals",
+    "losouth_market_unassigned"
+  ],
+  "must_remove_or_reframe_as_annotation": [
+    {
+      "feature_key": "losouth_market_unassigned",
+      "reason": "只有洛水南的方位，不可保留图右位置给人道东地点的印象。"
+    },
+    {
+      "feature_key": "losouth_guizheng_market",
+      "reason": "鱼鳖市与萧宝夤宅仅知归正里所属，不能转为独立里内点位或地块。"
+    },
+    {
+      "feature_key": "losouth_ward_temples",
+      "reason": "两寺分别属于不同里，当前上下名录行不是地理顺序；宅寺转换留在同一地点身份层。"
+    },
+    {
+      "feature_key": "losouth_animals",
+      "reason": "仅道东归属、内部无序，另有动物抵京时层条件；不能增画建筑院落或动物位置。"
+    },
+    {
+      "special_layer": "bridge_scene",
+      "reason": "两岸华表的符号不能被解释为总数恰为二或桥东固定两点。"
+    },
+    {
+      "entity_id": "altar_yuanqiu",
+      "reason": "仅示馆里以南方向，不将 platform 图符理解为坛基形制。"
+    }
+  ],
+  "display_locator_corrections": [
+    {
+      "entity_id": "market_fish",
+      "old": "p0132a11–14",
+      "new": "p0132a12–15",
+      "reason": "鱼鳖市名称在 a15。"
+    },
+    {
+      "entity_id": "v3_guizheng",
+      "old": "override p0161a01; places p0161a06–08",
+      "new": "p0161a07–09; 改寺核心 a08",
+      "reason": "来降与宅改寺叙述在 a07–08，后字补校说明延至 a09。"
+    },
+    {
+      "entity_id": "house_xiaobaoyin",
+      "old": "p0161a01–06",
+      "new": "旧宅 p0161a04–05; 迁居 p0161a06–07",
+      "reason": "迁永安里文字位于 a07。"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "S06-01",
+      "title": "永桥是跨洛水浮桥",
+      "entity_ids": [
+        "bridge_yong",
+        "luoshui"
+      ],
+      "baseline_feature_keys": [],
+      "relation": {
+        "type": "crosses",
+        "subject": "bridge_yong",
+        "object": "luoshui"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0158a06–07",
+        "quote": "至洛水上，作浮橋，……所謂永橋也。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "main_map_bridge_symbol",
+      "limits": [
+        "桥长、桥面宽度、桥墩或舟列数、岸形均未由此句确定。"
+      ],
+      "implementation_note": "由 base_scene 的洛水与 bridge_scene 同时处理；不得另造重复桥。"
+    },
+    {
+      "id": "S06-02",
+      "title": "宣阳门外至永桥四里仅保留原单位",
+      "entity_ids": [
+        "bridge_yong",
+        "gate_xuanyang"
+      ],
+      "baseline_feature_keys": [],
+      "relation": {
+        "type": "textual_distance",
+        "subject": "bridge_yong",
+        "reference": "gate_xuanyang",
+        "distance_text": "门外四里"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0158a06–08",
+        "quote": "宣陽門外四里，至洛水上，作浮橋，……所謂永橋也。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "annotation_original_distance",
+      "limits": [
+        "不换算为当前像素或米制距离；量距起讫点未细述。"
+      ],
+      "implementation_note": "周注引其他记述有城南五里、七里，不得当作同一量距的独立精密数据平均。"
+    },
+    {
+      "id": "S06-03",
+      "title": "南北岸均有华表",
+      "entity_ids": [
+        "v3_yong_huabiao",
+        "bridge_yong",
+        "luoshui"
+      ],
+      "baseline_feature_keys": [],
+      "relation": {
+        "type": "on_both_banks",
+        "subject": "v3_yong_huabiao",
+        "reference": "bridge_yong"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0160a04–05",
+        "quote": "南北兩岸有華表，……舉高二十丈，華表上作鳳凰似欲沖天勢。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "bank_membership_annotation",
+      "limits": [
+        "正文所述两岸不等于总数恰为两座；两圆点若保留须为岸别符号，不能作为总数。",
+        "不定华表在桥的东侧或西侧。"
+      ],
+      "implementation_note": "周注引《元河南志》作有四华表；数量分歧留在校注，不混入正文。"
+    },
+    {
+      "id": "S06-04",
+      "title": "四夷馆里区域的四个方位界限",
+      "entity_ids": [
+        "road_siyi",
+        "bridge_yong",
+        "altar_yuanqiu",
+        "luoshui",
+        "water_yi"
+      ],
+      "baseline_feature_keys": [],
+      "relation": {
+        "type": "regional_context",
+        "south_of": "bridge_yong",
+        "north_of": "altar_yuanqiu",
+        "between": [
+          "water_yi",
+          "luoshui"
+        ]
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0160a06–08",
+        "quote": "永橋以南，圜丘以北，伊洛之間，夾御道，東有四夷館……道西有四夷里。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "main_map_relative_context",
+      "limits": [
+        "不画闭合郭墙；伊水只给区域参照，不补精确河槽。",
+        "桥南御道同宣阳主轴连续为解释，不能由此固定直线及角度。"
+      ]
+    },
+    {
+      "id": "S06-05",
+      "title": "御道东四馆",
+      "entity_ids": [
+        "road_siyi",
+        "guan_jinling",
+        "guan_yanran",
+        "guan_fusang",
+        "guan_yanzi"
+      ],
+      "baseline_feature_keys": [
+        "losouth_four_lodgings"
+      ],
+      "relation": {
+        "type": "east_of",
+        "subjects": [
+          "guan_jinling",
+          "guan_yanran",
+          "guan_fusang",
+          "guan_yanzi"
+        ],
+        "object": "road_siyi"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0160a07–13",
+        "quote": "東有四夷館，一曰金陵，二曰燕然，三曰扶桑，四曰崦嵫。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "周氏校正文本；据《元河南志》补正馆名及馆里关系，校释在 a08–13。",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "main_map_side_group",
+      "limits": [
+        "各馆具体坐标、南北序列、占地、门位未记。"
+      ]
+    },
+    {
+      "id": "S06-06",
+      "title": "御道西四里",
+      "entity_ids": [
+        "road_siyi",
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi"
+      ],
+      "baseline_feature_keys": [
+        "losouth_west_wards",
+        "losouth_four_wards"
+      ],
+      "relation": {
+        "type": "west_of",
+        "subjects": [
+          "li_guizheng",
+          "li_guide",
+          "li_muhua",
+          "li_muyi"
+        ],
+        "object": "road_siyi"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0160a07–13",
+        "quote": "道西有四夷里，一曰歸正，二曰歸德，三曰慕化，四曰慕義。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "周氏校正文本；校释在 a08–13。",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "main_map_side_group",
+      "limits": [
+        "四里边界与相互顺序未定；虚线矩形不能当坊墙。"
+      ]
+    },
+    {
+      "id": "S06-07",
+      "title": "馆里列举顺序不产生空间次序",
+      "entity_ids": [
+        "guan_jinling",
+        "guan_yanran",
+        "guan_fusang",
+        "guan_yanzi",
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi"
+      ],
+      "baseline_feature_keys": [
+        "losouth_four_lodgings",
+        "losouth_four_wards"
+      ],
+      "relation": {
+        "type": "nonspatial_list",
+        "groups": [
+          "four_lodgings",
+          "four_wards"
+        ]
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0160a07–08",
+        "quote": "一曰金陵，二曰燕然，三曰扶桑，四曰崦嵫。……一曰歸正，二曰歸德，三曰慕化，四曰慕義。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "unordered_name_list",
+      "limits": [
+        "不将一二三四排为北南顺序；不由排版创造一一正对。"
+      ],
+      "implementation_note": "这是对文字信息边界的判断，不声称古代实际没有任何序列。"
+    },
+    {
+      "id": "S06-08",
+      "title": "金陵馆到归正里的安置关联",
+      "entity_ids": [
+        "guan_jinling",
+        "li_guizheng"
+      ],
+      "baseline_feature_keys": [
+        "losouth_four_lodgings",
+        "losouth_four_wards"
+      ],
+      "relation": {
+        "type": "resettlement_association",
+        "from": "guan_jinling",
+        "to": "li_guizheng",
+        "group": "吴人",
+        "duration_text": "三年已后"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0160a14",
+        "quote": "吳人投國者，處金陵館。……三年已後，賜宅歸正里。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "nonspatial_association_inset",
+      "limits": [
+        "安置对应不是隔街正对；不推出街坊间距。"
+      ]
+    },
+    {
+      "id": "S06-09",
+      "title": "燕然馆到归德里的安置关联",
+      "entity_ids": [
+        "guan_yanran",
+        "li_guide"
+      ],
+      "baseline_feature_keys": [
+        "losouth_four_lodgings",
+        "losouth_four_wards"
+      ],
+      "relation": {
+        "type": "resettlement_association",
+        "from": "guan_yanran",
+        "to": "li_guide",
+        "group": "北夷",
+        "duration_text": "三年已后"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0161a10–11",
+        "quote": "北夷來附者處燕然館，……三年已後，賜宅歸德里。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "nonspatial_association_inset",
+      "limits": [
+        "三年规则属于本段记述，不自动扩展到东、西夷的段落。",
+        "不画迁居路线或对应街口。"
+      ]
+    },
+    {
+      "id": "S06-10",
+      "title": "扶桑馆与慕化里的安置关联",
+      "entity_ids": [
+        "guan_fusang",
+        "li_muhua"
+      ],
+      "baseline_feature_keys": [
+        "losouth_four_lodgings",
+        "losouth_four_wards"
+      ],
+      "relation": {
+        "type": "resettlement_association",
+        "from": "guan_fusang",
+        "to": "li_muhua",
+        "group": "东夷"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0162a08–09",
+        "quote": "東夷來附者，處扶桑館，……賜宅慕化里。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "nonspatial_association_inset",
+      "limits": [
+        "本句未记三年期限；不补年限，不画跨路正对。"
+      ]
+    },
+    {
+      "id": "S06-11",
+      "title": "崦嵫馆与慕义里的安置关联",
+      "entity_ids": [
+        "guan_yanzi",
+        "li_muyi"
+      ],
+      "baseline_feature_keys": [
+        "losouth_four_lodgings",
+        "losouth_four_wards"
+      ],
+      "relation": {
+        "type": "resettlement_association",
+        "from": "guan_yanzi",
+        "to": "li_muyi",
+        "group": "西夷"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0162a09–10",
+        "quote": "西夷來附者，處崦嵫館，……賜宅慕義里。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "nonspatial_association_inset",
+      "limits": [
+        "本句未记三年期限；不补年限，不画跨路正对。"
+      ]
+    },
+    {
+      "id": "S06-12",
+      "title": "归正里民间称吴人坊",
+      "entity_ids": [
+        "li_guizheng"
+      ],
+      "baseline_feature_keys": [
+        "losouth_four_wards"
+      ],
+      "relation": {
+        "type": "alias",
+        "subject": "li_guizheng",
+        "alias": "吴人坊"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 2,
+        "locator": "B12n0077 p0132a12–15",
+        "quote": "賜宅城南歸正里。民間號為吳人坊，南來投化者多居其內。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/2",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "group_annotation",
+      "limits": [
+        "里内家数不转成建筑栋数；不生成数千间房屋。"
+      ]
+    },
+    {
+      "id": "S06-13",
+      "title": "鱼鳖市是归正里巷市",
+      "entity_ids": [
+        "market_fish",
+        "li_guizheng"
+      ],
+      "baseline_feature_keys": [
+        "losouth_guizheng_market"
+      ],
+      "relation": {
+        "type": "within",
+        "subject": "market_fish",
+        "object": "li_guizheng"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 2,
+        "locator": "B12n0077 p0132a12–15",
+        "quote": "賜宅城南歸正里。……自立巷市。……所賣口味，多是水族，時人謂為魚鱉市也。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/2",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "membership_annotation",
+      "limits": [
+        "市场在里内，未给东西南北；不另设一个固定市口或街段。"
+      ],
+      "implementation_note": "准确名称所在行是 a15；旧 places 登记止于 a14，显示层本轮改用 a12–15，不覆盖原记录。"
+    },
+    {
+      "id": "S06-14",
+      "title": "四通市只知洛水南",
+      "entity_ids": [
+        "market_sitong",
+        "luoshui"
+      ],
+      "baseline_feature_keys": [
+        "losouth_market_unassigned"
+      ],
+      "relation": {
+        "type": "south_of",
+        "subject": "market_sitong",
+        "object": "luoshui"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0162a15",
+        "quote": "別立市於洛水南，……號曰四通市。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "nonspatial_luosouth_annotation",
+      "limits": [
+        "未记御道路侧与距桥距离；不能因现有名录框处于图右而保留为道东地点。"
+      ],
+      "implementation_note": "应从世界坐标名录框转入旁注/说明带。只保留洛水南的地理归属。"
+    },
+    {
+      "id": "S06-15",
+      "title": "永桥市是四通市别称",
+      "entity_ids": [
+        "market_sitong"
+      ],
+      "baseline_feature_keys": [
+        "losouth_market_unassigned"
+      ],
+      "relation": {
+        "type": "alias",
+        "subject": "market_sitong",
+        "alias": "永桥市"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0162a15–0163a01",
+        "quote": "號曰四通市。民間謂為永橋市。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "single_entity_multiple_names",
+      "limits": [
+        "不能把两个名称画成两个市场。"
+      ]
+    },
+    {
+      "id": "S06-16",
+      "title": "鱼鳖市与四通市身份未决",
+      "entity_ids": [
+        "market_fish",
+        "market_sitong"
+      ],
+      "baseline_feature_keys": [
+        "losouth_guizheng_market",
+        "losouth_market_unassigned"
+      ],
+      "relation": {
+        "type": "identity_not_established",
+        "entities": [
+          "market_fish",
+          "market_sitong"
+        ]
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0162a15–0163a03",
+        "quote": "別立市於洛水南，……伊洛之魚，多於此賣。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "comparative_note",
+      "limits": [
+        "共同售鱼与同处洛南不足以证明同一地点；也不据此断言必是两个完全无关市场。"
+      ],
+      "implementation_note": "并读卷二 p0132a12–15 的归正里巷市；保留两实体及身份待考。"
+    },
+    {
+      "id": "S06-17",
+      "title": "萧正德先处馆后筑宅",
+      "entity_ids": [
+        "house_xiaozhengde",
+        "guan_jinling",
+        "li_guizheng"
+      ],
+      "baseline_feature_keys": [
+        "losouth_ward_temples",
+        "losouth_four_lodgings"
+      ],
+      "relation": {
+        "type": "residence_sequence",
+        "from": "guan_jinling",
+        "to": "house_xiaozhengde",
+        "within": "li_guizheng",
+        "date_text": "正光四年中"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0161a07–08",
+        "quote": "正光四年中，蕭衍子西豐侯蕭正德來降，處金陵館，為築宅歸正里。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "temporal_membership_inset",
+      "limits": [
+        "处馆与宅第为不同居住阶段；没有里内具体位置。",
+        "来降年代正史异记尚需另校，不在地图上强决。"
+      ]
+    },
+    {
+      "id": "S06-18",
+      "title": "萧正德宅改归正寺，改寺时点未证",
+      "entity_ids": [
+        "house_xiaozhengde",
+        "v3_guizheng",
+        "li_guizheng"
+      ],
+      "baseline_feature_keys": [
+        "losouth_ward_temples"
+      ],
+      "relation": {
+        "type": "converted_from",
+        "subject": "v3_guizheng",
+        "object": "house_xiaozhengde",
+        "within": "li_guizheng"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0161a08–09",
+        "quote": "後正德捨宅為歸正寺。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "古代记述，周氏据《元河南志》补“后”字；补字说明在 a08–09。",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "same_site_temporal_annotation",
+      "limits": [
+        "不为寺与宅造两个院址；改寺年未明，不能直接画成盛时确定寺态。"
+      ],
+      "implementation_note": "原 prosperity_overrides 的 p0161a01 不含此事件；本轮显示说明用 a08–09。"
+    },
+    {
+      "id": "S06-19",
+      "title": "萧宝夤旧宅在归正里",
+      "entity_ids": [
+        "house_xiaobaoyin",
+        "li_guizheng"
+      ],
+      "baseline_feature_keys": [
+        "losouth_guizheng_market"
+      ],
+      "relation": {
+        "type": "within",
+        "subject": "house_xiaobaoyin",
+        "object": "li_guizheng"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0161a04–05",
+        "quote": "封會稽公，為築宅於歸正里，後進爵為齊王。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "membership_annotation",
+      "limits": [
+        "宅与鱼鳖市的相对方位未记，不能画成相邻地块。"
+      ]
+    },
+    {
+      "id": "S06-20",
+      "title": "萧宝夤后迁城内永安里",
+      "entity_ids": [
+        "house_xiaobaoyin",
+        "li_yongan"
+      ],
+      "baseline_feature_keys": [
+        "losouth_guizheng_market"
+      ],
+      "relation": {
+        "type": "later_moved_to",
+        "subject": "house_xiaobaoyin",
+        "destination": "li_yongan"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0161a06–07",
+        "quote": "求入城內，世宗從之，賜宅於永安里。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "temporal_annotation",
+      "limits": [
+        "城内永安里不在洛南；不能沿用洛南旧宅同址。"
+      ],
+      "implementation_note": "原 places 迁居摘录标 a01–06，迁居核心在 a07；显示层按 a06–07 标注。"
+    },
+    {
+      "id": "S06-21",
+      "title": "菩提寺属于慕义里",
+      "entity_ids": [
+        "v3_puti",
+        "li_muyi"
+      ],
+      "baseline_feature_keys": [
+        "losouth_ward_temples"
+      ],
+      "relation": {
+        "type": "within",
+        "subject": "v3_puti",
+        "object": "li_muyi"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0165a02",
+        "quote": "菩提寺，西域胡人所立也，在慕義里。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "membership_annotation",
+      "limits": [
+        "未记院内塔殿及里内方位；沿用现有寺态年代未定，不自动填入盛时已建。"
+      ]
+    },
+    {
+      "id": "S06-22",
+      "title": "白象、狮子二坊在桥南道东",
+      "entity_ids": [
+        "fang_whiteelephant",
+        "fang_lion",
+        "bridge_yong",
+        "road_siyi"
+      ],
+      "baseline_feature_keys": [
+        "losouth_animals"
+      ],
+      "relation": {
+        "type": "relative_bearing",
+        "subjects": [
+          "fang_whiteelephant",
+          "fang_lion"
+        ],
+        "south_of": "bridge_yong",
+        "east_of": "road_siyi"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0163a04–05",
+        "quote": "永橋南道東有白象獅子二坊。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "side_group_with_time_condition",
+      "limits": [
+        "二坊内部次序未记；不据列名排成南北。",
+        "不能把叙事中的动物转成无年代条件的盛时院内图像。"
+      ]
+    },
+    {
+      "id": "S06-23",
+      "title": "白象迁坊属于太后时代记述",
+      "entity_ids": [
+        "fang_whiteelephant"
+      ],
+      "baseline_feature_keys": [
+        "losouth_animals"
+      ],
+      "relation": {
+        "type": "event",
+        "subject": "fang_whiteelephant",
+        "event": "太后徙象于此坊"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0163a11–14",
+        "quote": "常養象於乘黃曹，……百姓驚怖，奔走交馳。太后遂徙象於此坊。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "temporal_note",
+      "limits": [
+        "不能把永平二年献象日期当作迁入本坊的日期；迁坊月日未给。"
+      ]
+    },
+    {
+      "id": "S06-24",
+      "title": "狮子抵京晚于当前盛时截点",
+      "entity_ids": [
+        "fang_lion"
+      ],
+      "baseline_feature_keys": [
+        "losouth_animals"
+      ],
+      "relation": {
+        "type": "later_event",
+        "subject": "fang_lion",
+        "event": "狮子始达京师",
+        "date_text": "永安末；周注引永安三年六月"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0164a05–06",
+        "quote": "永安末，醜奴破滅，始達京師。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "正文永安末；周氏校注引《魏书》永安三年六月以释年代。",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "later_time_annotation",
+      "limits": [
+        "530 年相关抵京事件不能表现为 528 年前已在坊中的狮子盛况。",
+        "此条限制动物事件的时层，不独立证明坊名最早出现年份。"
+      ]
+    },
+    {
+      "id": "S06-25",
+      "title": "圜丘仅为南方区域界限",
+      "entity_ids": [
+        "altar_yuanqiu",
+        "road_siyi"
+      ],
+      "baseline_feature_keys": [],
+      "relation": {
+        "type": "south_of_region",
+        "subject": "altar_yuanqiu",
+        "object": "四夷馆里区域"
+      },
+      "source": {
+        "work": "洛阳伽蓝记校释",
+        "edition": "周祖谟校释，CBETA B12n0077",
+        "volume": 3,
+        "locator": "B12n0077 p0160a06–08",
+        "quote": "永橋以南，圜丘以北，伊洛之間，夾御道。",
+        "quote_policy": "摘录原文，省略穿插校注；省略号明示删节",
+        "text_layer": "杨衒之叙述；以周祖谟校释文本为读取本",
+        "url": "https://deerpark.app/cbeta/B0077/3",
+        "locator_verified_in_local_xml": true
+      },
+      "render_mode": "direction_label_only",
+      "limits": [
+        "不能由名称画确定圆形或方形坛基；不定距桥距离。"
+      ],
+      "implementation_note": "现有 platform 图符只允许读为方向参照；首版可采用文字方向记号。"
+    }
+  ]
+}

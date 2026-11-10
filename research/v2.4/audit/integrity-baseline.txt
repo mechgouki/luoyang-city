@@ -1,0 +1,52 @@
+北魏洛阳 v2.4 全城推广：独立数据与拼接基准核验
+
+发布输入为 luoyang-v23/deliverables/data。scene 246 features，places 339条，11张R区域、6张D详图、5张S街区、3张独立关系附图，加A未定位名录。旧全册27页；按D01替换、D07与S06新增，地图部分应为29页；图例等另计。
+
+原实体ID与feature key无重复，世界features中未发现未知ID引用；原地理coordinates全部为空。上轮样板的11个锚点逐个与发布快照吻合。
+
+I24-01 luoyang-v23/data/scene.json
+非发布工作 scene 只有3张街区页；已发布 deliverables/data/scene.json 有5张。
+处理：以本清单指向的发布 scene 为只读输入；不可重新拼回较早的3页工作 scene。
+
+I24-02 build_plan.py bridge_scene() / base_roads[luosouth]
+永桥图符范围 y=8850..9150；桥南御道从 y=9200 起，存在50绘图单位的图符接续断口。桥锚点仍为(6100,9000)，跨洛水中心一致。
+处理：不要把该继承断口当作新地图的历史断路；若以显示短接线处理，需记录为图符接续，不改变桥锚点或引入历史长度。
+
+I24-03 bridge_jianchun / east_gushui_local / east_yangqu
+建春石桥锚点(8130,3550)在南流谷水上；谷水终点与阳渠起点同为(8130,3650)。
+处理：新样式应保留该拓扑和桥东西通行图符。不可把两桥改为同向图符。
+
+I24-04 bridge_eaststone / bridge_north_avenue / bridge_eaststone_south_road
+东石桥锚点(9250,3650)在阳渠上；旧桥图符北端3600、南端3700分别接北、南道路端点。
+处理：更改图符大小时确认两端仍连接或以图式短接线衔接，不改变桥锚点。
+
+I24-05 gate_pingchang
+平昌门有门位示意，但没有配套接门道路；现成数据不支持为齐整补上一条道路。
+处理：保留为无新增道路的门符；门位本身仍属示意。
+
+I24-06 central_qianqiu_citygate_alignment
+千秋门与城西阊阖之间只有后出文献关系线，不是道路；本条 note 明确如此。
+处理：关系线与道路带保持不同画法，不因两门同高而补通连续道路。
+
+I24-07 losouth_market_unassigned / central_office_alternatives / east_taiwei_stupa_crossnote / south_baode_unassigned / market_unlocated_wards
+这些 group 均位于 world 框，但原注已声明道路侧、地址或全局方位未定；框的图面位置会产生额外地理含义。
+处理：移到相应分区侧栏或独立附记，并在登记中使用 sidebar/panel 坐标系。不得为维持300条主图覆盖而强保为地点。
+
+I24-08 build_plan.py bridge_scene() / v3_yong_huabiao
+旧桥旁在x=6200的南北岸各画一个圆点，容易被理解为总数恰为二且均在桥东。
+处理：依v2.4样板转为两岸归属旁注，避免新增数量与桥侧断言。
+
+I24-09 detail_regions D01 / pilot D01,D07,S06
+旧D01是母图永宁院内裁切；样板D01为四邻地理栏加独立内部关系栏，不能再将整页当连续母图裁切。D07为新增，D05仍保留区域用途。
+处理：sheet registry 明确 mixed geographic/relationship panels；只用地理栏作拼接。新增S06对应R11视窗。
+
+I24-10 drawing-register.json / verification.json
+旧版324条画入图或名录，15条仅登记；300条world引用、113条world节点/compound的数值不应成为新图式必须维持的地图点数。
+处理：完整保留339条原记录；允许未定位项转图外，但每条须记录显示去向。原来86条T编号寺院在至少一张图/名录可读，不能静默丢失。
+
+哈希：
+scene.json: 7abe14df6c58296fdf623cfec5b6334c2b7dc8661836846c9885b92c6ccefce4
+places.json: c03a0d906578fda85e2ac9d9e0063bf37ce19cfdbb204c2403f4af55b8ca5e28
+prosperity_overrides.json: 7db1956a383638d948ceb1db980c6805420240fdfedda9a193931dce6c577290
+
+验证策略见 JSON。113个主节点/建筑群/城门/桥锚点及区域交叠检查均已逐项记录。跨区域显示沿用同一锚点才可拼接，转入侧栏的对象不再作为地图点计算。未改动任何基准文件。
