@@ -29,25 +29,27 @@ jobs:
           node --check models-v26.js
           node --check models-v26-click.js
           node --check networks-v27.js
+          node --check portal-v28.js
       - name: Check spatial semantics and lossless normalization
         shell: bash
         run: |
           mkdir -p artifacts
           python -m unittest discover -s tests -p test_v26.py -v 2>&1 | tee artifacts/v26-semantic-tests.txt
           python -m unittest discover -s tests -p test_v27.py -v 2>&1 | tee artifacts/v27-semantic-tests.txt
-      - name: Build baseline, evidence, models and typed networks
+      - name: Build baseline, research and visible integrated release
         run: |
           python tools/build_site.py
           python tools/research_v25.py
           python tools/milestone_v26.py
           python tools/link_model_points_v26.py
           python tools/network_v27.py
+          python tools/portal_v28.py
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
           docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
           docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
-      - name: Exercise all existing and new website interactions
+      - name: Exercise all existing and visible-release interactions
         timeout-minutes: 8
         shell: bash
         run: |
@@ -59,6 +61,7 @@ jobs:
               python tests/browser_v25.py
               python tests/browser_v26.py
               python tests/browser_v27.py
+              python tests/browser_v28.py
             '
       - name: Preserve build and browser evidence
         if: always()
@@ -111,7 +114,7 @@ jobs:
           docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
           mkdir -p artifacts
           docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
-      - name: Exercise deployed baseline, v2.5, v2.6 and v2.7
+      - name: Exercise deployed baseline through v2.8 including old-cache isolation
         timeout-minutes: 8
         shell: bash
         env:
@@ -126,6 +129,7 @@ jobs:
               python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser
               python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser
               python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser
+              python tests/browser_v28.py --base-url "$SITE_URL" --output artifacts/live-v28-browser
             '
       - name: Preserve live acceptance evidence
         if: always()
