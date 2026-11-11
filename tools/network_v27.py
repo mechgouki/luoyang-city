@@ -1,33 +1,22 @@
 #!/usr/bin/env python3
-"""Textual flow/route/crossing networks, explicit joins, and scoped event windows.
-
-No legacy map coordinates, no inferred year-round passability, no persistence
-of a damage event into an unobserved later state. Only the admitted edge types
-can enter a path certificate. Same-name reaches are not silently identified.
-"""
+"""Typed textual networks and scoped events. No map coordinates or persistence."""
 from pathlib import Path
 from collections import deque, Counter
 from itertools import product
-import csv, hashlib, html, io, json
-
-ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'_site'
-
-def load(path): return json.loads(path.read_text(encoding='utf-8'))
-def write_json(path,obj):
- path.parent.mkdir(parents=True,exist_ok=True)
- path.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+import csv,hashlib,html,io,json,zipfile
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'_site'
+def load(p):return json.loads(p.read_text(encoding='utf-8'))
+def write_json(p,obj):
+ p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
 def network():
  nodes={};edges=[]
- def node(i,name,kind='water',maps=()):
-  nodes[i]={'id':i,'name':name,'kind':kind,'map_ids':list(maps),'geometry':None}
- def edge(i,a,b,kind,evidence,family,condition=None,scope=None):
-  edges.append({'id':i,'a':a,'b':b,'kind':kind,'evidence':[evidence],
-   'families':family.split('+'),'requires':[condition] if condition else [],
-   'route_scope':scope,'time_scope':'passage_specific_not_synchronized',
-   'meaning':'方向只表示文本所述水流或叙述行进，不是比例、距离或永久状态。'})
+ def node(i,name,kind='water',maps=()):nodes[i]={'id':i,'name':name,'kind':kind,'map_ids':list(maps),'geometry':None}
+ def edge(i,a,b,kind,ev,family,condition=None,scope=None):
+  edges.append({'id':i,'a':a,'b':b,'kind':kind,'evidence':[ev],'families':family.split('+'),
+   'requires':[condition] if condition else [],'route_scope':scope,'time_scope':'passage_specific_not_synchronized',
+   'meaning':'仅为文字关系；不证明尺度、全年通行或永久状态。'})
  def chain(prefix,seq,ev,fam,kind='flow',scope=None):
   for n,(a,b) in enumerate(zip(seq,seq[1:]),1):edge(prefix+str(n),a,b,kind,ev,fam,scope=scope)
  for i,name,maps in [
@@ -50,21 +39,22 @@ def network():
  for i,name,maps in [
   ('L_bridge_jian','L·建春门石桥',['bridge_jianchun']),('W_bridge_jian','W·建春门石桥',['bridge_jianchun']),
   ('L_bridge_east','L·东石桥',['bridge_eaststone']),('W_bridge_mashi','W·马市石桥',[]),
-  ('L_yong','L·永桥',['bridge_yong'])]:node(i,name,'bridge',maps)
+  ('L_yong','L·永桥',['bridge_yong']),('W_fuhang','W·洛水浮桁提及',[])]:node(i,name,'bridge',maps)
  for i,name,maps in [
   ('L_jian_gate','L·建春门',['gate_jianchun']),('L_eastroad','L·东桥北大道',['road_eaststone_north']),
   ('L_xuanyang','L·宣阳门',['gate_xuanyang']),('L_northbank','L·洛北岸',[]),
   ('L_southbank','L·洛南岸',[]),('L_siyi','L·桥南御道',['road_siyi']),
-  ('L_jingming','L·景明寺集像',['v3_jingming']),('L_palgate','L·宫前受散花',['ic_changhe_palace'])]:node(i,name,'route',maps)
- chain('LF', ['L_jian','L_yang'],'N01','L')
- chain('WF', ['W_north','W_jian','W_yang_east','W_mashi'],'N04','W')
- chain('WU', ['W_upper','W_wangxian','W_qianqiu'],'N05','W')
+  ('L_jingming','L·景明寺集像',['v3_jingming']),('L_palgate','L·宫前受散花',['ic_changhe_palace']),
+  ('W_gate_xuanyang','W·宣阳门提及',[]),('W_gate_palace','W·宫阊阖门提及',[])]:node(i,name,'route',maps)
+ chain('LF',['L_jian','L_yang'],'N01','L')
+ chain('WF',['W_north','W_jian','W_yang_east','W_mashi'],'N04','W')
+ chain('WU',['W_upper','W_wangxian','W_qianqiu'],'N05','W')
  edge('WP','W_qianqiu','W_pool','flow','N05','W')
- chain('WC', ['W_qianqiu','W_palace','W_tongtuo'],'N06','W')
- chain('WR', ['W_tongtuo','W_ritual','W_nanqu'],'N07','W')
- chain('WI', ['W_ximing','W_inner','W_she','W_miao','W_qing','W_yang_qing'],'N08','W')
- chain('WE', ['W_tongtuo','W_sima','W_taicang','W_dongbridge','W_yang_dong'],'N09','W')
- chain('WS', ['W_ximing','W_jinyang','W_xuanyang','W_lingtai','W_mingtang','W_kaiyang'],'N10','W')
+ chain('WC',['W_qianqiu','W_palace','W_tongtuo'],'N06','W')
+ chain('WR',['W_tongtuo','W_ritual','W_nanqu'],'N07','W')
+ chain('WI',['W_ximing','W_inner','W_she','W_miao','W_qing','W_yang_qing'],'N08','W')
+ chain('WE',['W_tongtuo','W_sima','W_taicang','W_dongbridge','W_yang_dong'],'N09','W')
+ chain('WS',['W_ximing','W_jinyang','W_xuanyang','W_lingtai','W_mingtang','W_kaiyang'],'N10','W')
  edge('OVERFLOW','L_changfen','L_luowest','overflow','N11','L','FLOOD')
  chain('RE',['L_jian_gate','L_bridge_east','L_eastroad'],'N02','L','route','east_bridge')
  chain('RY',['L_xuanyang','L_northbank','L_yong','L_southbank','L_siyi'],'N12','L','route','yong_approach')
@@ -72,9 +62,9 @@ def network():
  edge('CJ','W_bridge_jian','W_jian','crossing','N04','W')
  edge('CM','W_bridge_mashi','W_mashi','crossing','N04','W')
  edge('CY','L_yong','L_luoyong','crossing','N12','L')
- edge('ALIGN','L_palgate','L_yong','alignment','N13','W')
- # Joins are deliberately excluded until selected. Bridge identity never
- # creates river edges. Water identity equates specific reach mentions only.
+ # W mentions remain independent from L named objects. Directional alignment
+ # is not a river edge, route edge, or identity assertion.
+ chain('ALIGN',['W_gate_palace','W_gate_xuanyang','W_fuhang'],'N13','W','alignment')
  edge('JOIN1','L_yang','W_yang_east','identity_water','N04','L+W','J1')
  edge('JOIN2','W_nanqu','W_inner','identity_water','N07','W','J2')
  edge('JOIN3','L_bridge_east','W_bridge_mashi','identity_bridge','N02','L+W','J3')
@@ -83,7 +73,7 @@ def network():
   {'title':'水经注：水流叙述次序','kind':'flow','nodes':['W_north','W_jian','W_yang_east','W_mashi'],'evidence':'N04'},
   {'title':'伽蓝记：独立水段；J1才与上列对接','kind':'flow','nodes':['L_jian','L_yang'],'evidence':'N01'},
   {'title':'出门、至桥、桥北道路：不是水流','kind':'route','nodes':['L_jian_gate','L_bridge_east','L_eastroad'],'evidence':'N02'},
-  {'title':'J3：东石桥与马市桥同体是候选，不自动合水','kind':'identity_bridge','nodes':['L_bridge_east','W_bridge_mashi'],'evidence':'N02'}],
+  {'title':'J3：东石桥与马市桥同体是候选，不自动合水','kind':'identity_bridge','nodes':['L_bridge_east','W_bridge_mashi'],'evidence':'N02 / N04'}],
  'palace':[
   {'title':'西部上渠与宫前夹路水段','kind':'flow','nodes':['W_upper','W_wangxian','W_qianqiu','W_palace','W_tongtuo'],'evidence':'N05 / N06'},
   {'title':'宫前西转所注南渠：J2未默认认定','kind':'flow','nodes':['W_tongtuo','W_ritual','W_nanqu'],'evidence':'N07'},
@@ -97,7 +87,7 @@ def network():
   {'title':'出宣阳至洛北岸、渡桥、进入桥南御道','kind':'route','nodes':['L_xuanyang','L_northbank','L_yong','L_southbank','L_siyi'],'evidence':'N12'},
   {'title':'四月行像路径：不并作全年通行','kind':'route','nodes':['L_jingming','L_xuanyang','L_palgate'],'evidence':'N14'},
   {'title':'跨河关系（横线不表示流向）','kind':'crossing','nodes':['L_yong','L_luoyong'],'evidence':'N12'},
-  {'title':'方向参照：南直浮桁，不是从宫门流进洛水','kind':'alignment','nodes':['L_palgate','L_yong'],'evidence':'N13'}]}
+  {'title':'W独立提及：对齐不等于汇流，浮桁未并为L永桥','kind':'alignment','nodes':['W_gate_palace','W_gate_xuanyang','W_fuhang'],'evidence':'N13'}]}
  return {'nodes':list(nodes.values()),'edges':edges,'diagram_rows':rows}
 
 QUERIES=[
@@ -128,8 +118,7 @@ def path(graph,q,enabled=(),families=('L','W')):
   n,proof,visited=queue.popleft()
   if n==q['end']:
    return {'status':'supported_under_conditions','edge_ids':[e['id'] for e in proof],'nodes':visited,
-    'evidence':sorted({p for e in proof for p in e['evidence']}),
-    'premises':sorted({p for e in proof for p in e['requires']}),
+    'evidence':sorted({p for e in proof for p in e['evidence']}),'premises':sorted({p for e in proof for p in e['requires']}),
     'qualification':'仅此文字模型内的路径；不证明全年通行、共时水文或精确几何。'}
   for target,e in adjacency.get(n,[]):
    if target not in seen:seen.add(target);queue.append((target,proof+[e],visited+[target]))
@@ -137,34 +126,30 @@ def path(graph,q,enabled=(),families=('L','W')):
   'qualification':'本组材料/前提未建立路径，不等于历史上不存在连接。'}
 
 def event_position(event,year):
- """Locate the EVENT in time; never propagate its postcondition to all years."""
+ """Locate the event; never propagate its postcondition to unobserved years."""
  a,b=event['start'],event['end']
  if a is None:return 'undated_reference'
  if year<a:return 'event_not_yet_in_recorded_window'
  if year>b:return 'past_event_later_state_unknown'
  return 'event_in_selected_year' if a==b else 'year_inside_uncertain_event_window'
 
-EVENT_LABELS={
- 'undated_reference':'叙述参照未定年',
- 'event_not_yet_in_recorded_window':'事件窗口在所选年之后；不判断对象当时是否存在',
- 'past_event_later_state_unknown':'事件窗口已过；此年状态仍须另证',
- 'event_in_selected_year':'原文事件记于此年（年内月日仍依原记）',
+EVENT_LABELS={'undated_reference':'叙述参照未定年','event_not_yet_in_recorded_window':'事件窗口在所选年之后；不判断对象当时是否存在',
+ 'past_event_later_state_unknown':'事件窗口已过；此年状态仍须另证','event_in_selected_year':'原文事件记于此年（年内月日仍依原记）',
  'year_inside_uncertain_event_window':'所选年落入事件日期区间；不能认定恰在此年发生'}
-
 PANEL_TITLES={'east':'建春两桥：水流、道路与桥名分开','palace':'宫前支渠：南渠接缝与两个出口','west':'城西—城南：沿流水次序与条件溢流','yong':'永桥两岸：通行、跨河与行像路径'}
 
 def diagram(panel,graph):
- esc=html.escape; names={n['id']:n['name'] for n in graph['nodes']}
+ esc=html.escape;names={n['id']:n['name'] for n in graph['nodes']}
  s='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000" role="img"><title>'+esc(PANEL_TITLES[panel])+'</title><desc>文本网络示意，不按地理比例；各行位置不表示实际南北，水流与通行不混合。</desc><style>text{font-family:system-ui,"Noto Sans CJK SC",sans-serif}</style><rect width="1500" height="1000" fill="#f5f3ec"/>'
  def t(x,y,txt,size=21,fill='#254b40'):return f'<text x="{x}" y="{y}" font-size="{size}" fill="{fill}">{esc(txt)}</text>'
  s+=t(55,55,'北魏洛阳 · 跨区网络 v2.7',20)+t(55,103,PANEL_TITLES[panel],32)
- s+=t(55,145,'节点表示文本中的水段或行进阶段；跨行重复节点可相接，其余接缝必须单独核证。',19,'#65766c')
+ s+=t(55,145,'文本索引，非真实河形。各行上下位置不表示地理南北；未识别的接缝不自动相连。',19,'#65766c')
  colors={'flow':'#367f9c','route':'#927035','crossing':'#786083','alignment':'#78766c','overflow':'#367f9c','identity_bridge':'#9b624a'}
  for ri,row in enumerate(graph['diagram_rows'][panel]):
-  y=205+ri*181;kind=row['kind'];c=colors[kind];ids=row['nodes'];count=len(ids)
+  y=205+ri*181;kind=row['kind'];c=colors[kind];seq=row['nodes'];count=len(seq)
   s+=t(60,y,row['title'],22)+t(60,y+30,'依据 '+row['evidence']+' · '+{'flow':'水流','route':'叙述通行','crossing':'桥与河跨越','alignment':'方向参照','overflow':'仅FLOOD启用','identity_bridge':'仅J3启用'}[kind],16,'#6b766c')
   step=1360/max(count,3);width=min(step-38,268)
-  for i,n in enumerate(ids):
+  for i,n in enumerate(seq):
    x=60+i*step;yy=y+53
    s+=f'<rect x="{x}" y="{yy}" width="{width}" height="70" rx="8" fill="#fffef9" stroke="{c}" stroke-width="2"/>'
    label=names[n];cut=max(8,int((width-20)/18));lines=[label[:cut],label[cut:]] if len(label)>cut else [label]
@@ -176,13 +161,12 @@ def diagram(panel,graph):
  s+=t(55,953,'无比例尺 · 不代表各段同时存在 · 阶段箭头不是常年可通行保证 · 假设开关见网站',19)
  return s+'</svg>'
 
-def csv_output(path,headers,rows):
- b=io.StringIO(newline='');w=csv.writer(b);w.writerow(headers);w.writerows(rows)
- path.write_text('\ufeff'+b.getvalue(),encoding='utf-8')
+def csv_output(p,headers,rows):
+ b=io.StringIO(newline='');w=csv.writer(b);w.writerow(headers);w.writerows(rows);p.write_text('\ufeff'+b.getvalue(),encoding='utf-8')
 
 def main():
- if not (OUT/'build-info.json').exists():raise SystemExit('Build the baseline and v2.5/v2.6 first')
- info=load(OUT/'build-info.json');before={p:h for p,h in info['files_sha256'].items() if p not in {'index.html'}}
+ if not (OUT/'build-info.json').exists():raise SystemExit('Build baseline and v2.5/v2.6 first')
+ info=load(OUT/'build-info.json');before={p:h for p,h in info['files_sha256'].items() if p!='index.html'}
  source=load(ROOT/'research/v2.7/passages.json');g=network();entities=load(ROOT/'data/entities.json');ids={e['id'] for e in entities}
  ps={p['id'] for p in source['passages']};ns={n['id'] for n in g['nodes']};source_ids={s['id'] for s in source['sources']}
  assert len(ps)==len(source['passages']) and len(ns)==len(g['nodes'])
@@ -190,22 +174,19 @@ def main():
  for n in g['nodes']:assert set(n['map_ids'])<=ids,n['id']
  for e in g['edges']:
   assert e['a'] in ns and e['b'] in ns and set(e['evidence'])<=ps,e['id']
-  if e['kind'] in {'flow','overflow','identity_water'}:
-   assert all(next(n for n in g['nodes'] if n['id']==k)['kind']=='water' for k in [e['a'],e['b']]),e['id']
- for event in source['events']:
-  assert event['object'] is None or event['object'] in ids,event['id']
-  assert event['evidence'] in ps
-  assert (event['start'] is None)==(event['end'] is None)
-  assert event['start'] is None or event['start']<=event['end']
+  if e['kind'] in {'flow','overflow','identity_water'}:assert all(next(n for n in g['nodes'] if n['id']==k)['kind']=='water' for k in [e['a'],e['b']]),e['id']
+ for ev in source['events']:
+  assert ev['object'] is None or ev['object'] in ids,ev['id']
+  assert ev['evidence'] in ps
+  assert (ev['start'] is None)==(ev['end'] is None)
+  assert ev['start'] is None or ev['start']<=ev['end']
  scenarios=[]
  for bits in product([False,True],repeat=4):
   enabled=[k for k,b in zip(['J1','J2','J3','FLOOD'],bits) if b]
   for families in [['L','W'],['L'],['W']]:
    scenarios.append({'id':'n'+''.join('1' if b else '0' for b in bits)+'-'+''.join(families),'enabled':enabled,'families':families,
     'queries':[{**q,**path(g,q,enabled,families)} for q in QUERIES]})
- # An input-reference and source lookup audit, not a claim of full chronology.
- sampled={ev['object'] for ev in source['events'] if ev['object']}
- partial={m for p in source['passages'] for m in p['map_ids']}
+ sampled={ev['object'] for ev in source['events'] if ev['object']};partial={m for p in source['passages'] for m in p['map_ids']}
  audit=[{'entity_id':e['id'],'name':e['name'],'status':'scoped_events_sampled' if e['id'] in sampled else 'passages_reviewed_no_dated_event_added' if e['id'] in partial else 'event_series_not_reviewed',
   'event_ids':[ev['id'] for ev in source['events'] if ev['object']==e['id']],
   'legacy_temporal_state':e.get('temporal_state'),'valid_from':None,'valid_to':None} for e in entities]
@@ -217,26 +198,33 @@ def main():
  for k in PANEL_TITLES:
   p=OUT/f'assets/networks-v27/{k}.svg';p.parent.mkdir(parents=True,exist_ok=True);p.write_text(diagram(k,g),encoding='utf-8')
  for f in ['networks-v27.js','networks-v27.css']:(OUT/f).write_bytes((ROOT/f).read_bytes())
- index=(OUT/'index.html').read_text(encoding='utf-8')
- assert 'id="page-network"' not in index,'Run clean base build, not supplement twice'
+ index=(OUT/'index.html').read_text(encoding='utf-8');assert 'id="page-network"' not in index,'Run clean baseline build first'
  index=index.replace('</head>','<link rel="stylesheet" href="./networks-v27.css"><script defer src="./networks-v27.js"></script></head>')
  index=index.replace('<a href="#issues"','<a href="#network" data-nav="network">水陆与事件 v2.7</a>\n<a href="#issues"',1)
  index=index.replace('<main id="page-about"','<main id="page-network" class="page page-article" hidden><div id="network-content">水陆专题载入中…</div></main>\n<main id="page-about"',1)
+ index=index.replace('地理基线 v2.4 · 空间检验 v2.6','地理基线 v2.4 · 最新专题 v2.7')
+ index=index.replace('每个地点，都可以追溯到文字。','每个地点，都可以追溯到文字。 <a href="#network">最新：水陆网络与事件作用范围 v2.7 ↗</a>')
  (OUT/'index.html').write_text(index,encoding='utf-8')
  csv_output(OUT/'downloads/network-edges-v27.csv',['编号','源节点','目标节点','关系类型','依据','条件','通行段落作用域'],[[e['id'],e['a'],e['b'],e['kind'],'/'.join(e['evidence']),'/'.join(e['requires']),e['route_scope'] or ''] for e in g['edges']])
  csv_output(OUT/'downloads/events-v27.csv',['事件','作用对象','构件','范围','最早年','最晚年','原日期','依据','限制'],[[e['name'],e['object'] or '城市总括',e.get('component',''),e['scope'],e['start'],e['end'],e['original_date'],e['evidence'],e['state_note']] for e in source['events']])
  csv_output(OUT/'downloads/event-audit-v27.csv',['实体ID','名称','本轮事件审阅状态','已登记事件','原年代分类'],[[a['entity_id'],a['name'],a['status'],'/'.join(a['event_ids']),a['legacy_temporal_state'] or ''] for a in audit])
  esc=html.escape
- report='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>水陆网络与事件作用范围 v2.7</title><style>body{font:17px/1.8 sans-serif;max-width:1200px;margin:40px auto;padding:20px}img{max-width:100%}article{border-top:1px solid #ccc;padding:20px 0}blockquote{margin:12px;padding:12px;background:#f3f4ed} @media print{img{break-after:page}article{break-inside:avoid}}</style><h1>水陆网络与事件作用范围 v2.7</h1><p>'+esc(source['scope'])+'</p><h2>本次可检验结论</h2><p>建春外水段的跨源续接依赖J1；宫前南渠与西明支渠的续接依赖J2。认定两桥同体（J3）不产生水流。宣阳水道对永桥的几何接近不提供汇流边。长分向洛分流须启用条件，且保留中朝回溯。未建立的路径不等于历史上不存在。</p><p>这些是所选语义模型的条件结果，不是穷尽水网或唯一城市平面。</p>'
- for panel in data['panels']:report+='<h2>'+esc(panel['title'])+'</h2><img src="../'+panel['path']+'" alt="'+esc(panel['title'])+'">'
+ report='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>水陆网络与事件作用范围 v2.7</title><style>body{font:17px/1.8 sans-serif;max-width:1200px;margin:40px auto;padding:20px}img{max-width:100%}article{border-top:1px solid #ccc;padding:20px 0}blockquote{margin:12px;padding:12px;background:#f3f4ed}@media print{img{break-after:page}article{break-inside:avoid}}</style><h1>水陆网络与事件作用范围 v2.7</h1><p>'+esc(source['scope'])+'</p><h2>本次可检验结论</h2><p>建春外水段跨源续接依赖J1；宫前南渠与西明支渠续接依赖J2。认定桥梁同体（J3）不产生水流。宣阳水道与永桥的几何接近不提供汇流边。长分向洛分流须启用条件，且保留中朝回溯。未建立路径不等于历史上不存在。</p><p>这是所选语义模型的条件结果，不是穷尽水网或唯一城市平面。W浮桁提及与L永桥保持独立，不暗中认定同体。</p>'
+ for p in data['panels']:report+='<h2>'+esc(p['title'])+'</h2><img src="../'+p['path']+'" alt="'+esc(p['title'])+'">'
  report+='<h2>20条段落证据</h2>'
  for p in source['passages']:
   s=next(s for s in source['sources'] if s['id']==p['source'])
   report+='<article id="'+p['id']+'"><h3>'+p['id']+' · '+esc(p['anchor'])+'</h3><blockquote>'+esc(p['quote'])+'</blockquote><p>'+esc(p['reading'])+'</p><a href="'+esc(s['url'],quote=True)+'">'+esc(s['title'])+'</a></article>'
  report+='<h2>10项事件，不是十项对象现状</h2>'
  for e in source['events']:report+='<article><h3>'+e['id']+' · '+esc(e['name'])+'</h3><p>'+esc(e['original_date'])+'；作用范围：'+esc(e['scope'])+'</p><p>'+esc(e['state_note'])+'</p></article>'
- report+='<h2>339对象审阅账本</h2><p>'+esc(str(data['metrics']['event_coverage']))+'。有既有粗略年代标签不等于完成事件年表；未审项未补造日期。</p><h2>尚需考定</h2><p>具体水段同体与共时、南渠身份、东石桥/马市桥同体、雨毁后的桥梁修复、塔火后的各院内构件残存、547逐址状态均不能由本批自动解决。当前不改变母图岸线或承诺古里米制尺度。</p><h2>复现与边界</h2><p>研究数据和求解代码位于GitHub research/v2.7、tools/network_v27.py。48种前提/来源组合逐项输出路径边、依据与启用前提，水流路径不含跨越、对齐或通行边；事件窗口之外的对象状态均另待证。</p></html>'
+ report+='<h2>339对象审阅账本</h2><p>'+esc(str(data['metrics']['event_coverage']))+'。既有粗略年代标签不等于完成事件年表；未审项未补造日期。</p><h2>尚需考定</h2><p>具体水段同体与共时、南渠身份、东石桥/马市桥同体、雨毁后的修复、塔火后的院内构件残存、547逐址状态，均不能由本批自动解决。不改变母图岸线，不把古里换成米制尺度。</p><h2>复现与边界</h2><p>48种前提/来源组合输出路径边、依据和前提。水流路径不含跨越、对齐或通行边；事件窗口外的对象状态另待证。全量339对象的覆盖账本不等于全量完成年代考证。</p></html>'
  (OUT/'downloads/network-study-v27.html').write_text(report,encoding='utf-8')
+ # Deterministic source ZIP for independent reproduction; public repo files only.
+ source_files=['research/v2.7/passages.json','tools/network_v27.py','networks-v27.js','networks-v27.css','tests/test_v27.py','tests/browser_v27.py','docs/v2.7-release-notes.md']
+ with zipfile.ZipFile(OUT/'downloads/v27-reproducible-sources.zip','w',compression=zipfile.ZIP_DEFLATED) as z:
+  for name in source_files:
+   if not (ROOT/name).exists():continue
+   entry=zipfile.ZipInfo(name,date_time=(2026,11,11,0,0,0));entry.compress_type=zipfile.ZIP_DEFLATED;z.writestr(entry,(ROOT/name).read_bytes())
  for p,h in before.items():assert digest(OUT/p)==h,'Changed an existing asset: '+p
  info.update({'research_version':'v2.4 + R07-v2.5 + v2.6-models + v2.7-networks-events','web_version':'0.4.0','network_version':'v2.7','network_counts':data['metrics']})
  info['files_sha256']={str(p.relative_to(OUT)):digest(p) for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='build-info.json'}
