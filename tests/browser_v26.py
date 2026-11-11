@@ -28,6 +28,7 @@ try:
   expect(page.locator('.m26-plan-buttons a')).to_have_count(3);ok('s011 provides two feasible sides for the same premises')
   page.locator('.m26-plan-buttons a[href*="pick=east"]').click();expect(page.locator('#m26-plan-image')).to_have_attribute('src','./assets/models-v26/s011-east.svg')
   page.reload(wait_until='networkidle');ready(page);expect(page.locator('#m26-plan-image')).to_have_attribute('src','./assets/models-v26/s011-east.svg');ok('candidate deep link restores the east witness after full reload')
+  page.locator('[data-model-entity="ic_taiwei"]').click();expect(page.locator('#m26-point-evidence')).to_contain_text('太尉府');expect(page.locator('#m26-point-evidence')).to_contain_text('GWT');expect(page.locator('#m26-point-evidence')).to_contain_text('本情形未启用');ok('candidate point click explains both active and disabled premises')
   page.screenshot(path=str(out/'candidate-east.png'),full_page=True)
   page.locator('input[data-assumption="west_side"]').check();expect(page.locator('#m26-case')).to_have_value('s111')
   expect(page.locator('.m26-plan-buttons a')).to_have_count(2);ok('enabling west-side inheritance removes the incompatible east witness')
