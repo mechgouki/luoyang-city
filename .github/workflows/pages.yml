@@ -12,6 +12,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,22 +26,45 @@ jobs:
           node --check app.js
           node --test tests/map-interactions.test.cjs
           node --check research.js
-      - name: Build baseline plus reproducible R07 supplement
+          node --check models-v26.js
+          node --check models-v26-click.js
+      - name: Check spatial semantics and lossless normalization
+        shell: bash
+        run: |
+          mkdir -p artifacts
+          python -m unittest discover -s tests -p test_v26.py -v 2>&1 | tee artifacts/v26-semantic-tests.txt
+      - name: Build baseline, evidence and computed models
         run: |
           python tools/build_site.py
           python tools/research_v25.py
-      - name: Install browser acceptance tools
+          python tools/milestone_v26.py
+          python tools/link_model_points_v26.py
+      # The previous runs stalled on azure.archive.ubuntu.com DNS while
+      # installing optional system/font packages. The official matching image
+      # already contains Chromium and its OS dependencies; no test is skipped.
+      - name: Fetch pinned browser runtime with preinstalled dependencies
+        timeout-minutes: 6
         run: |
-          python -m pip install playwright==1.57.0
-          python -m playwright install --with-deps chromium
-      - name: Browser acceptance under the project subpath
-        run: python tests/browser_v25.py
-      - name: Preserve test evidence
+          docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
+          docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
+      - name: Exercise existing and v2.6 website interactions
+        timeout-minutes: 6
+        shell: bash
+        run: |
+          docker run --rm --init --ipc=host \
+            --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \
+            --workdir /work mcr.microsoft.com/playwright/python:v1.57.0-noble \
+            bash -euo pipefail -c '
+              python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
+              python tests/browser_v25.py
+              python tests/browser_v26.py
+            '
+      - name: Preserve build and browser evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: browser-build-evidence
-          path: artifacts/browser
+          path: artifacts
           retention-days: 14
       - name: Upload verified Pages artifact
         uses: actions/upload-pages-artifact@v4
@@ -51,6 +75,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     outputs:
       page_url: ${{ steps.deployment.outputs.page_url }}
     environment:
@@ -69,6 +94,7 @@ jobs:
   verify-live:
     needs: deploy
     runs-on: ubuntu-24.04
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -78,14 +104,27 @@ jobs:
         env:
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
         run: python tools/verify_live.py --base-url "$SITE_URL" --commit "$GITHUB_SHA"
-      - name: Install live browser tests
+      - name: Fetch the same pinned browser runtime
+        timeout-minutes: 6
         run: |
-          python -m pip install playwright==1.57.0
-          python -m playwright install --with-deps chromium
-      - name: Exercise the deployed desktop and mobile website
+          docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
+          mkdir -p artifacts
+          docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
+      - name: Exercise deployed baseline, v2.5 and v2.6 scenarios
+        timeout-minutes: 6
+        shell: bash
         env:
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
-        run: python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser
+        run: |
+          docker run --rm --init --ipc=host \
+            --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \
+            --workdir /work --env SITE_URL \
+            mcr.microsoft.com/playwright/python:v1.57.0-noble \
+            bash -euo pipefail -c '
+              python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
+              python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser
+              python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser
+            '
       - name: Preserve live acceptance evidence
         if: always()
         uses: actions/upload-artifact@v4
