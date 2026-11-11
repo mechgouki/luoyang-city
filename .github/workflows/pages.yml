@@ -2,38 +2,60 @@ name: Validate and deploy Luoyang Atlas
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: luoyang-pages-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  validate:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Validate research website
+      - name: Verify and assemble original 37-page PDF
+        run: python tools/assemble_pdf.py
+      - name: Validate research data and map assets
         run: python tools/validate_site.py
+      - name: Check JavaScript and interaction regressions
+        run: |
+          node --check app.js
+          node --test tests/map-interactions.test.cjs
+      - name: Build and check public website artifact
+        run: python tools/build_site.py
+      - name: Upload verified Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+          retention-days: 7
   deploy:
-    if: github.ref == 'refs/heads/main'
-    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     permissions:
+      contents: read
       pages: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Assemble complete research atlas PDF
-        run: python tools/assemble_pdf.py
-      - uses: actions/upload-pages-artifact@v4
-        with:
-          path: .
-      - id: deployment
+      - name: Read existing Pages configuration
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Explain initial Pages setup when configuration fails
+        if: failure() && steps.pages.outcome == 'failure'
+        run: |
+          echo '## Pages configuration needs attention' >> "$GITHUB_STEP_SUMMARY"
+          echo 'The build artifact passed validation. This job did not publish the site.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'If Pages has not been enabled, a repository owner must open Settings > Pages and select GitHub Actions under Build and deployment > Source.' >> "$GITHUB_STEP_SUMMARY"
+          echo "Settings: https://github.com/${{ github.repository }}/settings/pages" >> "$GITHUB_STEP_SUMMARY"
+          echo 'Then rerun this workflow. If Pages is already enabled, inspect the configure-pages error for permissions or service failures.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'The workflow deliberately does not request an administrator token or try to enable Pages using GITHUB_TOKEN.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Deploy verified website
+        id: deployment
         uses: actions/deploy-pages@v4

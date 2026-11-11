@@ -9,6 +9,7 @@ const stateLabel = {attested_by_528:'盛时已有记载',later_temple:'盛时为
 const pageIds = ['map','atlas','issues','about'];
 let entities=[], markers=[], disputes=[], regions=[], sheets=[];
 let svg=null, viewport=null, viewBox=[0,0,12400,12030], homeView=[0,0,12400,12030], selectedEntity=null, drag=null;
+let drawingGroup=null, drawingMatrix=null;
 let entityById=new Map(), selectedRegion=null, selectedIssue=null, suppressClick=false;
 
 function setHash(page, query='') { location.hash = page + (query ? '?' + query : ''); }
@@ -63,12 +64,19 @@ function screenToWorld(clientX,clientY){
  const ctm=svg.getScreenCTM();if(!ctm)return {x:0,y:0};
  return pt.matrixTransform(ctm.inverse());
 }
+function drawingBounds(x,y,width,height){
+ const m=drawingMatrix;if(!m)return [x,y,width,height];
+ const corners=[[x,y],[x+width,y],[x,y+height],[x+width,y+height]];
+ const points=corners.map(([px,py])=>[m.a*px+m.c*py+m.e,m.b*px+m.d*py+m.f]);
+ const xs=points.map(p=>p[0]),ys=points.map(p=>p[1]);
+ return [Math.min(...xs),Math.min(...ys),Math.max(...xs)-Math.min(...xs),Math.max(...ys)-Math.min(...ys)];
+}
 function focusRegion(code,update=true){
  const r=regions.find(x=>x.code===code);if(!r)return;
  selectedRegion=code;
- const [x1,y1,x2,y2]=r.bbox;
- // 既有区域 bbox 为 [左,上,右,下]
- focusBounds(x1,y1,x2-x1,y2-y1,.22);
+ const [x,y,width,height]=r.bbox;
+ // v2.4 区域框是 [左,上,宽,高]，不是两角坐标。
+ focusBounds(...drawingBounds(x,y,width,height),.22);
  $$('.region-btn').forEach(b=>b.classList.toggle('active',b.dataset.code===code));
  $('#map-status').textContent=code+' · '+r.title;
  $('#filters-panel').classList.remove('open');
@@ -78,7 +86,7 @@ function focusFull(update=true){ selectedRegion=null;setView(homeView);$('#map-s
 function focusMarker(id){
  const match=markers.find(m=>m.ids.includes(id));if(!match)return;
  // 按示意绘图坐标局部放大，不作为真实地理配准
- const w=3000,h=2500;focusBounds(match.x-w/2,match.y-h/2,w,h,0);
+ const w=3000,h=2500;focusBounds(...drawingBounds(match.x-w/2,match.y-h/2,w,h),0);
 }
 function markerOverlay(){
  const ns='http://www.w3.org/2000/svg',layer=document.createElementNS(ns,'g');
@@ -95,7 +103,7 @@ function markerOverlay(){
   hit.addEventListener('pointerleave',()=>{$('#map-tooltip').hidden=true});
   group.append(ring,hit);layer.appendChild(group);
  }
- svg.appendChild(layer);
+ (drawingGroup||svg).appendChild(layer);
 }
 function updateTooltip(e){const t=$('#map-tooltip');if(t.hidden)return;const r=$('#map-viewport').getBoundingClientRect();t.style.left=Math.min(r.width-180,Math.max(8,e.clientX-r.left+15))+'px';t.style.top=Math.max(6,e.clientY-r.top-48)+'px';}
 async function installSVG(){
@@ -106,25 +114,39 @@ async function installSVG(){
  svg.removeAttribute('width');svg.removeAttribute('height');svg.setAttribute('class','atlas-svg');
  const v=svg.getAttribute('viewBox')?.split(/\s+/).map(Number);if(v?.length===4)homeView=v;
  viewBox=[...homeView];
+ // 母图另有页边与标题平移；标记和相机必须采用同一坐标变换。
+ const groups=[...svg.children].filter(el=>el.localName==='g'&&el.hasAttribute('transform'));
+ if(groups.length!==1)throw Error('母图绘图坐标组不唯一，需核对导出格式');
+ drawingGroup=groups[0];drawingMatrix=drawingGroup.transform.baseVal.consolidate()?.matrix||null;
  viewport=$('#map-viewport');viewport.replaceChildren(svg);
  markerOverlay();
  svg.addEventListener('wheel',e=>{e.preventDefault();const at=screenToWorld(e.clientX,e.clientY);zoom(e.deltaY>0?1.16:1/1.16,at.x,at.y);},{passive:false});
  viewport.addEventListener('pointerdown',e=>{
-    if(e.button!==0&&e.pointerType!=='touch')return;
-    drag={x:e.clientX,y:e.clientY,view:[...viewBox],moved:false};
-    viewport.setPointerCapture(e.pointerId);
+    if((e.button!==0&&e.pointerType!=='touch')||!e.isPrimary)return;
+    const matrix=svg.getScreenCTM();if(!matrix)return;
+    drag={id:e.pointerId,x:e.clientX,y:e.clientY,view:[...viewBox],world:screenToWorld(e.clientX,e.clientY),inverse:matrix.inverse(),moved:false};
+    // 普通点击必须交给建筑标记；真正拖动后才捕获指针。
  });
  viewport.addEventListener('pointermove',e=>{
-    if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
-    if(Math.abs(dx)+Math.abs(dy)>5)drag.moved=true;
+    if(!drag||e.pointerId!==drag.id)return;
+    const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+    if(!drag.moved&&Math.abs(dx)+Math.abs(dy)>5){
+      drag.moved=true;viewport.setPointerCapture(e.pointerId);
+    }
     if(!drag.moved)return;
     viewport.classList.add('is-panning');
-    const rect=svg.getBoundingClientRect();
-    // 按视口比例平移；实际屏幕缩放由 SVG 处理
-    setView([drag.view[0]-dx*drag.view[2]/Math.max(1,rect.width),drag.view[1]-dy*drag.view[3]/Math.max(1,rect.height),drag.view[2],drag.view[3]]);
+    const point=svg.createSVGPoint();point.x=e.clientX;point.y=e.clientY;
+    const world=point.matrixTransform(drag.inverse);
+    setView([drag.view[0]+drag.world.x-world.x,drag.view[1]+drag.world.y-world.y,drag.view[2],drag.view[3]]);
  });
- viewport.addEventListener('pointerup',e=>{suppressClick=!!drag?.moved;setTimeout(()=>suppressClick=false,50);drag=null;viewport.classList.remove('is-panning');try{viewport.releasePointerCapture(e.pointerId)}catch{}});
+ viewport.addEventListener('pointerup',e=>{
+    if(!drag||e.pointerId!==drag.id)return;
+    suppressClick=drag.moved;setTimeout(()=>suppressClick=false,50);
+    drag=null;viewport.classList.remove('is-panning');
+    if(viewport.hasPointerCapture(e.pointerId))viewport.releasePointerCapture(e.pointerId);
+ });
  viewport.addEventListener('pointercancel',()=>{drag=null;viewport.classList.remove('is-panning')});
+ viewport.addEventListener('pointerleave',()=>{if(drag&&!drag.moved)drag=null});
  $('#zoom-in').addEventListener('click',()=>zoom(1/1.4));
  $('#zoom-out').addEventListener('click',()=>zoom(1.4));
  $('#home-map').addEventListener('click',()=>focusFull());
