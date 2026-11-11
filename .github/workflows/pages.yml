@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
       - name: Assemble and verify unchanged baseline PDF
         run: python tools/assemble_pdf.py
-      - name: Check baseline data and interactions
+      - name: Check baseline data and JavaScript
         run: |
           python tools/validate_site.py
           node --check app.js
@@ -28,27 +28,27 @@ jobs:
           node --check research.js
           node --check models-v26.js
           node --check models-v26-click.js
+          node --check networks-v27.js
       - name: Check spatial semantics and lossless normalization
         shell: bash
         run: |
           mkdir -p artifacts
           python -m unittest discover -s tests -p test_v26.py -v 2>&1 | tee artifacts/v26-semantic-tests.txt
-      - name: Build baseline, evidence and computed models
+          python -m unittest discover -s tests -p test_v27.py -v 2>&1 | tee artifacts/v27-semantic-tests.txt
+      - name: Build baseline, evidence, models and typed networks
         run: |
           python tools/build_site.py
           python tools/research_v25.py
           python tools/milestone_v26.py
           python tools/link_model_points_v26.py
-      # The previous runs stalled on azure.archive.ubuntu.com DNS while
-      # installing optional system/font packages. The official matching image
-      # already contains Chromium and its OS dependencies; no test is skipped.
+          python tools/network_v27.py
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
           docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
           docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
-      - name: Exercise existing and v2.6 website interactions
-        timeout-minutes: 6
+      - name: Exercise all existing and new website interactions
+        timeout-minutes: 8
         shell: bash
         run: |
           docker run --rm --init --ipc=host \
@@ -58,6 +58,7 @@ jobs:
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
               python tests/browser_v25.py
               python tests/browser_v26.py
+              python tests/browser_v27.py
             '
       - name: Preserve build and browser evidence
         if: always()
@@ -110,8 +111,8 @@ jobs:
           docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
           mkdir -p artifacts
           docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
-      - name: Exercise deployed baseline, v2.5 and v2.6 scenarios
-        timeout-minutes: 6
+      - name: Exercise deployed baseline, v2.5, v2.6 and v2.7
+        timeout-minutes: 8
         shell: bash
         env:
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
@@ -124,6 +125,7 @@ jobs:
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
               python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser
               python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser
+              python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser
             '
       - name: Preserve live acceptance evidence
         if: always()
