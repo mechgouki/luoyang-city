@@ -1,0 +1,137 @@
+name: Acquire terrain sources (no secrets)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [fix/terrain-acquisition-20261112]
+    paths: [.github/workflows/acquire-terrain.yml]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: terrain-acquisition-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  acquire:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download public sources and verify file signatures and lengths
+        timeout-minutes: 9
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          import hashlib, json, os, time
+          from datetime import datetime, timezone
+
+          out = Path('terrain-inputs')
+          out.mkdir(exist_ok=True)
+          tile = 'Copernicus_DSM_COG_10_N34_00_E112_00_DEM'
+          sources = [
+              {'id': 'DEM-COP30', 'name': tile + '.tif', 'format': 'tiff',
+               'urls': [f'https://copernicus-dem-30m.s3.eu-central-1.amazonaws.com/{tile}/{tile}.tif',
+                        f'https://copernicus-dem-30m.s3.amazonaws.com/{tile}/{tile}.tif'],
+               'catalogue': 'https://registry.opendata.aws/copernicus-dem/'},
+              {'id': 'MAP-AMS-NI49-7', 'name': 'ams-lo-yang-NI49-7.jpg', 'format': 'jpeg',
+               'urls': ['https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-7.jpg'],
+               'catalogue': 'https://maps.lib.utexas.edu/maps/ams/china/'}
+          ]
+          report = {'checked_at_utc': datetime.now(timezone.utc).isoformat(),
+                    'source_commit': os.environ.get('GITHUB_SHA'),
+                    'authentication': 'public anonymous HTTPS; no external credentials',
+                    'verification_scope': 'complete HTTP transfer, content length when available, binary signature, locally computed SHA-256; raster CRS/bounds and map registration require subsequent review',
+                    'files': []}
+          failures = []
+          for src in sources:
+              errors = []
+              acquired = None
+              for url in src['urls']:
+                  for attempt in range(2):
+                      dest = out / src['name']
+                      part = dest.with_suffix(dest.suffix + '.part')
+                      try:
+                          started = time.monotonic()
+                          request = Request(url, headers={'User-Agent': 'Luoyang-Atlas-Terrain-Acquisition/1.0'})
+                          h = hashlib.sha256()
+                          total = 0
+                          with urlopen(request, timeout=40) as response, part.open('wb') as handle:
+                              if response.status != 200:
+                                  raise ValueError(f'HTTP {response.status}; full response required')
+                              length_header = response.headers.get('Content-Length')
+                              expected_length = int(length_header) if length_header else None
+                              content_type = response.headers.get('Content-Type')
+                              final_url = response.geturl()
+                              etag = response.headers.get('ETag')
+                              modified = response.headers.get('Last-Modified')
+                              while True:
+                                  if time.monotonic() - started > 180:
+                                      raise TimeoutError('Transfer exceeded bounded time budget')
+                                  chunk = response.read(1024 * 1024)
+                                  if not chunk:
+                                      break
+                                  total += len(chunk)
+                                  if total > 256 * 1024 * 1024:
+                                      raise ValueError('Unexpected size over 256 MiB')
+                                  h.update(chunk)
+                                  handle.write(chunk)
+                          if total < 1024 * 1024:
+                              raise ValueError(f'Unexpectedly small source: {total} bytes')
+                          if expected_length is not None and total != expected_length:
+                              raise ValueError(f'Incomplete transfer: {total} != {expected_length}')
+                          with part.open('rb') as handle:
+                              head = handle.read(8)
+                          if src['format'] == 'tiff' and head[:4] not in (b'II\x2a\x00', b'MM\x00\x2a', b'II\x2b\x00', b'MM\x00\x2b'):
+                              raise ValueError('Not a TIFF/BigTIFF header; refusing HTML/error response')
+                          if src['format'] == 'jpeg' and head[:3] != b'\xff\xd8\xff':
+                              raise ValueError('Not a JPEG header; refusing HTML/error response')
+                          part.replace(dest)
+                          acquired = {'id': src['id'], 'file': src['name'], 'status': 'downloaded',
+                                      'requested_url': url, 'resolved_url': final_url,
+                                      'catalogue': src['catalogue'], 'bytes': total,
+                                      'sha256': h.hexdigest(), 'http_content_type': content_type,
+                                      'http_etag': etag, 'http_last_modified': modified,
+                                      'signature_verified': True, 'attempt_errors': errors}
+                          print(json.dumps(acquired, ensure_ascii=False), flush=True)
+                          break
+                      except Exception as exc:
+                          part.unlink(missing_ok=True)
+                          errors.append({'url': url, 'attempt': attempt + 1, 'error': str(exc)})
+                          print('DOWNLOAD ATTEMPT FAILED', src['id'], str(exc), flush=True)
+                          time.sleep(2)
+                  if acquired:
+                      break
+              if acquired:
+                  report['files'].append(acquired)
+              else:
+                  failures.append(src['id'])
+                  report['files'].append({'id': src['id'], 'status': 'failed', 'errors': errors})
+          report['status'] = 'passed' if not failures else 'failed'
+          (out / 'acquisition.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          (out / 'SHA256SUMS').write_text(''.join(f"{r['sha256']}  {r['file']}\n" for r in report['files'] if r['status'] == 'downloaded'), encoding='utf-8')
+          (out / 'SOURCE-NOTICE.txt').write_text(
+              'Copernicus DEM GLO-30 Public: https://registry.opendata.aws/copernicus-dem/\n'
+              'Produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.\n'
+              'The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30.\n'
+              'This is a modern surface model, not a Northern Wei bare-earth reconstruction. Read the dataset licence before reuse.\n'
+              'AMS historical map: US Army Map Service, LO-YANG NI49-7, held by UT Austin Libraries, https://maps.lib.utexas.edu/maps/ams/china/.\n'
+              'Acquisition does not establish the historical map edition, datum, georeferencing or ancient river courses.\n'
+              'No synthetic elevation data are included. No repository or website changes are made by this workflow.\n', encoding='utf-8')
+          if failures:
+              raise SystemExit('Acquisition incomplete: ' + ', '.join(failures))
+          PY
+      - name: Save raw files and acquisition evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: luoyang-terrain-inputs
+          path: terrain-inputs/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
