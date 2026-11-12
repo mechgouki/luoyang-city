@@ -33,7 +33,7 @@ jobs:
           node --check networks-v27.js
           node --check portal-v28.js
           node --check chronology-v29.js
-      - name: Check spatial, temporal and terrain semantics
+      - name: Check spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
           mkdir -p artifacts
@@ -41,7 +41,8 @@ jobs:
           python -m unittest discover -s tests -p test_v27.py -v 2>&1 | tee artifacts/v27-semantic-tests.txt
           python -m unittest discover -s tests -p test_v29.py -v 2>&1 | tee artifacts/v29-semantic-tests.txt
           python -m unittest discover -s tests -p test_v30.py -v 2>&1 | tee artifacts/v30-semantic-tests.txt
-      - name: Build preserved research and real terrain products
+          python -m unittest discover -s tests -p test_dual1.py -v 2>&1 | tee artifacts/dual1-semantic-tests.txt
+      - name: Build preserved archives and both actively developed maps
         run: |
           python tools/build_site.py
           python tools/research_v25.py
@@ -51,12 +52,13 @@ jobs:
           python tools/portal_v28.py
           python tools/chronology_v29.py
           python tools/terrain_v30.py
+          python tools/dual_release.py
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
           docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
           docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
-      - name: Exercise all existing and terrain interactions
+      - name: Exercise all existing and parallel-map interactions
         timeout-minutes: 8
         shell: bash
         run: |
@@ -71,6 +73,7 @@ jobs:
               python tests/browser_v28.py
               python tests/browser_v29.py
               python tests/browser_v30.py
+              python tests/browser_dual1.py
             '
       - name: Preserve build and browser evidence
         if: always()
@@ -123,7 +126,7 @@ jobs:
           docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
           mkdir -p artifacts
           docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
-      - name: Exercise all deployed research and terrain versions
+      - name: Exercise all deployed research, original and terrain maps
         timeout-minutes: 8
         shell: bash
         env:
@@ -141,6 +144,7 @@ jobs:
               python tests/browser_v28.py --base-url "$SITE_URL" --output artifacts/live-v28-browser
               python tests/browser_v29.py --base-url "$SITE_URL" --output artifacts/live-v29-browser
               python tests/browser_v30.py --base-url "$SITE_URL" --output artifacts/live-v30-browser
+              python tests/browser_dual1.py --base-url "$SITE_URL" --output artifacts/live-dual1-browser
             '
       - name: Preserve live acceptance evidence
         if: always()
