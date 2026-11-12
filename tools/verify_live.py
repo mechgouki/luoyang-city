@@ -10,7 +10,7 @@ if urlparse(base).scheme!='https':raise SystemExit('HTTPS required for live veri
 def get(path):
  target=urljoin(base,quote(path,safe='/'))
  if not target.startswith(base) or '..' in PurePosixPath(path).parts:raise ValueError('Unsafe asset path')
- req=Request(target,headers={'User-Agent':'Luoyang-Atlas-Acceptance/0.6.0','Cache-Control':'no-cache'})
+ req=Request(target,headers={'User-Agent':'Luoyang-Atlas-Acceptance/0.7.0','Cache-Control':'no-cache'})
  with urlopen(req,timeout=30) as response:
   if response.status!=200:raise ValueError(f'{path}: HTTP {response.status}')
   if not response.geturl().startswith(base):raise ValueError(f'{path}: unexpected redirect')
@@ -41,9 +41,12 @@ try:
  chrono=json.loads(get('data/chronology-v29.json'))
  assert len(chrono['dossiers'])==12 and len(chrono['records'])==25 and len(chrono['coverage'])==339
  assert sum(d['anchor'] is not None for d in chrono['dossiers'])==11
- release=json.loads(get('release.json'));assert release['source_commit']==info['source_commit'] and release['release']=='v2.9'
- report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
- print(f'LIVE PASS: {len(results)} public assets verified, including preserved PDF, former research and v2.9 temporal dossiers')
+ release=json.loads(get('release.json'));assert release['source_commit']==info['source_commit'] and release['release']=='v3.0-alpha.1'
+ terrain=json.loads(get('terrain/v3.0/metadata.json'))
+ assert info.get('terrain_version')=='v3.0-alpha.1' and terrain['synthetic'] is False
+ assert terrain['analysis_grid']==[1695,1860] and terrain['ancient_registered_nodes']==0
+ report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
+ print(f'LIVE PASS: {len(results)} public assets verified, including preserved research, real terrain products and original archival maps')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results};raise
 finally:
