@@ -2,7 +2,7 @@ name: Acquire real terrain and archival map for v3.0
 on:
   push:
     branches: [research/v3.0-terrain-batch1]
-    paths: [tools/terrain_source_v30.py, .github/workflows/terrain-source-v30.yml]
+    paths: [tools/terrain_source_v30.py, tools/terrain_extra_v30.py, .github/workflows/terrain-source-v30.yml]
   workflow_dispatch:
 permissions:
   contents: read
@@ -18,7 +18,9 @@ jobs:
       - name: Install raster processing dependencies
         run: python -m pip install numpy==2.2.6 rasterio==1.4.3 pillow==11.2.1
       - name: Acquire actual geospatial data and provenance
-        run: python tools/terrain_source_v30.py --include-repo
+        run: |
+          python tools/terrain_source_v30.py --include-repo
+          python tools/terrain_extra_v30.py
       - name: Preserve real rasters, archival scan and source receipt
         uses: actions/upload-artifact@v4
         with:
