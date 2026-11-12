@@ -1,0 +1,25 @@
+name: Dual-map source handoff
+on:
+  push:
+    branches: [research/dual-b1-b2-palace-gardens]
+    paths: [.github/workflows/dual-source-handoff.yml]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 82336ab80ed683a944a53e4e87fec297f1a9a8d8
+          persist-credentials: false
+      - name: Archive public baseline source only
+        run: |
+          git archive --format=tar.gz --output="$RUNNER_TEMP/luoyang-source-82336ab.tar.gz" HEAD
+          sha256sum "$RUNNER_TEMP/luoyang-source-82336ab.tar.gz"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dual-map-baseline-source
+          path: ${{ runner.temp }}/luoyang-source-82336ab.tar.gz
+          retention-days: 7
