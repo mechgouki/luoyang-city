@@ -19,7 +19,7 @@ try:
   kw={'headless':True}
   if os.environ.get('CHROMIUM_PATH'):kw['executable_path']=os.environ['CHROMIUM_PATH']
   browser=pw.chromium.launch(**kw);ctx=browser.new_context(viewport={'width':1540,'height':1100});page=ctx.new_page();page.on('pageerror',lambda e:errors.append(str(e)))
-  page.goto(base,wait_until='networkidle');expect(page.locator('#terrain-release-entry')).to_be_visible();expect(page.locator('.brand-release')).to_have_text('v3.0-alpha.1');ok('default website visibly shows current terrain release and real preview')
+  page.goto(base,wait_until='networkidle');expect(page.locator('#terrain-release-entry')).to_be_visible();current_release=ctx.request.get(base+'release.json').json()['release'];expect(page.locator('.brand-release')).to_have_text(current_release);ok('default website visibly shows current release and retained real terrain preview')
   page.locator('#terrain-release-entry a').last.click();ready(page);expect(page.locator('#release-status')).to_contain_text('已核对线上提交');ok('real terrain entry loads under the repository subpath')
   expect(page.locator('#raster-image')).to_have_attribute('href','./terrain/v3.0/relief.png');ok('real raster, not synthetic fixture or empty placeholder')
   page.screenshot(path=str(out/'terrain-desktop.png'),full_page=True)
