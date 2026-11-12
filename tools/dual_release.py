@@ -31,8 +31,13 @@ def main():
     page=OUT/'dual-map.html';body=page.read_text();needle="svg=$('#canvas svg');home=defaultbox();";assert body.count(needle)==1
     body=body.replace(needle,"svg=$('#canvas svg');if(mode==='terrain')$('#terrain-style').value='interpretation';home=defaultbox();")
     body=body.replace("$('#source-notice').textContent=data.terrain.source_notice;","$('#source-notice').textContent=data.terrain.source_notice+' '+data.terrain.liability_notice;")
+    # Hollow SVG groups contain unpainted space. Add a transparent interaction
+    # rectangle, not visible geometry, so ordinary clicks need not hit a stroke.
+    hit_needle="n.setAttribute('tabindex','0');"
+    assert body.count(hit_needle)==1
+    hit="const bb=n.getBBox(),hit=document.createElementNS('http://www.w3.org/2000/svg','rect');hit.setAttribute('x',bb.x-8);hit.setAttribute('y',bb.y-8);hit.setAttribute('width',bb.width+16);hit.setAttribute('height',bb.height+16);hit.setAttribute('fill','transparent');hit.setAttribute('stroke','none');hit.setAttribute('pointer-events','all');hit.setAttribute('data-interaction-only','true');n.insertBefore(hit,n.firstChild);"
+    body=body.replace(hit_needle,hit+hit_needle)
     page.write_text(body,encoding='utf-8')
-    # Root metadata and unique entry: old chronology controls remain unchanged.
     index=OUT/'index.html';text=index.read_text()
     text,n=re.subn(r'当前公开版本 · [^<]+','当前公开版本 · v3.1-alpha.1 / 双图并行第一批',text,count=1);assert n==1
     text=re.sub(r'<title>[^<]+</title>','<title>北魏洛阳 · 双图并行 v3.1 / 文献工作图 v2.10</title>',text,count=1)
@@ -63,5 +68,5 @@ See dual1/SOURCE-NOTICE.txt and dual1/terrain-method.json.
         z.writestr('README.md',readme)
     build=json.loads((OUT/'build-info.json').read_text());build['files_sha256']={str(p.relative_to(OUT)):sha(p) for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='build-info.json'}
     (OUT/'build-info.json').write_text(json.dumps(build,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print('Parallel maps packaged with synchronized root release, unique navigation, source notices and offline report assets.')
+    print('Parallel maps packaged with synchronized root release, accessible hit areas, source notices and offline report assets.')
 if __name__=='__main__':main()
