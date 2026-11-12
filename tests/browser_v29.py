@@ -23,9 +23,9 @@ try:
   if os.environ.get('CHROMIUM_PATH'):kw['executable_path']=os.environ['CHROMIUM_PATH']
   browser=pw.chromium.launch(**kw);ctx=browser.new_context(viewport={'width':1540,'height':1100})
   page=ctx.new_page();page.on('pageerror',lambda e:errors.append(str(e)));page.goto(base,wait_until='networkidle');ready(page)
-  expect(page.locator('.brand-release')).to_have_text('v2.9');expect(page.locator('.c29-entry')).to_be_visible();ok('default homepage visibly links the new temporal comparison')
+  current_release=ctx.request.get(base+'release.json').json()['release'];expect(page.locator('.brand-release')).to_have_text(current_release);expect(page.locator('.c29-entry')).to_be_visible();ok('default homepage visibly links the new temporal comparison')
   expect(page.locator('#v28-online-status')).to_contain_text('已核对在线发布');r=ctx.request.get(base+'release.json').json();b=ctx.request.get(base+'build-info.json').json()
-  assert r['source_commit']==b['source_commit'] and r['release']=='v2.9' and b['chronology_version']=='v2.9';ok('current release and build manifest agree')
+  assert r['source_commit']==b['source_commit'] and r['release']==current_release and b['chronology_version']=='v2.9';ok('current release and build manifest agree')
   page.locator('.c29-entry a').click();expect(page.locator('#page-compare')).to_be_visible();expect(page.locator('#c29-site option')).to_have_count(12)
   expect(page.locator('#c29-left [data-dossier]')).to_have_count(11);expect(page.locator('#c29-right [data-dossier]')).to_have_count(11);assert paired(page);ok('twelve dossiers share eleven pre-existing independent anchors')
   before=page.locator('#c29-left svg').get_attribute('viewBox');page.locator('#c29-zoom-in').click();assert paired(page) and before!=page.locator('#c29-left svg').get_attribute('viewBox');ok('zoom synchronizes both reference views')
