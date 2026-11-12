@@ -1,0 +1,27 @@
+name: Acquire public terrain research sources
+on:
+  pull_request:
+    paths:
+      - 'tools/acquire_terrain_v30.py'
+      - '.github/workflows/terrain-source.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download open DEM and historical map sheets with provenance
+        run: python tools/acquire_terrain_v30.py
+      - name: Retain actual data and acquisition report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: terrain-public-inputs
+          path: terrain-inputs
+          retention-days: 30
