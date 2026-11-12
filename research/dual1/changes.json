@@ -1,0 +1,21 @@
+{
+"version":"dual1","document_version":"v2.10","portal_version":"v3.1-alpha.1","reviewed_at":"2026-11-12",
+"scope":"三片区文献工作图实质细化；独立现代地表解释及未配准建筑群插图。不是北魏地理落址完成。",
+"sources":[{"id":"Z1","url":"https://deerpark.app/cbeta/B0077/1","title":"洛阳伽蓝记校释·卷一","verified":"电子正文/校注；本批未完成古刻逐叶校勘"},{"id":"Z2","url":"https://deerpark.app/cbeta/B0077/2","title":"洛阳伽蓝记校释·卷二","verified":"电子正文/校注；时间换算继承已审档案"},{"id":"Z3","url":"https://deerpark.app/cbeta/B0077/3","title":"洛阳伽蓝记校释·卷三","verified":"电子正文/校注；原单位不换成绘图像素"},{"id":"COP","url":"https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM","title":"Copernicus DEM 官方产品说明","verified":"现代DSM含植被与建筑；不是古代裸地"}],
+"regions":[
+{"code":"R07","title":"宫前—永宁—景乐","focus_bbox":[4700,4200,2900,2100],"summary":"保留官署路侧承接工作案；永宁塔北佛殿进入构件图符；景乐路东仍标校补。","notes":["永宁塔北有殿有据；图符尺寸与对中仅为阅读安排。","太尉在寺东不能单独推出道东；此图沿用西侧承接案。","景乐御道〈东〉为校补；建义以后停戏不等于寺毁。"],"evidence":["E01","E02","E03","E05","E13","E14","E17"]},
+{"code":"R04","title":"建春门—两桥—建阳里","focus_bbox":[7700,2800,3200,1550],"summary":"桥向与桥体事件分别标注；不把两桥同名或跨越关系转换成河流汇入。","notes":["建春门石桥527雨毁；图保留桥址/通路参照，不保证全时段可通。","东石桥南北而行，桥北大道两侧里名有据。","建春桥东西通行仍为工作图式，非独立量测；马市桥同体另审。"],"evidence":["N01","N02","N03","N04","N17"]},
+{"code":"R10","title":"景明—汉国子学堂—石经","focus_bbox":[5400,6650,3750,2250],"summary":"景明寺院、七层塔、池水和水功分项；学堂与石经分作用对象，不合并宫前学校。","notes":["景明塔记始造及华饰，竣工年未证；虚线不表示永久在建。","池水×3为数量目录，不在院内指定池形/坐标。","石经546迁邺不等于学堂迁毁；堂前不擅译成正南。"],"evidence":["N14","N16","N19","T29-03","T29-04","T29-05"]}],
+"changes":[
+{"id":"M01","entity":"ic_yongning","region":"R07","glyph":"tower_hall","note":"塔北佛殿；间距/对中非实测","before":"单一寺院识别符，内部关系另页","after":"塔与其北佛殿分开画；仍不补院墙与僧房排布","evidence":["E17","E02"],"source":"Z1","geometry_changed":"构件图符；地点锚点不变","ancient_lonlat":null},
+{"id":"M02","entity":"ic_taiwei","region":"R07","glyph":"office","note":"道西为段落承接；身份另审","before":"通用署字图符","after":"官署建筑类型图符；保留太尉/太府及路侧工作前提","evidence":["E02","E05","E06","E07"],"source":"Z1","geometry_changed":"类型图符；未移动官署","ancient_lonlat":null},
+{"id":"M03","entity":"ic_situ","region":"R07","glyph":"office","note":"道东为段落承接；院界未定","before":"通用署字图符","after":"官署图符与路侧条件说明；不赋等大院落","evidence":["E03","E14"],"source":"Z1","geometry_changed":"类型图符","ancient_lonlat":null},
+{"id":"M04","entity":"ic_guozixue","region":"R07","glyph":"school","note":"宫前学校；不并城南汉学堂","before":"学字图符","after":"学校类别平面图符，明确不同于城南汉国子学堂","evidence":["E04"],"source":"Z1","geometry_changed":"类型图符","ancient_lonlat":null},
+{"id":"M05","entity":"ic_jingle","region":"R07","glyph":"temple","note":"御道〈东〉校补；停戏≠寺毁","before":"通用寺字图符","after":"寺院类型图符，校补与活动变化同时可读","evidence":["E13","E14","T29-12"],"source":"Z1","geometry_changed":"类型图符","ancient_lonlat":null},
+{"id":"M06","entity":"bridge_jianchun","region":"R04","glyph":"bridge_ew","note":"527雨毁桥体；后续修复未详","before":"完整桥板图符容易被读作全时段完好","after":"桥址与跨越示意用间断桥面，注明区间内毁损；不是已证547残桥","evidence":["N01","N04","N17"],"source":"Z2","geometry_changed":"桥址参照不变；时间作用范围改绘","ancient_lonlat":null},
+{"id":"M07","entity":"bridge_eaststone","region":"R04","glyph":"bridge_ns","note":"南北通行；不接收建春桥毁事","before":"桥向有据但两桥事件容易混读","after":"南北向桥面图符和独立事件归属说明","evidence":["N02"],"source":"Z2","geometry_changed":"重绘桥向符号；不改河岸","ancient_lonlat":null},
+{"id":"M08","entity":"v2_longhua","region":"R04","glyph":"temple","note":"阳渠南；院形与渠宽未定","before":"通用寺字图符","after":"类别图符并保留南北岸关系；不补完整院界","evidence":["N03"],"source":"Z2","geometry_changed":"类型图符","ancient_lonlat":null},
+{"id":"M09","entity":"v3_jingming","region":"R10","glyph":"tower_uncertain","note":"七层塔竣工未证；三池不定位","before":"单一寺字图符，构成均转附图","after":"塔构件单独以虚线表示年代条件；池/水功仍作构成目录","evidence":["N16","T29-03","T29-04","T29-05"],"source":"Z3","geometry_changed":"构件表达；不补池岸、渠线或院界","ancient_lonlat":null},
+{"id":"M10","entity":"v3_hanguozixue","region":"R10","glyph":"school","note":"石经属可移动物；546迁出另记","before":"学校与石经合在同一标题下","after":"保留学校图符；石经作为关联对象而非另一栋建筑","evidence":["N19"],"source":"Z3","geometry_changed":"类别/对象分层；无石经新坐标","ancient_lonlat":null}],
+"policy":{"symbol":"建筑图符仅表示类别和有据构件；大小、重复线和屋顶纹理不对应古代开间或真实占地。","timing":"516—528盛时综合；区间内桥毁必须显现，534等后事不据此当成盛时状态。","terrain":"现代缓/起伏地表不自动视为古代稳定台地、河漫滩、建设区或古河道。","position":"全部10项古代经纬度仍空；新地形图采用分框文献插图，没有牵引线暗示地理落位。","source_dependence":"Z1/Z2/Z3及既有范本同出伽蓝记，非独立证据投票。"}
+}
