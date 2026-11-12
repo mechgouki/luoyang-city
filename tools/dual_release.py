@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Finalize the parallel-map release, including mandatory source attribution.
-
-The primary research generator remains independently testable. This packaging
-step adds notices, preserves archives, and includes all workbench image inputs.
-"""
+"""Finalize both map tracks with source notices and visible release metadata."""
 from pathlib import Path
 import hashlib
 import json
@@ -47,13 +43,18 @@ def main():
     changes=json.loads(changes_path.read_text());changes['terrain']=method
     changes_path.write_text(json.dumps(changes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     page=OUT/'dual-map.html';body=page.read_text()
-    # Every newly rendered terrain view starts with classification; keep its
-    # selector synchronized after changing regions or returning from a document.
     needle="svg=$('#canvas svg');home=defaultbox();"
     assert body.count(needle)==1
     body=body.replace(needle,"svg=$('#canvas svg');if(mode==='terrain')$('#terrain-style').value='interpretation';home=defaultbox();")
     body=body.replace("$('#source-notice').textContent=data.terrain.source_notice;","$('#source-notice').textContent=data.terrain.source_notice+' '+data.terrain.liability_notice;")
     page.write_text(body,encoding='utf-8')
+    # Update the actual default HTML, not only its badge or runtime metadata.
+    index=OUT/'index.html';text=index.read_text()
+    text,n=re.subn(r'当前公开版本 · [^<]+','当前公开版本 · v3.1-alpha.1 / 双图并行第一批',text,count=1)
+    assert n==1,'Default page release header missing'
+    text=re.sub(r'<title>[^<]+</title>','<title>北魏洛阳 · 双图并行 v3.1 / 文献工作图 v2.10</title>',text,count=1)
+    index.write_text(text,encoding='utf-8')
+    assert '当前公开版本 · v3.1-alpha.1' in text and 'dual-release-entry' in text
     readme='''# Parallel maps: first batch
 
 Open downloads/dual1-report.html to read the figures offline.
@@ -81,6 +82,6 @@ See dual1/SOURCE-NOTICE.txt and dual1/terrain-method.json.
     build=json.loads((OUT/'build-info.json').read_text())
     build['files_sha256']={str(p.relative_to(OUT)):sha(p) for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='build-info.json'}
     (OUT/'build-info.json').write_text(json.dumps(build,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print('Parallel maps packaged with full Copernicus notices and offline report assets.')
+    print('Parallel maps packaged with synchronized default release, source notices and offline report assets.')
 
 if __name__=='__main__':main()
