@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""User-visible default map, release, old-cache isolation and mobile acceptance."""
+"""Preserve integrated-map and cache tests; root version follows the release manifest.
+The separate v2.8.html entry remains explicitly tested as the prior reading UI.
+"""
 import argparse,functools,http.server,json,os,tempfile,threading
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -16,22 +18,23 @@ else:
  threading.Thread(target=server.serve_forever,daemon=True).start();base=f'http://127.0.0.1:{server.server_port}/luoyang-city/'
 results=[];errors=[]
 def ok(name):results.append({'name':name,'status':'passed'});print('PASS',name,flush=True)
-def ready(page):page.wait_for_function("document.documentElement.dataset.portal28Ready==='true'",timeout=45000)
+def ready(page):page.wait_for_function("document.documentElement.dataset.portal28Ready==='true' && (!document.querySelector('.c29-entry') || document.documentElement.dataset.chronology29Ready==='true')",timeout=45000)
 try:
  with sync_playwright() as pw:
   opts={'headless':True}
   if os.environ.get('CHROMIUM_PATH'):opts['executable_path']=os.environ['CHROMIUM_PATH']
   browser=pw.chromium.launch(**opts);ctx=browser.new_context(viewport={'width':1540,'height':1100})
+  current_release=ctx.request.get(base+'release.json').json()['release']
   page=ctx.new_page();page.on('pageerror',lambda e:errors.append(str(e)))
   response=page.goto(base,wait_until='networkidle');assert response.status==200;ready(page)
-  expect(page.locator('.brand-release')).to_have_text('v2.8');expect(page.locator('.map-header h1')).to_contain_text('最新研究')
-  assert '交互图册 · v2.4' not in page.locator('.map-header').inner_text();ok('root homepage visibly shows integrated v2.8, not v2.4 title')
+  expect(page.locator('.brand-release')).to_have_text(current_release);expect(page.locator('.map-header h1')).to_contain_text('最新研究')
+  assert '交互图册 · v2.4' not in page.locator('.map-header').inner_text();ok('root homepage visibly shows current integrated release, not v2.4 title')
   expect(page.locator('#review-layer-v28 .v28-signal')).to_have_count(35)
   expect(page.locator('.feature-target')).to_have_count(179)
   expect(page.locator('#inspector-body')).to_contain_text('地图已经接入的新成果');ok('35 research overlays and 179 original click targets share the default map')
   expect(page.locator('#v28-online-status')).to_contain_text('已核对在线发布',timeout=15000)
   info=ctx.request.get(base+'build-info.json').json();rel=ctx.request.get(base+'release.json').json()
-  assert rel['source_commit']==info['source_commit'] and rel['release']=='v2.8' and info['portal_version']=='v2.8';ok('actual release metadata matches deployed build commit')
+  assert rel['source_commit']==info['source_commit'] and rel['release']==current_release and info['portal_version']==current_release;ok('actual release metadata matches deployed build commit')
   page.screenshot(path=str(out/'default-desktop.png'),full_page=True)
   page.locator('[data-v28-layer="baseline"]').click();expect(page.locator('#review-layer-v28')).to_be_hidden()
   page.locator('[data-v28-layer="review"]').click();expect(page.locator('#review-layer-v28')).to_be_visible();ok('baseline and research layers genuinely change the displayed map')
@@ -49,7 +52,6 @@ try:
   expect(page.locator('[data-v28-layer="events"]')).to_have_attribute('aria-pressed','true');expect(page.locator('#v28-year')).to_have_value('534');ok('separate release URL restores layer and year on reload')
   paths=page.locator('script[src],link[rel="stylesheet"]').evaluate_all('(els)=>els.map(e=>e.getAttribute("src")||e.getAttribute("href"))')
   assert all(path.startswith('./_assets/') for path in paths);ok('every executing script and stylesheet uses content-addressed URLs')
-  # Simulate stale legacy assets. The new entry must never request these URLs.
   stale=browser.new_context(viewport={'width':1540,'height':1000});hits=[];p2=stale.new_page();p2.on('pageerror',lambda e:errors.append(str(e)))
   root_path=urlsplit(base).path
   def old_assets(route):
@@ -59,7 +61,6 @@ try:
    else:route.continue_()
   p2.route('**/*',old_assets);p2.goto(base+'v2.8.html#map',wait_until='networkidle');ready(p2)
   assert hits==[],hits;expect(p2.locator('.v28-signal')).to_have_count(35);ok('new entry ignores simulated stale unversioned v2.4 JS, CSS, JSON and map cache')
-  # A newer manifest produces a safe same-site update link, not a false green claim.
   future=dict(rel,source_commit='f'*40)
   p2.route('**/release.json?*',lambda route:route.fulfill(status=200,body=json.dumps(future),content_type='application/json'))
   p2.locator('#v28-check-release').click();expect(p2.locator('#v28-update-link')).to_be_visible();expect(p2.locator('#v28-online-status')).to_contain_text('另一个发布版本');ok('different release commit produces an explicit update path')
@@ -73,7 +74,7 @@ try:
   mp.goto(base+'v2.8.html',wait_until='networkidle');ready(mp)
   expect(mp.locator('.brand-release')).to_have_text('v2.8');assert mp.evaluate('document.documentElement.scrollWidth<=innerWidth+2')
   mp.locator('[data-v28-layer="events"]').tap();mp.locator('#v28-year').select_option('527');expect(mp.locator('#v28-layer-legend')).to_contain_text('527')
-  mp.screenshot(path=str(out/'mobile.png'),full_page=True);ok('mobile default page exposes release and working event-layer controls without page overflow')
+  mp.screenshot(path=str(out/'mobile.png'),full_page=True);ok('mobile prior-release page retains release and working event-layer controls without overflow')
   assert not errors,errors;ok('no runtime errors in normal and stale-cache browser contexts');browser.close()
 except Exception as exc:
  results.append({'name':'acceptance','status':'failed','error':str(exc)});raise
