@@ -26,13 +26,13 @@ try:
   page.screenshot(path=str(out/'main-r03.png'),full_page=True)
   page.goto(base+'dual-b1.html',wait_until='networkidle');ready(page);expect(page.locator('#region-picker')).to_have_value('L01');expect(page.locator('#canvas')).to_have_attribute('data-map','dual/maps/L01.svg');ok('approved B1 independently published with its original first-region entry')
   page.locator('#old-baseline').check();ready(page);expect(page.locator('#canvas')).to_have_attribute('data-map','assets/master-v24.svg');assert page.locator('#canvas [data-batch]').count()==0
-  page.locator('#old-baseline').uncheck();ready(page);assert page.locator('#canvas [data-batch="dual-b1"]').count()==7;ok('archive comparison actually loads the old SVG rather than hiding a ring')
+  page.locator('#old-baseline').uncheck();ready(page);expect(page.locator('#canvas')).to_have_attribute('data-map','dual/maps/L01.svg');assert page.locator('#canvas [data-batch="dual-b1"]').count()==7;ok('archive comparison actually loads the old SVG rather than hiding a ring')
   for region in ['L01','L02','L03','L04']:
    page.locator('#region-picker').select_option(region);ready(page);expect(page.locator('#canvas')).to_have_attribute('data-map','dual/maps/'+region+'.svg')
   ok('all four regional maps load from the same current masters')
   page.goto(base+'dual-b2.html#literary?region=L04',wait_until='networkidle');ready(page)
   expect(page.locator('#release-status')).to_contain_text('已核对正式发布');old=page.locator('#canvas svg').first.get_attribute('viewBox');page.locator('#zoom-in').click();assert page.locator('#canvas svg').first.get_attribute('viewBox')!=old;page.locator('#reset').click();assert page.locator('#canvas svg').first.get_attribute('viewBox')==old;ok('B2 actual release metadata and zoom/reset controls work')
-  target=page.locator('#canvas [data-entity-id="ic_jiuhua"]');target.click(position={'x':target.bounding_box()['width']/2,'y':target.bounding_box()['height']/2});ready(page);expect(page.locator('#inspector-title')).to_contain_text('九华');expect(page.locator('#inspector')).to_contain_text('G07');ok('B2 physical building click resolves to component evidence')
+  target=page.locator('#canvas [data-entity-id="ic_jiuhua"] rect').first;target.click();ready(page);expect(page.locator('#inspector-title')).to_contain_text('九华');expect(page.locator('#inspector')).to_contain_text('G07');ok('B2 physical building click resolves to component evidence')
   page.screenshot(path=str(out/'palace-desktop.png'),full_page=True)
   page.reload(wait_until='networkidle');ready(page);expect(page.locator('#entity-picker')).to_have_value('ic_jiuhua');ok('region and selected object restore after full page reload')
   page.locator('[data-tab="conditions"]').click();ready(page)
