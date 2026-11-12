@@ -1,0 +1,297 @@
+{
+  "version": "dual-west-b3",
+  "rebase_of": "unpublished-west-B2-package (baseline 82336ab)",
+  "base_commit": "82d27841314280a6aac5280d9c01d51a639716d6",
+  "scope": "大市—寿丘，原双图已发布B1与R03宫苑B2；本批城西另作B3，不占用L04",
+  "region": {
+    "id": "L05",
+    "name": "城西大市—寿丘",
+    "bbox": [
+      250,
+      4750,
+      4250,
+      3850
+    ]
+  },
+  "sources": [
+    {
+      "id": "Z4",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷四·周祖谟校释",
+      "url": "https://deerpark.app/cbeta/B0077/4"
+    },
+    {
+      "id": "F4",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷四·范祥雍校注",
+      "url": "https://deerpark.app/cbeta/B0078/4"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "W01",
+      "title": "大市与西阳门外御道",
+      "entities": [
+        "gate_xiyang",
+        "w_dashi"
+      ],
+      "quote": "出西陽門外四里御道南，有洛陽大市。",
+      "reading": "保留门外四里及御道南侧，不换算成图上距离。",
+      "limit": "西阳门与西明门不能仅凭相似名称合并。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W02",
+      "title": "市场周回",
+      "entities": [
+        "w_dashi"
+      ],
+      "quote": "周迴八里。",
+      "reading": "以市场类型符号表达，不倒算规则方形边界。",
+      "limit": "周回不等于正方形院墙或已知占地面积。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W03",
+      "title": "市东通商与达货",
+      "entities": [
+        "w_tongshang",
+        "w_dahuo"
+      ],
+      "quote": "市東有通商、達貨二里。里內之人盡皆工巧屠販為生。",
+      "reading": "表达市东两里及工巧屠贩行业。",
+      "limit": "列名次序不等于两里东西或南北次序。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W04",
+      "title": "市南调音与乐律",
+      "entities": [
+        "w_tiaoyin",
+        "w_yuelv"
+      ],
+      "quote": "市南有調音、樂律二里。里內之人，絲竹謳歌，天下妙伎出焉。",
+      "reading": "表达市南二里及乐艺，乐律／乐肆异记保留。",
+      "limit": "没有独立戏台或剧院的建筑坐标。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W05",
+      "title": "市西酿酒二里",
+      "entities": [
+        "w_yangu",
+        "w_zhishang"
+      ],
+      "quote": "市西有退酤、治觴二里。里內之人多醞酒為業。",
+      "reading": "并记延酤／退酤，保留市西酿酒业。",
+      "limit": "寿丘以延／退酤为参照，不等同整里图框东界。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W06",
+      "title": "市北慈孝与奉终",
+      "entities": [
+        "w_cixiao",
+        "w_fengzhong"
+      ],
+      "quote": "市北慈孝、奉終二里。里內之人以賣棺槨為業，賃輀車為事。",
+      "reading": "显示棺椁与丧车生业。",
+      "limit": "不推断为墓地或逐铺院落。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W07",
+      "title": "另列阜财与金肆",
+      "entities": [
+        "w_fucai",
+        "w_jinsi"
+      ],
+      "quote": "別有阜財、金肆二里，富人在焉。凡此十里，多諸工商貨殖之民。",
+      "reading": "将另两里列入无方位名录；阜财／准财校读并记。",
+      "limit": "不能画作两条新增有方向街区；十里不是十里长街。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W08",
+      "title": "开善寺里属与改寺",
+      "entities": [
+        "w_kaishan",
+        "w_fucai"
+      ],
+      "quote": "阜財里內有開善寺，京兆人韋英宅也。……梁氏惶懼，捨宅為寺。",
+      "reading": "记录里属、宅改寺的用途变化。",
+      "limit": "没有改寺确年或独立院址，不因叙事赋坐标。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W09",
+      "title": "皇女台市南／东南",
+      "entities": [
+        "w_huangnv",
+        "w_dashi"
+      ],
+      "quote": "市南有皇女臺。",
+      "reading": "市南主读与市东南异文并列。",
+      "limit": "南不必为正南；东南未必与南构成真实冲突。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W10",
+      "title": "灵仙寺在台上",
+      "entities": [
+        "w_lingxian",
+        "w_huangnv"
+      ],
+      "quote": "景明中比丘道恆立靈僊寺於其上。",
+      "reading": "台与寺分为两个构件层级。",
+      "limit": "台上不证明台高、塔存在或寺院足迹。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W11",
+      "title": "台西河阳县",
+      "entities": [
+        "w_heyang",
+        "w_huangnv"
+      ],
+      "quote": "臺西有河陽縣。",
+      "reading": "以县址名物而非具体县署院落表示。",
+      "limit": "县域、县治、县署仍需另证。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W12",
+      "title": "侯刚宅台东校读",
+      "entities": [
+        "w_hougang",
+        "w_huangnv"
+      ],
+      "quote": "臺東有侍中侯剛宅。",
+      "reading": "保留台东校改和侯刚／侯钊异名。",
+      "limit": "本次未独立核河南志原页，旁证不重复计票。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W13",
+      "title": "市西北土山鱼池",
+      "entities": [
+        "w_tushan_yuchi",
+        "w_dashi"
+      ],
+      "quote": "市西北有土山魚池，亦冀之所造。",
+      "reading": "保留土山、鱼池并列构成与西北关系。",
+      "limit": "涉及汉代追述；不把现代低地推为汉池。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W14",
+      "title": "寿丘里四至",
+      "entities": [
+        "w_shouqiu",
+        "w_yangu",
+        "w_zhangfanggou",
+        "luoshui",
+        "mangshan"
+      ],
+      "quote": "自延酤以西，張方溝以東，南臨洛水，北達芒山，其間東西二里，南北十五里，並名為壽丘里。",
+      "reading": "四至与东二里／南北十五里分别登记、保留原单位。",
+      "limit": "不将二比十五强制转成现代绘图长宽比。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W15",
+      "title": "河间王宅内部构成",
+      "entities": [
+        "w_hejian",
+        "w_wenbaitang",
+        "w_yingfengguan"
+      ],
+      "quote": "造文柏堂，形如徽音殿。……造迎風館於後園。",
+      "reading": "分列文柏堂与后园迎风馆。",
+      "limit": "后园不等于北园；形如不证明开间尺度相同。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    },
+    {
+      "id": "W16",
+      "title": "河阴之后宅改寺",
+      "entities": [
+        "w_shouqiu",
+        "w_hejian"
+      ],
+      "quote": "經河陰之役，諸元殲盡，王侯第宅，多題為寺。",
+      "reading": "盛时保留王宅名，后期部分改寺另记。",
+      "limit": "多不等于所有；无逐宅改寺年份和547全面存废状态。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "geographic_coordinates": null
+    }
+  ],
+  "ancient_absolute_positions_added": 0,
+  "notes": [
+    "文献方位是相对参照，不等同既有示意锚点的米制坐标。",
+    "与宫苑B2来源同为《伽蓝记》家族，不重复独立计票。",
+    "保持已发布B1、R03 B2、旧版档案，不给未定位对象制造经纬度。"
+  ]
+}
