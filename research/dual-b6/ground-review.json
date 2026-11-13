@@ -1,0 +1,763 @@
+{
+  "schema_version": "luoyang-ground-review-1",
+  "release": "B6",
+  "title": "具名地物审核与上游图源追查",
+  "reviewed_date": "2026-11-13",
+  "baseline_commit": "6e9d817fac023a70c2d5d8be237c1d245f3f4880",
+  "summary": "本批从地物类型队列推进到2个具名区域／线状对象：白马寺待补同点证据、黄河铁路桥整线不准入为单点；并取得L531目标图号的1946实物边栏。获准地面控制点仍为0。",
+  "original_horizontal_datum": null,
+  "original_geographic_crs": null,
+  "project_registration_to_wgs84": false,
+  "ground_accuracy_assessed": false,
+  "approved_ground_control_points": [],
+  "ancient_geographic_positions_added": 0,
+  "ancient_channels_added": 0,
+  "modern_dsm_modified": false,
+  "coordinate_assignment_performed": false,
+  "scope": [
+    "L500原图具名对象的身份及跨年代稳定性审核",
+    "被引L531及日本图源的可得性、版次和测量资料调查"
+  ],
+  "limitations": [
+    "原纸图完整水平基准未识别；后期WGS_1984定义不回填到原纸图。",
+    "像素框是供复查的图像区域，不是点坐标，也不用于任何地理变换。",
+    "两候选均未定位到可复测的物理点；同名、同走廊和年代悠久都不足以准入。",
+    "1945编图与1946实物印次分别记录；没有声称找到L500实际使用的同印本。",
+    "上游多圆锥投影、码制格网与L500的UTM分开；未据椭球、目录地图外包络或系列名称指定地理CRS。",
+    "白马寺候选仅属近现代AMS地名审核，不裁决古代两条白马记录。",
+    "本批没有WGS84配准、地面精度统计、新古址经纬度或古河道推定。"
+  ],
+  "sheets": [
+    {
+      "id": "NI49-7",
+      "title": "LO-YANG / 洛阳",
+      "source_file": "ams-ni49-7.jpg",
+      "source_url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-7.jpg",
+      "source_sha256": "005a2b3c81f9135ab03739f2c8f52566c554f7c7af56c6bad5d9b47927970532",
+      "source_size_px": [
+        5000,
+        3779
+      ],
+      "series": "L500",
+      "compiled_year": 1955,
+      "edition": "Edition 1-AMS",
+      "printed_date": "1964-11",
+      "original_horizontal_datum": null,
+      "original_geographic_crs": null,
+      "digital_assignment_role": "post_publication_digitization_working_definition",
+      "b5_datum_record": "../dual-b5/historical-datum.json",
+      "compilation_crop": {
+        "id": "compilation",
+        "title": "L500编图来源栏",
+        "raw_scan_crop_xyxy": [
+          250,
+          3280,
+          1450,
+          3650
+        ]
+      },
+      "compilation_sources": [
+        {
+          "title": "China Proper, NE",
+          "scale_denominator": 250000,
+          "publisher": "AMS",
+          "series_from_harvard_metadata": "L531",
+          "sheets": [
+            "I-49-K"
+          ],
+          "year": 1945,
+          "evidence": [
+            "compilation",
+            "HGL-7:/metadata/dataqual/lineage/srcinfo[3]/srccite/citeinfo"
+          ]
+        },
+        {
+          "title": "North China",
+          "scale_denominator": 100000,
+          "publisher_as_printed": "Japanese North China General Staff",
+          "years": "1942–1944",
+          "evidence": [
+            "compilation",
+            "HGL-7:/metadata/dataqual/lineage/srcinfo[4]/srccite/citeinfo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NI49-8",
+      "title": "CHENG-HSIEN / 郑县",
+      "source_file": "ams-ni49-8.jpg",
+      "source_url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-8.jpg",
+      "source_sha256": "d3525d1e86cc47536bb978721409e06852a07a3aee7298f69fb94b86cf94917c",
+      "source_size_px": [
+        5000,
+        3800
+      ],
+      "series": "L500",
+      "compiled_year": 1955,
+      "edition": "Edition 1-AMS",
+      "printed_date": "1964-09",
+      "original_horizontal_datum": null,
+      "original_geographic_crs": null,
+      "digital_assignment_role": "post_publication_digitization_working_definition",
+      "b5_datum_record": "../dual-b5/historical-datum.json",
+      "compilation_crop": {
+        "id": "compilation",
+        "title": "L500编图来源栏",
+        "raw_scan_crop_xyxy": [
+          250,
+          3280,
+          1450,
+          3650
+        ]
+      },
+      "compilation_sources": [
+        {
+          "title": "China Proper, NE",
+          "scale_denominator": 250000,
+          "publisher": "AMS",
+          "series_from_harvard_metadata": "L531",
+          "sheets": [
+            "I-49-K",
+            "I-49-L"
+          ],
+          "year": 1945,
+          "evidence": [
+            "compilation",
+            "HGL-8:/metadata/dataqual/lineage/srcinfo[3]/srccite/citeinfo"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "UT-7",
+      "title": "AMS L500 NI49-7 Lo-yang",
+      "institution": "UT Austin Libraries / Army Map Service",
+      "url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-7.jpg",
+      "location": "原扫描左下编图栏；本档案像素框[250,3280,1450,3650]",
+      "evidence": "本幅列I-49-K（1945）和日本North China 1:100,000（1942–44）为上游图源。",
+      "status": "original_scan_visually_reviewed"
+    },
+    {
+      "id": "UT-8",
+      "title": "AMS L500 NI49-8 Cheng-hsien",
+      "institution": "UT Austin Libraries / Army Map Service",
+      "url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-8.jpg",
+      "location": "原扫描左下编图栏、东部铁路跨河段、西缘Pai-ma-ssu及右栏图例",
+      "evidence": "编图栏列I-49-K、I-49-L（1945）；图上两具名候选均按原始扫描像素框记录。",
+      "status": "original_scan_visually_reviewed"
+    },
+    {
+      "id": "PRINCETON-MANIFEST",
+      "title": "China proper, NE 1:250,000 完整IIIF目录",
+      "institution": "Princeton University Library",
+      "url": "https://figgy.princeton.edu/concern/scanned_maps/8ff5cb87-1932-4182-ae4f-83c23e3d69a9/manifest",
+      "catalog_url": "https://catalog.princeton.edu/catalog/9968296003506421",
+      "permalink": "http://arks.princeton.edu/ark:/88435/dccj82km686",
+      "location": "Contents中Sheet I 49 K Lo-Yang与Sheet I 49 L Cheng-Hsien；items中各同名canvas",
+      "sha256": "88eb6fcc4381ce1ac356fd7899a3417cf7f3cd4f99ce4353fe4ff72eca90b568",
+      "retrieved_date": "2026-11-13",
+      "evidence": "系列目录1945–46包含两张目标图号。实际印次须以各图自己的边栏核定，不能拿系列Date=1945替代。",
+      "status": "official_manifest_and_selected_images_reviewed",
+      "rights_uri": "http://rightsstatements.org/vocab/NKC/1.0/"
+    },
+    {
+      "id": "MCT-BAIMA",
+      "title": "白马寺",
+      "institution": "中华人民共和国文化部网站（现文旅部域名）",
+      "url": "https://www.mct.gov.cn/preview/special/3578/3597/201203/t20120330_235404.html",
+      "published_date": "2012-03-30",
+      "location": "正文第1段及末段：洛阳东郊、邙山洛水之间、院落布局和历代修建",
+      "evidence": "行政文化机构介绍了洛阳东郊的现存白马寺建筑群，并记其历代兴废重修；资料没有提供与AMS圆点一一对应的建筑测量点。",
+      "status": "primary_institution_page_reviewed",
+      "limit": "仅支持近现代具名寺院区域的对应调查。不引用建寺传说来裁决北魏白马记录同异，不以门户或塔的名称代替同点证据。"
+    },
+    {
+      "id": "ZZ-BRIDGE",
+      "title": "〖市区〗黄河第一铁路桥旧址",
+      "institution": "郑州市文物局",
+      "url": "https://wwj.zhengzhou.gov.cn/province/3181950.jhtml",
+      "published_date": "2016-10-25",
+      "location": "正文介绍桥梁沿革的第一段",
+      "evidence": "记录1903开工、1906通车；1926、1927、1938、1944受损；1948换梁，1949–52多次加固，1958洪灾冲断，1987拆除上部钢梁并留南端5孔160米。",
+      "status": "primary_heritage_authority_page_reviewed",
+      "limit": "沿革支持排除整桥线作为一个跨年代固定点；不能据此断言每座桥墩或桥台均已迁移，个别存留结构需另取工程测量证据。"
+    },
+    {
+      "id": "SINICA-0608",
+      "title": "北支那十萬分一圖，目录0608",
+      "institution": "中央研究院 中国历史文化地图目录",
+      "url": "https://ccts.sinica.edu.tw/catalog/detail.php?num=0608",
+      "location": "年代、比例尺、内容及编篡製者字段",
+      "evidence": "目录载1:100,000、258幅、1933–1937年，编制机构为支那驻屯军司令部和陆地测量部；范围包括洛阳。",
+      "status": "catalog_only_earlier_impressions",
+      "limit": "尚未取得这个目录内的洛阳具体原图，也未证明它是L500所列1942–44印本。"
+    },
+    {
+      "id": "TOHOKU-HUB",
+      "title": "外邦图公开档案与洛陽标题查询",
+      "institution": "東北大学理学研究科／地理学教室",
+      "url": "https://gaihozu-jp-tohokugeo.hub.arcgis.com/",
+      "authority_url": "https://www.sci.tohoku.ac.jp/news/20240123-13039.html",
+      "service_url": "https://services1.arcgis.com/qvPIahekAMWThrhc/arcgis/rest/services/zukaku_th/FeatureServer/0",
+      "location": "公共目录属性查询：name LIKE 洛陽，返回3条；未取geometry",
+      "retrieved_date": "2026-11-13",
+      "query_snapshot_sha256": "edadec986f0f84df6bb60c70f9c3637645fa017b3b335af81e6ed3523946f0e1",
+      "query_parameters": {
+        "where": "name LIKE '%洛陽%'",
+        "outFields": "OBJECTID,url,ghzno,name,scale,survey_year,print_year,publication_year,code,ghzno_isMatchedimagefile",
+        "returnGeometry": false
+      },
+      "evidence": "精确标题检索返回洛陽（五十万分一）、洛陽店（武昌62号）及洛陽縣（十万分一、1923年）。这个查询尚未匹配L500的1942–44印本。",
+      "status": "catalog_query_only",
+      "limit": "未目读这些日图影像；目录外包络及其EPSG字段没有移植为历史图CRS。标题检索不证明全库无目标图。"
+    },
+    {
+      "id": "NIDS-CATALOG",
+      "title": "防衛研究所所蔵史料目录：支那／兵要地誌",
+      "institution": "日本防衛研究所 戦史研究センター史料室",
+      "url": "https://www.nids.mod.go.jp/military_archives/pdf/catalog/a4.pdf",
+      "location": "PDF第207页（zero-based 206）：支那-兵要地誌-116至-119、-123；目录版本2026-10-07",
+      "evidence": "目录给出测量沿革史草稿及洛阳—西安兵要地志的档号与编印时间，构成可申请核阅的档案索引。",
+      "status": "catalog_index_only",
+      "limit": "没有取得对应地方测量原簿、三角点成果或datum定义；索引中的史稿编印年不等于洛阳实测年。"
+    },
+    {
+      "id": "B5-DATUM",
+      "title": "B5原纸图与后期数字化定义调查",
+      "institution": "本项目；引Harvard Map Collection固定版本原馆XML",
+      "url": "./historical-datum.html",
+      "location": "research/dual-b5/historical-datum.json；Harvard procstep[2]/procdesc",
+      "evidence": "哈佛2005年WGS_1984为后期数字产品统一工作定义；L500原纸图完整水平基准仍未知。",
+      "status": "previous_review_retained",
+      "limit": "本批不将上游地图投影、数字化定义或现代目录坐标回填为L500原纸图datum。"
+    },
+    {
+      "id": "L531-K",
+      "title": "I 49 K Lo-Yang / 1946实物印次",
+      "institution": "Army Map Service / Princeton University Library",
+      "url": "https://figgy.princeton.edu/concern/scanned_maps/8ff5cb87-1932-4182-ae4f-83c23e3d69a9/manifest/canvas/1b32a786-e385-4ae3-8616-705b4031dccb",
+      "catalog_url": "https://catalog.princeton.edu/catalog/9968296003506421",
+      "manifest_url": "https://figgy.princeton.edu/concern/scanned_maps/8ff5cb87-1932-4182-ae4f-83c23e3d69a9/manifest",
+      "location": "左下编图版记[600,7450,2800,8000]；下栏投影[2900,7900,4700,8580]（完整IIIF像素）",
+      "evidence": "AMS 1, 1946；编图1945，中国1:50,000 Central Land Survey 1931–38；多圆锥投影，10000码World Polyconic格网。",
+      "status": "selected_sheet_collar_visually_reviewed",
+      "limit": "同图号、1945编图已核；L500所列1945源图的同印本关系未确认。裁片没有显示足够的完整水平datum实现资料。"
+    },
+    {
+      "id": "L531-L",
+      "title": "I 49 L Cheng-Hsien / 1946实物印次",
+      "institution": "Army Map Service / Princeton University Library",
+      "url": "https://figgy.princeton.edu/concern/scanned_maps/8ff5cb87-1932-4182-ae4f-83c23e3d69a9/manifest/canvas/2b9461fd-0d30-4bf6-84e5-4df199fd37b2",
+      "catalog_url": "https://catalog.princeton.edu/catalog/9968296003506421",
+      "manifest_url": "https://figgy.princeton.edu/concern/scanned_maps/8ff5cb87-1932-4182-ae4f-83c23e3d69a9/manifest",
+      "location": "左下编图版记[600,7450,2800,8000]；下栏投影[2900,7900,4700,8580]（完整IIIF像素）",
+      "evidence": "Type F (AMS 1), 1946；编图1945，中国1:50,000 Central Land Survey 1931–38；多圆锥投影，10000码World Polyconic格网。",
+      "status": "selected_sheet_collar_visually_reviewed",
+      "limit": "同图号、1945编图已核；L500所列1945源图的同印本关系未确认。裁片没有显示足够的完整水平datum实现资料。"
+    }
+  ],
+  "source_assets": [
+    {
+      "id": "l531-i49-k-compilation",
+      "source_id": "L531-K",
+      "local_file": "research/dual-b6/source-crops/L531-I49-K-compilation.jpg",
+      "kind": "original_scale_iiif_region",
+      "title": "编图与1946年版记",
+      "source_canvas": "https://figgy.princeton.edu/concern/scanned_maps/8ff5cb87-1932-4182-ae4f-83c23e3d69a9/manifest/canvas/1b32a786-e385-4ae3-8616-705b4031dccb",
+      "source_image_size_px": [
+        7888,
+        8947
+      ],
+      "source_full_image_sha256": null,
+      "raw_iiif_crop_xywh": [
+        600,
+        7450,
+        2200,
+        550
+      ],
+      "raw_scan_crop_xyxy": [
+        600,
+        7450,
+        2800,
+        8000
+      ],
+      "source_url": "https://iiif-cloud.princeton.edu/iiif/2/74%2Fb9%2F86%2F74b986a81a284f83b71345547cf53a8a%2Fintermediate_file/600,7450,2200,550/full/0/default.jpg",
+      "sha256": "f7f1f37921964301b3ece8e764a663b91fe1665bf08c534c57d4df1227c2958b",
+      "bytes": 181845,
+      "size_px": [
+        2200,
+        550
+      ],
+      "transformation": "IIIF region crop at full scale, rotation 0; saved response bytes unchanged; no contrast, annotation, resizing or georeferencing",
+      "rights_uri": "http://rightsstatements.org/vocab/NKC/1.0/",
+      "credit": "United States Army Map Service; Princeton University Library, Lewis Library, G7821.C2.s250 .A7M3",
+      "identity_limit": "SHA仅对应该IIIF原比例裁片响应，不是未下载的全幅TIFF哈希。"
+    },
+    {
+      "id": "l531-i49-k-projection",
+      "source_id": "L531-K",
+      "local_file": "research/dual-b6/source-crops/L531-I49-K-projection.jpg",
+      "kind": "original_scale_iiif_region",
+      "title": "多圆锥投影与码制格网",
+      "source_canvas": "https://figgy.princeton.edu/concern/scanned_maps/8ff5cb87-1932-4182-ae4f-83c23e3d69a9/manifest/canvas/1b32a786-e385-4ae3-8616-705b4031dccb",
+      "source_image_size_px": [
+        7888,
+        8947
+      ],
+      "source_full_image_sha256": null,
+      "raw_iiif_crop_xywh": [
+        2900,
+        7900,
+        1800,
+        680
+      ],
+      "raw_scan_crop_xyxy": [
+        2900,
+        7900,
+        4700,
+        8580
+      ],
+      "source_url": "https://iiif-cloud.princeton.edu/iiif/2/74%2Fb9%2F86%2F74b986a81a284f83b71345547cf53a8a%2Fintermediate_file/2900,7900,1800,680/full/0/default.jpg",
+      "sha256": "054818ddc8d48d0da8abcf598b2d3847ce216ae3ad69d4b11848ed8dba84e0a3",
+      "bytes": 178771,
+      "size_px": [
+        1800,
+        680
+      ],
+      "transformation": "IIIF region crop at full scale, rotation 0; saved response bytes unchanged; no contrast, annotation, resizing or georeferencing",
+      "rights_uri": "http://rightsstatements.org/vocab/NKC/1.0/",
+      "credit": "United States Army Map Service; Princeton University Library, Lewis Library, G7821.C2.s250 .A7M3",
+      "identity_limit": "SHA仅对应该IIIF原比例裁片响应，不是未下载的全幅TIFF哈希。"
+    },
+    {
+      "id": "l531-i49-l-compilation",
+      "source_id": "L531-L",
+      "local_file": "research/dual-b6/source-crops/L531-I49-L-compilation.jpg",
+      "kind": "original_scale_iiif_region",
+      "title": "编图与1946年版记",
+      "source_canvas": "https://figgy.princeton.edu/concern/scanned_maps/8ff5cb87-1932-4182-ae4f-83c23e3d69a9/manifest/canvas/2b9461fd-0d30-4bf6-84e5-4df199fd37b2",
+      "source_image_size_px": [
+        7968,
+        9031
+      ],
+      "source_full_image_sha256": null,
+      "raw_iiif_crop_xywh": [
+        600,
+        7450,
+        2200,
+        550
+      ],
+      "raw_scan_crop_xyxy": [
+        600,
+        7450,
+        2800,
+        8000
+      ],
+      "source_url": "https://iiif-cloud.princeton.edu/iiif/2/84%2F84%2F7d%2F84847d6feef842cbb2f7a9ea1c5a980a%2Fintermediate_file/600,7450,2200,550/full/0/default.jpg",
+      "sha256": "d92f4b04373cad19aa0f3876cd752b7a122677adc36f5e211b296d6926dbe8ee",
+      "bytes": 225034,
+      "size_px": [
+        2200,
+        550
+      ],
+      "transformation": "IIIF region crop at full scale, rotation 0; saved response bytes unchanged; no contrast, annotation, resizing or georeferencing",
+      "rights_uri": "http://rightsstatements.org/vocab/NKC/1.0/",
+      "credit": "United States Army Map Service; Princeton University Library, Lewis Library, G7821.C2.s250 .A7M3",
+      "identity_limit": "SHA仅对应该IIIF原比例裁片响应，不是未下载的全幅TIFF哈希。"
+    },
+    {
+      "id": "l531-i49-l-projection",
+      "source_id": "L531-L",
+      "local_file": "research/dual-b6/source-crops/L531-I49-L-projection.jpg",
+      "kind": "original_scale_iiif_region",
+      "title": "多圆锥投影与码制格网",
+      "source_canvas": "https://figgy.princeton.edu/concern/scanned_maps/8ff5cb87-1932-4182-ae4f-83c23e3d69a9/manifest/canvas/2b9461fd-0d30-4bf6-84e5-4df199fd37b2",
+      "source_image_size_px": [
+        7968,
+        9031
+      ],
+      "source_full_image_sha256": null,
+      "raw_iiif_crop_xywh": [
+        2900,
+        7900,
+        1800,
+        680
+      ],
+      "raw_scan_crop_xyxy": [
+        2900,
+        7900,
+        4700,
+        8580
+      ],
+      "source_url": "https://iiif-cloud.princeton.edu/iiif/2/84%2F84%2F7d%2F84847d6feef842cbb2f7a9ea1c5a980a%2Fintermediate_file/2900,7900,1800,680/full/0/default.jpg",
+      "sha256": "097b128cb46814e3594e62f5cb1510954a28e39ba99f81ae0c5a9be51029be8c",
+      "bytes": 200570,
+      "size_px": [
+        1800,
+        680
+      ],
+      "transformation": "IIIF region crop at full scale, rotation 0; saved response bytes unchanged; no contrast, annotation, resizing or georeferencing",
+      "rights_uri": "http://rightsstatements.org/vocab/NKC/1.0/",
+      "credit": "United States Army Map Service; Princeton University Library, Lewis Library, G7821.C2.s250 .A7M3",
+      "identity_limit": "SHA仅对应该IIIF原比例裁片响应，不是未下载的全幅TIFF哈希。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "baima",
+      "title": "白马寺／Pai-ma-ssu 地名区域",
+      "record_kind": "named_feature_region_review",
+      "sheet_id": "NI49-8",
+      "status": "pending",
+      "status_label": "待补证：区域可辨，同点未定",
+      "approved_as_ground_control": false,
+      "coordinates": null,
+      "anchor_pixel": null,
+      "physical_point_identified": false,
+      "map_label_read": [
+        "白馬寺",
+        "Pai-ma-ssu"
+      ],
+      "map_symbol_observation": "名称紧邻空心圆；同幅右栏图例把空心圆列在POPULATED PLACES／居住地。没有描出可单独匹配现寺门基、塔心或墙角的测量点。",
+      "identity_level": "named_area_supported_specific_object_unresolved",
+      "modern_correspondence": "文化部页面支持洛阳东郊白马寺建筑群的具名区域对应；它不是AMS圆点的测量坐标出处。",
+      "chronology": "现代机构记历代多次兴废重修，未给出1940年代图上符号与某一存留建筑基址之间的逐期对应证据。",
+      "verdict": "保留区域为待查对象；空心圆中心、文字中心和现寺任意建筑中心均不准直接作控制点。",
+      "blockers": [
+        "原图符号属于居住地概括表达；寺院实体、邻近聚落或站点关系仍须大比例尺原图消歧。",
+        "缺少1940年代至现代的同一实体、同一几何部位的连续证据。",
+        "没有独立现代测量成果、坐标基准、精度及检查点方案。"
+      ],
+      "admission_gate": "取得同期大比例尺图或航片，明确圆点所代表的对象；再以建筑测绘、维修档案和独立现代测量证明同一门基／塔基等具体部位连续，另立点记录。",
+      "scope_exclusion": "不以此审核裁决B5两条古代白马寺记录的同异、位置或迁徙，不把现存寺院定位倒投到北魏。",
+      "source_ids": [
+        "UT-8",
+        "MCT-BAIMA"
+      ],
+      "default_source_id": "MCT-BAIMA",
+      "crops": [
+        {
+          "id": "detail",
+          "title": "白馬寺名称与空心圆",
+          "raw_scan_crop_xyxy": [
+            470,
+            900,
+            820,
+            1130
+          ],
+          "observation": "可读白馬寺与Pai-ma-ssu；黑色空心圆邻近铁路，未标建筑测量点。"
+        },
+        {
+          "id": "context",
+          "title": "铁路、洛河与邻近地名上下文",
+          "raw_scan_crop_xyxy": [
+            290,
+            760,
+            1250,
+            1300
+          ],
+          "observation": "保留现图中铁路、洛河和偃师方向邻近地名，仅作原图识别上下文。"
+        },
+        {
+          "id": "legend",
+          "title": "同幅居住地及铁路图例",
+          "raw_scan_crop_xyxy": [
+            4280,
+            1940,
+            4750,
+            2570
+          ],
+          "observation": "空心圆出现在POPULATED PLACES／居住地图例；图例不把它定义为寺院门基或塔心。"
+        }
+      ]
+    },
+    {
+      "id": "huanghe-railway",
+      "title": "平汉铁路黄河跨河段／黄河第一铁路桥",
+      "record_kind": "named_feature_line_review",
+      "sheet_id": "NI49-8",
+      "status": "excluded",
+      "status_label": "整桥线不准入为单点",
+      "approved_as_ground_control": false,
+      "coordinates": null,
+      "anchor_pixel": null,
+      "physical_point_identified": false,
+      "map_label_read": [
+        "PEIPING-HANKOW RAILWAY",
+        "Huang-ho-pei-an",
+        "黃河北岸",
+        "Ti-miao-kou",
+        "地廟溝"
+      ],
+      "map_symbol_observation": "图上铁路与桥状平行线跨越黄河，近北岸、地庙沟诸名；原图没有把某座桥台或某个桥墩编号为测量点。",
+      "identity_level": "railway_crossing_corridor_supported_individual_structure_unmatched",
+      "modern_correspondence": "可与郑州市文物局记录的旧平汉线黄河铁路桥作沿革级审核；尚无某一留存孔跨或桥台与原图端点的精确配对。",
+      "chronology": "官方沿革记多次受损、换梁、加固、洪灾及拆除，整桥不具备可直接假设的几何连续性。",
+      "continuity_events": [
+        {
+          "year": "1903–1906",
+          "event": "开工并通车",
+          "source_id": "ZZ-BRIDGE"
+        },
+        {
+          "year": "1926 / 1927 / 1938 / 1944",
+          "event": "多次受损",
+          "source_id": "ZZ-BRIDGE"
+        },
+        {
+          "year": "1948",
+          "event": "加固并换梁",
+          "source_id": "ZZ-BRIDGE"
+        },
+        {
+          "year": "1949–1952",
+          "event": "五次加固",
+          "source_id": "ZZ-BRIDGE"
+        },
+        {
+          "year": "1958",
+          "event": "洪水冲断",
+          "source_id": "ZZ-BRIDGE"
+        },
+        {
+          "year": "1987",
+          "event": "拆除上部钢梁，保留南端5孔160米",
+          "source_id": "ZZ-BRIDGE"
+        }
+      ],
+      "verdict": "排除“整条桥线、线的任意端点或现代桥中心”作为本批单一控制点。个别留存桥台不是全部否定，但必须另立具体实体审核。",
+      "blockers": [
+        "线符号没有确定一个可复测的物理部位。",
+        "跨期破坏和工程变化使整桥同形同点假设不能成立。",
+        "未取得逐孔桥图、竣工测量、桥台编号及现存结构坐标。"
+      ],
+      "admission_gate": "以原桥逐孔竣工图、重建／拆除记录和现代工程测量锁定确实存留的同一桥台或基础，再证明它在原图上可唯一识别；新桥或水岸交点不能替代。",
+      "scope_exclusion": "这是近代桥梁跨年代稳定性审核，不证明古河道位置，也不把图上或现今河岸交点视作稳定地面点。",
+      "source_ids": [
+        "UT-8",
+        "ZZ-BRIDGE"
+      ],
+      "default_source_id": "ZZ-BRIDGE",
+      "crops": [
+        {
+          "id": "detail",
+          "title": "跨河线符号与南北岸上下文",
+          "raw_scan_crop_xyxy": [
+            2820,
+            150,
+            3100,
+            460
+          ],
+          "observation": "桥状平行线跨河；岸边地名有助于识别走廊，不指定桥台测量点。"
+        },
+        {
+          "id": "context",
+          "title": "平汉铁路标注与整段跨河走向",
+          "raw_scan_crop_xyxy": [
+            2620,
+            80,
+            3490,
+            1330
+          ],
+          "observation": "保留PEIPING-HANKOW RAILWAY及跨河段；不将线符号缩成任意一点。"
+        }
+      ]
+    }
+  ],
+  "lineage_records": [
+    {
+      "id": "l531-k",
+      "title": "L531 I-49-K：目标图号已找到",
+      "source_ids": [
+        "UT-7",
+        "UT-8",
+        "PRINCETON-MANIFEST",
+        "L531-K"
+      ],
+      "status": "same_sheet_later_impression_reviewed",
+      "status_label": "图号与1945编图已核；1946实物印次",
+      "l500_cited_year": 1945,
+      "observed_compiled_year": 1945,
+      "observed_printed_year": 1946,
+      "edition_as_printed": "AMS 1, 1946",
+      "exact_l500_source_impression_verified": false,
+      "original_horizontal_datum": null,
+      "geographic_crs_assigned": null,
+      "projection_as_printed": "Polyconic Projection",
+      "grid_as_printed": "Ten Thousand Yard World Polyconic Grid, Band IIIN, Zone E",
+      "parent_source": "China 1:50,000, Central Land Survey, 1931–38",
+      "aerial_photography_years": "1944–45",
+      "communications_source_years": "1943–45",
+      "evidence": "原图自己的编图栏追溯至1931–38年中国五万分一地图，并列1944–45航片与1943–45交通资料。投影栏与L500不同。",
+      "reason_unresolved": "1946实物可能与1945编图关联，但尚无版次对照、改版清单或AMS编图档案证明其就是L500实际使用的同印本。",
+      "next_gate": "核1945印本或馆藏版次说明，并取得被引用五万分一图的具体图号及测量依据；上游投影不能作为下游L500的CRS。",
+      "asset_ids": [
+        "l531-i49-k-compilation",
+        "l531-i49-k-projection"
+      ]
+    },
+    {
+      "id": "l531-l",
+      "title": "L531 I-49-L：目标图号已找到",
+      "source_ids": [
+        "UT-8",
+        "PRINCETON-MANIFEST",
+        "L531-L"
+      ],
+      "status": "same_sheet_later_impression_reviewed",
+      "status_label": "图号与1945编图已核；1946实物印次",
+      "l500_cited_year": 1945,
+      "observed_compiled_year": 1945,
+      "observed_printed_year": 1946,
+      "edition_as_printed": "Type F (AMS 1), 1946",
+      "exact_l500_source_impression_verified": false,
+      "original_horizontal_datum": null,
+      "geographic_crs_assigned": null,
+      "projection_as_printed": "Polyconic Projection",
+      "grid_as_printed": "Ten Thousand Yard World Polyconic Grid, Band IIIN, Zone E",
+      "parent_source": "China 1:50,000, Central Land Survey, 1931–38",
+      "aerial_photography_years": "1944–45",
+      "communications_source_years": "1943–45",
+      "evidence": "原图自己的编图栏追溯至1931–38年中国五万分一地图，并列1944–45航片与1943–45交通资料。投影栏与L500不同。",
+      "reason_unresolved": "1946实物可能与1945编图关联，但尚无版次对照、改版清单或AMS编图档案证明其就是L500实际使用的同印本。",
+      "next_gate": "核1945印本或馆藏版次说明，并取得被引用五万分一图的具体图号及测量依据；上游投影不能作为下游L500的CRS。",
+      "asset_ids": [
+        "l531-i49-l-compilation",
+        "l531-i49-l-projection"
+      ]
+    },
+    {
+      "id": "japanese-north-china",
+      "title": "西幅日本十万分一来源：尚未匹配1942–44实物",
+      "source_ids": [
+        "UT-7",
+        "SINICA-0608",
+        "TOHOKU-HUB"
+      ],
+      "status": "earlier_catalog_records_only",
+      "status_label": "早期系列已查，目标印本未核",
+      "l500_cited_years": "1942–1944",
+      "exact_l500_source_impression_verified": false,
+      "evidence": "中研院0608为1933–37的258幅系列。东北大学洛陽标题查询得到一幅1923年洛陽縣十万分一图，另两条尺度／地域不合。",
+      "catalog_records": [
+        {
+          "institution": "Tohoku",
+          "attributes": {
+            "OBJECTID": 10752,
+            "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH010161.jpg",
+            "ghzno": "TH010161",
+            "name": "洛陽",
+            "scale": "1:500,000",
+            "survey_year": -9999,
+            "print_year": 1936,
+            "publication_year": 1938,
+            "code": "壹四ル五○四",
+            "ghzno_isMatchedimagefile": 1
+          }
+        },
+        {
+          "institution": "Tohoku",
+          "attributes": {
+            "OBJECTID": 2757,
+            "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH004747.jpg",
+            "ghzno": "TH004747",
+            "name": "洛陽店",
+            "scale": "1:50,000",
+            "survey_year": 1934,
+            "print_year": 1939,
+            "publication_year": 1939,
+            "code": "武昌62号",
+            "ghzno_isMatchedimagefile": 1
+          }
+        },
+        {
+          "institution": "Tohoku",
+          "attributes": {
+            "OBJECTID": 4737,
+            "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002736.jpg",
+            "ghzno": "TH002736",
+            "name": "洛陽縣",
+            "scale": "1:100,000",
+            "survey_year": 1921,
+            "print_year": 1923,
+            "publication_year": 1923,
+            "code": "開封20号",
+            "ghzno_isMatchedimagefile": 1
+          }
+        }
+      ],
+      "reason_unresolved": "目录时间和实际来源时段不同；尚未目读对应日图原件，也没有证明1942–44版的沿用关系。",
+      "next_gate": "按洛阳及邻接图幅表追查1942–44印本的边栏、出版机构、修测年月和测量依据；不要把较早同名图或目录EPSG替换成源图datum。",
+      "asset_ids": []
+    },
+    {
+      "id": "survey-history",
+      "title": "测量与兵要地志：取得档案索引，未取得地方基准成果",
+      "source_ids": [
+        "NIDS-CATALOG"
+      ],
+      "status": "archive_call_numbers_identified",
+      "status_label": "档号可追；测量原簿待查",
+      "exact_l500_source_impression_verified": false,
+      "archive_references": [
+        {
+          "call_number": "支那-兵要地誌-116",
+          "title": "外邦測量沿革史 草稿",
+          "catalog_date": "昭17.9"
+        },
+        {
+          "call_number": "支那-兵要地誌-117",
+          "title": "外邦測量沿革史 草稿",
+          "catalog_date": "昭17.12"
+        },
+        {
+          "call_number": "支那-兵要地誌-118",
+          "title": "外邦測量沿革史 草稿",
+          "catalog_date": "昭19.9"
+        },
+        {
+          "call_number": "支那-兵要地誌-119",
+          "title": "外邦測量沿革史 草稿",
+          "catalog_date": "昭19.12"
+        },
+        {
+          "call_number": "支那-兵要地誌-123",
+          "title": "洛陽－西安間兵要地誌 概説",
+          "catalog_date": "昭15.8.31"
+        }
+      ],
+      "evidence": "官方目录PDF第207页提供了明确档号，可以据此继续核阅；本批没有取得支撑洛阳原纸图完整水平基准的测量点成果。",
+      "reason_unresolved": "史稿编印日期不能代替地方实测年；系列史与兵要地志目录条目不等于控制网说明。",
+      "next_gate": "核对应卷册内容是否涉及洛阳来源图的三角测量、基线、原点、椭球与定向，并核引用关系；有完整定义后再评估转换。",
+      "asset_ids": []
+    }
+  ],
+  "review_counts": {
+    "named_candidate_records": 2,
+    "pending_region_records": 1,
+    "excluded_as_point_records": 1,
+    "approved_ground_control_points": 0,
+    "fixed_original_scale_source_crops": 4
+  },
+  "next_gates": [
+    {
+      "title": "把区域拆成明确物理点",
+      "requires": "同期大比例尺图／航片与现存结构测绘可一一对应；不要选文字或圆点中心。"
+    },
+    {
+      "title": "证明跨年代连续",
+      "requires": "逐期维修、改线、拆建记录与工程实测能排除部位迁移；桥梁需明确孔跨和桥台编号。"
+    },
+    {
+      "title": "补齐来源和基准",
+      "requires": "核真正的源图版次及测量依据；现代坐标必须有独立来源、基准和精度。"
+    },
+    {
+      "title": "另设独立检查",
+      "requires": "获准的地面对象足够且空间分布合理后，保留未参与拟合的地面检查点并报告用途限制。"
+    }
+  ]
+}
