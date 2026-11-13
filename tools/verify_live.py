@@ -26,6 +26,18 @@ def check(item):
  if actual!=digest:raise ValueError(f'{path}: SHA-256 mismatch')
  return {'path':path,'bytes':len(body),'sha256':actual,'status':'passed'}
 try:
+ required_b7_assets={
+  'dual-luonan.html','luonan-b7.js','source-continuity.html','source-continuity/continuity.js',
+  'dual/luonan-b7.json','dual/luonan-b7-preservation.json','source-continuity/metadata.json',
+  'assets/master-dual-b7-luonan.svg','dual/maps/L10.svg','dual/maps/L10-archive.svg',
+  'dual/maps/LN7-institutions.svg','dual/maps/LN7-markets.svg','dual/maps/LN7-layers.svg',
+  'dual/maps/LN7-evidence-groups.svg','dual/maps/LN7-evidence-river.svg',
+  'source-continuity/edition-summary.svg','source-continuity/continuity-summary.svg',
+  'dual/luonan-b7-map.png','dual/luonan-b7-preview.png',
+  'downloads/dual-luonan-b7-atlas.pdf','downloads/dual-luonan-b7-evidence.csv',
+  'downloads/dual-luonan-b7-package.zip','downloads/luoyang-source-continuity-b7.zip',
+ }
+ assert required_b7_assets.issubset(info['files_sha256']), f'Missing B7 assets: {sorted(required_b7_assets-set(info["files_sha256"]))}'
  public_files=[(path,digest) for path,digest in info['files_sha256'].items() if path not in excluded]
  with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:results=list(pool.map(check,public_files))
  assert info['counts']['sheets']==37 and info['counts']['entities']==339
@@ -88,11 +100,62 @@ try:
  assert all(c['approved_as_ground_control'] is False and c['coordinates'] is None and c['anchor_pixel'] is None for c in ground['candidates'])
  assert all(r['exact_l500_source_impression_verified'] is False for r in ground['lineage_records'])
  assert [r['observed_printed_year'] for r in ground['lineage_records'] if r['id'] in ['l531-k','l531-l']]==[1946,1946]
+ luonan=json.loads(get('dual/luonan-b7.json'));continuity=json.loads(get('source-continuity/metadata.json'))
+ assert {'dual-luonan-b7','source-continuity-b7'}.issubset(release['extensions'])
+ assert luonan['source_commit']==info['source_commit']==info['luonan_b7']['source_commit']==continuity['source_commit']==info['source_continuity_b7']['source_commit']
+ assert len(luonan['evidence'])==info['luonan_b7']['records']==25
+ assert {e['id'] for e in luonan['evidence']}=={f'LG{i:02}' for i in range(1,12)}|{f'LR{i:02}' for i in range(1,15)}
+ assert luonan['source_family_count']==1 and {s['id'] for s in luonan['sources']}=={'Z3','F3','Z2','F2'}
+ assert all(s['family']=='L' for s in luonan['sources'])
+ assert luonan['region']['id']=='L10' and luonan['region']['source_region']=='R11' and luonan['region']['bbox']==[4100,8720,4350,2230]
+ assert luonan['ancient_absolute_positions_added']==0 and all(e['geographic_coordinates'] is None and e['source_region']=='R11' for e in luonan['evidence'])
+ audit=luonan['drawing_audit']
+ assert audit['reading_groups_changed']==info['luonan_b7']['reading_groups_changed']==7
+ assert audit['anchors_moved'] is False and audit['original_target_count']==179
+ assert audit['bridge_drawing_anchor']==[6100,9000] and audit['bridge_interactive_marker_present'] is False
+ assert audit['new_individual_site_glyphs']==audit['new_interactive_targets']==audit['new_ancient_coordinates']==0
+ assert info['luonan_b7']['new_individual_site_glyphs']==info['luonan_b7']['new_interactive_targets']==info['luonan_b7']['new_ancient_coordinates']==0
+ assert info['luonan_b7']['atlas_pages']==8 and info['luonan_b7']['previous_release_preserved']=='B1+B2+B3+B4+B5+B6'
+ assert set(audit['nonspatial_sidecars_preserved'])=={'house_xiaozhengde','v3_guizheng','v3_puti','market_fish','house_xiaobaoyin','market_sitong','fang_whiteelephant','fang_lion','v3_yong_huabiao'}
+ assert json.loads(get('dual/luonan-b7-preservation.json'))['protected_unchanged'] is True
+ records={e['id']:e for e in luonan['evidence']}
+ assert records['LR01']['bridge_construction_year_ce'] is None and records['LR02']['event']['bridge_construction_dated'] is False
+ assert records['LR03']['height_converted_to_map_scale'] is False and records['LR03']['annotation_only'] is True
+ assert records['LR04']['direction_reference_only'] is True and records['LR04']['altar_footprint'] is None
+ assert records['LR05']['procession_crosses_yong_established'] is False
+ assert records['LR06']['move_precedes_main_516_528'] is True and records['LR06']['occupancy_continues_into_main_period_established'] is False
+ assert records['LR06']['converted_to_guizheng_temple_established'] is False
+ assert records['LR07']['ward_id']=='li_guizheng' and records['LR07']['inherit_position_from_paragraph_heading'] is False
+ assert records['LR08']['market_moves_with_person'] is False
+ assert records['LR10']['fish_sitong_identity_established'] is False and records['LR10']['merge_authorized'] is False
+ assert records['LR10']['adjacent_to_bridge_established'] is False and records['LR10']['market_sitong_roadside'] is None
+ assert records['LR11']['main_temporal_state']=='undated' and records['LR11']['temple_foundation_year_ce'] is None
+ assert records['LR12']['internal_order'] is None and records['LR13']['arrival_is_ward_foundation'] is False
+ assert records['LR14']['lion_alive_in_main_period_allowed'] is False and records['LR14']['actual_return_home_established'] is False
+ assert continuity['review_counts']=={
+  'catalog_records_reviewed':3,'period_matched_catalog_candidates':1,'earlier_impressions':2,
+  'upstream_chinese_map_mentions':2,'historical_scans_added':0,'exact_l500_source_matches':0,
+  'exact_l531_source_matches':0,'approved_ground_control_points':0,
+ }
+ assert info['source_continuity_b7']['review_counts']==continuity['review_counts']
+ assert info['source_continuity_b7']['metadata']=='source-continuity/metadata.json'
+ assert info['source_continuity_b7']['metadata_sha256']==info['files_sha256']['source-continuity/metadata.json']
+ assert continuity['original_horizontal_datum'] is None and continuity['original_geographic_crs'] is None
+ assert continuity['project_registration_to_wgs84'] is False and continuity['ground_accuracy_assessed'] is False
+ assert continuity['coordinate_assignment_performed'] is False and continuity['modern_dsm_modified'] is False
+ assert continuity['new_historical_image_obtained'] is False
+ assert continuity['ancient_geographic_positions_added']==continuity['ancient_channels_added']==continuity['approved_control_points']==0
+ assert continuity['approved_ground_control_points']==[] and continuity['source_assets']==[] and continuity['named_records']==3
+ assert len(continuity['records'])==3 and {r['id'] for r in continuity['records']}=={'zhengzhou-1942','yanshi-1934','sishui-1935'}
+ assert {r['id']:r['status'] for r in continuity['records']}=={'zhengzhou-1942':'period-match','yanshi-1934':'earlier','sishui-1935':'earlier'}
+ assert all(r['catalog_only'] is True and r['original_scan_seen_in_this_batch'] is False and r['coordinates'] is None and r['approved_as_ground_control'] is False for r in continuity['records'])
+ assert all(r['actual_l500_source_match'] is False and r['actual_l531_source_match'] is False and r['original_horizontal_datum'] is None and r['original_geographic_crs'] is None for r in continuity['records'])
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
  report['southeast_b6']=info['southeast_b6'];report['ground_review_b6']=ground['review_counts']
- print(f'LIVE PASS: {len(results)} public assets verified, including B1-B6, source lineage and named-ground review; HTTP retries: {len(fetcher.retries)}')
+ report['luonan_b7']=info['luonan_b7'];report['source_continuity_b7']=continuity['review_counts']
+ print(f'LIVE PASS: {len(results)} public assets verified, including B1-B7, source lineage and source continuity; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise
 finally:
