@@ -52,8 +52,17 @@ try:
  assert len(dual['b1']['decisions'])==14 and len(dual['b2']['evidence'])==16 and len(dual['regions'])==4
  assert dual['audits']['b1']['groups_changed']==7 and dual['audits']['b2']['groups_changed']==15
  assert preserved['protected_unchanged'] is True and all(e['geographic_coordinates'] is None for e in dual['b2']['evidence'])
- report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
- print(f'LIVE PASS: {len(results)} public assets verified, including B1/B2 maps and all preserved research/terrain assets')
+ north=json.loads(get('dual/north-b4.json'));frame=json.loads(get('historical-frame/metadata.json'))
+ assert 'dual-north-b4' in release['extensions'] and 'dual-west-b3' in release['extensions']
+ assert north['source_commit']==info['source_commit']==info['north_b4']['source_commit']
+ assert len(north['evidence'])==16 and north['region']['id']=='L06'
+ assert north['ancient_absolute_positions_added']==0 and all(e['geographic_coordinates'] is None for e in north['evidence'])
+ assert json.loads(get('dual/north-b4-preservation.json'))['protected_unchanged'] is True
+ assert frame['ancient_geographic_positions_added']==0 and frame['ground_accuracy_assessed'] is False
+ assert len(frame['sheets'])==2 and sum(len(s['points']) for s in frame['sheets'])==26
+ assert all(s['calibration']['fit']['count']==8 and s['calibration']['internal_holdout_check']['count']==5 and s['geographic_crs'] is None for s in frame['sheets'])
+ report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
+ print(f'LIVE PASS: {len(results)} public assets verified, including B1-B4 and historical scan calibration')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results};raise
 finally:

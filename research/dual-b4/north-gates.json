@@ -1,0 +1,689 @@
+{
+  "version": "dual-north-b4",
+  "base_commit": "d97912c64ea0ed296ca48c08cf8a609790bbf12a",
+  "scope": "R01北门郊区及既有S05承明—金墉；保持B1、宫苑B2和城西B3。",
+  "region": {
+    "id": "L06",
+    "name": "北门—金墉与闻义里",
+    "bbox": [
+      3000,
+      780,
+      8900,
+      2450
+    ]
+  },
+  "sources": [
+    {
+      "id": "Z1",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷一·周祖谟校释电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/1",
+      "checked": "2026-11-13",
+      "basis": "本批核读电子正文与校语；未核古刻书影。"
+    },
+    {
+      "id": "F1",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷一·范祥雍校注电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/1",
+      "checked": "2026-11-13",
+      "basis": "本批核读电子正文与校语；与Z1同属一部古籍，不重复计为独立目击证据。"
+    },
+    {
+      "id": "Z5",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷五·周祖谟校释电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/5",
+      "checked": "2026-11-13",
+      "basis": "本批核读城北诸条电子正文及校语。"
+    },
+    {
+      "id": "F5",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷五·范祥雍校注电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/5",
+      "checked": "2026-11-13",
+      "basis": "本批对照城北电子正文，保留凝圆等显示读法。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "NG01",
+      "title": "两座北门的东西次序",
+      "entities": [
+        "gate_daxia",
+        "gate_guangmo"
+      ],
+      "quote": "北面有二門：西頭曰大夏門。……東頭曰廣莫門。",
+      "quote_source": "Z1",
+      "quote_locator": "原序·北面城门总叙",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "北面两门保持大夏在西、广莫在东；省略号跨过门名沿革及楼制叙述。",
+      "drawing": "沿用两门原有锚点，分别画门楼类型；关系卡只标西—东次序。",
+      "limit": "未给门距、精确北墙线或两门同一高程。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "gate_daxia",
+          "relation": "west_of",
+          "object": "gate_guangmo",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG02",
+      "title": "大夏三层楼与通门两重",
+      "entities": [
+        "gate_daxia",
+        "gate_guangmo"
+      ],
+      "quote": "嘗造三層樓，去地二十丈。……洛陽城門樓皆兩重，去地百尺，惟大夏門甍棟干雲。",
+      "quote_source": "F1",
+      "quote_locator": "原序·北面城门总叙，大夏门楼段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "范本正文；嘗、二字均附有异文校语",
+      "reading": "三层是大夏门的独立楼制记述；本工作图沿用周、范所取的北魏宣武帝营造读法，作为有标记的类型表达。",
+      "drawing": "大夏门用三层门楼类型图符并标†；广莫只用普通门符，不在本批指定层数。三层图符不代表复原立面或高度比例。",
+      "limit": "不把二十丈直接换算米值，不依据图符高度推门楼比例；广莫的两重来自通例而非单门测记。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "周校正文取宣武帝造三层楼；宣武为校补，帝字据异本改。"
+        },
+        {
+          "source": "F1",
+          "reading": "范正文留嘗，校语讨论世宗主语及十丈／二十丈传文；本批不再裁定营造主语与高度。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "北魏营造归属采用周、范校读；传文混有曹魏旧楼叙述，不据此证明曹魏结构原样延续到516—528年。",
+      "geographic_coordinates": null,
+      "claim_status": "selected_editorial_reading"
+    },
+    {
+      "id": "NG03",
+      "title": "城上宫观是连接叙述",
+      "entities": [
+        "gate_daxia",
+        "gate_guangmo"
+      ],
+      "quote": "廣莫門以西，至於大夏門，宮觀相連，被諸城上也。",
+      "quote_source": "F1",
+      "quote_locator": "原序·广莫门后相连宫观段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "两门之间城上有相连宫观的文字记述；摘录不包含校补的自字。",
+      "drawing": "以开放连续带及宫观类型识别表达，不把重复装饰数量计作建筑数。",
+      "limit": "没有宫观总数、逐栋位置、层数或是否整段无缺的测量。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "north_wall_buildings",
+          "relation": "between",
+          "objects": [
+            "gate_guangmo",
+            "gate_daxia"
+          ],
+          "basis": "direct",
+          "mapped_entity_added": false
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG04",
+      "title": "禅虚路西与门外校补",
+      "entities": [
+        "n_chanxu",
+        "gate_daxia"
+      ],
+      "quote": "禪虛寺，在大夏門〔外〕御道西。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·禅虚寺首句",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "校订正文；〔外〕为周校补字",
+      "reading": "御道西为正文方向；置于大夏门外沿用周校补字的工作读法。",
+      "drawing": "空心寺院类型符保留†，路西与门外分别注记；不添塔。",
+      "limit": "范正文无外字；不能把校补的外与直接记载的路西混成同一级确定性。寺门距未记，禅虚盛时年代仍未定。",
+      "sources": [
+        "Z5",
+        "F5"
+      ],
+      "variants": [
+        {
+          "source": "F5",
+          "reading": "正文为在大夏门御道西，无外字。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "n_chanxu",
+          "relation": "west_of",
+          "object": "road_daxia",
+          "basis": "direct"
+        },
+        {
+          "subject": "n_chanxu",
+          "relation": "outside_gate",
+          "object": "gate_daxia",
+          "basis": "editorial_supplement"
+        }
+      ],
+      "temporal_note": "沿用旧基线undated；本次不改为516—528年必存。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG05",
+      "title": "寺前阅武场的方向与使用",
+      "entities": [
+        "n_yuewuchang",
+        "n_chanxu"
+      ],
+      "quote": "寺前有閱武塲，歲終農隙，甲士習戰，千乘萬騎，常在於此。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·禅虚寺阅武场段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "寺前是依建筑朝向的关系；岁终农隙给出周期性使用叙述。",
+      "drawing": "阅武场置于非定位构成栏；连寺前关系，不新增地图场地轮廓。",
+      "limit": "前不自动等于南；千乘万骑不作为场地尺寸或容量测量，不据叙述画军阵占地。",
+      "sources": [
+        "Z5",
+        "F5"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "n_yuewuchang",
+          "relation": "in_front_of",
+          "object": "n_chanxu",
+          "basis": "direct",
+          "absolute_direction": null
+        }
+      ],
+      "temporal_note": "使用季节与建筑存在年份是不同字段。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG06",
+      "title": "宣武场转为光风园",
+      "entities": [
+        "n_guangfeng",
+        "gate_daxia",
+        "n_yuewuchang"
+      ],
+      "quote": "中朝時，宣武塲在大夏門東北，今為光風園，苜蓿生焉。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·禅虚寺后光风园段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "同一叙述对象有旧宣武场—叙述时光风园的用途变化；大夏东北为方位约束。",
+      "drawing": "园地类型替代训练场类型；前后用途并列显示，保留阅武场独立记录。",
+      "limit": "不能与禅虚寺前阅武场无证合并；今不等于已测定的某一公元年，苜蓿不证明封闭园墙。",
+      "sources": [
+        "Z5",
+        "F5"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "n_guangfeng",
+          "relation": "northeast_of",
+          "object": "gate_daxia",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "中朝旧用／正文叙述现在；转换确年未记。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG07",
+      "title": "凝玄寺与永平里三类约束",
+      "entities": [
+        "n_ningxuan",
+        "n_yongping",
+        "gate_guangmo"
+      ],
+      "quote": "在廣莫門外一里御道東，所謂永平里也。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·凝玄寺首段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "门外一里、御道东、位于永平里分别登记为量距、路侧和里属。",
+      "drawing": "凝玄寺用原锚点与寺院类型；永平里用开放范围，三类约束分别可读。",
+      "limit": "一里未给量距端点，不能当作永平里中心或坊界距门一里。",
+      "sources": [
+        "Z5",
+        "F5"
+      ],
+      "variants": [
+        {
+          "source": "Z5",
+          "reading": "周校取凝玄；引大典及逸史本。"
+        },
+        {
+          "source": "F5",
+          "reading": "范正文凝圆，校语保留疑玄／凝玄传文；这些名称仍属同一既有实体。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "n_ningxuan",
+          "relation": "outside_gate",
+          "object": "gate_guangmo",
+          "basis": "direct",
+          "distance": 1,
+          "unit": "里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "n_ningxuan",
+          "relation": "east_of",
+          "object": "road_guangmo",
+          "basis": "direct"
+        },
+        {
+          "subject": "n_ningxuan",
+          "relation": "within",
+          "object": "n_yongping",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG08",
+      "title": "凝玄相对高地线索",
+      "entities": [
+        "n_ningxuan"
+      ],
+      "quote": "地形高顯，下臨城闕，房廡精麗，竹栢成林。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·凝玄寺景观段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "登记高显、下临城阙为文本相对地势线索；房庑、竹柏为建筑和植被叙述。",
+      "drawing": "地形线索卡与现代地表并列，古寺仍不落到经纬网；建筑和竹柏只作类型标记。",
+      "limit": "不含绝对高程、坡度、朝向、视点或城阙的唯一指称；不能凭现代DSM高点认定寺址。",
+      "sources": [
+        "Z5",
+        "F5"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "n_ningxuan",
+          "relation": "relative_high_overlooking",
+          "object": "city_gate_or_palace_unspecified",
+          "basis": "qualitative_text",
+          "height_m": null,
+          "slope_deg": null
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG09",
+      "title": "凝玄舍宅建寺的时间限度",
+      "entities": [
+        "n_ningxuan"
+      ],
+      "quote": "遷京之初，創居此里，值母亡，捨以為寺。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·凝玄寺舍宅段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "保留宅居到寺院的用途转换；承接施主段落，但不从官衔推出确切建寺年。",
+      "drawing": "构成栏显示宅→寺的事件次序；图符不补宅院轴线。",
+      "limit": "迁京之初修饰居宅叙述，不足单独确定建寺年；既有盛时状态依赖施主传记证据链，本批不重写该状态。",
+      "sources": [
+        "Z5",
+        "F5"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "沿用基线attested_by_528；不宣称建寺在迁京当年或525年。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG10",
+      "title": "闻义里只有城东北区域关系",
+      "entities": [
+        "n_wenyi"
+      ],
+      "quote": "洛陽城東北有上商里。……高祖名聞義里。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·凝玄寺后闻义里段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "上商—闻义是名称沿革；城东北为宽区域约束。",
+      "drawing": "闻义里保持开放区域和异名目录，不画完整里墙。",
+      "limit": "不能从章目城北或后出图示把它强贴广莫门御道某一侧；上高里／上高景校读不能另增实体。",
+      "sources": [
+        "Z5",
+        "F5"
+      ],
+      "variants": [
+        {
+          "source": "F5",
+          "reading": "范以校号并列上高景及商里改读；本批采用既有上商／闻义显示名。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "n_wenyi",
+          "relation": "northeast_of",
+          "object": "luoyang_city",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG11",
+      "title": "闻义里的制瓦业不等于窑址",
+      "entities": [
+        "n_wenyi"
+      ],
+      "quote": "唯有造瓦者止其內，京師瓦器出焉。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·闻义里制瓦段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "这是里内居民生业与产品的记述，可以用制瓦／瓦器类型标签。",
+      "drawing": "只在里内无序构成栏显示制瓦业；不新增窑炉地图点。",
+      "limit": "不提供窑址、取土坑、作坊数量或全里排他用途；不可将叙事夸张读作人口普查。",
+      "sources": [
+        "Z5",
+        "F5"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "tile_making_activity",
+          "relation": "within",
+          "object": "n_wenyi",
+          "basis": "direct",
+          "mapped_entity_added": false
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG12",
+      "title": "郭宅与宋宅同里不定先后",
+      "entities": [
+        "n_guowenyuan",
+        "n_songyun",
+        "n_wenyi"
+      ],
+      "quote": "唯冠軍將軍郭文遠遊憩其中，堂宇園林，匹於邦君。……聞義里有燉煌人宋雲宅。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·闻义里郭文远及宋云宅两段；跨段节录",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "郭宅承上文里属，宋宅直接记在闻义里；两宅并列为无序成员。",
+      "drawing": "成员卡只列郭宅（堂宇、园林）与宋宅；沿用组锚点，不拆成两个定位点。",
+      "limit": "没有两宅之间方位、临街顺序或院落边界；宋云出使西域的路线也不是从其宅门口测出的街道。",
+      "sources": [
+        "Z5",
+        "F5"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "n_guowenyuan",
+          "relation": "within",
+          "object": "n_wenyi",
+          "basis": "paragraph_context"
+        },
+        {
+          "subject": "n_songyun",
+          "relation": "within",
+          "object": "n_wenyi",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG13",
+      "title": "承明接东西大道",
+      "entities": [
+        "gate_chengming",
+        "ic_jinyong"
+      ],
+      "quote": "次北曰承明門。承明者，高祖所立，當金墉城前東西大道。",
+      "quote_source": "Z1",
+      "quote_locator": "原序·西面城门总叙，承明门段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "承明列在西面城门门序的北端，不是北面第三门；与金墉城前东西大道相当，为门—道通行关系。",
+      "drawing": "保留原有门外短接段；在关系板表示门接道，不复制为新测量道路。",
+      "limit": "城前不强译成正南；门当道不推等距、同高或一条精确贯通轴线。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "gate_chengming",
+          "relation": "aligned_to_access_road",
+          "object": "road_before_jinyong",
+          "basis": "direct",
+          "road_orientation": "east_west",
+          "absolute_side_of_jinyong": null
+        },
+        {
+          "subject": "gate_chengming",
+          "relation": "side_of_city",
+          "object": "luoyang_city",
+          "side": "west",
+          "basis": "direct_section_context"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG14",
+      "title": "王南寺的通行关联与指代",
+      "entities": [
+        "a_wangnan",
+        "gate_chengming",
+        "ic_jinyong"
+      ],
+      "quote": "城西有王南寺，高祖數詣寺〔與〕沙門論義，故通此門，而未有名，世人謂之新門。",
+      "quote_source": "Z1",
+      "quote_locator": "原序·承明门段，前文为高祖住金墉城",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "校订正文；〔与〕为周校补字",
+      "reading": "西向参照沿用金墉语境下的待定指代；到寺与开门的叙事登记为通行关联。",
+      "drawing": "王南保留无定位名物卡，连通行关系线；线不作为实体道路几何。",
+      "limit": "不把王南画成确定金墉西某里或承明正西终点；新门与承明为同一门的称呼沿革，不增第二门。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "a_wangnan",
+          "relation": "west_of",
+          "object": "city_reference_in_jinyong_context",
+          "basis": "explicit_direction_ambiguous_referent"
+        },
+        {
+          "subject": "a_wangnan",
+          "relation": "associated_access_via",
+          "object": "gate_chengming",
+          "basis": "narrative_context"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG15",
+      "title": "瑶光—承明与金墉缺文",
+      "entities": [
+        "ic_yaoguang",
+        "gate_chengming",
+        "ic_jinyong"
+      ],
+      "quote": "瑤光寺北有承明門，城之西北門也。有金墉城，即魏氏所築。",
+      "quote_source": "Z1",
+      "quote_locator": "卷一·瑶光寺后金墉段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "瑶光北有承明的关系可保留；金墉句前疑缺文，不能将邻接句直接串成确定南北链。",
+      "drawing": "保留瑶光—承明关系；金墉单列既有范围示意，不增加由缺文推成的定位箭头。",
+      "limit": "不由此推出金墉在瑶光正北或承明正东；旧金墉示意锚点及外部参照保持原证据等级。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "有金墉城之前，周校提出疑有脱文；此为校者判断，未补出确定定位句。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "gate_chengming",
+          "relation": "north_of",
+          "object": "ic_yaoguang",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "NG16",
+      "title": "金墉门殿构成无内部坐标",
+      "entities": [
+        "ic_jinyong",
+        "ic_guangji_gate",
+        "ic_guangji_palace"
+      ],
+      "quote": "高祖在城內作光極殿，因名金墉城門為光極門。又作重樓飛閣，遍城上下，從地望之，有如雲也。",
+      "quote_source": "Z1",
+      "quote_locator": "卷一·瑶光寺后金墉建筑段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "传世正文（按所标电子整理本）",
+      "reading": "光极门是金墉城门名；光极殿在城内按段落回指金墉。重楼飞阁为构成及景观叙述。",
+      "drawing": "门、殿、楼阁列无序名物目录；不以目录上下顺序描绘宫殿轴线。",
+      "limit": "没有光极门所在城边、殿门轴线、楼阁总数或可复原足迹。校语所引别名城门不在本轮无证合并。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "ic_guangji_gate",
+          "relation": "gate_of",
+          "object": "ic_jinyong",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_guangji_palace",
+          "relation": "within",
+          "object": "ic_jinyong",
+          "basis": "paragraph_context"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    }
+  ],
+  "ancient_absolute_positions_added": 0,
+  "source_family_count": 1,
+  "notes": [
+    "四个电子卷册来自同一部古籍的两种现代整理，不是四份独立目击材料。",
+    "仅使用原实体ID与原文献图锚点；方位、里属、前向、通行、地势、时间六类关系不得互换。",
+    "引文省略号由本项目加入；古文引句与现代校读分字段保存。",
+    "研究时层沿用516—528年盛时综合图；本批未定年记录保持未定，不倒推全在同一年存在。",
+    "没有将关系卡、类型图符、里内名物卡或现代DSM相对高点当作古建筑足迹。"
+  ],
+  "improvements": [
+    {
+      "id": "B4-I1",
+      "title": "门楼类型区分",
+      "evidence": [
+        "NG02"
+      ],
+      "change": "将大夏三层楼单独表达；高度和营造主语保留版本问题。"
+    },
+    {
+      "id": "B4-I2",
+      "title": "文本地势线索入账",
+      "evidence": [
+        "NG08"
+      ],
+      "change": "登记凝玄高显、下临城阙，明确这类定性线索不能直接匹配现代高点。"
+    },
+    {
+      "id": "B4-I3",
+      "title": "有向关系与非定向关系分图",
+      "evidence": [
+        "NG04",
+        "NG05",
+        "NG13",
+        "NG14"
+      ],
+      "change": "东西路侧和东西大道方向，与寺前、城前、通行关系用不同画法。"
+    },
+    {
+      "id": "B4-I4",
+      "title": "无序成员不变成院落",
+      "evidence": [
+        "NG11",
+        "NG12",
+        "NG16"
+      ],
+      "change": "闻义里生业和宅第、金墉门殿构成采用无序名物目录。"
+    }
+  ]
+}

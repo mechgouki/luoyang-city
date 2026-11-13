@@ -44,6 +44,9 @@ jobs:
           node --check portal-v28.js
           node --check chronology-v29.js
           node --check web/dual-main.js
+          node --check web/north-b4.js
+          node --check web/north-main-b4.js
+          node --check web/historical-frame-b4.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -54,7 +57,9 @@ jobs:
           python -m unittest discover -s tests -p test_v30.py -v 2>&1 | tee artifacts/v30-semantic-tests.txt
           python -m unittest discover -s tests -p test_dual.py -v 2>&1 | tee artifacts/dual-semantic-tests.txt
           python -m unittest discover -s tests -p test_west_b3.py -v 2>&1 | tee artifacts/west-b3-semantic-tests.txt
-      - name: Build preserved research, real terrain, B1 and next-region B2
+          python -m unittest discover -s tests -p test_north_b4.py -v 2>&1 | tee artifacts/north-b4-semantic-tests.txt
+          python -m unittest discover -s tests -p test_historical_frame_b4.py -v 2>&1 | tee artifacts/historical-frame-b4-tests.txt
+      - name: Build preserved research, terrain, B1-B4 and historical scan calibration
         run: |
           python tools/build_site.py
           python tools/research_v25.py
@@ -66,6 +71,8 @@ jobs:
           python tools/terrain_v30.py
           python tools/dual_release.py
           python tools/west_b3.py
+          python tools/historical_frame_b4.py
+          python tools/north_b4.py
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
@@ -88,6 +95,7 @@ jobs:
               python tests/browser_v30.py
               python tests/browser_dual.py
               python tests/browser_west_b3.py
+              python tests/browser_north_b4.py
             '
       - name: Preserve build and browser evidence
         if: always()
@@ -160,6 +168,7 @@ jobs:
               python tests/browser_v30.py --base-url "$SITE_URL" --output artifacts/live-v30-browser
               python tests/browser_dual.py --base-url "$SITE_URL" --output artifacts/live-dual-browser
               python tests/browser_west_b3.py --base-url "$SITE_URL" --output artifacts/live-west-b3-browser
+              python tests/browser_north_b4.py --base-url "$SITE_URL" --output artifacts/live-north-b4-browser
             '
       - name: Preserve live acceptance evidence
         if: always()
