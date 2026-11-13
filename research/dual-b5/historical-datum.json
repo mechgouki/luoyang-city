@@ -1,0 +1,857 @@
+{
+  "version": "b5-historical-datum.1",
+  "date": "2026-11-13",
+  "title": "从原纸图边栏到2005年数字化：水平基准调查",
+  "status": "original_datum_unresolved_digitizer_assignment_documented",
+  "summary": "两幅原图明确印刷UTM第49带和International Spheroid。哈佛原馆元数据说明AMS未随该系列公布水平基准，2005年数字化统一赋予WGS_1984。这个数字产品工作定义不能反证原纸图基准。",
+  "source_claim_scope": "原系列未公布基准是哈佛数字化机构的过程记录；本项目尚未取得AMS原始大地测量档案来独立确认原始基准或转换参数。",
+  "english_excerpt": {
+    "text": "the AMS did not publish this map series with an associated horizontal datum",
+    "word_count": 13,
+    "source_ids": [
+      "HGL-7",
+      "HGL-8"
+    ],
+    "xpath": "/metadata/dataqual/lineage/procstep[2]/procdesc"
+  },
+  "original_horizontal_datum": null,
+  "original_geographic_crs": null,
+  "project_registration_to_wgs84": false,
+  "ground_accuracy_assessed": false,
+  "ancient_geographic_positions_added": 0,
+  "ancient_channels_added": 0,
+  "modern_dsm_modified": false,
+  "approved_ground_control_points": [],
+  "pixel_convention": "原始JPEG解码像素，左上角为原点；裁片采用Pillow左闭右开矩形[x0,y0,x1,y1]，未缩放坐标。裁片只截取图像，不赋予地理坐标。",
+  "evidence_statuses": {
+    "confirmed_from_scan": "已从扫描图目视核读",
+    "reported_by_digitizing_institution": "数字化机构明确记录",
+    "supported_interpretation": "依据直接资料作出的有限解释",
+    "unresolved": "尚未解决"
+  },
+  "sheets": [
+    {
+      "id": "NI49-7",
+      "title": "LO-YANG / 洛阳",
+      "source_file": "ams-ni49-7.jpg",
+      "source_url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-7.jpg",
+      "source_sha256": "005a2b3c81f9135ab03739f2c8f52566c554f7c7af56c6bad5d9b47927970532",
+      "source_size_px": [
+        5000,
+        3779
+      ],
+      "raw_scan_crop_xyxy": [
+        1280,
+        3430,
+        3150,
+        3685
+      ],
+      "crops": [
+        {
+          "id": "projection-grid",
+          "title": "投影、格网和椭球说明",
+          "raw_scan_crop_xyxy": [
+            1280,
+            3430,
+            3150,
+            3685
+          ],
+          "interpretation": "横轴墨卡托；蓝色10公里UTM第49带；International Spheroid。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "compilation",
+          "title": "编图来源与修订说明",
+          "raw_scan_crop_xyxy": [
+            250,
+            3280,
+            1450,
+            3650
+          ],
+          "interpretation": "1955年编图；上游图源按本幅单独记录。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "reliability",
+          "title": "可靠性分区与航片年份",
+          "raw_scan_crop_xyxy": [
+            4200,
+            400,
+            4820,
+            1150
+          ],
+          "interpretation": "区分大比例尺与中比例尺来源；1944—1945航片只作平面修测。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "grid-zone",
+          "title": "49S方格带与字母方格",
+          "raw_scan_crop_xyxy": [
+            3050,
+            3350,
+            3650,
+            3740
+          ],
+          "interpretation": "49S是格网带标识；此处S不表示南半球。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "printing",
+          "title": "印刷年月",
+          "raw_scan_crop_xyxy": [
+            3350,
+            3280,
+            4300,
+            3365
+          ],
+          "interpretation": "印刷年月为1964年11月。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "top-collar",
+          "title": "图号、版次和北图廓",
+          "raw_scan_crop_xyxy": [
+            260,
+            0,
+            4250,
+            180
+          ],
+          "interpretation": "L500，Edition 1-AMS，图号与图廓标签。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "bottom-full",
+          "title": "完整底部边栏",
+          "raw_scan_crop_xyxy": [
+            250,
+            3260,
+            4650,
+            3775
+          ],
+          "interpretation": "完整底部边栏，用于保留上下文。",
+          "status": "confirmed_from_scan"
+        }
+      ],
+      "paper_map": {
+        "series": "L500",
+        "edition": "Edition 1-AMS",
+        "scale_denominator": 250000,
+        "compiled_year": 1955,
+        "printed_date": "1964-11",
+        "projection_as_printed": "Transverse Mercator",
+        "grid_type_as_printed": "Universal Transverse Mercator",
+        "grid_zone_number": 49,
+        "grid_zone_designation_as_printed": "49S",
+        "latitude_band_interpretation": "S，北纬32°—40°纬带；49为UTM经度带",
+        "printed_grid_interval_m": 10000,
+        "ellipsoid_as_printed": "International Spheroid",
+        "horizontal_datum": null,
+        "geographic_crs": null,
+        "datum_status": "not_named_in_reviewed_margins; original series absence reported by Harvard",
+        "compilation_sources": [
+          {
+            "title": "China Proper, NE",
+            "scale_denominator": 250000,
+            "publisher": "AMS",
+            "series_from_harvard_metadata": "L531",
+            "sheets": [
+              "I-49-K"
+            ],
+            "year": 1945,
+            "evidence": [
+              "compilation",
+              "HGL-7:/metadata/dataqual/lineage/srcinfo[3]/srccite/citeinfo"
+            ]
+          },
+          {
+            "title": "North China",
+            "scale_denominator": 100000,
+            "publisher_as_printed": "Japanese North China General Staff",
+            "years": "1942–1944",
+            "evidence": [
+              "compilation",
+              "HGL-7:/metadata/dataqual/lineage/srcinfo[4]/srccite/citeinfo"
+            ]
+          }
+        ],
+        "reliability_medium_scale_compilation_years": "1942–1945",
+        "planimetry_aerial_photography_years": "1944–1945",
+        "magnetic_declination_reference_year": 1960
+      },
+      "digitized_product": {
+        "institution": "Harvard Map Collection / Harvard Geospatial Library",
+        "source_id": "HGL-7",
+        "identifier": "AMS7810_S250_U54_NI49_7",
+        "scan_process_date": "2004-12",
+        "georeference_process_date": "2005-02",
+        "metadata_date": "2005-10-19",
+        "metadata_citation_date": "2005-01",
+        "date_note": "馆藏引用日期2005-01、处理步骤2005-02分别照录；不把二者合并为一个制作日期。",
+        "paper_source_printed_date": "1964-11",
+        "paper_source_edition": "Ed. 1 - AMS",
+        "raster_size_px": [
+          8862,
+          6774
+        ],
+        "assigned_horizontal_datum": "D_WGS_1984",
+        "assigned_ellipsoid": "WGS_1984",
+        "assignment_role": "post_publication_digitization_working_definition",
+        "original_paper_datum_identified": false,
+        "registration_control_count": 4,
+        "registration_control_type": "原图四个角点附近的UTM格网坐标；不是实测地物控制点",
+        "software_as_reported": "ArcMap 9.0",
+        "model_order_reported": null,
+        "rms_m": 23.98942,
+        "rms_scope": "所选角点之间的转换一致性；不是独立地面精度",
+        "independent_ground_check_count_reported": null,
+        "utm_parameters_in_digital_metadata": {
+          "zone": 49,
+          "central_meridian_degrees": 111.0,
+          "latitude_origin_degrees": 0.0,
+          "central_scale": 0.9996,
+          "false_easting_m": 500000.0,
+          "false_northing_m": 0.0,
+          "parameter_scope": "只抄录哈佛数字产品定义，未移植给原纸图"
+        },
+        "metadata_url": "https://raw.githubusercontent.com/harvard-library/harvard-geodata/31403f56c50699a0fdd46b0a5620e1472aa27112/fgdc/AMS7810_S250_U54_NI49_7.xml",
+        "metadata_view_url": "https://github.com/harvard-library/harvard-geodata/blob/31403f56c50699a0fdd46b0a5620e1472aa27112/fgdc/AMS7810_S250_U54_NI49_7.xml",
+        "metadata_sha256": "0369a41628d6259def11270c77dc3fe687cf538da8404394c44ec85a6fa29577",
+        "metadata_bytes": 22283,
+        "repository_commit": "31403f56c50699a0fdd46b0a5620e1472aa27112",
+        "process_location": {
+          "xpath": "/metadata/dataqual/lineage/procstep[2]/procdesc",
+          "line_start": 278,
+          "line_end": 282,
+          "date_xpath": "/metadata/dataqual/lineage/procstep[2]/procdate",
+          "date_line": 284
+        },
+        "geodetic_location": {
+          "xpath": "/metadata/spref/horizsys/geodetic",
+          "line_start": 346,
+          "line_end": 349
+        },
+        "source_map_location": {
+          "xpath": "/metadata/dataqual/lineage/srcinfo[1]/srccite/citeinfo",
+          "pubdate_line": 132
+        },
+        "positional_accuracy_location": {
+          "xpath": "/metadata/dataqual/posacc/horizpa/horizpar",
+          "line_start": 119
+        },
+        "metadata_projection_warning": "水平精度段另称数字影像使用的UTM与原纸图投影存在不一致。两幅原图边栏均写横轴墨卡托，但该警告没有给出原图全部参数；不能仅由投影名称相近宣称完全等同，也不把这段警告解释为已经查明原图另一种投影。",
+        "download_url": "https://mps.lib.harvard.edu/assets/file/hgl:AMS7810_S250_U54_NI49_7",
+        "cog_url": "https://hgl.harvard.edu/data/public/AMS7810_S250_U54_NI49_7.tif",
+        "raster_downloaded_in_b5": false
+      },
+      "b4_internal_calibration": {
+        "source_id": "B4",
+        "source_size_px": [
+          5000,
+          3779
+        ],
+        "fit_count": 8,
+        "heldout_count": 5,
+        "fit_rms_printed_grid_m": 66.93368610729402,
+        "heldout_rms_printed_grid_m": 84.92155961952612,
+        "heldout_rms_scan_px": 2.3371416980459125,
+        "scope": "本项目UT扫描图的印刷网格；5点为同张扫描内部留出",
+        "geographic_crs": null,
+        "ground_accuracy_assessed": false
+      },
+      "cross_product_comparison": "图号、版次和印刷年月相符；数字影像来源与分辨率不同。控制方案与统计对象也不同，因此不以RMS作精度排名。"
+    },
+    {
+      "id": "NI49-8",
+      "title": "CHENG-HSIEN / 郑县",
+      "source_file": "ams-ni49-8.jpg",
+      "source_url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-8.jpg",
+      "source_sha256": "d3525d1e86cc47536bb978721409e06852a07a3aee7298f69fb94b86cf94917c",
+      "source_size_px": [
+        5000,
+        3800
+      ],
+      "raw_scan_crop_xyxy": [
+        1280,
+        3430,
+        3150,
+        3685
+      ],
+      "crops": [
+        {
+          "id": "projection-grid",
+          "title": "投影、格网和椭球说明",
+          "raw_scan_crop_xyxy": [
+            1280,
+            3430,
+            3150,
+            3685
+          ],
+          "interpretation": "横轴墨卡托；蓝色10公里UTM第49带；International Spheroid。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "compilation",
+          "title": "编图来源与修订说明",
+          "raw_scan_crop_xyxy": [
+            250,
+            3280,
+            1450,
+            3650
+          ],
+          "interpretation": "1955年编图；上游图源按本幅单独记录。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "reliability",
+          "title": "可靠性分区与航片年份",
+          "raw_scan_crop_xyxy": [
+            4200,
+            400,
+            4820,
+            1150
+          ],
+          "interpretation": "区分大比例尺与中比例尺来源；1944—1945航片只作平面修测。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "grid-zone",
+          "title": "49S方格带与字母方格",
+          "raw_scan_crop_xyxy": [
+            3050,
+            3350,
+            3650,
+            3740
+          ],
+          "interpretation": "49S是格网带标识；此处S不表示南半球。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "printing",
+          "title": "印刷年月",
+          "raw_scan_crop_xyxy": [
+            3350,
+            3280,
+            4300,
+            3365
+          ],
+          "interpretation": "印刷年月为1964年9月。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "top-collar",
+          "title": "图号、版次和北图廓",
+          "raw_scan_crop_xyxy": [
+            260,
+            0,
+            4250,
+            180
+          ],
+          "interpretation": "L500，Edition 1-AMS，图号与图廓标签。",
+          "status": "confirmed_from_scan"
+        },
+        {
+          "id": "bottom-full",
+          "title": "完整底部边栏",
+          "raw_scan_crop_xyxy": [
+            250,
+            3260,
+            4650,
+            3775
+          ],
+          "interpretation": "完整底部边栏，用于保留上下文。",
+          "status": "confirmed_from_scan"
+        }
+      ],
+      "paper_map": {
+        "series": "L500",
+        "edition": "Edition 1-AMS",
+        "scale_denominator": 250000,
+        "compiled_year": 1955,
+        "printed_date": "1964-09",
+        "projection_as_printed": "Transverse Mercator",
+        "grid_type_as_printed": "Universal Transverse Mercator",
+        "grid_zone_number": 49,
+        "grid_zone_designation_as_printed": "49S",
+        "latitude_band_interpretation": "S，北纬32°—40°纬带；49为UTM经度带",
+        "printed_grid_interval_m": 10000,
+        "ellipsoid_as_printed": "International Spheroid",
+        "horizontal_datum": null,
+        "geographic_crs": null,
+        "datum_status": "not_named_in_reviewed_margins; original series absence reported by Harvard",
+        "compilation_sources": [
+          {
+            "title": "China Proper, NE",
+            "scale_denominator": 250000,
+            "publisher": "AMS",
+            "series_from_harvard_metadata": "L531",
+            "sheets": [
+              "I-49-K",
+              "I-49-L"
+            ],
+            "year": 1945,
+            "evidence": [
+              "compilation",
+              "HGL-8:/metadata/dataqual/lineage/srcinfo[3]/srccite/citeinfo"
+            ]
+          }
+        ],
+        "reliability_medium_scale_compilation_years": "1945",
+        "planimetry_aerial_photography_years": "1944–1945",
+        "magnetic_declination_reference_year": 1955
+      },
+      "digitized_product": {
+        "institution": "Harvard Map Collection / Harvard Geospatial Library",
+        "source_id": "HGL-8",
+        "identifier": "AMS7810_S250_U54_NI49_8",
+        "scan_process_date": "2004-12",
+        "georeference_process_date": "2005-02",
+        "metadata_date": "2005-10-19",
+        "metadata_citation_date": "2005-01",
+        "date_note": "馆藏引用日期2005-01、处理步骤2005-02分别照录；不把二者合并为一个制作日期。",
+        "paper_source_printed_date": "1964-09",
+        "paper_source_edition": "Ed. 1 - AMS",
+        "raster_size_px": [
+          8840,
+          6752
+        ],
+        "assigned_horizontal_datum": "D_WGS_1984",
+        "assigned_ellipsoid": "WGS_1984",
+        "assignment_role": "post_publication_digitization_working_definition",
+        "original_paper_datum_identified": false,
+        "registration_control_count": 4,
+        "registration_control_type": "原图四个角点附近的UTM格网坐标；不是实测地物控制点",
+        "software_as_reported": "ArcMap 9.0",
+        "model_order_reported": null,
+        "rms_m": 48.70132,
+        "rms_scope": "所选角点之间的转换一致性；不是独立地面精度",
+        "independent_ground_check_count_reported": null,
+        "utm_parameters_in_digital_metadata": {
+          "zone": 49,
+          "central_meridian_degrees": 111.0,
+          "latitude_origin_degrees": 0.0,
+          "central_scale": 0.9996,
+          "false_easting_m": 500000.0,
+          "false_northing_m": 0.0,
+          "parameter_scope": "只抄录哈佛数字产品定义，未移植给原纸图"
+        },
+        "metadata_url": "https://raw.githubusercontent.com/harvard-library/harvard-geodata/31403f56c50699a0fdd46b0a5620e1472aa27112/fgdc/AMS7810_S250_U54_NI49_8.xml",
+        "metadata_view_url": "https://github.com/harvard-library/harvard-geodata/blob/31403f56c50699a0fdd46b0a5620e1472aa27112/fgdc/AMS7810_S250_U54_NI49_8.xml",
+        "metadata_sha256": "49d7844845f30ded1e5cf82257935a2e575e79441b513af341541c27cffbf4d2",
+        "metadata_bytes": 21313,
+        "repository_commit": "31403f56c50699a0fdd46b0a5620e1472aa27112",
+        "process_location": {
+          "xpath": "/metadata/dataqual/lineage/procstep[2]/procdesc",
+          "line_start": 251,
+          "line_end": 255,
+          "date_xpath": "/metadata/dataqual/lineage/procstep[2]/procdate",
+          "date_line": 257
+        },
+        "geodetic_location": {
+          "xpath": "/metadata/spref/horizsys/geodetic",
+          "line_start": 319,
+          "line_end": 322
+        },
+        "source_map_location": {
+          "xpath": "/metadata/dataqual/lineage/srcinfo[1]/srccite/citeinfo",
+          "pubdate_line": 129
+        },
+        "positional_accuracy_location": {
+          "xpath": "/metadata/dataqual/posacc/horizpa/horizpar",
+          "line_start": 116
+        },
+        "metadata_projection_warning": "水平精度段另称数字影像使用的UTM与原纸图投影存在不一致。两幅原图边栏均写横轴墨卡托，但该警告没有给出原图全部参数；不能仅由投影名称相近宣称完全等同，也不把这段警告解释为已经查明原图另一种投影。",
+        "download_url": "https://mps.lib.harvard.edu/assets/file/hgl:AMS7810_S250_U54_NI49_8",
+        "cog_url": "https://hgl.harvard.edu/data/public/AMS7810_S250_U54_NI49_8.tif",
+        "raster_downloaded_in_b5": false
+      },
+      "b4_internal_calibration": {
+        "source_id": "B4",
+        "source_size_px": [
+          5000,
+          3800
+        ],
+        "fit_count": 8,
+        "heldout_count": 5,
+        "fit_rms_printed_grid_m": 52.851042489938834,
+        "heldout_rms_printed_grid_m": 83.625133786883,
+        "heldout_rms_scan_px": 2.31449169758253,
+        "scope": "本项目UT扫描图的印刷网格；5点为同张扫描内部留出",
+        "geographic_crs": null,
+        "ground_accuracy_assessed": false
+      },
+      "cross_product_comparison": "图号、版次和印刷年月相符；数字影像来源与分辨率不同。控制方案与统计对象也不同，因此不以RMS作精度排名。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "UT-7",
+      "kind": "original_map_scan",
+      "publisher": "US Army Map Service",
+      "repository": "University of Texas at Austin, Perry-Castañeda Library Map Collection",
+      "title": "LO-YANG / 洛阳",
+      "url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-7.jpg",
+      "sha256": "005a2b3c81f9135ab03739f2c8f52566c554f7c7af56c6bad5d9b47927970532",
+      "size_px": [
+        5000,
+        3779
+      ],
+      "retrieved_date": "2026-11-13",
+      "access": "已获取并目视核读哈希锁定JPEG；裁片位置见sheets[].crops",
+      "supports": [
+        "纸图投影/格网/椭球文字",
+        "编图来源",
+        "编图、航片、印刷、磁偏角各自年份"
+      ],
+      "does_not_establish": [
+        "完整水平基准",
+        "独立地面位置精度"
+      ]
+    },
+    {
+      "id": "HGL-7",
+      "kind": "institutional_fgdc_metadata",
+      "publisher": "Harvard Map Collection / Harvard Geospatial Library",
+      "title": "AMS China: Lo-yang Region (Raster Image)",
+      "url": "https://raw.githubusercontent.com/harvard-library/harvard-geodata/31403f56c50699a0fdd46b0a5620e1472aa27112/fgdc/AMS7810_S250_U54_NI49_7.xml",
+      "view_url": "https://github.com/harvard-library/harvard-geodata/blob/31403f56c50699a0fdd46b0a5620e1472aa27112/fgdc/AMS7810_S250_U54_NI49_7.xml",
+      "repository_url": "https://github.com/harvard-library/harvard-geodata",
+      "commit": "31403f56c50699a0fdd46b0a5620e1472aa27112",
+      "sha256": "0369a41628d6259def11270c77dc3fe687cf538da8404394c44ec85a6fa29577",
+      "bytes": 22283,
+      "retrieved_date": "2026-11-13",
+      "access": "已获取官方原馆固定commit原始XML，哈希与OpenGeoMetadata镜像完全相同；构建只使用本档案转述，不在线抓取。",
+      "evidence_location": {
+        "xpath": "/metadata/dataqual/lineage/procstep[2]/procdesc",
+        "line_start": 278,
+        "line_end": 282,
+        "date_xpath": "/metadata/dataqual/lineage/procstep[2]/procdate",
+        "date_line": 284
+      },
+      "supports": [
+        "2005数字产品的工作基准",
+        "数字化机构关于原系列未公布基准的记录",
+        "四角格网坐标与RMS解释",
+        "原纸图版次、印刷日期和上游图源"
+      ],
+      "does_not_establish": [
+        "本项目UT扫描的像素变换",
+        "原纸图WGS84基准",
+        "独立地面验证"
+      ]
+    },
+    {
+      "id": "UT-8",
+      "kind": "original_map_scan",
+      "publisher": "US Army Map Service",
+      "repository": "University of Texas at Austin, Perry-Castañeda Library Map Collection",
+      "title": "CHENG-HSIEN / 郑县",
+      "url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-8.jpg",
+      "sha256": "d3525d1e86cc47536bb978721409e06852a07a3aee7298f69fb94b86cf94917c",
+      "size_px": [
+        5000,
+        3800
+      ],
+      "retrieved_date": "2026-11-13",
+      "access": "已获取并目视核读哈希锁定JPEG；裁片位置见sheets[].crops",
+      "supports": [
+        "纸图投影/格网/椭球文字",
+        "编图来源",
+        "编图、航片、印刷、磁偏角各自年份"
+      ],
+      "does_not_establish": [
+        "完整水平基准",
+        "独立地面位置精度"
+      ]
+    },
+    {
+      "id": "HGL-8",
+      "kind": "institutional_fgdc_metadata",
+      "publisher": "Harvard Map Collection / Harvard Geospatial Library",
+      "title": "AMS China: Cheng-hsien Region (Raster Image)",
+      "url": "https://raw.githubusercontent.com/harvard-library/harvard-geodata/31403f56c50699a0fdd46b0a5620e1472aa27112/fgdc/AMS7810_S250_U54_NI49_8.xml",
+      "view_url": "https://github.com/harvard-library/harvard-geodata/blob/31403f56c50699a0fdd46b0a5620e1472aa27112/fgdc/AMS7810_S250_U54_NI49_8.xml",
+      "repository_url": "https://github.com/harvard-library/harvard-geodata",
+      "commit": "31403f56c50699a0fdd46b0a5620e1472aa27112",
+      "sha256": "49d7844845f30ded1e5cf82257935a2e575e79441b513af341541c27cffbf4d2",
+      "bytes": 21313,
+      "retrieved_date": "2026-11-13",
+      "access": "已获取官方原馆固定commit原始XML，哈希与OpenGeoMetadata镜像完全相同；构建只使用本档案转述，不在线抓取。",
+      "evidence_location": {
+        "xpath": "/metadata/dataqual/lineage/procstep[2]/procdesc",
+        "line_start": 251,
+        "line_end": 255,
+        "date_xpath": "/metadata/dataqual/lineage/procstep[2]/procdate",
+        "date_line": 257
+      },
+      "supports": [
+        "2005数字产品的工作基准",
+        "数字化机构关于原系列未公布基准的记录",
+        "四角格网坐标与RMS解释",
+        "原纸图版次、印刷日期和上游图源"
+      ],
+      "does_not_establish": [
+        "本项目UT扫描的像素变换",
+        "原纸图WGS84基准",
+        "独立地面验证"
+      ]
+    },
+    {
+      "id": "NGA-GRID",
+      "kind": "official_technical_reference",
+      "publisher": "US National Geospatial-Intelligence Agency, Office of Geomatics",
+      "title": "Coordinate Systems: Military Grid Reference Systems (MGRS)",
+      "url": "https://earth-info.nga.mil/?action=coordsys&dir=coordsys",
+      "retrieved_date": "2026-11-13",
+      "evidence_location": "Military Grid Reference Systems (MGRS)节：第三字符为纬带的定义；紧随其后的S纬带/半球混淆警告。",
+      "access": "已从官方域搜索结果核读；直接网页抓取曾超时，未给该动态页面制作内容哈希。",
+      "supports": [
+        "格网带第三字符是纬带",
+        "S纬带不等于南半球"
+      ],
+      "does_not_establish": [
+        "AMS原纸图基准"
+      ]
+    },
+    {
+      "id": "B4",
+      "kind": "project_reproducible_research",
+      "title": "AMS印刷格网校准B4",
+      "path": "research/dual-b4/historical-frame.json",
+      "method_path": "tools/historical_frame_b4.py:fit_sheet",
+      "sha256": "0822ab9f3d61689fb99d54e63e450f645f6f4bda8d9c9649a7ff6489bdabde61",
+      "supports": [
+        "每幅8点拟合和5点同图内部留出",
+        "图内网格残差"
+      ],
+      "does_not_establish": [
+        "外部地面控制",
+        "水平基准"
+      ]
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "D01",
+      "title": "纸图确有椭球与格网标注",
+      "status": "confirmed_from_scan",
+      "finding": "两图底边说明UTM第49带、10公里格网与International Spheroid；这足以识别印刷网格类型，不能补足完整水平基准。",
+      "evidence_refs": [
+        "UT-7:projection-grid",
+        "UT-8:projection-grid"
+      ],
+      "next_gate": "G1"
+    },
+    {
+      "id": "D02",
+      "title": "原系列基准缺失有原馆记录支持",
+      "status": "reported_by_digitizing_institution",
+      "finding": "哈佛在两幅的第二处理步骤均说明AMS未随此系列公布水平基准。结论限于该机构的资料记录，本项目尚未找到AMS原始测量依据来独立确定所用基准。",
+      "evidence_refs": [
+        "HGL-7:/metadata/dataqual/lineage/procstep[2]/procdesc",
+        "HGL-8:/metadata/dataqual/lineage/procstep[2]/procdesc"
+      ],
+      "next_gate": "G1"
+    },
+    {
+      "id": "D03",
+      "title": "WGS84属于2005数字产品定义",
+      "status": "reported_by_digitizing_institution",
+      "finding": "哈佛为跨系列一致性而赋予WGS_1984，并把四角附近的印刷UTM坐标放入该工作定义。不能由数字元数据中的WGS84回填原纸图基准。",
+      "evidence_refs": [
+        "HGL-7:/metadata/dataqual/lineage/procstep[2]/procdesc",
+        "HGL-8:/metadata/dataqual/lineage/procstep[2]/procdesc"
+      ],
+      "next_gate": "G2"
+    },
+    {
+      "id": "D04",
+      "title": "49S中的S是纬带",
+      "status": "supported_interpretation",
+      "finding": "原图的49S是格网带标识。按NGA第三字符纬带定义，S为北纬32°—40°；因此不能将49S读成南半球UTM49带。",
+      "evidence_refs": [
+        "UT-7:grid-zone",
+        "UT-8:grid-zone",
+        "NGA-GRID"
+      ],
+      "next_gate": "无需据此新增地理坐标。"
+    },
+    {
+      "id": "D05",
+      "title": "RMS口径不能互换或排名",
+      "status": "supported_interpretation",
+      "finding": "哈佛数字化RMS来自四角格网控制；B4分别记录8点拟合、5点同图内部留出。图像、分辨率、控制组和统计对象不同；这些值均未提供独立地面误差。",
+      "evidence_refs": [
+        "HGL-7:/metadata/dataqual/lineage/procstep[2]/procdesc",
+        "HGL-8:/metadata/dataqual/lineage/procstep[2]/procdesc",
+        "B4"
+      ],
+      "next_gate": "G3"
+    },
+    {
+      "id": "D06",
+      "title": "两图上游资料不能互抄",
+      "status": "confirmed_from_scan",
+      "finding": "NI49-7写有1945年I-49-K和1942—1944年日本华北1:100,000图；NI49-8写有1945年I-49-K、I-49-L，未明确重复日本华北图这一条。不能将西幅的完整图源名单自动移植给东幅。",
+      "evidence_refs": [
+        "UT-7:compilation",
+        "UT-8:compilation",
+        "HGL-7:/metadata/dataqual/lineage/srcinfo",
+        "HGL-8:/metadata/dataqual/lineage/srcinfo"
+      ],
+      "next_gate": "G1"
+    },
+    {
+      "id": "D07",
+      "title": "摄影、编图与印刷年月分开",
+      "status": "confirmed_from_scan",
+      "finding": "两幅可靠性栏记1944—1945年航片平面修测，编图为1955年；印刷分别1964年11月和9月。它们不代表整幅内容来自一次1964年实测。",
+      "evidence_refs": [
+        "UT-7:reliability",
+        "UT-8:reliability",
+        "UT-7:printing",
+        "UT-8:printing",
+        "UT-7:compilation",
+        "UT-8:compilation"
+      ],
+      "next_gate": "G4"
+    },
+    {
+      "id": "D08",
+      "title": "同版同期馆藏仍是不同数字产品",
+      "status": "supported_interpretation",
+      "finding": "哈佛的纸图图号、版次、印刷年月与本项目原图吻合，但数字栅格尺寸不同；本次不移植其world file、控制像素或精度统计。",
+      "evidence_refs": [
+        "UT-7:top-collar",
+        "UT-8:top-collar",
+        "UT-7:printing",
+        "UT-8:printing",
+        "HGL-7:/metadata/dataqual/lineage/srcinfo[1]",
+        "HGL-8:/metadata/dataqual/lineage/srcinfo[1]"
+      ],
+      "next_gate": "G2"
+    },
+    {
+      "id": "D09",
+      "title": "尚无获准稳定地面点",
+      "status": "unresolved",
+      "finding": "只建立地物类型调查与排除队列。没有具体地物同时通过原图可识别、跨年代同点连续和独立现代坐标来源三项门槛，因此获准地面控制点为0。",
+      "evidence_refs": [],
+      "next_gate": "G2"
+    }
+  ],
+  "candidate_review_queue": [
+    {
+      "id": "stable-rock",
+      "title": "原位岩体上的明确点状特征",
+      "record_kind": "feature_type_screening",
+      "status": "pending",
+      "status_label": "待查",
+      "physical_feature_identified": false,
+      "approved_as_ground_control": false,
+      "coordinates": null,
+      "reason": "只把岩体类列为调查方向；尚未在两图和独立现代测量资料间确认同一明确点。山名文字中心、整条山脊、笼统峰顶均不能直接入选。",
+      "admission_gate": "原图可定位点状符号或清晰尖点；现代影像或实测可识别同一点；记录影像时相、地面坐标基准与点选不确定度。"
+    },
+    {
+      "id": "surviving-base",
+      "title": "原址保存的建筑基座或石构件",
+      "record_kind": "feature_type_screening",
+      "status": "pending",
+      "status_label": "待查",
+      "physical_feature_identified": false,
+      "approved_as_ground_control": false,
+      "coordinates": null,
+      "reason": "未核实具体建筑在1955年前后的连续性，也未找到其原图符号对应的是基座、塔心还是概略位置。",
+      "admission_gate": "独立建筑沿革与现状测量支持原址连续；图上符号与现代选点定义一致；不能使用后建仿古建筑。"
+    },
+    {
+      "id": "bridge-abutment",
+      "title": "保留原位的旧桥台",
+      "record_kind": "feature_type_screening",
+      "status": "pending",
+      "status_label": "待查",
+      "physical_feature_identified": false,
+      "approved_as_ground_control": false,
+      "coordinates": null,
+      "reason": "未确认任何桥台满足跨年代稳定。桥名沿用、桥梁重建和引道改线会形成伪同名点。",
+      "admission_gate": "建设档案或多期影像证明所选桥台原位保存；原图能够辨认桥台或同一轴线端点；排除以桥名文字定位。"
+    },
+    {
+      "id": "mobile-water",
+      "title": "近代河岸、沙洲、冲积区河流交汇点",
+      "record_kind": "feature_type_screening",
+      "status": "excluded",
+      "status_label": "当前排除",
+      "physical_feature_identified": false,
+      "approved_as_ground_control": false,
+      "coordinates": null,
+      "reason": "缺少跨时相稳定性证据；河道移动会把真实环境变化吸收到配准参数中。",
+      "admission_gate": "只有独立证据证明是固定岩岸上的同一明确物理点时，才可作为新的岩体候选重新评审。"
+    },
+    {
+      "id": "label-centre",
+      "title": "地名文字中心、聚落中心和重建城门",
+      "record_kind": "feature_type_screening",
+      "status": "excluded",
+      "status_label": "当前排除",
+      "physical_feature_identified": false,
+      "approved_as_ground_control": false,
+      "coordinates": null,
+      "reason": "文字排布和聚落概略符号不是地面测量点，重建建筑也不能代表旧物理点。",
+      "admission_gate": "须另行找到原位连续、定义明确的实体点；不能通过给概略中心加小数位升级为控制点。"
+    }
+  ],
+  "next_gates": [
+    {
+      "id": "G1",
+      "title": "核实原始大地测量依据",
+      "status": "open",
+      "requires": "AMS编图技术档、L531 I-49-K/I-49-L及明确上游图幅的基准/三角网说明。即使找到某上游基准，也要证明其进入本图时未另行调整。",
+      "unlocks": "可以提出有出处的原纸图基准假设；仍需外部验证。"
+    },
+    {
+      "id": "G2",
+      "title": "建立真实地面对应点",
+      "status": "open",
+      "requires": "跨年代同一物理点、可追溯现代坐标来源与精度、空间分布覆盖；在拟合前固定独立地面检查点。",
+      "unlocks": "可试验一个明确标为经验性的图像到现代地面的配准方案。"
+    },
+    {
+      "id": "G3",
+      "title": "独立检验并区分误差来源",
+      "status": "open",
+      "requires": "报告留出地面检查残差、点选误差、原图尺度与概括程度、基准假设、扫描和纸张变形；不得用同图蓝网留出点代替地面检查。",
+      "unlocks": "仅在限定区域和用途下报告经验证的现代配准，不据此推导北魏位置。"
+    },
+    {
+      "id": "G4",
+      "title": "分年代核查水系",
+      "status": "open",
+      "requires": "独立的历史水文、考古和地貌证据；明确地图编图、摄影、印刷及现代数据时相。",
+      "unlocks": "可讨论时相差异；古河道仍须专门证据，不能由现代DSM或近代图单独确定。"
+    }
+  ],
+  "visualization_plan": [
+    {
+      "id": "source-summary",
+      "title": "原纸图与数字工作定义并排",
+      "format": "2200×1560 SVG",
+      "content": "每幅并排展示原图投影/椭球裁片、印刷日期、哈佛过程记录与文件身份。未知的原纸图基准单独显示。"
+    },
+    {
+      "id": "review-summary",
+      "title": "残差口径与控制点准入",
+      "format": "2200×1560 SVG",
+      "content": "用表格分别呈现哈佛四角拟合、本项目8点拟合及5点同图留出，均不作为地面精度排名；并列5类调查/排除记录与0个获准地面点。"
+    }
+  ],
+  "limitations": [
+    "International Spheroid只是椭球标注，不能补足原点、定向、实现及转换关系；原纸图水平基准继续保留null。",
+    "49S中的S为格网纬带标识；不得据此把中国图幅设成南半球UTM。",
+    "哈佛的WGS_1984是后加数字化工作定义，本项目没有直接套用该定义或复制其world file。",
+    "两馆图号、版次和印刷年月吻合，但影像来自不同数字化产品；不能把一个栅格的控制点、像素参数或RMS搬到另一个栅格。",
+    "所有RMS均是各自控制方案下的转换或图内一致性统计；无独立地面精度评估，不能横向排名。",
+    "本次只确认资料链与排除错误解释；未完成原始基准识别、现代配准或跨图无缝拼接。",
+    "候选清单为地物类型审核队列，不宣称已找到具体稳定地物；获准地面点和新增古代坐标均为0。"
+  ]
+}

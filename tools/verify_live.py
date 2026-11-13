@@ -1,20 +1,14 @@
 #!/usr/bin/env python3
 """Verify the actual HTTPS commit and every public asset. No deployment mocks."""
 import argparse,concurrent.futures,hashlib,json,os,time
-from pathlib import Path,PurePosixPath
-from urllib.parse import quote,urljoin,urlparse
-from urllib.request import Request,urlopen
+from pathlib import Path
+from urllib.parse import urlparse
+from live_http import LiveFetcher
 p=argparse.ArgumentParser();p.add_argument('--base-url',required=True);p.add_argument('--commit',default=os.environ.get('GITHUB_SHA'));p.add_argument('--output',default='artifacts/live-http.json');args=p.parse_args()
 base=args.base_url.rstrip('/')+'/'
 if urlparse(base).scheme!='https':raise SystemExit('HTTPS required for live verification')
-def get(path):
- target=urljoin(base,quote(path,safe='/'))
- if not target.startswith(base) or '..' in PurePosixPath(path).parts:raise ValueError('Unsafe asset path')
- req=Request(target,headers={'User-Agent':'Luoyang-Atlas-Acceptance/0.8.0','Cache-Control':'no-cache'})
- with urlopen(req,timeout=45) as response:
-  if response.status!=200:raise ValueError(f'{path}: HTTP {response.status}')
-  if not response.geturl().startswith(base):raise ValueError(f'{path}: unexpected redirect')
-  return response.read()
+fetcher=LiveFetcher(base)
+get=fetcher.get
 info=None
 for attempt in range(12):
  try:
@@ -61,9 +55,23 @@ try:
  assert frame['ancient_geographic_positions_added']==0 and frame['ground_accuracy_assessed'] is False
  assert len(frame['sheets'])==2 and sum(len(s['points']) for s in frame['sheets'])==26
  assert all(s['calibration']['fit']['count']==8 and s['calibration']['internal_holdout_check']['count']==5 and s['geographic_crs'] is None for s in frame['sheets'])
+ west_roads=json.loads(get('dual/west-roads-b5.json'));datum=json.loads(get('historical-datum/metadata.json'))
+ assert 'dual-west-roads-b5' in release['extensions'] and 'historical-datum-b5' in release['extensions']
+ assert west_roads['source_commit']==info['source_commit']==info['west_roads_b5']['source_commit']==datum['source_commit']
+ assert len(west_roads['evidence'])==24 and west_roads['region']['id']=='L07'
+ assert west_roads['ancient_absolute_positions_added']==0 and all(e['geographic_coordinates'] is None for e in west_roads['evidence'])
+ assert west_roads['drawing_audit']['type_groups_changed']==11 and west_roads['drawing_audit']['anchors_moved'] is False
+ assert set(west_roads['drawing_audit']['nonspatial_sidecars_preserved'])=={'w_yongming','w_wangdianyu'}
+ assert json.loads(get('dual/west-roads-b5-preservation.json'))['protected_unchanged'] is True
+ assert datum['original_horizontal_datum'] is None and datum['original_geographic_crs'] is None
+ assert datum['project_registration_to_wgs84'] is False and datum['ground_accuracy_assessed'] is False
+ assert datum['ancient_geographic_positions_added']==0 and len(datum['approved_ground_control_points'])==0
+ assert len(datum['sheets'])==2 and all(s['digitized_product']['assignment_role']=='post_publication_digitization_working_definition' for s in datum['sheets'])
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
- print(f'LIVE PASS: {len(results)} public assets verified, including B1-B4 and historical scan calibration')
+ report['http_retries']=fetcher.retries
+ report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
+ print(f'LIVE PASS: {len(results)} public assets verified, including B1-B5 and historical datum review; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
- report={'base_url':base,'status':'failed','error':str(e),'files':results};raise
+ report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise
 finally:
  target=Path(args.output);target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(report,ensure_ascii=False,indent=2))
