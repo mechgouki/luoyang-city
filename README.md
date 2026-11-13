@@ -1,7 +1,7 @@
 # 北魏洛阳文献地图 · Luoyang Atlas
 
 以《洛阳伽蓝记》及其校注、相关史地文献为基础的可追溯历史城市地图。
-仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；当前工作线：**B1、宫苑B2、城西B3、北门B4**。
+仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；当前工作线：**B1、宫苑B2、城西B3、北门B4、城西门道B5**。
 
 > 盛时图采用 516—528 年河阴之变前的文献合成时层，不是某一年实测地图。图形尺寸、城墙轮廓和未定院界不能换算为历史地理坐标。
 
@@ -21,12 +21,14 @@
 | 宫苑B2 | 宫苑、瑶光、景阳山及地下水系条件 | [B2](https://mechgouki.github.io/luoyang-city/dual-b2.html) |
 | 城西B3 | 大市、四向八里、皇女台、寿丘与王宅 | [B3](https://mechgouki.github.io/luoyang-city/dual-west.html) |
 | 北门B4 | 两门、寺园、闻义里、承明—金墉；16条证据、4组类型调整 | [B4](https://mechgouki.github.io/luoyang-city/dual-north.html) |
+| 城西门道B5 | 三门道、寺序约束、宅寺时层；24条证据、11组类型调整 | [B5](https://mechgouki.github.io/luoyang-city/dual-west-roads.html) |
 | 现代地形 | 真实DSM、山影、坡度、等高线、两幅AMS原图 | [地形](https://mechgouki.github.io/luoyang-city/v3.0.html) |
 | 历史图面B4 | 26个印刷格网交点；每幅8拟合、5内部留出 | [图面校准](https://mechgouki.github.io/luoyang-city/historical-frame.html) |
+| 历史基准B5 | 两幅原图14张边栏裁片、原馆数字化记录；原纸图基准仍未识别 | [基准调查](https://mechgouki.github.io/luoyang-city/historical-datum.html) |
 
 当前状态及后续顺序见 [docs/current-state-and-next.md](docs/current-state-and-next.md)。旧`project-plan.md`、`resume-review.md`保留历史阶段记录，不能以其中旧部署状态判断今天的进度。`release.json`主版本族保持`v3.0-dual.b2`，后续批次由`extensions`和`current_milestone`登记。
 
-现代DSM不是北魏裸地；历史扫描图的同图格网残差不是地面精度。当前未把文献像素或现代高点转换成古址经纬度。
+现代DSM不是北魏裸地；历史扫描图的同图格网残差不是地面精度。哈佛2005年赋予的WGS_1984是数字化工作定义，不能反推原纸图水平基准。当前未把文献像素或现代高点转换成古址经纬度。
 
 ## 本地构建
 
@@ -49,6 +51,8 @@ python3 tools/dual_release.py
 python3 tools/west_b3.py
 python3 tools/historical_frame_b4.py
 python3 tools/north_b4.py
+python3 tools/historical_datum_b5.py
+python3 tools/west_roads_b5.py
 python3 -m http.server 8000 --directory _site
 ```
 
@@ -63,10 +67,10 @@ python3 -m http.server 8000 --directory _site
 - `tools/build_site.py`：生成 `_site/`；只收录浏览网站需要的文件。
 - `_site/build-info.json`：构建所用提交、记录数、坐标格式及文件校验值。
 - `tests/`：区域坐标与点击／拖动回归测试。
-- `research/dual-b1`至`research/dual-b4`：本批证据、解释边界和绘图决定。
+- `research/dual-b1`至`research/dual-b5`：各批证据、解释边界和绘图决定。
 - `docs/current-state-and-next.md`：当前进度与下一批；各批release-notes记录实际变化。
 
-所有旧版入口、原始37页图册、实体ID及示意锚点保持可追溯。B4图册含6页，另提供证据CSV、JSON、SVG、类型图与历史图面复现包。真实发布门槛见`AGENTS.md`。
+所有旧版入口、原始37页图册、实体ID及示意锚点保持可追溯。B4与B5各有6页图册，另提供证据CSV、JSON、SVG、类型图、历史图面校准及基准调查复现包。真实发布门槛见`AGENTS.md`。
 
 ## 史料、许可与限制
 
