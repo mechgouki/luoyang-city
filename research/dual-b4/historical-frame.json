@@ -1,0 +1,410 @@
+{
+  "version": "b4-historical-scan-frame.1",
+  "date": "2026-11-13",
+  "status": "printed_grid_calibration_only",
+  "title": "AMS扫描图：印刷方格网校准",
+  "scope": "两幅近现代扫描地图的图内网格校准；不是北魏地图复原或现代基准配准。",
+  "pixel_convention": "Original decoded JPEG coordinates; x increases right, y increases down; integer coordinates denote pixel centres; top-left centre is (0,0).",
+  "selection_method": "先查看完整扫描图和边栏标签；颜色通道统计只辅助寻找候选位置。全部26个交点以3倍放大裁片逐点目视检查；明显误取文字行的候选已按实际蓝色格线交点修正。坐标取整数像素，未做多观察者重复点选误差研究。",
+  "fit_protocol": "Each sheet uses only its eight preassigned fit points in an ordinary least-squares affine model. Five separately measured interior points are held out from fitting and report internal scan-grid residuals. No point is moved to reduce a residual.",
+  "check_scope": "留出点来自同一张扫描图的内部，不是独立地面控制点，也不是独立历史证据。",
+  "coordinate_meaning": "Printed grid metres reproduced from source marginal labels; no EPSG identifier, datum transformation, WGS84 registration or geographic-coordinate export is assigned.",
+  "ancient_geographic_positions_added": 0,
+  "ancient_channels_added": 0,
+  "modern_dsm_modified": false,
+  "ground_accuracy_assessed": false,
+  "source_edition": "AMS L500 Edition 1-AMS, compiled 1955; printing dates retained in existing v3.0 review; not a single-date survey.",
+  "limitations": [
+    "数字残差只衡量纸图/扫描图内的格网一致性，不是地面误差、古址定位精度或地图原始测绘精度。",
+    "平面仿射只校正整体平移、旋转、尺度和剪切；局部纸张/扫描变形和线宽仍可能残留。",
+    "刻意不加高阶模型追逐少量控制点，也不把同图留出检查说成独立地面验证。",
+    "无已识别水平基准，不将印刷网格坐标标成WGS84、EPSG:32649或任何现成地理CRS。",
+    "两图分别整饰和检查，未声称相邻图幅已经无缝配准；输出不含GIS坐标标签或world file。",
+    "整饰图限于拟合控制点包围的网格矩形；不对图外外推，不从近代河岸推北魏河岸。",
+    "下一阶段仍需查明大地基准、确认跨年代稳定地物，并使用独立地面检查点验证。"
+  ],
+  "sheets": [
+    {
+      "id": "NI49-7",
+      "title": "LO-YANG / 洛阳",
+      "source_file": "ams-ni49-7.jpg",
+      "source_url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-7.jpg",
+      "source_sha256": "005a2b3c81f9135ab03739f2c8f52566c554f7c7af56c6bad5d9b47927970532",
+      "source_size_px": [
+        5000,
+        3779
+      ],
+      "printed_scale": 250000,
+      "printed_grid_interval_m": 10000,
+      "printed_grid_description": "Blue 10000 metre Universal Transverse Mercator grid, International Spheroid; reviewed marginalia does not establish the horizontal datum.",
+      "horizontal_datum": null,
+      "geographic_crs": null,
+      "fit_model": "affine_pixel_to_printed_grid",
+      "fit_point_ids": [
+        "7-F01",
+        "7-F02",
+        "7-F03",
+        "7-F04",
+        "7-F05",
+        "7-F06",
+        "7-F07",
+        "7-F08"
+      ],
+      "check_point_ids": [
+        "7-C01",
+        "7-C02",
+        "7-C03",
+        "7-C04",
+        "7-C05"
+      ],
+      "label_evidence_crop_xyxy": [
+        260,
+        2820,
+        1150,
+        3300
+      ],
+      "rectified_printed_grid_extent_m": [
+        510000,
+        3780000,
+        620000,
+        3860000
+      ],
+      "points": [
+        {
+          "id": "7-F01",
+          "role": "fit",
+          "pixel_xy": [
+            620,
+            527
+          ],
+          "printed_grid_east_m": 510000,
+          "printed_grid_north_m": 3860000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-F02",
+          "role": "fit",
+          "pixel_xy": [
+            3654,
+            550
+          ],
+          "printed_grid_east_m": 620000,
+          "printed_grid_north_m": 3860000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-F03",
+          "role": "fit",
+          "pixel_xy": [
+            616,
+            2725
+          ],
+          "printed_grid_east_m": 510000,
+          "printed_grid_north_m": 3780000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-F04",
+          "role": "fit",
+          "pixel_xy": [
+            3652,
+            2752
+          ],
+          "printed_grid_east_m": 620000,
+          "printed_grid_north_m": 3780000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-F05",
+          "role": "fit",
+          "pixel_xy": [
+            1999,
+            534
+          ],
+          "printed_grid_east_m": 560000,
+          "printed_grid_north_m": 3860000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-F06",
+          "role": "fit",
+          "pixel_xy": [
+            1996,
+            2735
+          ],
+          "printed_grid_east_m": 560000,
+          "printed_grid_north_m": 3780000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-F07",
+          "role": "fit",
+          "pixel_xy": [
+            619,
+            1623
+          ],
+          "printed_grid_east_m": 510000,
+          "printed_grid_north_m": 3820000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-F08",
+          "role": "fit",
+          "pixel_xy": [
+            3653,
+            1647
+          ],
+          "printed_grid_east_m": 620000,
+          "printed_grid_north_m": 3820000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-C01",
+          "role": "check",
+          "pixel_xy": [
+            1446,
+            1078
+          ],
+          "printed_grid_east_m": 540000,
+          "printed_grid_north_m": 3840000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-C02",
+          "role": "check",
+          "pixel_xy": [
+            2549,
+            1089
+          ],
+          "printed_grid_east_m": 580000,
+          "printed_grid_north_m": 3840000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-C03",
+          "role": "check",
+          "pixel_xy": [
+            1446,
+            2182
+          ],
+          "printed_grid_east_m": 540000,
+          "printed_grid_north_m": 3800000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-C04",
+          "role": "check",
+          "pixel_xy": [
+            2547,
+            2191
+          ],
+          "printed_grid_east_m": 580000,
+          "printed_grid_north_m": 3800000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "7-C05",
+          "role": "check",
+          "pixel_xy": [
+            1999,
+            1633
+          ],
+          "printed_grid_east_m": 560000,
+          "printed_grid_north_m": 3820000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        }
+      ]
+    },
+    {
+      "id": "NI49-8",
+      "title": "CHENG-HSIEN / 郑县",
+      "source_file": "ams-ni49-8.jpg",
+      "source_url": "https://maps.lib.utexas.edu/maps/ams/china/txu-oclc-10552568-ni49-8.jpg",
+      "source_sha256": "d3525d1e86cc47536bb978721409e06852a07a3aee7298f69fb94b86cf94917c",
+      "source_size_px": [
+        5000,
+        3800
+      ],
+      "printed_scale": 250000,
+      "printed_grid_interval_m": 10000,
+      "printed_grid_description": "Blue 10000 metre Universal Transverse Mercator grid, International Spheroid; reviewed marginalia does not establish the horizontal datum.",
+      "horizontal_datum": null,
+      "geographic_crs": null,
+      "fit_model": "affine_pixel_to_printed_grid",
+      "fit_point_ids": [
+        "8-F01",
+        "8-F02",
+        "8-F03",
+        "8-F04",
+        "8-F05",
+        "8-F06",
+        "8-F07",
+        "8-F08"
+      ],
+      "check_point_ids": [
+        "8-C01",
+        "8-C02",
+        "8-C03",
+        "8-C04",
+        "8-C05"
+      ],
+      "label_evidence_crop_xyxy": [
+        260,
+        2820,
+        1150,
+        3300
+      ],
+      "rectified_printed_grid_extent_m": [
+        650000,
+        3780000,
+        760000,
+        3860000
+      ],
+      "points": [
+        {
+          "id": "8-F01",
+          "role": "fit",
+          "pixel_xy": [
+            717,
+            562
+          ],
+          "printed_grid_east_m": 650000,
+          "printed_grid_north_m": 3860000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-F02",
+          "role": "fit",
+          "pixel_xy": [
+            3760,
+            622
+          ],
+          "printed_grid_east_m": 760000,
+          "printed_grid_north_m": 3860000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-F03",
+          "role": "fit",
+          "pixel_xy": [
+            686,
+            2771
+          ],
+          "printed_grid_east_m": 650000,
+          "printed_grid_north_m": 3780000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-F04",
+          "role": "fit",
+          "pixel_xy": [
+            3727,
+            2837
+          ],
+          "printed_grid_east_m": 760000,
+          "printed_grid_north_m": 3780000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-F05",
+          "role": "fit",
+          "pixel_xy": [
+            2099,
+            588
+          ],
+          "printed_grid_east_m": 700000,
+          "printed_grid_north_m": 3860000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-F06",
+          "role": "fit",
+          "pixel_xy": [
+            2068,
+            2800
+          ],
+          "printed_grid_east_m": 700000,
+          "printed_grid_north_m": 3780000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-F07",
+          "role": "fit",
+          "pixel_xy": [
+            702,
+            1664
+          ],
+          "printed_grid_east_m": 650000,
+          "printed_grid_north_m": 3820000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-F08",
+          "role": "fit",
+          "pixel_xy": [
+            3744,
+            1730
+          ],
+          "printed_grid_east_m": 760000,
+          "printed_grid_north_m": 3820000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-C01",
+          "role": "check",
+          "pixel_xy": [
+            1539,
+            1126
+          ],
+          "printed_grid_east_m": 680000,
+          "printed_grid_north_m": 3840000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-C02",
+          "role": "check",
+          "pixel_xy": [
+            2647,
+            1154
+          ],
+          "printed_grid_east_m": 720000,
+          "printed_grid_north_m": 3840000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-C03",
+          "role": "check",
+          "pixel_xy": [
+            1523,
+            2235
+          ],
+          "printed_grid_east_m": 680000,
+          "printed_grid_north_m": 3800000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-C04",
+          "role": "check",
+          "pixel_xy": [
+            2631,
+            2259
+          ],
+          "printed_grid_east_m": 720000,
+          "printed_grid_north_m": 3800000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        },
+        {
+          "id": "8-C05",
+          "role": "check",
+          "pixel_xy": [
+            2083,
+            1693
+          ],
+          "printed_grid_east_m": 700000,
+          "printed_grid_north_m": 3820000,
+          "description": "蓝色10 km印刷方格网交点；像素位置经放大图逐点目视核对。"
+        }
+      ]
+    }
+  ]
+}

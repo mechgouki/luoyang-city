@@ -1,7 +1,7 @@
 # 北魏洛阳文献地图 · Luoyang Atlas
 
 以《洛阳伽蓝记》及其校注、相关史地文献为基础的可追溯历史城市地图。
-仓库：`mechgouki/luoyang-city`。研究基线：**v2.4**；网站实现：**web 0.1.1**。
+仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；当前工作线：**B1、宫苑B2、城西B3、北门B4**。
 
 > 盛时图采用 516—528 年河阴之变前的文献合成时层，不是某一年实测地图。图形尺寸、城墙轮廓和未定院界不能换算为历史地理坐标。
 
@@ -11,21 +11,26 @@
 网页支持 SVG 缩放、区域定位、地点检索、史料详情、争议浏览及图册下载。
 原始研究数据与绘图代码仍保留在仓库；首版为无第三方运行时依赖的 HTML、CSS、JavaScript 和 SVG 静态网站。
 
-## 首次发布：只需一次 Pages 设置
+## 当前成果与正式入口
 
-网站目标地址：`https://mechgouki.github.io/luoyang-city/`。
-**目标地址不代表已经部署成功；以 Actions 的 deploy 任务和实际访问为准。**
+正式网站：[mechgouki.github.io/luoyang-city](https://mechgouki.github.io/luoyang-city/)。现有GitHub Actions在main提交后自动构建、部署、验收；无需重新设置Pages。每批正式完成以对应提交的build、deploy、verify-live全部成功为准。
 
-1. 仓库管理员打开 https://github.com/mechgouki/luoyang-city/settings/pages 。
-2. 在 **Build and deployment → Source** 中选择 **GitHub Actions**。
-3. 在 **Actions → Validate and deploy Luoyang Atlas → Run workflow** 运行 `main`；也可以重试失败的部署任务。
+| 工作线 | 内容 | 入口 |
+| --- | --- | --- |
+| B1 | 宫前—永宁—景乐、建春两桥、景明—汉国子学堂—石经 | [B1](https://mechgouki.github.io/luoyang-city/dual-b1.html) |
+| 宫苑B2 | 宫苑、瑶光、景阳山及地下水系条件 | [B2](https://mechgouki.github.io/luoyang-city/dual-b2.html) |
+| 城西B3 | 大市、四向八里、皇女台、寿丘与王宅 | [B3](https://mechgouki.github.io/luoyang-city/dual-west.html) |
+| 北门B4 | 两门、寺园、闻义里、承明—金墉；16条证据、4组类型调整 | [B4](https://mechgouki.github.io/luoyang-city/dual-north.html) |
+| 现代地形 | 真实DSM、山影、坡度、等高线、两幅AMS原图 | [地形](https://mechgouki.github.io/luoyang-city/v3.0.html) |
+| 历史图面B4 | 26个印刷格网交点；每幅8拟合、5内部留出 | [图面校准](https://mechgouki.github.io/luoyang-city/historical-frame.html) |
 
-现有工作流会先校验、打包，再部署。无需提供密码、个人访问令牌或扩大其他仓库的权限。
-不推荐直接从 `main / (root)` 发布：本仓库的 PDF 需要先合并分片，且发布文件应从 `_site/` 生成。
+当前状态及后续顺序见 [docs/current-state-and-next.md](docs/current-state-and-next.md)。旧`project-plan.md`、`resume-review.md`保留历史阶段记录，不能以其中旧部署状态判断今天的进度。`release.json`主版本族保持`v3.0-dual.b2`，后续批次由`extensions`和`current_milestone`登记。
+
+现代DSM不是北魏裸地；历史扫描图的同图格网残差不是地面精度。当前未把文献像素或现代高点转换成古址经纬度。
 
 ## 本地构建
 
-需要 Python 3.11+，Node.js 18+（回归测试使用内置 node:test，无 npm 依赖）。
+需要 Python 3.11+、Node.js；固定依赖与完整验收以`.github/workflows/pages.yml`为准。
 
 ```sh
 python3 tools/assemble_pdf.py
@@ -33,6 +38,17 @@ python3 tools/validate_site.py
 node --check app.js
 node --test tests/map-interactions.test.cjs
 python3 tools/build_site.py
+python3 tools/research_v25.py
+python3 tools/milestone_v26.py
+python3 tools/link_model_points_v26.py
+python3 tools/network_v27.py
+python3 tools/portal_v28.py
+python3 tools/chronology_v29.py
+python3 tools/terrain_v30.py
+python3 tools/dual_release.py
+python3 tools/west_b3.py
+python3 tools/historical_frame_b4.py
+python3 tools/north_b4.py
 python3 -m http.server 8000 --directory _site
 ```
 
@@ -47,9 +63,10 @@ python3 -m http.server 8000 --directory _site
 - `tools/build_site.py`：生成 `_site/`；只收录浏览网站需要的文件。
 - `_site/build-info.json`：构建所用提交、记录数、坐标格式及文件校验值。
 - `tests/`：区域坐标与点击／拖动回归测试。
-- `docs/resume-review.md`：本轮续接核查、修复和仍需验证的事项。
+- `research/dual-b1`至`research/dual-b4`：本批证据、解释边界和绘图决定。
+- `docs/current-state-and-next.md`：当前进度与下一批；各批release-notes记录实际变化。
 
-本次仅修复网页和发布流程，未调整 v2.4 历史研究判断。UI 更新不等同于研究版本变化。
+所有旧版入口、原始37页图册、实体ID及示意锚点保持可追溯。B4图册含6页，另提供证据CSV、JSON、SVG、类型图与历史图面复现包。真实发布门槛见`AGENTS.md`。
 
 ## 史料、许可与限制
 
