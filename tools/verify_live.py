@@ -67,10 +67,32 @@ try:
  assert datum['project_registration_to_wgs84'] is False and datum['ground_accuracy_assessed'] is False
  assert datum['ancient_geographic_positions_added']==0 and len(datum['approved_ground_control_points'])==0
  assert len(datum['sheets'])==2 and all(s['digitized_product']['assignment_role']=='post_publication_digitization_working_definition' for s in datum['sheets'])
+ southeast=json.loads(get('dual/southeast-b6.json'));ground=json.loads(get('ground-review/metadata.json'))
+ assert {'dual-southeast-b6','ground-review-b6'}.issubset(release['extensions'])
+ assert southeast['source_commit']==info['source_commit']==info['southeast_b6']['source_commit']==ground['source_commit']
+ assert len(southeast['evidence'])==34 and southeast['source_family_count']==1 and len(southeast['sources'])==4
+ assert [r['id'] for r in southeast['regions']]==['L08','L09']
+ assert [r['bbox'] for r in southeast['regions']]==[[6500,4110,1710,2870],[7700,4050,4200,2700]]
+ assert southeast['ancient_absolute_positions_added']==0 and all(e['geographic_coordinates'] is None for e in southeast['evidence'])
+ assert southeast['drawing_audit']['type_groups_changed']==20 and southeast['drawing_audit']['anchors_moved'] is False
+ assert southeast['drawing_audit']['original_target_count']==179 and info['southeast_b6']['atlas_pages']==8
+ assert set(southeast['drawing_audit']['nonspatial_sidecars_preserved'])=={'ic_hutong','ic_yuanhui','ic_yishou','ic_guangming','v2_guijue'}
+ assert json.loads(get('dual/southeast-b6-preservation.json'))['protected_unchanged'] is True
+ records={e['id']:e for e in southeast['evidence']}
+ assert records['EO15']['identity_assumption_required_for_dating'] is True
+ assert records['EO07']['east_of_zhengshi_established'] is False and records['EO14']['baoming_at_ward_northwest_corner_established'] is False
+ assert ground['original_horizontal_datum'] is None and ground['original_geographic_crs'] is None
+ assert ground['project_registration_to_wgs84'] is False and ground['ground_accuracy_assessed'] is False
+ assert ground['ancient_geographic_positions_added']==0 and ground['ancient_channels_added']==0 and ground['modern_dsm_modified'] is False
+ assert ground['approved_ground_control_points']==[] and len(ground['candidates'])==2 and len(ground['source_assets'])==4
+ assert all(c['approved_as_ground_control'] is False and c['coordinates'] is None and c['anchor_pixel'] is None for c in ground['candidates'])
+ assert all(r['exact_l500_source_impression_verified'] is False for r in ground['lineage_records'])
+ assert [r['observed_printed_year'] for r in ground['lineage_records'] if r['id'] in ['l531-k','l531-l']]==[1946,1946]
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
- print(f'LIVE PASS: {len(results)} public assets verified, including B1-B5 and historical datum review; HTTP retries: {len(fetcher.retries)}')
+ report['southeast_b6']=info['southeast_b6'];report['ground_review_b6']=ground['review_counts']
+ print(f'LIVE PASS: {len(results)} public assets verified, including B1-B6, source lineage and named-ground review; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise
 finally:
