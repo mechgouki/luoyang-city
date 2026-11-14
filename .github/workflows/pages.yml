@@ -58,6 +58,7 @@ jobs:
           node --check web/source-continuity-b7.js
           node --check web/city-review-b8.js
           node --check web/city-main-b8.js
+          node --check web/homepage-v1.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -101,6 +102,7 @@ jobs:
           python tools/source_continuity_b7.py
           python tools/luonan_b7.py
           python tools/city_review_b8.py
+          python tools/homepage_v1.py
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
@@ -128,6 +130,7 @@ jobs:
               python tests/browser_southeast_b6.py
               python tests/browser_luonan_b7.py
               python tests/browser_city_b8.py
+              python tests/browser_homepage_v1.py
             '
       - name: Preserve build and browser evidence
         if: always()
@@ -205,6 +208,7 @@ jobs:
               python tests/browser_southeast_b6.py --base-url "$SITE_URL" --output artifacts/live-southeast-b6-browser
               python tests/browser_luonan_b7.py --base-url "$SITE_URL" --output artifacts/live-luonan-b7-browser
               python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser
+              python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser
             '
       - name: Preserve live acceptance evidence
         if: always()
