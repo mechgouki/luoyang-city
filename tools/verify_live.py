@@ -346,6 +346,29 @@ try:
  assert info['prosperity']['atlas_pages']==6
  assert get('downloads/prosperity-v1-atlas.pdf').startswith(b'%PDF-')
  assert get('downloads/prosperity-v1-package.zip').startswith(b'PK')
+ core=json.loads(get('prosperity-core/data.json'))
+ core_models=json.loads(get('prosperity-core/models.json'))
+ core_basis=json.loads(get('prosperity-core/core-scale-basis.json'))
+ core_relations=json.loads(get('prosperity-core/core-relations.json'))
+ core_preserved=json.loads(get('prosperity-core/preservation.json'))
+ assert core['version']==info['prosperity_core']['version']==release['prosperity_core_version']=='prosperity-core-v2'
+ assert all(x['source_commit']==info['source_commit'] for x in [core,core_models,core_preserved,info['prosperity_core']])
+ assert len(core['items'])==len(core_models['models'])==info['prosperity_core']['metric_templates']==3
+ assert {m['id'] for m in core_models['models']}=={'core-changhe','core-taiji','core-yongning-tower'}
+ assert all(m['historical_height_m'] is None and m['roof_model'] is None and m['orientation_verified'] is False for m in core_models['models'])
+ assert core_basis['courtyard_diagnostic']['fit_adopted_for_city_overlay'] is False
+ assert core['research_limits']['court_template_placed_in_city'] is False
+ assert all(info['prosperity_core'][key] is False for key in ['historical_heights_reconstructed','roofs_reconstructed','ancient_ground_surface_reconstructed','court_template_placed_in_city'])
+ assert len(core_relations['scenes'])==info['prosperity_core']['local_relation_scenes']==3
+ assert sum(len(s['nodes']) for s in core_relations['scenes'])==info['prosperity_core']['local_components']==27
+ assert sum(len(s['relations']) for s in core_relations['scenes'])==info['prosperity_core']['local_relations']==30
+ assert core_preserved['protected_unchanged'] is True
+ assert all(info['files_sha256'][path]==digest for path,digest in core_preserved['protected_files'].items())
+ assert 'id="core-scale-home-link"' in home_html and './prosperity-core.html' in home_html
+ assert 'id="core-scale-entry"' in get('prosperity.html').decode('utf-8')
+ assert info['prosperity_core']['atlas_pages']==7
+ assert get('downloads/prosperity-core-v2-atlas.pdf').startswith(b'%PDF-')
+ assert get('downloads/prosperity-core-v2-package.zip').startswith(b'PK')
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
@@ -354,7 +377,8 @@ try:
  report['city_review_b8']=info['city_review_b8'];report['city_audit_counts']=ledger['counts'];report['source_access_b8']=access['review_counts']
  report['homepage']=info['homepage']
  report['prosperity']=info['prosperity']
- print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1; HTTP retries: {len(fetcher.retries)}')
+ report['prosperity_core']=info['prosperity_core']
+ print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1-P2; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise
 finally:

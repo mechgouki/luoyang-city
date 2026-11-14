@@ -1,0 +1,2083 @@
+{
+  "schema_version": "prosperity-v2-core-relations-1",
+  "reviewed_at": "2026-11-14",
+  "status": "source_checked_local_structure_ready_for_rendering",
+  "scope": "三张有来源的独立局部关系图；不改P1的地理位置、旧实体ID或已发布图。",
+  "inputs": [
+    {
+      "path": "research/prosperity-v1/building-dimensions.json",
+      "sha256": "ca9a5cf39563408142ab306a435bce3687ab9ce65088975f57c107a1dcbaee87"
+    },
+    {
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "sha256": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79"
+    },
+    {
+      "path": "research/prosperity-v1/text-review.json",
+      "sha256": "e897985535b46d802708e628da4bad5a40c667ad2283caad55aeb0b347cb3836"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S37",
+      "title": "宫城阊阖门平剖图",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962",
+      "pdf_file_page": 1962,
+      "annex_printed_page": 37,
+      "document_sha256": "296e9336c19d0645e9f7f0274193bb5de466b439fbea511212686614c8c7b1c1",
+      "embedded_image_index_zero_based": 1,
+      "native_raster_pixels": [
+        555,
+        434
+      ],
+      "embedded_image_sha256": "8f3b722fc60cdf29ec04553022185d3c5b073ba7454be9430c97197a8da24cc7",
+      "source_type": "institutional_archaeological_plan_reproduction",
+      "checked_method": "PDF整页及原始内嵌图实际目读；未以重采样提高精度",
+      "note": "宫城阊阖门局部平剖图；可读北箭和20m比例尺。北箭角度未量，不将图面竖直直接设为精确真北。粗黑外框不能通作建筑边界。",
+      "supports": "labeled_components_and_local_topology",
+      "supports_precise_metric_tracing_this_pass": false,
+      "raw_image_redistributed": false
+    },
+    {
+      "id": "S40",
+      "title": "永宁寺全院图",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1965",
+      "pdf_file_page": 1965,
+      "annex_printed_page": 40,
+      "document_sha256": "296e9336c19d0645e9f7f0274193bb5de466b439fbea511212686614c8c7b1c1",
+      "embedded_image_index_zero_based": 0,
+      "native_raster_pixels": [
+        555,
+        569
+      ],
+      "embedded_image_sha256": "3a1044d068c4cb2b4a6810e38e3a0c13dd8aebbaccc75975cbdeba08c23178e9",
+      "source_type": "institutional_archaeological_plan_reproduction",
+      "checked_method": "PDF整页及原始内嵌图实际目读；未以重采样提高精度",
+      "note": "永宁寺全院图；佛殿、塔、西门、东门及南门标签可读，南部有源图灰带遮挡；未见可读北箭。方位须结合门名和古文，不借同页下图北箭。",
+      "supports": "labeled_components_and_local_topology",
+      "supports_precise_metric_tracing_this_pass": false,
+      "raw_image_redistributed": false
+    },
+    {
+      "id": "S40W",
+      "title": "永宁寺西门局部图",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1965",
+      "pdf_file_page": 1965,
+      "annex_printed_page": 40,
+      "document_sha256": "296e9336c19d0645e9f7f0274193bb5de466b439fbea511212686614c8c7b1c1",
+      "embedded_image_index_zero_based": 1,
+      "native_raster_pixels": [
+        507,
+        302
+      ],
+      "embedded_image_sha256": "aa2d476d86b118efc5355f9341cad4cc0b30c5a79d30ba7021096e4b593f4066",
+      "source_type": "institutional_archaeological_plan_reproduction",
+      "checked_method": "PDF整页及原始内嵌图实际目读；未以重采样提高精度",
+      "note": "同页西门局部图；北箭朝图面右，图中实测基槽边缘与复原线不同。不能把它的朝向转给上方全院图。",
+      "supports": "labeled_components_and_local_topology",
+      "supports_precise_metric_tracing_this_pass": false,
+      "raw_image_redistributed": false
+    },
+    {
+      "id": "S41",
+      "title": "永宁寺塔基平剖图",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1966",
+      "pdf_file_page": 1966,
+      "annex_printed_page": 41,
+      "document_sha256": "296e9336c19d0645e9f7f0274193bb5de466b439fbea511212686614c8c7b1c1",
+      "embedded_image_index_zero_based": 0,
+      "native_raster_pixels": [
+        554,
+        672
+      ],
+      "embedded_image_sha256": "1d27e0c3ba481d69e370ee536c84427fec6f9772195fdb56796c301fd27bb06f",
+      "source_type": "institutional_archaeological_plan_reproduction",
+      "checked_method": "PDF整页及原始内嵌图实际目读；未以重采样提高精度",
+      "note": "塔基平剖图；北箭略向图面左上，有5m比例尺，图下部分有灰带。可读构造类型和四向慢道，未进行米制边界或柱位量测。",
+      "supports": "labeled_components_and_local_topology",
+      "supports_precise_metric_tracing_this_pass": false,
+      "raw_image_redistributed": false
+    },
+    {
+      "id": "A2",
+      "title": "申遗附表：宫城阊阖门Cgm-3",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1927",
+      "pdf_file_page": 1927,
+      "annex_printed_page": 2,
+      "source_type": "institutional_dimensions_table",
+      "record": "Cgm-3 / 3-4",
+      "note": "门基44.5m东西、24.4m南北，非整个门阙群包络。"
+    },
+    {
+      "id": "A6",
+      "title": "申遗附表：永宁寺围墙、门基、塔基与佛殿",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1931",
+      "pdf_file_page": 1931,
+      "annex_printed_page": 6,
+      "source_type": "institutional_dimensions_table",
+      "records": [
+        "Jn-2.1",
+        "Jn-2.2",
+        "Jn-2.3",
+        "Jn-2.4",
+        "Jn-2.5",
+        "Jns-2.6"
+      ],
+      "note": "表列遗存尺度；佛殿形制尺寸未清，东门尺寸空白。"
+    },
+    {
+      "id": "Z1",
+      "title": "洛阳伽蓝记卷一·周祖谟校释",
+      "url": "https://deerpark.app/cbeta/B0077/1",
+      "source_type": "ancient_text_in_modern_edition",
+      "sha256": "3cde638a30fad10b42629bdc50f2e3bc4a3d7ee739671a1ccb74d8f8f13e9d91",
+      "text_layer": "正文及古书子注；不把现代small.inline-note当古文",
+      "independent_witness_count_added": 0
+    },
+    {
+      "id": "F1",
+      "title": "洛阳伽蓝记卷一·范祥雍校注",
+      "url": "https://deerpark.app/cbeta/B0078/1",
+      "source_type": "ancient_text_in_modern_edition",
+      "sha256": "fd5f844ee7aa07ccaefeef2704c4c270c5eed273d8edfe20c1c93cefbac6f331",
+      "text_layer": "正文及古书子注；不把现代small.inline-note当古文",
+      "independent_witness_count_added": 0
+    }
+  ],
+  "evidence": [
+    {
+      "id": "G01",
+      "source_refs": [
+        "S37"
+      ],
+      "basis": "archaeological_plan_observation",
+      "observation": "城门基座内标有西间道、中间道、东间道；由西至东的三通道次序可读。",
+      "locator": "图37下图中央门基与三条纵向灰色通道",
+      "certainty": "labeled_or_clear_plan_relation",
+      "limitations": [
+        "通道宽度、间距、地面标高和柱网未量；不得因图符等宽认定实测等宽。"
+      ],
+      "new_measurement": false
+    },
+    {
+      "id": "G02",
+      "source_refs": [
+        "S37"
+      ],
+      "basis": "archaeological_plan_observation",
+      "observation": "东阙和西阙有明确标签，分别在主门基图示南侧两翼。",
+      "locator": "图37下图南侧标东阙／西阙的两片基址",
+      "certainty": "labeled_or_clear_plan_relation",
+      "limitations": [
+        "阙的高度与屋顶未给定；地下基础夯土的虚边与上部范围不合并。"
+      ],
+      "new_measurement": false
+    },
+    {
+      "id": "G03",
+      "source_refs": [
+        "S37"
+      ],
+      "basis": "archaeological_plan_observation",
+      "observation": "西侧1号院、东侧2号院及其北面的3号院、4号院标签可读。",
+      "locator": "图37下图门基左右院区；3号院在1号院图示北侧，4号院在2号院图示北侧",
+      "certainty": "labeled_or_clear_plan_relation",
+      "limitations": [
+        "院内所有边界不因标签存在而全部实测；外框可能属于探方或图框。"
+      ],
+      "new_measurement": false
+    },
+    {
+      "id": "G04",
+      "source_refs": [
+        "S37"
+      ],
+      "basis": "archaeological_plan_observation",
+      "observation": "门区两侧存在连接相应阙区的长条着色基址／边界。",
+      "locator": "图37下图1号院西/南邻及2号院东/南邻的折线基址，接向两阙",
+      "certainty": "clear_graphic_connection_without_roof_type",
+      "limitations": [
+        "本轮只称基址连接，不把所有条带一律命名为有顶廊道。",
+        "细部折线、宽度与完整连续性未量，显示连接不意味着古代通行路径已测。"
+      ],
+      "new_measurement": false
+    },
+    {
+      "id": "G05",
+      "source_refs": [
+        "S37"
+      ],
+      "basis": "archaeological_plan_observation",
+      "observation": "图中另标地下基础夯土、探方／剖面界线及破坏、扰动要素。",
+      "locator": "东西阙下的地下基础夯土文字及粗黑外框/剖面线",
+      "certainty": "labeled_or_clear_plan_relation",
+      "limitations": [
+        "不把这些界线整体闭合成盛时建筑轮廓；不补完整院墙。"
+      ],
+      "new_measurement": false
+    },
+    {
+      "id": "Y01",
+      "source_refs": [
+        "S40"
+      ],
+      "basis": "archaeological_plan_observation",
+      "observation": "全院图可读佛殿基址在塔图示上方，西门位于院图左侧、东门右侧，南门名称在下方。",
+      "locator": "图40上图佛殿、塔、西门、东门、南门标注",
+      "certainty": "labeled_or_clear_plan_relation",
+      "limitations": [
+        "全院图未见可读北箭；佛殿在塔北的方位另外取古文T02，不借下方西门图北箭。",
+        "南门下部被灰带遮挡；北门未清楚显示；不能由此描完整院界或独立门基落点。"
+      ],
+      "new_measurement": false
+    },
+    {
+      "id": "Y02",
+      "source_refs": [
+        "S41"
+      ],
+      "basis": "archaeological_plan_observation",
+      "observation": "塔基平面中央可读土坯塔心；外围可见方形环绕构造带及柱位符号。",
+      "locator": "图41上方塔基平面中心和周围构造",
+      "certainty": "labeled_or_clear_plan_relation",
+      "limitations": [
+        "只保存围绕关系；不数全柱础、不补齐柱位、不宣称完整环廊已核。"
+      ],
+      "new_measurement": false
+    },
+    {
+      "id": "Y03",
+      "source_refs": [
+        "S41"
+      ],
+      "basis": "archaeological_plan_observation",
+      "observation": "塔基四向各有慢道／Slopeway标签，分别接向图示台基外侧。",
+      "locator": "图41上图上、下、左、右四处慢道标签；方向依该图北箭作局部阅读",
+      "certainty": "labeled_or_clear_plan_relation",
+      "limitations": [
+        "北箭角度未量，不能写精确地理方位角；各慢道宽度、长度、坡度与标高未量。"
+      ],
+      "new_measurement": false
+    },
+    {
+      "id": "Y04",
+      "source_refs": [
+        "S41"
+      ],
+      "basis": "archaeological_plan_observation",
+      "observation": "塔基图上、下的带状破坏处明确标破坏沟／Destroyed Canal。",
+      "locator": "图41塔基平面北、南侧损坏带及剖面",
+      "certainty": "labeled_or_clear_plan_relation",
+      "limitations": [
+        "是破坏标识，不画成北魏古渠或排水系统；来源未给成沟确年，也不擅定为某次现代工程。"
+      ],
+      "new_measurement": false
+    },
+    {
+      "id": "T01",
+      "source_refs": [
+        "Z1"
+      ],
+      "basis": "ancient_text_relation",
+      "quote": "中有九層浮圖一所，架木為之，舉高九十丈。",
+      "locator": "B12n0077_p0045a06",
+      "normalized_sequence_matches": [
+        {
+          "normalized_offset": 5236,
+          "normalized_length": 17,
+          "excerpt_start": "中有九層浮圖一所架木為之舉高九十丈",
+          "line_start": "0045a06",
+          "line_end": "0045a06"
+        }
+      ],
+      "note": "九层和木构是文献陈述；九十丈不换算为已证米制高度。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "T02",
+      "source_refs": [
+        "Z1"
+      ],
+      "basis": "ancient_text_relation",
+      "quote": "浮圖北有佛殿一所，形如太極殿。",
+      "locator": "B12n0077_p0047a04",
+      "normalized_sequence_matches": [
+        {
+          "normalized_offset": 5461,
+          "normalized_length": 13,
+          "excerpt_start": "浮圖北有佛殿一所形如太極殿",
+          "line_start": "0047a04",
+          "line_end": "0047a04"
+        }
+      ],
+      "note": "支持塔北关系；形如不提供相同尺寸、屋顶或共轴的测量。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "T03",
+      "source_refs": [
+        "Z1"
+      ],
+      "basis": "ancient_text_relation",
+      "quote": "僧房樓觀，一千餘間。",
+      "locator": "B12n0077_p0047a09–10",
+      "normalized_sequence_matches": [
+        {
+          "normalized_offset": 5511,
+          "normalized_length": 8,
+          "excerpt_start": "僧房樓觀一千餘間",
+          "line_start": "0047a09",
+          "line_end": "0047a10"
+        }
+      ],
+      "note": "合计叙述；不提供逐栋分布、开间面积或楼房层数。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "T04",
+      "source_refs": [
+        "Z1"
+      ],
+      "basis": "ancient_text_relation",
+      "quote": "寺院墻皆施短椽，以瓦覆之，若今宮墻也。四面各開一門。",
+      "locator": "B12n0077_p0048a12–13",
+      "normalized_sequence_matches": [
+        {
+          "normalized_offset": 5576,
+          "normalized_length": 22,
+          "excerpt_start": "寺院墻皆施短椽以瓦覆之若今宮墻也四面",
+          "line_start": "0048a12",
+          "line_end": "0048a13"
+        }
+      ],
+      "note": "支持四面开门、墙顶瓦覆的类型描述，不提供完整实测院界。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "T05",
+      "source_refs": [
+        "Z1"
+      ],
+      "basis": "ancient_text_relation",
+      "quote": "南門樓三重，通三閣道，去地二十丈，形製似今端門。",
+      "locator": "B12n0077_p0048a13–15",
+      "normalized_sequence_matches": [
+        {
+          "normalized_offset": 5598,
+          "normalized_length": 20,
+          "excerpt_start": "南門樓三重通三閣道去地二十丈形製似今",
+          "line_start": "0048a13",
+          "line_end": "0048a15"
+        }
+      ],
+      "note": "不得直接把三阁道绘成已经考古量得的三个地面孔道；不复制现代端门外观。",
+      "geographic_coordinates": null,
+      "edition_comparison": {
+        "source_ref": "F1",
+        "quote": "南門樓三重，通三道，去地二十丈，形製似今端門。",
+        "locator": "B12n0078_p0343a10–12",
+        "normalized_sequence_matches": [
+          {
+            "normalized_offset": 16907,
+            "normalized_length": 19,
+            "excerpt_start": "南門樓三重通三道去地二十丈形製似今端",
+            "line_start": "0343a10",
+            "line_end": "0343a12"
+          }
+        ],
+        "note": "周通三閣道、范通三道分列；本轮不裁定道的构造及底层孔道数。"
+      }
+    },
+    {
+      "id": "T06",
+      "source_refs": [
+        "Z1"
+      ],
+      "basis": "ancient_text_relation",
+      "quote": "東西兩門亦皆如之，所可異者，唯樓兩重。",
+      "locator": "B12n0077_p0049a15–p0050a01",
+      "normalized_sequence_matches": [
+        {
+          "normalized_offset": 5659,
+          "normalized_length": 16,
+          "excerpt_start": "東西兩門亦皆如之所可異者唯樓兩重",
+          "line_start": "0049a15",
+          "line_end": "0050a01"
+        }
+      ],
+      "note": "东西门两重不等于两门平面同型同大，也不自动继承南门二十丈高度。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "T07",
+      "source_refs": [
+        "Z1"
+      ],
+      "basis": "ancient_text_relation",
+      "quote": "北門一道，上不施屋，似烏頭門。",
+      "locator": "B12n0077_p0050a01–02",
+      "normalized_sequence_matches": [
+        {
+          "normalized_offset": 5675,
+          "normalized_length": 12,
+          "excerpt_start": "北門一道上不施屋似烏頭門",
+          "line_start": "0050a01",
+          "line_end": "0050a02"
+        }
+      ],
+      "note": "北门仅文献类型：一道、不施屋；图40上图未显示出可量的独立北门平面。",
+      "geographic_coordinates": null
+    }
+  ],
+  "scenes": [
+    {
+      "id": "changhe_gate_complex",
+      "title": "宫城阊阖门：三通道、两阙与四院",
+      "related_entity_ids": [
+        "ic_changhe_palace"
+      ],
+      "related_feature_ids": [
+        "geo-changhe-palace-gate"
+      ],
+      "coordinate_semantics": "schematic_not_metric",
+      "viewBox": [
+        0,
+        0,
+        1200,
+        900
+      ],
+      "nodes": [
+        {
+          "id": "cg-base",
+          "label": "主门基",
+          "kind": "gate_base",
+          "evidence_refs": [
+            "G01"
+          ],
+          "source_refs": [
+            "S37",
+            "A2"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": {
+            "east_west": 44.5,
+            "north_south": 24.4
+          },
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 400,
+            "y": 230,
+            "width": 400,
+            "height": 220,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "box",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "is_container": true,
+          "render_order": 0,
+          "dimension_scope": "门基44.5×24.4m；不覆盖两阙和院区群"
+        },
+        {
+          "id": "cg-pass-west",
+          "label": "西间道",
+          "kind": "passage",
+          "evidence_refs": [
+            "G01"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 440,
+            "y": 262,
+            "width": 56,
+            "height": 152,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "passage",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 3
+        },
+        {
+          "id": "cg-pass-middle",
+          "label": "中间道",
+          "kind": "passage",
+          "evidence_refs": [
+            "G01"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 572,
+            "y": 262,
+            "width": 56,
+            "height": 152,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "passage",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 3
+        },
+        {
+          "id": "cg-pass-east",
+          "label": "东间道",
+          "kind": "passage",
+          "evidence_refs": [
+            "G01"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 704,
+            "y": 262,
+            "width": 56,
+            "height": 152,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "passage",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 3
+        },
+        {
+          "id": "cg-que-west",
+          "label": "西阙基址",
+          "kind": "que_site",
+          "evidence_refs": [
+            "G02"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 160,
+            "y": 650,
+            "width": 255,
+            "height": 115,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "box",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 1
+        },
+        {
+          "id": "cg-que-east",
+          "label": "东阙基址",
+          "kind": "que_site",
+          "evidence_refs": [
+            "G02"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 785,
+            "y": 650,
+            "width": 255,
+            "height": 115,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "box",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 1
+        },
+        {
+          "id": "cg-court-1",
+          "label": "西侧1号院",
+          "kind": "courtyard_reading_area",
+          "evidence_refs": [
+            "G03"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 210,
+            "y": 282,
+            "width": 145,
+            "height": 175,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "dashed_area",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 1
+        },
+        {
+          "id": "cg-court-2",
+          "label": "东侧2号院",
+          "kind": "courtyard_reading_area",
+          "evidence_refs": [
+            "G03"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 845,
+            "y": 282,
+            "width": 145,
+            "height": 175,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "dashed_area",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 1
+        },
+        {
+          "id": "cg-court-3",
+          "label": "3号院",
+          "kind": "courtyard_reading_area",
+          "evidence_refs": [
+            "G03"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 210,
+            "y": 140,
+            "width": 145,
+            "height": 88,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "dashed_area",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 1
+        },
+        {
+          "id": "cg-court-4",
+          "label": "4号院",
+          "kind": "courtyard_reading_area",
+          "evidence_refs": [
+            "G03"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 845,
+            "y": 140,
+            "width": 145,
+            "height": 88,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "dashed_area",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 1
+        },
+        {
+          "id": "cg-connection-west",
+          "label": "西侧基址连接",
+          "kind": "foundation_connection",
+          "evidence_refs": [
+            "G04"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 220,
+            "y": 520,
+            "width": 200,
+            "height": 72,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "connection_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "roofed_corridor_proven": false
+        },
+        {
+          "id": "cg-connection-east",
+          "label": "东侧基址连接",
+          "kind": "foundation_connection",
+          "evidence_refs": [
+            "G04"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 780,
+            "y": 520,
+            "width": 200,
+            "height": 72,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "connection_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "roofed_corridor_proven": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "CG01",
+          "subject": "cg-pass-west",
+          "relation": "within",
+          "object": "cg-base",
+          "evidence_refs": [
+            "G01"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "位于门基内",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG02",
+          "subject": "cg-pass-middle",
+          "relation": "within",
+          "object": "cg-base",
+          "evidence_refs": [
+            "G01"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "位于门基内",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG03",
+          "subject": "cg-pass-east",
+          "relation": "within",
+          "object": "cg-base",
+          "evidence_refs": [
+            "G01"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "位于门基内",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG04",
+          "subject": "cg-pass-west",
+          "relation": "west_of",
+          "object": "cg-pass-middle",
+          "evidence_refs": [
+            "G01"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "西 → 中",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG05",
+          "subject": "cg-pass-middle",
+          "relation": "west_of",
+          "object": "cg-pass-east",
+          "evidence_refs": [
+            "G01"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "中 → 东",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG06",
+          "subject": "cg-que-west",
+          "relation": "southwest_of",
+          "object": "cg-base",
+          "evidence_refs": [
+            "G02"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "图示西南翼",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG07",
+          "subject": "cg-que-east",
+          "relation": "southeast_of",
+          "object": "cg-base",
+          "evidence_refs": [
+            "G02"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "图示东南翼",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG08",
+          "subject": "cg-court-1",
+          "relation": "west_of",
+          "object": "cg-base",
+          "evidence_refs": [
+            "G03"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "西侧院",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG09",
+          "subject": "cg-court-2",
+          "relation": "east_of",
+          "object": "cg-base",
+          "evidence_refs": [
+            "G03"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "东侧院",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG10",
+          "subject": "cg-court-3",
+          "relation": "north_of",
+          "object": "cg-court-1",
+          "evidence_refs": [
+            "G03"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "北侧3号院",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG11",
+          "subject": "cg-court-4",
+          "relation": "north_of",
+          "object": "cg-court-2",
+          "evidence_refs": [
+            "G03"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "北侧4号院",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG12",
+          "subject": "cg-connection-west",
+          "relation": "connects_foundation_zone",
+          "object": "cg-base",
+          "evidence_refs": [
+            "G04"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "接主门西侧基址",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG13",
+          "subject": "cg-connection-west",
+          "relation": "connects_foundation_zone",
+          "object": "cg-que-west",
+          "evidence_refs": [
+            "G04"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "接西阙基址",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG14",
+          "subject": "cg-connection-east",
+          "relation": "connects_foundation_zone",
+          "object": "cg-base",
+          "evidence_refs": [
+            "G04"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "接主门东侧基址",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "CG15",
+          "subject": "cg-connection-east",
+          "relation": "connects_foundation_zone",
+          "object": "cg-que-east",
+          "evidence_refs": [
+            "G04"
+          ],
+          "source_refs": [
+            "S37"
+          ],
+          "display_label": "接东阙基址",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        }
+      ],
+      "main_new_structure": "把原单一门位分解为可点的主门基、三通道、两阙、四院与两侧基址连接；仅在独立局部图显示。",
+      "rendering_guidance": [
+        "图面上北下南依据原图北箭作关系重排，角度和间距没有量测。",
+        "通道图符等宽、院区框规则形状都只是排版，不能导出开间或院界。",
+        "门基44.5×24.4m只在主门基尺寸卡显示，不给整个门阙群统一套框。",
+        "连接条带画为基址连接或虚线联系，不画成已证有顶廊道。",
+        "四个院区使用虚边阅读区；所有粗黑源图外框不自动沿用。"
+      ],
+      "excluded_from_active_reconstruction": [
+        {
+          "evidence_ref": "G05",
+          "items": [
+            "探方及剖面外框",
+            "阙下地下基础夯土范围与上部边界的混并",
+            "未量的柱础逐点、门洞宽度和廊宽"
+          ],
+          "reason": "不是本轮可确认的盛时完整建筑轮廓"
+        }
+      ]
+    },
+    {
+      "id": "yongning_compound",
+      "title": "永宁寺：塔北佛殿与四门差异",
+      "related_entity_ids": [
+        "ic_yongning"
+      ],
+      "related_feature_ids": [
+        "geo-yongning-temple-walls",
+        "geo-yongning-pagoda-reference"
+      ],
+      "coordinate_semantics": "schematic_not_metric",
+      "viewBox": [
+        0,
+        0,
+        1200,
+        900
+      ],
+      "nodes": [
+        {
+          "id": "yn-enclosure",
+          "label": "寺院范围参照",
+          "kind": "compound_extent",
+          "evidence_refs": [
+            "T04"
+          ],
+          "source_refs": [
+            "S40",
+            "A6",
+            "Z1"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": {
+            "north_south": 301,
+            "east_west": 212
+          },
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 350,
+            "y": 125,
+            "width": 500,
+            "height": 650,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "conceptual_frame",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "is_container": true,
+          "render_order": 0,
+          "archaeological_outline_complete": false,
+          "literary_four_sided_enclosure": true
+        },
+        {
+          "id": "yn-tower",
+          "label": "九层木塔／塔基",
+          "kind": "pagoda_site",
+          "evidence_refs": [
+            "Y01",
+            "T01"
+          ],
+          "source_refs": [
+            "S40",
+            "A6",
+            "Z1"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": {
+            "surviving_square_side_approx": 38.2
+          },
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 550,
+            "y": 450,
+            "width": 100,
+            "height": 100,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "square_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "literary_level_count": 9,
+          "literary_level_word": "層",
+          "remaining_base_height_m": 2.2,
+          "remaining_height_is_historical_complete_height": false
+        },
+        {
+          "id": "yn-hall",
+          "label": "塔北佛殿",
+          "kind": "unmeasured_building",
+          "evidence_refs": [
+            "Y01",
+            "T02"
+          ],
+          "source_refs": [
+            "S40",
+            "Z1"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 495,
+            "y": 250,
+            "width": 210,
+            "height": 76,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "label_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "metric_footprint_allowed": false,
+          "shared_axis_with_tower_proven": false
+        },
+        {
+          "id": "yn-gate-west",
+          "label": "西门 · 文献两重",
+          "kind": "temple_gate",
+          "evidence_refs": [
+            "Y01",
+            "T04",
+            "T06"
+          ],
+          "source_refs": [
+            "S40",
+            "S40W",
+            "A6",
+            "Z1"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": {
+            "east_west": 18.2,
+            "north_south_outer_flank": 24,
+            "north_south_inner_flank": 30
+          },
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 215,
+            "y": 450,
+            "width": 175,
+            "height": 76,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "gate_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "literary_level_count": 2,
+          "literary_level_word": "重",
+          "along_wall_position_m": null,
+          "footprint_reconstructed": false
+        },
+        {
+          "id": "yn-gate-east",
+          "label": "东门 · 文献两重",
+          "kind": "temple_gate",
+          "evidence_refs": [
+            "Y01",
+            "T04",
+            "T06"
+          ],
+          "source_refs": [
+            "S40",
+            "Z1"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 815,
+            "y": 465,
+            "width": 175,
+            "height": 76,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "gate_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "literary_level_count": 2,
+          "literary_level_word": "重",
+          "along_wall_position_m": null,
+          "footprint_reconstructed": false
+        },
+        {
+          "id": "yn-gate-south",
+          "label": "南门 · 文献三重",
+          "kind": "temple_gate",
+          "evidence_refs": [
+            "Y01",
+            "T04",
+            "T05"
+          ],
+          "source_refs": [
+            "S40",
+            "A6",
+            "Z1",
+            "F1"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": {
+            "length": 45.5,
+            "width": 19.1,
+            "axis_assignment_from_table": null
+          },
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 565,
+            "y": 755,
+            "width": 195,
+            "height": 76,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "gate_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "literary_level_count": 3,
+          "literary_level_word": "重",
+          "ground_passage_count": null,
+          "along_wall_position_m": null,
+          "remaining_base_height_m": 1.2,
+          "remaining_height_is_historical_complete_height": false
+        },
+        {
+          "id": "yn-gate-north",
+          "label": "北门 · 不施屋",
+          "kind": "temple_gate",
+          "evidence_refs": [
+            "T04",
+            "T07"
+          ],
+          "source_refs": [
+            "Z1"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 600,
+            "y": 58,
+            "width": 190,
+            "height": 67,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "roofless_gate_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "literary_passage_count": 1,
+          "roof_present": false,
+          "roof_present_basis": "ancient_text_only",
+          "along_wall_position_m": null,
+          "plan_visible_in_S40": false
+        },
+        {
+          "id": "yn-lodgings",
+          "label": "僧房楼观 · 分布未定",
+          "kind": "nonspatial_component_group",
+          "evidence_refs": [
+            "T03"
+          ],
+          "source_refs": [
+            "Z1"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 40,
+            "y": 210,
+            "width": 235,
+            "height": 165,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "catalogue_card",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "placement_mode": "unlocated_catalogue",
+          "catalogue_is_directional": false,
+          "quantity_text": "一千餘間",
+          "quantity_scope": "僧房楼观合计叙述",
+          "individual_building_count": null
+        }
+      ],
+      "relations": [
+        {
+          "id": "YN01",
+          "subject": "yn-hall",
+          "relation": "north_of",
+          "object": "yn-tower",
+          "evidence_refs": [
+            "T02",
+            "Y01"
+          ],
+          "source_refs": [
+            "S40",
+            "Z1"
+          ],
+          "display_label": "佛殿在塔北",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "ancient_text_relation",
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false,
+          "shared_axis_proven": false
+        },
+        {
+          "id": "YN02",
+          "subject": "yn-tower",
+          "relation": "part_of",
+          "object": "yn-enclosure",
+          "evidence_refs": [
+            "T01",
+            "Y01"
+          ],
+          "source_refs": [
+            "S40",
+            "Z1"
+          ],
+          "display_label": "寺内塔",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "ancient_text_relation",
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "YN03",
+          "subject": "yn-hall",
+          "relation": "part_of",
+          "object": "yn-enclosure",
+          "evidence_refs": [
+            "T02",
+            "Y01"
+          ],
+          "source_refs": [
+            "S40",
+            "Z1"
+          ],
+          "display_label": "寺内佛殿",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "ancient_text_relation",
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "YN04",
+          "subject": "yn-gate-west",
+          "relation": "on_west_side_of",
+          "object": "yn-enclosure",
+          "evidence_refs": [
+            "T04",
+            "T06",
+            "Y01"
+          ],
+          "source_refs": [
+            "S40",
+            "Z1"
+          ],
+          "display_label": "西门，沿墙位置未测",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "ancient_text_relation",
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "YN05",
+          "subject": "yn-gate-east",
+          "relation": "on_east_side_of",
+          "object": "yn-enclosure",
+          "evidence_refs": [
+            "T04",
+            "T06",
+            "Y01"
+          ],
+          "source_refs": [
+            "S40",
+            "Z1"
+          ],
+          "display_label": "东门，沿墙位置未测",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "ancient_text_relation",
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "YN06",
+          "subject": "yn-gate-south",
+          "relation": "on_south_side_of",
+          "object": "yn-enclosure",
+          "evidence_refs": [
+            "T04",
+            "T05",
+            "Y01"
+          ],
+          "source_refs": [
+            "S40",
+            "Z1"
+          ],
+          "display_label": "南门，局部图有遮挡",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "ancient_text_relation",
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "YN07",
+          "subject": "yn-gate-north",
+          "relation": "on_north_side_of",
+          "object": "yn-enclosure",
+          "evidence_refs": [
+            "T04",
+            "T07"
+          ],
+          "source_refs": [
+            "Z1"
+          ],
+          "display_label": "文献北门",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "ancient_text_relation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "YN08",
+          "subject": "yn-lodgings",
+          "relation": "mentioned_in_account_of",
+          "object": "yn-enclosure",
+          "evidence_refs": [
+            "T03"
+          ],
+          "source_refs": [
+            "Z1"
+          ],
+          "display_label": "寺内构件记载；未定位",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "ancient_text_relation"
+          ],
+          "has_measured_edge_geometry": false,
+          "is_spatial_placement": false,
+          "render_as_arrow": false
+        }
+      ],
+      "main_new_structure": "把原寺院框与塔节点扩为塔北佛殿、东西南北四门的证据分层及僧房非定位目录；不同门不再同型复制。",
+      "rendering_guidance": [
+        "院框是关系容器，301×212m只在范围说明中给出；本图不承诺四边均是已描实测墙。",
+        "佛殿用未知尺寸标签图符，不能复制太极殿100×60m。",
+        "塔与佛殿仅有南北关系；图中对中不能当轴线已测，建议给出非共轴提示。",
+        "南门三重、东西门两重仅以文字或层数徽标显示；北门不画屋顶。",
+        "不因通三閣道／通三道给南门画三个已经确认的地面通道。",
+        "僧房卡片放在独立非定位目录区，不解释成寺西建筑群；不画一千间网格。",
+        "四门图符在墙边的具体位置属于排版；真实沿墙距离和各门坐标仍为空。"
+      ],
+      "unlocated_node_ids": [
+        "yn-lodgings"
+      ],
+      "excluded_from_active_reconstruction": [
+        {
+          "evidence_ref": "Y01",
+          "items": [
+            "被灰带遮挡的南门基全轮廓",
+            "未显示的北门实测平面"
+          ],
+          "reason": "图版没有提供本轮可量的完整形状"
+        },
+        {
+          "evidence_ref": "T03",
+          "items": [
+            "僧房逐栋平面和院内网格"
+          ],
+          "reason": "原文仅总数与构件记载"
+        }
+      ]
+    },
+    {
+      "id": "yongning_pagoda_base",
+      "title": "永宁塔基：塔心、环绕构造与四向慢道",
+      "related_entity_ids": [
+        "ic_yongning"
+      ],
+      "related_feature_ids": [
+        "geo-yongning-pagoda-reference"
+      ],
+      "coordinate_semantics": "schematic_not_metric",
+      "viewBox": [
+        0,
+        0,
+        1200,
+        900
+      ],
+      "nodes": [
+        {
+          "id": "yb-footing",
+          "label": "方形塔基遗存",
+          "kind": "pagoda_footing",
+          "evidence_refs": [
+            "Y02",
+            "Y03"
+          ],
+          "source_refs": [
+            "S41",
+            "A6"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": {
+            "surviving_square_side_approx": 38.2
+          },
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 300,
+            "y": 190,
+            "width": 500,
+            "height": 500,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "square_outline",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "is_container": true,
+          "render_order": 0,
+          "remaining_base_height_m": 2.2,
+          "historical_complete_base_height_m": null
+        },
+        {
+          "id": "yb-core",
+          "label": "中央土坯塔心",
+          "kind": "adobe_core",
+          "evidence_refs": [
+            "Y02"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 475,
+            "y": 365,
+            "width": 150,
+            "height": 150,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "unmeasured_core_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2
+        },
+        {
+          "id": "yb-surround",
+          "label": "环绕构造与柱位符号",
+          "kind": "surrounding_structural_evidence",
+          "evidence_refs": [
+            "Y02"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 380,
+            "y": 270,
+            "width": 340,
+            "height": 340,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "dashed_surrounding_band",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 1,
+          "complete_cloister_proven": false,
+          "pillar_count": null,
+          "individual_pillar_coordinates_m": null
+        },
+        {
+          "id": "yb-ramp-north",
+          "label": "北向慢道",
+          "kind": "ramp",
+          "evidence_refs": [
+            "Y03"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 495,
+            "y": 90,
+            "width": 110,
+            "height": 70,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "ramp_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "slope_degrees": null,
+          "shape_measured": false
+        },
+        {
+          "id": "yb-ramp-south",
+          "label": "南向慢道",
+          "kind": "ramp",
+          "evidence_refs": [
+            "Y03"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 495,
+            "y": 720,
+            "width": 110,
+            "height": 70,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "ramp_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "slope_degrees": null,
+          "shape_measured": false
+        },
+        {
+          "id": "yb-ramp-west",
+          "label": "西向慢道",
+          "kind": "ramp",
+          "evidence_refs": [
+            "Y03"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 155,
+            "y": 400,
+            "width": 110,
+            "height": 80,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "ramp_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "slope_degrees": null,
+          "shape_measured": false
+        },
+        {
+          "id": "yb-ramp-east",
+          "label": "东向慢道",
+          "kind": "ramp",
+          "evidence_refs": [
+            "Y03"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "measured_plan_xy_m": null,
+          "geographic_coordinates": null,
+          "footprint_geometry_m": null,
+          "dimensions_m": null,
+          "historical_height_m": null,
+          "roof_model": null,
+          "diagram_layout": {
+            "x": 835,
+            "y": 400,
+            "width": 110,
+            "height": 80,
+            "units": "editorial_canvas",
+            "origin": "top_left",
+            "shape": "ramp_symbol",
+            "is_archaeological_measurement": false
+          },
+          "point_is_entity_location": false,
+          "render_order": 2,
+          "slope_degrees": null,
+          "shape_measured": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "YB01",
+          "subject": "yb-core",
+          "relation": "within",
+          "object": "yb-footing",
+          "evidence_refs": [
+            "Y02"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "display_label": "塔基中央构造",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "YB02",
+          "subject": "yb-surround",
+          "relation": "arranged_around",
+          "object": "yb-core",
+          "evidence_refs": [
+            "Y02"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "display_label": "环绕关系，非完整环廊",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "YB03",
+          "subject": "yb-surround",
+          "relation": "within",
+          "object": "yb-footing",
+          "evidence_refs": [
+            "Y02"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "display_label": "塔基内构造证据",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false
+        },
+        {
+          "id": "YB04",
+          "subject": "yb-ramp-north",
+          "relation": "meets_north_side_of",
+          "object": "yb-footing",
+          "evidence_refs": [
+            "Y03"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "display_label": "北侧慢道",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false,
+          "direction_precision": "local_cardinal_reading_not_survey_bearing"
+        },
+        {
+          "id": "YB05",
+          "subject": "yb-ramp-south",
+          "relation": "meets_south_side_of",
+          "object": "yb-footing",
+          "evidence_refs": [
+            "Y03"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "display_label": "南侧慢道",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false,
+          "direction_precision": "local_cardinal_reading_not_survey_bearing"
+        },
+        {
+          "id": "YB06",
+          "subject": "yb-ramp-west",
+          "relation": "meets_west_side_of",
+          "object": "yb-footing",
+          "evidence_refs": [
+            "Y03"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "display_label": "西侧慢道",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false,
+          "direction_precision": "local_cardinal_reading_not_survey_bearing"
+        },
+        {
+          "id": "YB07",
+          "subject": "yb-ramp-east",
+          "relation": "meets_east_side_of",
+          "object": "yb-footing",
+          "evidence_refs": [
+            "Y03"
+          ],
+          "source_refs": [
+            "S41"
+          ],
+          "display_label": "东侧慢道",
+          "distance_m": null,
+          "bearing_degrees": null,
+          "basis": [
+            "archaeological_plan_observation"
+          ],
+          "has_measured_edge_geometry": false,
+          "direction_precision": "local_cardinal_reading_not_survey_bearing"
+        }
+      ],
+      "main_new_structure": "塔基由单一方形扩为中央土坯塔心、环绕构造证据组和四向慢道；不增加上部塔身的虚构尺度。",
+      "rendering_guidance": [
+        "慢道的四向关系依图内北箭；未量角度、坡度、宽度、长度。",
+        "外围柱位符号仅以一组证据提示，不复制固定数量或整齐柱网。",
+        "环绕构造用断续或虚线示意，不闭合为已证完整环廊。",
+        "38.2m和2.2m分别是塔基遗存边长与残高；本图无历史完整塔高。",
+        "破坏沟不画进盛时水系；来源未明其形成确年，也不标为已有确年的现代工程。"
+      ],
+      "excluded_from_active_reconstruction": [
+        {
+          "evidence_ref": "Y04",
+          "items": [
+            "北侧破坏沟",
+            "南侧破坏沟"
+          ],
+          "reason": "损坏标识，不是已证北魏水道"
+        },
+        {
+          "evidence_ref": "Y02",
+          "items": [
+            "全部柱础的数量、类型、精确位置",
+            "塔身层高、收分、屋顶"
+          ],
+          "reason": "此小图及当前证据不足"
+        }
+      ]
+    }
+  ],
+  "coordinate_contract": {
+    "diagram_layout_units": "editorial_canvas",
+    "diagram_layout_is_archaeological_measurement": false,
+    "measured_plan_xy_m": null,
+    "geographic_coordinates": null,
+    "unmeasured_distance_value": null,
+    "unmeasured_bearing_value": null,
+    "new_ancient_coordinates": 0,
+    "new_ground_control_points": 0,
+    "precise_footprint_tracing_completed": false,
+    "node_ids_scope": "new local diagram parts only; not additions or replacements in data/entities.json"
+  },
+  "temporal_contract": {
+    "default_scope": "遗址图局部拓扑与古书构件叙述分别保留；不宣称516—528每年每件构造都同时完整存在。",
+    "archaeological_plan_not_single_year_snapshot": true,
+    "historical_height_m_default": null,
+    "metre_conversion_of_zhang_or_chi_adopted": false,
+    "roof_shape_default": null
+  },
+  "counts": {
+    "scenes": 3,
+    "local_nodes": 27,
+    "local_relations": 30,
+    "archaeological_observation_records": 9,
+    "ancient_quote_records": 7,
+    "new_registered_historical_entities": 0,
+    "new_ancient_absolute_coordinates": 0,
+    "precisely_measured_local_footprints": 0
+  },
+  "review_limits": [
+    "555像素左右的小图可读标签和拓扑，但未进行精确廊宽、柱位或完整边线量测。",
+    "局部关系图可立即供页面实现；它们不能直接投放地理地图作为新的精确建筑足迹。",
+    "古文有层数、原丈尺及形似说法时，均保留文字，不自动变为米制体块和确定屋顶。"
+  ],
+  "publication_note": "本研究文件生成不等于网站发布；构建、集成、审阅与上线由主任务处理。"
+}
