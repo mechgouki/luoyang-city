@@ -1,0 +1,58 @@
+{
+  "base_url": "http://127.0.0.1:41609/luoyang-city/",
+  "checks": [
+    {
+      "name": "default website visibly shows current terrain release and real preview",
+      "status": "passed"
+    },
+    {
+      "name": "real terrain entry loads under the repository subpath",
+      "status": "passed"
+    },
+    {
+      "name": "real raster, not synthetic fixture or empty placeholder",
+      "status": "passed"
+    },
+    {
+      "name": "elevation, hillshade, raw and smoothed slopes switch actual images",
+      "status": "passed"
+    },
+    {
+      "name": "contours and archival sheet seam are independent overlays",
+      "status": "passed"
+    },
+    {
+      "name": "terrain camera zoom and reset",
+      "status": "passed"
+    },
+    {
+      "name": "physical map click reads a labelled coarse modern-surface sample",
+      "status": "passed"
+    },
+    {
+      "name": "terrain layer and contour deep link restore after full reload",
+      "status": "passed"
+    },
+    {
+      "name": "archival maps expose edition, compilation, printing and unresolved datum",
+      "status": "passed"
+    },
+    {
+      "name": "historical network remains textual, filtered and explicitly unregistered",
+      "status": "passed"
+    },
+    {
+      "name": "actual product downloads and manifest are publicly accessible",
+      "status": "passed"
+    },
+    {
+      "name": "mobile terrain controls work without horizontal page overflow",
+      "status": "passed"
+    },
+    {
+      "name": "zero runtime errors",
+      "status": "passed"
+    }
+  ],
+  "runtime_errors": []
+}

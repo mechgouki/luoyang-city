@@ -1,0 +1,47 @@
+PR #26 accepted-head build
+Run: https://github.com/mechgouki/luoyang-city/actions/runs/43581095325
+PR head: efcf7c50f6c0897f7eb93afc3ee6d61f56e764bb
+GitHub PR test merge: 951210b4c71b95487fe28f9a74859a696f2b8419
+Tested tree: c7dea8250f78b1e1c8527c52f1913a0c5353cef5
+
+2026-11-14T09:33:33.1810389Z TAP version 13
+2026-11-14T09:33:33.2191914Z # Subtest: all 11 region boxes are consumed as x,y,width,height
+2026-11-14T09:33:33.2201718Z ok 1 - all 11 region boxes are consumed as x,y,width,height
+2026-11-14T09:33:33.2202814Z   ---
+2026-11-14T09:33:33.2203306Z   duration_ms: 4.527965
+2026-11-14T09:33:33.2203667Z   type: 'test'
+2026-11-14T09:33:33.2203927Z   ...
+2026-11-14T09:33:33.2204648Z # Subtest: a simple map click is not captured away from a building marker
+2026-11-14T09:33:33.2206160Z ok 2 - a simple map click is not captured away from a building marker
+2026-11-14T09:33:33.2207051Z   ---
+2026-11-14T09:33:33.2207299Z   duration_ms: 1.405889
+2026-11-14T09:33:33.2207587Z   type: 'test'
+2026-11-14T09:33:33.2207825Z   ...
+2026-11-14T09:33:33.2208730Z # Subtest: dragging captures only after the threshold and releases on pointerup
+2026-11-14T09:33:33.2211180Z ok 3 - dragging captures only after the threshold and releases on pointerup
+2026-11-14T09:33:33.2211808Z   ---
+2026-11-14T09:33:33.2212059Z   duration_ms: 0.995941
+2026-11-14T09:33:33.2212345Z   type: 'test'
+2026-11-14T09:33:33.2212579Z   ...
+2026-11-14T09:33:33.2214626Z # Subtest: a secondary pointer does not replace the active drag
+2026-11-14T09:33:33.2215303Z ok 4 - a secondary pointer does not replace the active drag
+2026-11-14T09:33:33.2216032Z   ---
+2026-11-14T09:33:33.2216321Z   duration_ms: 1.355733
+2026-11-14T09:33:33.2216648Z   type: 'test'
+2026-11-14T09:33:33.2216924Z   ...
+2026-11-14T09:33:33.2217335Z # Subtest: drawing-to-page translation is shared by camera and marker overlay
+2026-11-14T09:33:33.2217950Z ok 5 - drawing-to-page translation is shared by camera and marker overlay
+2026-11-14T09:33:33.2218362Z   ---
+2026-11-14T09:33:33.2218592Z   duration_ms: 0.98228
+2026-11-14T09:33:33.2218913Z   type: 'test'
+2026-11-14T09:33:33.2219145Z   ...
+2026-11-14T09:33:33.2723471Z 1..5
+2026-11-14T09:33:33.2723773Z # tests 5
+2026-11-14T09:33:33.2723981Z # suites 0
+2026-11-14T09:33:33.2724187Z # pass 5
+2026-11-14T09:33:33.2724398Z # fail 0
+2026-11-14T09:33:33.2724559Z # cancelled 0
+2026-11-14T09:33:33.2724796Z # skipped 0
+2026-11-14T09:33:33.2725229Z # todo 0
+2026-11-14T09:33:33.2725517Z # duration_ms 101.219661
+
