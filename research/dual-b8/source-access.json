@@ -1,0 +1,1094 @@
+{
+  "schema_version": "luoyang-source-access-1",
+  "release": "B8",
+  "title": "原图获取与底图接合表调查",
+  "reviewed_date": "2026-11-14",
+  "baseline_commit": "e959da7c16db7cb814bb7460c03e5c7d860be1fa",
+  "summary": "新增锁定1926河南十万分一185幅集合与1931五万分一263幅集合及接合表记录，核三幅NDL原图当前获取路径，并以完整图号及一个具名桥墩事件排除误匹配；本批尚未取得目标历史扫描。",
+  "original_horizontal_datum": null,
+  "original_geographic_crs": null,
+  "project_registration_to_wgs84": false,
+  "ground_accuracy_assessed": false,
+  "approved_ground_control_points": [],
+  "ancient_geographic_positions_added": 0,
+  "ancient_channels_added": 0,
+  "modern_dsm_modified": false,
+  "coordinate_assignment_performed": false,
+  "new_historical_image_obtained": false,
+  "source_assets": [],
+  "review_counts": {
+    "target_maps_access_reviewed": 3,
+    "target_historical_scans_obtained": 0,
+    "bounded_university_catalog_records_screened": 35,
+    "rejected_name_or_number_matches": 3,
+    "upstream_target_series_records": 2,
+    "documented_join_index_targets": 1,
+    "join_index_images_obtained": 0,
+    "comparative_series_records_kept_separate": 2,
+    "named_structure_exclusions_added": 1,
+    "actual_ams_source_matches": 0,
+    "approved_ground_control_points": 0
+  },
+  "sources": [
+    {
+      "id": "NDL-2507",
+      "title": "郑州／開封11號单件纸本目录",
+      "institution": "国立国会图书馆",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000008299342",
+      "evidence_location": "資料形態／請求記号／書誌ID；单件页实际链接清单",
+      "evidence": "本次公开HTML仍标紙；没有给出这件地图的数字影像链接。页尾网络阅览、复制与到馆链接是通用服务帮助。",
+      "source_kind": "institutional_catalog",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "3b959a173f1f636ced927450201458603b9c656359d00a6fdd35efda774d903a",
+      "limit": "只陈述本次公开响应，不断言未数字化、无其他数字本或禁止阅览。"
+    },
+    {
+      "id": "NDL-2519",
+      "title": "偃师县／開封21號单件纸本目录",
+      "institution": "国立国会图书馆",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000008299355",
+      "evidence_location": "資料形態／請求記号／書誌ID；单件页实际链接清单",
+      "evidence": "本次公开HTML仍标紙；没有给出这件地图的数字影像链接。页尾网络阅览、复制与到馆链接是通用服务帮助。",
+      "source_kind": "institutional_catalog",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "688c58c6e86670814c556816d35a5fbb07a48e7e7cc07964ed5edb5eea8f6fe4",
+      "limit": "只陈述本次公开响应，不断言未数字化、无其他数字本或禁止阅览。"
+    },
+    {
+      "id": "NDL-2516",
+      "title": "汜水县／開封16號单件纸本目录",
+      "institution": "国立国会图书馆",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000008299352",
+      "evidence_location": "資料形態／請求記号／書誌ID；单件页实际链接清单",
+      "evidence": "本次公开HTML仍标紙；没有给出这件地图的数字影像链接。页尾网络阅览、复制与到馆链接是通用服务帮助。",
+      "source_kind": "institutional_catalog",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "3815ae08d71197f0e498fbf69274bccfe57c63bb039c8653cf51a773453d51f0",
+      "limit": "只陈述本次公开响应，不断言未数字化、无其他数字本或禁止阅览。"
+    },
+    {
+      "id": "NDL-GAIHOZU",
+      "title": "外邦図（一覧）／资料利用方法",
+      "institution": "国立国会图书馆地图室",
+      "url": "https://ndlsearch.ndl.go.jp/rnavi/maps/post_601012",
+      "evidence_location": "第2节 資料の利用方法",
+      "evidence": "外邦图在东京本馆地图室利用，为闭架资料，经NDL Search检索后申请阅览。",
+      "source_kind": "institution_service_guidance",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "1a6cfcf5b964191de7ceaff5684664c2392fc779bfceacf8b655b3d02fd8d41e",
+      "limit": "这是系列服务说明，不是本次已预约或已取得三件资料。",
+      "published_date": "2023-09-12"
+    },
+    {
+      "id": "NDL-COPY",
+      "title": "遠隔複写（郵送受取）サービス",
+      "institution": "国立国会图书馆",
+      "url": "https://ndlsearch.ndl.go.jp/help/remotecopy",
+      "evidence_location": "9-1-1至9-1-4；9-1-3 注意事項",
+      "evidence": "远隔复制是注册用户使用的收费邮寄服务；须明确资料和复制部位，能否提供及方式受资料保存和相关规定限制。",
+      "source_kind": "institution_service_guidance",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "94f63b1aeee7d69029749a6186bba8adddfd5a1b50001271e67ff77bd2a69af7",
+      "limit": "三件具体地图的复制可否、范围和费用未由馆方个件核准；本项目未提交申请或付款。"
+    },
+    {
+      "id": "TOHOKU-HUB",
+      "title": "外邦图档案公开范围",
+      "institution": "東北大学外邦图数字档案",
+      "url": "https://gaihozu-jp-tohokugeo.hub.arcgis.com/",
+      "evidence_location": "首页介绍末段",
+      "evidence": "网站说明更新期间暂只提供东大所藏图像。",
+      "source_kind": "institution_service_guidance",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": null,
+      "limit": "本次检索的FeatureServer不能代表其他大学或全部外邦图收藏。"
+    },
+    {
+      "id": "TOHOKU-TITLE",
+      "title": "东大三个标题字段查询",
+      "institution": "東北大学外邦图数字档案",
+      "url": "https://services1.arcgis.com/qvPIahekAMWThrhc/arcgis/rest/services/zukaku_th/FeatureServer/0/query",
+      "evidence_location": "where：name包含鄭州、偃師或汜水；returnGeometry=false",
+      "evidence": "此查询返回2条：TH002729鄭州／開封10号、TH002362汜水鎮／淮安10号。均未匹配三幅目标的完整书目身份。",
+      "source_kind": "public_catalog_query",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "50682b159adae16c7f3957aab02195e4b5f6961e3a1b2a66f3175b1e373cf6df",
+      "limit": "返回中附带的目录空间参考、面积、周长均不转写为历史地图CRS或坐标。"
+    },
+    {
+      "id": "TOHOKU-KAIFENG",
+      "title": "东大開封图号字段查询",
+      "institution": "東北大学外邦图数字档案",
+      "url": "https://services1.arcgis.com/qvPIahekAMWThrhc/arcgis/rest/services/zukaku_th/FeatureServer/0/query",
+      "evidence_location": "where：code LIKE 開封；选取属性字段；returnGeometry=false",
+      "evidence": "限定查询返回35条，无截断标志；其中早期開封21号是高平縣，不能按末尾图号匹配偃師縣／西9行南1段開封21號。",
+      "source_kind": "public_catalog_query",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "e9ee74aff09ab6d8c51f3a6c249eef5caffb6d5ca20e5b7433d4126759e8b5aa",
+      "limit": "查询结果仅代表本次字段、当前服务和记录；不声称全库没有目标图。"
+    },
+    {
+      "id": "GIFU-100K",
+      "title": "中国北支1:100000馆藏目录",
+      "institution": "岐阜県图书馆",
+      "url": "https://www.library.pref.gifu.lg.jp/map/worlddis/mokuroku/out_japan/newmokuroku/hokusi10.htm",
+      "evidence_location": "資料番号881081447、881081240；网页原编码cp932",
+      "evidence": "目录有1923鄭州（881081447）和1934泗水縣（881081240）；后者为泗，不是目标河南汜水的汜。",
+      "source_kind": "institutional_catalog",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "ec042f77b3c66dd968a75969fc5d38d34a62c6e7a3dfb3b5c30478b7196a0ace",
+      "limit": "没有从此目录取得原图；目录坐标不用于本项目的古址、控制点或地图CRS。"
+    },
+    {
+      "id": "OCHA-ACCESS",
+      "title": "外邦図について／コレクションの内容",
+      "institution": "お茶の水女子大学附属图书馆",
+      "url": "https://www.lib.ocha.ac.jp/04/gaihozuocha.html",
+      "evidence_location": "コレクションの内容末段",
+      "evidence": "官方说明对校外检索及复制服务的支持体制尚不充分，建议利用NDL和岐阜图书馆。",
+      "source_kind": "institution_service_guidance",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": null,
+      "limit": "说明是机构公开服务现状；不等于三幅目标无馆藏，也未联系或申请该馆。"
+    },
+    {
+      "id": "CCTS-4788",
+      "title": "河南地圖／1926",
+      "institution": "中央研究院维护：北京图书馆《舆图要录》检索系统",
+      "url": "https://ccts.sinica.edu.tw/catalog/detail.php?num=4788",
+      "evidence_location": "编号、编篡製者、比例尺、西元年、幅數、註記及內容字段",
+      "evidence": "1:100000、國民革命軍總司令部參謀處、1926、185幅；注少量图幅为河南陆军测量局绘制。",
+      "source_kind": "institutional_catalog",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "ec6d8537e99a5489f4672d18bd18eb5a401eb897be31eaac4dba5993717ee09c",
+      "limit": "系列级目录，没有本次所需偃师单幅号或原图。"
+    },
+    {
+      "id": "CCTS-4798",
+      "title": "河南省五萬分一地形圖／1931",
+      "institution": "中央研究院维护：北京图书馆《舆图要录》检索系统",
+      "url": "https://ccts.sinica.edu.tw/catalog/detail.php?num=4798",
+      "evidence_location": "编号、编篡製者、比例尺、西元年、幅數、註記及內容字段",
+      "evidence": "1:50000、參謀本部陸地測量總局、1931、263幅，註記明确为接合表1張。",
+      "source_kind": "institutional_catalog",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "54490cbccb682a02796f7d17b5abedffc237a3c9b977e95a0506087aa614b999",
+      "limit": "只确认接合表被目录记载；尚未取得接合表或汜水对应底图图号。"
+    },
+    {
+      "id": "CCTS-4793",
+      "title": "河南省十萬分一圖／1930",
+      "institution": "中央研究院维护：北京图书馆《舆图要录》检索系统",
+      "url": "https://ccts.sinica.edu.tw/catalog/detail.php?num=4793",
+      "evidence_location": "编号、编篡製者、比例尺、西元年、幅數、註記及內容字段",
+      "evidence": "1:100000、參謀本部陸地測量總局、1930、137幅。",
+      "source_kind": "institutional_catalog",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "39f26442689fe8f26a25550d3a63559b770b9af46f6445920f95f21dfbd83efc",
+      "limit": "年代及机构组合有别，不并入1926目标集合。"
+    },
+    {
+      "id": "CCTS-4809",
+      "title": "河南省五萬分一地形圖／1917–1947",
+      "institution": "中央研究院维护：北京图书馆《舆图要录》检索系统",
+      "url": "https://ccts.sinica.edu.tw/catalog/detail.php?num=4809",
+      "evidence_location": "编号、编篡製者、比例尺、西元年、幅數、註記及內容字段",
+      "evidence": "1:50000、參謀本部陸地測量總局等、1917–1947、499幅，另记圖表1張。",
+      "source_kind": "institutional_catalog",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "720b4f31c3302c9dedec56fd3f0c151b30c3d7da38477b025670176b3b72a261",
+      "limit": "这是另一个较宽年代集合；不能当作1931专条的263幅加接合表。"
+    },
+    {
+      "id": "ZZ-PIER11",
+      "title": "郑铁传承／黄河之上“桥”见历史",
+      "institution": "素材来源：郑州桥工段；澎湃号·政务公开发布",
+      "url": "https://www.thepaper.cn/newsDetail_forward_15959525",
+      "evidence_location": "1958年洪水段落，1952年视察图片后；文末素材来源",
+      "evidence": "原文具体记载北端11号桥墩严重冲刷后倒塌，并致相连第10、第11孔钢梁落水；文章亦记此后抢修通车。",
+      "source_kind": "operator_historical_account",
+      "retrieved_date": "2026-11-14",
+      "response_sha256": "5ddc5375eda6d9b8fac7ca22d8beed9b871336c9553a73bc74612c4a950e123e",
+      "limit": "这是养护部门供稿的公开史述，不是1958年原始观测记录、竣工图或现代测量。编号怎样对应现存构件仍未知。",
+      "published_date": "2021-12-22"
+    }
+  ],
+  "access_records": [
+    {
+      "id": "zhengzhou-1942",
+      "title": "郑州／開封11號",
+      "target_call_number": "YG821-2507",
+      "bibliographic_id": "000008299342",
+      "target_series": "北支那十万分一圖 ; 開封 11號",
+      "target_publication_as_cataloged": "[1942]",
+      "scale_denominator": 100000,
+      "status": "catalog_verified_public_image_not_located",
+      "status_label": "纸本目录已核；本次未定位公开数字本",
+      "source_ids": [
+        "NDL-2507",
+        "NDL-GAIHOZU",
+        "NDL-COPY",
+        "TOHOKU-TITLE",
+        "TOHOKU-KAIFENG"
+      ],
+      "checked_endpoints": [
+        {
+          "id": "ndl-item",
+          "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000008299342",
+          "http_status": 200,
+          "response_sha256": "3b959a173f1f636ced927450201458603b9c656359d00a6fdd35efda774d903a",
+          "result": "paper_catalog_without_item_specific_digital_image_link"
+        },
+        {
+          "id": "ndl-exact-call-search",
+          "url": "https://ndlsearch.ndl.go.jp/api/opensearch?any=YG821-2507&cnt=20",
+          "http_status": 200,
+          "response_sha256": "0b5602a1603187c7b45df1ff53029dff12e66891e759e342af7e9c80d3b87e41",
+          "returned_record_count": 1,
+          "returned_bibliographic_ids": [
+            "000008299342"
+          ],
+          "result": "one_paper_catalog_record_in_bounded_query"
+        }
+      ],
+      "public_image_url": null,
+      "historical_image_obtained": false,
+      "historical_image_inspected": false,
+      "raw_scan_crop_xyxy": null,
+      "edition_match_status": "target_edition_not_visually_checked",
+      "actual_ams_source_match": false,
+      "library_reading_status": "collection_guide_documents_closed_stack_reading",
+      "copy_request_status": "service_route_identified_not_applied",
+      "item_specific_copy_eligibility_confirmed": false,
+      "finding": "馆号及纸本身份已复核，当前公开入口未取得对应地图影像。",
+      "next_gate": "按准确馆号核原件可利用状态；优先取得全图外框、图号、版记和编测说明，并由馆方确认复制范围与权利。",
+      "limit": "没有图像链接与限定查询未命中不等于从未数字化、馆藏不存在或不得利用。"
+    },
+    {
+      "id": "yanshi-1934",
+      "title": "偃师县／開封21號",
+      "target_call_number": "YG821-2519",
+      "bibliographic_id": "000008299355",
+      "target_series": "北支那十万分一圖 ; 西9行南1段 開封 21號",
+      "target_publication_as_cataloged": "1934.4",
+      "scale_denominator": 100000,
+      "status": "catalog_verified_public_image_not_located",
+      "status_label": "纸本目录已核；本次未定位公开数字本",
+      "source_ids": [
+        "NDL-2519",
+        "NDL-GAIHOZU",
+        "NDL-COPY",
+        "TOHOKU-TITLE",
+        "TOHOKU-KAIFENG"
+      ],
+      "checked_endpoints": [
+        {
+          "id": "ndl-item",
+          "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000008299355",
+          "http_status": 200,
+          "response_sha256": "688c58c6e86670814c556816d35a5fbb07a48e7e7cc07964ed5edb5eea8f6fe4",
+          "result": "paper_catalog_without_item_specific_digital_image_link"
+        },
+        {
+          "id": "ndl-exact-call-search",
+          "url": "https://ndlsearch.ndl.go.jp/api/opensearch?any=YG821-2519&cnt=20",
+          "http_status": 200,
+          "response_sha256": "f2d4c6ac27f443209a8f5d1807a8a15a955916a1c3656e420970e4f87d66341d",
+          "returned_record_count": 1,
+          "returned_bibliographic_ids": [
+            "000008299355"
+          ],
+          "result": "one_paper_catalog_record_in_bounded_query"
+        }
+      ],
+      "public_image_url": null,
+      "historical_image_obtained": false,
+      "historical_image_inspected": false,
+      "raw_scan_crop_xyxy": null,
+      "edition_match_status": "target_edition_not_visually_checked",
+      "actual_ams_source_match": false,
+      "library_reading_status": "collection_guide_documents_closed_stack_reading",
+      "copy_request_status": "service_route_identified_not_applied",
+      "item_specific_copy_eligibility_confirmed": false,
+      "finding": "馆号及纸本身份已复核，当前公开入口未取得对应地图影像。",
+      "next_gate": "按准确馆号核原件可利用状态；优先取得全图外框、图号、版记和编测说明，并由馆方确认复制范围与权利。",
+      "limit": "没有图像链接与限定查询未命中不等于从未数字化、馆藏不存在或不得利用。"
+    },
+    {
+      "id": "sishui-1935",
+      "title": "汜水县／開封16號",
+      "target_call_number": "YG821-2516",
+      "bibliographic_id": "000008299352",
+      "target_series": "北支那十万分一圖 ; 西9行南1段 開封 16號",
+      "target_publication_as_cataloged": "1935.1",
+      "scale_denominator": 100000,
+      "status": "catalog_verified_public_image_not_located",
+      "status_label": "纸本目录已核；本次未定位公开数字本",
+      "source_ids": [
+        "NDL-2516",
+        "NDL-GAIHOZU",
+        "NDL-COPY",
+        "TOHOKU-TITLE",
+        "TOHOKU-KAIFENG"
+      ],
+      "checked_endpoints": [
+        {
+          "id": "ndl-item",
+          "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000008299352",
+          "http_status": 200,
+          "response_sha256": "3815ae08d71197f0e498fbf69274bccfe57c63bb039c8653cf51a773453d51f0",
+          "result": "paper_catalog_without_item_specific_digital_image_link"
+        },
+        {
+          "id": "ndl-exact-call-search",
+          "url": "https://ndlsearch.ndl.go.jp/api/opensearch?any=YG821-2516&cnt=20",
+          "http_status": 200,
+          "response_sha256": "225181c1c369b12fbb171c8e92198578c07745afd48127ba334053db2ab55006",
+          "returned_record_count": 1,
+          "returned_bibliographic_ids": [
+            "000008299352"
+          ],
+          "result": "one_paper_catalog_record_in_bounded_query"
+        }
+      ],
+      "public_image_url": null,
+      "historical_image_obtained": false,
+      "historical_image_inspected": false,
+      "raw_scan_crop_xyxy": null,
+      "edition_match_status": "target_edition_not_visually_checked",
+      "actual_ams_source_match": false,
+      "library_reading_status": "collection_guide_documents_closed_stack_reading",
+      "copy_request_status": "service_route_identified_not_applied",
+      "item_specific_copy_eligibility_confirmed": false,
+      "finding": "馆号及纸本身份已复核，当前公开入口未取得对应地图影像。",
+      "next_gate": "按准确馆号核原件可利用状态；优先取得全图外框、图号、版记和编测说明，并由馆方确认复制范围与权利。",
+      "limit": "没有图像链接与限定查询未命中不等于从未数字化、馆藏不存在或不得利用。"
+    }
+  ],
+  "catalog_queries": [
+    {
+      "id": "TOHOKU-TITLE",
+      "service_url": "https://services1.arcgis.com/qvPIahekAMWThrhc/arcgis/rest/services/zukaku_th/FeatureServer/0/query",
+      "where": "name LIKE '%鄭州%' OR name LIKE '%偃師%' OR name LIKE '%汜水%'",
+      "returnGeometry": false,
+      "queried_date": "2026-11-14",
+      "response_sha256": "50682b159adae16c7f3957aab02195e4b5f6961e3a1b2a66f3175b1e373cf6df",
+      "returned_record_count": 2,
+      "exceeded_transfer_limit_reported": false,
+      "target_complete_identity_matches": 0,
+      "records": [
+        {
+          "OBJECTID": 1887,
+          "ghzno": "TH002362",
+          "name": "汜水鎮",
+          "code": "淮安10号",
+          "scale": "1:100,000",
+          "survey_year": 1909,
+          "print_year": 1912,
+          "publication_year": 1912,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002362.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4730,
+          "ghzno": "TH002729",
+          "name": "鄭州",
+          "code": "開封10号",
+          "scale": "1:100,000",
+          "survey_year": 1920,
+          "print_year": 1913,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002729.jpg",
+          "ghzno_isMatchedimagefile": 1
+        }
+      ],
+      "interpretation_limit": "属性查询不代表完整馆藏普查；目录年份与图号待原图进一步核。未保留几何、范围坐标、面积或周长。",
+      "outFields": "*"
+    },
+    {
+      "id": "TOHOKU-KAIFENG",
+      "service_url": "https://services1.arcgis.com/qvPIahekAMWThrhc/arcgis/rest/services/zukaku_th/FeatureServer/0/query",
+      "where": "code LIKE '%開封%'",
+      "returnGeometry": false,
+      "queried_date": "2026-11-14",
+      "response_sha256": "e9ee74aff09ab6d8c51f3a6c249eef5caffb6d5ca20e5b7433d4126759e8b5aa",
+      "returned_record_count": 35,
+      "exceeded_transfer_limit_reported": false,
+      "target_complete_identity_matches": 0,
+      "records": [
+        {
+          "OBJECTID": 4712,
+          "ghzno": "TH002711",
+          "name": "襄城縣",
+          "code": "西九行南一段開封14号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002711.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4713,
+          "ghzno": "TH002712",
+          "name": "舞陽縣",
+          "code": "西九行南一段開封15号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002712.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4714,
+          "ghzno": "TH002713",
+          "name": "?縣",
+          "code": "西九行南一段開封18号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002713.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4715,
+          "ghzno": "TH002714",
+          "name": "寳豊縣",
+          "code": "西九行南一段開封19号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002714.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4716,
+          "ghzno": "TH002715",
+          "name": "方城縣",
+          "code": "西九行南一段開封20号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002715.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4717,
+          "ghzno": "TH002716",
+          "name": "葛哈",
+          "code": "西九行南一段開封22号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002716.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4718,
+          "ghzno": "TH002717",
+          "name": "臨汝県",
+          "code": "西九行南一段開封23号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002717.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4719,
+          "ghzno": "TH002718",
+          "name": "魯山縣",
+          "code": "西九行南一段開封24号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002718.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4720,
+          "ghzno": "TH002719",
+          "name": "南召縣",
+          "code": "西九行南一段開封25号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002719.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4730,
+          "ghzno": "TH002729",
+          "name": "鄭州",
+          "code": "開封10号",
+          "scale": "1:100,000",
+          "survey_year": 1920,
+          "print_year": 1913,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002729.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4731,
+          "ghzno": "TH002730",
+          "name": "柳樹口鎮",
+          "code": "開封12号",
+          "scale": "1:100,000",
+          "survey_year": 1921,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002730.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4721,
+          "ghzno": "TH002720",
+          "name": "彰徳",
+          "code": "開封1号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1914,
+          "publication_year": 1921,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002720.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4722,
+          "ghzno": "TH002721",
+          "name": "淇縣",
+          "code": "開封2号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002721.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4723,
+          "ghzno": "TH002722",
+          "name": "衞輝",
+          "code": "開封3号",
+          "scale": "1:100,000",
+          "survey_year": 1915,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002722.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4724,
+          "ghzno": "TH002723",
+          "name": "開封",
+          "code": "開封4号",
+          "scale": "1:100,000",
+          "survey_year": 1911,
+          "print_year": 1914,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002723.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4725,
+          "ghzno": "TH002724",
+          "name": "開封南部",
+          "code": "開封5号",
+          "scale": "1:100,000",
+          "survey_year": 1911,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002724.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4726,
+          "ghzno": "TH002725",
+          "name": "林縣",
+          "code": "開封6号",
+          "scale": "1:100,000",
+          "survey_year": 1920,
+          "print_year": 1921,
+          "publication_year": 1921,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002725.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4727,
+          "ghzno": "TH002726",
+          "name": "輝縣",
+          "code": "開封7号",
+          "scale": "1:100,000",
+          "survey_year": 1921,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002726.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4728,
+          "ghzno": "TH002727",
+          "name": "新郷",
+          "code": "開封8号",
+          "scale": "1:100,000",
+          "survey_year": 1911,
+          "print_year": 1913,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002727.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4729,
+          "ghzno": "TH002728",
+          "name": "榮澤",
+          "code": "開封9号",
+          "scale": "1:100,000",
+          "survey_year": 1911,
+          "print_year": 1914,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002728.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4741,
+          "ghzno": "TH002740",
+          "name": "新安縣",
+          "code": "開封25号",
+          "scale": "1:100,000",
+          "survey_year": 1921,
+          "print_year": 1923,
+          "publication_year": 1925,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002740.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4740,
+          "ghzno": "TH002739",
+          "name": "狂口",
+          "code": "開封24号",
+          "scale": "1:100,000",
+          "survey_year": 1921,
+          "print_year": 1923,
+          "publication_year": 1925,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002739.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4739,
+          "ghzno": "TH002738",
+          "name": "澤州",
+          "code": "開封22号",
+          "scale": "1:100,000",
+          "survey_year": 1921,
+          "print_year": 1924,
+          "publication_year": 1924,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002738.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4738,
+          "ghzno": "TH002737",
+          "name": "高平縣",
+          "code": "開封21号",
+          "scale": "1:100,000",
+          "survey_year": 1921,
+          "print_year": 1924,
+          "publication_year": 1924,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002737.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4737,
+          "ghzno": "TH002736",
+          "name": "洛陽縣",
+          "code": "開封20号",
+          "scale": "1:100,000",
+          "survey_year": 1921,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002736.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4736,
+          "ghzno": "TH002735",
+          "name": "孟縣",
+          "code": "開封19号",
+          "scale": "1:100,000",
+          "survey_year": 1920,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002735.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4735,
+          "ghzno": "TH002734",
+          "name": "懐慶",
+          "code": "開封18号",
+          "scale": "1:100,000",
+          "survey_year": 1920,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002734.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4734,
+          "ghzno": "TH002733",
+          "name": "密縣",
+          "code": "開封15号",
+          "scale": "1:100,000",
+          "survey_year": 1921,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002733.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4733,
+          "ghzno": "TH002732",
+          "name": "木欒店",
+          "code": "開封14号",
+          "scale": "1:100,000",
+          "survey_year": 1920,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002732.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4732,
+          "ghzno": "TH002731",
+          "name": "清化鎮",
+          "code": "開封13号",
+          "scale": "1:100,000",
+          "survey_year": 1920,
+          "print_year": 1923,
+          "publication_year": 1923,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002731.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4710,
+          "ghzno": "TH002709",
+          "name": "臨頴縣",
+          "code": "西九行南一段開封9号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002709.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4709,
+          "ghzno": "TH002708",
+          "name": "許昌縣",
+          "code": "西九行南一段開封8号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002708.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4708,
+          "ghzno": "TH002707",
+          "name": "西華縣",
+          "code": "西九行南一段開封4号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002707.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4707,
+          "ghzno": "TH002706",
+          "name": "扶溝縣",
+          "code": "西九行南一段開封3号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002706.jpg",
+          "ghzno_isMatchedimagefile": 1
+        },
+        {
+          "OBJECTID": 4711,
+          "ghzno": "TH002710",
+          "name": "禹縣",
+          "code": "西九行南一段開封13号",
+          "scale": "1:100,000",
+          "survey_year": -9999,
+          "print_year": 1935,
+          "publication_year": 1935,
+          "url": "https://nakaya-geolab.com/GaihozuTiles/?imageid=TH002710.jpg",
+          "ghzno_isMatchedimagefile": 1
+        }
+      ],
+      "interpretation_limit": "属性查询不代表完整馆藏普查；目录年份与图号待原图进一步核。未保留几何、范围坐标、面积或周长。",
+      "outFields": "OBJECTID,url,ghzno,name,scale,survey_year,print_year,publication_year,code,ghzno_isMatchedimagefile,width,height"
+    }
+  ],
+  "rejected_matches": [
+    {
+      "id": "th-zhengzhou-1923",
+      "candidate_catalog_id": "TH002729",
+      "candidate_name": "鄭州",
+      "candidate_code": "開封10号",
+      "candidate_publication_year": 1923,
+      "target_id": "zhengzhou-1942",
+      "source_id": "TOHOKU-KAIFENG",
+      "status": "excluded_as_target_edition",
+      "reason": "目标是開封11號、[1942]；这条是開封10号、1923，不能因同名替代。",
+      "image_inspected": false
+    },
+    {
+      "id": "th-gaoping-1924",
+      "candidate_catalog_id": "TH002737",
+      "candidate_name": "高平縣",
+      "candidate_code": "開封21号",
+      "candidate_publication_year": 1924,
+      "target_id": "yanshi-1934",
+      "source_id": "TOHOKU-KAIFENG",
+      "status": "excluded_as_target_sheet",
+      "reason": "末尾图号21相同，但题名、年份及完整图系前缀与偃師縣／西9行南1段開封21號不同。",
+      "image_inspected": false
+    },
+    {
+      "id": "gifu-sishui-1934",
+      "candidate_catalog_id": "881081240",
+      "candidate_name": "泗水縣",
+      "candidate_index_code": "中国北支-11-34",
+      "candidate_publication_year": 1934,
+      "target_id": "sishui-1935",
+      "source_id": "GIFU-100K",
+      "status": "excluded_as_target_identity",
+      "reason": "目录字形为泗水縣，目标为河南汜水縣；读音相同和1930年代不能消除题名、版次差别。",
+      "image_inspected": false
+    }
+  ],
+  "upstream_records": [
+    {
+      "id": "henan-1926-100k",
+      "title": "1926河南十万分一：中国底图集合已具体化",
+      "status": "series_record_verified_sheet_unknown",
+      "source_id": "CCTS-4788",
+      "catalog_record_number": "4788",
+      "catalog_record_number_is_historical_sheet_number": false,
+      "catalog_title": "河南地圖",
+      "creator_as_cataloged": "國民革命軍總司令部參謀處",
+      "catalog_year": "1926",
+      "scale_denominator": 100000,
+      "catalog_sheet_count": 185,
+      "physical_size_as_cataloged": "28x44厘米",
+      "notes_as_cataloged": "內有少量圖幅為河南陸軍測量局繪製。",
+      "index_sheet_documented": false,
+      "index_sheet_obtained": false,
+      "historical_sheet_number": null,
+      "target_relation": "与B7偃师目录所引底图机构、年份及尺度相容；该集合中的具体偃师图尚未核。",
+      "actual_parent_sheet_match": false,
+      "new_finding": "新增具体系列目录4788及集合构成注记，不再只有日图一般注记中的机构名称。",
+      "next_gate": "取得该185幅集合的目录或接合表，按偃师及邻接图名锁定单幅，并分清河南陆军测量局少量图幅。"
+    },
+    {
+      "id": "henan-1931-50k",
+      "title": "1931河南五万分一：找到一张待取得的接合表",
+      "status": "series_and_index_record_verified_sheet_unknown",
+      "source_id": "CCTS-4798",
+      "catalog_record_number": "4798",
+      "catalog_record_number_is_historical_sheet_number": false,
+      "catalog_title": "河南省五萬分一地形圖",
+      "creator_as_cataloged": "參謀本部陸地測量總局",
+      "catalog_year": "1931",
+      "scale_denominator": 50000,
+      "catalog_sheet_count": 263,
+      "physical_size_as_cataloged": "38x48厘米",
+      "notes_as_cataloged": "接合表1張",
+      "index_sheet_documented": true,
+      "index_sheet_obtained": false,
+      "historical_sheet_number": null,
+      "target_relation": "与B7汜水所引1931五万分一底图的机构、年代和尺度相容；尚不证明同一单幅或被L531实际采用。",
+      "actual_parent_sheet_match": false,
+      "new_finding": "从泛称1931底图推进为具体263幅集合及明确存在于目录的接合表获取对象。",
+      "next_gate": "优先取得目录4798所记接合表，核汜水对应图名、图号和邻接关系，再取单幅版记核1931印次。"
+    }
+  ],
+  "comparison_records": [
+    {
+      "id": "CCTS-4793",
+      "catalog_title": "河南省十萬分一圖",
+      "catalog_year": "1930",
+      "scale_denominator": 100000,
+      "creator_as_cataloged": "參謀本部陸地測量總局",
+      "catalog_sheet_count": 137,
+      "decision": "不同于1926机构与年代组合，保留独立目录。"
+    },
+    {
+      "id": "CCTS-4809",
+      "catalog_title": "河南省五萬分一地形圖",
+      "catalog_year": "1917–1947",
+      "scale_denominator": 50000,
+      "creator_as_cataloged": "參謀本部陸地測量總局等",
+      "catalog_sheet_count": 499,
+      "notes_as_cataloged": "圖表1張",
+      "decision": "年代混合集不替代1931专条263幅；未把圖表自动改称同一接合表。"
+    }
+  ],
+  "structure_reviews": [
+    {
+      "id": "huanghe-railway-pier-11",
+      "title": "平汉铁路黄河桥历史11号墩：存续假设被否决",
+      "parent_candidate_id": "huanghe-railway",
+      "source_id": "ZZ-PIER11",
+      "record_kind": "named_historical_structure_exclusion",
+      "status": "excluded_as_continuously_surviving_point",
+      "reported_event_date": "1958-07-17",
+      "reported_component_label": "11号桥墩",
+      "reported_event": "养护部门供稿记该墩在洪水中倒塌，相连第10、第11孔钢梁落水，后经抢修恢复交通。",
+      "evidence_level": "operator_retrospective_history_not_original_engineering_drawing",
+      "new_finding": "从整桥多次改建的泛化排除，推进到一个有编号的历史构件遭毁记录。",
+      "physical_point_in_ams_identified": false,
+      "current_component_identity_verified": false,
+      "coordinates": null,
+      "anchor_pixel": null,
+      "approved_as_ground_control": false,
+      "verdict": "不得把历史11号墩默认为仍原位存续的跨期测量点；恢复通车不能证明同一基础或墩位未变。",
+      "next_gate": "另核原始墩号图、1958抢修竣工资料、构件重建或遗存关系及现代工程测量；AMS线符号中仍须能唯一指认该物理部位。"
+    }
+  ],
+  "access_routes": [
+    {
+      "id": "ndl-reading",
+      "title": "东京本馆地图室闭架阅览",
+      "source_id": "NDL-GAIHOZU",
+      "status": "documented_route_not_requested",
+      "detail": "使用准确馆号检索并依馆方程序申请阅览；本次未预约、未到馆。"
+    },
+    {
+      "id": "ndl-copy",
+      "title": "注册用户远隔复制申请",
+      "source_id": "NDL-COPY",
+      "status": "documented_route_item_eligibility_unconfirmed",
+      "detail": "服务收费且需明确复制部位；三件资料可复制范围、提供形式和费用待馆方核定。未发申请、未付款。"
+    },
+    {
+      "id": "ocha-other",
+      "title": "其他大学不是同一公开库",
+      "source_id": "OCHA-ACCESS",
+      "status": "general_service_guidance_only",
+      "detail": "お茶之水官方页面说明校外检索/复制支持有限；東北大当前服务不能代替其他馆藏普查。"
+    }
+  ],
+  "search_log": [
+    {
+      "id": "NDL-EXACT-3",
+      "date": "2026-11-14",
+      "scope": "按三个精确YG821馆号查询公开单件HTML与OpenSearch cnt=20",
+      "result": "各返一个纸本书目，未取得对应公开数字本入口。",
+      "source_ids": [
+        "NDL-2507",
+        "NDL-2519",
+        "NDL-2516"
+      ],
+      "not_proved": "未证明没有其他数字本或禁止复制。"
+    },
+    {
+      "id": "TOHOKU-TARGET-QUERY",
+      "date": "2026-11-14",
+      "scope": "name三题名查询及code含開封查询；returnGeometry=false",
+      "result": "分别2与35条，完整目标身份未匹配。",
+      "source_ids": [
+        "TOHOKU-TITLE",
+        "TOHOKU-KAIFENG"
+      ],
+      "not_proved": "不是全馆藏普查，不以未匹配为绝对不存在。"
+    },
+    {
+      "id": "GIFU-READ",
+      "date": "2026-11-14",
+      "scope": "中国北支1:100000公开目录cp932解码，按题名/读音筛选",
+      "result": "取得1923鄭州和1934泗水縣等不同身份记录；后者字形不等于河南汜水。",
+      "source_ids": [
+        "GIFU-100K"
+      ],
+      "not_proved": "没有取得目标印本影像。"
+    },
+    {
+      "id": "CCTS-UPSTREAM",
+      "date": "2026-11-14",
+      "scope": "河南地圖与五万分一系列条目4788/4798/4793/4809",
+      "result": "锁定两个目标年代集合、一个接合表记录，另保留两个不可混同的集合。",
+      "source_ids": [
+        "CCTS-4788",
+        "CCTS-4798",
+        "CCTS-4793",
+        "CCTS-4809"
+      ],
+      "not_proved": "没有取得具体历史图号、接合表影像或同图源关系。"
+    },
+    {
+      "id": "BRIDGE-NUMBERED",
+      "date": "2026-11-14",
+      "scope": "候选铁路桥养护部门史述中的编号构件",
+      "result": "11号墩1958倒塌，否决默认连续存续；无原始墩号图或现代同点测量。",
+      "source_ids": [
+        "ZZ-PIER11"
+      ],
+      "not_proved": "没有批准桥墩控制点，未认定任何现存墩与历史编号对应。"
+    }
+  ],
+  "limitations": [
+    "本批取得的是目录、属性查询和机构服务说明；目标三幅历史扫描与接合表影像取得数均为0。",
+    "纸本记录无数字链接及有限查询未匹配，不能写成未数字化、馆藏不存在或禁止利用。",
+    "CCTS编号4788/4798是目录条目号，不是1926或1931历史地图图号；幅数按该条目著录，不视为原系列完整生产总量。",
+    "机构、年份与比例尺相容不足以认定同一单幅、同一基准或AMS实际用图关系。",
+    "历史11号墩倒塌来自养护部门回顾史述；它支持否决默认存续，不提供现代构件身份或实测坐标。",
+    "本批未提出复制申请、预约、付款或联系馆方；所有获取条件只是已核服务路径。",
+    "原纸图水平基准未识别，未赋地理CRS；0获准地面点、0古址坐标、0古河道，现代DSM不变。"
+  ],
+  "next_gates": [
+    {
+      "id": "index-first",
+      "title": "先取得1931接合表",
+      "requires": "以CCTS4798题名、1931年代、263幅及接合表1张为精确查件信息，取得表后才填写单幅图号。"
+    },
+    {
+      "id": "map-margin",
+      "title": "按三馆号取得原图边栏",
+      "requires": "图名、完整图系、版记、编测说明和四边范围须同时可见；不能仅凭同名或末尾编号取代目标。"
+    },
+    {
+      "id": "parent-link",
+      "title": "逐幅核底图引用",
+      "requires": "核1926/1931底图的实际单幅与日图、AMS编图清单；相容条件与确证引用分开。"
+    },
+    {
+      "id": "pier-identity",
+      "title": "桥墩重建与同点身份另核",
+      "requires": "取得原始墩号及1958抢修图，再核现代遗存与测量；恢复通车不是同点连续证明。"
+    }
+  ],
+  "deferred_leads": [
+    {
+      "id": "third-party-zhengzhou-figure",
+      "target_id": "zhengzhou-1942",
+      "url": "https://sjm460405.blogspot.com/2019/03/blog-post_12.html",
+      "checked_scope": "article_text_only",
+      "claimed_figure": "图6标题标为1942鄭州／開封11號",
+      "status": "unverified_image_provenance_not_admitted",
+      "reason": "检索命中第三方文章的图题，但未核其图像字节、完整边栏、保管来源与再使用条件；不计为本批已取得原图。"
+    }
+  ]
+}

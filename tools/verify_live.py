@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Verify the actual HTTPS commit and every public asset. No deployment mocks."""
-import argparse,concurrent.futures,hashlib,json,os,time
+import argparse,concurrent.futures,hashlib,json,os,re,time
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
 from live_http import LiveFetcher
@@ -38,6 +39,15 @@ try:
   'downloads/dual-luonan-b7-package.zip','downloads/luoyang-source-continuity-b7.zip',
  }
  assert required_b7_assets.issubset(info['files_sha256']), f'Missing B7 assets: {sorted(required_b7_assets-set(info["files_sha256"]))}'
+ required_b8_assets={
+  'dual-city-review.html','city-review-b8.js','assets/master-dual-b8-review.svg',
+  'city-review/ledger.json','city-review/cases.json','city-review/metadata.json',
+  'city-review/errata.json','city-review/preservation.json','city-review/overview.png',
+  'source-access/metadata.json','source-access/access-summary.svg','source-access/upstream-summary.svg',
+  'downloads/luoyang-city-review-b8-atlas.pdf','downloads/luoyang-city-review-b8-ledger.csv',
+  'downloads/luoyang-city-review-b8-package.zip','dual-b2-before-b8.html','downloads/dual-map-report-before-b8.html',
+ }
+ assert required_b8_assets.issubset(info['files_sha256']), f'Missing B8 assets: {sorted(required_b8_assets-set(info["files_sha256"]))}'
  public_files=[(path,digest) for path,digest in info['files_sha256'].items() if path not in excluded]
  with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:results=list(pool.map(check,public_files))
  assert info['counts']['sheets']==37 and info['counts']['entities']==339
@@ -150,12 +160,147 @@ try:
  assert {r['id']:r['status'] for r in continuity['records']}=={'zhengzhou-1942':'period-match','yanshi-1934':'earlier','sishui-1935':'earlier'}
  assert all(r['catalog_only'] is True and r['original_scan_seen_in_this_batch'] is False and r['coordinates'] is None and r['approved_as_ground_control'] is False for r in continuity['records'])
  assert all(r['actual_l500_source_match'] is False and r['actual_l531_source_match'] is False and r['original_horizontal_datum'] is None and r['original_geographic_crs'] is None for r in continuity['records'])
+ # B8 checks the real published associations and correction layer without promoting them to historical certainty.
+ ledger=json.loads(get('city-review/ledger.json'));cases=json.loads(get('city-review/cases.json'))
+ city=json.loads(get('city-review/metadata.json'));access=json.loads(get('source-access/metadata.json'))
+ errata=json.loads(get('city-review/errata.json'));city_preserved=json.loads(get('city-review/preservation.json'))
+ assert {'city-review-b8','source-access-b8'}.issubset(release['extensions'])
+ assert all(d['source_commit']==info['source_commit'] for d in [ledger,cases,city,access,errata,info['city_review_b8'],info['source_access_b8']])
+ assert all(d['baseline_commit']=='e959da7c16db7cb814bb7460c03e5c7d860be1fa' for d in [ledger,cases,city,access,errata])
+ expected_counts={'entities':339,'targets':179,'regions':11,'targeted_entities':237,
+  'individual_entities':136,'group_entities':101,'no_interactive_target_entities':102,
+  'groups':42,'shared_or_group_targets':43,'shared_non_group_targets':1,
+  'explicit_focus_entities':125,'direct_evidence_records':183,'direct_evidence_entities':209,
+  'direct_evidence_refs':506,'no_direct_evidence_refs_entities':130,
+  'new_ancient_coordinates':0,'new_interactive_targets':0,'new_historical_verifications':0}
+ assert city['counts']==ledger['counts'] and all(ledger['counts'][k]==v for k,v in expected_counts.items())
+ assert info['city_review_b8']['entities']==339 and info['city_review_b8']['targets']==179
+ assert city['atlas_pages']==info['city_review_b8']['atlas_pages']==8
+ assert city['new_ancient_coordinates']==city['new_interactive_targets']==0
+ assert city['historical_full_entity_revalidation_claimed'] is False
+ baseline_entities=json.loads(get('data/entities.json'));markers=json.loads(get('data/markers.json'))
+ baseline_regions=json.loads(get('data/regions.json'))
+ rows={e['id']:e for e in ledger['entities']}
+ assert len(rows)==len(ledger['entities'])==339 and set(rows)=={e['id'] for e in baseline_entities}
+ assert len(markers)==179 and len(baseline_regions)==len(ledger['regions'])==11
+ targets={}
+ for original in baseline_entities:
+  row=rows[original['id']]
+  assert all(row[k]==original[k] for k in ['id','map_id','name','type']), original['id']
+  assert row['legacy_temporal_state']==original.get('temporal_state')
+  assert row['geographic_coordinates'] is None and row['historical_verification_added'] is False
+  assert row['drawing_status']['geographic_coordinates'] is None
+  assert row['explicit_focus_regions']==[r['code'] for r in baseline_regions if row['id'] in r['focus_ids']]
+  expected_indexes=[i for i,m in enumerate(markers) if row['id'] in m['ids']]
+  assert [t['source_index'] for t in row['targets']]==expected_indexes, row['id']
+  expected_state='no_interactive_target' if not expected_indexes else 'group_member' if any(markers[i]['kind']=='group' or len(markers[i]['ids'])>1 for i in expected_indexes) else 'individual'
+  assert row['marker_state']==expected_state, row['id']
+  for t in row['targets']:
+   m=markers[t['source_index']]
+   assert t['id']==f'target-{t["source_index"]+1:03}' and t['member_ids']==m['ids']
+   assert [t['kind'],t['x'],t['y'],t['member_count']]==[m['kind'],m['x'],m['y'],len(m['ids'])]
+   assert t['coordinate_frame']=='documentary_canvas_not_geographic'
+   assert t['id'] not in targets or targets[t['id']]==t
+   targets[t['id']]=t
+  assert all(row['id'] in ref['entity_ids'] and ref['relation']=='explicit_reference' for ref in row['direct_evidence_refs'])
+ assert len(targets)==179 and sum(len(row['direct_evidence_refs']) for row in rows.values())==506
+ associated_evidence={r['key'] for row in rows.values() for r in row['direct_evidence_refs']}
+ unassociated_network={f'v2.7:{r["id"]}' for r in net['passages'] if not r['map_ids']}
+ assert unassociated_network=={'v2.7:N18','v2.7:N20'}
+ assert associated_evidence.isdisjoint(unassociated_network) and len(associated_evidence)==181
+ assert len(associated_evidence|unassociated_network)==ledger['counts']['direct_evidence_records']==183
+ assert 'city_jinyang' not in rows and any(r['resolution']=='known_external_reference' for r in rows['ic_sanji_jinyang']['constraint_references'])
+ assert rows['bridge_yong']['targets']==[] and rows['bridge_yong']['crop_regions']==[]
+ assert rows['bridge_yong']['explicit_focus_regions']==['R10','R11']
+ assert rows['ic_donggong_reserved']['targets']==rows['ic_taicang_jin']['targets']
+ assert rows['ic_donggong_reserved']['targets'][0]['kind']=='area'
+ assert rows['v2_baoming']['legacy_temporal_state']=='attested_by_528'
+ assert 'conditional-identity' in rows['v2_baoming']['drawing_status']['current_temporal_displays']
+ assert rows['v2_baoming']['current_review']['temporal_label']=='前期身份有条件'
+ assert rows['house_xiaobaoyin']['display_name']=='萧宝夤归正里旧宅〔后迁永安里〕'
+ assert city['display_override_entities']==sum(bool(e['current_review']) for e in rows.values())==2
+ assert all(e['current_review'].get('changes_catalog') is False for e in rows.values() if e['current_review'])
+ assert [r['id'] for r in cases['records']]==[f'CB{i:02}' for i in range(1,15)]
+ assert city['case_count']==info['city_review_b8']['case_count']==len(cases['records'])==14
+ assert cases['source_family_count']==1 and len(cases['sources'])==10
+ assert all(r['geographic_coordinates'] is None and set(r['entities'])<=set(rows) for r in cases['records'])
+ assert all(row['case_ids']==[c['id'] for c in cases['records'] if row['id'] in c['entities']] for row in rows.values())
+ assert city['case_linked_entities']==info['city_review_b8']['case_linked_entities']==sum(bool(e['case_ids']) for e in rows.values())==80
+ correction=next(r for r in cases['records'] if r['id']=='CB14')['errata']
+ assert errata['original_research_data_preserved'] is True and errata['records']==[dict(correction,case_id='CB14')]
+ assert city['quotation_corrections']==info['city_review_b8']['quotation_corrections']==1
+ assert correction['legacy_quote']==next(e for e in dual['b2']['evidence'] if e['id']=='G15')['quote']=='大旱則穀水注之，霖雨則陽穀泄之。'
+ assert correction['corrected_source_quote']=='若旱魃為害，穀水注之不竭；離畢滂潤，陽穀泄之不盈。'
+ assert correction['correction_scope']=='quotation_layer' and correction['original_data_preserved'] is True
+ assert correction['legacy_originals_are_overwritten'] is False
+ assert correction['commentary_variant']['quote']=='穀當作渠。' and correction['commentary_variant']['changes_body_quote_silently'] is False
+ assert city_preserved['protected_unchanged'] is True
+ assert city['protected_files']==info['city_review_b8']['protected_files']==city_preserved['protected_files']==len(city_preserved['sha256'])
+ assert all(info['files_sha256'][path]==digest for path,digest in city_preserved['sha256'].items())
+ updates=city_preserved['intentional_html_updates']
+ assert updates==city['intentional_html_updates'] and {u['path']:u['archive_path'] for u in updates}=={
+  'dual-b2.html':'dual-b2-before-b8.html','downloads/dual-map-report.html':'downloads/dual-map-report-before-b8.html'}
+ for update in updates:
+  assert update['case_id']=='CB14' and update['before_sha256']==info['files_sha256'][update['archive_path']]
+  assert update['after_sha256']==info['files_sha256'][update['path']]
+  after=get(update['path']);before=get(update['archive_path'])
+  assert after.count(b'id="b8-quotation-correction"')==1 and b'case=CB14' in after
+  assert b'id="b8-quotation-correction"' not in before
+  restored,count=re.subn(rb'<section id="b8-quotation-correction"[^>]*>.*?</section>',b'',after,count=1,flags=re.DOTALL)
+  assert count==1 and restored==before, update['path']
+ drawing=city['drawing_audit'];assert drawing==city_preserved['drawing_audit']
+ assert drawing['review_targets']==179 and drawing['all_original_world_children_preserved'] is True
+ assert drawing['anchors_moved'] is False and drawing['marker_catalog_unchanged'] is True
+ assert drawing['new_ancient_coordinates']==drawing['new_interactive_targets']==0
+ assert drawing['source_master']==city['original_master_retained']=='assets/master-dual-b7-luonan.svg'
+ assert drawing['source_sha256']==info['files_sha256'][drawing['source_master']]
+ assert drawing['overlay_role']=='review_association_not_historical_confidence'
+ ns='{http://www.w3.org/2000/svg}'
+ previous=ET.fromstring(get(drawing['source_master']));current=ET.fromstring(get('assets/master-dual-b8-review.svg'))
+ previous_world=next(g for g in previous if g.tag==ns+'g' and g.get('transform'))
+ current_world=next(g for g in current if g.tag==ns+'g' and g.get('transform'))
+ assert len(previous_world)==drawing['original_world_children'] and len(current_world)==len(previous_world)+1
+ assert [ET.tostring(g) for g in previous_world]==[ET.tostring(g) for g in list(current_world)[:-1]]
+ overlay=list(current_world)[-1];assert overlay.get('id')=='city-audit-overlay-b8'
+ rings=[g for g in overlay if g.get('class')=='city-review-target']
+ assert len(rings)==179 and {g.get('data-target-id') for g in rings}==set(targets)
+ for g in rings:
+  t=targets[g.get('data-target-id')];circle=next(c for c in g if c.tag==ns+'circle')
+  assert g.get('data-entity-ids').split()==t['member_ids'] and g.get('data-footprint')=='false'
+  assert [float(circle.get('cx')),float(circle.get('cy'))]==[t['x'],t['y']]
+  assert g.get('data-shared')==str(t['kind']=='group' or t['member_count']>1).lower()
+ outputs=city['outputs']
+ assert isinstance(outputs,list) and outputs and len(outputs)==len(set(outputs))
+ assert all(isinstance(path,str) and path and not path.startswith('/') and '..' not in path.split('/') and ':' not in path for path in outputs)
+ assert set(outputs)<=set(info['files_sha256']) and required_b8_assets-{'city-review/metadata.json'}<=set(outputs)
+ assert access['review_counts']==city['source_access_counts']==info['source_access_b8']['review_counts']=={
+  'target_maps_access_reviewed':3,'target_historical_scans_obtained':0,
+  'bounded_university_catalog_records_screened':35,'rejected_name_or_number_matches':3,
+  'upstream_target_series_records':2,'documented_join_index_targets':1,'join_index_images_obtained':0,
+  'comparative_series_records_kept_separate':2,'named_structure_exclusions_added':1,
+  'actual_ams_source_matches':0,'approved_ground_control_points':0}
+ assert access['original_horizontal_datum'] is None and access['original_geographic_crs'] is None
+ assert all(access[k] is False for k in ['project_registration_to_wgs84','ground_accuracy_assessed','modern_dsm_modified','coordinate_assignment_performed','new_historical_image_obtained'])
+ assert access['approved_ground_control_points']==[] and access['source_assets']==[]
+ assert access['ancient_geographic_positions_added']==access['ancient_channels_added']==access['approved_control_points']==0
+ assert info['source_access_b8']['metadata']=='source-access/metadata.json'
+ assert info['source_access_b8']['approved_control_points']==0 and info['source_access_b8']['project_registration_to_wgs84'] is False and info['source_access_b8']['original_horizontal_datum'] is None
+ assert len(access['access_records'])==3 and {r['id'] for r in access['access_records']}=={'zhengzhou-1942','yanshi-1934','sishui-1935'}
+ assert all(r['historical_image_obtained'] is False and r['historical_image_inspected'] is False and r['actual_ams_source_match'] is False for r in access['access_records'])
+ assert all(r['public_image_url'] is None and r['raw_scan_crop_xyxy'] is None and r['copy_request_status']=='service_route_identified_not_applied' for r in access['access_records'])
+ assert len(access['upstream_records'])==2 and len(access['rejected_matches'])==3 and len(access['comparison_records'])==2
+ assert all(r['historical_sheet_number'] is None and r['actual_parent_sheet_match'] is False and r['index_sheet_obtained'] is False and r['catalog_record_number_is_historical_sheet_number'] is False for r in access['upstream_records'])
+ assert len(access['structure_reviews'])==1 and access['structure_reviews'][0]['id']=='huanghe-railway-pier-11'
+ assert all(r['approved_as_ground_control'] is False and r['coordinates'] is None and r['anchor_pixel'] is None and r['physical_point_in_ams_identified'] is False and r['current_component_identity_verified'] is False for r in access['structure_reviews'])
+ assert access['plates']==['source-access/access-summary.svg','source-access/upstream-summary.svg']
+ assert all(access['plate_sha256'][Path(path).name]==info['files_sha256'][path] for path in access['plates'])
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
  report['southeast_b6']=info['southeast_b6'];report['ground_review_b6']=ground['review_counts']
  report['luonan_b7']=info['luonan_b7'];report['source_continuity_b7']=continuity['review_counts']
- print(f'LIVE PASS: {len(results)} public assets verified, including B1-B7, source lineage and source continuity; HTTP retries: {len(fetcher.retries)}')
+ report['city_review_b8']=info['city_review_b8'];report['city_audit_counts']=ledger['counts'];report['source_access_b8']=access['review_counts']
+ print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, source lineage, source continuity and source access; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise
 finally:
