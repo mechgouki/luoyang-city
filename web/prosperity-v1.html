@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="从盛时洛阳的文献平面出发，逐处查看城市布局、历史地形参照与位置依据。">
+  <title>盛时洛阳：从文献平面到城市分布</title>
+  <link rel="stylesheet" href="./prosperity-v1.css">
+</head>
+<body>
+  <a class="skip-link" href="#city-workspace">跳到城市地图</a>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">洛</span><span><small>NORTHERN WEI · LUOYANG</small><strong>北魏洛阳文献地图</strong></span></a>
+    <nav aria-label="主要导航"><a href="./">首页</a><a href="./#map">文献总图</a><a href="./v3.0.html">现代地形参照</a><a href="#sources" id="sources-link">资料来源</a></nav>
+  </header>
+  <main class="page-shell">
+    <section class="introduction" aria-labelledby="page-title">
+      <div><p class="eyebrow">516—528 · 盛时综合</p><h1 id="page-title">盛时洛阳<span>从文献平面到城市分布</span></h1><p class="intro-copy" id="intro-copy">先读城市各部分的关系，再查看它们能够怎样落入地理空间。选择一处地点，沿着原文、位置依据与保留的问题继续探索。</p></div>
+      <p class="view-promise">同一座城<br><strong>两种空间读法</strong></p>
+    </section>
+    <nav class="view-switch" aria-label="城市视图" id="view-switch">
+      <button type="button" data-view="plan" aria-pressed="true"><span>01</span>文献平面</button>
+      <button type="button" data-view="geography" aria-pressed="false"><span>02</span>地形与布局</button>
+      <button type="button" data-view="panorama" aria-pressed="false" hidden><span>03</span>布局鸟瞰</button>
+    </nav>
+    <section class="view-basis" aria-live="polite"><div><span class="basis-label" id="basis-label"></span><h2 id="view-title">盛时文献平面</h2></div><p id="basis-note"></p></section>
+    <section class="city-filters" aria-label="地点筛选">
+      <details id="filter-panel" open><summary id="filter-toggle">检索地点与筛选区域</summary><div class="filter-fields">
+      <label class="search-label">检索地点<input type="search" id="entity-search" placeholder="寺院、城门、坊里或地点名称" autocomplete="off"></label>
+      <label>区域<select id="region-filter" aria-label="筛选区域"><option value="all">全城</option></select></label>
+      <label>类型<select id="kind-filter" aria-label="筛选地点类型"><option value="all">全部类型</option></select></label>
+      <button type="button" id="clear-filters" class="text-button">清除筛选</button>
+      <p id="result-count" role="status"></p>
+      </div></details>
+    </section>
+    <section class="city-workspace" id="city-workspace" aria-label="盛时洛阳互动地图">
+      <div class="map-panel">
+        <div class="map-toolbar"><div><button type="button" id="zoom-in" aria-label="放大地图">＋</button><button type="button" id="zoom-out" aria-label="缩小地图">−</button><button type="button" id="reset-map">全图</button><button type="button" id="focus-selection">查看所选位置</button></div><span id="map-status" aria-live="polite">正在载入城市地图…</span></div>
+        <div class="map-layer-options" id="modern-reference-control" hidden><label><input type="checkbox" id="modern-reference">现代地理参照</label><span>近现代洛水与邙山参照，非北魏地貌。</span></div>
+        <div class="map-viewport" id="map-viewport" tabindex="0" aria-label="可拖动、缩放和点选的城市地图" aria-busy="true"><p class="loading-message">正在载入城市地图…</p></div>
+        <div class="map-caption"><p id="map-caption"></p><a id="download-map" href="#" target="_blank" rel="noopener">打开当前图件 ↗</a></div>
+        <details class="map-limitations" id="map-limitations"><summary>这张图能说明什么？</summary><div id="map-limitations-body"></div></details>
+      </div>
+      <aside class="inspector" aria-label="地点与依据">
+        <label for="entity-select">选择地点</label><select id="entity-select"></select>
+        <div id="entity-detail" aria-live="polite"><p class="muted">选择一处地点，阅读它的构成和位置依据。</p></div>
+      </aside>
+    </section>
+    <section class="sources-section" id="sources" aria-labelledby="sources-title">
+      <details id="source-catalog"><summary id="sources-title">资料来源与图件下载<span>查看原文、地图和本版数据</span></summary><details class="text-review" id="text-review" hidden><summary>本版文献核对</summary><div id="text-review-summary"></div><div class="text-decisions" id="text-decisions"></div></details><details class="text-review" id="terrain-review" hidden><summary>历史地形线索</summary><div><p class="muted">河道改迁、南墙毁损，以及局部壕泥与剖面记录，分别说明其时空范围和对布局的影响。本版据此记录约束，尚未生成古代地面高程模型（DEM）。</p></div><div class="text-decisions" id="terrain-constraints"></div></details><div class="source-grid" id="source-list"></div><div class="download-links" id="download-links"></div></details>
+    </section>
+    <footer><p>盛时综合采用 516—528 年河阴事件前的文献语境。文献关系、地形参照和位置判断分别说明。</p><p id="release-status">正在核对发布版本…</p></footer>
+  </main>
+  <script src="./prosperity-v1.js"></script>
+</body>
+</html>

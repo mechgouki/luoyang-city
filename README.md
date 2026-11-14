@@ -1,7 +1,7 @@
 # 北魏洛阳文献地图 · Luoyang Atlas
 
 以《洛阳伽蓝记》及其校注、相关史地文献为基础的可追溯历史城市地图。
-仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；当前研究工作线：**B1—B8**；首页体验版本：**H1 / homepage-v1**。
+仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前盛时工作层：**P1 / prosperity-v1**；首页体验版本：**H1 / homepage-v1**。
 
 > 盛时图采用 516—528 年河阴之变前的文献合成时层，不是某一年实测地图。图形尺寸、城墙轮廓和未定院界不能换算为历史地理坐标。
 
@@ -15,10 +15,13 @@
 
 正式网站：[mechgouki.github.io/luoyang-city](https://mechgouki.github.io/luoyang-city/)。现有GitHub Actions在main提交后自动构建、部署、验收；无需重新设置Pages。每批正式完成以对应提交的build、deploy、verify-live全部成功为准。
 
-H1首页以宽幅城市概念图开始，连接三个历史问题、互动地图和后置研究资料。主图标注“研究性复原示意”；建筑造型及构图不作为新的历史定位或尺寸证据。界面更新不改变B8研究结论，后续研究批次仍为B9。见[首页更新说明](docs/homepage-v1-release-notes.md)。
+当前按用户确认的顺序持续推进盛时洛阳：文献平面 → 历史地形与定位依据 → 城市分布 → 从布局深化全景。P1把183条旧证据电子文本追溯、236处字面约束审查、申遗原图的30项几何与相同布局的鸟瞰接入[盛时工作页](https://mechgouki.github.io/luoyang-city/prosperity.html)，另提供6页图册。详见[本版说明](docs/prosperity-v1-release-notes.md)。历史地面、绝对精度与全城建筑复原仍未完成，毁后场景后置。
+
+H1首页以宽幅城市概念图开始，连接三个历史问题、互动地图和后置研究资料。主图标注“研究性复原示意”；建筑造型及构图不作为新的历史定位或尺寸证据。见[首页更新说明](docs/homepage-v1-release-notes.md)。
 
 | 工作线 | 内容 | 入口 |
 | --- | --- | --- |
+| 盛时P1 | 文献审校、来源图城市骨架、布局鸟瞰；339地点与30来源要素分开阅读 | [盛时工作页](https://mechgouki.github.io/luoyang-city/prosperity.html) |
 | B1 | 宫前—永宁—景乐、建春两桥、景明—汉国子学堂—石经 | [B1](https://mechgouki.github.io/luoyang-city/dual-b1.html) |
 | 宫苑B2 | 宫苑、瑶光、景阳山及地下水系条件 | [B2](https://mechgouki.github.io/luoyang-city/dual-b2.html) |
 | 城西B3 | 大市、四向八里、皇女台、寿丘与王宅 | [B3](https://mechgouki.github.io/luoyang-city/dual-west.html) |
@@ -65,6 +68,8 @@ python3 tools/source_continuity_b7.py
 python3 tools/luonan_b7.py
 python3 tools/city_review_b8.py
 python3 tools/homepage_v1.py
+python3 tools/prosperity_v1.py
+python3 -m unittest discover -s tests -p 'test_prosperity*.py' -v
 python3 -m http.server 8000 --directory _site
 ```
 

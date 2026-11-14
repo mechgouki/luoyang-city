@@ -313,6 +313,39 @@ try:
  assert all(f'id="{ident}"' in home_html for ident in ['home-hero','home-start','home-questions','home-research'])
  assert home_html.index('id="home-hero"') < home_html.index('id="home-questions"') < home_html.index('id="map-viewport"') < home_html.index('id="home-research"')
  assert '研究性复原示意' in home_html
+ # Prosperity P1 adds a source-coordinate layer without promoting the literary canvas to ground truth.
+ prosperity=json.loads(get('prosperity/data.json'))
+ prosperity_geo=json.loads(get('prosperity/geographic-evidence.json'))
+ prosperity_text=json.loads(get('prosperity/text-review.json'))
+ prosperity_preserved=json.loads(get('prosperity/preservation.json'))
+ assert prosperity['version']==info['prosperity']['version']==release['prosperity_version']=='prosperity-v1'
+ assert prosperity['source_commit']==prosperity_preserved['source_commit']==info['source_commit']
+ assert {e['id'] for e in prosperity['entities']}==set(rows) and len(prosperity['entities'])==339
+ assert len(prosperity_text['records'])==183 and len(prosperity_text['constraint_references'])==236
+ assert len(prosperity_geo['features'])==info['prosperity']['source_geometries']==30
+ assert prosperity['source_features']==prosperity_geo['features']
+ assert len(prosperity['map_decisions'])==11 and 'TXT08' in {d['id'] for d in prosperity['map_decisions']}
+ terrain_constraints=json.loads(get('prosperity/terrain-constraints.json'))
+ assert prosperity['terrain_constraints']==terrain_constraints['records'] and len(terrain_constraints['records'])==5
+ assert all(r['coordinates'] is None and r['creates_ancient_surface'] is False for r in terrain_constraints['records'])
+ dimensions=json.loads(get('prosperity/building-dimensions.json'))
+ assert len(dimensions['massing_items'])==8 and all(r['historical_height_m'] is None for r in dimensions['massing_items'])
+ assert prosperity['projection']['source_crs']==prosperity_geo['calibration']['crs']=='EPSG:4610'
+ assert all(info['prosperity'][key] is False for key in ['wgs84_registration_completed','ancient_ground_surface_reconstructed','full_city_reconstruction_completed'])
+ assert prosperity['projection']['datum_conversion_performed'] is False
+ assert prosperity['panorama_projection']['heights_reconstructed'] is False
+ assert prosperity['projection']['projection_pipeline']==prosperity['panorama_projection']['projection_pipeline']
+ refs={ref['id']:ref for entity in prosperity['entities'] for ref in entity['evidence_refs']}
+ assert '堂東有扶桑海' in refs['B2:G13']['quote'] and '柰林西有都堂' in refs['B2:G13']['quote']
+ assert '城之西北門也' not in refs['B4:NG15']['quote'] and '现代校注' in refs['B4:NG15']['reading']
+ assert 'B0077/3' in refs['v2.7:N14']['url']
+ assert all(entity.get('temporal_label') for entity in prosperity['entities'])
+ assert prosperity_preserved['protected_unchanged'] is True
+ assert all(info['files_sha256'][path]==digest for path,digest in prosperity_preserved['protected_files'].items())
+ assert 'id="prosperity-entry"' in home_html and './prosperity.html' in home_html
+ assert info['prosperity']['atlas_pages']==6
+ assert get('downloads/prosperity-v1-atlas.pdf').startswith(b'%PDF-')
+ assert get('downloads/prosperity-v1-package.zip').startswith(b'PK')
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
@@ -320,7 +353,8 @@ try:
  report['luonan_b7']=info['luonan_b7'];report['source_continuity_b7']=continuity['review_counts']
  report['city_review_b8']=info['city_review_b8'];report['city_audit_counts']=ledger['counts'];report['source_access_b8']=access['review_counts']
  report['homepage']=info['homepage']
- print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8 and the H1 homepage; HTTP retries: {len(fetcher.retries)}')
+ report['prosperity']=info['prosperity']
+ print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise
 finally:

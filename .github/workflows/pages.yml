@@ -59,6 +59,7 @@ jobs:
           node --check web/city-review-b8.js
           node --check web/city-main-b8.js
           node --check web/homepage-v1.js
+          node --check web/prosperity-v1.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -103,6 +104,11 @@ jobs:
           python tools/luonan_b7.py
           python tools/city_review_b8.py
           python tools/homepage_v1.py
+      - name: Build prosperity documentary maps and source-geographic layout
+        run: python tools/prosperity_v1.py
+      - name: Check the built prosperity maps and their evidence
+        shell: bash
+        run: python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
@@ -131,6 +137,7 @@ jobs:
               python tests/browser_luonan_b7.py
               python tests/browser_city_b8.py
               python tests/browser_homepage_v1.py
+              python tests/browser_prosperity_v1.py
             '
       - name: Preserve build and browser evidence
         if: always()
@@ -209,6 +216,7 @@ jobs:
               python tests/browser_luonan_b7.py --base-url "$SITE_URL" --output artifacts/live-luonan-b7-browser
               python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser
               python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser
+              python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser
             '
       - name: Preserve live acceptance evidence
         if: always()
