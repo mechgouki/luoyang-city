@@ -1,0 +1,741 @@
+{
+  "schema_version": "1.0.0",
+  "version": "prosperity-core-scale-v2.0",
+  "created_at": "2026-11-14",
+  "scope": "在既有来源图概略锚点上显示三项有出处的定尺平面参考；院界尺寸只作独立比较模板，不新增古址控制点、古地面、建筑高度或屋顶。",
+  "inputs": [
+    {
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "sha256": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79"
+    },
+    {
+      "path": "research/prosperity-v1/building-dimensions.json",
+      "sha256": "ca9a5cf39563408142ab306a435bce3687ab9ce65088975f57c107a1dcbaee87"
+    }
+  ],
+  "sources": [
+    {
+      "id": "unesco-1442",
+      "title": "丝绸之路申遗文件所收汉魏洛阳故城考古资料与管理规划",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+      "sha256": "296e9336c19d0645e9f7f0274193bb5de466b439fbea511212686614c8c7b1c1",
+      "pages_are_one_based": true,
+      "dimension_pages": [
+        1927,
+        1930,
+        1931
+      ],
+      "local_plan_pages": [
+        1962,
+        1965,
+        1966,
+        3453
+      ],
+      "geographical_map_page": 3457,
+      "geographical_map_identifier": "管理规划图 06a，2012.12",
+      "source_level": "已核原件中的汇总尺寸表、考古机构提供的局部图和保护规划图；不冒称已阅读全文的原始发掘报告。",
+      "raw_source_redistributed": false
+    }
+  ],
+  "coordinate_reference": {
+    "source_crs": "EPSG:4610",
+    "datum": "Xian 1980",
+    "anchor_coordinate_order": "longitude,latitude",
+    "local_metric_axes": "x=east, y=north, unit=metre",
+    "projection_pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=aeqd +lat_0=34.7333333333 +lon_0=112.6166666667 +a=6378140 +rf=298.257",
+    "projection_matches": "tools/prosperity_maps.py:PROJECTION",
+    "datum_conversion_performed": false,
+    "is_rfc7946_wgs84_geojson": false,
+    "angle_convention": "orientation_angle_deg 是局部米制平面中北轴从 +y 向 +x 顺时针转过的工作角；不是独立测定的古建筑真北方位角。",
+    "rectangle_formula": "theta=orientation_angle_deg*pi/180; east_axis=(cos(theta),-sin(theta)); north_axis=(sin(theta),cos(theta)); vertex=anchor_local_m + u*east_axis + v*north_axis, with u=±east_west/2 and v=±north_south/2",
+    "historical_height_m": null,
+    "historical_ground_elevation_m": null
+  },
+  "evidence_levels": {
+    "dimension_table": "汇总表明确记载的米制数值；约数、遗存范围及对象类型逐项保留。",
+    "position_generalized": "管理图 06a 图符中心的来源位置，未经独立地面控制点核验；尺寸的书写精度不等于定位精度。",
+    "orientation_working": "从现有图示锚点或墙线导出的显示朝向，古代结构实测方位未知。",
+    "shape_reference": "矩形或方形是定尺参考片，不宣称是已逐边提取的发掘轮廓。",
+    "comparison_only": "尺度可比较，但缺少一致的地理落位依据；不得绘入城市实证布局。"
+  },
+  "templates": [
+    {
+      "id": "core-changhe",
+      "label": "宫城阊阖门基尺度片",
+      "source_feature_id": "geo-changhe-palace-gate",
+      "source_dimension_item_id": "M02",
+      "entity_id": "ic_changhe_palace",
+      "dimensions_m": {
+        "east_west": 44.5,
+        "north_south": 24.4
+      },
+      "dimension_status": "table_dimensions_of_gate_base",
+      "dimension_meaning": "宫城南门的门基东西、南北表列尺度；不是完整门阙、廊院群或屋顶的外包络。",
+      "dimension_source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1927",
+        "pdf_pages": [
+          1927
+        ],
+        "printed_pages": [
+          "附录 II-F C02-CN 2"
+        ],
+        "source_code": "Cgm-3 / 3-4"
+      },
+      "local_plan_source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962",
+        "pdf_page": 1962,
+        "printed_page": "附录 II-F C02-CN 37",
+        "north_arrow_present": true,
+        "scale_bar_m": 20,
+        "geographical_grid_present": false,
+        "geographical_orientation_calibrated": false
+      },
+      "anchor_coordinates": [
+        112.6221536,
+        34.72559
+      ],
+      "anchor_crs": "EPSG:4610",
+      "anchor_local_m": [
+        502.558775,
+        -858.998246
+      ],
+      "anchor_source_pdf_page": 3457,
+      "anchor_source_pdf_pt": [
+        314.001495,
+        325.356506
+      ],
+      "anchor_source_render_px": [
+        949.4801,
+        983.8154
+      ],
+      "anchor_kind": "generalized_source_symbol_center",
+      "measured_structure_center_verified": false,
+      "working_display_tolerance_m": 100,
+      "absolute_ground_accuracy_m": null,
+      "position_note": "沿用宫城阊阖来源图符中心，不移动原点；100 米为 P1 工作展示设置，不是实测误差或置信区间。把尺度片居中只是显示锚定，不证明已测得门基几何中心。",
+      "orientation_angle_deg": 1.128958,
+      "orientation_verified": false,
+      "measured_orientation_angle_deg": null,
+      "orientation_rule": "palace_source_anchor_axis",
+      "orientation_source_feature_ids": [
+        "geo-changhe-palace-gate",
+        "geo-taiji-hall-reference"
+      ],
+      "orientation_note": "采用阊阖来源点指向太极来源点的工作中轴统一阅读；局部图虽有北箭头，尚未完成与城市坐标的独立角度标定。本角度不称实测门基朝向。",
+      "local_unrotated_outline_m": [
+        [
+          -22.25,
+          -12.2
+        ],
+        [
+          22.25,
+          -12.2
+        ],
+        [
+          22.25,
+          12.2
+        ],
+        [
+          -22.25,
+          12.2
+        ],
+        [
+          -22.25,
+          -12.2
+        ]
+      ],
+      "placement_status": "source_anchor_dimensioned_reference",
+      "city_overlay_allowed": true,
+      "is_excavated_footprint": false,
+      "historical_height_m": null,
+      "historical_ground_elevation_m": null,
+      "roof_model": null,
+      "limitations": [
+        "不能使用内城西墙同名阊阖门的约 47×58 米尺寸。",
+        "现有图符位置与局部门基图尚未通过共同控制点严格配准。",
+        "不能以本尺度片生成确定三通道宽度、侧阙边界、廊院或上部屋顶。"
+      ],
+      "source_historical_period": "魏晋至北魏",
+      "temporal_scope": "附表所记时期：魏晋至北魏。可作为北魏盛时地理布局的遗存参照；该年代跨度本身不证明516—528每年都具有同样完整的上部建筑或运行状态。",
+      "anchor_ground_control_verified": false
+    },
+    {
+      "id": "core-taiji",
+      "label": "太极殿遗址尺度片",
+      "source_feature_id": "geo-taiji-hall-reference",
+      "source_dimension_item_id": "M03",
+      "entity_id": null,
+      "dimensions_m": {
+        "east_west": 100,
+        "north_south": 60
+      },
+      "dimension_status": "approximate_table_dimensions_of_site",
+      "dimension_meaning": "遗址东西、南北约数，不是上部殿身柱网或屋顶投影的精确足迹。",
+      "dimension_source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1930",
+        "pdf_pages": [
+          1930,
+          1931
+        ],
+        "printed_pages": [
+          "附录 II-F C02-CN 5",
+          "附录 II-F C02-CN 6"
+        ],
+        "source_code": "Jg-4 / 3-7"
+      },
+      "local_plan_source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962",
+        "pdf_page": 1962,
+        "printed_page": "附录 II-F C02-CN 37，上方宫城调查图",
+        "geographical_orientation_calibrated": false,
+        "note": "不能把同页下方阊阖门局部图的北箭头作为太极殿结构的独立角度量测。"
+      },
+      "anchor_coordinates": [
+        112.6222774,
+        34.7307621
+      ],
+      "anchor_crs": "EPSG:4610",
+      "anchor_local_m": [
+        513.865845,
+        -285.227304
+      ],
+      "anchor_source_pdf_page": 3457,
+      "anchor_source_pdf_pt": [
+        314.71759,
+        302.261993
+      ],
+      "anchor_source_render_px": [
+        951.6454,
+        913.9821
+      ],
+      "anchor_kind": "generalized_source_symbol_center",
+      "measured_structure_center_verified": false,
+      "working_display_tolerance_m": 100,
+      "absolute_ground_accuracy_m": null,
+      "position_note": "沿用来源图太极殿标绘中心；不以图符边角推算殿址实际边线，100 米展示设置不作实测位置精度。",
+      "orientation_angle_deg": 1.128958,
+      "orientation_verified": false,
+      "measured_orientation_angle_deg": null,
+      "orientation_rule": "palace_source_anchor_axis",
+      "orientation_source_feature_ids": [
+        "geo-changhe-palace-gate",
+        "geo-taiji-hall-reference"
+      ],
+      "orientation_note": "与阊阖尺度片采用同一来源点连线作为工作中轴；没有据此确证太极殿基实测角度或完整宫院轴网。",
+      "local_unrotated_outline_m": [
+        [
+          -50,
+          -30
+        ],
+        [
+          50,
+          -30
+        ],
+        [
+          50,
+          30
+        ],
+        [
+          -50,
+          30
+        ],
+        [
+          -50,
+          -30
+        ]
+      ],
+      "placement_status": "source_anchor_dimensioned_reference",
+      "city_overlay_allowed": true,
+      "is_excavated_footprint": false,
+      "historical_height_m": null,
+      "historical_ground_elevation_m": null,
+      "roof_model": null,
+      "limitations": [
+        "东西约 100 米、南北约 60 米始终保留约数含义。",
+        "表列约 6 米为夯土深度，不能向上拉成台高或殿高。",
+        "不因永宁佛殿形如太极殿而复制此尺寸，不为关联旧实体而强绑其他名称。"
+      ],
+      "source_historical_period": "魏晋至北魏",
+      "temporal_scope": "附表所记时期：魏晋至北魏。可作为北魏盛时地理布局的遗存参照；该年代跨度本身不证明516—528每年都具有同样完整的上部建筑或运行状态。",
+      "anchor_ground_control_verified": false
+    },
+    {
+      "id": "core-yongning-tower",
+      "label": "永宁寺塔基遗存尺度片",
+      "source_feature_id": "geo-yongning-pagoda-reference",
+      "source_dimension_item_id": "M05",
+      "entity_id": "ic_yongning",
+      "entity_binding_scope": "pagoda_component_only",
+      "dimensions_m": {
+        "east_west": 38.2,
+        "north_south": 38.2
+      },
+      "dimension_status": "approximate_surviving_footing_square",
+      "dimension_meaning": "地上塔基遗存的方形尺度；不是完整盛时塔身、外檐或各层塔楼边长。",
+      "dimension_source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1931",
+        "pdf_pages": [
+          1931
+        ],
+        "printed_pages": [
+          "附录 II-F C02-CN 6"
+        ],
+        "source_code": "Jn-2.5 / 7-5"
+      },
+      "local_plan_source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1966",
+        "pdf_page": 1966,
+        "printed_page": "附录 II-F C02-CN 41",
+        "north_arrow_present": true,
+        "scale_bar_m": 5,
+        "geographical_grid_present": false,
+        "geographical_orientation_calibrated": false,
+        "note": "北箭头略向图面左上，不能默认图面竖线即独立标定的真北；本轮不从该扫描小图宣称精确实测角度。"
+      },
+      "anchor_coordinates": [
+        112.6181789,
+        34.718953
+      ],
+      "anchor_crs": "EPSG:4610",
+      "anchor_local_m": [
+        138.519427,
+        -1595.29016
+      ],
+      "anchor_source_pdf_page": 3457,
+      "anchor_source_pdf_pt": [
+        298.994202,
+        354.840515
+      ],
+      "anchor_source_render_px": [
+        904.1009,
+        1072.9694
+      ],
+      "anchor_kind": "generalized_source_symbol_center",
+      "measured_structure_center_verified": false,
+      "working_display_tolerance_m": 100,
+      "absolute_ground_accuracy_m": null,
+      "position_note": "沿用来源图塔基方形符号中心，仅代表塔基节点；绝不把塔心用于确定寺院几何中心。",
+      "orientation_angle_deg": 0.91399,
+      "orientation_verified": false,
+      "measured_orientation_angle_deg": null,
+      "orientation_rule": "yongning_source_walls_orthogonal_working_axes",
+      "orientation_source_feature_ids": [
+        "geo-yongning-temple-walls"
+      ],
+      "orientation_note": "按管理图三面院墙线的共同正交方向对齐显示方形尺度片；这只是图示寺区的工作轴，既不是塔基角度的独立实测，也不表示院界拟合已获采用。",
+      "local_unrotated_outline_m": [
+        [
+          -19.1,
+          -19.1
+        ],
+        [
+          19.1,
+          -19.1
+        ],
+        [
+          19.1,
+          19.1
+        ],
+        [
+          -19.1,
+          19.1
+        ],
+        [
+          -19.1,
+          -19.1
+        ]
+      ],
+      "placement_status": "source_anchor_dimensioned_reference",
+      "city_overlay_allowed": true,
+      "is_excavated_footprint": false,
+      "historical_height_m": null,
+      "historical_ground_elevation_m": null,
+      "surviving_height_m_not_used_in_prosperity_view": 2.2,
+      "roof_model": null,
+      "limitations": [
+        "38.2 米的残基尺度不能扩展为九层木塔各层平面或塔檐尺寸。",
+        "2.2 米为遗存残高，不赋给盛时塔身或完整台基。",
+        "现图寺墙与表列寺院尺寸存在冲突，不借此将寺院整体平移到塔心。"
+      ],
+      "source_historical_period": "北魏",
+      "temporal_scope": "附表所记时期：北魏。可作为北魏盛时地理布局的遗存参照；该年代跨度本身不证明516—528每年都具有同样完整的上部建筑或运行状态。",
+      "anchor_ground_control_verified": false
+    }
+  ],
+  "comparison_templates": [
+    {
+      "id": "comparison-yongning-court",
+      "label": "永宁寺院界尺度比较模板",
+      "source_dimension_item_id": "M04",
+      "source_feature_id": "geo-yongning-temple-walls",
+      "dimensions_m": {
+        "east_west": 212,
+        "north_south": 301
+      },
+      "dimension_source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1931",
+        "pdf_page": 1931,
+        "printed_page": "附录 II-F C02-CN 6",
+        "source_code": "Jn-2.1 / 7-1"
+      },
+      "dimension_meaning": "寺墙所界范围的表列尺度，不是单栋建筑或完整已测院墙轮廓。",
+      "placement_status": "unplaced_comparison_only",
+      "city_overlay_allowed": false,
+      "anchor_coordinates": null,
+      "anchor_local_m": null,
+      "orientation_angle_deg": 0,
+      "orientation_verified": false,
+      "orientation_note": "0 度仅是独立比较图的横竖排版约定，不代表地理朝向。",
+      "local_unrotated_outline_m": [
+        [
+          -106,
+          -150.5
+        ],
+        [
+          106,
+          -150.5
+        ],
+        [
+          106,
+          150.5
+        ],
+        [
+          -106,
+          150.5
+        ],
+        [
+          -106,
+          -150.5
+        ]
+      ],
+      "tower_at_court_center_allowed": false,
+      "tower_position_in_template_m": null,
+      "creates_new_entity": false,
+      "is_excavated_footprint": false,
+      "historical_height_m": null,
+      "historical_ground_elevation_m": null,
+      "roof_model": null,
+      "rendering_note": "可与三项尺度片使用相同比例尺独立比较；不要把塔基复制到模板中心，不要把此框叠画成城市地图的实证院界。"
+    }
+  ],
+  "orientation_diagnostics": {
+    "palace_source_anchor_axis": {
+      "from_feature_id": "geo-changhe-palace-gate",
+      "to_feature_id": "geo-taiji-hall-reference",
+      "delta_east_m": 11.30707,
+      "delta_north_m": 573.770941,
+      "source_anchor_separation_m": 573.882343,
+      "working_north_axis_bearing_deg": 1.128958,
+      "historical_orientation_verified": false,
+      "note": "距离及角度是两个概略来源点在同基准局部投影中的计算量，不宣称为古代建筑中轴的实测值。"
+    },
+    "yongning_source_walls_orthogonal_working_axes": {
+      "source_feature_id": "geo-yongning-temple-walls",
+      "working_north_axis_bearing_deg": 0.91399,
+      "orientation_method": "各墙内按实际描线长度作连续权重，三面墙等权；先最小化每面线关于自身均值的正交残差方差，再拟合固定尺寸模板的平移。",
+      "source_line_internal_rms_m": 0.263425,
+      "internal_rms_is_ground_accuracy": false,
+      "historical_orientation_verified": false,
+      "note": "内部描线近乎直线仅说明来源矢量线整齐，不证明地下院墙或塔基的米级位置和角度。"
+    }
+  },
+  "rendering_contract": {
+    "city_templates": [
+      "core-changhe",
+      "core-taiji",
+      "core-yongning-tower"
+    ],
+    "comparison_only_templates": [
+      "comparison-yongning-court"
+    ],
+    "source_anchor_points_must_remain_identifiable": true,
+    "reference_patches_must_be_distinguished_from_measured_footprints": true,
+    "historical_orientation_must_not_be_labelled_verified": true,
+    "source_map_symbol_size_must_not_set_metric_dimensions": true,
+    "same_metric_geometry_in_plan_and_birdseye": true,
+    "existing_site_wall_geometries_must_not_be_rescaled_or_replaced": true,
+    "comparison_court_must_not_be_added_to_city_map": true,
+    "comparison_court_must_not_be_centred_on_tower": true,
+    "historical_height_default": null,
+    "historical_ground_elevation_default": null,
+    "roof_model_default": null,
+    "screen_extrusion_policy": "如为阅读显示边厚，只可使用独立像素显示参数，不能写成米制古代高度。",
+    "legend_text": "定尺片：表列遗存尺度；定位：来源图概略点；朝向：工作对齐，尚非建筑实测方位。"
+  },
+  "courtyard_diagnostic": {
+    "id": "fit-yongning-fixed-212x301",
+    "source_feature_id": "geo-yongning-temple-walls",
+    "source_geometry_unchanged": true,
+    "fit_adopted_for_city_overlay": false,
+    "decision": "unplaced_comparison_only",
+    "observed_sides": [
+      "west",
+      "south",
+      "east"
+    ],
+    "north_side_observed": false,
+    "fixed_dimensions_m": {
+      "east_west": 212,
+      "north_south": 301
+    },
+    "source_segment_assignment_zero_based": {
+      "west": [
+        {
+          "line_index": 0,
+          "vertex_pair": [
+            0,
+            1
+          ]
+        },
+        {
+          "line_index": 1,
+          "vertex_pair": [
+            0,
+            1
+          ]
+        },
+        {
+          "line_index": 2,
+          "vertex_pair": [
+            0,
+            1
+          ]
+        }
+      ],
+      "south": [
+        {
+          "line_index": 2,
+          "vertex_pair": [
+            1,
+            2
+          ]
+        },
+        {
+          "line_index": 3,
+          "vertex_pair": [
+            0,
+            1
+          ]
+        },
+        {
+          "line_index": 4,
+          "vertex_pair": [
+            0,
+            1
+          ]
+        }
+      ],
+      "east": [
+        {
+          "line_index": 4,
+          "vertex_pair": [
+            1,
+            2
+          ]
+        },
+        {
+          "line_index": 5,
+          "vertex_pair": [
+            0,
+            1
+          ]
+        },
+        {
+          "line_index": 5,
+          "vertex_pair": [
+            1,
+            2
+          ]
+        },
+        {
+          "line_index": 6,
+          "vertex_pair": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "method": "在与 P1 相同的局部投影中，对每条可读线段作连续一、二阶矩积分；墙内按长度归一化，西、南、东三面墙等权。先拟合共同正交工作轴，再令 212 米模板的东西边关于两侧线均值对称、南边贴合南墙均值；301 米只决定模板中心北移 150.5 米及推定北边，没有北墙观测参与。",
+    "source_wall_spacing_m": 264.889055,
+    "width_difference_from_table_m": 52.889055,
+    "width_difference_fraction_of_table": 0.249477,
+    "working_north_axis_bearing_deg": 0.91399,
+    "diagnostic_center_local_m_not_adopted": [
+      138.417007,
+      -1594.955851
+    ],
+    "side_residuals": {
+      "west": {
+        "traced_length_m": 151.63891,
+        "mean_signed_normal_m": -26.444527,
+        "rms_normal_m": 26.447181,
+        "max_abs_normal_m": 27.020944
+      },
+      "south": {
+        "traced_length_m": 169.49585,
+        "mean_signed_normal_m": 0,
+        "rms_normal_m": 0.164088,
+        "max_abs_normal_m": 0.297147
+      },
+      "east": {
+        "traced_length_m": 183.208101,
+        "mean_signed_normal_m": 26.444527,
+        "rms_normal_m": 26.445301,
+        "max_abs_normal_m": 26.875108
+      }
+    },
+    "three_sides_equal_weight_rms_m": 21.593473,
+    "residuals_are": "固定模板与来源图概化线之间的模型不合程度；不是外部测量精度、原址误差或统计置信区间。",
+    "tower_minus_diagnostic_center_local_axes_m": {
+      "east": 0.107739,
+      "north": -0.332633
+    },
+    "tower_minus_diagnostic_center_distance_m": 0.349646,
+    "tower_was_used_as_fit_control": false,
+    "source_plan_cross_check": {
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=3453",
+      "pdf_page": 3453,
+      "printed_identifier": "管理规划图 02，Fig. 2：永宁寺复原平面图",
+      "reading": "完整院图中塔基明显在院几何中心南侧。1965 / 附录 40 所收同图的南部存在扫描遮挡，不能仅凭其残见部分判断院心。",
+      "source_is_restored_or_schematic_plan": true,
+      "source_image_xref": 15901,
+      "embedded_image_size_px": [
+        294,
+        392
+      ],
+      "image_pixel_check_approximate": {
+        "wall_envelope_left_top_right_bottom": [
+          76,
+          84,
+          239,
+          306
+        ],
+        "tower_symbol_center": [
+          162,
+          213
+        ],
+        "reading_tolerance_px": 3,
+        "tower_south_of_envelope_center_fraction_of_image_height_approx": 0.08,
+        "pixel_origin": "upper_left"
+      },
+      "converted_to_absolute_geographic_coordinates": false,
+      "converted_to_measured_metric_tower_offset": false,
+      "limitations": "这张复原示意图仅用于图内关系复核；像素读数不当作发掘量测，也不利用其图上比例替代塔基或院墙实测尺度。"
+    },
+    "rejection_reasons": [
+      "管理图两侧描线间距比表列院宽大约四分之一，不能同时保持三面来源线与 212 米模板。",
+      "模板南边贴合管理图南墙后，院心几乎重合于塔符中心；该结果虽未使用塔心作拟合控制，仍与完整院图的塔在院心偏南关系不一致。",
+      "北墙缺少可读观测，301 米尺寸不能自动把北边升级为已证墙段。",
+      "P1 的 100 米展示容差不是拟合验收阈值，不能用它把尺寸和相对位置冲突判为已通过。"
+    ],
+    "rejected_unconstrained_angle_fit": {
+      "working_north_axis_bearing_deg": 6.430128,
+      "three_sides_equal_weight_rms_m": 20.561127,
+      "note": "若让角度随固定宽度同时自由优化，均方差仅略降，工作角却偏离来源墙线方向约 5.5 度；这是尺寸不合被旋转部分吸收，故不采用。该试算采用每段不超过 2 米的等弧长采样及端点半权。"
+    },
+    "measured_wall_spacing_m": 264.889055,
+    "measured_wall_spacing_meaning": "仅指来源图线在局部米制投影中的量算间距，不是现场实测院宽。",
+    "table_width_m": 212,
+    "table_length_m": 301,
+    "fixed_template_rms_m": 21.593473,
+    "tower_to_template_center_m": 0.349646,
+    "fit_center_local_m": [
+      138.417007,
+      -1594.955851
+    ],
+    "fit_angle_deg": 0.91399,
+    "source_wall_geometry_local_m": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            7.907995,
+            -1513.609392
+          ],
+          [
+            7.129437,
+            -1550.207015
+          ]
+        ],
+        [
+          [
+            6.011965,
+            -1602.468726
+          ],
+          [
+            4.335735,
+            -1680.877926
+          ]
+        ],
+        [
+          [
+            3.786145,
+            -1707.014323
+          ],
+          [
+            3.007554,
+            -1743.611935
+          ],
+          [
+            39.556243,
+            -1744.11106
+          ]
+        ],
+        [
+          [
+            103.81416,
+            -1745.009137
+          ],
+          [
+            200.19648,
+            -1746.349866
+          ]
+        ],
+        [
+          [
+            232.330033,
+            -1746.792853
+          ],
+          [
+            268.878746,
+            -1747.291069
+          ],
+          [
+            269.335681,
+            -1710.726725
+          ]
+        ],
+        [
+          [
+            270.267853,
+            -1637.353974
+          ],
+          [
+            271.474143,
+            -1541.4613
+          ],
+          [
+            271.766842,
+            -1527.328109
+          ]
+        ],
+        [
+          [
+            272.452747,
+            -1490.663905
+          ],
+          [
+            273.156968,
+            -1454.066259
+          ]
+        ]
+      ]
+    },
+    "tower_anchor_local_m": [
+      138.519427,
+      -1595.29016
+    ],
+    "comparison_rendering_note": "左侧可画来源三面墙与原塔符点；右侧按同一米尺画独立 212×301 尺度框。若另画诊断拟合，须明确未采用，不能把相近中心关系当成已证布局。"
+  }
+}

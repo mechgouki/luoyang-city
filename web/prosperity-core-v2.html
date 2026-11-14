@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="在宫城与永宁寺的同一布局中比较建筑尺度，逐处阅读位置、朝向和原件依据。">
+  <title>盛时洛阳 · 核心建筑尺度</title>
+  <link rel="stylesheet" href="./prosperity-core-v2.css">
+</head>
+<body>
+  <a class="skip-link" href="#core-workspace">跳到核心区地图</a>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">洛</span><span><small>NORTHERN WEI · LUOYANG</small><strong>北魏洛阳文献地图</strong></span></a>
+    <nav aria-label="主要导航"><a href="./prosperity.html">盛时总览</a><a href="./#map">文献地图</a><a href="#sources" id="sources-link">资料与下载</a></nav>
+  </header>
+  <main class="page-shell">
+    <section class="introduction" aria-labelledby="page-title">
+      <div><p class="eyebrow" id="period-label">516—528 · 盛时综合</p><h1 id="page-title">宫城与永宁寺的建筑尺度</h1><p id="intro-copy">把建筑尺度放回城市关系中，逐处查看位置与原件依据。</p></div>
+      <a class="figure-jump" href="#figures" id="figures-link">查看尺度比较 <span aria-hidden="true">↓</span></a>
+    </section>
+    <div class="view-controls">
+      <nav class="mode-switch" aria-label="核心区视图" id="mode-switch"><button type="button" data-mode="plan" aria-pressed="true">平面布局</button><button type="button" data-mode="oblique" aria-pressed="false">布局斜视</button></nav>
+      <div class="focus-switch" role="group" aria-label="聚焦区域" id="focus-switch"></div>
+    </div>
+    <section class="core-workspace" id="core-workspace" aria-label="核心区建筑尺度地图">
+      <div class="map-panel">
+        <div class="map-toolbar"><h2 id="map-title">核心区平面布局</h2><div class="map-tools"><button type="button" id="zoom-in" aria-label="放大地图">＋</button><button type="button" id="zoom-out" aria-label="缩小地图">−</button><button type="button" id="reset-map">恢复视图</button><button type="button" id="focus-item">查看所选</button></div></div>
+        <div class="map-viewport" id="map-viewport" tabindex="0" aria-label="可拖动、缩放和选择建筑的核心区地图" aria-busy="true"><p class="loading-message">正在载入核心区地图…</p></div>
+        <div class="map-caption"><p>位置、尺寸和工作朝向分别阅读；图中不补原高与屋顶。</p><a id="open-map" href="#" target="_blank" rel="noopener">打开当前图件 ↗</a></div>
+      </div>
+      <aside class="inspector" aria-label="建筑尺度与依据">
+        <p class="section-kicker">选择建筑</p><div class="item-switch" role="group" aria-label="建筑尺度片" id="item-switch"></div>
+        <div id="item-detail" aria-live="polite"><p class="muted">选择地图上的建筑，查看尺寸与位置依据。</p></div>
+      </aside>
+    </section>
+    <section class="figures-section" id="figures" aria-labelledby="figures-title">
+      <div class="section-heading"><div><p class="section-kicker">尺度与局部关系</p><h2 id="figures-title">近看建筑，比较尺度</h2></div><p>局部关系图表达构成与方位，图内布局不作测绘平面使用。</p></div>
+      <div class="figure-grid" id="figure-list"></div>
+    </section>
+    <section class="sources-section" id="sources" aria-labelledby="sources-title">
+      <details id="source-catalog"><summary id="sources-title">原件来源与图件下载</summary><div class="source-grid" id="source-list"></div><div class="download-links" id="download-links"></div></details>
+    </section>
+    <footer><a href="./prosperity.html">返回盛时城市总览 ↗</a><p id="version-status" role="status">正在核对发布信息…</p></footer>
+  </main>
+  <script src="./prosperity-core-v2.js"></script>
+</body>
+</html>
