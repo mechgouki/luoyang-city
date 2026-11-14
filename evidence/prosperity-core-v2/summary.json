@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "milestone": "prosperity-core-v2",
+  "status": "production_verified",
+  "repository": "mechgouki/luoyang-city",
+  "site_url": "https://mechgouki.github.io/luoyang-city/",
+  "entry_url": "https://mechgouki.github.io/luoyang-city/prosperity-core.html",
+  "archive_branch": "evidence/prosperity-core-v2-9b2e2c7",
+  "source_commit": "9b2e2c79ed51fc68400f87b0b7a26b6223d4a7f6",
+  "pull_request": {
+    "number": 27,
+    "url": "https://github.com/mechgouki/luoyang-city/pull/27",
+    "accepted_run_id": 43586652076
+  },
+  "commit_provenance": {
+    "schema_version": 1,
+    "repository": "mechgouki/luoyang-city",
+    "pull_request": 27,
+    "identical_source_trees": true,
+    "source_tree": "8dace59fae84211b9a251400037b642ca001a219",
+    "commits": {
+      "pr_head": {
+        "sha": "fd72ae0defb0a3abd2a7818d8c94baa5c9f12114",
+        "tree": "8dace59fae84211b9a251400037b642ca001a219",
+        "parents": [
+          "6824dd363332099c6afc9c31d7beff0f221ca320"
+        ],
+        "api_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits/fd72ae0defb0a3abd2a7818d8c94baa5c9f12114"
+      },
+      "pr_test_merge": {
+        "sha": "fb34b53fe16cc3e063ae343105c72c075f75d7a4",
+        "tree": "8dace59fae84211b9a251400037b642ca001a219",
+        "parents": [
+          "6824dd363332099c6afc9c31d7beff0f221ca320",
+          "fd72ae0defb0a3abd2a7818d8c94baa5c9f12114"
+        ],
+        "api_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits/fb34b53fe16cc3e063ae343105c72c075f75d7a4"
+      },
+      "production_merge": {
+        "sha": "9b2e2c79ed51fc68400f87b0b7a26b6223d4a7f6",
+        "tree": "8dace59fae84211b9a251400037b642ca001a219",
+        "parents": [
+          "6824dd363332099c6afc9c31d7beff0f221ca320",
+          "fd72ae0defb0a3abd2a7818d8c94baa5c9f12114"
+        ],
+        "api_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits/9b2e2c79ed51fc68400f87b0b7a26b6223d4a7f6"
+      }
+    }
+  },
+  "production_run": {
+    "id": 43587199337,
+    "url": "https://github.com/mechgouki/luoyang-city/actions/runs/43587199337",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 132424137391,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 132425303311,
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 132425386954,
+        "name": "verify-live",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "verification": {
+    "pr": {
+      "browser": {
+        "suite_count": 16,
+        "checks": 239,
+        "failed": 0,
+        "runtime_errors": 0,
+        "reports": [
+          {
+            "report": "pr/browser/results.json",
+            "checks": 16,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/city-b8-browser/results.json",
+            "checks": 18,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/dual-browser/results.json",
+            "checks": 19,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/homepage-v1-browser/results.json",
+            "checks": 10,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/luonan-b7-browser/results.json",
+            "checks": 17,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/north-b4-browser/results.json",
+            "checks": 10,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/prosperity-core-v2-browser/results.json",
+            "checks": 12,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/prosperity-v1-browser/results.json",
+            "checks": 18,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/southeast-b6-browser/results.json",
+            "checks": 17,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/v26-browser/results.json",
+            "checks": 17,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/v27-browser/results.json",
+            "checks": 19,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/v28-browser/results.json",
+            "checks": 15,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/v29-browser/results.json",
+            "checks": 19,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/v30-browser/results.json",
+            "checks": 13,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/west-b3-browser/results.json",
+            "checks": 9,
+            "runtime_errors": 0
+          },
+          {
+            "report": "pr/west-roads-b5-browser/results.json",
+            "checks": 10,
+            "runtime_errors": 0
+          }
+        ]
+      },
+      "python": {
+        "report_count": 19,
+        "tests": 249,
+        "failed": 0,
+        "reports": [
+          {
+            "report": "pr/city-audit-b8-tests.txt",
+            "tests": 8,
+            "status": "passed"
+          },
+          {
+            "report": "pr/city-review-b8-tests.txt",
+            "tests": 7,
+            "status": "passed"
+          },
+          {
+            "report": "pr/dual-semantic-tests.txt",
+            "tests": 22,
+            "status": "passed"
+          },
+          {
+            "report": "pr/ground-review-b6-tests.txt",
+            "tests": 6,
+            "status": "passed"
+          },
+          {
+            "report": "pr/historical-datum-b5-tests.txt",
+            "tests": 7,
+            "status": "passed"
+          },
+          {
+            "report": "pr/historical-frame-b4-tests.txt",
+            "tests": 7,
+            "status": "passed"
+          },
+          {
+            "report": "pr/live-http-tests.txt",
+            "tests": 5,
+            "status": "passed"
+          },
+          {
+            "report": "pr/luonan-b7-tests.txt",
+            "tests": 21,
+            "status": "passed"
+          },
+          {
+            "report": "pr/north-b4-semantic-tests.txt",
+            "tests": 8,
+            "status": "passed"
+          },
+          {
+            "report": "pr/prosperity-semantic-tests.txt",
+            "tests": 33,
+            "status": "passed"
+          },
+          {
+            "report": "pr/source-access-b8-tests.txt",
+            "tests": 5,
+            "status": "passed"
+          },
+          {
+            "report": "pr/source-continuity-b7-tests.txt",
+            "tests": 5,
+            "status": "passed"
+          },
+          {
+            "report": "pr/southeast-b6-tests.txt",
+            "tests": 18,
+            "status": "passed"
+          },
+          {
+            "report": "pr/v26-semantic-tests.txt",
+            "tests": 20,
+            "status": "passed"
+          },
+          {
+            "report": "pr/v27-semantic-tests.txt",
+            "tests": 25,
+            "status": "passed"
+          },
+          {
+            "report": "pr/v29-semantic-tests.txt",
+            "tests": 20,
+            "status": "passed"
+          },
+          {
+            "report": "pr/v30-semantic-tests.txt",
+            "tests": 16,
+            "status": "passed"
+          },
+          {
+            "report": "pr/west-b3-semantic-tests.txt",
+            "tests": 8,
+            "status": "passed"
+          },
+          {
+            "report": "pr/west-roads-b5-tests.txt",
+            "tests": 8,
+            "status": "passed"
+          }
+        ]
+      },
+      "node": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "report": "pr/node-tests.log",
+        "scope": "verbatim Node TAP excerpt from official build log"
+      }
+    },
+    "build": {
+      "browser": {
+        "suite_count": 16,
+        "checks": 239,
+        "failed": 0,
+        "runtime_errors": 0,
+        "reports": [
+          {
+            "report": "build/browser/results.json",
+            "checks": 16,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/city-b8-browser/results.json",
+            "checks": 18,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/dual-browser/results.json",
+            "checks": 19,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/homepage-v1-browser/results.json",
+            "checks": 10,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/luonan-b7-browser/results.json",
+            "checks": 17,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/north-b4-browser/results.json",
+            "checks": 10,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/prosperity-core-v2-browser/results.json",
+            "checks": 12,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/prosperity-v1-browser/results.json",
+            "checks": 18,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/southeast-b6-browser/results.json",
+            "checks": 17,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/v26-browser/results.json",
+            "checks": 17,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/v27-browser/results.json",
+            "checks": 19,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/v28-browser/results.json",
+            "checks": 15,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/v29-browser/results.json",
+            "checks": 19,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/v30-browser/results.json",
+            "checks": 13,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/west-b3-browser/results.json",
+            "checks": 9,
+            "runtime_errors": 0
+          },
+          {
+            "report": "build/west-roads-b5-browser/results.json",
+            "checks": 10,
+            "runtime_errors": 0
+          }
+        ]
+      },
+      "python": {
+        "report_count": 19,
+        "tests": 249,
+        "failed": 0,
+        "reports": [
+          {
+            "report": "build/city-audit-b8-tests.txt",
+            "tests": 8,
+            "status": "passed"
+          },
+          {
+            "report": "build/city-review-b8-tests.txt",
+            "tests": 7,
+            "status": "passed"
+          },
+          {
+            "report": "build/dual-semantic-tests.txt",
+            "tests": 22,
+            "status": "passed"
+          },
+          {
+            "report": "build/ground-review-b6-tests.txt",
+            "tests": 6,
+            "status": "passed"
+          },
+          {
+            "report": "build/historical-datum-b5-tests.txt",
+            "tests": 7,
+            "status": "passed"
+          },
+          {
+            "report": "build/historical-frame-b4-tests.txt",
+            "tests": 7,
+            "status": "passed"
+          },
+          {
+            "report": "build/live-http-tests.txt",
+            "tests": 5,
+            "status": "passed"
+          },
+          {
+            "report": "build/luonan-b7-tests.txt",
+            "tests": 21,
+            "status": "passed"
+          },
+          {
+            "report": "build/north-b4-semantic-tests.txt",
+            "tests": 8,
+            "status": "passed"
+          },
+          {
+            "report": "build/prosperity-semantic-tests.txt",
+            "tests": 33,
+            "status": "passed"
+          },
+          {
+            "report": "build/source-access-b8-tests.txt",
+            "tests": 5,
+            "status": "passed"
+          },
+          {
+            "report": "build/source-continuity-b7-tests.txt",
+            "tests": 5,
+            "status": "passed"
+          },
+          {
+            "report": "build/southeast-b6-tests.txt",
+            "tests": 18,
+            "status": "passed"
+          },
+          {
+            "report": "build/v26-semantic-tests.txt",
+            "tests": 20,
+            "status": "passed"
+          },
+          {
+            "report": "build/v27-semantic-tests.txt",
+            "tests": 25,
+            "status": "passed"
+          },
+          {
+            "report": "build/v29-semantic-tests.txt",
+            "tests": 20,
+            "status": "passed"
+          },
+          {
+            "report": "build/v30-semantic-tests.txt",
+            "tests": 16,
+            "status": "passed"
+          },
+          {
+            "report": "build/west-b3-semantic-tests.txt",
+            "tests": 8,
+            "status": "passed"
+          },
+          {
+            "report": "build/west-roads-b5-tests.txt",
+            "tests": 8,
+            "status": "passed"
+          }
+        ]
+      },
+      "node": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "report": "build/node-tests.log",
+        "scope": "verbatim Node TAP excerpt from official build log"
+      }
+    },
+    "live": {
+      "browser": {
+        "suite_count": 16,
+        "checks": 239,
+        "failed": 0,
+        "runtime_errors": 0,
+        "reports": [
+          {
+            "report": "live/live-browser/results.json",
+            "checks": 16,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-city-b8-browser/results.json",
+            "checks": 18,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-dual-browser/results.json",
+            "checks": 19,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-homepage-v1-browser/results.json",
+            "checks": 10,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-luonan-b7-browser/results.json",
+            "checks": 17,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-north-b4-browser/results.json",
+            "checks": 10,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-prosperity-core-v2-browser/results.json",
+            "checks": 12,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-prosperity-v1-browser/results.json",
+            "checks": 18,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-southeast-b6-browser/results.json",
+            "checks": 17,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-v26-browser/results.json",
+            "checks": 17,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-v27-browser/results.json",
+            "checks": 19,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-v28-browser/results.json",
+            "checks": 15,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-v29-browser/results.json",
+            "checks": 19,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-v30-browser/results.json",
+            "checks": 13,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-west-b3-browser/results.json",
+            "checks": 9,
+            "runtime_errors": 0
+          },
+          {
+            "report": "live/live-west-roads-b5-browser/results.json",
+            "checks": 10,
+            "runtime_errors": 0
+          }
+        ]
+      }
+    }
+  },
+  "live_http": {
+    "source": "live/live-http.json",
+    "commit": "9b2e2c79ed51fc68400f87b0b7a26b6223d4a7f6",
+    "status": "passed",
+    "checked_at": "2026-11-14T10:56:36Z",
+    "checked_files": 448,
+    "manifest_entries": 449,
+    "build_control_not_published": [
+      ".nojekyll"
+    ],
+    "all_hashes_match_public_build_info": true,
+    "http_retries": 0
+  },
+  "browser_runtime": {
+    "image_digests": [
+      "mcr.microsoft.com/playwright/python@sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1"
+    ],
+    "identical_across_pr_build_live": true
+  },
+  "research_snapshot": {
+    "version": "prosperity-core-v2",
+    "source_commit": "9b2e2c79ed51fc68400f87b0b7a26b6223d4a7f6",
+    "metric_templates": 3,
+    "local_relation_scenes": 3,
+    "local_components": 27,
+    "local_relations": 30,
+    "atlas_pages": 7,
+    "source_crs": "EPSG:4610",
+    "new_ancient_absolute_coordinates": 0,
+    "historical_heights_reconstructed": false,
+    "roofs_reconstructed": false,
+    "ancient_ground_surface_reconstructed": false,
+    "court_template_placed_in_city": false,
+    "protected_files": 422,
+    "metadata": "prosperity-core/data.json"
+  },
+  "preserved_p1_snapshot": {
+    "version": "prosperity-v1",
+    "source_commit": "9b2e2c79ed51fc68400f87b0b7a26b6223d4a7f6",
+    "entities": 339,
+    "source_geometries": 30,
+    "located_entities": 11,
+    "evidence_records": 183,
+    "source_crs": "EPSG:4610",
+    "terrain_constraints": 5,
+    "building_dimension_items": 8,
+    "wgs84_registration_completed": false,
+    "ancient_ground_surface_reconstructed": false,
+    "full_city_reconstruction_completed": false,
+    "atlas_pages": 6,
+    "protected_files": 404,
+    "metadata": "prosperity/data.json"
+  },
+  "research_limitations": [
+    "516–528 河阴之变前合成时层，不是某一年实测地图。",
+    "三个尺度模板沿用来源图概略代表点；尚非完成配准的考古发掘边线。",
+    "来源坐标仍为西安1980；工作朝向不是独立实测方位角。",
+    "来源图墙间距与表列院宽存在差异；院界框仅用于独立比较，未进入城市落位，也未补北墙。",
+    "局部结构图使用无比例编辑画布，节点真实坐标、未知距离和古高保持空值。",
+    "古代地面、建筑原高、柱网与屋顶尚未复原；斜视7px厚度只是显示参数。"
+  ],
+  "archive_scope": {
+    "all_original_json_txt_reports_retained": true,
+    "production_screenshots": [
+      {
+        "file": "live/live-prosperity-core-v2-browser/core-desktop-first-screen.png",
+        "width": 1500,
+        "height": 1000,
+        "sha256": "560ba3a3cedd9e4ba929a5a687f201caae5f3a3558b9ac5dcaae457e74358648",
+        "byte_identical_to_reviewed_pr": true
+      },
+      {
+        "file": "live/live-prosperity-core-v2-browser/core-figures-and-sources.png",
+        "width": 1500,
+        "height": 3951,
+        "sha256": "b49f08d92587e5e39c64acd748ec2be69be0ad597462fcce051f5216acc4bfeb",
+        "byte_identical_to_reviewed_pr": false
+      },
+      {
+        "file": "live/live-prosperity-core-v2-browser/core-mobile-first-screen.png",
+        "width": 390,
+        "height": 844,
+        "sha256": "e779a04d23d636adcd8454400e97cfd0ef7471dcceb7e99084e56b47d94081b0",
+        "byte_identical_to_reviewed_pr": true
+      },
+      {
+        "file": "live/live-prosperity-core-v2-browser/core-mobile.png",
+        "width": 390,
+        "height": 5335,
+        "sha256": "610170de498c285d14c02b0d82acb0ce0c666af7a25fc7df57d58a358326e334",
+        "byte_identical_to_reviewed_pr": true
+      },
+      {
+        "file": "live/live-prosperity-core-v2-browser/core-oblique.png",
+        "width": 1500,
+        "height": 1000,
+        "sha256": "cb7f39f53dd54723bc4255456e1b82a201bf9f7e2acf80e68c64d46f3defb463",
+        "byte_identical_to_reviewed_pr": true
+      },
+      {
+        "file": "live/live-prosperity-core-v2-browser/core-tablet.png",
+        "width": 900,
+        "height": 1000,
+        "sha256": "3ad5bfca940b051574d0ac5dfcf62abc3c2cc52b901ad1969072d4ec3915310c",
+        "byte_identical_to_reviewed_pr": true
+      }
+    ],
+    "original_artifacts": [
+      {
+        "metadata": "pr/artifacts.json",
+        "id": 14110965308,
+        "name": "github-pages",
+        "size_in_bytes": 296599760,
+        "digest": "sha256:b0137bac87e1f07052f4febaa681687345654171a55f97540ad4c624f1d34fef",
+        "expires_at": "2026-11-21T10:48:08Z",
+        "run_id": 43586652076
+      },
+      {
+        "metadata": "pr/artifacts.json",
+        "id": 14110872715,
+        "name": "browser-build-evidence",
+        "size_in_bytes": 93860133,
+        "digest": "sha256:c2d26fd2035c781b40ac98d7181c73f60107281bd763da3901cf14898f61a0dc",
+        "expires_at": "2026-11-28T10:48:04Z",
+        "run_id": 43586652076
+      },
+      {
+        "metadata": "production-artifacts.json",
+        "id": 14111485039,
+        "name": "browser-build-evidence",
+        "size_in_bytes": 93871017,
+        "digest": "sha256:2b23fb5131cb816bfcb1d72eb6b767502641e7f4b8c26f54266fb5d2e93b39cf",
+        "expires_at": "2026-11-28T10:55:44Z",
+        "run_id": 43587199337
+      },
+      {
+        "metadata": "production-artifacts.json",
+        "id": 14111325413,
+        "name": "github-pages",
+        "size_in_bytes": 296601558,
+        "digest": "sha256:2ab0609291355575bf8cf0b5abc0e12c53f4ca07d5a93935b96d28e035739628",
+        "expires_at": "2026-11-21T10:55:48Z",
+        "run_id": 43587199337
+      },
+      {
+        "metadata": "production-artifacts.json",
+        "id": 14110839712,
+        "name": "live-acceptance-evidence",
+        "size_in_bytes": 42770751,
+        "digest": "sha256:c9ac4a628b3e9660b05f19f2f737ecc69c62d4f6eff5c8d4071d4fcee0ef6955",
+        "expires_at": "2026-12-14T10:59:48Z",
+        "run_id": 43587199337
+      }
+    ],
+    "full_actions_zip_archives_retained": false,
+    "other_versions_screenshots_retained": false,
+    "pages_deployment_artifact_retained": false,
+    "checksum_manifest": "SHA256SUMS",
+    "manifest_excludes_itself": true,
+    "downloaded_evidence_archives": [
+      {
+        "metadata": "pr/artifacts.json",
+        "id": 14110872715,
+        "name": "browser-build-evidence",
+        "size_in_bytes": 93860133,
+        "digest": "sha256:c2d26fd2035c781b40ac98d7181c73f60107281bd763da3901cf14898f61a0dc",
+        "expires_at": "2026-11-28T10:48:04Z",
+        "run_id": 43586652076,
+        "download_sha256_verified_before_extraction": true
+      },
+      {
+        "metadata": "production-artifacts.json",
+        "id": 14111485039,
+        "name": "browser-build-evidence",
+        "size_in_bytes": 93871017,
+        "digest": "sha256:2b23fb5131cb816bfcb1d72eb6b767502641e7f4b8c26f54266fb5d2e93b39cf",
+        "expires_at": "2026-11-28T10:55:44Z",
+        "run_id": 43587199337,
+        "download_sha256_verified_before_extraction": true
+      },
+      {
+        "metadata": "production-artifacts.json",
+        "id": 14110839712,
+        "name": "live-acceptance-evidence",
+        "size_in_bytes": 42770751,
+        "digest": "sha256:c9ac4a628b3e9660b05f19f2f737ecc69c62d4f6eff5c8d4071d4fcee0ef6955",
+        "expires_at": "2026-12-14T10:59:48Z",
+        "run_id": 43587199337,
+        "download_sha256_verified_before_extraction": true
+      }
+    ],
+    "files_by_directory": {
+      "pr": 48,
+      "build": 45,
+      "live": 26
+    },
+    "total_files_including_manifest": 126,
+    "checksummed_files_excluding_manifest": 125
+  },
+  "visual_review": {
+    "pr_screenshots_reviewed": 6,
+    "production_screenshots": 6,
+    "five_production_screenshots_byte_identical_to_reviewed_pr": true,
+    "different_screenshot": "live/live-prosperity-core-v2-browser/core-figures-and-sources.png",
+    "difference_bounds_xyxy": [
+      16,
+      991,
+      153,
+      1092
+    ],
+    "difference_description": "Only the focused skip-to-map link moved vertically within the full-page capture; all other pixels were identical. The full-page screenshot scroll/focus state differs. No content or layout regression was found.",
+    "blocking_layout_issues": 0,
+    "pdf_pages_reviewed": 7,
+    "pdf_tower_label_wrap_repaired_and_rechecked": true
+  },
+  "independent_live_audit": {
+    "status": "passed",
+    "read_only": true,
+    "public_commit_matches": true,
+    "resource_hashes_recounted": 448,
+    "browser_checks_recounted": 239,
+    "protected_files_recounted": 422,
+    "research_json_and_method_file_hashes_match_public_manifest": true,
+    "p1_geographic_source_hash_unchanged": true,
+    "research_limitations_consistent": true
+  }
+}
