@@ -1,0 +1,387 @@
+#!/usr/bin/env python3
+"""Build a read-only structural ledger; no new historical or spatial decisions.
+
+The caller publishes the returned object.  This module neither writes the site
+nor treats a marker, evidence mention, date, or SVG tag as a located ancient site.
+"""
+from collections import Counter, defaultdict
+from copy import deepcopy
+import hashlib
+import json
+from pathlib import Path
+from urllib.parse import urlencode
+import xml.etree.ElementTree as ET
+
+
+ROOT = Path(__file__).resolve().parents[1]
+MASTER_PATH = 'assets/master-dual-b7-luonan.svg'
+REVIEW_STATUS = 'structure_checked_history_not_reassessed'
+CROP_BASIS = 'existing_interactive_target_centres_in_documentary_crop_only'
+EXTERNAL_REFERENCES = {
+    'city_jinyang': {'name': '晋阳', 'status': 'known_external_reference',
+                    'scope': 'outside_luoyang_entity_register'},
+}
+# Only declared record-to-entity fields are indexed.  No prose/name matching,
+# co-marker propagation, or inferred transitive coverage is performed.
+EVIDENCE_INPUTS = (
+    ('v2.5', 'research/v2.5/evidence.json', 'evidence', 'entities'),
+    ('v2.7', 'research/v2.7/passages.json', 'passages', 'map_ids'),
+    ('B1', 'research/dual-b1/decisions.json', 'decisions', 'entity'),
+    ('B2', 'research/dual-b2/palace-gardens.json', 'evidence', 'entities'),
+    ('B3', 'research/dual-b3/west-market.json', 'evidence', 'entities'),
+    ('B4', 'research/dual-b4/north-gates.json', 'evidence', 'entities'),
+    ('B5', 'research/dual-b5/west-roads.json', 'evidence', 'entities'),
+    ('B6', 'research/dual-b6/southeast-inner.json', 'evidence', 'entities'),
+    ('B6', 'research/dual-b6/southeast-outer.json', 'evidence', 'entities'),
+    ('B7', 'research/dual-b7/luonan-groups.json', 'evidence', 'entities'),
+    ('B7', 'research/dual-b7/luonan-river-markets.json', 'evidence', 'entities'),
+)
+
+
+def _read(path):
+    return json.loads(Path(path).read_text(encoding='utf-8'))
+
+
+def _sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def _evidence_link(batch, record):
+    record_id = record['id']
+    if batch == 'v2.5':
+        return './#research?' + urlencode({'panel': record['group'], 'evidence': record_id})
+    if batch == 'v2.7':
+        return './#network?' + urlencode({'tab': 'evidence', 'item': record_id})
+    if batch in ('B1', 'B2'):
+        return './downloads/dual-map-report.html#' + record_id
+    pages = {'B3': ('dual-west.html', 'literary'),
+             'B4': ('dual-north.html', 'literary'),
+             'B5': ('dual-west-roads.html', 'literary'),
+             'B6': ('dual-southeast.html', 'inner' if record_id.startswith('EI') else 'outer'),
+             'B7': ('dual-luonan.html', 'map')}
+    page, tab = pages[batch]
+    return './' + page + '#' + tab + '?' + urlencode({'id': record_id})
+
+
+def _master_index(path):
+    """Read explicit tags, inheriting only their nearest ancestor's batch.
+
+    B3 puts batch on the parent and individual entity IDs on nine child groups.
+    B7 uses plural IDs.  Neither convention requires adding or moving a glyph.
+    """
+    root = ET.parse(path).getroot()
+    by_entity = defaultdict(list)
+    batch_nodes = Counter()
+    tagged_nodes = 0
+
+    def walk(node, inherited_batch=None, inherited_group=None):
+        nonlocal tagged_nodes
+        own_batch = node.get('data-batch')
+        batch = own_batch or inherited_batch
+        group = node.get('id') if own_batch else inherited_group
+        if own_batch:
+            batch_nodes[own_batch] += 1
+        entity_ids = []
+        if node.get('data-entity-id'):
+            entity_ids.append(node.get('data-entity-id'))
+        entity_ids.extend(node.get('data-entity-ids', '').split())
+        entity_ids = list(dict.fromkeys(entity_ids))
+        if entity_ids:
+            tagged_nodes += 1
+            ref = {
+                'path': MASTER_PATH, 'batch': batch,
+                'node_id': node.get('id'), 'node_class': node.get('class'),
+                'ancestor_group_id': inherited_group,
+                'batch_inherited': own_batch is None and batch is not None,
+                'entity_ids': entity_ids,
+                'locating_mode': node.get('data-locating-mode'),
+                'temporal_display': node.get('data-temporal-display'),
+                'footprint': {'true': True, 'false': False}.get(node.get('data-footprint')),
+                'relation': 'explicit_svg_entity_tag',
+            }
+            for entity_id in entity_ids:
+                by_entity[entity_id].append(ref)
+        for child in node:
+            walk(child, batch, group)
+
+    walk(root)
+    return dict(by_entity), dict(batch_nodes), tagged_nodes
+
+
+def _inside(target, region):
+    x, y, width, height = region['bbox']
+    return x <= target['x'] <= x + width and y <= target['y'] <= y + height
+
+
+def build_audit(site=None, source_commit='local-review'):
+    """Return all 339 registered rows and reproducible input hashes, without I/O writes.
+
+    ``site`` must contain the B7 master generated by the preceding build stage.
+    Missing publication input fails explicitly; it never falls back to another
+    master, a live URL, a guessed point, or an older version.
+    """
+    if not isinstance(source_commit, str) or not source_commit.strip():
+        raise ValueError('A nonempty source_commit is required')
+    site = Path(site) if site is not None else ROOT / '_site'
+    master = site / MASTER_PATH
+    if not master.is_file():
+        raise FileNotFoundError(f'Build B7 first; missing current master: {master}')
+    inputs = []
+
+    def read_repo(path):
+        full = ROOT / path
+        data = _read(full)
+        inputs.append({'path': path, 'kind': 'repository_input', 'sha256': _sha(full)})
+        return data
+
+    source_entities = read_repo('data/entities.json')
+    markers = read_repo('data/markers.json')
+    source_regions = read_repo('data/regions.json')
+    sheets = read_repo('data/sheets.json')
+    ids = [entity['id'] for entity in source_entities]
+    if len(ids) != len(set(ids)):
+        raise ValueError('Duplicate registered entity IDs')
+    id_set = set(ids)
+    findings = []
+
+    def finding(category, code, entity_ids, title, detail, paths, status='open'):
+        entry = {'id': f'SA{len(findings) + 1:02}', 'category': category,
+                 'code': code, 'entity_ids': sorted(set(entity_ids)),
+                 'title': title, 'detail': detail, 'paths': paths, 'status': status}
+        findings.append(entry)
+
+    targets_by_entity = defaultdict(list)
+    targets = []
+    for index, marker in enumerate(markers):
+        member_ids = list(marker['ids'])
+        target = {'id': f'target-{index + 1:03}', 'source_index': index,
+                  'kind': marker['kind'], 'x': marker['x'], 'y': marker['y'],
+                  'member_count': len(member_ids), 'member_ids': member_ids,
+                  'label': marker.get('label'),
+                  'coordinate_frame': 'documentary_canvas_not_geographic'}
+        targets.append(target)
+        for entity_id in dict.fromkeys(member_ids):
+            if entity_id not in id_set:
+                finding('structural_issue', 'unknown_marker_entity', [],
+                        '交互目标引用未登记实体', entity_id, ['data/markers.json'])
+            else:
+                targets_by_entity[entity_id].append(target)
+
+    focus_by_entity = defaultdict(list)
+    for region in source_regions:
+        for entity_id in dict.fromkeys(region['focus_ids']):
+            if entity_id not in id_set:
+                finding('structural_issue', 'unknown_focus_entity', [],
+                        '分区索引引用未登记实体', entity_id, ['data/regions.json'])
+            else:
+                focus_by_entity[entity_id].append(region['code'])
+
+    evidence_by_entity = defaultdict(list)
+    evidence_records = []
+    for batch, path, records_key, entity_field in EVIDENCE_INPUTS:
+        data = read_repo(path)
+        for record in data[records_key]:
+            declared = record[entity_field]
+            entity_ids = list(dict.fromkeys([declared] if isinstance(declared, str) else declared))
+            ref = {'key': batch + ':' + record['id'], 'batch': batch,
+                   'id': record['id'], 'path': path, 'entity_ids': entity_ids,
+                   'link': _evidence_link(batch, record),
+                   'relation': 'explicit_reference', 'entity_field': entity_field,
+                   'record_kind': {'decisions': 'drawing_decision', 'passages': 'passage'}.get(records_key, 'evidence'),
+                   'title': record.get('title') or record.get('anchor') or record.get('after') or record['id']}
+            evidence_records.append(ref)
+            for entity_id in entity_ids:
+                if entity_id not in id_set:
+                    finding('structural_issue', 'unknown_evidence_entity', [],
+                            '专题记录引用未登记实体', f'{ref["key"]}: {entity_id}', [path])
+                else:
+                    evidence_by_entity[entity_id].append(ref)
+    keys = [record['key'] for record in evidence_records]
+    if len(keys) != len(set(keys)):
+        raise ValueError('Duplicate namespaced evidence reference keys')
+
+    chronology = read_repo('research/v2.9/dossiers.json')
+    chrono_by_entity = defaultdict(list)
+    dossiers_by_entity = defaultdict(list)
+    for dossier in chronology['dossiers']:
+        for entity_id in [dossier['site_id']] + dossier.get('related_ids', []):
+            if entity_id in id_set:
+                dossiers_by_entity[entity_id].append({
+                    'id': dossier['id'], 'site_id': dossier['site_id'],
+                    'role': 'dossier_site' if entity_id == dossier['site_id'] else 'related_context',
+                    'status_at_547': dossier['status_at_547'],
+                    'link': './#compare?' + urlencode({'site': dossier['id'], 'year': 547})})
+    for record in chronology['records']:
+        for entity_id in dict.fromkeys([record['subject_id'], record['site_id']]):
+            if entity_id not in id_set:
+                finding('structural_issue', 'unknown_chronology_entity', [],
+                        '时层记录引用未登记实体', f'{record["id"]}: {entity_id}',
+                        ['research/v2.9/dossiers.json'])
+                continue
+            chrono_by_entity[entity_id].append({
+                'id': record['id'], 'dossier_id': record['dossier_id'],
+                'site_id': record['site_id'], 'subject_id': record['subject_id'],
+                'role': 'subject' if entity_id == record['subject_id'] else 'site_context',
+                'scope': record['scope'], 'kind': record['kind'],
+                'date': deepcopy(record['date']),
+                'state_valid_from': record['state_valid_from'],
+                'state_valid_to': record['state_valid_to'],
+                'interpretation_limit': record['interpretation_limit'],
+                'path': 'research/v2.9/dossiers.json',
+                'link': './#compare?' + urlencode({'site': record['dossier_id'], 'year': 547}),
+            })
+
+    master_refs, master_batches, tagged_nodes = _master_index(master)
+    inputs.append({'path': MASTER_PATH, 'kind': 'built_b7_master', 'sha256': _sha(master)})
+    for entity_id in sorted(set(master_refs) - id_set):
+        finding('structural_issue', 'unknown_master_entity', [],
+                '当前母图标签引用未登记实体', entity_id, [MASTER_PATH])
+
+    sheet_by_code = {sheet['code']: sheet for sheet in sheets}
+    rows = []
+    constraint_counts = Counter()
+    for entity in source_entities:
+        entity_id = entity['id']
+        entity_targets = targets_by_entity.get(entity_id, [])
+        if not entity_targets:
+            marker_state = 'no_interactive_target'
+        elif any(target['kind'] == 'group' or target['member_count'] > 1 for target in entity_targets):
+            marker_state = 'group_member'
+        else:
+            marker_state = 'individual'
+        focus_regions = focus_by_entity.get(entity_id, [])
+        crop_regions = [region['code'] for region in source_regions
+                        if any(_inside(target, region) for target in entity_targets)]
+        current_refs = master_refs.get(entity_id, [])
+        temporal_displays = sorted({ref['temporal_display'] for ref in current_refs if ref['temporal_display']})
+        constraints = []
+        for index, constraint in enumerate(entity['constraints']):
+            value = constraint.get('target_id') or constraint.get('target')
+            if value in id_set:
+                resolution = 'registered_entity_reference'
+            elif value in EXTERNAL_REFERENCES:
+                resolution = 'known_external_reference'
+                finding('interpretation_caution', 'known_external_reference', [entity_id],
+                        '晋阳属于已知域外参照',
+                        'city_jinyang 不在339实体名录内；原三级寺为晋阳叙事，不新增洛阳实体、位置或交互目标。',
+                        ['data/entities.json'], 'retained_external_reference')
+            elif constraint.get('target_id'):
+                resolution = 'unresolved_explicit_id'
+                finding('structural_issue', 'unresolved_constraint_id', [entity_id],
+                        '旧约束存在未解析ID', str(value), ['data/entities.json'])
+            else:
+                resolution = 'literal_reference_not_resolved'
+            constraint_counts[resolution] += 1
+            constraints.append({'index': index, 'relation': constraint.get('relation'),
+                                'target_value': value, 'target_name': constraint.get('target_name'),
+                                'resolution': resolution})
+        if entity['temporal_state'] == 'attested_by_528' and 'conditional-identity' in temporal_displays:
+            finding('interpretation_caution', 'legacy_temporal_requires_identity_condition', [entity_id],
+                    '旧年代字段须与同名联接条件并读',
+                    '基础名录保留attested_by_528；当前图符明确conditional-identity。B8不把旧字段升级为无条件年代结论，也不改写旧数据。',
+                    ['data/entities.json', MASTER_PATH, 'research/dual-b6/southeast-outer.json'],
+                    'current_drawing_already_qualified')
+        # These are known index relations, not claims that every glyph is visible
+        # in a crop.  Details/street sheets without explicit entity membership
+        # remain outside this limited sheet index.
+        sheet_refs = []
+        for code in focus_regions:
+            if code in sheet_by_code:
+                sheet_refs.append({'code': code, 'path': sheet_by_code[code]['svg'],
+                                   'basis': 'explicit_region_focus'})
+        for frame in entity['frames']:
+            code = frame.split(':', 1)[1] if frame.startswith('appendix:') else None
+            if code in sheet_by_code:
+                sheet_refs.append({'code': code, 'path': sheet_by_code[code]['svg'],
+                                   'basis': 'registered_appendix_frame'})
+        rows.append({
+            'id': entity_id, 'map_id': entity['map_id'], 'name': entity['name'],
+            'source_name': entity['source_name'], 'type': entity['type'],
+            'source_url': entity['source_url'], 'source_ref': entity['source_ref'],
+            'legacy_temporal_state': entity['temporal_state'],
+            'marker_state': marker_state, 'targets': deepcopy(entity_targets),
+            'explicit_focus_regions': list(focus_regions), 'crop_regions': crop_regions,
+            'crop_basis': CROP_BASIS, 'sheet_refs': sheet_refs,
+            'direct_evidence_refs': deepcopy(evidence_by_entity.get(entity_id, [])),
+            'chronology_refs': deepcopy(chrono_by_entity.get(entity_id, [])),
+            'chronology_dossiers': deepcopy(dossiers_by_entity.get(entity_id, [])),
+            'constraint_references': constraints,
+            'drawing_status': {
+                'baseline_frames': list(entity['frames']), 'baseline_modes': list(entity['modes']),
+                'current_master_path': MASTER_PATH,
+                'current_master_refs': deepcopy(current_refs),
+                'current_master_index_state': 'explicit_entity_tag' if current_refs else 'no_explicit_entity_tag',
+                'current_temporal_displays': temporal_displays,
+                'geographic_coordinates': None,
+            },
+            'review_status': REVIEW_STATUS, 'historical_verification_added': False,
+            'geographic_coordinates': None, 'case_ids': [], 'finding_ids': [],
+        })
+
+    by_id = {row['id']: row for row in rows}
+    for item in findings:
+        for entity_id in item['entity_ids']:
+            by_id[entity_id]['finding_ids'].append(item['id'])
+    regions = []
+    for region in source_regions:
+        code = region['code']
+        regions.append({'code': code, 'title': region['title'], 'bbox': list(region['bbox']),
+                        'bbox_format': 'x,y,width,height',
+                        'focus_ids': list(region['focus_ids']),
+                        'explicit_focus_entities': sum(code in row['explicit_focus_regions'] for row in rows),
+                        'crop_entities': sum(code in row['crop_regions'] for row in rows),
+                        'crop_basis': CROP_BASIS,
+                        'sheet_path': sheet_by_code[code]['svg'] if code in sheet_by_code else None,
+                        'historical_boundary_asserted': False})
+
+    row_states = Counter(row['marker_state'] for row in rows)
+    batch_record_counts = Counter(record['batch'] for record in evidence_records)
+    counts = {
+        'entities': len(rows), 'targets': len(targets), 'regions': len(regions), 'baseline_sheets': len(sheets),
+        'targeted_entities': sum(bool(row['targets']) for row in rows),
+        'individual_entities': row_states['individual'], 'group_entities': row_states['group_member'],
+        'no_interactive_target_entities': row_states['no_interactive_target'],
+        'groups': sum(target['kind'] == 'group' for target in targets),
+        'individual_targets': sum(target['kind'] != 'group' and target['member_count'] == 1 for target in targets),
+        'shared_or_group_targets': sum(target['kind'] == 'group' or target['member_count'] > 1 for target in targets),
+        'shared_non_group_targets': sum(target['kind'] != 'group' and target['member_count'] > 1 for target in targets),
+        'explicit_focus_entities': sum(bool(row['explicit_focus_regions']) for row in rows),
+        'no_explicit_focus_entities': sum(not row['explicit_focus_regions'] for row in rows),
+        'direct_evidence_records': len(evidence_records),
+        'direct_evidence_entities': sum(bool(row['direct_evidence_refs']) for row in rows),
+        'direct_evidence_refs': sum(len(row['direct_evidence_refs']) for row in rows),
+        'no_direct_evidence_refs_entities': sum(not row['direct_evidence_refs'] for row in rows),
+        'evidence_records_by_batch': dict(batch_record_counts),
+        'chronology_dossiers': len(chronology['dossiers']), 'chronology_records': len(chronology['records']),
+        'chronology_ref_entities': sum(bool(row['chronology_refs']) for row in rows),
+        'chronology_subject_entities': sum(any(ref['role'] == 'subject' for ref in row['chronology_refs']) for row in rows),
+        'legacy_temporal_unspecified_entities': sum(row['legacy_temporal_state'] is None for row in rows),
+        'current_master_tagged_entities': sum(bool(row['drawing_status']['current_master_refs']) for row in rows),
+        'current_master_entity_tag_nodes': tagged_nodes, 'current_master_batch_nodes': master_batches,
+        'legacy_constraint_references': dict(constraint_counts),
+        'structural_issues': sum(item['category'] == 'structural_issue' for item in findings),
+        'interpretation_cautions': sum(item['category'] == 'interpretation_caution' for item in findings),
+        'new_ancient_coordinates': 0, 'new_interactive_targets': 0,
+        'new_historical_verifications': 0,
+    }
+    return {
+        'version': 'B8', 'schema_version': 'luoyang-city-audit-1', 'source_commit': source_commit,
+        'counts': counts, 'entities': rows, 'regions': regions, 'findings': findings, 'inputs': inputs,
+        'policies': {
+            'review_status': REVIEW_STATUS,
+            'review_meaning': '本批核对结构关联；没有逐实体重做历史真实性、准确街址或完整时层审定。',
+            'marker_meaning': 'individual只表示单实体交互目标；group_member表示组目标或共享目标成员，均非实测古址。',
+            'crop_basis': CROP_BASIS,
+            'crop_meaning': '仅既有交互目标中心落入文献图框；不等于历史里属、可见图符全集或实测地理范围。',
+            'evidence_meaning': '直接索引只按记录明确列出的实体ID；参照、对比或限制对象也可能被列入，不等于全项已证实。',
+            'evidence_counts_are_independent_sources': False,
+            'derived_v26_models_counted_as_new_evidence': False,
+            'v29_indexed_separately': True,
+            'chronology_meaning': '保留事件主语、作用范围与学堂等场景引用；不把构件事件下传整院或推定后续永久状态。',
+            'master_index_meaning': '无逐实体SVG标签不等于未绘；B3沿祖先继承批次，B7复数IDs按组读取。',
+            'sheet_index_scope': 'explicit_region_focus_and_registered_appendix_frames_only',
+            'literal_constraint_targets_auto_resolved': False,
+            'missing_target_or_focus_is_omission': False,
+            'new_coordinates_or_entities_created': False,
+        },
+    }

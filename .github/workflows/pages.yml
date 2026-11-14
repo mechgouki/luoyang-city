@@ -56,6 +56,8 @@ jobs:
           node --check web/luonan-b7.js
           node --check web/luonan-main-b7.js
           node --check web/source-continuity-b7.js
+          node --check web/city-review-b8.js
+          node --check web/city-main-b8.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -75,7 +77,10 @@ jobs:
           python -m unittest discover -s tests -p test_southeast_b6.py -v 2>&1 | tee artifacts/southeast-b6-tests.txt
           python -m unittest discover -s tests -p test_source_continuity_b7.py -v 2>&1 | tee artifacts/source-continuity-b7-tests.txt
           python -m unittest discover -s tests -p test_luonan_b7.py -v 2>&1 | tee artifacts/luonan-b7-tests.txt
-      - name: Build preserved research, terrain, B1-B7 and historical map review
+          python -m unittest discover -s tests -p test_city_audit_b8.py -v 2>&1 | tee artifacts/city-audit-b8-tests.txt
+          python -m unittest discover -s tests -p test_source_access_b8.py -v 2>&1 | tee artifacts/source-access-b8-tests.txt
+          python -m unittest discover -s tests -p test_city_review_b8.py -v 2>&1 | tee artifacts/city-review-b8-tests.txt
+      - name: Build preserved research, terrain, B1-B8 and historical map review
         run: |
           python tools/build_site.py
           python tools/research_v25.py
@@ -95,6 +100,7 @@ jobs:
           python tools/southeast_b6.py
           python tools/source_continuity_b7.py
           python tools/luonan_b7.py
+          python tools/city_review_b8.py
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
@@ -121,6 +127,7 @@ jobs:
               python tests/browser_west_roads_b5.py
               python tests/browser_southeast_b6.py
               python tests/browser_luonan_b7.py
+              python tests/browser_city_b8.py
             '
       - name: Preserve build and browser evidence
         if: always()
@@ -197,6 +204,7 @@ jobs:
               python tests/browser_west_roads_b5.py --base-url "$SITE_URL" --output artifacts/live-west-roads-b5-browser
               python tests/browser_southeast_b6.py --base-url "$SITE_URL" --output artifacts/live-southeast-b6-browser
               python tests/browser_luonan_b7.py --base-url "$SITE_URL" --output artifacts/live-luonan-b7-browser
+              python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser
             '
       - name: Preserve live acceptance evidence
         if: always()
