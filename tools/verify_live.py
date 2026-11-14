@@ -48,6 +48,8 @@ try:
   'downloads/luoyang-city-review-b8-package.zip','dual-b2-before-b8.html','downloads/dual-map-report-before-b8.html',
  }
  assert required_b8_assets.issubset(info['files_sha256']), f'Missing B8 assets: {sorted(required_b8_assets-set(info["files_sha256"]))}'
+ required_homepage_assets={'homepage/metadata.json','homepage/preservation.json'}
+ assert required_homepage_assets.issubset(info['files_sha256']), 'Missing homepage metadata or preservation record'
  public_files=[(path,digest) for path,digest in info['files_sha256'].items() if path not in excluded]
  with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:results=list(pool.map(check,public_files))
  assert info['counts']['sheets']==37 and info['counts']['entities']==339
@@ -294,13 +296,31 @@ try:
  assert all(r['approved_as_ground_control'] is False and r['coordinates'] is None and r['anchor_pixel'] is None and r['physical_point_in_ams_identified'] is False and r['current_component_identity_verified'] is False for r in access['structure_reviews'])
  assert access['plates']==['source-access/access-summary.svg','source-access/upstream-summary.svg']
  assert all(access['plate_sha256'][Path(path).name]==info['files_sha256'][path] for path in access['plates'])
+ homepage=json.loads(get('homepage/metadata.json'))
+ home_preserved=json.loads(get('homepage/preservation.json'))
+ assert homepage['version']==release['homepage_version']==info['homepage']['version']=='homepage-v1'
+ assert homepage['source_commit']==home_preserved['source_commit']==info['source_commit']
+ assert homepage['research_milestone']=='B8' and homepage['research_release_unchanged']==release['release']
+ assert homepage['new_historical_claims']==homepage['new_ancient_coordinates']==0
+ assert homepage['research_data_changed'] is False and homepage['source_geometry_changed'] is False
+ assert len(homepage['questions'])==info['homepage']['question_count']==3
+ assert home_preserved['protected_unchanged'] is True
+ assert home_preserved['protected_files']==info['homepage']['protected_files']==len(home_preserved['sha256'])
+ assert all(info['files_sha256'][path]==digest for path,digest in home_preserved['sha256'].items())
+ assert homepage['hero']['generated_image'] is True and homepage['hero']['measured_reconstruction'] is False
+ assert {homepage['hero']['asset'],homepage['hero']['small_asset']}<=set(info['files_sha256'])
+ home_html=get('index.html').decode('utf-8')
+ assert all(f'id="{ident}"' in home_html for ident in ['home-hero','home-start','home-questions','home-research'])
+ assert home_html.index('id="home-hero"') < home_html.index('id="home-questions"') < home_html.index('id="map-viewport"') < home_html.index('id="home-research"')
+ assert '研究性复原示意' in home_html
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
  report['southeast_b6']=info['southeast_b6'];report['ground_review_b6']=ground['review_counts']
  report['luonan_b7']=info['luonan_b7'];report['source_continuity_b7']=continuity['review_counts']
  report['city_review_b8']=info['city_review_b8'];report['city_audit_counts']=ledger['counts'];report['source_access_b8']=access['review_counts']
- print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, source lineage, source continuity and source access; HTTP retries: {len(fetcher.retries)}')
+ report['homepage']=info['homepage']
+ print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8 and the H1 homepage; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise
 finally:

@@ -1,7 +1,7 @@
 # 北魏洛阳文献地图 · Luoyang Atlas
 
 以《洛阳伽蓝记》及其校注、相关史地文献为基础的可追溯历史城市地图。
-仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；当前工作线：**B1、宫苑B2、城西B3、北门B4、城西门道B5、城东南B6**。
+仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；当前研究工作线：**B1—B8**；首页体验版本：**H1 / homepage-v1**。
 
 > 盛时图采用 516—528 年河阴之变前的文献合成时层，不是某一年实测地图。图形尺寸、城墙轮廓和未定院界不能换算为历史地理坐标。
 
@@ -15,6 +15,8 @@
 
 正式网站：[mechgouki.github.io/luoyang-city](https://mechgouki.github.io/luoyang-city/)。现有GitHub Actions在main提交后自动构建、部署、验收；无需重新设置Pages。每批正式完成以对应提交的build、deploy、verify-live全部成功为准。
 
+H1首页以宽幅城市概念图开始，连接三个历史问题、互动地图和后置研究资料。主图标注“研究性复原示意”；建筑造型及构图不作为新的历史定位或尺寸证据。界面更新不改变B8研究结论，后续研究批次仍为B9。见[首页更新说明](docs/homepage-v1-release-notes.md)。
+
 | 工作线 | 内容 | 入口 |
 | --- | --- | --- |
 | B1 | 宫前—永宁—景乐、建春两桥、景明—汉国子学堂—石经 | [B1](https://mechgouki.github.io/luoyang-city/dual-b1.html) |
@@ -23,6 +25,8 @@
 | 北门B4 | 两门、寺园、闻义里、承明—金墉；16条证据、4组类型调整 | [B4](https://mechgouki.github.io/luoyang-city/dual-north.html) |
 | 城西门道B5 | 三门道、寺序约束、宅寺时层；24条证据、11组类型调整 | [B5](https://mechgouki.github.io/luoyang-city/dual-west-roads.html) |
 | 城东南B6 | R08门内与R09门外；34条证据、20组类型调整、8页图册 | [B6](https://mechgouki.github.io/luoyang-city/dual-southeast.html) |
+| 洛南B7 | 四馆四里、市场与永桥通行、25条记录 | [B7](https://mechgouki.github.io/luoyang-city/dual-luonan.html) |
+| 全城B8 | 339项结构关联、14个跨批审校案例与图源追查 | [B8](https://mechgouki.github.io/luoyang-city/dual-city-review.html) |
 | 现代地形 | 真实DSM、山影、坡度、等高线、两幅AMS原图 | [地形](https://mechgouki.github.io/luoyang-city/v3.0.html) |
 | 历史图面B4 | 26个印刷格网交点；每幅8拟合、5内部留出 | [图面校准](https://mechgouki.github.io/luoyang-city/historical-frame.html) |
 | 历史基准B5 | 两幅原图14张边栏裁片、原馆数字化记录；原纸图基准仍未识别 | [基准调查](https://mechgouki.github.io/luoyang-city/historical-datum.html) |
@@ -57,6 +61,10 @@ python3 tools/historical_datum_b5.py
 python3 tools/west_roads_b5.py
 python3 tools/ground_review_b6.py
 python3 tools/southeast_b6.py
+python3 tools/source_continuity_b7.py
+python3 tools/luonan_b7.py
+python3 tools/city_review_b8.py
+python3 tools/homepage_v1.py
 python3 -m http.server 8000 --directory _site
 ```
 
