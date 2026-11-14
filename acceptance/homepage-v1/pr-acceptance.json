@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "package_kind": "pr_acceptance_evidence",
+  "prepared_at": "2026-11-14T12:38:58+08:00",
+  "repository": "mechgouki/luoyang-city",
+  "milestone": {
+    "interface": "H1",
+    "homepage_version": "homepage-v1",
+    "research_working_layer": "B8"
+  },
+  "pull_request": {
+    "number": 25,
+    "url": "https://github.com/mechgouki/luoyang-city/pull/25",
+    "head_sha": "c8cf6034a1d499bee60921169d41c3cefc778e88"
+  },
+  "workflow_run": {
+    "id": 43556783910,
+    "url": "https://github.com/mechgouki/luoyang-city/actions/runs/43556783910",
+    "event": "pull_request",
+    "conclusion": "success",
+    "metadata_provenance": "Run ID, head SHA and successful conclusion supplied by the parent agent after GitHub inspection."
+  },
+  "source_artifact": {
+    "id": 14098473480,
+    "name": "browser-build-evidence",
+    "downloaded_archive_filename": "luoyang-h1-pr-acceptance.zip",
+    "archive_sha256": "41da638d7cade5db25641b40f7be68f7b7f04cdd980ef0573860823dd1815389",
+    "archive_hash_verified_locally": true,
+    "extracted_scope": "All 14 browser results.json files and homepage-build.json; no browser tests rerun."
+  },
+  "build_source_commit_as_recorded": "18aee165ff764598c905ff366e91f1301202aa61",
+  "commit_note": "The build source_commit is retained verbatim. This package does not classify it as a PR head or synthetic merge commit.",
+  "summary": {
+    "browser_suites": 14,
+    "homepage_suites": 1,
+    "earlier_browser_suites": 13,
+    "browser_checks": 209,
+    "passed": 209,
+    "failed": 0,
+    "runtime_errors": 0,
+    "homepage_checks": 10,
+    "protected_unchanged": true,
+    "protected_files": 398
+  },
+  "browser_results": [
+    {
+      "artifact_path": "browser/results.json",
+      "original_bytes": 1765,
+      "original_sha256": "3f5b942e2f315e8d85c0908edc08ebc66480fe4eca0ac96b510e440e1b96d66a",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:33473/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"project subpath loads all baseline records and marker overlay\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"all 11 region centers lie inside the selected camera\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"ordinary physical marker click opens Yongning\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"copied entity URL opens the same place in a fresh page\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Yongning to Taiwei relationship navigation\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"C01 preserves legacy plate and links current stable sheet IDs\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"30 questions are classified; clarified status is not an unresolved count\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"evidence deep link restores panel B and E07 after full reload\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"all three diagrams render with evidence cards\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"site search works\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"unlocated record does not acquire a map point\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"37 original atlas sheets remain available\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"overview/detail label switch does not mutate source SVG\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile filters, region selection and evidence drawer\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile research layout has no page overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"no browser runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "browser",
+      "summary": {
+        "checks": 16,
+        "passed": 16,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "city-b8-browser/results.json",
+      "original_bytes": 2781,
+      "original_sha256": "2e2997c9fc82ab127e1b556b426b55cb28692c3c0aacf974785457116fbb0989",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:38741/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"B8 reading rings retain all earlier drawing batches and the original 179 interactive targets\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"the main inspector separates Baoming conditions from its legacy field and keeps Yong bridge unlocated\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"four city views load all 339 records and 179 reading rings with the matching release identity\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"interaction filters expose the actual 136 individual, 101 grouped and 102 untargeted entities\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"evidence and case filters distinguish explicit references from historical verification\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"name, map-number and entity-ID searches work and empty results do not create a selected point\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"region filtering uses explicit focus membership while bridge and incidental crop matches retain their limits\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"the shared palace-reserve area keeps one target for two members and supports physical ring selection\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zoom and overlay controls work and all seven city hash fields restore the selected filtered record\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"the full ledger and filtered rows navigate to the same entity without assigning a new marker\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Baoming presents its current identity condition beside the preserved baseline temporal field\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"fourteen cases include a restored G15 quotation correction while the earlier B2 record remains unchanged\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"source access distinguishes catalog and index leads from scans, actual map matches and surviving controls\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"published metadata retains one commit and zero added historical verification, coordinates or control points\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"all 23 declared B8 downloads and metadata match their actual published SHA256 hashes\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"390px main and city maps retain 179 targets and restore the untargeted bridge filter without overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"390px ledger, quotation correction and source views remain usable and restore without page overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zero browser runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "city-b8-browser",
+      "summary": {
+        "checks": 18,
+        "passed": 18,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "dual-browser/results.json",
+      "original_bytes": 2453,
+      "original_sha256": "0dc873606f04385f774d45a3a91531c8d9940495901332a11a7e4fca4e0e7c9d",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:45355/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"default home exposes the released B1+B2, not a hidden branch\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"current main map really redraws 15 groups while preserving all original click targets\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"physical main-map click opens the new evidence section\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"approved B1 independently published with its original first-region entry\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"archive comparison actually loads the old SVG rather than hiding a ring\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"all four regional maps load from the same current masters\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"B2 actual release metadata and zoom/reset controls work\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"B2 physical building click resolves to component evidence\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"region and selected object restore after full page reload\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Diaotai alternatives affect an explicit membership diagram, not a new coordinate\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"underground collective relationships are distinct from surface-flow geometry\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"independent terrain board shows unregistered ancient inserts without fake coordinates\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"modern raw relief, heuristic classification and interpretive board are distinct views\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"14 prior decisions and 16 next-region evidence records are inspectable\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"published PDFs, reports, data and archive downloads are reachable and match the release\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"new evidence and modern terrain do not manufacture ancient geographic positions\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"all independently archived earlier entrypoints remain available\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile tabs, terrain and object selection work without page overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zero JavaScript runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "dual-browser",
+      "summary": {
+        "checks": 19,
+        "passed": 19,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "homepage-v1-browser/results.json",
+      "original_bytes": 1526,
+      "original_sha256": "1611908feaea4b532acc73b582459e114e6922df862c26f60f117d2338b4da4c",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:39855/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"desktop homepage presents the large panorama, three questions, live map and research in order\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"start exploration reaches the actual map; zoom, region, search and shared entity reload work\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"the relocated research area keeps B1-B8 access and the working map overlay control\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"yongning question opens the intended evidence, survives reload and returns to the homepage\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"markets question opens the intended evidence, survives reload and returns to the homepage\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"identity question opens the intended evidence, survives reload and returns to the homepage\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"existing research and about routes stay direct; the current release URL has the same homepage\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"900px wrapped navigation stays above the panorama without overlap or horizontal overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"390px homepage, tap-to-map, regional filters and question navigation work without page overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zero browser runtime errors during the homepage journeys\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "homepage-v1-browser",
+      "summary": {
+        "checks": 10,
+        "passed": 10,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "luonan-b7-browser/results.json",
+      "original_bytes": 2472,
+      "original_sha256": "a535667d3fd9e42c32d5e0c65d198afeb1c165d7d99901d989cafa2f4a57f601",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:39993/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"seven B7 reading groups preserve earlier symbols and 179 targets without a new bridge point\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"existing ward and market clicks plus the unlocated bridge record expose B7 evidence links\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"five literary views and all 25 evidence records load with matching build identity\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"L10 archive, evidence deep link and all zoom controls restore correctly\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"institutional correspondences retain unrecorded waiting periods and undated temple conversion\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"market records remain distinct and the textual date variants are accessible\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"time layers preserve the former residence, unscaled huabiao and later lion events\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"the full evidence view restores from its hash and links back to the selected map record\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"three catalog records open with separate production dates and zero new historical scans\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"period and earlier-edition filters select only eligible records and their official source links\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"timeline and source lineage switch for the same record without asserting an AMS source match\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"record, filter, view and expanded source details restore from all four hash fields\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"eighteen actual downloads and diagrams match the published SHA256 manifest\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"B7 metadata binds the release and preserves unlocated literary records and unconfirmed catalog matches\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"390px main map and all literary tabs, archive and evidence controls work without page overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"390px source-continuity filtering, reading views and expanded details survive reload without overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zero browser runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "luonan-b7-browser",
+      "summary": {
+        "checks": 17,
+        "passed": 17,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "north-b4-browser/results.json",
+      "original_bytes": 1420,
+      "original_sha256": "5ee67728b033ea64240b69d335673428014419b6def5f9accf9b8649b45f855b",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:35309/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"current main contains four B4 type groups and preserves B1/B2/B3 and 179 original targets\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"physical Daxia main-map click opens B4 evidence without script-order errors\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"new region and 16 attributed evidence records load with matching build metadata\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"same-region archive comparison, selection deep link and zoom/reset work\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"directions, front relations and unlocated membership have separate readable views\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"printed-grid controls, held-out point crop and removable crosshair are inspectable\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"both sheets, physical point clicks, image rectification and deep-link restoration work\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"PDF/CSV/ZIP/SVG and research records publish with source identity and no ancient registration\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile main navigation, evidence and both map sheets work without page overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zero browser runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "north-b4-browser",
+      "summary": {
+        "checks": 10,
+        "passed": 10,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "southeast-b6-browser/results.json",
+      "original_bytes": 2344,
+      "original_sha256": "c13ac9c3b14f43301fef8c216f1020ddc8aebfce028ebe6db3bd412934bf84fb",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:42945/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"twenty B6 symbols coexist with B1-B5 and all 179 original hit targets\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"physical Zhaoyi and Dianyu clicks open the corresponding B6 evidence\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"five literary views and 34 evidence records load with matching build identity\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"selecting evidence automatically follows its inner or outer literary region\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"L08 archive, evidence hash and zoom survive the expected interactions\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"L09 has its own working archive and restores its evidence deep link\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"relation, time-layer and full-source views keep attribution and regional navigation\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Baima opens three distinct original-scan crops with explicit source access\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"railway-bridge record loads its own crops and modern-source attribution\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"pending, excluded and empty approved filters work and restore without false controls\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"independent source selection and expanded provenance restore from the ground-review hash\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"four upstream-map lineage records remain distinct and persist independently of source selection\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"sixteen actual downloads and diagrams match the published SHA256 manifest\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"B6 metadata preserves source identity, prior assets and zero unearned geographic controls\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"390px main map and literary tabs, evidence and archive controls work without page overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"390px ground-review filters, crops, source details and lineage survive reload and empty results\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zero browser runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "southeast-b6-browser",
+      "summary": {
+        "checks": 17,
+        "passed": 17,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "v26-browser/results.json",
+      "original_bytes": 2034,
+      "original_sha256": "6a32321434fa7c05db3714d218a311a6670e445eb732509aa4c88a185e3ccf52",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:41029/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"s011 provides two feasible sides for the same premises\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"candidate deep link restores the east witness after full reload\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"candidate point click explains both active and disabled premises\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"enabling west-side inheritance removes the incompatible east witness\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"removing emendation alone retains alternative deduction\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"removing both supporting premises exposes indeterminacy\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"same identity-time-reference model exposes conflict cores\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"relaxing each conflict premise restores consistency without asserting historical migration\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"atomic assumptions link to underlying v2.5 evidence\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"482 lossless rows and the broken pre-existing reference remain reviewable\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"all 16 scenario results are visible\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"source ablations and identity comparison do not fabricate new geographic layouts\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"baseline map links to the new model without changing entity IDs\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"all 13 generated SVG candidates load\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile candidate switching stays within page width\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile relation review has contained table scrolling\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"no runtime errors in desktop or mobile\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "v26-browser",
+      "summary": {
+        "checks": 17,
+        "passed": 17,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "v27-browser/results.json",
+      "original_bytes": 2191,
+      "original_sha256": "53c14f2c3ec58fa6be01d120e4b604504ba81ce5c329ada5a8401816f263aec1",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:46619/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"new network entry loads all queries and four explicit conditions\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"cross-source east path needs J1\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"join settings survive a complete reload\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"southern canal path changes only with J2\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"bridge identity and alignment never become flow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"historical overflow is conditional rather than default permanent flow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"source filtering removes its text and dependent joins\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"path certificate shows actual selected edges and premises\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"all four typed network diagrams render\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"evidence deep link preserves source wording and selection\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"527 bridge event does not shift to Yong bridge or to 534 tower fire\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"construction interval does not generate completion or permanent construction status\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"547 preserves undated columns, unknown later condition and aggregate scope\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"a bridge without a sampled event does not inherit another bridge damage\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"event coverage audit retains every baseline object\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"baseline entity links to its scoped event view\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"standalone reports and data exports are public\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile controls, tables and event cards remain within viewport\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"no desktop or mobile runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "v27-browser",
+      "summary": {
+        "checks": 19,
+        "passed": 19,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "v28-browser/results.json",
+      "original_bytes": 1963,
+      "original_sha256": "b8b2f9fd8aa19f70848e2387e9962a0c23c2101bb8af8f8faa58a1090291fe1e",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:43949/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"root homepage visibly shows current integrated release, not v2.4 title\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"35 research overlays and 179 original click targets share the default map\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"actual release metadata matches deployed build commit\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"baseline and research layers genuinely change the displayed map\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"event layer marks only four existing anchors; unmapped movable objects get no invented point\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"547 entity reading retains scoped past events without asserting permanent destruction\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"real marker click opens integrated evidence and model entry\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"separate release URL restores layer and year on reload\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"every executing script and stylesheet uses content-addressed URLs\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"new entry ignores simulated stale unversioned v2.4 JS, CSS, JSON and map cache\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"different release commit produces an explicit update path\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"failed online check never claims verified freshness\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"new map download, release report and coverage data are publicly accessible\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile prior-release page retains release and working event-layer controls without overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"no runtime errors in normal and stale-cache browser contexts\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "v28-browser",
+      "summary": {
+        "checks": 15,
+        "passed": 15,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "v29-browser/results.json",
+      "original_bytes": 2325,
+      "original_sha256": "1f504f1c3e2b692a00108e88a8765b8da7e9e25a623c6a0741237647dc5f2d4d",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:36153/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"default homepage visibly links the new temporal comparison\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"current release and build manifest agree\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"twelve dossiers share eleven pre-existing independent anchors\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zoom synchronizes both reference views\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"drag synchronizes both reference views\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"physical existing map anchor opens the matching dossier\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"534 tower fire does not become a 547 whole-temple state\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"group-only inner Jianzhong remains unplaced and preserves competing dates\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"alternative chronology is not flattened to a continuous interval\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"eastern Jianzhong remains a separate entity with an open time bound\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"explicit 533 tower completion is not projected backward into the prosperous layer\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Jingming construction start and inscription commission remain distinct\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"deep-link reload preserves site, year and activity-versus-building distinction\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"portable stones use a related place, not an invented object coordinate\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"every dossier maintains the same reference and two matching viewports\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"main map inspector links directly into new research\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"new downloads exist and executing dependencies stay fingerprinted\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile dossier controls, unknown placement and side-by-side reference stack without overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"no runtime errors in desktop or mobile\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "v29-browser",
+      "summary": {
+        "checks": 19,
+        "passed": 19,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "v30-browser/results.json",
+      "original_bytes": 1566,
+      "original_sha256": "a712a276abdc6832f970cd01a165fc8baa73b248f42ee2203915432cc8f6d6fd",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:41825/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"default website visibly shows current terrain release and real preview\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"real terrain entry loads under the repository subpath\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"real raster, not synthetic fixture or empty placeholder\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"elevation, hillshade, raw and smoothed slopes switch actual images\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"contours and archival sheet seam are independent overlays\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"terrain camera zoom and reset\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"physical map click reads a labelled coarse modern-surface sample\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"terrain layer and contour deep link restore after full reload\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"archival maps expose edition, compilation, printing and unresolved datum\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"historical network remains textual, filtered and explicitly unregistered\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"actual product downloads and manifest are publicly accessible\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile terrain controls work without horizontal page overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zero runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "v30-browser",
+      "summary": {
+        "checks": 13,
+        "passed": 13,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "west-b3-browser/results.json",
+      "original_bytes": 1125,
+      "original_sha256": "655f7b076c8d8f3dad891651f960126a966c1889b318c23559dbf47278e18683",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:36453/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"homepage new B3 glyphs and banner; B1+B2 and 179 original targets preserved\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"separate city-west research page and 16 evidence records load\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"four-boundary Shouqiu evidence shows its original units and coordinate limits\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"text relations and actual modern terrain are separate views\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"all 16 full evidence cards inspectable\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"deep link and selected evidence survive reload\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"PDF/CSV/SVG/JSON and all prior independent version entries accessible\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"mobile evidence and terrain toggles work with no horizontal page overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"no browser runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "west-b3-browser",
+      "summary": {
+        "checks": 9,
+        "passed": 9,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    },
+    {
+      "artifact_path": "west-roads-b5-browser/results.json",
+      "original_bytes": 1352,
+      "original_sha256": "58f414c35259372cb66c851f9c170e367f759ab73ed56fc88e43cb7c243d559a",
+      "raw_json": "{\n  \"base_url\": \"http://127.0.0.1:44605/luoyang-city/\",\n  \"checks\": [\n    {\n      \"name\": \"eleven B5 symbols coexist with B1-B4; 179 original targets and nonspatial sidecars preserved\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"physical Rongjue click opens attributed B5 evidence\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"L07 and 24 source records load with correct release identity\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"archive, evidence deep link and zoom restore correctly\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"partial-order, neighbour and house-to-temple time layers are inspectable\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"both original scan margins and digital-provider provenance are inspectable\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"candidate screening and deep links preserve zero approved ground controls\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"new downloads, all prior assets and research metadata retain identity and interpretation boundaries\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"390px main, literary evidence and historical datum controls work without horizontal overflow\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"zero browser runtime errors\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"runtime_errors\": []\n}",
+      "suite": "west-roads-b5-browser",
+      "summary": {
+        "checks": 10,
+        "passed": 10,
+        "failed": 0,
+        "runtime_errors": 0
+      }
+    }
+  ],
+  "homepage_build": {
+    "artifact_path": "homepage-build.json",
+    "original_bytes": 1833,
+    "original_sha256": "c915129775939e8d6ebdf49e055a2bfc65ae3528acf3355d304b962f9ba88c56",
+    "raw_json": "{\n  \"version\": \"homepage-v1\",\n  \"source_commit\": \"18aee165ff764598c905ff366e91f1301202aa61\",\n  \"protected_unchanged\": true,\n  \"protected_files\": 398,\n  \"questions\": [\n    {\n      \"id\": \"yongning\",\n      \"number\": \"01\",\n      \"theme\": \"寺院与建筑\",\n      \"title\": \"永宁寺里除了高塔还有什么？\",\n      \"description\": \"从高塔读到塔北佛殿，看寺院的构成怎样进入文献地图。\",\n      \"action\": \"进入永宁寺\",\n      \"href\": \"./dual-b2.html#literary?region=L01&entity=ic_yongning\",\n      \"evidence\": [\n        \"B01\",\n        \"B02\"\n      ],\n      \"research_module\": \"B1+B2\"\n    },\n    {\n      \"id\": \"markets\",\n      \"number\": \"02\",\n      \"theme\": \"市场与日常\",\n      \"title\": \"洛阳人到哪里买鱼？\",\n      \"description\": \"读归正里鱼鳖市与洛水南四通市的记载，分清生活场景与方位线索。\",\n      \"action\": \"走进洛南市场\",\n      \"href\": \"./dual-luonan.html#markets?id=LR10\",\n      \"evidence\": [\n        \"LR07\",\n        \"LR10\"\n      ],\n      \"research_module\": \"B7\"\n    },\n    {\n      \"id\": \"identity\",\n      \"number\": \"03\",\n      \"theme\": \"同名与辨认\",\n      \"title\": \"书里同名的寺是否就是同一座？\",\n      \"description\": \"从宝明、白马寺的不同记载，看看同名为什么还需要身份核对。\",\n      \"action\": \"打开身份核对案例\",\n      \"href\": \"./dual-city-review.html#view=cases&case=CB01\",\n      \"evidence\": [\n        \"CB01\"\n      ],\n      \"research_module\": \"B8\"\n    }\n  ],\n  \"hero\": {\n    \"asset\": \"_assets/0eaca3b9a929c9fbe167-luoyang-panorama.webp\",\n    \"small_asset\": \"_assets/4489bb6879b2f61c8366-luoyang-panorama-small.webp\",\n    \"width\": 1672,\n    \"height\": 941,\n    \"description\": \"研究性复原示意\",\n    \"generated_image\": true,\n    \"measured_reconstruction\": false\n  },\n  \"interface_only\": true\n}\n"
+  },
+  "raw_preservation_note": "raw_json stores each source file unchanged as UTF-8 text. Encoding it as UTF-8 recreates the original bytes and recorded SHA-256.",
+  "visual_review": {
+    "report_file": "visual-review.md",
+    "screenshots": [
+      {
+        "artifact_path": "homepage-v1-browser/homepage-desktop-first-screen.png",
+        "bytes": 2008535,
+        "sha256": "7d6152cc5b93db768ad695e3800c86174c04469c2e02bbacf4e6a89443d99d04",
+        "pixel_dimensions": [
+          1500,
+          1000
+        ],
+        "reviewer": "root",
+        "review_type": "Reported approval by parent agent",
+        "result": "passed",
+        "copied_into_durable_text_package": false
+      },
+      {
+        "artifact_path": "homepage-v1-browser/homepage-mobile-first-screen.png",
+        "bytes": 214209,
+        "sha256": "a5174181fa505bdad4c3894be960bf12fd05e16b579a8bf6a7be30222e80c536",
+        "pixel_dimensions": [
+          390,
+          844
+        ],
+        "reviewer": "homepage_verification",
+        "review_type": "Direct visual inspection",
+        "result": "passed",
+        "copied_into_durable_text_package": false
+      },
+      {
+        "artifact_path": "homepage-v1-browser/homepage-tablet-first-screen.png",
+        "bytes": 1039626,
+        "sha256": "29e002301f1545ca72865339e02cd0566506eb31a3ffcd09592b95a3a0ddce0d",
+        "pixel_dimensions": [
+          900,
+          1000
+        ],
+        "reviewer": "homepage_verification",
+        "review_type": "Direct visual inspection",
+        "result": "passed",
+        "copied_into_durable_text_package": false
+      },
+      {
+        "artifact_path": "homepage-v1-browser/homepage-mobile.png",
+        "bytes": 690803,
+        "sha256": "3b1c821867686dbd80d4526d54c06c41d945391cf65c1fbda98135d1bf657452",
+        "pixel_dimensions": [
+          390,
+          5305
+        ],
+        "reviewer": "homepage_verification",
+        "review_type": "Direct visual inspection",
+        "result": "passed",
+        "copied_into_durable_text_package": false
+      }
+    ],
+    "scope": "PR build screenshots. Desktop approval is attributed to root; mobile and tablet were directly inspected by homepage_verification."
+  },
+  "production_followup": {
+    "included_in_this_package": false,
+    "merge_sha": "1d541938cb8b21cb218d5bbd934cf41bbdfa9fc8",
+    "run_id": 43557485331,
+    "run_url": "https://github.com/mechgouki/luoyang-city/actions/runs/43557485331",
+    "note": "The parent agent will add independently captured production acceptance. This PR package makes no production-success claim."
+  }
+}
