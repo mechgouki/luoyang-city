@@ -1,0 +1,526 @@
+{
+  "version": "prosperity-v1-building-dimensions",
+  "created_at": "2026-11-14",
+  "scope": "已核建筑平面尺度与后续体块实施依据；不生成未经证实的盛时建筑高度、屋顶或古地面。",
+  "inputs": [
+    {
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "sha256": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79"
+    },
+    {
+      "path": "research/prosperity-v1/text-review.json",
+      "sha256": "e897985535b46d802708e628da4bad5a40c667ad2283caad55aeb0b347cb3836"
+    }
+  ],
+  "source_pdf": {
+    "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+    "sha256": "296e9336c19d0645e9f7f0274193bb5de466b439fbea511212686614c8c7b1c1",
+    "visual_table_pages_checked": [
+      1926,
+      1927,
+      1930,
+      1931
+    ],
+    "visual_plan_pages_checked": [
+      1962,
+      1965,
+      1966
+    ],
+    "raw_source_redistributed": false
+  },
+  "current_dimension_fields_audit": [
+    {
+      "feature_id": "geo-palace-walls",
+      "source_dimensions_m": {
+        "west_remaining_length": 1398,
+        "east_remaining_length": 1284,
+        "south_length": 660
+      },
+      "dimension_source": {
+        "pdf_page": 1926,
+        "printed_page": "Annex II-F C02-CN 1"
+      },
+      "numeric_transcription_matches_annex": true,
+      "qualifier": "需要保留约数/残存/范围含义；不是上部建筑完整尺寸。西墙1398原表用总长，东墙1284用遗存长度；不要混称全周宫墙。"
+    },
+    {
+      "feature_id": "geo-jinyong-bing-wall",
+      "source_dimensions_m": {
+        "length": 310,
+        "width": 240
+      },
+      "dimension_source": {
+        "pdf_page": 1927,
+        "printed_page": "Annex II-F C02-CN 2"
+      },
+      "numeric_transcription_matches_annex": true,
+      "qualifier": "需要保留约数/残存/范围含义；不是上部建筑完整尺寸。"
+    },
+    {
+      "feature_id": "geo-yongning-temple-walls",
+      "source_dimensions_m": {
+        "north_south": 301,
+        "east_west": 212
+      },
+      "dimension_source": {
+        "pdf_page": 1931,
+        "printed_page": "Annex II-F C02-CN 6"
+      },
+      "numeric_transcription_matches_annex": true,
+      "qualifier": "需要保留约数/残存/范围含义；不是上部建筑完整尺寸。"
+    },
+    {
+      "feature_id": "geo-yongning-pagoda-reference",
+      "source_dimensions_m": {
+        "remaining_footing_side": 38.2,
+        "remaining_footing_height": 2.2
+      },
+      "dimension_source": {
+        "pdf_page": 1931,
+        "printed_page": "Annex II-F C02-CN 6"
+      },
+      "numeric_transcription_matches_annex": true,
+      "qualifier": "需要保留约数/残存/范围含义；不是上部建筑完整尺寸。"
+    },
+    {
+      "feature_id": "geo-changhe-palace-gate",
+      "source_dimensions_m": {
+        "gate_base_east_west": 44.5,
+        "gate_base_north_south": 24.4
+      },
+      "dimension_source": {
+        "pdf_page": 1927,
+        "printed_page": "Annex II-F C02-CN 2"
+      },
+      "numeric_transcription_matches_annex": true,
+      "qualifier": "需要保留约数/残存/范围含义；不是上部建筑完整尺寸。"
+    },
+    {
+      "feature_id": "geo-taiji-hall-reference",
+      "source_dimensions_m": {
+        "east_west_approx": 100,
+        "north_south_approx": 60
+      },
+      "dimension_source": {
+        "pdf_pages": [
+          1930,
+          1931
+        ],
+        "printed_pages": [
+          "Annex II-F C02-CN 5",
+          "Annex II-F C02-CN 6"
+        ]
+      },
+      "numeric_transcription_matches_annex": true,
+      "qualifier": "需要保留约数/残存/范围含义；不是上部建筑完整尺寸。"
+    },
+    {
+      "feature_id": "geo-tongtuo-avenue",
+      "source_dimensions_m": {
+        "remaining_length": 1650,
+        "width_min": 40,
+        "width_max": 65
+      },
+      "dimension_source": {
+        "pdf_page": 1930,
+        "printed_page": "Annex II-F C02-CN 5"
+      },
+      "numeric_transcription_matches_annex": true,
+      "qualifier": "需要保留约数/残存/范围含义；不是上部建筑完整尺寸。"
+    }
+  ],
+  "massing_items": [
+    {
+      "item_id": "M01",
+      "name": "宫城西、南、东墙的平面带状体",
+      "existing_feature_ids": [
+        "geo-palace-walls"
+      ],
+      "source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+        "pdf_file_pages": [
+          1926
+        ],
+        "annex_printed_pages": [
+          1
+        ],
+        "source_numbers": [
+          "Cgq-1",
+          "Cgq-2",
+          "Cgq-3"
+        ],
+        "pages_are_one_based": true
+      },
+      "plan_dimensions_m": {
+        "west_recorded_length": 1398,
+        "west_south_section_width_approx": 13,
+        "west_north_section_width_approx": 20,
+        "east_remains_length": 1284,
+        "east_general_width_range": [
+          4,
+          8
+        ],
+        "east_maximum_width": 11,
+        "south_length": 660,
+        "south_width_range": [
+          8,
+          10
+        ]
+      },
+      "dimension_meaning": "遗存墙线长度和发掘/钻探墙体宽度；西墙原表为total length，东墙明确为remains length；不是盛时全周城墙模型。",
+      "implementation": "沿现有三面证据线分段作平面带，宽度以区间或带宽注记保留；西墙南北段的13/20m在分界未定时不得擅自插值到逐点宽度。北缘保持不闭合。",
+      "historical_height_m": null,
+      "surviving_height_m": null,
+      "height_claim_text": null,
+      "forbidden": [
+        "把本项目宫城范围北缘闭合线实体化为已证北墙",
+        "拿内城北东墙5—7m残高给宫墙赋值",
+        "推算女墙、城楼、墙坡收分、瓦顶坡角"
+      ],
+      "status": "ready_plan_band_with_width_ranges"
+    },
+    {
+      "item_id": "M02",
+      "name": "宫城阊阖门基座尺度片",
+      "existing_feature_ids": [
+        "geo-changhe-palace-gate"
+      ],
+      "existing_entity_id": "ic_changhe_palace",
+      "source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+        "pdf_file_pages": [
+          1927,
+          1962
+        ],
+        "annex_printed_pages": [
+          2,
+          37
+        ],
+        "source_numbers": [
+          "Cgm-3",
+          "3-4"
+        ],
+        "pages_are_one_based": true
+      },
+      "plan_dimensions_m": {
+        "east_west": 44.5,
+        "north_south": 24.4
+      },
+      "dimension_meaning": "门基东西、南北的表列尺度，不能把44.5×24.4矩形当完整门阙群精确轮廓。附图37可见中门基、三通道、东西阙及廊院关系。",
+      "implementation": "先在已有概略门位显示44.5×24.4m的基座外接尺度片；下一步可按附图37比例尺逐段提取本地平面，再启用三通道与东西阙平面。新提取前不以规则格网补侧阙。",
+      "historical_height_m": null,
+      "surviving_height_m": null,
+      "height_claim_text": null,
+      "forbidden": [
+        "套用城西同名阊阖门约47×58m",
+        "把城门总叙百尺用于宫前门",
+        "推断门楼层数、阙楼高度、屋顶和开间尺寸",
+        "把门图符放大轮廓当实测基座"
+      ],
+      "status": "ready_dimensioned_reference_patch_detail_plan_pending"
+    },
+    {
+      "item_id": "M03",
+      "name": "太极殿遗址尺度片",
+      "existing_feature_ids": [
+        "geo-taiji-hall-reference"
+      ],
+      "existing_entity_id": null,
+      "source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+        "pdf_file_pages": [
+          1930,
+          1931,
+          1962
+        ],
+        "annex_printed_pages": [
+          5,
+          6,
+          37
+        ],
+        "source_numbers": [
+          "Jg-4",
+          "3-7"
+        ],
+        "pages_are_one_based": true
+      },
+      "plan_dimensions_m": {
+        "east_west_approx": 100,
+        "north_south_approx": 60
+      },
+      "dimension_meaning": "附表跨页记录的遗址平面约数，非上部殿身精确足迹；约6m为夯土深度。",
+      "implementation": "在既有太极殿来源图节点上显示约100×60m的无屋顶尺度片；原图位置容差和尺寸约数均保留，不绑定不相符的旧实体ID。",
+      "historical_height_m": null,
+      "surviving_height_m": null,
+      "below_surface_or_fill_depth_m_approx": 6,
+      "height_claim_text": null,
+      "forbidden": [
+        "把夯土深度6m向上拉成台高",
+        "把100×60m作为屋顶投影或主体殿身柱网",
+        "因永宁佛殿形如太极殿就复制此尺寸",
+        "从宫城中轴关系补未知院墙、楼阁和屋顶"
+      ],
+      "status": "ready_approximate_dimensioned_reference_patch"
+    },
+    {
+      "item_id": "M04",
+      "name": "永宁寺院界尺度框",
+      "existing_feature_ids": [
+        "geo-yongning-temple-walls"
+      ],
+      "existing_entity_id": "ic_yongning",
+      "source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+        "pdf_file_pages": [
+          1931,
+          1965
+        ],
+        "annex_printed_pages": [
+          6,
+          40
+        ],
+        "source_numbers": [
+          "Jn-2.1",
+          "7-1"
+        ],
+        "pages_are_one_based": true
+      },
+      "plan_dimensions_m": {
+        "north_south": 301,
+        "east_west": 212
+      },
+      "dimension_meaning": "寺院围墙所界范围，不是一个301×212m的建筑实体；来源缩图墙线与表值不完全相合。",
+      "implementation": "用301×212m约束单独的寺院尺度模板；已描证据墙线保持原样。图示定位与模板拟合属于下一步假说，不能以塔心自动当寺院几何中心；未见可靠墙线的一侧单独标识。",
+      "historical_height_m": null,
+      "surviving_height_m": null,
+      "height_claim_text": null,
+      "literary_components": {
+        "quote": "寺院墻皆施短椽，以瓦覆之，若今宮墻也。四面各開一門。",
+        "source_url": "https://deerpark.app/cbeta/B0077/1",
+        "locator": "B12n0077_p0048a12–13"
+      },
+      "forbidden": [
+        "把院界范围拉成整块有屋顶建筑",
+        "镜像复制门基生成四座相同门楼",
+        "把缺失墙段当完整已测院墙",
+        "凭瓦覆之生成确定瓦式、坡度和墙高"
+      ],
+      "status": "ready_extent_template_evidence_geometry_separate"
+    },
+    {
+      "item_id": "M05",
+      "name": "永宁寺塔基地上遗存方形",
+      "existing_feature_ids": [
+        "geo-yongning-pagoda-reference"
+      ],
+      "existing_entity_id": "ic_yongning",
+      "source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+        "pdf_file_pages": [
+          1931,
+          1966
+        ],
+        "annex_printed_pages": [
+          6,
+          41
+        ],
+        "source_numbers": [
+          "Jn-2.5",
+          "7-5"
+        ],
+        "pages_are_one_based": true
+      },
+      "plan_dimensions_m": {
+        "surviving_square_side_approx": 38.2
+      },
+      "dimension_meaning": "附表所述地上塔基遗存方形；2.2m为该遗存高度，不能自动代表盛时完整台基高度。",
+      "implementation": "已有塔基图符中心只作概略定位，方形大小改用38.2m来源表值。默认盛时布局不使用2.2m给九层木塔定高；如单设遗存研究模式，可注明按该残高显示遗存基座。",
+      "historical_height_m": null,
+      "surviving_height_m": 2.2,
+      "height_claim_text": {
+        "quote": "中有九層浮圖一所，架木為之，舉高九十丈。……上有金剎，復高十丈；合去地一千尺。",
+        "source_url": "https://deerpark.app/cbeta/B0077/1",
+        "locator": "B12n0077_p0045a06–09",
+        "other_edition_url": "https://deerpark.app/cbeta/B0078/1",
+        "other_locator": "B12n0078_p0341a11–15",
+        "metre_conversion_adopted": false
+      },
+      "forbidden": [
+        "把九十丈或一千尺直接折算成确定米制高度",
+        "用2.2m给盛时塔身或完整台基赋高",
+        "凭九层推算等层高、逐层收分、各层屋顶曲线",
+        "把38.2m残基边长直接当每层塔身或塔檐宽度"
+      ],
+      "status": "ready_surviving_footing_plan_historical_superstructure_pending"
+    },
+    {
+      "item_id": "M06",
+      "name": "永宁寺南门基座局部模板",
+      "existing_feature_ids": [],
+      "existing_entity_id": "ic_yongning",
+      "source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+        "pdf_file_pages": [
+          1931,
+          1965
+        ],
+        "annex_printed_pages": [
+          6,
+          40
+        ],
+        "source_numbers": [
+          "Jn-2.4",
+          "7-2"
+        ],
+        "pages_are_one_based": true
+      },
+      "plan_dimensions_m": {
+        "length": 45.5,
+        "width": 19.1,
+        "axis_assignment_from_table": null
+      },
+      "dimension_meaning": "表中记长、宽和残高，未在该行明确长宽对应东西/南北。此批没有新的独立南门地理点。",
+      "implementation": "可先制作45.5×19.1m的未落点尺度模板；须核原发掘图与寺院平面的位置/轴向后，才放入地理全景。不得把长宽方向凭常识写成实测方位。",
+      "historical_height_m": null,
+      "surviving_height_m": 1.2,
+      "height_claim_text": {
+        "quote": "南門樓三重，通三閣道，去地二十丈，形製似今端門。",
+        "source_url": "https://deerpark.app/cbeta/B0077/1",
+        "locator": "B12n0077_p0048a13–15",
+        "variant_note": "范本B12n0078_p0343a10–12作通三道；两版本不计独立见证。",
+        "metre_conversion_adopted": false
+      },
+      "forbidden": [
+        "把残高1.2m当盛时楼高",
+        "把文献二十丈直接变确定米高",
+        "复制宫阊阖门或现代端门外观",
+        "把三重与三通道自动生成确定柱网和屋顶"
+      ],
+      "status": "ready_unplaced_scale_template_position_and_axis_pending"
+    },
+    {
+      "item_id": "M07",
+      "name": "永宁寺西门分侧尺度模板",
+      "existing_feature_ids": [],
+      "existing_entity_id": "ic_yongning",
+      "source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+        "pdf_file_pages": [
+          1931,
+          1965
+        ],
+        "annex_printed_pages": [
+          6,
+          40
+        ],
+        "source_numbers": [
+          "Jn-2.2",
+          "7-3"
+        ],
+        "pages_are_one_based": true
+      },
+      "plan_dimensions_m": {
+        "east_west": 18.2,
+        "north_south_outer_flank": 24,
+        "north_south_inner_flank": 30
+      },
+      "dimension_meaning": "门基东西18.2m；南北分别记外侧24m、内侧30m，不是可任选的两个总宽数值。",
+      "implementation": "保留两侧尺度，先作尺寸卡。附图40有比例尺、实线基槽边缘及复原线，需分层提取后才能生成准确本地门基地形；不能强行简化为18.2×30实测矩形。",
+      "historical_height_m": null,
+      "surviving_height_m": null,
+      "height_claim_text": {
+        "quote": "東西兩門亦皆如之，所可異者，唯樓兩重。",
+        "source_url": "https://deerpark.app/cbeta/B0077/1",
+        "locator": "B12n0077_p0049a15–p0050a01",
+        "metre_conversion_adopted": false
+      },
+      "forbidden": [
+        "把外24/内30取均值27当实测宽",
+        "镜像西门给尺寸缺失的东门",
+        "套用南门二十丈",
+        "把西门考古图虚线复原线当实线已发掘边"
+      ],
+      "status": "local_plan_tracing_required_before_massing"
+    },
+    {
+      "item_id": "M08",
+      "name": "永宁佛殿、东门、北门及僧房楼观",
+      "existing_feature_ids": [],
+      "existing_entity_id": "ic_yongning",
+      "source": {
+        "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+        "pdf_file_pages": [
+          1931,
+          1965
+        ],
+        "annex_printed_pages": [
+          6,
+          40
+        ],
+        "source_numbers": [
+          "Jns-2.6",
+          "Jn-2.3"
+        ],
+        "pages_are_one_based": true
+      },
+      "plan_dimensions_m": null,
+      "dimension_meaning": "附表佛殿形状和结构尺寸明确未清；东门尺寸空白；本轮未取得北门及每间僧房的米制尺度。",
+      "implementation": "佛殿继续仅作塔北的关系对象；东西北门可保留名称和类型文字，不能生成假精确足迹。北门如作类型示意须遵守不施屋；一千余间不展开为一千个房间。",
+      "historical_height_m": null,
+      "surviving_height_m": null,
+      "literary_components": [
+        {
+          "quote": "浮圖北有佛殿一所，形如太極殿。",
+          "source_url": "https://deerpark.app/cbeta/B0077/1",
+          "locator": "B12n0077_p0047a04"
+        },
+        {
+          "quote": "僧房樓觀，一千餘間。",
+          "source_url": "https://deerpark.app/cbeta/B0077/1",
+          "locator": "B12n0077_p0047a09–10"
+        },
+        {
+          "quote": "北門一道，上不施屋，似烏頭門。",
+          "source_url": "https://deerpark.app/cbeta/B0077/1",
+          "locator": "B12n0077_p0050a01–02"
+        }
+      ],
+      "forbidden": [
+        "把太极100×60m复制给佛殿",
+        "用西门尺寸镜像东门",
+        "给北门加上楼屋或瓦顶",
+        "机械铺设一千间等大单元及坊内网格",
+        "凭形如太极殿套用某个时代宫殿屋顶"
+      ],
+      "status": "relation_annotation_only_no_metric_massing"
+    }
+  ],
+  "rendering_contract": {
+    "historical_height_default": null,
+    "historical_ground_elevation_default": null,
+    "roof_model_default": null,
+    "metre_conversion_from_zhang_or_chi_adopted": false,
+    "display_extrusion_policy": "默认只画定尺平面和无屋顶低体块；若需要阅读厚度，用独立screen/display参数并标明仅为绘图厚度，不能写入historical_height_m或标注米制古高。",
+    "position_scale_separation": "来源图概略中心与独立表值尺度分别存储；不以缩图符号尺寸代替考古表值，也不因尺寸精确到0.1m就宣称位置同等精确。",
+    "surviving_height_policy": "2.2m塔基残高和1.2m南门残高只用于有名称区分的遗存研究层；不得作为盛时完整高度。",
+    "geographic_registration_policy": "沿用EPSG:4610来源框架；100m工作显示容差不是实测精度或置信区间，不与WGS84地形直接混合。",
+    "temporal_policy": "魏晋至北魏的遗存分期不保证516—528每年的全部上部构件和外观一致。"
+  },
+  "next_implementation_order": [
+    "先做M02/M03/M05的独立定尺平面片；保持上部高度未知。",
+    "再做M01分段带与M04院界尺度模板，证据几何和显示拟合分离。",
+    "M06先做不落点尺度卡；M07先提取附图40实测线与复原线后再建体。",
+    "M08维持文献关系，不补米制佛殿、东/北门和僧房体块。"
+  ],
+  "out_of_core_scope": {
+    "jinyong": "当前310×240m只指丙城范围，附表未明长宽轴向；不扩为三城，不采用百尺楼名当实测高度。",
+    "tongtuo": "1650m遗存段及40–65m宽可作为范围式路带；不取单一宽度铺满全轴，也不补沿线建筑或宣阳门坐标。"
+  },
+  "unresolved_questions": [
+    "定尺模板与概略节点的独立配准及误差控制",
+    "各基址属于何次营建以及516—528期间的构件状态",
+    "南门长宽方向、门址独立落点和西门实际不规则轮廓",
+    "所有上部建筑高度、屋顶形制、柱网尺寸和逐层收分",
+    "古代地表、夯土深度与建筑基座顶面的共同高程基准"
+  ]
+}

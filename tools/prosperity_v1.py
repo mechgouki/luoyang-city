@@ -75,8 +75,6 @@ def entities_data(ledger,text_review,geo,geo_boxes,pano_boxes):
                          'name_layer':'名称时层需区分；后出名称不提前用于盛时。'}
         current=row.get('current_review',{})
         temporal_label=current.get('temporal_label') or temporal_labels.get(row.get('legacy_temporal_state'),'本批未新增该对象的盛时断代结论。')
-        notes=list(dict.fromkeys(reviewed.get(ref['key'],{}).get('legacy_temporal_note_preserved') for ref in row['direct_evidence_refs'] if reviewed.get(ref['key'],{}).get('legacy_temporal_note_preserved')))
-        if notes:temporal_label+=' '+ '；'.join(notes)
         e={'id':eid,'name':row.get('display_name',row['name']),'kind':original['type'],
            'aliases':original.get('aliases',[]),'component_summary':comps or '点击下方记载，区分建筑构成、方位与采用解释。',
            'plan_target_ids':[t['id'] for t in targets],'plan_bbox':box,
@@ -112,6 +110,7 @@ def research_plate(review,geo):
 
 def main():
     review=load(RESEARCH/'text-review.json');geo=load(RESEARCH/'geographic-evidence.json')
+    terrain=load(RESEARCH/'terrain-constraints.json');dimensions=load(RESEARCH/'building-dimensions.json')
     assert len(review['records'])==183,'All prior evidence needs a review row'
     assert geo.get('features'),'No fabricated geographical placeholder permitted'
     info=load(SITE/'build-info.json');ledger=load(SITE/'city-review/ledger.json')['entities']
@@ -144,6 +143,7 @@ def main():
           'regions':[{'id':r['code'],'name':r['title'],'bbox':[r['bbox'][0]+200,r['bbox'][1]+640,*r['bbox'][2:]],'entity_ids':r['focus_ids']} for r in load(ROOT/'data/regions.json')],
           'entities':entities,'sources':source_list(review,geo),'source_features':geo['features'],
           'text_review_summary':review['counts'],
+          'terrain_constraints':terrain['records'],
           'map_decisions':[{k:(v.replace('small.inline-note','现代夹注层') if isinstance(v,str) else v) for k,v in d.items() if k in ['id','title','finding','visual_instruction','corrected_quote','locator','evidence_keys']} for d in review['map_decisions']],
           'projection':projection,'panorama_projection':panoprojection,
           'downloads':[{'label':'本版图册 PDF','url':'./downloads/prosperity-v1-atlas.pdf','type':'pdf'},
@@ -151,8 +151,13 @@ def main():
                        {'label':'地点与定位依据 CSV','url':'./downloads/prosperity-v1-entities.csv','type':'csv'},
                        {'label':'引文核对 JSON','url':'./prosperity/text-review.json','type':'json'},
                        {'label':'地理来源与原图坐标 JSON','url':'./prosperity/geographic-evidence.json','type':'json'},
+                       {'label':'历史地形线索 JSON','url':'./prosperity/terrain-constraints.json','type':'json'},
+                       {'label':'建筑尺度与建模依据说明','url':'./prosperity/building-dimensions.md','type':'md'},
+                       {'label':'建筑尺度依据 JSON','url':'./prosperity/building-dimensions.json','type':'json'},
                        {'label':'完整数据包 ZIP','url':'./downloads/prosperity-v1-package.zip','type':'zip'}]}
     dump(OUT/'data.json',data);dump(OUT/'text-review.json',review);dump(OUT/'geographic-evidence.json',geo)
+    dump(OUT/'terrain-constraints.json',terrain);dump(OUT/'building-dimensions.json',dimensions)
+    shutil.copyfile(ROOT/'docs/prosperity-building-dimensions.md',OUT/'building-dimensions.md')
     with (SITE/'downloads/prosperity-v1-entities.csv').open('w',encoding='utf-8-sig',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=['id','name','kind','geographic_status','source_features','placement_note','source_url']);writer.writeheader()
         for e in entities:writer.writerow({k:(';'.join(e['source_feature_ids']) if k=='source_features' else e.get(k,'')) for k in writer.fieldnames})
@@ -183,6 +188,7 @@ def main():
     release=load(SITE/'release.json');release['extensions']=sorted(set(release.get('extensions',[])+[VERSION]));release['prosperity_version']=VERSION;release['current_milestone']='盛时P1：文献审校与来源图城市骨架';dump(SITE/'release.json',release)
     info['prosperity']={'version':VERSION,'source_commit':info['source_commit'],'entities':len(entities),'source_geometries':len(geo['features']),
                         'located_entities':sum(bool(e['source_feature_ids']) for e in entities),'evidence_records':183,'source_crs':'EPSG:4610',
+                        'terrain_constraints':len(terrain['records']),'building_dimension_items':len(dimensions['massing_items']),
                         'wgs84_registration_completed':False,'ancient_ground_surface_reconstructed':False,'full_city_reconstruction_completed':False,
                         'atlas_pages':6,'protected_files':len(protected),'metadata':'prosperity/data.json'}
     info['files_sha256']={str(p.relative_to(SITE)):sha(p) for p in sorted(SITE.rglob('*')) if p.is_file() and p.name!='build-info.json'};dump(SITE/'build-info.json',info)

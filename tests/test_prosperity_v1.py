@@ -108,4 +108,20 @@ class ProsperityPublicationTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256((SITE/path).read_bytes()).hexdigest(),self.info['files_sha256'][path])
         self.assertIn('id="prosperity-entry"',(SITE/'index.html').read_text())
 
+    def test_terrain_constraints_and_building_depths_do_not_become_ancient_surface(self):
+        terrain=read(SITE/'prosperity/terrain-constraints.json')
+        self.assertEqual(self.data['terrain_constraints'],terrain['records'])
+        self.assertEqual(len(terrain['records']),5)
+        for r in terrain['records']:
+            self.assertIsNone(r['coordinates'])
+            self.assertFalse(r['creates_ancient_surface'])
+            self.assertTrue(r['source_url'] and r['limitations'])
+        dimensions=read(SITE/'prosperity/building-dimensions.json')
+        items={r['item_id']:r for r in dimensions['massing_items']}
+        self.assertEqual(len(items),8)
+        self.assertTrue(all(r['historical_height_m'] is None for r in items.values()))
+        self.assertEqual(items['M03']['below_surface_or_fill_depth_m_approx'],6)
+        self.assertIsNone(items['M03']['surviving_height_m'])
+        self.assertEqual(items['M05']['surviving_height_m'],2.2)
+
 if __name__=='__main__':unittest.main()

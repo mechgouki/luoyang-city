@@ -325,6 +325,11 @@ try:
  assert len(prosperity_geo['features'])==info['prosperity']['source_geometries']==30
  assert prosperity['source_features']==prosperity_geo['features']
  assert len(prosperity['map_decisions'])==11 and 'TXT08' in {d['id'] for d in prosperity['map_decisions']}
+ terrain_constraints=json.loads(get('prosperity/terrain-constraints.json'))
+ assert prosperity['terrain_constraints']==terrain_constraints['records'] and len(terrain_constraints['records'])==5
+ assert all(r['coordinates'] is None and r['creates_ancient_surface'] is False for r in terrain_constraints['records'])
+ dimensions=json.loads(get('prosperity/building-dimensions.json'))
+ assert len(dimensions['massing_items'])==8 and all(r['historical_height_m'] is None for r in dimensions['massing_items'])
  assert prosperity['projection']['source_crs']==prosperity_geo['calibration']['crs']=='EPSG:4610'
  assert all(info['prosperity'][key] is False for key in ['wgs84_registration_completed','ancient_ground_surface_reconstructed','full_city_reconstruction_completed'])
  assert prosperity['projection']['datum_conversion_performed'] is False

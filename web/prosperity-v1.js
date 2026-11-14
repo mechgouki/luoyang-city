@@ -182,7 +182,9 @@
     return null;
   }
   function bindFeatures() {
-    features = [...svg.querySelectorAll('[data-entity-id],[data-entity-ids],[data-members],[data-ids],[data-target-id],[data-feature-id],[id]')].filter(n => idsForFeature(n).length || sourceFeatureFor(n));
+    // One keyboard target per drawn hit area; labels remain mouse-readable via featureFor.
+    const selector=state.view==='plan'?'#prosperity-plan-targets [data-target-id]':'[data-feature-id]';
+    features = [...svg.querySelectorAll(selector)].filter(n => idsForFeature(n).length || sourceFeatureFor(n));
     features.forEach(n => {
       n.setAttribute('tabindex','0'); n.setAttribute('role','button');
       const ids=idsForFeature(n);
@@ -322,6 +324,14 @@
     }
     const reviewText=value=>String(value||'').replaceAll('small.inline-note','现代夹注层');
     $('#text-decisions').innerHTML=decisions.map(d=>'<article class="text-decision" data-text-decision="'+esc(d.id)+'"><span class="record-id">'+esc(d.id)+'</span><h3>'+esc(d.title||d.id)+'</h3>'+paragraphs(reviewText(d.finding))+(d.corrected_quote?'<blockquote>'+esc(d.corrected_quote)+'</blockquote>':'')+(d.visual_instruction?'<h4>在图中怎样采用</h4>'+paragraphs(reviewText(d.visual_instruction)):'')+(d.locator?'<p class="muted">'+esc(d.locator)+'</p>':'')+(d.evidence_keys?.length?'<p class="muted">相关记录：'+esc(d.evidence_keys.join('、'))+'</p>':'')+'</article>').join('');
+    const terrain=data.terrain_constraints||[];
+    $('#terrain-review').hidden=!terrain.length;
+    $('#terrain-constraints').innerHTML=terrain.map(c=>{
+      let href=safeUrl(c.source_url);
+      if(href&&c.pdf_page){const url=new URL(href);if(url.pathname.toLowerCase().endsWith('.pdf'))url.hash='page='+c.pdf_page;href=url.href;}
+      const pages=[c.pdf_page?'PDF 第 '+c.pdf_page+' 页':'',c.printed_page?'书内第 '+c.printed_page+' 页':''].filter(Boolean).join(' · ');
+      return '<article class="text-decision" data-terrain-constraint="'+esc(c.id)+'"><span class="record-id">'+esc(c.id)+'</span><h3>'+esc(c.title||c.id)+'</h3>'+paragraphs(c.reading)+(c.temporal_scope?'<h4>时间范围</h4>'+paragraphs(c.temporal_scope):'')+(c.spatial_scope?'<h4>空间范围</h4>'+paragraphs(c.spatial_scope):'')+(c.layout_implication?'<h4>对城市布局的影响</h4>'+paragraphs(c.layout_implication):'')+(strings(c.limitations).length?'<h4>解读限制</h4>'+paragraphs(c.limitations):'')+(pages?'<p class="muted">'+esc(pages)+'</p>':'')+(href?link(href,'打开来源页 ↗',true):'')+'</article>';
+    }).join('');
   }
   function showSources() { $('#source-catalog').open=true;$('#sources').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}); }
   function fail(error) {

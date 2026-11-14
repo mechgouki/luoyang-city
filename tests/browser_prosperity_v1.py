@@ -9,7 +9,7 @@ import re
 import tempfile
 import threading
 from pathlib import Path
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 
 from playwright.sync_api import expect, sync_playwright
 
@@ -96,7 +96,8 @@ try:
         expect(page.locator('#basis-label')).to_have_text(data['maps']['plan']['basis_label'])
         expect(page.locator('#release-status')).to_contain_text('正式发布一致')
         expect(page.locator('#modern-reference-control')).to_be_hidden()
-        assert page.locator('#map-viewport [role="button"]').count() > 0
+        expect(page.locator('#map-viewport [role="button"]')).to_have_count(179)
+        expect(page.locator('#map-viewport #prosperity-plan-targets [data-target-id][role="button"]')).to_have_count(179)
         no_overflow(page)
         page.screenshot(path=str(out / 'prosperity-desktop-first-screen.png'))
         ok('the prosperity page loads its real documentary map, bounded geography mode and all object records')
@@ -116,12 +117,12 @@ try:
         ok('the actual SVG supports zoom, drag and restoration of its original view')
 
         # Select through the map itself: focus a real feature to keep even small symbols reachable.
-        direct = page.locator('#map-viewport [role="button"][aria-label]:visible')
-        feature_nodes = direct.evaluate_all('nodes => nodes.map(n => ({name:n.getAttribute("aria-label"), id:n.getAttribute("data-entity-id")||""}))')
+        direct = page.locator('#map-viewport #prosperity-plan-targets [data-target-id][role="button"][aria-label]:visible')
+        feature_nodes = direct.evaluate_all('nodes => nodes.map(n => ({target:n.getAttribute("data-target-id"), id:n.getAttribute("data-entity-id")||""}))')
         solo_nodes = [n for n in feature_nodes if n['id'] in records]
         assert solo_nodes, 'The documentary map should retain independently selectable records'
         eligible = next((n for n in solo_nodes if n['id'] == preferred), solo_nodes[0])
-        target = page.get_by_role('button', name=eligible['name'], exact=True).first
+        target = page.locator('#map-viewport #prosperity-plan-targets [data-target-id="'+eligible['target']+'"]')
         target.focus()
         target.press('Enter')
         ready(page, 'plan')
@@ -129,20 +130,18 @@ try:
         expect(page.locator('#entity-detail h2')).to_have_text(records[eligible['id']]['name'])
         assert page.locator('#map-viewport .prosperity-selected').count() > 0
         clicked_entity = parameters(page)['entity']
-        selected_feature = page.locator('#map-viewport .prosperity-selected[role="button"]').first
-        selected_label = selected_feature.get_attribute('aria-label')
         page.locator('#focus-selection').click()
         page.locator('#entity-search').fill('无此地点-pointer-check')
         ready(page)
         expect(page.locator('#entity-select')).to_be_disabled()
-        page.get_by_role('button', name=selected_label, exact=True).first.click()
+        target.click()
         ready(page)
         assert parameters(page)['entity'] == clicked_entity
         expect(page.locator('#entity-search')).to_have_value('')
         ok('keyboard and pointer selection on real map features open existing entities and clear incompatible filters')
 
         page.locator('#reset-map').click()
-        groups = page.locator('#map-viewport [data-entity-ids][role="button"], #map-viewport [data-members][role="button"]')
+        groups = page.locator('#map-viewport #prosperity-plan-targets [data-target-id][role="button"]')
         shared_index = groups.evaluate_all('''nodes => nodes.findIndex(n => {
             const ids=(n.getAttribute('data-entity-ids')||'').split(/[ ,]+/).filter(Boolean);
             const members=JSON.parse(n.getAttribute('data-members')||'[]');
@@ -346,6 +345,12 @@ try:
         expect(page.locator('#text-decisions')).not_to_contain_text('small.inline-note')
         assert any(d['id']=='TXT08' for d in review_decisions)
         expect(page.locator('[data-text-decision="TXT08"]')).to_be_visible()
+        terrain_constraints = data['terrain_constraints']
+        assert terrain_constraints, 'Reviewed historical terrain clues must remain accessible'
+        page.locator('#terrain-review > summary').click()
+        expect(page.locator('[data-terrain-constraint]')).to_have_count(len(terrain_constraints))
+        terrain_url = urlparse(page.locator('[data-terrain-constraint] a').first.get_attribute('href'))
+        assert terrain_url.scheme in ('https','http') and terrain_url.netloc
         no_overflow(page)
         ok('the current SVG, source catalog, global text-review decisions and downloadable artifacts remain accessible')
 
