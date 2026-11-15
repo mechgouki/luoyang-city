@@ -1,0 +1,395 @@
+﻿2026-11-15T15:19:19.6292004Z Current runner version: '2.338.2'
+2026-11-15T15:19:19.6321119Z ##[group]Runner Image Provisioner
+2026-11-15T15:19:19.6322074Z Hosted Compute Agent
+2026-11-15T15:19:19.6322752Z Version: 20261103.629
+2026-11-15T15:19:19.6323466Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-15T15:19:19.6324228Z Build Date: 2026-11-03T17:26:59Z
+2026-11-15T15:19:19.6325358Z Worker ID: {fc7ad692-bd3b-4b3d-b676-fc1bd903a206}
+2026-11-15T15:19:19.6326135Z Region: centralus
+2026-11-15T15:19:19.6326736Z Cloud: Azure
+2026-11-15T15:19:19.6327257Z ##[endgroup]
+2026-11-15T15:19:19.6328951Z ##[group]Operating System
+2026-11-15T15:19:19.6329682Z Ubuntu
+2026-11-15T15:19:19.6330203Z 24.04.5
+2026-11-15T15:19:19.6330966Z LTS
+2026-11-15T15:19:19.6331617Z ##[endgroup]
+2026-11-15T15:19:19.6332189Z ##[group]Runner Image
+2026-11-15T15:19:19.6332833Z Image: ubuntu-24.04
+2026-11-15T15:19:19.6333497Z Version: 20261111.370.1
+2026-11-15T15:19:19.6334934Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261111.370/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-15T15:19:19.6336663Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261111.370
+2026-11-15T15:19:19.6337690Z ##[endgroup]
+2026-11-15T15:19:19.6338862Z ##[group]GITHUB_TOKEN Permissions
+2026-11-15T15:19:19.6341673Z Contents: read
+2026-11-15T15:19:19.6342291Z Metadata: read
+2026-11-15T15:19:19.6342974Z ##[endgroup]
+2026-11-15T15:19:19.6345097Z Secret source: Actions
+2026-11-15T15:19:19.6346036Z Cache mode: write
+2026-11-15T15:19:19.6347210Z Prepare workflow directory
+2026-11-15T15:19:19.6647003Z Prepare all required actions
+2026-11-15T15:19:19.6696252Z Getting action download info
+2026-11-15T15:19:19.8855230Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-15T15:19:19.9738323Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-15T15:19:20.0682851Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-15T15:19:20.2933026Z Complete job name: verify-live
+2026-11-15T15:19:20.3610102Z ##[group]Run actions/checkout@v4
+2026-11-15T15:19:20.3611196Z with:
+2026-11-15T15:19:20.3611647Z   repository: mechgouki/luoyang-city
+2026-11-15T15:19:20.3614776Z   token: ***
+2026-11-15T15:19:20.3615195Z   ssh-strict: true
+2026-11-15T15:19:20.3615609Z   ssh-user: git
+2026-11-15T15:19:20.3616060Z   persist-credentials: true
+2026-11-15T15:19:20.3616517Z   clean: true
+2026-11-15T15:19:20.3616953Z   sparse-checkout-cone-mode: true
+2026-11-15T15:19:20.3617463Z   fetch-depth: 1
+2026-11-15T15:19:20.3617874Z   fetch-tags: false
+2026-11-15T15:19:20.3618292Z   show-progress: true
+2026-11-15T15:19:20.3618726Z   lfs: false
+2026-11-15T15:19:20.3619214Z   submodules: false
+2026-11-15T15:19:20.3619665Z   set-safe-directory: true
+2026-11-15T15:19:20.3620141Z   allow-unsafe-pr-checkout: false
+2026-11-15T15:19:20.3620908Z ##[endgroup]
+2026-11-15T15:19:20.6077943Z Syncing repository: mechgouki/luoyang-city
+2026-11-15T15:19:20.6082083Z ##[group]Getting Git version info
+2026-11-15T15:19:20.6083359Z Working directory is '/home/runner/work/luoyang-city/luoyang-city'
+2026-11-15T15:19:20.6084818Z [command]/usr/bin/git version
+2026-11-15T15:19:20.6180166Z git version 2.56.1
+2026-11-15T15:19:20.6203321Z ##[endgroup]
+2026-11-15T15:19:20.6210987Z Temporarily overriding HOME='/home/runner/work/_temp/1c3f2889-4b26-4610-a141-3d2d755f6843' before making global git config changes
+2026-11-15T15:19:20.6212740Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-15T15:19:20.6214954Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luoyang-city/luoyang-city
+2026-11-15T15:19:20.6275289Z Deleting the contents of '/home/runner/work/luoyang-city/luoyang-city'
+2026-11-15T15:19:20.6282225Z ##[group]Initializing the repository
+2026-11-15T15:19:20.6286942Z [command]/usr/bin/git init /home/runner/work/luoyang-city/luoyang-city
+2026-11-15T15:19:20.6377152Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-15T15:19:20.6379928Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-15T15:19:20.6382081Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-15T15:19:20.6383450Z hint: call:
+2026-11-15T15:19:20.6384396Z hint:
+2026-11-15T15:19:20.6386175Z hint: 	git config --global init.defaultBranch <name>
+2026-11-15T15:19:20.6387632Z hint:
+2026-11-15T15:19:20.6388763Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-15T15:19:20.6390147Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-15T15:19:20.6391872Z hint:
+2026-11-15T15:19:20.6392666Z hint: 	git branch -m <name>
+2026-11-15T15:19:20.6394789Z hint:
+2026-11-15T15:19:20.6395925Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-15T15:19:20.6397872Z Initialized empty Git repository in /home/runner/work/luoyang-city/luoyang-city/.git/
+2026-11-15T15:19:20.6402104Z [command]/usr/bin/git remote add origin https://github.com/mechgouki/luoyang-city
+2026-11-15T15:19:20.6442382Z ##[endgroup]
+2026-11-15T15:19:20.6444312Z ##[group]Disabling automatic garbage collection
+2026-11-15T15:19:20.6463262Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-15T15:19:20.6494274Z ##[endgroup]
+2026-11-15T15:19:20.6495546Z ##[group]Setting up auth
+2026-11-15T15:19:20.6500125Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-15T15:19:20.6534415Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-15T15:19:20.6859618Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-15T15:19:20.6895411Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-15T15:19:20.7107193Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T15:19:20.7141501Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-15T15:19:20.7316058Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-15T15:19:20.7356381Z ##[endgroup]
+2026-11-15T15:19:20.7357642Z ##[group]Fetching the repository
+2026-11-15T15:19:20.7367467Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bd87e471d292a76efbf6bde74c4b77e8f3040c68:refs/remotes/origin/main
+2026-11-15T15:19:21.6409601Z From https://github.com/mechgouki/luoyang-city
+2026-11-15T15:19:21.6413368Z  * [new ref]         bd87e471d292a76efbf6bde74c4b77e8f3040c68 -> origin/main
+2026-11-15T15:19:21.6418043Z ##[endgroup]
+2026-11-15T15:19:21.6420086Z ##[group]Determining the checkout info
+2026-11-15T15:19:21.6422393Z ##[endgroup]
+2026-11-15T15:19:21.6424309Z [command]/usr/bin/git sparse-checkout disable
+2026-11-15T15:19:21.6482823Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-15T15:19:21.6514984Z ##[group]Checking out the ref
+2026-11-15T15:19:21.6517542Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-15T15:19:21.7143289Z Switched to a new branch 'main'
+2026-11-15T15:19:21.7145881Z branch 'main' set up to track 'origin/main'.
+2026-11-15T15:19:21.7155530Z ##[endgroup]
+2026-11-15T15:19:21.7199396Z [command]/usr/bin/git log -1 --format=%H
+2026-11-15T15:19:21.7223296Z bd87e471d292a76efbf6bde74c4b77e8f3040c68
+2026-11-15T15:19:21.7577592Z ##[group]Run actions/setup-python@v5
+2026-11-15T15:19:21.7578759Z with:
+2026-11-15T15:19:21.7579591Z   python-version: 3.11
+2026-11-15T15:19:21.7580703Z   check-latest: false
+2026-11-15T15:19:21.7588975Z   token: ***
+2026-11-15T15:19:21.7590186Z   update-environment: true
+2026-11-15T15:19:21.7591316Z   allow-prereleases: false
+2026-11-15T15:19:21.7592702Z   freethreaded: false
+2026-11-15T15:19:21.7593665Z ##[endgroup]
+2026-11-15T15:19:21.8809046Z ##[group]Installed versions
+2026-11-15T15:19:21.8884132Z (node:2114) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-15T15:19:21.8887365Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-15T15:19:21.8889549Z Successfully set up CPython (3.11.18)
+2026-11-15T15:19:21.8891983Z ##[endgroup]
+2026-11-15T15:19:21.9072112Z ##[group]Run python tools/verify_live.py --base-url "$SITE_URL" --commit "$GITHUB_SHA"
+2026-11-15T15:19:21.9074459Z [36;1mpython tools/verify_live.py --base-url "$SITE_URL" --commit "$GITHUB_SHA"[0m
+2026-11-15T15:19:21.9103769Z shell: /usr/bin/bash -e {0}
+2026-11-15T15:19:21.9104752Z env:
+2026-11-15T15:19:21.9105829Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:19:21.9107482Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-15T15:19:21.9109088Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:19:21.9110826Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:19:21.9112370Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:19:21.9113836Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-15T15:19:21.9115283Z   SITE_URL: https://mechgouki.github.io/luoyang-city/
+2026-11-15T15:19:21.9116450Z ##[endgroup]
+2026-11-15T15:20:22.1811816Z LIVE PASS: 448 public assets verified, including B1-B8, H1 and prosperity P1-P2; HTTP retries: 1
+2026-11-15T15:20:22.2196654Z ##[group]Run docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-15T15:20:22.2197180Z [36;1mdocker pull mcr.microsoft.com/playwright/python:v1.57.0-noble[0m
+2026-11-15T15:20:22.2197638Z [36;1mmkdir -p artifacts[0m
+2026-11-15T15:20:22.2198187Z [36;1mdocker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json[0m
+2026-11-15T15:20:22.2212124Z shell: /usr/bin/bash -e {0}
+2026-11-15T15:20:22.2212466Z env:
+2026-11-15T15:20:22.2212787Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:20:22.2213196Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-15T15:20:22.2213615Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:20:22.2214020Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:20:22.2214401Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:20:22.2214880Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-15T15:20:22.2215211Z ##[endgroup]
+2026-11-15T15:20:22.5072718Z v1.57.0-noble: Pulling from playwright/python
+2026-11-15T15:20:22.5511323Z 02de03a7213b: Pulling fs layer
+2026-11-15T15:20:22.5511825Z 7b5874a20bcf: Pulling fs layer
+2026-11-15T15:20:22.5512220Z 4b7186aead47: Pulling fs layer
+2026-11-15T15:20:22.5512643Z b7c8fb4e771e: Pulling fs layer
+2026-11-15T15:20:22.5513002Z b7c8fb4e771e: Waiting
+2026-11-15T15:20:22.7354249Z 02de03a7213b: Verifying Checksum
+2026-11-15T15:20:22.7355095Z 02de03a7213b: Download complete
+2026-11-15T15:20:22.8155599Z 7b5874a20bcf: Verifying Checksum
+2026-11-15T15:20:22.8156611Z 7b5874a20bcf: Download complete
+2026-11-15T15:20:22.9848748Z 4b7186aead47: Verifying Checksum
+2026-11-15T15:20:22.9849474Z 4b7186aead47: Download complete
+2026-11-15T15:20:23.6077055Z 02de03a7213b: Pull complete
+2026-11-15T15:20:26.0576660Z b7c8fb4e771e: Verifying Checksum
+2026-11-15T15:20:26.0577671Z b7c8fb4e771e: Download complete
+2026-11-15T15:20:30.8755777Z 7b5874a20bcf: Pull complete
+2026-11-15T15:20:31.6758583Z 4b7186aead47: Pull complete
+2026-11-15T15:20:50.3045268Z b7c8fb4e771e: Pull complete
+2026-11-15T15:20:50.3090037Z Digest: sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1
+2026-11-15T15:20:50.3112607Z Status: Downloaded newer image for mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-15T15:20:50.3123957Z mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-15T15:20:50.3558368Z ##[group]Run docker run --rm --init --ipc=host \
+2026-11-15T15:20:50.3558857Z [36;1mdocker run --rm --init --ipc=host \[0m
+2026-11-15T15:20:50.3559283Z [36;1m  --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \[0m
+2026-11-15T15:20:50.3559682Z [36;1m  --workdir /work --env SITE_URL \[0m
+2026-11-15T15:20:50.3560050Z [36;1m  mcr.microsoft.com/playwright/python:v1.57.0-noble \[0m
+2026-11-15T15:20:50.3560388Z [36;1m  bash -euo pipefail -c '[0m
+2026-11-15T15:20:50.3561339Z [36;1m    python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0[0m
+2026-11-15T15:20:50.3561950Z [36;1m    python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser[0m
+2026-11-15T15:20:50.3562573Z [36;1m    python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser[0m
+2026-11-15T15:20:50.3563141Z [36;1m    python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser[0m
+2026-11-15T15:20:50.3563847Z [36;1m    python tests/browser_v28.py --base-url "$SITE_URL" --output artifacts/live-v28-browser[0m
+2026-11-15T15:20:50.3564399Z [36;1m    python tests/browser_v29.py --base-url "$SITE_URL" --output artifacts/live-v29-browser[0m
+2026-11-15T15:20:50.3564913Z [36;1m    python tests/browser_v30.py --base-url "$SITE_URL" --output artifacts/live-v30-browser[0m
+2026-11-15T15:20:50.3565486Z [36;1m    python tests/browser_dual.py --base-url "$SITE_URL" --output artifacts/live-dual-browser[0m
+2026-11-15T15:20:50.3566053Z [36;1m    python tests/browser_west_b3.py --base-url "$SITE_URL" --output artifacts/live-west-b3-browser[0m
+2026-11-15T15:20:50.3566831Z [36;1m    python tests/browser_north_b4.py --base-url "$SITE_URL" --output artifacts/live-north-b4-browser[0m
+2026-11-15T15:20:50.3567460Z [36;1m    python tests/browser_west_roads_b5.py --base-url "$SITE_URL" --output artifacts/live-west-roads-b5-browser[0m
+2026-11-15T15:20:50.3568105Z [36;1m    python tests/browser_southeast_b6.py --base-url "$SITE_URL" --output artifacts/live-southeast-b6-browser[0m
+2026-11-15T15:20:50.3568756Z [36;1m    python tests/browser_luonan_b7.py --base-url "$SITE_URL" --output artifacts/live-luonan-b7-browser[0m
+2026-11-15T15:20:50.3569325Z [36;1m    python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser[0m
+2026-11-15T15:20:50.3569969Z [36;1m    python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser[0m
+2026-11-15T15:20:50.3570818Z [36;1m    python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser[0m
+2026-11-15T15:20:50.3571474Z [36;1m    python tests/browser_prosperity_core_v2.py --base-url "$SITE_URL" --output artifacts/live-prosperity-core-v2-browser[0m
+2026-11-15T15:20:50.3572009Z [36;1m  '[0m
+2026-11-15T15:20:50.3589951Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-15T15:20:50.3590341Z env:
+2026-11-15T15:20:50.3590827Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:20:50.3591375Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-15T15:20:50.3591811Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:20:50.3592224Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:20:50.3592607Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:20:50.3592984Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-15T15:20:50.3593445Z   SITE_URL: https://mechgouki.github.io/luoyang-city/
+2026-11-15T15:20:50.3593792Z ##[endgroup]
+2026-11-15T15:20:50.9046926Z Collecting playwright==1.57.0
+2026-11-15T15:20:50.9874486Z   Downloading playwright-1.57.0-py3-none-manylinux1_x86_64.whl.metadata (3.5 kB)
+2026-11-15T15:20:51.0119372Z Collecting pyee<14,>=13 (from playwright==1.57.0)
+2026-11-15T15:20:51.0220812Z   Downloading pyee-13.0.1-py3-none-any.whl.metadata (3.0 kB)
+2026-11-15T15:20:51.1805131Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright==1.57.0)
+2026-11-15T15:20:51.1914970Z   Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-11-15T15:20:51.2164629Z Collecting typing-extensions (from pyee<14,>=13->playwright==1.57.0)
+2026-11-15T15:20:51.2264687Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-15T15:20:51.2421232Z Downloading playwright-1.57.0-py3-none-manylinux1_x86_64.whl (46.0 MB)
+2026-11-15T15:20:52.1108826Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 MB 55.0 MB/s  0:00:00
+2026-11-15T15:20:52.1215299Z Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)
+2026-11-15T15:20:52.1266424Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 621.4/621.4 kB 106.9 MB/s  0:00:00
+2026-11-15T15:20:52.1367085Z Downloading pyee-13.0.1-py3-none-any.whl (15 kB)
+2026-11-15T15:20:52.1492289Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-15T15:20:52.2021420Z Installing collected packages: typing-extensions, greenlet, pyee, playwright
+2026-11-15T15:20:52.9745189Z 
+2026-11-15T15:20:52.9756262Z Successfully installed greenlet-3.5.6 playwright-1.57.0 pyee-13.0.1 typing-extensions-4.16.0
+2026-11-15T15:20:52.9759532Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-11-15T15:20:55.0994611Z PASS project subpath loads all baseline records and marker overlay
+2026-11-15T15:20:56.6023327Z PASS all 11 region centers lie inside the selected camera
+2026-11-15T15:20:56.7886073Z PASS ordinary physical marker click opens Yongning
+2026-11-15T15:20:57.9630951Z PASS copied entity URL opens the same place in a fresh page
+2026-11-15T15:20:58.0921036Z PASS Yongning to Taiwei relationship navigation
+2026-11-15T15:20:58.7157849Z PASS C01 preserves legacy plate and links current stable sheet IDs
+2026-11-15T15:20:58.7560746Z PASS 30 questions are classified; clarified status is not an unresolved count
+2026-11-15T15:20:59.5164936Z PASS evidence deep link restores panel B and E07 after full reload
+2026-11-15T15:21:00.7579173Z PASS all three diagrams render with evidence cards
+2026-11-15T15:21:01.0891695Z PASS site search works
+2026-11-15T15:21:01.1260519Z PASS unlocated record does not acquire a map point
+2026-11-15T15:21:01.1711040Z PASS 37 original atlas sheets remain available
+2026-11-15T15:21:01.3501293Z PASS overview/detail label switch does not mutate source SVG
+2026-11-15T15:21:04.9584384Z PASS mobile filters, region selection and evidence drawer
+2026-11-15T15:21:05.2490713Z PASS mobile research layout has no page overflow
+2026-11-15T15:21:05.2491578Z PASS no browser runtime errors
+2026-11-15T15:21:06.7158817Z PASS s011 provides two feasible sides for the same premises
+2026-11-15T15:21:07.5900905Z PASS candidate deep link restores the east witness after full reload
+2026-11-15T15:21:07.7526151Z PASS candidate point click explains both active and disabled premises
+2026-11-15T15:21:08.5648731Z PASS enabling west-side inheritance removes the incompatible east witness
+2026-11-15T15:21:08.7150444Z PASS removing emendation alone retains alternative deduction
+2026-11-15T15:21:08.8466402Z PASS removing both supporting premises exposes indeterminacy
+2026-11-15T15:21:08.8683889Z PASS same identity-time-reference model exposes conflict cores
+2026-11-15T15:21:09.0853248Z PASS relaxing each conflict premise restores consistency without asserting historical migration
+2026-11-15T15:21:10.6783592Z PASS atomic assumptions link to underlying v2.5 evidence
+2026-11-15T15:21:10.9104172Z PASS 482 lossless rows and the broken pre-existing reference remain reviewable
+2026-11-15T15:21:10.9368282Z PASS all 16 scenario results are visible
+2026-11-15T15:21:11.0051539Z PASS source ablations and identity comparison do not fabricate new geographic layouts
+2026-11-15T15:21:11.2446309Z PASS baseline map links to the new model without changing entity IDs
+2026-11-15T15:21:12.2996148Z PASS all 13 generated SVG candidates load
+2026-11-15T15:21:13.4285223Z PASS mobile candidate switching stays within page width
+2026-11-15T15:21:13.6402082Z PASS mobile relation review has contained table scrolling
+2026-11-15T15:21:13.6402906Z PASS no runtime errors in desktop or mobile
+2026-11-15T15:21:15.1017225Z PASS new network entry loads all queries and four explicit conditions
+2026-11-15T15:21:15.2439309Z PASS cross-source east path needs J1
+2026-11-15T15:21:15.9645038Z PASS join settings survive a complete reload
+2026-11-15T15:21:16.0931482Z PASS southern canal path changes only with J2
+2026-11-15T15:21:16.2501694Z PASS bridge identity and alignment never become flow
+2026-11-15T15:21:16.3759743Z PASS historical overflow is conditional rather than default permanent flow
+2026-11-15T15:21:16.4029305Z PASS source filtering removes its text and dependent joins
+2026-11-15T15:21:16.4741919Z PASS path certificate shows actual selected edges and premises
+2026-11-15T15:21:17.4964190Z PASS all four typed network diagrams render
+2026-11-15T15:21:17.5386278Z PASS evidence deep link preserves source wording and selection
+2026-11-15T15:21:17.5708758Z PASS 527 bridge event does not shift to Yong bridge or to 534 tower fire
+2026-11-15T15:21:17.8267068Z PASS construction interval does not generate completion or permanent construction status
+2026-11-15T15:21:17.8656595Z PASS 547 preserves undated columns, unknown later condition and aggregate scope
+2026-11-15T15:21:18.1001061Z PASS a bridge without a sampled event does not inherit another bridge damage
+2026-11-15T15:21:18.2042754Z PASS event coverage audit retains every baseline object
+2026-11-15T15:21:18.5964149Z PASS baseline entity links to its scoped event view
+2026-11-15T15:21:18.8817431Z PASS standalone reports and data exports are public
+2026-11-15T15:21:20.2190758Z PASS mobile controls, tables and event cards remain within viewport
+2026-11-15T15:21:20.2191437Z PASS no desktop or mobile runtime errors
+2026-11-15T15:21:21.8261242Z PASS root homepage visibly shows current integrated release, not v2.4 title
+2026-11-15T15:21:21.8350923Z PASS 35 research overlays and 179 original click targets share the default map
+2026-11-15T15:21:21.9232966Z PASS actual release metadata matches deployed build commit
+2026-11-15T15:21:23.1205384Z PASS baseline and research layers genuinely change the displayed map
+2026-11-15T15:21:23.3073005Z PASS event layer marks only four existing anchors; unmapped movable objects get no invented point
+2026-11-15T15:21:23.4110810Z PASS 547 entity reading retains scoped past events without asserting permanent destruction
+2026-11-15T15:21:23.9638845Z PASS real marker click opens integrated evidence and model entry
+2026-11-15T15:21:25.5497360Z PASS separate release URL restores layer and year on reload
+2026-11-15T15:21:25.5557378Z PASS every executing script and stylesheet uses content-addressed URLs
+2026-11-15T15:21:26.4673971Z PASS new entry ignores simulated stale unversioned v2.4 JS, CSS, JSON and map cache
+2026-11-15T15:21:26.5957465Z PASS different release commit produces an explicit update path
+2026-11-15T15:21:26.7236226Z PASS failed online check never claims verified freshness
+2026-11-15T15:21:26.9474611Z PASS new map download, release report and coverage data are publicly accessible
+2026-11-15T15:21:28.7094562Z PASS mobile prior-release page retains release and working event-layer controls without overflow
+2026-11-15T15:21:28.7095177Z PASS no runtime errors in normal and stale-cache browser contexts
+2026-11-15T15:21:30.2962027Z PASS default homepage visibly links the new temporal comparison
+2026-11-15T15:21:30.3916186Z PASS current release and build manifest agree
+2026-11-15T15:21:30.6187746Z PASS twelve dossiers share eleven pre-existing independent anchors
+2026-11-15T15:21:30.7251107Z PASS zoom synchronizes both reference views
+2026-11-15T15:21:30.8890845Z PASS drag synchronizes both reference views
+2026-11-15T15:21:31.0967236Z PASS physical existing map anchor opens the matching dossier
+2026-11-15T15:21:31.2082252Z PASS 534 tower fire does not become a 547 whole-temple state
+2026-11-15T15:21:31.5938129Z PASS group-only inner Jianzhong remains unplaced and preserves competing dates
+2026-11-15T15:21:31.6425655Z PASS alternative chronology is not flattened to a continuous interval
+2026-11-15T15:21:31.7632541Z PASS eastern Jianzhong remains a separate entity with an open time bound
+2026-11-15T15:21:32.0659342Z PASS explicit 533 tower completion is not projected backward into the prosperous layer
+2026-11-15T15:21:32.1603971Z PASS Jingming construction start and inscription commission remain distinct
+2026-11-15T15:21:34.0689071Z PASS deep-link reload preserves site, year and activity-versus-building distinction
+2026-11-15T15:21:34.1584649Z PASS portable stones use a related place, not an invented object coordinate
+2026-11-15T15:21:35.3148681Z PASS every dossier maintains the same reference and two matching viewports
+2026-11-15T15:21:36.4315128Z PASS main map inspector links directly into new research
+2026-11-15T15:21:36.9262611Z PASS new downloads exist and executing dependencies stay fingerprinted
+2026-11-15T15:21:38.5621957Z PASS mobile dossier controls, unknown placement and side-by-side reference stack without overflow
+2026-11-15T15:21:38.5622909Z PASS no runtime errors in desktop or mobile
+2026-11-15T15:21:40.2979798Z PASS default website visibly shows current terrain release and real preview
+2026-11-15T15:21:40.7394282Z PASS real terrain entry loads under the repository subpath
+2026-11-15T15:21:40.7424468Z PASS real raster, not synthetic fixture or empty placeholder
+2026-11-15T15:21:40.9919115Z PASS elevation, hillshade, raw and smoothed slopes switch actual images
+2026-11-15T15:21:41.0697588Z PASS contours and archival sheet seam are independent overlays
+2026-11-15T15:21:41.1506494Z PASS terrain camera zoom and reset
+2026-11-15T15:21:41.1713611Z PASS physical map click reads a labelled coarse modern-surface sample
+2026-11-15T15:21:41.8385487Z PASS terrain layer and contour deep link restore after full reload
+2026-11-15T15:21:41.8987527Z PASS archival maps expose edition, compilation, printing and unresolved datum
+2026-11-15T15:21:42.2536472Z PASS historical network remains textual, filtered and explicitly unregistered
+2026-11-15T15:22:13.4030320Z Traceback (most recent call last):
+2026-11-15T15:22:13.4039986Z   File "/work/tests/browser_v30.py", line 38, in <module>
+2026-11-15T15:22:13.4040895Z     assert ctx.request.get(base+path).status==200,path
+2026-11-15T15:22:13.4041394Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-15T15:22:13.4041970Z   File "/usr/local/lib/python3.12/dist-packages/playwright/sync_api/_generated.py", line 18551, in get
+2026-11-15T15:22:13.4046165Z     self._sync(
+2026-11-15T15:22:13.4048146Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+2026-11-15T15:22:13.4049135Z     return task.result()
+2026-11-15T15:22:13.4049624Z            ^^^^^^^^^^^^^
+2026-11-15T15:22:13.4050282Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_fetch.py", line 193, in get
+2026-11-15T15:22:13.4051083Z     return await self.fetch(
+2026-11-15T15:22:13.4051558Z            ^^^^^^^^^^^^^^^^^
+2026-11-15T15:22:13.4052301Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_fetch.py", line 319, in fetch
+2026-11-15T15:22:13.4052890Z     return await self._inner_fetch(
+2026-11-15T15:22:13.4053318Z            ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-15T15:22:13.4054298Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_fetch.py", line 410, in _inner_fetch
+2026-11-15T15:22:13.4055405Z     response = await self._channel.send(
+2026-11-15T15:22:13.4056006Z                ^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-15T15:22:13.4057009Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_connection.py", line 69, in send
+2026-11-15T15:22:13.4058437Z     return await self._connection.wrap_api_call(
+2026-11-15T15:22:13.4059268Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-15T15:22:13.4060436Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+2026-11-15T15:22:13.4062011Z     raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+2026-11-15T15:22:13.4063223Z playwright._impl._errors.TimeoutError: APIRequestContext.get: Timeout 30000ms exceeded.
+2026-11-15T15:22:13.4064156Z Call log:
+2026-11-15T15:22:13.4065386Z   - → GET https://mechgouki.github.io/luoyang-city/terrain/v3.0/ams-ni49-8.jpg
+2026-11-15T15:22:13.4066820Z     - user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36
+2026-11-15T15:22:13.4067935Z     - accept: */*
+2026-11-15T15:22:13.4068435Z     - accept-encoding: gzip,deflate,br
+2026-11-15T15:22:13.4068907Z 
+2026-11-15T15:22:13.7218387Z ##[error]Process completed with exit code 1.
+2026-11-15T15:22:13.7312639Z ##[group]Run actions/upload-artifact@v4
+2026-11-15T15:22:13.7312981Z with:
+2026-11-15T15:22:13.7313277Z   name: live-acceptance-evidence
+2026-11-15T15:22:13.7313573Z   path: artifacts
+2026-11-15T15:22:13.7313818Z   retention-days: 30
+2026-11-15T15:22:13.7314148Z   if-no-files-found: warn
+2026-11-15T15:22:13.7314439Z   compression-level: 6
+2026-11-15T15:22:13.7314712Z   overwrite: false
+2026-11-15T15:22:13.7315010Z   include-hidden-files: false
+2026-11-15T15:22:13.7315292Z env:
+2026-11-15T15:22:13.7315662Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:22:13.7316106Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-15T15:22:13.7316539Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:22:13.7316950Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:22:13.7317351Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-15T15:22:13.7317900Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-15T15:22:13.7318256Z ##[endgroup]
+2026-11-15T15:22:13.8803739Z (node:2844) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-15T15:22:13.8804864Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-15T15:22:13.8907434Z With the provided path, there will be 32 files uploaded
+2026-11-15T15:22:13.8911858Z Artifact name is valid!
+2026-11-15T15:22:13.8912429Z Root directory input is valid!
+2026-11-15T15:22:14.1861846Z Beginning upload of artifact content to blob storage
+2026-11-15T15:22:14.5007304Z (node:2844) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-15T15:22:14.9755957Z Uploaded bytes 8388608
+2026-11-15T15:22:15.1472664Z Uploaded bytes 14854661
+2026-11-15T15:22:15.1896282Z Finished uploading artifact content to blob storage!
+2026-11-15T15:22:15.1897232Z SHA256 digest of uploaded artifact zip is dae725edaacef3c83a716d076fd2e1a0954d65e4143f7a5ed4a8c96209b822c9
+2026-11-15T15:22:15.1897947Z Finalizing artifact upload
+2026-11-15T15:22:15.5439284Z Artifact live-acceptance-evidence.zip successfully finalized. Artifact ID 14167906810
+2026-11-15T15:22:15.5440238Z Artifact live-acceptance-evidence has been successfully uploaded! Final size is 14854661 bytes. Artifact ID is 14167906810
+2026-11-15T15:22:15.5447680Z Artifact download URL: https://github.com/mechgouki/luoyang-city/actions/runs/43728787251/artifacts/14167906810
+2026-11-15T15:22:15.5679668Z Post job cleanup.
+2026-11-15T15:22:15.6448588Z [command]/usr/bin/git version
+2026-11-15T15:22:15.6487078Z git version 2.56.1
+2026-11-15T15:22:15.6517425Z Temporarily overriding HOME='/home/runner/work/_temp/4a890434-0a3f-49e9-bf70-9d3ab7785caf' before making global git config changes
+2026-11-15T15:22:15.6519154Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-15T15:22:15.6521720Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luoyang-city/luoyang-city
+2026-11-15T15:22:15.6561678Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-15T15:22:15.6595350Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-15T15:22:15.6812872Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-15T15:22:15.6840497Z http.https://github.com/.extraheader
+2026-11-15T15:22:15.6850511Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-15T15:22:15.6891808Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-15T15:22:15.7106388Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T15:22:15.7154599Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-15T15:22:15.7514699Z Cleaning up orphan processes
+2026-11-15T15:22:15.7839529Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

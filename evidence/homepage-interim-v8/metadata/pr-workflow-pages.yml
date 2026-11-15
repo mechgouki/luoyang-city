@@ -1,0 +1,232 @@
+name: Validate and deploy Luoyang Atlas
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: luoyang-pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned terrain and document dependencies
+        run: python -m pip install numpy==2.2.6 rasterio==1.4.3 scipy==1.15.3 pyproj==3.7.2 pillow==11.2.1 contourpy==1.3.2 cairosvg==2.8.2 pypdf==5.9.0
+      - name: Install pinned rendering font outside the published directory
+        timeout-minutes: 3
+        shell: bash
+        run: |
+          mkdir -p "$HOME/.local/share/fonts" artifacts
+          FONT="$HOME/.local/share/fonts/NotoSansCJKsc-Regular.otf"
+          curl --fail --location --retry 2 --max-time 90 'https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf' -o "$FONT"
+          test "$(git hash-object "$FONT")" = dc15562470b4f842321894787a0d066879ccff8b
+          fc-cache -f
+          fc-match 'Noto Sans CJK SC' > artifacts/pdf-font-resolution.txt
+      - name: Assemble and verify unchanged baseline PDF
+        run: python tools/assemble_pdf.py
+      - name: Check baseline data and JavaScript
+        run: |
+          python tools/validate_site.py
+          node --check app.js
+          node --test tests/map-interactions.test.cjs
+          node --check research.js
+          node --check models-v26.js
+          node --check models-v26-click.js
+          node --check networks-v27.js
+          node --check portal-v28.js
+          node --check chronology-v29.js
+          node --check web/dual-main.js
+          node --check web/north-b4.js
+          node --check web/north-main-b4.js
+          node --check web/historical-frame-b4.js
+          node --check web/west-roads-b5.js
+          node --check web/west-roads-main-b5.js
+          node --check web/historical-datum-b5.js
+          node --check web/southeast-b6.js
+          node --check web/southeast-main-b6.js
+          node --check web/ground-review-b6.js
+          node --check web/luonan-b7.js
+          node --check web/luonan-main-b7.js
+          node --check web/source-continuity-b7.js
+          node --check web/city-review-b8.js
+          node --check web/city-main-b8.js
+          node --check web/homepage-v1.js
+          node --check web/prosperity-v1.js
+          node --check web/prosperity-core-v2.js
+      - name: Check all spatial, temporal, terrain and dual-map semantics
+        shell: bash
+        run: |
+          mkdir -p artifacts
+          python -m unittest discover -s tests -p test_v26.py -v 2>&1 | tee artifacts/v26-semantic-tests.txt
+          python -m unittest discover -s tests -p test_v27.py -v 2>&1 | tee artifacts/v27-semantic-tests.txt
+          python -m unittest discover -s tests -p test_v29.py -v 2>&1 | tee artifacts/v29-semantic-tests.txt
+          python -m unittest discover -s tests -p test_v30.py -v 2>&1 | tee artifacts/v30-semantic-tests.txt
+          python -m unittest discover -s tests -p test_dual.py -v 2>&1 | tee artifacts/dual-semantic-tests.txt
+          python -m unittest discover -s tests -p test_west_b3.py -v 2>&1 | tee artifacts/west-b3-semantic-tests.txt
+          python -m unittest discover -s tests -p test_north_b4.py -v 2>&1 | tee artifacts/north-b4-semantic-tests.txt
+          python -m unittest discover -s tests -p test_historical_frame_b4.py -v 2>&1 | tee artifacts/historical-frame-b4-tests.txt
+          python -m unittest discover -s tests -p test_west_roads_b5.py -v 2>&1 | tee artifacts/west-roads-b5-tests.txt
+          python -m unittest discover -s tests -p test_historical_datum_b5.py -v 2>&1 | tee artifacts/historical-datum-b5-tests.txt
+          python -m unittest discover -s tests -p test_live_http.py -v 2>&1 | tee artifacts/live-http-tests.txt
+          python -m unittest discover -s tests -p test_ground_review_b6.py -v 2>&1 | tee artifacts/ground-review-b6-tests.txt
+          python -m unittest discover -s tests -p test_southeast_b6.py -v 2>&1 | tee artifacts/southeast-b6-tests.txt
+          python -m unittest discover -s tests -p test_source_continuity_b7.py -v 2>&1 | tee artifacts/source-continuity-b7-tests.txt
+          python -m unittest discover -s tests -p test_luonan_b7.py -v 2>&1 | tee artifacts/luonan-b7-tests.txt
+          python -m unittest discover -s tests -p test_city_audit_b8.py -v 2>&1 | tee artifacts/city-audit-b8-tests.txt
+          python -m unittest discover -s tests -p test_source_access_b8.py -v 2>&1 | tee artifacts/source-access-b8-tests.txt
+          python -m unittest discover -s tests -p test_city_review_b8.py -v 2>&1 | tee artifacts/city-review-b8-tests.txt
+      - name: Build preserved research, terrain, B1-B8 and historical map review
+        run: |
+          python tools/build_site.py
+          python tools/research_v25.py
+          python tools/milestone_v26.py
+          python tools/link_model_points_v26.py
+          python tools/network_v27.py
+          python tools/portal_v28.py
+          python tools/chronology_v29.py
+          python tools/terrain_v30.py
+          python tools/dual_release.py
+          python tools/west_b3.py
+          python tools/historical_frame_b4.py
+          python tools/north_b4.py
+          python tools/historical_datum_b5.py
+          python tools/west_roads_b5.py
+          python tools/ground_review_b6.py
+          python tools/southeast_b6.py
+          python tools/source_continuity_b7.py
+          python tools/luonan_b7.py
+          python tools/city_review_b8.py
+          python tools/homepage_v1.py
+      - name: Build prosperity documentary maps and source-geographic layout
+        run: |
+          python tools/prosperity_v1.py
+          python tools/prosperity_core_v2.py
+      - name: Check the built prosperity maps and their evidence
+        shell: bash
+        run: python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
+      - name: Fetch pinned browser runtime with preinstalled dependencies
+        timeout-minutes: 6
+        run: |
+          docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
+          docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
+      - name: Exercise all earlier and dual-map interactions
+        timeout-minutes: 8
+        shell: bash
+        run: |
+          docker run --rm --init --ipc=host \
+            --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \
+            --workdir /work mcr.microsoft.com/playwright/python:v1.57.0-noble \
+            bash -euo pipefail -c '
+              python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
+              python tests/browser_v25.py
+              python tests/browser_v26.py
+              python tests/browser_v27.py
+              python tests/browser_v28.py
+              python tests/browser_v29.py
+              python tests/browser_v30.py
+              python tests/browser_dual.py
+              python tests/browser_west_b3.py
+              python tests/browser_north_b4.py
+              python tests/browser_west_roads_b5.py
+              python tests/browser_southeast_b6.py
+              python tests/browser_luonan_b7.py
+              python tests/browser_city_b8.py
+              python tests/browser_homepage_v1.py
+              python tests/browser_prosperity_v1.py
+              python tests/browser_prosperity_core_v2.py
+            '
+      - name: Preserve build and browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-build-evidence
+          path: artifacts
+          retention-days: 14
+      - name: Upload verified Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+          retention-days: 7
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Read existing Pages configuration
+        uses: actions/configure-pages@v5
+      - name: Deploy verified website
+        id: deployment
+        uses: actions/deploy-pages@v4
+  verify-live:
+    needs: deploy
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check actual HTTPS resources and hashes
+        env:
+          SITE_URL: ${{ needs.deploy.outputs.page_url }}
+        run: python tools/verify_live.py --base-url "$SITE_URL" --commit "$GITHUB_SHA"
+      - name: Fetch the same pinned browser runtime
+        timeout-minutes: 6
+        run: |
+          docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
+          mkdir -p artifacts
+          docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
+      - name: Exercise all deployed research, terrain and dual-map versions
+        timeout-minutes: 8
+        shell: bash
+        env:
+          SITE_URL: ${{ needs.deploy.outputs.page_url }}
+        run: |
+          docker run --rm --init --ipc=host \
+            --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \
+            --workdir /work --env SITE_URL \
+            mcr.microsoft.com/playwright/python:v1.57.0-noble \
+            bash -euo pipefail -c '
+              python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
+              python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser
+              python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser
+              python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser
+              python tests/browser_v28.py --base-url "$SITE_URL" --output artifacts/live-v28-browser
+              python tests/browser_v29.py --base-url "$SITE_URL" --output artifacts/live-v29-browser
+              python tests/browser_v30.py --base-url "$SITE_URL" --output artifacts/live-v30-browser
+              python tests/browser_dual.py --base-url "$SITE_URL" --output artifacts/live-dual-browser
+              python tests/browser_west_b3.py --base-url "$SITE_URL" --output artifacts/live-west-b3-browser
+              python tests/browser_north_b4.py --base-url "$SITE_URL" --output artifacts/live-north-b4-browser
+              python tests/browser_west_roads_b5.py --base-url "$SITE_URL" --output artifacts/live-west-roads-b5-browser
+              python tests/browser_southeast_b6.py --base-url "$SITE_URL" --output artifacts/live-southeast-b6-browser
+              python tests/browser_luonan_b7.py --base-url "$SITE_URL" --output artifacts/live-luonan-b7-browser
+              python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser
+              python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser
+              python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser
+              python tests/browser_prosperity_core_v2.py --base-url "$SITE_URL" --output artifacts/live-prosperity-core-v2-browser
+            '
+      - name: Preserve live acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-acceptance-evidence
+          path: artifacts
+          retention-days: 30

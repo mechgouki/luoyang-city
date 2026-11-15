@@ -1,0 +1,51 @@
+{
+  "base_url": "https://mechgouki.github.io/luoyang-city/",
+  "checks": [
+    {
+      "name": "default website visibly shows current terrain release and real preview",
+      "status": "passed"
+    },
+    {
+      "name": "real terrain entry loads under the repository subpath",
+      "status": "passed"
+    },
+    {
+      "name": "real raster, not synthetic fixture or empty placeholder",
+      "status": "passed"
+    },
+    {
+      "name": "elevation, hillshade, raw and smoothed slopes switch actual images",
+      "status": "passed"
+    },
+    {
+      "name": "contours and archival sheet seam are independent overlays",
+      "status": "passed"
+    },
+    {
+      "name": "terrain camera zoom and reset",
+      "status": "passed"
+    },
+    {
+      "name": "physical map click reads a labelled coarse modern-surface sample",
+      "status": "passed"
+    },
+    {
+      "name": "terrain layer and contour deep link restore after full reload",
+      "status": "passed"
+    },
+    {
+      "name": "archival maps expose edition, compilation, printing and unresolved datum",
+      "status": "passed"
+    },
+    {
+      "name": "historical network remains textual, filtered and explicitly unregistered",
+      "status": "passed"
+    },
+    {
+      "name": "acceptance",
+      "status": "failed",
+      "error": "APIRequestContext.get: Timeout 30000ms exceeded.\nCall log:\n  - → GET https://mechgouki.github.io/luoyang-city/terrain/v3.0/ams-ni49-8.jpg\n    - user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36\n    - accept: */*\n    - accept-encoding: gzip,deflate,br\n"
+    }
+  ],
+  "runtime_errors": []
+}

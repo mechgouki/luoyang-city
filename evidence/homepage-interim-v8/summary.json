@@ -1,0 +1,885 @@
+{
+  "scope": "Homepage panorama interim v8; retain H1 and P1/P2 research behavior",
+  "image_revision": "panorama-interim-v8",
+  "image_status": "interim",
+  "final_aesthetic_approval": false,
+  "source_commit": "bd87e471d292a76efbf6bde74c4b77e8f3040c68",
+  "source_tree": "457b88f6befc536053a100a73a7b50c52ba3037b",
+  "pr_head": "1baafefc93a29e7d18e43551348de3958fd286ec",
+  "pr_tested_merge": "719a21047955e158c344157ee6faac9d672028f3",
+  "source_trees_identical": true,
+  "workflow_runs": {
+    "pr": {
+      "id": 43728326687,
+      "url": "https://github.com/mechgouki/luoyang-city/actions/runs/43728326687",
+      "conclusion": "success",
+      "attempt": 1
+    },
+    "production": {
+      "id": 43728787251,
+      "url": "https://github.com/mechgouki/luoyang-city/actions/runs/43728787251",
+      "conclusion": "success",
+      "attempt": 2
+    }
+  },
+  "prior_failed_attempts": [
+    {
+      "run_id": 43728787251,
+      "attempt": 1,
+      "conclusion": "failure",
+      "stage": "verify-live",
+      "suite": "tests/browser_v30.py",
+      "failed_check": {
+        "name": "acceptance",
+        "status": "failed",
+        "error": "APIRequestContext.get: Timeout 30000ms exceeded.\nCall log:\n  - → GET https://mechgouki.github.io/luoyang-city/terrain/v3.0/ams-ni49-8.jpg\n    - user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36\n    - accept: */*\n    - accept-encoding: gzip,deflate,br\n"
+      },
+      "url": "https://mechgouki.github.io/luoyang-city/terrain/v3.0/ams-ni49-8.jpg",
+      "original_result": "live-attempt1/live-v30-browser/results.json",
+      "original_log": "metadata/production-attempt1-verify-live-logs.txt",
+      "http_checks_passed": 448,
+      "later_homepage_browser_suite_executed_in_this_attempt": false,
+      "remediation": "Reran only the failed live-verification job on the same production commit; no source changes or test omissions."
+    }
+  ],
+  "semantics": {
+    "pr": {
+      "python_tests": 249,
+      "python_log_files": 19,
+      "node_tests": 5,
+      "node_failed": 0,
+      "logs": [
+        {
+          "path": "pr/city-audit-b8-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "pr/city-review-b8-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "pr/dual-semantic-tests.txt",
+          "tests": 22,
+          "passed": true
+        },
+        {
+          "path": "pr/ground-review-b6-tests.txt",
+          "tests": 6,
+          "passed": true
+        },
+        {
+          "path": "pr/historical-datum-b5-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "pr/historical-frame-b4-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "pr/live-http-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "pr/luonan-b7-tests.txt",
+          "tests": 21,
+          "passed": true
+        },
+        {
+          "path": "pr/north-b4-semantic-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "pr/prosperity-semantic-tests.txt",
+          "tests": 33,
+          "passed": true
+        },
+        {
+          "path": "pr/source-access-b8-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "pr/source-continuity-b7-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "pr/southeast-b6-tests.txt",
+          "tests": 18,
+          "passed": true
+        },
+        {
+          "path": "pr/v26-semantic-tests.txt",
+          "tests": 20,
+          "passed": true
+        },
+        {
+          "path": "pr/v27-semantic-tests.txt",
+          "tests": 25,
+          "passed": true
+        },
+        {
+          "path": "pr/v29-semantic-tests.txt",
+          "tests": 20,
+          "passed": true
+        },
+        {
+          "path": "pr/v30-semantic-tests.txt",
+          "tests": 16,
+          "passed": true
+        },
+        {
+          "path": "pr/west-b3-semantic-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "pr/west-roads-b5-tests.txt",
+          "tests": 8,
+          "passed": true
+        }
+      ]
+    },
+    "production-build": {
+      "python_tests": 249,
+      "python_log_files": 19,
+      "node_tests": 5,
+      "node_failed": 0,
+      "logs": [
+        {
+          "path": "production-build/city-audit-b8-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "production-build/city-review-b8-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "production-build/dual-semantic-tests.txt",
+          "tests": 22,
+          "passed": true
+        },
+        {
+          "path": "production-build/ground-review-b6-tests.txt",
+          "tests": 6,
+          "passed": true
+        },
+        {
+          "path": "production-build/historical-datum-b5-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "production-build/historical-frame-b4-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "production-build/live-http-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "production-build/luonan-b7-tests.txt",
+          "tests": 21,
+          "passed": true
+        },
+        {
+          "path": "production-build/north-b4-semantic-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "production-build/prosperity-semantic-tests.txt",
+          "tests": 33,
+          "passed": true
+        },
+        {
+          "path": "production-build/source-access-b8-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "production-build/source-continuity-b7-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "production-build/southeast-b6-tests.txt",
+          "tests": 18,
+          "passed": true
+        },
+        {
+          "path": "production-build/v26-semantic-tests.txt",
+          "tests": 20,
+          "passed": true
+        },
+        {
+          "path": "production-build/v27-semantic-tests.txt",
+          "tests": 25,
+          "passed": true
+        },
+        {
+          "path": "production-build/v29-semantic-tests.txt",
+          "tests": 20,
+          "passed": true
+        },
+        {
+          "path": "production-build/v30-semantic-tests.txt",
+          "tests": 16,
+          "passed": true
+        },
+        {
+          "path": "production-build/west-b3-semantic-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "production-build/west-roads-b5-tests.txt",
+          "tests": 8,
+          "passed": true
+        }
+      ]
+    }
+  },
+  "browsers": {
+    "pr": {
+      "suite_count": 16,
+      "check_count": 239,
+      "all_passed": true,
+      "runtime_errors": 0,
+      "suites": [
+        {
+          "path": "pr/browser/results.json",
+          "checks": 16,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/city-b8-browser/results.json",
+          "checks": 18,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/dual-browser/results.json",
+          "checks": 19,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/homepage-v1-browser/results.json",
+          "checks": 10,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/luonan-b7-browser/results.json",
+          "checks": 17,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/north-b4-browser/results.json",
+          "checks": 10,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/prosperity-core-v2-browser/results.json",
+          "checks": 12,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/prosperity-v1-browser/results.json",
+          "checks": 18,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/southeast-b6-browser/results.json",
+          "checks": 17,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/v26-browser/results.json",
+          "checks": 17,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/v27-browser/results.json",
+          "checks": 19,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/v28-browser/results.json",
+          "checks": 15,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/v29-browser/results.json",
+          "checks": 19,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/v30-browser/results.json",
+          "checks": 13,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/west-b3-browser/results.json",
+          "checks": 9,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "pr/west-roads-b5-browser/results.json",
+          "checks": 10,
+          "all_passed": true,
+          "runtime_errors": []
+        }
+      ]
+    },
+    "production-build": {
+      "suite_count": 16,
+      "check_count": 239,
+      "all_passed": true,
+      "runtime_errors": 0,
+      "suites": [
+        {
+          "path": "production-build/browser/results.json",
+          "checks": 16,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/city-b8-browser/results.json",
+          "checks": 18,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/dual-browser/results.json",
+          "checks": 19,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/homepage-v1-browser/results.json",
+          "checks": 10,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/luonan-b7-browser/results.json",
+          "checks": 17,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/north-b4-browser/results.json",
+          "checks": 10,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/prosperity-core-v2-browser/results.json",
+          "checks": 12,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/prosperity-v1-browser/results.json",
+          "checks": 18,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/southeast-b6-browser/results.json",
+          "checks": 17,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/v26-browser/results.json",
+          "checks": 17,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/v27-browser/results.json",
+          "checks": 19,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/v28-browser/results.json",
+          "checks": 15,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/v29-browser/results.json",
+          "checks": 19,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/v30-browser/results.json",
+          "checks": 13,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/west-b3-browser/results.json",
+          "checks": 9,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "production-build/west-roads-b5-browser/results.json",
+          "checks": 10,
+          "all_passed": true,
+          "runtime_errors": []
+        }
+      ]
+    },
+    "live": {
+      "suite_count": 16,
+      "check_count": 239,
+      "all_passed": true,
+      "runtime_errors": 0,
+      "suites": [
+        {
+          "path": "live/live-browser/results.json",
+          "checks": 16,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-city-b8-browser/results.json",
+          "checks": 18,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-dual-browser/results.json",
+          "checks": 19,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-homepage-v1-browser/results.json",
+          "checks": 10,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-luonan-b7-browser/results.json",
+          "checks": 17,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-north-b4-browser/results.json",
+          "checks": 10,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-prosperity-core-v2-browser/results.json",
+          "checks": 12,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-prosperity-v1-browser/results.json",
+          "checks": 18,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-southeast-b6-browser/results.json",
+          "checks": 17,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-v26-browser/results.json",
+          "checks": 17,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-v27-browser/results.json",
+          "checks": 19,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-v28-browser/results.json",
+          "checks": 15,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-v29-browser/results.json",
+          "checks": 19,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-v30-browser/results.json",
+          "checks": 13,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-west-b3-browser/results.json",
+          "checks": 9,
+          "all_passed": true,
+          "runtime_errors": []
+        },
+        {
+          "path": "live/live-west-roads-b5-browser/results.json",
+          "checks": 10,
+          "all_passed": true,
+          "runtime_errors": []
+        }
+      ]
+    }
+  },
+  "verified_artifacts": [
+    {
+      "artifact_id": 14166593991,
+      "zip_file_name": "pr28-browser-build-evidence.zip",
+      "zip_sha256": "b9867f4bbff6150bde6a54b12bfed1a55aea8daf02b372be658004eb4a4f7828",
+      "zip_size_bytes": 94383574,
+      "official_digest_verified": true,
+      "extracted_count": 49
+    },
+    {
+      "artifact_id": 14167796614,
+      "zip_file_name": "production-browser-build-evidence.zip",
+      "zip_sha256": "94b16b2df931c2125e466d1f2f01f70fa31df5d46e05803098d7e5ec72b4434b",
+      "zip_size_bytes": 94385991,
+      "official_digest_verified": true,
+      "extracted_count": 49
+    },
+    {
+      "artifact_id": 14167906810,
+      "zip_file_name": "live-attempt1-acceptance-evidence.zip",
+      "zip_sha256": "dae725edaacef3c83a716d076fd2e1a0954d65e4143f7a5ed4a8c96209b822c9",
+      "zip_size_bytes": 14854661,
+      "official_digest_verified": true,
+      "extracted_count": 8
+    },
+    {
+      "artifact_id": 14168027405,
+      "zip_file_name": "live-attempt2-acceptance-evidence.zip",
+      "zip_sha256": "5ce00bb8183c6c68da5da559dbdeca2799ef7212f2a5bf85f84c6c09fca95b52",
+      "zip_size_bytes": 43217392,
+      "official_digest_verified": true,
+      "extracted_count": 23
+    }
+  ],
+  "public_verification": {
+    "source_commit": "bd87e471d292a76efbf6bde74c4b77e8f3040c68",
+    "base_url": "https://mechgouki.github.io/luoyang-city/",
+    "all_checks_passed": true,
+    "checks": [
+      {
+        "name": "build-info records the production merge",
+        "passed": true
+      },
+      {
+        "name": "release records the production merge",
+        "passed": true
+      },
+      {
+        "name": "homepage-metadata records the production merge",
+        "passed": true
+      },
+      {
+        "name": "homepage is the authorized interim v8 image",
+        "passed": true
+      },
+      {
+        "name": "image remains generated and not a measured reconstruction",
+        "passed": true
+      },
+      {
+        "name": "original generated source hash matches the accepted conversion source",
+        "passed": true
+      },
+      {
+        "name": "_assets/c887056d075fa92c2514-luoyang-panorama.webp has the expected bytes, manifest hash and dimensions",
+        "passed": true
+      },
+      {
+        "name": "_assets/4b5c1b5251bfe49854d3-luoyang-panorama-small.webp has the expected bytes, manifest hash and dimensions",
+        "passed": true
+      },
+      {
+        "name": "release.json matches the build manifest",
+        "passed": true
+      },
+      {
+        "name": "homepage/metadata.json matches the build manifest",
+        "passed": true
+      },
+      {
+        "name": "index.html matches the build manifest",
+        "passed": true
+      },
+      {
+        "name": "hero metadata names both exact fingerprinted assets",
+        "passed": true
+      },
+      {
+        "name": "build exposes interim v8 status",
+        "passed": true
+      },
+      {
+        "name": "release exposes the v8 image revision",
+        "passed": true
+      },
+      {
+        "name": "homepage references both exact image assets",
+        "passed": true
+      },
+      {
+        "name": "research reconstruction caption is retained",
+        "passed": true
+      },
+      {
+        "name": "start exploration points to the actual map route",
+        "passed": true
+      },
+      {
+        "name": "yongning research entry retains the intended route",
+        "passed": true
+      },
+      {
+        "name": "markets research entry retains the intended route",
+        "passed": true
+      },
+      {
+        "name": "identity research entry retains the intended route",
+        "passed": true
+      }
+    ],
+    "http_responses": [
+      {
+        "path": "build-info.json",
+        "url": "https://mechgouki.github.io/luoyang-city/build-info.json",
+        "status": 200,
+        "retrieved_at": "2026-11-15T15:26:07.394640+00:00",
+        "bytes": 56692,
+        "sha256": "8cedfc56c48a936c2f7f71167c2a48f75a05fbd11bb0368d603e9064f8504bac",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "56692",
+          "ETag": "\"6af9cd6f-dd74\"",
+          "Last-Modified": "Sun, 15 Nov 2026 15:19:11 GMT",
+          "Date": "Sun, 15 Nov 2026 15:26:07 GMT"
+        }
+      },
+      {
+        "path": "release.json",
+        "url": "https://mechgouki.github.io/luoyang-city/release.json",
+        "status": 200,
+        "retrieved_at": "2026-11-15T15:26:07.386042+00:00",
+        "bytes": 994,
+        "sha256": "daef27869ee9d0b4d25c9d8c71caa49de558be0dfd1b9bc054a3d1b8ac8a1b56",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "994",
+          "ETag": "\"6af9cd6e-3e2\"",
+          "Last-Modified": "Sun, 15 Nov 2026 15:19:10 GMT",
+          "Date": "Sun, 15 Nov 2026 15:26:07 GMT"
+        }
+      },
+      {
+        "path": "homepage/metadata.json",
+        "url": "https://mechgouki.github.io/luoyang-city/homepage/metadata.json",
+        "status": 200,
+        "retrieved_at": "2026-11-15T15:26:07.347255+00:00",
+        "bytes": 2710,
+        "sha256": "c437f9ddbc39ef0e1323f7a0fb46f0b4e51db20d602a524613efa1984b942151",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "2710",
+          "ETag": "\"6af9cd6e-a96\"",
+          "Last-Modified": "Sun, 15 Nov 2026 15:19:10 GMT",
+          "Date": "Sun, 15 Nov 2026 15:26:07 GMT"
+        }
+      },
+      {
+        "path": "index.html",
+        "url": "https://mechgouki.github.io/luoyang-city/index.html",
+        "status": 200,
+        "retrieved_at": "2026-11-15T15:26:07.394670+00:00",
+        "bytes": 24190,
+        "sha256": "ff3a772a5b48e1bd94b5318164ee6c8472e931b25501abbeb42eff1bbb51d2be",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Content-Length": "24190",
+          "ETag": "\"6af9cd6e-5e7e\"",
+          "Last-Modified": "Sun, 15 Nov 2026 15:19:10 GMT",
+          "Date": "Sun, 15 Nov 2026 15:26:07 GMT"
+        }
+      },
+      {
+        "path": "_assets/c887056d075fa92c2514-luoyang-panorama.webp",
+        "url": "https://mechgouki.github.io/luoyang-city/_assets/c887056d075fa92c2514-luoyang-panorama.webp",
+        "status": 200,
+        "retrieved_at": "2026-11-15T15:26:07.410014+00:00",
+        "bytes": 599550,
+        "sha256": "c887056d075fa92c251422aece642df5def7af5b8ff087f3ff31f47ea6fdf4ee",
+        "headers": {
+          "Content-Type": "image/webp",
+          "Content-Length": "599550",
+          "ETag": "\"6af9cd6e-925fe\"",
+          "Last-Modified": "Sun, 15 Nov 2026 15:19:10 GMT",
+          "Date": "Sun, 15 Nov 2026 15:26:07 GMT"
+        },
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      {
+        "path": "_assets/4b5c1b5251bfe49854d3-luoyang-panorama-small.webp",
+        "url": "https://mechgouki.github.io/luoyang-city/_assets/4b5c1b5251bfe49854d3-luoyang-panorama-small.webp",
+        "status": 200,
+        "retrieved_at": "2026-11-15T15:26:07.397982+00:00",
+        "bytes": 239164,
+        "sha256": "4b5c1b5251bfe49854d3a3a1cf70bb622d9b37efae5d772358f01c4f47673235",
+        "headers": {
+          "Content-Type": "image/webp",
+          "Content-Length": "239164",
+          "ETag": "\"6af9cd6e-3a63c\"",
+          "Last-Modified": "Sun, 15 Nov 2026 15:19:10 GMT",
+          "Date": "Sun, 15 Nov 2026 15:26:07 GMT"
+        },
+        "dimensions": [
+          960,
+          540
+        ]
+      }
+    ],
+    "scope": "Independent HTTP and byte verification; browser interaction is separately evidenced by original CI reports."
+  },
+  "live_http": {
+    "source_commit": "bd87e471d292a76efbf6bde74c4b77e8f3040c68",
+    "status": "passed",
+    "checked_files": 448,
+    "report": "live/live-http.json"
+  },
+  "visual_review": {
+    "recorded_at": "2026-11-15T15:19:23.372367+00:00",
+    "reviewer": "root agent",
+    "method": "Direct visual inspection of original PR screenshots",
+    "reviewed_files": [
+      "pr/homepage-v1-browser/homepage-desktop-first-screen.png",
+      "pr/homepage-v1-browser/homepage-mobile-first-screen.png"
+    ],
+    "findings": [
+      "The displayed image is the latest v8 color panorama.",
+      "Desktop title and buttons are readable.",
+      "Mobile presents the entire wide image and a separate text area without overlap or image cropping."
+    ],
+    "scope": "Webpage presentation acceptance only",
+    "image_status": "interim",
+    "final_aesthetic_approval": false,
+    "remaining_direction": "The user remains dissatisfied with the visual design; continue research and later refinement."
+  },
+  "parent_public_asset_verification": {
+    "reviewer": "parent agent /root",
+    "method": "Independent HTTPS GET of build-info.json, homepage/metadata.json and both actual WebP assets with the production commit as review query",
+    "source_commit": "bd87e471d292a76efbf6bde74c4b77e8f3040c68",
+    "revision": "panorama-interim-v8",
+    "status": "interim",
+    "visual_review": "further_revision_requested",
+    "full_asset": {
+      "bytes": 599550,
+      "sha256": "c887056d075fa92c251422aece642df5def7af5b8ff087f3ff31f47ea6fdf4ee",
+      "matches_public_manifest": true
+    },
+    "small_asset": {
+      "bytes": 239164,
+      "sha256": "4b5c1b5251bfe49854d3a3a1cf70bb622d9b37efae5d772358f01c4f47673235",
+      "matches_public_manifest": true
+    },
+    "scope": "Asset and commit verification only; does not replace the complete live browser suites or establish final aesthetic approval."
+  },
+  "screenshot_comparisons": [
+    {
+      "name": "homepage-desktop-first-screen.png",
+      "sha256": {
+        "pr": "e97c91dd885c549a35d8c0ee36131c98c4d4fc3f46839eac499b50857f3968b2",
+        "production_build": "e97c91dd885c549a35d8c0ee36131c98c4d4fc3f46839eac499b50857f3968b2",
+        "live": "e97c91dd885c549a35d8c0ee36131c98c4d4fc3f46839eac499b50857f3968b2"
+      },
+      "pr_and_live_byte_identical": true,
+      "production_and_live_byte_identical": true
+    },
+    {
+      "name": "homepage-desktop.png",
+      "sha256": {
+        "pr": "c510f7527f23ecb443f7617f689eb83f3831e6aa76c50a10b0e0acc5a366d144",
+        "production_build": "512d207986fee4b2e2880ff14d548128b741c506a4869e9f7d0083ba993a25a4",
+        "live": "512d207986fee4b2e2880ff14d548128b741c506a4869e9f7d0083ba993a25a4"
+      },
+      "pr_and_live_byte_identical": false,
+      "production_and_live_byte_identical": true
+    },
+    {
+      "name": "homepage-mobile-first-screen.png",
+      "sha256": {
+        "pr": "c4bd9972b6af762567895beb8fa838cc486a6798e4fefeb9c04d20c5a7ecc980",
+        "production_build": "c4bd9972b6af762567895beb8fa838cc486a6798e4fefeb9c04d20c5a7ecc980",
+        "live": "c4bd9972b6af762567895beb8fa838cc486a6798e4fefeb9c04d20c5a7ecc980"
+      },
+      "pr_and_live_byte_identical": true,
+      "production_and_live_byte_identical": true
+    },
+    {
+      "name": "homepage-mobile.png",
+      "sha256": {
+        "pr": "8a2c0b3c68dd2db4c12e063bbd09313f0807a63e2741f6290bbe67013e53fa02",
+        "production_build": "3b74b308fb5e0e64165af34b5aa8995b218155b378a5e6b4424db387a6a01b22",
+        "live": "3b74b308fb5e0e64165af34b5aa8995b218155b378a5e6b4424db387a6a01b22"
+      },
+      "pr_and_live_byte_identical": false,
+      "production_and_live_byte_identical": true
+    },
+    {
+      "name": "homepage-tablet-first-screen.png",
+      "sha256": {
+        "pr": "720a5c3415e93e7b1847a5feff9e41cc924a57be30663d6a2cf3b64d314c8347",
+        "production_build": "720a5c3415e93e7b1847a5feff9e41cc924a57be30663d6a2cf3b64d314c8347",
+        "live": "720a5c3415e93e7b1847a5feff9e41cc924a57be30663d6a2cf3b64d314c8347"
+      },
+      "pr_and_live_byte_identical": true,
+      "production_and_live_byte_identical": true
+    }
+  ],
+  "retention_policy": "Keep original JSON/TXT reports, Node TAP excerpts, homepage screenshots, official metadata and public snapshots. No large ZIP or Pages package is committed."
+}
