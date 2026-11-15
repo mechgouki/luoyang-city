@@ -1,0 +1,966 @@
+{
+  "schema_version": "1.0.0",
+  "version": "prosperity-gate-v3.0",
+  "id": "changhe-gate-local-metric",
+  "label": "阊阖门：从原件像素到局部米制平面",
+  "calibration": {
+    "method": "single_printed_scale_bar_and_image_marked_north",
+    "scale_bar": {
+      "id": "scale-20m",
+      "start_px": [
+        30,
+        411
+      ],
+      "end_px": [
+        111,
+        411
+      ],
+      "length_m": 20,
+      "endpoint_tolerance_px": 1.5,
+      "source_ref": "S37",
+      "reading_note": "量读 0 与 20 米末端刻线；黑白横段约 81 原生像素。端点容差是人工读图范围，不是统计置信区间。",
+      "tolerance_geometry": "euclidean_disk_radius_in_native_pixels"
+    },
+    "north_arrow": {
+      "id": "north-arrow",
+      "tail_px": [
+        461,
+        141
+      ],
+      "tip_px": [
+        457,
+        82
+      ],
+      "endpoint_tolerance_px": 1.5,
+      "source_ref": "S37",
+      "reference_type": "image_marked_north_only",
+      "external_reference_verified": false,
+      "reading_note": "取箭杆尾端与箭尖；图未交代真北、网格北或磁北，角度仅定义图内坐标轴。",
+      "tolerance_geometry": "euclidean_disk_radius_in_native_pixels"
+    },
+    "local_origin_px": [
+      271.5,
+      138.5
+    ],
+    "local_origin_definition": "门基主体四个量读角点的算术平均；纯图内原点，不认作现场测定中心或管理图图符对应点。",
+    "output_coordinate_axes": "x follows image-marked east; y follows image-marked north; metres",
+    "isotropic_pixel_scale_assumed": true,
+    "independent_vertical_scale_verified": false,
+    "geographic_crs": null,
+    "ground_control_points_count": 0,
+    "statistical_uncertainty_model": null,
+    "assumptions": [
+      "单条横向印刷比例尺用于图内两个方向，未独立验证扫描纵横比例畸变。",
+      "原生像素读数保留，所有坐标由同一比例尺计算；不以 44.5×24.4 米表列数值调校图件。",
+      "北箭只定义图内方向；不能独自给出与城市基准的旋转关系。"
+    ],
+    "scale_span_px": 81.0,
+    "m_per_px": 0.24691358024691357,
+    "m_per_px_reading_range": [
+      0.23809523809523808,
+      0.2564102564102564
+    ],
+    "north_unit_in_source_px": [
+      -0.06764133573679162,
+      -0.9977097021176764
+    ],
+    "east_unit_in_source_px": [
+      0.9977097021176764,
+      -0.06764133573679162
+    ],
+    "north_arrow_length_px": 59.135437767890075,
+    "north_arrow_angle_from_image_up_clockwise_deg": -3.878524502847706,
+    "north_arrow_reading_angle_envelope_deg": 2.9079205252920457,
+    "coordinate_formula": "x_m = m_per_px * dot(p_px - local_origin_px, east_unit); y_m = m_per_px * dot(p_px - local_origin_px, north_unit)",
+    "reading_range_is_statistical_confidence_interval": false,
+    "external_orientation_verified": false
+  },
+  "components": [
+    {
+      "id": "gate-main-base",
+      "label": "主门基主体边缘",
+      "title": "主门基主体边缘",
+      "kind": "gate_base",
+      "geometry_type": "Polygon",
+      "source_px": [
+        [
+          180,
+          87
+        ],
+        [
+          364,
+          87
+        ],
+        [
+          365,
+          190
+        ],
+        [
+          177,
+          190
+        ],
+        [
+          180,
+          87
+        ]
+      ],
+      "trace_tolerance_px": 2,
+      "evidence_status": "observed_solid_trace",
+      "source_ref": "S37",
+      "note": "量读主体四边的简化折线；南北突出漫道和左右连接部分另列，不是整个门阙群外轮廓。每点按原生图约 ±2 像素量读，不提取柱网。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          -21.680718,
+          14.215119
+        ],
+        [
+          23.647327,
+          11.142031
+        ],
+        [
+          22.173414,
+          -14.248522
+        ],
+        [
+          -24.140024,
+          -11.108628
+        ],
+        [
+          -21.680718,
+          14.215119
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "原图可辨实线；人工量读",
+      "trace_tolerance_m_nominal": 0.49382716049382713,
+      "closed_outline": true,
+      "city_overlay_allowed": false,
+      "dimensions_label": "图读约 45.9 × 25.4 m；表列 44.5 × 24.4 m，分开保存"
+    },
+    {
+      "id": "gate-passage-west",
+      "label": "西门道可辨段",
+      "title": "西门道可辨段",
+      "kind": "passage",
+      "geometry_type": "Polygon",
+      "source_px": [
+        [
+          214,
+          117
+        ],
+        [
+          237,
+          117
+        ],
+        [
+          237,
+          155
+        ],
+        [
+          214,
+          155
+        ],
+        [
+          214,
+          117
+        ]
+      ],
+      "trace_tolerance_px": 2,
+      "evidence_status": "observed_passage_limits",
+      "source_ref": "S37",
+      "note": "门道两旁夯土基座之间可辨的中段；端部取相邻基座端线，不表示封闭墙，也不将全进深都算作门道。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          -13.805931,
+          6.256824
+        ],
+        [
+          -8.139925,
+          5.872688
+        ],
+        [
+          -8.774584,
+          -3.488539
+        ],
+        [
+          -14.44059,
+          -3.104403
+        ],
+        [
+          -13.805931,
+          6.256824
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "基座间通道带；端线用于截取可辨段",
+      "trace_tolerance_m_nominal": 0.49382716049382713,
+      "closed_outline": true,
+      "city_overlay_allowed": false,
+      "dimensions_label": "原生图读线约 ±0.5 m；另有比例尺量读范围"
+    },
+    {
+      "id": "gate-passage-central",
+      "label": "中门道可辨段",
+      "title": "中门道可辨段",
+      "kind": "passage",
+      "geometry_type": "Polygon",
+      "source_px": [
+        [
+          264,
+          117
+        ],
+        [
+          284,
+          117
+        ],
+        [
+          284,
+          155
+        ],
+        [
+          264,
+          155
+        ],
+        [
+          264,
+          117
+        ]
+      ],
+      "trace_tolerance_px": 2,
+      "evidence_status": "observed_passage_limits",
+      "source_ref": "S37",
+      "note": "只圈出原图中门道的可辨中段；南北廊、漫道不并入这个长度。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          -1.488527,
+          5.421745
+        ],
+        [
+          3.438435,
+          5.087714
+        ],
+        [
+          2.803775,
+          -4.273513
+        ],
+        [
+          -2.123186,
+          -3.939481
+        ],
+        [
+          -1.488527,
+          5.421745
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "基座间通道带；端线用于截取可辨段",
+      "trace_tolerance_m_nominal": 0.49382716049382713,
+      "closed_outline": true,
+      "city_overlay_allowed": false,
+      "dimensions_label": "原生图读线约 ±0.5 m；另有比例尺量读范围"
+    },
+    {
+      "id": "gate-passage-east",
+      "label": "东门道可辨段",
+      "title": "东门道可辨段",
+      "kind": "passage",
+      "geometry_type": "Polygon",
+      "source_px": [
+        [
+          312,
+          117
+        ],
+        [
+          331,
+          117
+        ],
+        [
+          331,
+          155
+        ],
+        [
+          312,
+          155
+        ],
+        [
+          312,
+          117
+        ]
+      ],
+      "trace_tolerance_px": 2,
+      "evidence_status": "observed_passage_limits",
+      "source_ref": "S37",
+      "note": "只圈出原图东门道的可辨中段；宽度来自小图读数，不能用作精确通行宽度。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          10.336181,
+          4.62007
+        ],
+        [
+          15.016794,
+          4.302741
+        ],
+        [
+          14.382135,
+          -5.058486
+        ],
+        [
+          9.701521,
+          -4.741157
+        ],
+        [
+          10.336181,
+          4.62007
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "基座间通道带；端线用于截取可辨段",
+      "trace_tolerance_m_nominal": 0.49382716049382713,
+      "closed_outline": true,
+      "city_overlay_allowed": false,
+      "dimensions_label": "原生图读线约 ±0.5 m；另有比例尺量读范围"
+    },
+    {
+      "id": "gate-west-que",
+      "label": "西阙基可见边缘",
+      "title": "西阙基可见边缘",
+      "kind": "que_base",
+      "geometry_type": "LineString",
+      "source_px": [
+        [
+          52,
+          338
+        ],
+        [
+          61,
+          338
+        ],
+        [
+          61,
+          352
+        ],
+        [
+          89,
+          352
+        ],
+        [
+          92,
+          358
+        ],
+        [
+          178,
+          358
+        ],
+        [
+          180,
+          265
+        ]
+      ],
+      "trace_tolerance_px": 2,
+      "evidence_status": "observed_solid_trace",
+      "source_ref": "S37",
+      "note": "保留南、东侧可辨实线；北部受到黑色探方边框截断，未闭合成完整阙基，也不把探方框认作建筑边。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          -57.405364,
+          -45.480448
+        ],
+        [
+          -55.188232,
+          -45.630762
+        ],
+        [
+          -55.422054,
+          -49.079635
+        ],
+        [
+          -48.524308,
+          -49.547278
+        ],
+        [
+          -47.885473,
+          -51.075472
+        ],
+        [
+          -26.699538,
+          -52.511806
+        ],
+        [
+          -24.653597,
+          -29.634838
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "原图可辨实线；人工量读",
+      "trace_tolerance_m_nominal": 0.49382716049382713,
+      "closed_outline": false,
+      "city_overlay_allowed": false,
+      "dimensions_label": "开放边线；不计算完整阙基长宽或面积"
+    },
+    {
+      "id": "gate-east-que",
+      "label": "东阙基可见边缘",
+      "title": "东阙基可见边缘",
+      "kind": "que_base",
+      "geometry_type": "LineString",
+      "source_px": [
+        [
+          359,
+          264
+        ],
+        [
+          358,
+          358
+        ],
+        [
+          448,
+          358
+        ],
+        [
+          449,
+          351
+        ],
+        [
+          474,
+          351
+        ],
+        [
+          475,
+          335
+        ]
+      ],
+      "trace_tolerance_px": 2,
+      "evidence_status": "observed_solid_trace",
+      "source_ref": "S37",
+      "note": "保留西、南侧可辨实线与折角；没有用黑色探方边框补齐东北轮廓。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          19.45941,
+          -32.37807
+        ],
+        [
+          17.643115,
+          -55.518088
+        ],
+        [
+          39.814442,
+          -57.021228
+        ],
+        [
+          40.177701,
+          -55.313494
+        ],
+        [
+          46.336403,
+          -55.731033
+        ],
+        [
+          46.849976,
+          -51.806165
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "原图可辨实线；人工量读",
+      "trace_tolerance_m_nominal": 0.49382716049382713,
+      "closed_outline": false,
+      "city_overlay_allowed": false,
+      "dimensions_label": "开放边线；不计算完整阙基长宽或面积"
+    },
+    {
+      "id": "gate-west-underground",
+      "label": "西阙地下基础示意边缘",
+      "title": "西阙地下基础示意边缘",
+      "kind": "underground_foundation",
+      "geometry_type": "LineString",
+      "source_px": [
+        [
+          51,
+          340
+        ],
+        [
+          50,
+          359
+        ],
+        [
+          66,
+          364
+        ],
+        [
+          66,
+          382
+        ],
+        [
+          204,
+          382
+        ],
+        [
+          205,
+          266
+        ]
+      ],
+      "trace_tolerance_px": 3,
+      "evidence_status": "source_dashed_extent",
+      "source_ref": "S37",
+      "note": "跟读原图“地下基础夯土”外缘虚线；保留虚线语义及开放端，不把它混为地上建筑外墙。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          -57.685116,
+          -45.956442
+        ],
+        [
+          -58.248793,
+          -50.620354
+        ],
+        [
+          -54.390732,
+          -52.119319
+        ],
+        [
+          -54.69136,
+          -56.553585
+        ],
+        [
+          -20.695326,
+          -58.858401
+        ],
+        [
+          -18.511596,
+          -30.298725
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "原图地下基础虚线；保留未闭合范围",
+      "trace_tolerance_m_nominal": 0.7407407407407407,
+      "closed_outline": false,
+      "city_overlay_allowed": false,
+      "dimensions_label": "开放边线；不计算完整阙基长宽或面积"
+    },
+    {
+      "id": "gate-east-underground",
+      "label": "东阙地下基础示意边缘",
+      "title": "东阙地下基础示意边缘",
+      "kind": "underground_foundation",
+      "geometry_type": "LineString",
+      "source_px": [
+        [
+          338,
+          264
+        ],
+        [
+          337,
+          384
+        ],
+        [
+          474,
+          383
+        ],
+        [
+          476,
+          357
+        ],
+        [
+          485,
+          343
+        ],
+        [
+          496,
+          342
+        ],
+        [
+          497,
+          335
+        ]
+      ],
+      "trace_tolerance_px": 3,
+      "evidence_status": "source_dashed_extent",
+      "source_ref": "S37",
+      "note": "原图“地下基础夯土”下侧和西侧可辨虚线；局部模糊，量读取 ±3 像素，不补未识别的外缘。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          14.286101,
+          -32.027337
+        ],
+        [
+          12.035565,
+          -61.572405
+        ],
+        [
+          45.801953,
+          -63.614171
+        ],
+        [
+          46.728889,
+          -57.242524
+        ],
+        [
+          49.179844,
+          -53.943965
+        ],
+        [
+          51.906374,
+          -53.881334
+        ],
+        [
+          52.269633,
+          -52.173599
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "原图地下基础虚线；保留未闭合范围",
+      "trace_tolerance_m_nominal": 0.7407407407407407,
+      "closed_outline": false,
+      "city_overlay_allowed": false,
+      "dimensions_label": "开放边线；不计算完整阙基长宽或面积"
+    },
+    {
+      "id": "gate-west-link",
+      "label": "门基至西阙连接路径",
+      "title": "门基至西阙连接路径",
+      "kind": "foundation_connection",
+      "geometry_type": "LineString",
+      "source_px": [
+        [
+          179,
+          137
+        ],
+        [
+          158,
+          137
+        ],
+        [
+          158,
+          239
+        ],
+        [
+          172,
+          239
+        ],
+        [
+          178,
+          247
+        ]
+      ],
+      "trace_tolerance_px": 3,
+      "evidence_status": "schematic_centerline_from_visible_foundation",
+      "source_ref": "S37",
+      "note": "按图中黄色连接基址的连续路径取中心示意线，只表达连接走向；线宽无尺寸含义，不证明屋顶、廊高或北端与西阙的完整接口。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          -22.762145,
+          1.914417
+        ],
+        [
+          -27.935454,
+          2.26515
+        ],
+        [
+          -29.639014,
+          -22.862354
+        ],
+        [
+          -26.190141,
+          -23.096176
+        ],
+        [
+          -24.845665,
+          -25.16717
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "按可见基础走向取示意中心线；无宽度含义",
+      "trace_tolerance_m_nominal": 0.7407407407407407,
+      "closed_outline": false,
+      "city_overlay_allowed": false,
+      "dimensions_label": "路径中心示意；线宽和全廊长度未定"
+    },
+    {
+      "id": "gate-east-link",
+      "label": "门基至东阙连接路径",
+      "title": "门基至东阙连接路径",
+      "kind": "foundation_connection",
+      "geometry_type": "LineString",
+      "source_px": [
+        [
+          364,
+          137
+        ],
+        [
+          386,
+          137
+        ],
+        [
+          386,
+          236
+        ],
+        [
+          367,
+          236
+        ],
+        [
+          365,
+          250
+        ]
+      ],
+      "trace_tolerance_px": 3,
+      "evidence_status": "schematic_centerline_from_visible_foundation",
+      "source_ref": "S37",
+      "note": "按可辨连接基址取中心示意线；过探方间缺口至东阙只保存拓扑关系，不跨缺口补出实测边线。",
+      "trace_tolerance_geometry": "euclidean_disk_radius_in_native_pixels",
+      "coordinates_m": [
+        [
+          22.812249,
+          -1.175373
+        ],
+        [
+          28.231907,
+          -1.542807
+        ],
+        [
+          26.578452,
+          -25.931266
+        ],
+        [
+          21.897839,
+          -25.613937
+        ],
+        [
+          21.171321,
+          -29.029407
+        ]
+      ],
+      "coordinate_space": "image_local_marked_north_metres",
+      "evidence_label": "按可见基础走向取示意中心线；无宽度含义",
+      "trace_tolerance_m_nominal": 0.7407407407407407,
+      "closed_outline": false,
+      "city_overlay_allowed": false,
+      "dimensions_label": "路径中心示意；线宽和全廊长度未定"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "gate-r-west-link",
+      "from": "gate-main-base",
+      "via": "gate-west-link",
+      "to": "gate-west-que",
+      "relation": "foundation_connection",
+      "source_ref": "S37",
+      "metric_continuity_verified": false,
+      "note": "原图支持连接关系；探方间缺口与接口边界未完整量读，不补成有顶廊。"
+    },
+    {
+      "id": "gate-r-east-link",
+      "from": "gate-main-base",
+      "via": "gate-east-link",
+      "to": "gate-east-que",
+      "relation": "foundation_connection",
+      "source_ref": "S37",
+      "metric_continuity_verified": false,
+      "note": "原图支持连接关系；描线止于可见路径，阙侧接口仍有限制。"
+    },
+    {
+      "id": "gate-r-passages",
+      "from": "gate-main-base",
+      "contains": [
+        "gate-passage-west",
+        "gate-passage-central",
+        "gate-passage-east"
+      ],
+      "relation": "three_passage_bands",
+      "source_ref": "S37",
+      "note": "三个可辨通道带属于主门基；边带不是独立历史实体。"
+    }
+  ],
+  "bounds": {
+    "min_x": -58.24879346889577,
+    "min_y": -63.6141710257956,
+    "max_x": 52.269633421050976,
+    "max_y": 14.215118982463398,
+    "unit": "m",
+    "coordinate_space": "image_local_marked_north_metres"
+  },
+  "diagnostics": {
+    "headline": "先按比例尺量读，再与表列尺寸分开核对",
+    "summary": "比例尺换算后，主门基平均相对边约 45.9 × 25.4 m；图读减表值为 +1.4 / +1.0 m。保留量读包络与边界定义差异，不作反向缩放。",
+    "dimension_check": {
+      "component_id": "gate-main-base",
+      "method": "mean_lengths_of_opposite_edges",
+      "corner_order": "northwest,northeast,southeast,southwest,closed",
+      "edge_pairs": {
+        "east_west": [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "north_south": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "table_dimensions_m": {
+        "east_west": 44.5,
+        "north_south": 24.4
+      },
+      "source_ref": "A2-Cgm-3",
+      "table_used_for_scale_calibration": false,
+      "dimension_direction_note": "平均相对边长用于比较表中东西、南北尺度；不以北箭坐标轴包围盒代替边长，避免旋转使包围盒变大。",
+      "reading_envelope_note": "把每条边两端合计 ±4 像素和比例尺端点合计 ±3 像素作最保守组合；只是量读包络，不是现场精度或置信区间。",
+      "measurements": {
+        "east_west": {
+          "edge_lengths_px": [
+            184.0,
+            188.0
+          ],
+          "mean_edge_length_px": 186.0,
+          "image_read_length_m": 45.925925925925924,
+          "reading_envelope_m": [
+            43.33333333333333,
+            48.717948717948715
+          ],
+          "table_length_m": 44.5,
+          "difference_m": 1.4259259259259238,
+          "difference_fraction_of_table": 0.03204327923429042,
+          "table_value_inside_reading_envelope": true,
+          "is_field_accuracy_estimate": false
+        },
+        "north_south": {
+          "edge_lengths_px": [
+            103.04368005850722,
+            103.00485425454472
+          ],
+          "mean_edge_length_px": 103.02426715652598,
+          "image_read_length_m": 25.43809065593234,
+          "reading_envelope_m": [
+            23.577206465839517,
+            27.442119783724607
+          ],
+          "table_length_m": 24.4,
+          "difference_m": 1.03809065593234,
+          "difference_fraction_of_table": 0.04254469901362049,
+          "table_value_inside_reading_envelope": true,
+          "is_field_accuracy_estimate": false
+        }
+      },
+      "status": "difference_retained_without_refitting_scale",
+      "all_table_values_inside_reading_envelopes": true,
+      "interpretation": "图读名义边长与表列值有差异；所列人工量读包络均包含对应表值。这不能判定两项已经吻合，也不能单凭小图判定原址尺寸矛盾。"
+    },
+    "common_controls": {
+      "verified_count": 0,
+      "has_common_survey_points": false,
+      "has_verified_centre_correspondence": false,
+      "has_verified_external_north_reference": false,
+      "registration_solved": false
+    },
+    "note": "来源图可支持局部尺度与相邻关系；当前不能由一个概略图符点和未定北向推导精确城市落位。"
+  },
+  "city_link": {
+    "source_ref": "P1-06a",
+    "p2_template_id": "core-changhe",
+    "source_feature_id": "geo-changhe-palace-gate",
+    "entity_id": "ic_changhe_palace",
+    "anchor_coordinates": [
+      112.6221536,
+      34.72559
+    ],
+    "anchor_crs": "EPSG:4610",
+    "anchor_local_m": [
+      502.558775,
+      -858.998246
+    ],
+    "anchor_source_pdf_pt": [
+      314.001495,
+      325.356506
+    ],
+    "anchor_kind": "generalized_source_symbol_center",
+    "anchor_unchanged_from_p2": true,
+    "working_axis_angle_deg": 1.128958,
+    "working_axis_unchanged_from_p2": true,
+    "working_axis_is_verified_structure_orientation": false,
+    "p2_reference_dimensions_m": {
+      "east_west": 44.5,
+      "north_south": 24.4
+    },
+    "registration_verified": false,
+    "common_control_points_count": 0,
+    "translation_m": null,
+    "rotation_deg": null,
+    "city_geometry": null,
+    "city_overlay_allowed": false,
+    "global_accuracy_m": null,
+    "historical_height_m": null,
+    "historical_ground_elevation_m": null,
+    "roof_model": null,
+    "label": "城市位置保持概略来源点；局部描图暂不据此叠成实测足迹",
+    "note": "P2 的 1.128958° 仍只是阊阖、太极来源点连线的工作方向。原图北箭不足以验证它。图内原点与来源图符中心也未确认为同一测点。",
+    "requirements_for_registration": [
+      "可识别且相互独立的共同位置控制及其误差记录",
+      "原件北向所用外部基准，或可独立解算旋转的共同控制",
+      "扫描纵横尺度及所用几何边界的核对"
+    ],
+    "p2_yongning_court_fit_adopted": false,
+    "p2_yongning_width_conflict_m": {
+      "source_wall_spacing": 264.889055,
+      "table_width": 212
+    },
+    "p2_yongning_note": "永宁院宽冲突沿用 P2 未定结论，本图不处理或改动其院界。",
+    "comparison_reference": {
+      "id": "core-taiji",
+      "label": "太极殿遗址尺度片",
+      "anchor_local_m": [
+        513.865845,
+        -285.227304
+      ],
+      "dimensions_m": {
+        "east_west": 100,
+        "north_south": 60
+      },
+      "orientation_angle_deg": 1.128958,
+      "source_ref": "P1-06a",
+      "note": "只为展示现有 P2 两来源点工作轴，沿用原值，不新增位置。"
+    }
+  },
+  "limits": [
+    "这是低分辨率考古图的可复算量读，不是新测绘成果；没有精确柱网、屋顶或高度。",
+    "阙基仅描可辨实线与来源虚线，探方边框、后期沟坑及不明边缘不补为建筑轮廓。",
+    "门道只取基座之间的可辨中段；连接路径为关系示意，不赋予实际廊宽。",
+    "图内比例尺已经使用，但纵横印刷畸变没有独立控制；读图包络不是古址位置误差。",
+    "共同控制为零，城市落位未解；原图北箭与 P2 工作轴都不升级为实测建筑朝向。",
+    "原件年代与遗存层次不能独自证明 516—528 年每年都有同样完整上部结构。"
+  ],
+  "historical_height_m": null,
+  "historical_ground_elevation_m": null,
+  "roof_model": null,
+  "publication_version": "prosperity-gate-v3",
+  "source_commit": "a52b28be7063fb30fb7c3c81375bf9ec05cb5dea",
+  "coordinate_scope": "image_local_only",
+  "research_limits": {
+    "registration_verified": false,
+    "new_ancient_absolute_coordinates": 0,
+    "historical_heights_reconstructed": false,
+    "roofs_reconstructed": false,
+    "ancient_ground_surface_reconstructed": false,
+    "city_footprint_placed": false,
+    "external_true_north_verified": false,
+    "full_city_reconstruction_completed": false
+  }
+}

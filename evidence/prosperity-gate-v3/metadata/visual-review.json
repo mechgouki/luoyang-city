@@ -1,0 +1,67 @@
+{
+  "reviewed_pr_head": "747932370d9c1113ddc1b2dae6a0e65661e573ee",
+  "reviewed_pr_tested_merge": "eea118a1adb6c4c782230b2c0545f6e4f50a92be",
+  "source_tree": "c243415b440f9199ddfe5cbd23b1cc019b4a44e3",
+  "original_screenshots": [
+    {
+      "path": "pr/prosperity-gate-v3-browser/desktop-local.png",
+      "sha256": "166deecd8187c3abd2c39848ce83794a9fc8d2b2972122a4a70b770e75097e0b",
+      "dimensions": [
+        1500,
+        2564
+      ]
+    },
+    {
+      "path": "pr/prosperity-gate-v3-browser/desktop-city.png",
+      "sha256": "8dfee7640c1d4fdf0b87b5e8bc1655e0019f782836602218e5b0db1f971a9be5",
+      "dimensions": [
+        1396,
+        892
+      ]
+    },
+    {
+      "path": "pr/prosperity-gate-v3-browser/desktop-diagnostics.png",
+      "sha256": "5b517a827e2b6dc508833a9769ab66457ca6390350de968d22a78b9a32f60ab5",
+      "dimensions": [
+        1396,
+        892
+      ]
+    },
+    {
+      "path": "pr/prosperity-gate-v3-browser/mobile-local.png",
+      "sha256": "2761a2b1c705211ee9a20d7810f8e9e05fb07c10672c8bd70956512d068e2d69",
+      "dimensions": [
+        390,
+        3388
+      ]
+    },
+    {
+      "path": "pr/prosperity-gate-v3-browser/no-javascript.png",
+      "sha256": "4b6ae0ad4d0b6b01d014dd6a2e731c33944aa157f9d970c8dd6d7d48ddb4e252",
+      "dimensions": [
+        390,
+        3560
+      ]
+    }
+  ],
+  "root_reviewed": [
+    "desktop-local.png",
+    "desktop-city.png",
+    "mobile-local.png"
+  ],
+  "interface_agent_reviewed": [
+    "desktop-local.png",
+    "desktop-city.png",
+    "desktop-diagnostics.png",
+    "mobile-local.png",
+    "no-javascript.png"
+  ],
+  "observations": [
+    "Desktop plan, source notes and controls remain within their panels.",
+    "The city registration label does not obscure the open que traces.",
+    "Mobile selected west-que and source-off states are correctly reflected; HTML notes and controls remain usable, with diagram detail available by zoom or the full SVG link.",
+    "The diagnostics figure keeps image scale, tabulated dimensions and unverified north reference distinct.",
+    "The no-JavaScript capture retains the static image, initial source notes, original comparison and complete downloads."
+  ],
+  "scope": "Presentation and documented interaction acceptance. This does not certify historical registration, field accuracy, reconstructed roof/height, or final homepage panorama aesthetics."
+}

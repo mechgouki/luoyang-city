@@ -1,0 +1,8 @@
+2026-11-15T15:37:38.6113616Z Traceback (most recent call last):
+2026-11-15T15:37:38.6122264Z   File "/work/tests/browser_prosperity_gate_v3.py", line 98, in <module>
+2026-11-15T15:37:38.6122742Z     assert_component(page, main)
+2026-11-15T15:37:38.6123549Z   File "/work/tests/browser_prosperity_gate_v3.py", line 70, in assert_component
+2026-11-15T15:37:38.6124276Z     expect(target.locator('#component-detail a').filter(has_text=source['label']).first()).to_have_attribute('href', source['url'])
+2026-11-15T15:37:38.6124882Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-15T15:37:38.6125249Z TypeError: 'Locator' object is not callable
+2026-11-15T15:37:38.7800464Z ##[error]Process completed with exit code 1.

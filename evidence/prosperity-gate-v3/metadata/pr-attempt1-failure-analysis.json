@@ -1,0 +1,29 @@
+{
+  "failure_run_id": 43729698896,
+  "head_commit": "6314e99660fa65f288af0b646c6ea757a11acd25",
+  "tested_merge_commit": "ba85e215a2aa8a8d5e3c0229331f3b1c9d7b18ae",
+  "failure_suite": "tests/browser_prosperity_v1.py",
+  "failure_line": 114,
+  "assertion": "assert shape_box(page) != zoomed",
+  "source_screenshot": "pr-attempt1/prosperity-v1-browser/prosperity-desktop-first-screen.png",
+  "viewport_px": [
+    1500,
+    1000
+  ],
+  "observed_map_top_px_approx": 699,
+  "css_viewport_height_rule": "min(69vh, 810px); min-height: 480px",
+  "inferred_map_height_px": 690,
+  "test_drag_relative_y": [
+    0.52,
+    0.58
+  ],
+  "inferred_drag_y_px": [
+    1057.8,
+    1099.2
+  ],
+  "interpretation": "Screenshot and CSS together show that both unscrolled pointer coordinates are below the 1000 px viewport. This is an inference from the captured layout and test code, not a captured DOM bounding-box measurement.",
+  "javascript_runtime_errors": [],
+  "p2_browser_executed": false,
+  "p3_browser_executed": false,
+  "product_source_modified_by_this_evidence_collection": false
+}

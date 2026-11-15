@@ -1,0 +1,67 @@
+{
+  "metrics": {
+    "entities": 339,
+    "relations": 482,
+    "target_id_field": 161,
+    "target_field": 321,
+    "target_field_contains_existing_id": 85,
+    "target_status": {
+      "compound_expression": 13,
+      "explicit_id": 245,
+      "name_unique": 198,
+      "name_variant_candidate": 2,
+      "unresolved": 24
+    },
+    "relation_families": {
+      "association": 12,
+      "directional_extent": 23,
+      "directional_projection": 220,
+      "gate_relation": 58,
+      "identity_claim": 8,
+      "membership": 96,
+      "orientation_or_quantity": 7,
+      "time_or_use": 22,
+      "topology": 36
+    },
+    "raw_relation_types": 78,
+    "raw_entity_types": 82,
+    "unmapped_types": [],
+    "temporal_audit": {
+      "legacy_coarse_state_present": 86,
+      "event_series_not_reviewed": 253
+    }
+  },
+  "counts": {
+    "relations": 482,
+    "atoms": 69,
+    "cases": 16,
+    "candidates": 13
+  },
+  "case_satisfiability": {
+    "s000": true,
+    "s001": true,
+    "s010": true,
+    "s011": true,
+    "s100": true,
+    "s101": true,
+    "s110": true,
+    "s111": true,
+    "without_L": true,
+    "without_H": true,
+    "without_W": true,
+    "ritual111": false,
+    "ritual011": true,
+    "ritual101": true,
+    "ritual110": true,
+    "merge_taifu": true
+  },
+  "baseline_unchanged": true,
+  "stable_queries": [
+    "yongning_west",
+    "lingyin_south_jiuji",
+    "sizhou_south_jiuji",
+    "miao_inside",
+    "she_inside",
+    "yushi_north_taiwei"
+  ]
+}

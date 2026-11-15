@@ -1,0 +1,1337 @@
+{
+  "milestone": "prosperity-gate-v3",
+  "source_commit": "a52b28be7063fb30fb7c3c81375bf9ec05cb5dea",
+  "source_tree": "c243415b440f9199ddfe5cbd23b1cc019b4a44e3",
+  "pr_head": "747932370d9c1113ddc1b2dae6a0e65661e573ee",
+  "pr_tested_merge": "eea118a1adb6c4c782230b2c0545f6e4f50a92be",
+  "source_trees_identical": true,
+  "workflow_runs": {
+    "pr": {
+      "id": 43731134315,
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/43731134315",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1
+    },
+    "production": {
+      "id": 43731735963,
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/43731735963",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1
+    }
+  },
+  "production_jobs": [
+    {
+      "id": 132865465910,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/43731735963/job/132865465910"
+    },
+    {
+      "id": 132866771695,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/43731735963/job/132866771695"
+    },
+    {
+      "id": 132866880112,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/43731735963/job/132866880112"
+    }
+  ],
+  "prior_failed_pr_validations": [
+    {
+      "run_id": 43729698896,
+      "run_attempt": 1,
+      "head": "6314e99660fa65f288af0b646c6ea757a11acd25",
+      "result": "failure",
+      "suite": "tests/browser_prosperity_v1.py",
+      "failed_assertion": "assert shape_box(page) != zoomed",
+      "observed_cause": "The unscrolled drag coordinates were below the 1000 px viewport after the new entry block. Screenshot and CSS geometry are retained as evidence.",
+      "correction": "P1/P2 tests scroll the map into view, verify both pointer points hit the visible map, and retain the real drag/viewBox/reset assertions.",
+      "p3_executed": false,
+      "reports": "pr-attempt1/",
+      "failure_log": "metadata/pr-attempt1-browser-failure.txt"
+    },
+    {
+      "run_id": 43730476238,
+      "run_attempt": 1,
+      "head": "e96c1bc10194526966a9252a02f912abcd7a320b",
+      "result": "failure",
+      "suite": "tests/browser_prosperity_gate_v3.py",
+      "error": "TypeError: 'Locator' object is not callable",
+      "observed_cause": "The Python Playwright test called the Locator.first property as a function. The prior 16 browser suites had passed all 239 checks.",
+      "correction": "All three .first() calls became .first properties. P3 moved first in the browser sequence; all 16 earlier suites remain mandatory.",
+      "p3_passed_checks": 0,
+      "is_javascript_runtime_failure": false,
+      "reports": "pr-attempt2/",
+      "failure_log": "metadata/pr-attempt2-browser-failure.txt"
+    }
+  ],
+  "reports": {
+    "pr": {
+      "phase": "pr",
+      "browser_suite_count": 17,
+      "browser_check_count": 248,
+      "browser_passed_checks": 248,
+      "browser_error_count": 0,
+      "all_browser_suites_passed": true,
+      "browser_suites": [
+        {
+          "path": "pr/browser/results.json",
+          "checks": 16,
+          "passed_checks": 16,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:39841/luoyang-city/"
+        },
+        {
+          "path": "pr/city-b8-browser/results.json",
+          "checks": 18,
+          "passed_checks": 18,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:34805/luoyang-city/"
+        },
+        {
+          "path": "pr/dual-browser/results.json",
+          "checks": 19,
+          "passed_checks": 19,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:43939/luoyang-city/"
+        },
+        {
+          "path": "pr/homepage-v1-browser/results.json",
+          "checks": 10,
+          "passed_checks": 10,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:38043/luoyang-city/"
+        },
+        {
+          "path": "pr/luonan-b7-browser/results.json",
+          "checks": 17,
+          "passed_checks": 17,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:33547/luoyang-city/"
+        },
+        {
+          "path": "pr/north-b4-browser/results.json",
+          "checks": 10,
+          "passed_checks": 10,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:37347/luoyang-city/"
+        },
+        {
+          "path": "pr/prosperity-core-v2-browser/results.json",
+          "checks": 12,
+          "passed_checks": 12,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:42919/luoyang-city/"
+        },
+        {
+          "path": "pr/prosperity-gate-v3-browser/report.json",
+          "checks": 9,
+          "passed_checks": 9,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:40121/luoyang-city/"
+        },
+        {
+          "path": "pr/prosperity-v1-browser/results.json",
+          "checks": 18,
+          "passed_checks": 18,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:40723/luoyang-city/"
+        },
+        {
+          "path": "pr/southeast-b6-browser/results.json",
+          "checks": 17,
+          "passed_checks": 17,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:43561/luoyang-city/"
+        },
+        {
+          "path": "pr/v26-browser/results.json",
+          "checks": 17,
+          "passed_checks": 17,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:46555/luoyang-city/"
+        },
+        {
+          "path": "pr/v27-browser/results.json",
+          "checks": 19,
+          "passed_checks": 19,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:34885/luoyang-city/"
+        },
+        {
+          "path": "pr/v28-browser/results.json",
+          "checks": 15,
+          "passed_checks": 15,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:36477/luoyang-city/"
+        },
+        {
+          "path": "pr/v29-browser/results.json",
+          "checks": 19,
+          "passed_checks": 19,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:38607/luoyang-city/"
+        },
+        {
+          "path": "pr/v30-browser/results.json",
+          "checks": 13,
+          "passed_checks": 13,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:40949/luoyang-city/"
+        },
+        {
+          "path": "pr/west-b3-browser/results.json",
+          "checks": 9,
+          "passed_checks": 9,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:39087/luoyang-city/"
+        },
+        {
+          "path": "pr/west-roads-b5-browser/results.json",
+          "checks": 10,
+          "passed_checks": 10,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:39019/luoyang-city/"
+        }
+      ],
+      "semantic_log_count": 19,
+      "python_tests": 261,
+      "all_semantic_logs_passed": true,
+      "semantic_logs": [
+        {
+          "path": "pr/city-audit-b8-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "pr/city-review-b8-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "pr/dual-semantic-tests.txt",
+          "tests": 22,
+          "passed": true
+        },
+        {
+          "path": "pr/ground-review-b6-tests.txt",
+          "tests": 6,
+          "passed": true
+        },
+        {
+          "path": "pr/historical-datum-b5-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "pr/historical-frame-b4-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "pr/live-http-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "pr/luonan-b7-tests.txt",
+          "tests": 21,
+          "passed": true
+        },
+        {
+          "path": "pr/north-b4-semantic-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "pr/prosperity-semantic-tests.txt",
+          "tests": 45,
+          "passed": true
+        },
+        {
+          "path": "pr/source-access-b8-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "pr/source-continuity-b7-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "pr/southeast-b6-tests.txt",
+          "tests": 18,
+          "passed": true
+        },
+        {
+          "path": "pr/v26-semantic-tests.txt",
+          "tests": 20,
+          "passed": true
+        },
+        {
+          "path": "pr/v27-semantic-tests.txt",
+          "tests": 25,
+          "passed": true
+        },
+        {
+          "path": "pr/v29-semantic-tests.txt",
+          "tests": 20,
+          "passed": true
+        },
+        {
+          "path": "pr/v30-semantic-tests.txt",
+          "tests": 16,
+          "passed": true
+        },
+        {
+          "path": "pr/west-b3-semantic-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "pr/west-roads-b5-tests.txt",
+          "tests": 8,
+          "passed": true
+        }
+      ],
+      "node": {
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "path": "pr/node-map-interactions-tap.txt"
+      }
+    },
+    "production-build": {
+      "phase": "production-build",
+      "browser_suite_count": 17,
+      "browser_check_count": 248,
+      "browser_passed_checks": 248,
+      "browser_error_count": 0,
+      "all_browser_suites_passed": true,
+      "browser_suites": [
+        {
+          "path": "production-build/browser/results.json",
+          "checks": 16,
+          "passed_checks": 16,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:40919/luoyang-city/"
+        },
+        {
+          "path": "production-build/city-b8-browser/results.json",
+          "checks": 18,
+          "passed_checks": 18,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:37665/luoyang-city/"
+        },
+        {
+          "path": "production-build/dual-browser/results.json",
+          "checks": 19,
+          "passed_checks": 19,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:35211/luoyang-city/"
+        },
+        {
+          "path": "production-build/homepage-v1-browser/results.json",
+          "checks": 10,
+          "passed_checks": 10,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:41895/luoyang-city/"
+        },
+        {
+          "path": "production-build/luonan-b7-browser/results.json",
+          "checks": 17,
+          "passed_checks": 17,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:42845/luoyang-city/"
+        },
+        {
+          "path": "production-build/north-b4-browser/results.json",
+          "checks": 10,
+          "passed_checks": 10,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:32925/luoyang-city/"
+        },
+        {
+          "path": "production-build/prosperity-core-v2-browser/results.json",
+          "checks": 12,
+          "passed_checks": 12,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:45579/luoyang-city/"
+        },
+        {
+          "path": "production-build/prosperity-gate-v3-browser/report.json",
+          "checks": 9,
+          "passed_checks": 9,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:46449/luoyang-city/"
+        },
+        {
+          "path": "production-build/prosperity-v1-browser/results.json",
+          "checks": 18,
+          "passed_checks": 18,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:42217/luoyang-city/"
+        },
+        {
+          "path": "production-build/southeast-b6-browser/results.json",
+          "checks": 17,
+          "passed_checks": 17,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:40625/luoyang-city/"
+        },
+        {
+          "path": "production-build/v26-browser/results.json",
+          "checks": 17,
+          "passed_checks": 17,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:45891/luoyang-city/"
+        },
+        {
+          "path": "production-build/v27-browser/results.json",
+          "checks": 19,
+          "passed_checks": 19,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:34009/luoyang-city/"
+        },
+        {
+          "path": "production-build/v28-browser/results.json",
+          "checks": 15,
+          "passed_checks": 15,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:43727/luoyang-city/"
+        },
+        {
+          "path": "production-build/v29-browser/results.json",
+          "checks": 19,
+          "passed_checks": 19,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:38565/luoyang-city/"
+        },
+        {
+          "path": "production-build/v30-browser/results.json",
+          "checks": 13,
+          "passed_checks": 13,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:40439/luoyang-city/"
+        },
+        {
+          "path": "production-build/west-b3-browser/results.json",
+          "checks": 9,
+          "passed_checks": 9,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:46053/luoyang-city/"
+        },
+        {
+          "path": "production-build/west-roads-b5-browser/results.json",
+          "checks": 10,
+          "passed_checks": 10,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "http://127.0.0.1:38091/luoyang-city/"
+        }
+      ],
+      "semantic_log_count": 19,
+      "python_tests": 261,
+      "all_semantic_logs_passed": true,
+      "semantic_logs": [
+        {
+          "path": "production-build/city-audit-b8-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "production-build/city-review-b8-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "production-build/dual-semantic-tests.txt",
+          "tests": 22,
+          "passed": true
+        },
+        {
+          "path": "production-build/ground-review-b6-tests.txt",
+          "tests": 6,
+          "passed": true
+        },
+        {
+          "path": "production-build/historical-datum-b5-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "production-build/historical-frame-b4-tests.txt",
+          "tests": 7,
+          "passed": true
+        },
+        {
+          "path": "production-build/live-http-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "production-build/luonan-b7-tests.txt",
+          "tests": 21,
+          "passed": true
+        },
+        {
+          "path": "production-build/north-b4-semantic-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "production-build/prosperity-semantic-tests.txt",
+          "tests": 45,
+          "passed": true
+        },
+        {
+          "path": "production-build/source-access-b8-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "production-build/source-continuity-b7-tests.txt",
+          "tests": 5,
+          "passed": true
+        },
+        {
+          "path": "production-build/southeast-b6-tests.txt",
+          "tests": 18,
+          "passed": true
+        },
+        {
+          "path": "production-build/v26-semantic-tests.txt",
+          "tests": 20,
+          "passed": true
+        },
+        {
+          "path": "production-build/v27-semantic-tests.txt",
+          "tests": 25,
+          "passed": true
+        },
+        {
+          "path": "production-build/v29-semantic-tests.txt",
+          "tests": 20,
+          "passed": true
+        },
+        {
+          "path": "production-build/v30-semantic-tests.txt",
+          "tests": 16,
+          "passed": true
+        },
+        {
+          "path": "production-build/west-b3-semantic-tests.txt",
+          "tests": 8,
+          "passed": true
+        },
+        {
+          "path": "production-build/west-roads-b5-tests.txt",
+          "tests": 8,
+          "passed": true
+        }
+      ],
+      "node": {
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "path": "production-build/node-map-interactions-tap.txt"
+      }
+    },
+    "live": {
+      "phase": "live",
+      "browser_suite_count": 17,
+      "browser_check_count": 248,
+      "browser_passed_checks": 248,
+      "browser_error_count": 0,
+      "all_browser_suites_passed": true,
+      "browser_suites": [
+        {
+          "path": "live/live-browser/results.json",
+          "checks": 16,
+          "passed_checks": 16,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-city-b8-browser/results.json",
+          "checks": 18,
+          "passed_checks": 18,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-dual-browser/results.json",
+          "checks": 19,
+          "passed_checks": 19,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-homepage-v1-browser/results.json",
+          "checks": 10,
+          "passed_checks": 10,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-luonan-b7-browser/results.json",
+          "checks": 17,
+          "passed_checks": 17,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-north-b4-browser/results.json",
+          "checks": 10,
+          "passed_checks": 10,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-prosperity-core-v2-browser/results.json",
+          "checks": 12,
+          "passed_checks": 12,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-prosperity-gate-v3-browser/report.json",
+          "checks": 9,
+          "passed_checks": 9,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-prosperity-v1-browser/results.json",
+          "checks": 18,
+          "passed_checks": 18,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-southeast-b6-browser/results.json",
+          "checks": 17,
+          "passed_checks": 17,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-v26-browser/results.json",
+          "checks": 17,
+          "passed_checks": 17,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-v27-browser/results.json",
+          "checks": 19,
+          "passed_checks": 19,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-v28-browser/results.json",
+          "checks": 15,
+          "passed_checks": 15,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-v29-browser/results.json",
+          "checks": 19,
+          "passed_checks": 19,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-v30-browser/results.json",
+          "checks": 13,
+          "passed_checks": 13,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-west-b3-browser/results.json",
+          "checks": 9,
+          "passed_checks": 9,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        },
+        {
+          "path": "live/live-west-roads-b5-browser/results.json",
+          "checks": 10,
+          "passed_checks": 10,
+          "all_passed": true,
+          "failed_checks": [],
+          "errors": [],
+          "base_url": "https://mechgouki.github.io/luoyang-city/"
+        }
+      ],
+      "semantic_log_count": 0,
+      "python_tests": 0,
+      "all_semantic_logs_passed": false,
+      "semantic_logs": [],
+      "node": null
+    }
+  },
+  "verified_artifacts": [
+    {
+      "artifact_id": 14168250726,
+      "zip_file_name": "p3-pr-attempt1-14168250726.zip",
+      "zip_sha256": "4d8c9934cefa41a19413dc046aa3ce0a3a55995e42c7f833dd2747c66160e6c6",
+      "zip_size_bytes": 92040212,
+      "official_digest_verified": true,
+      "extracted_count": 45
+    },
+    {
+      "artifact_id": 14167774972,
+      "zip_file_name": "p3-pr-attempt2-14167774972.zip",
+      "zip_sha256": "f34b6d32a4063d4572604821a504cb135ee840305720a60182abe047bc70c756",
+      "zip_size_bytes": 94593524,
+      "official_digest_verified": true,
+      "extracted_count": 46
+    },
+    {
+      "artifact_id": 14168436875,
+      "zip_file_name": "p3-pr-14168436875.zip",
+      "zip_sha256": "4a1831f5b136382493671fcab04daf449f6cffaf35dd6cc128ce27bc02f7fd68",
+      "zip_size_bytes": 96725255,
+      "official_digest_verified": true,
+      "extracted_count": 51
+    },
+    {
+      "artifact_id": 14168947141,
+      "zip_file_name": "p3-production-build-14168947141.zip",
+      "zip_sha256": "2dc482698984b04e9f7fa5c1b05cd8d619630e7345692589adfb2beea46f590c",
+      "zip_size_bytes": 96732223,
+      "official_digest_verified": true,
+      "extracted_count": 51
+    },
+    {
+      "artifact_id": 14168927969,
+      "zip_file_name": "p3-live-14168927969.zip",
+      "zip_sha256": "2a19b659b327b3f25bb6fea43a82eee6af5004ab92e3bd56e27f9a35bea60848",
+      "zip_size_bytes": 45512263,
+      "official_digest_verified": true,
+      "extracted_count": 24
+    }
+  ],
+  "public_verification": {
+    "path": "public/independent-verification.json",
+    "source_commit": "a52b28be7063fb30fb7c3c81375bf9ec05cb5dea",
+    "sampled_resources": 26,
+    "passed_checks": 73,
+    "all_passed": true,
+    "http_retries": 0
+  },
+  "live_http_original_report": "live/live-http.json",
+  "live_http_checked_files": 469,
+  "live_http_retries": [],
+  "parent_public_verification": {
+    "path": "metadata/parent-public-asset-verification.json",
+    "manifest_hash_semantics": "Its build_manifest_sha256 is the hash of a sorted-key JSON representation, not the original HTTP response bytes."
+  },
+  "preservation": {
+    "protected_files": 444,
+    "intentional_html_updates": [
+      {
+        "path": "index.html",
+        "archive_path": "index-before-gate.html",
+        "before_sha256": "184ae8c0d90475969cfff156d0b3dd0be90fe2fcd257f7842464f6701334ee7b",
+        "after_sha256": "8bb645d5d5d4148bed676e2545de9f72c8bf69855f0663507ee64c34a9ab63dd",
+        "entry_id": "gate-detail-home-entry",
+        "intent": "仅增加指向阊阖门 P3 的专题入口；其余页面字节保留。"
+      },
+      {
+        "path": "v3.0-dual.html",
+        "archive_path": "v3.0-dual-before-gate.html",
+        "before_sha256": "184ae8c0d90475969cfff156d0b3dd0be90fe2fcd257f7842464f6701334ee7b",
+        "after_sha256": "8bb645d5d5d4148bed676e2545de9f72c8bf69855f0663507ee64c34a9ab63dd",
+        "entry_id": "gate-detail-home-entry",
+        "intent": "仅增加指向阊阖门 P3 的专题入口；其余页面字节保留。"
+      },
+      {
+        "path": "prosperity.html",
+        "archive_path": "prosperity-before-gate.html",
+        "before_sha256": "af960adb3e1621d0f4e713d6f7ccb61a67358a274508a87b8b1cb559f32b6559",
+        "after_sha256": "78b85b46bd5c082f30ce850857d6a25507d0ccece55a8b344403e3583e615475",
+        "entry_id": "gate-detail-entry",
+        "intent": "仅增加指向阊阖门 P3 的专题入口；其余页面字节保留。"
+      },
+      {
+        "path": "prosperity-core.html",
+        "archive_path": "prosperity-core-before-gate.html",
+        "before_sha256": "170837e7b371c8e0152f37f7f1251d6722fba3d4cadd79e7cde863ebc79d6881",
+        "after_sha256": "07074097ad71134c4b3f06d23aaab9e1eda7eaf341a1d5b81754613b94d00d9c",
+        "entry_id": "gate-detail-core-entry",
+        "intent": "仅增加指向阊阖门 P3 的专题入口；其余页面字节保留。"
+      }
+    ],
+    "previous_preservation_files_unchanged": true
+  },
+  "visual_review": {
+    "reviewed_pr_head": "747932370d9c1113ddc1b2dae6a0e65661e573ee",
+    "reviewed_pr_tested_merge": "eea118a1adb6c4c782230b2c0545f6e4f50a92be",
+    "source_tree": "c243415b440f9199ddfe5cbd23b1cc019b4a44e3",
+    "original_screenshots": [
+      {
+        "path": "pr/prosperity-gate-v3-browser/desktop-local.png",
+        "sha256": "166deecd8187c3abd2c39848ce83794a9fc8d2b2972122a4a70b770e75097e0b",
+        "dimensions": [
+          1500,
+          2564
+        ]
+      },
+      {
+        "path": "pr/prosperity-gate-v3-browser/desktop-city.png",
+        "sha256": "8dfee7640c1d4fdf0b87b5e8bc1655e0019f782836602218e5b0db1f971a9be5",
+        "dimensions": [
+          1396,
+          892
+        ]
+      },
+      {
+        "path": "pr/prosperity-gate-v3-browser/desktop-diagnostics.png",
+        "sha256": "5b517a827e2b6dc508833a9769ab66457ca6390350de968d22a78b9a32f60ab5",
+        "dimensions": [
+          1396,
+          892
+        ]
+      },
+      {
+        "path": "pr/prosperity-gate-v3-browser/mobile-local.png",
+        "sha256": "2761a2b1c705211ee9a20d7810f8e9e05fb07c10672c8bd70956512d068e2d69",
+        "dimensions": [
+          390,
+          3388
+        ]
+      },
+      {
+        "path": "pr/prosperity-gate-v3-browser/no-javascript.png",
+        "sha256": "4b6ae0ad4d0b6b01d014dd6a2e731c33944aa157f9d970c8dd6d7d48ddb4e252",
+        "dimensions": [
+          390,
+          3560
+        ]
+      }
+    ],
+    "root_reviewed": [
+      "desktop-local.png",
+      "desktop-city.png",
+      "mobile-local.png"
+    ],
+    "interface_agent_reviewed": [
+      "desktop-local.png",
+      "desktop-city.png",
+      "desktop-diagnostics.png",
+      "mobile-local.png",
+      "no-javascript.png"
+    ],
+    "observations": [
+      "Desktop plan, source notes and controls remain within their panels.",
+      "The city registration label does not obscure the open que traces.",
+      "Mobile selected west-que and source-off states are correctly reflected; HTML notes and controls remain usable, with diagram detail available by zoom or the full SVG link.",
+      "The diagnostics figure keeps image scale, tabulated dimensions and unverified north reference distinct.",
+      "The no-JavaScript capture retains the static image, initial source notes, original comparison and complete downloads."
+    ],
+    "scope": "Presentation and documented interaction acceptance. This does not certify historical registration, field accuracy, reconstructed roof/height, or final homepage panorama aesthetics."
+  },
+  "screenshot_comparisons": {
+    "comparisons": [
+      {
+        "name": "desktop-city.png",
+        "left_phase": "pr",
+        "right_phase": "production-build",
+        "left_sha256": "8dfee7640c1d4fdf0b87b5e8bc1655e0019f782836602218e5b0db1f971a9be5",
+        "right_sha256": "8dfee7640c1d4fdf0b87b5e8bc1655e0019f782836602218e5b0db1f971a9be5",
+        "byte_identical": true,
+        "same_size": true,
+        "left_size": [
+          1396,
+          892
+        ],
+        "right_size": [
+          1396,
+          892
+        ],
+        "pixels_identical": true,
+        "different_pixels": 0,
+        "difference_bbox": null,
+        "different_row_ranges_inclusive": []
+      },
+      {
+        "name": "desktop-diagnostics.png",
+        "left_phase": "pr",
+        "right_phase": "production-build",
+        "left_sha256": "5b517a827e2b6dc508833a9769ab66457ca6390350de968d22a78b9a32f60ab5",
+        "right_sha256": "5b517a827e2b6dc508833a9769ab66457ca6390350de968d22a78b9a32f60ab5",
+        "byte_identical": true,
+        "same_size": true,
+        "left_size": [
+          1396,
+          892
+        ],
+        "right_size": [
+          1396,
+          892
+        ],
+        "pixels_identical": true,
+        "different_pixels": 0,
+        "difference_bbox": null,
+        "different_row_ranges_inclusive": []
+      },
+      {
+        "name": "desktop-local.png",
+        "left_phase": "pr",
+        "right_phase": "production-build",
+        "left_sha256": "166deecd8187c3abd2c39848ce83794a9fc8d2b2972122a4a70b770e75097e0b",
+        "right_sha256": "3345fa42e76299a1dd56f2336f9ae9679288dd184b88c2f2a32eb1160531c04f",
+        "byte_identical": false,
+        "same_size": true,
+        "left_size": [
+          1500,
+          2564
+        ],
+        "right_size": [
+          1500,
+          2564
+        ],
+        "pixels_identical": false,
+        "different_pixels": 271,
+        "difference_bbox": [
+          1402,
+          2532,
+          1448,
+          2539
+        ],
+        "different_row_ranges_inclusive": [
+          [
+            2532,
+            2538
+          ]
+        ]
+      },
+      {
+        "name": "mobile-local.png",
+        "left_phase": "pr",
+        "right_phase": "production-build",
+        "left_sha256": "2761a2b1c705211ee9a20d7810f8e9e05fb07c10672c8bd70956512d068e2d69",
+        "right_sha256": "5f0fb456c8e9bfd0672b6159cb8e926abe54ff0c7c7e635380084a13d6feb97d",
+        "byte_identical": false,
+        "same_size": true,
+        "left_size": [
+          390,
+          3388
+        ],
+        "right_size": [
+          390,
+          3388
+        ],
+        "pixels_identical": false,
+        "different_pixels": 265,
+        "difference_bbox": [
+          177,
+          3356,
+          223,
+          3363
+        ],
+        "different_row_ranges_inclusive": [
+          [
+            3356,
+            3362
+          ]
+        ]
+      },
+      {
+        "name": "no-javascript.png",
+        "left_phase": "pr",
+        "right_phase": "production-build",
+        "left_sha256": "4b6ae0ad4d0b6b01d014dd6a2e731c33944aa157f9d970c8dd6d7d48ddb4e252",
+        "right_sha256": "33b36ff13c69cdf96411bbedf7a1e4d8cd0637c77f2be1baa3373ebf96f89964",
+        "byte_identical": false,
+        "same_size": true,
+        "left_size": [
+          390,
+          3560
+        ],
+        "right_size": [
+          390,
+          3560
+        ],
+        "pixels_identical": false,
+        "different_pixels": 271,
+        "difference_bbox": [
+          68,
+          3528,
+          114,
+          3535
+        ],
+        "different_row_ranges_inclusive": [
+          [
+            3528,
+            3534
+          ]
+        ]
+      },
+      {
+        "name": "desktop-city.png",
+        "left_phase": "production-build",
+        "right_phase": "live",
+        "left_sha256": "8dfee7640c1d4fdf0b87b5e8bc1655e0019f782836602218e5b0db1f971a9be5",
+        "right_sha256": "8dfee7640c1d4fdf0b87b5e8bc1655e0019f782836602218e5b0db1f971a9be5",
+        "byte_identical": true,
+        "same_size": true,
+        "left_size": [
+          1396,
+          892
+        ],
+        "right_size": [
+          1396,
+          892
+        ],
+        "pixels_identical": true,
+        "different_pixels": 0,
+        "difference_bbox": null,
+        "different_row_ranges_inclusive": []
+      },
+      {
+        "name": "desktop-diagnostics.png",
+        "left_phase": "production-build",
+        "right_phase": "live",
+        "left_sha256": "5b517a827e2b6dc508833a9769ab66457ca6390350de968d22a78b9a32f60ab5",
+        "right_sha256": "5b517a827e2b6dc508833a9769ab66457ca6390350de968d22a78b9a32f60ab5",
+        "byte_identical": true,
+        "same_size": true,
+        "left_size": [
+          1396,
+          892
+        ],
+        "right_size": [
+          1396,
+          892
+        ],
+        "pixels_identical": true,
+        "different_pixels": 0,
+        "difference_bbox": null,
+        "different_row_ranges_inclusive": []
+      },
+      {
+        "name": "desktop-local.png",
+        "left_phase": "production-build",
+        "right_phase": "live",
+        "left_sha256": "3345fa42e76299a1dd56f2336f9ae9679288dd184b88c2f2a32eb1160531c04f",
+        "right_sha256": "3345fa42e76299a1dd56f2336f9ae9679288dd184b88c2f2a32eb1160531c04f",
+        "byte_identical": true,
+        "same_size": true,
+        "left_size": [
+          1500,
+          2564
+        ],
+        "right_size": [
+          1500,
+          2564
+        ],
+        "pixels_identical": true,
+        "different_pixels": 0,
+        "difference_bbox": null,
+        "different_row_ranges_inclusive": []
+      },
+      {
+        "name": "mobile-local.png",
+        "left_phase": "production-build",
+        "right_phase": "live",
+        "left_sha256": "5f0fb456c8e9bfd0672b6159cb8e926abe54ff0c7c7e635380084a13d6feb97d",
+        "right_sha256": "5f0fb456c8e9bfd0672b6159cb8e926abe54ff0c7c7e635380084a13d6feb97d",
+        "byte_identical": true,
+        "same_size": true,
+        "left_size": [
+          390,
+          3388
+        ],
+        "right_size": [
+          390,
+          3388
+        ],
+        "pixels_identical": true,
+        "different_pixels": 0,
+        "difference_bbox": null,
+        "different_row_ranges_inclusive": []
+      },
+      {
+        "name": "no-javascript.png",
+        "left_phase": "production-build",
+        "right_phase": "live",
+        "left_sha256": "33b36ff13c69cdf96411bbedf7a1e4d8cd0637c77f2be1baa3373ebf96f89964",
+        "right_sha256": "33b36ff13c69cdf96411bbedf7a1e4d8cd0637c77f2be1baa3373ebf96f89964",
+        "byte_identical": true,
+        "same_size": true,
+        "left_size": [
+          390,
+          3560
+        ],
+        "right_size": [
+          390,
+          3560
+        ],
+        "pixels_identical": true,
+        "different_pixels": 0,
+        "difference_bbox": null,
+        "different_row_ranges_inclusive": []
+      },
+      {
+        "name": "desktop-city.png",
+        "left_phase": "pr",
+        "right_phase": "live",
+        "left_sha256": "8dfee7640c1d4fdf0b87b5e8bc1655e0019f782836602218e5b0db1f971a9be5",
+        "right_sha256": "8dfee7640c1d4fdf0b87b5e8bc1655e0019f782836602218e5b0db1f971a9be5",
+        "byte_identical": true,
+        "same_size": true,
+        "left_size": [
+          1396,
+          892
+        ],
+        "right_size": [
+          1396,
+          892
+        ],
+        "pixels_identical": true,
+        "different_pixels": 0,
+        "difference_bbox": null,
+        "different_row_ranges_inclusive": []
+      },
+      {
+        "name": "desktop-diagnostics.png",
+        "left_phase": "pr",
+        "right_phase": "live",
+        "left_sha256": "5b517a827e2b6dc508833a9769ab66457ca6390350de968d22a78b9a32f60ab5",
+        "right_sha256": "5b517a827e2b6dc508833a9769ab66457ca6390350de968d22a78b9a32f60ab5",
+        "byte_identical": true,
+        "same_size": true,
+        "left_size": [
+          1396,
+          892
+        ],
+        "right_size": [
+          1396,
+          892
+        ],
+        "pixels_identical": true,
+        "different_pixels": 0,
+        "difference_bbox": null,
+        "different_row_ranges_inclusive": []
+      },
+      {
+        "name": "desktop-local.png",
+        "left_phase": "pr",
+        "right_phase": "live",
+        "left_sha256": "166deecd8187c3abd2c39848ce83794a9fc8d2b2972122a4a70b770e75097e0b",
+        "right_sha256": "3345fa42e76299a1dd56f2336f9ae9679288dd184b88c2f2a32eb1160531c04f",
+        "byte_identical": false,
+        "same_size": true,
+        "left_size": [
+          1500,
+          2564
+        ],
+        "right_size": [
+          1500,
+          2564
+        ],
+        "pixels_identical": false,
+        "different_pixels": 271,
+        "difference_bbox": [
+          1402,
+          2532,
+          1448,
+          2539
+        ],
+        "different_row_ranges_inclusive": [
+          [
+            2532,
+            2538
+          ]
+        ]
+      },
+      {
+        "name": "mobile-local.png",
+        "left_phase": "pr",
+        "right_phase": "live",
+        "left_sha256": "2761a2b1c705211ee9a20d7810f8e9e05fb07c10672c8bd70956512d068e2d69",
+        "right_sha256": "5f0fb456c8e9bfd0672b6159cb8e926abe54ff0c7c7e635380084a13d6feb97d",
+        "byte_identical": false,
+        "same_size": true,
+        "left_size": [
+          390,
+          3388
+        ],
+        "right_size": [
+          390,
+          3388
+        ],
+        "pixels_identical": false,
+        "different_pixels": 265,
+        "difference_bbox": [
+          177,
+          3356,
+          223,
+          3363
+        ],
+        "different_row_ranges_inclusive": [
+          [
+            3356,
+            3362
+          ]
+        ]
+      },
+      {
+        "name": "no-javascript.png",
+        "left_phase": "pr",
+        "right_phase": "live",
+        "left_sha256": "4b6ae0ad4d0b6b01d014dd6a2e731c33944aa157f9d970c8dd6d7d48ddb4e252",
+        "right_sha256": "33b36ff13c69cdf96411bbedf7a1e4d8cd0637c77f2be1baa3373ebf96f89964",
+        "byte_identical": false,
+        "same_size": true,
+        "left_size": [
+          390,
+          3560
+        ],
+        "right_size": [
+          390,
+          3560
+        ],
+        "pixels_identical": false,
+        "different_pixels": 271,
+        "difference_bbox": [
+          68,
+          3528,
+          114,
+          3535
+        ],
+        "different_row_ranges_inclusive": [
+          [
+            3528,
+            3534
+          ]
+        ]
+      }
+    ],
+    "interpretation": "Only exact observed byte/pixel differences are recorded. A semantic explanation of differing regions requires visual review."
+  },
+  "historical_limits": {
+    "registration_verified": false,
+    "new_ancient_absolute_coordinates": 0,
+    "external_true_north_verified": false,
+    "historical_heights_reconstructed": false,
+    "roofs_reconstructed": false,
+    "ancient_ground_surface_reconstructed": false
+  },
+  "retention_policy": "All original JSON/TXT reports, timestamped Node TAP excerpts, five P3 screenshots per successful browser phase, one prior-failure P1 screenshot, official metadata and independent HTTP snapshots. Large ZIPs, unrelated screenshots and Pages deployment packages are excluded."
+}

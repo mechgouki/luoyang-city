@@ -1,0 +1,231 @@
+{
+  "total_count": 3,
+  "jobs": [
+    {
+      "id": 132859206875,
+      "run_id": 43729698896,
+      "workflow_name": "Validate and deploy Luoyang Atlas",
+      "head_branch": "feat/prosperity-gate-v3",
+      "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/43729698896",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVpoYrs8AAAAe7wac2w",
+      "head_sha": "6314e99660fa65f288af0b646c6ea757a11acd25",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/132859206875",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/43729698896/job/132859206875",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-15T15:24:24Z",
+      "started_at": "2026-11-15T15:24:26Z",
+      "completed_at": "2026-11-15T15:29:04Z",
+      "name": "build",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-15T15:24:27Z",
+          "completed_at": "2026-11-15T15:24:28Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-15T15:24:28Z",
+          "completed_at": "2026-11-15T15:24:30Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-15T15:24:30Z",
+          "completed_at": "2026-11-15T15:24:30Z"
+        },
+        {
+          "name": "Install pinned terrain and document dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-15T15:24:30Z",
+          "completed_at": "2026-11-15T15:24:44Z"
+        },
+        {
+          "name": "Install pinned rendering font outside the published directory",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-15T15:24:44Z",
+          "completed_at": "2026-11-15T15:24:46Z"
+        },
+        {
+          "name": "Assemble and verify unchanged baseline PDF",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-15T15:24:46Z",
+          "completed_at": "2026-11-15T15:24:46Z"
+        },
+        {
+          "name": "Check baseline data and JavaScript",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-15T15:24:46Z",
+          "completed_at": "2026-11-15T15:24:48Z"
+        },
+        {
+          "name": "Check all spatial, temporal, terrain and dual-map semantics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-15T15:24:48Z",
+          "completed_at": "2026-11-15T15:24:56Z"
+        },
+        {
+          "name": "Build preserved research, terrain, B1-B8 and historical map review",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-15T15:24:56Z",
+          "completed_at": "2026-11-15T15:26:05Z"
+        },
+        {
+          "name": "Build prosperity documentary maps and source-geographic layout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-15T15:26:05Z",
+          "completed_at": "2026-11-15T15:26:12Z"
+        },
+        {
+          "name": "Check the built prosperity maps and their evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-15T15:26:12Z",
+          "completed_at": "2026-11-15T15:26:13Z"
+        },
+        {
+          "name": "Fetch pinned browser runtime with preinstalled dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-11-15T15:26:13Z",
+          "completed_at": "2026-11-15T15:26:36Z"
+        },
+        {
+          "name": "Exercise all earlier and dual-map interactions",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 13,
+          "started_at": "2026-11-15T15:26:36Z",
+          "completed_at": "2026-11-15T15:28:57Z"
+        },
+        {
+          "name": "Preserve build and browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-15T15:28:57Z",
+          "completed_at": "2026-11-15T15:29:02Z"
+        },
+        {
+          "name": "Upload verified Pages artifact",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-11-15T15:29:02Z",
+          "completed_at": "2026-11-15T15:29:02Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 29,
+          "started_at": "2026-11-15T15:29:02Z",
+          "completed_at": "2026-11-15T15:29:02Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30,
+          "started_at": "2026-11-15T15:29:02Z",
+          "completed_at": "2026-11-15T15:29:02Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31,
+          "started_at": "2026-11-15T15:29:02Z",
+          "completed_at": "2026-11-15T15:29:02Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/132859206875",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000000105,
+      "runner_name": "GitHub Actions 1000000105",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 132860510893,
+      "run_id": 43729698896,
+      "workflow_name": "Validate and deploy Luoyang Atlas",
+      "head_branch": "feat/prosperity-gate-v3",
+      "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/43729698896",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVpoYrs8AAAAe7xqCrQ",
+      "head_sha": "6314e99660fa65f288af0b646c6ea757a11acd25",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/132860510893",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/43729698896/job/132860510893",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-11-15T15:29:05Z",
+      "started_at": "2026-11-15T15:29:05Z",
+      "completed_at": "2026-11-15T15:29:04Z",
+      "name": "deploy",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/132860510893",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    },
+    {
+      "id": 132860511047,
+      "run_id": 43729698896,
+      "workflow_name": "Validate and deploy Luoyang Atlas",
+      "head_branch": "feat/prosperity-gate-v3",
+      "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/43729698896",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVpoYrs8AAAAe7xqDRw",
+      "head_sha": "6314e99660fa65f288af0b646c6ea757a11acd25",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/132860511047",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/43729698896/job/132860511047",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-11-15T15:29:05Z",
+      "started_at": "2026-11-15T15:29:05Z",
+      "completed_at": "2026-11-15T15:29:04Z",
+      "name": "verify-live",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/132860511047",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    }
+  ]
+}

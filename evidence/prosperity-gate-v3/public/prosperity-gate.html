@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="从阊阖门原件平面读取局部构成与比例尺，分别核对图内米制、附表尺寸和城市总图概略位置。">
+  <title>盛时洛阳 · 阊阖门局部平面</title>
+  <link rel="stylesheet" href="./_assets/a5b79c141be4379de01b-prosperity-gate-v3.css">
+</head>
+<body>
+  <a class="skip-link" href="#gate-workspace">跳到阊阖门图件</a>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">洛</span><span><small>NORTHERN WEI · LUOYANG</small><strong>北魏洛阳文献地图</strong></span></a>
+    <nav aria-label="主要导航"><a href="./prosperity.html">盛时总览</a><a href="./prosperity-core.html">核心建筑尺度</a><a href="#sources">资料与下载</a></nav>
+  </header>
+  <main class="page-shell">
+    <section class="introduction" aria-labelledby="page-title">
+      <div><p class="eyebrow">盛时洛阳 · 宫城南门</p><h1 id="page-title">从原件，读懂阊阖门</h1><p>近看门基、通道与两侧阙基，把局部平面量读与城市位置依据分开核对。</p></div>
+      <a class="figure-jump" href="#source-comparison">对照原件 <span aria-hidden="true">↓</span></a>
+    </section>
+    <div class="view-controls">
+      <nav class="mode-switch" aria-label="阊阖门研究视图" id="mode-switch"><button type="button" data-view="local" aria-pressed="true" disabled>局部平面</button><button type="button" data-view="city" aria-pressed="false" disabled>城市接合</button><button type="button" data-view="diagnostics" aria-pressed="false" disabled>尺度核对</button></nav>
+      <span class="registration-status">城市配准 · 尚未核定</span>
+    </div>
+    <section class="gate-workspace" id="gate-workspace" aria-label="阊阖门平面与定位依据">
+      <div class="map-panel">
+        <div class="map-toolbar"><h2 id="map-title">阊阖门局部平面</h2><div class="map-tools"><button type="button" id="zoom-in" aria-label="放大图件" disabled>＋</button><button type="button" id="zoom-out" aria-label="缩小图件" disabled>−</button><button type="button" id="reset-map" disabled>恢复视图</button><button type="button" id="focus-component" disabled>查看所选</button></div></div>
+        <div class="map-viewport" id="map-viewport" tabindex="0" aria-label="可缩放、拖动和选择构成的阊阖门图件" aria-describedby="map-help"><img class="fallback-map" src="./prosperity-gate/local-plan.svg" alt="阊阖门局部量读平面；下方提供完整图件及来源说明。"></div>
+        <div class="map-options"><label><input type="checkbox" id="source-toggle" checked disabled> 显示原件底图</label><a id="open-map" href="./prosperity-gate/local-plan.svg" target="_blank" rel="noopener">放大当前图件 ↗</a><button type="button" id="copy-link" disabled>复制此视图链接</button></div>
+        <p class="map-help" id="map-help">选择图中构成可读出处；可拖动图面，用 ＋ / − 缩放，Home 恢复视图，Enter 选择构成。</p>
+        <p class="share-status" id="share-status" role="status"></p><input id="share-url" class="share-url" aria-label="当前视图链接" readonly hidden>
+        <p class="map-note" id="view-note">图内米制来自原件比例尺。局部原点与图内方向用于量读，尚未接入城市坐标。</p>
+        <noscript><p class="fallback-note">当前显示静态局部平面。可直接打开<a href="./prosperity-gate/local-plan.svg">局部平面</a>、<a href="./prosperity-gate/city-link.svg">城市接合</a>和<a href="./prosperity-gate/scale-diagnostics.svg">尺度核对</a>，或下载下方图册和读数。图内坐标不表示新测得的古址经纬度。</p></noscript>
+      </div>
+      <aside class="inspector" aria-label="构成与出处">
+        <label class="section-kicker" for="component-select">选择构成，核对依据</label>
+        <select id="component-select" disabled><option value="gate-main-base" selected>主门基主体边缘</option><option value="gate-passage-west">西门道可辨段</option><option value="gate-passage-central">中门道可辨段</option><option value="gate-passage-east">东门道可辨段</option><option value="gate-west-que">西阙基可见边缘</option><option value="gate-east-que">东阙基可见边缘</option><option value="gate-west-underground">西阙地下基础示意边缘</option><option value="gate-east-underground">东阙地下基础示意边缘</option><option value="gate-west-link">门基至西阙连接路径</option><option value="gate-east-link">门基至东阙连接路径</option></select>
+        <div id="component-detail" aria-live="polite"><h2>主门基主体边缘</h2><p class="evidence-label">原图可辨实线；人工量读</p><p class="measure-label">图内量读 / 构成说明</p><p class="measure-value">图读约 45.9 × 25.4 m；表列 44.5 × 24.4 m，分开保存</p><dl class="component-facts"><dt>原件怎样支持这一构成</dt><dd>量读主体四边的简化折线；南北突出漫道和左右连接部分另列，不是整个门阙群外轮廓。每点按原生图约 ±2 像素量读，不提取柱网。</dd><dt>读数使用范围</dt><dd>原件描摹范围约 ±2 px；只表示图面线宽与读取范围，不等同遗址测量精度。</dd></dl><div class="component-links"><a href="https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962" target="_blank" rel="noopener">宫城阊阖门平剖图 ↗</a><a href="#source-comparison">对照来源原图 ↓</a><a href="./prosperity-gate/readings.csv" download>下载像素与局部米制读数</a></div><details class="reading-details"><summary>查看读数层说明</summary><p>本构成保存 5 个原件读点。CSV 分列原件像素和换算后的局部米制，原始读点顺序保持不变。</p><p>图内原点与轴向只服务本图量读；这些坐标不作为古址经纬度发布。</p></details></div>
+        <div class="boundary-note"><strong>局部量读的边界</strong><p>原件像素、图内米制和城市总图锚点各有来源。城市接合尚未核定；图内北箭不作为外部真北校核。</p></div>
+      </aside>
+    </section>
+    <section class="evidence-section" aria-labelledby="evidence-title">
+      <div class="section-heading"><div><p class="section-kicker">三种依据，分别保留</p><h2 id="evidence-title">尺度怎样进入城市研究</h2></div><p>在定位依据补齐之前，保留差异本身，让每一步都能回到原件。</p></div>
+      <div class="evidence-grid">
+        <article><span class="evidence-number">01</span><h3>图内米制</h3><p>读取局部平面上的比例尺和轮廓。换算结果只在这张图的局部坐标中成立，描摹容差不等于遗址测量精度。</p></article>
+        <article><span class="evidence-number">02</span><h3>附表尺寸</h3><p>门基表列 44.5 × 24.4 m 单独列示。它与原件量读值用于核对，不调整图面去强行吻合。</p></article>
+        <article><span class="evidence-number">03</span><h3>城市总图锚点</h3><p>沿用总图中阊阖门的概略位置关系。局部平面需要独立的同名控制点、方位与坐标依据，才能完成城市配准。</p></article>
+      </div>
+    </section>
+    <section class="source-comparison" id="source-comparison" aria-labelledby="comparison-title">
+      <div class="section-heading"><div><p class="section-kicker">原件对照</p><h2 id="comparison-title">回到平面图本身</h2></div><p>保留原件分辨率与出处，叠绘线条可在局部平面中单独开关。点击原件可另页放大。</p></div>
+      <figure class="source-figure"><a href="./prosperity-gate/sources/changhe-plan-native.jpeg" target="_blank" rel="noopener"><img src="./prosperity-gate/sources/changhe-plan-native.jpeg" alt="来源原件中的阊阖门局部平剖面" loading="lazy" width="555" height="434"></a><figcaption><h3>阊阖门局部平剖面</h3><p>宫城阊阖门平剖图</p><p>原件图像 555 × 434 px。保留原始分辨率；放大只帮助辨读，不增加图中细节。</p><p>门基、通道和阙基按原图可辨轮廓读取，模糊或未定部分保留说明。</p><a href="https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962" target="_blank" rel="noopener">打开官方原件出处 ↗</a></figcaption></figure>
+    </section>
+    <section class="sources-section" id="sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">资料与下载</h2>
+      <div class="download-links" id="download-links"><a href="./downloads/prosperity-gate-v3-atlas.pdf" download>阊阖门研究图册 PDF</a><a href="./downloads/prosperity-gate-v3-package.zip" download>完整资料包 ZIP</a><a href="./prosperity-gate/local-plan.svg" download>局部平面 SVG</a><a href="./prosperity-gate/city-link.svg" download>城市接合 SVG</a><a href="./prosperity-gate/scale-diagnostics.svg" download>尺度核对 SVG</a><a href="./prosperity-gate/gate-plan.json" download>原件读数与证据 JSON</a><a href="./prosperity-gate/models.json" download>局部米制模型 JSON</a><a href="./prosperity-gate/readings.csv" download>像素与米制读数 CSV</a><a href="./prosperity-gate/method.md" download>量读与接合方法说明</a></div>
+      <details id="source-catalog"><summary>原件出处与方法说明</summary><div class="source-grid" id="source-list"><article class="source-card"><h3>宫城阊阖门平剖图</h3><p>申遗文档所收考古机构平剖图；本轮恢复原生 555×434 JPEG。含比例尺、北箭及剖面带；图中的探方框与后期扰动不等于建筑边。</p><a href="https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962" target="_blank" rel="noopener">查看原件出处 ↗</a></article><article class="source-card"><h3>宫城阊阖门基表列尺度</h3><p>Cgm-3：门基东西 44.5 米、南北 24.4 米。与图件同属汇编，作为分开的尺度核对，不作为外部测量控制，也不反向拟合比例尺。</p><a href="https://whc.unesco.org/uploads/nominations/1442.pdf#page=1927" target="_blank" rel="noopener">查看原件出处 ↗</a></article><article class="source-card"><h3>管理规划图 06a 的概略来源点</h3><p>2012 管理规划图，底图注明 1997 航摄、1999 测绘；位置沿用 P1/P2。来源基准 Xian 1980，并未转为 WGS84。</p><a href="https://whc.unesco.org/uploads/nominations/1442.pdf#page=3457" target="_blank" rel="noopener">查看原件出处 ↗</a></article></div></details>
+    </section>
+    <footer><a href="./prosperity-core.html">返回核心建筑尺度 ↗</a><p id="version-status" role="status">阊阖门 P3 · a52b28be</p></footer>
+  </main>
+  <script src="./_assets/25178c3517c18bf176cf-prosperity-gate-v3.js"></script>
+</body>
+</html>
