@@ -1,7 +1,7 @@
 # 北魏洛阳文献地图 · Luoyang Atlas
 
 以《洛阳伽蓝记》及其校注、相关史地文献为基础的可追溯历史城市地图。
-仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前盛时工作层：**P1 + P2 / prosperity-core-v2**；首页体验版本：**H1 / homepage-v1**。
+仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前盛时工作层：**P1—P3 / prosperity-gate-v3**；首页体验版本：**H1 / homepage-v1**（第八版全景暂用稿）。
 
 > 盛时图采用 516—528 年河阴之变前的文献合成时层，不是某一年实测地图。文献关系画布的图形大小与显示间距不代表历史测量；来源图坐标、表列尺寸、工作朝向和未定院界分别记录，不能拼接成未经验证的精确遗址边线。
 
@@ -19,10 +19,15 @@
 
 P2继续把3座核心建筑的表列尺度落实到[核心建筑尺度页](https://mechgouki.github.io/luoyang-city/prosperity-core.html)：宫城阊阖门基、太极殿遗址与永宁寺塔基在平面和斜视中使用相同几何；位置概略、尺寸出处与工作朝向分别说明。另提供三张局部结构图（27个部件、30条关系）、永宁院界尺寸差异校核、7页图册。院界模板没有强行落位，未知古高与屋顶没有补绘。详见[P2说明](docs/prosperity-core-v2-release-notes.md)。
 
+P3把阊阖门从外接尺度片推进到[局部考古平面](https://mechgouki.github.io/luoyang-city/prosperity-gate.html)：依据申遗原件的门址图及其20m比例尺，逐项量读可辨的门基、通道与两阙，并提供原图叠照、尺度核对和城市接合视图。原图量读与独立表列尺寸分别保留；城市视图仍沿用P1来源锚点，不宣称已经完成实测配准。附3页图册、SVG、CSV、JSON和复现包。详见[P3说明](docs/prosperity-gate-v3-release-notes.md)与[量读方法](docs/prosperity-gate-method.md)。
+
 H1首页以宽幅城市概念图开始，连接三个历史问题、互动地图和后置研究资料。主图标注“研究性复原示意”；建筑造型及构图不作为新的历史定位或尺寸证据。见[首页更新说明](docs/homepage-v1-release-notes.md)。
+
+2026-11-15用户明确要求先替换第八版全景并继续其他工作；当前图记为暂用、仍待改进，不能据此称视觉方案已最终确认。
 
 | 工作线 | 内容 | 入口 |
 | --- | --- | --- |
+| 盛时P3 | 阊阖门局部平面、原图叠照、尺度核对与城市接合诊断 | [阊阖门平面](https://mechgouki.github.io/luoyang-city/prosperity-gate.html) |
 | 盛时P2 | 3座核心尺度片、3张局部结构图、院界尺寸校核 | [核心建筑尺度](https://mechgouki.github.io/luoyang-city/prosperity-core.html) |
 | 盛时P1 | 文献审校、来源图城市骨架、布局鸟瞰；339地点与30来源要素分开阅读 | [盛时工作页](https://mechgouki.github.io/luoyang-city/prosperity.html) |
 | B1 | 宫前—永宁—景乐、建春两桥、景明—汉国子学堂—石经 | [B1](https://mechgouki.github.io/luoyang-city/dual-b1.html) |
@@ -73,6 +78,7 @@ python3 tools/city_review_b8.py
 python3 tools/homepage_v1.py
 python3 tools/prosperity_v1.py
 python3 tools/prosperity_core_v2.py
+python3 tools/prosperity_gate_v3.py
 python3 -m unittest discover -s tests -p 'test_prosperity*.py' -v
 python3 -m http.server 8000 --directory _site
 ```

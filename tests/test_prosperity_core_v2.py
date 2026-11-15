@@ -308,7 +308,27 @@ class ProsperityCorePublicationTests(unittest.TestCase):
         self.assertEqual(read(SITE / 'data/entities.json'), read(ROOT / 'data/entities.json'))
         self.assertEqual(read(SITE / 'prosperity/geographic-evidence.json'), self.geo)
         self.assertEqual(digest(SITE / preservation['p1_entry_archive']), preservation['p1_entry_before_sha256'])
-        self.assertEqual(digest(SITE / 'prosperity.html'), preservation['p1_entry_after_sha256'])
+        gate_preservation_path = SITE / 'prosperity-gate/preservation.json'
+        if gate_preservation_path.exists():
+            # P3 adds one entry while retaining the exact P2 page and its proof.
+            # Verify the whole archive chain rather than replacing P2's old hash.
+            gate_preservation = read(gate_preservation_path)
+            updates = [item for item in gate_preservation['intentional_html_updates']
+                       if item['path'] == 'prosperity.html']
+            self.assertEqual(len(updates), 1)
+            update = updates[0]
+            self.assertEqual(update['entry_id'], 'gate-detail-entry')
+            archived = (SITE / update['archive_path']).read_bytes()
+            current = (SITE / update['path']).read_bytes()
+            self.assertEqual(hashlib.sha256(archived).hexdigest(), preservation['p1_entry_after_sha256'])
+            self.assertEqual(hashlib.sha256(archived).hexdigest(), update['before_sha256'])
+            self.assertEqual(hashlib.sha256(current).hexdigest(), update['after_sha256'])
+            entry_pattern = rb'<p\b[^>]*\bid="gate-detail-entry"[^>]*>.*?</p>'
+            stripped, count = re.subn(entry_pattern, b'', current, flags=re.DOTALL)
+            self.assertEqual(count, 1)
+            self.assertEqual(stripped, archived)
+        else:
+            self.assertEqual(digest(SITE / 'prosperity.html'), preservation['p1_entry_after_sha256'])
 
     def test_pdf_zip_and_all_advertised_downloads_are_real_consistent_artifacts(self):
         pdf = PdfReader(SITE / 'downloads/prosperity-core-v2-atlas.pdf')

@@ -115,10 +115,18 @@ try:
         page.locator('#zoom-in').click()
         assert view_box(page) != original
         zoomed = view_box(page)
+        # The P3 navigation entry changes the page height, not map interaction.
+        page.locator('#map-viewport').scroll_into_view_if_needed()
         viewport = page.locator('#map-viewport').bounding_box()
-        page.mouse.move(viewport['x'] + viewport['width'] * .6, viewport['y'] + viewport['height'] * .5)
+        drag_start = [viewport['x'] + viewport['width'] * .6, viewport['y'] + viewport['height'] * .5]
+        drag_end = [viewport['x'] + viewport['width'] * .69, viewport['y'] + viewport['height'] * .57]
+        assert page.evaluate('''points => points.every(([x,y]) =>
+            x >= 0 && y >= 0 && x < innerWidth && y < innerHeight &&
+            document.querySelector('#map-viewport').contains(document.elementFromPoint(x,y)))''',
+            [drag_start, drag_end]), 'Drag must start and end on the visible map'
+        page.mouse.move(*drag_start)
         page.mouse.down()
-        page.mouse.move(viewport['x'] + viewport['width'] * .69, viewport['y'] + viewport['height'] * .57, steps=8)
+        page.mouse.move(*drag_end, steps=8)
         page.mouse.up()
         assert view_box(page) != zoomed
         page.locator('#reset-map').click()

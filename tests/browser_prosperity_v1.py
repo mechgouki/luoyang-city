@@ -106,10 +106,19 @@ try:
         page.locator('#zoom-in').click()
         expect(page.locator('#map-viewport > svg')).not_to_have_attribute('viewBox', before)
         zoomed = shape_box(page)
+        # Navigation entries can put the middle of this tall map below the fold.
+        # Prepare a visible pointer journey; retain the actual viewBox assertion.
+        page.locator('#map-viewport').scroll_into_view_if_needed()
         viewport = page.locator('#map-viewport').bounding_box()
-        page.mouse.move(viewport['x'] + viewport['width'] * .55, viewport['y'] + viewport['height'] * .52)
+        drag_start = [viewport['x'] + viewport['width'] * .55, viewport['y'] + viewport['height'] * .52]
+        drag_end = [viewport['x'] + viewport['width'] * .63, viewport['y'] + viewport['height'] * .58]
+        assert page.evaluate('''points => points.every(([x,y]) =>
+            x >= 0 && y >= 0 && x < innerWidth && y < innerHeight &&
+            document.querySelector('#map-viewport').contains(document.elementFromPoint(x,y)))''',
+            [drag_start, drag_end]), 'Drag must start and end on the visible map'
+        page.mouse.move(*drag_start)
         page.mouse.down()
-        page.mouse.move(viewport['x'] + viewport['width'] * .63, viewport['y'] + viewport['height'] * .58, steps=8)
+        page.mouse.move(*drag_end, steps=8)
         page.mouse.up()
         assert shape_box(page) != zoomed
         page.locator('#reset-map').click()

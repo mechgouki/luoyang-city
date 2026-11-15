@@ -61,6 +61,7 @@ jobs:
           node --check web/homepage-v1.js
           node --check web/prosperity-v1.js
           node --check web/prosperity-core-v2.js
+          node --check web/prosperity-gate-v3.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -109,6 +110,7 @@ jobs:
         run: |
           python tools/prosperity_v1.py
           python tools/prosperity_core_v2.py
+          python tools/prosperity_gate_v3.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
@@ -117,7 +119,7 @@ jobs:
         run: |
           docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
           docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
-      - name: Exercise all earlier and dual-map interactions
+      - name: Exercise current and all earlier map interactions
         timeout-minutes: 8
         shell: bash
         run: |
@@ -126,6 +128,7 @@ jobs:
             --workdir /work mcr.microsoft.com/playwright/python:v1.57.0-noble \
             bash -euo pipefail -c '
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
+              python tests/browser_prosperity_gate_v3.py
               python tests/browser_v25.py
               python tests/browser_v26.py
               python tests/browser_v27.py
@@ -194,7 +197,7 @@ jobs:
           docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
           mkdir -p artifacts
           docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
-      - name: Exercise all deployed research, terrain and dual-map versions
+      - name: Exercise current and all earlier deployed map versions
         timeout-minutes: 8
         shell: bash
         env:
@@ -206,6 +209,7 @@ jobs:
             mcr.microsoft.com/playwright/python:v1.57.0-noble \
             bash -euo pipefail -c '
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
+              python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
               python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser
               python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser
               python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser
