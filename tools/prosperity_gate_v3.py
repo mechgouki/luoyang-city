@@ -218,12 +218,87 @@ def copy_source_raster(raw):
     return {**raw, 'url': './prosperity-gate/' + target_relative.as_posix()}
 
 
+
+def comparison_figure(source, raster, raster_source):
+    """Two literal copies of the same image coordinate space, not a city placement."""
+    w, h = raster['width_px'], raster['height_px']
+    palette = {'gate_base':'#236a64', 'passage':'#ad671f',
+               'que_base':'#4c537b', 'underground_foundation':'#9c7d3b',
+               'foundation_connection':'#34798f'}
+    traces = []
+    for item in source['components']:
+        tag = 'polygon' if item['geometry_type'] == 'Polygon' else 'polyline'
+        pts = ' '.join(f'{point[0]},{point[1]}' for point in item['source_px'])
+        dash = (' stroke-dasharray="6 5"' if item['kind'] in {'passage','foundation_connection'}
+                else ' stroke-dasharray="10 7"' if item['kind'] == 'underground_foundation' else '')
+        traces.append(
+            f'<g data-compare-component="{esc(item["id"])}" role="button" tabindex="0" '
+            f'aria-pressed="false" aria-label="选择{esc(item["label"])}">'
+            f'<title>{esc(item["label"])}：{esc(item["note"])}</title>'
+            f'<{tag} class="comparison-trace-line" points="{pts}" fill="none" '
+            f'stroke="{palette[item["kind"]]}" stroke-width="2.8" '
+            f'vector-effect="non-scaling-stroke"{dash}/></g>')
+    img = esc(raster['url'])
+    return ''.join([
+        '<figure class="comparison-board"><div class="compare-panes">',
+        '<div class="compare-pane"><h3>01 · 考古原图（保留完整画幅）</h3>',
+        f'<a class="compare-frame" href="{img}" target="_blank" rel="noopener">'
+        f'<img id="comparison-original" src="{img}" width="{w}" height="{h}" loading="eager" '
+        'alt="阊阖门原件：包含平面、剖面、比例尺、北箭和探方标注"></a>',
+        '<p>原件 555 × 434 px，无重采样；点击可单独放大。</p></div>',
+        '<div class="compare-pane"><h3>02 · 同像素位置的人工描绘</h3>',
+        '<div class="compare-frame" id="comparison-drawing">',
+        f'<svg id="comparison-trace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
+        'role="group" aria-label="阊阖门原图同像素读线，含10个可选构件">',
+        '<title>十项人工描线与左图使用同一原件像素坐标</title>',
+        f'<rect x="0" y="0" width="{w}" height="{h}" fill="#f8f7f1"/>',
+        f'<image id="comparison-underlay" x="0" y="0" width="{w}" height="{h}" '
+        f'href="{img}" opacity="0" preserveAspectRatio="none"/>',
+        *traces, '</svg></div>',
+        '<div class="comparison-controls"><label for="comparison-opacity">'
+        '在右图叠加考古原图 <output id="comparison-opacity-value" for="comparison-opacity">0%（仅描线）</output></label>',
+        '<input type="range" id="comparison-opacity" min="0" max="90" step="5" value="0" '
+        'aria-label="在描绘图上叠加考古原图的透明度" disabled>',
+        '<div class="comparison-actions"><button id="comparison-mix" type="button" disabled>叠加 55% 检查</button>'
+        '<button id="comparison-clear" type="button" disabled>只看描绘</button></div></div>',
+        '<p>在右图滑动叠加比例，可直接核对线条落点；点击线条查看对应出处。</p></div></div>',
+        '<div class="comparison-legend"><span>绿色实线：门基</span><span>橙色虚线：三门道可辨段</span>'
+        '<span>紫色实线：阙基边</span><span>金色虚线：地下基础</span>'
+        '<span>蓝色虚线：连接路径示意</span></div>',
+        '<figcaption>右图只描绘10项读线，未描绘处不表示不存在。门道截取端线不是墙；'
+        '阙基开放端不补齐，地下基础虚线不是地面建筑边，连接线也不代表廊宽。'
+        '两图一致的只是原件像素位置，未完成古址地理坐标配准。'
+        f' <a href="{esc(raster_source["url"])}" target="_blank" rel="noopener">原始 PDF 第1962页 ↗</a>'
+        f' <a href="{img}" target="_blank" rel="noopener">单独打开原件 JPEG ↗</a></figcaption></figure>'])
+
+
+def axis_evidence_markup(axis):
+    """Order-only palace axis evidence; no fictitious coordinates or spacings."""
+    nodes = ''.join(
+        f'<li class="axis-node"><span class="axis-order">{item["order_south_to_north"]:02d}</span>'
+        f'<div><strong>{esc(item["label"])}</strong><p>{esc(item["description"])}</p></div></li>'
+        for item in axis['nodes'])
+    refs = ' · '.join(f'<a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])}</a>'
+                      for s in axis['sources'])
+    return (f'<ol class="axis-sequence">{nodes}</ol>'
+            '<p class="axis-limit">按<strong>南 → 北</strong>阅读的是研究文献支持的相对序列，'
+            '不是等距排布或实测宫墙、道路、院界。二号/三号门分别对应止车门/端门是研究者的身份解释，'
+            '目前尚未取得可逐点并入城市坐标的共同控制。</p>'
+            f'<p class="axis-source-links">资料：{refs} · '
+            '<a href="./prosperity-gate/palace-axis-preliminary.json">下载四节点来源关系 JSON</a></p>')
+
 def main():
     info = load(SITE / 'build-info.json')
     assert info.get('prosperity_core', {}).get('version') == 'prosperity-core-v2', 'Build P2 before P3'
     protected = {str(path.relative_to(SITE)): sha(path) for path in SITE.rglob('*') if path.is_file()
                  and str(path.relative_to(SITE)) not in MUTABLE and not own(str(path.relative_to(SITE)))}
     source = load(RESEARCH / 'gate-plan.json')
+    axis = load(ROOT / 'research/prosperity-v4/axis-sequence.json')
+    assert axis['version'] == 'palace-axis-p4-initial'
+    assert [node['order_south_to_north'] for node in axis['nodes']] == [1, 2, 3, 4]
+    assert len(axis['relative_sequence']) == 3
+    assert axis['limitations']['absolute_coordinates_assigned'] == 0
+    assert axis['limitations']['common_city_control_points_verified'] == 0
     models = build_gate_geometry(source)
     assert source['city_link']['registration_verified'] is False
     assert models['city_link']['registration_verified'] is False
@@ -255,6 +330,7 @@ def main():
     downloads = [
         {'label': '阊阖门研究图册 PDF', 'url': './downloads/prosperity-gate-v3-atlas.pdf', 'type': 'pdf'},
         {'label': '完整资料包 ZIP', 'url': './downloads/prosperity-gate-v3-package.zip', 'type': 'zip'},
+        {'label': '原始考古图 JPEG', 'url': raster['url'], 'type': 'jpeg'},
         {'label': '局部平面 SVG', 'url': maps['local']['url'], 'type': 'svg'},
         {'label': '城市接合 SVG', 'url': maps['city']['url'], 'type': 'svg'},
         {'label': '尺度核对 SVG', 'url': maps['diagnostics']['url'], 'type': 'svg'},
@@ -269,12 +345,17 @@ def main():
               'external_true_north_verified': False, 'full_city_reconstruction_completed': False}
     data = {'version': VERSION, 'source_commit': info['source_commit'], 'title': '从原件，读懂阊阖门',
             'maps': maps, 'components': components, 'default_component': default,
-            'source_raster': raster, 'sources': sources, 'calibration': models['calibration'],
+            'source_raster': raster, 'sources': sources,
+             'comparison_version': 'source-pixel-side-by-side-v1',
+             'axis_evidence': {'version': axis['version'], 'url': './prosperity-gate/palace-axis-preliminary.json',
+                               'nodes': len(axis['nodes']), 'city_registration_verified': False},
+             'calibration': models['calibration'],
             'diagnostics': models['diagnostics'], 'city_link': models['city_link'],
             'research_limits': limits, 'downloads': downloads,
             'source_data': './prosperity-gate/gate-plan.json', 'coordinate_scope': 'image_local_only'}
     dump(OUT / 'data.json', data)
     shutil.copyfile(RESEARCH / 'gate-plan.json', OUT / 'gate-plan.json')
+    dump(OUT / 'palace-axis-preliminary.json', axis)
     dump(OUT / 'models.json', {**models, 'publication_version': VERSION, 'source_commit': info['source_commit'],
                              'coordinate_scope': 'image_local_only', 'research_limits': limits})
     (OUT / 'readings.csv').write_text(readings_csv(components), encoding='utf-8-sig', newline='')
@@ -284,18 +365,13 @@ def main():
     js = fp('prosperity-gate-v3.js', (ROOT / 'web/prosperity-gate-v3.js').read_bytes())
     raster_ref = raster.get('source_ref')
     raster_source = next((item for item in sources if item['id'] == raster_ref), sources[0])
-    source_figure = (f'<figure class="source-figure"><a href="{esc(raster["url"])}" target="_blank" rel="noopener">'
-                    f'<img src="{esc(raster["url"])}" alt="来源原件中的阊阖门局部平剖面" loading="lazy" '
-                    f'width="{raster["width_px"]}" height="{raster["height_px"]}"></a><figcaption>'
-                    '<h3>阊阖门局部平剖面</h3>'
-                    f'<p>{esc(raster_source["label"])}</p><p>原件图像 {raster["width_px"]} × {raster["height_px"]} px。'
-                    '保留原始分辨率；放大只帮助辨读，不增加图中细节。</p>'
-                    f'<p>{esc(raster.get("note", "门基、通道和阙基按原图可辨轮廓读取，模糊或未定部分保留说明。"))}</p>'
-                    f'<a href="{esc(raster_source["url"])}" target="_blank" rel="noopener">打开官方原件出处 ↗</a></figcaption></figure>')
+    source_figure = comparison_figure(source, raster, raster_source)
+    axis_html = axis_evidence_markup(axis)
     initial = next(component for component in components if component['id'] == default)
     substitutions = {
         '{{COMPONENT_OPTIONS}}': ''.join(f'<option value="{esc(component["id"])}"' + (' selected' if component['id'] == default else '') + f'>{esc(component["label"])}</option>' for component in components),
         '{{INITIAL_DETAIL}}': component_html(initial), '{{SOURCE_FIGURE}}': source_figure,
+        '{{AXIS_HTML}}': axis_html,
         '{{DOWNLOAD_LINKS}}': ''.join(f'<a href="{esc(item["url"])}" download>{esc(item["label"])}</a>' for item in downloads),
         '{{SOURCE_CARDS}}': ''.join(f'<article class="source-card"><h3>{esc(item["label"])}</h3><p>{esc(item["note"])}</p><a href="{esc(item["url"])}" target="_blank" rel="noopener">查看原件出处 ↗</a></article>' for item in sources),
         '{{VERSION_LABEL}}': '阊阖门 P3 · ' + esc(info['source_commit'][:8]),
@@ -332,10 +408,12 @@ def main():
     release = load(SITE / 'release.json')
     release['extensions'] = sorted(set(release.get('extensions', []) + [VERSION]))
     release['prosperity_gate_version'] = VERSION
-    release['current_milestone'] = '盛时P3：阊阖门局部平面与城市接合诊断'
+    release['current_milestone'] = '盛时P3.1：考古原图对照与宫城中轴首批研究'
+    release['palace_axis_preliminary_version'] = axis['version']
     dump(SITE / 'release.json', release)
     info['prosperity_gate'] = {'version': VERSION, 'source_commit': info['source_commit'],
         'components': len(components), 'atlas_pages': len(atlas_paths), 'source_raster_sha256': raster['sha256'],
+        'comparison_version': 'source-pixel-side-by-side-v1', 'axis_evidence_version': axis['version'],
         'registration_verified': False, 'new_ancient_absolute_coordinates': 0,
         'historical_heights_reconstructed': False, 'roofs_reconstructed': False,
         'ancient_ground_surface_reconstructed': False, 'protected_files': len(protected),

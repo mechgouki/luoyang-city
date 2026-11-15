@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "version": "palace-axis-p4-initial",
+  "research_state": "evidence-backed-order-only",
+  "title": "阊阖门—二号宫门—三号宫门—太极殿：宫城中轴首批关系",
+  "temporal_scope": "曹魏始建与北魏增修沿用的多期遗址关系；非516—528年同一时刻测绘图",
+  "sources": [
+    {
+      "id": "UNESCO-S37",
+      "title": "申遗文档附录 II-F C02-CN 37：阊阖门平剖原图",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962",
+      "kind": "source-plan-republished",
+      "limitations": "用于阊阖门局部结构、像素和比例尺读数，不用于其余三处古址的单体位置或全城配准"
+    },
+    {
+      "id": "QIAN-2018",
+      "title": "钱国祥：《汉魏洛阳故城居中宫城制度考》",
+      "url": "https://www.nopss.gov.cn/n1/2018/0704/c373410-30125781.html",
+      "kind": "archaeological-research-summary",
+      "limitations": "报告三门同处南北线及北向太极殿；文字概述不等于逐点坐标和院墙实测图"
+    },
+    {
+      "id": "QIAN-2019",
+      "title": "钱国祥：《汉魏洛阳城城门与宫院门的考察研究》（中国考古网账号转载）",
+      "url": "https://k.sina.cn/article_2145932192_7fe853a001900gcbp.html",
+      "kind": "scholarly-analysis-reposted",
+      "limitations": "将二、三号宫门对应止车门、端门属于文章的历史身份解释；不冒充另一份独立考古测量"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "axis-changhe",
+      "order_south_to_north": 1,
+      "label": "阊阖门",
+      "description": "宫城南面第一道正门；P3已有原件像素量读",
+      "evidence_class": "excavated-local-plan-with-identification",
+      "source_ids": [
+        "UNESCO-S37",
+        "QIAN-2018"
+      ],
+      "city_registration_verified": false
+    },
+    {
+      "id": "axis-gate-2",
+      "order_south_to_north": 2,
+      "label": "二号宫门（研究者对应：止车门）",
+      "description": "阊阖门以北、三号宫门以南；名称对应使用论文解释",
+      "evidence_class": "excavated-gate-identity-interpreted",
+      "source_ids": [
+        "QIAN-2018",
+        "QIAN-2019"
+      ],
+      "city_registration_verified": false
+    },
+    {
+      "id": "axis-gate-3",
+      "order_south_to_north": 3,
+      "label": "三号宫门（研究者对应：端门）",
+      "description": "二号宫门以北、太极殿以南；名称对应使用论文解释",
+      "evidence_class": "excavated-gate-identity-interpreted",
+      "source_ids": [
+        "QIAN-2018",
+        "QIAN-2019"
+      ],
+      "city_registration_verified": false
+    },
+    {
+      "id": "axis-taiji",
+      "order_south_to_north": 4,
+      "label": "太极殿",
+      "description": "宫城正殿建筑群；具体殿基与中轴的几何接合另审",
+      "evidence_class": "excavated-hall-complex",
+      "source_ids": [
+        "QIAN-2018"
+      ],
+      "city_registration_verified": false
+    }
+  ],
+  "relative_sequence": [
+    {
+      "south": "axis-changhe",
+      "north": "axis-gate-2"
+    },
+    {
+      "south": "axis-gate-2",
+      "north": "axis-gate-3"
+    },
+    {
+      "south": "axis-gate-3",
+      "north": "axis-taiji"
+    }
+  ],
+  "orientation": "source-reported northward order; not a verified survey bearing",
+  "limitations": {
+    "absolute_coordinates_assigned": 0,
+    "common_city_control_points_verified": 0,
+    "independent_local_to_city_transform_verified": false,
+    "distances_or_spacings_modelled": false,
+    "courtyard_boundaries_drawn": false,
+    "reconstruction_of_heights_or_roofs": false,
+    "use_as_geographically_scaled_map": false,
+    "editorial_order_not_footprint": true
+  },
+  "next_evidence_needed": [
+    "二号与三号宫门的正式发掘平面原图及各自比例尺",
+    "三座门与太极殿共同可识别控制点和真实测绘方位",
+    "叠压、复修和各期遗迹与北魏盛时的对应记录",
+    "宫城道路、墙院边界的逐条图文出处和误差范围"
+  ]
+}

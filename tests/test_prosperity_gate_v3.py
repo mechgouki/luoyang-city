@@ -285,6 +285,49 @@ class PublishedGatePlan(unittest.TestCase):
         p2 = read(SITE / 'prosperity-core/preservation.json')
         self.assertEqual(digest(SITE / 'prosperity-before-gate.html'), p2['p1_entry_after_sha256'])
 
+
+    def test_source_comparison_and_axis_sequence_keep_raw_evidence_boundaries(self):
+        """Original and drawn views use one image grid; P4 does not invent locations."""
+        page = (SITE / 'prosperity-gate.html').read_text(encoding='utf-8')
+        markup = Markup(page)
+        self.assertLess(page.index('id="source-comparison"'), page.index('id="gate-workspace"'))
+        self.assertIn('考古原图对比', page)
+        self.assertIn('原始考古图 vs 我们描绘的线稿', page)
+        self.assertIn('viewBox="0 0 555 434"', page)
+        trace_ids = {attrs['data-compare-component'] for tag, attrs in markup.tags
+                     if tag == 'g' and 'data-compare-component' in attrs}
+        self.assertEqual(trace_ids, {component['id'] for component in self.source['components']})
+        self.assertTrue(any(tag == 'img' and attrs.get('id') == 'comparison-original'
+                            and attrs.get('src') == self.data['source_raster']['url']
+                            for tag, attrs in markup.tags))
+        self.assertTrue(any(tag == 'image' and attrs.get('id') == 'comparison-underlay'
+                            and attrs.get('href') == self.data['source_raster']['url']
+                            and attrs.get('opacity') == '0' for tag, attrs in markup.tags))
+        self.assertEqual(self.data['comparison_version'], 'source-pixel-side-by-side-v1')
+        self.assertEqual(self.info['prosperity_gate']['comparison_version'], self.data['comparison_version'])
+        self.assertIn(self.data['source_raster']['url'],
+                      {entry['url'] for entry in self.data['downloads']})
+        axis = read(OUT / 'palace-axis-preliminary.json')
+        self.assertEqual(axis['version'], 'palace-axis-p4-initial')
+        self.assertEqual(self.data['axis_evidence']['version'], axis['version'])
+        self.assertEqual(self.info['prosperity_gate']['axis_evidence_version'], axis['version'])
+        self.assertEqual([node['order_south_to_north'] for node in axis['nodes']], [1, 2, 3, 4])
+        self.assertEqual([(item['south'], item['north']) for item in axis['relative_sequence']],
+                         [(axis['nodes'][i]['id'], axis['nodes'][i + 1]['id']) for i in range(3)])
+        self.assertEqual(axis['limitations']['absolute_coordinates_assigned'], 0)
+        self.assertEqual(axis['limitations']['common_city_control_points_verified'], 0)
+        self.assertFalse(axis['limitations']['independent_local_to_city_transform_verified'])
+        self.assertFalse(axis['limitations']['distances_or_spacings_modelled'])
+        self.assertFalse(axis['limitations']['courtyard_boundaries_drawn'])
+        source_ids = {item['id'] for item in axis['sources']}
+        self.assertGreaterEqual(len(source_ids), 2)
+        self.assertTrue(all(set(node['source_ids']) <= source_ids for node in axis['nodes']))
+        for node in axis['nodes']:
+            self.assertIn(node['label'], page)
+        self.assertEqual(read(SITE / 'release.json')['palace_axis_preliminary_version'], axis['version'])
+        self.assertEqual(self.info['files_sha256']['prosperity-gate/palace-axis-preliminary.json'],
+                         digest(OUT / 'palace-axis-preliminary.json'))
+
     def test_no_script_page_is_useful_and_all_new_assets_are_in_release_manifest(self):
         page = (SITE / 'prosperity-gate.html').read_text(encoding='utf-8')
         self.assertNotIn('{{', page)
