@@ -71,6 +71,11 @@
       return url ? `<a href="${escape(url)}" target="_blank" rel="noopener">${escape(source.label)} ↗</a>` : '';
     }).join('');
     $('component-detail').innerHTML = `<h2>${escape(item.label)}</h2><p class="evidence-label">${escape(item.evidence_label)}</p><p class="measure-label">图内量读 / 构成说明</p><p class="measure-value">${escape(item.dimensions_label)}</p><dl class="component-facts"><dt>原件怎样支持这一构成</dt><dd>${escape(item.note)}</dd><dt>读数使用范围</dt><dd>${escape(item.trace_note)}</dd></dl><div class="component-links">${links}<a href="#source-comparison">对照来源原图 ↓</a><a href="./prosperity-gate/readings.csv" download>下载像素与局部米制读数</a></div><details class="reading-details"><summary>查看读数层说明</summary><p>${escape(item.reading_label)}</p><p>图内原点与轴向只服务本图量读；这些坐标不作为古址经纬度发布。</p></details>`;
+    document.querySelectorAll('[data-compare-component]').forEach((node) => {
+      const selected = node.getAttribute('data-compare-component') === item.id;
+      node.classList.toggle('compare-selected', selected);
+      node.setAttribute('aria-pressed', String(selected));
+    });
     if (!svg) return;
     let found = false;
     svg.querySelectorAll('[data-component-id]').forEach((node) => {
@@ -169,6 +174,29 @@
     $('focus-component').addEventListener('click', focusComponent);
     $('component-select').addEventListener('change', (event) => choose(event.target.value));
     $('source-toggle').addEventListener('change', (event) => applyState({...state, source: event.target.checked}));
+    const comparisonOpacity = $('comparison-opacity');
+    const updateComparison = () => {
+      const opacity = Math.max(0, Math.min(90, Number(comparisonOpacity.value) || 0));
+      $('comparison-underlay').setAttribute('opacity', String(opacity / 100));
+      $('comparison-opacity-value').textContent = opacity === 0 ? '0%（仅描线）' : opacity + '% 原图叠加';
+    };
+    comparisonOpacity.disabled = false;
+    $('comparison-mix').disabled = false;
+    $('comparison-clear').disabled = false;
+    comparisonOpacity.addEventListener('input', updateComparison);
+    $('comparison-mix').addEventListener('click', () => { comparisonOpacity.value = '55'; updateComparison(); });
+    $('comparison-clear').addEventListener('click', () => { comparisonOpacity.value = '0'; updateComparison(); });
+    updateComparison();
+    $('source-comparison').addEventListener('click', (event) => {
+      const node = event.target.closest?.('[data-compare-component]');
+      if (node) choose(node.getAttribute('data-compare-component'));
+    });
+    $('source-comparison').addEventListener('keydown', (event) => {
+      const node = event.target.closest?.('[data-compare-component]');
+      if (node && ['Enter', ' '].includes(event.key)) {
+        event.preventDefault(); choose(node.getAttribute('data-compare-component'));
+      }
+    });
     $('copy-link').addEventListener('click', async () => {
       writeState(true);
       try {
@@ -232,7 +260,7 @@
       const info = await response.json();
       const verified = info.source_commit === data.source_commit && info.prosperity_gate?.version === data.version;
       $('version-status').dataset.verified = String(verified);
-      $('version-status').textContent = verified ? `阊阖门 P3 · 来源与发布版本已核对 · ${data.source_commit.slice(0, 8)}` : '阊阖门 P3 · 发布信息待重新核对';
+      $('version-status').textContent = verified ? `阊阖门 P3.1 · 原图对比与P4中轴数据已发布 · ${data.source_commit.slice(0, 8)}` : '阊阖门 P3.1 · 发布信息待重新核对';
     } catch (_) { $('version-status').textContent = '阊阖门 P3 · 当前无法核对发布信息；原件与下载仍可查阅'; }
   }
   async function start() {

@@ -103,9 +103,34 @@ try:
         assert map_bounds['height'] >= 500
         expect(page.locator('#source-toggle')).to_be_checked()
         expect(page.locator('#source-layer')).to_be_visible()
+        # The comparison must be immediately discoverable and use the original pixel coordinates.
+        assert page.locator('#source-comparison').bounding_box()['y'] < page.locator('#gate-workspace').bounding_box()['y']
+        original_image = page.locator('#comparison-original')
+        expect(original_image).to_be_visible()
+        assert original_image.evaluate('(img) => img.complete && img.naturalWidth === 555 && img.naturalHeight === 434')
+        expect(page.locator('#comparison-trace')).to_have_attribute('viewBox', '0 0 555 434')
+        assert page.locator('[data-compare-component]').count() == len(components)
+        native = page.locator(f'[data-compare-component="{main["id"]}"] .comparison-trace-line')
+        native_points = ' '.join(','.join(str(value) for value in point) for point in main['source_px'])
+        expect(native).to_have_attribute('points', native_points)
+        expect(page.locator('#comparison-underlay')).to_have_attribute('opacity', '0')
+        page.locator('#comparison-mix').click()
+        expect(page.locator('#comparison-underlay')).to_have_attribute('opacity', '0.55')
+        page.locator('#comparison-opacity').focus()
+        page.keyboard.press('End')
+        expect(page.locator('#comparison-underlay')).to_have_attribute('opacity', '0.9')
+        page.locator('#comparison-clear').click()
+        expect(page.locator('#comparison-underlay')).to_have_attribute('opacity', '0')
+        ok('opening comparison shows both original JPEG and aligned ten-source-pixel traces with working overlay controls')
         page.screenshot(path=str(out / 'desktop-local.png'), full_page=True)
         ok('desktop source-backed plan occupies the main workspace and verifies its release')
 
+        compare_target = page.locator(f'[data-compare-component="{passage["id"]}"]')
+        compare_target.focus()
+        page.keyboard.press('Enter')
+        assert_component(page, passage)
+        expect(compare_target).to_have_attribute('aria-pressed', 'true')
+        ok('comparison tracing selects the evidence-backed component and updates its deep link')
         target = page.locator(f'#map-viewport [data-component-id="{passage["id"]}"]').first
         target.focus()
         page.keyboard.press('Enter')
@@ -123,7 +148,9 @@ try:
         assert view_box(page) == original
         page.keyboard.press('=')
         assert view_box(page)[2] < original[2]
+        page.locator('#map-viewport').scroll_into_view_if_needed()
         map_bounds = page.locator('#map-viewport').bounding_box()
+        assert map_bounds['y'] >= 0 and map_bounds['y'] + 150 <= 1000
         before_drag = view_box(page)
         page.mouse.move(map_bounds['x'] + 80, map_bounds['y'] + 90)
         page.mouse.down()
@@ -195,6 +222,10 @@ try:
         mobile_page.goto(base + 'prosperity-gate.html', wait_until='networkidle')
         ready(mobile_page)
         no_overflow(mobile_page)
+        expect(mobile_page.locator('#comparison-original')).to_be_visible()
+        expect(mobile_page.locator('#comparison-trace')).to_be_visible()
+        mobile_page.locator('#comparison-mix').tap()
+        expect(mobile_page.locator('#comparison-underlay')).to_have_attribute('opacity', '0.55')
         assert mobile_page.locator('#map-viewport').bounding_box()['height'] >= 330
         mobile_page.locator('#component-select').select_option(que['id'])
         assert_component(mobile_page, que)
@@ -216,6 +247,9 @@ try:
         fallback = no_script.new_page()
         fallback.goto(base + 'prosperity-gate.html', wait_until='networkidle')
         expect(fallback.locator('.fallback-map')).to_be_visible()
+        expect(fallback.locator('#comparison-original')).to_be_visible()
+        expect(fallback.locator('#comparison-trace')).to_be_visible()
+        assert fallback.locator('#comparison-original').evaluate('(img) => img.complete && img.naturalWidth === 555')
         assert fallback.locator('.fallback-map').evaluate('(image) => image.complete && image.naturalWidth > 0')
         expect(fallback.locator('.fallback-note')).to_contain_text('局部平面')
         expect(fallback.locator('#component-detail')).to_contain_text(main['note'])
