@@ -67,7 +67,7 @@ def assert_component(target, component):
     expect(target.locator('.measure-value')).to_have_text(component['dimensions_label'])
     expect(target.locator('#component-detail')).to_contain_text(component['note'])
     for source in component['source_links']:
-        expect(target.locator('#component-detail a').filter(has_text=source['label']).first()).to_have_attribute('href', source['url'])
+        expect(target.locator('#component-detail a').filter(has_text=source['label']).first).to_have_attribute('href', source['url'])
     assert parameters(target)['component'] == component['id']
 
 
@@ -106,7 +106,7 @@ try:
         page.screenshot(path=str(out / 'desktop-local.png'), full_page=True)
         ok('desktop source-backed plan occupies the main workspace and verifies its release')
 
-        target = page.locator(f'#map-viewport [data-component-id="{passage["id"]}"]').first()
+        target = page.locator(f'#map-viewport [data-component-id="{passage["id"]}"]').first
         target.focus()
         page.keyboard.press('Enter')
         assert_component(page, passage)
@@ -208,7 +208,7 @@ try:
         no_overflow(mobile_page)
         mobile_page.screenshot(path=str(out / 'mobile-local.png'), full_page=True)
         mobile_page.locator('#download-links').scroll_into_view_if_needed()
-        expect(mobile_page.locator('#download-links a').first()).to_be_visible()
+        expect(mobile_page.locator('#download-links a').first).to_be_visible()
         mobile.close()
         ok('mobile layout has no overflow and keeps view, source, component, and download controls usable')
 
