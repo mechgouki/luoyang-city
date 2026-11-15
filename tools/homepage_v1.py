@@ -17,6 +17,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / '_site'
 MUTABLE = {'index.html', 'v3.0-dual.html', 'release.json', 'build-info.json'}
 VERSION = 'homepage-v1'
+HERO_REVISION = 'panorama-interim-v8'
+HERO_SOURCE_NAME = 'exec-763b28a2-1ff5-444a-9b59-d6c4114b3fbd.png'
+HERO_SOURCE_SHA256 = '29427da12c869874f8ccd43749dd44f6a851cde8eddb643f31008088b2eeaa39'
 QUESTIONS = [
     {'id': 'yongning', 'number': '01', 'theme': '寺院与建筑',
      'title': '永宁寺里除了高塔还有什么？',
@@ -117,7 +120,7 @@ def home_intro(large, small, width, height):
 <div id="home-introduction">
   <section id="home-hero" class="home-hero" aria-labelledby="home-title">
     <figure><picture><source media="(max-width: 600px)" srcset="{small}">
-      <img src="{large}" width="{width}" height="{height}" fetchpriority="high" decoding="async" alt="北魏洛阳研究性复原示意：木塔、坊里与长街向远处宫城展开，前景城门和人物显示城市尺度。">
+      <img src="{large}" width="{width}" height="{height}" fetchpriority="high" decoding="async" alt="北魏洛阳研究性复原示意：木塔、院落和长街向城市远景展开，人物与车马呈现日常活动。">
     </picture><figcaption class="home-image-note">北魏洛阳 · 研究性复原示意</figcaption></figure>
     <div class="home-hero-copy"><p class="home-kicker">NORTHERN WEI · LUOYANG　/　516—528</p>
       <h1 id="home-title">走进一千五百年前的洛阳</h1>
@@ -194,6 +197,13 @@ def main():
         'research_release_unchanged': release['release'], 'questions': QUESTIONS,
         'hero': {'asset': large.removeprefix('./'), 'small_asset': small.removeprefix('./'),
                  'width': width, 'height': height, 'description': '研究性复原示意',
+                 'revision': HERO_REVISION, 'status': 'interim',
+                 'visual_review': 'further_revision_requested',
+                 'publication_authorized': True,
+                 'note': '暂用首页图；用户仍不满意，视觉方案后续继续调整。',
+                 'source_name': HERO_SOURCE_NAME, 'source_sha256': HERO_SOURCE_SHA256,
+                 'asset_sha256': digest(image_source), 'small_asset_sha256': digest(small_source),
+                 'conversion': 'ImageMagick: WebP quality 92; full size retained; small width 960; no crop or redraw',
                  'generated_image': True, 'measured_reconstruction': False},
         'new_historical_claims': 0, 'new_ancient_coordinates': 0,
         'research_data_changed': False, 'source_geometry_changed': False,
@@ -207,6 +217,7 @@ def main():
     })
     release['extensions'] = sorted(set(release.get('extensions', [])) | {VERSION})
     release['homepage_version'] = VERSION
+    release['homepage_hero_revision'] = HERO_REVISION
     release['current_milestone'] = 'H1 首页阅读入口；研究工作层保持 B8'
     dump(SITE / 'release.json', release)
     info['homepage'] = {key: metadata[key] for key in ('version', 'interface_milestone', 'source_commit',
@@ -216,6 +227,8 @@ def main():
     info['homepage']['question_count'] = len(QUESTIONS)
     info['homepage']['protected_files'] = len(protected)
     info['homepage']['metadata'] = 'homepage/metadata.json'
+    info['homepage']['hero_revision'] = HERO_REVISION
+    info['homepage']['hero_status'] = 'interim'
     info['files_sha256'] = {str(p.relative_to(SITE)): digest(p) for p in sorted(SITE.rglob('*'))
                            if p.is_file() and p.name != 'build-info.json'}
     dump(SITE / 'build-info.json', info)
