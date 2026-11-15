@@ -61,6 +61,7 @@ jobs:
           node --check web/homepage-v1.js
           node --check web/prosperity-v1.js
           node --check web/prosperity-core-v2.js
+          node --check web/prosperity-gate-v3.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -109,6 +110,7 @@ jobs:
         run: |
           python tools/prosperity_v1.py
           python tools/prosperity_core_v2.py
+          python tools/prosperity_gate_v3.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
@@ -142,6 +144,7 @@ jobs:
               python tests/browser_homepage_v1.py
               python tests/browser_prosperity_v1.py
               python tests/browser_prosperity_core_v2.py
+              python tests/browser_prosperity_gate_v3.py
             '
       - name: Preserve build and browser evidence
         if: always()
@@ -222,6 +225,7 @@ jobs:
               python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser
               python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser
               python tests/browser_prosperity_core_v2.py --base-url "$SITE_URL" --output artifacts/live-prosperity-core-v2-browser
+              python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
             '
       - name: Preserve live acceptance evidence
         if: always()

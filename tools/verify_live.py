@@ -309,6 +309,12 @@ try:
  assert all(info['files_sha256'][path]==digest for path,digest in home_preserved['sha256'].items())
  assert homepage['hero']['generated_image'] is True and homepage['hero']['measured_reconstruction'] is False
  assert {homepage['hero']['asset'],homepage['hero']['small_asset']}<=set(info['files_sha256'])
+ assert homepage['hero']['revision']==info['homepage']['hero_revision']==release['homepage_hero_revision']=='panorama-interim-v8'
+ assert homepage['hero']['status']==info['homepage']['hero_status']=='interim'
+ assert homepage['hero']['visual_review']=='further_revision_requested' and homepage['hero']['publication_authorized'] is True
+ assert homepage['hero']['source_sha256']=='29427da12c869874f8ccd43749dd44f6a851cde8eddb643f31008088b2eeaa39'
+ assert info['files_sha256'][homepage['hero']['asset']]==homepage['hero']['asset_sha256']=='c887056d075fa92c251422aece642df5def7af5b8ff087f3ff31f47ea6fdf4ee'
+ assert info['files_sha256'][homepage['hero']['small_asset']]==homepage['hero']['small_asset_sha256']=='4b5c1b5251bfe49854d3a3a1cf70bb622d9b37efae5d772358f01c4f47673235'
  home_html=get('index.html').decode('utf-8')
  assert all(f'id="{ident}"' in home_html for ident in ['home-hero','home-start','home-questions','home-research'])
  assert home_html.index('id="home-hero"') < home_html.index('id="home-questions"') < home_html.index('id="map-viewport"') < home_html.index('id="home-research"')
@@ -369,6 +375,63 @@ try:
  assert info['prosperity_core']['atlas_pages']==7
  assert get('downloads/prosperity-core-v2-atlas.pdf').startswith(b'%PDF-')
  assert get('downloads/prosperity-core-v2-package.zip').startswith(b'PK')
+ # P3 adds a traceable local gate plan, without changing earlier geometry or
+ # promoting the one-point display connection to a verified registration.
+ gate=json.loads(get('prosperity-gate/data.json'))
+ gate_source=json.loads(get('prosperity-gate/gate-plan.json'))
+ gate_models=json.loads(get('prosperity-gate/models.json'))
+ gate_preserved=json.loads(get('prosperity-gate/preservation.json'))
+ gate_info=info['prosperity_gate']
+ assert gate['version']==gate_info['version']==release['prosperity_gate_version']=='prosperity-gate-v3'
+ assert 'prosperity-gate-v3' in release['extensions']
+ assert all(item['source_commit']==info['source_commit'] for item in [gate,gate_models,gate_preserved,gate_info])
+ assert len(gate['components'])==gate_info['components'] and gate_info['components']>3
+ assert gate_info['source_raster_sha256']=='8f3b722fc60cdf29ec04553022185d3c5b073ba7454be9430c97197a8da24cc7'
+ assert gate_info['new_ancient_absolute_coordinates']==0
+ assert all(gate_info[key] is False for key in ['registration_verified','historical_heights_reconstructed','roofs_reconstructed','ancient_ground_surface_reconstructed'])
+ assert gate['source_raster']['sha256']==gate_source['source_raster']['sha256']==gate_info['source_raster_sha256']
+ assert hashlib.sha256(get(gate['source_raster']['url'].removeprefix('./'))).hexdigest()==gate_info['source_raster_sha256']
+ assert gate_source['calibration']['scale_bar']['length_m']==20 and gate_source['calibration']['geographic_crs'] is None
+ assert gate_source['calibration']['ground_control_points_count']==0 and gate_source['calibration']['north_arrow']['external_reference_verified'] is False
+ assert gate_source['diagnostics']['dimension_check']['table_used_for_scale_calibration'] is False
+ assert gate_source['city_link']==gate_models['city_link']==gate['city_link']
+ assert gate['city_link']['anchor_coordinates']==[112.6221536,34.72559] and gate['city_link']['anchor_crs']=='EPSG:4610'
+ gate_previous=next(item for item in core_models['models'] if item['id']=='core-changhe')
+ assert gate['city_link']['anchor_coordinates']==gate_previous['anchor_source_coordinates']
+ assert gate['city_link']['working_axis_angle_deg']==gate_previous['orientation_angle_deg']
+ assert gate['city_link']['p2_reference_dimensions_m']==gate_previous['dimensions_m']
+ assert all(abs(a-b)<0.000001 for a,b in zip(gate['city_link']['anchor_local_m'],gate_previous['center_xy_m']))
+ assert gate['city_link']['common_control_points_count']==0 and gate['city_link']['registration_verified'] is False
+ assert gate['city_link']['city_overlay_allowed'] is False and gate['research_limits']['city_footprint_placed'] is False
+ assert all(gate['city_link'][key] is None for key in ['translation_m','rotation_deg','city_geometry','global_accuracy_m','historical_height_m','historical_ground_elevation_m','roof_model'])
+ assert set(gate['maps'])=={'local','city','diagnostics'}
+ assert {item['id'] for item in gate['components']}=={item['id'] for item in gate_source['components']}=={item['id'] for item in gate_models['components']}
+ assert sum(item['kind']=='passage' for item in gate['components'])==3
+ assert sum(item['kind']=='que_base' and item['geometry_type']=='LineString' for item in gate['components'])==2
+ assert gate_preserved['protected_unchanged'] is True
+ assert len(gate_preserved['protected_files'])==gate_info['protected_files']
+ assert all(info['files_sha256'][path]==digest for path,digest in gate_preserved['protected_files'].items())
+ expected_updates={
+  'index.html':('index-before-gate.html','gate-detail-home-entry'),
+  'v3.0-dual.html':('v3.0-dual-before-gate.html','gate-detail-home-entry'),
+  'prosperity.html':('prosperity-before-gate.html','gate-detail-entry'),
+  'prosperity-core.html':('prosperity-core-before-gate.html','gate-detail-core-entry'),
+ }
+ updates=gate_preserved['intentional_html_updates']
+ assert len(updates)==len(expected_updates) and {item['path'] for item in updates}==set(expected_updates)
+ for item in updates:
+  assert (item['archive_path'],item['entry_id'])==expected_updates[item['path']]
+  archived=get(item['archive_path']);current=get(item['path'])
+  assert hashlib.sha256(archived).hexdigest()==item['before_sha256']==info['files_sha256'][item['archive_path']]
+  assert hashlib.sha256(current).hexdigest()==item['after_sha256']==info['files_sha256'][item['path']]
+  pattern=rb'<p\b[^>]*\bid="'+re.escape(item['entry_id'].encode())+rb'"[^>]*>.*?</p>'
+  restored,count=re.subn(pattern,b'',current,flags=re.DOTALL)
+  assert count==1 and restored==archived, f'P3 changed more than its declared entry: {item["path"]}'
+  if item['path']=='prosperity.html':
+   assert item['before_sha256']==core_preserved['p1_entry_after_sha256']
+ assert gate_info['atlas_pages']==3
+ assert get('downloads/prosperity-gate-v3-atlas.pdf').startswith(b'%PDF-')
+ assert get('downloads/prosperity-gate-v3-package.zip').startswith(b'PK')
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
@@ -378,7 +441,8 @@ try:
  report['homepage']=info['homepage']
  report['prosperity']=info['prosperity']
  report['prosperity_core']=info['prosperity_core']
- print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1-P2; HTTP retries: {len(fetcher.retries)}')
+ report['prosperity_gate']=gate_info
+ print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise
 finally:
