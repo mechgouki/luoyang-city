@@ -177,7 +177,7 @@ def html_page(d, figures, info):
 <meta name="description" content="阊阖门—二号宫门—三号宫门—太极殿的分段量距、道路、分期与原刊考古图核查。">
 <link rel="stylesheet" href="./prosperity-axis/style.css"></head><body>
 <header class="top"><a class="brand" href="./">洛 <span>盛时洛阳 · 考古空间研究</span></a>
-<nav aria-label="研究导航"><a href="./prosperity.html">盛时总图</a><a href="./prosperity-gate.html#source-comparison">阊阖门原图对比</a><a href="#originals">原始图版</a><a href="#download">下载</a></nav></header>
+<nav aria-label="研究导航"><a href="./prosperity.html">盛时总图</a><a href="./prosperity-gate.html#source-comparison">阊阖门原图对比</a><a href="./prosperity-axis-sources.html">原刊异记对照 P4.1</a><a href="#originals">原始图版</a><a href="#download">下载</a></nav></header>
 <main class="shell">
 <section class="hero"><p class="eyebrow">P4 · 中轴量距与时层审查</p>
 <h1>一座宫城，不能只靠四个点画出来。</h1>
@@ -207,10 +207,11 @@ def html_page(d, figures, info):
 <p>{link("XU2020","考古研究与图三")}记载太极殿主殿北边102.3米、南边98.4米、进深59—61.5米，东堂48×23米，东堂在主殿以东约14米。这里画的是台基尺度比较，不是盛时屋顶与楼高。</p>
 <p>太极殿宫院东北角另有东西长96米、南北残长27米的院落记录和约4.7米夹道。它们是<strong>局部残存院落</strong>，不能当作整个宫院的尺寸。{link("HENAN2017","省考古机构报道")}</p></section>
 <section class="section" id="originals"><div class="section-head"><span>05 · 原始图版</span><h2>直接核对出版的考古平面，不再只看我们的示意</h2></div>
-<div class="source-grid"><article><h3>2013 年 · 宫城平面原图</h3><p>奈良文化财研究所《纪要2013》第52页图69：宫城、城墙、门殿及0—200m图内标尺。图中另有“一号门”标注，其与阊阖门的命名关系需要单独核清。</p>{link("NARA2013","打开原刊PDF的图69")}</article>
+<div class="source-grid"><article><h3>2013 年 · 宫城平面原图</h3><p>奈良文化财研究所《纪要2013》第52页图69：宫城、城墙、门殿及0—200m图内标尺。图中“一号门”和“阊阖门”指向同一宫城正门的考古编号与历史名称；此对应已在后续图证专题核查。</p>{link("NARA2013","打开原刊PDF的图69")}</article>
 <article><h3>2012 年 · 中文考古报告</h3><p>钱国祥《汉魏洛阳故城北魏宫城中枢区南部的合作勘察》，中文部分第28—30页，记二、三号门及道路分期。其日文译文与中文稿属同一研究来源链。</p>{link("QIAN2012","打开2012会议原刊PDF")}</article>
 <article><h3>太极殿 · 研究平面图</h3><p>徐龙国《两汉魏晋南北朝都城建筑的发展演变》，图三及太极殿主殿/东堂尺寸。此处提供原刊链接，未声称获得独立精测CAD。</p>{link("XU2020","打开原刊太极殿平面")}</article>
 <article><h3>阊阖门 · 原生平剖图</h3><p>本站P3已提供同像素描线、原图叠照和完整出处；可直接进入交互比较。</p><p>{link("UNESCO-S37","打开阊阖门考古原图所在的申遗文档")}</p><a href="./prosperity-gate.html#source-comparison">打开已上线的原图对比 ↗</a></article></div></section>
+<section class="section" id="source-audit"><div class="section-head"><span>新研究 · P4.1</span><h2>同一中轴为什么出现200米与300米两种写法？</h2></div><p>奈文研2011年调查概要写三号门至太极殿约200米，而钱国祥研究写约300米。后一种说法得出的475米累计只是一种读法，不是所有材料的共识。已把原刊图号、一号门命名和二号门23／24米之差放入独立专题。</p><p><a href="./prosperity-axis-sources.html">进入 P4.1：原始考古图证与测距异记对照 →</a></p></section>
 <section class="section" id="download"><div class="section-head"><span>06 · 可复核文件</span><h2>本轮成果与未解决问题</h2></div>
 <div class="downloads"><a href="./downloads/prosperity-axis-v4-atlas.pdf">三页考古尺度图册 PDF</a>
 <a href="./downloads/prosperity-axis-v4-package.zip">完整研究资料 ZIP</a>
