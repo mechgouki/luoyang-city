@@ -57,7 +57,7 @@ class PrimarySourceAudit(unittest.TestCase):
         self.assertEqual([x["north_south_m"] for x in dims],[23.0,24.0])
         self.assertEqual([x["east_west_m"] for x in dims],[44.5,44.5])
         self.assertEqual([x["source_id"] for x in dims],["NARA2009","NARA2010"])
-        self.assertIn("没有取得",self.data["second_gate_diameter_assessment"])
+        self.assertIn("未取得",self.data["second_gate_diameter_assessment"])
 
     def test_figure_catalog_and_formal_reports_not_falsely_claimed(self):
         sources={item["id"]:item for item in self.data["sources"]}
@@ -101,7 +101,7 @@ class PrimarySourceAudit(unittest.TestCase):
         self.assertIn("二号门",self.page)
         self.assertIn('id="scenario"',self.page)
         self.assertIn('id="sources"',self.page)
-        self.assertIn("完整测绘",self.page)
+        self.assertIn("原始测绘平面",self.page)
         for item in self.data["sources"]:
             # Every source has an audit link, but formal reports link to the catalog only.
             self.assertIn(item["url"].split("#")[0],self.page)
