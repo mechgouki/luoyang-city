@@ -73,7 +73,7 @@ def hall_scale_svg(d):
 
 def north_courts_svg(d):
     d2=d["northern_courts"]
-    assert d2["west"]["inner_court_ew_m"]==8 and d2["east"]["southern_corridor_bays"]==9
+    assert d2["west"]["inner_court_ew_m"]==8 and d2["east"]["south_corridor_bays"]==9
     p=svg_begin("东堂北侧：道路、廊庑与两组院落的关系",
                 "只有已记载的相邻、道路、南廊和局部天井；以下卡片为无比例关系式，不是完整发掘平面。")
     p.append(box(70,218,1340,600))
