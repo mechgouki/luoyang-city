@@ -62,6 +62,8 @@ jobs:
           node --check web/prosperity-v1.js
           node --check web/prosperity-core-v2.js
           node --check web/prosperity-gate-v3.js
+          node --check web/prosperity-axis-sources.js
+          python -m py_compile tools/prosperity_axis_sources_p41.py tests/browser_prosperity_axis_sources_p41.py
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
