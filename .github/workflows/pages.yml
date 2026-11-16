@@ -111,6 +111,7 @@ jobs:
           python tools/prosperity_v1.py
           python tools/prosperity_core_v2.py
           python tools/prosperity_gate_v3.py
+          python tools/prosperity_axis_v4.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
@@ -129,6 +130,7 @@ jobs:
             bash -euo pipefail -c '
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
               python tests/browser_prosperity_gate_v3.py
+              python tests/browser_prosperity_axis_v4.py
               python tests/browser_v25.py
               python tests/browser_v26.py
               python tests/browser_v27.py
@@ -210,6 +212,7 @@ jobs:
             bash -euo pipefail -c '
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
               python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
+              python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser
               python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser
               python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser
               python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser

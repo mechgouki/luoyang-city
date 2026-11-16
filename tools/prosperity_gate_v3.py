@@ -184,7 +184,9 @@ def patch_entries():
                 archive.write_bytes(before)
         block = (f'<p id="{entry_id}" style="padding:12px 16px;background:#e9efdf;border-left:3px solid #48715b">'
                  '<a href="./prosperity-gate.html" style="color:#244c3e;font-weight:600">'
-                 '继续近看阊阖门：局部平面、原件量读与城市接合依据 →</a></p>').encode()
+                 '继续近看阊阖门：局部平面、原件量读与城市接合依据 →</a>'
+                 ' · <a href="./prosperity-axis.html" style="color:#244c3e;font-weight:600">'
+                 '宫城中轴：分段量距、道路与遗址分期 →</a></p>').encode()
         if path in {'index.html', 'v3.0-dual.html'}:
             section = re.search(rb'<section id="prosperity-entry"[^>]*>.*?</section>', before, flags=re.S)
             assert section, f'Missing prosperity entry: {path}'
@@ -198,7 +200,7 @@ def patch_entries():
         target.write_bytes(after)
         records.append({'path': path, 'archive_path': archive_path, 'before_sha256': sha(archive),
                         'after_sha256': sha(target), 'entry_id': entry_id,
-                        'intent': '仅增加指向阊阖门 P3 的专题入口；其余页面字节保留。'})
+                        'intent': '仅在可移除入口块内增加阊阖门 P3 与宫城中轴 P4 专题入口；其余页面字节保留。'})
     return records
 
 
