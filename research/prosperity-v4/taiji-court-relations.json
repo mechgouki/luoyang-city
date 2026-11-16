@@ -1,0 +1,205 @@
+{
+  "version": "prosperity-taiji-courts-p42",
+  "date": "2026-11-16",
+  "title": "太极殿与东堂北侧宫院：尺度、构成及各期变化",
+  "sources": [
+    {
+      "id": "JLU2016",
+      "title": "汉魏洛阳城太极殿遗址发掘获重要成果",
+      "url": "https://bjkg.jlu.edu.cn/info/1048/1613.htm",
+      "kind": "考古研究机构公开转载",
+      "family": "CASS-Luoyang"
+    },
+    {
+      "id": "XU2020",
+      "title": "徐龙国：两汉魏晋南北朝都城建筑的发展演变（图三）",
+      "url": "https://hrczh.cass.cn/sxqy/kgx/202502/W020250228392257504164.pdf",
+      "kind": "论文图版及文字",
+      "family": "CASS-Luoyang"
+    },
+    {
+      "id": "CASS2015",
+      "title": "2015年度十大考古新发现：洛阳太极殿",
+      "url": "https://dbsqp.com/article/25060",
+      "kind": "考古团队成果介绍的媒体转载",
+      "family": "CASS-Luoyang"
+    },
+    {
+      "id": "QIAN2017",
+      "title": "钱国祥2017四川大学学术讲座通讯",
+      "url": "https://www.sohu.com/a/210236533_100029711",
+      "kind": "考古者讲座纪要转载",
+      "family": "CASS-Luoyang"
+    },
+    {
+      "id": "CH2023",
+      "title": "瀍河区政务专题：汉魏洛阳故城宫城遗址",
+      "url": "https://www.thepaper.cn/newsDetail_forward_24468431",
+      "kind": "2023政务考古综述",
+      "family": "Research-synthesis"
+    },
+    {
+      "id": "HENAN2017",
+      "title": "2017年度汉魏洛阳城宫城太极殿宫院发掘与收获",
+      "url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=583",
+      "kind": "省级机构转载发掘成果",
+      "family": "CASS-Luoyang"
+    }
+  ],
+  "main_hall": {
+    "north_ew_m": 102.3,
+    "south_ew_m": 98.4,
+    "ns_review_m": 61.5,
+    "reported_ns_range_m": [
+      58,
+      61.5
+    ],
+    "source_ids": [
+      "JLU2016",
+      "XU2020"
+    ],
+    "preserved_platform_not_one_phase_roof": true,
+    "historical_height_m": null
+  },
+  "east_hall": {
+    "observations": [
+      {
+        "source_id": "JLU2016",
+        "ew_m": 47.9,
+        "ns_m": 21.3,
+        "gap_from_main_east_m": 13
+      },
+      {
+        "source_id": "XU2020",
+        "ew_m": 48,
+        "ns_m": 23,
+        "gap_from_main_east_m": 14
+      }
+    ],
+    "position": "east_of_main",
+    "relative_north_south_offset_verified": false,
+    "roof_height_m": null,
+    "connection": {
+      "kind": "东閤门",
+      "gate_width_m_approx": 4,
+      "partition_width_m_approx": 1.4,
+      "eight_column_bases": true,
+      "upper_gallery_inferred_not_directly_preserved": true,
+      "paved_lane_ns_length_remaining_m": 15,
+      "paved_lane_width_m": 2,
+      "source_id": "JLU2016"
+    }
+  },
+  "northern_courts": {
+    "site": "east_hall_north",
+    "two_courts_east_west": true,
+    "excavated_ns_strip_range_m": [
+      11,
+      14
+    ],
+    "west": {
+      "ew_m_approx": 20,
+      "south_corridor_bays": 4,
+      "inner_court_ew_m": 8,
+      "inner_court_ns_m": 4,
+      "north_room_bays": 3,
+      "north_room_ew_m": 9,
+      "north_room_ns_unknown": true,
+      "stone_paving": true
+    },
+    "east": {
+      "south_corridor_bays": 9,
+      "south_corridor_length_remaining_m": 37,
+      "unexcavated_east_boundary": true
+    },
+    "separating_ew_paved_road": {
+      "ew_length_remaining_m": 52,
+      "ns_width_m": 4,
+      "west_gate_width_m_approx": 3.5
+    },
+    "northeast_court_2017": {
+      "ew_m": 96,
+      "ns_remaining_m": 27,
+      "alley_width_m": 4.7,
+      "source_id": "HENAN2017",
+      "same_as_earlier_two_courts_verified": false
+    },
+    "complete_courtyard_polygon_known": false,
+    "source_id": "JLU2016"
+  },
+  "courtyard_extent_variants": [
+    {
+      "id": "A",
+      "ew_m": 340,
+      "ns_m": 310,
+      "label": "2015成果介绍／2017讲座",
+      "source_ids": [
+        "CASS2015",
+        "QIAN2017"
+      ],
+      "phase_mapped": false,
+      "shared_control_verified": false
+    },
+    {
+      "id": "B",
+      "ew_m": 320,
+      "ns_m": 380,
+      "label": "2023政务综合介绍",
+      "source_ids": [
+        "CH2023"
+      ],
+      "phase_mapped": false,
+      "shared_control_verified": false
+    }
+  ],
+  "difference_B_minus_A_m": {
+    "ew": -20,
+    "ns": 70
+  },
+  "same_courtyard_boundary_identified": false,
+  "phase_models": [
+    {
+      "id": "wei_jin",
+      "label": "魏晋时期",
+      "source_id": "CH2023",
+      "corridor": "早期大型柱网廊房，报道面宽十三间；前后有砖砌拱券式暗渠",
+      "drainage": "砖砌拱券式暗渠",
+      "boundary": "不能用北魏多院隔墙直接替代"
+    },
+    {
+      "id": "northern_wei",
+      "label": "北魏重修",
+      "source_id": "CH2023",
+      "corridor": "院落以夯土隔墙区分，两侧设檐柱，形成两面廊庑",
+      "drainage": "石板盖顶的较小暗渠",
+      "boundary": "东堂北有多组院落，但北缘发掘不完整"
+    },
+    {
+      "id": "northern_zhou",
+      "label": "北周晚期",
+      "source_id": "CH2023",
+      "corridor": "东堂及部分北侧院落保留北魏布局；局部后筑夯土破坏",
+      "drainage": "不可推为完整北魏时期排水网络",
+      "boundary": "太极殿主殿晚期改建未完成，不并入北魏盛时"
+    }
+  ],
+  "source_dependency_note": "多个公布版本可来自同一考古队列或研究成果的再传播，不作为完全独立实测；宫院340×310与320×380测量边界尚未取得共同控制。",
+  "geographic_registration": {
+    "verified_common_control_points": 0,
+    "new_absolute_coordinates": 0,
+    "city_geographic_overlay_allowed": false,
+    "ancient_ground_reconstructed": false
+  },
+  "research_limits": {
+    "whole_courtyard_shape_reconstructed": false,
+    "building_heights_reconstructed": false,
+    "unexcavated_edges_closed": false,
+    "visualization_only_alignment": true
+  },
+  "next_actions": [
+    "确认2015与2023的太极殿宫院边界、所指时层和测量线段是否相同",
+    "取得东堂与北院正式测绘平面及源像素/比例尺读点",
+    "核实北魏两面廊庑、排水暗渠和院墙的时期对应",
+    "取得可验证的局部—城市共同控制点后再落位"
+  ]
+}
