@@ -37,7 +37,7 @@ class TaijiCourtsEvidence(unittest.TestCase):
   self.assertTrue(x["two_courts_east_west"])
   self.assertEqual(x["excavated_ns_strip_range_m"],[11,14])
   self.assertEqual([x["west"]["ew_m_approx"],x["west"]["inner_court_ew_m"],x["west"]["inner_court_ns_m"]],[20,8,4])
-  self.assertEqual([x["east"]["southern_corridor_bays"],x["east"]["south_corridor_length_remaining_m"]],[9,37])
+  self.assertEqual([x["east"]["south_corridor_bays"],x["east"]["south_corridor_length_remaining_m"]],[9,37])
   self.assertEqual([x["separating_ew_paved_road"]["ew_length_remaining_m"],x["separating_ew_paved_road"]["ns_width_m"]],[52,4])
   self.assertTrue(x["east"]["unexcavated_east_boundary"])
   self.assertFalse(x["complete_courtyard_polygon_known"])
@@ -47,7 +47,7 @@ class TaijiCourtsEvidence(unittest.TestCase):
   self.assertEqual([a["ew_m"],a["ns_m"]],[340,310])
   self.assertEqual([b["ew_m"],b["ns_m"]],[320,380])
   self.assertEqual([b["ew_m"]-a["ew_m"],b["ns_m"]-a["ns_m"]],[-20,70])
-  self.assertEqual(self.data["dimensions_B_minus_A_m"],{"ew":-20,"ns":70})
+  self.assertEqual(self.data["difference_B_minus_A_m"],{"ew":-20,"ns":70})
   self.assertFalse(self.data["same_courtyard_boundary_identified"])
   self.assertTrue(all(not item["shared_control_verified"] for item in [a,b] if "shared_control_verified" in item))
  def test_three_phase_models_are_not_collapsed(self):
