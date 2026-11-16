@@ -62,6 +62,8 @@ jobs:
           node --check web/prosperity-v1.js
           node --check web/prosperity-core-v2.js
           node --check web/prosperity-gate-v3.js
+          node --check web/prosperity-axis-sources.js
+          python -m py_compile tools/prosperity_axis_sources_p41.py tests/browser_prosperity_axis_sources_p41.py
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -112,6 +114,7 @@ jobs:
           python tools/prosperity_core_v2.py
           python tools/prosperity_gate_v3.py
           python tools/prosperity_axis_v4.py
+          python tools/prosperity_axis_sources_p41.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
@@ -131,6 +134,7 @@ jobs:
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
               python tests/browser_prosperity_gate_v3.py
               python tests/browser_prosperity_axis_v4.py
+              python tests/browser_prosperity_axis_sources_p41.py
               python tests/browser_v25.py
               python tests/browser_v26.py
               python tests/browser_v27.py
@@ -213,6 +217,7 @@ jobs:
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
               python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
               python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser
+              python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser
               python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser
               python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser
               python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser

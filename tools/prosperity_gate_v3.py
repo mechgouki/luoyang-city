@@ -186,7 +186,9 @@ def patch_entries():
                  '<a href="./prosperity-gate.html" style="color:#244c3e;font-weight:600">'
                  '继续近看阊阖门：局部平面、原件量读与城市接合依据 →</a>'
                  ' · <a href="./prosperity-axis.html" style="color:#244c3e;font-weight:600">'
-                 '宫城中轴：分段量距、道路与遗址分期 →</a></p>').encode()
+                 '宫城中轴：分段量距、道路与遗址分期 →</a>'
+                 ' · <a href="./prosperity-axis-sources.html" style="color:#244c3e;font-weight:600">'
+                 '原刊图证和200/300米异记 →</a></p>').encode()
         if path in {'index.html', 'v3.0-dual.html'}:
             section = re.search(rb'<section id="prosperity-entry"[^>]*>.*?</section>', before, flags=re.S)
             assert section, f'Missing prosperity entry: {path}'
