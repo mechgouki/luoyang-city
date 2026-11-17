@@ -1,0 +1,178 @@
+{
+  "version": "prosperity-palace-boundaries-p43",
+  "date": "2026-11-17",
+  "subject": "太极殿宫院范围：310／370／380米南北尺度异记与院界判读",
+  "comparison_only": true,
+  "scope": "reported overall palace court width/depth; not recovered surveyed wall polygons or a single-period footprint",
+  "units": "m",
+  "reporting_variants": [
+    {
+      "id": "A",
+      "reported_period": "2015考古成果／2017讲座口径",
+      "ew_m": 340,
+      "ns_m": 310,
+      "source_ids": [
+        "CASS2015",
+        "QIAN2017"
+      ],
+      "source_grade": "archaeological-team reported summary",
+      "lineage_group": "CASS-Luoyang",
+      "approximate": true,
+      "original_measurement_endpoints_available": false,
+      "individual_phase_verified": false,
+      "real_boundary_polygon_available": false
+    },
+    {
+      "id": "B",
+      "reported_period": "2022大众遗址介绍口径",
+      "ew_m": 320,
+      "ns_m": 370,
+      "source_ids": [
+        "VISIT2022"
+      ],
+      "source_grade": "popular secondary account; pending origin verification",
+      "lineage_group": "popular-derivative-unresolved",
+      "approximate": true,
+      "original_measurement_endpoints_available": false,
+      "individual_phase_verified": false,
+      "real_boundary_polygon_available": false
+    },
+    {
+      "id": "C",
+      "reported_period": "2023政务考古综述口径",
+      "ew_m": 320,
+      "ns_m": 380,
+      "source_ids": [
+        "CH2023"
+      ],
+      "source_grade": "government archaeological synthesis; source-stage to verify",
+      "lineage_group": "research-synthesis",
+      "approximate": true,
+      "original_measurement_endpoints_available": false,
+      "individual_phase_verified": false,
+      "real_boundary_polygon_available": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "CASS2015",
+      "title": "2015年度全国十大考古新发现：汉魏洛阳故城太极殿宫院",
+      "url": "https://bjkg.jlu.edu.cn/info/1048/1600.htm",
+      "year": 2015,
+      "kind": "考古团队阶段性成果介绍（机构转载）",
+      "lineage_group": "CASS-Luoyang",
+      "claim_ids": [
+        "A"
+      ],
+      "is_independent_excavation_measurement": false
+    },
+    {
+      "id": "QIAN2017",
+      "title": "钱国祥2017年关于汉魏洛阳宫城发掘的学术讲座通讯",
+      "url": "https://www.sohu.com/a/210236533_100029711",
+      "year": 2017,
+      "kind": "发掘团队成员讲座报道，与2015口径同源",
+      "lineage_group": "CASS-Luoyang",
+      "claim_ids": [
+        "A"
+      ],
+      "is_independent_excavation_measurement": false
+    },
+    {
+      "id": "VISIT2022",
+      "title": "2022年洛阳遗址游览及宫城尺度介绍",
+      "url": "https://www.sohu.com/a/558715703_121117499",
+      "year": 2022,
+      "kind": "大众游览介绍（非发掘简报）",
+      "lineage_group": "popular-derivative-unresolved",
+      "claim_ids": [
+        "B"
+      ],
+      "is_independent_excavation_measurement": false
+    },
+    {
+      "id": "CH2023",
+      "title": "2023年瀍河区政务考古综述：汉魏洛阳故城宫城遗址",
+      "url": "https://www.thepaper.cn/newsDetail_forward_24468431",
+      "year": 2023,
+      "kind": "政务研究综述",
+      "lineage_group": "research-synthesis",
+      "claim_ids": [
+        "C"
+      ],
+      "is_independent_excavation_measurement": false
+    },
+    {
+      "id": "HENAN2017",
+      "title": "2017年度汉魏洛阳城太极殿宫院发掘与收获",
+      "url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=583",
+      "year": 2017,
+      "kind": "省级考古机构所载年度发掘汇报",
+      "lineage_group": "CASS-Luoyang",
+      "claim_ids": [],
+      "is_independent_excavation_measurement": false
+    },
+    {
+      "id": "WANG2021",
+      "title": "2021建筑史论文：太极殿宫院总宽320m及东西堂相对关系",
+      "url": "https://www.jgcm.ac.cn/jah/cn/article/pdf/preview/10.12329/20969368.2021.01004.pdf",
+      "year": 2021,
+      "kind": "建筑史论文对相关发掘资料的研究解释",
+      "lineage_group": "architectural-study",
+      "claim_ids": [],
+      "is_independent_excavation_measurement": false
+    }
+  ],
+  "additional_anchors": [
+    {
+      "id": "NE_COURT_2017",
+      "source_id": "HENAN2017",
+      "description": "太极殿宫院东北角局部院址：东西96m、南北残长27m，夹道4.7m",
+      "ew_m": 96,
+      "ns_remaining_m": 27,
+      "alley_width_m": 4.7,
+      "partial": true,
+      "identical_to_any_overall_boundary_edge_verified": false,
+      "absolute_coordinates": null
+    },
+    {
+      "id": "WANG2021_WIDTH",
+      "source_id": "WANG2021",
+      "description": "建筑史研究援引宫院总宽320m，但需追读所依实测原图",
+      "ew_m": 320,
+      "ns_m": null,
+      "measurement_endpoint_unverified": true,
+      "absolute_coordinates": null
+    }
+  ],
+  "metric_differences_m": {
+    "B_minus_A": {
+      "ew": -20,
+      "ns": 60
+    },
+    "C_minus_A": {
+      "ew": -20,
+      "ns": 70
+    },
+    "C_minus_B": {
+      "ew": 0,
+      "ns": 10
+    }
+  },
+  "research_hypotheses_unconfirmed": [
+    "发表阶段所采用的院墙识别或不同建筑时相",
+    "南北范围测量基点、南门至北院界的起讫差异",
+    "2022年大众介绍转引或舍入造成的370米中间口径"
+  ],
+  "spatial_registration": {
+    "original_scaled_complete_plan_obtained": false,
+    "verified_shared_endpoints": 0,
+    "verified_common_ground_controls": 0,
+    "new_absolute_ancient_coordinates": 0,
+    "site_court_walls_overlay_allowed": false,
+    "roof_heights_reconstructed": false,
+    "ancient_ground_elevation_reconstructed": false
+  },
+  "prior_milestone_unchanged": "prosperity-taiji-courts-p42",
+  "followup_source_request": "取得正式发表的完整带尺测绘总平面、院墙东/西/南/北边界、测线端点和分期图；核明2017东北角局部院界如何与总院界相接。"
+}
