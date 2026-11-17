@@ -133,7 +133,7 @@ def page_html(d, info):
 <link rel="stylesheet" href="./prosperity-axis-sources/style.css"></head><body>
 <header><a href="./">洛 · 盛时洛阳</a><nav aria-label="研究导航">
 <a href="./prosperity-axis.html">返回中轴尺度 P4</a><a href="./prosperity-gate.html#source-comparison">阊阖门原图</a>
-<a href="#sources">逐份查看原刊图</a></nav></header>
+<a href="#sources">逐份查看原刊图</a><a href="./prosperity-taiji-courts.html">太极殿院落 P4.2</a></nav></header>
 <main><section class="intro"><p class="eyebrow">P4.1 · 原始考古图源校核</p>
 <h1>同一座宫门的两个名字，同一段距离的两种记法。</h1>
 <p>这不是一张新的“标准答案地图”。我们把原刊图、考古编号、不同阶段量距和缺失图件放在同一页面，

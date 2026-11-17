@@ -177,7 +177,7 @@ def html_page(d, figures, info):
 <meta name="description" content="阊阖门—二号宫门—三号宫门—太极殿的分段量距、道路、分期与原刊考古图核查。">
 <link rel="stylesheet" href="./prosperity-axis/style.css"></head><body>
 <header class="top"><a class="brand" href="./">洛 <span>盛时洛阳 · 考古空间研究</span></a>
-<nav aria-label="研究导航"><a href="./prosperity.html">盛时总图</a><a href="./prosperity-gate.html#source-comparison">阊阖门原图对比</a><a href="./prosperity-axis-sources.html">原刊异记对照 P4.1</a><a href="#originals">原始图版</a><a href="#download">下载</a></nav></header>
+<nav aria-label="研究导航"><a href="./prosperity.html">盛时总图</a><a href="./prosperity-gate.html#source-comparison">阊阖门原图对比</a><a href="./prosperity-axis-sources.html">原刊异记对照 P4.1</a><a href="./prosperity-taiji-courts.html">太极殿院落 P4.2</a><a href="#originals">原始图版</a><a href="#download">下载</a></nav></header>
 <main class="shell">
 <section class="hero"><p class="eyebrow">P4 · 中轴量距与时层审查</p>
 <h1>一座宫城，不能只靠四个点画出来。</h1>
