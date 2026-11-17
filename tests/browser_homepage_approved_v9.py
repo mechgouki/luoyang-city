@@ -53,7 +53,7 @@ try:
         r=p.goto(base,wait_until="networkidle")
         assert r.status==200
         ready(p)
-        h=ctx.request.get(base+"homepage/metadata.json").json()["hero"]
+        h=ctx.request.get(base+"homepage/approval-v9.json").json()["hero"]
         approval=ctx.request.get(base+"homepage/approval-v9.json").json()
         old=ctx.request.get(base+"homepage/history/panorama-interim-v8.json").json()
         assert h["revision"]=="panorama-approved-v9" and h["status"]=="approved"
