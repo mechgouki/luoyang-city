@@ -38,8 +38,11 @@ class P44Architecture(unittest.TestCase):
         self.assertEqual(p43.count('id="p44-next"'),1)
         self.assertIn('href="./prosperity-architecture.html"',p43)
         homepage=data(SITE/"homepage/metadata.json")
-        self.assertEqual(homepage["hero"]["revision"],"panorama-interim-v8")
-        self.assertEqual(homepage["hero"]["visual_review"],"further_revision_requested")
+        self.assertEqual(homepage["hero"]["revision"],"panorama-approved-v9")
+        self.assertEqual(homepage["hero"]["visual_review"],"approved_for_homepage")
+        original=data(SITE/"homepage/history/panorama-interim-v8.json")
+        self.assertEqual(original["hero"]["revision"],"panorama-interim-v8")
+        self.assertEqual(original["hero"]["visual_review"],"further_revision_requested")
 
     def test_six_types_are_structurally_different(self):
         d=self.public
