@@ -447,9 +447,13 @@ try:
  assert len(updates)==len(expected_updates) and {item['path'] for item in updates}==set(expected_updates)
  for item in updates:
   assert (item['archive_path'],item['entry_id'])==expected_updates[item['path']]
-  archived=get(item['archive_path']);current=get(item['path'])
+  archived=get(item['archive_path'])
+  # H2 changes only the hero illustration and stores pre-approval HTML unchanged.
+  # Replay P3's byte-exact append/remove proof against that archived H1 view.
+  prior_page=('homepage/history/'+item['path'].replace('.html','-before-v9.html')) if item['path'] in ('index.html','v3.0-dual.html') else item['path']
+  current=get(prior_page)
   assert hashlib.sha256(archived).hexdigest()==item['before_sha256']==info['files_sha256'][item['archive_path']]
-  assert hashlib.sha256(current).hexdigest()==item['after_sha256']==info['files_sha256'][item['path']]
+  assert hashlib.sha256(current).hexdigest()==item['after_sha256']==info['files_sha256'][prior_page]
   pattern=rb'<p\b[^>]*\bid="'+re.escape(item['entry_id'].encode())+rb'"[^>]*>.*?</p>'
   restored,count=re.subn(pattern,b'',current,flags=re.DOTALL)
   assert count==1 and restored==archived, f'P3 changed more than its declared entry: {item["path"]}'
