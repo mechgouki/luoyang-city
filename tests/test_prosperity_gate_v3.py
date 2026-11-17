@@ -274,7 +274,13 @@ class PublishedGatePlan(unittest.TestCase):
                          {'index.html', 'v3.0-dual.html', 'prosperity.html', 'prosperity-core.html'})
         for update in proof['intentional_html_updates']:
             previous = (SITE / update['archive_path']).read_bytes()
-            current = (SITE / update['path']).read_bytes()
+            # The H2 homepage swap archives the prior exact HTML before
+            # changing only the hero picture. Re-run P3's byte-exact proof on
+            # that archived v8 page; the H2 test separately constrains the
+            # current HTML and prevents untracked map edits.
+            h2_old = SITE / 'homepage/history' / update['path'].replace('.html', '-before-v9.html')
+            source = h2_old if update['path'] in ('index.html', 'v3.0-dual.html') else SITE / update['path']
+            current = source.read_bytes()
             self.assertEqual(hashlib.sha256(previous).hexdigest(), update['before_sha256'])
             self.assertEqual(hashlib.sha256(current).hexdigest(), update['after_sha256'])
             pattern = rb'<p id="' + re.escape(update['entry_id'].encode()) + rb'"[^>]*>.*?</p>'
