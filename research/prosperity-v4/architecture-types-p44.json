@@ -1,0 +1,355 @@
+{
+  "version": "prosperity-architecture-p44",
+  "research_date": "2026-11-17",
+  "scope": "Northern Wei Luoyang: archaeological gate-type differentiation as constraints for later reconstruction, not verified roofs or city footprints",
+  "reference_period": "516–528 Northern Wei prosperous composite (not a single excavated phase)",
+  "sources": [
+    {
+      "id": "QIAN2018",
+      "title": "钱国祥《汉魏洛阳城城门与宫院门的考察研究》",
+      "original_publication": "《华夏考古》2018年第6期",
+      "accessed_publication": "2019-02-28中国考古网文章的公开转载，注明省略注释",
+      "url": "https://www.sohu.com/a/298263205_199807",
+      "figure_numbers": [
+        "图一",
+        "图二",
+        "图四",
+        "图五",
+        "图六",
+        "图七",
+        "图八",
+        "图九"
+      ],
+      "figure_read_status": "公开网页图号、图题、相关文字及链接已见；原刊整版带尺原图未独立取得并量读",
+      "reuse_rights": "link_only_do_not_republish",
+      "source_family": "CASS_Luoyang"
+    },
+    {
+      "id": "JLU2016",
+      "title": "《汉魏洛阳城太极殿遗址发掘获重要成果》",
+      "original_publication": "洛阳汉魏城队考古成果公开叙述",
+      "accessed_publication": "吉林大学边疆考古研究中心2016-11-01转载",
+      "url": "https://bjkg.jlu.edu.cn/info/1048/1613.htm",
+      "figure_numbers": [],
+      "figure_read_status": "已核公开文字与数字；本文所提原始带尺完整总平面未取得",
+      "reuse_rights": "link_only",
+      "source_family": "CASS_Luoyang"
+    },
+    {
+      "id": "HENAN2017",
+      "title": "2017年度汉魏洛阳城宫城太极殿宫院发掘与收获",
+      "original_publication": "洛阳汉魏城队2017年度发掘汇报",
+      "accessed_publication": "河南省文物考古研究院新闻转载",
+      "url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=583",
+      "figure_numbers": [],
+      "figure_read_status": "已核公开文字，未取得完整测绘图及共同地理控制",
+      "reuse_rights": "link_only",
+      "source_family": "CASS_Luoyang"
+    },
+    {
+      "id": "XU2020",
+      "title": "徐龙国《两汉魏晋南北朝都城建筑的发展演变》",
+      "original_publication": "《中原文物》2020年第3期",
+      "accessed_publication": "中国社会科学院学术PDF线上公开",
+      "url": "https://hrczh.cass.cn/sxqy/kgx/202502/W020250228392257504164.pdf",
+      "figure_numbers": [
+        "图三"
+      ],
+      "figure_read_status": "P4/P4.2已引用尺度；本批不新增图版像素量读",
+      "reuse_rights": "link_only",
+      "source_family": "CASS_Luoyang"
+    }
+  ],
+  "types": [
+    {
+      "id": "inner_city_gate",
+      "name": "内城城门",
+      "style": "排叉柱过梁式",
+      "place_example": "建春门",
+      "category": "city_defensive",
+      "passage_count": 3,
+      "observed_evidence": {
+        "platform_ns_m": 30,
+        "platform_ew_m": 12.5,
+        "center_passage_report_m": 8,
+        "side_passages_report_m": 6,
+        "postpit_remains": true
+      },
+      "evidence_level": "reported_excavation_with_structure_interpretation",
+      "inference": "据排叉柱础坑和道路结构推断过梁式，不能直接复原完整城门楼层",
+      "reported_bay_grid": null,
+      "upper_floors_known": false,
+      "roof_height_m": null,
+      "original_metric_plan_read": false,
+      "source_ids": [
+        "QIAN2018"
+      ],
+      "limitations": [
+        "门址尺寸属建春门报告，不能复制给北魏全部城门",
+        "内城城门与宫门制度不同，不能画同类三层殿堂"
+      ]
+    },
+    {
+      "id": "palace_axial_gate",
+      "name": "宫城中轴主门",
+      "style": "多重楼观殿堂式",
+      "place_example": "阊阖门",
+      "category": "palace_ceremonial",
+      "passage_count": 3,
+      "observed_evidence": {
+        "changhe_platform_ew_m": 44.5,
+        "changhe_platform_ns_m": 24.4,
+        "changhe_column_bases": 40,
+        "changhe_que_bases": 2
+      },
+      "reported_bay_grid": {
+        "frontage_bays": 7,
+        "depth_bays": 4
+      },
+      "evidence_level": "platform_and_column_bases_reported;upper_storeys_interpreted",
+      "inference": "论文据文献认为阊阖／止车／端门应有三重门楼，不能视作发掘保留的三层立面",
+      "upper_floors_known": false,
+      "roof_height_m": null,
+      "original_metric_plan_read": false,
+      "source_ids": [
+        "QIAN2018"
+      ],
+      "limitations": [
+        "44.5×24.4m仅对应阊阖门报告，不为止车端门直接复制精确台基",
+        "七开间四进深为论文对主轴宫门的总体判断",
+        "双阙只对阊阖门遗迹单独确认，不能给止车和端门凭空补阙"
+      ]
+    },
+    {
+      "id": "palace_side_gate",
+      "name": "宫城侧向宫门",
+      "style": "较小殿堂式宫门",
+      "place_example": "神虎门",
+      "category": "palace_side_ceremonial",
+      "passage_count": 3,
+      "observed_evidence": {
+        "paired_que_found": true,
+        "excavation_report_year": 2017
+      },
+      "reported_bay_grid": {
+        "frontage_bays": 5,
+        "depth_bays": 2
+      },
+      "evidence_level": "reported_excavation_and_form_interpretation",
+      "inference": "两重门楼为论文提出的可能性；不得认作已知建筑古高",
+      "upper_floors_known": false,
+      "roof_height_m": null,
+      "original_metric_plan_read": false,
+      "source_ids": [
+        "QIAN2018",
+        "HENAN2017"
+      ],
+      "limitations": [
+        "神虎门不能与阊阖门等尺度复制",
+        "云龙门对应关系来自文献勘探解释，不能反向补具体柱网"
+      ]
+    },
+    {
+      "id": "east_ge_gate",
+      "name": "太极殿东閤门",
+      "style": "双层阁道式宫院门",
+      "place_example": "太极殿主殿与东堂之间",
+      "category": "inter_hall_link",
+      "passage_count": 1,
+      "observed_evidence": {
+        "eave_column_base_rows": 2,
+        "base_count_per_row": 4,
+        "side_rammed_partition_width_m_approx": 1.4,
+        "rammed_wall_remaining_height_m": 1.1
+      },
+      "reported_bay_grid": {
+        "frontage_bays": 3,
+        "depth_bays": 2
+      },
+      "evidence_level": "column_bases_and_wall_survive;upper_gallery_inferred",
+      "inference": "下有南北向单门道，上面东西向阁道为柱础承重与论文综合推定；缺古高、楼层立面及屋顶资料",
+      "upper_floors_known": false,
+      "roof_height_m": null,
+      "original_metric_plan_read": false,
+      "source_ids": [
+        "QIAN2018",
+        "JLU2016"
+      ],
+      "limitations": [
+        "两侧殿基的真实南北错位未核",
+        "不能拿残高1.1m当作古代阁道高度"
+      ]
+    },
+    {
+      "id": "roofed_court_gate",
+      "name": "屋宇式宫院门",
+      "style": "单门道屋宇式",
+      "place_example": "太极东堂北侧宫院西端",
+      "category": "smaller_courtyard_gate",
+      "passage_count": 1,
+      "observed_evidence": {
+        "door_opening_m_approx": 4,
+        "partition_width_m_approx": 1.2,
+        "eave_column_diameter_m_approx": 0.7
+      },
+      "reported_bay_grid": {
+        "frontage_bays": 1,
+        "depth_bays": 2
+      },
+      "evidence_level": "reported_excavation_and_form_interpretation",
+      "inference": "屋宇式属于结构分类；屋顶轮廓、屋高、坡度及颜色未发掘确定",
+      "upper_floors_known": false,
+      "roof_height_m": null,
+      "original_metric_plan_read": false,
+      "source_ids": [
+        "QIAN2018"
+      ],
+      "limitations": [
+        "2016另一处道路西端门道3.5m，未证两条报告指相同对象",
+        "单门不代表正殿或楼阁"
+      ]
+    },
+    {
+      "id": "corridor_court_gate",
+      "name": "廊道式宫院门",
+      "style": "夯土隔墙—两面檐柱廊庑内开门",
+      "place_example": "太极东堂以北院落",
+      "category": "courtyard_corridor",
+      "passage_count": 1,
+      "observed_evidence": {
+        "door_opening_m_approx": 2.5,
+        "post_to_post_spacing_m_range": [
+          3.9,
+          4
+        ]
+      },
+      "reported_bay_grid": null,
+      "evidence_level": "reported_partial_excavation;roof_form_inferred",
+      "inference": "两面坡廊房为考古结构解释；真实屋顶高度与具体单个廊道门位置缺共同控制",
+      "upper_floors_known": false,
+      "roof_height_m": null,
+      "original_metric_plan_read": false,
+      "source_ids": [
+        "QIAN2018",
+        "JLU2016"
+      ],
+      "limitations": [
+        "2016廊庑进深约3.6m与2018论文3.9–4m的础心间距不可默认为同一端点",
+        "不能把长廊当作连续封闭宫墙并套接完整院界"
+      ]
+    }
+  ],
+  "source_scope_comparisons": [
+    {
+      "id": "east_gate_center_door",
+      "subject_id": "east_ge_gate",
+      "readings": [
+        {
+          "source_id": "JLU2016",
+          "value_m": 4,
+          "measure": "门道宽，约值"
+        },
+        {
+          "source_id": "QIAN2018",
+          "value_m": 4.3,
+          "measure": "居中间面阔，础心间距"
+        }
+      ],
+      "result": "different_measurement_semantics_do_not_average"
+    },
+    {
+      "id": "east_gate_depth",
+      "subject_id": "east_ge_gate",
+      "readings": [
+        {
+          "source_id": "JLU2016",
+          "value_m": 2.3,
+          "measure": "东西稍间进深，报道值"
+        },
+        {
+          "source_id": "QIAN2018",
+          "value_m": 2.9,
+          "measure": "进深2间，单间础心至墙心间距"
+        }
+      ],
+      "result": "measurement_reference_and_reporting_stage_unverified"
+    },
+    {
+      "id": "west_court_gate",
+      "subject_id": null,
+      "readings": [
+        {
+          "source_id": "JLU2016",
+          "value_m": 3.5,
+          "measure": "东堂北东西向铺砖道路西端门道"
+        },
+        {
+          "source_id": "QIAN2018",
+          "value_m": 4,
+          "measure": "东堂北侧宫院西端屋宇式单门道"
+        }
+      ],
+      "result": "identity_of_described_gates_not_verified"
+    }
+  ],
+  "figure_inventory": [
+    {
+      "source_id": "QIAN2018",
+      "figure_no": "图六",
+      "caption": "北魏太极殿附近宫院门位置图",
+      "readable_metric_original": false,
+      "not_applied_as_city_geography": true
+    },
+    {
+      "source_id": "QIAN2018",
+      "figure_no": "图七",
+      "caption": "太极殿东閤门平面示意图",
+      "readable_metric_original": false,
+      "not_applied_as_city_geography": true
+    },
+    {
+      "source_id": "QIAN2018",
+      "figure_no": "图八",
+      "caption": "太极殿宫院屋宇式院门平面示意图",
+      "readable_metric_original": false,
+      "not_applied_as_city_geography": true
+    },
+    {
+      "source_id": "QIAN2018",
+      "figure_no": "图九",
+      "caption": "太极殿宫院廊道式院门平面示意图",
+      "readable_metric_original": false,
+      "not_applied_as_city_geography": true
+    }
+  ],
+  "chronology": {
+    "primary_illustration": "Northern Wei 516–528 composite",
+    "earlier": "魏晋基础及早期柱廊不能未经分期全归北魏",
+    "later": "北周未完工殿基/干扰不加入盛时",
+    "phase_specific_roof_models_verified": false
+  },
+  "visual_grammar": {
+    "permitted": "differentiate type, massing relationship, gate passage counts, post footprints and bays only where a specific published observation exists",
+    "hypothesis_layer": "artistic roof slope, bracket design, paint, figures and traffic remain non-evidentiary and turned off in measured diagrams",
+    "forbidden": [
+      "duplicate changhe seven-bay grid over every gate",
+      "apply 2018 hypothesized upper storeys as excavated fact",
+      "invent palace enclosure polygon from P4.3 report dimensions",
+      "assign specific historic building height from rammed earth remaining height",
+      "geolocate schematic figure in WGS84",
+      "treat republished figures as independently surveyed sources"
+    ]
+  },
+  "geo_registration": {
+    "verified_common_ground_controls": 0,
+    "new_ancient_absolute_coordinates": 0,
+    "full_court_overlay_allowed": false,
+    "ancient_ground_surface_reconstructed": false,
+    "roof_dimensions_verified": false,
+    "source_figure_georegistration_completed": false
+  },
+  "old_milestones_preserved": [
+    "prosperity-taiji-courts-p42",
+    "prosperity-palace-boundaries-p43"
+  ]
+}

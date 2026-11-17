@@ -66,7 +66,9 @@ jobs:
           python -m py_compile tools/prosperity_axis_sources_p41.py tests/browser_prosperity_axis_sources_p41.py
           python -m py_compile tools/prosperity_taiji_courts_p42.py tests/browser_prosperity_taiji_courts_p42.py
            python -m py_compile tools/prosperity_palace_boundaries_p43.py tests/browser_prosperity_palace_boundaries_p43.py
+          python -m py_compile tools/prosperity_architecture_p44.py tests/browser_prosperity_architecture_p44.py
           node --check web/prosperity-taiji-courts.js
+          node --check web/prosperity-architecture.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -120,6 +122,7 @@ jobs:
           python tools/prosperity_axis_sources_p41.py
           python tools/prosperity_taiji_courts_p42.py
            python tools/prosperity_palace_boundaries_p43.py
+          python tools/prosperity_architecture_p44.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
@@ -142,6 +145,7 @@ jobs:
               python tests/browser_prosperity_axis_sources_p41.py
               python tests/browser_prosperity_taiji_courts_p42.py
                python tests/browser_prosperity_palace_boundaries_p43.py
+              python tests/browser_prosperity_architecture_p44.py
               python tests/browser_v25.py
               python tests/browser_v26.py
               python tests/browser_v27.py
@@ -227,6 +231,7 @@ jobs:
               python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser
               python tests/browser_prosperity_taiji_courts_p42.py --base-url "$SITE_URL" --output artifacts/live-prosperity-taiji-courts-p42-browser
                python tests/browser_prosperity_palace_boundaries_p43.py --base-url "$SITE_URL" --output artifacts/live-prosperity-palace-boundaries-p43-browser
+              python tests/browser_prosperity_architecture_p44.py --base-url "$SITE_URL" --output artifacts/live-prosperity-architecture-p44-browser
               python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser
               python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser
               python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser
