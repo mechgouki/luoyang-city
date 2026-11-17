@@ -40,6 +40,11 @@ class P44Architecture(unittest.TestCase):
         homepage=data(SITE/"homepage/metadata.json")
         self.assertEqual(homepage["hero"]["revision"],"panorama-interim-v8")
         self.assertEqual(homepage["hero"]["visual_review"],"further_revision_requested")
+        approved=data(SITE/"homepage/approval-v9.json")
+        self.assertEqual(approved["hero"]["revision"],"panorama-approved-v9")
+        self.assertEqual(approved["hero"]["visual_review"],"approved_for_homepage")
+        original=data(SITE/"homepage/history/panorama-interim-v8.json")
+        self.assertEqual(original,homepage)
 
     def test_six_types_are_structurally_different(self):
         d=self.public

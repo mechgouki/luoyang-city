@@ -67,6 +67,7 @@ jobs:
           python -m py_compile tools/prosperity_taiji_courts_p42.py tests/browser_prosperity_taiji_courts_p42.py
            python -m py_compile tools/prosperity_palace_boundaries_p43.py tests/browser_prosperity_palace_boundaries_p43.py
           python -m py_compile tools/prosperity_architecture_p44.py tests/browser_prosperity_architecture_p44.py
+          python -m py_compile tools/homepage_approved_v9.py tests/browser_homepage_approved_v9.py tests/test_homepage_approved_v9.py
           node --check web/prosperity-taiji-courts.js
           node --check web/prosperity-architecture.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
@@ -123,9 +124,13 @@ jobs:
           python tools/prosperity_taiji_courts_p42.py
            python tools/prosperity_palace_boundaries_p43.py
           python tools/prosperity_architecture_p44.py
+      - name: Promote the explicitly approved H2 panorama without changing research maps
+        run: python tools/homepage_approved_v9.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
-        run: python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
+        run: |
+          python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
+          python -m unittest discover -s tests -p 'test_homepage_approved_v9.py' -v 2>&1 | tee artifacts/homepage-approved-v9-tests.txt
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
@@ -160,6 +165,7 @@ jobs:
               python tests/browser_luonan_b7.py
               python tests/browser_city_b8.py
               python tests/browser_homepage_v1.py
+              python tests/browser_homepage_approved_v9.py
               python tests/browser_prosperity_v1.py
               python tests/browser_prosperity_core_v2.py
             '
@@ -246,6 +252,7 @@ jobs:
               python tests/browser_luonan_b7.py --base-url "$SITE_URL" --output artifacts/live-luonan-b7-browser
               python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser
               python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser
+              python tests/browser_homepage_approved_v9.py --base-url "$SITE_URL" --output artifacts/live-homepage-approved-v9-browser
               python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser
               python tests/browser_prosperity_core_v2.py --base-url "$SITE_URL" --output artifacts/live-prosperity-core-v2-browser
             '
