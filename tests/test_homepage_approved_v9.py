@@ -23,7 +23,8 @@ def sha(p):
 class ApprovedPanoramaH2(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.home=read(SITE/"homepage/metadata.json")
+        cls.home=read(SITE/"homepage/approval-v9.json")
+        cls.h1=read(SITE/"homepage/metadata.json")
         cls.old=read(SITE/"homepage/history/panorama-interim-v8.json")
         cls.approval=read(SITE/"homepage/approval-v9.json")
         cls.preservation=read(SITE/"homepage/approval-preservation-v9.json")
@@ -32,7 +33,8 @@ class ApprovedPanoramaH2(unittest.TestCase):
 
     def test_explicit_approval_and_correct_source(self):
         h=self.home["hero"]
-        self.assertEqual(self.home["version"],"homepage-v1")
+        self.assertEqual(self.home["version"],"homepage-approved-v9")
+        self.assertEqual(self.h1,self.old)
         self.assertEqual(h["revision"],REV)
         self.assertEqual(h["status"],"approved")
         self.assertEqual(h["visual_review"],"approved_for_homepage")
@@ -101,8 +103,10 @@ class ApprovedPanoramaH2(unittest.TestCase):
         self.assertEqual(self.release["homepage_hero_revision"],REV)
         self.assertEqual(self.release["homepage_hero_status"],"approved")
         self.assertIn(VERSION,self.release["extensions"])
-        self.assertEqual(self.info["homepage"]["hero_revision"],REV)
-        self.assertEqual(self.info["homepage"]["hero_status"],"approved")
+        self.assertEqual(self.info["homepage"]["hero_revision"],OLD_REV)
+        self.assertEqual(self.info["homepage"]["hero_status"],"interim")
+        self.assertEqual(self.info["homepage_approved_v9"]["hero_revision"],REV)
+        self.assertEqual(self.info["homepage_approved_v9"]["hero_status"],"approved")
         self.assertEqual(self.info["homepage_approved_v9"]["version"],VERSION)
         self.assertEqual(self.info["homepage_approved_v9"]["source_commit"],self.info["source_commit"])
         self.assertEqual(self.approval["source_commit"],self.info["source_commit"])
