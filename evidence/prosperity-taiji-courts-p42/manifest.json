@@ -1,0 +1,63 @@
+{
+  "version": "prosperity-taiji-courts-p42",
+  "recorded_at_utc": "2026-11-17",
+  "repo": "mechgouki/luoyang-city",
+  "pr": 33,
+  "pr_head": "dc3e4bbc45dc36e4747e7b4ff7e40e9d204da20a",
+  "production_commit": "019c8efd4bc8aa3c25f8a0a8b5a4aedf6235eb98",
+  "production_tree": "3ed3d9c0d9a43ff18065e0cab6c79cfc1f113973",
+  "pr_run": {
+    "id": 43903858647,
+    "result": "success"
+  },
+  "production_run": {
+    "id": 43994876743,
+    "result": "success",
+    "jobs": [
+      {
+        "job": "build",
+        "id": 133744348359,
+        "conclusion": "success"
+      },
+      {
+        "job": "deploy",
+        "id": 133746603890,
+        "conclusion": "success"
+      },
+      {
+        "job": "verify-live",
+        "id": 133746770005,
+        "conclusion": "success"
+      }
+    ]
+  },
+  "live_resources_verified": 505,
+  "live_http_retries": 1,
+  "prosperity_semantic_tests": 78,
+  "interpretation_limits": [
+    "宫院330级发布尺度为来源说法，非地理配准围墙",
+    "东堂北侧两组院落残部不可拼成完整闭合院墙",
+    "不能把魏晋、北魏、北周遗迹混为一个北魏单时相",
+    "城中共同控制点仍为0"
+  ],
+  "log_files": [
+    {
+      "label": "pr-build",
+      "job_id": 133427319213,
+      "sha": "36929701383c676b3cca44640a1c3a5460f22f9f",
+      "chars": 180312
+    },
+    {
+      "label": "production-build",
+      "job_id": 133744348359,
+      "sha": "8019ee489a0c96d64a90d0b8733815a6690b6d6f",
+      "chars": 179362
+    },
+    {
+      "label": "production-verify-live",
+      "job_id": 133746770005,
+      "sha": "29a081b0154ea3a6ce8662f26e39cfcf4d9f459a",
+      "chars": 53642
+    }
+  ]
+}
