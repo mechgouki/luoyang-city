@@ -26,7 +26,7 @@ SMALL=ROOT/"web/assets/luoyang-panorama-approved-v9-small.webp"
 FULL_SHA256="6465657667ba740d3fc99cde2495a864d3a8a446e2086c25984c0c547eed5825"
 SMALL_SHA256="98459529d0a2d8210aaf2728b0c1673ca38b46df2f7b761c9064f1c21fe053b6"
 OLD_REVISION="panorama-interim-v8"
-EXCEPTIONS={"index.html","v3.0-dual.html","homepage/metadata.json","release.json","build-info.json"}
+EXCEPTIONS={"index.html","v3.0-dual.html","release.json","build-info.json"}
 
 def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -121,12 +121,13 @@ def main():
         "previous_metadata_archive":"homepage/history/panorama-interim-v8.json",
         "historical_ground_truth_upgraded":False
     })
-    current["hero"]=hero
-    current["approved_hero_milestone"]=VERSION
-    current["approved_hero_date"]=APPROVED_DATE
-    dump(SITE/"homepage/metadata.json",current)
+    # H1 metadata is protected by the earlier P1/P2/P3 research manifests.
+    # Its v8 interim state is an authentic historical snapshot and MUST remain
+    # unchanged. The approved *current* hero lives in a new H2 sidecar.
     approval={
         "version":VERSION,
+        "hero":hero,
+        "h1_metadata_unchanged":True,
         "source_commit":info["source_commit"],
         "approval_date":APPROVED_DATE,
         "scope":"homepage_visual_only",
@@ -167,9 +168,8 @@ def main():
     release["homepage_hero_approval_date"]=APPROVED_DATE
     release["current_milestone"]="H2：正式采用用户批准的盛时洛阳全景；P4.4研究数据不变"
     dump(SITE/"release.json",release)
-    info["homepage"]["hero_revision"]=REVISION
-    info["homepage"]["hero_status"]="approved"
-    info["homepage"]["hero_source_sha256"]=APPROVED_SOURCE_SHA256
+    # Keep info['homepage'] as the unmodified H1 vintage; H2's display
+    # approval is deliberately recorded under a separate versioned key.
     info["homepage_approved_v9"]={
         "version":VERSION,"source_commit":info["source_commit"],
         "approval_date":APPROVED_DATE,
