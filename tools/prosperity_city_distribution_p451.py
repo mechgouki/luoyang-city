@@ -238,7 +238,7 @@ def stylesheet_image_page(data,fig_svg,info):
 <p class="lead">本页直接继承2012年来源图30项几何中的4个建筑符号中心，关联阊阖门、建春门、太极殿与永宁塔基的已报告局部尺度。另有永宁寺局部围墙残段及4种尚不能独立定位的门制。</p>
 <div class="chips"><span>30项来源图几何</span><span>13项关联既有实体ID</span>
 <span>4处已有建筑参考点</span><span>4种宫门类型未独立定位</span><span>新增古址坐标 0</span></div>
-<div class="caution"><strong>这不是四座建筑的实测地理多边形。</strong>图上的点位取自来源图概略符号中心；建筑尺寸另在不定位的同米尺图里比较。西安1980来源网格、1997/1999底图河道、北魏盛时解释和艺术全景彼此独立。</div>
+<div class="caution"><strong>这不是四座建筑的实测地理多边形。</strong>图上的点位取自来源图概略符号中心；建筑尺寸另在不定位的同米尺图里比较。西安1980来源网格、1997/1999底图的现代洛水河道、北魏盛时解释和艺术全景彼此独立；现代洛水不能直接当作北魏河道。</div>
 </section>
 <section id="map"><h2>01 · 来源图上的四处建筑参照</h2>
 <div class="mapsplit">
