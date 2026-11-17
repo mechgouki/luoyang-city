@@ -1,0 +1,245 @@
+{
+  "version": "prosperity-city-distribution-p451",
+  "study_date": "2026-11-17",
+  "title": "北魏盛时洛阳来源图锚点与建筑类型分布第一批",
+  "reference_period": "516–528 Northern Wei prosperous composite, not a single excavated settlement snapshot",
+  "method": "Join existing published source-map feature identifiers with independently reported architectural type and dimension records. Generate no historical geodetic coordinates or fictional density estimates.",
+  "inputs": {
+    "source_geography": "research/prosperity-v1/geographic-evidence.json",
+    "dimensions": "research/prosperity-v1/building-dimensions.json",
+    "architectural_types": "research/prosperity-v4/architecture-types-p44.json",
+    "prior_palace_scope": "research/prosperity-v4/palace-boundary-variants-p43.json",
+    "original_source_crs": "EPSG:4610 (Xian 1980, as printed on 2012 source map)",
+    "reference_source": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+    "source_map_printed_number": "06a",
+    "source_map_pdf_page_1_based": 3457,
+    "source_geometry_count": 30,
+    "source_entity_bound_feature_count": 13,
+    "source_map_geometry_is_generalized": true,
+    "modern_dem_replaced_with_ancient_surface": false
+  },
+  "evidence_layers": [
+    {
+      "id": "source_map_reference",
+      "label": "来源图已有位置参照",
+      "rule": "Use original feature IDs and their own source coordinates, never add a new surveyed point or infer building extent from a drawn map symbol"
+    },
+    {
+      "id": "local_structure_measurement",
+      "label": "建筑局部尺度",
+      "rule": "Source-published footprint measures live in a separate same-scale dimension figure, not placed as geographic building polygons"
+    },
+    {
+      "id": "structural_interpretation",
+      "label": "结构类型解释",
+      "rule": "Morphology derived from excavated post bases and texts; type classification is conditional, roof and ancient height unverified"
+    },
+    {
+      "id": "not_registered",
+      "label": "未定位／只有关系或类型",
+      "rule": "Catalogue outside mapped feature geometry; do not generate points, wall polygons, household counts, market density or river alignments"
+    },
+    {
+      "id": "visual_illustration",
+      "label": "已批准首页艺术全景",
+      "rule": "Pure presentation; no spatial or dimensional evidence may be extracted from its pixels"
+    }
+  ],
+  "anchored_buildings": [
+    {
+      "id": "C01",
+      "name": "宫城阊阖门",
+      "feature_id": "geo-changhe-palace-gate",
+      "entity_id": "ic_changhe_palace",
+      "type_id": "palace_axial_gate",
+      "architectural_kind": "宫城仪门",
+      "dimension_item_id": "M02",
+      "dimension_source": "P1 M02",
+      "reported_footprint_m": {
+        "east_west": 44.5,
+        "north_south": 24.4
+      },
+      "dimensions_approximate": false,
+      "source_feature_represents": "generalized_source_map_symbol_center_not_exposed_building_corners",
+      "chronology": "魏晋—北魏重叠的遗址说明；不单凭图符判定516—528立面",
+      "measured_elevation_m": null,
+      "roof_style_verified": false,
+      "binding_confidence": "source_map_symbol_with_reported_independent_local_footprint",
+      "site_registered_polygon_allowed": false,
+      "source_refs": [
+        "research/prosperity-v1/geographic-evidence.json",
+        "research/prosperity-v1/building-dimensions.json",
+        "research/prosperity-v4/architecture-types-p44.json"
+      ]
+    },
+    {
+      "id": "C02",
+      "name": "内城建春门",
+      "feature_id": "geo-jianchun-gate",
+      "entity_id": "gate_jianchun",
+      "type_id": "inner_city_gate",
+      "architectural_kind": "内城城门",
+      "dimension_item_id": null,
+      "dimension_source": "P4.4 QIAN2018 published city gate report",
+      "reported_footprint_m": {
+        "east_west": 12.5,
+        "north_south": 30
+      },
+      "dimensions_approximate": true,
+      "source_feature_represents": "generalized_source_map_symbol_center_not_exposed_building_corners",
+      "chronology": "东汉—北魏多朝代基址；上部梁架属研究解释",
+      "measured_elevation_m": null,
+      "roof_style_verified": false,
+      "binding_confidence": "source_map_symbol_with_reported_independent_local_footprint",
+      "site_registered_polygon_allowed": false,
+      "source_refs": [
+        "research/prosperity-v1/geographic-evidence.json",
+        "research/prosperity-v4/architecture-types-p44.json"
+      ]
+    },
+    {
+      "id": "C03",
+      "name": "太极殿",
+      "feature_id": "geo-taiji-hall-reference",
+      "entity_id": null,
+      "type_id": null,
+      "architectural_kind": "宫城大殿",
+      "dimension_item_id": "M03",
+      "dimension_source": "P1 M03, reported approximate reference",
+      "reported_footprint_m": {
+        "east_west": 100,
+        "north_south": 60
+      },
+      "dimensions_approximate": true,
+      "source_feature_represents": "generalized_source_map_symbol_center_no_published_original_corner_georeferencing",
+      "chronology": "魏晋—北魏多期叠压；P4.2另有主殿两套更细量距口径",
+      "measured_elevation_m": null,
+      "roof_style_verified": false,
+      "binding_confidence": "source_map_symbol_with_reported_independent_local_footprint",
+      "site_registered_polygon_allowed": false,
+      "source_refs": [
+        "research/prosperity-v1/geographic-evidence.json",
+        "research/prosperity-v1/building-dimensions.json",
+        "research/prosperity-v4/taiji-court-relations.json"
+      ]
+    },
+    {
+      "id": "C04",
+      "name": "永宁寺塔基",
+      "feature_id": "geo-yongning-pagoda-reference",
+      "entity_id": "ic_yongning",
+      "type_id": null,
+      "architectural_kind": "寺院塔基遗存",
+      "dimension_item_id": "M05",
+      "dimension_source": "P1 M05, surviving square footing",
+      "reported_footprint_m": {
+        "east_west": 38.2,
+        "north_south": 38.2
+      },
+      "dimensions_approximate": true,
+      "source_feature_represents": "generalized_source_map_symbol_center_not_the_excavated_pillar_axis",
+      "chronology": "北魏九层木塔寺院有盛时文本记载；38.2m只指遗存台基平面",
+      "measured_elevation_m": null,
+      "roof_style_verified": false,
+      "binding_confidence": "source_map_symbol_with_reported_independent_local_footprint",
+      "site_registered_polygon_allowed": false,
+      "source_refs": [
+        "research/prosperity-v1/geographic-evidence.json",
+        "research/prosperity-v1/building-dimensions.json"
+      ]
+    }
+  ],
+  "enclosure_context": [
+    {
+      "id": "L01",
+      "name": "永宁寺围墙图示残段",
+      "feature_id": "geo-yongning-temple-walls",
+      "entity_id": "ic_yongning",
+      "dimension_item_id": "M04",
+      "reported_enclosure_m": {
+        "east_west": 212,
+        "north_south": 301
+      },
+      "limitation": "来源图多折线是局部遗存。其粗图显示的东西宽与表列212m不完全吻合；不闭合残墙、不强制套入表列矩形、不在地图上绘真实完整院界。",
+      "anchor_counted_as_building": false,
+      "closed_polygon_allowed": false
+    }
+  ],
+  "unplaced_p44_types": [
+    {
+      "id": "U01",
+      "type_id": "palace_side_gate",
+      "example": "神虎门",
+      "why": "The source-map 30 feature collection has no independently validated match to the example's specific excavated side-gate footprint"
+    },
+    {
+      "id": "U02",
+      "type_id": "east_ge_gate",
+      "example": "太极殿东閤门",
+      "why": "P4.2 supports inter-hall connection and columns but no standalone common source-map coordinate for this gateway"
+    },
+    {
+      "id": "U03",
+      "type_id": "roofed_court_gate",
+      "example": "东堂北屋宇式宫院门",
+      "why": "Partial layout/door passage and conflicting published widths do not establish a unique geodetic gate position"
+    },
+    {
+      "id": "U04",
+      "type_id": "corridor_court_gate",
+      "example": "东堂北院廊道式门",
+      "why": "Excavation of walls/posts is localized but not tied to an independently registered source-map point in this project"
+    }
+  ],
+  "nonspatial_city_functions": [
+    {
+      "id": "F01",
+      "label": "市场与贸易",
+      "evidence_route": "./dual-luonan.html#markets?id=LR10",
+      "spatial_status": "documentary_relationship_or_region_membership_only",
+      "population_density_estimated": false
+    },
+    {
+      "id": "F02",
+      "label": "里坊与民居",
+      "evidence_route": "./dual-city-review.html",
+      "spatial_status": "not_every_courtyard_has_verified_footprint",
+      "population_density_estimated": false
+    },
+    {
+      "id": "F03",
+      "label": "学校与礼制设施",
+      "evidence_route": "./prosperity.html",
+      "spatial_status": "relationships_recorded_exact_site_footprints_not_generalized",
+      "population_density_estimated": false
+    }
+  ],
+  "source_map_audit": {
+    "total_features": 30,
+    "source_bound_existing_entity_features": 13,
+    "site_remains_features": 26,
+    "source_map_illustrative_envelope_features": 1,
+    "outer_city_related_range_features": 1,
+    "modern_river_line_features": 1,
+    "modern_hill_label_features": 1,
+    "anchored_building_count": 4,
+    "partial_enclosure_context_count": 1,
+    "independently_registered_ancient_gcp_count": 0,
+    "newly_geolocated_historical_buildings": 0,
+    "roof_elevations_recovered": 0,
+    "quantitative_population_density_recovered": false,
+    "scale_figures_not_geographic_overlays": true
+  },
+  "user_approved_hero": {
+    "revision": "panorama-approved-v9",
+    "status": "approved",
+    "image_role": "visual_narrative_not_archaeological_measurement",
+    "must_remain_unchanged_in_this_milestone": true
+  },
+  "next_research_decisions": [
+    "Retrieve original measurable palace and temple site plans with dated phase and spatial reference controls",
+    "Validate shared source-map symbols against independently surveyed building baselines",
+    "Derive limited road-facing and building-cluster categories from text without generating unrecorded neighborhoods",
+    "Only then create an archaeological/site-vs-artistic panoramic comparison; never revise approved hero automatically"
+  ]
+}

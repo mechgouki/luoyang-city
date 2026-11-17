@@ -68,8 +68,10 @@ jobs:
            python -m py_compile tools/prosperity_palace_boundaries_p43.py tests/browser_prosperity_palace_boundaries_p43.py
           python -m py_compile tools/prosperity_architecture_p44.py tests/browser_prosperity_architecture_p44.py
           python -m py_compile tools/homepage_approved_v9.py tests/browser_homepage_approved_v9.py tests/test_homepage_approved_v9.py
+          python -m py_compile tools/prosperity_city_distribution_p451.py tests/browser_prosperity_city_distribution_p451.py
           node --check web/prosperity-taiji-courts.js
           node --check web/prosperity-architecture.js
+          node --check web/prosperity-city-distribution.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -126,6 +128,8 @@ jobs:
           python tools/prosperity_architecture_p44.py
       - name: Promote the explicitly approved H2 panorama without changing research maps
         run: python tools/homepage_approved_v9.py
+      - name: P4.5.1 source-anchored architecture distribution and citation tiers
+        run: python tools/prosperity_city_distribution_p451.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: |
@@ -166,6 +170,7 @@ jobs:
               python tests/browser_city_b8.py
               python tests/browser_homepage_v1.py
               python tests/browser_homepage_approved_v9.py
+              python tests/browser_prosperity_city_distribution_p451.py
               python tests/browser_prosperity_v1.py
               python tests/browser_prosperity_core_v2.py
             '
@@ -253,6 +258,7 @@ jobs:
               python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser
               python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser
               python tests/browser_homepage_approved_v9.py --base-url "$SITE_URL" --output artifacts/live-homepage-approved-v9-browser
+              python tests/browser_prosperity_city_distribution_p451.py --base-url "$SITE_URL" --output artifacts/live-prosperity-city-distribution-p451-browser
               python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser
               python tests/browser_prosperity_core_v2.py --base-url "$SITE_URL" --output artifacts/live-prosperity-core-v2-browser
             '
