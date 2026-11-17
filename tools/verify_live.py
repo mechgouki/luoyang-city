@@ -309,12 +309,32 @@ try:
  assert all(info['files_sha256'][path]==digest for path,digest in home_preserved['sha256'].items())
  assert homepage['hero']['generated_image'] is True and homepage['hero']['measured_reconstruction'] is False
  assert {homepage['hero']['asset'],homepage['hero']['small_asset']}<=set(info['files_sha256'])
- assert homepage['hero']['revision']==info['homepage']['hero_revision']==release['homepage_hero_revision']=='panorama-interim-v8'
- assert homepage['hero']['status']==info['homepage']['hero_status']=='interim'
- assert homepage['hero']['visual_review']=='further_revision_requested' and homepage['hero']['publication_authorized'] is True
- assert homepage['hero']['source_sha256']=='29427da12c869874f8ccd43749dd44f6a851cde8eddb643f31008088b2eeaa39'
- assert info['files_sha256'][homepage['hero']['asset']]==homepage['hero']['asset_sha256']=='c887056d075fa92c251422aece642df5def7af5b8ff087f3ff31f47ea6fdf4ee'
- assert info['files_sha256'][homepage['hero']['small_asset']]==homepage['hero']['small_asset_sha256']=='4b5c1b5251bfe49854d3a3a1cf70bb622d9b37efae5d772358f01c4f47673235'
+ # H2 promotes only the user-approved visual panorama. The original H1 v8
+ # image and all research assets remain publicly archived with exact checksums.
+ assert homepage['hero']['revision']==info['homepage']['hero_revision']==release['homepage_hero_revision']=='panorama-approved-v9'
+ assert homepage['hero']['status']==info['homepage']['hero_status']==release['homepage_hero_status']=='approved'
+ assert homepage['hero']['visual_review']=='approved_for_homepage' and homepage['hero']['publication_authorized'] is True
+ assert homepage['hero']['approval_scope']=='homepage_visual_only' and homepage['hero']['historical_ground_truth_upgraded'] is False
+ assert homepage['hero']['source_sha256']=='2a59bf83886d77f7c9226ec7f5d99c94ea6c63c6e207c2e560ee82f80ed93891'
+ assert info['files_sha256'][homepage['hero']['asset']]==homepage['hero']['asset_sha256']=='6465657667ba740d3fc99cde2495a864d3a8a446e2086c25984c0c547eed5825'
+ assert info['files_sha256'][homepage['hero']['small_asset']]==homepage['hero']['small_asset_sha256']=='98459529d0a2d8210aaf2728b0c1673ca38b46df2f7b761c9064f1c21fe053b6'
+ previous_home=json.loads(get('homepage/history/panorama-interim-v8.json'))
+ assert previous_home['hero']['revision']=='panorama-interim-v8'
+ assert previous_home['hero']['status']=='interim' and previous_home['hero']['visual_review']=='further_revision_requested'
+ assert info['files_sha256'][previous_home['hero']['asset']]==previous_home['hero']['asset_sha256']=='c887056d075fa92c251422aece642df5def7af5b8ff087f3ff31f47ea6fdf4ee'
+ assert info['files_sha256'][previous_home['hero']['small_asset']]==previous_home['hero']['small_asset_sha256']=='4b5c1b5251bfe49854d3a3a1cf70bb622d9b37efae5d772358f01c4f47673235'
+ visual_approval=json.loads(get('homepage/approval-v9.json'))
+ approval_preserved=json.loads(get('homepage/approval-preservation-v9.json'))
+ assert visual_approval['source_commit']==info['source_commit']==info['homepage_approved_v9']['source_commit']
+ assert visual_approval['version']==info['homepage_approved_v9']['version']=='homepage-approved-v9'
+ assert visual_approval['changes_city_layout'] is False and visual_approval['changes_research_data'] is False
+ assert visual_approval['adds_ancient_geographic_control_points']==0
+ assert approval_preserved['protected_unchanged'] is True and approval_preserved['protected_files']==len(approval_preserved['sha256'])
+ assert all(info['files_sha256'][path]==value for path,value in approval_preserved['sha256'].items())
+ for previous_page,previous_sha in visual_approval['previous_html_sha256'].items():
+  archived='homepage/history/'+previous_page.replace('.html','-before-v9.html')
+  assert hashlib.sha256(get(archived)).hexdigest()==previous_sha
+
  home_html=get('index.html').decode('utf-8')
  assert all(f'id="{ident}"' in home_html for ident in ['home-hero','home-start','home-questions','home-research'])
  assert home_html.index('id="home-hero"') < home_html.index('id="home-questions"') < home_html.index('id="map-viewport"') < home_html.index('id="home-research"')
