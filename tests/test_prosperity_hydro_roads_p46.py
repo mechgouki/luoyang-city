@@ -81,6 +81,25 @@ class P46AnchorAudit(unittest.TestCase):
         self.assertEqual(roads[-2]["linked_prior_road_id"],"candidate:P451_D03_only_not_confirmed")
         self.assertTrue(all(not r["ancient_full_route_georegistered"] for r in roads))
 
+    def test_parallel_research_consolidated_inner_avenues_local_lanes_and_geology(self):
+        self.assertEqual(len(self.d["source_registry"]),17)
+        inner=self.d["inner_city_ten_road_literature_summary"]
+        self.assertEqual(inner["east_west_count"],5)
+        self.assertEqual(inner["north_south_count"],5)
+        self.assertEqual(len(inner["east_west"])+len(inner["north_south"]),10)
+        self.assertFalse(inner["exact_survey_to_old_eight_matched"])
+        for street in inner["east_west"]+inner["north_south"]:
+            self.assertIsNone(street["registered_original_survey_polyline"])
+            self.assertFalse(street["matching_p1_old_remnant_resolved"])
+        local=self.d["baima_local_ward_2024"]
+        self.assertEqual(local["excavated_ward_streets_reported"],6)
+        self.assertEqual((local["local_ew_street_spacing_m"],local["local_ns_street_spacing_m"]),(40,86))
+        self.assertFalse(local["extension_to_whole_outer_city_allowed"])
+        self.assertFalse(self.d["ancient_luo_yi_geologic_trend_2024"]["phase_specific_516_528_polyline_verified"])
+        self.assertEqual(len(self.d["original_document_acquisition_queue"]),7)
+        self.assertTrue(all(not x["scaled_survey_plan_acquired"] for x in self.d["original_document_acquisition_queue"]))
+        self.assertTrue(self.d["northern_wei_east_yangqu_phase_controversy"]["not_a_confirmed_complete_field_dated_continuous_channel"])
+
     def test_diagrams_same_original_unchanged_and_four_page_atlas(self):
         original=SITE/"prosperity/source-layout.svg"
         copied=OUT/"unaltered-source-layout.svg"
