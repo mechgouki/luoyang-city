@@ -31,7 +31,7 @@ class P46AnchorAudit(unittest.TestCase):
         self.assertEqual(self.d["version"],VERSION)
         self.assertEqual(self.d["water_features"],self.raw["water_features"])
         self.assertEqual(self.d["main_road_records"],self.raw["main_road_records"])
-        self.assertEqual(len(self.d["source_registry"]),13)
+        self.assertEqual(len(self.d["source_registry"]),17)
         self.assertEqual(len(self.d["water_features"]),34)
         self.assertEqual(len(self.d["main_road_records"]),21)
         self.assertEqual(self.d["coordinates_added"],0)
