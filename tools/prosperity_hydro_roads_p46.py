@@ -427,4 +427,7 @@ def main():
     print(json.dumps(info["prosperity_hydro_roads"],ensure_ascii=False))
 
 if __name__=="__main__":
+    from prosperity_anchors_p461 import build as publish_source_readings
+
     main()
+    publish_source_readings()

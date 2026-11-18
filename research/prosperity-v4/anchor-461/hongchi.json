@@ -1,0 +1,54 @@
+{
+  "id": "AQ02-hongchi-evidence",
+  "title": "鸿池陂的位置线索、遗存尺度与缺失的南岸",
+  "period_of_interest": "北魏盛时合成层（516—528）",
+  "geographic_coordinates": null,
+  "shoreline_geometry": null,
+  "sources": [
+    {
+      "id": "Cao2021",
+      "authors": "曹慧奇、谷飞、陈国梁（中国社会科学院考古研究所）",
+      "title": "对偃师商城遗址水利设施及城址布局的新认识",
+      "publication": "《南方文物》2021年第6期",
+      "text_url": "https://www.sohu.com/a/541715849_121124392",
+      "locator": "第一部分第1项、图一、注2。图一为作者展示1983年调查结果的版本。其所引早期报告为中国社会科学院考古研究所汉魏故城工作队《偃师商城的初步勘探和发掘》，《考古》1984年第6期。",
+      "image_url": "https://p7.itc.cn/q_70/images03/20220427/7ace984b108a408593273cd88475cdea.png",
+      "image_check": {
+        "pixel_size": [487,776],
+        "sha256": "8a0aa8455286d43d88fa6d9f28ea6e6cb86fbbe42a84fa228438dbd33666ca68",
+        "scale_bar_m": [0,300],
+        "observed": "图幅底部为0—300米标尺。城址东南角外以蓝色椭圆标示古湖所在低地，原文指明蓝色为相关区域。"
+      }
+    },
+    {
+      "id": "Liang2022",
+      "author": "梁克敏",
+      "title": "中古时期鸿池陂的变迁与洛阳水运的兴衰",
+      "publication": "《中国历史地理论丛》2022年第3辑，中国人民大学清史研究所转载",
+      "url": "http://iqh.ruc.edu.cn/old/zglsdlyj/lsdl_lzjj/xqzmddlyj/c2fa8f7da9d548a693fe53280ae39140.htm",
+      "locator": "第一节（一）汉魏时期鸿池陂的扩张；第三节（一）唐宋之际鸿池陂的湮废。重刊网页无原刊页码。",
+      "figure_1": {
+        "title": "汉魏时期洛阳水运渠道及鸿池陂位置示意图",
+        "url": "http://iqh.ruc.edu.cn/old/images/2022-09/a2b367a742c94f1cb748e4c3d02229b8.png",
+        "sha256": "35ddd587b6e0bbe80c1a0eec2c26d7c9b0dd6f6439be49c02ebeeb7ed137efc1",
+        "type": "作者对汉魏水运的区域示意，池位标于偃师商城东南一带。"
+      }
+    },
+    {
+      "id": "Yanshi2011",
+      "author": "偃师市文物管理局",
+      "title": "汉魏洛阳城东阳渠、鸿池陂考古勘察简报",
+      "publication": "《华夏考古》2011年第1期",
+      "locator": "黄学超《汉魏洛阳城周边的水利建设》注释指向第22—23页。尚待以原刊图版核对图号、测线及地层对应关系。",
+      "reference_url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+      "original_plate_acquired": false
+    }
+  ],
+  "spatial_findings": [
+    {"id":"field-lowland","source":"Cao2021","basis":"1983年考古勘探，经后续作者发表","place":"偃师商城东南角城墙外","reported_depression_depth":"一般约3米，局部超过5米","interpretation":"古湖低地确有勘探记录。将其识别为文献中的鸿池结合了《水经注》和地望。所述深度是遗存低地的勘探观测，不能解释成北魏水深。"},
+    {"id":"preserved-dimensions","source":"Liang2022","basis":"梁克敏转述勘探结果","east_west_extent_m":1480,"preserved_northern_half_ns_radius_m_approx":800,"southern_half":"后受洛水冲毁","scope":"东西尺度与仅存北半部的南北尺度各自保留。南北半径约800米不能翻倍充作实测全径。尺寸没有特指516—528年的水边位置。"},
+    {"id":"historical-units","source":"Liang2022","basis":"作者依北魏尺步假设将文献的东西千步、南北千一百步换算","east_west_m_derived":1398.5,"north_south_m_derived":1538.35,"scope":"文本换算是另一组估计。与勘探所见的遗存范围没有共同测点。"},
+    {"id":"north-and-east-banks","source":"Liang2022","basis":"对1992年以来北部与东岸勘察的转述","thickness_m_top_to_bottom":[{"unit":"现代耕土","range":[0.3,0.5]},{"unit":"唐宋或宋以后黄褐色冲积","range":[1.0,2.2]},{"unit":"汉魏时期红褐色堆积","approx":0.5},{"unit":"汉代以前深红色土","range":[0.5,0.7]}],"scope":"这些数字是分层厚度。汉魏为宽时段。同一钻孔的绝对标高与北魏岸线尚待原剖面验证。"}
+  ],
+  "next_evidence":"取得2011简报原图，辨明探孔、剖面、残岸和推测线的对应关系，再与可复核的现场基点及年代约束接合。"
+}
