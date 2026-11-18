@@ -119,6 +119,38 @@
       "url": "https://deerpark.app/cbeta/B0077/4",
       "kind": "primary_text_edition",
       "caution": "西郭园池见原文名物，未据以画面积和真实岸线"
+    },
+    {
+      "id": "Y2024",
+      "family": "YinLuo2024",
+      "title": "尹玲玲、罗丽娟《从地质背景看汉魏隋唐时期洛阳盆地的河道变迁》",
+      "url": "https://www.lsdlyj.com.cn/CN/10.20166/j.issn.2096-6822.L20230083",
+      "kind": "peer_reviewed_geological_historical_synthesis",
+      "caution": "摘要指洛水北移、伊水东南调整与汇洛口东移；未提供本站可验证516–528古河槽或里程控制点"
+    },
+    {
+      "id": "CN2023INNER",
+      "family": "local_heritage2023",
+      "title": "洛阳考古综述：内城东西五、南北五条道路",
+      "url": "https://www.thepaper.cn/newsDetail_forward_24443356",
+      "kind": "archaeological_survey_summary",
+      "caution": "5+5与旧8项P1概略残线属于不同调查/命名口径；逐线与古址共控尚待原图"
+    },
+    {
+      "id": "BAIMA2024LOCAL",
+      "family": "BaimaLocal2024",
+      "title": "白马寺附近2024北魏里坊六条局部道路发掘报道",
+      "url": "https://cbgc.scol.com.cn/news/6067403",
+      "kind": "excavation_news_report",
+      "caution": "所报40m与86m为道路间距、不是道路宽度；仅属于局部里坊，不能复制为全郭标准格网"
+    },
+    {
+      "id": "CSSN2024OUTER",
+      "family": "CSSN2024",
+      "title": "外郭九条主干大道考古勘查综述",
+      "url": "https://www.cssn.cn/lsx/lsx_kgx/202412/t20241213_5822224.shtml",
+      "kind": "archaeological_research_summary",
+      "caution": "九大道见总数但本站未逐条取得原勘探路线/独立配准同一图框"
     }
   ],
   "status_legend": [
@@ -1175,7 +1207,10 @@
     "Do not assign 2020 34m road width to Lh-1 unless same segment and endpoints verified",
     "Do not use 2025 7.5m neighborhood gate opening as trunk road width",
     "Do not turn modern dsm/hill lows into ancient pond boundaries or invented river connections",
-    "Do not move or repaint approved homepage hero based on proposed hydrographic corridors"
+    "Do not move or repaint approved homepage hero based on proposed hydrographic corridors",
+    "Do not mistake 2024 Bai Ma local 40m and 86m street spacings for any road widths or universal city ward-grid spacing",
+    "Do not present reported inner 5 EW + 5 NS avenues as ten already georegistered polylines",
+    "Do not force northern Jianchun canal and southern Northern Wei Yangqu into a single simultaneously active river"
   ],
   "completion_gates": {
     "hydrology": [
@@ -1197,5 +1232,206 @@
   "verified_new_ancient_common_ground_controls": 0,
   "historic_waterbody_polygons_added": 0,
   "historic_full_road_polylines_added": 0,
-  "audit_scope_note": "Finite first-pass inventory from current 339 entities plus readily accessible primary/2026 scholarly sources; NOT a claim that every historic named stream and pond in all Chinese literature has been exhausted"
+  "audit_scope_note": "Finite first-pass inventory from current 339 entities plus readily accessible primary/2026 scholarly sources; NOT a claim that every historic named stream and pond in all Chinese literature has been exhausted",
+  "inner_city_ten_road_literature_summary": {
+    "source_id": "CN2023INNER",
+    "east_west_count": 5,
+    "north_south_count": 5,
+    "east_west": [
+      {
+        "id": "EW1",
+        "name": "承明门内大街",
+        "orientation_as_published": "east_west",
+        "historical_phase_status": "reported_inner_road",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "魏晋—北魏不同期，路端与旧P1 Lh-X对应待核",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      },
+      {
+        "id": "EW2",
+        "name": "城西阊阖门—建春门大道",
+        "orientation_as_published": "east_west",
+        "historical_phase_status": "reported_inner_road",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "东—西向主道报告，未获统一测线",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      },
+      {
+        "id": "EW3",
+        "name": "西阳门—东阳门大道",
+        "orientation_as_published": "east_west",
+        "historical_phase_status": "reported_inner_road",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "两端名称与测线需核原图",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      },
+      {
+        "id": "EW4",
+        "name": "西明门—青阳门大道",
+        "orientation_as_published": "east_west",
+        "historical_phase_status": "reported_inner_road",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "2020年约2.5km、34m新路证据单独X01，不自动等同P1 Lh-1",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      },
+      {
+        "id": "EW5",
+        "name": "汉代雍门内大道",
+        "orientation_as_published": "east_west",
+        "historical_phase_status": "older_phase_survey",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "汉代道路，北魏沿用与否待核；不得纳入已证北魏活跃道路",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      }
+    ],
+    "north_south": [
+      {
+        "id": "NS1",
+        "name": "开阳门至建春门大道（综述复合命名）",
+        "orientation_as_published": "north_south",
+        "historical_phase_status": "report_needs_name_orientation_check",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "需核原刊起讫，不能按门名直接拉线",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      },
+      {
+        "id": "NS2",
+        "name": "平昌门至广莫门大道（综述复合命名）",
+        "orientation_as_published": "north_south",
+        "historical_phase_status": "report_needs_name_orientation_check",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "需核原刊起讫，不能按门名直接拉线",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      },
+      {
+        "id": "NS3",
+        "name": "宣阳门内大道／铜驼街",
+        "orientation_as_published": "north_south",
+        "historical_phase_status": "reported_inner_road",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "与现P1 Lz-3同址范围需原刊共同控制",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      },
+      {
+        "id": "NS4",
+        "name": "津阳门内大道",
+        "orientation_as_published": "north_south",
+        "historical_phase_status": "reported_inner_road",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "未有整段带尺横纵线",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      },
+      {
+        "id": "NS5",
+        "name": "大夏门内大道",
+        "orientation_as_published": "north_south",
+        "historical_phase_status": "reported_inner_road",
+        "source_ids": [
+          "CN2023INNER"
+        ],
+        "comment": "局部遗存报告不能推出全部通行线",
+        "registered_original_survey_polyline": null,
+        "matching_p1_old_remnant_resolved": false
+      }
+    ],
+    "exact_survey_to_old_eight_matched": false,
+    "note": "Published 5EW+5NS nomenclature is not equivalent to eight source SVG remnants; includes earlier dynastic traces"
+  },
+  "baima_local_ward_2024": {
+    "source_ids": [
+      "BAIMA2024LOCAL",
+      "R03"
+    ],
+    "excavated_ward_streets_reported": 6,
+    "local_ew_street_spacing_m": 40,
+    "local_ns_street_spacing_m": 86,
+    "number_semantics": "separation between local streets, NOT street or main-avenue width",
+    "reported_northern_wei_context": true,
+    "extension_to_whole_outer_city_allowed": false,
+    "source_map_survey_georegistration_completed": false,
+    "distinct_from_wide_xiyang_outer_avenue": true
+  },
+  "ancient_luo_yi_geologic_trend_2024": {
+    "source_id": "Y2024",
+    "claim": "Luo River channel migrated generally north; Yi River expanded southeast and the confluence progressively shifted east from Han Wei toward Sui Tang periods.",
+    "phase_specific_516_528_polyline_verified": false,
+    "full_city_ancient_shoreline_rendering_permitted": false
+  },
+  "northern_wei_east_yangqu_phase_controversy": {
+    "source_id": "H01",
+    "hypothesis": "Wide canal on north side of Jianchun road may preserve earlier Han phase; Northern Wei Yangqu may have lain south of the avenue.",
+    "not_a_confirmed_complete_field_dated_continuous_channel": true,
+    "must_not_stitch_north_and_south_canals_into_one_single_wei_active_channel": true
+  },
+  "original_document_acquisition_queue": [
+    {
+      "priority": 1,
+      "title": "《北魏洛阳外郭城和水道的勘查》（1993）",
+      "target": "nine outer-city major avenues and associated channels",
+      "scaled_survey_plan_acquired": false
+    },
+    {
+      "priority": 2,
+      "title": "《汉魏洛阳城东阳渠、鸿池陂考古勘察简报》（2011）",
+      "target": "phase-dated eastern Yangqu and Hongchi banks",
+      "scaled_survey_plan_acquired": false
+    },
+    {
+      "priority": 3,
+      "title": "《洛阳汉唐漕运水系考古调查》（2016）",
+      "target": "historic navigation/canal traces and dated measures",
+      "scaled_survey_plan_acquired": false
+    },
+    {
+      "priority": 4,
+      "title": "《从地质背景看汉魏隋唐时期洛阳盆地的河道变迁》（2024）",
+      "target": "dated paleochannels and geological measurements",
+      "scaled_survey_plan_acquired": false
+    },
+    {
+      "priority": 5,
+      "title": "黄学超2026原文图1／2／4",
+      "target": "differentiate author-proposed hydro topology from genuinely measured survey",
+      "scaled_survey_plan_acquired": false
+    },
+    {
+      "priority": 6,
+      "title": "白马寺北魏里坊2024/2025完整发掘总图",
+      "target": "local six lanes and actual Xiyang avenue intersection",
+      "scaled_survey_plan_acquired": false
+    },
+    {
+      "priority": 7,
+      "title": "2022宫城千秋门渠道及墙体分期原测图",
+      "target": "Han/Wei-Jin/Northern Wei duct phases",
+      "scaled_survey_plan_acquired": false
+    }
+  ]
 }
