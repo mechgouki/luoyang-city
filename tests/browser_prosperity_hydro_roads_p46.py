@@ -8,6 +8,7 @@ import os
 import tempfile
 import threading
 from pathlib import Path
+from browser_anchors_p461 import check_page as check_source_readings
 from playwright.sync_api import expect,sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
@@ -116,6 +117,9 @@ try:
         for image in m.locator(".plates img").all():
             assert image.evaluate("(el)=>el.complete && el.naturalWidth>0")
         m.screenshot(path=str(out/"mobile.png"),full_page=True)
+        check_source_readings(page,base,out,"desktop")
+        check_source_readings(m,base,out,"mobile")
+        ok("P4.6.1 desktop and mobile: navigate from P4.6, inspect source readings, reload an anchor and return")
         mobile.close()
         ok("390px mobile supports water/road selection and shows all four diagrams without overflow")
         nojs=browser.new_context(viewport={"width":720,"height":900},java_script_enabled=False)

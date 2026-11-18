@@ -1,0 +1,172 @@
+{
+  "title": "千秋门发掘区与水道分期图像核读",
+  "scope": "宫城西墙千秋门与西南角为不同发掘位置。",
+  "acquisition_queue": {
+    "index": 7,
+    "status": "已核实分期报道、发掘区航拍标注与地层照片；原始带尺测绘平面与共用测站仍待取得。",
+    "scaled_survey_plan_acquired": false
+  },
+  "sources": [
+    {
+      "id": "XA22",
+      "date": "2022-06-13",
+      "locator": "新华社，6月11日电，社科院洛阳汉魏城队供图，发掘负责人郭晓涛受访；首图与文字第3段。",
+      "url": "https://www1.xinhuanet.com/culture/20220613/87e5d144f9d14711b91f4b6fc18f7fd6/c.html"
+    },
+    {
+      "id": "XA23",
+      "date": "2023-01-08",
+      "locator": "新华社稿（北京日报客户端转载）。正文引郭晓涛，首张发掘局部图及第3张各期水道关系图。",
+      "url": "https://xinwen.bjd.com.cn/content/s63ba1809e4b075b42c423053.html"
+    },
+    {
+      "id": "NARA13",
+      "locator": "今井晃樹，2013，印页52，图69，宫城范围示意。",
+      "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/6157/1/BA67898227_2013_052_053.pdf#page=1",
+      "sha256_pdf": "6c4afc4c3988f34b8f64ee4b783dcab49ff838a8b5baa4b0d580467db9cf58cf"
+    },
+    {
+      "id": "HP23",
+      "locator": "河南省文物考古研究院，2022年度河南考古工作成果交流会（三），第32项郭晓涛报告；会议目录交叉核题。",
+      "url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=1871"
+    },
+    {
+      "id": "REVIEW23",
+      "locator": "《考古2022》图3，同一带标注的发掘区图版；稿中亦述分期。",
+      "url": "https://www.thepaper.cn/newsDetail_forward_23920562",
+      "figure_url": "https://imagecloud.thepaper.cn/thepaper/image/262/73/787.png",
+      "original_size_px": [
+        1080,
+        1016
+      ],
+      "sha256": "a133bbf8d1c049b2caf233720e51506c8ebba449ce601862aa78de4d502f445b"
+    }
+  ],
+  "observations": [
+    {
+      "id": "Q01",
+      "scope": "同地不同披露时间",
+      "june_2022_reported_wei_jin_stone_conduits": 3,
+      "january_2023_reported_wei_jin_stone_conduits": 4,
+      "reported_as_excavated_total_length_m": ">80",
+      "source": [
+        "XA22",
+        "XA23"
+      ],
+      "limits": "年会报告称四条西南—东北并列，同属魏晋。累计揭露长度没有分配到各渠；采访所述北魏再利用属于区域级解释，无法证明4条石渠在516—528全通。另有汉、北魏期水工。"
+    },
+    {
+      "id": "Q02",
+      "scope": "原图像素抽查，魏晋水道三处可辨图符",
+      "source": "XA23，图1（由文字图注定位）；REVIEW23图3为另一版，不能直接照抄像素。",
+      "url": "https://static.bjd.com.cn/dams-res/editing/image/202312/29/658e7cd2d5deca83f8f4f2c5.jpeg",
+      "sha256": "cb763a34dfc8e3914664722aea5bdd1beab6efce9d782ac742dac01a0622654d",
+      "image_size_px": [
+        1000,
+        960
+      ],
+      "north_arrow": true,
+      "printed_metric_scale_visible": false,
+      "metres_per_pixel": null,
+      "marks": [
+        {
+          "label": "水道3",
+          "left_x": 388,
+          "right_x": 406,
+          "representative_pixel": [
+            397,
+            590
+          ]
+        },
+        {
+          "label": "水道2",
+          "left_x": 441,
+          "right_x": 467,
+          "representative_pixel": [
+            454,
+            590
+          ]
+        },
+        {
+          "label": "水道1",
+          "left_x": 507,
+          "right_x": 544,
+          "representative_pixel": [
+            526,
+            590
+          ]
+        }
+      ],
+      "pixel_sampling_method": "在原文件第590像素行观察青绿色带，色域筛选 G−R>12 且 B−R>4；在三个区域中取连续像素区段的中点，取整。东西顺序由朝上指北箭头近似判断。",
+      "adjacent_displayed_separation_px": [
+        57,
+        72
+      ],
+      "sensitivity": "同一文件改取584、596行，人工依据各带取中后两相邻间距约54–75px；用于辨序，各带为覆盖标注，没有场地比例尺。",
+      "limits": "三个点代表图中着色水道的位置，不是中线测站。此张图不可凭字段指标换算成米；未给第四条渠定位。"
+    },
+    {
+      "id": "Q03",
+      "scope": "跨期地层照片",
+      "source": "XA23，图3「各期水道关系图」",
+      "url": "https://static.bjd.com.cn/dams-res/editing/image/202312/29/658e7cd1d5de9bf28162636e.jpeg",
+      "sha256": "af144a5ecb0f959c74b357f6919c8a3520c460726cb1a160fb0c7c03adaa7f87",
+      "image_size_px": [
+        1000,
+        621
+      ],
+      "labels_read": [
+        "北周门址夯土基槽",
+        "魏晋水道2夯土基槽",
+        "魏晋水道1底部夯土基槽",
+        "汉代券砖水道顶部填土",
+        "汉代券砖水道"
+      ],
+      "limits": "图版为剖面照片并附线注，可复核早、晚地层及不同设施。无米尺，不据此绘北魏水道平面，不将图内魏晋水道1误作北魏G1。"
+    }
+  ],
+  "city_comparison": {
+    "id": "Q04",
+    "source": "NARA13，印页52图69。既有来源图，此次复读千秋门与西南隅图符间的尺度。",
+    "render": "pdftoppm 26.05.0，-f 1 -l 1 -r 145 -png；原整页1199×1696。",
+    "render_sha256": "6dd4ffcb21613dd9cb6af6ff134c30b49dc45913220a356f2f4c6ae79a88418b",
+    "scale_bar": {
+      "left_px": [
+        957,
+        1557
+      ],
+      "right_px": [
+        1052,
+        1557
+      ],
+      "length_px": 95,
+      "metres": 200
+    },
+    "read_points": [
+      {
+        "mark": "千秋门西宫墙缺口，取墙线与东西道路交会图符中央",
+        "xy_px": [
+          692,
+          1160
+        ]
+      },
+      {
+        "mark": "西南隅调查区黑块中央",
+        "xy_px": [
+          692,
+          1519.5
+        ]
+      }
+    ],
+    "pixel_distance": 359.5,
+    "symbol_distance_m": 756.8,
+    "sensitivity_m": [
+      698,
+      818
+    ],
+    "uncertainty_explanation": "保守敏感度：千秋门图符取点纵向±6 px，西南隅黑块±15 px，尺端各±1 px。仅表示图符及读数扰动，无现场定位误差或统计置信含义。",
+    "limits": "约0.76km只是该宫城概图上两个符号中心的读数。不可把标尺迁移至2022航拍图，不是千秋门某水道到西南隅某探沟的实测距离。"
+  },
+  "world_coordinates": null,
+  "source_pixel_origin": "取原文件左上为(0,0)，x向右，y向下。"
+}

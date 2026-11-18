@@ -510,6 +510,14 @@ try:
  assert 'id="p46-first"' in get('prosperity-street-clusters.html').decode('utf-8')
  assert get('downloads/prosperity-hydro-roads-p46-atlas.pdf').startswith(b'%PDF-')
  assert get('downloads/prosperity-hydro-roads-p46-package.zip').startswith(b'PK')
+ source_readings=info['prosperity_anchors_p461']
+ assert source_readings['version']==release['prosperity_anchors_p461_version']=='prosperity-anchors-p461'
+ assert source_readings['source_commit']==info['source_commit']
+ source_manifest=json.loads(get(source_readings['manifest']))
+ assert source_manifest['source_commit']==info['source_commit']
+ assert all(info['files_sha256'][path]==digest for path,digest in source_manifest['files_sha256'].items())
+ assert {source_readings['page'],source_readings['bundle'],source_readings['manifest']} <= set(info['files_sha256'])
+
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
@@ -523,6 +531,7 @@ try:
  report['prosperity_road_functions']=info['prosperity_road_functions']
  report['prosperity_street_clusters']=info['prosperity_street_clusters']
  report['prosperity_hydro_roads']=info['prosperity_hydro_roads']
+ report['prosperity_anchors_p461']=source_readings
  print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise
