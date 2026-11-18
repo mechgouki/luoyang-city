@@ -493,6 +493,23 @@ try:
  assert 'id="p453-next"' in get('prosperity-road-functions.html').decode('utf-8')
  assert get('downloads/prosperity-street-clusters-p453-atlas.pdf').startswith(b'%PDF-')
  assert get('downloads/prosperity-street-clusters-p453-package.zip').startswith(b'PK')
+ # P4.6 prioritizes historic waterways and the full main-street provenance.
+ hydro=json.loads(get('prosperity-hydro-roads/data.json'))
+ assert hydro['version']==info['prosperity_hydro_roads']['version']==release['prosperity_hydro_roads_version']=='prosperity-hydro-roads-anchor-p46'
+ assert len(hydro['water_features'])==info['prosperity_hydro_roads']['water_feature_records']==34
+ assert len(hydro['main_road_records'])==info['prosperity_hydro_roads']['road_source_records']==21
+ assert hydro['coordinates_added']==info['prosperity_hydro_roads']['independent_ancient_common_controls_added']==0
+ assert hydro['verified_new_ancient_common_ground_controls']==0
+ assert hydro['historic_waterbody_polygons_added']==0
+ assert hydro['historic_full_road_polylines_added']==0
+ assert hydro['approved_artistic_panorama_changed'] is False
+ assert len([x for x in hydro['water_features'] if x['position_tier']=='registered_modern_basemap_line'])==1
+ assert len([x for x in hydro['main_road_records'] if x['position_tier']=='preserved_source_map_geometry'])==8
+ assert len([x for x in hydro['main_road_records'] if x['id'].startswith('O')])==11
+ assert hashlib.sha256(get('prosperity-hydro-roads/unaltered-source-layout.svg')).hexdigest()==info['files_sha256']['prosperity/source-layout.svg']
+ assert 'id="p46-first"' in get('prosperity-street-clusters.html').decode('utf-8')
+ assert get('downloads/prosperity-hydro-roads-p46-atlas.pdf').startswith(b'%PDF-')
+ assert get('downloads/prosperity-hydro-roads-p46-package.zip').startswith(b'PK')
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
@@ -505,6 +522,7 @@ try:
  report['prosperity_gate']=gate_info
  report['prosperity_road_functions']=info['prosperity_road_functions']
  report['prosperity_street_clusters']=info['prosperity_street_clusters']
+ report['prosperity_hydro_roads']=info['prosperity_hydro_roads']
  print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise

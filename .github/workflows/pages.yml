@@ -71,11 +71,13 @@ jobs:
           python -m py_compile tools/prosperity_city_distribution_p451.py tests/browser_prosperity_city_distribution_p451.py
           python -m py_compile tools/prosperity_road_functions_p452.py tests/browser_prosperity_road_functions_p452.py
           python -m py_compile tools/prosperity_street_clusters_p453.py tests/browser_prosperity_street_clusters_p453.py
+          python -m py_compile tools/prosperity_hydro_roads_p46.py tests/browser_prosperity_hydro_roads_p46.py
           node --check web/prosperity-taiji-courts.js
           node --check web/prosperity-architecture.js
           node --check web/prosperity-city-distribution.js
           node --check web/prosperity-road-functions.js
           node --check web/prosperity-street-clusters.js
+          node --check web/prosperity-hydro-roads.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -138,6 +140,8 @@ jobs:
         run: python tools/prosperity_road_functions_p452.py
       - name: P4.5.3 build three qualitative historic road/building clusters
         run: python tools/prosperity_street_clusters_p453.py
+      - name: P4.6 audit Northern Wei water and major road anchor evidence
+        run: python tools/prosperity_hydro_roads_p46.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: |
@@ -181,6 +185,7 @@ jobs:
               python tests/browser_prosperity_city_distribution_p451.py
               python tests/browser_prosperity_road_functions_p452.py
               python tests/browser_prosperity_street_clusters_p453.py
+              python tests/browser_prosperity_hydro_roads_p46.py
               python tests/browser_prosperity_v1.py
               python tests/browser_prosperity_core_v2.py
             '
@@ -271,6 +276,7 @@ jobs:
               python tests/browser_prosperity_city_distribution_p451.py --base-url "$SITE_URL" --output artifacts/live-prosperity-city-distribution-p451-browser
               python tests/browser_prosperity_road_functions_p452.py --base-url "$SITE_URL" --output artifacts/live-prosperity-road-functions-p452-browser
               python tests/browser_prosperity_street_clusters_p453.py --base-url "$SITE_URL" --output artifacts/live-prosperity-street-clusters-p453-browser
+              python tests/browser_prosperity_hydro_roads_p46.py --base-url "$SITE_URL" --output artifacts/live-prosperity-hydro-roads-p46-browser
               python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser
               python tests/browser_prosperity_core_v2.py --base-url "$SITE_URL" --output artifacts/live-prosperity-core-v2-browser
             '
