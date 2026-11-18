@@ -512,11 +512,21 @@ try:
  assert get('downloads/prosperity-hydro-roads-p46-package.zip').startswith(b'PK')
  source_readings=info['prosperity_anchors_p461']
  assert source_readings['version']==release['prosperity_anchors_p461_version']=='prosperity-anchors-p461'
- assert source_readings['source_commit']==info['source_commit']
+ assert source_readings['source_commit']=='266d28afc3d290d592170aaffe3e6b61747640a0'
  source_manifest=json.loads(get(source_readings['manifest']))
- assert source_manifest['source_commit']==info['source_commit']
+ assert source_manifest['source_commit']==source_readings['source_commit']
  assert all(info['files_sha256'][path]==digest for path,digest in source_manifest['files_sha256'].items())
  assert {source_readings['page'],source_readings['bundle'],source_readings['manifest']} <= set(info['files_sha256'])
+ assert info['files_sha256'][source_readings['bundle']]=='e84193d952d8a025bac2c580d8728f801f9e4b88528bfbe98f1c8480ac273f82'
+ assert info['files_sha256'][source_readings['atlas']]=='99150d18d93011aeb7e1e5d38d78ac70a6e79e00e27ae65217cf4de03ccb1c38'
+ network_study=info['prosperity_network_p462']
+ assert network_study['version']==release['prosperity_network_p462_version']=='prosperity-network-p462'
+ assert network_study['source_commit']==info['source_commit']
+ network_manifest=json.loads(get(network_study['manifest']))
+ assert network_manifest['source_commit']==info['source_commit']
+ assert all(info['files_sha256'][path]==digest for path,digest in network_manifest['files_sha256'].items())
+ assert {network_study[key] for key in ('page','bundle','atlas','manifest')} <= set(info['files_sha256'])
+ assert get(source_readings['page']).count(b'id="p462-entry"')==1
 
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
@@ -532,6 +542,7 @@ try:
  report['prosperity_street_clusters']=info['prosperity_street_clusters']
  report['prosperity_hydro_roads']=info['prosperity_hydro_roads']
  report['prosperity_anchors_p461']=source_readings
+ report['prosperity_network_p462']=network_study
  print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise

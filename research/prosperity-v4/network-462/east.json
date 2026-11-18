@@ -1,0 +1,88 @@
+{
+  "scope": "城东阳渠与鸿池陂，北魏盛时以516—528年为目标层",
+  "segments": [
+    {
+      "id": "outer-wall-outlet",
+      "from": "北魏外郭东墙",
+      "relative_to": "今陇海铁路以北约100米",
+      "distance_to_rail_m_approx": 100,
+      "sources": [
+        "Huang2026-east"
+      ],
+      "period": "多时期渠道，原段未直接断至516—528年"
+    },
+    {
+      "id": "outside-wall-to-pond",
+      "order": [
+        "羊二庄、南蔡庄、大冢头诸村北",
+        "前杜楼村南",
+        "华夏西路北侧",
+        "偃师商城中南部",
+        "东南入鸿池陂"
+      ],
+      "typical_width_m": [
+        60,
+        80
+      ],
+      "width_source": "Liang2022-east",
+      "route_source": "Huang2026-east",
+      "period": "黄引调查仅笼统作隋唐以前；黄据文献推北魏可通至陂"
+    },
+    {
+      "id": "pond-to-old-town",
+      "order": [
+        "鸿池陂",
+        "洛神路一带",
+        "商都东路一带",
+        "偃师老城村北"
+      ],
+      "period": "宽泛汉魏",
+      "sources": [
+        "Huang2026-east",
+        "Liang2022-east"
+      ],
+      "source_difference": "梁以华夏世纪城小区、洛神路南侧、商都东路北侧定位，黄录其与两路交错"
+    },
+    {
+      "id": "tangquan-to-dongtun",
+      "order": [
+        "汤泉村东南、与今中州渠近合",
+        "东屯村东山嘴南"
+      ],
+      "terminus": "勘查止点，向东受冲毁",
+      "sources": [
+        "Huang2026-east"
+      ],
+      "suggested_further_course": "黑石峡南口附近系黄学超据地势推断",
+      "outlet_observed": false
+    },
+    {
+      "id": "inner-east-wall-separate",
+      "alignment": "建春门以南、内城东墙外的南北向阳渠",
+      "survey_year": 2014,
+      "length_m": 2460,
+      "top_width_m": [
+        59,
+        64
+      ],
+      "depth_reported_m": {
+        "centre": 5.2,
+        "sides": 2.3
+      },
+      "source": "Liang2022-east",
+      "scope": "转述调查结果；探测渠深与水深分别处理"
+    }
+  ],
+  "period_question": {
+    "north_wei_canal_to_pond": "黄学超结合文献与城东位置关系论证北魏至少通至此处。",
+    "east_of_pond": "观察所得是宽年代旧渠。黄学超认为北魏鸿池与洛水仍可通流，运渠失用。梁克敏复原通至洛水的水运网络。",
+    "floodplain_break": "东屯村东调查末端以东走向缺失",
+    "shoreline": null,
+    "coordinates": null
+  },
+  "south_branch_hypotheses": [
+    "鱼骨村与和村南侧的今洛河左侧发现池址，其与《水经注》的池对应为梁氏比定。",
+    "古城村以东今洛河圆弧是否为阮曲，梁氏存疑。"
+  ],
+  "bibliography": "east-sources.json"
+}

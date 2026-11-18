@@ -1,0 +1,17 @@
+{
+  "title": "建春门外三桥与道路、水道对读",
+  "time_slice": "516—528年；早期营造和527年受损另记",
+  "spatial_scope": "相对关系示意；无投影、无绝对坐标，各桥间图距不可量测",
+  "sources": {
+    "YG2": {"work":"杨衒之《洛阳伽蓝记》卷二 城东", "url":"https://zh.wikisource.org/wiki/洛陽伽藍記/卷二", "locators":["明悬尼寺","崇真寺后东石桥段及魏昌尼寺条","崇义里东七里桥"]},
+    "SJ16": {"work":"郦道元《水经注》卷十六 谷水", "url":"https://zh.wikisource.org/wiki/水經注/16", "locator":"建春门石桥、东出阳渠、马市石桥、七里涧与旅人桥；引朱超石书"},
+    "JS3": {"work":"《晋书》卷三 武帝纪", "url":"https://zh.wikisource.org/wiki/晉書/卷003", "locator":"泰始十年冬十一月"},
+    "H2026": {"work":"黄学超《汉魏洛阳城周边的水利建设》", "url":"https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea", "open_text":"https://www.sohu.com/a/1082362449_121124389", "locator":"第三节第一项、图4"}
+  },
+  "crossings": [
+    {"name":"建春门石桥","observed_text":["谷水绕城经建春门外石桥","石柱铭记汉阳嘉四年（135）马宪营造","孝昌三年（527）大雨，桥受损"],"sources":["YG2","SJ16"],"reconstruction":"出城东西通行，跨城东环城谷水。527年损坏仅归于此桥。","distinct_from":"东石桥"},
+    {"name":"东石桥","observed_text":["出建春门一里余","桥南北通行","桥北大道西建阳里，东绥民里","《洛阳伽蓝记》系于西晋太康元年（280）"],"sources":["YG2"],"parallel_name":{"name":"马市石桥","sources":["SJ16","H2026"],"status":"文献比定，保留两部书各自的称名"},"reconstruction":"依黄氏解释，南北大道与东西御道相交，桥在交叉口南，跨其所复原的北魏阳渠。","field_control":"桥址与御道、渠的共同测点待核"},
+    {"name":"七里桥","observed_text":["崇义里东有石桥","桥向东一里为开三道的郭门","《晋书》记泰始十年（274）十一月立城东七里涧石桥"],"sources":["YG2","JS3"],"parallel_name":{"name":"旅人桥","sources":["SJ16","H2026"],"status":"与七里涧上石桥对读，非命名合并"},"dating_variant":"《水经注》所引朱超石书另记太康三年（282）十一月初就功；两说并存，不自定为重修或始建。","distance_origins":"桥到外郭门一里与朱超石书所述桥距洛阳宫六七里，起点不同。","reconstruction":"东行道路跨七里涧；过桥再向东至郭门。"}
+  ],
+  "period_comparison":{"field_observation":"建春门外御道北侧有既往勘查所见宽渠遗迹。","interpretation":"把北侧遗迹主要系于东汉，并把西晋至北魏的渠线置于御道南侧，是黄学超据桥向、桥铭与行运去向提出的解释。","excluded":"无共用控制点，不将南侧假设或两侧分期改画成带实测坐标的渠线。"}
+}

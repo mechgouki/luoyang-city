@@ -34,7 +34,16 @@ class AnchorReadings(unittest.TestCase):
         meta = json.loads((SITE / "build-info.json").read_text())["prosperity_anchors_p461"]
         manifest = json.loads((SITE / meta["manifest"]).read_text())
         self.assertEqual(meta["source_commit"], manifest["source_commit"])
-        self.assertEqual((SITE / meta["page"]).read_bytes(), (SOURCE / "index.html").read_bytes())
+        html = (SITE / meta["page"]).read_text()
+        entries = [line + "\n" for line in html.splitlines() if line.startswith('<p id="p462-entry">')]
+        self.assertEqual(len(entries), 1)
+        self.assertIn('href="./prosperity-network-p462.html"', entries[0])
+        original = html.replace(entries[0], "", 1).encode()
+        self.assertEqual(original, (SOURCE / "index.html").read_bytes())
+        self.assertEqual(hashlib.sha256((SITE / meta["bundle"]).read_bytes()).hexdigest(),
+                         "e84193d952d8a025bac2c580d8728f801f9e4b88528bfbe98f1c8480ac273f82")
+        next_study = json.loads((SITE / "build-info.json").read_text())["prosperity_network_p462"]
+        self.assertEqual(hashlib.sha256(original).hexdigest(), next_study["previous_html_sha256"])
         with zipfile.ZipFile(SITE / meta["bundle"]) as package:
             members = set(package.namelist())
             self.assertEqual(members, set(manifest["files_sha256"]) | {"index.html", meta["manifest"]})
