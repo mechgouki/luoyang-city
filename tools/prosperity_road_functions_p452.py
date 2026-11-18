@@ -40,7 +40,7 @@ def dump(p,x):
     p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 def sha(p):
     return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-def esc(s):
+def h(s):
     return html.escape(str(s),quote=True)
 
 def verify_sources(d,geo,p451,b1,b7,b8,p1,entities,info):
