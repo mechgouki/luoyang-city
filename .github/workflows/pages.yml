@@ -69,9 +69,11 @@ jobs:
           python -m py_compile tools/prosperity_architecture_p44.py tests/browser_prosperity_architecture_p44.py
           python -m py_compile tools/homepage_approved_v9.py tests/browser_homepage_approved_v9.py tests/test_homepage_approved_v9.py
           python -m py_compile tools/prosperity_city_distribution_p451.py tests/browser_prosperity_city_distribution_p451.py
+          python -m py_compile tools/prosperity_road_functions_p452.py tests/browser_prosperity_road_functions_p452.py
           node --check web/prosperity-taiji-courts.js
           node --check web/prosperity-architecture.js
           node --check web/prosperity-city-distribution.js
+          node --check web/prosperity-road-functions.js
       - name: Check all spatial, temporal, terrain and dual-map semantics
         shell: bash
         run: |
@@ -130,6 +132,8 @@ jobs:
         run: python tools/homepage_approved_v9.py
       - name: P4.5.1 source-anchored architecture distribution and citation tiers
         run: python tools/prosperity_city_distribution_p451.py
+      - name: P4.5.2 build source road remnants and qualitative functions
+        run: python tools/prosperity_road_functions_p452.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: |
@@ -171,6 +175,7 @@ jobs:
               python tests/browser_homepage_v1.py
               python tests/browser_homepage_approved_v9.py
               python tests/browser_prosperity_city_distribution_p451.py
+              python tests/browser_prosperity_road_functions_p452.py
               python tests/browser_prosperity_v1.py
               python tests/browser_prosperity_core_v2.py
             '
@@ -259,6 +264,7 @@ jobs:
               python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser
               python tests/browser_homepage_approved_v9.py --base-url "$SITE_URL" --output artifacts/live-homepage-approved-v9-browser
               python tests/browser_prosperity_city_distribution_p451.py --base-url "$SITE_URL" --output artifacts/live-prosperity-city-distribution-p451-browser
+              python tests/browser_prosperity_road_functions_p452.py --base-url "$SITE_URL" --output artifacts/live-prosperity-road-functions-p452-browser
               python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser
               python tests/browser_prosperity_core_v2.py --base-url "$SITE_URL" --output artifacts/live-prosperity-core-v2-browser
             '
