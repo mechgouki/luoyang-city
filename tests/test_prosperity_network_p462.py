@@ -22,12 +22,14 @@ class NetworkStudy(unittest.TestCase):
         meta = info["prosperity_network_p462"]
         manifest = json.loads((SITE / meta["manifest"]).read_text())
         self.assertEqual(manifest["version"], meta["version"])
-        self.assertEqual(manifest["source_commit"], info["source_commit"])
+        self.assertEqual(manifest["source_commit"], "576b6a6dbb3fe6d688f712a36f48a6a752e53d5f")
         page = (SITE / meta["page"]).read_text()
         svg = (SOURCE / "network.svg").read_text()
         figure = svg[svg.index("<svg"):svg.rindex("</svg>") + len("</svg>")]
         self.assertEqual(page.count(figure), 1)
-        self.assertEqual(page.replace(figure, "<!-- NETWORK_SVG -->"), (SOURCE / "index.html").read_text())
+        ENTRY = next(line + "\n" for line in page.splitlines() if line.startswith('<p id="p463-entry">'))
+        self.assertEqual(page.count(ENTRY), 1)
+        self.assertEqual(page.replace(ENTRY, "").replace(figure, "<!-- NETWORK_SVG -->"), (SOURCE / "index.html").read_text())
         expected_sources = {"network-462/" + p.relative_to(SOURCE).as_posix()
                             for p in SOURCE.rglob("*") if p.is_file() and p != SOURCE / "index.html"}
         self.assertEqual(set(manifest["files_sha256"]), expected_sources | {meta["atlas"]})
