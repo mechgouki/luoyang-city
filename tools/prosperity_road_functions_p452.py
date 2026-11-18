@@ -367,7 +367,7 @@ def main():
     pdf=SITE/"downloads/prosperity-road-functions-p452-atlas.pdf"
     render_atlas([img,relations,functions],pdf)
     page_file=SITE/"prosperity-road-functions.html"
-    page_file.write_text(page(d,ET.tostring(image,encoding="unicode"),info),encoding="utf-8")
+    page_file.write_text(page({**d,"road_segments":enriched},ET.tostring(image,encoding="unicode"),info),encoding="utf-8")
     (OUT/"README.md").write_text(
      "P4.5.2继承P1的八条原有道路多段折线，不补支路、通行路网、古代街道宽度或古河道。\n"
      "独立文字关系不以图上的相近节点合并；现代洛水底图不是北魏河槽。\n"
