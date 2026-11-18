@@ -1,9 +1,10 @@
 """Publish P4.6.2 with one reversible entry on the previous reading page."""
+import json
 import shutil
+from pathlib import Path
 import zipfile
 
 from dual_cartography import dump, load, sha
-from north_b4 import render_atlas
 from prosperity_anchors_p461 import PAGE as PREVIOUS
 from prosperity_anchors_p461 import ROOT, SITE, digest, offline_page
 
@@ -39,35 +40,23 @@ def build(site=SITE, source=SOURCE):
         raise ValueError("P4.6.2 page requires a single marker and a complete network figure")
     figure = svg[svg.index("<svg"):svg.rindex("</svg>") + len("</svg>")]
     page.write_text(template.replace("<!-- NETWORK_SVG -->", figure), encoding="utf-8")
-    attachments = {}
-    for path in sorted(source.rglob("*")):
-        if not path.is_file() or path == source / "index.html":
-            continue
-        name = "network-462/" + path.relative_to(source).as_posix()
-        target = site / name
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(path, target)
-        attachments[name] = target
-
-    diagrams = sorted((path for path in attachments.values() if path.suffix == ".svg"), key=lambda path: (
-        PLATE_ORDER.index(path.name) if path.name in PLATE_ORDER else len(PLATE_ORDER), path.name
-    ))
-    if not diagrams:
-        raise ValueError("The P4.6.2 study needs at least one diagram")
-    render_atlas(diagrams, site / ATLAS)
-    attachments[ATLAS] = site / ATLAS
-    offline_html = offline_page(page.read_text(encoding="utf-8"), "network-462", ATLAS).encode()
-    manifest = {
-        "version": VERSION, "source_commit": info["source_commit"],
-        "files_sha256": {name: sha(path) for name, path in attachments.items()},
-        "offline_index_sha256": digest(offline_html),
-    }
-    dump(site / MANIFEST, manifest)
-    with zipfile.ZipFile(site / BUNDLE, "w") as archive:
-        # Ignore checkout and build timestamps so a rebuild of this commit yields the same bundle.
-        archive.writestr(zipfile.ZipInfo("index.html"), offline_html, compress_type=zipfile.ZIP_DEFLATED)
-        for name, path in [(MANIFEST, site / MANIFEST), *attachments.items()]:
-            archive.writestr(zipfile.ZipInfo(name), path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED)
+    archived = ROOT / "research/prosperity-v4/archive/network-462.zip"
+    if sha(archived) != "1f11c20b3b6417eb1818771dc58b4493c3e93d34ad40cfd8f86ae9147116f1eb":
+        raise ValueError("P4.6.2 archive differs from the accepted release")
+    with zipfile.ZipFile(archived) as archive:
+        manifest = json.loads(archive.read(MANIFEST))
+        attachments = manifest["files_sha256"]
+        if offline_page(page.read_text(), "network-462", ATLAS).encode() != archive.read("index.html"):
+            raise ValueError("P4.6.2 article differs from its accepted offline edition")
+        for name in [*attachments, MANIFEST]:
+            target = site / name
+            data = archive.read(name)
+            if name.startswith("network-462/") and name != MANIFEST:
+                if data != (source / Path(name).relative_to("network-462")).read_bytes():
+                    raise ValueError(f"Archived P4.6.2 source changed: {name}")
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
+    shutil.copyfile(archived, site / BUNDLE)
 
     previous.write_text(html.replace(marker, ENTRY + marker, 1), encoding="utf-8")
     release["extensions"] = sorted(set(release["extensions"]) | {VERSION})
@@ -75,8 +64,8 @@ def build(site=SITE, source=SOURCE):
     release["current_milestone"] = "盛时 P4.6.2 · 水道、河流与街道复原图"
     dump(site / "release.json", release)
     info["prosperity_network_p462"] = {
-        "version": VERSION, "source_commit": info["source_commit"], "page": PAGE,
-        "bundle": BUNDLE, "atlas": ATLAS, "atlas_plates": [path.name for path in diagrams],
+        "version": VERSION, "source_commit": manifest["source_commit"], "page": PAGE,
+        "bundle": BUNDLE, "atlas": ATLAS, "atlas_plates": list(PLATE_ORDER),
         "manifest": MANIFEST, "previous_html_sha256": old_sha,
     }
     for name in [*attachments, MANIFEST, BUNDLE, PAGE, PREVIOUS, "release.json"]:

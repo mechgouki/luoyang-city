@@ -34,6 +34,23 @@ def check_page(page, base, output, device):
         assert download.ok and download.body().startswith(magic)
     page.evaluate("window.scrollTo(0,0)")
     page.screenshot(path=str(output / f"p462-{device}.png"))
+    page.locator("#p463-entry a").click()
+    page.wait_for_url("**/prosperity-corridors-p463.html")
+    for section in ("ward", "pond", "outer", "sources"):
+        page.locator(f'nav a[href="#{section}"]').click()
+        page.reload(wait_until="load")
+        assert page.locator(f"#{section}").is_visible()
+    for diagram in page.locator("main img").all():
+        diagram.evaluate("img => img.decode()")
+    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
+    for extension, magic in [("pdf", b"%PDF-"), ("zip", b"PK")]:
+        link = page.locator(f'a[href$="downloads/corridors-463.{extension}"]')
+        download = page.request.get(link.evaluate("a => a.href"))
+        assert download.ok and download.body().startswith(magic)
+    page.locator('nav a[href="#ward"]').click()
+    page.screenshot(path=str(output / f"p463-{device}.png"))
+    page.locator('header a').click()
+    page.wait_for_url("**/prosperity-network-p462.html")
     page.locator('a[href$="prosperity-anchors-p461.html"]').first.click()
     page.wait_for_url("**/prosperity-anchors-p461.html")
     assert page.locator("#p462-entry").is_visible()
