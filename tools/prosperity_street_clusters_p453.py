@@ -78,8 +78,12 @@ def validate(d,b1,b7,b8,p1,p451,p452,geo,entities,info):
             assert e["predicate"] in RELATIONS
             assert e["grade"] in ("A","C")
             assert e["geographic_line_allowed"] is False
-            prefix,key=e["source_record"].split(":",1) if ":" in e["source_record"] else ("P1",e["source_record"])
-            assert key in srcs[prefix],e["source_record"]
+            record=e["source_record"]
+            if record.startswith(("B1:","B7:","B8:")):
+                prefix,key=record.split(":",1)
+            else:
+                prefix,key="P1",record
+            assert key in srcs[prefix],record
             assert e["quote"] and e["scope"]
     edges=[x for c in d["clusters"] for x in c["edges"]]
     assert len(edges)==17
