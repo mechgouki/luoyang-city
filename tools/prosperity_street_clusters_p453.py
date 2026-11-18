@@ -247,7 +247,7 @@ def main():
     ref=OUT/"source-index-unchanged.svg"
     shutil.copyfile(index_original,ref)
     assert sha(ref)==sha(index_original)
-    assert len(ET.parse(ref).getroot().findall(".//{"+NS+"circle"))>=4
+    assert len(ET.parse(ref).getroot().findall(f".//{{{NS}}}circle"))>=4
     illustrations.append(ref)
     (SITE/"downloads").mkdir(exist_ok=True)
     pdf=SITE/"downloads/prosperity-street-clusters-p453-atlas.pdf"
