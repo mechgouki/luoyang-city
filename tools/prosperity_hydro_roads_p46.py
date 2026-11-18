@@ -53,7 +53,7 @@ def validate(d,geo,terrain,p452,p453,info):
     assert d["version"]==VERSION
     assert len(d["water_features"])==34
     assert len(d["main_road_records"])==21
-    assert len(d["source_registry"])==13
+    assert len(d["source_registry"])==17
     assert geo["crs"]=="EPSG:4610"
     assert len(geo["features"])==30
     assert p452["version"]=="prosperity-road-functions-p452"
@@ -97,6 +97,19 @@ def validate(d,geo,terrain,p452,p453,info):
     assert newer[0]["sourced_metrics"]["length_approx_m"]==2500
     assert newer[1]["sourced_metrics"]["neighborhood_gate_gap_approx_m"]==7.5
     assert "terrain-luo-northward-after-sui" in {x["id"] for x in terrain["records"]}
+    inner=d["inner_city_ten_road_literature_summary"]
+    assert len(inner["east_west"])==inner["east_west_count"]==5
+    assert len(inner["north_south"])==inner["north_south_count"]==5
+    assert all(x["registered_original_survey_polyline"] is None for x in inner["east_west"]+inner["north_south"])
+    assert inner["exact_survey_to_old_eight_matched"] is False
+    local=d["baima_local_ward_2024"]
+    assert local["excavated_ward_streets_reported"]==6
+    assert (local["local_ew_street_spacing_m"],local["local_ns_street_spacing_m"])==(40,86)
+    assert local["extension_to_whole_outer_city_allowed"] is False
+    assert d["ancient_luo_yi_geologic_trend_2024"]["phase_specific_516_528_polyline_verified"] is False
+    assert d["northern_wei_east_yangqu_phase_controversy"]["not_a_confirmed_complete_field_dated_continuous_channel"]
+    assert len(d["original_document_acquisition_queue"])==7
+    assert all(not x["scaled_survey_plan_acquired"] for x in d["original_document_acquisition_queue"])
     assert d["coordinates_added"]==0
     assert d["verified_new_ancient_common_ground_controls"]==0
     assert d["historic_waterbody_polygons_added"]==0
@@ -169,7 +182,7 @@ def roads_plate(d):
     text(root,942,1091,"另有：开阳门外、平昌门外两条大道",21,C["ink"])
     box(root,60,1210,1678,125,"#edf3ee","#c7d8ce")
     text(root,91,1246,"C｜2020西明—青阳大道：约2.5km / 34m，历多朝，报告有北魏车辙",22,"#315e51",weight=700)
-    text(root,91,1300,"D｜2025西阳门外大道与里坊南北街交会：约7.5m为坊门缺口，不是干道宽",22,"#315e51")
+    text(root,91,1300,"D｜2024里坊六条局部路，40/86m为路间距；2025坊门缺口7.5m≠干道宽",22,"#315e51")
     footer(root,"不同来源线路可能重叠，不能把8+9+2+2按21条互不相同街道简单相加。精确同线关系仍待原测绘图。")
     return root
 
@@ -286,12 +299,17 @@ def html_page(d,info):
 <option value="published_excavation_unregistered">新发掘未独立配准</option></select>
 <span data-visible-count class="note">21项</span></div>
 <div class="tablewrap"><table><thead><tr><th>编号</th><th>大道或道路</th><th>锚定状态</th><th>明确依据与局限</th><th>来源</th></tr></thead><tbody>{road_rows}</tbody></table></div></div>
+<p>另据2023考古综述，内城主道为<strong>东西五条＋南北五条</strong>的文字目录，不等于旧来源图8项残线，仍缺逐条同址测线。2024白马寺邻近里坊出现<strong>六条局部道路</strong>，40米与86米为相邻道路间距，不能当成道路宽，也不能作为全外郭统一坊格。2024地质研究提示洛水北移、伊水合流位置变更；2026水利论文认为建春门北侧宽渠可能保留东汉旧层、北魏阳渠更可能在道路南侧，均待原测绘复核。</p>
 </section>
 <section id="gates"><h2>03 · 什么时候才能说“主骨架确定好了”？</h2>
 <div class="pending">
 <h3>水文地图完成条件</h3><ol>{tolist(gates["hydrology"])}</ol>
 <h3>道路地图完成条件</h3><ol>{tolist(gates["roads"])}</ol>
 <p>这两套条件落实之前，新建筑的空间位置仍只能使用已有遗址点、局部比例图或有据的文字方位，不允许从视觉全景恢复绝对坐标。</p></div>
+</section>
+<section id="originals"><h2>04 · 关键原测量图取得清单</h2>
+<p>以下七类报告仍没有本项目可直接量读、带统一尺度与控制点的原始平面；取得这些资料是从“审查线索”升级为真正古代河湖与主干道地理底图的必要条件。</p>
+<ol>{''.join('<li>'+esc(v["title"])+'：'+esc(v["target"])+'</li>' for v in d["original_document_acquisition_queue"])}</ol>
 </section>
 <section id="sources"><h2>04 · 原件、同行研究及边界</h2>
 <ol>{sources}</ol>
