@@ -1,0 +1,576 @@
+{
+  "version": "city-anchors-hydro-roads-p50",
+  "review_date": "2026-11-18",
+  "period": "Northern Wei 516–528 composite; Han/Wei/Jin and 1997–99 baseline separate",
+  "scope": "Stop further building infill until hydrology and main trunk roads are original-source controlled",
+  "completion_status": "evidence_inventory_and_hypothesis_topology_not_verified_complete_geographic_city_skeleton",
+  "sources": [
+    {
+      "id": "UNESCO2012",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf"
+    },
+    {
+      "id": "H2026",
+      "url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea"
+    },
+    {
+      "id": "H2026TEXT",
+      "url": "https://www.sohu.com/a/1082362449_121124389"
+    },
+    {
+      "id": "Y2024",
+      "url": "https://www.lsdlyj.com.cn/CN/10.20166/j.issn.2096-6822.L20230083"
+    },
+    {
+      "id": "CN2023",
+      "url": "https://www.thepaper.cn/newsDetail_forward_24443356"
+    },
+    {
+      "id": "CSSN2024",
+      "url": "https://www.cssn.cn/lsx/lsx_kgx/202412/t20241213_5822224.shtml"
+    },
+    {
+      "id": "QIAN2019",
+      "url": "https://www.sohu.com/a/359474889_644538"
+    },
+    {
+      "id": "BAIMA2024",
+      "url": "https://cbgc.scol.com.cn/news/6067403"
+    },
+    {
+      "id": "BAIMA2025",
+      "url": "https://hnswwkgyjy.cn/NewsView.php?News_ID=2810"
+    },
+    {
+      "id": "QIANQIU2022",
+      "url": "https://www1.xinhuanet.com/culture/20220613/87e5d144f9d14711b91f4b6fc18f7fd6/c.html"
+    },
+    {
+      "id": "LGS",
+      "url": "https://deerpark.app/cbeta/B0077/1"
+    }
+  ],
+  "evidence_policy": {
+    "ancient_coordinate_controls_approved": 0,
+    "new_ancient_geographic_coordinates": 0,
+    "source_map_crs": "EPSG:4610",
+    "exact_ancient_river_lines_registered": 0,
+    "complete_major_roads_registered": 0,
+    "modern_luo_source_id": "geo-modern-luo-river",
+    "modern_luo_years": "1997 aerial/1999 survey",
+    "modern_luo_cannot_be_ancient": true,
+    "source_map_road_remnants": 8,
+    "homepage_approved_version": "panorama-approved-v9",
+    "homepage_modification_forbidden": true
+  },
+  "water_components": [
+    {
+      "id": "W01",
+      "name": "古洛水",
+      "old_entity_id": "luoshui",
+      "kind": "river",
+      "source_ids": [
+        "Y2024",
+        "UNESCO2012",
+        "H2026"
+      ],
+      "evidence_summary": "北魏城南古河，河道长期北迁；1997/99今线绝不能作为516–528年河线",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W02",
+      "name": "伊水",
+      "old_entity_id": "water_yi",
+      "kind": "river",
+      "source_ids": [
+        "Y2024",
+        "LGS"
+      ],
+      "evidence_summary": "古伊河及汇洛口向东移；文献伊洛之间仅为区域关系",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W03",
+      "name": "谷水／涧水",
+      "old_entity_id": "gushui",
+      "kind": "river_diversion",
+      "source_ids": [
+        "H2026",
+        "LGS"
+      ],
+      "evidence_summary": "上游供水，接城西水利；不是全段已测河道",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W04",
+      "name": "瀍水",
+      "old_entity_id": "r_chanjian",
+      "kind": "river_diversion",
+      "source_ids": [
+        "H2026",
+        "Y2024"
+      ],
+      "evidence_summary": "瀍与谷在旧工程汇合；瀍涧区域名不是一条复合实测河线",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W05",
+      "name": "北魏湖沟入水渠",
+      "old_entity_id": null,
+      "kind": "intake",
+      "source_ids": [
+        "H2026"
+      ],
+      "evidence_summary": "学者推断北魏再启旧湖沟；未取得原测线",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W06",
+      "name": "千金堨／千金渠",
+      "old_entity_id": "w_qianjin",
+      "kind": "weir",
+      "source_ids": [
+        "H2026"
+      ],
+      "evidence_summary": "汉/魏/晋/北魏多期改造；古堰体边界不详",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W07",
+      "name": "引洛入谷枝渎",
+      "old_entity_id": null,
+      "kind": "intake_candidate",
+      "source_ids": [
+        "H2026"
+      ],
+      "evidence_summary": "496年前后考证，516–528未证全年通水",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W08",
+      "name": "张方沟",
+      "old_entity_id": "w_zhangfanggou",
+      "kind": "drain",
+      "source_ids": [
+        "H2026",
+        "LGS"
+      ],
+      "evidence_summary": "西郭墙可能顺排水道布局；无完整已配准古沟",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W09",
+      "name": "内城壕沟",
+      "old_entity_id": null,
+      "kind": "moat",
+      "source_ids": [
+        "UNESCO2012",
+        "CN2023"
+      ],
+      "evidence_summary": "西壕局部18–28m，东壕局部18–40m；多期，南垣毁损不可自动闭合",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W10",
+      "name": "城东阳渠",
+      "old_entity_id": "water_yangqu",
+      "kind": "eastern_canal",
+      "source_ids": [
+        "H2026",
+        "LGS"
+      ],
+      "evidence_summary": "建春门大道北侧宽渠可能属东汉，北魏渠或在道南，属分期研究推论",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W11",
+      "name": "城东南谷水支路",
+      "old_entity_id": null,
+      "kind": "eastern_drain",
+      "source_ids": [
+        "H2026"
+      ],
+      "evidence_summary": "南向排洪、阮曲及池/方湖调蓄为文献加研究者的拓扑解释",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W12",
+      "name": "鸿池陂／洪池",
+      "old_entity_id": null,
+      "kind": "reservoir",
+      "source_ids": [
+        "H2026"
+      ],
+      "evidence_summary": "偃师西南区域，水面边缘与水位尚无可引用的配准古址多边形",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W13",
+      "name": "千秋门三石砌水道",
+      "old_entity_id": null,
+      "kind": "excavated_multi_period",
+      "source_ids": [
+        "QIANQIU2022"
+      ],
+      "evidence_summary": "魏晋三水道西南至东北，另有汉/北魏水道，不能判断同期流通",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W14",
+      "name": "宫苑诸海地下石窦",
+      "old_entity_id": null,
+      "kind": "collective_pool_connectivity",
+      "source_ids": [
+        "LGS"
+      ],
+      "evidence_summary": "凡此诸海为集合，禁止把各池两两直接相连",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    },
+    {
+      "id": "W15",
+      "name": "宫城西墙旧渠",
+      "old_entity_id": null,
+      "kind": "excavation_stratigraphy",
+      "source_ids": [
+        "UNESCO2012"
+      ],
+      "evidence_summary": "旧汉晋渠与北魏宫墙层叠，旧渠不自动视作北魏盛时有效",
+      "ancient_516_528_metric_geometry": null,
+      "shared_geodetic_control_count": 0
+    }
+  ],
+  "historical_waterbody_entity_ids": [
+    "ic_mengfan_pool",
+    "ic_bihai_pool",
+    "ic_zhaoyi_pool",
+    "ic_yonghe_pool_north",
+    "ic_yonghe_pool_south",
+    "ic_diquan",
+    "ic_tianyuan",
+    "ic_xuanwu_pool",
+    "ic_liushang",
+    "ic_fusang",
+    "w_xianchi"
+  ],
+  "extra_lakes_and_pools": [
+    {
+      "id": "EPOOL01",
+      "name": "景明寺三池",
+      "related_id": "v3_jingming",
+      "count": 3,
+      "geometry": null,
+      "note": "text count only, not three measured polygons"
+    },
+    {
+      "id": "EPOOL02",
+      "name": "土山鱼池",
+      "related_id": "w_tushan_yuchi",
+      "count": 1,
+      "geometry": null,
+      "note": "garden pond, site surroundings only"
+    },
+    {
+      "id": "EPOOL03",
+      "name": "城东南谷水旁池与方湖",
+      "related_id": null,
+      "count": 2,
+      "geometry": null,
+      "note": "Shuijingzhu and 2026 scholar flood channels, unregistered pools"
+    },
+    {
+      "id": "EPOOL04",
+      "name": "鸿池陂",
+      "related_id": null,
+      "count": 1,
+      "geometry": null,
+      "note": "same as W12 reservoir, not second independent lake"
+    }
+  ],
+  "water_identity_guardrails": [
+    {
+      "id": "SEPARATE01",
+      "a": "ic_zhaoyi_pool",
+      "b": "ic_diquan",
+      "rule": "explicitly distinct"
+    },
+    {
+      "id": "SEPARATE02",
+      "a": "ic_yonghe_pool_north",
+      "b": "ic_yonghe_pool_south",
+      "rule": "two ponds named separately"
+    },
+    {
+      "id": "SEPARATE03",
+      "a": "ic_mengfan_pool",
+      "b": null,
+      "rule": "seasonal summer wet/winter dry"
+    },
+    {
+      "id": "SEPARATE04",
+      "a": "ic_zhaoyi_pool",
+      "b": "ic_tianyuan",
+      "rule": "cannot infer pairwise connections from 凡此诸海"
+    }
+  ],
+  "hydrological_topology": [
+    {
+      "id": "HX01",
+      "from": "W03",
+      "to": "W05",
+      "context": "2026 historical hydrological scholarly interpretation",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    },
+    {
+      "id": "HX02",
+      "from": "W05",
+      "to": "W06",
+      "context": "2026 historical hydrological scholarly interpretation",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    },
+    {
+      "id": "HX03",
+      "from": "W04",
+      "to": "W06",
+      "context": "2026 historical hydrological scholarly interpretation",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    },
+    {
+      "id": "HX04",
+      "from": "W06",
+      "to": "W09",
+      "context": "2026 historical hydrological scholarly interpretation",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    },
+    {
+      "id": "HX05",
+      "from": "W09",
+      "to": "W10",
+      "context": "2026 historical hydrological scholarly interpretation",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    },
+    {
+      "id": "HX06",
+      "from": "W09",
+      "to": "W11",
+      "context": "2026 historical hydrological scholarly interpretation",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    },
+    {
+      "id": "HX07",
+      "from": "W10",
+      "to": "W12",
+      "context": "2026 historical hydrological scholarly interpretation",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    },
+    {
+      "id": "HX08",
+      "from": "W11",
+      "to": "W12",
+      "context": "2026 historical hydrological scholarly interpretation",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    },
+    {
+      "id": "HX09",
+      "from": "W01",
+      "to": "W07",
+      "context": "proposed 496 branch not proven 516–528",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    },
+    {
+      "id": "HX10",
+      "from": "W07",
+      "to": "W03",
+      "context": "proposed 496 branch not proven 516–528",
+      "ancient_geographic_polyline": null,
+      "draw_schematic_only": true
+    }
+  ],
+  "roads": {
+    "p1_old_remnant_feature_ids": [
+      "geo-tongtuo-avenue",
+      "geo-tongtuo-cross-street",
+      "geo-road-east-west-south",
+      "geo-road-east-west-middle",
+      "geo-road-east-west-north",
+      "geo-road-north-south-east",
+      "geo-road-north-south-mid-east",
+      "geo-road-north-south-west"
+    ],
+    "inner_city_published_summary": {
+      "ew_count": 5,
+      "ns_count": 5,
+      "source_id": "CN2023",
+      "ew": [
+        {
+          "id": "EW1",
+          "name": "承明门内大街",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        },
+        {
+          "id": "EW2",
+          "name": "阊阖城门至建春门大道",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        },
+        {
+          "id": "EW3",
+          "name": "西阳门至东阳门大道",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        },
+        {
+          "id": "EW4",
+          "name": "西明门至青阳门大道",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        },
+        {
+          "id": "EW5",
+          "name": "汉代雍门内大道（北魏时相待核）",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        }
+      ],
+      "ns": [
+        {
+          "id": "NS1",
+          "name": "开阳门至建春门大道（综合名称待原图复核）",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        },
+        {
+          "id": "NS2",
+          "name": "平昌门至广莫门大道（同上）",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        },
+        {
+          "id": "NS3",
+          "name": "宣阳门内大道／铜驼街",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        },
+        {
+          "id": "NS4",
+          "name": "津阳门内大道",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        },
+        {
+          "id": "NS5",
+          "name": "大夏门内大道",
+          "source_map_exact_registered_ancient_line": null,
+          "requires_original_plan": true
+        }
+      ],
+      "matching_to_old_8_fragments_resolved": false
+    },
+    "outer_city": {
+      "published_major_corridor_count": 9,
+      "source_ids": [
+        "CSSN2024",
+        "QIAN2019"
+      ],
+      "individual_old_original_survey_paths_acquired": 0,
+      "cannot_create_nine_synthetic_lines": true
+    },
+    "baimasi_local": {
+      "site": "白马寺附近里坊",
+      "source_ids": [
+        "BAIMA2024",
+        "BAIMA2025"
+      ],
+      "new_streets_reported": 6,
+      "local_ew_street_interval_m": 40,
+      "local_ns_street_interval_m": 86,
+      "number_semantics": "spacing, NOT road width",
+      "new_2025_ward_gate_intersection": "south ward gate / north-south internal road intersects Xiyang outside avenue",
+      "extrapolation_to_citywide_not_allowed": true
+    },
+    "new_study_east_avenue": {
+      "source_id": "H2026",
+      "width_report_m": [
+        15,
+        20
+      ],
+      "period_uncertain": true,
+      "claimed_full_registered_polyline": false
+    },
+    "name_and_connectivity_barriers": [
+      "P1 old 8 fragments != confirmed entire inner 5EW+5NS",
+      "outer 9 not plotted as nine invented paths",
+      "local 6 ward roads do not extend citywide",
+      "Palace text imperial avenue not fully verified identical to Tongtuo source line",
+      "1997 Luo centerline not North Wei bridge crossing"
+    ]
+  },
+  "acquisition_queue": [
+    {
+      "priority": 1,
+      "document": "《北魏洛阳外郭城和水道的勘查》1993",
+      "goal": "original nine outer-road and hydrological measured traces",
+      "original_survey_control_recovered_in_repo": false
+    },
+    {
+      "priority": 2,
+      "document": "《汉魏洛阳城东阳渠、鸿池陂考古勘察简报》2011",
+      "goal": "east channels phase and reservoir banks",
+      "original_survey_control_recovered_in_repo": false
+    },
+    {
+      "priority": 3,
+      "document": "《洛阳汉唐漕运水系考古调查》2016",
+      "goal": "canal survey paths and baselines",
+      "original_survey_control_recovered_in_repo": false
+    },
+    {
+      "priority": 4,
+      "document": "《从地质背景看汉魏隋唐时期洛阳盆地的河道变迁》2024",
+      "goal": "dated paleochannels and geological measurement control",
+      "original_survey_control_recovered_in_repo": false
+    },
+    {
+      "priority": 5,
+      "document": "黄学超2026水利论文图1、2、4",
+      "goal": "distinguish scholarly reconstructed branches from excavated traces",
+      "original_survey_control_recovered_in_repo": false
+    },
+    {
+      "priority": 6,
+      "document": "白马寺北魏里坊2024–25发掘总图",
+      "goal": "local block main avenue and gate ties",
+      "original_survey_control_recovered_in_repo": false
+    },
+    {
+      "priority": 7,
+      "document": "千秋门2022水道发掘测绘图",
+      "goal": "separate Han/WeiJin/Northern Wei ducts by phase",
+      "original_survey_control_recovered_in_repo": false
+    }
+  ],
+  "next_gate": "Once original scale drawings, phase and shared survey controls are obtained, upgrade selected ancient line sections; do not infer missing segments from visual panorama."
+}
