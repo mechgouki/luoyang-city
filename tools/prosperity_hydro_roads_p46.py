@@ -428,6 +428,8 @@ def main():
 
 if __name__=="__main__":
     from prosperity_anchors_p461 import build as publish_source_readings
+    from prosperity_network_p462 import build as publish_network
 
     main()
     publish_source_readings()
+    publish_network()

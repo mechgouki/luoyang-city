@@ -9,6 +9,7 @@ import tempfile
 import threading
 from pathlib import Path
 from browser_anchors_p461 import check_page as check_source_readings
+from browser_network_p462 import check_page as check_network_study
 from playwright.sync_api import expect,sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
@@ -120,6 +121,9 @@ try:
         check_source_readings(page,base,out,"desktop")
         check_source_readings(m,base,out,"mobile")
         ok("P4.6.1 desktop and mobile: navigate from P4.6, inspect source readings, reload an anchor and return")
+        check_network_study(page,base,out,"desktop")
+        check_network_study(m,base,out,"mobile")
+        ok("P4.6.2 desktop and mobile: follow entry, reload a section, inspect figures, fetch atlas and bundle, return")
         mobile.close()
         ok("390px mobile supports water/road selection and shows all four diagrams without overflow")
         nojs=browser.new_context(viewport={"width":720,"height":900},java_script_enabled=False)

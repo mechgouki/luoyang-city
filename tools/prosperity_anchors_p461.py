@@ -1,5 +1,6 @@
 """Publish the P4.6.1 primary-source readings after the P4.6 inventory."""
 import hashlib
+import json
 import re
 import shutil
 import zipfile
@@ -7,7 +8,6 @@ from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
 from dual_cartography import dump, load, sha
-from north_b4 import render_atlas
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "research/prosperity-v4/anchor-461"
@@ -18,6 +18,8 @@ PREVIOUS = "prosperity-hydro-roads.html"
 BUNDLE = "downloads/anchor-461.zip"
 ATLAS = "downloads/anchor-461.pdf"
 PLATES = ("trench.svg", "roads.svg", "hongchi.svg", "fig25.svg", "qianqiu.svg")
+ARCHIVE = ROOT / "research/prosperity-v4/archive/anchor-461.zip"
+ARCHIVE_SHA256 = "e84193d952d8a025bac2c580d8728f801f9e4b88528bfbe98f1c8480ac273f82"
 VERSION = "prosperity-anchors-p461"
 ENTRY = f'<p id="p461-entry"><a href="./{PAGE}">P4.6.1 · 查看河湖与主干道的原图核读</a></p>\n'
 
@@ -26,14 +28,14 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def offline_page(html):
+def offline_page(html, asset_dir="anchor-461", atlas=ATLAS):
     """Keep study assets and in-page anchors local; link earlier site pages online."""
     def resolve(match):
         url = match.group(2)
         path = urlsplit(url).path
-        if path.removeprefix("./") == ATLAS:
+        if path.removeprefix("./") == atlas:
             return match.group(0)
-        if url.startswith(("#", "//")) or urlsplit(url).scheme or path.startswith(("anchor-461/", "./anchor-461/")):
+        if url.startswith(("#", "//")) or urlsplit(url).scheme or path.removeprefix("./").startswith(asset_dir + "/"):
             return match.group(0)
         return 'href=' + match.group(1) + urljoin(OFFICIAL, url) + match.group(1)
     return re.sub(r'''\bhref=(["'])([^"']+)\1''', resolve, html)
@@ -54,34 +56,25 @@ def build(site=SITE, source=SOURCE):
 
     page = site / PAGE
     shutil.copyfile(source / "index.html", page)
-    attachments = {}
-    for path in sorted(source.rglob("*")):
-        if path.is_file() and path != source / "index.html":
-            name = "anchor-461/" + path.relative_to(source).as_posix()
+    if sha(ARCHIVE) != ARCHIVE_SHA256:
+        raise ValueError("The archived P4.6.1 delivery has changed")
+    manifest_name = "anchor-461/bundle-manifest.json"
+    with zipfile.ZipFile(ARCHIVE) as archive:
+        manifest = json.loads(archive.read(manifest_name))
+        attachments = manifest["files_sha256"]
+        local_html = offline_page(page.read_text(encoding="utf-8")).encode()
+        if local_html != archive.read("index.html"):
+            raise ValueError("The P4.6.1 study differs from its approved offline edition")
+        (site / "downloads").mkdir(exist_ok=True)
+        for name in [*attachments, manifest_name]:
             target = site / name
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(path, target)
-            attachments[name] = target
-    plates = [site / "anchor-461" / name for name in PLATES if (source / name).is_file()]
-    if not plates:
-        raise ValueError("The study needs at least one source plate for the PDF atlas")
-    render_atlas(plates, site / ATLAS)
-    attachments[ATLAS] = site / ATLAS
-    local_html = offline_page(page.read_text(encoding="utf-8")).encode()
-    manifest = {
-        "version": VERSION,
-        "source_commit": info["source_commit"],
-        "files_sha256": {name: sha(path) for name, path in attachments.items()},
-        "offline_index_sha256": digest(local_html),
-    }
-    manifest_name = "anchor-461/bundle-manifest.json"
-    dump(site / manifest_name, manifest)
-    bundle = site / BUNDLE
-    with zipfile.ZipFile(bundle, "w", zipfile.ZIP_DEFLATED) as archive:
-        archive.writestr("index.html", local_html)
-        archive.write(site / manifest_name, manifest_name)
-        for name, path in attachments.items():
-            archive.write(path, name)
+            data = archive.read(name)
+            if name.startswith("anchor-461/") and name != manifest_name:
+                if data != (source / Path(name).relative_to("anchor-461")).read_bytes():
+                    raise ValueError(f"Archived P4.6.1 source changed: {name}")
+            target.write_bytes(data)
+    shutil.copyfile(ARCHIVE, site / BUNDLE)
 
     previous.write_text(html.replace(marker, ENTRY + marker, 1), encoding="utf-8")
     release["extensions"] = sorted(set(release["extensions"]) | {VERSION})
@@ -89,9 +82,9 @@ def build(site=SITE, source=SOURCE):
     release["current_milestone"] = "盛时 P4.6.1 · 河湖与主干道原图核读"
     dump(site / "release.json", release)
     info["prosperity_anchors_p461"] = {
-        "version": VERSION, "source_commit": info["source_commit"], "page": PAGE,
+        "version": VERSION, "source_commit": manifest["source_commit"], "page": PAGE,
         "bundle": BUNDLE, "manifest": manifest_name, "previous_html_sha256": before_hash,
-        "atlas": ATLAS, "atlas_plates": [path.name for path in plates],
+        "atlas": ATLAS, "atlas_plates": list(PLATES),
     }
     for name in [*attachments, PAGE, PREVIOUS, BUNDLE, manifest_name, "release.json"]:
         checksums[name] = sha(site / name)

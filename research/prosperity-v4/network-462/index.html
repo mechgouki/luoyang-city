@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>水道、河流与街道 · 北魏洛阳</title>
+<link rel="stylesheet" href="network-462/study.css">
+<script defer src="network-462/network-ui.js"></script>
+</head>
+<body>
+<header><div class="wrap"><a href="./prosperity-anchors-p461.html">← 河湖与主干道原图核读</a><span>盛时洛阳研究图册 · P4.6.2</span></div></header>
+<main class="wrap">
+<div class="intro"><p class="period">北魏洛阳　516—528</p><h1>水道、河流与街道</h1>
+<p>从内城八条街道读起，向东追到鸿池陂，向南辨认跨洛水的道路。图上每一处交会都可以回到勘查记录、原图或古籍原文。</p></div>
+<nav aria-label="图册目录"><a href="#network">内城街网</a><a href="#outer">外郭门道</a><a href="#east">城东水道</a><a href="#crossing-study">建春门外三桥</a><a href="#south">城南洛水</a><a href="#sources">来源与下载</a></nav>
+<section id="network"><h2>内城八条街道</h2>
+<p>申遗管理规划图06a在同一幅底图绘出四条横街、四条纵街。图中的蓝线沿1997年航摄、1999年实测底图上可辨的洛河中东段概略描取，只供辨别20世纪90年代地貌与遗址的关系。</p>
+<div class="options" id="layer-controls" hidden><fieldset><legend>显示图层</legend>
+<label><input type="checkbox" data-layer="roads" checked>道路</label>
+<label><input type="checkbox" data-layer="anchors" checked>门址等图符</label>
+<label><input type="checkbox" data-layer="modern-river" id="toggle-modern-river" checked>近现代洛河</label>
+<label><input type="checkbox" data-layer="intersections" checked>图线交点</label>
+<label><input type="checkbox" data-layer="near-misses" checked>近接处</label>
+<label><input type="checkbox" data-layer="gaps" checked>图线间隔</label>
+</fieldset>
+<label for="road-choice">突出显示</label> <select id="road-choice"><option value="">全部道路</option>
+<option value="Lh-1">横一 · 西明门至青阳门</option><option value="Lh-2">横二 · 西阳门至东阳门</option><option value="Lh-3">横三 · 内城西垣阊阖门至建春门</option><option value="Lh-4">横四 · 承明门向东</option>
+<option value="Lz-1">纵一 · 建春门以内向南</option><option value="Lz-2">纵二 · 广莫门南出</option><option value="Lz-3">纵三 · 宫城阊阖门外铜驼街</option><option value="Lz-4">纵四 · 大夏门南出折行</option>
+<option value="Lh-2 Lz-3">宫城阊阖门前两路</option></select>
+<span id="selected-roads" aria-live="polite"></span></div>
+<figure><div id="network-plate"><!-- NETWORK_SVG --></div>
+<figcaption>图中点位以原PDF的图面单位计算。<a href="network-462/network.svg">放大街网对读图</a> · <a href="network-462/network.json">查看原线、坐标与算法说明</a></figcaption></figure>
+<h3>阊阖门前的路口，为什么留了一个空圈？</h3>
+<p>1973年勘查记述可整理出十二组横纵街关系，申遗图中有十一组原线相交。余下一组是<strong>西阳门—东阳门横街与铜驼街</strong>。钱国祥2019年明确记为宫门前的丁字路口，横街长约2630米、宽约40米。申遗图上的横线落在铜驼街两个图段的空隙内。图上保留空圈，读者可以分别复查道路关系和交点位置。</p>
+<figure><a href="network-462/roads.svg"><img src="network-462/roads.svg" alt="横纵道路关系对照，单独放大宫前横二与铜驼街之间的图面间隔" loading="lazy"></a><figcaption><a href="network-462/roads.svg">放大道路对读图</a> · <a href="network-462/roads.json">逐条勘查与路口记录</a> · <a href="network-462/road-notes.md">勘查出处与尺寸表</a></figcaption></figure>
+<p>“八条”是这张图所取的路网。钱国祥2019年另列五横五纵，其中有北魏可能已经废弃的汉雍门短路。他也把早期勘查的纵四拆读为津阳门内大道（残长2990米）和大夏门内路（残长400余米）。分段口径会改变里程，两个版本分别保存在逐路记录中。<a href="https://www.sohu.com/a/351999859_199807">钱国祥，2019年，第三节</a></p>
+<p>西阳门一侧保存了更局部的证据。距内城西墙内侧约35米的道路剖面上，两层路土都有东西向车辙，下层推属北魏。路面南北两侧各有疑似路沟；城门北门道下另见砖沟。三处各自记录，目前还欠缺贯通它们的测线。</p>
+</section>
+<section id="outer"><h2>从外郭城门识别大道</h2>
+<p>东郭由北数第二门，近墙路土约18米宽，到两阙间收至约8米。西郭从南数第一、第三门，两阙间距分别约30米、40米。前一处能比较同一路段的收束，后两处只量到了门口。钱国祥复原图中的门间轴向与这些局部尺寸分列。</p>
+<figure><a href="network-462/outer.svg"><img src="network-462/outer.svg" alt="同一米尺比较东郭第二门两处路土宽度与西郭两门的阙口宽度" loading="lazy"></a><figcaption><a href="network-462/outer.svg">放大外郭门道图</a> · <a href="network-462/outer.json">逐门来源和量读规则</a></figcaption></figure>
+<details><summary>查看复原图上六组内城门至外郭门的距离</summary>
+<table><caption>按钱国祥2018年图一的千米图尺读取，约至0.1千米。各数为图上两门间的直线距离。</caption>
+<thead><tr><th scope="col">由北向南</th><th scope="col">西侧</th><th scope="col">东侧</th></tr></thead><tbody>
+<tr><th scope="row">北道</th><td>内城阊阖门　4.5千米</td><td>建春门　3.7千米</td></tr>
+<tr><th scope="row">中道</th><td>西阳门　4.4千米</td><td>东阳门　3.5千米</td></tr>
+<tr><th scope="row">南道</th><td>西明门　3.9千米</td><td>青阳门　3.6千米</td></tr></tbody></table>
+<p>数值反映复原图所设门位，可检验同侧三个出城方向及大致纵深。1993年勘查报告的逐路测线尚待核对。<a href="https://www.jstage.jst.go.jp/article/actaasiatica/126/0/126_1262/_pdf/-char/en#page=17">公开重刊图6（印页17）</a></p></details>
+</section>
+<section id="east"><h2>东阳渠，从东郭追到鸿池陂</h2>
+<p>沿东郭往东，可依次核对羊二庄、南蔡庄、大冢头诸村北侧、前杜楼南侧和偃师商城，渠在商城一带转向东南，进入鸿池陂。梁克敏转述，东郭至陂这段通常宽60—80米。这与内城东墙外另有记载的南北向渠道分属两段。</p>
+<figure><a href="network-462/east.svg"><img src="network-462/east.svg" alt="东郭至鸿池陂以及池东渠迹分段，列出现代地名参照与勘查终点" loading="lazy"></a><figcaption><a href="network-462/east.svg">放大城东渠段图</a> · <a href="network-462/east.json">渠段、年代与资料出处</a></figcaption></figure>
+<p>池东另有古渠迹，经过偃师老城村北、汤泉村东南，至东屯村东山嘴南侧。再往东，洛河泛滥破坏了可追踪的遗迹。这次将盛时通航的表示止于证据能支持的区段。池东的汉魏宽年代遗迹保留在图上，北魏舟运能否一路抵洛仍有争议。</p>
+</section>
+<section id="crossing-study"><h2>建春门外，三座桥分别跨什么？</h2>
+<p>《洛阳伽蓝记》从城门写到郭门，留下了桥的方位和街坊次序。把这段叙述同《水经注》及桥铭对读，可以区分城门前过环城谷水、马市附近南北过渠，以及更东处过七里涧三种关系。</p>
+<figure><a href="network-462/crossings.svg"><img src="network-462/crossings.svg" loading="lazy" alt="三幅桥路关系示意，从建春门石桥、东石桥到七里桥分别标出道路、水流与证据性质"></a><figcaption><a href="network-462/crossings.svg">放大三桥关系图</a> · <a href="network-462/crossings.json">打开逐桥文献对照</a></figcaption></figure>
+<p>第二座东石桥有南北通行的记载，桥北大道两侧分别是建阳里、绥民里。把东石桥比定为马市石桥，并把它放在东西御道以南的阳渠上，是有文献依据的一种复原。七里桥在崇义里以东，过桥再向东一里才到开三道的郭门。图中保留原书的里数及其起点。</p>
+</section>
+<section id="south"><h2>城南洛水：永桥与引洛渠分别在哪条路上？</h2>
+<p>《洛阳伽蓝记》以宣阳门为起点，记门外四里至永桥。考古调查另以津阳门外大街为参照，在街东叙述引洛渠。把两个门名和各自的参照物分开，才能判断一处发现约束的是跨河道路、另一处约束的是渠道走廊。</p>
+<figure><a href="network-462/waters.svg"><img src="network-462/waters.svg" alt="城南古今洛河示意与宣阳门永桥、津阳门外引洛渠分列对读" loading="lazy"></a><figcaption><a href="network-462/waters.svg">放大洛水与南出道路图</a> · <a href="network-462/waters.json">图号、页码与可核关系</a></figcaption></figure>
+<p>2023年《隋唐洛阳含嘉仓城考古发掘报告》印刷第2页并列两图。图一把灵台画在标作今洛河与古洛河的两道水线之间；图二据《水经注》摹绘谷水等水系。两图的用途与时代范围各异，《伽蓝记》记永桥为浮桥，两端登陆点和当时河宽仍待地层或测点确定。</p>
+</section>
+<section id="sources"><h2>来源与下载</h2>
+<p>1993年《考古》第7期《北魏洛阳外廓城和水道的勘查》（602—608页）、2011年《华夏考古》第1期《汉魏洛阳城东阳渠、鸿池陂考古勘察简报》（20—25页）仍是取得分段测线的两项关键资料。本页把后出复原图、地方材料转述、原刊书目和已经核读的考古报告图版分别登记。外郭九条大道仍需核对逐路探孔，鸿池陂南岸和东屯村以东河口仍留待直接证据。</p>
+<div class="downloads"><a href="./downloads/network-462.pdf">下载图册 PDF</a><a href="./downloads/network-462.zip">下载离线图册与数据 ZIP</a></div>
+<ul><li><a href="https://whc.unesco.org/uploads/nominations/1442.pdf#page=3457">申遗管理规划图06a（PDF 第3457页）</a></li>
+<li><a href="https://www.dainst.blog/bridging-eurasia/wp-content/uploads/sites/2/2020/04/eFB-DAI_2019-1_Wertmann_SRF.pdf">德国考古院2019年综述，西阳门至东阳门大道</a> · <a href="https://www.ecsponline.com/book_2019/2023/yz/9787030737496-001001-curved-sam.pdf#page=34">2023年报告样章，印刷第2页图一、二</a></li>
+<li><a href="https://www.thepaper.cn/newsDetail_forward_24428757">《文化瀍河》外郭城门勘查叙述</a> · <a href="https://m.thepaper.cn/baijiahao_24443356">西阳门道路剖面</a></li>
+<li><a href="https://ncpssd.org/journal/details.aspx?gch=94762X&amp;langType=1&amp;num=7&amp;years=1993">《考古》1993年第7期目录</a> · <a href="https://www.ncpssd.org/journal/details?gch=83083X&amp;years=2011&amp;num=1&amp;langType=1&amp;nav=1">《华夏考古》2011年第1期目录</a> · <a href="https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea">黄学超《汉魏洛阳城周边的水利建设》</a></li>
+<li><a href="https://zh.wikisource.org/wiki/洛陽伽藍記/卷二">《洛阳伽蓝记》卷二</a> · <a href="https://zh.wikisource.org/wiki/水經注/16">《水经注》卷十六</a> · <a href="https://zh.wikisource.org/wiki/晉書/卷003">《晋书》武帝纪</a></li></ul>
+</section></main><footer><div class="wrap"><a href="./prosperity-anchors-p461.html">← 上一册：河湖与主干道原图核读</a><a href="#network">返回内城街网 ↑</a></div></footer>
+</body></html>
