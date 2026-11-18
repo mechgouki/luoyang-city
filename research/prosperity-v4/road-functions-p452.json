@@ -1,0 +1,359 @@
+{
+  "version": "prosperity-road-functions-p452",
+  "date": "2026-11-18",
+  "title": "盛时洛阳：来源图道路残段、文本路侧和不定位城市功能关系",
+  "reference_period": "Northern Wei 516–528 documentary composite; not a full ancient road network",
+  "data_lineage": {
+    "source_geography_path": "research/prosperity-v1/geographic-evidence.json",
+    "source_architecture_distribution": "research/prosperity-v4/city-distribution-p451.json",
+    "source_b1": "research/dual-b1/decisions.json",
+    "source_b7": "research/dual-b7/luonan-river-markets.json",
+    "source_b8": "research/dual-b8/cross-batch-review.json",
+    "source_p1_text": "research/prosperity-v1/text-review.json",
+    "source_entities": "data/entities.json",
+    "original_source_map": "2012 WHC 1442 nomination map 06a; 1997 aerial / 1999 survey base",
+    "source_map_crs": "EPSG:4610 Xian 1980",
+    "direct_historical_earth_controls_acquired": 0,
+    "new_absolute_coordinates_added": 0,
+    "modern_river_used_as_ancient_river": false,
+    "homepage_panorama_v9_status": "approved_and_unchanged"
+  },
+  "road_segments": [
+    {
+      "id": "D01",
+      "feature_id": "geo-tongtuo-avenue",
+      "name": "铜驼大道图示残段",
+      "source_code": "Lz-3",
+      "heading_group": "north_south",
+      "evidence": "source_map_generalized_road_remnant",
+      "sourced_length_m": 1650,
+      "sourced_width_m_range": [
+        40,
+        65
+      ],
+      "annotation": "来源附表所记现存段约长1650m，宽40–65m；这是图示遗存的报告信息，不是沿线每段实测道路宽或北魏盛时全线通行能力。",
+      "same_as_palace_imperial_road_verified": false
+    },
+    {
+      "id": "D02",
+      "feature_id": "geo-tongtuo-cross-street",
+      "name": "宫城南横街图示线路",
+      "source_code": "Lh-2",
+      "heading_group": "east_west",
+      "evidence": "source_map_generalized_road_remnant",
+      "sourced_length_m": null,
+      "sourced_width_m_range": null,
+      "annotation": "与铜驼纵道在来源图说明中形成T形关系；未证城门—铜驼街直接可通的所有分支。",
+      "same_as_palace_imperial_road_verified": false
+    },
+    {
+      "id": "D03",
+      "feature_id": "geo-road-east-west-south",
+      "name": "内城南部横道",
+      "source_code": "Lh-1",
+      "heading_group": "east_west",
+      "evidence": "source_map_generalized_underground_road",
+      "sourced_length_m": null,
+      "sourced_width_m_range": null,
+      "annotation": "地下道路的来源图概略线；不画支路或坊门。"
+    },
+    {
+      "id": "D04",
+      "feature_id": "geo-road-east-west-middle",
+      "name": "内城中部横道",
+      "source_code": "Lh-3",
+      "heading_group": "east_west",
+      "evidence": "source_map_generalized_underground_road",
+      "sourced_length_m": null,
+      "sourced_width_m_range": null,
+      "annotation": "不把线条平行等同于全城路格间距。"
+    },
+    {
+      "id": "D05",
+      "feature_id": "geo-road-east-west-north",
+      "name": "宫城北侧横道",
+      "source_code": "Lh-4",
+      "heading_group": "east_west",
+      "evidence": "source_map_generalized_underground_road",
+      "sourced_length_m": null,
+      "sourced_width_m_range": null,
+      "annotation": "没有桥位/门洞与完整通行方向实证。"
+    },
+    {
+      "id": "D06",
+      "feature_id": "geo-road-north-south-east",
+      "name": "内城东部纵道",
+      "source_code": "Lz-1",
+      "heading_group": "north_south",
+      "evidence": "source_map_generalized_underground_road",
+      "sourced_length_m": null,
+      "sourced_width_m_range": null,
+      "annotation": "北魏时层来源图遗存中心线不是道路路宽和店铺位置。"
+    },
+    {
+      "id": "D07",
+      "feature_id": "geo-road-north-south-mid-east",
+      "name": "内城中东部纵道",
+      "source_code": "Lz-2",
+      "heading_group": "north_south",
+      "evidence": "source_map_generalized_underground_road",
+      "sourced_length_m": null,
+      "sourced_width_m_range": null,
+      "annotation": "旧线段不自动连接其它纵道或推定街坊门。"
+    },
+    {
+      "id": "D08",
+      "feature_id": "geo-road-north-south-west",
+      "name": "内城西部纵道",
+      "source_code": "Lz-4",
+      "heading_group": "north_south",
+      "evidence": "source_map_generalized_underground_road",
+      "sourced_length_m": null,
+      "sourced_width_m_range": null,
+      "annotation": "有独立来源图线，但不自动等同西阳门内文献御道。"
+    }
+  ],
+  "interpretation_rules": {
+    "grade_A": "Direct statement within the transmitted document; establishes qualitative relation only",
+    "grade_B": "Source-map generalized feature; retains reported spatial orientation/geometry but not new excavation survey",
+    "grade_C": "Conditional interpretation, editorial emendation or reuse of multi-sentence narrative sequence",
+    "grade_D": "Catalogue-only or unlocated; never draw a new road edge/site coordinate",
+    "forbidden": [
+      "Treat imperial road in palace prose as precisely the entire surveyed Tongtuo Avenue line",
+      "Connect all source-map road remnants into a complete traffickable grid",
+      "Trace Northern Wei Luo/Yellow/Yi watercourses from modern 1997/1999 river lines",
+      "Convert four li, one li, road-width reports, bridge narrative into WGS84 track or bridge dimensions",
+      "Merge first Jianchun stone bridge, east stone bridge and Yong floating bridge",
+      "Transfer 527 collapse or 518–520 composition date across bridges",
+      "Draw inferred office/school blocks on a known street side, or calculate urban population density",
+      "Generate all missing streets and shops from already-approved panorama illustration"
+    ]
+  },
+  "contexts": [
+    {
+      "id": "R01",
+      "title": "宫城阊阖门与铜驼街：来源同图，不等于完整同名路网",
+      "mapped_road_ids": [
+        "D01",
+        "D02"
+      ],
+      "other_source_feature_ids": [
+        "geo-changhe-palace-gate"
+      ],
+      "entity_ids": [
+        "ic_changhe_palace"
+      ],
+      "grade": "B",
+      "original_quote": null,
+      "provenance_refs": [
+        "research/prosperity-v1/geographic-evidence.json"
+      ],
+      "historical_claim": "同一来源图分别绘宫城南门位置符号、铜驼大道图示残段与宫南横道。",
+      "display_permission": "highlight_existing_source_roads_and_existing_gate_symbol_only",
+      "not_proved": "不能断言图上铜驼路所有残段与《洛阳伽蓝记》阊阖门前御道完全同体，也不画城门到南远端连续新路。",
+      "route_measured": false
+    },
+    {
+      "id": "R02",
+      "title": "永宁寺—宫前御道：寺院在道西的明文",
+      "mapped_road_ids": [],
+      "other_source_feature_ids": [
+        "geo-yongning-temple-walls",
+        "geo-yongning-pagoda-reference",
+        "geo-changhe-palace-gate"
+      ],
+      "entity_ids": [
+        "ic_yongning",
+        "ic_changhe_palace"
+      ],
+      "grade": "A",
+      "original_quote": "在宮前閶闔門南一里御道西。",
+      "provenance_refs": [
+        "research/prosperity-v1/text-review.json#v2.5:E01",
+        "research/dual-b8/cross-batch-review.json#CB08"
+      ],
+      "historical_claim": "文献明确永宁寺与宫前阊阖门的南一里、御道西关系。",
+      "display_permission": "text_relation_and_old_site_symbols_only_not_road_polyline",
+      "not_proved": "‘一里’不自动换算成米；没有对御道原文与P1铜驼街来源线完成同控制点测量配准。",
+      "route_measured": false
+    },
+    {
+      "id": "R03",
+      "title": "建春门外两座石桥与桥北大道分开读",
+      "mapped_road_ids": [],
+      "other_source_feature_ids": [
+        "geo-jianchun-gate"
+      ],
+      "entity_ids": [
+        "gate_jianchun",
+        "bridge_jianchun",
+        "bridge_eaststone",
+        "li_jianyang",
+        "li_suimin"
+      ],
+      "grade": "A",
+      "original_quote": "橋北大道西有建陽里，大道東有綏民里。",
+      "provenance_refs": [
+        "research/dual-b1/decisions.json#B06",
+        "research/dual-b1/decisions.json#B07",
+        "research/dual-b1/decisions.json#B08",
+        "research/dual-b8/cross-batch-review.json#CB13"
+      ],
+      "historical_claim": "第一座建春石桥记527年颓桥事件；另记东石桥南北通行及桥北大道东西两里。",
+      "display_permission": "separate_two_bridge_objects_and_unlocated_road_side_text_only",
+      "not_proved": "不可把第一桥527毁损传给第二桥、把两桥置于同一现河道桥位，或将建阳绥民坊界绘为已测多边形。",
+      "route_measured": false
+    },
+    {
+      "id": "R04",
+      "title": "宣阳门—永桥—洛南四通市：文本方位，不是可量路线",
+      "mapped_road_ids": [],
+      "other_source_feature_ids": [],
+      "entity_ids": [
+        "gate_xuanyang",
+        "bridge_yong",
+        "luoshui",
+        "market_sitong"
+      ],
+      "grade": "A",
+      "original_quote": "宣陽門外四里，至洛水上，作浮橋，所謂永橋也。",
+      "provenance_refs": [
+        "research/dual-b7/luonan-river-markets.json#LR01",
+        "research/dual-b7/luonan-river-markets.json#LR04",
+        "research/dual-b7/luonan-river-markets.json#LR10"
+      ],
+      "historical_claim": "原文记宣阳门外四里至永桥、桥为浮桥；四通市只知洛水南且俗称永桥市。",
+      "display_permission": "only_unlocated_qualitative_relation_card_no_source_map_overlay",
+      "not_proved": "四里不当4km或作为GIS路线长；四通市不因俗称永桥市便实测桥头，现代洛水线不能直接对应古河道。",
+      "route_measured": false
+    },
+    {
+      "id": "R05",
+      "title": "宫前御道两侧官署与国子学：明文顺序及条件解释",
+      "mapped_road_ids": [],
+      "other_source_feature_ids": [
+        "geo-changhe-palace-gate"
+      ],
+      "entity_ids": [
+        "ic_zuowei",
+        "ic_youwei",
+        "ic_situ",
+        "ic_taiwei",
+        "ic_guozixue"
+      ],
+      "grade": "C",
+      "original_quote": "閶闔門前御道東有左衛府。府南有司徒府。",
+      "provenance_refs": [
+        "research/prosperity-v1/text-review.json#v2.5:E03",
+        "research/prosperity-v1/text-review.json#v2.5:E04",
+        "research/dual-b1/decisions.json#B03",
+        "research/dual-b8/cross-batch-review.json#CB10"
+      ],
+      "historical_claim": "左卫府道东、右卫府道西为直接表述；司徒府在左卫府南、国子学在司徒府南属于接续文本，太尉府的御道路侧读法有整段解释。",
+      "display_permission": "editorial_roadside_sequence_nonmetric_only",
+      "not_proved": "不能把两列官署画成正对或等深的实测单位、不能把国子学继承‘御道东’作为独立明文、更不能从太尉府在永宁寺东直接推出其道东。",
+      "route_measured": false
+    }
+  ],
+  "nongeographic_function_groups": [
+    {
+      "id": "T01",
+      "type": "temple",
+      "title": "寺院与宗教设施",
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_context_ids": [
+        "R02"
+      ],
+      "spatial_grade": "source_site_symbol_plus_text_relation",
+      "new_building_footprint": false,
+      "note": "永宁有旧来源图参照与塔基尺寸；塔北佛殿不新增测量点或古高。"
+    },
+    {
+      "id": "T02",
+      "type": "government",
+      "title": "宫前官署与学校",
+      "entity_ids": [
+        "ic_zuowei",
+        "ic_youwei",
+        "ic_situ",
+        "ic_taiwei",
+        "ic_guozixue"
+      ],
+      "source_context_ids": [
+        "R05"
+      ],
+      "spatial_grade": "relative_road_side_and_sequence_unregistered",
+      "new_building_footprint": false,
+      "note": "国子学堂与官署次序来自文本，不能把路侧继承为独立测绘位置。"
+    },
+    {
+      "id": "T03",
+      "type": "transport",
+      "title": "道路与桥梁",
+      "entity_ids": [
+        "bridge_jianchun",
+        "bridge_eaststone",
+        "bridge_yong",
+        "gate_jianchun"
+      ],
+      "source_context_ids": [
+        "R01",
+        "R03",
+        "R04"
+      ],
+      "spatial_grade": "old_site_gate_symbol_plus_separate_documentary_bridge_relations",
+      "new_building_footprint": false,
+      "note": "三桥不是一桥；东石桥南北而行不等于有已测古河线。"
+    },
+    {
+      "id": "T04",
+      "type": "commerce",
+      "title": "市场与买卖",
+      "entity_ids": [
+        "market_sitong",
+        "market_fish"
+      ],
+      "source_context_ids": [
+        "R04"
+      ],
+      "spatial_grade": "text_region_only_no_new_market_coordinates",
+      "new_building_footprint": false,
+      "note": "四通/永桥市仅知洛水南；鱼鳖市为归正里巷市；不得合并或推测市场交易密度。"
+    },
+    {
+      "id": "T05",
+      "type": "neighborhood",
+      "title": "里坊居民区",
+      "entity_ids": [
+        "li_guizheng",
+        "li_jianyang",
+        "li_suimin"
+      ],
+      "source_context_ids": [
+        "R03",
+        "R04"
+      ],
+      "spatial_grade": "documentary_neighborhood_membership_only",
+      "new_building_footprint": false,
+      "note": "建阳和绥民的桥北大道东西关系以及归正里属不提供坊墙边界。"
+    }
+  ],
+  "unchanged_assets": {
+    "source_map": "prosperity/source-layout.svg",
+    "approved_homepage_revision": "panorama-approved-v9",
+    "p451_reference": "prosperity-city-distribution/data.json",
+    "main_reading_workbench": "prosperity.html",
+    "changed_ancient_original_geometries": 0,
+    "added_historical_geographic_anchors": 0,
+    "drawn_population_density_maps": 0,
+    "closed_historic_roads_from_fragments": 0
+  },
+  "followup": [
+    "Find original source-map road line label/period and published widths; build per-line provenance and gap audit",
+    "Compare road side textual statements using original edition line spans, separating manuscript emendations and direct text",
+    "Progressively annotate only established functional relations, not full city residential density or ancient traffic lanes",
+    "Original temple/court surveyed perimeters and ancient terrain still required for precise massing"
+  ]
+}
