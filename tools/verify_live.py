@@ -478,6 +478,21 @@ try:
  assert 'id="p452-next"' in get('prosperity-city-distribution.html').decode('utf-8')
  assert get('downloads/prosperity-road-functions-p452-atlas.pdf').startswith(b'%PDF-')
  assert get('downloads/prosperity-road-functions-p452-package.zip').startswith(b'PK')
+ # P4.5.3: 3 source-graded text clusters, 17 qualitative edges; no new GIS, roads or roof dimensions.
+ cluster_data=json.loads(get('prosperity-street-clusters/data.json'))
+ assert cluster_data['version']==info['prosperity_street_clusters']['version']==release['prosperity_street_clusters_version']=='prosperity-street-clusters-p453'
+ assert len(cluster_data['clusters'])==info['prosperity_street_clusters']['cluster_count']==3
+ assert sum(e['grade']=='A' for c in cluster_data['clusters'] for e in c['edges'])==16
+ assert sum(e['grade']=='C' for c in cluster_data['clusters'] for e in c['edges'])==1
+ assert cluster_data['audit']['new_ancient_wgs84_points']==0
+ assert cluster_data['audit']['existing_source_geometry_modified'] is False
+ assert cluster_data['audit']['ancient_river_channel_constructed'] is False
+ assert cluster_data['audit']['homepage_visual_changed'] is False
+ assert all(not e['geographic_line_allowed'] for c in cluster_data['clusters'] for e in c['edges'])
+ assert hashlib.sha256(get('prosperity-street-clusters/source-index-unchanged.svg')).hexdigest()==info['files_sha256']['prosperity-city-distribution/grounded-distribution.svg']
+ assert 'id="p453-next"' in get('prosperity-road-functions.html').decode('utf-8')
+ assert get('downloads/prosperity-street-clusters-p453-atlas.pdf').startswith(b'%PDF-')
+ assert get('downloads/prosperity-street-clusters-p453-package.zip').startswith(b'PK')
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
@@ -489,6 +504,7 @@ try:
  report['prosperity_core']=info['prosperity_core']
  report['prosperity_gate']=gate_info
  report['prosperity_road_functions']=info['prosperity_road_functions']
+ report['prosperity_street_clusters']=info['prosperity_street_clusters']
  print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: {len(fetcher.retries)}')
 except Exception as e:
  report={'base_url':base,'status':'failed','error':str(e),'files':results,'http_retries':fetcher.retries};raise

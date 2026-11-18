@@ -1,0 +1,505 @@
+{
+  "version": "prosperity-street-clusters-p453",
+  "research_date": "2026-11-18",
+  "title": "北魏盛时洛阳局部道路两侧建筑关系：三组带来源类型边",
+  "reference_window": "516–528 documentary composite; includes events within that window only when explicitly dated",
+  "is_geographic_map": false,
+  "source_lineage": {
+    "p1": "research/prosperity-v1/text-review.json",
+    "b1": "research/dual-b1/decisions.json",
+    "b7": "research/dual-b7/luonan-river-markets.json",
+    "b8": "research/dual-b8/cross-batch-review.json",
+    "p451": "research/prosperity-v4/city-distribution-p451.json",
+    "p452": "research/prosperity-v4/road-functions-p452.json",
+    "entity_inventory": "data/entities.json",
+    "source_geometry": "research/prosperity-v1/geographic-evidence.json",
+    "approved_hero": "homepage/approval-v9.json",
+    "source_datum": "EPSG:4610 Xian 1980 source-map framework",
+    "primary_texts": [
+      "https://deerpark.app/cbeta/B0077/1",
+      "https://deerpark.app/cbeta/B0077/2",
+      "https://deerpark.app/cbeta/B0077/3"
+    ]
+  },
+  "evidence_grades": {
+    "A": "原典明示的方位、所属或叙事先后；可编码定性关系，不能编码坐标",
+    "C": "解释层：句读承接、校补或跨句路侧转移需要说明，不得当成直接明文",
+    "B": "旧2012来源图概略遗址点或路迹，与文献关系另核；只能显示既有坐标",
+    "D": "未定位、不生成新实体或足迹"
+  },
+  "diagram_contract": {
+    "node_placement": "all manuscript diagrams are schematic; x and y are unrelated to source map coordinates, distance, street widths, scale, or ancient elevations",
+    "edges_only": "directly evidenced qualitative relations; not metric road segments",
+    "source_map_overlay_policy": "reuse P4.5.1 existing source SVG unchanged as a separate third plate, without drawing any qualitative edge on it",
+    "new_historical_coordinates_added": 0,
+    "new_site_boundaries_added": 0,
+    "new_roof_elevations_added": 0,
+    "new_population_density_estimates": 0,
+    "modern_luo_as_ancient_channel": false,
+    "approved_hero_v9_modified": false
+  },
+  "clusters": [
+    {
+      "id": "K01",
+      "title": "宫前御道：寺院、两卫府与南北官学次序",
+      "reading_scope": "《洛阳伽蓝记》卷一永宁寺及宫前官署段",
+      "non_geographic": true,
+      "nodes": [
+        {
+          "id": "ic_palace_avenue",
+          "name": "宫前御道",
+          "role": "documentary_road",
+          "feature_id": null
+        },
+        {
+          "id": "ic_changhe_palace",
+          "name": "阊阖门（宫前）",
+          "role": "source_map_site_symbol",
+          "feature_id": "geo-changhe-palace-gate"
+        },
+        {
+          "id": "ic_yongning",
+          "name": "永宁寺",
+          "role": "source_map_complex_reference",
+          "feature_id": "geo-yongning-temple-walls"
+        },
+        {
+          "id": "ic_zuowei",
+          "name": "左卫府",
+          "role": "office",
+          "feature_id": null
+        },
+        {
+          "id": "ic_youwei",
+          "name": "右卫府",
+          "role": "office",
+          "feature_id": null
+        },
+        {
+          "id": "ic_situ",
+          "name": "司徒府",
+          "role": "office",
+          "feature_id": null
+        },
+        {
+          "id": "ic_guozixue",
+          "name": "国子学",
+          "role": "school",
+          "feature_id": null
+        },
+        {
+          "id": "ic_taiwei",
+          "name": "太尉府",
+          "role": "office",
+          "feature_id": null
+        }
+      ],
+      "edges": [
+        {
+          "id": "K01E01",
+          "subject": "ic_yongning",
+          "predicate": "west_of",
+          "object": "ic_palace_avenue",
+          "grade": "A",
+          "source_record": "v2.5:E01",
+          "quote": "在宮前閶闔門南一里御道西。",
+          "scope": "寺院在御道西；一里为古籍原文距离，不转换米",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E02",
+          "subject": "ic_yongning",
+          "predicate": "south_of",
+          "object": "ic_changhe_palace",
+          "grade": "A",
+          "source_record": "v2.5:E01",
+          "quote": "在宮前閶闔門南一里御道西。",
+          "scope": "南一里为文献方位与原文距离，不据此推断两点间实测GIS距离",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E03",
+          "subject": "ic_zuowei",
+          "predicate": "east_of",
+          "object": "ic_palace_avenue",
+          "grade": "A",
+          "source_record": "v2.5:E03",
+          "quote": "閶闔門前御道東有左衛府。",
+          "scope": "左卫御道东为明文",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E04",
+          "subject": "ic_youwei",
+          "predicate": "west_of",
+          "object": "ic_palace_avenue",
+          "grade": "A",
+          "source_record": "B1:B05",
+          "quote": "御道西有右衛府。",
+          "scope": "右卫御道西为正文语境",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E05",
+          "subject": "ic_situ",
+          "predicate": "south_of",
+          "object": "ic_zuowei",
+          "grade": "A",
+          "source_record": "v2.5:E03",
+          "quote": "府南有司徒府。",
+          "scope": "府为左卫府前句所承接；不表示已知距离",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E06",
+          "subject": "ic_guozixue",
+          "predicate": "south_of",
+          "object": "ic_situ",
+          "grade": "A",
+          "source_record": "v2.5:E04",
+          "quote": "司徒府南有國子學堂。",
+          "scope": "司徒府南为本句所属；国子学独立道路侧别未记",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E07",
+          "subject": "ic_taiwei",
+          "predicate": "east_of",
+          "object": "ic_yongning",
+          "grade": "A",
+          "source_record": "v2.5:E02",
+          "quote": "其寺東有太尉府。",
+          "scope": "寺东相对位置不能自动推出御道东",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E08",
+          "subject": "ic_taiwei",
+          "predicate": "west_of",
+          "object": "ic_palace_avenue",
+          "grade": "C",
+          "source_record": "B1:B03",
+          "quote": "御道西有右衛府，府南有太尉府。",
+          "scope": "道西来自整个官署段落承接的工作解释，非太尉直接独立路侧明文",
+          "geographic_line_allowed": false
+        }
+      ],
+      "uncertainty_notes": [
+        "铜驼大道2012来源图残线尚未证与本文宫前御道全段完全同体",
+        "同一宫前阊阖门不与城西同名城门合并；洛南'阊阖填列'不新增第三门",
+        "官署示意左右仅表达方位边，不提供单体院墙、占地或南北实测间距"
+      ],
+      "source_record_ids": [
+        "v2.5:E01",
+        "v2.5:E02",
+        "v2.5:E03",
+        "v2.5:E04",
+        "B1:B03",
+        "B1:B05",
+        "CB08",
+        "CB10"
+      ]
+    },
+    {
+      "id": "K02",
+      "title": "建春门：第一石桥、东石桥与桥北大道两里",
+      "reading_scope": "《洛阳伽蓝记》卷二建春门及东石桥段",
+      "non_geographic": true,
+      "nodes": [
+        {
+          "id": "gate_jianchun",
+          "name": "建春门",
+          "role": "source_map_site_symbol",
+          "feature_id": "geo-jianchun-gate"
+        },
+        {
+          "id": "bridge_jianchun",
+          "name": "建春门第一石桥",
+          "role": "documentary_bridge",
+          "feature_id": null
+        },
+        {
+          "id": "bridge_eaststone",
+          "name": "东石桥",
+          "role": "documentary_bridge",
+          "feature_id": null
+        },
+        {
+          "id": "road_eaststone_north",
+          "name": "东石桥北大道",
+          "role": "documentary_road",
+          "feature_id": null
+        },
+        {
+          "id": "li_jianyang",
+          "name": "建阳里",
+          "role": "documentary_neighborhood",
+          "feature_id": null
+        },
+        {
+          "id": "li_suimin",
+          "name": "绥民里",
+          "role": "documentary_neighborhood",
+          "feature_id": null
+        }
+      ],
+      "edges": [
+        {
+          "id": "K02E01",
+          "subject": "bridge_jianchun",
+          "predicate": "outside",
+          "object": "gate_jianchun",
+          "grade": "A",
+          "source_record": "B1:B06",
+          "quote": "至建春門外，東入陽渠石橋。",
+          "scope": "建春门外第一石桥；不能取现代阳渠河线恢复旧桥位",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K02E02",
+          "subject": "bridge_eaststone",
+          "predicate": "outside",
+          "object": "gate_jianchun",
+          "grade": "A",
+          "source_record": "B1:B07",
+          "quote": "出建春門外一里餘，至東石橋。",
+          "scope": "门外一里余不换算地图米值；两石桥不能并为一桥",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K02E03",
+          "subject": "road_eaststone_north",
+          "predicate": "north_of",
+          "object": "bridge_eaststone",
+          "grade": "A",
+          "source_record": "B1:B08",
+          "quote": "橋北大道西有建陽里，大道東有綏民里。",
+          "scope": "桥北大道为文献参照；缺独立地理路中线",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K02E04",
+          "subject": "li_jianyang",
+          "predicate": "west_of",
+          "object": "road_eaststone_north",
+          "grade": "A",
+          "source_record": "B1:B08",
+          "quote": "橋北大道西有建陽里。",
+          "scope": "只给坊里与桥北大道的路侧关系，不画坊墙",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K02E05",
+          "subject": "li_suimin",
+          "predicate": "east_of",
+          "object": "road_eaststone_north",
+          "grade": "A",
+          "source_record": "B1:B08",
+          "quote": "大道東有綏民里。",
+          "scope": "不增加邻里间距或店铺分布",
+          "geographic_line_allowed": false
+        }
+      ],
+      "temporal_events": [
+        {
+          "id": "K02T01",
+          "subject": "bridge_jianchun",
+          "event": "孝昌三年（527）大雨頹橋",
+          "year": 527,
+          "source_record": "B1:B06",
+          "does_not_transfer_to": [
+            "bridge_eaststone",
+            "bridge_yong"
+          ],
+          "scope": "盛时组合窗口内发生过破坏，不能画成516—528整个时段恒定状态"
+        },
+        {
+          "id": "K02T02",
+          "subject": "bridge_eaststone",
+          "event": "晋太康元年造之正文记述",
+          "year": 280,
+          "source_record": "B1:B07",
+          "scope": "前代建造年份按古籍保留，不证明北魏桥梁上部结构始终同形"
+        }
+      ],
+      "uncertainty_notes": [
+        "桥北大道的方位并不自动与P1任何东西横街同体",
+        "两桥没有核定共同测线或现代河道精确坐标",
+        "魏晋旧桥背景与527破坏须与516—528盛时合成层分期显示"
+      ],
+      "source_record_ids": [
+        "B1:B06",
+        "B1:B07",
+        "B1:B08",
+        "CB13"
+      ]
+    },
+    {
+      "id": "K03",
+      "title": "洛南：宣阳门、永桥浮桥与两种市场",
+      "reading_scope": "《洛阳伽蓝记》卷二归正里巷市与卷三永桥、四通市",
+      "non_geographic": true,
+      "nodes": [
+        {
+          "id": "gate_xuanyang",
+          "name": "宣阳门",
+          "role": "documentary_city_gate",
+          "feature_id": null
+        },
+        {
+          "id": "bridge_yong",
+          "name": "永桥",
+          "role": "documentary_floating_bridge",
+          "feature_id": null
+        },
+        {
+          "id": "luoshui",
+          "name": "洛水",
+          "role": "documentary_ancient_watercourse_not_georegistered",
+          "feature_id": null
+        },
+        {
+          "id": "market_sitong",
+          "name": "四通市（永桥市）",
+          "role": "market_south_of_luo",
+          "feature_id": null
+        },
+        {
+          "id": "market_fish",
+          "name": "鱼鳖市",
+          "role": "neighborhood_market",
+          "feature_id": null
+        },
+        {
+          "id": "li_guizheng",
+          "name": "归正里",
+          "role": "neighborhood",
+          "feature_id": null
+        }
+      ],
+      "edges": [
+        {
+          "id": "K03E01",
+          "subject": "bridge_yong",
+          "predicate": "outside",
+          "object": "gate_xuanyang",
+          "grade": "A",
+          "source_record": "B7:LR01",
+          "quote": "宣陽門外四里，至洛水上，作浮橋，所謂永橋也。",
+          "scope": "四里只是原文距离，不取现代单位或线形",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K03E02",
+          "subject": "bridge_yong",
+          "predicate": "on",
+          "object": "luoshui",
+          "grade": "A",
+          "source_record": "B7:LR01",
+          "quote": "至洛水上，作浮橋，所謂永橋也。",
+          "scope": "桥在古洛水上，未据此取得河道或桥位的地理路径",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K03E03",
+          "subject": "market_sitong",
+          "predicate": "south_of",
+          "object": "luoshui",
+          "grade": "A",
+          "source_record": "B7:LR10",
+          "quote": "別立市於洛水南，號曰四通市。",
+          "scope": "位置仅限古洛水南，不必位于桥头；民间称永桥市为同一市场别名",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K03E04",
+          "subject": "market_fish",
+          "predicate": "within",
+          "object": "li_guizheng",
+          "grade": "A",
+          "source_record": "B7:LR07",
+          "quote": "賜宅城南歸正里。……自立巷市。……時人謂為魚鱉市也。",
+          "scope": "归正里俗称吴人坊，鱼鳖市为其内部巷市；与四通市未证同体",
+          "geographic_line_allowed": false
+        }
+      ],
+      "uncertainty_notes": [
+        "永桥市为四通市俗称，不给第二个独立市场点",
+        "鱼鳖市不是从孝义里小市北原段自然继承的位置",
+        "永桥未记景明行像经过，也不能从未记而断言所有参与者均未过桥",
+        "518—520常景作颂是记文事件，不等于永桥始建或完工时间",
+        "不得用1997/1999现代洛水河槽给北魏桥梁和两市配准"
+      ],
+      "source_record_ids": [
+        "B7:LR01",
+        "B7:LR04",
+        "B7:LR05",
+        "B7:LR07",
+        "B7:LR10",
+        "CB11",
+        "CB13"
+      ]
+    }
+  ],
+  "spatial_index_references": [
+    {
+      "feature_id": "geo-changhe-palace-gate",
+      "entity_id": "ic_changhe_palace",
+      "cluster_id": "K01",
+      "role": "P1 published generalized symbol center"
+    },
+    {
+      "feature_id": "geo-yongning-temple-walls",
+      "entity_id": "ic_yongning",
+      "cluster_id": "K01",
+      "role": "P1 partial excavated temple wall lines, not full enceinte"
+    },
+    {
+      "feature_id": "geo-jianchun-gate",
+      "entity_id": "gate_jianchun",
+      "cluster_id": "K02",
+      "role": "P1 published generalized city gate symbol center"
+    }
+  ],
+  "forbidden_inferences": [
+    {
+      "a": "ic_palace_avenue",
+      "b": "geo-tongtuo-avenue",
+      "why": "Literary palace road cannot yet be equated with complete 2012 Tongtuo remnant geometry"
+    },
+    {
+      "a": "bridge_jianchun",
+      "b": "bridge_eaststone",
+      "why": "Two separate bridge references; 527 collapse belongs to first only"
+    },
+    {
+      "a": "bridge_eaststone",
+      "b": "bridge_yong",
+      "why": "Stone bridge of eastern city and southern Luo floating bridge distinct"
+    },
+    {
+      "a": "market_sitong",
+      "b": "market_fish",
+      "why": "Two fish markets not proven identical or adjacent"
+    },
+    {
+      "a": "v3_jingming",
+      "b": "bridge_yong",
+      "why": "Image procession account does not establish this bridge as route"
+    }
+  ],
+  "audit": {
+    "cluster_count": 3,
+    "documentary_entity_ids": 20,
+    "direct_edges": 16,
+    "interpretive_edges": 1,
+    "new_ancient_wgs84_points": 0,
+    "existing_source_geometry_modified": false,
+    "ancient_river_channel_constructed": false,
+    "sourced_footprint_polygons_created": 0,
+    "measured_old_roof_height_m": null,
+    "historical_population_density_estimated": false,
+    "homepage_visual_changed": false
+  },
+  "next_gate": "Need original measured palace/temple and bridge site plans with phase-specific common controls before converting these qualitative edges to georegistered footprints or routing."
+}
