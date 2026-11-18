@@ -428,6 +428,7 @@ def main():
 
 if __name__=="__main__":
     from prosperity_anchors_p461 import build as publish_source_readings
+    from prosperity_field_p464 import build as publish_field
     from prosperity_corridors_p463 import build as publish_corridors
     from prosperity_network_p462 import build as publish_network
 
@@ -435,3 +436,4 @@ if __name__=="__main__":
     publish_source_readings()
     publish_network()
     publish_corridors()
+    publish_field()

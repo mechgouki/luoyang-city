@@ -34,13 +34,26 @@ class CorridorsStudy(unittest.TestCase):
             for side, name, (x, y) in figure["contacts"]:
                 self.assertTrue(left < x < right and top < y < bottom, (side, name))
 
+    def test_field_supplement(self):
+        info = json.loads((SITE / "build-info.json").read_text())
+        study = info["prosperity_field_p464"]
+        data = json.loads((SITE / study["readings"]).read_text())
+        self.assertEqual(len(PdfReader(SITE / study["atlas"]).pages), 2)
+        self.assertEqual(len(study["plates"]), 2)
+        ward = data["ward"]
+        self.assertEqual((ward["rut_band_width_m"], ward["groove_ew_length_approx_m"], ward["groove_ns_width_m"]), (4.6, 4.6, 0.4))
+        self.assertEqual(ward["east_foundation_ew_exposed_gt_m"], 24)
+        self.assertIsNone(ward["gate_to_central_cross_m"])
+        self.assertIsNone(data["hongchi"]["southern_outlet_516_528_coordinates"])
+        self.assertEqual(data["hongchi"]["pond_internal_bank_orientation"], "东西")
+
     def test_offline_edition(self):
         info = json.loads((SITE/"build-info.json").read_text())
         study = info["prosperity_corridors_p463"]
         self.assertEqual(len(PdfReader(SITE/study["atlas"]).pages),3)
         with zipfile.ZipFile(SITE/study["bundle"]) as archive:
             manifest = json.loads(archive.read(study["manifest"]))
-            self.assertEqual(manifest["source_commit"], info["source_commit"])
+            self.assertEqual(manifest["source_commit"], study["source_commit"])
             for name, digest in manifest["files_sha256"].items():
                 self.assertEqual(archive.read(name), (SITE/name).read_bytes())
                 self.assertEqual(hashlib.sha256(archive.read(name)).hexdigest(),digest)

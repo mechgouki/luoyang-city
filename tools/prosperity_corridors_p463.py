@@ -1,12 +1,12 @@
 """Publish the survey dimensions and the two independent readings of Hongchi."""
 import html
+import json
 import shutil
 import zipfile
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
 from dual_cartography import dump, load, sha
-from north_b4 import render_atlas
 from prosperity_anchors_p461 import ROOT, SITE, digest, offline_page
 from prosperity_network_p462 import PAGE as PREVIOUS
 
@@ -140,7 +140,6 @@ def build(site=SITE):
         ET.ElementTree(svg).write(path, encoding="utf-8", xml_declaration=True)
         plates.append(path)
     shutil.copyfile(SOURCE/"evidence.json",dest/"evidence.json")
-    render_atlas(plates, site/ATLAS)
     sources = "".join(f'<li id="src-{key}"><a href="{html.escape(rec["url"], quote=True)}">{html.escape(rec["title"])}</a>。{html.escape(rec["locator"])}</li>' for key,rec in data["sources"].items())
     template = (SOURCE/"index.html").read_text()
     page = template.replace("<!-- SOURCES -->",sources)
@@ -151,20 +150,26 @@ def build(site=SITE):
     if previous.count(marker)!=1 or digest(previous.encode())!="0147a872d2bc7c606a9cf2ad2d9c63a7564e48c9606c2b39fcbf09f6cb462c54":
         raise ValueError("P4.6.2 reading page differs from its published baseline")
     predecessor.write_text(previous.replace(marker,ENTRY+marker,1))
-    assets = [*plates,dest/"evidence.json",site/ATLAS]
-    files = {path.relative_to(site).as_posix():sha(path) for path in assets}
-    offline = offline_page(page,FOLDER,ATLAS).encode()
-    dump(site/MANIFEST,{"version":"prosperity-corridors-p463","source_commit":info["source_commit"],
-                        "files_sha256":files,"offline_index_sha256":digest(offline)})
-    with zipfile.ZipFile(site/BUNDLE,"w") as archive:
-        for name,content in [("index.html",offline),*((n,(site/n).read_bytes()) for n in [*files,MANIFEST])]:
-            archive.writestr(zipfile.ZipInfo(name),content,compress_type=zipfile.ZIP_DEFLATED)
+    archived = ROOT / "research/prosperity-v4/archive/corridors-463.zip"
+    if sha(archived) != "7230498ebddc8966b39d7295d8ab9861293e1a7acd558b25ba5dd4669ca97f94":
+        raise ValueError("P4.6.3 archive differs from its accepted release")
+    with zipfile.ZipFile(archived) as archive:
+        manifest = json.loads(archive.read(MANIFEST))
+        files = manifest["files_sha256"]
+        if archive.read("index.html") != offline_page(page, FOLDER, ATLAS).encode():
+            raise ValueError("P4.6.3 reading page differs from its accepted edition")
+        for path in [*plates, dest / "evidence.json"]:
+            if sha(path) != files[path.relative_to(site).as_posix()]:
+                raise ValueError(f"P4.6.3 plate or readings changed: {path.name}")
+        (site / ATLAS).write_bytes(archive.read(ATLAS))
+        (site / MANIFEST).write_bytes(archive.read(MANIFEST))
+    shutil.copyfile(archived, site / BUNDLE)
     version = "prosperity-corridors-p463"
     release["extensions"] = sorted(set(release["extensions"]) | {version})
     release["current_milestone"] = "盛时 P4.6.3 · 外郭九道、白马寺里坊与鸿池陂"
     release["prosperity_corridors_p463_version"] = version
     dump(site/"release.json",release)
-    info["prosperity_corridors_p463"] = {"version":version,"source_commit":info["source_commit"],"page":PAGE,
+    info["prosperity_corridors_p463"] = {"version":version,"source_commit":manifest["source_commit"],"page":PAGE,
                                       "atlas":ATLAS,"bundle":BUNDLE,"manifest":MANIFEST,"atlas_plates":list(diagrams)}
     for name in [*files,PREVIOUS,PAGE,MANIFEST,BUNDLE,"release.json"]:
         info["files_sha256"][name] = sha(site/name)
