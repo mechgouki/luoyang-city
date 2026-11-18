@@ -63,7 +63,7 @@ def check_page(page, base, output, device):
     assert response.ok and response.body().startswith(b"%PDF-")
     page.locator('nav a[href="#gate"]').click()
     page.screenshot(path=str(output / f"p464-{device}.png"))
-    page.locator("header a").click()
+    page.get_by_role("link", name="返回外郭九道、白马寺与鸿池陂", exact=True).click()
     page.wait_for_url("**/prosperity-corridors-p463.html")
     page.locator('header a').click()
     page.wait_for_url("**/prosperity-network-p462.html")
