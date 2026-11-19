@@ -1,0 +1,439 @@
+{
+  "schema": "jianchun-public-verification-summary-v1",
+  "status": "passed",
+  "checked_at_utc": "2026-11-19T14:56:05.145058+00:00",
+  "public_site": "https://mechgouki.github.io/luoyang-city/",
+  "public_page": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html",
+  "public_jianchun_entry": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#context-geo-jianchun-gate",
+  "pull_request": {
+    "url": "https://github.com/mechgouki/luoyang-city/pull/60",
+    "head_commit": "d3f7f0a647a97e2482737b254b80c9c50afb1292",
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44543196772",
+    "workflow_status": "success",
+    "artifact_build_commit": "ece5d744197f16baad42ddcaddf75a841fee25e1"
+  },
+  "production": {
+    "source_commit": "6e8ad4a9d485a74913574ad13f1a1df2f8bc1f46",
+    "commit_url": "https://github.com/mechgouki/luoyang-city/commit/6e8ad4a9d485a74913574ad13f1a1df2f8bc1f46",
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44544871817",
+    "successful_attempt": 2,
+    "jobs": {
+      "build": {
+        "status": "completed",
+        "conclusion": "success",
+        "job_id": 135636741756,
+        "completed_at": "2026-11-19T14:46:13Z"
+      },
+      "deploy": {
+        "status": "completed",
+        "conclusion": "success",
+        "job_id": 135641361163,
+        "completed_at": "2026-11-19T14:46:43Z"
+      },
+      "verify-live": {
+        "status": "completed",
+        "conclusion": "success",
+        "job_id": 135641675367,
+        "completed_at": "2026-11-19T14:53:03Z"
+      }
+    }
+  },
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "build": "failure",
+      "deploy": "skipped",
+      "verify_live": "skipped",
+      "failure": "30-second timeout waiting for a browser download event",
+      "target_public_url": "https://mechgouki.github.io/luoyang-city/backbone-469/source-frame-audit.json",
+      "target_inferred_from_sorted_loop_and_10_completed_downloads": true,
+      "completed_downloads_before_timeout": 10,
+      "target_bytes": 38599,
+      "target_sha256": "37f6fa59bdab5d2a7747ba328e34544b4d2c9a2c58ee51be71997b72460e9405",
+      "target_source_and_accepted_PR_download_identical": true,
+      "recorded_browser_errors": 0,
+      "failed_artifact": {
+        "artifact_id": 14540846523,
+        "name": "browser-build-evidence",
+        "bytes": 64756864,
+        "sha256": "46f89f649ca2c1cd8392b93cabc90f34cf2506011c03090c55a5807211e5ed6f",
+        "expires_at": "2026-12-03T14:36:45Z",
+        "downloaded_archive_digest_verified": true
+      }
+    },
+    {
+      "attempt": 2,
+      "result": "build/deploy/verify-live all succeeded",
+      "retry_count": 1,
+      "retry_method": "rerun_failed_workflow_run_jobs; dependent deployment and live verification then executed",
+      "source_commit_unchanged": true,
+      "code_unchanged": true,
+      "tests_unchanged": true,
+      "download_timeout_unchanged": true,
+      "tests_skipped_to_accept": false
+    }
+  ],
+  "artifact_selection": "Successful build/live artifacts were selected by exact ID and creation time within attempt-2 job bounds, then verified against the source commit, archive digest and actual report contents; the earlier same-name failure artifact was excluded.",
+  "artifacts": [
+    {
+      "role": "build",
+      "run_id": 44544871817,
+      "run_attempt": 2,
+      "artifact_id": 14541835677,
+      "artifact_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44544871817/artifacts/14541835677",
+      "name": "browser-build-evidence",
+      "bytes": 135267060,
+      "sha256": "c2d223a41a346daf1da8ac31c896936ef722f793f1563e5eb738f6dc991a912c",
+      "created_at": "2026-11-19T14:45:59Z",
+      "expires_at": "2026-12-03T14:45:53Z",
+      "downloaded_archive_digest_verified": true,
+      "source_commit": "6e8ad4a9d485a74913574ad13f1a1df2f8bc1f46"
+    },
+    {
+      "role": "live",
+      "run_id": 44544871817,
+      "run_attempt": 2,
+      "artifact_id": 14541583471,
+      "artifact_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44544871817/artifacts/14541583471",
+      "name": "live-acceptance-evidence",
+      "bytes": 84129249,
+      "sha256": "fb3f92ab09a89da891df3d5d53e8a0aa0cc530162efb1d7809ed98afa7a656fa",
+      "created_at": "2026-11-19T14:53:00Z",
+      "expires_at": "2026-12-19T14:52:56Z",
+      "downloaded_archive_digest_verified": true,
+      "source_commit": "6e8ad4a9d485a74913574ad13f1a1df2f8bc1f46"
+    },
+    {
+      "role": "pr",
+      "run_id": 44543196772,
+      "run_attempt": 1,
+      "artifact_id": 14541045176,
+      "artifact_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44543196772/artifacts/14541045176",
+      "name": "browser-build-evidence",
+      "bytes": 135260376,
+      "sha256": "824d4a69088182a41e5b51b4af8b1f3442deb9e4a6f39531aab8e475e8ad258f",
+      "created_at": "2026-11-19T14:30:17Z",
+      "expires_at": "2026-12-03T14:30:11Z",
+      "downloaded_archive_digest_verified": true,
+      "source_commit": "d3f7f0a647a97e2482737b254b80c9c50afb1292"
+    }
+  ],
+  "validation_counts": {
+    "semantic_regressions": 173,
+    "homepage_regressions": 5,
+    "ci_public_resources": 708,
+    "independent_public_files": 23,
+    "independent_public_assertions": 64,
+    "independent_public_readback": "passed"
+  },
+  "browser_verification": {
+    "production_build": {
+      "desktop": {
+        "status": "passed",
+        "check_groups": 10,
+        "downloads": 14,
+        "download_file_hashes_verified": true,
+        "no_javascript_checks_passed": true,
+        "reported_browser_errors": 0
+      },
+      "mobile": {
+        "status": "passed",
+        "check_groups": 10,
+        "downloads": 14,
+        "download_file_hashes_verified": true,
+        "no_javascript_checks_passed": true,
+        "reported_browser_errors": 0
+      }
+    },
+    "production_live": {
+      "desktop": {
+        "status": "passed",
+        "check_groups": 10,
+        "downloads": 14,
+        "download_file_hashes_verified": true,
+        "no_javascript_checks_passed": true,
+        "reported_browser_errors": 0
+      },
+      "mobile": {
+        "status": "passed",
+        "check_groups": 10,
+        "downloads": 14,
+        "download_file_hashes_verified": true,
+        "no_javascript_checks_passed": true,
+        "reported_browser_errors": 0
+      }
+    },
+    "PR": {
+      "desktop": {
+        "status": "passed",
+        "check_groups": 10,
+        "downloads": 14,
+        "download_file_hashes_verified": true,
+        "no_javascript_checks_passed": true,
+        "reported_browser_errors": 0
+      },
+      "mobile": {
+        "status": "passed",
+        "check_groups": 10,
+        "downloads": 14,
+        "download_file_hashes_verified": true,
+        "no_javascript_checks_passed": true,
+        "reported_browser_errors": 0
+      }
+    }
+  },
+  "screenshots": {
+    "expected": 36,
+    "production_build_matches_accepted_PR_bytes": 36,
+    "production_live_matches_accepted_PR_bytes": 36,
+    "differences": [],
+    "missing": [],
+    "extra": [],
+    "PR_qa_crop_files_excluded": 2,
+    "scope": "Exact image SHA-256 comparison to the previously reviewed PR images; this comparison does not claim a new manual visual review of all images.",
+    "digest_manifest": [
+      {
+        "file": "p469-desktop-frame-06a-map.png",
+        "shared_PR_build_live_sha256": "224ba55c3be32d8552d72fe74737ee0b7081084cc49892f048d4ce590b657224"
+      },
+      {
+        "file": "p469-desktop-frame-06a-modern-on-map.png",
+        "shared_PR_build_live_sha256": "16a68dc873ae77b673f07df4d481d7f164b6c85fa00c7ea3657aecbd26617a72"
+      },
+      {
+        "file": "p469-desktop-frame-06a-modern-on.png",
+        "shared_PR_build_live_sha256": "ef35d41ef32102299339e8284967f3bb8de517e28dc8cb95db0b46795073df61"
+      },
+      {
+        "file": "p469-desktop-frame-06a.png",
+        "shared_PR_build_live_sha256": "4edcbe8457434d5538e83029d63b9e2b10037bc1a699721357d00e62a44cb216"
+      },
+      {
+        "file": "p469-desktop-frame-qian2018-map.png",
+        "shared_PR_build_live_sha256": "92812c120d44ec0bf9c168a5271d85e9a75d834338b225d2c8246b0b5e7432b0"
+      },
+      {
+        "file": "p469-desktop-frame-qian2018.png",
+        "shared_PR_build_live_sha256": "3c666cf1616a00278fb5b1ead737407f7e7fad146b7100df9a98c944d4787f37"
+      },
+      {
+        "file": "p469-desktop-geo-changhe-palace-gate-context.png",
+        "shared_PR_build_live_sha256": "3ee46cbccc997d5d4074dca072623d1cf8445a7c5eabf5e30a7368b470708ed8"
+      },
+      {
+        "file": "p469-desktop-geo-daxia-gate-context.png",
+        "shared_PR_build_live_sha256": "f42f1c4b88da8ea26cfcf66fec34c4561dcf906e698926b3e754eb73c0748e37"
+      },
+      {
+        "file": "p469-desktop-geo-jianchun-gate-context.png",
+        "shared_PR_build_live_sha256": "13235230ed44664ad093871436cdfb4be8cf66af4d9785f665114a27d0c4553b"
+      },
+      {
+        "file": "p469-desktop-geo-qianqiu-gate-context.png",
+        "shared_PR_build_live_sha256": "e54948272c23feec025f4bf43fa1c7f3292d06e71ea8eed0dcdb512ed1c7db67"
+      },
+      {
+        "file": "p469-desktop-jianchun-audit-figures.png",
+        "shared_PR_build_live_sha256": "8ea8d06a1b2d5252118c5963ff7bf2e48a24caa606eefb477993f396095ddf29"
+      },
+      {
+        "file": "p469-desktop-nojs-frame-06a-map.png",
+        "shared_PR_build_live_sha256": "3644813637dfd77e54c7fb1e8d51177195ae52b1289fdb3095be302e6c677e50"
+      },
+      {
+        "file": "p469-desktop-nojs-frame-06a.png",
+        "shared_PR_build_live_sha256": "75f7e04b7014ef16abcb209ab7499812beb181518ed7febcc59dd64b894bcb13"
+      },
+      {
+        "file": "p469-desktop-nojs-frame-qian2018-map.png",
+        "shared_PR_build_live_sha256": "83ffedde88a9e286f04f704223c74194ec58e9ef4b1617cf28144bb1d60ea771"
+      },
+      {
+        "file": "p469-desktop-nojs-frame-qian2018.png",
+        "shared_PR_build_live_sha256": "a37f7d36b103394b89c82bfbf3ab89b66755a5506151b40a862e7ddf6ec345a3"
+      },
+      {
+        "file": "p469-desktop-nojs-geo-changhe-palace-gate-context.png",
+        "shared_PR_build_live_sha256": "60c98436b8172c982a0202ce472dc1fcabed551d38004b5cabe928e7bcf31b29"
+      },
+      {
+        "file": "p469-desktop-nojs-geo-jianchun-gate-context.png",
+        "shared_PR_build_live_sha256": "7618a443cca82444e2ff7a7ea38309821e9d83eebee09901dfdbdf20d544a5ec"
+      },
+      {
+        "file": "p469-desktop-nojs-jianchun-audit-figures.png",
+        "shared_PR_build_live_sha256": "53fd712356a771d5ba4e64e707d65073eadf4f1447940c1a6033f41cb0142e3e"
+      },
+      {
+        "file": "p469-mobile-frame-06a-map.png",
+        "shared_PR_build_live_sha256": "b301e6ef0dac81c56945f623b87d2dc197812d91f7b2f7c72782c6c8cdef0a97"
+      },
+      {
+        "file": "p469-mobile-frame-06a-modern-on-map.png",
+        "shared_PR_build_live_sha256": "08e369425250d4270fba1eda1b99185cbc0b57a1e1756216e98cf495e2b4dcc4"
+      },
+      {
+        "file": "p469-mobile-frame-06a-modern-on.png",
+        "shared_PR_build_live_sha256": "507e17512e1dcde83c8db5b5cf298220c9829c135f2bf64ce03e01ceb26557ce"
+      },
+      {
+        "file": "p469-mobile-frame-06a.png",
+        "shared_PR_build_live_sha256": "fc896c978f98b2f6307d320efd8ba754f63233c48bb728bb681067ce46a599b0"
+      },
+      {
+        "file": "p469-mobile-frame-qian2018-map.png",
+        "shared_PR_build_live_sha256": "c9ca41f27bc89d8f0144f6682dd67443501ef85128768fc91b60cd6ef35cf0be"
+      },
+      {
+        "file": "p469-mobile-frame-qian2018.png",
+        "shared_PR_build_live_sha256": "a20bdba1914d15e1bfb1935a463f87d5f348ec292782f377088d34acdd5f5ddd"
+      },
+      {
+        "file": "p469-mobile-geo-changhe-palace-gate-context.png",
+        "shared_PR_build_live_sha256": "bebd52ec53125fcbbc34cf91bef6552edc131bcb65acf0a5e80fdeff49b421ec"
+      },
+      {
+        "file": "p469-mobile-geo-daxia-gate-context.png",
+        "shared_PR_build_live_sha256": "d58b7b18b1089a2d6c8ccc6ac9e1f1c53d77726736bac43fddf5a17d84541692"
+      },
+      {
+        "file": "p469-mobile-geo-jianchun-gate-context.png",
+        "shared_PR_build_live_sha256": "1d5a55e9a72b9d620aa8b43985932f35e4d28d7cb0dbf37f181b6e3a6cc8f680"
+      },
+      {
+        "file": "p469-mobile-geo-qianqiu-gate-context.png",
+        "shared_PR_build_live_sha256": "48dd5c9d9dfffe0477acf21192945fc93a0199ffaebc513ca6d3e8e52d19ee48"
+      },
+      {
+        "file": "p469-mobile-jianchun-audit-figures.png",
+        "shared_PR_build_live_sha256": "4f6706ef3967d2ef891ecfba29ee682a6697cddba202757d0d9ac0d67c4b4bcd"
+      },
+      {
+        "file": "p469-mobile-nojs-frame-06a-map.png",
+        "shared_PR_build_live_sha256": "0a23b19e197f089e628aef792d6bec6d777cf7cc658a28c6c88a7b2c10a2d655"
+      },
+      {
+        "file": "p469-mobile-nojs-frame-06a.png",
+        "shared_PR_build_live_sha256": "6d1301bf402f885b15748739c4d849f9d3fecb8f7df735d6aa3d8643557fd152"
+      },
+      {
+        "file": "p469-mobile-nojs-frame-qian2018-map.png",
+        "shared_PR_build_live_sha256": "dc8bca1a9b54326697edbd1fcaff458cc5a98d038e7ae30094417b8c690785b9"
+      },
+      {
+        "file": "p469-mobile-nojs-frame-qian2018.png",
+        "shared_PR_build_live_sha256": "bb6c103acf0f00992f6cfe0c3ad73f8375b606be91e9ebd4f73fdf522c3a804e"
+      },
+      {
+        "file": "p469-mobile-nojs-geo-changhe-palace-gate-context.png",
+        "shared_PR_build_live_sha256": "dd2c2e116b571f077dd9ee377ac84b320b66034aedd693e733c0c94f6ee881b2"
+      },
+      {
+        "file": "p469-mobile-nojs-geo-jianchun-gate-context.png",
+        "shared_PR_build_live_sha256": "710d805a83ff3ab5d9a0635fc134d6f77664b00a49854ee25e92f230ba608439"
+      },
+      {
+        "file": "p469-mobile-nojs-jianchun-audit-figures.png",
+        "shared_PR_build_live_sha256": "fdc1e00c3a22bc662ae84d0e76ff70d8979d528119bb32249364dc9049c63fc6"
+      }
+    ]
+  },
+  "public_downloads": [
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/bundle-manifest.json",
+      "sha256": "6d5a1d7525b311b9aa4888bf70007cfbdfb8aa9d5c082a88d877b6d5fb4de237"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/frame-06a.svg",
+      "sha256": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/frame-qian2018.svg",
+      "sha256": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/jianchun-plan-audit.json",
+      "sha256": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/jianchun-source-context.svg",
+      "sha256": "eaf696a70f7df2d446305599c9c679ab2cb48032fe9f556b834b62a72799528d"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/jianchun-structure-reading.svg",
+      "sha256": "197be999a471879cf60884485ded7bd3fcbabfca52b897587d0c82f582a17377"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/readings.json",
+      "sha256": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/road01-image-access.json",
+      "sha256": "b98eb82115c972e1fec7001aa4d5dd8695216260582dfc6130dc7c0548d3df87"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/road01-source-audit.json",
+      "sha256": "7ecaf20678c961f281216e370019fe9206f68bc118375e532c85b92072b7ff2d"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/road02-access-20261119.json",
+      "sha256": "7ab1095c05960cbee6473aad0a2751767e285195c47a16b8a253fae6aa87eabe"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/source-frame-audit.json",
+      "sha256": "37f6fa59bdab5d2a7747ba328e34544b4d2c9a2c58ee51be71997b72460e9405"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/urban-contexts.json",
+      "sha256": "47817e58ea63ccea1c3f2c83e4914333c6886ac30c6c6af0c182e77da406e6d7"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/downloads/backbone-469.pdf",
+      "sha256": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6"
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/downloads/backbone-469.zip",
+      "sha256": "1f7721a00ae2e90772a2ec89d91c496e0bc32a57c33a7bb8abe1064d6850b3fd"
+    }
+  ],
+  "PR_to_production_download_comparison": {
+    "unchanged_downloads": 12,
+    "changed_downloads": [
+      "backbone-469/bundle-manifest.json",
+      "downloads/backbone-469.zip"
+    ],
+    "bundle_manifest_only_changed_field": "source_commit",
+    "PR_artifact_build_commit": "ece5d744197f16baad42ddcaddf75a841fee25e1",
+    "production_commit": "6e8ad4a9d485a74913574ad13f1a1df2f8bc1f46",
+    "ZIP_member_count": 16,
+    "ZIP_member_names_identical": true,
+    "ZIP_members_with_changed_content": [
+      "backbone-469/bundle-manifest.json"
+    ],
+    "ZIP_other_members_byte_identical": 15,
+    "blanket_ignore_rules_used": false
+  },
+  "research_boundary": {
+    "conclusion": "2018年图二的带尺重刊图已取得并目读，可核读门址内部遗迹；06a只保留城门图符中心，未建立同一物理点的共同控制，两图分框联读。",
+    "research_accounting": {
+      "new_ancient_absolute_coordinates": 0,
+      "new_metric_measurements": 0,
+      "accepted_control_pairs": 0,
+      "new_geographic_building_footprints": 0,
+      "new_geographic_bridge_positions": 0,
+      "new_geographic_water_lines": 0,
+      "new_reported_quantity_rows": 6,
+      "note": "报告值与残存数的再核对不计作本项目新增测绘。"
+    },
+    "new_control_or_geographic_positions_must_not_be_inferred_from_successful_software_checks": true,
+    "2022_canal_report_remains_deferred": true
+  },
+  "publication_preservation_checked": {
+    "previous_two_backbone_SVGs": "byte-identical",
+    "previous_two_page_PDF": "byte-identical",
+    "existing_urban_contexts_and_water_readings": "byte-identical",
+    "four_existing_panorama_WebPs": "byte-identical in independent public readback"
+  },
+  "scope": "This summary contains only public URLs, publication provenance, counts, cryptographic digests and research boundaries. It contains no screenshots, downloaded file bodies, complete job logs or unrelated prior evidence payloads.",
+  "archive_scope": "Permanent public verification ledger only; original CI archives remain subject to the artifact expiry dates above. No original screenshot, downloaded body, full log or earlier 143-file archive is republished here."
+}
