@@ -46,9 +46,12 @@ def fit(page):
     assert all(value <= page.viewport_size["width"] + 2 for value in widths.values()), widths
 
 
-def screenshot(page, output, report, stem, selector=None):
-    page.evaluate("document.fonts.ready")
-    page.evaluate("() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))")
+def screenshot(page, output, report, stem, selector=None, *, javascript_enabled=True):
+    # A script-disabled context cannot run requestAnimationFrame callbacks.
+    # Its native locator screenshot still waits for a visible, stable element.
+    if javascript_enabled:
+        page.evaluate("document.fonts.ready")
+        page.evaluate("() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))")
     fit(page)
     target = output / f"p470-{report['device']}-{stem}.png"
     if selector:
@@ -196,14 +199,15 @@ def nojs(browser, base, output, device, data, report):
         expect(page.locator('#city-common-map [data-city-layer="modern"]')).to_be_hidden()
         point = page.locator('#city-common-map [data-place-id="C04"] circle[data-source-feature-id]').first
         point.click()
+        page.wait_for_url("**/" + PAGE + "#place-C04")
         assert urlsplit(page.url).fragment == "place-C04"
         expect(page.locator("#place-C04")).to_be_visible()
         assert compact(next(place for place in data["places"] if place["id"] == "C04")["name"]) in compact(page.locator("#place-C04").inner_text())
         for path in DOWNLOADS:
             expect(page.locator(f'a[download][href="./{path}"], a[download][href="{path}"]')).to_be_visible()
-        screenshot(page, output, report, "nojs-map", "#common-map-scroll")
-        screenshot(page, output, report, "nojs-C04", "#place-C04")
-        screenshot(page, output, report, "nojs-K03", "#scene-K03")
+        screenshot(page, output, report, "nojs-map", "#common-map-scroll", javascript_enabled=False)
+        screenshot(page, output, report, "nojs-C04", "#place-C04", javascript_enabled=False)
+        screenshot(page, output, report, "nojs-K03", "#scene-K03", javascript_enabled=False)
         report["no_javascript"] = {"status": "passed", "building_cards": 4, "scenes": 3,
                                    "relations": 17, "events": 2, "function_objects": 15,
                                    "download_links": 6, "fallback_fragment": "place-C04"}
