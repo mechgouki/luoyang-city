@@ -86,6 +86,12 @@ class CorridorsStudy(unittest.TestCase):
         self.assertIsNone(data["diversion"]["section_width_m"])
         self.assertFalse(data["diversion"]["section_read"])
         self.assertEqual(data["texts"]["bank_landings"], [None,None])
+        chronology = data["texts"]["mingtang"]
+        self.assertEqual(chronology["era_ce"], [520,525])
+        self.assertIsNone(chronology["exact_year"])
+        mx, my = plan["places_px"]["明堂"]
+        bx, by = plan["places_px"]["辟雍"]
+        self.assertTrue(mx < bx and my > by)
         self.assertIsNone(data["modern_coordinates"])
 
     def test_offline_edition(self):
