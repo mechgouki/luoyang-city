@@ -5,8 +5,8 @@
     516,
     528
   ],
-  "summary": "把张方沟与城壕、宫西分期水道和独立园池补入水系研究。流向、相邻、包含、层位与后出解释分别显示；报告中的尺寸也按实际观测对象保留。",
-  "scope_completion": "本批核对12个前册保留对象的可读证据与限制；完成关系和分期表达，不宣称全部岸线、池口、城壕接续或516—528逐年通水已定。",
+  "summary": "把张方沟与城壕、宫西分期水道和独立园池补入水系研究，并逐池复核宫苑方位与季节性。流向、相邻、包含、层位与后出解释分别显示；报告中的尺寸按实际观测对象保留。",
+  "scope_completion": "补核12个前册保留对象，细分复核前册共用I09的5个池名，并撤回W20／W21挂入该组水路的索引；不宣称全部岸线、池口、城壕接续或516—528逐年通水已定。",
   "coordinate_system": "diagram_layout_only",
   "geographic_coordinates": null,
   "new_geographic_coordinates": 0,
@@ -2346,6 +2346,439 @@
         "土山、鱼池归汉梁冀旧造；谷水在土山东的明文不能补出鱼池进出水。",
         "景明三池仅按数示意；“皆用水功”未说明取水于三池。各项不作516—528逐年水况证明。"
       ]
+    },
+    {
+      "id": "palace-pools-audit",
+      "title": "宫苑池逐项复核：方位与季节",
+      "subtitle": "五个旧编号逐池回读。长秋寺濛汜池与西游园碧海曲池单列，华林园水路总说只保留群体层。",
+      "default_layer": "all",
+      "legend_mode": "p468",
+      "nodes": [
+        {
+          "id": "h-mengsi",
+          "label": "濛汜池\n（范本：濛氾）",
+          "x": 155,
+          "y": 240,
+          "kind": "pool",
+          "label_dy": -38,
+          "legacy_water_ids": [
+            "W20"
+          ],
+          "seasonality": {
+            "summer": "has_water",
+            "winter": "dry",
+            "source_phrase": "夏則有水，冬則竭矣",
+            "temporal_scope": "作者叙事中的季节对比；没有逐年锁定516—528",
+            "perennial_water_confirmed": false
+          }
+        },
+        {
+          "id": "h-changqiu",
+          "label": "长秋寺",
+          "x": 155,
+          "y": 340,
+          "kind": "site",
+          "label_dy": 26
+        },
+        {
+          "id": "h-mengsi-season",
+          "label": "夏有水 · 冬则竭",
+          "x": 350,
+          "y": 285,
+          "kind": "label",
+          "label_dy": 0
+        },
+        {
+          "id": "h-xuanwu",
+          "label": "玄武池",
+          "x": 650,
+          "y": 240,
+          "kind": "pool",
+          "legacy_water_ids": [
+            "W17"
+          ]
+        },
+        {
+          "id": "h-mountain",
+          "label": "山\n（名称存校读）",
+          "x": 650,
+          "y": 340,
+          "kind": "site",
+          "label_dy": 26
+        },
+        {
+          "id": "h-xiyou",
+          "label": "西游园",
+          "x": 120,
+          "y": 500,
+          "kind": "site"
+        },
+        {
+          "id": "h-lingyun",
+          "label": "凌云台\n（周校：陵云台）",
+          "x": 330,
+          "y": 500,
+          "kind": "building",
+          "label_dy": -38
+        },
+        {
+          "id": "h-bihai",
+          "label": "碧海曲池",
+          "x": 330,
+          "y": 580,
+          "kind": "pool",
+          "label_dy": 18,
+          "legacy_water_ids": [
+            "W21"
+          ]
+        },
+        {
+          "id": "h-dutang-area",
+          "label": "都堂所述地段\n（柰林西）",
+          "x": 650,
+          "y": 485,
+          "kind": "site",
+          "label_dy": -38
+        },
+        {
+          "id": "h-liushang",
+          "label": "流觞池",
+          "x": 650,
+          "y": 570,
+          "kind": "pool",
+          "label_dy": 26,
+          "legacy_water_ids": [
+            "W18"
+          ]
+        },
+        {
+          "id": "h-fusang",
+          "label": "扶桑海",
+          "x": 900,
+          "y": 485,
+          "kind": "pool",
+          "legacy_water_ids": [
+            "W19"
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "id": "H01",
+          "from": "h-mengsi",
+          "to": "h-changqiu",
+          "label": "长秋寺北濛汜池：夏水冬竭",
+          "points": [
+            [
+              155,
+              240
+            ],
+            [
+              155,
+              340
+            ]
+          ],
+          "relationship_type": "adjacency",
+          "period_class": "text_context",
+          "source_ids": [
+            "P-Z1",
+            "P-F1"
+          ],
+          "quote": "寺北有濛汜池，夏則有水，冬則竭矣。",
+          "locator": "《洛阳伽蓝记》卷一·长秋寺；周 B12n0077_p0078a02、0078a04；范 B12n0078_p0383a08",
+          "reading": "“寺”本段明指长秋寺；池在寺北。夏有水、冬竭是原文明确的季节性状态，不是年表或实测水位。",
+          "limit": "未记具体供排水口；不能用后面华林园“凡此诸海”总说单独认定本池谷水供水，也不能反过来断言它绝无水路。",
+          "legacy_water_ids": [
+            "W20"
+          ],
+          "evidence_ids": [
+            "H-W20"
+          ],
+          "hydraulic_connection": false,
+          "flow_direction": null,
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "seasonality": {
+            "summer": "has_water",
+            "winter": "dry",
+            "source_phrase": "夏則有水，冬則竭矣",
+            "temporal_scope": "作者叙事中的季节对比；没有逐年锁定516—528",
+            "perennial_water_confirmed": false
+          }
+        },
+        {
+          "id": "H02",
+          "from": "h-xuanwu",
+          "to": "h-mountain",
+          "label": "玄武池在此段之山北",
+          "points": [
+            [
+              650,
+              240
+            ],
+            [
+              650,
+              340
+            ]
+          ],
+          "relationship_type": "adjacency",
+          "period_class": "text_context",
+          "source_ids": [
+            "P-Z1",
+            "P-F1"
+          ],
+          "quote": "山北有玄武池。",
+          "locator": "卷一末华林园段；周 B12n0077_p0094a03（上文0093a14、下文0094a05）；范 B12n0078_p0406a05（上文0406a03、下文0406a07）",
+          "reading": "最低稳固关系是玄武池在“山北”。新图用“山（名称存校读）”，不强选山名或把该山并为蓬莱山。",
+          "limit": "未记玄武池独立进出水口；I09仍只作池群供水总说，不把某条地下石窦专配本池。",
+          "legacy_water_ids": [
+            "W17"
+          ],
+          "evidence_ids": [
+            "H-W17"
+          ],
+          "hydraulic_connection": false,
+          "flow_direction": null,
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "H03",
+          "from": "h-xiyou",
+          "to": "h-lingyun",
+          "label": "西游园中有凌云台",
+          "points": [
+            [
+              120,
+              500
+            ],
+            [
+              330,
+              500
+            ]
+          ],
+          "relationship_type": "containment",
+          "period_class": "text_context",
+          "source_ids": [
+            "P-Z1",
+            "P-F1"
+          ],
+          "quote": "千秋門內道北有西游園，園中有凌雲臺。……臺下有碧海曲池。",
+          "locator": "卷一·瑶光寺附西游园段；周 B12n0077_p0080a08—10；范 B12n0078_p0386a06—07",
+          "reading": "“园中有凌云台”明示台在西游园内；该园又在千秋门内道北。正文“凌”与周注校作“陵”分别展示。",
+          "limit": "这一所属关系不提供园界或台位坐标，不借此将西游园与华林园合并。",
+          "legacy_water_ids": [
+            "W21"
+          ],
+          "evidence_ids": [
+            "H-W21"
+          ],
+          "hydraulic_connection": false,
+          "flow_direction": null,
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "H04",
+          "from": "h-bihai",
+          "to": "h-lingyun",
+          "label": "碧海曲池在台下",
+          "points": [
+            [
+              330,
+              580
+            ],
+            [
+              330,
+              500
+            ]
+          ],
+          "relationship_type": "adjacency",
+          "period_class": "text_context",
+          "source_ids": [
+            "P-Z1",
+            "P-F1"
+          ],
+          "quote": "千秋門內道北有西游園，園中有凌雲臺。……臺下有碧海曲池。",
+          "locator": "卷一·瑶光寺附西游园段；周 B12n0077_p0080a08—10；范 B12n0078_p0386a06—07",
+          "reading": "碧海曲池属于瑶光寺所附西游园的台下景物叙述；它与华林园段的玄武、流觞、扶桑分开。",
+          "limit": "“台下”只说明台基上下关系，不是台南；园中有台不等于已量园界。不能由后面的“凡此诸海”直接分配一条供水到碧海，也不据此否认任何实际水路。",
+          "legacy_water_ids": [
+            "W21"
+          ],
+          "evidence_ids": [
+            "H-W21"
+          ],
+          "hydraulic_connection": false,
+          "flow_direction": null,
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "H05",
+          "from": "h-dutang-area",
+          "to": "h-liushang",
+          "label": "都堂所述地段有流觞池",
+          "points": [
+            [
+              650,
+              485
+            ],
+            [
+              650,
+              570
+            ]
+          ],
+          "relationship_type": "containment",
+          "period_class": "text_context",
+          "source_ids": [
+            "P-Z1",
+            "P-F1"
+          ],
+          "quote": "柰林西有都堂，有流觴池。堂東有扶桑海。",
+          "locator": "卷一末华林园段；周 B12n0077_p0095a11—12；范 B12n0078_p0407a02",
+          "reading": "以“都堂所述地段”为地点框，保存“有流觞池”。包含只指同处记述，既不是堂内建筑池，也不是池在堂南。",
+          "limit": "“有流觞池”只表示都堂所述地段有池，不解释为堂内建筑池或堂南；不能由二池同条并列推二池互通或各池口流向。",
+          "legacy_water_ids": [
+            "W18"
+          ],
+          "evidence_ids": [
+            "H-W18-19"
+          ],
+          "hydraulic_connection": false,
+          "flow_direction": null,
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "H06",
+          "from": "h-dutang-area",
+          "to": "h-fusang",
+          "label": "扶桑海在都堂东",
+          "points": [
+            [
+              650,
+              485
+            ],
+            [
+              900,
+              485
+            ]
+          ],
+          "relationship_type": "adjacency",
+          "period_class": "text_context",
+          "source_ids": [
+            "P-Z1",
+            "P-F1"
+          ],
+          "quote": "柰林西有都堂，有流觴池。堂東有扶桑海。",
+          "locator": "卷一末华林园段；周 B12n0077_p0095a11—12；范 B12n0078_p0407a02",
+          "reading": "“堂东有扶桑海”提供明确东侧关系；图中都堂所述地段用作方位参照，不确定池口或岸形。",
+          "limit": "“有流觞池”只表示都堂所述地段有池，不解释为堂内建筑池或堂南；不能由二池同条并列推二池互通或各池口流向。",
+          "legacy_water_ids": [
+            "W19"
+          ],
+          "evidence_ids": [
+            "H-W18-19"
+          ],
+          "hydraulic_connection": false,
+          "flow_direction": null,
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        }
+      ],
+      "reference_boxes": [
+        {
+          "x": 45,
+          "y": 157,
+          "width": 450,
+          "height": 249,
+          "label": ""
+        },
+        {
+          "x": 525,
+          "y": 157,
+          "width": 450,
+          "height": 249,
+          "label": ""
+        },
+        {
+          "x": 45,
+          "y": 410,
+          "width": 450,
+          "height": 205,
+          "label": ""
+        },
+        {
+          "x": 525,
+          "y": 410,
+          "width": 450,
+          "height": 205,
+          "label": ""
+        }
+      ],
+      "annotations": [
+        {
+          "x": 55,
+          "y": 176,
+          "text": "A 濛汜池 · 长秋寺北",
+          "max_chars": 27
+        },
+        {
+          "x": 250,
+          "y": 246,
+          "text": "原文明示季节性",
+          "max_chars": 16
+        },
+        {
+          "x": 245,
+          "y": 330,
+          "text": "未记本池具体供排水口",
+          "max_chars": 18
+        },
+        {
+          "x": 555,
+          "y": 176,
+          "text": "B 玄武池 · 山北",
+          "max_chars": 27
+        },
+        {
+          "x": 735,
+          "y": 230,
+          "text": "“山北”明示；\n山名依校读处理。",
+          "max_chars": 15
+        },
+        {
+          "x": 55,
+          "y": 428,
+          "text": "C 西游园 · 台下碧海曲池",
+          "max_chars": 27
+        },
+        {
+          "x": 55,
+          "y": 551,
+          "text": "“台下”指台基下方，\n不是池在台南。",
+          "max_chars": 15
+        },
+        {
+          "x": 555,
+          "y": 428,
+          "text": "D 都堂、流觞池与扶桑海",
+          "max_chars": 27
+        },
+        {
+          "x": 735,
+          "y": 545,
+          "text": "都堂处“有流觞池”；\n不定池在堂内或堂南。",
+          "max_chars": 15
+        }
+      ],
+      "notes": [
+        "濛汜池与碧海曲池分属长秋寺、所附西游园段，不凭华林园“凡此诸海”逐池接水。",
+        "“山北”“堂东”为文献方位；“台下”不是台南；都堂处有池不解释成堂内水池。",
+        "“若旱魃为害，谷水注之不竭”是条件叙事，不等于全年恒定流量或516—528逐年供水。",
+        "群体水路不可摊到每个池口。本图仅补方位、所属及季节性，未新增水流箭头或岸线。"
+      ]
     }
   ],
   "reported_measurements": [
@@ -2477,6 +2910,32 @@
       "metres": null
     }
   ],
+  "corrections": [
+    {
+      "id": "P467-I09-POOL-SCOPE",
+      "previous_version": "prosperity-water-p467",
+      "previous_page": "prosperity-water-p467.html",
+      "previous_segment": "I09",
+      "withdrawn_legacy_ids": [
+        "W20",
+        "W21"
+      ],
+      "withdrawn_fields": [
+        "plates[inner].segments[I09].legacy_water_ids",
+        "legacy_water_coverage[W20/W21].本册图段"
+      ],
+      "reason": "W20属长秋寺北的季节性池，W21属西游园凌云台下；后文华林园“凡此诸海”不足以承担两池的供水索引。撤回索引不证明两池绝无水路。",
+      "replacement_plate": "palace-pools-audit",
+      "quote_scope": "若旱魃為害，穀水注之不竭；離畢滂潤，陽穀泄之不盈。",
+      "quote_limit": "保留旱涝条件；群体记述不拆为各池口已证连接，不作全年恒定流量或516—528逐年供水表。",
+      "legacy_bytes_policy": "旧PDF、JSON和索引保留发布时字节；前页显著勘误及本记录为当前采用判断。",
+      "source_ids": [
+        "P-Z1",
+        "P-F1",
+        "P-G1"
+      ]
+    }
+  ],
   "legacy_water_coverage": [
     {
       "旧编号": "W10",
@@ -2501,6 +2960,31 @@
     {
       "旧编号": "W14",
       "本册图": "palace-water",
+      "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+    },
+    {
+      "旧编号": "W17",
+      "本册图": "palace-pools-audit",
+      "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+    },
+    {
+      "旧编号": "W18",
+      "本册图": "palace-pools-audit",
+      "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+    },
+    {
+      "旧编号": "W19",
+      "本册图": "palace-pools-audit",
+      "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+    },
+    {
+      "旧编号": "W20",
+      "本册图": "palace-pools-audit",
+      "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+    },
+    {
+      "旧编号": "W21",
+      "本册图": "palace-pools-audit",
       "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
     },
     {

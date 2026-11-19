@@ -41,11 +41,19 @@ def capture_map(page, panel, output, stem):
     viewport.evaluate("""async node => {
         await document.fonts.ready;
         node.scrollIntoView({block: 'start', inline: 'nearest', behavior: 'instant'});
+        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        const rect = node.getBoundingClientRect();
+        if (rect.height <= innerHeight && rect.bottom > innerHeight) {
+            window.scrollBy({top: rect.bottom - innerHeight, behavior: 'instant'});
+            await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        }
     }""")
     bounds = viewport.bounding_box()
     size = page.viewport_size
     assert bounds and size, "The map must have a real viewport before its screenshot"
-    assert -2 <= bounds["y"] <= 2, bounds
+    # scroll-margin may retain space above the map; require complete visibility, not y=0.
+    assert bounds["x"] >= -2 and bounds["y"] >= -2, bounds
+    assert bounds["x"] + bounds["width"] <= size["width"] + 2, bounds
     assert bounds["y"] + bounds["height"] <= size["height"] + 2, bounds
     fit(page)
     page.screenshot(path=str(output / f"{stem}.png"), animations="disabled")
@@ -159,6 +167,15 @@ def check_page(page, base, output, device):
         page.locator("#p467-entry a").click()
         page.wait_for_url("**/prosperity-water-p467.html*")
         page.wait_for_function("document.documentElement.dataset.water467Ready === 'true'")
+        correction = page.locator("#p468-pool-correction")
+        expect(correction).to_be_visible()
+        expect(correction).to_contain_text("W20")
+        expect(correction).to_contain_text("濛汜")
+        correction_link = correction.locator('a[href*="prosperity-water-p468.html"]')
+        expect(correction_link).to_have_count(1)
+        correction_href = correction_link.get_attribute("href")
+        correction.screenshot(path=str(output / f"p468-{device}-p467-correction.png"), animations="disabled")
+        report["checks"].append("P4.6.7 visibly corrects W20 濛汜池 before entering the supplementary maps")
         expect(page.locator("#p468-entry a")).to_have_count(1)
         page.locator("#p468-entry a").click()
         page.wait_for_url("**/prosperity-water-p468.html*")
@@ -172,6 +189,11 @@ def check_page(page, base, output, device):
         expect(page.locator("[data-plate-choice]")).to_have_count(plate_count)
         assert data == page.locator("#water-study-data").evaluate("node => JSON.parse(node.textContent)")
         assert all(plate.get("default_layer") == "all" for plate in data["plates"])
+        correction_params = parse_qs(urlsplit(correction_href).fragment)
+        assert len(correction_params.get("map", [])) == 1, correction_href
+        correction_plate = next(plate for plate in data["plates"] if plate["id"] == correction_params["map"][0])
+        assert any("W20" in segment.get("legacy_water_ids", []) for segment in correction_plate["segments"]), "The correction must open a map that actually documents W20"
+        report["pool_correction_map"] = correction_plate["id"]
         report["map_count"] = plate_count
         report["containment_segments"] = sum(segment["relationship_type"] == "containment"
                                               for plate in data["plates"] for segment in plate["segments"])
@@ -298,6 +320,29 @@ def check_page(page, base, output, device):
         check_nojs(page.context.browser, base, data, output, device)
         report["checks"].append(f"No-JS view keeps all {plate_count} maps and every evidence row, with no horizontal page overflow")
         capture_map(page, active_panel(page), output, f"p468-{device}")
+
+        # Exercise the older page's correction link itself, including its map deep link.
+        page.locator('header a[href$="prosperity-water-p467.html"]').click()
+        page.wait_for_url("**/prosperity-water-p467.html*")
+        page.wait_for_function("document.documentElement.dataset.water467Ready === 'true'")
+        correction = page.locator("#p468-pool-correction")
+        expect(correction).to_be_visible()
+        expect(correction).to_contain_text("W20")
+        expect(correction).to_contain_text("濛汜")
+        correction.locator('a[href*="prosperity-water-p468.html"]').click()
+        page.wait_for_url("**/prosperity-water-p468.html*")
+        ready(page)
+        state = parse_qs(urlsplit(page.url).fragment)
+        assert state["map"] == [correction_plate["id"]]
+        expect(active_panel(page)).to_have_attribute("data-plate-panel", correction_plate["id"])
+        check_layer(page, correction_plate, "all")
+        page.reload(wait_until="load")
+        ready(page)
+        assert parse_qs(urlsplit(page.url).fragment)["map"] == [correction_plate["id"]]
+        expect(active_panel(page)).to_have_attribute("data-plate-panel", correction_plate["id"])
+        check_layer(page, correction_plate, "all")
+        capture_map(page, active_panel(page), output, f"p468-{device}-pool-correction")
+        report["checks"].append("P4.6.7 W20 correction opens its documented map with all evidence and survives reload")
 
         # Return through the user-facing headers, leaving P4.6.6 for the pre-existing chain.
         page.locator('header a[href$="prosperity-water-p467.html"]').click()

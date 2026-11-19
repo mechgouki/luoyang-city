@@ -1,0 +1,392 @@
+{
+  "title": "P467宫苑诸海覆盖范围与W17—W21逐池复核更正",
+  "version": "p468-palace-pools-correction-1",
+  "created_beijing": "2026-11-19T18:08:25+08:00",
+  "status": "供P468新增图与P467网页勘误使用；历史PDF及原readings.json保持封存",
+  "target_period": [
+    516,
+    528
+  ],
+  "sources": [
+    {
+      "id": "P-Z1",
+      "title": "《洛阳伽蓝记》卷1，周祖谟校释，CBETA电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/1",
+      "cached_filename": "Z1.html",
+      "sha256": "3cde638a30fad10b42629bdc50f2e3bc4a3d7ee739671a1ccb74d8f8f13e9d91",
+      "verification": "复读已缓存完整HTML，按CBETA行号定位；正文与small标签中的现代校语分开。未新增联网检索，未核古刻原叶。"
+    },
+    {
+      "id": "P-F1",
+      "title": "《洛阳伽蓝记》卷1，范祥雍校注，CBETA电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/1",
+      "cached_filename": "F1.html",
+      "sha256": "fd5f844ee7aa07ccaefeef2704c4c270c5eed273d8edfe20c1c93cefbac6f331",
+      "verification": "复读已缓存完整HTML，按CBETA行号定位；正文与small标签中的现代校语分开。未新增联网检索，未核古刻原叶。"
+    }
+  ],
+  "records": [
+    {
+      "id": "H-W20",
+      "legacy_water_ids": [
+        "W20"
+      ],
+      "source_ids": [
+        "P-Z1",
+        "P-F1"
+      ],
+      "quote": "寺北有濛汜池，夏則有水，冬則竭矣。",
+      "locator": "《洛阳伽蓝记》卷一·长秋寺；周 B12n0077_p0078a02、0078a04；范 B12n0078_p0383a08",
+      "context_quote": "長秋寺，劉騰所立也。……在西陽門內御道北一里。……寺北有濛汜池，夏則有水，冬則竭矣。",
+      "textual_variant": "周本濛汜；范本濛氾。季节性语句一致。",
+      "reading": "“寺”本段明指长秋寺；池在寺北。夏有水、冬竭是原文明确的季节性状态，不是年表或实测水位。",
+      "limit": "未记具体供排水口；不能用后面华林园“凡此诸海”总说单独认定本池谷水供水，也不能反过来断言它绝无水路。",
+      "seasonality": {
+        "summer": "has_water",
+        "winter": "dry",
+        "source_phrase": "夏則有水，冬則竭矣",
+        "temporal_scope": "作者叙事中的季节对比；没有逐年锁定516—528",
+        "perennial_water_confirmed": false
+      }
+    },
+    {
+      "id": "H-W17",
+      "legacy_water_ids": [
+        "W17"
+      ],
+      "source_ids": [
+        "P-Z1",
+        "P-F1"
+      ],
+      "quote": "山北有玄武池。",
+      "locator": "卷一末华林园段；周 B12n0077_p0094a03（上文0093a14、下文0094a05）；范 B12n0078_p0406a05（上文0406a03、下文0406a07）",
+      "context_quote": "海西南有景山殿。……山北有玄武池。……景陽山南，有百果園。",
+      "textual_variant": "周注据下文将“景山殿”校释为景阳山；范注以《玉海》推“景山”疑为景阳殿。两项是现代校语，不混成两本共同古文。",
+      "reading": "最低稳固关系是玄武池在“山北”。新图用“山（名称存校读）”，不强选山名或把该山并为蓬莱山。",
+      "limit": "未记玄武池独立进出水口；I09仍只作池群供水总说，不把某条地下石窦专配本池。"
+    },
+    {
+      "id": "H-W18-19",
+      "legacy_water_ids": [
+        "W18",
+        "W19"
+      ],
+      "source_ids": [
+        "P-Z1",
+        "P-F1"
+      ],
+      "quote": "柰林西有都堂，有流觴池。堂東有扶桑海。",
+      "locator": "卷一末华林园段；周 B12n0077_p0095a11—12；范 B12n0078_p0407a02",
+      "context_quote": "柰林西有都堂，有流觴池。堂東有扶桑海。",
+      "textual_variant": "周本“都堂即都亭”“即曲水也”为整理本注语；本图不当作古文句子或新的同一关系。",
+      "reading": "都堂在柰林西；同处记有流觞池；扶桑海在都堂东。流觞池未获相对于堂的具体方向。",
+      "limit": "“有流觞池”只表示都堂所述地段有池，不解释为堂内建筑池或堂南；不能由二池同条并列推二池互通或各池口流向。"
+    },
+    {
+      "id": "H-W21",
+      "legacy_water_ids": [
+        "W21"
+      ],
+      "source_ids": [
+        "P-Z1",
+        "P-F1"
+      ],
+      "quote": "千秋門內道北有西游園，園中有凌雲臺。……臺下有碧海曲池。",
+      "locator": "卷一·瑶光寺附西游园段；周 B12n0077_p0080a08—10；范 B12n0078_p0386a06—07",
+      "context_quote": "千秋門內道北有西游園，園中有凌雲臺，即是魏文帝所築者。……臺下有碧海曲池。",
+      "textual_variant": "正文台名作凌云台；周注说“凌当作陵”。新图保留正文并旁注周校，不冒充古文字形一致。",
+      "reading": "碧海曲池属于瑶光寺所附西游园的台下景物叙述；它与华林园段的玄武、流觞、扶桑分开。",
+      "limit": "“台下”只说明台基上下关系，不是台南；园中有台不等于已量园界。不能由后面的“凡此诸海”直接分配一条供水到碧海，也不据此否认任何实际水路。"
+    },
+    {
+      "id": "H-GROUP-CONDITION",
+      "legacy_water_ids": [
+        "W34"
+      ],
+      "source_ids": [
+        "P-Z1",
+        "P-F1"
+      ],
+      "quote": "凡此諸海，皆有石竇流於地下，西通穀水，東連陽渠，亦與翟泉相連。若旱魃為害，穀水注之不竭；離畢滂潤，陽穀泄之不盈。",
+      "locator": "卷一末华林园段；周 B12n0077_p0095a13—0096a01；范 B12n0078_p0407a02—04",
+      "textual_variant": "范校录吴集证称“阳谷”的谷当作渠，另引《河南志》作“百谷”；此为校语，未据此绘定唯一排水口。",
+      "reading": "保留群体层的地下连通与旱、雨条件叙事。I09的群体注入关系仍可用；“通”“连”不自动给各池逐一方向。",
+      "limit": "不得省掉干旱条件后推全年恒定流量或516—528每年供水；不把本段总说跨篇章摊到濛汜、碧海，也不强定每一个被概括池体的接水线。"
+    }
+  ],
+  "correction": {
+    "affected_page": "prosperity-water-p467.html",
+    "affected_segments": [
+      "I09",
+      "I10",
+      "I11"
+    ],
+    "affected_annotation": "地下石窦连通：各池分列",
+    "withdraw_specific_legacy_mapping": {
+      "segment": "I09",
+      "legacy_water_ids": [
+        "W20",
+        "W21"
+      ]
+    },
+    "reason": "I09所引华林园段群体总说不能直接覆盖前面长秋寺的濛汜池及瑶光寺所附西游园的碧海曲池。两池各有可独立核读的段落与关系。",
+    "does_not_assert": [
+      "两池实际绝无任何水路",
+      "两池历史上绝未与谷水或其他水源接通",
+      "华林园群体供水总说全部无效"
+    ],
+    "retain_group_level": "I09可保留谷水对宫苑池群的注入叙述；I10/I11保留群体“通”“连”，不把群体关系逐池分配、不定每个池口。W17—W19另补方位不等于各自供水线已定。",
+    "quote_scope": {
+      "previous_problem": "旧I09将“凡此诸海……”与“谷水注之不竭”以分号连接，省去其前“若旱魃为害”，容易被读作无条件常供。",
+      "restored_full_quote": "凡此諸海，皆有石竇流於地下，西通穀水，東連陽渠，亦與翟泉相連。若旱魃為害，穀水注之不竭；離畢滂潤，陽穀泄之不盈。",
+      "conditional_quote": "若旱魃為害，穀水注之不竭；離畢滂潤，陽穀泄之不盈。",
+      "locator": "卷一末华林园段；周 B12n0077_p0095a13—0096a01；范 B12n0078_p0407a02—04",
+      "reading": "原段对举旱时补给与雨时泄水；只形成文献条件叙事，不产生全年恒定流量、逐年运行或各池独立供水路线。",
+      "outflow_name_variant": "正文作阳谷，范注另有谷当作渠、百谷等校语；本次不据此新增具体排水口。"
+    },
+    "web_correction_suggestion": "P4.6.7第2图I09为华林园池群的总括叙述。原覆盖表把W20濛汜池、W21碧海曲池一并归入，此项映射现撤回：濛汜池在长秋寺北，原文明记夏有水、冬竭；碧海曲池在西游园凌云台下。另须恢复“若旱魃为害，谷水注之不竭”的条件语境。群体注入或地下相连不等于每个池口已定，也不证明516—528逐年常供。旧PDF和原数据保留，逐池复核见P4.6.8新增第5图。",
+    "historical_files_policy": "不覆写P467历史PDF或readings；在网页入口及对应图旁明确勘误，并在P468复核表记录原映射与新判断。"
+  },
+  "coverage_reconciliation": {
+    "legacy_object_count": 34,
+    "historical_or_documentary_objects": 33,
+    "modern_reference_objects": 1,
+    "modern_reference_id": "W02",
+    "original_registry_split": {
+      "p467_listed_ids": 21,
+      "p468_preexisting_supplement_ids": 12,
+      "modern_reference": 1,
+      "arithmetic_correct": true
+    },
+    "qualification": "21+12+1只是初始编号归属计数，并不证明每项已获得独立水力关系。新增第5图重核W17—W21是重叠复核，不再给旧对象总数加5。W20/W21从I09专属映射撤回后由本图独立承接。",
+    "safe_completion_statement": "旧清单34项已逐项核对并标明可用关系与未定边界，其中33项属古代水体、设施或关系组，1项为近现代洛河参照；不宣称全部岸线、池口或516—528逐年水况已完成。"
+  },
+  "minimal_relations": [
+    {
+      "segment_id": "H01",
+      "from": "h-mengsi",
+      "to": "h-changqiu",
+      "relationship_type": "adjacency",
+      "legacy_water_ids": [
+        "W20"
+      ],
+      "evidence_ids": [
+        "H-W20"
+      ]
+    },
+    {
+      "segment_id": "H02",
+      "from": "h-xuanwu",
+      "to": "h-mountain",
+      "relationship_type": "adjacency",
+      "legacy_water_ids": [
+        "W17"
+      ],
+      "evidence_ids": [
+        "H-W17"
+      ]
+    },
+    {
+      "segment_id": "H03",
+      "from": "h-xiyou",
+      "to": "h-lingyun",
+      "relationship_type": "containment",
+      "legacy_water_ids": [
+        "W21"
+      ],
+      "evidence_ids": [
+        "H-W21"
+      ]
+    },
+    {
+      "segment_id": "H04",
+      "from": "h-bihai",
+      "to": "h-lingyun",
+      "relationship_type": "adjacency",
+      "legacy_water_ids": [
+        "W21"
+      ],
+      "evidence_ids": [
+        "H-W21"
+      ]
+    },
+    {
+      "segment_id": "H05",
+      "from": "h-dutang-area",
+      "to": "h-liushang",
+      "relationship_type": "containment",
+      "legacy_water_ids": [
+        "W18"
+      ],
+      "evidence_ids": [
+        "H-W18-19"
+      ]
+    },
+    {
+      "segment_id": "H06",
+      "from": "h-dutang-area",
+      "to": "h-fusang",
+      "relationship_type": "adjacency",
+      "legacy_water_ids": [
+        "W19"
+      ],
+      "evidence_ids": [
+        "H-W18-19"
+      ]
+    }
+  ],
+  "new_metric_measurements": 0,
+  "new_geographic_coordinates": 0,
+  "new_516_528_bank_geometry": null,
+  "need_user_historical_judgment": false,
+  "decision_basis": "原典已有季节性、方位和分段证据，当前更正可以直接完成；山名校勘及群体指涉保留明示差异，不要求用户替缺证关系作裁决。",
+  "remaining_named_mapping_review": {
+    "reviewed_at_beijing": "2026-11-19T18:10:35+08:00",
+    "scope": "只复核既有P467具名映射、原典缓存及记录边界；不新增联网检索或水道范围。",
+    "review_basis": [
+      "research/prosperity-v4/water-467/readings.json",
+      "shuijing16_sibu.html",
+      "Z1.html",
+      "F1.html"
+    ],
+    "records": [
+      {
+        "segments": [
+          "I03",
+          "I04"
+        ],
+        "legacy_water_ids": [
+          "W28"
+        ],
+        "original_quote": "又枝流入石逗，伏流注靈芝九龍池。……遂因用之。",
+        "source": "《水经注》卷十六·穀水；望先寺、故金市南、千秋门后；四部丛刊转录及P467已读原典记录",
+        "source_url": "https://zh.wikisource.org/wiki/水經注_(四部叢刊本)/卷第十六",
+        "result": "可保留石逗伏流注向原文连称的灵芝九龙池之关系；这一目的名称由该句直接给出，比I09的诸海总称更具体。",
+        "limits": [
+          "灵芝九龙池按原文连称登记；不据斜线或池组图符断言恰有两个池，也不逐池分配出入水口。",
+          "太和迁都时发现并沿用古渠，是文献中的重用事实，不是516—528逐年水况或已量渠线。",
+          "不得直接与《伽蓝记》西游园的九龙殿前“九龙吐水成一海”合成已证同一池。",
+          "更不能以九龙殿附近景物为由，给W21碧海曲池补一条已证谷水供水边。",
+          "周祖谟在西游园九龙条下注引《水经注》，属于后出比勘，不计作两份独立古代接水实证。"
+        ],
+        "action": "当前I04原文连称及池口限制可保留；不新增跨书池体同一关系。"
+      },
+      {
+        "segments": [
+          "I02",
+          "I10"
+        ],
+        "legacy_water_ids": [
+          "W15",
+          "W16",
+          "W34"
+        ],
+        "original_quote": "池水又東流入洛陽縣之南池，池即故翟泉也。",
+        "source": "《水经注》卷十六·穀水，天渊池出园、听讼观后；另与《洛阳伽蓝记》卷一末诸海、翟泉段分列",
+        "result": "I02是郦注明确给出的天渊池至县南池关系；“故翟泉”保留为郦注的认定。《伽蓝记》的诸海与翟泉相连由I10另行登记。",
+        "limits": [
+          "同称翟泉不解决古翟泉定位争论，不能将两书所有所称翟泉及昭仪池合成一个坐标。",
+          "现图county-south-pool与diquan-linked为分列节点，没有借同名共享测点；这一表达边界可接受。",
+          "I10的群体相连仍不得分配到各单池。"
+        ],
+        "action": "保留现有分列；使用正文中的身份判断时标明说话者/文献。"
+      },
+      {
+        "segments": [
+          "R10",
+          "R11",
+          "P01"
+        ],
+        "legacy_water_ids": [
+          "W08"
+        ],
+        "result": "湖沟按太和暴水后排湖入瀍的旧事表示，保留四/七年异文。",
+        "limits": [
+          "原历史事件不证明516—528湖沟复用或终年供水。"
+        ],
+        "action": "现有older_event分层可保留。"
+      },
+      {
+        "segments": [
+          "P01",
+          "P02",
+          "P05"
+        ],
+        "legacy_water_ids": [
+          "W09"
+        ],
+        "result": "旧枝渎“久废不修/今无水”和496年“将通洛水入谷”的筹划分开。",
+        "limits": [
+          "不将将通改为竣工，也不把西部枝渎并成津阳门外城南引洛渠。"
+        ],
+        "action": "现有废渠与提议分层可保留。"
+      },
+      {
+        "segments": [
+          "O16",
+          "EAST01",
+          "EAST05",
+          "EAST06",
+          "P06"
+        ],
+        "legacy_water_ids": [
+          "W30"
+        ],
+        "result": "阮曲后谷水注鸿池的文献关系、城东调查分期、洪池通洛的有条件提议分别表达。",
+        "limits": [
+          "提议不等于建成通航；调查概况不能补出尚未取得原图的东出口、岸线或完整盛时航道。"
+        ],
+        "action": "继续保留不同证据层及水-01原图缺口。"
+      },
+      {
+        "segments": [
+          "EAST01",
+          "EAST02",
+          "EAST03",
+          "EAST04"
+        ],
+        "legacy_water_ids": [
+          "W31"
+        ],
+        "result": "七里涧保留传本文序/熊会贞与黄学超校读两套解释。",
+        "limits": [
+          "没有由编号覆盖推得唯一河流身份、移接尾界或实测东出口。"
+        ],
+        "action": "现有并列表达可保留；不请用户凭空替缺原页处作裁定。"
+      },
+      {
+        "segments": [
+          "O13",
+          "O14",
+          "O15"
+        ],
+        "legacy_water_ids": [
+          "W32"
+        ],
+        "original_quote": "又北逕故太倉西；又北入洛陽溝。",
+        "result": "沿城东南角北注支流至洛阳沟的文字链表达。",
+        "limits": [
+          "没有把洛阳沟强接为建春—乐里道水支所入的东北阳渠，也没有据同一编号制造共用汇口。"
+        ],
+        "action": "现有末端与未定接续边界可保留。"
+      },
+      {
+        "segments": [
+          "R09"
+        ],
+        "legacy_water_ids": [
+          "W33"
+        ],
+        "original_quote": "穀水又東，左會金谷水；金谷水又東南流入於穀。",
+        "result": "金谷水作为独立来水汇入谷水，保留文字叙述在金墉城以前的范围。",
+        "limits": [
+          "不把金谷水与谷水上游或华林园池同名合并；不提供现代汇口坐标。"
+        ],
+        "action": "当前直接文献汇流关系可保留。"
+      }
+    ],
+    "conclusion": "除本次已提交W17—W21逐池补图、W20/W21撤回I09映射及旱雨条件句复原，未在这次现有清单/主数据/缓存复读中发现另一整类可直接补入而遗漏的水道。可按本轮证据层收束，不宣称岸线、池口或516—528逐年通水全部核定。",
+    "user_historical_decision_required": false,
+    "reason": "目前剩余不确定性由原图、分期、校勘或接续资料不足造成，应保留并列与空白；取得授权原件是获取材料问题，不是要求用户裁断历史事实。"
+  }
+}

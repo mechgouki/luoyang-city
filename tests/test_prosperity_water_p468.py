@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "research/prosperity-v4/water-468"
 SITE = ROOT / "_site"
 NS = "{http://www.w3.org/2000/svg}"
-PLATES = {"west-moats", "palace-water", "fanghu-zhaoyi", "independent-pools"}
+CORE_PLATES = {"west-moats", "palace-water", "fanghu-zhaoyi", "independent-pools"}
 P467_DATA_SHA = "bf51dad84680792dafbaacb14bea0a0715fa31a5cf13842fd0096f762132a789"
 P467_ATLAS_SHA = "68c994d5a558ee222134afd98cf15e095b6b4dce4c75d999e68c9789d4d0d404"
 
@@ -261,6 +261,40 @@ class Water468Evidence(unittest.TestCase):
             self.assertNotEqual(endpoints, {"l-gu-reference", "l-fishpond"})
             self.assertNotEqual(endpoints, {"l-jm-three", "l-jm-waterpower"})
 
+    def test_rechecked_palace_pools_preserve_seasonality_and_unproved_individual_inlets(self):
+        plate = self.plates["palace-pools-audit"]
+        nodes = {node["id"]: node for node in plate["nodes"]}
+        expected = {
+            "H01": ("h-mengsi", "h-changqiu", "adjacency"),
+            "H02": ("h-xuanwu", "h-mountain", "adjacency"),
+            "H03": ("h-xiyou", "h-lingyun", "containment"),
+            "H04": ("h-bihai", "h-lingyun", "adjacency"),
+            "H05": ("h-dutang-area", "h-liushang", "containment"),
+            "H06": ("h-dutang-area", "h-fusang", "adjacency"),
+        }
+        for sid, relation in expected.items():
+            edge = self.segments[sid]
+            self.assertEqual((edge["from"], edge["to"], edge["relationship_type"]), relation)
+            self.assertFalse(edge["hydraulic_connection"])
+            self.assertIsNone(edge["flow_direction"])
+            self.assertFalse(edge["annual_flow_516_528_confirmed"])
+        for nid in nodes:
+            self.assertEqual(reachable(plate, nid, undirected=True), {nid},
+                             "A group-level water statement became a demonstrated individual inlet")
+        for item in (nodes["h-mengsi"], self.segments["H01"]):
+            self.assertEqual(item["legacy_water_ids"], ["W20"])
+            seasonality = item["seasonality"]
+            self.assertEqual((seasonality["summer"], seasonality["winter"]),
+                             ("has_water", "dry"))
+            self.assertFalse(seasonality["perennial_water_confirmed"])
+            self.assertEqual(seasonality["source_phrase"], "夏則有水，冬則竭矣")
+        self.assertEqual(nodes["h-bihai"]["legacy_water_ids"], ["W21"])
+        self.assertIn("不是台南", self.segments["H04"]["limit"])
+        self.assertIn("所述地段", nodes["h-dutang-area"]["label"])
+        coverage = {item["旧编号"]: item for item in self.data["legacy_water_coverage"]}
+        for number in range(17, 22):
+            self.assertEqual(coverage[f"W{number}"]["本册图"], plate["id"])
+
     def test_reported_values_do_not_merge_windows_or_turn_structural_height_into_water_depth(self):
         rows = {row["id"]: row for row in self.data["reported_measurements"]}
         self.assertTrue({"MW", "ME", "POOL", "D12", "D3", "D4", "TRENCH", "EARLY", "FANGHU"}
@@ -282,11 +316,12 @@ class Water468Evidence(unittest.TestCase):
         self.assertEqual(rows["FANGHU"]["unit"], "步")
         self.assertIsNone(rows["FANGHU"]["metres"])
 
-    def test_all_twelve_remaining_objects_have_a_review_without_new_bank_geometry(self):
+    def test_reviewed_objects_have_evidence_without_new_bank_geometry(self):
         expected = {f"W{number:02}" for number in (10, 11, 12, 13, 14, 22, 23, 24, 25, 26, 27, 29)}
         coverage = self.data["legacy_water_coverage"]
-        self.assertEqual(len(coverage), len(expected))
-        self.assertEqual({item["旧编号"] for item in coverage}, expected)
+        actual = {item["旧编号"] for item in coverage}
+        self.assertEqual(len(coverage), len(actual))
+        self.assertTrue(expected <= actual)
         for item in coverage:
             self.assertIn(item["本册图"], self.plates)
             self.assertTrue(item["状态"].strip())
@@ -332,11 +367,13 @@ class Water468Publication(unittest.TestCase):
         self.assertTrue({"containment", "stratigraphy", "adjacency", "hypothesis", "connection"}
                         <= nonflow_seen)
 
-    def test_all_four_maps_and_source_downloads_match_the_page_and_pdf(self):
+    def test_all_maps_and_source_downloads_match_the_page_and_pdf(self):
         plates = self.data["plates"]
         edges = [edge for plate in plates for edge in plate["segments"]]
         plate_ids = {plate["id"] for plate in plates}
-        self.assertEqual(plate_ids, PLATES)
+        self.assertTrue(CORE_PLATES <= plate_ids)
+        self.assertEqual(len(plates), len(plate_ids))
+        self.assertEqual(len(self.meta["plates"]), len(plates))
         self.assertEqual(set(self.meta["plates"]), {f"{pid}.svg" for pid in plate_ids})
         self.assertEqual(self.meta["atlas_pages"], len(plates))
         self.assertEqual(len(PdfReader(SITE / self.meta["atlas"]).pages), len(plates))
@@ -358,7 +395,8 @@ class Water468Publication(unittest.TestCase):
         self.assertEqual(set(self.meta["data_files"]), expected_sources)
         self.assertTrue({f"water-468/{name}.json" for name in
                          ("readings", "moats-zhangfang-source-audit", "west-palace-source-audit",
-                          "pools-source-audit")} <= expected_sources)
+                          "pools-source-audit", "palace-pools-correction-source-audit")}
+                        <= expected_sources)
         for name in expected_sources:
             self.assertIn(name, links.hrefs)
             self.assertEqual((SITE / name).read_bytes(), (SOURCE / Path(name).name).read_bytes())
@@ -370,19 +408,67 @@ class Water468Publication(unittest.TestCase):
             self.assertEqual(digest(SITE / name), self.info["files_sha256"][name], name)
         measurements = self.data["reported_measurements"]
         self.assertEqual(self.meta["reported_value_rows"], len(measurements))
+        self.assertEqual(self.meta["legacy_objects_reviewed"], len(self.data["legacy_water_coverage"]))
         for row in measurements:
             self.assertIn(f'id="measure-{row["id"]}"', page)
 
-    def test_p467_fifty_three_relations_and_original_pdf_remain_frozen(self):
+    def test_p467_archive_retains_historical_bytes_including_the_withdrawn_index(self):
         old_source = ROOT / "research/prosperity-v4/water-467/readings.json"
         self.assertEqual(digest(old_source), P467_DATA_SHA)
         self.assertEqual(digest(SITE / "water-467/readings.json"), P467_DATA_SHA)
         old = read(old_source)
         self.assertEqual(sum(len(plate["segments"]) for plate in old["plates"]), 53)
+        historical_i09 = next(edge for plate in old["plates"] for edge in plate["segments"]
+                              if edge["id"] == "I09")
+        self.assertTrue({"W20", "W21"} <= set(historical_i09["legacy_water_ids"]))
+        old_coverage = {item["旧编号"]: item for item in old["legacy_water_coverage"]}
+        for wid in ("W20", "W21"):
+            self.assertEqual(old_coverage[wid]["本册图段"], "I09")
         self.assertEqual(digest(ROOT / "research/prosperity-v4/archive/water-467.pdf"),
                          P467_ATLAS_SHA)
         self.assertEqual(digest(SITE / "downloads/water-467.pdf"), P467_ATLAS_SHA)
         self.assertEqual(len(PdfReader(SITE / "downloads/water-467.pdf").pages), 5)
+
+    def test_current_correction_withdraws_both_old_indexes_and_restores_the_condition(self):
+        corrections = {item["id"]: item for item in self.data["corrections"]}
+        correction = corrections["P467-I09-POOL-SCOPE"]
+        self.assertEqual(correction["previous_segment"], "I09")
+        self.assertEqual(set(correction["withdrawn_legacy_ids"]), {"W20", "W21"})
+        self.assertEqual(set(correction["withdrawn_fields"]), {
+            "plates[inner].segments[I09].legacy_water_ids",
+            "legacy_water_coverage[W20/W21].本册图段",
+        })
+        self.assertEqual(correction["replacement_plate"], "palace-pools-audit")
+        audit = read(SOURCE / "palace-pools-correction-source-audit.json")
+        scope = audit["correction"]["quote_scope"]
+        self.assertEqual(correction["quote_scope"], scope["conditional_quote"])
+        self.assertIn("若旱魃為害", correction["quote_scope"])
+        self.assertIn("離畢滂潤", correction["quote_scope"])
+        self.assertTrue(audit["correction"]["does_not_assert"],
+                        "Withdrawing an unsupported index must not prove the opposite connection")
+        reconciliation = audit["coverage_reconciliation"]
+        self.assertEqual(reconciliation["legacy_object_count"], 34)
+        self.assertEqual(reconciliation["historical_or_documentary_objects"], 33)
+        self.assertEqual(reconciliation["modern_reference_objects"], 1)
+        self.assertEqual(self.meta["previously_unmapped_objects_reviewed"], 12)
+        self.assertEqual(self.meta["previously_grouped_objects_revisited"], 5)
+
+        previous = correction["previous_page"]
+        page = (SITE / previous).read_text(encoding="utf-8")
+        self.assertEqual(page.count('id="p468-pool-correction"'), 1)
+        marker = re.search(r'<aside\b[^>]*\bid="p468-pool-correction"[^>]*>(.*?)</aside>',
+                           page, re.S)
+        self.assertIsNotNone(marker)
+        self.assertLess(marker.start(), page.index('<section id="explore"'))
+        for phrase in ("W20", "W21", "撤回", "夏有水", "冬则竭", "若旱魃", "不足以证明"):
+            self.assertIn(phrase, marker.group(1))
+        links = Links()
+        links.feed(marker.group(0))
+        self.assertIn("./prosperity-water-p468.html#map=palace-pools-audit&layer=all", links.hrefs)
+        meta_correction = self.meta["historical_correction"]
+        self.assertEqual(meta_correction["id"], "p468-pool-correction")
+        self.assertEqual(set(meta_correction["withdrawn_legacy_ids"]), {"W20", "W21"})
+        self.assertEqual(digest(SITE / previous), self.info["files_sha256"][previous])
 
 
 if __name__ == "__main__":

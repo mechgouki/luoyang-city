@@ -1,5 +1,7 @@
 # P4.6.7 河流与水道：研究与发布说明
 
+> 2026-11-19 P4.6.8更正：I09及旧覆盖表中W20濛汜池、W21碧海曲池映射撤回。两池各见长秋寺／西游园段；华林园群体水路不能直接分配给它们。I09“谷水注之不竭”应连同“若旱魃为害”的条件读。原PDF／JSON／SVG保留历史字节，当前逐池判断见[P4.6.8说明](prosperity-water-p468-notes.md)与网页显著勘误。
+
 日期：2026-11-19。研究目标时层：北魏洛阳516—528年。当前批次入口为[河流与水道专题](https://mechgouki.github.io/luoyang-city/prosperity-water-p467.html)；发布及验收状态以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新记录为准。本批已由e6d0aaec76b5d25ed347f377ce19d7361b47f9a2发布并验收；历史状态和后续工作以#52为准。
 
 ## 本批解决的问题

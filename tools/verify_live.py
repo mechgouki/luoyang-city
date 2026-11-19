@@ -588,9 +588,12 @@ try:
  assert remainder['geographic_coordinates_added']==0 and remainder['new_metric_measurements']==0
  assert get(water['page']).count(b'id="p468-entry"')==1
  rd=json.loads(get(remainder['readings']))
- assert len(rd['plates'])==remainder['atlas_pages']==4
+ assert len(rd['plates'])==remainder['atlas_pages']==5
  assert rd['geographic_coordinates'] is None and rd['new_516_528_bank_geometry'] is None
- assert len(rd['legacy_water_coverage'])==remainder['legacy_objects_reviewed']==12
+ assert len(rd['legacy_water_coverage'])==remainder['legacy_objects_reviewed']==17
+ assert remainder['previously_unmapped_objects_reviewed']==12 and remainder['previously_grouped_objects_revisited']==5
+ assert get(water['page']).count(b'id="p468-pool-correction"')==1
+ assert rd['corrections'][0]['withdrawn_legacy_ids']==['W20','W21']
  assert len(rd['reported_measurements'])==remainder['reported_value_rows']
  assert all(item['new_measurement_by_project'] is False for item in rd['reported_measurements'])
  assert sum(len(plate['segments']) for plate in rd['plates'])==remainder['segments']
