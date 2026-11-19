@@ -553,13 +553,33 @@ try:
  assert all(value is None for value in json.loads(get(gates['readings']))['open_endpoints'].values())
 
  south=info['prosperity_south_p466']
- assert south['source_commit']==info['source_commit'] and south['version'] in release['extensions']
+ assert south['source_commit']=='a5d9fa3ee0a1eccce7cbd2e53cebcb57e9983632' and south['version'] in release['extensions']
+ assert info['files_sha256'][south['atlas']]=='90e8011316936430cd06a2cf5660d8c749936c89f758ca9058d2d40b29990589'
  assert get(gates['page']).count(b'id="p466-entry"')==1
  assert info['files_sha256'][gates['atlas']]=='6efc01a020e5be1497cd612b75d6710c7507a62b79045a39e8bf7fa82e0a8353'
  assert set(south['plates'])=={'roads.svg','ditch.svg','waters.svg'}
  sd=json.loads(get(south['readings']))
  assert sd['plan']['symbol_spacing_px']==39 and sd['excavation']['biyong']['flow_516_528'] is None
  assert sd['diversion']['section_read'] is False and sd['texts']['bank_landings']==[None,None]
+
+ water=info['prosperity_water_p467']
+ assert water['source_commit']==info['source_commit'] and water['version']==release['prosperity_water_p467_version']
+ assert water['version'] in release['extensions'] and water['layout_coordinates_only'] is True
+ assert water['geographic_coordinates_added']==0 and water['atlas_pages']==5
+ assert get(south['page']).count(b'id="p467-entry"')==1
+ assert get(field['page']).count(b'id="p467-water-correction"')==1
+ wd=json.loads(get(water['readings']))
+ assert len(wd['plates'])==water['atlas_pages'] and wd['geographic_coordinates'] is None
+ assert wd['new_metric_measurements']==0 and wd['new_516_528_bank_geometry'] is None
+ assert len(wd['legacy_water_coverage'])==34
+ assert sum(len(plate['segments']) for plate in wd['plates'])==water['segments']
+ assert {water['page'],water['atlas'],*water['data_files']} <= set(info['files_sha256'])
+ for plate in wd['plates']:
+  tree=ET.fromstring(get('water-467/'+plate['id']+'.svg'))
+  for group in tree.iter('{http://www.w3.org/2000/svg}g'):
+   if group.get('class')=='water-segment':
+    route=next(el for el in group if el.get('class')=='segment-route')
+    assert ('marker-end' in route.attrib)==(group.get('data-relationship')=='flow')
 
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
@@ -577,6 +597,7 @@ try:
  report['prosperity_anchors_p461']=source_readings
  report['prosperity_network_p462']=network_study
  report['prosperity_south_p466']=south
+ report['prosperity_water_p467']=water
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors

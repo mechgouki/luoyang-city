@@ -72,6 +72,8 @@ jobs:
           python -m py_compile tools/prosperity_road_functions_p452.py tests/browser_prosperity_road_functions_p452.py
           python -m py_compile tools/prosperity_street_clusters_p453.py tests/browser_prosperity_street_clusters_p453.py
           python -m py_compile tools/prosperity_hydro_roads_p46.py tests/browser_prosperity_hydro_roads_p46.py
+          python -m py_compile tools/prosperity_water_p467.py tests/browser_water_p467.py tests/test_prosperity_water_p467.py
+          node --check research/prosperity-v4/water-467/water-ui.js
           node --check web/prosperity-taiji-courts.js
           node --check web/prosperity-architecture.js
           node --check web/prosperity-city-distribution.js

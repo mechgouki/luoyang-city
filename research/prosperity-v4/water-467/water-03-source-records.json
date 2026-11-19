@@ -1,0 +1,1079 @@
+{
+  "id": "water-03-primary-text-network",
+  "recorded_at_beijing": "2026-11-19T16:59:33+08:00",
+  "target_period": [
+    516,
+    528
+  ],
+  "geographic_coordinates": null,
+  "scope": "用于P4.6.7的原典核读；文献关系不转换为实测坐标。",
+  "relation_types": {
+    "flow": "原文有方向动词的水流关系；仍须看temporal_status，不等于盛时各年已证。",
+    "connection": "原文通、连、相连而本条不确定单向。",
+    "adjacency": "地物相对方位，不表达水连接。",
+    "proposed_flow": "意向、计划；默认不纳入已通水图层。"
+  },
+  "sources": [
+    {
+      "id": "S16",
+      "title": "郦道元《水经注》卷十六·穀水",
+      "url": "https://zh.wikisource.org/zh-hant/水經注/16",
+      "kind": "通行转录；本轮发现一处漏字与一处误字，关键句另校四部丛刊本"
+    },
+    {
+      "id": "SB16",
+      "title": "《水经注》四部丛刊本卷十六，景上海涵芬楼藏武英殿聚珍版本",
+      "url": "https://zh.wikisource.org/wiki/水經注_(四部叢刊本)/卷第十六",
+      "kind": "可逐叶回查的古籍转录；指定原叶另附 URL"
+    },
+    {
+      "id": "S15",
+      "title": "郦道元《水经注》卷十五·洛水、瀍水、涧水",
+      "url": "https://zh.wikisource.org/zh-hant/水經注/15",
+      "kind": "原典转录"
+    },
+    {
+      "id": "G1",
+      "title": "杨衒之《洛阳伽蓝记》卷一·城内",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷一",
+      "kind": "原典转录"
+    },
+    {
+      "id": "G2",
+      "title": "杨衒之《洛阳伽蓝记》卷二·城东",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷二",
+      "kind": "原典转录"
+    },
+    {
+      "id": "G4",
+      "title": "杨衒之《洛阳伽蓝记》卷四·城西",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷四",
+      "kind": "原典转录"
+    },
+    {
+      "id": "W7",
+      "title": "《魏书》卷七下·高祖纪下，太和二十年九月丁亥",
+      "url": "https://zh.wikisource.org/wiki/魏書/卷7下",
+      "kind": "原典转录；项目 source-checks 已有该条，本轮复核不计新发现"
+    },
+    {
+      "id": "W53",
+      "title": "《魏书》卷五十三·李冲传，高祖泛舟洪池段",
+      "url": "https://zh.wikisource.org/wiki/魏書/卷53",
+      "kind": "原典转录；项目 source-checks 已有该条，本轮复核不计新发现"
+    },
+    {
+      "id": "HUANG2026",
+      "title": "黄学超《汉魏洛阳城周边的水利建设》，《中国历史地理论丛》2026年第3辑，28—42、52页，第一节",
+      "url": "https://www.sohu.com/a/1082362449_121124389",
+      "official_record": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+      "kind": "当代作者的错简校读与复原解释；不是传本原文或实测全线"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E01",
+      "source": "S15",
+      "locator": "洛水枝渎，经河南县王城西、郏鄏陌后",
+      "quote": "枝瀆又北入穀，蓋經始周啟，瀆久廢不脩矣。",
+      "temporal_reading": "追述旧渠道，郦注明说久废。",
+      "interpretation_limit": "不能画成516—528仍通水的西部引洛渠；与津阳门外城南引洛渠不等同。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E02",
+      "source": "SB16",
+      "locator": "穀城南、河南王城西北石碛段",
+      "quote": "洛水枝流入焉今無水也；磧南出為死穀北出為湖溝；魏太和四年〈案近刻訛作七年〉；決湖以注瀍水。",
+      "temporal_reading": "旧河道和一次暴水后排湖事件；本条不擅定为496，也不据异本七年径定483。",
+      "interpretation_limit": "四部本有四/七年校记；普通卷16漏录瀍字。只保留湖沟排水通瀍的历史关系及异文，未证盛时仍通。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/11"
+      ]
+    },
+    {
+      "id": "E03",
+      "source": "S16",
+      "locator": "河南王城、穀洛斗段",
+      "quote": "本於王城東北合流，所謂穀、洛鬬也。今城之東南缺千步，世又謂之穀、洛鬬處。俱為非也。",
+      "temporal_reading": "郦道元在评论先秦事件及前人定位，不是其时代新增汇流点。",
+      "interpretation_limit": "原文后据韦昭解释王城西南受害；不能只截前一句把王城东北或东南当作盛时河口。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E04",
+      "source": "SB16",
+      "locator": "千金堨石人腹铭及郦注判断",
+      "quote": "太和五年二月八日庚戌造築此堨；蓋魏明帝脩王張故績也。",
+      "temporal_reading": "曹魏明帝太和五年，非北魏太和五年。",
+      "interpretation_limit": "不把这条石刻年代写成孝文帝修堰。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/14"
+      ]
+    },
+    {
+      "id": "E05",
+      "source": "S16",
+      "locator": "千金堨、西晋修堰与北魏修复段",
+      "quote": "水歷堨東注，謂之千金渠；朝廷太和中脩復故堨。",
+      "temporal_reading": "前半为水道命名，后半明确北魏朝廷太和中修复；没有精确到496。",
+      "interpretation_limit": "可区分堰体与堰下千金渠，不能从同属太和推定为496通洛入穀的同一工程。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/16"
+      ]
+    },
+    {
+      "id": "E06",
+      "source": "S16",
+      "locator": "石人西胁旧议之后、皋门桥之前",
+      "quote": "準之於文，北引渠東合舊瀆。舊瀆又東；謂之臯門橋。穀水又東，又結石梁，跨水制城，西梁也。",
+      "temporal_reading": "北魏修复叙述之后接水道行程；更早石人西胁文字本身是将来修渠的建议。",
+      "interpretation_limit": "北引渠与旧渎的汇接可存为关系，但尚无现代点位；不能据西梁出现就定它为北、西两条环城支的分水点。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/17",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/18"
+      ]
+    },
+    {
+      "id": "E07",
+      "source": "S16",
+      "locator": "西梁后、金墉城前",
+      "quote": "穀水又東，左會金谷水；金谷水又東南流入於穀。",
+      "temporal_reading": "郦注行水叙述，夹有石崇旧居沿革。",
+      "interpretation_limit": "金谷水是入穀的支流，不应因同有谷字与穀水上游或宫苑池合并。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/19"
+      ]
+    },
+    {
+      "id": "E08",
+      "source": "S16",
+      "locator": "金墉城北至大夏门",
+      "quote": "穀水又東逕金墉城北；穀水逕洛陽小城北；又東歷大夏門下。",
+      "temporal_reading": "郦注行水叙述，沿线有高祖迁洛居金墉等北魏内容。",
+      "interpretation_limit": "可纳盛时文献层的相对行程，不提供距城墙多少米或逐年流量。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/19",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/20"
+      ]
+    },
+    {
+      "id": "E09",
+      "source": "S16",
+      "locator": "大夏门后、华林园与天渊池段",
+      "quote": "穀水又東，枝分南入華林園；其水東注天淵池。",
+      "temporal_reading": "郦注行水叙述。",
+      "interpretation_limit": "这是北城来水分入园池的一支；不把分支点移到千金堨。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/22",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/23"
+      ]
+    },
+    {
+      "id": "E10",
+      "source": "S16",
+      "locator": "天渊池东出华林园、听讼观后",
+      "quote": "其水自天淵池東出華林園，逕聽訟觀南；池水又東流入洛陽縣之南池。",
+      "temporal_reading": "郦注行水叙述。",
+      "interpretation_limit": "天渊池和洛阳县南池是先后节点，不是同一池的任意别名。郦注将后池认作故翟泉，另有古翟泉定位争论。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/23",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/24"
+      ]
+    },
+    {
+      "id": "E11",
+      "source": "S16",
+      "locator": "回叙大夏门另一水与东北城段",
+      "quote": "其一水自大夏門東逕宣武觀；穀水又東逕廣莫門北；又東屈南，逕建春門石橋下。",
+      "temporal_reading": "郦注行水叙述；《伽蓝记》另记孝昌三年该桥毁损。",
+      "interpretation_limit": "与入华林园支分别保存；可定东行转南，不能由广莫门北水段推到邙山北路终点。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/27",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/28",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/29"
+      ]
+    },
+    {
+      "id": "E12",
+      "source": "S16",
+      "locator": "建春门石桥之后、马市石桥之前",
+      "quote": "其水依柱，又自樂里道屈而東出陽渠；又東逕馬市石橋。",
+      "temporal_reading": "郦注行水叙述，桥铭另属东汉。",
+      "interpretation_limit": "由北环城来的水向东出至阳渠；并非环城水从这里全数向南。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/30"
+      ]
+    },
+    {
+      "id": "E13",
+      "source": "S16",
+      "locator": "王梁、张纯引水旧事后",
+      "quote": "後張純堰洛以通漕；是渠今引穀水，蓋純之創也。",
+      "temporal_reading": "张纯属东汉旧事；“今引穀水”是郦注对其时水源的判断。",
+      "interpretation_limit": "不能把“堰洛”旧事直接当作516—528城南引洛渠仍通水的证明；也不能因渠名阳渠就一律标洛水水源。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/30",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/31"
+      ]
+    },
+    {
+      "id": "E14",
+      "source": "S16",
+      "locator": "阳渠南暨阊阖城门、入城高渠段",
+      "quote": "陽渠水南暨閶闔門，漢之上西門者也；太和遷都，徙門南側，其水北乘高渠，枝分上下，歷故石橋東入城，逕望先寺。",
+      "temporal_reading": "北魏迁都后城门变化，叙述与旧桥并存。",
+      "interpretation_limit": "此阊阖是西城门，不是宫城南正门；“上下”不擅释成北、南两条大支。原文没有点名北、西环城支在哪座堰桥分开。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/32"
+      ]
+    },
+    {
+      "id": "E15",
+      "source": "S16",
+      "locator": "望先寺后、故金市南、千秋门",
+      "quote": "渠水又東歷故金市南，直千秋門；又枝流入石逗伏流，注靈芝九龍池；遂因用之。",
+      "temporal_reading": "古石渠在魏太和迁洛修宫时揭检后沿用。",
+      "interpretation_limit": "目的池原文连称灵芝九龙池；可按园池组保留，不能当作天渊池或洛阳县南池。原典此句不另给北向角度。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/32",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/33"
+      ]
+    },
+    {
+      "id": "E16",
+      "source": "S16",
+      "locator": "千秋门南流至宫门前",
+      "quote": "其一水自千秋門南流逕神虎門下；又南逕通門、掖門西，又南流東轉，逕閶闔門南。",
+      "temporal_reading": "郦注宫城现状与曹魏沿革叠述。",
+      "interpretation_limit": "此阊阖为宫城正南门，须与E14西城阊阖分成两个实体。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/33"
+      ]
+    },
+    {
+      "id": "E17",
+      "source": "S16",
+      "locator": "登闻鼓后、铜驼街及永宁寺段",
+      "quote": "渠水又枝分，夾路南出；水西有永寧寺，熙平中始創也；渠水又西歷廟社之間，南注南渠。",
+      "temporal_reading": "同一叙述明确接熙平创永宁寺，支持列入516年以后文献层；不是逐年水况记录。",
+      "interpretation_limit": "末端只称南渠，不能未经论证合并为城南外谷水；两侧夹路是支分关系，不能画成铜驼街上一条水沟。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/36",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/37"
+      ]
+    },
+    {
+      "id": "E18",
+      "source": "S16",
+      "locator": "铜驼街东向主渠、司空府和太仓南",
+      "quote": "渠水自銅駝街東逕司馬門南；渠水歷司空府前，逕太倉南，出東陽門石橋下，注陽渠。",
+      "temporal_reading": "郦注行水叙述；其间对杜预所谓翟泉另说今无水。",
+      "interpretation_limit": "可证一条出东阳门入阳渠的流向；不同古翟泉论说不能借名合池。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/38",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/39",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/40"
+      ]
+    },
+    {
+      "id": "E19",
+      "source": "S16",
+      "locator": "回叙西城外谷水南行",
+      "quote": "穀水自閶闔門而南逕土山東；南出逕西陽門；穀水又南逕白馬寺東；又南逕平樂觀東；又南逕西明門。",
+      "temporal_reading": "郦注现状行程中穿插古迹和门名沿革。",
+      "interpretation_limit": "这里的白马寺是本段西城水道语境；不移用今天白马寺坐标。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/40",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/41",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/42",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/43"
+      ]
+    },
+    {
+      "id": "E20",
+      "source": "SB16",
+      "locator": "西明门向东入城支、青阳门",
+      "quote": "門左枝渠東派入城逕太社前又東逕太廟南又東于靑陽門右下注陽渠。",
+      "temporal_reading": "郦注行水叙述。",
+      "interpretation_limit": "普通转录“下涇陽渠”不取；四部本为下注阳渠，没有新水名“泾阳渠”。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/43"
+      ]
+    },
+    {
+      "id": "E21",
+      "source": "S16",
+      "locator": "津阳门至太学石经北",
+      "quote": "穀水又南，東屈逕津陽門南；又東逕宣陽門南；又東逕平昌門南；又逕明堂北；又東逕開陽門南；又東逕國子太學石經北。",
+      "temporal_reading": "已在P4.6.6核过的城南序列；本轮重用于连通表，不计新量测。",
+      "interpretation_limit": "灵台北/北望有句读异文，继续仅写灵台附近；不按文字次序制造地面折线。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/43",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/44",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/45",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/46"
+      ]
+    },
+    {
+      "id": "E22",
+      "source": "S16",
+      "locator": "太学石经段后、城东南隅支",
+      "quote": "穀水於城東南隅枝分北注，逕青陽門東；又北逕東陽門東；又北逕故太倉西；又北入洛陽溝。",
+      "temporal_reading": "郦注行水叙述，所引太仓运船千计是更早《洛阳地记》资料。",
+      "interpretation_limit": "原句终点名洛阳沟，没有直说此沟就是建春—乐里道所入的东北阳渠。先不强连为一个具地点的汇水口。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/51"
+      ]
+    },
+    {
+      "id": "E23",
+      "source": "S16",
+      "locator": "城东南分支后回到东流水、方湖与阮曲",
+      "quote": "穀水又東，左迆為池。又東，右出為方湖；穀水又東南轉屈而東注，謂之阮曲；穀水又東注鴻池陂。",
+      "temporal_reading": "郦注行水叙述；方湖水衡署及阮氏故居为历史说明。",
+      "interpretation_limit": "左池和右出方湖属于侧出，不把主流依次穿过两池；古步数不转为未经复核的坐标。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/52"
+      ]
+    },
+    {
+      "id": "E24",
+      "source": "S16",
+      "locator": "鸿池横塘及其后东流水",
+      "quote": "中又有東西橫塘，水溜徑通；其水又東，左合七里澗。",
+      "temporal_reading": "郦注引旧籍与行水叙述交织。",
+      "interpretation_limit": "传本文序把左合七里涧接在鸿池段后；黄2026提出错简移接，故不可把鸿池→七里涧默认作已定实际连通。“水溜径通”不等同全程可航。",
+      "facsimile_leaf_urls": [
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/52",
+        "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/53"
+      ]
+    },
+    {
+      "id": "E25",
+      "source": "S16",
+      "locator": "七里涧桥后、偃师下游",
+      "quote": "陽渠水又東流逕漢廣野君酈食其廟南；穀水又東逕偃師城南；穀水又東流注於洛水矣。",
+      "temporal_reading": "郦注行水叙述中水名在阳渠、穀水间转换。",
+      "interpretation_limit": "各句局部方向可保留，但七里涧后至亳殷段在黄2026中另有移接读法；该文未逐字指定移接尾界，不把偃师城南及入洛句自动划入已经校定的移接范围。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E26",
+      "source": "S15",
+      "locator": "洛水经百谷坞北后",
+      "quote": "洛水又北，陽渠水注之；洛水又北逕偃師城東。",
+      "temporal_reading": "从洛水干流视角记支流口。",
+      "interpretation_limit": "可与卷16互证偃师附近下游汇流关系；口位只保留相对次序。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E27",
+      "source": "G1",
+      "locator": "城内华林园、诸海段",
+      "quote": "凡此諸海，皆有石竇流於地下，西通穀水，東連陽渠，亦與翟泉相連；穀水注之不竭。",
+      "temporal_reading": "杨衒之追记洛阳宫苑及高祖、世宗建设；没有逐年通水表。",
+      "interpretation_limit": "谷水注池可记flow；东连阳渠、与翟泉相连先记connection。诸海是池群，不是同一水体的多个别称。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E28",
+      "source": "G2",
+      "locator": "明悬尼寺、建春门外石桥段",
+      "quote": "穀水周圍繞城，至建春門外，東入陽渠石橋；逮我孝昌三年，大雨頹橋。",
+      "temporal_reading": "孝昌三年即527，在目标时段内发生桥毁；桥建造铭属东汉阳嘉四年。",
+      "interpretation_limit": "527事件用于桥梁状态分期，不自动推出水道停流。与卷16建春桥下转东关系可互校。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E29",
+      "source": "G4",
+      "locator": "卷末长分桥及千金堰",
+      "quote": "出閶闔門城外七里，有長分橋；中朝時以穀水浚急；長則分流入洛；長分橋西，有千金堰。",
+      "temporal_reading": "涨水分流原因明标中朝，即西晋旧事；作者另记当时朝士送迎与桥名争说。",
+      "interpretation_limit": "保存有条件的历史泄洪关系；“桥西有堰”是方位adjacency，不是从桥流到堰的箭头；不可画成城南永桥。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E30",
+      "source": "W7",
+      "locator": "太和二十年九月丁亥",
+      "quote": "將通洛水入穀，帝親臨觀。",
+      "temporal_reading": "496年的筹划/施工观察，原文用将；非516—528水况或竣工记。",
+      "interpretation_limit": "方向为洛→穀；条文没有鸿池、千金堨、津阳门或渠口位置。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E31",
+      "source": "W53",
+      "locator": "高祖自邺还京、泛舟洪池",
+      "quote": "朕欲從此通渠於洛；今溝渠若須二萬人以下、六十日有成者，宜以漸修之。",
+      "temporal_reading": "孝文帝的军运意向与有条件施工要求。",
+      "interpretation_limit": "方向为洪池→洛，与496本纪方向相反；不拼成同一工程的成功或盛时通航证明。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E32",
+      "source": "S15",
+      "locator": "瀍水、涧水篇末",
+      "quote": "穀水自千金堨東注，謂之千金渠也；舊與穀水亂流，南入於洛；今穀水東入千金渠，澗水與之俱東入洛矣。",
+      "temporal_reading": "旧南入洛与郦注之今东入千金渠明确对举。",
+      "interpretation_limit": "涧、谷水名有通称问题，原文自言未详；不能用旧谷洛合流关系取代郦注今水的东行网络。",
+      "facsimile_leaf_urls": []
+    },
+    {
+      "id": "E33",
+      "source": "HUANG2026",
+      "locator": "第一节，节引《谷水注》后“这段文字”一段；节引末句为亳殷南",
+      "quote": "移接起句：其水又东，左合七里涧；接入位置：又东迳马市石桥。",
+      "temporal_reading": "现代校读方案，作者将该部分归于北支，把南支叙述止于鸿池；与传本文序不同。",
+      "interpretation_limit": "文章说起句以后的文字但未给逐字止句；实际节引覆盖旅人桥、郦食其庙南、亳殷南。不可声称已独立核定偃师城南、入洛尾句也全部移接。官方注释指向杨萧杨2021年讨论358—369页，未在本轮获取该文原页。",
+      "facsimile_leaf_urls": []
+    }
+  ],
+  "relations": [
+    {
+      "id": "F01",
+      "type": "flow",
+      "path": [
+        "千金堨下",
+        "千金渠"
+      ],
+      "evidence": [
+        "E05",
+        "E32"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "只有堰下东注及命名关系；不是北西分流坐标。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F02",
+      "type": "flow",
+      "path": [
+        "北引渠",
+        "旧渎",
+        "皋门桥水段",
+        "西梁水段"
+      ],
+      "evidence": [
+        "E06"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "沿文次序，不固定分水点。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F03",
+      "type": "flow",
+      "path": [
+        "金谷水",
+        "穀水（金墉城以前）"
+      ],
+      "evidence": [
+        "E07"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F04",
+      "type": "flow",
+      "path": [
+        "穀水（金墉城北）",
+        "洛阳小城北水段",
+        "大夏门下水段"
+      ],
+      "evidence": [
+        "E08"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F05",
+      "type": "flow",
+      "path": [
+        "大夏门东来水的园内支",
+        "华林园",
+        "天渊池",
+        "华林园东出水",
+        "洛阳县南池"
+      ],
+      "evidence": [
+        "E09",
+        "E10"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "天渊池与南池为两个先后节点。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F06",
+      "type": "flow",
+      "path": [
+        "大夏门东另一水",
+        "宣武观水段",
+        "广莫门北水段",
+        "建春门石桥下水段",
+        "乐里道转东水段",
+        "阳渠（建春—乐里道段）",
+        "马市石桥水段"
+      ],
+      "evidence": [
+        "E11",
+        "E12",
+        "E28"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F07",
+      "type": "flow",
+      "path": [
+        "西城阊阖门附近高渠支",
+        "故石桥",
+        "望先寺水段",
+        "故金市南水段",
+        "千秋门附近渠"
+      ],
+      "evidence": [
+        "E14",
+        "E15"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "东西方向明确；北乘高渠、枝分上下不转成坐标或南北两支。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F08",
+      "type": "flow",
+      "path": [
+        "千秋门附近渠",
+        "石逗伏流",
+        "灵芝、九龙池组"
+      ],
+      "evidence": [
+        "E15"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "原文连称；本关系不拆解池间流向，也不与天渊池合并。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F09",
+      "type": "flow",
+      "path": [
+        "千秋门附近渠",
+        "神虎门下水段",
+        "通门及掖门西水段",
+        "宫城阊阖门南水段"
+      ],
+      "evidence": [
+        "E16"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F10",
+      "type": "flow",
+      "path": [
+        "宫门前渠的分支",
+        "铜驼街夹路南行支",
+        "庙社间西转水段",
+        "南渠（原文所名）"
+      ],
+      "evidence": [
+        "E17"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "有熙平后内容，516—528文献层适用度较高；南渠终点不擅认作外城南谷水。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F11",
+      "type": "flow",
+      "path": [
+        "铜驼街附近渠",
+        "司马门南水段",
+        "司空府前水段",
+        "太仓南水段",
+        "东阳门石桥下",
+        "阳渠（东阳门外所入段）"
+      ],
+      "evidence": [
+        "E18"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F12",
+      "type": "flow",
+      "path": [
+        "西城阊阖门外谷水",
+        "土山东水段",
+        "西阳门水段",
+        "白马寺东水段",
+        "平乐观东水段",
+        "西明门水段"
+      ],
+      "evidence": [
+        "E19"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F13",
+      "type": "flow",
+      "path": [
+        "西明门左支",
+        "太社前水段",
+        "太庙南水段",
+        "青阳门右",
+        "阳渠（青阳门所入段）"
+      ],
+      "evidence": [
+        "E20"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "取四部本下注阳渠，不建泾阳渠节点。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F14",
+      "type": "flow",
+      "path": [
+        "西明门以南水段",
+        "津阳门南水段",
+        "宣阳门南水段",
+        "灵台附近",
+        "平昌门南水段",
+        "明堂北水段",
+        "开阳门南水段",
+        "太学石经北水段",
+        "城东南隅"
+      ],
+      "evidence": [
+        "E21"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "沿用P4.6.6已核序列；灵台只保留附近。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F15",
+      "type": "flow",
+      "path": [
+        "城东南隅北注支",
+        "青阳门东水段",
+        "东阳门东水段",
+        "故太仓西水段",
+        "洛阳沟"
+      ],
+      "evidence": [
+        "E22"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "洛阳沟未在该句被直接等同东北阳渠。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F16",
+      "type": "flow",
+      "path": [
+        "城东南隅继续东流水",
+        "阮曲",
+        "鸿池陂"
+      ],
+      "evidence": [
+        "E23"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "旁出池、方湖不是主流必须依次经过的节点。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F17",
+      "type": "flow",
+      "path": [
+        "城东南东流水",
+        "左侧池"
+      ],
+      "evidence": [
+        "E23"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F18",
+      "type": "flow",
+      "path": [
+        "城东南东流水",
+        "右出方湖"
+      ],
+      "evidence": [
+        "E23"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F19",
+      "type": "flow",
+      "path": [
+        "鸿池陂东流水",
+        "七里涧汇入后的下游",
+        "酈食其庙南水段",
+        "亳殷南水段"
+      ],
+      "evidence": [
+        "E24",
+        "E25"
+      ],
+      "temporal_status": "transmitted_sequence_with_reordering_dispute",
+      "note": "只在传本文序方案显示，不默认成已定实际连通，也不是漕航线。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F19B",
+      "type": "flow",
+      "path": [
+        "马市石桥以下东流水",
+        "七里涧汇入后的下游",
+        "酈食其庙南水段",
+        "亳殷南水段"
+      ],
+      "evidence": [
+        "E33"
+      ],
+      "temporal_status": "huang_2026_reordered_reading",
+      "note": "现代校读方案；尾部不擅连接偃师城南、洛水为已定同一支。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F19C",
+      "type": "flow",
+      "path": [
+        "偃师城南谷水",
+        "洛水"
+      ],
+      "evidence": [
+        "E25"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "保留原文局部东行入洛；上接北支还是鸿池南支的句序归属另列待核。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F19D",
+      "type": "flow",
+      "path": [
+        "阳渠",
+        "洛水（继续北经偃师城东以前）"
+      ],
+      "evidence": [
+        "E26"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "卷15提供的支流口相对次序，不把该河口坐标确定下来。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F20",
+      "type": "flow",
+      "path": [
+        "七里涧",
+        "东流水（支属待校）"
+      ],
+      "evidence": [
+        "E24",
+        "E33"
+      ],
+      "temporal_status": "local_flow_direction_under_both_readings",
+      "note": "两种读法都保留左合方向；接收者属鸿池以下还是马市桥以下的北支是争点。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "F21",
+      "type": "flow",
+      "path": [
+        "谷水",
+        "宫苑诸海池群"
+      ],
+      "evidence": [
+        "E27"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "只据谷水注之作箭头。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "C01",
+      "type": "connection",
+      "path": [
+        "宫苑诸海池群",
+        "阳渠"
+      ],
+      "evidence": [
+        "E27"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "原词东连，图用连通而不定单向。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "C02",
+      "type": "connection",
+      "path": [
+        "宫苑诸海池群",
+        "翟泉（伽蓝记所称）"
+      ],
+      "evidence": [
+        "E27"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "原词相连，非池名合并。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "A01",
+      "type": "adjacency",
+      "path": [
+        "千金堰",
+        "长分桥"
+      ],
+      "evidence": [
+        "E29"
+      ],
+      "temporal_status": "early_sixth_century_text",
+      "note": "千金堰在长分桥西；没有箭头方向。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "H01",
+      "type": "flow",
+      "path": [
+        "洛水旧枝渎",
+        "河南王城西",
+        "穀水"
+      ],
+      "evidence": [
+        "E01",
+        "E02"
+      ],
+      "temporal_status": "abandoned_by_li_daoyuan",
+      "note": "不得画作516—528实流水。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "H02",
+      "type": "flow",
+      "path": [
+        "湖沟排湖水",
+        "瀍水"
+      ],
+      "evidence": [
+        "E02"
+      ],
+      "temporal_status": "historical_event_date_variant",
+      "note": "太和四/七年异文；不用于盛时通水确证。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "H03",
+      "type": "flow",
+      "path": [
+        "长分桥附近涨水分支",
+        "洛水"
+      ],
+      "evidence": [
+        "E29"
+      ],
+      "temporal_status": "western_jin_conditional_flood_spill",
+      "note": "中朝旧事且有涨水条件；不是盛时常流。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "P01",
+      "type": "proposed_flow",
+      "path": [
+        "洛水",
+        "穀水"
+      ],
+      "evidence": [
+        "E30"
+      ],
+      "temporal_status": "proposal_496",
+      "note": "原文将通，没有渠口和竣工记录。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    },
+    {
+      "id": "P02",
+      "type": "proposed_flow",
+      "path": [
+        "洪池",
+        "洛水"
+      ],
+      "evidence": [
+        "E31"
+      ],
+      "temporal_status": "xiaowen_proposal",
+      "note": "原文朕欲、有条件工期，非已证常流或通航。",
+      "modern_coordinates": null,
+      "navigation_516_528_confirmed": false
+    }
+  ],
+  "prohibited_merges": [
+    "西城阊阖门 ≠ 宫城南阊阖门",
+    "天渊池 ≠ 洛阳县南池；两者由水流连接",
+    "灵芝、九龙池组 ≠ 天渊池；原典支路不同",
+    "南渠（铜驼支末端）不自动等同城南外谷水",
+    "洛阳沟不自动等同建春—乐里道段阳渠的一个精确汇流口",
+    "河南王城西废洛水枝 ≠ 津阳门外城南引洛渠",
+    "千金堨修复 ≠ 496通洛水入穀工程",
+    "同名阳渠在三个入水位置可为同一系统，不能合并为同一个地理节点"
+  ],
+  "unresolved_junctions": [
+    {
+      "question": "谷水绕北与循西转南两条路线的分支点",
+      "status": "原文未点名千金堨、西梁或其他确切地物为二路分水点",
+      "display": "城西分支处未明；作为编排节点须标示不代表实测分水点"
+    },
+    {
+      "question": "洛阳沟与东北阳渠的接续",
+      "status": "卷16此句未明言同一性",
+      "display": "分别保留水名，不画出已证的同一汇流点"
+    },
+    {
+      "question": "南渠与西明门入城支、城南外谷水之间的同一性",
+      "status": "需逐层比对原典和考古，单凭南字不足以合并",
+      "display": "保留独立名称和未定连接"
+    }
+  ],
+  "textual_variants": [
+    {
+      "locator": "湖沟",
+      "common": "普通卷16缺瀍字；部分版本作太和七年",
+      "checked_sibu": "太和四年，校记近刻讹作七年；決湖以注瀍水",
+      "leaf": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/11"
+    },
+    {
+      "locator": "西明门支出青阳门",
+      "common": "下涇陽渠",
+      "checked_sibu": "下注陽渠",
+      "leaf": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/43"
+    },
+    {
+      "locator": "故金市南",
+      "common": "直千秋門",
+      "checked_sibu": "直千金門右，校记宫城西门曰千秋门；下句亦自千秋门",
+      "leaf": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/32"
+    },
+    {
+      "locator": "灵台",
+      "common": "北字分句不同",
+      "resolution": "沿用P4.6.6只写灵台附近，未在本轮重定北岸关系"
+    }
+  ],
+  "baseline_not_new": [
+    "496通洛入穀、李冲传洪池通洛意向与下游偃师入洛：source-checks已存，本轮复核并加入同一分期表。",
+    "城南四门—太学序列：south-466已有，本轮只接入有向表。"
+  ],
+  "textual_reordering": {
+    "source": "HUANG2026",
+    "issue": "七里涧以下文字在传本的接续位置",
+    "transmitted_order": [
+      "马市石桥",
+      "回叙西城及城南水",
+      "鸿池陂",
+      "七里涧",
+      "旅人桥",
+      "酈食其庙南",
+      "亳殷南",
+      "偃师城南",
+      "入洛"
+    ],
+    "huang_verified_move_start": "其水又东，左合七里涧",
+    "huang_verified_insert_after": "又东迳马市石桥",
+    "passages_in_huang_excerpt": [
+      "七里涧",
+      "旅人桥",
+      "酈食其庙南",
+      "亳殷南"
+    ],
+    "exact_move_end_verified": false,
+    "not_claimed_reordered": [
+      "偃师城南",
+      "穀水又东流注于洛水"
+    ],
+    "invariants": [
+      "七里涧为左侧汇入，而不是谷水流入七里涧。",
+      "酈食其庙南、亳殷南段自身记东流。",
+      "卷16明确另有偃师城南谷水东流入洛。",
+      "卷15明确阳渠入洛在洛水北经偃师城东以前。",
+      "上述任何读法都不直接证明516—528年全程可航。"
+    ],
+    "default_excluded_direct_edge": [
+      "鸿池陂",
+      "七里涧"
+    ],
+    "display_rule": "并列传本文序与黄2026校读；不把现代校读冒充原文、不要求用户替文献裁决。"
+  },
+  "ancient_facsimile_verified": [
+    {
+      "leaf_url": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/43",
+      "visual_reading": "青陽門右下注陽渠"
+    },
+    {
+      "leaf_url": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/11",
+      "visual_reading": "魏太和四年、近刻訛作七年、決湖以注瀍水"
+    }
+  ],
+  "archaeology_original_scans_obtained": false,
+  "original_scans_note": "本项目要求的2022运河报告折页、1993考古报告未在本轮取得。古籍四部丛刊本另有公开逐叶扫描，与该两种现代考古图不能混称。",
+  "title": "水-03 原典分段、连通与分期证据"
+}

@@ -1,0 +1,124 @@
+{
+  "checked_beijing": "2026-11-19T16:59:59+08:00",
+  "original_2011_acquired": false,
+  "original_2011_figure_inspection": false,
+  "entries": [
+    {
+      "id": "institute",
+      "url": "https://www.hnswwkgyjy.cn/Include_hxkg.php",
+      "error": "HTTP Error 503: Service Unavailable",
+      "log_file": "initial-access.json",
+      "content_status": "http503_technical_failure",
+      "note": "河南省文物考古研究院公开期刊入口本轮服务失败；不是授权状态证明。"
+    },
+    {
+      "id": "nssd",
+      "url": "https://www.ncpssd.org/Literature/articleinfo?id=HXKG2011001003&type=journalArticle&langType=1",
+      "error": "HTTP Error 403: Forbidden",
+      "log_file": "initial-access.json",
+      "content_status": "http403",
+      "note": "旧域公开文章页面本轮访问受拒；不由此推断馆藏或所有用户授权状态。"
+    },
+    {
+      "id": "huang",
+      "url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+      "status": 200,
+      "final_url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+      "bytes": 114528,
+      "sha256": "7403fa6b40d97b105aed34f0ad692a7571b5beb65d2fba558a544d5d884b5282",
+      "title": [
+        "中国历史地理论丛"
+      ],
+      "log_file": "initial-access.json",
+      "content_status": "metadata_abstract_references_only",
+      "note": "页面正文面板为访问cnki.net提示；未调用隐藏PDF下载，不把注释HTML当全文。"
+    },
+    {
+      "id": "huang-sohu",
+      "url": "https://www.sohu.com/a/1082362449_121124389",
+      "status": 200,
+      "final_url": "https://www.sohu.com/a/1082362449_121124389",
+      "bytes": 85999,
+      "sha256": "cff7fb3ffcde428dd6b235abc0845135a118581d763c3cad7c63c778e1c5078b",
+      "log_file": "secondary-access.json",
+      "content_status": "full_authored_article_public_reprint",
+      "note": "全文及图可读，注释从略；未核校勘段精确原刊页码。"
+    },
+    {
+      "id": "geology-2024",
+      "url": "https://www.lsdlyj.com.cn/EN/abstract/article/2096-6822/56666",
+      "error": "HTTP Error 503: Service Unavailable",
+      "log_file": "secondary-access.json",
+      "content_status": "http503_technical_failure",
+      "note": "本轮此入口失败；旧anchor-461已取得过原PDF和图，不应写成该文一贯不可得。"
+    },
+    {
+      "id": "nssd-cn",
+      "url": "https://www.ncpssd.cn/Literature/articleinfo?id=HXKG2011001003&type=journalArticle&langType=1",
+      "status": 200,
+      "final_url": "https://www.ncpssd.cn/Literature/articleinfo?id=HXKG2011001003&type=journalArticle&langType=1",
+      "bytes": 37940,
+      "sha256": "e0c8d7911c3e2a9ca1cc42c7976f6e64f0533d18e9481ca595b9b69121065333",
+      "log_file": "more-access.json",
+      "content_status": "javascript_challenge_only",
+      "note": "HTTP200但页面可见文本仅Please enable JavaScript and refresh the page；没有取得摘要、原页或PDF。未绕过挑战。"
+    },
+    {
+      "id": "huang-public-fulltext-source",
+      "url": "https://www.sohu.com/a/1082362449_121124389",
+      "status": 200,
+      "final_url": "https://www.sohu.com/a/1082362449_121124389",
+      "bytes": 85999,
+      "sha256": "cff7fb3ffcde428dd6b235abc0845135a118581d763c3cad7c63c778e1c5078b",
+      "log_file": "more-access.json",
+      "content_status": "full_authored_article_public_reprint",
+      "note": "全文及图可读，注释从略；未核校勘段精确原刊页码。"
+    },
+    {
+      "file": "huang-figure1.png",
+      "url": "https://q9.itc.cn/q_70/images03/20260929/b74e7818e9794e798be73a42d1091d93.png",
+      "http": 200,
+      "bytes": 50748,
+      "sha256": "212cb3ec6d0cc01127a5d8ebfddbca8a91888fd70db2dde6a8439613f63c2b7f",
+      "log_file": "figure-access.json",
+      "content_status": "image_downloaded_and_visually_inspected",
+      "note": "图像哈希与anchor-461既存一致；图源非新增，新增为校读拓扑比较。"
+    },
+    {
+      "file": "huang-figure4.png",
+      "url": "https://q8.itc.cn/q_70/images03/20260929/c557a8c2930c43f1ba434159a5b6a5c9.png",
+      "http": 200,
+      "bytes": 36022,
+      "sha256": "724c347c9c42bb467c2ae7344341ef23b20c5538aa570784224ff02819e11556",
+      "log_file": "figure-access.json",
+      "content_status": "image_downloaded_and_visually_inspected",
+      "note": "图像哈希与anchor-461既存一致；图源非新增，新增为校读拓扑比较。"
+    },
+    {
+      "file": "shui16-transmitted",
+      "url": "https://zh.wikisource.org/wiki/水經注/16",
+      "http": 200,
+      "bytes": 114893,
+      "sha256": "d3197d9dc1c0012fefbd1b5e288e25dcc5a5032b0f1b25f6397f463a676bad2d",
+      "log_file": "classical-access.json",
+      "content_status": "public_transcription_read",
+      "note": "穀水篇末文字可读；未用录文替代原版影印校勘。"
+    },
+    {
+      "file": "shui16-shuyaoshan",
+      "url": "https://www.shidianguji.com/book/CADAL11201767/chapter/1l7ronkbbhyk4",
+      "http": 200,
+      "bytes": 453243,
+      "sha256": "2a0dd08d0403c196d1cefe13e5b8f5029879b311a0bee9dc87414bc421bb0479",
+      "log_file": "classical-access.json",
+      "content_status": "public_transcription_read",
+      "note": "熊会贞曰一段可直接核读；非本轮校勘底本影印核对。"
+    }
+  ],
+  "search_scope_note": "两搜索引擎检索原题、变体及官方/机构来源未找到可直接核读2011原报告；不将搜索未命中升级成全网不存在。未尝试受限PDF隐藏路径、未发送第三方消息。",
+  "remaining_acquisition": [
+    "华夏考古2011(1)20–25页（全篇；重点22–23及其图注、剖面、图例）",
+    "杨萧杨2021文358–369页，特别核七里涧段移接的完整尾界"
+  ],
+  "title": "水-01 原刊与校勘资料访问记录"
+}
