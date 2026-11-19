@@ -296,13 +296,15 @@ def check_downloads(page, base, output, device, data, report):
     info = response.json()
     resources = download_paths(info["prosperity_backbone_p469"])
     assert len([path for path in resources if path.endswith(".pdf")]) == 1, resources
-    assert len([path for path in resources if path.endswith(".svg")]) == 2, resources
+    svg_paths = {path for path in resources if path.endswith(".svg")}
+    assert svg_paths == {"backbone-469/frame-06a.svg", "backbone-469/frame-qian2018.svg",
+                         "backbone-469/jianchun-source-context.svg", "backbone-469/jianchun-structure-reading.svg"}, resources
     assert len([path for path in resources if path.endswith(".zip")]) == 1, resources
     assert any(path.endswith("/readings.json") for path in resources), resources
     folder = output / "downloads" / device
     folder.mkdir(parents=True, exist_ok=True)
     for path in resources:
-        if path.endswith(".svg"):
+        if Path(path).name in {"frame-06a.svg", "frame-qian2018.svg"}:
             choose_map(page, Path(path).stem)
         link = page.locator(f'a[href={json.dumps(path)}],a[href={json.dumps("./" + path)}]').first
         expect(link).to_be_visible()
@@ -343,6 +345,31 @@ def check_downloads(page, base, output, device, data, report):
     return resources
 
 
+def check_jianchun_audit(page, output, device, *, nojs=False):
+    audit = page.locator("#jianchun-plan-audit")
+    expect(audit).to_be_visible()
+    expect(audit).to_contain_text("残宽8米")
+    expect(audit).to_contain_text("汉晋层位")
+    expect(audit.locator(".jianchun-status")).to_contain_text("共同控制：0组")
+    for image in audit.locator(".jianchun-figures img").all():
+        image.scroll_into_view_if_needed()
+        expect(image).to_be_visible()
+        page.wait_for_function("img => img.complete && img.naturalWidth > 0", arg=image.element_handle())
+    controls = audit.locator(".jianchun-controls")
+    controls.locator("summary").click()
+    expect(controls.locator("tbody tr")).to_have_count(5)
+    expect(controls.locator("table")).to_be_visible()
+    controls.locator("summary").click()
+    dates = audit.locator(".jianchun-dates")
+    dates.locator("summary").click()
+    expect(dates).to_contain_text("1985年10—12月")
+    expect(dates).to_contain_text("1986年")
+    dates.locator("summary").click()
+    fit(page, output, f"p469-{device}-jianchun-audit-overflow")
+    audit.locator(".jianchun-figures").screenshot(
+        path=str(output / f"p469-{device}-{'nojs-' if nojs else ''}jianchun-audit-figures.png"), animations="disabled")
+
+
 def check_nojs(browser, base, data, urban, output, device):
     mobile = device == "mobile"
     context = browser.new_context(
@@ -363,6 +390,8 @@ def check_nojs(browser, base, data, urban, output, device):
         for navigation in urban["navigation"]:
             feature_id = navigation["mapped_feature_id"]
             check_urban_context(page, data, urban, feature_id, active=False)
+            if feature_id == "geo-jianchun-gate":
+                check_jianchun_audit(page, output, device, nojs=True)
             fit(page, output, f"p469-{device}-nojs-{feature_id}-overflow")
             page.locator(f"#context-{feature_id}").screenshot(
                 path=str(output / f"p469-{device}-nojs-{feature_id}-context.png"), animations="disabled")
@@ -461,6 +490,7 @@ def check_page(page, base, output, device):
             report["urban_contexts"][feature_id] = check_urban_context(page, data, urban, feature_id)
             if feature_id == "geo-jianchun-gate":
                 check_context(page, data, feature_id)
+                check_jianchun_audit(page, output, device)
             fit(page, output, f"p469-{device}-{feature_id}-overflow")
             page.locator("#context-details").screenshot(
                 path=str(output / f"p469-{device}-{feature_id}-context.png"), animations="disabled")
@@ -469,6 +499,14 @@ def check_page(page, base, output, device):
             check_urban_context(page, data, urban, feature_id)
             check_urban_roundtrip(page, data, urban, feature_id)
         report["checks"].append("Palace Changhe and Jianchun SVG clicks show original K01/K02 records, grades, bridge-event scope, reload and actual P453/back navigation")
+        page.locator("[data-open-jianchun]").click()
+        expect(page.locator("#anchor-choice")).to_have_value("geo-jianchun-gate")
+        expect(page.locator("#jianchun-plan-audit")).to_be_visible()
+        assert "anchor=geo-jianchun-gate" in page.url
+        page.reload(wait_until="load")
+        ready(page)
+        expect(page.locator("#jianchun-plan-audit")).to_be_visible()
+        report["checks"].append("Jianchun entry and reload preserve the selected gate; both source diagrams load; control and date disclosures work")
 
         page.goto(base + PAGE + "#map=frame-06a&anchor=geo-daxia-gate&water=W20", wait_until="load")
         ready(page)

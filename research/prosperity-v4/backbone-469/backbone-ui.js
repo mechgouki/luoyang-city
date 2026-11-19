@@ -44,6 +44,13 @@
     button.addEventListener("click", () => showContext(button.dataset.contextChoice));
   }
   anchorChoice.addEventListener("change", () => showContext(anchorChoice.value));
+  for (const link of document.querySelectorAll("[data-open-jianchun]")) {
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      showMap("frame-06a", false);
+      showContext("geo-jianchun-gate", true, true);
+    });
+  }
   for (const mark of document.querySelectorAll("[data-context-id]")) {
     mark.addEventListener("click", event => {
       event.preventDefault();
