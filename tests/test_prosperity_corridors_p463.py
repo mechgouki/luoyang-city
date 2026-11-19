@@ -1,6 +1,7 @@
 """The road spacings and each author's pond contacts retain independent frames."""
 import hashlib
 import json
+import math
 import unittest
 import zipfile
 from pathlib import Path
@@ -46,6 +47,27 @@ class CorridorsStudy(unittest.TestCase):
         self.assertIsNone(ward["gate_to_central_cross_m"])
         self.assertIsNone(data["hongchi"]["southern_outlet_516_528_coordinates"])
         self.assertEqual(data["hongchi"]["pond_internal_bank_orientation"], "东西")
+
+    def test_gate_readings_in_their_source_frames(self):
+        info = json.loads((SITE / "build-info.json").read_text())
+        study = info["prosperity_gates_p465"]
+        data = json.loads((SITE / study["readings"]).read_text())
+        self.assertEqual(len(PdfReader(SITE / study["atlas"]).pages), 3)
+        field = data["field_plan"]
+        self.assertEqual(set(field["points"]), {"IV", "V", "VI", "VII"})
+        self.assertIsNone(field["excluded_gap"]["formal_gate_or_named_road"])
+        later = data["later_plan"]
+        self.assertNotEqual(field["size_px"], later["size_px"])
+        scale = math.dist(*later["scale_endpoints_px"])
+        self.assertEqual(scale, later["scale_px_per_km"])
+        for road in later["north"]:
+            first, last = road["to_wall_px"][0], road["to_wall_px"][-1]
+            self.assertEqual(last, road["beyond_wall_to_frame_px"][0])
+            self.assertEqual(round(math.dist(first, last) / scale, 1), road["chord_km_one_decimal"])
+        self.assertFalse(later["source_map_merge_visible"])
+        self.assertTrue(all(value is None for value in data["open_endpoints"].values()))
+        self.assertIsNone(data["moat"]["water_depth_516_528_m"])
+        self.assertEqual(data["moat"]["channel_width_approx_m"], [20, 24])
 
     def test_offline_edition(self):
         info = json.loads((SITE/"build-info.json").read_text())

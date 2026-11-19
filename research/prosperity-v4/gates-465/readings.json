@@ -1,0 +1,52 @@
+{
+  "title": "承明门西段、邙山两条北出道与北垣河道",
+  "period_of_interest_ce": [516, 528],
+  "sources": {
+    "survey1973": {"title": "中国科学院考古研究所洛阳工作队《汉魏洛阳城初步勘查》", "locator": "《考古》1973年第4期，198—208页。第一节西垣Ⅱ、Ⅳ、Ⅴ与北垣Ⅵ、Ⅶ号门，同节护城河段；第二节横四道。", "url": "https://www.scribd.com/document/968336271/"},
+    "field_plan": {"title": "1973年原刊199页《汉魏洛阳城平面实测图》，谢美婧《北魏洛阳城的营建》附录5转载", "locator": "东北师范大学，2009，印页40，PDF第44页。转载图下将篇名写作“初步调查”。", "url": "https://ygx.sxu.edu.cn/db/%E5%AD%A6%E4%BD%8D/Y1465886.pdf#page=44", "pdf_sha256": "508dde67a55562ba06212a3fd457da0aad5704cf174107414ef4a80a2b9a3a10"},
+    "qian2018": {"title": "钱国祥《汉魏洛阳城城门与宫院门的考察研究》", "locator": "《华夏考古》2018年第6期，图一与第一节外郭城段。调查回顾记两条北路，墙路交点设郭门属作者判断。", "url": "https://www.sohu.com/a/298263205_199807"},
+    "qian_reprint": {"title": "朱岩石，Acta Asiatica 126（2024）", "locator": "印页17，图6，图注引钱国祥2018年图一。", "url": "https://www.jstage.jst.go.jp/article/actaasiatica/126/0/126_1262/_pdf/-char/en#page=17", "pdf_sha256": "93a9ec94a8a29fc1537c3c30902299cf287a4cdf4c08b2ba75d35a1da4ff04fb"},
+    "chanhe_mid": {"title": "《文化瀍河》第二章第五节，中篇", "locator": "外郭城北垣、城门及街道三段。作者述两路登邙会合，也提出经山沟穿郭，可能未建北郭门。", "url": "https://www.thepaper.cn/newsDetail_forward_24428757"},
+    "chanhe_lower": {"title": "《文化瀍河》第二章第五节，下篇", "locator": "Ⅳ—Ⅶ号门、护城河段。用于校读上下栏错排的数字，与早期报告有承袭关系。", "url": "https://www.thepaper.cn/newsDetail_forward_24443356"},
+    "survey1993": {"title": "洛阳汉魏城工作队《北魏洛阳外廓城和水道的勘查》", "locator": "《考古》1993年第7期602—608页。另收入《洛阳考古集成·秦汉魏晋南北朝卷》190—196页。当前仅核篇名、目录及转引。", "url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993"},
+    "wei2006": {"title": "魏采如《〈洛陽伽藍記〉之時空敘事與記憶認同》", "locator": "國立臺灣大學，2006。目录列附图六，印页165，引调查附图。源机构列有偿授权，本次未核该页。", "url": "https://tdr.lib.ntu.edu.tw/handle/123456789/34647"}
+  },
+  "pixel_convention": "两幅来源图分别提取指定PDF页的唯一内嵌栅格（pdfimages -png）；原点为各自图像左上，x向右、y向下。取城门中线与墙线交会的近似中心。点与折线仅供复读来源图。",
+  "field_plan": {
+    "source": "field_plan", "size_px": [2402,3457],
+    "points": {"IV": [681,1164], "V": [691,951], "VI": [924,855], "VII": [1233,739]},
+    "wall_traces_px": [
+      [[680,1164],[664,1155],[675,1063],[691,951],[710,848],[719,743],[742,612]],
+      [[710,848],[792,851],[924,855],[1122,864],[1126,738],[1143,730],[1233,739],[1335,755],[1450,777],[1464,791],[1476,861]]
+    ],
+    "h4_sample_px": [[691,951],[791,959],[922,964],[980,964],[1024,974],[1129,974]],
+    "gate_notes": {
+      "IV": "西垣阊阖门比定点，只作Ⅴ号的南侧参照。",
+      "V": "西垣最北的缺口，翟泉村寨东南。缺口下有路土，其下仍有城墙夯基。往东接城内横四道。工作队据门位比定承明门。",
+      "VI": "金村西寨墙内。阙口中有两堵夯土隔墙，工作队据此判断一门三道，比定大夏门。",
+      "VII": "金村东北。缺口受损，仍探得同一南北向路土从墙内穿往墙外。工作队据此推定门址，疑为广莫门。"
+    },
+    "v_gap_width_approx_m": 20, "v_to_iv_reported_approx_m": 650, "vii_to_ne_corner_reported_approx_m": 700,
+    "excluded_gap": {"location": "金村与翟泉之间，阿斗坟旁", "gap_width_approx_m": 13, "outside_road_soil": true, "formal_gate_or_named_road": null},
+    "west_ii_note": "1973年原文所说门外路土保存好的门是汉雍门（Ⅱ号）。"
+  },
+  "later_plan": {
+    "source": "qian_reprint", "size_px": [1145,951], "scale_px_per_km": 92, "scale_endpoints_px": [[980.5,933],[1072.5,933]],
+    "inner_wall_px": [[467,251],[474,212],[481,181],[552,183],[608,184],[612,147],[617,146],[648,150],[706,160],[714,172],[715,220]],
+    "outer_wall_px": [[430,53],[469,55],[507,56],[546,54],[575,56],[611,59],[655,60],[679,56],[705,55]],
+    "west": {"inner_gate": "承明门", "trace_px": [[474,212],[454,211],[441,210]], "western_symbol": "短线末端转为点线，图中未标西郭门或探孔编号。"},
+    "north": [
+      {"id": "VI", "name": "大夏门", "to_wall_px": [[552,183],[554,119],[558,86],[567,70],[575,56]], "beyond_wall_to_frame_px": [[575,56],[582,39],[594,22],[609,6]], "legend": "北郭西侧交点", "chord_km_one_decimal": 1.4},
+      {"id": "VII", "name": "广莫门", "to_wall_px": [[648,150],[654,128],[665,108],[672,93],[678,72],[679,56]], "beyond_wall_to_frame_px": [[679,56],[678,36],[668,19],[661,6]], "legend": "北郭东侧交点", "chord_km_one_decimal": 1.1}
+    ],
+    "method": "弦长取内城门至该路线与图上北郭标记的交点，用两端像素欧氏距离除以92，展示到0.1公里。两端的横纵坐标分别改动3像素、尺度改动1像素，结果变化不超过0.12公里。路线弯曲不计入弦长。这是读图灵敏度，地面定位误差未知。",
+    "source_map_merge_visible": false, "northern_outer_gate_archaeological_structures": null
+  },
+  "moat": {
+    "source": "survey1973", "crosscheck": "chanhe_lower", "segment": "上屯一带复见河道，经广莫门附近至内城东北角，转向城东。", "modern_disturbance": "1958年开挖中州大渠，金墉甲城北支部分遭破坏；在甲城东约300米、中州大渠南侧重新见到河道。",
+    "offset_from_inner_north_wall_approx_m": [20,35], "channel_width_approx_m": [20,24], "silt_depth_at_least_m": 4,
+    "bridge_or_culvert_location": null, "north_wall_distance_definition": "报告未说明从墙体和河道的哪一缘起量。", "water_depth_516_528_m": null
+  },
+  "open_endpoints": {"chengming_westernmost_survey_station": null, "daxia_last_field_station": null, "guangmo_last_field_station": null, "mangshan_confluence_coordinates": null},
+  "next_evidence": "核1993年原刊或重印的完整图例和三条路的说明。若图上只画走向，继续找北郭发掘平面、原钻孔编号或可复位的剖面，再给出最后实测点。"
+}
