@@ -1,0 +1,879 @@
+{
+  "schema": "west-palace-source-audit-v1",
+  "checked_at_beijing": "2026-11-19T17:37:47+08:00",
+  "scope": [
+    "W13宫城西墙汉晋河渠遗迹",
+    "W14千秋门区域魏晋大型水利设施"
+  ],
+  "target_period": "516–528 CE",
+  "new_metric_measurements": 0,
+  "new_absolute_coordinates": 0,
+  "new_516_528_continuous_channel_geometry": 0,
+  "baseline_files": [
+    "research/prosperity-v4/hydro-roads-anchor-p46.json",
+    "research/prosperity-v4/primary-source-audit.json",
+    "research/prosperity-v4/anchor-461/trench.json",
+    "research/prosperity-v4/anchor-461/qianqiu.json"
+  ],
+  "sources": [
+    {
+      "id": "NARA2013",
+      "kind": "primary_excavation_participant_report",
+      "author": "今井晃樹",
+      "title": "漢魏洛陽城－北魏宮城西南隅の調査成果－",
+      "publication": "奈良文化財研究所紀要2013",
+      "printed_pages": "52–53",
+      "digital_pages": "1–2 (two-page article PDF)",
+      "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/6157/1/BA67898227_2013_052_053.pdf",
+      "local_pdf": {
+        "path": "verification-cache/BA67898227_2013_052_053.pdf",
+        "bytes": 2333833,
+        "sha256": "6c4afc4c3988f34b8f64ee4b783dcab49ff838a8b5baa4b0d580467db9cf58cf"
+      },
+      "inspection": "downloaded; extracted text; visually inspected both rendered pages including figures69–71",
+      "source_family": "CHINA_NARA_2010_2011_EXCAVATION",
+      "old_status": "already cited and visually inspected in primary-source-audit.json and anchor-461/trench.json; this run restores local PDF and expands overlooked facts"
+    },
+    {
+      "id": "QIAN2012",
+      "kind": "primary_excavation_leader_conference_report",
+      "author": "钱国祥",
+      "title": "汉魏洛阳故城北魏宫城中枢区南部的合作勘察",
+      "publication": "日中韓 古代都城文化の潮流－奈文研60年 都城の発掘と国際共同研究",
+      "year": 2012,
+      "printed_pages_used": "中文30页，§2.3和§2.4；31页§3为文献身份判断",
+      "digital_pages_used": [
+        30,
+        31
+      ],
+      "url": "https://www.kuba.co.jp/nabunken1020/img/nabunken20121020.pdf",
+      "local_pdf": {
+        "path": "verification-cache/qian2012-conference.pdf",
+        "bytes": 5946558,
+        "sha256": "cfb3fb2f67332e562b7e456740d337be4af4745391308e830c9949723d828bdc"
+      },
+      "inspection": "downloaded; Chinese printed30/digital30 rendered and visually read; p31 text checked",
+      "source_family": "CHINA_NARA_2010_2011_EXCAVATION",
+      "old_status": "already cited in anchor-461/trench.json; not independent second excavation"
+    },
+    {
+      "id": "QIAN2017",
+      "kind": "excavation_leader_later_synthesis_and_bibliographic_chain",
+      "author": "钱国祥；日译松本圭太",
+      "title": "漢魏洛陽城宮城調査における新発見とその構造／汉魏洛阳城宫城的考察新发现与布局研究",
+      "publication": "岩手大学平泉文化研究センター年報 = Hiraizumi studies 5 (2017), 1–11,13–22",
+      "locator": "中文印15页及注6；日文相应概述",
+      "url": "https://iwate-u.repo.nii.ac.jp/record/14433/files/arhs-v5p1-22.pdf",
+      "doi": "10.15113/00014417",
+      "bibliographic_verification": "https://www.r-info.tohoku.ac.jp/ja/713a693cb83c766d4b49197fdc5e3754.html",
+      "local_pdf": {
+        "path": "verification-cache/qian2017-iwate.pdf",
+        "bytes": 2463065,
+        "sha256": "0ee85517f6cc4563855e6637bfdfdedd623e11ad2d8af7df6dcbb4578956add6"
+      },
+      "inspection": "downloaded; text checked; no new image measurement; only later synthesis/bibliographic pointer used",
+      "source_family": "CHINA_NARA_2010_2011_EXCAVATION",
+      "primary_report_pointer": "联合考古队《河南洛阳市汉魏故城魏晋时期宫城西墙与河渠遗迹》，《考古》2013年第5期；本轮未取得该原刊全文。"
+    },
+    {
+      "id": "HNS2023",
+      "kind": "official_institute_meeting_report",
+      "author_role": "河南省文物考古研究院发布；第32项转述中国社会科学院考古研究所郭晓涛汇报",
+      "title": "2022年度河南考古工作成果交流会（三）",
+      "date": "2023-01-07",
+      "meeting_date": "2023-01-06",
+      "locator": "第32项《2022年汉魏洛阳城考古发掘新收获》",
+      "url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=1860",
+      "duplicate_url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=1871",
+      "access": "official text and figure captions readable through search retrieval; direct browser retrieval502 and ordinary HTTPGET503 for both URLs; original image bytes not acquired from this host",
+      "old_status": "1871 already registered as HP23 in anchor-461/qianqiu.json;1860 is duplicate栏目, not independent evidence",
+      "figure_captions": [
+        "千秋门遗址发掘平面图",
+        "各期水道关系图",
+        "水道G3水栅遗迹（北-南）"
+      ],
+      "figure_files_reported_by_index": [
+        "1673063066297134.jpg",
+        "1673063073401486.jpg",
+        "1673063081808696.jpg"
+      ],
+      "source_family": "CASS_QIANQIU_2021_2022"
+    },
+    {
+      "id": "QIANQIU_TEAM_IMAGES_2023",
+      "kind": "excavation_team_visual_evidence_in_official_news_reprint",
+      "host": "北京日报客户端，标来源新华社微信公众号",
+      "date": "2023-01-08",
+      "title": "河南汉魏洛阳城考古，重要进展！",
+      "url": "https://xinwen.bjd.com.cn/content/s63ba1809e4b075b42c423053.html",
+      "source_status": "图像原属发掘资料；网站为官方新闻转载渠道。网页叙述不等同正式发掘简报，采访判断和图像观察分开。",
+      "images": [
+        {
+          "path": "verification-cache/qianqiu2023-plan.jpeg",
+          "bytes": 138771,
+          "sha256": "cb763a34dfc8e3914664722aea5bdd1beab6efce9d782ac742dac01a0622654d",
+          "url": "https://static.bjd.com.cn/dams-res/editing/image/202312/29/658e7cd2d5deca83f8f4f2c5.jpeg",
+          "caption": "2022年汉魏洛阳城宫城千秋门遗址发掘局部示意图",
+          "old_status": "same hash already in anchor-461/qianqiu.json"
+        },
+        {
+          "path": "verification-cache/qianqiu2023-phases.jpeg",
+          "bytes": 114414,
+          "sha256": "af144a5ecb0f959c74b357f6919c8a3520c460726cb1a160fb0c7c03adaa7f87",
+          "url": "https://static.bjd.com.cn/dams-res/editing/image/202312/29/658e7cd1d5de9bf28162636e.jpeg",
+          "caption": "汉魏洛阳城宫城千秋门遗址各期水道关系图",
+          "old_status": "same hash already in anchor-461/qianqiu.json"
+        },
+        {
+          "path": "verification-cache/qianqiu2023-division.jpeg",
+          "bytes": 81150,
+          "sha256": "e0ebbd5ce8d79054fe455aac20200caf0b3c6e9ef0ba4de2816074de7482c938",
+          "url": "https://static.bjd.com.cn/dams-res/editing/image/202312/29/658e7cd1d5de908f072aed68.jpeg",
+          "caption": "汉魏洛阳城发现的魏晋时期水道的分流结构",
+          "old_status": "new local visual inspection; not a new excavation result"
+        }
+      ],
+      "source_family": "CASS_QIANQIU_2021_2022"
+    },
+    {
+      "id": "CASS_RELEASE_2022_REPRINT",
+      "kind": "official_media_fulltext_reprint_of_institute_release_auxiliary",
+      "marked_source": "中国社会科学院考古研究所",
+      "host": "贵州广播电视台动静",
+      "title": "汉魏洛阳城遗址考古重大发现！",
+      "date": "2022-06-11",
+      "url": "https://www.gzstv.com/a/3c9e64c0f9714ebda1a69c39cb8ae8f4",
+      "access": "full HTML readable via web retrieval; 3 signed image URLs timed out; not altered or bypassed",
+      "use": "仅辅助辨明三条石渠的披露时间、方向及发掘者的功能解释；未升级为原刊分层测量。",
+      "source_family": "CASS_QIANQIU_2021_2022"
+    },
+    {
+      "id": "UNESCO1944",
+      "kind": "official_nomination_dossier_reproducing_excavation_institute_photographs",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+      "source_pdf_pages_total": 5714,
+      "source_pdf_page": 1944,
+      "printed_locator": "Annex II-F C02-CN, p19",
+      "local_extract_path": "verification-cache/unesco-1442-pages-1926-1931-1944.pdf",
+      "local_extract_page": 7,
+      "local_extract_sha256": "1fded6ca145fe7a54f8219c2651a881ba4b0cb5526397fe61e12f88a8a41b3a0",
+      "provenance_file": "verification-cache/unesco-extraction-provenance.json",
+      "acquisition": "sibling road_sources extracted public HTTP206 ranges; full source PDF not stored; this agent visually read source-p1944 rendering",
+      "old_status": "source page cited in old terrain evidence; newly restored original page for visual review, not new excavation"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "WP01",
+      "subject": "2010–2011两个发掘窗口",
+      "source_ids": [
+        "NARA2013",
+        "QIAN2012"
+      ],
+      "locator": "NARA p52 §2；QIAN p30 §2.4",
+      "facts": [
+        "西南角主发掘区与其北约80m的横跨西墙探沟必须分开。"
+      ],
+      "period": "modern_excavation",
+      "novelty_against_old_records": "inherited anchor-461/trench T01",
+      "limit_516_528": "两个窗口没有本项目共同地理测站，不能连成连续实测渠线。",
+      "reported_values": [
+        {
+          "value": [
+            60,
+            30
+          ],
+          "unit": "m",
+          "semantic": "主区南北×东西（NARA）"
+        },
+        {
+          "value": [
+            70,
+            4
+          ],
+          "unit": "m",
+          "semantic": "横探沟东西×南北"
+        },
+        {
+          "value": 80,
+          "unit": "m",
+          "semantic": "探沟在宫城西南角以北约数"
+        }
+      ],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WP02",
+      "subject": "汉晋／汉魏早期大渠及废弃堆积",
+      "source_ids": [
+        "QIAN2012",
+        "NARA2013"
+      ],
+      "locator": "QIAN p30右栏§2.4；NARA p52右栏城壁段",
+      "facts": [
+        "早期大渠位于魏晋宫墙西侧，南北向并由北向南流。",
+        "北魏墙基开挖其淤积层；北魏砖暗渠基槽亦切入旧渠淤土。",
+        "钱文记渠底有人工硬面，渠内近3m淤土分多期形成，其上还压多层瓦砾、淤土与路土。"
+      ],
+      "period": "QIAN称汉晋；NARA称汉魏堆积并述魏晋墙外大渠",
+      "novelty_against_old_records": "渠宽、4.2m、南流为旧T02；近3m淤积和底硬面性质为本轮展开的原报告事实",
+      "limit_516_528": "旧渠该截段已被北魏施工占压，不能画成516–528仍同宽同线通水；多期淤积未按层给绝对年代。",
+      "reported_values": [
+        {
+          "value": 29,
+          "unit": "m",
+          "semantic": "渠上口宽；QIAN"
+        },
+        {
+          "value": 20.4,
+          "unit": "m",
+          "semantic": "渠底宽；QIAN"
+        },
+        {
+          "value": 4.2,
+          "unit": "m",
+          "semantic": "渠东岸至魏晋宫墙包砖拆除沟；QIAN"
+        },
+        {
+          "value": 30,
+          "unit": "m",
+          "qualifier": "about",
+          "semantic": "概述大渠宽；NARA，不替换上下口值"
+        },
+        {
+          "value": 3,
+          "unit": "m",
+          "qualifier": "nearly",
+          "semantic": "多期灰黑色淤积总厚；不是河渠水深"
+        }
+      ],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WP03",
+      "subject": "北魏与北周墙、道路叠压",
+      "source_ids": [
+        "NARA2013",
+        "QIAN2012"
+      ],
+      "locator": "NARA p52城壁段；QIAN p30§2.4",
+      "facts": [
+        "北魏墙外有道路地面，北周墙基、地面另列较晚层。",
+        "北魏西墙在魏晋墙外侧；2012详报与2013概报的宽度语义须分别记录。"
+      ],
+      "period": "Northern_Wei_then_Northern_Zhou",
+      "novelty_against_old_records": "inherited T03 T04 T07, expanded NARA wall dimensions",
+      "limit_516_528": "可画时期先后，不能把“北魏”自动细分为516–528连续使用。",
+      "reported_values": [
+        {
+          "value": [
+            1.7,
+            2.0
+          ],
+          "unit": "m",
+          "semantic": "北魏墙较魏晋墙向西偏移；QIAN"
+        },
+        {
+          "value": 6,
+          "unit": "m",
+          "semantic": "北魏墙体宽概数；NARA"
+        },
+        {
+          "value": 8,
+          "unit": "m",
+          "semantic": "北魏掘入地业宽；NARA"
+        },
+        {
+          "value": 2,
+          "unit": "m",
+          "qualifier": "about",
+          "semantic": "北魏地业深；NARA"
+        },
+        {
+          "value": [
+            11,
+            15
+          ],
+          "unit": "m",
+          "semantic": "北魏路面东西残宽；QIAN"
+        },
+        {
+          "value": 9,
+          "unit": "m",
+          "semantic": "北周路面东西残宽；QIAN"
+        }
+      ],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WP04",
+      "subject": "西南角内侧砖砌池",
+      "source_ids": [
+        "QIAN2012",
+        "NARA2013"
+      ],
+      "locator": "QIAN中文p30左栏§2.3；NARA p53左栏首段",
+      "facts": [
+        "砖池在西南角内侧，形近长方，池底坚硬。",
+        "2012报告称池和4条砖渠均不晚于北魏；不是明确断为北魏新建。",
+        "2012称池底有铺砖痕迹，2013只述池底土坚硬，未提供入口、出口定位。"
+      ],
+      "period": "no_later_than_Northern_Wei",
+      "novelty_against_old_records": "new structured extraction; not found in searched old prosperity-v4 JSON/MD",
+      "limit_516_528": "可列不晚于北魏的局部池体和表列尺寸；516–528通水及与各渠的池口接续未证。",
+      "reported_values": [
+        {
+          "value": 9.3,
+          "unit": "m",
+          "semantic": "池南北宽"
+        },
+        {
+          "value": 5.5,
+          "unit": "m",
+          "qualifier": "surviving_length; NARA at_least",
+          "semantic": "池东西残长；非完整池长"
+        },
+        {
+          "value": 1.4,
+          "unit": "m",
+          "semantic": "报告池深"
+        }
+      ],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WP05",
+      "subject": "西墙内侧两条北流水渠",
+      "source_ids": [
+        "QIAN2012",
+        "NARA2013"
+      ],
+      "locator": "QIAN中文p30左栏池后段；NARA p53给排水首段溝1、溝2",
+      "facts": [
+        "两条砖暗渠沿宫城西墙内侧南北排列，水均由南向北。",
+        "2012说两渠南端起于池北侧；不足以确认直接接入池口。",
+        "2012没有给编号；2013对应编号应作为同发掘报告的对照，不以数字跨到千秋门水道。"
+      ],
+      "period": "QIAN broad group no_later_than_Northern_Wei; NARA not individually dated",
+      "novelty_against_old_records": "new structured extraction",
+      "limit_516_528": "允许两条独立北向流线及池北侧相邻关系；不能画已证池→两渠供水箭头或把两渠认作千秋门G1/G2。",
+      "reported_values": [
+        {
+          "value": 3,
+          "unit": "m",
+          "semantic": "两渠间距；端点定义未给；QIAN"
+        },
+        {
+          "value": 27,
+          "unit": "m",
+          "qualifier": "about_each_surviving_length",
+          "semantic": "每渠残长；QIAN"
+        },
+        {
+          "value": 1.4,
+          "unit": "m",
+          "qualifier": "about",
+          "semantic": "沟槽宽；QIAN"
+        },
+        {
+          "value": 1.5,
+          "unit": "m",
+          "semantic": "沟外宽；NARA，勿强并成统一测值"
+        },
+        {
+          "value": 0.5,
+          "unit": "m",
+          "semantic": "砖槽内宽；两报告概数"
+        },
+        {
+          "value": 0.4,
+          "unit": "m",
+          "semantic": "砖壁残高；QIAN"
+        }
+      ],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WP06",
+      "subject": "宫城南墙内侧东西向水渠",
+      "source_ids": [
+        "QIAN2012"
+      ],
+      "locator": "中文p30左栏§2.3末句（灶坑段之前）",
+      "facts": [
+        "报告另记紧贴南墙内侧的一条东西向渠。",
+        "原段的4条渠统计与2013的溝1–4未在此句逐一对号；不能无条件另增第五独立编号。"
+      ],
+      "period": "no_later_than_Northern_Wei_by_group_context",
+      "novelty_against_old_records": "new structured extraction with identity unresolved",
+      "limit_516_528": "只画东西向未定向渠段或置待核条目；不给流向、出口、长度、与池连接。",
+      "reported_values": [],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WP07",
+      "subject": "溝3穿墙接溝4",
+      "source_ids": [
+        "NARA2013",
+        "QIAN2012"
+      ],
+      "locator": "NARA p53给排水第二段及图71；QIAN p30§2.3",
+      "facts": [
+        "溝3在池西北，东西段穿西墙后接墙外溝4。",
+        "NARA明言溝3、4为一套、与北魏城墙同期。",
+        "NARA作T形；QIAN作L形。保留异记，不强合完整平面。"
+      ],
+      "period": "Northern_Wei_contemporary_with_wall",
+      "novelty_against_old_records": "connection and most sizes inherited T06; 1.9m surviving wall and cut-stone floor expanded here",
+      "limit_516_528": "可画北魏期穿墙连接与局部构造；尚不能断定516–528每年连续通水。",
+      "reported_values": [
+        {
+          "value": 6.5,
+          "unit": "m",
+          "semantic": "溝3已见南北段长"
+        },
+        {
+          "value": 18,
+          "unit": "m",
+          "semantic": "溝3已见东西段长"
+        },
+        {
+          "value": 0.6,
+          "unit": "m",
+          "semantic": "溝3内宽；NARA正文60cm"
+        },
+        {
+          "value": 1.9,
+          "unit": "m",
+          "semantic": "溝3穿墙暗渠砖壁残高；非完整内高或水深"
+        }
+      ],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WP08",
+      "subject": "墙外溝4南流",
+      "source_ids": [
+        "NARA2013"
+      ],
+      "locator": "p53给排水第二段",
+      "facts": [
+        "溝4在墙西且与墙平行，水向南；砖底砖壁及拱顶。"
+      ],
+      "period": "Northern_Wei_contemporary_with_wall",
+      "novelty_against_old_records": "inherited T06",
+      "limit_516_528": "7m为主区报告墙距，不能用横探沟的2.7m位移取代或画成同一测点。",
+      "reported_values": [
+        {
+          "value": 7,
+          "unit": "m",
+          "semantic": "主区溝4在墙西所报距离，端点未定义"
+        },
+        {
+          "value": 3.8,
+          "unit": "m",
+          "semantic": "溝4外宽；不是基槽口宽"
+        },
+        {
+          "value": 1.4,
+          "unit": "m",
+          "semantic": "溝4内宽"
+        },
+        {
+          "value": 1.5,
+          "unit": "m",
+          "semantic": "溝4内高到拱顶；非水深"
+        }
+      ],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WP09",
+      "subject": "北侧横探沟路下砖暗渠",
+      "source_ids": [
+        "QIAN2012"
+      ],
+      "locator": "中文p30右栏§2.4",
+      "facts": [
+        "砖暗渠位于北魏路下、墙西；北向南流水。",
+        "渠基槽开挖旧渠淤土，内涵洞上作双层砖拱。"
+      ],
+      "period": "Northern_Wei",
+      "novelty_against_old_records": "inherited T05",
+      "limit_516_528": "与主区溝4可属同体系的判断不能代替两窗口间实测接续；尺寸差不得平均。",
+      "reported_values": [
+        {
+          "value": 2.7,
+          "unit": "m",
+          "semantic": "距北魏墙西报告值"
+        },
+        {
+          "value": 3.8,
+          "unit": "m",
+          "semantic": "基槽上口宽"
+        },
+        {
+          "value": 3.5,
+          "unit": "m",
+          "semantic": "基槽底宽"
+        },
+        {
+          "value": 1.4,
+          "unit": "m",
+          "semantic": "涵洞内宽"
+        },
+        {
+          "value": 1.3,
+          "unit": "m",
+          "qualifier": "about",
+          "semantic": "涵洞内高"
+        }
+      ],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WQ01",
+      "subject": "千秋门阙间广场下的多期水道",
+      "source_ids": [
+        "HNS2023"
+      ],
+      "locator": "官方年会第32项",
+      "facts": [
+        "魏晋大型地下水道在阙间广场下层；其下另有汉代大型券砖水道。",
+        "门址在北周大规模重建，早期门址形制未清；阙台始建魏晋、北魏改建。"
+      ],
+      "period": "Han_then_Wei_Jin; gate Northern_Wei_and_Northern_Zhou alterations",
+      "novelty_against_old_records": "inherited regional phasing; official report text now read in detail",
+      "limit_516_528": "阙台沿用不等于四条石渠全沿用；此段未提供北魏单渠的逐层使用年代。",
+      "reported_values": [],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WQ02",
+      "subject": "千秋门石渠结构",
+      "source_ids": [
+        "HNS2023"
+      ],
+      "locator": "第32项魏晋水涵洞段",
+      "facts": [
+        "石渠由底板、侧板、盖板组成，具体砌法不同。"
+      ],
+      "period": "Wei_Jin",
+      "novelty_against_old_records": "old general structure; linked directly to official meeting report",
+      "limit_516_528": "未公布本条渠宽高、底高、梯度或516–528年流量；不由照片尺杆惯例换算。",
+      "reported_values": [],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WQ03",
+      "subject": "千秋门发掘平面图实际读图",
+      "source_ids": [
+        "QIANQIU_TEAM_IMAGES_2023"
+      ],
+      "locator": "图1原图1000×960px",
+      "facts": [
+        "北箭向图上；图例青绿为魏晋水道，白色为北朝遗迹，黄色为晚期遗迹。",
+        "可辨水道1、2、3，西南—东北斜向并在北部有转向；不能把报道第四条补成任意线。",
+        "图例“北朝”不得改标“516–528北魏”。"
+      ],
+      "period": "Wei_Jin_channel_overlaid_with_broad_Northern_Dynasties_features",
+      "novelty_against_old_records": "old plan/hash; reinspection no new points",
+      "limit_516_528": "无印刷米尺，不转换米距；图中转折为揭露/着色范围，非完整四渠测线。",
+      "reported_values": [],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WQ04",
+      "subject": "千秋门各期水道关系照片实际读图",
+      "source_ids": [
+        "QIANQIU_TEAM_IMAGES_2023"
+      ],
+      "locator": "图3原图1000×621px",
+      "facts": [
+        "照片标北周门址夯土基槽、魏晋水道2夯土基槽、魏晋水道1底部夯土基槽、汉代券砖水道顶部填土及汉代券砖水道。",
+        "照片没有标出北魏渠；不能据此给北魏渠编号、出口或使用层。"
+      ],
+      "period": "Han_Wei_Jin_Northern_Zhou_as_labelled",
+      "novelty_against_old_records": "old phase photograph/hash; interpretive boundary clarified",
+      "limit_516_528": "无可读米尺或孔位坐标；只能依图注识别相对叠压，不作比例剖面。",
+      "reported_values": [],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WQ05",
+      "subject": "千秋门石渠分流照片实际读图",
+      "source_ids": [
+        "QIANQIU_TEAM_IMAGES_2023"
+      ],
+      "locator": "图2原图1000×667px",
+      "facts": [
+        "可见石板渠体、中间立石隔分两孔／两腔及盖板方孔。",
+        "有红白尺杆，但此图无数字或长度说明；照片未标渠道编号或北向。"
+      ],
+      "period": "caption identifies Wei_Jin",
+      "novelty_against_old_records": "new local visual examination of an already published team photo",
+      "limit_516_528": "不量宽深，不判水流箭头，不把照片自动指定为年会“G3水栅遗迹”。",
+      "reported_values": [],
+      "new_measurement_by_project": false
+    },
+    {
+      "id": "WP10",
+      "subject": "2011宫墙与河渠剖面照片",
+      "source_ids": [
+        "UNESCO1944"
+      ],
+      "locator": "源PDF1944页／附录19页／本地抽页PDF7页",
+      "facts": [
+        "同页两幅图标为2011宫城西墙与汉晋河渠遗迹，署中国社会科学院考古研究所资料。",
+        "上图可读北魏宫墙基础、汉晋河渠；下图可读魏晋宫墙、排水渠。"
+      ],
+      "period": "excavation labels cover Han_Jin and Northern_Wei",
+      "novelty_against_old_records": "old source page now visually rechecked",
+      "limit_516_528": "仍是透视剖面照片，没有可读尺标、层号、孔号或测线坐标，不能读成等比例地层剖面；照片的“排水渠”标签本身不足以定渠编号。",
+      "reported_values": [],
+      "new_measurement_by_project": false
+    }
+  ],
+  "figures": [
+    {
+      "id": "NARA-F69",
+      "source_id": "NARA2013",
+      "printed_page": 52,
+      "digital_page": 1,
+      "caption": "北魏宮城の構造と調査地",
+      "kind": "schematic_city_plan",
+      "visual_file": "verification-cache/nara2013-p52.png",
+      "readable_scale": "0–200m",
+      "use": "区分千秋门与西南角发掘地点；不显示70×4m横探沟或水渠完整线位",
+      "new_measurement": false
+    },
+    {
+      "id": "NARA-F70",
+      "source_id": "NARA2013",
+      "printed_page": 53,
+      "digital_page": 2,
+      "caption": "西城壁断面図の作成",
+      "kind": "photo_of_field_drawing_a_wall_section",
+      "visual_file": "verification-cache/nara2013-p53.png",
+      "readable_scale": null,
+      "use": "确认现场制作断面图的作业照片；并非可直接读取层界的带尺剖面绘图",
+      "new_measurement": false
+    },
+    {
+      "id": "NARA-F71",
+      "source_id": "NARA2013",
+      "printed_page": 53,
+      "digital_page": 2,
+      "caption": "溝３の磚積構造",
+      "kind": "photo_of_drain3_brickwork",
+      "visual_file": "verification-cache/nara2013-p53.png",
+      "readable_scale": null,
+      "use": "见砖砌侧壁与渠体；不是溝4照片、也不是带尺平面。0.6m/1.9m等数值来自同页正文，非图测。",
+      "new_measurement": false
+    },
+    {
+      "id": "UNESCO-P1944",
+      "source_id": "UNESCO1944",
+      "caption": "West Palace wall and Han and Jin canals ruins 1/2 (2011)",
+      "source_pdf_page": 1944,
+      "printed_page": 19,
+      "local_pdf_page": 7,
+      "kind": "two_oblique_excavation_section_photographs",
+      "visual_file": "verification-cache/unesco-p1944-7.png",
+      "readable_scale": null,
+      "new_measurement": false
+    }
+  ],
+  "relations": [
+    {
+      "id": "WR01",
+      "from": "W13_early_open_channel",
+      "to": "south",
+      "relation": "flow_direction",
+      "period": "Han_Jin_or_Han_Wei_early",
+      "evidence_ids": [
+        "WP02"
+      ],
+      "style": "historical_dry_or_superseded_layer"
+    },
+    {
+      "id": "WR02",
+      "from": "W13_Northern_Wei_wall_foundation",
+      "to": "W13_early_channel_fill",
+      "relation": "cuts",
+      "evidence_ids": [
+        "WP02",
+        "WP03"
+      ],
+      "style": "stratigraphy_only"
+    },
+    {
+      "id": "WR03",
+      "from": "W13_brick_pool",
+      "to": "W13_inner_north_drains_1_2",
+      "relation": "drains_begin_north_of_pool",
+      "evidence_ids": [
+        "WP04",
+        "WP05"
+      ],
+      "style": "adjacency_no_flow_arrow",
+      "unknown": "pool outlet/connection"
+    },
+    {
+      "id": "WR04",
+      "from": "W13_drain1",
+      "to": "north",
+      "relation": "flow_direction",
+      "evidence_ids": [
+        "WP05"
+      ],
+      "period": "no_later_than_Northern_Wei"
+    },
+    {
+      "id": "WR05",
+      "from": "W13_drain2",
+      "to": "north",
+      "relation": "flow_direction",
+      "evidence_ids": [
+        "WP05"
+      ],
+      "period": "no_later_than_Northern_Wei"
+    },
+    {
+      "id": "WR06",
+      "from": "W13_south_wall_inner_channel",
+      "to": "east_west_axis",
+      "relation": "alignment_only",
+      "evidence_ids": [
+        "WP06"
+      ],
+      "unknown": "identity and flow direction; may overlap an already numbered channel"
+    },
+    {
+      "id": "WR07",
+      "from": "W13_drain3",
+      "to": "W13_west_wall",
+      "relation": "passes_under",
+      "evidence_ids": [
+        "WP07"
+      ],
+      "period": "Northern_Wei"
+    },
+    {
+      "id": "WR08",
+      "from": "W13_drain3",
+      "to": "W13_drain4",
+      "relation": "connects_westward",
+      "evidence_ids": [
+        "WP07"
+      ],
+      "period": "Northern_Wei"
+    },
+    {
+      "id": "WR09",
+      "from": "W13_drain4",
+      "to": "south",
+      "relation": "flow_direction",
+      "evidence_ids": [
+        "WP08"
+      ],
+      "period": "Northern_Wei"
+    },
+    {
+      "id": "WR10",
+      "from": "W13_north_trench_brick_drain",
+      "to": "south",
+      "relation": "flow_direction",
+      "evidence_ids": [
+        "WP09"
+      ],
+      "period": "Northern_Wei",
+      "unknown": "continuous physical join with main-area drain4"
+    },
+    {
+      "id": "WR11",
+      "from": "W14_Wei_Jin_stone_conduits",
+      "to": "W14_Han_brick_conduit",
+      "relation": "stratigraphically_above",
+      "evidence_ids": [
+        "WQ01",
+        "WQ04"
+      ],
+      "style": "stratigraphy_only"
+    },
+    {
+      "id": "WR12",
+      "from": "W14_numbered_stone_conduits_1_2_3",
+      "to": "southwest_northeast_axis",
+      "relation": "alignment_only",
+      "evidence_ids": [
+        "WQ03"
+      ],
+      "period": "Wei_Jin",
+      "unknown": "fourth-channel measured line and Northern_Wei individual usage"
+    }
+  ],
+  "recommended_panels": [
+    {
+      "title": "西南角池渠：连接与未定池口",
+      "evidence_ids": [
+        "WP04",
+        "WP05",
+        "WP06",
+        "WP07",
+        "WP08"
+      ],
+      "notes": "池旁两渠北流与穿墙排渠南流分开；南墙东西渠编号未定；T/L异记并列。"
+    },
+    {
+      "title": "横探沟：旧渠淤积到北魏路下暗渠",
+      "evidence_ids": [
+        "WP01",
+        "WP02",
+        "WP03",
+        "WP09"
+      ],
+      "notes": "非比例层序示意；各厚度/宽度做原报告尺寸卡，勿按图70量测。"
+    },
+    {
+      "title": "千秋门：汉、魏晋、北朝分期",
+      "evidence_ids": [
+        "WQ01",
+        "WQ02",
+        "WQ03",
+        "WQ04",
+        "WQ05"
+      ],
+      "notes": "与西南角独立面板；四条报道与三条图符分开，北朝标签不窄化北魏。"
+    }
+  ],
+  "critical_limits": [
+    "西南角溝1/2/3/4与千秋门水道1/2/3及G3不是同一编号系统。",
+    "池和4渠“不晚于北魏”给时代上限，不证明所有设施同时建造、全在516–528通水。",
+    "NARA对沟3/4的北魏同墙期判断比对池/沟1/2更明确；不得统一改成笼统均北魏。",
+    "图70是现场绘剖面照片，图71是沟3照片。所有尺寸来自正文，不是按这两图尺标量测。",
+    "同一发掘的2012、2013及2017发表不算独立复测。",
+    "河南年会1860/1871是同内容不同栏目；页面抓取受阻不代表已取得三张原图。",
+    "四条魏晋石渠、累计揭露>80m与旧图已在P461登记，不记本轮新发现；累计长度不分配每条。",
+    "本次未从第三方转载的不同数字取平均、移位或确定旧渠两期断面。"
+  ],
+  "secondary_or_unverified_material": [
+    {
+      "url": "https://www.uux.cn/viewnews-34660.html",
+      "title": "汉魏洛阳故城北魏宫城五号建筑遗址的发掘",
+      "status": "第三方署名转述／转载，列刘涛等发掘者，但本轮未找到其机构原刊；不作主要数值证据。",
+      "reason_to_keep_separate": "池底有/无铺砖、沟1/2距池约5m、渠分两期宽度等与2012会议详略不同；须追正式报告，不能据转载单独改图。"
+    },
+    {
+      "url": "https://www.thepaper.cn/newsDetail_forward_23920562",
+      "status": "后出年度综述，旧案已有；本次不作为新增原始证据。"
+    }
+  ],
+  "next_exact_actions": [
+    "取得《考古》2013年第5期《河南洛阳市汉魏故城魏晋时期宫城西墙与河渠遗迹》的原图及完整地层表，区分两个窗口并核旧渠分期。",
+    "取得《考古》2012年第1期五号建筑遗址简报原页，核池口与G1/G2接续、T/L形异记以及各编号独立年代。",
+    "取得郭晓涛2022年度汇报的原始带尺图／后续正式千秋门简报，逐条给四条石渠对应编号、底高和北魏改建/废弃层，不以区域再利用代替单渠。",
+    "UNESCO源1944页已目验，仍为照片；下一步应索2013《考古》原刊带层号的绘制剖面，不能将本次抽回照片记作新测线。"
+  ],
+  "cache_note": "核读缓存未随网站分发；原件请用各条公开来源链接，图页与哈希供复核。"
+}

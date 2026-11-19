@@ -1,0 +1,1004 @@
+{
+  "version": "water04-pools-source-audit-v1",
+  "created_beijing": "2026-11-19T17:38:50+08:00",
+  "target_period": "516—528年；是研究目标，不表示每条记载已逐年证实",
+  "scope_legacy_water_ids": [
+    "W22",
+    "W23",
+    "W24",
+    "W25",
+    "W26",
+    "W27",
+    "W29"
+  ],
+  "summary": "七个旧编号全部补齐可复用原文、校本行号、时层与连通边界；另建一条都亭堂上方湖比较记录，防止与旧W29误合。池水拥有关系、位置关系和水力连通分别保存。",
+  "geographic_coordinates": null,
+  "new_geographic_controls": 0,
+  "new_banklines": 0,
+  "quotation_policy": "古文依周/范校本正文或四部丛刊原文节引；标点为整理读法，省略号为本次节引。现代注释只摘要，未混入古文。数字页号与印本页/叶码分别对待。",
+  "local_sources_read_first": [
+    "luoyang-water/research/prosperity-v4/hydro-roads-anchor-p46.json",
+    "luoyang-water/research/dual-b6/southeast-inner.json",
+    "luoyang-water/research/dual-b3/west-market.json",
+    "luoyang-water/research/prosperity-v4/water-467/water-03-source-records.json",
+    "water-text-next/source-cache/galan1.txt",
+    "water-text-next/source-cache/galan3.txt",
+    "water-text-next/source-cache/galan4.txt",
+    "water-text-next/source-cache/shuijing16_sibu.html"
+  ],
+  "sources": [
+    {
+      "id": "Z1",
+      "title": "《洛阳伽蓝记》卷1，周祖谟校释，CBETA电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/1",
+      "source_family": "洛阳伽蓝记",
+      "role": "古文正文及现代校语分读；与另一校本互校，不另计独立古籍证据",
+      "verification": "2026-11-19直接读取完整公开HTML，定位CBETA行号；未核本书古刻原叶",
+      "local_cache": "source-cache/Z1.html"
+    },
+    {
+      "id": "F1",
+      "title": "《洛阳伽蓝记》卷1，范祥雍校注，CBETA电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/1",
+      "source_family": "洛阳伽蓝记",
+      "role": "古文正文及现代校语分读；与另一校本互校，不另计独立古籍证据",
+      "verification": "2026-11-19直接读取完整公开HTML，定位CBETA行号；未核本书古刻原叶",
+      "local_cache": "source-cache/F1.html"
+    },
+    {
+      "id": "Z3",
+      "title": "《洛阳伽蓝记》卷3，周祖谟校释，CBETA电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/3",
+      "source_family": "洛阳伽蓝记",
+      "role": "古文正文及现代校语分读；与另一校本互校，不另计独立古籍证据",
+      "verification": "2026-11-19直接读取完整公开HTML，定位CBETA行号；未核本书古刻原叶",
+      "local_cache": "source-cache/Z3.html"
+    },
+    {
+      "id": "F3",
+      "title": "《洛阳伽蓝记》卷3，范祥雍校注，CBETA电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/3",
+      "source_family": "洛阳伽蓝记",
+      "role": "古文正文及现代校语分读；与另一校本互校，不另计独立古籍证据",
+      "verification": "2026-11-19直接读取完整公开HTML，定位CBETA行号；未核本书古刻原叶",
+      "local_cache": "source-cache/F3.html"
+    },
+    {
+      "id": "Z4",
+      "title": "《洛阳伽蓝记》卷4，周祖谟校释，CBETA电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/4",
+      "source_family": "洛阳伽蓝记",
+      "role": "古文正文及现代校语分读；与另一校本互校，不另计独立古籍证据",
+      "verification": "2026-11-19直接读取完整公开HTML，定位CBETA行号；未核本书古刻原叶",
+      "local_cache": "source-cache/Z4.html"
+    },
+    {
+      "id": "F4",
+      "title": "《洛阳伽蓝记》卷4，范祥雍校注，CBETA电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/4",
+      "source_family": "洛阳伽蓝记",
+      "role": "古文正文及现代校语分读；与另一校本互校，不另计独立古籍证据",
+      "verification": "2026-11-19直接读取完整公开HTML，定位CBETA行号；未核本书古刻原叶",
+      "local_cache": "source-cache/F4.html"
+    },
+    {
+      "id": "G1",
+      "title": "《洛阳伽蓝记》卷一，维基文库通行转录",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷一",
+      "source_family": "洛阳伽蓝记",
+      "role": "补充转录对读，关键引文采用周、范校本正文",
+      "verification": "2026-11-19公开页可读；读取已有全文缓存"
+    },
+    {
+      "id": "G3",
+      "title": "《洛阳伽蓝记》卷三，维基文库通行转录",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷三",
+      "source_family": "洛阳伽蓝记",
+      "role": "补充转录对读，关键引文采用周、范校本正文",
+      "verification": "2026-11-19公开页可读；读取已有全文缓存"
+    },
+    {
+      "id": "G4",
+      "title": "《洛阳伽蓝记》卷四，维基文库通行转录",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷四",
+      "source_family": "洛阳伽蓝记",
+      "role": "补充转录对读，关键引文采用周、范校本正文",
+      "verification": "2026-11-19公开页可读；读取已有全文缓存"
+    },
+    {
+      "id": "SB16",
+      "title": "《水经注》卷十六·穀水，四部丛刊景上海涵芬楼藏武英殿聚珍版本",
+      "url": "https://zh.wikisource.org/wiki/水經注_(四部叢刊本)/卷第十六",
+      "source_family": "水经注",
+      "role": "古文正文、原刊双行案语与本次解释分别记录",
+      "verification": "读取完整转录；两处方湖关键语数字页22、23、52另下载原叶并目验。维基转录标未校对，结论不只依赖该标记的转录。",
+      "local_cache": "source-cache/shuijing16_sibu.html"
+    },
+    {
+      "id": "SB16-P22",
+      "title": "《水经注》卷十六四部丛刊本数字页22原叶",
+      "url": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/22",
+      "source_family": "水经注",
+      "role": "原叶目验",
+      "verification": "原图已下载并视觉核读；数字页号不冒充印本叶码",
+      "local_scan": "source-cache/SB16-page22.jpg"
+    },
+    {
+      "id": "SB16-P23",
+      "title": "《水经注》卷十六四部丛刊本数字页23原叶",
+      "url": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/23",
+      "source_family": "水经注",
+      "role": "原叶目验",
+      "verification": "原图已下载并视觉核读；数字页号不冒充印本叶码",
+      "local_scan": "source-cache/SB16-page23.jpg"
+    },
+    {
+      "id": "SB16-P52",
+      "title": "《水经注》卷十六四部丛刊本数字页52原叶",
+      "url": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/52",
+      "source_family": "水经注",
+      "role": "原叶目验",
+      "verification": "原图已下载并视觉核读；数字页号不冒充印本叶码",
+      "local_scan": "source-cache/SB16-page52.jpg"
+    }
+  ],
+  "records": [
+    {
+      "id": "POOL-W22",
+      "legacy_water_ids": [
+        "W22"
+      ],
+      "label": "昭仪寺池",
+      "existing_entity_id": "ic_zhaoyi_pool",
+      "scope": "寺池及否定同一关系",
+      "evidence": [
+        {
+          "id": "P22-A",
+          "source_ids": [
+            "Z1",
+            "F1"
+          ],
+          "locator": "卷一·昭仪尼寺；范B12n0078_p0394a06起",
+          "quote": "昭儀尼寺，閹官等所立也。在東陽門內一里御道南。",
+          "note": ""
+        },
+        {
+          "id": "P22-B",
+          "source_ids": [
+            "Z1",
+            "F1"
+          ],
+          "locator": "周B12n0077_p0086a12—0087a03；范B12n0078_p0395a01—04",
+          "quote": "昭儀寺有池，京師學徒謂之翟泉也。……按晉太倉在建春門內，今太倉在東陽門內，此地今在太倉西南，明非翟泉也。後隱士趙逸云：「此地是晉侍中石崇家池，池南有綠珠樓。」",
+          "note": "省略号省略杜预引文；此地及今太仓关系按周、范正文核读。"
+        },
+        {
+          "id": "P22-C",
+          "source_ids": [
+            "Z1",
+            "F1"
+          ],
+          "locator": "周B12n0077_p0087a04起；范B12n0078_p0395a05起",
+          "quote": "池西南有願會寺，中書侍郎王翊捨宅所立也。",
+          "note": "侍郎为周本正文及范本校正读法；愿会关系的参照明确是池。"
+        },
+        {
+          "id": "P22-D",
+          "source_ids": [
+            "SB16"
+          ],
+          "locator": "卷十六·城内渠、杜元凯所谓翟泉段；数字页39",
+          "quote": "渠水又東逕杜元凱所謂翟泉北，今無水，坎方九丈六尺，深二丈餘。",
+          "note": "用于防止误套尺寸；此段未明称昭仪寺池。本条仅核转录，未目验页39。"
+        }
+      ],
+      "text_observations": [
+        "昭仪寺拥有池这一关系有明文。",
+        "池在北魏叙事中的今太仓西南；愿会寺在池西南。",
+        "作者明确否定昭仪池与翟泉同一；石崇旧池、池南绿珠楼是赵逸发言中的晋事追述。"
+      ],
+      "collation_notes": [
+        "范本就“今在”二字提出倒文疑问；周本解释所指为今太仓。此校语不改变本次保留的池—今太仓西南关系。",
+        "愿会王翊官衔的校正不增加池的坐标、形状或通水证据。"
+      ],
+      "interpretation": [
+        "不得因两书均驳杜预翟泉说，就把《水经注》的干坎与昭仪池合并。",
+        "原文无昭仪池进出水口、与城内渠相通或流水方向。"
+      ],
+      "time_layers": [
+        {
+          "kind": "text_context",
+          "statement": "北魏洛阳寺院叙事及今太仓比较；池的营建、使用起讫未单独纪年，不能写成516—528逐年水位实测。"
+        },
+        {
+          "kind": "reported_older_event",
+          "statement": "石崇家池及绿珠楼须标赵逸所述晋事，不自动画为北魏仍存建筑。"
+        }
+      ],
+      "not_proven": [
+        "池宽、池深、岸线、精确位置",
+        "与翟泉或城内渠之间的水力连接",
+        "水经注干坎尺寸就是昭仪池尺寸",
+        "绿珠楼516—528年仍在"
+      ],
+      "drawing": "独立池符号；允许池与寺的包含、今太仓及愿会寺的方位关系，另列“非翟泉”；不接渠。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "POOL-W23",
+      "legacy_water_ids": [
+        "W23"
+      ],
+      "label": "永和里北池",
+      "existing_entity_id": "ic_yonghe_pool_north",
+      "scope": "永和里南北两处池水登记",
+      "evidence": [
+        {
+          "id": "P23-A",
+          "source_ids": [
+            "Z1",
+            "F1"
+          ],
+          "locator": "卷一·修梵寺附永和里；周B12n0077_p0089a10—11；范B12n0078_p0400a05—06",
+          "quote": "寺北有永和里，漢太師董卓之宅也。里南北皆有池，卓之所造。今猶有水，冬夏不竭。",
+          "note": ""
+        }
+      ],
+      "text_observations": [
+        "永和里的南、北均有池水；本条登记北侧对象。",
+        "正文把造池归董卓，并说今仍有水、冬夏不竭。",
+        "“寺北”承接修梵段，代词所指须保留篇章校读层。"
+      ],
+      "collation_notes": [
+        "周、范所录池水关系一致。“青阳／清阳”门名校读不提供池坐标。",
+        "原句不是“有二池”；旧W23/W24可作为南北两处登记，不能进一步证明每侧恰一池、排他的总数恰二。"
+      ],
+      "interpretation": [
+        "南、北分开呈现，不能合成一条跨坊长湖。",
+        "冬夏不竭记水体状态，不等于两池互通或渠道长年供水。",
+        "同段官员宅居属累积叙述，不以六宅官衔推出所有池及宅同年完成。"
+      ],
+      "time_layers": [
+        {
+          "kind": "older_event",
+          "statement": "造池归汉太师董卓。"
+        },
+        {
+          "kind": "text_context",
+          "statement": "“今犹有水，冬夏不竭”为作者叙事时的状态语；没有足以逐年锁定516—528的独立纪年。"
+        }
+      ],
+      "not_proven": [
+        "两处池水互通",
+        "与昭仪池、翟泉或城内渠道相接",
+        "池数排他地等于二",
+        "池岸、面积、深度、补给来源",
+        "寺北等于修梵寺已测院墙北"
+      ],
+      "drawing": "保留北侧独立池符号或一组池符号，并注“南北均有池”；不画进出水线。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "POOL-W24",
+      "legacy_water_ids": [
+        "W24"
+      ],
+      "label": "永和里南池",
+      "existing_entity_id": "ic_yonghe_pool_south",
+      "scope": "永和里南北两处池水登记",
+      "evidence": [
+        {
+          "id": "P24-A",
+          "source_ids": [
+            "Z1",
+            "F1"
+          ],
+          "locator": "卷一·修梵寺附永和里；周B12n0077_p0089a10—11；范B12n0078_p0400a05—06",
+          "quote": "寺北有永和里，漢太師董卓之宅也。里南北皆有池，卓之所造。今猶有水，冬夏不竭。",
+          "note": ""
+        }
+      ],
+      "text_observations": [
+        "永和里的南、北均有池水；本条登记南侧对象。",
+        "正文把造池归董卓，并说今仍有水、冬夏不竭。",
+        "“寺北”承接修梵段，代词所指须保留篇章校读层。"
+      ],
+      "collation_notes": [
+        "周、范所录池水关系一致。“青阳／清阳”门名校读不提供池坐标。",
+        "原句不是“有二池”；旧W23/W24可作为南北两处登记，不能进一步证明每侧恰一池、排他的总数恰二。"
+      ],
+      "interpretation": [
+        "南、北分开呈现，不能合成一条跨坊长湖。",
+        "冬夏不竭记水体状态，不等于两池互通或渠道长年供水。",
+        "同段官员宅居属累积叙述，不以六宅官衔推出所有池及宅同年完成。"
+      ],
+      "time_layers": [
+        {
+          "kind": "older_event",
+          "statement": "造池归汉太师董卓。"
+        },
+        {
+          "kind": "text_context",
+          "statement": "“今犹有水，冬夏不竭”为作者叙事时的状态语；没有足以逐年锁定516—528的独立纪年。"
+        }
+      ],
+      "not_proven": [
+        "两处池水互通",
+        "与昭仪池、翟泉或城内渠道相接",
+        "池数排他地等于二",
+        "池岸、面积、深度、补给来源",
+        "寺北等于修梵寺已测院墙北"
+      ],
+      "drawing": "保留南侧独立池符号或一组池符号，并注“南北均有池”；不画进出水线。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "POOL-W25",
+      "legacy_water_ids": [
+        "W25"
+      ],
+      "label": "咸池",
+      "existing_entity_id": "w_xianchi",
+      "scope": "宝光寺园内水体",
+      "evidence": [
+        {
+          "id": "P25-A",
+          "source_ids": [
+            "Z4",
+            "F4"
+          ],
+          "locator": "卷四·宝光寺；周B12n0077_p0184a12起；范B12n0078_p0539a09起",
+          "quote": "寶光寺，在西陽門外御道北。",
+          "note": ""
+        },
+        {
+          "id": "P25-B",
+          "source_ids": [
+            "Z4",
+            "F4"
+          ],
+          "locator": "周B12n0077_p0185a06—10；范B12n0078_p0539a14—0540a01",
+          "quote": "園中有一海，號咸池。葭菼被岸，菱荷覆水，青松翠竹，羅生其旁。……或置酒林泉，題詩花圃，折藕浮瓜，以為興適。",
+          "note": "依校本正文节引；“园”承上宝光寺园地。"
+        },
+        {
+          "id": "P25-C",
+          "source_ids": [
+            "Z4",
+            "F4"
+          ],
+          "locator": "卷四·宝光寺，咸池游赏段后",
+          "quote": "普泰末，雍州刺史隴西王尒朱天光總士馬於此寺。",
+          "note": "引周本正文；这是寺院后续事件，非咸池形成或通水纪年。"
+        }
+      ],
+      "text_observations": [
+        "宝光寺在西阳门外御道北，咸池在其园中；“一海”明确为此处一个有称谓水体的记法。",
+        "岸边及水生植物、游赏说明叙事中的水景；未写渠道或出入水口。"
+      ],
+      "collation_notes": [
+        "前段“当时园池／地平衍”，周、范均校为园地；不可把讹文“园池平衍”另造第二池或断为咸池被填。",
+        "菼／芙异读不改变池的归属；沿周、范正文作葭菼。"
+      ],
+      "interpretation": [
+        "宝光寺园内的包含关系可以入图；不能凭城西、门外推接谷水或瀍涧。",
+        "普泰末为目标516—528以后的寺事，不能把该事件日期当池水状态日期，也不据它否认较早存在。"
+      ],
+      "time_layers": [
+        {
+          "kind": "text_context",
+          "statement": "北魏洛阳宝光寺园林游赏叙事；池的始建年、516—528期间状态没有另列。"
+        },
+        {
+          "kind": "later_event",
+          "statement": "普泰末屯兵、寺门崩塌为后续寺事，分开保存。"
+        }
+      ],
+      "not_proven": [
+        "咸池与谷水、瀍水、涧水的连通",
+        "池深、面积、水位和岸线",
+        "普泰事件给出咸池始建或毁坏年"
+      ],
+      "drawing": "宝光寺园内独立池，借寺的御道北关系标相对位置；不画供排水渠。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "POOL-W26",
+      "legacy_water_ids": [
+        "W26"
+      ],
+      "label": "土山、鱼池（旧登记“土山鱼池”）",
+      "existing_entity_id": "w_tushan_yuchi",
+      "scope": "洛阳大市西北复合旧迹；不是已测专名湖泊",
+      "evidence": [
+        {
+          "id": "P26-A",
+          "source_ids": [
+            "Z4",
+            "F4"
+          ],
+          "locator": "卷四·法云寺后附大市；周B12n0077_p0188a11—0189a04；范B12n0078_p0542a10起",
+          "quote": "出西陽門外四里御道南，有洛陽大市，……市西北有土山魚池，亦冀之所造。即漢書所謂「採土築山，十里九坂，以象二崤」者。",
+          "note": "只节引大市定位与土山鱼池；冀在前句明指梁冀。"
+        },
+        {
+          "id": "P26-B",
+          "source_ids": [
+            "SB16"
+          ],
+          "locator": "卷十六·城西谷水、土山段；四部本数字页40",
+          "quote": "穀水自閶闔門而南逕土山東，水西三里有坂，坂上有土山，漢大將軍梁冀所成，築土為山，植木成苑。",
+          "note": "本条核公开转录及周注引用，未目验页40；四部本双行案语“此阊阖门乃上西门也”为后出校者语，不混入郦注正文。"
+        }
+      ],
+      "text_observations": [
+        "大市西北有土山、鱼池的复合记述；建造归汉梁冀。",
+        "水经注另记谷水在梁冀土山东，水西三里有坂、坂上有土山；该段没有鱼池及其通水句。"
+      ],
+      "collation_notes": [
+        "周祖谟在鱼池条的现代注释引用《水经注》土山段，这是跨书比勘，不是古文额外说鱼池引谷水。",
+        "“土山鱼池”保留为旧ID，显示上宜分土山与池的类型，不强制判断为一个正式池名。"
+      ],
+      "interpretation": [
+        "两书同涉及梁冀土山可作地点比勘；鱼池与河流关系不能随土山位置一起补出。",
+        "“逕土山东”及“水西三里”是相对方位/古里程，不是谷水向鱼池输水。"
+      ],
+      "time_layers": [
+        {
+          "kind": "older_event",
+          "statement": "两书都把营造归汉梁冀。"
+        },
+        {
+          "kind": "text_context",
+          "statement": "北魏叙事列举该处；鱼池当时是否积水、是否仍用于养鱼、是否延续至整个516—528，未给独立证据。"
+        }
+      ],
+      "not_proven": [
+        "谷水供水给鱼池",
+        "鱼池返流谷水",
+        "池水516—528全期维持",
+        "土山、池的轮廓与测绘坐标",
+        "古三里折为现场距离"
+      ],
+      "drawing": "在大市西北显示土山与池两个类型符号或复合旧迹卡；谷水—土山只画方位参照，鱼池不接渠。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "POOL-W27",
+      "legacy_water_ids": [
+        "W27"
+      ],
+      "label": "景明寺三池",
+      "existing_entity_id": "v3_jingming",
+      "scope": "确切计数三池与寺院水功，接水仍未知",
+      "evidence": [
+        {
+          "id": "P27-A",
+          "source_ids": [
+            "Z3",
+            "F3"
+          ],
+          "locator": "卷三·景明寺开篇；周、范该卷首段",
+          "quote": "景明年中立，因以為名。在宣陽門外一里御道東。",
+          "note": ""
+        },
+        {
+          "id": "P27-B",
+          "source_ids": [
+            "Z3",
+            "F3"
+          ],
+          "locator": "周B12n0077_p0144a09—13；范B12n0078_p0472a12—14",
+          "quote": "寺有三池，萑蒲菱藕，水物生焉。……𥗇磑舂簸，皆用水功。",
+          "note": "引范本正文并去掉校注标识；周本簸作异体𥳽。三池与水功两项同条出现；省略水禽鱼类描写。𥗇保留原字，展示时可旁注通常释碾。"
+        },
+        {
+          "id": "P27-C",
+          "source_ids": [
+            "Z3",
+            "F3"
+          ],
+          "locator": "同条三池段前后",
+          "quote": "至正光年中，太后始造七層浮圖一所。……至永熙年中，始詔國子祭酒邢子才為寺碑文。",
+          "note": "建寺、造塔及委托碑文是不同对象的事件，不互相替代池的纪年。"
+        }
+      ],
+      "text_observations": [
+        "明确数量为三池，与永和里“南北皆有池”的计数确定程度不同。",
+        "同条明说碾、磑、舂、簸皆用水功，水力利用可以登记。",
+        "原文没有说三池逐一相连、哪池供哪台水功设施、或外部渠名。"
+      ],
+      "collation_notes": [
+        "周释𥗇为今碾字；范就字形另有校议。仅影响设备释读，不产生供水路线。",
+        "繁／蘩、浮沈／沈浮及“最得／最为”异读不改变三池数量和皆用水功的核心事实。"
+      ],
+      "interpretation": [
+        "可把三池和水功作为同属景明寺的两组要素，并标“水功有记、接水未记”。",
+        "不可用寺邻洛水的区域常识，把三池直连洛水或城南引洛渠。原文“并门邻洛水”说的是景明寺南的双女寺，不宜错接给景明。"
+      ],
+      "time_layers": [
+        {
+          "kind": "foundation",
+          "statement": "景明年中（500—503）建寺，为寺院事件。"
+        },
+        {
+          "kind": "construction_event",
+          "statement": "正光年中（520—525）始造塔，为塔工程事件。"
+        },
+        {
+          "kind": "later_event",
+          "statement": "永熙年中（532—534）委托碑文，为文献事件。"
+        },
+        {
+          "kind": "text_context",
+          "statement": "三池与水功属于寺院繁盛描述，但本句未给启用或持续时段，不能自动以寺/塔年份给池和设施定年。"
+        }
+      ],
+      "not_proven": [
+        "三池互通",
+        "水功必由三池驱动",
+        "外接洛水、阳渠或引洛渠",
+        "三池形状、相对方位、池深和水位",
+        "水功在516—528每一年运行"
+      ],
+      "drawing": "三个等类池符号仅表达数量；水功独立图标同置寺院资料框，不画池间或外部供水箭头。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "POOL-W29",
+      "legacy_water_ids": [
+        "W29"
+      ],
+      "label": "方湖（谷水城东外侧出）",
+      "existing_entity_id": null,
+      "scope": "旧W29保留给城外谷水旁支湖，不与华林园堂上方湖合并",
+      "evidence": [
+        {
+          "id": "P29-A",
+          "source_ids": [
+            "SB16",
+            "SB16-P52"
+          ],
+          "locator": "卷十六·城东南北出支后、阮曲前；数字页51末至52前两行",
+          "quote": "穀水又東，左迆為池。又東，右出為方湖，東西百九十步，南北七十步，故水衡署之所在也。",
+          "note": "数字页52原叶已目验“右出为方湖”及190/70步。标点由本次添加。"
+        },
+        {
+          "id": "P29-B",
+          "source_ids": [
+            "SB16",
+            "SB16-P52"
+          ],
+          "locator": "数字页52第2—3行",
+          "quote": "穀水又東南轉屈而東注，謂之阮曲，云阮嗣宗之故居也。穀水又東注鴻池陂。",
+          "note": "文序在方湖之后重提主语谷水；不能因此把主流改为穿方湖、再从湖出。"
+        }
+      ],
+      "text_observations": [
+        "“右出”为明确侧出水流关系；左迆的无名池与右出方湖分开登记。",
+        "下文以谷水为主语叙阮曲及鸿池，是主流继续；未明记方湖回流口。",
+        "古文记方湖东西190步、南北70步；没有深度或渠宽。"
+      ],
+      "collation_notes": [
+        "四部本原叶与普通转录的上述关键关系吻合。",
+        "“故水衡署之所在”是旧署说明，不等于北魏盛时仍有该署运营。"
+      ],
+      "interpretation": [
+        "侧出入口可用箭头从东流谷水指向方湖；不画方湖向鸿池的单独箭头。",
+        "东流语境下把右侧排在图的南侧是关系布局安排，必须标非测绘岸线；“又东”没有提供侧出点到城墙的距离。"
+      ],
+      "time_layers": [
+        {
+          "kind": "text_context",
+          "statement": "郦注行水叙述，存在旧址与汉晋引书叠合；不单独证明516—528逐年水况。"
+        },
+        {
+          "kind": "older_site",
+          "statement": "故水衡署、阮嗣宗故居属历史说明，不能转成同一年的建筑。"
+        }
+      ],
+      "textual_dimensions": {
+        "east_west": 190,
+        "north_south": 70,
+        "unit": "步",
+        "metres": null,
+        "depth": null,
+        "measurement_kind": "古文记述尺度，非本轮实测",
+        "transfer_to_hualin_pool": false
+      },
+      "not_proven": [
+        "湖岸轮廓、现代坐标、断面和水位",
+        "方湖回流主河的位置",
+        "主流串行穿湖",
+        "此湖就是华林园堂上方湖",
+        "190×70步可当渠宽或米数"
+      ],
+      "drawing": "谷水东流旁支单向入方湖；湖用无尺度符号，古步数仅写证据卡；保留主流绕过湖继续向阮曲、鸿池。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "POOL-HUALIN-FANGHU",
+      "legacy_water_ids": [],
+      "compared_legacy_water_ids": [
+        "W29"
+      ],
+      "label": "都亭堂上方湖（华林园）",
+      "existing_entity_id": null,
+      "scope": "与城外方湖分开的园林记述对象；“方湖”是否专名不作定论",
+      "evidence": [
+        {
+          "id": "PHF-A",
+          "source_ids": [
+            "SB16",
+            "SB16-P22"
+          ],
+          "locator": "卷十六·大夏门相关入园支；数字页21末至22",
+          "quote": "穀水又東，枝分南入華林園，歴疏圃南。……又逕瑤華宫南，歴景陽山北，山有都亭，堂上結方湖，湖中起御坐石也。",
+          "note": "数字页22已目验；原文“堂上结方湖”可能含形制描述，不强定为独立专名。"
+        },
+        {
+          "id": "PHF-B",
+          "source_ids": [
+            "SB16",
+            "SB16-P22",
+            "SB16-P23"
+          ],
+          "locator": "数字页22末至23第2行",
+          "quote": "其中引水飛臯，傾瀾瀑布，或枉渚聲溜，潺潺不斷。……其水東注天淵池。",
+          "note": "数字页23目验“其水东注天渊池”；其水承接园内引水叙述。"
+        }
+      ],
+      "text_observations": [
+        "入园谷水支向南，经过疏圃南、瑶华宫南及景阳山北。",
+        "都亭堂上有结方湖、湖中御坐石的记述，属于园林构筑语境。",
+        "园内引水系统有“其水东注天渊池”的明确流向。"
+      ],
+      "collation_notes": [
+        "原叶22双行案语提醒“穀”近刻误作“渠”等字；此是版本校语，正文主语按穀水。",
+        "本次不把“堂上方湖”改称独立已证专名，也不套城外方湖190×70步。"
+      ],
+      "interpretation": [
+        "可画入园支→园林引水系统→天渊池，堂上方湖放入园林资料框。",
+        "若把箭头直接从方湖唯一出水口画向天渊池，会比“其水”承接范围更具体；尚不能确定每段池口及唯一水路。"
+      ],
+      "time_layers": [
+        {
+          "kind": "text_context",
+          "statement": "郦注描写入园水及园内构筑，前后夹叙曹魏旧事、现状及改造；此段没有把堂上方湖使用状态单独系于516—528。"
+        }
+      ],
+      "not_proven": [
+        "与城外方湖同一",
+        "池名一定是专名而非方形池的描述",
+        "190×70步适用于此池",
+        "池口、池底、标高及单独出水渠",
+        "与灵芝九龙池支渠为同一支"
+      ],
+      "drawing": "与W29彻底分开；显示园内构筑包含关系及园林水东注天渊池，避免给堂上方湖独造单一排水口。",
+      "geographic_coordinates": null
+    }
+  ],
+  "relations": [
+    {
+      "id": "RP22-1",
+      "from": "昭仪尼寺",
+      "to": "昭仪寺池",
+      "relationship_type": "containment",
+      "statement": "寺有池",
+      "evidence_ids": [
+        "P22-B"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP22-2",
+      "from": "昭仪寺池",
+      "to": "今太仓",
+      "relationship_type": "relative_position",
+      "statement": "池在北魏叙事的今太仓西南",
+      "evidence_ids": [
+        "P22-B"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP22-3",
+      "from": "愿会寺",
+      "to": "昭仪寺池",
+      "relationship_type": "relative_position",
+      "statement": "愿会寺在池西南",
+      "evidence_ids": [
+        "P22-C"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP22-4",
+      "from": "昭仪寺池",
+      "to": "翟泉",
+      "relationship_type": "negative_identity",
+      "statement": "明非翟泉，不得合并",
+      "evidence_ids": [
+        "P22-B"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP22-5",
+      "from": "昭仪寺池",
+      "to": "石崇家池",
+      "relationship_type": "reported_identity",
+      "statement": "赵逸说此为晋石崇家池，非本轮考古确认",
+      "evidence_ids": [
+        "P22-B"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "reported_older_tradition",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP23-1",
+      "from": "永和里北池",
+      "to": "永和里",
+      "relationship_type": "relative_position",
+      "statement": "里北有池",
+      "evidence_ids": [
+        "P23-A"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP24-1",
+      "from": "永和里南池",
+      "to": "永和里",
+      "relationship_type": "relative_position",
+      "statement": "里南有池",
+      "evidence_ids": [
+        "P24-A"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RPYH-1",
+      "from": "永和里",
+      "to": "修梵寺",
+      "relationship_type": "relative_position",
+      "statement": "寺北有永和里；寺回指修梵为篇章工作读法",
+      "evidence_ids": [
+        "P23-A",
+        "P24-A"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_reference_interpretation",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP25-1",
+      "from": "宝光寺园",
+      "to": "咸池",
+      "relationship_type": "containment",
+      "statement": "园中有一海号咸池",
+      "evidence_ids": [
+        "P25-B"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP26-1",
+      "from": "土山、鱼池",
+      "to": "洛阳大市",
+      "relationship_type": "relative_position",
+      "statement": "市西北有土山鱼池",
+      "evidence_ids": [
+        "P26-A"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP26-2",
+      "from": "谷水",
+      "to": "梁冀土山",
+      "relationship_type": "relative_position",
+      "statement": "水经注谷水逕土山东，不是鱼池供水",
+      "evidence_ids": [
+        "P26-B"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP27-1",
+      "from": "景明寺",
+      "to": "三池",
+      "relationship_type": "containment",
+      "statement": "寺有三池，只给数量",
+      "evidence_ids": [
+        "P27-B"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP27-2",
+      "from": "景明寺",
+      "to": "水功设施",
+      "relationship_type": "association",
+      "statement": "同条说碾磑舂簸皆用水功；不画从三池到设施的供水边",
+      "evidence_ids": [
+        "P27-B"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP29-1",
+      "from": "谷水城东外东流段",
+      "to": "方湖（城外）",
+      "relationship_type": "flow",
+      "statement": "又东右出为方湖；只建立侧出入湖",
+      "evidence_ids": [
+        "P29-A"
+      ],
+      "hydraulic_connection": true,
+      "flow_direction": "从谷水向右侧方湖",
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RP29-2",
+      "from": "谷水城东外东流段",
+      "to": "阮曲",
+      "relationship_type": "flow",
+      "statement": "主语谷水继续东南转屈东注，非明文说湖水出流",
+      "evidence_ids": [
+        "P29-B"
+      ],
+      "hydraulic_connection": true,
+      "flow_direction": "东南转屈而东",
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RPHF-1",
+      "from": "谷水入华林园支",
+      "to": "华林园园林引水系统",
+      "relationship_type": "flow",
+      "statement": "谷水枝分南入园，经景阳山北园林段",
+      "evidence_ids": [
+        "PHF-A"
+      ],
+      "hydraulic_connection": true,
+      "flow_direction": "南入；园中局部路线未测",
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RPHF-2",
+      "from": "华林园园林引水系统",
+      "to": "天渊池",
+      "relationship_type": "flow",
+      "statement": "其水东注天渊池；不指定堂上湖唯一出口",
+      "evidence_ids": [
+        "PHF-B"
+      ],
+      "hydraulic_connection": true,
+      "flow_direction": "东注",
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RPHF-3",
+      "from": "都亭堂上",
+      "to": "方湖（华林园）",
+      "relationship_type": "containment",
+      "statement": "堂上结方湖",
+      "evidence_ids": [
+        "PHF-A"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "text_explicit",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "RPHF-4",
+      "from": "方湖（城外）",
+      "to": "方湖（华林园）",
+      "relationship_type": "do_not_merge",
+      "statement": "段落、水系位置及构筑语境均不同；旧W29仅给城外方湖",
+      "evidence_ids": [
+        "P29-A",
+        "PHF-A"
+      ],
+      "hydraulic_connection": false,
+      "flow_direction": null,
+      "status": "identity_control",
+      "geographic_coordinates": null
+    }
+  ],
+  "cartographic_rules": [
+    "W22—W27不新增外部供水箭头。无明文不等于实际绝无连通，只表示本轮没有证据绘制。",
+    "永和南北池的分立与景明三池的精确数量须分清；前者为两处方位登记，后者为正文明确三池。",
+    "旧W29只保留给谷水城外右出方湖；华林园堂上方湖使用比较用新ID。",
+    "图上箭头只表达原文流向；土山在水西、寺园内有池等只作位置或包含关系。",
+    "古步、古里保留原单位；不换算现代地理距离，不用于勾岸线。",
+    "周、范与普通转录是同一古籍的整理见证，不作为三份独立历史证据计数。"
+  ],
+  "ready_for_map": [
+    "昭仪池、今太仓、愿会寺及非翟泉关系小图",
+    "永和里南北分置池符号并注冬夏不竭为文献状态语",
+    "宝光园咸池、大市西北土山鱼池作为独立旧迹关系卡",
+    "景明寺三池及水功设施并列，不接未知渠",
+    "方湖两处辨名与城外入湖支流、园林水东注天渊的不同接线"
+  ],
+  "open_questions": [
+    {
+      "id": "POOL-Q1",
+      "missing": "W22—W27进出水口及与已知水渠的同址/断面/纪年证据",
+      "decision": "保持孤池或包含关系，不需请用户凭空选水源。"
+    },
+    {
+      "id": "POOL-Q2",
+      "missing": "三池—水功设备之间的具体水工接线",
+      "decision": "同寺共现，水力设施另列，等原图或明确文献。"
+    },
+    {
+      "id": "POOL-Q3",
+      "missing": "城外方湖回流口与华林园堂上方湖独立出口",
+      "decision": "只画已明示的旁支入湖与园林水东注，保留未证接口。"
+    },
+    {
+      "id": "POOL-Q4",
+      "missing": "各池516—528年的独立使用时段/淤积纪年",
+      "decision": "纳入文献层并写时层限度，不标为每年实证通水。"
+    }
+  ],
+  "access_logs": [
+    "source-access-pools.json",
+    "scan-access-pools.json"
+  ],
+  "verification": {
+    "cbeta_live_full_pages": 6,
+    "classical_scan_pages_visually_checked": [
+      22,
+      23,
+      52
+    ],
+    "all_legacy_ids_covered": true,
+    "repository_files_modified": false,
+    "github_writes": false
+  },
+  "cache_note": "核读缓存未随网站分发；原件请用各条公开来源链接，图页与哈希供复核。"
+}
