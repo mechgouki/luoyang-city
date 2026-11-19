@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Verify the actual HTTPS commit and every public asset. No deployment mocks."""
-import argparse,concurrent.futures,hashlib,json,os,re,time
+import argparse,concurrent.futures,csv,hashlib,io,json,os,re,time,zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
@@ -636,6 +636,103 @@ try:
  assert all(link['semantics']=='context_link_only' and set(link['evidence_refs'])<=set(br) for link in bd['water_evidence_navigation'])
  assert {backbone['page'],backbone['atlas'],*backbone['data_files']}<=set(info['files_sha256'])
 
+ # P4.7 reuses one existing source frame; relationship scenes never create map geometry.
+ common=info['prosperity_city_common_p470']
+ assert common['source_commit']==info['source_commit']
+ assert common['version']==release['prosperity_city_common_p470_version']=='prosperity-city-common-p470'
+ assert common['version'] in release['extensions']
+ assert common['page']=='prosperity-city-common.html' and common['folder']=='common-470'
+ assert common['readings']=='common-470/readings.json' and common['manifest']=='common-470/bundle-manifest.json'
+ assert common['bundle']=='downloads/common-470.zip' and common['plates']==['city-common.svg']
+ assert common['new_historical_coordinates']==common['new_metric_measurements']==common['new_historical_relationships']==common['new_geographic_footprints']==0
+ assert common['new_geographic_transform'] is None
+ cd=json.loads(get(common['readings']))
+ expected_common_counts={'source_features':30,'features':25,'site_remains':24,'modern_features':1,
+  'prior_backbone_features':22,'added_existing_features':3,'building_cards':4,'roads':8,
+  'gate_points':10,'wall_groups':4,'partial_enclosure_parts':7,'water_records':34,
+  'water_relations':100,'water_context_links':9,'urban_scenes':3,'urban_relations':17,
+  'new_geographic_coordinates':0,'new_metric_measurements':0,'new_historical_edges':0,'new_geographic_footprints':0}
+ assert cd['version']=='P4.7' and cd['counts']==common['counts']==expected_common_counts
+ cf={feature['id']:feature for feature in cd['features']}
+ original_features={feature['id']:feature for feature in prosperity_geo['features']}
+ assert len(cf)==len(cd['features'])==25
+ assert all(feature==original_features[identifier] for identifier,feature in cf.items())
+ assert cd['source_frame']['crs']=='EPSG:4610' and cd['source_frame']['new_geographic_transform'] is None
+ assert cd['source_frame']['shared_source_not_new_registration'] is True
+ assert set(cd['source_frame']['added_existing_feature_ids'])=={'geo-taiji-hall-reference','geo-yongning-pagoda-reference','geo-yongning-temple-walls'}
+ assert set(cf)==set(cd['source_frame']['prior_backbone_display_feature_ids'])|set(cd['source_frame']['added_existing_feature_ids'])
+ assert len(cd['source_frame']['prior_backbone_display_feature_ids'])==22
+ assert cd['modern_reference_default_visible'] is False and cd['modern_feature_id']=='geo-modern-luo-river'
+ assert cf[cd['modern_feature_id']]['layer']=='modern_geographic_reference'
+ original_distribution=json.loads(get('prosperity-city-distribution/data.json'))
+ original_places={place['id']:place for place in original_distribution['anchored_buildings']}
+ cp={place['id']:place for place in cd['places']}
+ assert set(cp)=={'C01','C02','C03','C04'}
+ assert all({key:value for key,value in place.items() if key!='reading_navigation'}==original_places[identifier] for identifier,place in cp.items())
+ assert cp['C03']['entity_id'] is None and cp['C03']['reading_navigation']['scene_binding_feature_id'] is None
+ assert cp['C03']['reading_navigation']['scene_bindings']==cp['C03']['reading_navigation']['urban_cluster_ids']==[]
+ assert cp['C04']['reading_navigation']['selection_feature_ids']==['geo-yongning-pagoda-reference','geo-yongning-temple-walls']
+ assert cp['C04']['reading_navigation']['scene_binding_feature_id']=='geo-yongning-temple-walls'
+ assert cp['C04']['reading_navigation']['scene_bindings']==[item for item in cluster_data['spatial_index_references'] if item['feature_id']=='geo-yongning-temple-walls']
+ assert cd['enclosure_context']==original_distribution['enclosure_context']
+ assert len(cf['geo-yongning-temple-walls']['source_pdf_geometry']['coordinates'])==7
+ assert cd['enclosure_context'][0]['closed_polygon_allowed'] is False
+ assert cd['roads']==json.loads(get('network-462/roads.json'))['routes']
+ assert cd['gates']==json.loads(get('network-462/network.json'))['gates']
+ assert cd['jianchun_plan_audit']==json.loads(get('backbone-469/jianchun-plan-audit.json'))
+ assert cd['jianchun_plan_audit']['read_status']['geographic_transform'] is None
+ assert cd['jianchun_plan_audit']['read_status']['accepted_control_pairs']==[]
+ for field in ('water_evidence_navigation','current_water_ledger','current_relations','corrected_current_I09','target_period','phase_rule'):
+  assert cd[field]==bd[field],field
+ assert cd['water_correction']==bd['correction'] and cd['water_relation_plates']==bd['relation_plates']
+ cu=cd['urban']
+ assert cu['clusters']==cluster_data['clusters'] and cu['scene_bindings']==cluster_data['spatial_index_references']
+ assert cu['functions']==road_study['nongeographic_function_groups']
+ assert cu['evidence_grades']==cluster_data['evidence_grades'] and cu['forbidden_inferences']==cluster_data['forbidden_inferences']
+ assert cu['counts']==common['urban_counts']=={'scene_count':3,'object_count':20,'relation_count':17,
+  'direct_relation_count':16,'interpretive_relation_count':1,'event_count':2,'function_group_count':5,
+  'function_object_count':15,'reference_object_count':5,'source_binding_count':3,'source_record_count':12}
+ assert cu['new_historical_coordinates']==cu['new_historical_relationships']==0
+ assert all(node['feature_id'] is None for scene in cu['clusters'] if scene['id']=='K03' for node in scene['nodes'])
+ assert all(edge['geographic_line_allowed'] is False for scene in cu['clusters'] for edge in scene['edges'])
+ plan=json.loads(get('common-470/reuse-plan.json'))
+ assert plan['expected_counts']==expected_common_counts and plan['modern_reference_default_visible'] is False
+ assert len(plan['required_input_sha256'])==6 and len(plan['required_urban_input_sha256'])==5
+ assert cd['source_inputs_sha256']==common['source_inputs_sha256']=={
+  **plan['required_input_sha256'],**plan['required_urban_input_sha256'],
+  'research/prosperity-v4/common-470/reuse-plan.json':hashlib.sha256(get('common-470/reuse-plan.json')).hexdigest()}
+ manifest=json.loads(get(common['manifest']))
+ assert manifest['version']==common['version'] and manifest['source_commit']==info['source_commit']
+ assert manifest['source_inputs_sha256']==cd['source_inputs_sha256']
+ assert all(info['files_sha256'][path]==digest for path,digest in manifest['files_sha256'].items())
+ assert set(common['download_files'])=={'common-470/city-common.svg','common-470/readings.json',
+  'common-470/places.csv','common-470/reuse-plan.json','common-470/bundle-manifest.json','downloads/common-470.zip'}
+ assert {common['page'],*common['download_files']}<=set(info['files_sha256'])
+ common_svg=ET.fromstring(get('common-470/city-common.svg'))
+ assert common_svg.get('id')=='city-common-map'
+ assert {node.get('data-feature-id') for node in common_svg.iter() if node.get('data-feature-id')}==set(cf)
+ csv_rows=list(csv.DictReader(io.StringIO(get('common-470/places.csv').decode('utf-8-sig'))))
+ assert len(csv_rows)==4 and {row['card_id'] for row in csv_rows}==set(cp)
+ for row in csv_rows:
+  place=cp[row['card_id']]
+  assert row['feature_id']==place['feature_id'] and row['entity_id']==(place['entity_id'] or '')
+  assert row['scene_binding_feature_id']==(place['reading_navigation']['scene_binding_feature_id'] or '')
+  assert float(row['east_west_m'])==place['reported_footprint_m']['east_west']
+  assert float(row['north_south_m'])==place['reported_footprint_m']['north_south']
+ with zipfile.ZipFile(io.BytesIO(get(common['bundle']))) as archive:
+  assert len(archive.namelist())==8
+  assert set(archive.namelist())==set(manifest['files_sha256'])|{common['manifest'],'index.html'}
+  assert archive.read(common['manifest'])==get(common['manifest'])
+  for path,digest in manifest['files_sha256'].items():
+   assert hashlib.sha256(archive.read(path)).hexdigest()==digest and archive.read(path)==get(path),path
+ preservation=common['preservation']
+ assert preservation==manifest['preservation'] and preservation['previous_page']==backbone['page']
+ previous_html=get(preservation['previous_page'])
+ entry=preservation['entry_html'].encode('utf-8')
+ assert preservation['entry_id']=='p470-entry' and previous_html.count(b'id="p470-entry"')==previous_html.count(entry)==1
+ assert hashlib.sha256(previous_html.replace(entry,b'')).hexdigest()==preservation['previous_page_sha256']
+ assert all(info['files_sha256'][path]==digest for path,digest in preservation['protected_files_sha256'].items())
+
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
@@ -655,6 +752,7 @@ try:
  report['prosperity_water_p467']=water
  report['prosperity_water_p468']=remainder
  report['prosperity_backbone_p469']=backbone
+ report['prosperity_city_common_p470']=common
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors
