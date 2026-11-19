@@ -605,6 +605,37 @@ try:
     route=next(el for el in group if el.get('class')=='segment-route')
     assert ('marker-end' in route.attrib)==(group.get('data-relationship')=='flow')
 
+ backbone=info['prosperity_backbone_p469']
+ assert backbone['source_commit']==info['source_commit'] and backbone['version']==release['prosperity_backbone_p469_version']
+ assert backbone['version'] in release['extensions'] and backbone['atlas_pages']==2
+ assert backbone['geographic_coordinates_added']==0 and backbone['new_metric_measurements']==0
+ assert get(remainder['page']).count(b'id="p469-entry"')==1
+ bd=json.loads(get(backbone['readings']))
+ assert bd['counts']=={'source_features_06a':30,'source_road_features':8,'qian_outer_endpoint_pairs':6,'water_records':34,'current_relations':100,'relationship_plates':10,'place_context_links':9}
+ assert bd['new_geographic_coordinates']==0 and bd['new_metric_measurements']==0 and bd['new_516_528_bank_geometry'] is None
+ bf={frame['id']:frame for frame in bd['frames']}
+ assert bf['frame-06a']['features']==prosperity_geo['features']
+ assert bf['frame-06a']['source_crs']==prosperity_geo['crs'] and bf['frame-06a']['crs']=='EPSG:4610'
+ assert bf['frame-06a']['modern_river_default_visible'] is False
+ assert bf['frame-qian2018-zhu2024']['geographic_transform'] is None
+ assert bf['frame-relations']['geographic_transform'] is None
+ assert bf['frame-qian2018-zhu2024']['south_reading']==sd['plan']
+ br={relation['ref']:relation for relation in bd['current_relations']}
+ assert len(br)==100 and all(relation['geographic_coordinates'] is None for relation in br.values())
+ assert all(not {'points','label_position','x','y'} & set(relation) for relation in br.values())
+ assert br['P467/inner/I09']['legacy_water_ids']==['W17','W18','W19','W34']
+ assert '若旱魃為害' in br['P467/inner/I09']['quote'] and '離畢滂潤' in br['P467/inner/I09']['quote']
+ bw={record['id']:record for record in bd['current_water_ledger']}
+ assert len(bw)==34 and bw['W02']['modern_only'] and not bw['W02']['current_refs']
+ assert bw['W20']['current_refs']==['P468/palace-pools-audit/H01']
+ assert bw['W21']['current_refs']==['P468/palace-pools-audit/H03','P468/palace-pools-audit/H04']
+ assert all('P467/inner/I09' not in bw[wid]['current_refs'] for wid in ['W20','W21'])
+ assert bw['W14']['current_refs']==[] and bw['W14']['context_plate_refs']==['P468/palace-water']
+ assert bd['unknowns']['yongqiao_bank_landings']==[None,None]
+ assert all(value is None for key,value in bd['unknowns'].items() if key!='yongqiao_bank_landings')
+ assert all(link['semantics']=='context_link_only' and set(link['evidence_refs'])<=set(br) for link in bd['water_evidence_navigation'])
+ assert {backbone['page'],backbone['atlas'],*backbone['data_files']}<=set(info['files_sha256'])
+
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
@@ -623,6 +654,7 @@ try:
  report['prosperity_south_p466']=south
  report['prosperity_water_p467']=water
  report['prosperity_water_p468']=remainder
+ report['prosperity_backbone_p469']=backbone
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors
