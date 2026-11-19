@@ -22,7 +22,7 @@
     <div class="facts" aria-label="本册范围">
       <div><strong>2</strong><span>独立来源图框架</span></div>
       <div><strong>34</strong><span>当前水系索引项</span></div>
-      <div><strong>9</strong><span>可点门道参照</span></div>
+      <div><strong>门道</strong><span>水系与城市关系联读</span></div>
       <div><strong>0</strong><span>新增古岸线定位</span></div>
     </div>
     <nav class="downloads" aria-label="下载本册">
@@ -39,7 +39,7 @@
       <button type="button" data-map-choice="frame-06a" aria-pressed="true">01 · 遗存骨架 06a</button>
       <button type="button" data-map-choice="frame-qian2018" aria-pressed="false">02 · 钱氏图同框读数</button>
     </div>
-    <p class="map-guide">小屏可先看全图，再点“放大读图”横向移动；所有图例、证据与未知项也在下方以文字列出。</p>
+    <p class="map-guide">小屏可先看全图，再打开SVG或PDF细读。<span class="enhanced-only">也可点“放大读图”横向移动。</span>所有图例、证据与未知项也在下方以文字列出。</p>
     <article class="map-card" id="map-frame-06a" data-map-panel="frame-06a">
       <div class="map-toolbar"><h3>01 · 城墙、门址与八条道路遗存</h3><div><label class="toggle"><input id="modern-river-toggle" type="checkbox">1997／1999洛河参照</label><button type="button" data-zoom="frame-06a" aria-pressed="false">放大读图</button><a href="./backbone-469/frame-06a.svg" download>SVG</a></div></div>
       <div class="map-scroll map-viewport" data-map-scroll="frame-06a" tabindex="0" aria-label="遗存骨架图，可在放大后横向滚动"><!-- FRAME_06A --></div>
@@ -50,12 +50,12 @@
       <div class="map-scroll map-viewport" data-map-scroll="frame-qian2018" tabindex="0" aria-label="钱氏图同框读数，可在放大后横向滚动"><!-- FRAME_QIAN --></div>
       <div class="map-caption"><p><strong>同一幅1145×951像素的原图。</strong>合并P465的北路与承明门西短线、P466的南路和古洛水图带、P462的六对东西郭门端点。</p><p>同号门端只表一对读点，不连成实测大道。古洛水是后世复原图的图带，永桥是原图符号；两者没有变成盛时岸线和考古桥头。</p></div>
     </article>
-    <noscript><p class="notice">当前未启用脚本，两张地图、九处关联证据、全部水系索引与原文仍可直接阅读；SVG和PDF可独立打开。</p></noscript>
+    <noscript><p class="notice">当前未启用脚本，两张地图、门道关联证据、城市关系、全部水系索引与原文仍可直接阅读；SVG和PDF可独立打开。</p></noscript>
   </section>
 
   <section id="contexts" class="section">
-    <div class="section-heading"><div><p class="eyebrow">02 / 地点联读</p><h2 id="context-heading">门道周围，水从哪里读起</h2></div><a href="#water-index">按水体名称查找 ↓</a></div>
-    <p class="section-intro">点第一图的门址或铜驼街，也可在此选择。地点的已知坐标只负责提供参照；“门北”“门东”“街侧”保留为相对关系。</p>
+    <div class="section-heading"><div><p class="eyebrow">02 / 地点联读</p><h2 id="context-heading">门道周围，联读水系与城市关系</h2></div><a href="#water-index">按水体名称查找 ↓</a></div>
+    <p class="section-intro">点第一图的门址或铜驼街，也可在此选择。宫城阊阖门可续读宫前寺院与官署关系，建春门可续读两座石桥与桥北里坊。地点只负责提供参照；“门北”“门东”“街侧”保留为相对关系，铜驼街没有因此与文献宫前御道全段合一。</p>
     <label class="select-label" for="anchor-choice">选择门道参照<select id="anchor-choice"><!-- CONTEXT_OPTIONS --></select></label>
     <div class="context-choices"><!-- CONTEXT_BUTTONS --></div>
     <div id="context-details"><!-- CONTEXT_CARDS --></div>
@@ -85,7 +85,7 @@
   <section id="unknowns" class="section unknowns"><p class="eyebrow">04 / 留下可执行的边界</p><h2>尚未定位的部分继续留白</h2><ul><!-- UNKNOWNS --></ul><p>引洛渠在津阳门外大街东侧；《洛阳伽蓝记》记永桥在宣阳门外四里、跨洛水；残长180米的干道属于辟雍。三个已核结论继续沿用，其各自的年代与定位边界保持可见。</p></section>
 
   <!-- ROAD01_UPDATE -->
-  <section class="audit-files"><h2>来源与访问记录</h2><p>本轮图框核对、路-01图源排查与路-02访问结果，随数据一起保存。</p><nav class="audit-downloads"><!-- AUDIT_DOWNLOADS --><a href="./backbone-469/bundle-manifest.json" download>下载文件校验清单</a></nav></section>
+  <section class="audit-files"><h2>来源与访问记录</h2><p>本轮图框核对、路-01图源排查与路-02访问结果，随数据一起保存。城市关系联读复用P4.5.3原记录并保留来源校验；没有新增史料判断或古地理坐标。</p><nav class="audit-downloads"><!-- AUDIT_DOWNLOADS --><a href="./backbone-469/bundle-manifest.json" download>下载文件校验清单</a></nav></section>
 
   <section id="all-evidence" class="section"><p class="eyebrow">05 / 全部关系记录</p><h2>100条原文与判断，逐条展开</h2><p class="section-intro">相邻、所属、连接、水流、地层关系与学者解释分开标示。这里没有把页面排版坐标转换为地理坐标。</p><div class="all-evidence"><!-- EVIDENCE_RECORDS --></div></section>
 </main>
