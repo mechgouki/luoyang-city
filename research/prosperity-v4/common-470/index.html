@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="在同一06a来源图中联读北魏洛阳城墙、八条道路遗存与四处建筑参照，并查看宫前、建春门和洛南的城市关系。">
+  <title>城市骨架与建筑共同视图 · 盛时洛阳 P4.7</title>
+  <link rel="stylesheet" href="./common-470/study.css">
+  <script src="./common-470/common-ui.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#city-map">跳到共同视图</a>
+<header class="masthead"><a href="./prosperity-backbone-p469.html">← 城市水陆骨架</a><a href="./index.html">盛时洛阳</a></header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">北魏洛阳 · 516—528年研究 · P4.7</p>
+    <h1>沿着城市骨架，<br><span>看见建筑与城市关系</span></h1>
+    <p class="lead">太极殿、阊阖门、建春门与永宁寺，共用一张来源图的位置参照。选择建筑，联读局部尺度；选择宫前、建春或洛南，继续查看寺院、官署、桥梁与市场的文献关系。</p>
+    <div class="facts" aria-label="共同视图范围"><div><strong>25</strong><span>同源图示要素</span></div><div><strong>4</strong><span>建筑参照卡</span></div><div><strong>3</strong><span>城市关系场景</span></div><div><strong>17</strong><span>已有文献关系</span></div></div>
+    <nav class="downloads" aria-label="本次成果下载"><a class="button primary" href="#city-map">进入共同视图 ↓</a><a class="button" href="./downloads/common-470.zip" download>离线资料 ZIP</a><a href="./common-470/city-common.svg" download>地图 SVG</a><a href="./common-470/readings.json" download>完整依据 JSON</a></nav>
+    <p class="scope-note">同源图示要素包括24项遗存参照与1项默认关闭的近现代洛水参照。局部尺寸保留在卡片中；文献中的相对关系在下方逐条阅读。</p>
+  </section>
+
+  <section class="section" id="city-map">
+    <div class="section-heading"><div><p class="eyebrow">01 / 同一来源图里的城市</p><h2>墙线、道路与四处建筑</h2></div><a href="#method">查看来源与范围 ↓</a></div>
+    <p class="section-intro">地图沿用06a原PDF点坐标及原分段。点选编号或下方建筑名称；永宁寺塔基与寺院残墙分别保留，选中时可一起查看。</p>
+    <div class="place-choices" aria-label="选择建筑参照"><!-- PLACE_BUTTONS --></div>
+    <div class="workspace">
+      <article class="map-card">
+        <div class="map-toolbar"><div class="layer-controls enhanced-only" aria-label="显示图层"><label><input type="checkbox" id="layer-roads" checked>道路遗存</label><label><input type="checkbox" id="layer-walls" checked>墙线遗存</label><label><input type="checkbox" id="layer-modern">1997／1999洛水</label></div><button class="enhanced-only" type="button" id="map-zoom" aria-pressed="false">放大读图</button></div>
+        <div class="map-scroll" id="common-map-scroll" tabindex="0" aria-label="城市共同视图，放大后可横向移动"><!-- COMMON_MAP --></div>
+        <p class="map-caption">八条道路保留断笔，永宁寺残墙保留7段。图符中心用于定位参照；未据尺寸卡补绘建筑轮廓、完整院墙或屋顶。</p>
+      </article>
+      <aside class="place-reading" aria-label="所选建筑的依据">
+        <article id="place-overview" hidden><p class="eyebrow">当前场景没有06a地理绑定</p><h3>洛南：保留文献关系</h3><p>宣阳门、永桥、四通市、鱼鳖市与归正里仍以相对关系阅读。地图保持城市整体，没有为本组新增点位或借用近现代洛水线。</p><a href="#scene-K03" data-open-scene="K03">查看洛南四条关系 ↓</a></article>
+        <!-- PLACE_CARDS -->
+      </aside>
+    </div>
+    <noscript><p class="notice">未启用脚本时，四张建筑卡、三组城市关系和全部对象仍完整可读。图中编号链接到对应卡片，现代洛水默认不显示。</p></noscript>
+  </section>
+
+  <section class="section" id="city-scenes">
+    <div class="section-heading"><div><p class="eyebrow">02 / 从参照位置读城市关系</p><h2>宫前、建春门与洛南</h2></div><a href="#functions">按城市功能查找 ↓</a></div>
+    <p class="section-intro">这里复用已核的20个对象、17条关系和2个事件。宫前和建春门有明确的来源图阅读入口；洛南保留独立文献场景。关系顺序只用于阅读，不是地图坐标。</p>
+    <div class="scene-choices" aria-label="选择城市关系场景"><!-- SCENE_BUTTONS --></div>
+    <p class="notice" id="scene-none" hidden>太极殿的宫院关系在独立专题中详读。本次三组街区关系没有把它绑定到宫前御道；可自行选择下方场景继续阅读。</p>
+    <div id="scene-panels"><!-- SCENE_PANELS --></div>
+  </section>
+
+  <section class="section" id="functions">
+    <div class="section-heading"><div><p class="eyebrow">03 / 按功能找对象</p><h2>寺院、官署、桥梁、市场与里坊</h2></div><span class="count" id="function-count">15个对象</span></div>
+    <p class="section-intro">五类功能覆盖15个对象；另5个对象作为关系参照。分类帮助查找原文，未绘成城市用地分区，也未据此估算人口或建筑密度。</p>
+    <label class="filter-label enhanced-only" for="function-filter">功能类别<select id="function-filter"><option value="all">全部五类</option><!-- FUNCTION_OPTIONS --></select></label>
+    <div class="function-grid"><!-- FUNCTION_OBJECTS --></div>
+  </section>
+
+  <section class="section method" id="method">
+    <div><p class="eyebrow">04 / 来源与下一条证据</p><h2>共同视图的依据</h2><p>位置取自2012年管理规划图06a（UNESCO申遗PDF第3457页），底图注明1997年航摄、1999年测量。既有配准使用西安1980（EPSG:4610）；本图保留原PDF点框，未变换为WGS84。</p><p>太极殿、永宁寺塔基与残墙来自同一份既有图源，属于本次新增显示内容。原图中的遗存包含多期信息，不能据此认定516—528年每年状态完全相同。</p><a href="https://whc.unesco.org/uploads/nominations/1442.pdf#page=3457" target="_blank" rel="noopener">打开06a原图 ↗</a></div>
+    <div><h3>仍需新材料的部分</h3><ul><li>建春门局部平面与全城图的共同测量点仍为0组，原位置与联测图待得。</li><li>永宁寺残墙不强制套成301×212米的完整院框。</li><li>钱氏复原图中的古洛水图带与06a保持分框；永桥桥头、古岸线和宣阳门未新增位置。</li><li>太极殿沿用原图feature参照，实体绑定仍为空；未据名称补造新实体。</li></ul><p>2022年运河报告继续暂缓。后续有新的原位置图、测量网或分期依据时，再更新相应定位。</p></div>
+  </section>
+
+  <section class="audit"><h2>下载与复核</h2><p>完整数据保存原ID、图形、年代、来源记录与校验值。来源图中的建筑尺度、街区关系和水系索引分别保留其证据范围。</p><nav class="downloads"><a href="./common-470/places.csv" download>四建筑参照 CSV</a><a href="./common-470/reuse-plan.json" download>同源接入审查 JSON</a><a href="./common-470/bundle-manifest.json" download>文件校验清单</a></nav><details><summary>查看使用的源数据与校验值</summary><!-- SOURCE_AUDIT --></details></section>
+</main>
+<footer><p>盛时洛阳 · P4.7 · 城市骨架与建筑共同视图</p><nav><a href="./prosperity-city-distribution.html">建筑类型与独立尺度</a><a href="./prosperity-backbone-p469.html">水陆骨架与水系索引</a><a href="./prosperity-street-clusters.html">城市关系原专题</a><a href="https://github.com/mechgouki/luoyang-city/issues/52">项目续接记录</a></nav><p class="build-note">发布提交 <!-- SOURCE_COMMIT --></p></footer>
+</body>
+</html>
