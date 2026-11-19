@@ -11,6 +11,7 @@ from xml.etree import ElementTree as ET
 
 from dual_cartography import dump, load, sha
 from prosperity_anchors_p461 import ROOT, SITE, offline_page
+from jianchun_plan_audit import build_figures as build_jianchun_figures, section_html as jianchun_section_html
 
 FOLDER = "backbone-469"
 SOURCE = ROOT / "research/prosperity-v4" / FOLDER
@@ -545,9 +546,10 @@ def context_html(data, inputs, catalog, sources, urban):
                       '<p>下列水道关系单独阅读；所选门道的图上位置没有赋给河渠、池口或桥头。</p>'
                       f'<ul class="context-evidence">{"".join(entries)}</ul>') if row else ""
         city_html = urban_context_html(urban_navigation[feature_id], urban) if feature_id in urban_navigation else ""
+        plan_html = jianchun_section_html() if feature_id == "geo-jianchun-gate" else ""
         articles.append(f'<article class="context-card" id="context-{esc(feature_id)}" data-context-card="{esc(feature_id)}">'
                         f'<p class="eyebrow">地理参照 × 相对关系</p><h3>{esc(name)}</h3>'
-                        f'{water_html}{city_html}</article>')
+                        f'{plan_html}{water_html}{city_html}</article>')
     return "".join(options), "".join(buttons), "".join(articles)
 
 
@@ -659,7 +661,9 @@ def road01_html(data):
 def audit_downloads_html():
     return ("".join(f'<a href="./{FOLDER}/{esc(path.name)}" download>{esc(path.name)}</a>'
                     for path in sorted(SOURCE.glob("*.json")) if path.name != "readings.json")
-            + f'<a href="./{FOLDER}/urban-contexts.json" download>城市关系原记录与来源校验</a>')
+            + f'<a href="./{FOLDER}/urban-contexts.json" download>城市关系原记录与来源校验</a>'
+            + f'<a href="./{FOLDER}/jianchun-source-context.svg" download>建春门：06a局部 SVG</a>'
+            + f'<a href="./{FOLDER}/jianchun-structure-reading.svg" download>建春门：遗迹关系示意 SVG</a>')
 
 
 def inline_urban_links(plate, urban, inputs):
@@ -747,6 +751,8 @@ def build(site=SITE):
         copied.append(dest/source_path.name)
     dump(dest/"urban-contexts.json", urban)
     copied.append(dest/"urban-contexts.json")
+    supplemental_figures = build_jianchun_figures(dest)
+    copied.extend(supplemental_figures)
     page = render_page(data, inputs, plates, catalog, sources, urban)
     (site/PAGE).write_text(page, encoding="utf-8")
     previous = site/PREVIOUS
@@ -786,6 +792,10 @@ def build(site=SITE):
         "urban_contexts": f"{FOLDER}/urban-contexts.json",
         "urban_context_counts": urban["counts"],
         "urban_context_source_sha256": urban["source_sha256"],
+        "jianchun_plan_audit": {"data": f"{FOLDER}/jianchun-plan-audit.json",
+                                "diagrams": [path.relative_to(site).as_posix() for path in supplemental_figures],
+                                "read_status": "2018_republished_figure_read_original_1988_full_page_not_obtained",
+                                "accepted_common_control_pairs": 0, "geographic_transform": None},
         "current_relations": len(catalog),
         "geographic_coordinates_added": 0, "new_metric_measurements": 0,
         "new_516_528_bank_geometry": None, "approved_h2_changed": False,
