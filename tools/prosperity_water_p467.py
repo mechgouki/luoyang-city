@@ -18,6 +18,9 @@ PAGE = "prosperity-water-p467.html"
 PREVIOUS = "prosperity-south-p466.html"
 ATLAS = f"downloads/{FOLDER}.pdf"
 VERSION = "prosperity-water-p467"
+ARCHIVED_ATLAS = ROOT / "research/prosperity-v4/archive/water-467.pdf"
+ARCHIVED_COMMIT = "e6d0aaec76b5d25ed347f377ce19d7361b47f9a2"
+ARCHIVED_ATLAS_SHA = "68c994d5a558ee222134afd98cf15e095b6b4dce4c75d999e68c9789d4d0d404"
 ENTRY = f'<p id="p467-entry"><a href="./{PAGE}">续读 · 河流与水道：城内外的连接与分期</a></p>\n'
 CORRECTION = ('<aside id="p467-water-correction" style="border-left:4px solid #956b46;padding:.7rem 1rem;background:#f1ebde">'
               '<strong>2026-11-19校读补充：</strong>下图及下文沿传本文序说明鸿池后接七里涧。'
@@ -26,7 +29,7 @@ CORRECTION = ('<aside id="p467-water-correction" style="border-left:4px solid #9
               '这里的传本文序不能单独证明鸿池东出口的实际位置或516—528年连续通航。'
               '本册旧PDF与读数保留原样，请连同新校读阅读。</aside>\n')
 PAPER, RULE, OLD, PROPOSED = "#faf8f0", "#c6cec3", "#836446", "#9b694e"
-RELATION_LABELS = {"flow": "明确流向", "connection": "相连，方向未定", "adjacency": "仅相邻", "proposal": "开渠提议", "hypothesis": "复原解释"}
+RELATION_LABELS = {"flow": "明确流向", "connection": "相连，方向未定", "adjacency": "仅相邻", "containment": "位于其内", "stratigraphy": "层位先后", "proposal": "开渠提议", "hypothesis": "复原解释"}
 PERIOD_LABELS = {"text_context": "文献语境", "older_event": "早期记事／旧迹", "broad_survey": "宽年代调查", "interpretation": "后出解释", "proposal": "提议，实施待证"}
 
 
@@ -77,8 +80,10 @@ def midpoint(points):
 
 def style_for(segment):
     relation, period = segment["relationship_type"], segment["period_class"]
-    if relation == "adjacency":
+    if relation in ("adjacency", "containment"):
         return "#87918a", "2 7", 2.0
+    if relation == "stratigraphy":
+        return "#777080", "3 6", 2.2
     if relation in ("proposal", "hypothesis") or period in ("interpretation", "proposal"):
         return PROPOSED, "8 6", 2.7
     if period in ("older_event", "broad_survey"):
@@ -86,7 +91,7 @@ def style_for(segment):
     return WATER, None, 3.6
 
 
-def draw_plate(plate, number, total):
+def draw_plate(plate, number, total, study_label="盛时洛阳  /  P4.6.7  /  水系关系"):
     pid = safe_id(plate["id"])
     root = ET.Element("svg", xmlns="http://www.w3.org/2000/svg", width="1020", height="760",
                       viewBox="0 0 1020 760", role="img", attrib={"font-family": "Noto Sans CJK SC, sans-serif",
@@ -99,19 +104,29 @@ def draw_plate(plate, number, total):
         marker = node(defs, "marker", id=f"arrow-{pid}-{color_name}", markerWidth=13, markerHeight=11,
                       refX=12, refY=5.5, orient="auto", markerUnits="userSpaceOnUse")
         node(marker, "path", d="M 0 0 L 12 5.5 L 0 11 L 3 5.5 Z", fill=color)
-    label(root, 44, 23, "盛时洛阳  /  P4.6.7  /  水系关系", 12, MUTED)
+    label(root, 44, 23, study_label, 12, MUTED)
     label(root, 975, 25, f"{number:02d} / {total:02d}", 14, MUTED, "end")
     label(root, 44, 62, plate["title"], 30, INK)
     subtitle = plate.get("subtitle", "")
     paragraph(root, 45, 88, subtitle, 16, MUTED, 58, 21)
     legend_y = 128
-    for x, text, color, dash, arrow in (
+    legend = (
         (45, "流向", WATER, None, True),
         (203, "相连", WATER, None, False),
         (361, "仅相邻", "#87918a", "2 7", False),
         (539, "旧迹／调查", OLD, "10 5", False),
         (768, "提议／解释", PROPOSED, "8 6", False),
-    ):
+    )
+    if plate.get("legend_mode") == "p468":
+        legend = (
+            (45, "流向", WATER, None, True),
+            (190, "相连", WATER, None, False),
+            (335, "方位相邻", "#87918a", "2 7", False),
+            (500, "位于其内", "#87918a", "2 7", False),
+            (665, "层位先后", "#777080", "3 6", False),
+            (840, "解释", PROPOSED, "8 6", False),
+        )
+    for x, text, color, dash, arrow in legend:
         line(root, x, legend_y, x+37, legend_y, color, 2.6, dash)
         if arrow:
             node(root, "path", d=f"M{x+29} {legend_y-4} L{x+38} {legend_y} L{x+29} {legend_y+4}", fill="none", stroke=color, stroke_width=2)
@@ -201,15 +216,15 @@ def evidence_html(data):
     return "\n".join(result)
 
 
-def render_html(data, diagrams):
-    template = (SOURCE / "index.html").read_text(encoding="utf-8")
+def render_html(data, diagrams, source_dir=SOURCE, folder=FOLDER):
+    template = (source_dir / "index.html").read_text(encoding="utf-8")
     tabs, panels = [], []
     for index, (plate, diagram) in enumerate(zip(data["plates"], diagrams), 1):
         pid = plate["id"]
         tabs.append(f'<button type="button" data-plate-choice="{esc(pid)}" aria-pressed="{str(index == 1).lower()}"><span>{index:02d}</span>{esc(plate["title"])}</button>')
         svg = ET.tostring(diagram, encoding="unicode")
         panels.append(f'<article class="plate-panel" id="plate-{esc(pid)}" data-plate-panel="{esc(pid)}"><h3 class="sr-only">{esc(plate["title"])}</h3><div class="map-viewport">{svg}</div>'
-                      f'<p class="map-caption">相对位置关系图，图上距离不表示实际里程。<a href="{FOLDER}/{esc(pid)}.svg">下载本图 SVG</a></p></article>')
+                      f'<p class="map-caption">相对位置关系图，图上距离不表示实际里程。<a href="{folder}/{esc(pid)}.svg">下载本图 SVG</a></p></article>')
     source_html = "\n".join(f'<li id="source-{esc(s["id"])}"><a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])}</a><p>{esc(s.get("locator", ""))}</p><small>{esc(s.get("type", ""))}</small></li>' for s in data["sources"])
     question_html = "\n".join(f'<article class="question"><h3>{esc(q["label"])}</h3><p>{esc(q["missing"])}</p><p class="question-decision">{esc(q["decision"])}</p></article>' for q in data.get("open_questions", []))
     coverage = data.get("legacy_water_coverage", [])
@@ -225,12 +240,12 @@ def render_html(data, diagrams):
         coverage_html = '<details class="coverage"><summary>与前册水系对象的对应</summary><ul>'+"".join(lines)+"</ul></details>"
     encoded = json.dumps(data, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     additional = []
-    for path in sorted(SOURCE.glob("*.json")):
+    for path in sorted(source_dir.glob("*.json")):
         if path.name == "readings.json":
             continue
         extra = load(path)
         title = extra.get("title", extra.get("task", path.stem)) if isinstance(extra, dict) else path.stem
-        additional.append(f'<a href="{FOLDER}/{esc(path.name)}">{esc(title)}（JSON） <span>↓</span></a>')
+        additional.append(f'<a href="{folder}/{esc(path.name)}">{esc(title)}（JSON） <span>↓</span></a>')
     replacements = {
         "<!-- PLATE_COUNT -->": str(len(data["plates"])),
         "<!-- PLATE_COUNT_CN -->": {1:"一",2:"两",3:"三",4:"四",5:"五",6:"六"}.get(len(data["plates"]), str(len(data["plates"]))),
@@ -290,7 +305,9 @@ def build(site=SITE):
         ET.ElementTree(diagram).write(path, encoding="utf-8", xml_declaration=True)
         diagrams.append(diagram)
         paths.append(path)
-    render_atlas(paths, site / ATLAS)
+    if sha(ARCHIVED_ATLAS) != ARCHIVED_ATLAS_SHA:
+        raise ValueError("Archived P4.6.7 PDF bytes changed")
+    shutil.copyfile(ARCHIVED_ATLAS, site / ATLAS)
     copied = [*sorted(SOURCE.glob("*.json")), SOURCE / "study.css", SOURCE / "water-ui.js"]
     for path in copied:
         shutil.copyfile(path, dest / path.name)
@@ -316,7 +333,7 @@ def build(site=SITE):
     dump(site / "release.json", release)
     segments = [segment for plate in data["plates"] for segment in plate["segments"]]
     info["prosperity_water_p467"] = {
-        "version": VERSION, "source_commit": info["source_commit"], "page": PAGE,
+        "version": VERSION, "source_commit": ARCHIVED_COMMIT, "page": PAGE,
         "atlas": ATLAS, "readings": f"{FOLDER}/readings.json", "plates": [path.name for path in paths],
         "atlas_pages": len(paths), "segments": len(segments),
         "relation_counts": dict(Counter(segment["relationship_type"] for segment in segments)),
