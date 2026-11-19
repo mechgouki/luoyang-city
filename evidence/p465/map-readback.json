@@ -1,0 +1,113 @@
+{
+  "description": "同名内城门在两幅图上的相似性校核",
+  "source_commit": "5daa6ea32079a77dd4cec5ae5c8d6e54121aabd7",
+  "from_1973_reprint_px": {
+    "IV": [
+      681,
+      1164
+    ],
+    "V": [
+      691,
+      951
+    ],
+    "VI": [
+      924,
+      855
+    ],
+    "VII": [
+      1233,
+      739
+    ]
+  },
+  "to_2018_reprint_px": {
+    "IV": [
+      468,
+      278
+    ],
+    "V": [
+      474,
+      212
+    ],
+    "VI": [
+      552,
+      183
+    ],
+    "VII": [
+      648,
+      150
+    ]
+  },
+  "method": "四个门轮流留出一个，用另外三个门以最小二乘拟合平移、旋转与均匀缩放。结果的单位是2018年转载图像素。两图像素原点均在左上。",
+  "formula": "f = sum(conj(z-mean(z))*(w-mean(w))) / sum(abs(z-mean(z))**2); predict(z) = mean(w)+f*(z-mean(z))",
+  "leave_one_out": [
+    {
+      "held_out": "IV",
+      "fit_to": [
+        "V",
+        "VI",
+        "VII"
+      ],
+      "predicted_source_pixel": [
+        469.949,
+        279.05
+      ],
+      "observed_source_pixel": [
+        468,
+        278
+      ],
+      "residual_px": 2.214
+    },
+    {
+      "held_out": "V",
+      "fit_to": [
+        "IV",
+        "VI",
+        "VII"
+      ],
+      "predicted_source_pixel": [
+        474.876,
+        210.403
+      ],
+      "observed_source_pixel": [
+        474,
+        212
+      ],
+      "residual_px": 1.822
+    },
+    {
+      "held_out": "VI",
+      "fit_to": [
+        "IV",
+        "V",
+        "VII"
+      ],
+      "predicted_source_pixel": [
+        548.707,
+        183.453
+      ],
+      "observed_source_pixel": [
+        552,
+        183
+      ],
+      "residual_px": 3.324
+    },
+    {
+      "held_out": "VII",
+      "fit_to": [
+        "IV",
+        "V",
+        "VI"
+      ],
+      "predicted_source_pixel": [
+        652.599,
+        151.006
+      ],
+      "observed_source_pixel": [
+        648,
+        150
+      ],
+      "residual_px": 4.708
+    }
+  ],
+  "interpretation": "只检查手工选点与两图画法的一致程度。后图承袭早期考古成果；四门都在内城，这些残差不提供独立的地面位置或山上、城西外推的不确定度。"
+}
