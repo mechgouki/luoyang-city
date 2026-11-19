@@ -12,6 +12,8 @@ FOLDER = "south-466"
 SOURCE = ROOT / "research/prosperity-v4" / FOLDER
 PAGE = "prosperity-south-p466.html"
 ATLAS = f"downloads/{FOLDER}.pdf"
+PRESERVED_SOURCE_COMMIT = "a5d9fa3ee0a1eccce7cbd2e53cebcb57e9983632"
+PRESERVED_ATLAS_SHA256 = "90e8011316936430cd06a2cf5660d8c749936c89f758ca9058d2d40b29990589"
 ENTRY = f'<p id="p466-entry"><a href="./{PAGE}">续读 · 城南两条大道、谷水与永桥</a></p>\n'
 PAPER, PALE, RULE = "#faf8f0", "#dce9e6", "#c2cabd"
 
@@ -172,7 +174,10 @@ def build(site=SITE):
         path = dest / f"{name}.svg"
         ET.ElementTree(drawing).write(path, encoding="utf-8", xml_declaration=True)
         plates.append(path)
-    render_atlas(plates, site / ATLAS)
+    archived_atlas = ROOT / "research/prosperity-v4/archive/south-466.pdf"
+    if sha(archived_atlas) != PRESERVED_ATLAS_SHA256:
+        raise ValueError("The accepted P4.6.6 atlas must retain its verified bytes")
+    shutil.copyfile(archived_atlas, site / ATLAS)
     shutil.copyfile(SOURCE / "readings.json", dest / "readings.json")
     shutil.copyfile(SOURCE / "index.html", site / PAGE)
     previous = site / PREVIOUS
@@ -186,7 +191,7 @@ def build(site=SITE):
     release["extensions"] = sorted(set(release["extensions"]) | {version})
     release["current_milestone"] = "盛时 P4.6.6 · 城南两条大道、谷水与永桥"
     dump(site / "release.json", release)
-    info["prosperity_south_p466"] = {"version": version, "source_commit": info["source_commit"], "page": PAGE,
+    info["prosperity_south_p466"] = {"version": version, "source_commit": PRESERVED_SOURCE_COMMIT, "page": PAGE,
                                      "atlas": ATLAS, "readings": f"{FOLDER}/readings.json", "plates": [p.name for p in plates]}
     for path in [*plates, dest / "readings.json", site / PAGE, site / ATLAS, previous, site / "release.json"]:
         info["files_sha256"][path.relative_to(site).as_posix()] = sha(path)

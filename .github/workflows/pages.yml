@@ -72,6 +72,8 @@ jobs:
           python -m py_compile tools/prosperity_road_functions_p452.py tests/browser_prosperity_road_functions_p452.py
           python -m py_compile tools/prosperity_street_clusters_p453.py tests/browser_prosperity_street_clusters_p453.py
           python -m py_compile tools/prosperity_hydro_roads_p46.py tests/browser_prosperity_hydro_roads_p46.py
+          python -m py_compile tools/prosperity_water_p467.py tests/browser_water_p467.py tests/test_prosperity_water_p467.py
+          node --check research/prosperity-v4/water-467/water-ui.js
           node --check web/prosperity-taiji-courts.js
           node --check web/prosperity-architecture.js
           node --check web/prosperity-city-distribution.js
@@ -160,7 +162,7 @@ jobs:
             --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \
             --workdir /work mcr.microsoft.com/playwright/python:v1.57.0-noble \
             bash -euo pipefail -c '
-              python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
+              python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0 pypdf==5.9.0
               python tests/browser_prosperity_gate_v3.py
               python tests/browser_prosperity_axis_v4.py
               python tests/browser_prosperity_axis_sources_p41.py
@@ -251,7 +253,7 @@ jobs:
             --workdir /work --env SITE_URL \
             mcr.microsoft.com/playwright/python:v1.57.0-noble \
             bash -euo pipefail -c '
-              python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0
+              python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0 pypdf==5.9.0
               python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
               python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser
               python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser

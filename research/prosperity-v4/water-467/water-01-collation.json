@@ -1,0 +1,158 @@
+{
+  "checked_beijing": "2026-11-19T16:59:11+08:00",
+  "topic": "水-01：城东阳渠、鸿池陂与七里涧校读分歧",
+  "original_2011_acquired": false,
+  "original_2011_figures_viewed": false,
+  "original_2011_pages": "20–25；重点22–23",
+  "new_measurements": 0,
+  "new_control_points": 0,
+  "new_shoreline_geometry": null,
+  "new_516_528_dating": null,
+  "baseline_reviewed": [
+    "anchor-461/hongchi.json",
+    "anchor-461/figures.json",
+    "network-462/east.json",
+    "network-462/east-notes.md",
+    "network-462/crossings.json",
+    "source-checks/readings.json",
+    "source-checks/ward-hongchi.md"
+  ],
+  "sources": [
+    {
+      "id": "H2026-article",
+      "type": "authored_historical_research_reprint",
+      "url": "https://www.sohu.com/a/1082362449_121124389",
+      "title": "汉魏洛阳城周边的水利建设",
+      "author": "黄学超",
+      "publication": "中国历史地理论丛 2026(3):28–42+52",
+      "locator": "第一节《水经注》所示洛阳城周边水道复原；节引《谷水注》后首段、图1；第三节第1项图4",
+      "exact_page_of_collation_paragraph": null,
+      "access": "正文可读；转载明示注释从略；本轮未取得原刊PDF",
+      "sha256": "cff7fb3ffcde428dd6b235abc0845135a118581d763c3cad7c63c778e1c5078b"
+    },
+    {
+      "id": "H2026-official",
+      "type": "journal_metadata_and_notes",
+      "url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+      "access": "摘要、出版信息及参考注释可读；全文面板提示访问cnki.net，未把此HTML当全文",
+      "publication_date": "2026-07-10",
+      "collation_source": "杨萧杨《〈水经·谷水注〉中的错简、脱文与汉魏洛阳城及其周边水系》，李晓杰主编、校释《水经注校笺图释·洛水流域诸篇》，科学出版社2021年，第358–369页",
+      "collation_source_pages_acquired": false
+    },
+    {
+      "id": "SJ16-transmitted",
+      "type": "classical_primary_text_digital_transcription",
+      "url": "https://zh.wikisource.org/wiki/水經注/16",
+      "locator": "穀水，鴻池陂后至甘水篇前",
+      "access": "本轮实际取得并核读正文；此为网页录文，不是版本校勘影印本"
+    },
+    {
+      "id": "Xiong-shuyaoshan",
+      "type": "historical_scholarly_commentary",
+      "url": "https://www.shidianguji.com/book/CADAL11201767/chapter/1l7ronkbbhyk4",
+      "title": "水经注疏要删卷十六",
+      "locator": "“注其水又东，左合七里涧”下“熊会贞曰”以及下一段“至此下或言阳渠”",
+      "access": "本轮实际取得并核读公开录文；书名作者页标杨守敬，相关观点明确署熊会贞曰"
+    }
+  ],
+  "claims": [
+    {
+      "id": "W01-COLLATION-01",
+      "novelty": "newly_extracted_interpretation_not_new_excavation",
+      "claim": "黄学超明确提出将七里涧段移接到马市石桥段之后，归城东北支，不能把传本文序直接当作鸿池东出口的地理次序。",
+      "source_ids": [
+        "H2026-article",
+        "H2026-official"
+      ],
+      "direct_start": "其水又东，左合七里涧",
+      "direct_insertion_after": "又东迳马市石桥",
+      "old_intervening_south_block_start": "阳渠水南暨阊阖门",
+      "old_intervening_south_block_end": "谷水又东，注鸿池陂",
+      "explicit_terminal_of_moved_block": null,
+      "scope_note": "黄用“以后文字”概括，节引尾部列至“阳渠水又东，迳亳殷南”；未逐字指定移接尾句。不据此宣称偃师城南和入洛尾句的校勘已经逐句核定。"
+    },
+    {
+      "id": "W01-COLLATION-02",
+      "novelty": "newly_explicit_topological_comparison_of_previously_acquired_figures",
+      "claim": "黄图1把七里涧画成鸿池陂以西从北来、汇入阳渠的支流；图4把旅人桥（七里桥）画在此涧跨越建春门外大道处，涧南入阳渠，位于东郭门以西、马市石桥以东。",
+      "source_ids": [
+        "H2026-article"
+      ],
+      "visuals_actually_inspected_this_round": [
+        "huang-figure1.png",
+        "huang-figure4.png"
+      ],
+      "qualifier": "作者复原关系；非2011原勘探图；不能从小比例示意图新增坐标、孔位、河宽或水深。图像及哈希已在anchor-461，图源本身不算新增。"
+    },
+    {
+      "id": "W01-COLLATION-03",
+      "novelty": "newly_acquired_named_alternative_interpretation",
+      "claim": "《水经注疏要删》熊会贞按语把七里涧解释为建春门外城北、东侧汇水的下流异名；其说认为鸿池陂以下城南城北之水合一，并以谷水/阳渠为一水二名解释两篇入洛称名。",
+      "source_ids": [
+        "Xiong-shuyaoshan"
+      ],
+      "qualifier": "这是依传本文序的学术解释；不构成测得的池东汇口坐标或516–528岸线。与黄氏从北来支流模型应并列。"
+    },
+    {
+      "id": "W01-READING-LIMIT-01",
+      "novelty": "newly_recorded_internal_qualification",
+      "claim": "黄文第三节第3项先承认池东较窄汉魏旧渠及东端冲毁，后以“不见鸿池陂以东阳渠河道”论北魏计划可能未实行；后一句不能孤立解释为池东没有任何考古渠迹。",
+      "source_ids": [
+        "H2026-article"
+      ],
+      "qualifier": "项目可说目前所取材料未给出可核的北魏连续通航东段；不能据宽年代旧渠认定516–528通航，也不能据后句删除旧渠遗迹。"
+    }
+  ],
+  "affected_scope": [
+    {
+      "item": "马市石桥",
+      "unchanged": "水道经桥的局部叙述",
+      "affected": "成为移接七里涧段的前文锚点",
+      "status": "黄文明确"
+    },
+    {
+      "item": "七里涧",
+      "unchanged": "存在涧水及桥的文字",
+      "affected": "鸿池后合流与北支受北来支流两种拓扑不能合并",
+      "status": "黄文及图1、4与熊按对比"
+    },
+    {
+      "item": "旅人桥",
+      "unchanged": "《穀水》把石梁归七里涧；桥距洛阳宫六七里的文献起点未被这次移接改变",
+      "affected": "不能沿传本文序将桥置于鸿池以东",
+      "status": "传本、黄图4"
+    },
+    {
+      "item": "郦食其庙南",
+      "unchanged": "阳渠经庙南的相对方位",
+      "affected": "在黄节引中位于七里涧段以后，属所概称北支的叙述；不证明从鸿池出发的连续实测河线",
+      "status": "黄节引明确列入后续"
+    },
+    {
+      "item": "亳殷南／毫殷南",
+      "unchanged": "阳渠经其南的相对方位；网页异体写法不擅自改成新地名",
+      "affected": "黄节引末项；北支重排影响其上游接续，不新增城市定位",
+      "status": "黄节引为亳；维基录文为毫"
+    },
+    {
+      "item": "偃师城南至洛水",
+      "unchanged": "传本文字末尾有穀水经偃师城南、向东注洛；独立的南北相对与入洛关系仍可存",
+      "affected": "黄没有在本段逐句列出这两句，也未指定移接的尾界；暂不把它们整体改成已核北支，亦不凭传本连续性锁定鸿池东出口",
+      "status": "传本已核，校勘范围待杨萧杨2021原页"
+    },
+    {
+      "item": "阮曲→鸿池及池内东西横塘",
+      "unchanged": "在黄所划南支内部，移接七里涧段不直接改动阮曲东注鸿池与横塘东西向",
+      "affected": "失去用后续七里涧作确定东出口定位的捷径",
+      "status": "传本＋黄重排边界"
+    },
+    {
+      "item": "516–528年具体水线、两岸、渠深、出口",
+      "unchanged": "仍无原2011剖面/孔号可核",
+      "affected": "本轮全部不新增",
+      "status": "no_new_measurements"
+    }
+  ],
+  "recommendation": "下一版水系关系图并列“传本文序及熊会贞解释”和“黄学超援杨萧杨校读及图示”；使用相对关系，不重画实测岸线。原2011报告和杨2021原校勘尾界仍作为后续验证，不阻碍先画明已经核实的解释分歧。",
+  "title": "水-01 七里涧两种解释及校读范围"
+}

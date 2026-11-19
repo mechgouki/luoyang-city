@@ -1,5 +1,6 @@
 """Open the network study from P4.6.1 and follow its research materials."""
 from urllib.parse import unquote, urlsplit
+from browser_water_p467 import check_page as check_water_study
 
 
 def check_page(page, base, output, device):
@@ -100,6 +101,7 @@ def check_page(page, base, output, device):
         assert downloaded.ok and downloaded.body().lstrip().startswith(magic)
     page.locator('nav a[href="#roads"]').click()
     page.screenshot(path=str(output / f"p466-{device}.png"))
+    check_water_study(page, base, output, device)
     page.locator("header > a").click()
     page.wait_for_url("**/prosperity-gates-p465.html")
     page.get_by_role("link", name="返回白马寺南坊门与鸿池陂", exact=True).click()
