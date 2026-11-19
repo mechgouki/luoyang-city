@@ -1,0 +1,165 @@
+{
+  "task": "路-02 原刊图源核查",
+  "recorded_at_beijing": "2026-11-19T16:37:10+08:00",
+  "scope": "只核公开目录、书目、摘要及开放 PDF；没有取得 1993 目标报告扫描，没有新增地图量测。",
+  "url_checks": [
+    {
+      "id": "ncpssd_1993_7",
+      "url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993",
+      "role": "国家哲社文献中心原刊期次入口",
+      "checked_at_beijing": "2026-11-19T16:36:51+08:00",
+      "http_status": 200,
+      "final_url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993",
+      "content_type": "text/html;charset=UTF-8",
+      "byte_length": 845,
+      "response_sha256": "c7cf2b559a22acd14c21883c75e0a67115dc15d435d8cd48d03b13594f23ba32",
+      "html_title": "monitor - 500",
+      "access_outcome": "HTTP 200 返回 monitor - 500 内部服务器错误页，非期次目录或原刊",
+      "application_error": 500,
+      "earlier_check_this_session": "同一会话稍早请求曾返回 HTTP 403；此处保留本次重测响应，不能只按 HTTP 200 当作内容可读。"
+    },
+    {
+      "id": "cnki_article",
+      "url": "https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFD9093&filename=KAGU199307004",
+      "role": "维普公开书目提供的知网正式记录，HTTP 地址升级为 HTTPS",
+      "checked_at_beijing": "2026-11-19T16:36:51+08:00",
+      "http_status": 503,
+      "access_outcome": "HTTP 503 Service Unavailable"
+    },
+    {
+      "id": "cnki_journal",
+      "url": "https://kagu.cbpt.cnki.net/",
+      "role": "考古期刊平台首页",
+      "checked_at_beijing": "2026-11-19T16:36:51+08:00",
+      "http_status": 200,
+      "final_url": "https://kagu.cbpt.cnki.net/",
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 129,
+      "response_sha256": "536610c93f190d4bea78701a61dd2219e98f915fe84fe2c95f7c75cd74c895c8",
+      "html_title": "",
+      "access_outcome": "HTTP 200 返回期刊平台错误跳转页，非目录或原刊"
+    },
+    {
+      "id": "institute_catalog",
+      "url": "https://kaogu.cssn.cn/zwb/xszl/sztsg/zjqk/kg/",
+      "role": "考古所旧期刊目录",
+      "checked_at_beijing": "2026-11-19T16:36:51+08:00",
+      "http_status": 503,
+      "access_outcome": "HTTP 503 Service Unavailable"
+    },
+    {
+      "id": "cqvip_issue",
+      "url": "https://www.cqvip.com/journal/94762X/1000076712",
+      "role": "维普《考古》1993 年第 7 期期次页",
+      "checked_at_beijing": "2026-11-19T16:36:51+08:00",
+      "http_status": 200,
+      "final_url": "https://www.cqvip.com/journal/94762X/1000076712",
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 142908,
+      "response_sha256": "a3336d0daf53994c7172e932b5b958e96449a615f748e89a79e05bb73c190459",
+      "html_title": "考古 | 期刊-维普官网",
+      "access_outcome": "期次目录可读，含目标题名及普通文献链接；此成功不是报告全文成功"
+    },
+    {
+      "id": "cqvip_canonical",
+      "url": "https://www.cqvip.com/doc/journal/1002554709",
+      "role": "维普文献 canonical；须区分裸地址与期次页普通链接",
+      "checked_at_beijing": "2026-11-19T16:36:58+08:00",
+      "http_status": 200,
+      "final_url": "https://www.cqvip.com/?serve=http://www.cqvip.com/doc/journal/1002554709&appCode=101",
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 141725,
+      "response_sha256": "d15c89688c9a34a4b26e43e0e3cff30c4e3fd5f334273cde8c89080420ad6f1c",
+      "html_title": "维普网",
+      "access_outcome": "裸文献地址返回维普首页或登录入口重定向；下一会话应由期次页点击目标题名"
+    },
+    {
+      "id": "cqvip_legacy",
+      "url": "https://qikan.cqvip.com/Qikan/Article/Detail?id=1002554709",
+      "role": "维普公开书目给出的旧文献详情入口，HTTP 地址升级为 HTTPS",
+      "checked_at_beijing": "2026-11-19T16:36:58+08:00",
+      "http_status": 403,
+      "access_outcome": "HTTP 403 Forbidden"
+    },
+    {
+      "id": "cqvip_article_via_issue",
+      "url": "https://www.cqvip.com/doc/journal/1002554709",
+      "role": "由期次目录普通文章链接访问的书目摘要页",
+      "checked_at_beijing": "2026-11-19T16:37:06+08:00",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 69590,
+      "response_sha256": "c0b7d69fe43add6b478bce6086d78c34fd4cc9c22234001397de9765bb89c249",
+      "html_title": "北魏洛阳外廓城和水道的勘查-文献详情-维普官网",
+      "entry_route": "https://www.cqvip.com/journal/94762X/1000076712 → 北魏洛阳外廓城和水道的勘查",
+      "public_link_query_omitted": true,
+      "access_outcome": "题名、作者、单位、期次、页码、摘要可读；未取得 602—608 页原刊扫描",
+      "reading_controls_observation": "返回 HTML 的智能阅读及 PDF下载控件带 hidden 类，无可跟随 href；未执行隐藏文件路径或绕授权请求"
+    },
+    {
+      "id": "ntu_thesis",
+      "url": "https://tdr.lib.ntu.edu.tw/handle/123456789/34647",
+      "role": "魏采如 2006 学位论文官方馆藏；附图 165 是此前已知线索",
+      "observation_basis": "本会话已实测，非本脚本重测",
+      "http_status": 200,
+      "access_outcome": "书目可读；Fulltext Rights 为有償授權，ntu-95-1.pdf 显示 Restricted Access；未获取全文",
+      "novelty": "既有断点已有此线索，不计本轮新增"
+    },
+    {
+      "id": "ncl_thesis",
+      "url": "https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi?o=dnclcdr&s=id%3D%22094NTU05045014%22.&searchmode=basic",
+      "role": "台大论文国家图书馆书目",
+      "observation_basis": "本会话已实测，非本脚本重测",
+      "http_status": null,
+      "access_outcome": "网页打开后为验证码；停止，不视为取得论文"
+    },
+    {
+      "id": "reprint_catalog",
+      "url": "https://www.kjlm.net/ebook/1482479.html",
+      "role": "《洛阳考古集成·秦汉魏晋南北朝卷》重印目录",
+      "observation_basis": "本会话已实测，非本脚本重测",
+      "http_status": null,
+      "access_outcome": "仅目录：目标论文始于 190 页，下一篇始于 197 页；未取得 190—196 原页",
+      "novelty": "既有图源，非本轮新增全文"
+    },
+    {
+      "id": "dai_article_pdf",
+      "url": "https://www.dainst.blog/bridging-eurasia/wp-content/uploads/sites/2/2020/04/eFB-DAI_2019-1_Wertmann_SRF.pdf",
+      "role": "DAI 文章单篇 PDF",
+      "observation_basis": "本会话 shell 请求实测，非本脚本重测",
+      "http_status": 503,
+      "access_outcome": "HTTP 503；已用官方整期公开 PDF 核内容"
+    },
+    {
+      "id": "dai_issue_pdf",
+      "url": "https://publications.dainst.org/journals/efb/issue/download/168/43",
+      "role": "DAI 2019/1 官方开放整期 PDF",
+      "observation_basis": "本会话 shell 请求及下载全文文本核查，非本脚本重测",
+      "http_status": 200,
+      "byte_length": 22101666,
+      "access_outcome": "开放 PDF 下载成功；洛阳段仅引述 1993 年报告，未找到所需原报告道路端点图；不用于端点量测",
+      "response_sha256": "507658f63b39100df2d8be6d5d21b462bb74b9cd5eb6a5c51c1287aab9b825c8"
+    },
+    {
+      "id": "academic_reprint_reference",
+      "url": "https://www.academia.edu/26735011/%E5%90%B4%E6%A2%A6%E8%95%BE_%E5%8C%97%E9%AD%8F%E6%B4%9B%E9%98%B3%E5%9F%8E%E9%87%8C%E5%9D%8A%E6%95%B0%E6%8E%A2%E6%9E%90",
+      "role": "2016 年课程论文图源引用",
+      "observation_basis": "本会话 web 读取，非本脚本重测",
+      "http_status": null,
+      "access_outcome": "文字提及 1993 图重印于 2000《汉魏洛阳故城研究》图一；只作引文线索，未取得原报告可读图页"
+    },
+    {
+      "id": "road_review_teaser",
+      "url": "https://m.fx361.com/news/2019/1205/6076367.html",
+      "role": "张辉 2019《汉魏洛阳城道路遗址的考古发现与研究》转载预览",
+      "observation_basis": "本会话 web 读取，非本脚本重测",
+      "http_status": null,
+      "access_outcome": "文章预览止于登录 APP 查看全文提示；没有原刊 602—608 页"
+    }
+  ],
+  "schema_version": 1,
+  "baseline_main_commit": "a5d9fa3ee0a1eccce7cbd2e53cebcb57e9983632",
+  "record_url": "https://github.com/mechgouki/luoyang-city/issues/47#issuecomment-7004023061",
+  "target_original_pages_obtained": false,
+  "new_field_measurements": []
+}

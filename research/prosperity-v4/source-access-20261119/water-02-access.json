@@ -1,0 +1,84 @@
+{
+  "step": "水-02",
+  "checked_at_beijing": "2026-11-19 16:32",
+  "scope": "合法可读的2022原图或2016同源原调查图。未使用受限科学文库接口；未联系第三方。",
+  "result": "未取得图2-2或图2-2-4可读原图；尚不能对孔号、剖线、尺标及断代作新的实测记录。",
+  "checks": [
+    {
+      "url": "https://archaeology.pku.edu.cn/info/1032/4541.htm",
+      "status": "目录可读",
+      "observation": "203号条目确认2022年科学出版社版，索书号K872.615/0172；页面无该书原图或全文附件。",
+      "novelty": "复核已知馆藏，不是新增史实"
+    },
+    {
+      "url": "https://www.ecsponline.com/goods.php?id=218604",
+      "status": "书目和插图目录可读",
+      "observation": "确认图2-2印21页、图2-2-4插页；其余图2-2-1至2-2-5均为堤堰或引洛渠钻探剖面。此轮未取得目标图像。",
+      "novelty": "复核已知目录"
+    },
+    {
+      "url": "https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=BEE866DDD5E330A68E053020B0A0A23B4000",
+      "status": "书目可读",
+      "observation": "本轮书目可读；未重新进行阅读器权限实测。另由文本抓取工具打开数字44、45页均未取得图像，技术失败不能替代权限判断；上轮第45页明确无权限的记录继续保留。",
+      "novelty": "未改变既有授权阻塞结论"
+    },
+    {
+      "url": "https://ci.nii.ac.jp/ncid/BD03120412",
+      "status": "馆藏目录可读",
+      "observation": "注记折り込図あり，著录xx,200p,图版107p；可确认折图版本存在，不能代表已读折图。",
+      "novelty": "复核已知书目"
+    },
+    {
+      "url": "https://www.chugoku-shoten.com/mokuji/cmokuji/81538/81538.pdf",
+      "status": "PDF可读，但非报告原文",
+      "observation": "实际为4页书讯和目录，未含目标平面或剖面。",
+      "novelty": "新增入口排除记录"
+    },
+    {
+      "url": "https://www.lykgyjy.cn/Y2016565/",
+      "status": "HTTP 200，阅读链接为空",
+      "observation": "官方2016期刊页面的第4期与第3期卡片均为<a href=\"\" target=\"_blank\">；仅标PDF和阅读，没有提供实际PDF URL。2016(4)才是《洛阳汉唐漕运水系考古调查》；2016(3)为另一篇隋唐水系简报。",
+      "novelty": "新增实际访问阻塞",
+      "snapshot_sha256": "e382d7a91ac59ea9560e23fa1f60716e2be2515c730cf215b94666ba89cfeb1a",
+      "minimal_observed_html": "<a href=\"\" target=\"_blank\"> ... <b class=\"f20\">2016年洛阳考古第4期</b> ... </a>"
+    },
+    {
+      "url": "https://lykgyjy.museumcloud.com.cn/Y2016565/",
+      "status": "HTTP 503 Service Unavailable",
+      "observation": "同机构另一公开域名的2016栏目在此次请求中未能读取；不能解释为授权拒绝。",
+      "novelty": "新增技术访问结果"
+    },
+    {
+      "url": "https://www.ecsponline.com/goods.php?id=225450",
+      "status": "2024重印目录可读",
+      "observation": "《漕渠考古发现与研究》，ISBN9787030777096，2024-06。目标2016原调查重印从印14页起，下一篇从28页起，因此待取范围14–27页为目录推定；是否完整保留2022目标图尚未核。",
+      "novelty": "新增替代获取路径，未获得图像"
+    },
+    {
+      "url": "https://www.ecsponline.com/book_2019/2024/yz/9787030777096-001001-curved-sam.pdf",
+      "discovery_url": "https://www.ecsponline.com/preview.php?atc=1&goods_id=225450",
+      "status": "HTTP 200，公开样章已下载并末页视觉核验",
+      "bytes": 11258511,
+      "sha256": "3f8bf61db055ad41c755d47550dbbc2cf2fc987ed24f91f097e8463c208c4951",
+      "pdf_pages": 36,
+      "last_print_page": 10,
+      "observation": "样章正文只到印10页，未覆盖所需14–27页。末页图四《漕河河床断面图》属于陕西洛河文章，不能拿来代替洛阳引洛渠。",
+      "novelty": "新增实际覆盖范围与排除记录"
+    },
+    {
+      "url": "https://book.sciencereading.cn/shop/book/Booksimple/onlineRead.do?id=BEE866DDD5E330A68E053020B0A0A23B4000&bookPageNum=44",
+      "status": "本轮文本抓取工具不可读",
+      "observation": "44、45两页均未取得图像；这项技术结果不另行证明权限状态。第45页阅读器无权限属于上一轮已保存实测。",
+      "companion_reader_page": 45
+    }
+  ],
+  "next_acquisition": {
+    "primary": "2022报告印18–25页正文、图2-1/2-2和完整图2-2-1至2-2-5折页；彩版2-1至2-7可辅助辨认岸段，但不可自行补断代。",
+    "alternative": "取得2016《洛阳考古》第4期原文，或2024《漕渠考古发现与研究》印14–27页，先核图号/方向/尺标/孔号是否与2022目标图一一对应，满足后才能替代。"
+  },
+  "schema_version": 1,
+  "baseline_main_commit": "a5d9fa3ee0a1eccce7cbd2e53cebcb57e9983632",
+  "record_url": "https://github.com/mechgouki/luoyang-city/issues/47#issuecomment-7003959035",
+  "new_field_measurements": [],
+  "target_figures_acquired": false
+}
