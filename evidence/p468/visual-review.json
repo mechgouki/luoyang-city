@@ -1,0 +1,198 @@
+{
+  "checked_beijing": "2026-11-19T18:51:41+08:00",
+  "method": "浏览器截图目验与原字节核对；手机为390px触控浏览器环境",
+  "pr_review": "五张桌面图与五张手机图均已逐图目验；第五图勘误跳转、原值表与无JS视图另行检查。前四张桌面图在第二次运行已核看，地图数据随后未改；最终PR五图手机截图再次逐图检查。",
+  "production_review": [
+    "桌面勘误跳转第五图及完整图面",
+    "手机勘误跳转第五图",
+    "手机无JS五图连续阅读视图"
+  ],
+  "findings": [
+    "未见图框裁切、节点与说明相互遮挡；所选图段说明、来源与限制可读。",
+    "手机全图为缩略视图，放大／拖动由实际浏览器检查确认；未把缩略图作为大字阅读图。",
+    "较长标题与来源链接正常换行；无JS保留全部图与证据。"
+  ],
+  "production_pr_screenshot_comparison": [
+    {
+      "production_file": "live-desktop-01-west-moats-map.png",
+      "sha256": "354798b32520b5f1ff8a6d392c7121abdc9cdf10bcc5c8a24574aaf55aca7ecf",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-01-west-moats.png",
+      "sha256": "840dada90f34fa37a3ae8e2efabe71cbb50d50c09539cd1fec5ef3411ad11ef9",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-02-palace-water-map.png",
+      "sha256": "4cec681f9695f9658a3465eda107960f64d32150f04a988b3203aa1b5f2c10ec",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-02-palace-water.png",
+      "sha256": "85779a0da63ee37458abbd03096a0920942517ee5c4d51134029df3bccb3b9ba",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-03-fanghu-zhaoyi-map.png",
+      "sha256": "a974475e6c7004ba6773ace081390c29dcad5bfb0796dcd846fe6e7cc69a7bb1",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-03-fanghu-zhaoyi.png",
+      "sha256": "e0f459ad908b478a870744a14fae55aab0eeefdaa4edb49a135d4ce2193c831e",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-04-independent-pools-map.png",
+      "sha256": "14ef75f5eed6a9ffca430383a473e53a65b8bd7960b05fd424a8026ec8656d8a",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-04-independent-pools.png",
+      "sha256": "af2f3a451a32b9a07b06eef8cf0408072a5b22d69202211479315b3873103cd2",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-05-palace-pools-audit-map.png",
+      "sha256": "10f3016d5b055e2e4ba508479b61e5d3d2600c469962bb7d0c2b9df4a8c3a744",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-05-palace-pools-audit.png",
+      "sha256": "d484aeac6b5e9acb47bb0a24749572b6e1d7ea0f66cef712473d684e9534c1dd",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-map.png",
+      "sha256": "97f8829e511d9a723a104049b0dea7b839c8108d52d9c924245ed2eaa9983d7b",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-measurements.png",
+      "sha256": "e75c84192a6856751165fae19b1804699a7198d27e66cb0fbb833f348aa77a1e",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-nojs-map.png",
+      "sha256": "46d7990214fc8c556d30e8fac9e210663892fff539ee4ff8ec32ff5ad8deaa13",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-nojs.png",
+      "sha256": "bdc55bb69287b45f3a361c1714100031c6e04791e97b40addccbfc2d79bcda0d",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-p467-correction.png",
+      "sha256": "c3c487a8c422b7643dff1a9c995d19b7d5a0f9069ed9379a58b2dc5e65c91d53",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-pool-correction-map.png",
+      "sha256": "97f8829e511d9a723a104049b0dea7b839c8108d52d9c924245ed2eaa9983d7b",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop-pool-correction.png",
+      "sha256": "173ea6955b447fde0492fd4925e20bd54d6f207bfa4fe2223d524685fc8da9dd",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-desktop.png",
+      "sha256": "173ea6955b447fde0492fd4925e20bd54d6f207bfa4fe2223d524685fc8da9dd",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-01-west-moats-map.png",
+      "sha256": "8f283d9df0a74b2f3c5b5553ca928c51c110494f110e143dd893fa5c62bd97e1",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-01-west-moats.png",
+      "sha256": "3c8a1e277e471280388dc86f9fae2ef65514e8c6d58a3052ec8e2824ae5bf0fa",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-02-palace-water-map.png",
+      "sha256": "04e1214de279bde7502477ca91f5e743c0c6cacdb3f25cd6340d35dd3b0608ff",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-02-palace-water.png",
+      "sha256": "0a8f21a7bf0afcdddcfb39f3a4b5872f33eba30d8d612d4903a8e75df23e52a9",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-03-fanghu-zhaoyi-map.png",
+      "sha256": "5ca75fcf2febf07dc057b0c6127b8d9ee2911bfbf3e3543e6ec9233025a98352",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-03-fanghu-zhaoyi.png",
+      "sha256": "20c26b486ab71b6ff189d9637cc479bf90b1e5ca91952eb9d9ebaae09e54c24e",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-04-independent-pools-map.png",
+      "sha256": "e222dab87371616a1de45ed9979bf8172441feddcc0f0fba72f0bd47035d306d",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-04-independent-pools.png",
+      "sha256": "519d1db753f916cd97ecbefee43070ce86b3925382b5f36383f69b96a981a364",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-05-palace-pools-audit-map.png",
+      "sha256": "b42e12cfd9089f0549396c86f57690033b21303b4e6934b313e9e10a157d36cc",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-05-palace-pools-audit.png",
+      "sha256": "1c8dffe63f1c83c93764ca881d63146f712697f89f87eed4f3366db9a7088070",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-map.png",
+      "sha256": "f8f36a7b596e89539744203eede1d38e4abc6e9c8e185d3e60a9097377047fd2",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-measurements.png",
+      "sha256": "80e258253039d4d2f124e3d734516d5a645623adb86914682b54f39481368932",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-nojs-map.png",
+      "sha256": "b4101b94575112f50335969df8b4fef7df640847d820493fe11f979ccc55c287",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-nojs.png",
+      "sha256": "bdda69589f33367bffe2e2afa790c8fec6155a7869d164488b6a8dc61774ddc4",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-p467-correction.png",
+      "sha256": "adc9bab1bd2552a9f640dbde8a0f433e61fd8eecbaa6b988c9f745ee7a8afe90",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-pool-correction-map.png",
+      "sha256": "f8f36a7b596e89539744203eede1d38e4abc6e9c8e185d3e60a9097377047fd2",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile-pool-correction.png",
+      "sha256": "e3e9bea736c4ec5643aee88806af327f3e7b93d0a11537293c62679137284ec1",
+      "same_bytes_as_accepted_pr": true
+    },
+    {
+      "production_file": "live-mobile.png",
+      "sha256": "e3e9bea736c4ec5643aee88806af327f3e7b93d0a11537293c62679137284ec1",
+      "same_bytes_as_accepted_pr": true
+    }
+  ],
+  "all_compared_pngs_identical": true
+}
