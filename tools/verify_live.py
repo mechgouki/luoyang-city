@@ -539,11 +539,18 @@ try:
  assert {corridors[k] for k in ('page','bundle','atlas','manifest')} <= set(info['files_sha256'])
 
  field=info['prosperity_field_p464']
- assert field['source_commit']==info['source_commit'] and field['version'] in release['extensions']
+ assert field['source_commit']=='e31d9220f4c896819b256aca5d432734285a3635' and field['version'] in release['extensions']
  assert get(corridors['page']).count(b'id="p464-entry"')==1
  assert info['files_sha256'][corridors['bundle']]=='7230498ebddc8966b39d7295d8ab9861293e1a7acd558b25ba5dd4669ca97f94'
  assert {'gate.svg','hongchi.svg'}==set(field['plates'])
  assert json.loads(get(field['readings']))['ward']['gate_to_central_cross_m'] is None
+
+ gates=info['prosperity_gates_p465']
+ assert gates['source_commit']==info['source_commit'] and gates['version'] in release['extensions']
+ assert info['files_sha256'][field['atlas']]=='fc0478c8e09522a6bb694d44e8c5bf39c7bc183a23eeb0c301ec87637d2f1bb3'
+ assert get(field['page']).count(b'id="p465-entry"')==1
+ assert set(gates['plates'])=={'field.svg','north.svg','moat.svg'}
+ assert all(value is None for value in json.loads(get(gates['readings']))['open_endpoints'].values())
 
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
@@ -560,6 +567,7 @@ try:
  report['prosperity_hydro_roads']=info['prosperity_hydro_roads']
  report['prosperity_anchors_p461']=source_readings
  report['prosperity_network_p462']=network_study
+ report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors
  print(f'LIVE PASS: {len(results)} public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: {len(fetcher.retries)}')
