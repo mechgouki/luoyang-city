@@ -1,0 +1,75 @@
+{
+  "research_version": "P4.6.9",
+  "source_commit": "e58880049cb88db17379a63bbe2377c63a7e7fe2",
+  "reviewed_at": "2026-11-19T20:29:07+08:00",
+  "status": "passed",
+  "production_run": "https://github.com/mechgouki/luoyang-city/actions/runs/44520238130",
+  "production_attempt": 2,
+  "production_jobs": {
+    "build": "success",
+    "deploy": "success",
+    "verify-live": "success"
+  },
+  "semantic_tests": 162,
+  "production_public_resources": 704,
+  "independent_public_files": 41,
+  "independent_assertions": 44,
+  "browser_devices": [
+    "desktop",
+    "mobile-390px"
+  ],
+  "checks_per_device": 8,
+  "downloads_per_device": 10,
+  "production_screenshots": 24,
+  "production_screenshots_identical_to_visually_reviewed_build": true,
+  "pdf_pages_reviewed": [
+    1,
+    2
+  ],
+  "initial_failure": {
+    "step": "verify-live / old P3 browser download",
+    "path": "prosperity-gate/gate-plan.json",
+    "observed": "HTTP response was not 200; log did not print the exact status code.",
+    "resolution": "Independent HTTP 200 and release hash matched; reran only failed workflow jobs. Same code and same release passed.",
+    "source_changes_for_retry": 0,
+    "tests_skipped": 0
+  },
+  "artifact_archives": [
+    {
+      "id": 14528305416,
+      "kind": "main-build",
+      "sha256": "1dfb50b632424fd3c7bbe2202ca8c70fc9271be1f19fb917e0fb95b1e5eec879"
+    },
+    {
+      "id": 14527144864,
+      "kind": "production-attempt-1",
+      "sha256": "2bd2db10d94c9a399a162727febdb499db962ab1f60e262402c0f6557ac9aa74"
+    },
+    {
+      "id": 14529156964,
+      "kind": "production-attempt-2",
+      "sha256": "a084bfffdc1f3be17f2522f651a599bcf1c6dfa546b7fd4aadcaba11f9f03c47"
+    }
+  ],
+  "research_limits": {
+    "source_frames": 2,
+    "legacy_water_index_entries": 34,
+    "current_relations": 100,
+    "water_context_links": 9,
+    "water_index_count_is_not_distinct_contemporaneous_bodies": true,
+    "new_ancient_coordinates": 0,
+    "new_metric_measurements": 0,
+    "new_516_528_bank_geometry": 0,
+    "book_2022": "Deferred by user; do not block other work or invent bank/bridgehead coordinates."
+  },
+  "preservation": [
+    "approved H2 desktop/mobile",
+    "P466 PDF",
+    "P467 five SVGs, readings and PDF",
+    "P468 PDF and eight JSON files"
+  ],
+  "visual_notes": [
+    "Mobile full-map fine print requires zoom or separate SVG/PDF.",
+    "No-JS generic zoom hint is a minor wording inconsistency; full maps and standalone SVG links remain available."
+  ]
+}

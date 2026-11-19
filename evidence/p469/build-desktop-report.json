@@ -1,0 +1,75 @@
+{
+  "base_url": "http://127.0.0.1:33895/luoyang-city/",
+  "device": "desktop",
+  "status": "passed",
+  "checks": [
+    "P468 visible entry actually opens P469",
+    "frame-06a: real tab, complete map screenshot, reload, zoom/native scroll/reset and modern-river scope",
+    "frame-qian2018: real tab, complete map screenshot, reload, zoom/native scroll/reset and modern-river scope",
+    "Daxia and Qianqiu SVG markers, Guangmo list choice and reload show only their assigned water evidence",
+    "Combined map/anchor/W20 deep link, W20/W21 correction and ordinary source-method anchor survive reload",
+    "Actual browser downloads: two-page PDF, two SVGs, offline ZIP and all manifest JSON; 10 matching hashes",
+    "No-JS keeps both full maps, nine source contexts, 34 water rows, I09 correction and unknown boundaries",
+    "P469 header returns to P468"
+  ],
+  "download_sha256": {
+    "backbone-469/bundle-manifest.json": "36b74169365eb7f95800456488b5ca09d3cbd589c2e20014a575b18b7c57bc70",
+    "backbone-469/frame-06a.svg": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04",
+    "backbone-469/frame-qian2018.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+    "backbone-469/readings.json": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+    "backbone-469/road01-image-access.json": "b98eb82115c972e1fec7001aa4d5dd8695216260582dfc6130dc7c0548d3df87",
+    "backbone-469/road01-source-audit.json": "7ecaf20678c961f281216e370019fe9206f68bc118375e532c85b92072b7ff2d",
+    "backbone-469/road02-access-20261119.json": "7ab1095c05960cbee6473aad0a2751767e285195c47a16b8a253fae6aa87eabe",
+    "backbone-469/source-frame-audit.json": "37f6fa59bdab5d2a7747ba328e34544b4d2c9a2c58ee51be71997b72460e9405",
+    "downloads/backbone-469.pdf": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6",
+    "downloads/backbone-469.zip": "6f0bcc37680ca3fc988ef856590ccba89e5d1e1de8166893f9b34e838df6aa42"
+  },
+  "map_bounds": {
+    "frame-06a": {
+      "viewport": {
+        "x": 61,
+        "y": 23.953125,
+        "width": 1318,
+        "height": 830
+      },
+      "svg": {
+        "x": 61,
+        "y": 23.953125,
+        "width": 1318,
+        "height": 830
+      }
+    },
+    "frame-qian2018": {
+      "viewport": {
+        "x": 61,
+        "y": 23.953125,
+        "width": 1318,
+        "height": 830
+      },
+      "svg": {
+        "x": 61,
+        "y": 23.953125,
+        "width": 1318,
+        "height": 830
+      }
+    }
+  },
+  "contexts": {
+    "geo-daxia-gate": [
+      "P467/outer/O03",
+      "P467/inner/I01"
+    ],
+    "geo-qianqiu-gate": [
+      "P467/inner/I03",
+      "P467/inner/I04",
+      "P467/inner/I05",
+      "P468/palace-pools-audit/H03",
+      "P468/palace-pools-audit/H04"
+    ],
+    "geo-guangmo-gate": [
+      "P467/outer/O04",
+      "P467/outer/O05"
+    ]
+  },
+  "errors": []
+}

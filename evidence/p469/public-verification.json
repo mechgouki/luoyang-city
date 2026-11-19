@@ -1,0 +1,991 @@
+{
+  "schema": "p469-independent-public-asset-verification-v1",
+  "started_at_utc": "2026-11-19T12:23:04.101129+00:00",
+  "base_url": "https://mechgouki.github.io/luoyang-city/",
+  "expected_source_commit": "e58880049cb88db17379a63bbe2377c63a7e7fe2",
+  "scope": "Bounded independent public-resource readback; not a browser-interaction replacement",
+  "network_attempt_limit": 3,
+  "network_timeout_seconds": 30,
+  "checks": [
+    {
+      "name": "live_source_commit_matches_expected",
+      "status": "passed",
+      "detail": "e58880049cb88db17379a63bbe2377c63a7e7fe2"
+    },
+    {
+      "name": "P469_source_commit_matches_expected",
+      "status": "passed"
+    },
+    {
+      "name": "approved_H2_desktop_unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "approved_H2_mobile_unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "P466_PDF_unchanged_from_repository_archive",
+      "status": "passed"
+    },
+    {
+      "name": "P467_PDF_unchanged_from_repository_archive",
+      "status": "passed"
+    },
+    {
+      "name": "P467_readings_unchanged_from_repository_source",
+      "status": "passed"
+    },
+    {
+      "name": "P468_PDF_matches_previous_release_registered_hash",
+      "status": "passed"
+    },
+    {
+      "name": "P468_data_matches_repository_source:water-468/moats-zhangfang-source-audit.json",
+      "status": "passed"
+    },
+    {
+      "name": "P468_data_matches_repository_source:water-468/palace-original-access.json",
+      "status": "passed"
+    },
+    {
+      "name": "P468_data_matches_repository_source:water-468/palace-pools-correction-source-audit.json",
+      "status": "passed"
+    },
+    {
+      "name": "P468_data_matches_repository_source:water-468/pools-source-audit.json",
+      "status": "passed"
+    },
+    {
+      "name": "P468_data_matches_repository_source:water-468/readings.json",
+      "status": "passed"
+    },
+    {
+      "name": "P468_data_matches_repository_source:water-468/scan-access-pools.json",
+      "status": "passed"
+    },
+    {
+      "name": "P468_data_matches_repository_source:water-468/source-access-pools.json",
+      "status": "passed"
+    },
+    {
+      "name": "P468_data_matches_repository_source:water-468/west-palace-source-audit.json",
+      "status": "passed"
+    },
+    {
+      "name": "PDF_page_count:downloads/backbone-469.pdf",
+      "status": "passed",
+      "detail": {
+        "expected": 2,
+        "actual": 2
+      }
+    },
+    {
+      "name": "PDF_page_count:downloads/south-466.pdf",
+      "status": "passed",
+      "detail": {
+        "expected": 3,
+        "actual": 3
+      }
+    },
+    {
+      "name": "PDF_page_count:downloads/water-467.pdf",
+      "status": "passed",
+      "detail": {
+        "expected": 5,
+        "actual": 5
+      }
+    },
+    {
+      "name": "PDF_page_count:downloads/water-468.pdf",
+      "status": "passed",
+      "detail": {
+        "expected": 5,
+        "actual": 5
+      }
+    },
+    {
+      "name": "offline_manifest_source_commit",
+      "status": "passed"
+    },
+    {
+      "name": "offline_manifest_source_hash:research/prosperity-v1/geographic-evidence.json",
+      "status": "passed"
+    },
+    {
+      "name": "offline_manifest_source_hash:research/prosperity-v4/network-462/network.json",
+      "status": "passed"
+    },
+    {
+      "name": "offline_manifest_source_hash:research/prosperity-v4/network-462/roads.json",
+      "status": "passed"
+    },
+    {
+      "name": "offline_manifest_source_hash:research/prosperity-v4/network-462/outer.json",
+      "status": "passed"
+    },
+    {
+      "name": "offline_manifest_source_hash:research/prosperity-v4/gates-465/readings.json",
+      "status": "passed"
+    },
+    {
+      "name": "offline_manifest_source_hash:research/prosperity-v4/south-466/readings.json",
+      "status": "passed"
+    },
+    {
+      "name": "offline_manifest_source_hash:research/prosperity-v4/water-467/readings.json",
+      "status": "passed"
+    },
+    {
+      "name": "offline_manifest_source_hash:research/prosperity-v4/water-468/readings.json",
+      "status": "passed"
+    },
+    {
+      "name": "offline_zip_members_exactly_match_manifest",
+      "status": "passed",
+      "detail": {
+        "member_count": 12,
+        "expected_count": 12,
+        "unexpected": [],
+        "missing": []
+      }
+    },
+    {
+      "name": "offline_zip_manifest_matches_public_manifest",
+      "status": "passed"
+    },
+    {
+      "name": "offline_zip_all_member_hashes_and_public_bytes_match",
+      "status": "passed",
+      "detail": [
+        {
+          "path": "backbone-469/frame-06a.svg",
+          "hash_matches": true,
+          "matches_public_asset": true
+        },
+        {
+          "path": "backbone-469/frame-qian2018.svg",
+          "hash_matches": true,
+          "matches_public_asset": true
+        },
+        {
+          "path": "backbone-469/readings.json",
+          "hash_matches": true,
+          "matches_public_asset": true
+        },
+        {
+          "path": "backbone-469/road01-image-access.json",
+          "hash_matches": true,
+          "matches_public_asset": true
+        },
+        {
+          "path": "backbone-469/road01-source-audit.json",
+          "hash_matches": true,
+          "matches_public_asset": true
+        },
+        {
+          "path": "backbone-469/road02-access-20261119.json",
+          "hash_matches": true,
+          "matches_public_asset": true
+        },
+        {
+          "path": "backbone-469/source-frame-audit.json",
+          "hash_matches": true,
+          "matches_public_asset": true
+        },
+        {
+          "path": "backbone-469/study.css",
+          "hash_matches": true,
+          "matches_public_asset": true
+        },
+        {
+          "path": "backbone-469/backbone-ui.js",
+          "hash_matches": true,
+          "matches_public_asset": true
+        },
+        {
+          "path": "downloads/backbone-469.pdf",
+          "hash_matches": true,
+          "matches_public_asset": true
+        }
+      ]
+    },
+    {
+      "name": "offline_zip_local_links_resolve",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "all_advertised_P469_downloads_verified",
+      "status": "passed",
+      "detail": {
+        "count": 10,
+        "paths": [
+          "backbone-469/bundle-manifest.json",
+          "backbone-469/frame-06a.svg",
+          "backbone-469/frame-qian2018.svg",
+          "backbone-469/readings.json",
+          "backbone-469/road01-image-access.json",
+          "backbone-469/road01-source-audit.json",
+          "backbone-469/road02-access-20261119.json",
+          "backbone-469/source-frame-audit.json",
+          "downloads/backbone-469.pdf",
+          "downloads/backbone-469.zip"
+        ]
+      }
+    },
+    {
+      "name": "P468_page_contains_P469_entry_anchor",
+      "status": "passed"
+    },
+    {
+      "name": "matches_prior_P468_release:water-467/outer.svg",
+      "status": "passed",
+      "detail": {
+        "previous_source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+        "expected_sha256": "1fc069ed49bdcdc11301dbc758d0354be7a9ab7f18304c55b6bb5b41fca7de60",
+        "actual_sha256": "1fc069ed49bdcdc11301dbc758d0354be7a9ab7f18304c55b6bb5b41fca7de60"
+      }
+    },
+    {
+      "name": "matches_prior_P468_release:water-467/inner.svg",
+      "status": "passed",
+      "detail": {
+        "previous_source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+        "expected_sha256": "2ab81451375985c713c73bfd95d7dd2b653d937ef5c34e5212474e544c4b748e",
+        "actual_sha256": "2ab81451375985c713c73bfd95d7dd2b653d937ef5c34e5212474e544c4b748e"
+      }
+    },
+    {
+      "name": "matches_prior_P468_release:water-467/east-readings.svg",
+      "status": "passed",
+      "detail": {
+        "previous_source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+        "expected_sha256": "9757af327834b229d121e0016a4d06d7bfd954ffd1571f01c38d0d81ed0ea8c2",
+        "actual_sha256": "9757af327834b229d121e0016a4d06d7bfd954ffd1571f01c38d0d81ed0ea8c2"
+      }
+    },
+    {
+      "name": "matches_prior_P468_release:water-467/phases.svg",
+      "status": "passed",
+      "detail": {
+        "previous_source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+        "expected_sha256": "904db92834b1a830e5b0711485470a56525d587a4e066f078ff595f633cb7481",
+        "actual_sha256": "904db92834b1a830e5b0711485470a56525d587a4e066f078ff595f633cb7481"
+      }
+    },
+    {
+      "name": "matches_prior_P468_release:water-467/regional.svg",
+      "status": "passed",
+      "detail": {
+        "previous_source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+        "expected_sha256": "804828d56303bf2e84bde327f5292da64592d85e84774426b2f2d634bd80fa02",
+        "actual_sha256": "804828d56303bf2e84bde327f5292da64592d85e84774426b2f2d634bd80fa02"
+      }
+    },
+    {
+      "name": "matches_prior_P468_release:downloads/south-466.pdf",
+      "status": "passed",
+      "detail": {
+        "previous_source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+        "expected_sha256": "90e8011316936430cd06a2cf5660d8c749936c89f758ca9058d2d40b29990589",
+        "actual_sha256": "90e8011316936430cd06a2cf5660d8c749936c89f758ca9058d2d40b29990589"
+      }
+    },
+    {
+      "name": "matches_prior_P468_release:downloads/water-467.pdf",
+      "status": "passed",
+      "detail": {
+        "previous_source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+        "expected_sha256": "68c994d5a558ee222134afd98cf15e095b6b4dce4c75d999e68c9789d4d0d404",
+        "actual_sha256": "68c994d5a558ee222134afd98cf15e095b6b4dce4c75d999e68c9789d4d0d404"
+      }
+    },
+    {
+      "name": "matches_prior_P468_release:water-467/readings.json",
+      "status": "passed",
+      "detail": {
+        "previous_source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+        "expected_sha256": "bf51dad84680792dafbaacb14bea0a0715fa31a5cf13842fd0096f762132a789",
+        "actual_sha256": "bf51dad84680792dafbaacb14bea0a0715fa31a5cf13842fd0096f762132a789"
+      }
+    },
+    {
+      "name": "matches_prior_P468_release:downloads/water-468.pdf",
+      "status": "passed",
+      "detail": {
+        "previous_source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+        "expected_sha256": "c9e562c6c8f27a5fd1d316e9a5f6e2f6db13f7a95d9d0b41d3219501e572eb3f",
+        "actual_sha256": "c9e562c6c8f27a5fd1d316e9a5f6e2f6db13f7a95d9d0b41d3219501e572eb3f"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "build-info.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 98460,
+      "sha256": "566a08f314d1debf00b814bc2b0a46714b0a6eb9b8b44483513ef6b83a1ac8a8",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 98460
+        }
+      ]
+    },
+    {
+      "path": "homepage/approval-v9.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 3009,
+      "sha256": "84795e4e8bb6bb589a4327ed260d2e78071a25eeea7373dedd01a1ab41ac5834",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 3009
+        }
+      ],
+      "expected_sha256": "84795e4e8bb6bb589a4327ed260d2e78071a25eeea7373dedd01a1ab41ac5834",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/bundle-manifest.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 2378,
+      "sha256": "36b74169365eb7f95800456488b5ca09d3cbd589c2e20014a575b18b7c57bc70",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 2378
+        }
+      ],
+      "expected_sha256": "36b74169365eb7f95800456488b5ca09d3cbd589c2e20014a575b18b7c57bc70",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/backbone-ui.js",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 5525,
+      "sha256": "cbaf616eff6f73b9cab37d94c2a8a41820e5018cb0ad28cd9b6a8fd4574ec525",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 5525
+        }
+      ],
+      "expected_sha256": "cbaf616eff6f73b9cab37d94c2a8a41820e5018cb0ad28cd9b6a8fd4574ec525",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "_assets/98459529d0a2d8210aaf-luoyang-panorama-approved-v9-small.webp",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 274354,
+      "sha256": "98459529d0a2d8210aaf2728b0c1673ca38b46df2f7b761c9064f1c21fe053b6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 274354
+        }
+      ],
+      "expected_sha256": "98459529d0a2d8210aaf2728b0c1673ca38b46df2f7b761c9064f1c21fe053b6",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "_assets/6465657667ba740d3fc9-luoyang-panorama-approved-v9.webp",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 742398,
+      "sha256": "6465657667ba740d3fc99cde2495a864d3a8a446e2086c25984c0c547eed5825",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 742398
+        }
+      ],
+      "expected_sha256": "6465657667ba740d3fc99cde2495a864d3a8a446e2086c25984c0c547eed5825",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/road01-image-access.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 1977,
+      "sha256": "b98eb82115c972e1fec7001aa4d5dd8695216260582dfc6130dc7c0548d3df87",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 1977
+        }
+      ],
+      "expected_sha256": "b98eb82115c972e1fec7001aa4d5dd8695216260582dfc6130dc7c0548d3df87",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/frame-06a.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 37894,
+      "sha256": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 37894
+        }
+      ],
+      "expected_sha256": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/frame-qian2018.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 16502,
+      "sha256": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 16502
+        }
+      ],
+      "expected_sha256": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/readings.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 468561,
+      "sha256": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 468561
+        }
+      ],
+      "expected_sha256": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/source-frame-audit.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 38599,
+      "sha256": "37f6fa59bdab5d2a7747ba328e34544b4d2c9a2c58ee51be71997b72460e9405",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 38599
+        }
+      ],
+      "expected_sha256": "37f6fa59bdab5d2a7747ba328e34544b4d2c9a2c58ee51be71997b72460e9405",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/road01-source-audit.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 9392,
+      "sha256": "7ecaf20678c961f281216e370019fe9206f68bc118375e532c85b92072b7ff2d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 9392
+        }
+      ],
+      "expected_sha256": "7ecaf20678c961f281216e370019fe9206f68bc118375e532c85b92072b7ff2d",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/study.css",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 13160,
+      "sha256": "10a97614825ddeddb3d5668e2da994347fedbac392a5902ea54759f783d7187e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 13160
+        }
+      ],
+      "expected_sha256": "10a97614825ddeddb3d5668e2da994347fedbac392a5902ea54759f783d7187e",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "backbone-469/road02-access-20261119.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 8823,
+      "sha256": "7ab1095c05960cbee6473aad0a2751767e285195c47a16b8a253fae6aa87eabe",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 8823
+        }
+      ],
+      "expected_sha256": "7ab1095c05960cbee6473aad0a2751767e285195c47a16b8a253fae6aa87eabe",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "downloads/water-467.pdf",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 500311,
+      "sha256": "68c994d5a558ee222134afd98cf15e095b6b4dce4c75d999e68c9789d4d0d404",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 500311
+        }
+      ],
+      "expected_sha256": "68c994d5a558ee222134afd98cf15e095b6b4dce4c75d999e68c9789d4d0d404",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "downloads/backbone-469.pdf",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 1051225,
+      "sha256": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 1051225
+        }
+      ],
+      "expected_sha256": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "downloads/south-466.pdf",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 254839,
+      "sha256": "90e8011316936430cd06a2cf5660d8c749936c89f758ca9058d2d40b29990589",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 254839
+        }
+      ],
+      "expected_sha256": "90e8011316936430cd06a2cf5660d8c749936c89f758ca9058d2d40b29990589",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "downloads/backbone-469.zip",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 1188404,
+      "sha256": "6f0bcc37680ca3fc988ef856590ccba89e5d1e1de8166893f9b34e838df6aa42",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 1188404
+        }
+      ],
+      "expected_sha256": "6f0bcc37680ca3fc988ef856590ccba89e5d1e1de8166893f9b34e838df6aa42",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "downloads/water-468.pdf",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 484011,
+      "sha256": "c9e562c6c8f27a5fd1d316e9a5f6e2f6db13f7a95d9d0b41d3219501e572eb3f",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 484011
+        }
+      ],
+      "expected_sha256": "c9e562c6c8f27a5fd1d316e9a5f6e2f6db13f7a95d9d0b41d3219501e572eb3f",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "prosperity-water-p468.html",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 224898,
+      "sha256": "917aa2ca7fca717ac41d7e3a826dda705780cd0ef61f8f030f5c1d9eabe39e79",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 224898
+        }
+      ],
+      "expected_sha256": "917aa2ca7fca717ac41d7e3a826dda705780cd0ef61f8f030f5c1d9eabe39e79",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "index.html",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 25461,
+      "sha256": "beed312f2fbfa2f1668a9993714505b0c130e82e346d8d693d338e6d0cf02889",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 25461
+        }
+      ],
+      "expected_sha256": "beed312f2fbfa2f1668a9993714505b0c130e82e346d8d693d338e6d0cf02889",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "prosperity-backbone-p469.html",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 214603,
+      "sha256": "b0b634902e504254e4f1fa0871ed0eabae46c702750ae2e10daf3f3b62a2ce1d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 214603
+        }
+      ],
+      "expected_sha256": "b0b634902e504254e4f1fa0871ed0eabae46c702750ae2e10daf3f3b62a2ce1d",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-467/east-readings.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 13662,
+      "sha256": "9757af327834b229d121e0016a4d06d7bfd954ffd1571f01c38d0d81ed0ea8c2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 13662
+        }
+      ],
+      "expected_sha256": "9757af327834b229d121e0016a4d06d7bfd954ffd1571f01c38d0d81ed0ea8c2",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-467/phases.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 15105,
+      "sha256": "904db92834b1a830e5b0711485470a56525d587a4e066f078ff595f633cb7481",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 15105
+        }
+      ],
+      "expected_sha256": "904db92834b1a830e5b0711485470a56525d587a4e066f078ff595f633cb7481",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-467/outer.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 23052,
+      "sha256": "1fc069ed49bdcdc11301dbc758d0354be7a9ab7f18304c55b6bb5b41fca7de60",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 23052
+        }
+      ],
+      "expected_sha256": "1fc069ed49bdcdc11301dbc758d0354be7a9ab7f18304c55b6bb5b41fca7de60",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-467/inner.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 17300,
+      "sha256": "2ab81451375985c713c73bfd95d7dd2b653d937ef5c34e5212474e544c4b748e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 17300
+        }
+      ],
+      "expected_sha256": "2ab81451375985c713c73bfd95d7dd2b653d937ef5c34e5212474e544c4b748e",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/independent-pools.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 20148,
+      "sha256": "01be03d7f070c3ece9a86501ea6098e485c581ea475486801b124341ae279f70",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 20148
+        }
+      ],
+      "expected_sha256": "01be03d7f070c3ece9a86501ea6098e485c581ea475486801b124341ae279f70",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-467/regional.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 18202,
+      "sha256": "804828d56303bf2e84bde327f5292da64592d85e84774426b2f2d634bd80fa02",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 18202
+        }
+      ],
+      "expected_sha256": "804828d56303bf2e84bde327f5292da64592d85e84774426b2f2d634bd80fa02",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/fanghu-zhaoyi.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 17588,
+      "sha256": "8a615ffa626d23ed459df41e6030326e3e31a5229f3ecf62611189252005a2cf",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 17588
+        }
+      ],
+      "expected_sha256": "8a615ffa626d23ed459df41e6030326e3e31a5229f3ecf62611189252005a2cf",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-467/readings.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 98037,
+      "sha256": "bf51dad84680792dafbaacb14bea0a0715fa31a5cf13842fd0096f762132a789",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 98037
+        }
+      ],
+      "expected_sha256": "bf51dad84680792dafbaacb14bea0a0715fa31a5cf13842fd0096f762132a789",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/palace-pools-audit.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 14311,
+      "sha256": "704a65e920eeac819bec6e9de1456efbfda00833fdd3ae679d391042040897c0",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 14311
+        }
+      ],
+      "expected_sha256": "704a65e920eeac819bec6e9de1456efbfda00833fdd3ae679d391042040897c0",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/palace-original-access.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 11255,
+      "sha256": "1739c58d337f93f4ec4d2623e1cbae86a531b723945b40e23cf4d20c6067b48b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 11255
+        }
+      ],
+      "expected_sha256": "1739c58d337f93f4ec4d2623e1cbae86a531b723945b40e23cf4d20c6067b48b",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/moats-zhangfang-source-audit.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 19746,
+      "sha256": "9ac22ed0522904f509df88b36a049b6a5ff46f055b5989276cd170ea685a7ccd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 19746
+        }
+      ],
+      "expected_sha256": "9ac22ed0522904f509df88b36a049b6a5ff46f055b5989276cd170ea685a7ccd",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/palace-pools-correction-source-audit.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 17803,
+      "sha256": "f6718739ebe82c70df63130c62d6801f3670f88b22ccb25e45926641978e9077",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 17803
+        }
+      ],
+      "expected_sha256": "f6718739ebe82c70df63130c62d6801f3670f88b22ccb25e45926641978e9077",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/scan-access-pools.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 1408,
+      "sha256": "f3e803f9f8585461e80d5a933e7e00638f7c36319d6c9b1f870a01d4f94b712b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 1408
+        }
+      ],
+      "expected_sha256": "f3e803f9f8585461e80d5a933e7e00638f7c36319d6c9b1f870a01d4f94b712b",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/readings.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 96592,
+      "sha256": "6703af3308fff4e266c3e50c6fcd2d8f8e357c08ceb678f0e327d37dbd18467d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 96592
+        }
+      ],
+      "expected_sha256": "6703af3308fff4e266c3e50c6fcd2d8f8e357c08ceb678f0e327d37dbd18467d",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/pools-source-audit.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 40129,
+      "sha256": "a8919dfbfa73e5978cc11bbf802cef84a8756978cfa006b6a5df0388c117eb93",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 40129
+        }
+      ],
+      "expected_sha256": "a8919dfbfa73e5978cc11bbf802cef84a8756978cfa006b6a5df0388c117eb93",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/palace-water.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 18176,
+      "sha256": "4d5f7f0e78263a406f11f1406619a58566135283918da8a216c17f033fb1eece",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 18176
+        }
+      ],
+      "expected_sha256": "4d5f7f0e78263a406f11f1406619a58566135283918da8a216c17f033fb1eece",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/source-access-pools.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 2835,
+      "sha256": "41528ebee6848627078ebc2ba6e8b013351fb923a86a75ad768c3e57850a9798",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 2835
+        }
+      ],
+      "expected_sha256": "41528ebee6848627078ebc2ba6e8b013351fb923a86a75ad768c3e57850a9798",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/west-moats.svg",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 17040,
+      "sha256": "ecaca52557fa00da77268a475a476f301aeb51cdab4d53cbde850a4258dd7fe4",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 17040
+        }
+      ],
+      "expected_sha256": "ecaca52557fa00da77268a475a476f301aeb51cdab4d53cbde850a4258dd7fe4",
+      "manifest_hash_matches": true
+    },
+    {
+      "path": "water-468/west-palace-source-audit.json",
+      "status": "passed",
+      "http_status": 200,
+      "bytes": 33383,
+      "sha256": "1cece99ecb4e0e65c0d4f8ff7e2e8646d493052e38541eec80be31f3cb783134",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200,
+          "bytes": 33383
+        }
+      ],
+      "expected_sha256": "1cece99ecb4e0e65c0d4f8ff7e2e8646d493052e38541eec80be31f3cb783134",
+      "manifest_hash_matches": true
+    }
+  ],
+  "completed_at_utc": "2026-11-19T12:23:42.790221+00:00",
+  "checked_files": 41,
+  "checked_assertions": 44,
+  "status": "passed",
+  "http_failed_attempts": 0,
+  "previous_release_reference": {
+    "source_url": "https://raw.githubusercontent.com/mechgouki/luoyang-city/a018052a2462632c2090e17fd8721fa8afc9fb74/evidence/p468/build-info.json",
+    "evidence_commit": "a018052a2462632c2090e17fd8721fa8afc9fb74",
+    "source_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+    "local_reference": "p468-previous-build-info.json",
+    "sha256": "4f8abf23c39cee2c2cf4763253a6bcd92b97362bec445bd93542bf7f0f7e84aa"
+  }
+}

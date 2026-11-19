@@ -1,0 +1,137 @@
+{
+  "audit": "P4.6.9 mobile screenshot visual inspection",
+  "source_stage": "main-build browser screenshots; production equivalence must be checked separately",
+  "source_directory": "/workspace/scratch/085c80f18d26/p469-work/main-build/prosperity-backbone-p469-browser",
+  "viewport_css_width_px": 390,
+  "method": "All 12 p469-mobile-*.png files opened individually with view_image and visually inspected; no image editing or screenshot regeneration.",
+  "status": "passed_with_non_blocking_notes",
+  "blocking_issues": [],
+  "limitations": [
+    "Static screenshot review does not independently prove click, download, drag, or toggle interaction. Those require the actual browser report.",
+    "Map labels and map-internal legends at fit-to-phone overview scale are too small for close reading. The complete map is visible and uncropped; detail reading depends on the implemented zoom/SVG/PDF access and text evidence below.",
+    "The no-JavaScript screenshot still shows general guidance referring to a zoom button, while that interactive button is absent in no-JavaScript mode. Both maps and their SVG links remain visible; this wording mismatch is non-blocking."
+  ],
+  "images": [
+    {
+      "file": "p469-mobile-frame-06a.png",
+      "result": "pass",
+      "observations": "Full 06a map fits within the card. No clipped map boundary, horizontal overflow, overlapping caption, or obscured surrounding text is visible. Caption and following section text wrap cleanly. Map-internal small text is overview scale.",
+      "sha256": "579ff923d689100b5f0da7817ccabb596508177d88b1b65353e3aa3479fbc561",
+      "image_size_px": [
+        390,
+        844
+      ]
+    },
+    {
+      "file": "p469-mobile-frame-06a-map.png",
+      "result": "pass",
+      "observations": "Map crop includes the complete title, diagram, right legend and lower source notes. Walls and road segments remain separated. No modern river line is displayed in the default state. Close reading requires enlargement.",
+      "sha256": "c6aa45ea5155793c0ec0eaa9a8738fa0e4d80c98db6e50e0c5c8a2e3b574044e",
+      "image_size_px": [
+        352,
+        285
+      ]
+    },
+    {
+      "file": "p469-mobile-frame-06a-modern-on.png",
+      "result": "pass",
+      "observations": "Modern river is visible as an added dashed line below the city framework. The map and explanatory caption retain the same fitting layout with no newly visible overflow. The toggle control itself is outside this viewport crop, so operation is not inferred from the image alone.",
+      "sha256": "f12022ce893acadca797ab8f556bd6890d000a6175cab3a18a9c7551fbf1f8cb",
+      "image_size_px": [
+        390,
+        844
+      ]
+    },
+    {
+      "file": "p469-mobile-frame-06a-modern-on-map.png",
+      "result": "pass",
+      "observations": "The dashed modern river and its period annotation appear within the lower map extent. The complete map remains visible; the river does not cover the city road labels or the right legend.",
+      "sha256": "b2376d03d08d78f2497e524980523cff39d368a46fcbdfce5570a9f26bf8405d",
+      "image_size_px": [
+        352,
+        285
+      ]
+    },
+    {
+      "file": "p469-mobile-frame-qian2018.png",
+      "result": "pass",
+      "observations": "Qian-source map is fully contained, including northern routes, outer-gate endpoint pairs, southern samples and river band. Captions visibly distinguish paired endpoints from surveyed routes and drawn river band from dated banks. Surrounding text wraps cleanly.",
+      "sha256": "1a83955bba97cb01b694a706083cc829789538c77765b4c9ae9bf795cb4d3ba0",
+      "image_size_px": [
+        390,
+        844
+      ]
+    },
+    {
+      "file": "p469-mobile-frame-qian2018-map.png",
+      "result": "pass",
+      "observations": "Complete map crop includes north arrow, northern and southern geometry, eastern and western endpoint labels, right legend, scale and source notes. No clipping or overlapping panels is visible. Map detail requires enlargement.",
+      "sha256": "5db96981b042dfbe0a2f2b75a0a2631988411b32dc0e57eb405f46b961c07653",
+      "image_size_px": [
+        352,
+        285
+      ]
+    },
+    {
+      "file": "p469-mobile-geo-daxia-gate-context.png",
+      "result": "pass",
+      "observations": "Daxia gate heading, relative-location warning, two relation cards, quotations, interpretation, limitations and source/navigation links are readable. Long headings wrap inside the card. No clipped lines, horizontal spill or overlapping elements is visible.",
+      "sha256": "cfbf1b11fa9537fc7fff3a67694d20d5c580d100a7f66d86bee88862b379f06d",
+      "image_size_px": [
+        354,
+        1077
+      ]
+    },
+    {
+      "file": "p469-mobile-geo-qianqiu-gate-context.png",
+      "result": "pass",
+      "observations": "All five Qianqiu context cards are visible in the tall element screenshot. Long quotations and combined source links wrap inside each card. Palace water and western-garden relations stay distinct; warnings and citations are readable. No card or text overlap is visible.",
+      "sha256": "bf436340fadb07a25d1d147d8ef39c9f7f5fd7b6a889eeaf41369d3121206b0c",
+      "image_size_px": [
+        354,
+        2705
+      ]
+    },
+    {
+      "file": "p469-mobile-nojs-frame-06a.png",
+      "result": "pass",
+      "observations": "Without JavaScript, the first map is visible with its heading, independent SVG link and captions; the second map card begins below it. The 06a drawing is complete. General zoom-button guidance remains despite the button being absent, noted separately as a non-blocking wording issue.",
+      "sha256": "f709faafb6e86acd9cf21b87295291ca1e155207c3fc69968f45eabcaed79362",
+      "image_size_px": [
+        390,
+        844
+      ]
+    },
+    {
+      "file": "p469-mobile-nojs-frame-06a-map.png",
+      "result": "pass",
+      "observations": "The full default 06a map remains available in no-JavaScript mode, with diagram, legend, title and source notes present. No clipping or accidental modern-river display is visible.",
+      "sha256": "a0c9ef1912aa74a46c5f2109b9e2e6d1be59ff3d31391833f8b0661d249ed59c",
+      "image_size_px": [
+        352,
+        284
+      ]
+    },
+    {
+      "file": "p469-mobile-nojs-frame-qian2018.png",
+      "result": "pass",
+      "observations": "The second map remains independently visible below the first without JavaScript. Its SVG link, complete map and explanatory captions fit within the viewport width. No blank map, offscreen horizontal content or overlapping text is visible.",
+      "sha256": "c613cfdd2bfd8a0f4cdb6e9f28d5297d4c590fa77930877708715724ccb01525",
+      "image_size_px": [
+        390,
+        844
+      ]
+    },
+    {
+      "file": "p469-mobile-nojs-frame-qian2018-map.png",
+      "result": "pass",
+      "observations": "Complete Qian-source map, legend, scale, title and source notes are present in no-JavaScript mode. The fit-to-phone overview has small labels but no visible clipping or overlap.",
+      "sha256": "f6b678d3fa4245a96342e3fe99b27f02c52cce781892389eeafa7b1972e4089d",
+      "image_size_px": [
+        352,
+        285
+      ]
+    }
+  ],
+  "inspected_image_count": 12
+}
