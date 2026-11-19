@@ -1,0 +1,22 @@
+{
+  "source_commit": "e6d0aaec76b5d25ed347f377ce19d7361b47f9a2",
+  "pr": 56,
+  "pr_head": "f1bd64535dfa9d8b6152b9359f1b2c8895d80be8",
+  "pr_run": "https://github.com/mechgouki/luoyang-city/actions/runs/44494874856",
+  "pr_result": "build_success_deploy_and_verify_live_skipped_on_pr",
+  "pr_artifact": {
+    "id": 14513873949,
+    "name": "browser-build-evidence",
+    "bytes": 118092034,
+    "sha256": "43e265064e53851f8b588a2c348ae30b872d19fa14036bb19954009e789b0bab"
+  },
+  "production_run": "https://github.com/mechgouki/luoyang-city/actions/runs/44496324313",
+  "production_status": "build_deploy_verify-live_success",
+  "visual_review": {
+    "pr_desktop": "Five map viewport screenshots and no-JS inspected; locally rendered full SVG/PDF figures had been inspected before the PR.",
+    "pr_mobile": "Five map navigation/control viewports, no-JS and regional-map overview inspected; no blocking overflow or clipped controls.",
+    "limit": "Per-map viewport screenshots do not show every lower part of the diagrams; operation coverage comes from the actual Playwright reports. Mobile overview labels require zoom for detailed reading."
+  },
+  "checked_beijing": "2026-11-19T17:34:19+08:00",
+  "live_checked_files": 674
+}

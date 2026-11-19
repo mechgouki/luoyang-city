@@ -1,0 +1,137 @@
+{
+  "checked_at_utc": "2026-11-19T09:18:41+00:00",
+  "checked_at_beijing": "2026-11-19T17:18:41+08:00",
+  "task": "水-01补充原章访问审计",
+  "target": {
+    "author": "杨萧杨",
+    "chapter": "《〈水经·谷水注〉中的错简、脱文与汉魏洛阳城及其周边水系》",
+    "book": "《水经注校笺图释·洛水流域诸篇》",
+    "editor": "李晓杰",
+    "publisher": "科学出版社",
+    "year": 2021,
+    "volume": "下册",
+    "printed_pages": "358–369",
+    "isbn": "9787030689375"
+  },
+  "result": {
+    "original_chapter_acquired": false,
+    "author_deposit_found": false,
+    "authorized_readable_fulltext_found": false,
+    "original_pages_read": [],
+    "new_textual_boundary_verified": false,
+    "relocation_end_phrase": null,
+    "impact_on_plate_3": "没有取得原章，无法进一步判定黄学超所说“以后文字”的移接尾界。保持传本文序／熊会贞解释与黄氏校读并列，不扩大对旅人桥、郦食其庙、亳殷、偃师城南及入洛各句移接范围的判断。",
+    "negative_finding_scope": "仅本轮公开检索及所列入口访问未发现可读目标原页，不等于证明原章没有任何授权电子版。"
+  },
+  "access_checks": [
+    {
+      "url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+      "role": "黄学超2026文官方期刊条目及参考文献",
+      "method": "搜索引擎结果读取并尝试网页打开",
+      "status": "搜索可读；直接open两次超时",
+      "observed": "官方检索结果列杨萧杨目标篇名、2021书名及358–369页。该网页属于后出论文参考资料，不是杨章正文。",
+      "original_chapter_readable": false,
+      "direct_http_followup": "普通urllib公开GET读取超时。"
+    },
+    {
+      "url": "https://ci.nii.ac.jp/ncid/BC13143869",
+      "role": "机构联合馆藏书目",
+      "method": "网页open成功",
+      "status": "公开HTML书目可读，无目标正文",
+      "observed": "下册；科学出版社2021.5；全套ISBN9787030689375；下册页数p[255]–400,40p；列7所馆藏。可确认358–369页应索取下册，不能据书目读出校勘正文。",
+      "original_chapter_readable": false
+    },
+    {
+      "url": "https://www.sohu.com/a/499949959_121124388",
+      "role": "2021书讯转载，标来源复旦史地所",
+      "method": "网页open成功",
+      "status": "公开书讯可读，非目标原章",
+      "observed": "呈现书目信息、前言／目录／后记及选图入口。未见目标358–369页原章正文；不把这些书讯图或目录当目标原页。未对每张书讯图片进行原章鉴定。",
+      "original_chapter_readable": false
+    },
+    {
+      "url": "https://www.lsdlyj.com.cn/CN/Y2020/V40/I3/1",
+      "role": "同团队《水经·洛水注》校笺及水道与政区复原（上）",
+      "method": "网页open成功",
+      "status": "期刊标题和页面可读，正文模板字段未填充",
+      "observed": "2020,40(3):1–22，题目明确为卷15洛水。属于相关研究，不是目标卷16谷水错简章。网页标PDF(5588KB)，搜索工具的6号链接实际指向pdf.png图标，未取得论文PDF。",
+      "original_chapter_readable": false,
+      "direct_http_followup": "普通urllib公开GET返回HTTP503；不等同于确认授权墙。"
+    },
+    {
+      "url": "https://www.lsdlyj.com.cn/develop/static/common/images/pdf.png",
+      "role": "上一入口的PDF图标链接",
+      "method": "点击搜索工具暴露的6号链接",
+      "status": "图标URL超时；它本身不是PDF",
+      "observed": "未枚举、猜测或探测未公开的PDF路径。",
+      "original_chapter_readable": false
+    },
+    {
+      "url": "https://www.lsdlyj.com.cn/CN/abstract/abstract49388.shtml",
+      "role": "同团队《水经·洛水注》校笺及水道与政区复原（下）",
+      "method": "搜索结果读取；网页open两次",
+      "status": "搜索结果有书目；open超时",
+      "observed": "题目为洛水注，不可据标题视为杨萧杨谷水错简章的重印；未取得正文，无从判定是否旁涉目标问题。",
+      "original_chapter_readable": false,
+      "direct_http_followup": "普通urllib公开GET返回HTTP503；不等同于确认授权墙。"
+    }
+  ],
+  "searches": [
+    {
+      "engine": "system2",
+      "queries": [
+        "\"杨萧杨\" \"错简\" \"脱文\"",
+        "\"水经注校笺图释\" \"洛水流域诸篇\" pdf",
+        "\"水经·谷水注\" 杨萧杨",
+        "\"水经注校笺图释\" \"358\" \"369\""
+      ],
+      "outcome": "未取得目标原章；主要为书目、新闻及后出引用。"
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"杨萧杨\" \"错简\"",
+        "\"杨萧杨\" \"谷水\"",
+        "\"水经注校笺图释·洛水流域诸篇\" 全文"
+      ],
+      "outcome": "未出现可读原章或作者存档；机构书目核得下册信息。"
+    },
+    {
+      "engine": "system2",
+      "queries": [
+        "\"9787030689375\" 阅读",
+        "\"杨萧杨\" \"水经\" filetype:pdf",
+        "\"谷水注\" \"错简\" \"洛阳城\"",
+        "\"洛水流域诸篇\" site:book.sciencereading.cn"
+      ],
+      "outcome": "得到后出期刊参考文献和同团队洛水注期刊入口，未得到谷水错简原章。"
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"杨萧杨\" \"错简\" 全文",
+        "\"楊蕭楊\" \"穀水\"",
+        "\"杨萧杨\" \"洛阳城\" pdf",
+        "\"穀水注\" \"錯簡\" 楊",
+        "\"谷水注\" \"脱文\" 杨萧杨",
+        "\"杨萧杨\" \"水经\" site:repository.fudan.edu.cn"
+      ],
+      "outcome": "未见可核读目标原章的机构存档。"
+    },
+    {
+      "engine": "system2",
+      "queries": [
+        "\"谷水注\" \"错简、脱文\"",
+        "\"洛水流域诸篇\" \"科学文库\"",
+        "\"杨萧杨\" \"七里涧\"",
+        "\"杨萧杨\" \"错简\" site:fudan.edu.cn",
+        "\"楊蕭楊\" \"錯簡、脫文\"",
+        "\"谷水注中的错简\"",
+        "\"洛水流域诸篇\" site:archive.org",
+        "\"杨萧杨\" site:researchgate.net"
+      ],
+      "outcome": "未见作者提供版或可核查授权的目标全文。"
+    }
+  ],
+  "precise_next_retrieval": "索取ISBN9787030689375下册印本358–369页完整原章（含图、脚注及跨页段落），核查“其水又东，左合七里涧”移接起点、受接句“又东迳马市石桥”以及移接段落的最后一句；不从后出论文“以后文字”自行推定尾界。"
+}
