@@ -546,11 +546,20 @@ try:
  assert json.loads(get(field['readings']))['ward']['gate_to_central_cross_m'] is None
 
  gates=info['prosperity_gates_p465']
- assert gates['source_commit']==info['source_commit'] and gates['version'] in release['extensions']
+ assert gates['source_commit']=='5daa6ea32079a77dd4cec5ae5c8d6e54121aabd7' and gates['version'] in release['extensions']
  assert info['files_sha256'][field['atlas']]=='fc0478c8e09522a6bb694d44e8c5bf39c7bc183a23eeb0c301ec87637d2f1bb3'
  assert get(field['page']).count(b'id="p465-entry"')==1
  assert set(gates['plates'])=={'field.svg','north.svg','moat.svg'}
  assert all(value is None for value in json.loads(get(gates['readings']))['open_endpoints'].values())
+
+ south=info['prosperity_south_p466']
+ assert south['source_commit']==info['source_commit'] and south['version'] in release['extensions']
+ assert get(gates['page']).count(b'id="p466-entry"')==1
+ assert info['files_sha256'][gates['atlas']]=='6efc01a020e5be1497cd612b75d6710c7507a62b79045a39e8bf7fa82e0a8353'
+ assert set(south['plates'])=={'roads.svg','ditch.svg','waters.svg'}
+ sd=json.loads(get(south['readings']))
+ assert sd['plan']['symbol_spacing_px']==39 and sd['excavation']['biyong']['flow_516_528'] is None
+ assert sd['diversion']['section_read'] is False and sd['texts']['bank_landings']==[None,None]
 
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
@@ -567,6 +576,7 @@ try:
  report['prosperity_hydro_roads']=info['prosperity_hydro_roads']
  report['prosperity_anchors_p461']=source_readings
  report['prosperity_network_p462']=network_study
+ report['prosperity_south_p466']=south
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors

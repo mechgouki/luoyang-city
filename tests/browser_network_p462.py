@@ -81,6 +81,27 @@ def check_page(page, base, output, device):
     assert result.ok and result.body().startswith(b"%PDF-")
     page.locator('nav a[href="#north"]').click()
     page.screenshot(path=str(output / f"p465-{device}.png"))
+    page.locator("#p466-entry a").click()
+    page.wait_for_url("**/prosperity-south-p466.html")
+    assert page.get_by_role("heading", level=1).is_visible()
+    for section in ("roads", "ditch", "waters", "sources"):
+        page.locator(f'nav a[href="#{section}"]').click()
+        page.reload(wait_until="load")
+        assert urlsplit(page.url).fragment == section and page.locator(f"#{section}").is_visible()
+    pictures = page.locator("main figure img")
+    assert pictures.count() == 3
+    for diagram in pictures.all():
+        diagram.evaluate("img => img.decode()")
+        assert diagram.evaluate("img => img.naturalWidth > 0")
+    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
+    for suffix, magic in (("south-466.pdf", b"%PDF-"), ("south-466/readings.json", b"{")):
+        link = page.locator(f'a[href$="{suffix}"]')
+        downloaded = page.request.get(link.evaluate("a => a.href"))
+        assert downloaded.ok and downloaded.body().lstrip().startswith(magic)
+    page.locator('nav a[href="#roads"]').click()
+    page.screenshot(path=str(output / f"p466-{device}.png"))
+    page.locator("header > a").click()
+    page.wait_for_url("**/prosperity-gates-p465.html")
     page.get_by_role("link", name="返回白马寺南坊门与鸿池陂", exact=True).click()
     page.wait_for_url("**/prosperity-field-p464.html")
     page.get_by_role("link", name="返回外郭九道、白马寺与鸿池陂", exact=True).click()

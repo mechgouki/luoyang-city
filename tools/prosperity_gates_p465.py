@@ -3,7 +3,6 @@ import shutil
 from xml.etree import ElementTree as ET
 
 from dual_cartography import dump, load, sha
-from north_b4 import render_atlas
 from prosperity_anchors_p461 import ROOT, SITE, digest
 from prosperity_corridors_p463 import INK, MUTED, ROAD, WATER, label, line, node, plate
 from prosperity_field_p464 import PAGE as PREVIOUS
@@ -146,7 +145,10 @@ def build(site=SITE):
         path = dest / f"{name}.svg"
         ET.ElementTree(graphic).write(path, encoding="utf-8", xml_declaration=True)
         plates.append(path)
-    render_atlas(plates, site / ATLAS)
+    archive = ROOT / "research/prosperity-v4/archive/gates-465.pdf"
+    if sha(archive) != "6efc01a020e5be1497cd612b75d6710c7507a62b79045a39e8bf7fa82e0a8353":
+        raise ValueError("Published P4.6.5 atlas checksum mismatch")
+    shutil.copyfile(archive, site / ATLAS)
     shutil.copyfile(SOURCE / "readings.json", dest / "readings.json")
     shutil.copyfile(SOURCE / "index.html", site / PAGE)
     previous = site / PREVIOUS
@@ -161,7 +163,7 @@ def build(site=SITE):
     release["extensions"] = sorted(set(release["extensions"]) | {version})
     release["current_milestone"] = "盛时 P4.6.5 · 承明门西段、邙山北路与北垣河道"
     dump(site / "release.json", release)
-    info["prosperity_gates_p465"] = {"version": version, "source_commit": info["source_commit"],
+    info["prosperity_gates_p465"] = {"version": version, "source_commit": "5daa6ea32079a77dd4cec5ae5c8d6e54121aabd7",
                                      "page": PAGE, "atlas": ATLAS, "readings": f"{FOLDER}/readings.json",
                                      "plates": [p.name for p in plates]}
     for path in [*plates, dest / "readings.json", site / ATLAS, site / PAGE, previous, site / "release.json"]:
