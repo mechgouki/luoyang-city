@@ -34,20 +34,31 @@ def active_panel(page):
     return page.locator("[data-plate-panel]:visible")
 
 
-def capture_map(page, panel, output, stem):
+def capture_map(page, panel, output, stem, *, javascript_enabled=True):
     """Keep the actual diagram in frame, and retain an uncluttered map crop for review."""
     viewport = panel.locator(".map-viewport")
     expect(viewport).to_be_visible()
-    viewport.evaluate("""async node => {
-        await document.fonts.ready;
-        node.scrollIntoView({block: 'start', inline: 'nearest', behavior: 'instant'});
-        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-        const rect = node.getBoundingClientRect();
-        if (rect.height <= innerHeight && rect.bottom > innerHeight) {
-            window.scrollBy({top: rect.bottom - innerHeight, behavior: 'instant'});
+    if javascript_enabled:
+        viewport.evaluate("""async node => {
+            await document.fonts.ready;
+            node.scrollIntoView({block: 'start', inline: 'nearest', behavior: 'instant'});
             await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-        }
-    }""")
+            const rect = node.getBoundingClientRect();
+            if (rect.height <= innerHeight && rect.bottom > innerHeight) {
+                window.scrollBy({top: rect.bottom - innerHeight, behavior: 'instant'});
+                await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+            }
+        }""")
+    else:
+        # Page callbacks need not run when JavaScript is disabled. Use native scrolling
+        # and a synchronous geometry adjustment; screenshot() handles font readiness.
+        viewport.scroll_into_view_if_needed()
+        viewport.evaluate("""node => {
+            const rect = node.getBoundingClientRect();
+            if (rect.height <= innerHeight && rect.bottom > innerHeight) {
+                window.scrollBy({top: rect.bottom - innerHeight, behavior: 'instant'});
+            }
+        }""")
     bounds = viewport.bounding_box()
     size = page.viewport_size
     assert bounds and size, "The map must have a real viewport before its screenshot"
@@ -148,7 +159,7 @@ def check_nojs(browser, base, data, output, device):
         assert page.locator("#measurements tbody tr").count() > 0
         expect(page.locator("#measurements tbody tr").first).not_to_be_empty()
         fit(page)
-        capture_map(page, page.locator("[data-plate-panel]").first, output, f"p468-{device}-nojs")
+        capture_map(page, page.locator("[data-plate-panel]").first, output, f"p468-{device}-nojs", javascript_enabled=False)
     finally:
         context.close()
 
