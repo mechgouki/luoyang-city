@@ -69,6 +69,31 @@ class CorridorsStudy(unittest.TestCase):
         self.assertIsNone(data["moat"]["water_depth_516_528_m"])
         self.assertEqual(data["moat"]["channel_width_approx_m"], [20, 24])
 
+    def test_southern_roads_and_water_evidence(self):
+        info = json.loads((SITE / "build-info.json").read_text())
+        study = info["prosperity_south_p466"]
+        self.assertEqual(len(PdfReader(SITE / study["atlas"]).pages), 3)
+        data = json.loads((SITE / study["readings"]).read_text())
+        plan = data["plan"]
+        centers = [sum(edges)/2 for edges in plan["road_edges_at_row_px"].values()]
+        gap = abs(centers[1] - centers[0])
+        self.assertEqual(gap, plan["symbol_spacing_px"])
+        self.assertEqual(round(gap/math.dist(*plan["scale_endpoints_px"]), 1), plan["map_spacing_approx_km"])
+        ditch = data["excavation"]["biyong"]
+        self.assertEqual((ditch["trunk_preserved_m"], ditch["fork_north_of_hall_approx_m"],
+                          ditch["lateral_each_gt_m"], ditch["south_each_approx_m"]), (180,156,180,400))
+        self.assertTrue(all(ditch[x] is None for x in ("flow_516_528","southern_closure","water_source")))
+        self.assertIsNone(data["diversion"]["section_width_m"])
+        self.assertFalse(data["diversion"]["section_read"])
+        self.assertEqual(data["texts"]["bank_landings"], [None,None])
+        chronology = data["texts"]["mingtang"]
+        self.assertEqual(chronology["era_ce"], [520,525])
+        self.assertIsNone(chronology["exact_year"])
+        mx, my = plan["places_px"]["明堂"]
+        bx, by = plan["places_px"]["辟雍"]
+        self.assertTrue(mx < bx and my > by)
+        self.assertIsNone(data["modern_coordinates"])
+
     def test_offline_edition(self):
         info = json.loads((SITE/"build-info.json").read_text())
         study = info["prosperity_corridors_p463"]
