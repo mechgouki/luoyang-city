@@ -25,9 +25,54 @@ def ready(page):
     page.wait_for_function("document.documentElement.dataset.water468Ready === 'true'")
 
 
-def fit(page):
-    widths = page.evaluate("({document:document.documentElement.scrollWidth, viewport:innerWidth})")
-    assert widths["document"] <= widths["viewport"] + 2, widths
+def fit(page, *, output=None, stem="p468-overflow"):
+    widths = page.evaluate("""({
+        documentWidth: document.documentElement.scrollWidth,
+        clientWidth: document.documentElement.clientWidth,
+        innerWidth: innerWidth
+    })""")
+    viewport = page.viewport_size
+    assert viewport, "Width checks require a configured viewport"
+    widths["viewportWidth"] = viewport["width"]
+    if (widths["documentWidth"] <= widths["innerWidth"] + 2 and
+            all(widths[name] <= viewport["width"] + 2
+                for name in ("documentWidth", "clientWidth", "innerWidth"))):
+        return
+    # Synchronous inspection also works with JavaScript disabled. Report only HTML
+    # boxes; SVG geometry may intentionally extend inside a clipped map viewport.
+    elements = page.evaluate("""limit => [...document.body.querySelectorAll('*')]
+        .filter(node => node instanceof HTMLElement && node.getClientRects().length)
+        .map(node => {
+            const rect = node.getBoundingClientRect();
+            const style = getComputedStyle(node);
+            return {
+                element: node.tagName.toLowerCase() + (node.id ? '#' + node.id : '') +
+                    [...node.classList].map(value => '.' + value).join(''),
+                text: (node.textContent || '').trim().replace(/\\s+/g, ' ').slice(0, 180),
+                x: rect.x, y: rect.y, width: rect.width, right: rect.right,
+                scrollWidth: node.scrollWidth, clientWidth: node.clientWidth,
+                overflowX: style.overflowX, overflowWrap: style.overflowWrap,
+                whiteSpace: style.whiteSpace, minWidth: style.minWidth
+            };
+        })
+        .filter(item => item.right > limit + 2 || item.x < -2 ||
+            item.overflowX === 'visible' && item.scrollWidth > item.clientWidth + 2)
+        .sort((a, b) => Math.max(b.right, b.x + b.scrollWidth) -
+            Math.max(a.right, a.x + a.scrollWidth))
+        .slice(0, 20)""", viewport["width"])
+    diagnostic = {"url": page.url, "widths": widths, "overflow_elements": elements}
+    print("P468 horizontal overflow: " + json.dumps(diagnostic, ensure_ascii=False))
+    if output is not None:
+        output = Path(output)
+        output.mkdir(parents=True, exist_ok=True)
+        # Keep the original width failure even if capturing its evidence also fails.
+        try:
+            page.screenshot(path=str(output / f"{stem}.png"), animations="disabled")
+        except Exception as screenshot_error:
+            diagnostic["screenshot_error"] = str(screenshot_error)
+        (output / f"{stem}.json").write_text(
+            json.dumps(diagnostic, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    raise AssertionError(f"Page exceeds configured viewport: {widths}")
 
 
 def active_panel(page):
@@ -66,7 +111,7 @@ def capture_map(page, panel, output, stem, *, javascript_enabled=True):
     assert bounds["x"] >= -2 and bounds["y"] >= -2, bounds
     assert bounds["x"] + bounds["width"] <= size["width"] + 2, bounds
     assert bounds["y"] + bounds["height"] <= size["height"] + 2, bounds
-    fit(page)
+    fit(page, output=output, stem=f"{stem}-overflow")
     page.screenshot(path=str(output / f"{stem}.png"), animations="disabled")
     viewport.screenshot(path=str(output / f"{stem}-map.png"), animations="disabled")
 
@@ -78,7 +123,7 @@ def expected_segments(plate, layer):
     return [segment for segment in plate["segments"] if segment["period_class"] in wanted]
 
 
-def check_layer(page, plate, layer):
+def check_layer(page, plate, layer, *, output=None):
     expect(page.locator("#water-layer")).to_have_value(layer)
     shown = expected_segments(plate, layer)
     assert active_panel(page).locator(".water-segment:visible").count() == len(shown)
@@ -86,7 +131,7 @@ def check_layer(page, plate, layer):
     if not shown:
         expect(page.locator("#segment-choice")).to_be_disabled()
         expect(page.locator("#segment-detail .empty-detail")).to_be_visible()
-    fit(page)
+    fit(page, output=output)
     return shown
 
 
@@ -158,7 +203,7 @@ def check_nojs(browser, base, data, output, device):
             assert row.locator("a[href]").count() == len(segment["source_ids"])
         assert page.locator("#measurements tbody tr").count() > 0
         expect(page.locator("#measurements tbody tr").first).not_to_be_empty()
-        fit(page)
+        fit(page, output=output, stem=f"p468-{device}-nojs-overflow")
         capture_map(page, page.locator("[data-plate-panel]").first, output, f"p468-{device}-nojs", javascript_enabled=False)
     finally:
         context.close()
@@ -217,7 +262,7 @@ def check_page(page, base, output, device):
             expect(active_panel(page)).to_have_count(1)
             expect(active_panel(page)).to_have_attribute("data-plate-panel", plate["id"])
             default = plate.get("default_layer", "text")
-            shown = check_layer(page, plate, default)
+            shown = check_layer(page, plate, default, output=output)
             assert shown, f"Default layer unexpectedly blank: {plate['id']}"
             segment = shown[-1]
             page.locator("#segment-choice").select_option(segment["id"])
@@ -227,12 +272,12 @@ def check_page(page, base, output, device):
             page.reload(wait_until="load")
             ready(page)
             check_selected(page, segment)
-            check_layer(page, plate, default)
+            check_layer(page, plate, default, output=output)
             capture_map(page, active_panel(page), output, f"p468-{device}-{number:02d}-{plate['id']}")
 
             for layer in ("text", "survey", "all"):
                 page.locator("#water-layer").select_option(layer)
-                check_layer(page, plate, layer)
+                check_layer(page, plate, layer, output=output)
             # Containment is a selectable relation with evidence, but never a flow arrow.
             contained = next((item for item in plate["segments"] if item["relationship_type"] == "containment"), None)
             if contained:
@@ -248,7 +293,7 @@ def check_page(page, base, output, device):
             page.reload(wait_until="load")
             ready(page)
             assert urlsplit(page.url).fragment == "evidence-" + segment["id"], "Ordinary evidence anchors must survive reload"
-            fit(page)
+            fit(page, output=output, stem=f"p468-{device}-overflow")
             report["checks"].append(f"Map {number}: default layer, list and SVG selection, three filters, map/segment reload and evidence anchor")
 
         page.locator('nav a[href="#measurements"]').click()
@@ -260,7 +305,7 @@ def check_page(page, base, output, device):
         expect(measurements).to_be_visible()
         assert measurements.locator("tbody tr").count() > 0
         expect(measurements.locator("tbody tr").first).not_to_be_empty()
-        fit(page)
+        fit(page, output=output, stem=f"p468-{device}-overflow")
         measurements.evaluate("node => node.scrollIntoView({block:'start', behavior:'instant'})")
         page.screenshot(path=str(output / f"p468-{device}-measurements.png"), animations="disabled")
         report["checks"].append("Reported measurements navigation and reload preserve a nonempty table without horizontal page overflow")
@@ -289,7 +334,7 @@ def check_page(page, base, output, device):
         page.locator("#zoom-reset").click()
         assert viewbox(map_element) == [0, 0, 1020, 760]
         expect(page.locator("#zoom-out")).to_be_disabled()
-        fit(page)
+        fit(page, output=output, stem=f"p468-{device}-overflow")
         report["checks"].append("Zoom, keyboard pan, touch drag on mobile or mouse drag on desktop, and full-view reset")
 
         # Resolve the actual visible download links, then inspect their content and published digests.
@@ -346,12 +391,12 @@ def check_page(page, base, output, device):
         state = parse_qs(urlsplit(page.url).fragment)
         assert state["map"] == [correction_plate["id"]]
         expect(active_panel(page)).to_have_attribute("data-plate-panel", correction_plate["id"])
-        check_layer(page, correction_plate, "all")
+        check_layer(page, correction_plate, "all", output=output)
         page.reload(wait_until="load")
         ready(page)
         assert parse_qs(urlsplit(page.url).fragment)["map"] == [correction_plate["id"]]
         expect(active_panel(page)).to_have_attribute("data-plate-panel", correction_plate["id"])
-        check_layer(page, correction_plate, "all")
+        check_layer(page, correction_plate, "all", output=output)
         capture_map(page, active_panel(page), output, f"p468-{device}-pool-correction")
         report["checks"].append("P4.6.7 W20 correction opens its documented map with all evidence and survives reload")
 

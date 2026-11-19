@@ -7,3 +7,12 @@
 @media print{.site-header,.map-tools,.map-tabs,.map-help,.evidence-panel,.site-footer,.intro-bottom nav{display:none!important}.wrap{width:100%;padding:0}.plate-panel[hidden]{display:block!important}.water-segment[hidden]{display:inline!important}.water-node.is-muted{opacity:1}.explorer-layout{display:block;border:0}.map-viewport svg{max-height:none}a{color:inherit}.plate-panel{break-inside:avoid;page-break-after:always}.article-section{margin-top:1.5rem}.questions-grid,.downloads{display:block}.source-list{columns:1}}
 
 .correction-note{margin:1.5rem 0;padding:1.2rem 1.4rem;border-left:4px solid #956b46;background:#f1ebde;border-radius:0 8px 8px 0}.correction-note h2{font-size:1.2rem;margin:0 0 .6rem}.correction-note p{margin:.6rem 0;line-height:1.8}
+
+/* Long source classifications and appendix names must fit with all maps visible. */
+.explorer-layout,.map-column,#map-panels,.plate-panel,.downloads>div,.download-links,.download-links>a,.source-list li,.question{min-width:0}
+.downloads{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+.download-links>a{max-width:100%;overflow-wrap:anywhere}
+.download-links>a>span{flex:0 0 auto}
+.source-list li,.source-list p,.source-list small,.locator,.detail-locator,th,td,.question p,.correction-note p{overflow-wrap:anywhere}
+.table-scroll{width:100%;min-width:0;overflow-x:auto}
+@media(max-width:760px){.downloads{grid-template-columns:minmax(0,1fr)}.table-scroll{overflow-x:auto}table,tbody,tr,th,td{max-width:100%;min-width:0}}
