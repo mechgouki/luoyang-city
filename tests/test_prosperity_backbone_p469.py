@@ -23,7 +23,10 @@ SOURCE = ROOT / "research/prosperity-v4/backbone-469"
 SITE = ROOT / "_site"
 NS = "{http://www.w3.org/2000/svg}"
 I09 = "P467/inner/I09"
+URBAN_SOURCE = "research/prosperity-v4/street-clusters-p453.json"
 BASELINE_SHA = {
+    URBAN_SOURCE:
+        "9b69da412a86d5e21e82b2cfdcac747b667ecad053de868618fd7474e4bcd116",
     "research/prosperity-v1/geographic-evidence.json":
         "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79",
     "research/prosperity-v4/network-462/outer.json":
@@ -36,6 +39,16 @@ BASELINE_SHA = {
         "bf51dad84680792dafbaacb14bea0a0715fa31a5cf13842fd0096f762132a789",
     "research/prosperity-v4/water-468/readings.json":
         "6703af3308fff4e266c3e50c6fcd2d8f8e357c08ceb678f0e327d37dbd18467d",
+}
+# First P469 main-build browser downloads, independently matched to public assets.
+# Adding page-only context links must not redraw the published source maps or PDF.
+FROZEN_BACKBONE_DOWNLOAD_SHA = {
+    "backbone-469/frame-06a.svg":
+        "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04",
+    "backbone-469/frame-qian2018.svg":
+        "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+    "downloads/backbone-469.pdf":
+        "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6",
 }
 RENDERED_06A = {
     "geo-inner-wall-aboveground", "geo-inner-wall-underground", "geo-palace-walls",
@@ -316,6 +329,9 @@ class Backbone469Publication(unittest.TestCase):
         cls.svg06a = ET.parse(SITE / "backbone-469/frame-06a.svg").getroot()
         cls.svgqian = ET.parse(SITE / "backbone-469/frame-qian2018.svg").getroot()
         cls.page = Markup((SITE / "prosperity-backbone-p469.html").read_text(encoding="utf-8"))
+        cls.urban = read(SITE / "backbone-469/urban-contexts.json")
+        cls.urban_source = read(ROOT / URBAN_SOURCE)
+        cls.urban_clusters = {cluster["id"]: cluster for cluster in cls.urban["clusters"]}
 
     def assertPointsEqual(self, actual, expected, label):
         self.assertEqual(len(actual), len(expected), label)
@@ -324,6 +340,153 @@ class Backbone469Publication(unittest.TestCase):
             for axis in (0, 1):
                 self.assertAlmostEqual(observed[axis], original[axis], places=6,
                                        msg=f"{label}[{index}][{axis}]")
+
+    def test_page_context_extension_keeps_published_map_and_pdf_bytes(self):
+        for name, expected in FROZEN_BACKBONE_DOWNLOAD_SHA.items():
+            with self.subTest(download=name):
+                self.assertEqual(digest(SITE / name), expected,
+                                 "A page-only evidence link changed a frozen map or PDF")
+        archive = ROOT / "research/prosperity-v4/archive/backbone-469.pdf"
+        self.assertEqual(archive.read_bytes(), (SITE / "downloads/backbone-469.pdf").read_bytes(),
+                         "The published atlas must be the reviewed archive, not a font-dependent rerender")
+
+    def test_urban_export_reuses_the_reviewed_clusters_and_sources(self):
+        self.assertEqual(self.urban["source_path"], URBAN_SOURCE)
+        self.assertEqual(self.urban["source_sha256"], BASELINE_SHA[URBAN_SOURCE])
+        self.assertEqual(self.urban["source_version"], self.urban_source["version"])
+        self.assertEqual(self.urban["evidence_grades"], self.urban_source["evidence_grades"])
+        expected_clusters = [cluster for cluster in self.urban_source["clusters"]
+                             if cluster["id"] in {"K01", "K02"}]
+        self.assertEqual(self.urban["clusters"], expected_clusters,
+                         "A context link must not paraphrase or recategorize the reviewed evidence")
+        self.assertEqual(self.urban["new_historical_coordinates"], 0)
+        self.assertTrue({URBAN_SOURCE, "research/prosperity-v1/text-review.json",
+                         "research/dual-b1/decisions.json"}
+                        <= self.urban["source_inputs_sha256"].keys())
+        for path, expected in self.urban["source_inputs_sha256"].items():
+            self.assertEqual(digest(ROOT / path), expected, path)
+        used_records = {record["source_record"]
+                        for cluster in expected_clusters
+                        for record in [*cluster["edges"], *cluster.get("temporal_events", [])]}
+        self.assertTrue(used_records <= self.urban["source_records"].keys())
+        p1_records = {record["legacy_title"]: record for record in
+                      read(ROOT / "research/prosperity-v1/text-review.json")["records"]}
+        b1_records = {"B1:" + record["id"]: record for record in
+                      read(ROOT / "research/dual-b1/decisions.json")["decisions"]}
+        original_records = {**p1_records, **b1_records}
+        for record_id in used_records:
+            source = self.urban["source_records"][record_id]
+            self.assertIn(source["source_path"], self.urban["source_inputs_sha256"])
+            self.assertEqual(source["record"], original_records[record_id], record_id)
+            self.assertEqual(source["locator"], original_records[record_id].get("legacy_locator", ""),
+                             "Missing original locators must not be invented for the new view")
+            self.assertTrue(source["links"], record_id)
+            for link in source["links"]:
+                self.assertTrue(link["title"].strip(), record_id)
+                self.assertTrue(link["url"].startswith("https://"), record_id)
+
+    def test_urban_navigation_uses_the_two_explicit_gate_bindings(self):
+        expected = {"geo-changhe-palace-gate": ("ic_changhe_palace", "K01"),
+                    "geo-jianchun-gate": ("gate_jianchun", "K02")}
+        navigation = self.urban["navigation"]
+        self.assertEqual(len(navigation), 2)
+        self.assertEqual({row["mapped_feature_id"] for row in navigation}, set(expected))
+        bindings = {(row["feature_id"], row["entity_id"], row["cluster_id"])
+                    for row in self.urban_source["spatial_index_references"]}
+        for row in navigation:
+            feature_id = row["mapped_feature_id"]
+            entity_id, cluster_id = expected[feature_id]
+            self.assertEqual((row["entity_id"], row["cluster_id"]), (entity_id, cluster_id))
+            self.assertIn((feature_id, entity_id, cluster_id), bindings)
+            self.assertEqual(row["semantics"], "context_link_only")
+            self.assertEqual(row["page"],
+                             f"prosperity-street-clusters.html?cluster={cluster_id}&grade=all")
+            self.assertTrue(row["limit"].strip())
+            for _, record in objects(row):
+                self.assertTrue({"geometry", "coordinates", "points", "x", "y",
+                                 "offset_m", "local_gis_transform"}.isdisjoint(record))
+        palace_road = next(node for node in self.urban_clusters["K01"]["nodes"]
+                          if node["id"] == "ic_palace_avenue")
+        self.assertIsNone(palace_road["feature_id"],
+                          "The palace avenue must not silently become the whole Tongtuo geometry")
+
+    def test_urban_bridge_events_and_interpretive_grade_keep_their_scope(self):
+        palace, bridges = self.urban_clusters["K01"], self.urban_clusters["K02"]
+        self.assertEqual((len(palace["edges"]), len(bridges["edges"])), (8, 5))
+        conditional = [edge for edge in palace["edges"] if edge["grade"] == "C"]
+        self.assertEqual([edge["id"] for edge in conditional], ["K01E08"])
+        events = {event["id"]: event for event in bridges["temporal_events"]}
+        self.assertEqual(set(events), {"K02T01", "K02T02"})
+        collapse, construction = events["K02T01"], events["K02T02"]
+        self.assertEqual((collapse["subject"], collapse["year"]), ("bridge_jianchun", 527))
+        self.assertEqual(set(collapse["does_not_transfer_to"]), {"bridge_eaststone", "bridge_yong"})
+        self.assertEqual((construction["subject"], construction["year"]), ("bridge_eaststone", 280))
+        for cluster in (palace, bridges):
+            self.assertTrue(cluster["non_geographic"])
+            self.assertTrue(all(edge["geographic_line_allowed"] is False for edge in cluster["edges"]))
+
+    def test_urban_records_are_visible_and_source_linked_without_javascript(self):
+        for navigation in self.urban["navigation"]:
+            cluster = self.urban_clusters[navigation["cluster_id"]]
+            article = self.page.by_id("context-" + navigation["mapped_feature_id"])
+            self.assertNotIn("hidden", article["attrs"])
+            self.assertIn(navigation["limit"], article["text"])
+            sections = [node for node in Markup.descendants(article)
+                        if node["attrs"].get("data-urban-cluster") == cluster["id"]]
+            self.assertEqual(len(sections), 1)
+            section = sections[0]
+            self.assertNotIn("hidden", section["attrs"])
+            descendants = list(Markup.descendants(section))
+            edges = {node["attrs"]["data-urban-edge-id"]: node
+                     for node in descendants if "data-urban-edge-id" in node["attrs"]}
+            self.assertEqual(set(edges), {edge["id"] for edge in cluster["edges"]})
+            for edge in cluster["edges"]:
+                rendered = edges[edge["id"]]
+                self.assertEqual(rendered["attrs"]["data-evidence-grade"], edge["grade"])
+                for field in ("quote", "scope", "source_record"):
+                    self.assertIn(edge[field], rendered["text"], (edge["id"], field))
+                hrefs = {node["attrs"].get("href") for node in Markup.descendants(rendered)}
+                for link in self.urban["source_records"][edge["source_record"]]["links"]:
+                    self.assertIn(link["url"], hrefs, edge["id"])
+            events = {node["attrs"]["data-urban-event-id"]: node
+                      for node in descendants if "data-urban-event-id" in node["attrs"]}
+            self.assertEqual(set(events), {event["id"] for event in cluster.get("temporal_events", [])})
+            names = {node["id"]: node["name"] for node in cluster["nodes"]}
+            for event in cluster.get("temporal_events", []):
+                rendered = events[event["id"]]
+                for field in ("event", "scope", "source_record"):
+                    self.assertIn(event[field], rendered["text"], (event["id"], field))
+                self.assertIn(str(event["year"]), rendered["text"])
+                self.assertIn(names[event["subject"]], rendered["text"])
+                if event["id"] == "K02T01":
+                    self.assertIn("东石桥", rendered["text"])
+                    self.assertIn("永桥", rendered["text"])
+            original_links = [node for node in descendants
+                              if node["attrs"].get("data-urban-source-link") == cluster["id"]]
+            self.assertEqual(len(original_links), 1)
+            self.assertEqual(original_links[0]["attrs"]["href"], "./" + navigation["page"])
+            self.assertNotIn("target", original_links[0]["attrs"], "The original-topic return check needs same-tab navigation")
+
+    def test_inline_gate_links_do_not_modify_the_map_drawing(self):
+        inline = self.page.by_id("frame-06a")
+        inline_nodes = list(Markup.descendants(inline))
+        navigation_ids = {row["mapped_feature_id"] for row in self.data["water_evidence_navigation"]}
+        navigation_ids.update(row["mapped_feature_id"] for row in self.urban["navigation"])
+        inline_links = [node for node in inline_nodes if "data-context-id" in node["attrs"]]
+        self.assertEqual(len(inline_links), 10)
+        self.assertEqual({node["attrs"]["data-context-id"] for node in inline_links}, navigation_ids)
+        for node in inline_links:
+            self.assertEqual(node["tag"], "a")
+            self.assertEqual(node["attrs"]["href"], "#context-" + node["attrs"]["data-context-id"])
+        # Anchor wrappers may differ, but every drawing element stays the same.
+        visual_tags = {"circle", "ellipse", "line", "path", "polygon", "polyline", "rect", "text"}
+        original_drawings = [(element.tag.removeprefix(NS), dict(element.attrib), "".join(element.itertext()))
+                             for element in self.svg06a.iter()
+                             if element.tag.removeprefix(NS) in visual_tags]
+        inline_drawings = [(node["tag"], node["attrs"], node["text"])
+                           for node in inline_nodes if node["tag"] in visual_tags]
+        self.assertEqual(inline_drawings, original_drawings,
+                         "A context link moved, resized, or redrew a source feature")
 
     def test_06a_rendering_keeps_original_vertices_and_does_not_complete_missing_walls(self):
         source = read(ROOT / "research/prosperity-v1/geographic-evidence.json")
@@ -521,12 +684,16 @@ class Backbone469Publication(unittest.TestCase):
         self.assertEqual(set(meta["rendered_06a_feature_ids"]), RENDERED_06A)
         self.assertEqual(set(meta["source_frames"]), {"frame-06a", "frame-qian2018"})
         self.assertEqual(meta["atlas_pages"], 2)
+        self.assertEqual(meta["context_links"], 10)
+        self.assertEqual(meta["water_context_links"], 9)
+        self.assertEqual(meta["urban_context_links"], 2)
+        self.assertEqual(meta["urban_contexts"], "backbone-469/urban-contexts.json")
         self.assertEqual(len(PdfReader(SITE / meta["atlas"]).pages), 2)
         self.assertEqual(read(SITE / meta["readings"]), self.data)
         self.assertEqual((SITE / meta["readings"]).read_bytes(),
                          (SOURCE / "readings.json").read_bytes())
         downloads = {urlsplit(href).path.removeprefix("./") for href in self.page.hrefs}
-        required = {meta["atlas"], meta["bundle"], meta["readings"],
+        required = {meta["atlas"], meta["bundle"], meta["readings"], meta["urban_contexts"],
                     "backbone-469/frame-06a.svg", "backbone-469/frame-qian2018.svg"}
         self.assertTrue(required <= downloads)
         published = required | {meta["page"], manifest_name,

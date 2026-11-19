@@ -10,7 +10,6 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 from dual_cartography import dump, load, sha
-from north_b4 import render_atlas
 from prosperity_anchors_p461 import ROOT, SITE, offline_page
 
 FOLDER = "backbone-469"
@@ -20,6 +19,12 @@ PREVIOUS = "prosperity-water-p468.html"
 VERSION = "prosperity-backbone-p469"
 ATLAS = f"downloads/{FOLDER}.pdf"
 BUNDLE = f"downloads/{FOLDER}.zip"
+FROZEN_ATLAS = ROOT / "research/prosperity-v4/archive/backbone-469.pdf"
+FROZEN_ATLAS_SHA256 = "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6"
+FROZEN_PLATE_SHA256 = {
+    "frame-06a.svg": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04",
+    "frame-qian2018.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+}
 ENTRY = (f'<p id="p469-entry" style="border-left:4px solid #34685e;padding:1rem;background:#e8eee7">'
          f'<a href="./{PAGE}">续读 · 城市水陆骨架与水系证据联读</a></p>\n')
 SVG_NS = "http://www.w3.org/2000/svg"
@@ -35,7 +40,12 @@ NORTH_PATH = "research/prosperity-v4/gates-465/readings.json"
 SOUTH_PATH = "research/prosperity-v4/south-466/readings.json"
 WATER_PATHS = {"P467": "research/prosperity-v4/water-467/readings.json",
                "P468": "research/prosperity-v4/water-468/readings.json"}
-INPUTS = (GEO_PATH, NETWORK_PATH, ROAD_PATH, OUTER_PATH, NORTH_PATH, SOUTH_PATH, *WATER_PATHS.values())
+URBAN_PATH = "research/prosperity-v4/street-clusters-p453.json"
+URBAN_TEXT_PATH = "research/prosperity-v1/text-review.json"
+URBAN_B1_PATH = "research/dual-b1/decisions.json"
+URBAN_INPUTS = (URBAN_PATH, URBAN_TEXT_PATH, URBAN_B1_PATH)
+INPUTS = (GEO_PATH, NETWORK_PATH, ROAD_PATH, OUTER_PATH, NORTH_PATH, SOUTH_PATH,
+          *WATER_PATHS.values(), *URBAN_INPUTS)
 SOURCE_LINKS = {
     "06a": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=3457",
     "qian": "https://www.jstage.jst.go.jp/article/actaasiatica/126/0/126_1262/_pdf/-char/en#page=17",
@@ -328,6 +338,77 @@ def input_data():
             "outer": load(ROOT/OUTER_PATH), "north": load(ROOT/NORTH_PATH), "south": load(ROOT/SOUTH_PATH)}
 
 
+def urban_context_bundle():
+    """Read the existing P453 clusters; this adds navigation, never spatial edges."""
+    source = load(ROOT/URBAN_PATH)
+    p1 = load(ROOT/URBAN_TEXT_PATH)
+    b1 = load(ROOT/URBAN_B1_PATH)
+    clusters = {item["id"]: item for item in source["clusters"]}
+    bindings = (("geo-changhe-palace-gate", "ic_changhe_palace", "K01"),
+                ("geo-jianchun-gate", "gate_jianchun", "K02"))
+    navigation = []
+    selected = []
+    for feature_id, entity_id, cluster_id in bindings:
+        binding = next((item for item in source["spatial_index_references"]
+                        if (item["feature_id"], item["entity_id"], item["cluster_id"])
+                        == (feature_id, entity_id, cluster_id)), None)
+        if binding is None:
+            raise ValueError("P453 no longer confirms this existing gate reference: " + feature_id)
+        cluster = clusters[cluster_id]
+        node = next(item for item in cluster["nodes"] if item["id"] == entity_id)
+        if node["feature_id"] != feature_id or not cluster["non_geographic"]:
+            raise ValueError("Review the P453 source binding before publishing urban contexts")
+        if any(edge["geographic_line_allowed"] for edge in cluster["edges"]):
+            raise ValueError("P469 cannot add geographic lines from manuscript relations")
+        navigation.append({"mapped_feature_id": feature_id, "entity_id": entity_id,
+                           "cluster_id": cluster_id, "semantics": "context_link_only",
+                           "source_binding": copy.deepcopy(binding),
+                           "page": f"prosperity-street-clusters.html?cluster={cluster_id}&grade=all",
+                           "limit": "既有门址只作阅读入口；这些城市关系没有取得新增位置、院界或道路坐标。"})
+        selected.append(copy.deepcopy(cluster))
+    # In P453 the manuscript avenue has no source-map feature binding. Do not
+    # silently identify it with the cartographic Tongtuo road when adding links.
+    avenue = next(item for item in clusters["K01"]["nodes"] if item["id"] == "ic_palace_avenue")
+    if avenue["feature_id"] is not None:
+        raise ValueError("The manuscript avenue identity changed and requires a separate review")
+    p1_records = {item["legacy_title"]: item for item in p1["records"]}
+    b1_records = {item["id"]: item for item in b1["decisions"]}
+    b1_sources = {item["id"]: item for item in b1["sources"]}
+    records = {}
+    for cluster in selected:
+        for item in [*cluster["edges"], *cluster.get("temporal_events", [])]:
+            record_id = item["source_record"]
+            if record_id in records:
+                continue
+            if record_id.startswith("B1:"):
+                record = b1_records[record_id.split(":", 1)[1]]
+                record_path = URBAN_B1_PATH
+                links = [copy.deepcopy(b1_sources[key]) for key in record["source_ids"]]
+            else:
+                record = p1_records[record_id]
+                record_path = URBAN_TEXT_PATH
+                links = [{"id": check["declared_source_id"],
+                          "title": check["declared_source_id"] + "本原文校读",
+                          "url": check["declared_url"]}
+                         for check in record["source_checks"]]
+            records[record_id] = {"source_path": record_path,
+                                  "locator": record.get("legacy_locator", ""),
+                                  "links": links, "record": copy.deepcopy(record)}
+    entity_names = {node["id"]: node["name"] for cluster in source["clusters"] for node in cluster["nodes"]}
+    return {"version": "P4.6.9", "source_version": source["version"],
+            "source_path": URBAN_PATH, "source_sha256": sha(ROOT/URBAN_PATH),
+            "source_inputs_sha256": {relative: sha(ROOT/relative) for relative in URBAN_INPUTS},
+            "evidence_grades": copy.deepcopy(source["evidence_grades"]),
+            "navigation": navigation, "clusters": selected, "source_records": records,
+            "entity_names": entity_names,
+            "counts": {"gate_contexts": len(navigation),
+                       "existing_relations": sum(len(cluster["edges"]) for cluster in selected),
+                       "existing_events": sum(len(cluster.get("temporal_events", [])) for cluster in selected)},
+            "new_historical_coordinates": 0, "new_historical_relationships": 0,
+            "map_geometry_modified": False,
+            "scope": "复用P453已经审阅的城市关系和原门址参照，只新增P469网页联读入口；水系索引与独立地图不改。"}
+
+
 def ref_of(record):
     for key in ("ref", "reference", "id", "key", "uid", "relation_ref"):
         value = record.get(key)
@@ -396,28 +477,77 @@ def relation_link(ref, catalog):
     return f'<a href="#{evidence_id(ref)}" data-current-ref="{esc(ref)}">{esc(item["version"])} {esc(item.get("id", ref.rsplit("/",1)[-1]))} · {esc(item.get("label", "证据"))}</a>'
 
 
-def context_html(data, inputs, catalog, sources):
+def urban_source_html(record_id, urban):
+    record = urban["source_records"][record_id]
+    links = "；".join(f'<a href="{esc(source["url"])}" target="_blank" rel="noopener">{esc(source["title"])}</a>'
+                     for source in record["links"])
+    locator = f' · {esc(record["locator"])}' if record["locator"] else ""
+    return f'<span data-source-record="{esc(record_id)}">{esc(record_id)}</span>{locator}；{links}'
+
+
+def urban_context_html(binding, urban):
+    cluster = next(item for item in urban["clusters"] if item["id"] == binding["cluster_id"])
+    names = urban["entity_names"]
+    predicates = {"west_of": "在其西", "east_of": "在其东", "north_of": "在其北",
+                  "south_of": "在其南", "outside": "位于门外", "on": "位于其上", "within": "属于其内"}
+    edges = []
+    for edge in cluster["edges"]:
+        grade = edge["grade"]
+        relation = f'{names[edge["subject"]]} · {predicates[edge["predicate"]]} · {names[edge["object"]]}'
+        edges.append(f'<li data-urban-edge-id="{esc(edge["id"])}" data-evidence-grade="{esc(grade)}">'
+                     f'<h5>{esc(relation)}</h5><p class="source-line"><span class="tag">{esc(grade)}层</span> '
+                     f'{esc(urban["evidence_grades"][grade])} · {esc(edge["id"])}</p>'
+                     f'<blockquote>{esc(edge["quote"])}</blockquote><p class="boundary">{esc(edge["scope"])}</p>'
+                     f'<p class="source-line">{urban_source_html(edge["source_record"], urban)}</p></li>')
+    events = []
+    for event in cluster.get("temporal_events", []):
+        exclusions = event.get("does_not_transfer_to", [])
+        excluded = (f'<p class="boundary">此事件不转移到：{esc("、".join(names[key] for key in exclusions))}。</p>'
+                    if exclusions else "")
+        events.append(f'<li data-urban-event-id="{esc(event["id"])}"><h5>{esc(names[event["subject"]])}</h5>'
+                      f'<p><strong>{esc(event["event"])}</strong></p><p class="source-line">公元{esc(event["year"])}年 · '
+                      f'{esc(event["id"])}</p><p class="boundary">{esc(event["scope"])}</p>{excluded}'
+                      f'<p class="source-line">{urban_source_html(event["source_record"], urban)}</p></li>')
+    event_html = ('<h4 class="urban-subheading">桥梁事件分开记录</h4>'
+                  '<p>建春门第一石桥与东石桥是两个对象。527年颓桥只记在第一石桥，未据此判定东石桥或永桥受损。</p>'
+                  f'<ul class="context-evidence urban-events">{"".join(events)}</ul>') if events else ""
+    notes = "".join(f'<li>{esc(note)}</li>' for note in cluster["uncertainty_notes"])
+    return (f'<section class="urban-context" data-urban-cluster="{esc(cluster["id"])}">'
+            f'<p class="eyebrow">已有城市关系联读</p><h4>{esc(cluster["title"])}</h4>'
+            f'<p class="boundary">{esc(binding["limit"])}</p>'
+            '<p class="source-line">以下原文、A／C证据等级和解释沿用P4.5.3；等级表示文字关系的性质，不表示测量精度。</p>'
+            f'<p><a data-urban-source-link="{esc(cluster["id"])}" href="./{esc(binding["page"])}">打开原城市关系专题与上下文</a></p>'
+            f'<ul class="context-evidence urban-edges">{"".join(edges)}</ul>{event_html}'
+            f'<ul class="urban-boundaries">{notes}</ul></section>')
+
+
+def context_html(data, inputs, catalog, sources, urban):
     feature_names = {feature["id"]: feature["label"].replace("位置参考", "").replace("图示残段", "")
                      for feature in inputs["geo"]["features"]}
-    options, buttons, articles = ['<option value="">全部9处参照</option>'], [], []
-    for row in data["water_evidence_navigation"]:
-        feature_id = row["mapped_feature_id"]
+    water_navigation = {row["mapped_feature_id"]: row for row in data["water_evidence_navigation"]}
+    urban_navigation = {row["mapped_feature_id"]: row for row in urban["navigation"]}
+    feature_ids = list(dict.fromkeys([*water_navigation, *urban_navigation]))
+    options, buttons, articles = ['<option value="">全部门道参照</option>'], [], []
+    for feature_id in feature_ids:
+        row = water_navigation.get(feature_id)
         name = feature_names.get(feature_id, feature_id)
         options.append(f'<option value="{esc(feature_id)}">{esc(name)}</option>')
         buttons.append(f'<button type="button" data-context-choice="{esc(feature_id)}" aria-pressed="false">{esc(name)}</button>')
         entries = []
-        for ref in row["evidence_refs"]:
+        for ref in row["evidence_refs"] if row else []:
             record = catalog[ref]
             source_page = record.get("page", f'prosperity-water-{record["version"].lower()}.html#map={record["plate_id"]}&layer=all')
             entries.append(f'<li data-evidence-ref="{esc(ref)}"><h4>{relation_link(ref, catalog)}</h4><blockquote>{esc(record.get("quote", ""))}</blockquote>'
                            f'<p>{esc(record.get("reading", ""))}</p><p class="boundary">{esc(record.get("limit", ""))}</p>'
                            f'<p class="source-line">{source_html(record, sources)}</p>'
                            f'<p class="source-line"><a href="./{esc(source_page)}">打开原分册关系图与上下文</a></p></li>')
+        water_html = (f'<p class="boundary">{esc(row["limit"])}</p>'
+                      '<p>下列水道关系单独阅读；所选门道的图上位置没有赋给河渠、池口或桥头。</p>'
+                      f'<ul class="context-evidence">{"".join(entries)}</ul>') if row else ""
+        city_html = urban_context_html(urban_navigation[feature_id], urban) if feature_id in urban_navigation else ""
         articles.append(f'<article class="context-card" id="context-{esc(feature_id)}" data-context-card="{esc(feature_id)}">'
                         f'<p class="eyebrow">地理参照 × 相对关系</p><h3>{esc(name)}</h3>'
-                        f'<p class="boundary">{esc(row.get("limit", "关联只指文献上下文，不为水体新增位置。"))}</p>'
-                        '<p>下列水道关系单独阅读；所选门道的图上位置没有赋给河渠、池口或桥头。</p>'
-                        f'<ul class="context-evidence">{"".join(entries)}</ul></article>')
+                        f'{water_html}{city_html}</article>')
     return "".join(options), "".join(buttons), "".join(articles)
 
 
@@ -527,16 +657,35 @@ def road01_html(data):
 
 
 def audit_downloads_html():
-    return "".join(f'<a href="./{FOLDER}/{esc(path.name)}" download>{esc(path.name)}</a>'
-                   for path in sorted(SOURCE.glob("*.json")) if path.name != "readings.json")
+    return ("".join(f'<a href="./{FOLDER}/{esc(path.name)}" download>{esc(path.name)}</a>'
+                    for path in sorted(SOURCE.glob("*.json")) if path.name != "readings.json")
+            + f'<a href="./{FOLDER}/urban-contexts.json" download>城市关系原记录与来源校验</a>')
 
 
-def render_page(data, inputs, plates, catalog, sources):
-    options, buttons, contexts = context_html(data, inputs, catalog, sources)
+def inline_urban_links(plate, urban, inputs):
+    """Add link semantics to existing symbols in HTML only, never redraw a map."""
+    inline = copy.deepcopy(plate)
+    features = {item["id"]: item for item in inputs["geo"]["features"]}
+    for binding in urban["navigation"]:
+        feature_id = binding["mapped_feature_id"]
+        mark = inline.find(f".//*[@id='p469-{feature_id}']")
+        if mark is None or mark.find(f"{{{SVG_NS}}}circle") is None:
+            raise ValueError("Urban navigation requires an existing drawn gate symbol: " + feature_id)
+        mark.tag = f"{{{SVG_NS}}}a"
+        mark.set("href", "#context-" + feature_id)
+        mark.set("data-context-id", feature_id)
+        mark.set("data-urban-context-only", "true")
+        mark.set("class", "context-link")
+        mark.set("aria-label", features[feature_id]["label"] + "：查看已有城市关系")
+    return inline
+
+
+def render_page(data, inputs, plates, catalog, sources, urban):
+    options, buttons, contexts = context_html(data, inputs, catalog, sources, urban)
     correction = data["corrected_current_I09"]
     template = (SOURCE/"index.html").read_text(encoding="utf-8")
     replacements = {
-        "<!-- FRAME_06A -->": ET.tostring(plates[0], encoding="unicode"),
+        "<!-- FRAME_06A -->": ET.tostring(inline_urban_links(plates[0], urban, inputs), encoding="unicode"),
         "<!-- FRAME_QIAN -->": ET.tostring(plates[1], encoding="unicode"),
         "<!-- CONTEXT_OPTIONS -->": options,
         "<!-- CONTEXT_BUTTONS -->": buttons,
@@ -573,6 +722,7 @@ def build(site=SITE):
     if len(catalog) != 100:
         raise ValueError("P469 current evidence must preserve the 100 reviewed relationships")
     before_sources = {relative: sha(ROOT/relative) for relative in INPUTS}
+    urban = urban_context_bundle()
     dest = site/FOLDER
     dest.mkdir(parents=True, exist_ok=True)
     (site/"downloads").mkdir(parents=True, exist_ok=True)
@@ -583,12 +733,21 @@ def build(site=SITE):
     for diagram, filename in zip(plates, paths):
         ET.indent(diagram)
         ET.ElementTree(diagram).write(filename, encoding="utf-8", xml_declaration=True)
-    render_atlas(paths, site/ATLAS)
+    # This revision adds HTML evidence links only. Reuse the accepted PDF rather
+    # than letting a different installed font subset change the published atlas.
+    for filename in paths:
+        if sha(filename) != FROZEN_PLATE_SHA256[filename.name]:
+            raise ValueError("The frozen P469 map changed; review a new atlas before publication")
+    if sha(FROZEN_ATLAS) != FROZEN_ATLAS_SHA256:
+        raise ValueError("The accepted P469 atlas archive changed")
+    shutil.copyfile(FROZEN_ATLAS, site/ATLAS)
     copied = []
     for source_path in [*sorted(SOURCE.glob("*.json")), SOURCE/"study.css", SOURCE/"backbone-ui.js"]:
         shutil.copyfile(source_path, dest/source_path.name)
         copied.append(dest/source_path.name)
-    page = render_page(data, inputs, plates, catalog, sources)
+    dump(dest/"urban-contexts.json", urban)
+    copied.append(dest/"urban-contexts.json")
+    page = render_page(data, inputs, plates, catalog, sources, urban)
     (site/PAGE).write_text(page, encoding="utf-8")
     previous = site/PREVIOUS
     original = previous.read_text(encoding="utf-8").replace(ENTRY, "")
@@ -606,6 +765,9 @@ def build(site=SITE):
         "atlas": ATLAS, "atlas_pages": 2, "source_inputs_sha256": before_sources,
         "files_sha256": {path.relative_to(site).as_posix(): sha(path) for path in [*paths, *copied, site/ATLAS]},
         "new_historical_coordinates": 0, "new_metric_measurements": 0,
+        "atlas_archive": {"path": FROZEN_ATLAS.relative_to(ROOT).as_posix(),
+                          "sha256": FROZEN_ATLAS_SHA256,
+                          "accepted_source_commit": "e58880049cb88db17379a63bbe2377c63a7e7fe2"},
     }
     dump(dest/"bundle-manifest.json", bundle_manifest)
     with zipfile.ZipFile(site/BUNDLE, "w", zipfile.ZIP_DEFLATED) as archive:
@@ -618,7 +780,13 @@ def build(site=SITE):
         "readings": f"{FOLDER}/readings.json", "plates": [path.name for path in paths],
         "entry_id": "p469-entry", "source_frames": ["frame-06a", "frame-qian2018"],
         "rendered_06a_feature_ids": feature_ids, "current_water_objects": 34,
-        "context_links": 9, "current_relations": len(catalog),
+        "context_links": len({row["mapped_feature_id"] for row in
+                              [*data["water_evidence_navigation"], *urban["navigation"]]}),
+        "water_context_links": 9, "urban_context_links": len(urban["navigation"]),
+        "urban_contexts": f"{FOLDER}/urban-contexts.json",
+        "urban_context_counts": urban["counts"],
+        "urban_context_source_sha256": urban["source_sha256"],
+        "current_relations": len(catalog),
         "geographic_coordinates_added": 0, "new_metric_measurements": 0,
         "new_516_528_bank_geometry": None, "approved_h2_changed": False,
         "source_inputs_sha256": before_sources,

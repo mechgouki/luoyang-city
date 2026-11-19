@@ -181,9 +181,9 @@ def check_context(page, data, feature_id):
     expect(page.locator("#context-heading")).to_contain_text(context_label(data, feature_id))
     article = page.locator(f"#context-{feature_id}")
     expect(article).to_be_visible()
-    for other in data["water_evidence_navigation"]:
-        if other["mapped_feature_id"] != feature_id:
-            expect(page.locator(f'#context-{other["mapped_feature_id"]}')).to_be_hidden()
+    for other in page.locator("[data-context-card]").all():
+        if other.get_attribute("data-context-card") != feature_id:
+            expect(other).to_be_hidden()
     text = compact(article.inner_text())
     assert compact(navigation["limit"]) in text, feature_id
     relations = {relation["ref"]: relation for relation in data["current_relations"]}
@@ -200,6 +200,74 @@ def check_context(page, data, feature_id):
             assert canonical_url in hrefs, (feature_id, ref, source["id"])
     assert parse_qs(urlsplit(page.url).fragment).get("anchor") == [feature_id]
     return navigation["evidence_refs"]
+
+
+def check_urban_context(page, data, urban, feature_id, *, active=True):
+    """Read every original urban record at its assigned gate, not hidden global text."""
+    navigation = next(item for item in urban["navigation"]
+                      if item["mapped_feature_id"] == feature_id)
+    cluster = next(item for item in urban["clusters"] if item["id"] == navigation["cluster_id"])
+    article = page.locator(f"#context-{feature_id}")
+    expect(article).to_be_visible()
+    if active:
+        expect(page.locator("#anchor-choice")).to_have_value(feature_id)
+        expect(page.locator("#context-heading")).to_contain_text(context_label(data, feature_id))
+        for other in page.locator("[data-context-card]").all():
+            if other.get_attribute("data-context-card") != feature_id:
+                expect(other).to_be_hidden()
+        assert parse_qs(urlsplit(page.url).fragment).get("anchor") == [feature_id]
+    assert compact(navigation["limit"]) in compact(article.inner_text())
+    section = article.locator(f'[data-urban-cluster="{cluster["id"]}"]')
+    expect(section).to_be_visible()
+    expect(section.locator("[data-urban-edge-id]")).to_have_count(len(cluster["edges"]))
+    for edge in cluster["edges"]:
+        record = section.locator(f'[data-urban-edge-id="{edge["id"]}"]')
+        expect(record).to_be_visible()
+        expect(record).to_have_attribute("data-evidence-grade", edge["grade"])
+        text = compact(record.inner_text())
+        for field in ("quote", "scope", "source_record"):
+            assert compact(edge[field]) in text, (feature_id, edge["id"], field)
+        assert edge["grade"] in record.inner_text(), (edge["id"], "visible evidence grade")
+        hrefs = {link.get_attribute("href") for link in record.locator("a[href]").all()}
+        for link in urban["source_records"][edge["source_record"]]["links"]:
+            assert link["url"] in hrefs, (edge["id"], link["id"])
+    events = cluster.get("temporal_events", [])
+    expect(section.locator("[data-urban-event-id]")).to_have_count(len(events))
+    names = {node["id"]: node["name"] for node in cluster["nodes"]}
+    for event in events:
+        record = section.locator(f'[data-urban-event-id="{event["id"]}"]')
+        expect(record).to_be_visible()
+        text = compact(record.inner_text())
+        for field in ("event", "scope", "source_record"):
+            assert compact(event[field]) in text, (event["id"], field)
+        assert str(event["year"]) in text
+        assert compact(names[event["subject"]]) in text
+        if event["id"] == "K02T01":
+            assert "东石桥" in text and "永桥" in text, "The 527 event exclusions must stay visible"
+    original = section.locator(f'a[data-urban-source-link="{cluster["id"]}"]')
+    expect(original).to_be_visible()
+    expect(original).to_have_attribute("href", "./" + navigation["page"])
+    assert original.get_attribute("target") is None
+    return {"cluster": cluster["id"], "edge_ids": [edge["id"] for edge in cluster["edges"]],
+            "event_ids": [event["id"] for event in events], "source_page": navigation["page"]}
+
+
+def check_urban_roundtrip(page, data, urban, feature_id):
+    result = check_urban_context(page, data, urban, feature_id)
+    cluster_id = result["cluster"]
+    original = page.locator(f'#context-{feature_id} a[data-urban-source-link="{cluster_id}"]')
+    original.click()
+    page.wait_for_url("**/prosperity-street-clusters.html?*")
+    page.wait_for_function("document.documentElement.dataset.p453Ready === 'true'")
+    assert parse_qs(urlsplit(page.url).query).get("cluster") == [cluster_id]
+    assert parse_qs(urlsplit(page.url).query).get("grade") == ["all"]
+    expect(page.locator(f'article[data-cluster-panel="{cluster_id}"]')).to_be_visible()
+    expect(page.locator(f'article[data-cluster-panel="{cluster_id}"] tr.relation-row:visible')).to_have_count(
+        len(result["edge_ids"]))
+    page.go_back(wait_until="load")
+    ready(page)
+    assert check_urban_context(page, data, urban, feature_id) == result
+    return result
 
 
 def download_paths(study):
@@ -275,7 +343,7 @@ def check_downloads(page, base, output, device, data, report):
     return resources
 
 
-def check_nojs(browser, base, data, output, device):
+def check_nojs(browser, base, data, urban, output, device):
     mobile = device == "mobile"
     context = browser.new_context(
         viewport={"width": 390 if mobile else 1440, "height": 844 if mobile else 950},
@@ -292,6 +360,12 @@ def check_nojs(browser, base, data, output, device):
             article = page.locator(f'#context-{navigation["mapped_feature_id"]}')
             expect(article).to_be_visible()
             assert compact(navigation["limit"]) in compact(article.inner_text())
+        for navigation in urban["navigation"]:
+            feature_id = navigation["mapped_feature_id"]
+            check_urban_context(page, data, urban, feature_id, active=False)
+            fit(page, output, f"p469-{device}-nojs-{feature_id}-overflow")
+            page.locator(f"#context-{feature_id}").screenshot(
+                path=str(output / f"p469-{device}-nojs-{feature_id}-context.png"), animations="disabled")
         for water in data["current_water_ledger"]:
             row = page.locator(f'#water-{water["id"]}')
             expect(row).to_be_visible()
@@ -308,7 +382,7 @@ def check_page(page, base, output, device):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     report = {"base_url": base, "device": device, "status": "running", "checks": [],
-              "download_sha256": {}, "map_bounds": {}, "contexts": {}, "errors": []}
+              "download_sha256": {}, "map_bounds": {}, "contexts": {}, "urban_contexts": {}, "errors": []}
     on_error = lambda error: report["errors"].append(str(error))
     page.on("pageerror", on_error)
     try:
@@ -328,6 +402,12 @@ def check_page(page, base, output, device):
         assert data["version"] == "P4.6.9"
         assert len(data["water_evidence_navigation"]) == 9
         assert len(data["current_water_ledger"]) == 34
+        response = page.request.get(base + "backbone-469/urban-contexts.json")
+        assert response.ok
+        urban = response.json()
+        assert len(urban["navigation"]) == 2
+        assert {item["id"] for item in urban["clusters"]} == {"K01", "K02"}
+        expect(page.locator("[data-context-card]")).to_have_count(10)
 
         for map_id in MAPS:
             choose_map(page, map_id)
@@ -374,6 +454,22 @@ def check_page(page, base, output, device):
         check_context(page, data, feature_id)
         report["checks"].append("Daxia and Qianqiu SVG markers, Guangmo list choice and reload show only their assigned water evidence")
 
+        for feature_id in ("geo-changhe-palace-gate", "geo-jianchun-gate"):
+            marker = panel(page, "frame-06a").locator(f'a[data-context-id="{feature_id}"]')
+            expect(marker).to_be_visible()
+            marker.locator("circle").click()
+            report["urban_contexts"][feature_id] = check_urban_context(page, data, urban, feature_id)
+            if feature_id == "geo-jianchun-gate":
+                check_context(page, data, feature_id)
+            fit(page, output, f"p469-{device}-{feature_id}-overflow")
+            page.locator("#context-details").screenshot(
+                path=str(output / f"p469-{device}-{feature_id}-context.png"), animations="disabled")
+            page.reload(wait_until="load")
+            ready(page)
+            check_urban_context(page, data, urban, feature_id)
+            check_urban_roundtrip(page, data, urban, feature_id)
+        report["checks"].append("Palace Changhe and Jianchun SVG clicks show original K01/K02 records, grades, bridge-event scope, reload and actual P453/back navigation")
+
         page.goto(base + PAGE + "#map=frame-06a&anchor=geo-daxia-gate&water=W20", wait_until="load")
         ready(page)
         check_context(page, data, "geo-daxia-gate")
@@ -402,8 +498,8 @@ def check_page(page, base, output, device):
 
         resources = check_downloads(page, base, output, device, data, report)
         report["checks"].append(f"Actual browser downloads: two-page PDF, two SVGs, offline ZIP and all manifest JSON; {len(resources)} matching hashes")
-        check_nojs(page.context.browser, base, data, output, device)
-        report["checks"].append("No-JS keeps both full maps, nine source contexts, 34 water rows, I09 correction and unknown boundaries")
+        check_nojs(page.context.browser, base, data, urban, output, device)
+        report["checks"].append("No-JS keeps both full maps, nine water contexts plus both original urban clusters and bridge events, 34 water rows, I09 correction and unknown boundaries")
 
         back = page.locator('header a[href$="prosperity-water-p468.html"]').first
         expect(back).to_be_visible()

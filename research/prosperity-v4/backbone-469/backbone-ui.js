@@ -34,7 +34,7 @@
     for (const mark of document.querySelectorAll("[data-context-id]")) {
       mark.classList.toggle("is-selected", mark.dataset.contextId === id);
     }
-    heading.textContent = id ? anchorChoice.selectedOptions[0].textContent + " · 水道证据" : "门道周围，水从哪里读起";
+    heading.textContent = id ? anchorChoice.selectedOptions[0].textContent + " · 关系联读" : "门道周围，联读水系与城市关系";
     document.body.dataset.currentAnchor = id;
     if (write) updateHash();
     if (scroll) document.getElementById("contexts").scrollIntoView({block: "start"});
