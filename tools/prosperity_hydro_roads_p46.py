@@ -430,6 +430,7 @@ if __name__=="__main__":
     from prosperity_anchors_p461 import build as publish_source_readings
     from prosperity_south_p466 import build as publish_south
     from prosperity_water_p467 import build as publish_water
+    from prosperity_water_p468 import build as publish_water_remainders
     from prosperity_gates_p465 import build as publish_gates
     from prosperity_field_p464 import build as publish_field
     from prosperity_corridors_p463 import build as publish_corridors
@@ -443,3 +444,4 @@ if __name__=="__main__":
     publish_gates()
     publish_south()
     publish_water()
+    publish_water_remainders()

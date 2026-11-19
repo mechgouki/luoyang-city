@@ -1,7 +1,7 @@
 # 北魏洛阳文献地图 · Luoyang Atlas
 
 以《洛阳伽蓝记》及其校注、相关史地文献为基础的可追溯历史城市地图。
-仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前研究批次：**P4.6.7 / prosperity-water-p467**（河流与水道）；首页沿用**已批准的 H2《北魏洛阳盛景全景俯瞰》**。本批发布及验收状态以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新记录为准。
+仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前研究批次：**P4.6.8 / prosperity-water-p468**（城壕、宫西水道与独立园池）；首页沿用**已批准的 H2《北魏洛阳盛景全景俯瞰》**。本批发布及验收状态以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新记录为准。
 
 > 盛时图采用 516—528 年河阴之变前的文献合成时层，不是某一年实测地图。文献关系画布的图形大小与显示间距不代表历史测量；来源图坐标、表列尺寸、工作朝向和未定院界分别记录，不能拼接成未经验证的精确遗址边线。
 
@@ -15,7 +15,9 @@
 
 正式网站：[mechgouki.github.io/luoyang-city](https://mechgouki.github.io/luoyang-city/)。现有GitHub Actions在main提交后自动构建、部署、验收；无需重新设置Pages。每批正式完成以对应提交的build、deploy、verify-live全部成功为准。
 
-**P4.6.7 河流与水道**整理为[五图专题](https://mechgouki.github.io/luoyang-city/prosperity-water-p467.html)：绕城干流与城东南支、入城支渠与园池、七里涧的两种读法与调查止点、两处引洛与河渠分期、伊洛与西北来水。共53段关系，分为流向36、连接8、解释假说5、工程提议2、相邻2；数量不表示53条已定位古河道。目标时层为516—528年，旧道、已涸水体、工程提议与跨期证据分别标识。新增历史位置0、米制量测0，尚未完成全部河岸及各年通水核定。研究依据、图层边界及旧版衔接见[P4.6.7说明](docs/prosperity-water-p467-notes.md)。本地132项语义测试已通过；本地浏览器因环境拒绝socket而未能运行，PR/main CI和正式站桌面、手机、下载验收仍须以实际记录确认。
+**P4.6.8 城壕、宫西水道与独立园池**补入[四图专题](https://mechgouki.github.io/luoyang-city/prosperity-water-p468.html)：城西排水与内城壕沟、宫西水道、两处方湖与昭仪池、独立园池。核对12个前册保留对象；九行原典／报告数值区分宽度、残长、埋深和淤积语义。相邻、包含、层位不作水流，报告值不计为本项目新增图测。研究与未定项见[P4.6.8说明](docs/prosperity-water-p468-notes.md)，实际发布与验收状态以#52为准。
+
+**P4.6.7 河流与水道**整理为[五图专题](https://mechgouki.github.io/luoyang-city/prosperity-water-p467.html)：绕城干流与城东南支、入城支渠与园池、七里涧的两种读法与调查止点、两处引洛与河渠分期、伊洛与西北来水。共53段关系，分为流向36、连接8、解释假说5、工程提议2、相邻2；数量不表示53条已定位古河道。目标时层为516—528年，旧道、已涸水体、工程提议与跨期证据分别标识。新增历史位置0、米制量测0，尚未完成全部河岸及各年通水核定。研究依据、图层边界及旧版衔接见[P4.6.7说明](docs/prosperity-water-p467-notes.md)。已由[发布提交e6d0aae](https://github.com/mechgouki/luoyang-city/commit/e6d0aaec76b5d25ed347f377ce19d7361b47f9a2)完成正式站验收，674项公网资源及桌面／手机／下载均通过；[长期验收副本](https://github.com/mechgouki/luoyang-city/tree/54bc53f53a95f0390c5f3c8fd181c6e070e16623/evidence/p467)已保存。
 
 [固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)管理当前进度、验收状态和下一步；[研究记录 #47](https://github.com/mechgouki/luoyang-city/issues/47)保存史料、原图页码、量测依据与研究判断。存在并行会话更新时，以#52最新记录续接。
 
@@ -29,6 +31,7 @@ P3把阊阖门从外接尺度片推进到[局部考古平面](https://mechgouki.
 
 | 工作线 | 内容 | 入口 |
 | --- | --- | --- |
+| 盛时P4.6.8 | 城壕、宫西水道与独立园池四图；12个旧对象与9项原值分层核对，发布状态见#52 | [水系补遗](https://mechgouki.github.io/luoyang-city/prosperity-water-p468.html) |
 | 盛时P4.6.7 | 五图、53段河流与水道关系，七里涧两种校读与分期；发布状态见#52 | [河流与水道](https://mechgouki.github.io/luoyang-city/prosperity-water-p467.html) |
 | 盛时P4.6.6 | 城南两条大道、谷水与永桥；旧PDF封存 | [城南道路与水系](https://mechgouki.github.io/luoyang-city/prosperity-south-p466.html) |
 | 盛时P3 | 阊阖门局部平面、原图叠照、尺度核对与城市接合诊断 | [阊阖门平面](https://mechgouki.github.io/luoyang-city/prosperity-gate.html) |

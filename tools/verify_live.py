@@ -563,7 +563,8 @@ try:
  assert sd['diversion']['section_read'] is False and sd['texts']['bank_landings']==[None,None]
 
  water=info['prosperity_water_p467']
- assert water['source_commit']==info['source_commit'] and water['version']==release['prosperity_water_p467_version']
+ assert water['source_commit']=='e6d0aaec76b5d25ed347f377ce19d7361b47f9a2' and water['version']==release['prosperity_water_p467_version']
+ assert info['files_sha256'][water['atlas']]=='68c994d5a558ee222134afd98cf15e095b6b4dce4c75d999e68c9789d4d0d404'
  assert water['version'] in release['extensions'] and water['layout_coordinates_only'] is True
  assert water['geographic_coordinates_added']==0 and water['atlas_pages']==5
  assert get(south['page']).count(b'id="p467-entry"')==1
@@ -576,6 +577,26 @@ try:
  assert {water['page'],water['atlas'],*water['data_files']} <= set(info['files_sha256'])
  for plate in wd['plates']:
   tree=ET.fromstring(get('water-467/'+plate['id']+'.svg'))
+  for group in tree.iter('{http://www.w3.org/2000/svg}g'):
+   if group.get('class')=='water-segment':
+    route=next(el for el in group if el.get('class')=='segment-route')
+    assert ('marker-end' in route.attrib)==(group.get('data-relationship')=='flow')
+
+ remainder=info['prosperity_water_p468']
+ assert remainder['source_commit']==info['source_commit'] and remainder['version']==release['prosperity_water_p468_version']
+ assert remainder['version'] in release['extensions'] and remainder['layout_coordinates_only'] is True
+ assert remainder['geographic_coordinates_added']==0 and remainder['new_metric_measurements']==0
+ assert get(water['page']).count(b'id="p468-entry"')==1
+ rd=json.loads(get(remainder['readings']))
+ assert len(rd['plates'])==remainder['atlas_pages']==4
+ assert rd['geographic_coordinates'] is None and rd['new_516_528_bank_geometry'] is None
+ assert len(rd['legacy_water_coverage'])==remainder['legacy_objects_reviewed']==12
+ assert len(rd['reported_measurements'])==remainder['reported_value_rows']
+ assert all(item['new_measurement_by_project'] is False for item in rd['reported_measurements'])
+ assert sum(len(plate['segments']) for plate in rd['plates'])==remainder['segments']
+ assert {remainder['page'],remainder['atlas'],*remainder['data_files']} <= set(info['files_sha256'])
+ for plate in rd['plates']:
+  tree=ET.fromstring(get('water-468/'+plate['id']+'.svg'))
   for group in tree.iter('{http://www.w3.org/2000/svg}g'):
    if group.get('class')=='water-segment':
     route=next(el for el in group if el.get('class')=='segment-route')
@@ -598,6 +619,7 @@ try:
  report['prosperity_network_p462']=network_study
  report['prosperity_south_p466']=south
  report['prosperity_water_p467']=water
+ report['prosperity_water_p468']=remainder
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors
