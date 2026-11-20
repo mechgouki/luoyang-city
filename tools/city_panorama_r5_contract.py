@@ -3,7 +3,7 @@ import hashlib
 import re
 
 KEY="prosperity_city_panorama_r5"
-VERSION="prosperity-city-panorama-r5.2"
+VERSION="prosperity-city-panorama-r5.3"
 BASELINE="1a7df53882eca40a44777b6e0717969a09f0f634"
 HOME="index.html"
 ATLAS="prosperity-city-atlas.html"

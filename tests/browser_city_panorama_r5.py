@@ -52,6 +52,13 @@ def exercise(browser,base,device,out):
             expect(p.locator("#east-title")).to_be_visible()
             assert p.evaluate("document.documentElement.scrollWidth<=innerWidth")
             capture(p.locator("#palace-east figure img"),"palace-east")
+            p.locator("#palace-east [href='#sima-road']").click()
+            expect(p.locator("#sima-title")).to_be_visible()
+            p.reload(wait_until="domcontentloaded")
+            expect(p.locator("#sima-road")).to_contain_text("39.3")
+            p.locator("#sima-road img").evaluate("im=>im.decode()")
+            assert p.evaluate("document.documentElement.scrollWidth<=innerWidth")
+            capture(p.locator("#sima-road figure img"),"sima-road")
             with tempfile.TemporaryDirectory() as tmp:
                 for path in meta["download_files"]:
                     with p.expect_download() as ev:p.locator(f'[download][href="./{path}"]').click()
@@ -65,13 +72,16 @@ def exercise(browser,base,device,out):
                     page.locator(".tabbar [href='#palace-east']").click()
                     page.locator("#palace-east img").evaluate("im=>im.decode()")
                     expect(page.locator("#palace-east")).to_contain_text("东围墙")
+                    page.locator("#palace-east [href='#sima-road']").click()
+                    expect(page.locator("#sima-road")).to_contain_text("仓区西墙")
+                    page.locator("#sima-road img").evaluate("im=>im.decode()")
                     page.locator(".tabbar [href='#city']").click();expect(page.locator("#city")).to_be_visible()
                     page.locator("#city [data-label=C03]").click();expect(page.locator("#C03")).to_contain_text("太极殿")
             with browser.new_context(**opts,java_script_enabled=False) as disabled:
                 page=disabled.new_page();page.goto(base+PAGE+"#core")
                 expect(page.locator("#core")).to_be_visible();expect(page.locator("#city")).to_be_visible()
                 assert page.evaluate("document.documentElement.scrollWidth<=innerWidth")
-            report["checks"].append("Seven actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation")
+            report["checks"].append("Eight actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation")
             assert not report["errors"];report["status"]="passed"
         except Exception as e:
             report.update(status="failed",error=str(e));p.screenshot(path=out/(device+"-failure.png"));raise

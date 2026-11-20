@@ -5,6 +5,7 @@ from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
 
 from PIL import Image
+from city_panorama_sima import compare, plate as sima_plate
 from city_panorama_r5_contract import ATLAS, BASELINE, ENTRY, HOME, KEY, VERSION, before_r5, digest
 from city_panorama_r5_page import BUNDLE, FILES, FOLDER, MANIFEST, PAGE, make_page
 from city_panorama_r5_scene import CAMERAS, MODELS, project, svg
@@ -21,7 +22,7 @@ def scene_data(site):
     atlas=load(site/ATLAS_JSON);architecture=load(ROOT/ARCH)
     notes=load(SRC/"interpretation.json")
     scene={key:notes[key] for key in ("period","orientation","art_direction","sources")}
-    scene.update(version="R5.2",r4_baseline=BASELINE,source_atlas=ATLAS_JSON,source_atlas_sha256=sha(site/ATLAS_JSON),
+    scene.update(version="R5.3",r4_baseline=BASELINE,source_atlas=ATLAS_JSON,source_atlas_sha256=sha(site/ATLAS_JSON),
                  architecture_source=ARCH,architecture_sha256=sha(ROOT/ARCH),cameras=CAMERAS,
                  source_coordinate_space="06a original PDF points. x increases eastward on the sheet, y southward. Camera z is illustrative.",
                  projections={"perspective":"camera looks along decreasing y; rotate by pitch then apply focal length / depth",
@@ -41,6 +42,7 @@ def scene_data(site):
         item["projected_ground_px"]={key:[round(v,4) for v in project(x,y,0,c)] for key,c in CAMERAS.items()}
         models.append(item)
     scene["models"]=models
+    scene["sima_road"]=compare(load(SRC/"sima-road.json"),scene["features"])
     scene["east_palace"]=load(SRC/"palace-east.json")
     scene["image"]=load(SRC/"image-record.json")
     return scene
@@ -54,6 +56,7 @@ def build(site=ROOT/"_site"):
         assert img.size==(scene["image"]["width"],scene["image"]["height"])
     plates={key:svg(scene,key) for key in CAMERAS}
     for key,plate in plates.items():(folder/(key+".svg")).write_text(plate)
+    (folder/"sima-road.svg").write_text(sima_plate(scene["sima_road"]))
     dump(folder/"scene.json",scene)
     (site/PAGE).write_text(make_page(scene,plates))
     prior={}
@@ -65,7 +68,7 @@ def build(site=ROOT/"_site"):
         changed=original.replace(marker,ENTRY+marker,1)
         assert before_r5(info,path,changed)==original
         (site/path).write_bytes(changed)
-    assets=[FOLDER+"/"+p for p in (*STATIC,"core.svg","city.svg","scene.json")]
+    assets=[FOLDER+"/"+p for p in (*STATIC,"core.svg","city.svg","scene.json","sima-road.svg")]
     study=dict(version=VERSION,source_commit=info["source_commit"],page=PAGE,manifest=MANIFEST,bundle=BUNDLE,
                download_files=list(FILES),entry_predecessors=prior,files_sha256={p:sha(site/p) for p in assets},
                feature_count=len(scene["features"]),models=len(scene["models"]),artwork_status="published_for_review",
@@ -76,7 +79,7 @@ def build(site=ROOT/"_site"):
         for p in [*assets,MANIFEST]:z.write(site/p,p)
     release["extensions"]=sorted(set(release["extensions"])|{VERSION})
     release[KEY+"_version"]=VERSION
-    release["current_milestone"]="盛时 R5.2 · 宫城东部布局"
+    release["current_milestone"]="盛时 R5.3 · 司马门内道路"
     dump(site/"release.json",release)
     info[KEY]=study
     for p in [*assets,MANIFEST,BUNDLE,PAGE,HOME,ATLAS,"release.json"]:info["files_sha256"][p]=sha(site/p)
