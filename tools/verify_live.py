@@ -900,6 +900,8 @@ try:
  report['prosperity_city_north_p471']=north_view
  from verify_city_west_p472 import verify as verify_city_west
  report['prosperity_city_west_p472']=verify_city_west(info,get)
+ from verify_city_atlas_r4 import verify as verify_atlas
+ report['prosperity_city_atlas_r4']=verify_atlas(info,get)
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors

@@ -2,6 +2,10 @@
 
 更新：2026-11-20。当前进度、验收状态及下一条断点以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新正文和评论为准；史料、图源、量测和验收依据存于[研究记录 #47](https://github.com/mechgouki/luoyang-city/issues/47)。以真实主分支、发布清单和正式站验收为准；不要从较早ZIP恢复覆盖主分支。
 
+## 2026-11-20　R4 统一城市分布总图
+
+[全城总图](https://mechgouki.github.io/luoyang-city/prosperity-city-atlas.html)合并 R2 覆盖与 R3 定位依据，提供 339 个对象、十一片区的文献关系、两幅同源位置图、独立钱氏图框、PDF 与离线包。[本批研究说明与统计口径](city-atlas-r4.md)。正式发布状态以 #52 和对应版本清单为准。研究未定项保留，下一工作包是按统一布局深化 R5 全景。
+
 ## 2026-11-20　P4.7.2 城西门道与坊寺
 
 R1的[逐条对照](../research/prosperity-v4/west-472/crosswalk.json)、[图面与变更说明](prosperity-city-west-p472-notes.md)接入现行城市视图。页面为 `prosperity-city-west.html`，从北门与金墉专题可达。24条证据、22个已有实体，3个有来源图符、19个未定位。城西阊阖门空绑定，宫城阊阖仅供辨名。P1人工语境字段仍全部为空。后续按R2全城文献覆盖、R3地形与定位依据分级推进，再收束R4总图与R5全景。[固定交接与正式验收状态](https://github.com/mechgouki/luoyang-city/issues/52)。
