@@ -49,6 +49,14 @@ def exercise(browser, base, device, output):
         name = device+"-"+label+".png"
         content = where.screenshot(path=str(output/name),animations="disabled")
         report["screenshots"][name] = hashlib.sha256(content).hexdigest()
+    def width_check(view, record_id, mode):
+        width = size["width"]
+        box = view.locator("#"+record_id).bounding_box()
+        assert box and box["x"] >= -1 and box["x"]+box["width"] <= width+1, (mode,width,box)
+        scroll = view.locator("html").evaluate("node => node.scrollWidth")
+        assert scroll <= width+1, (mode,width,scroll)
+        report.setdefault("expanded_widths",{})[mode] = {"viewport":width, "card":box["width"], "document":scroll}
+
     def count(number):
         expect(page.locator("[data-record]:visible")).to_have_count(number)
     try:
@@ -60,7 +68,7 @@ def exercise(browser, base, device, output):
         page.wait_for_url("**/"+PAGE)
         expect(page.locator("html")).to_have_class("enhanced")
         count(24)
-        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
+        assert page.locator("html").evaluate("node => node.scrollWidth") <= size["width"]+1
         capture(page.locator("#source-plate"),"source")
         capture(page.locator("#relations-plate"),"relations")
         report["checks"].append("P471 entry, both readable plates and viewport fit")
@@ -112,7 +120,10 @@ def exercise(browser, base, device, output):
         page.go_back()
         expect(page.locator("#WR08 details")).to_be_visible()
         count(1)
-        report["checks"].append("Four groups, source lines, WR08 deep link, reload and history")
+        page.goto(base+PAGE+"#WR18")
+        expect(page.locator("#WR18 details")).to_have_attribute("open","")
+        width_check(page,"WR18","javascript")
+        report["checks"].append("Four groups, source lines, WR08 deep link, reload, history and expanded WR18 width")
 
         for path in meta["download_files"]:
             anchor = page.locator(f'a[download][href="./{path}"]')
@@ -148,6 +159,7 @@ def exercise(browser, base, device, output):
             nojs.wait_for_url("**/"+PAGE+"#WR18")
             nojs.locator("#WR18 summary").click()
             expect(nojs.locator("#WR18 details")).to_contain_text("528年前必定竣工")
+            width_check(nojs,"WR18","no_javascript")
             capture(nojs.locator("#WR18"),"nojs-period")
         report["checks"].append("No-JS native map jump, all records, all objects and phase limits")
         assert not report["errors"],report["errors"]
