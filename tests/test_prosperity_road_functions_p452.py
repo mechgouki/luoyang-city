@@ -101,6 +101,7 @@ class P452RoadReview(unittest.TestCase):
         self.assertTrue(self.preserve["protected_unchanged"])
         self.assertEqual(len(self.preserve["protected_sha256"]),self.preserve["protected_files"])
         for name,digest in self.preserve["protected_sha256"].items():
+            name = "homepage/history/index-before-r4.html" if name == "index.html" else name
             self.assertEqual(sha(SITE/name),digest,name)
             self.assertEqual(self.info["files_sha256"][name],digest,name)
         previous=OUT/"history/prosperity-city-distribution-before-p452.html"

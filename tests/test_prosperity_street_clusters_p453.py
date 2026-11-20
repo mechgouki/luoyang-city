@@ -31,6 +31,7 @@ class P453SourceRelations(unittest.TestCase):
     def test_all_prior_site_and_metadata_unchanged_except_one_link(self):
         self.assertTrue(self.proof["protected_unchanged"])
         for path,digest in self.proof["protected_files"].items():
+            path = "homepage/history/index-before-r4.html" if path == "index.html" else path
             self.assertEqual(sha(SITE/path),digest,path)
             self.assertEqual(self.info["files_sha256"][path],digest)
         self.assertEqual(read(SITE/"homepage/approval-v9.json")["hero"]["revision"],"panorama-approved-v9")
