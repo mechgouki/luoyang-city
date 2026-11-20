@@ -1,0 +1,497 @@
+{
+  "version": "R5.1",
+  "website_version": "prosperity-city-panorama-r5.1",
+  "site": "https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html",
+  "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+  "tree": "0449c3c182c8aa01916448e5ea70cccd090d3a69",
+  "prior_r4": "1a7df53882eca40a44777b6e0717969a09f0f634",
+  "pr": 66,
+  "pr_run": {
+    "id": 44718791996,
+    "event": "pull_request",
+    "run_attempt": 1,
+    "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44718791996",
+    "head_sha": "b46c8003435067598b2324ff4850aca47a7b92b3",
+    "created_at": "2026-11-20T10:23:15Z",
+    "updated_at": "2026-11-20T10:31:05Z",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 136228876862,
+        "name": "build",
+        "conclusion": "success",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44718791996/job/136228876862",
+        "completed_at": "2026-11-20T10:31:05Z"
+      },
+      {
+        "id": 136232664834,
+        "name": "deploy",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44718791996/job/136232664834",
+        "completed_at": "2026-11-20T10:31:05Z"
+      },
+      {
+        "id": 136232666407,
+        "name": "verify-live",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44718791996/job/136232666407",
+        "completed_at": "2026-11-20T10:31:05Z"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": 14621377021,
+        "name": "browser-build-evidence",
+        "digest": "sha256:0594cd6255d77d8fbc7d13e861816a5ea89bf80c49cfce8334101c08feff95e5",
+        "size_in_bytes": 149333689,
+        "expires_at": "2026-12-04T10:30:45Z"
+      }
+    ]
+  },
+  "production": {
+    "id": 44719941041,
+    "event": "push",
+    "run_attempt": 1,
+    "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44719941041",
+    "head_sha": "4d7072e571605399fcde489a56db47df41cd3763",
+    "created_at": "2026-11-20T10:31:22Z",
+    "updated_at": "2026-11-20T10:46:28Z",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 136232806377,
+        "name": "build",
+        "conclusion": "success",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44719941041/job/136232806377",
+        "completed_at": "2026-11-20T10:39:48Z"
+      },
+      {
+        "id": 136236825216,
+        "name": "deploy",
+        "conclusion": "success",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44719941041/job/136236825216",
+        "completed_at": "2026-11-20T10:40:11Z"
+      },
+      {
+        "id": 136237005478,
+        "name": "verify-live",
+        "conclusion": "success",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44719941041/job/136237005478",
+        "completed_at": "2026-11-20T10:46:28Z"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": 14622092082,
+        "name": "live-acceptance-evidence",
+        "digest": "sha256:d86ab37419dc18ca5cbd3e4c0ff83859c239e785bafa7eeff4b3b90f949d727c",
+        "size_in_bytes": 98250027,
+        "expires_at": "2026-12-20T10:46:22Z"
+      },
+      {
+        "id": 14621174021,
+        "name": "browser-build-evidence",
+        "digest": "sha256:36794320527837adb7fe810a0ed9957e372178c790ff6671d866d48ee10fbd8d",
+        "size_in_bytes": 149348227,
+        "expires_at": "2026-12-04T10:39:28Z"
+      }
+    ]
+  },
+  "http": {
+    "status": "passed",
+    "commit": "4d7072e571605399fcde489a56db47df41cd3763",
+    "checked_at": "2026-11-20T10:40:42Z",
+    "checked_files": 762,
+    "prosperity_city_panorama_r5": {
+      "status": "passed",
+      "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+      "source_features": 28,
+      "models": 4,
+      "views": 3,
+      "download_count": 6,
+      "offline_members": 9,
+      "distinct_resources": 17,
+      "protected_prior_pages": 2,
+      "approved_homepage_images": 2
+    },
+    "prosperity_city_atlas_r4": {
+      "status": "passed",
+      "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+      "counts": {
+        "entities": 339,
+        "levels": {
+          "source": 11,
+          "relative": 315,
+          "unlocated": 12,
+          "candidate": 1
+        },
+        "periods": {
+          "attested": 29,
+          "later": 7,
+          "undated": 47,
+          "unspecified": 252,
+          "conditional": 2,
+          "name": 2
+        },
+        "features": 30,
+        "direct_bindings": 13,
+        "records": 183,
+        "literal_targets": 236,
+        "manual_context_reviews": 11,
+        "cases": 14,
+        "water_records": 34,
+        "water_relations": 100,
+        "road_records": 21
+      },
+      "downloads": 11,
+      "basis_rows": 97,
+      "archive_members": 13,
+      "coverage_rows": 339,
+      "distinct_resources": 47,
+      "preservation": {
+        "p472_stable_assets": 7,
+        "p472_offline_members": 9,
+        "entry_pages": 2
+      }
+    }
+  },
+  "independent_https": {
+    "origin": "https://mechgouki.github.io/luoyang-city/",
+    "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+    "checked_at_utc": "2026-11-20T10:42:39.077876+00:00",
+    "r5": {
+      "status": "passed",
+      "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+      "source_features": 28,
+      "models": 4,
+      "views": 3,
+      "download_count": 6,
+      "offline_members": 9,
+      "distinct_resources": 17,
+      "protected_prior_pages": 2,
+      "approved_homepage_images": 2
+    },
+    "r4": {
+      "status": "passed",
+      "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+      "counts": {
+        "entities": 339,
+        "levels": {
+          "source": 11,
+          "relative": 315,
+          "unlocated": 12,
+          "candidate": 1
+        },
+        "periods": {
+          "attested": 29,
+          "later": 7,
+          "undated": 47,
+          "unspecified": 252,
+          "conditional": 2,
+          "name": 2
+        },
+        "features": 30,
+        "direct_bindings": 13,
+        "records": 183,
+        "literal_targets": 236,
+        "manual_context_reviews": 11,
+        "cases": 14,
+        "water_records": 34,
+        "water_relations": 100,
+        "road_records": 21
+      },
+      "downloads": 11,
+      "basis_rows": 97,
+      "archive_members": 13,
+      "coverage_rows": 339,
+      "distinct_resources": 47,
+      "preservation": {
+        "p472_stable_assets": 7,
+        "p472_offline_members": 9,
+        "entry_pages": 2
+      }
+    },
+    "resource_count": 61,
+    "public_sha256": {
+      "build-info.json": "e1a9769796e9cb91678a733dc66c0668f71c9b25e10191b87fd2d40a59748f13",
+      "city-atlas/atlas.css": "831f048205a1136ca53ca15a427583e4768c2adef0f0fb1a85c5a539862e1cb8",
+      "city-atlas/atlas.js": "362273341151b9b20c7c275bd09cbcacf2ce2b70ddba774bdab788c6e682041a",
+      "city-atlas/atlas.json": "06a0f5f4659f4c4f7d81ac0533612a51a2895ef7f5686ca47ee8184128d3a79c",
+      "city-atlas/basis.csv": "2183e7ed36b2d002a3a0733d3e7b9d33940bbfa6061e6675e8c96929af98aad0",
+      "city-atlas/city.svg": "9d1dff104cd01b3a78c45979bf5ab904589c26ccef85b6715f85657620b0ad04",
+      "city-atlas/core.svg": "d88d8b1121cb92bdbde9c20d227bcb9003a473dd3ab953de66554232cda0d03a",
+      "city-atlas/coverage.csv": "51876e3cf04bca021123caf80e18a5b5b0582f44123f29f649fb3aaac4a341ed",
+      "city-atlas/literary.svg": "f636db11cb335fa0c44af6c3b3732aa7f1a98dd253a69b708f5e407df3315f83",
+      "city-atlas/manifest.json": "3a862410852e9d63f4b8dd12cd873e33257f4e3325c67a288b3fdb37c8b2f3eb",
+      "city-atlas/qian.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+      "city-atlas/relations.svg": "571479720d54e9c8d23be5ff0cd72ab2e1fb15e05b893c71fd72c6c06a0e392c",
+      "city-panorama/city.svg": "120ab4a09887abe882b805706c8534ccc62259568a56bd9b6ed36ac50a0c205a",
+      "city-panorama/core.svg": "1279bb5ba55193967ecb34c4b2678d205f7a08d41389bc5d0c1f54e2e3e6ad2f",
+      "city-panorama/manifest.json": "d79bffbefe9173811cbd955b16ad7a91aa7cc4987ba4c26d63b12922ca5af9e0",
+      "city-panorama/panorama-small.webp": "9e130c899abbf49704d308e773c24dd82a578d00bd752fd48cb9496a4d4a3596",
+      "city-panorama/panorama.css": "fe6d9ff60bd476855ce5816056e3cf4c4e4d51c200b4d42d53c8956b3d0cb5a1",
+      "city-panorama/panorama.js": "dfca8b86dc889d32d1e74970c07b006b307162da82109eec9f53cad8bf9c7205",
+      "city-panorama/panorama.webp": "2c990d2388b5cde804a5c5497039e4951646fe490ae46579cd7642a085b48a95",
+      "city-panorama/scene.json": "7fe5181c4780dc1547f7e5b4a7f1275849d963c30ab996850a6dc23f88d8018f",
+      "downloads/city-atlas.pdf": "af104bffa46e8623ddc8acb043fa1ea5d2d8b7f5d4bfcc686d1f90b66c544f5c",
+      "downloads/city-atlas.zip": "5ef372ce80226675427e58568d00970afda5ba645efd887227e81aeffcf3b7c6",
+      "downloads/city-panorama.zip": "477cd212330b3c722ec4d616b0b704f1ef0b8103c090cc41124887cb04605576",
+      "homepage/approval-v9.json": "a36f0edc09fa26c647799a92fc715fc5fda3412f344a83493ea998392ed74da0",
+      "index.html": "f8c3ba4f354014887f120cf6b73c4b256df2e255c70ade47feba56ddd8f7d1e1",
+      "prosperity-city-atlas.html": "2381a67a3a8d9b4812449dc2b189e3f6c9474a3e1d6ce45d963295210de6b0ab",
+      "prosperity-city-panorama.html": "68ef2cc1794f2ded859ac6963ba80118479242be943c109a5d5852dfadb8caf5",
+      "release.json": "73dbe181a4c5fd9dbc30878fdca47e9b53fa9ddcdb2ad1ddc3726a76dd0d8802",
+      "_assets/6465657667ba740d3fc9-luoyang-panorama-approved-v9.webp": "6465657667ba740d3fc99cde2495a864d3a8a446e2086c25984c0c547eed5825",
+      "_assets/98459529d0a2d8210aaf-luoyang-panorama-approved-v9-small.webp": "98459529d0a2d8210aaf2728b0c1673ca38b46df2f7b761c9064f1c21fe053b6",
+      "data/entities.json": "829f0c1f97a34fc4155346dec1e765f8efb4981d4a48f0d5aaad0e47c2cec5ed",
+      "prosperity/text-review.json": "e897985535b46d802708e628da4bad5a40c667ad2283caad55aeb0b347cb3836",
+      "prosperity/geographic-evidence.json": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79",
+      "prosperity/data.json": "1c578c66a87d8c394e7855bce9ba449116f5a29af18ecf1024acc228cba973bf",
+      "prosperity/literary-plan.svg": "f85ed030433f2a4c066fde049448c42fd48a333ec6bf9ea63172853b6db224f1",
+      "city-review/ledger.json": "1256b7789d5a29851dcd2a39b5f3ce2d352ba2e1862877757ae3f1ff8b9c3ef0",
+      "city-review/cases.json": "0e442209d55ccefe9b3957ccea380fb58f7f0c85b135568b63380c3af8caa1ba",
+      "common-470/readings.json": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870",
+      "north-471/readings.json": "883ba2756666b9926bdbd065cd3dca81de7bd2f011ab9021f42f6da687a59fab",
+      "west-472/readings.json": "dec5beaa1b6a4b8616b743aefad0418c3d1f456adf10bc8f1cffdddc06dd865f",
+      "prosperity/terrain-constraints.json": "2280ad1e0163e2e330d61ba093a603d15662cd268a18099d3609209930d8de51",
+      "backbone-469/readings.json": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+      "backbone-469/jianchun-plan-audit.json": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f",
+      "backbone-469/frame-qian2018.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+      "homepage/history/index-before-r4.html": "7fc56a95c3358937ac14e79f630e99dea566084fb5340c5193d5b8b77c6410b3",
+      "_assets/f0b0ab62e0263d7bfeb6-runtime.js": "f0b0ab62e0263d7bfeb6aae080351d2cc536d940ba629c85a9dd02715553aab1",
+      "prosperity-city-west.html": "c62b44d0081f890ceb1e84533646d3a0314e164ef2a6688d67f9591f18494ac9",
+      "west-472/west-source.svg": "127d86abf37868e634a97fefd71f5be80fcd6e09ffd6dd0a41681fa13bf13105",
+      "west-472/west-relations.svg": "a7f7b2d1d9652a1e4b5f1598f9a3f271afe68eac41bbef5ee2001a09d92ee7b2",
+      "west-472/evidence.csv": "87e3a0b30d013245c4750451de4a69adcaa274c494644f8dc45416adfdf88212",
+      "west-472/crosswalk.json": "32d615c3435bb9dcda0a8a588601188c78441bd4a557f860da40973b86d3aea6",
+      "west-472/study.css": "7ef745a19dbe1b9e776387e2b5e2c9bfa2d905734657abb1b1e26fdfc347e662",
+      "west-472/west-ui.js": "e4629ca3a27b6b3858be74393b2691834b7312add470e1d9d450f3e727aefdc3",
+      "west-472/bundle-manifest.json": "87dda732a2134e2d148f47226ca3fefcec32f62b7d5c11f1215d3b65932abee6",
+      "prosperity-city-north.html": "77eef7e802356de3ba9192597f6a7ecaad9edc96f05c751672fc117123894e03",
+      "common-470/bundle-manifest.json": "cd5dc0c6bef7c54a26026389f57ef1be07300b84fcba5a440e03c7ee4cfef94b",
+      "downloads/common-470.zip": "1013849862776f7433004810fbcf0b0c7b1df56a318869fd57d6d04a1faa6200",
+      "downloads/north-471.zip": "3a7843fcb8d276c62955876a7c177ac7575dc5b33ce70f782480379dc1ee83f0",
+      "north-471/bundle-manifest.json": "91dd45fe5a72cd0eeae335244e89c76721debaafdedb33dc4aba22b2ce1d3deb",
+      "prosperity-city-common.html": "69301bd4d5541f562fa5ca2cc8bf5d6e026452fd5108104a9c70de888ee163ed",
+      "downloads/west-472.zip": "ace545e93fb7903caffe94c4dc4d684778f5e5472a5d84480ae0eda5994f0951"
+    },
+    "image_record": {
+      "title": "自城南望宫城",
+      "medium": "以 R4 宫寺视角投影图引导生成的艺术鸟瞰",
+      "width": 1628,
+      "height": 966,
+      "source_png_sha256": "7c6ec7f549509fe9a3525da8e85de86085fe0dd5f2d17ea66f6be94a2b22c793",
+      "published_full_sha256": "2c990d2388b5cde804a5c5497039e4951646fe490ae46579cd7642a085b48a95",
+      "published_small_sha256": "9e130c899abbf49704d308e773c24dd82a578d00bd752fd48cb9496a4d4a3596",
+      "small_width": 900,
+      "composition_review": "四处取读中心为人工在艺术原幅上读取的近似画面位置。对照地面参考点时受屋檐遮挡与符号简化影响，只比较构图，不作跨图配准。塔影檐层作了简化，九层读法在核心体量图中逐层呈现。",
+      "painting_footpoints_px": {
+        "C01": [
+          782,
+          605
+        ],
+        "C02": [
+          1381,
+          512
+        ],
+        "C03": [
+          795,
+          531
+        ],
+        "C04": [
+          545,
+          744
+        ]
+      },
+      "layer_status": "published_for_review",
+      "homepage_replacement_approved": false
+    }
+  },
+  "research_regressions": 212,
+  "approved_homepage_tests": 5,
+  "browsers": {
+    "pr": {
+      "desktop": {
+        "device": "desktop",
+        "checks": [
+          "Two entrances, responsive artwork, four comparison marks, source cards and restoration of shared views",
+          "Six actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation"
+        ],
+        "downloads": {
+          "city-panorama/panorama.webp": "2c990d2388b5cde804a5c5497039e4951646fe490ae46579cd7642a085b48a95",
+          "city-panorama/core.svg": "1279bb5ba55193967ecb34c4b2678d205f7a08d41389bc5d0c1f54e2e3e6ad2f",
+          "city-panorama/city.svg": "120ab4a09887abe882b805706c8534ccc62259568a56bd9b6ed36ac50a0c205a",
+          "city-panorama/scene.json": "457dc01e5e103bdd4c4b513f88153033c11d1599983a7f0b99b4d4b993984098",
+          "city-panorama/manifest.json": "a76f6444240aeb4839d9434d515a4445c9e184762618a56f8af8a3b828094393",
+          "downloads/city-panorama.zip": "40601ab94ed1f09c18578ecbeaa6371707f9ae62a00ca6247097a1e68cf827ba"
+        },
+        "screenshots": {
+          "desktop-landmarks.png": "091f5ade709be8f18624fa392eea4c3fef2f91ea659119f474140773426e30b9",
+          "desktop-core.png": "e577fee4d2eb5a1256d895a23ca33bb43fc1272623b50eb2bfd458ac873d1a7c"
+        },
+        "errors": [],
+        "source_commit": "4c844900b87e1247d2f98a4c60e21109ab579f41",
+        "status": "passed"
+      },
+      "mobile": {
+        "device": "mobile",
+        "checks": [
+          "Two entrances, responsive artwork, four comparison marks, source cards and restoration of shared views",
+          "Six actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation"
+        ],
+        "downloads": {
+          "city-panorama/panorama.webp": "2c990d2388b5cde804a5c5497039e4951646fe490ae46579cd7642a085b48a95",
+          "city-panorama/core.svg": "1279bb5ba55193967ecb34c4b2678d205f7a08d41389bc5d0c1f54e2e3e6ad2f",
+          "city-panorama/city.svg": "120ab4a09887abe882b805706c8534ccc62259568a56bd9b6ed36ac50a0c205a",
+          "city-panorama/scene.json": "457dc01e5e103bdd4c4b513f88153033c11d1599983a7f0b99b4d4b993984098",
+          "city-panorama/manifest.json": "a76f6444240aeb4839d9434d515a4445c9e184762618a56f8af8a3b828094393",
+          "downloads/city-panorama.zip": "40601ab94ed1f09c18578ecbeaa6371707f9ae62a00ca6247097a1e68cf827ba"
+        },
+        "screenshots": {
+          "mobile-landmarks.png": "7660a23b03b6d1c8e70dddb1e72e7ebbb21b871d0daad3f7e8df13ec33eed8c2",
+          "mobile-core.png": "ae2d96becace553bd5f7859583889d7e173334c591308856d8f5613fdd30383a"
+        },
+        "errors": [],
+        "source_commit": "4c844900b87e1247d2f98a4c60e21109ab579f41",
+        "status": "passed"
+      }
+    },
+    "build": {
+      "desktop": {
+        "device": "desktop",
+        "checks": [
+          "Two entrances, responsive artwork, four comparison marks, source cards and restoration of shared views",
+          "Six actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation"
+        ],
+        "downloads": {
+          "city-panorama/panorama.webp": "2c990d2388b5cde804a5c5497039e4951646fe490ae46579cd7642a085b48a95",
+          "city-panorama/core.svg": "1279bb5ba55193967ecb34c4b2678d205f7a08d41389bc5d0c1f54e2e3e6ad2f",
+          "city-panorama/city.svg": "120ab4a09887abe882b805706c8534ccc62259568a56bd9b6ed36ac50a0c205a",
+          "city-panorama/scene.json": "7fe5181c4780dc1547f7e5b4a7f1275849d963c30ab996850a6dc23f88d8018f",
+          "city-panorama/manifest.json": "d79bffbefe9173811cbd955b16ad7a91aa7cc4987ba4c26d63b12922ca5af9e0",
+          "downloads/city-panorama.zip": "477cd212330b3c722ec4d616b0b704f1ef0b8103c090cc41124887cb04605576"
+        },
+        "screenshots": {
+          "desktop-landmarks.png": "091f5ade709be8f18624fa392eea4c3fef2f91ea659119f474140773426e30b9",
+          "desktop-core.png": "e577fee4d2eb5a1256d895a23ca33bb43fc1272623b50eb2bfd458ac873d1a7c"
+        },
+        "errors": [],
+        "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+        "status": "passed"
+      },
+      "mobile": {
+        "device": "mobile",
+        "checks": [
+          "Two entrances, responsive artwork, four comparison marks, source cards and restoration of shared views",
+          "Six actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation"
+        ],
+        "downloads": {
+          "city-panorama/panorama.webp": "2c990d2388b5cde804a5c5497039e4951646fe490ae46579cd7642a085b48a95",
+          "city-panorama/core.svg": "1279bb5ba55193967ecb34c4b2678d205f7a08d41389bc5d0c1f54e2e3e6ad2f",
+          "city-panorama/city.svg": "120ab4a09887abe882b805706c8534ccc62259568a56bd9b6ed36ac50a0c205a",
+          "city-panorama/scene.json": "7fe5181c4780dc1547f7e5b4a7f1275849d963c30ab996850a6dc23f88d8018f",
+          "city-panorama/manifest.json": "d79bffbefe9173811cbd955b16ad7a91aa7cc4987ba4c26d63b12922ca5af9e0",
+          "downloads/city-panorama.zip": "477cd212330b3c722ec4d616b0b704f1ef0b8103c090cc41124887cb04605576"
+        },
+        "screenshots": {
+          "mobile-landmarks.png": "7660a23b03b6d1c8e70dddb1e72e7ebbb21b871d0daad3f7e8df13ec33eed8c2",
+          "mobile-core.png": "ae2d96becace553bd5f7859583889d7e173334c591308856d8f5613fdd30383a"
+        },
+        "errors": [],
+        "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+        "status": "passed"
+      }
+    },
+    "live": {
+      "desktop": {
+        "device": "desktop",
+        "checks": [
+          "Two entrances, responsive artwork, four comparison marks, source cards and restoration of shared views",
+          "Six actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation"
+        ],
+        "downloads": {
+          "city-panorama/panorama.webp": "2c990d2388b5cde804a5c5497039e4951646fe490ae46579cd7642a085b48a95",
+          "city-panorama/core.svg": "1279bb5ba55193967ecb34c4b2678d205f7a08d41389bc5d0c1f54e2e3e6ad2f",
+          "city-panorama/city.svg": "120ab4a09887abe882b805706c8534ccc62259568a56bd9b6ed36ac50a0c205a",
+          "city-panorama/scene.json": "7fe5181c4780dc1547f7e5b4a7f1275849d963c30ab996850a6dc23f88d8018f",
+          "city-panorama/manifest.json": "d79bffbefe9173811cbd955b16ad7a91aa7cc4987ba4c26d63b12922ca5af9e0",
+          "downloads/city-panorama.zip": "477cd212330b3c722ec4d616b0b704f1ef0b8103c090cc41124887cb04605576"
+        },
+        "screenshots": {
+          "desktop-landmarks.png": "091f5ade709be8f18624fa392eea4c3fef2f91ea659119f474140773426e30b9",
+          "desktop-core.png": "e577fee4d2eb5a1256d895a23ca33bb43fc1272623b50eb2bfd458ac873d1a7c"
+        },
+        "errors": [],
+        "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+        "status": "passed"
+      },
+      "mobile": {
+        "device": "mobile",
+        "checks": [
+          "Two entrances, responsive artwork, four comparison marks, source cards and restoration of shared views",
+          "Six actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation"
+        ],
+        "downloads": {
+          "city-panorama/panorama.webp": "2c990d2388b5cde804a5c5497039e4951646fe490ae46579cd7642a085b48a95",
+          "city-panorama/core.svg": "1279bb5ba55193967ecb34c4b2678d205f7a08d41389bc5d0c1f54e2e3e6ad2f",
+          "city-panorama/city.svg": "120ab4a09887abe882b805706c8534ccc62259568a56bd9b6ed36ac50a0c205a",
+          "city-panorama/scene.json": "7fe5181c4780dc1547f7e5b4a7f1275849d963c30ab996850a6dc23f88d8018f",
+          "city-panorama/manifest.json": "d79bffbefe9173811cbd955b16ad7a91aa7cc4987ba4c26d63b12922ca5af9e0",
+          "downloads/city-panorama.zip": "477cd212330b3c722ec4d616b0b704f1ef0b8103c090cc41124887cb04605576"
+        },
+        "screenshots": {
+          "mobile-landmarks.png": "7660a23b03b6d1c8e70dddb1e72e7ebbb21b871d0daad3f7e8df13ec33eed8c2",
+          "mobile-core.png": "ae2d96becace553bd5f7859583889d7e173334c591308856d8f5613fdd30383a"
+        },
+        "errors": [],
+        "source_commit": "4d7072e571605399fcde489a56db47df41cd3763",
+        "status": "passed"
+      }
+    }
+  },
+  "screenshots": {
+    "desktop-core.webp": {
+      "relative_path": "screenshots/desktop-core.webp",
+      "webp_sha256": "dc2bb0a19746d2cfd3d3dc708c3d184e737ed8c6de604fb76f8b0b84848bb588",
+      "original_png_sha256": "e577fee4d2eb5a1256d895a23ca33bb43fc1272623b50eb2bfd458ac873d1a7c",
+      "matching_pr_png": true,
+      "matching_main_build_png": true
+    },
+    "desktop-landmarks.webp": {
+      "relative_path": "screenshots/desktop-landmarks.webp",
+      "webp_sha256": "0b243e19fb4d4027970d1ff29c01076b27a970d098d4b10cf87fdcbf2d363f61",
+      "original_png_sha256": "091f5ade709be8f18624fa392eea4c3fef2f91ea659119f474140773426e30b9",
+      "matching_pr_png": true,
+      "matching_main_build_png": true
+    },
+    "mobile-core.webp": {
+      "relative_path": "screenshots/mobile-core.webp",
+      "webp_sha256": "f4b8e23f1db84052eeacf7f99bedafaef8c72f96eff7e5d3f12593c0f6c66ca5",
+      "original_png_sha256": "ae2d96becace553bd5f7859583889d7e173334c591308856d8f5613fdd30383a",
+      "matching_pr_png": true,
+      "matching_main_build_png": true
+    },
+    "mobile-landmarks.webp": {
+      "relative_path": "screenshots/mobile-landmarks.webp",
+      "webp_sha256": "f825234a3ce00748f1e06a889bdae41c8d7a5954f7c99695e40a5700554ac4ec",
+      "original_png_sha256": "7660a23b03b6d1c8e70dddb1e72e7ebbb21b871d0daad3f7e8df13ec33eed8c2",
+      "matching_pr_png": true,
+      "matching_main_build_png": true
+    }
+  },
+  "retention": "Four full-frame WebP records of the R5 production browser views and original PNG fingerprints are retained here. CI archives have the recorded expiry dates.",
+  "limits": [
+    "28 original 06a features in two registered views; four source symbols carry illustrative masses.",
+    "Four sampled painting positions check composition only; illustrative roof heights, settlement texture and sky have no geo-registration.",
+    "Artistic tower silhouette simplifies storeys. Core volume represents nine stages.",
+    "H2/v9 remains the approved homepage visual. Ancient shoreline, ground heights and Jianchun joint controls remain unresolved."
+  ],
+  "completed_utc": "2026-11-20T10:47:11.435853+00:00",
+  "resolved_pr_finding": {
+    "run_id": 44718086009,
+    "job_id": 136226496139,
+    "failure": "The click area on the Taiji hall SVG callout left empty space between text and its leader, which sent pointer events to the background.",
+    "correction_commit": "b46c8003435067598b2324ff4850aca47a7b92b3",
+    "verification": "The same offline SVG click and all original journeys ran again."
+  }
+}
