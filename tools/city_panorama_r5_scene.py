@@ -131,11 +131,18 @@ def svg(scene,view):
         x,y=f["source_pdf_geometry"]["coordinates"];px,py=project(x,y,0,c)
         dx,dy={"C01":(-24,23),"C02":(18,-9),"C03":(-22,-30),"C04":(-25,34)}[m["id"]]
         end="end" if dx<0 else "start"
-        label=(f'<path d="M{px:.2f},{py:.2f} l{dx},{dy}" stroke="#4a6259" fill="none" stroke-width="1"/>'
+        # Include the leader's empty space in the hit target as well as the glyphs.
+        label_width=20*len(titles[m["id"]])+6
+        edge=px+dx-label_width if dx<0 else px+dx+label_width
+        left,right=sorted((px,edge))
+        top,bottom=min(py,py+dy-21),max(py,py+dy+5)
+        hit=(f'<rect x="{left-2:.2f}" y="{top-2:.2f}" width="{right-left+4:.2f}" '
+             f'height="{bottom-top+4:.2f}" fill="transparent" pointer-events="all"/>')
+        label=(hit+f'<path d="M{px:.2f},{py:.2f} l{dx},{dy}" stroke="#4a6259" fill="none" stroke-width="1"/>'
                f'<text x="{px+dx:.2f}" y="{py+dy:.2f}" text-anchor="{end}" fill="#21493d" '
                f'stroke="#f1ecdf" stroke-width="5" paint-order="stroke" font-family="sans-serif" font-size="18">{titles[m["id"]]}</text>')
         parts.append(f'<a href="{BASE}{R4}#feature-{f["id"]}" data-label="{m["id"]}">{label}</a>')
     name="宫寺核心" if view=="core" else "全城"
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-label="盛时洛阳{name}布局体量图">'
-            f'<title>{name} · 图06a原顶点投影</title><rect width="100%" height="100%" fill="#f1ecdf"/>'
+            f'<title>{name} · 图06a原顶点投影</title><rect width="100%" height="100%" fill="#f1ecdf" pointer-events="none"/>'
             +'<g stroke-linejoin="round" stroke-linecap="round">'+"".join(parts)+'</g></svg>\n')
