@@ -1,0 +1,857 @@
+{
+  "schema": "p470-public-production-verification-v1",
+  "status": "passed",
+  "checked_at_utc": "2026-11-20T01:35:48.757510+00:00",
+  "checked_at_beijing": "2026-11-20T09:35:48.757510+08:00",
+  "public_site": "https://mechgouki.github.io/luoyang-city/",
+  "public_page": "https://mechgouki.github.io/luoyang-city/prosperity-city-common.html",
+  "pull_request": {
+    "number": 61,
+    "url": "https://github.com/mechgouki/luoyang-city/pull/61",
+    "head_sha": "e59c6c680a816774c50de341f12c94fb58fa5944",
+    "tested_merge_sha": "b43731f09948f43461cee4b45e9e715c917fc230",
+    "tested_tree": "61c2968f410b8d44afa5b00a5b0493615ab3d1a7",
+    "workflow_run_id": 44581455465,
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44581455465",
+    "conclusion": "success"
+  },
+  "production": {
+    "source_commit": "e16c28d52ec743492b6ac248b7ae3076a04b47a2",
+    "tree": "61c2968f410b8d44afa5b00a5b0493615ab3d1a7",
+    "matches_reviewed_PR_tree": true,
+    "workflow_run_id": 44583071728,
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44583071728",
+    "run_attempt": 2,
+    "conclusion": "success",
+    "completed_at_utc": "2026-11-19T18:23:07Z",
+    "jobs": [
+      {
+        "id": 135773764804,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-19T18:08:04Z",
+        "completed_at": "2026-11-19T18:15:19Z"
+      },
+      {
+        "id": 135778383127,
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-19T18:15:24Z",
+        "completed_at": "2026-11-19T18:16:33Z"
+      },
+      {
+        "id": 135779181574,
+        "name": "verify-live",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-19T18:16:36Z",
+        "completed_at": "2026-11-19T18:23:07Z"
+      }
+    ]
+  },
+  "artifact_selection": "Success build and live archives were selected by exact IDs and creation times within their attempt-2 job bounds. The earlier same-name failed build archive was excluded from final acceptance. All five downloaded CI archives were checked against their declared byte lengths and SHA256 digests; Pages archives are listed as metadata only.",
+  "artifacts": [
+    {
+      "id": 14557918547,
+      "name": "browser-build-evidence",
+      "size_in_bytes": 53180817,
+      "digest": "sha256:4242dc2a94382a9ae3427cc7c747e64c6590fb2609a2d95415595448a9548c67",
+      "created_at": "2026-11-19T17:47:45Z",
+      "expires_at": "2026-12-03T17:47:42Z",
+      "workflow_run_id": 44580456047,
+      "url": "https://github.com/mechgouki/luoyang-city/actions/runs/44580456047/artifacts/14557918547",
+      "archive_downloaded_and_sha256_verified": true
+    },
+    {
+      "id": 14559091810,
+      "name": "github-pages",
+      "size_in_bytes": 321088600,
+      "digest": "sha256:c5b173d24ea378751a3a0219e11f7ca24bfae720652e4a879f69183cb77663f8",
+      "created_at": "2026-11-19T17:57:42Z",
+      "expires_at": "2026-11-26T17:57:32Z",
+      "workflow_run_id": 44581455465,
+      "url": "https://github.com/mechgouki/luoyang-city/actions/runs/44581455465/artifacts/14559091810",
+      "archive_downloaded_and_sha256_verified": false
+    },
+    {
+      "id": 14558689815,
+      "name": "browser-build-evidence",
+      "size_in_bytes": 139173141,
+      "digest": "sha256:3e651068f89b74519641848d7a75d193aa0767f6fe83130230fc6ba21979aedb",
+      "created_at": "2026-11-19T17:57:32Z",
+      "expires_at": "2026-12-03T17:57:26Z",
+      "workflow_run_id": 44581455465,
+      "url": "https://github.com/mechgouki/luoyang-city/actions/runs/44581455465/artifacts/14558689815",
+      "archive_downloaded_and_sha256_verified": true
+    },
+    {
+      "id": 14561382334,
+      "name": "browser-build-evidence",
+      "size_in_bytes": 139176484,
+      "digest": "sha256:64cc5358080a772106e167c2d1bb594c347c3d7d4a3e98e3bc03f6c9099734b2",
+      "created_at": "2026-11-19T18:15:04Z",
+      "expires_at": "2026-12-03T18:14:59Z",
+      "workflow_run_id": 44583071728,
+      "url": "https://github.com/mechgouki/luoyang-city/actions/runs/44583071728/artifacts/14561382334",
+      "archive_downloaded_and_sha256_verified": true
+    },
+    {
+      "id": 14560633753,
+      "name": "github-pages",
+      "size_in_bytes": 321090269,
+      "digest": "sha256:30d7d1da3f4fd7fd76783152649e3685a9558ad60602cbf0927ae1b754ab6a73",
+      "created_at": "2026-11-19T18:15:15Z",
+      "expires_at": "2026-11-26T18:15:05Z",
+      "workflow_run_id": 44583071728,
+      "url": "https://github.com/mechgouki/luoyang-city/actions/runs/44583071728/artifacts/14560633753",
+      "archive_downloaded_and_sha256_verified": false
+    },
+    {
+      "id": 14560541959,
+      "name": "browser-build-evidence",
+      "size_in_bytes": 68725852,
+      "digest": "sha256:b9ec2e800d64575c5ca04c3774f581a9b1bc2a7ee9b3b7e0751ed048d3771c48",
+      "created_at": "2026-11-19T18:04:35Z",
+      "expires_at": "2026-12-03T18:04:31Z",
+      "workflow_run_id": 44583071728,
+      "url": "https://github.com/mechgouki/luoyang-city/actions/runs/44583071728/artifacts/14560541959",
+      "archive_downloaded_and_sha256_verified": true
+    },
+    {
+      "id": 14559639289,
+      "name": "live-acceptance-evidence",
+      "size_in_bytes": 88143771,
+      "digest": "sha256:7860331f7ba1e3642060d0713f0657ba88d7e113d2e2ffb1f2357cf16285c8f0",
+      "created_at": "2026-11-19T18:23:04Z",
+      "expires_at": "2026-12-19T18:23:00Z",
+      "workflow_run_id": 44583071728,
+      "url": "https://github.com/mechgouki/luoyang-city/actions/runs/44583071728/artifacts/14559639289",
+      "archive_downloaded_and_sha256_verified": true
+    }
+  ],
+  "semantic_tests": {
+    "prosperity": {
+      "count": 186,
+      "status": "passed",
+      "report_sha256": "ce40e40047bd0b0154c6ed857539fb740849f86e937206f66a2bb8b2a49e58e5"
+    },
+    "homepage": {
+      "count": 5,
+      "status": "passed",
+      "report_sha256": "3a955260b04cf7e05fd8e2c1aeade91602a73ec2bddcba921220e6d8a4b9c0b2"
+    }
+  },
+  "public_HTTP_verification": {
+    "status": "passed",
+    "source_commit": "e16c28d52ec743492b6ac248b7ae3076a04b47a2",
+    "checked_files": 717,
+    "all_resource_statuses_passed": true,
+    "http_retry_count": 0,
+    "checked_at": "2026-11-19T18:17:20Z",
+    "report_sha256": "8b1a84f402c49e644fe980c7deeb13159f70ca6ba63431b62bdb5a5a8728ee6f"
+  },
+  "independent_public_readback": {
+    "status": "passed",
+    "source_commit": "e16c28d52ec743492b6ac248b7ae3076a04b47a2",
+    "file_count": 26,
+    "assertion_count": 76,
+    "checked_at": "2026-11-19T18:17:19.029318+00:00",
+    "report_sha256": "a17d32c2888e56b501fe0278febcef879aa869d707d6d87eebe5df744e4b5636",
+    "public_files": {
+      "_assets/4b5c1b5251bfe49854d3-luoyang-panorama-small.webp": {
+        "bytes": 239164,
+        "sha256": "4b5c1b5251bfe49854d3a3a1cf70bb622d9b37efae5d772358f01c4f47673235"
+      },
+      "_assets/6465657667ba740d3fc9-luoyang-panorama-approved-v9.webp": {
+        "bytes": 742398,
+        "sha256": "6465657667ba740d3fc99cde2495a864d3a8a446e2086c25984c0c547eed5825"
+      },
+      "_assets/98459529d0a2d8210aaf-luoyang-panorama-approved-v9-small.webp": {
+        "bytes": 274354,
+        "sha256": "98459529d0a2d8210aaf2728b0c1673ca38b46df2f7b761c9064f1c21fe053b6"
+      },
+      "_assets/c887056d075fa92c2514-luoyang-panorama.webp": {
+        "bytes": 599550,
+        "sha256": "c887056d075fa92c251422aece642df5def7af5b8ff087f3ff31f47ea6fdf4ee"
+      },
+      "backbone-469/frame-06a.svg": {
+        "bytes": 37894,
+        "sha256": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04"
+      },
+      "backbone-469/frame-qian2018.svg": {
+        "bytes": 16502,
+        "sha256": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba"
+      },
+      "backbone-469/jianchun-plan-audit.json": {
+        "bytes": 15772,
+        "sha256": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f"
+      },
+      "backbone-469/jianchun-source-context.svg": {
+        "bytes": 7572,
+        "sha256": "eaf696a70f7df2d446305599c9c679ab2cb48032fe9f556b834b62a72799528d"
+      },
+      "backbone-469/jianchun-structure-reading.svg": {
+        "bytes": 3955,
+        "sha256": "197be999a471879cf60884485ded7bd3fcbabfca52b897587d0c82f582a17377"
+      },
+      "backbone-469/readings.json": {
+        "bytes": 468561,
+        "sha256": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a"
+      },
+      "backbone-469/urban-contexts.json": {
+        "bytes": 33551,
+        "sha256": "47817e58ea63ccea1c3f2c83e4914333c6886ac30c6c6af0c182e77da406e6d7"
+      },
+      "common-470/bundle-manifest.json": {
+        "bytes": 4726,
+        "sha256": "d9a02c0a1e4b530baaef56ec94a819fab4370fc1b5a4ab33b8534ea3c0e14f6a"
+      },
+      "common-470/city-common.svg": {
+        "bytes": 43433,
+        "sha256": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89"
+      },
+      "common-470/common-ui.js": {
+        "bytes": 6538,
+        "sha256": "b4f46e2351342267b6ecf2c4b73f0960cfd660eefd2c34a4d92a00882afd6ef2"
+      },
+      "common-470/places.csv": {
+        "bytes": 1340,
+        "sha256": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232"
+      },
+      "common-470/readings.json": {
+        "bytes": 471604,
+        "sha256": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870"
+      },
+      "common-470/reuse-plan.json": {
+        "bytes": 6752,
+        "sha256": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346"
+      },
+      "common-470/study.css": {
+        "bytes": 12761,
+        "sha256": "11298174abfe0005b3b402565632fdd5be56ea725f3ac852ab017fe2b822b435"
+      },
+      "downloads/backbone-469.pdf": {
+        "bytes": 1051225,
+        "sha256": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6"
+      },
+      "downloads/common-470.zip": {
+        "bytes": 117624,
+        "sha256": "2164b4ef94bd03fca269cb22a9e967a04278c1d3b1baaa67f4eeb24248f9b760"
+      },
+      "index.html": {
+        "bytes": 25461,
+        "sha256": "a35d82b3248d3201e5f472895d22a125fb14940058ef5a671fc135d223278ff6"
+      },
+      "prosperity-backbone-p469.html": {
+        "bytes": 232701,
+        "sha256": "748508d7018ded7bcfbdc27a8f1a17cd5db103f4039d89a835d87acf894d4394"
+      },
+      "prosperity-city-common.html": {
+        "bytes": 85095,
+        "sha256": "93885d807fa2adae057adc8e2ea64b865b098a14566f66559e785f4789af0a37"
+      },
+      "prosperity-city-distribution/grounded-distribution.svg": {
+        "bytes": 47065,
+        "sha256": "5e626f70d28bde7217f2cdb5184657ea0533c5f9514d1355f4368cc1247b200e"
+      },
+      "prosperity/source-layout.svg": {
+        "bytes": 44032,
+        "sha256": "3e8706abbc0fe44c28e3d41e7039363f32d16f29943001cf12cc7546ede47c47"
+      },
+      "release.json": {
+        "bytes": 3019,
+        "sha256": "4b904cf926e74c4a8d7f85712c8c16719e95889f81dfd4456230b5e3603a7344"
+      }
+    }
+  },
+  "browser_verification": {
+    "P470_devices": {
+      "desktop": {
+        "status": "passed",
+        "viewport": {
+          "width": 1440,
+          "height": 950
+        },
+        "check_groups": 12,
+        "screenshot_count": 16,
+        "actual_downloads": 6,
+        "browser_errors": [],
+        "no_javascript": {
+          "status": "passed",
+          "building_cards": 4,
+          "scenes": 3,
+          "relations": 17,
+          "events": 2,
+          "function_objects": 15,
+          "download_links": 6,
+          "fallback_fragment": "place-C04"
+        },
+        "report_sha256": "5b97ab97e77122841725ce1766c22303e97a585f22ecdc0cabde58c6e03a3e3c"
+      },
+      "mobile": {
+        "status": "passed",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "check_groups": 12,
+        "screenshot_count": 16,
+        "actual_downloads": 6,
+        "browser_errors": [],
+        "no_javascript": {
+          "status": "passed",
+          "building_cards": 4,
+          "scenes": 3,
+          "relations": 17,
+          "events": 2,
+          "function_objects": 15,
+          "download_links": 6,
+          "fallback_fragment": "place-C04"
+        },
+        "report_sha256": "1ee7ff3d7b37667e9e52a3710ea5218a7ab9e5d836d9247041ce521b5eda11af"
+      }
+    },
+    "checks": [
+      "Visible P469 continuation opens the independent P470 page",
+      "Initial C01/K01 state shows source roads and walls with modern reference hidden",
+      "Four actual SVG point clicks select original cards; C04 highlights tower and temple wall, C03 has no scene binding",
+      "Four visible card controls select the same map features and preserve scene scope",
+      "Three scene controls expose all 17 original quotations/scopes and two events; K03 clears geographic selection",
+      "Road, wall and modern-reference toggles operate on the actual SVG source groups",
+      "Zoom enlarges the native map within a horizontally scrollable viewport and restores the overview",
+      "C04 layers and unbound K03 deep links restore on reload without inventing a map selection",
+      "Function filter shows two T04 objects, its evidence link opens the scene, and all restores 15 objects",
+      "Six actual SVG/JSON/CSV/ZIP browser downloads match public hashes and the complete offline manifest",
+      "No-JS retains four cards, three scenes, 17 relations, two events, 15 function objects and working SVG fallback links",
+      "Header returns to the previous source-frame study"
+    ],
+    "P469_devices": {
+      "desktop": {
+        "status": "passed",
+        "check_groups": 10,
+        "actual_downloads": 14,
+        "browser_errors": [],
+        "report_sha256": "96917b51b8f154fd4acdd06bed2a906edfb63386b724337f34e7a515956bf75e"
+      },
+      "mobile": {
+        "status": "passed",
+        "check_groups": 10,
+        "actual_downloads": 14,
+        "browser_errors": [],
+        "report_sha256": "4bde095228e5d25efc434286b3f423a0e01ed099d530fdf79b2c5b03380883a2"
+      }
+    },
+    "browser_runtime": [
+      "mcr.microsoft.com/playwright/python@sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1"
+    ]
+  },
+  "screenshots": {
+    "total": 32,
+    "per_device": 16,
+    "all_live_files_match_report_hashes": true,
+    "identical_to_successful_PR": 32,
+    "identical_to_successful_production_build": 32,
+    "differing_files": [],
+    "files_sha256": {
+      "p470-desktop-initial.png": "cd83dff38726a4362b74dc1679e77421cfdf2b9edebab7ccb59e93075573fb63",
+      "p470-desktop-map-default.png": "ad22f16aa512e8a3c7631a792e686d3ad02a3321f74234fb9958f6a0bc69eabe",
+      "p470-desktop-place-C01.png": "d549f00d8c624b31d4b556fa58ae23ae7b82b02e597b1697bbd59e042e41fc39",
+      "p470-desktop-place-C02.png": "84c103188ae1af01b04d68935a0424712393898efd4fb22d177a6f092b9643a6",
+      "p470-desktop-place-C03.png": "7e804078435817eccb211c2c67b6ca540b80701afc2d89e8e86c9c2745b3b3a8",
+      "p470-desktop-place-C04.png": "4dbb4857cfe50a24b0504aa1a2ccb39180bb8e80471055226b5ced927e14cac3",
+      "p470-desktop-scene-K01.png": "42b6971a775e8c0f061863e64b03cf38e15a3450fd6fdfb9525f6f32f3e8b86f",
+      "p470-desktop-scene-K02.png": "1826dd2500b4f6cc06edffe10dd0b3eab6771e9802623b5a84dab21eff9b0a71",
+      "p470-desktop-scene-K03.png": "b23181688bbbf095f6a3616cef3b50d558abdd36f095aa9f04ed5d691544edc2",
+      "p470-desktop-map-modern.png": "e0de3f96574b380093193202848b2dfc24f6a582621b6ada11a9db9b594a4e78",
+      "p470-desktop-map-zoom.png": "169efc148fbf833bdbecf9d57a3d0379ab5b4e2e06b0ab598c684193d1855e32",
+      "p470-desktop-deep-link.png": "7b328b63ff9b40b7c94c5489347d353f18f59dbfdc04b5f1fa99080e1cf20ef2",
+      "p470-desktop-functions-T04.png": "3d9d49cc0e79a394198530d33770eae9be2e5ea34ec67cfcbf6976a1b162a4b2",
+      "p470-desktop-nojs-map.png": "abde93a7e2e4077dc86cc6b7814163d350747d3a69c44727f8ab3aa079061dc9",
+      "p470-desktop-nojs-C04.png": "115bea3a1c8406d3ed8760b19c7173a9d7e563cbbb5d2e5af7d78209e40b12a6",
+      "p470-desktop-nojs-K03.png": "81b3c72437b2e32d93ee70ca94055ca1737840baaef9abac2cd7f7cffd89ab21",
+      "p470-mobile-initial.png": "a844fbeee10f664750635a8710eb69227c5d6da0c0006e958fe07c1e9c5f148c",
+      "p470-mobile-map-default.png": "53d46541c16fa8be7059a086fdbb4281cef475d8f3974e16b96cd70bca11747b",
+      "p470-mobile-place-C01.png": "5f4d6bfad1ecaaff728d2d3aff9e29749819271138061ebaefa7ebef51e4f10e",
+      "p470-mobile-place-C02.png": "d0721ecf48696e9f8b88f1ddfa3006a923827dc28031e4947f180b3bbb20d7ed",
+      "p470-mobile-place-C03.png": "627d45b74924028f2cfda61688cbb2de8ad7a6ff6b339c62f0bae02e490e6745",
+      "p470-mobile-place-C04.png": "f0dc0a9e058db9b938d9198a3d4e219874d13b0b8b531692042ff35b47da543b",
+      "p470-mobile-scene-K01.png": "dc3c3961df18bb5dacf292512da6610aea070f22a7f6ee79c94072dfbfd0e43b",
+      "p470-mobile-scene-K02.png": "c9488641545cfb746b5f1032a8edcca422e54421a2fc4da63b2fcb8fcea50f2c",
+      "p470-mobile-scene-K03.png": "e367361c12a71c64085aeab850a4fb4edaaa617e1187c39d3c0ce3a976370128",
+      "p470-mobile-map-modern.png": "fff7d4112016356a085727af3333dfa4ad850ae8b7d4adc11254f92302f5d551",
+      "p470-mobile-map-zoom.png": "6c70da63edc0c3bcd3541178087d6f13a69e3901398a75b78bdf43587e515b9f",
+      "p470-mobile-deep-link.png": "72286d60b35b4ea7a0106b7e2462a92bc4c98a7bad7cb99ca2331d7413a2c712",
+      "p470-mobile-functions-T04.png": "56bdc96fae9dec4e393faa5343f45e382434ac27fc0c5595a4077e65c19954a5",
+      "p470-mobile-nojs-map.png": "d83c0b2b969d04dc3b7627a4025f7a9b5f6313c78040ab7ba6fc9aa7cab7640f",
+      "p470-mobile-nojs-C04.png": "f9f51e1b862510eba38b2c0e3f86c579c4c25556cbf83bac7de9b12d24cfd2d0",
+      "p470-mobile-nojs-K03.png": "d2b51be099de274f9f94c4fa19e8e3c96ff72f07bc174db7950144495906a346"
+    },
+    "visual_review_basis": "Final live and successful build PNG bytes equal the accepted PR PNG bytes. The parent and independent map reviewer inspected desktop and mobile PR images before merge."
+  },
+  "public_downloads": {
+    "unique_files": 6,
+    "actual_downloads": 12,
+    "desktop_and_mobile_identical": true,
+    "all_match_live_HTTP_report": true,
+    "all_match_successful_build": true,
+    "files": {
+      "common-470/city-common.svg": {
+        "public_url": "https://mechgouki.github.io/luoyang-city/common-470/city-common.svg",
+        "bytes": 43433,
+        "sha256": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89",
+        "PR_sha256": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89",
+        "matches_successful_build": true
+      },
+      "common-470/readings.json": {
+        "public_url": "https://mechgouki.github.io/luoyang-city/common-470/readings.json",
+        "bytes": 471604,
+        "sha256": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870",
+        "PR_sha256": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870",
+        "matches_successful_build": true
+      },
+      "common-470/places.csv": {
+        "public_url": "https://mechgouki.github.io/luoyang-city/common-470/places.csv",
+        "bytes": 1340,
+        "sha256": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232",
+        "PR_sha256": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232",
+        "matches_successful_build": true
+      },
+      "common-470/reuse-plan.json": {
+        "public_url": "https://mechgouki.github.io/luoyang-city/common-470/reuse-plan.json",
+        "bytes": 6752,
+        "sha256": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+        "PR_sha256": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+        "matches_successful_build": true
+      },
+      "common-470/bundle-manifest.json": {
+        "public_url": "https://mechgouki.github.io/luoyang-city/common-470/bundle-manifest.json",
+        "bytes": 4726,
+        "sha256": "d9a02c0a1e4b530baaef56ec94a819fab4370fc1b5a4ab33b8534ea3c0e14f6a",
+        "PR_sha256": "ec4fdccb1469fc44e3dd8eff49d13bbe737d0d31289c39618e1aefd061de424c",
+        "matches_successful_build": true
+      },
+      "downloads/common-470.zip": {
+        "public_url": "https://mechgouki.github.io/luoyang-city/downloads/common-470.zip",
+        "bytes": 117624,
+        "sha256": "2164b4ef94bd03fca269cb22a9e967a04278c1d3b1baaa67f4eeb24248f9b760",
+        "PR_sha256": "9e848c10da96e8571e82a6aeb41dab9ee911d28e383009fc9919cd38a0207976",
+        "matches_successful_build": true
+      }
+    }
+  },
+  "offline_bundle": {
+    "members": 8,
+    "all_member_hashes_verified": true,
+    "source_commit": "e16c28d52ec743492b6ac248b7ae3076a04b47a2",
+    "differing_PR_member_contents": [
+      "index.html",
+      "common-470/bundle-manifest.json"
+    ],
+    "PR_equivalence_after_exact_commit_normalization": true,
+    "members_metadata": [
+      {
+        "path": "common-470/bundle-manifest.json",
+        "bytes": 4726,
+        "sha256": "d9a02c0a1e4b530baaef56ec94a819fab4370fc1b5a4ab33b8534ea3c0e14f6a",
+        "PR_sha256": "ec4fdccb1469fc44e3dd8eff49d13bbe737d0d31289c39618e1aefd061de424c",
+        "raw_content_equal": false,
+        "equivalence_rule": "Only top-level source_commit normalized",
+        "equivalent": true,
+        "commit_replacements": null,
+        "PR_zip_timestamp": [
+          2026,
+          11,
+          19,
+          17,
+          52,
+          22
+        ],
+        "production_zip_timestamp": [
+          2026,
+          11,
+          19,
+          18,
+          9,
+          56
+        ]
+      },
+      {
+        "path": "common-470/city-common.svg",
+        "bytes": 43433,
+        "sha256": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89",
+        "PR_sha256": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89",
+        "raw_content_equal": true,
+        "equivalence_rule": "No normalization",
+        "equivalent": true,
+        "commit_replacements": null,
+        "PR_zip_timestamp": [
+          2026,
+          11,
+          19,
+          17,
+          52,
+          22
+        ],
+        "production_zip_timestamp": [
+          2026,
+          11,
+          19,
+          18,
+          9,
+          56
+        ]
+      },
+      {
+        "path": "common-470/common-ui.js",
+        "bytes": 6538,
+        "sha256": "b4f46e2351342267b6ecf2c4b73f0960cfd660eefd2c34a4d92a00882afd6ef2",
+        "PR_sha256": "b4f46e2351342267b6ecf2c4b73f0960cfd660eefd2c34a4d92a00882afd6ef2",
+        "raw_content_equal": true,
+        "equivalence_rule": "No normalization",
+        "equivalent": true,
+        "commit_replacements": null,
+        "PR_zip_timestamp": [
+          2026,
+          11,
+          19,
+          17,
+          52,
+          22
+        ],
+        "production_zip_timestamp": [
+          2026,
+          11,
+          19,
+          18,
+          9,
+          56
+        ]
+      },
+      {
+        "path": "common-470/places.csv",
+        "bytes": 1340,
+        "sha256": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232",
+        "PR_sha256": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232",
+        "raw_content_equal": true,
+        "equivalence_rule": "No normalization",
+        "equivalent": true,
+        "commit_replacements": null,
+        "PR_zip_timestamp": [
+          2026,
+          11,
+          19,
+          17,
+          52,
+          22
+        ],
+        "production_zip_timestamp": [
+          2026,
+          11,
+          19,
+          18,
+          9,
+          56
+        ]
+      },
+      {
+        "path": "common-470/readings.json",
+        "bytes": 471604,
+        "sha256": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870",
+        "PR_sha256": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870",
+        "raw_content_equal": true,
+        "equivalence_rule": "No normalization",
+        "equivalent": true,
+        "commit_replacements": null,
+        "PR_zip_timestamp": [
+          2026,
+          11,
+          19,
+          17,
+          52,
+          22
+        ],
+        "production_zip_timestamp": [
+          2026,
+          11,
+          19,
+          18,
+          9,
+          56
+        ]
+      },
+      {
+        "path": "common-470/reuse-plan.json",
+        "bytes": 6752,
+        "sha256": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+        "PR_sha256": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+        "raw_content_equal": true,
+        "equivalence_rule": "No normalization",
+        "equivalent": true,
+        "commit_replacements": null,
+        "PR_zip_timestamp": [
+          2026,
+          11,
+          19,
+          17,
+          52,
+          22
+        ],
+        "production_zip_timestamp": [
+          2026,
+          11,
+          19,
+          18,
+          9,
+          56
+        ]
+      },
+      {
+        "path": "common-470/study.css",
+        "bytes": 12761,
+        "sha256": "11298174abfe0005b3b402565632fdd5be56ea725f3ac852ab017fe2b822b435",
+        "PR_sha256": "11298174abfe0005b3b402565632fdd5be56ea725f3ac852ab017fe2b822b435",
+        "raw_content_equal": true,
+        "equivalence_rule": "No normalization",
+        "equivalent": true,
+        "commit_replacements": null,
+        "PR_zip_timestamp": [
+          2026,
+          11,
+          19,
+          17,
+          52,
+          22
+        ],
+        "production_zip_timestamp": [
+          2026,
+          11,
+          19,
+          18,
+          9,
+          56
+        ]
+      },
+      {
+        "path": "index.html",
+        "bytes": 85914,
+        "sha256": "88f8c2775cb197824f440a67e6ee43ecb25ab639f8a23a8543eddab2f7842196",
+        "PR_sha256": "01079f4834be782b0b6798082b1148a1329759cda4817b5337a570c3600f3dba",
+        "raw_content_equal": false,
+        "equivalence_rule": "Exact PR commit to production commit replacement",
+        "equivalent": true,
+        "commit_replacements": 2,
+        "PR_zip_timestamp": [
+          2026,
+          11,
+          19,
+          17,
+          52,
+          22
+        ],
+        "production_zip_timestamp": [
+          2026,
+          11,
+          19,
+          18,
+          9,
+          56
+        ]
+      }
+    ],
+    "note": "All eight ZIP member timestamps differ between PR and production; content differences are confined to the two documented provenance-bearing members."
+  },
+  "source_inputs_sha256": {
+    "research/prosperity-v4/common-470/reuse-plan.json": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+    "research/prosperity-v1/geographic-evidence.json": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79",
+    "research/prosperity-v4/city-distribution-p451.json": "8749bac2e6f56f017b99790b11d757edb165a4903749665a30b67c5430f932f9",
+    "research/prosperity-v4/network-462/network.json": "f1081cfc39fb16e67e81271be177755fdab4cd46a18283e0d1ed46efb3e1275b",
+    "research/prosperity-v4/network-462/roads.json": "6a48b686ef2c133731f080405d525b4a60e9bf0506cfb35a78ff0cfa2b0efb8d",
+    "research/prosperity-v4/backbone-469/readings.json": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+    "research/prosperity-v4/backbone-469/jianchun-plan-audit.json": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f",
+    "research/prosperity-v4/street-clusters-p453.json": "9b69da412a86d5e21e82b2cfdcac747b667ecad053de868618fd7474e4bcd116",
+    "research/prosperity-v4/road-functions-p452.json": "6f963d3dfcfe7c74f02fefd4528958d65868cb53691259f40aa890f0649e074c",
+    "research/prosperity-v1/text-review.json": "e897985535b46d802708e628da4bad5a40c667ad2283caad55aeb0b347cb3836",
+    "research/dual-b1/decisions.json": "aee1cdc54a4f0888f3793712c559a75489ea484e9786d2bfe370466faedfb26f",
+    "research/dual-b7/luonan-river-markets.json": "0acfc920d242f26f3e8de894085d0e7963ed2a4a74ec981a626a8f8450f8e42d"
+  },
+  "research_counts": {
+    "source_features": 30,
+    "features": 25,
+    "site_remains": 24,
+    "modern_features": 1,
+    "prior_backbone_features": 22,
+    "added_existing_features": 3,
+    "building_cards": 4,
+    "roads": 8,
+    "gate_points": 10,
+    "wall_groups": 4,
+    "partial_enclosure_parts": 7,
+    "water_records": 34,
+    "water_relations": 100,
+    "water_context_links": 9,
+    "urban_scenes": 3,
+    "urban_relations": 17,
+    "new_geographic_coordinates": 0,
+    "new_metric_measurements": 0,
+    "new_historical_edges": 0,
+    "new_geographic_footprints": 0
+  },
+  "urban_counts": {
+    "scene_count": 3,
+    "object_count": 20,
+    "relation_count": 17,
+    "direct_relation_count": 16,
+    "interpretive_relation_count": 1,
+    "event_count": 2,
+    "function_group_count": 5,
+    "function_object_count": 15,
+    "reference_object_count": 5,
+    "source_binding_count": 3,
+    "source_record_count": 12
+  },
+  "research_boundaries": {
+    "C03_entity_binding": null,
+    "C04_scene_binding_feature_id": "geo-yongning-temple-walls",
+    "K03_geographic_bindings": 0,
+    "new_geographic_transform": null,
+    "modern_river_default_visible": false,
+    "new_historical_coordinates": 0,
+    "new_metric_measurements": 0,
+    "new_geographic_footprints": 0,
+    "new_historical_relationships": 0,
+    "2022_canal_report": "deferred by user; does not block this milestone",
+    "Jianchun_common_control_pairs": 0
+  },
+  "publication_preservation": {
+    "protected_old_assets": {
+      "prosperity/source-layout.svg": {
+        "bytes": 44032,
+        "sha256": "3e8706abbc0fe44c28e3d41e7039363f32d16f29943001cf12cc7546ede47c47"
+      },
+      "prosperity-city-distribution/grounded-distribution.svg": {
+        "bytes": 47065,
+        "sha256": "5e626f70d28bde7217f2cdb5184657ea0533c5f9514d1355f4368cc1247b200e"
+      },
+      "backbone-469/frame-06a.svg": {
+        "bytes": 37894,
+        "sha256": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04"
+      },
+      "backbone-469/frame-qian2018.svg": {
+        "bytes": 16502,
+        "sha256": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba"
+      },
+      "downloads/backbone-469.pdf": {
+        "bytes": 1051225,
+        "sha256": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6"
+      },
+      "backbone-469/readings.json": {
+        "bytes": 468561,
+        "sha256": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a"
+      },
+      "backbone-469/urban-contexts.json": {
+        "bytes": 33551,
+        "sha256": "47817e58ea63ccea1c3f2c83e4914333c6886ac30c6c6af0c182e77da406e6d7"
+      },
+      "backbone-469/jianchun-plan-audit.json": {
+        "bytes": 15772,
+        "sha256": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f"
+      },
+      "backbone-469/jianchun-source-context.svg": {
+        "bytes": 7572,
+        "sha256": "eaf696a70f7df2d446305599c9c679ab2cb48032fe9f556b834b62a72799528d"
+      },
+      "backbone-469/jianchun-structure-reading.svg": {
+        "bytes": 3955,
+        "sha256": "197be999a471879cf60884485ded7bd3fcbabfca52b897587d0c82f582a17377"
+      },
+      "_assets/4b5c1b5251bfe49854d3-luoyang-panorama-small.webp": {
+        "bytes": 239164,
+        "sha256": "4b5c1b5251bfe49854d3a3a1cf70bb622d9b37efae5d772358f01c4f47673235"
+      },
+      "_assets/6465657667ba740d3fc9-luoyang-panorama-approved-v9.webp": {
+        "bytes": 742398,
+        "sha256": "6465657667ba740d3fc99cde2495a864d3a8a446e2086c25984c0c547eed5825"
+      },
+      "_assets/98459529d0a2d8210aaf-luoyang-panorama-approved-v9-small.webp": {
+        "bytes": 274354,
+        "sha256": "98459529d0a2d8210aaf2728b0c1673ca38b46df2f7b761c9064f1c21fe053b6"
+      },
+      "_assets/c887056d075fa92c2514-luoyang-panorama.webp": {
+        "bytes": 599550,
+        "sha256": "c887056d075fa92c251422aece642df5def7af5b8ff087f3ff31f47ea6fdf4ee"
+      }
+    },
+    "P469_single_entry_removal_recovers_accepted_prior_page": true,
+    "previous_accepted_commit": "6e8ad4a9d485a74913574ad13f1a1df2f8bc1f46"
+  },
+  "attempt_history": [
+    {
+      "phase": "PR",
+      "run_id": 44580456047,
+      "run_attempt": 1,
+      "head_sha": "2e67eba6f1249167c9616ef8ca6e214bdd260bc3",
+      "conclusion": "failure",
+      "direct_failure": "No-JS screenshot helper waited for asynchronous animation callback in a script-disabled context.",
+      "resolution": "A source commit added a script-disabled screenshot branch and explicit fallback URL wait; all page, download, width and no-JS assertions remained."
+    },
+    {
+      "phase": "PR",
+      "run_id": 44581455465,
+      "run_attempt": 1,
+      "head_sha": "e59c6c680a816774c50de341f12c94fb58fa5944",
+      "conclusion": "success"
+    },
+    {
+      "phase": "production",
+      "run_id": 44583071728,
+      "run_attempt": 1,
+      "head_sha": "e16c28d52ec743492b6ac248b7ae3076a04b47a2",
+      "conclusion": "failure",
+      "failed_script": "tests/browser_backbone_p469.py",
+      "failed_line": 311,
+      "direct_failure": "Timeout after 30000ms waiting for a download event in the existing P469 desktop check.",
+      "P469_completed_downloads": 10,
+      "inferred_target": "backbone-469/source-frame-audit.json",
+      "target_is_inferred_not_directly_logged": true,
+      "unavailable_evidence": [
+        "actual failure page URL",
+        "HTTP error",
+        "per-download timings",
+        "failure screenshot"
+      ],
+      "root_cause": "not established",
+      "deployment_started": false,
+      "P470_devices_passed": true,
+      "P470_screenshot_comparison": {
+        "identical_to_PR": 31,
+        "different_file": "p470-mobile-map-zoom.png",
+        "difference": "1px horizontal scroll position; overlapping 347x1321 area matched pixel-for-pixel. Original SHA mismatch retained."
+      },
+      "resolution": "Only failed jobs were retried with the same commit, code, timeout and assertions."
+    },
+    {
+      "phase": "production",
+      "run_id": 44583071728,
+      "run_attempt": 2,
+      "head_sha": "e16c28d52ec743492b6ac248b7ae3076a04b47a2",
+      "conclusion": "success",
+      "build": "success",
+      "deploy": "success",
+      "verify-live": "success",
+      "P469_actual_downloads_per_device": 14
+    }
+  ],
+  "unconfirmed_download_diagnostic": {
+    "status": "candidate_not_confirmed",
+    "mechanism": "Pinned Chromium has a burst download limit of 10 requests with a one-second reset. The earlier failure was consistent with the inferred 11th target, but no per-target timing exists to establish that the limiter triggered.",
+    "sources": [
+      "https://github.com/microsoft/playwright/blob/v1.57.0/packages/playwright-core/browsers.json",
+      "https://github.com/chromium/chromium/blob/143.0.7499.4/third_party/blink/renderer/core/frame/local_frame.cc"
+    ],
+    "code_changed_for_production_retry": false
+  },
+  "scope": "Newly authored public acceptance metadata only: public URLs, published paths, counts, statuses, research limits and cryptographic digests. No screenshot bytes, download bodies, complete logs, signed artifact URLs or unrelated prior evidence packages are included.",
+  "archive_scope": "This summary can be retained permanently; the original CI archives remain subject to the listed expiry dates. It is not a permanent copy of the raw screenshots, downloads or full logs."
+}
