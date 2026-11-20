@@ -1,5 +1,6 @@
 """Exercise P4.6.9 maps, source contexts and real downloads in desktop/mobile browsers."""
 import argparse
+import datetime
 import functools
 import hashlib
 import http.server
@@ -9,6 +10,7 @@ import os
 import re
 import tempfile
 import threading
+import time
 import zipfile
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
@@ -295,6 +297,7 @@ def check_downloads(page, base, output, device, data, report):
     assert response.ok
     info = response.json()
     resources = download_paths(info["prosperity_backbone_p469"])
+    assert len(resources) == 14, resources
     assert len([path for path in resources if path.endswith(".pdf")]) == 1, resources
     svg_paths = {path for path in resources if path.endswith(".svg")}
     assert svg_paths == {"backbone-469/frame-06a.svg", "backbone-469/frame-qian2018.svg",
@@ -303,45 +306,108 @@ def check_downloads(page, base, output, device, data, report):
     assert any(path.endswith("/readings.json") for path in resources), resources
     folder = output / "downloads" / device
     folder.mkdir(parents=True, exist_ok=True)
+    # Chromium 143.0.7499.4 limits a frame to ten burst download requests in one
+    # second (LocalFrame::ShouldThrottleDownload). Respect that limit with real
+    # user-like clicks; do not disable it, retry requests, or weaken assertions.
+    # The earlier timeout lacked timings, so its cause remains unconfirmed.
+    # https://github.com/chromium/chromium/blob/143.0.7499.4/third_party/blink/renderer/core/frame/local_frame.cc
+    minimum_click_interval = .15
+    sequence_started = time.monotonic()
+    previous_click = None
+    report["download_policy"] = {"minimum_click_interval_seconds": minimum_click_interval,
+                                  "automatic_retries": 0, "event_timeout_ms": 30000}
+    report["download_attempts"] = []
+    report["download_target"] = None
     for path in resources:
-        if Path(path).name in {"frame-06a.svg", "frame-qian2018.svg"}:
-            choose_map(page, Path(path).stem)
-        link = page.locator(f'a[href={json.dumps(path)}],a[href={json.dumps("./" + path)}]').first
-        expect(link).to_be_visible()
-        with page.expect_download() as pending:
-            link.click()
-        downloaded = pending.value
-        assert downloaded.failure() is None, (path, downloaded.failure())
-        saved = folder / Path(path).name
-        downloaded.save_as(saved)
-        body = saved.read_bytes()
-        digest = hashlib.sha256(body).hexdigest()
-        assert digest == info["files_sha256"][path], path
-        report["download_sha256"][path] = digest
-        if path.endswith(".pdf"):
-            assert body.startswith(b"%PDF-")
-            assert len(PdfReader(io.BytesIO(body)).pages) == 2
-        elif path.endswith(".json"):
-            parsed = json.loads(body)
-            if path.endswith("/readings.json"):
-                assert parsed == data
-        elif path.endswith(".svg"):
-            drawing = ET.fromstring(body)
-            assert drawing.tag == SVG + "svg"
-            assert drawing.attrib.get("viewBox"), path
-            assert drawing.attrib.get("id") == Path(path).stem, path
-            assert any(element.tag in {SVG + tag for tag in
-                       ("path", "line", "polyline", "polygon", "image", "circle")}
-                       for element in drawing.iter()), path
-        else:
-            with zipfile.ZipFile(io.BytesIO(body)) as archive:
-                names = archive.namelist()
-                assert any(name.endswith("index.html") for name in names), names
-                for resource in resources:
-                    if resource.endswith((".svg", ".json")):
-                        matches = [name for name in names if Path(name).name == Path(resource).name]
-                        assert len(matches) == 1, (resource, matches)
-                        assert hashlib.sha256(archive.read(matches[0])).hexdigest() == info["files_sha256"][resource]
+        attempt = {"path": path, "url": base + path, "status": "pending",
+                   "page_url": page.url, "viewport": page.viewport_size,
+                   "attempt_started_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                   "attempt_started_seconds": time.monotonic() - sequence_started,
+                   "responses": [], "request_failures": []}
+        report["download_attempts"].append(attempt)
+        report["download_target"] = attempt
+
+        def on_response(response):
+            if response.url.split("#", 1)[0] == base + path:
+                attempt["responses"].append({"url": response.url, "status": response.status,
+                    "elapsed_seconds": time.monotonic() - sequence_started})
+
+        def on_request_failed(request):
+            if request.url.split("#", 1)[0] == base + path:
+                attempt["request_failures"].append({"url": request.url, "failure": request.failure,
+                    "elapsed_seconds": time.monotonic() - sequence_started})
+
+        page.on("response", on_response)
+        page.on("requestfailed", on_request_failed)
+        try:
+            if Path(path).name in {"frame-06a.svg", "frame-qian2018.svg"}:
+                choose_map(page, Path(path).stem)
+            link = page.locator(f'a[href={json.dumps(path)}],a[href={json.dumps("./" + path)}]').first
+            expect(link).to_be_visible()
+            attempt.update(page_url=page.url, href=link.get_attribute("href"),
+                           download_attribute=link.get_attribute("download"))
+            if previous_click is not None:
+                remaining = minimum_click_interval - (time.monotonic() - previous_click)
+                if remaining > 0:
+                    page.wait_for_timeout(remaining * 1000)
+            previous_click = time.monotonic()
+            attempt["click_call_started_seconds"] = previous_click - sequence_started
+            attempt["click_call_started_utc"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+            with page.expect_download(timeout=30000) as pending:
+                link.click()
+            downloaded = pending.value
+            attempt["download_url"] = downloaded.url
+            attempt["suggested_filename"] = downloaded.suggested_filename
+            failure = downloaded.failure()
+            assert failure is None, (path, failure)
+            saved = folder / Path(path).name
+            downloaded.save_as(saved)
+            body = saved.read_bytes()
+            digest = hashlib.sha256(body).hexdigest()
+            assert digest == info["files_sha256"][path], path
+            report["download_sha256"][path] = digest
+            if path.endswith(".pdf"):
+                assert body.startswith(b"%PDF-")
+                assert len(PdfReader(io.BytesIO(body)).pages) == 2
+            elif path.endswith(".json"):
+                parsed = json.loads(body)
+                if path.endswith("/readings.json"):
+                    assert parsed == data
+            elif path.endswith(".svg"):
+                drawing = ET.fromstring(body)
+                assert drawing.tag == SVG + "svg"
+                assert drawing.attrib.get("viewBox"), path
+                assert drawing.attrib.get("id") == Path(path).stem, path
+                assert any(element.tag in {SVG + tag for tag in
+                           ("path", "line", "polyline", "polygon", "image", "circle")}
+                           for element in drawing.iter()), path
+            else:
+                with zipfile.ZipFile(io.BytesIO(body)) as archive:
+                    names = archive.namelist()
+                    assert any(name.endswith("index.html") for name in names), names
+                    for resource in resources:
+                        if resource.endswith((".svg", ".json")):
+                            matches = [name for name in names if Path(name).name == Path(resource).name]
+                            assert len(matches) == 1, (resource, matches)
+                            assert hashlib.sha256(archive.read(matches[0])).hexdigest() == info["files_sha256"][resource]
+            attempt.update(status="passed", bytes=len(body), sha256=digest,
+                           completed_seconds=time.monotonic() - sequence_started)
+            report["download_target"] = None
+        except Exception as error:
+            attempt.update(status="failed", error=str(error), current_url=page.url,
+                           failure_viewport=page.viewport_size,
+                           failed_seconds=time.monotonic() - sequence_started)
+            screenshot = output / f"p469-{device}-download-failure.png"
+            try:
+                page.screenshot(path=str(screenshot), animations="disabled")
+                attempt["failure_screenshot"] = screenshot.name
+            except Exception as screenshot_error:
+                attempt["screenshot_error"] = str(screenshot_error)
+            raise
+        finally:
+            page.remove_listener("response", on_response)
+            page.remove_listener("requestfailed", on_request_failed)
+    assert len(report["download_sha256"]) == len(resources) == 14
     return resources
 
 
@@ -551,6 +617,8 @@ def check_page(page, base, output, device):
     except Exception as error:
         report["status"] = "failed"
         report["failure"] = str(error)
+        report["current_url"] = page.url
+        report["viewport"] = page.viewport_size
         raise
     finally:
         page.remove_listener("pageerror", on_error)

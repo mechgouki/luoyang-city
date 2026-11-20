@@ -733,6 +733,150 @@ try:
  assert hashlib.sha256(previous_html.replace(entry,b'')).hexdigest()==preservation['previous_page_sha256']
  assert all(info['files_sha256'][path]==digest for path,digest in preservation['protected_files_sha256'].items())
 
+ # P4.7.1 keeps B4's raw records and P1's corrected display layer distinct.
+ north_view=info['prosperity_city_north_p471']
+ assert north_view['source_commit']==info['source_commit']
+ assert north_view['version']==release['prosperity_city_north_p471_version']=='prosperity-city-north-p471'
+ assert north_view['version'] in release['extensions']
+ assert north_view['page']=='prosperity-city-north.html' and north_view['folder']=='north-471'
+ assert north_view['readings']=='north-471/readings.json' and north_view['manifest']=='north-471/bundle-manifest.json'
+ assert north_view['bundle']=='downloads/north-471.zip'
+ assert set(north_view['plates'])=={'city-overview.svg','north-detail.svg'}
+ assert north_view['new_historical_coordinates']==north_view['new_metric_measurements']==north_view['new_historical_relationships']==north_view['new_geographic_footprints']==0
+ assert north_view['new_geographic_transform'] is None
+ nd=json.loads(get(north_view['readings']))
+ expected_north_counts={'source_features':30,'features':27,'site_remains':26,'modern_features':1,
+  'prior_common_features':25,'added_existing_features':2,'north_entries':3,'evidence_records':16,
+  'evidence_groups':3,'entities':16,'bound_entities':3,'unbound_entities':13,'source_binding_features':4,
+  'constraints':21,'water_relations':5,'roads':3,'jinyong_wall_parts':5,'jinyong_wall_vertices':13,
+  'corrected_quotations':1,'modern_annotations':2,'new_geographic_coordinates':0,
+  'new_metric_measurements':0,'new_historical_relationships':0,'new_geographic_footprints':0}
+ assert nd['version']=='P4.7.1' and nd['counts']==north_view['counts']==expected_north_counts
+ assert nd['common']==cd
+ nf={feature['id']:feature for feature in nd['features']}
+ assert len(nf)==len(nd['features'])==27
+ assert set(nf)==set(cf)|{'geo-jinyong-bing-wall','geo-jinyong-bing-reference'}
+ assert all(feature==original_features[identifier] for identifier,feature in nf.items())
+ assert nd['source_frame']['crs']=='EPSG:4610' and nd['source_frame']['new_geographic_transform'] is None
+ assert nd['new_geographic_transform'] is None and nd['modern_reference_default_visible'] is False
+ jinyong_wall=nf['geo-jinyong-bing-wall']['source_pdf_geometry']
+ assert jinyong_wall['type']=='MultiLineString' and len(jinyong_wall['coordinates'])==5
+ assert sum(len(part) for part in jinyong_wall['coordinates'])==13
+ assert all(part[0]!=part[-1] for part in jinyong_wall['coordinates'])
+ assert nf['geo-jinyong-bing-reference']['source_pdf_geometry']=={'type':'Point','coordinates':[285.45,259.35]}
+ assert nf['geo-jinyong-bing-reference']['approximation']['status']=='representative_point_within_mapped_remains'
+ assert nf['geo-jinyong-bing-reference']['approximation']['is_field_verified_gcp'] is False
+ assert nd['original_evidence']==north['evidence']
+ ne={row['id']:row for row in nd['evidence']}
+ assert len(ne)==len(nd['evidence'])==16
+ original_north={row['id']:row for row in north['evidence']}
+ north_reviews={row['key']:row for row in prosperity_text['records'] if row['batch']=='B4'}
+ assert nd['text_review_records']==north_reviews
+ assert nd['source_records']=={row['id']:row for row in north['sources']}
+ for identifier,row in ne.items():
+  assert {key:value for key,value in row.items() if key!='reading_overlay'}==original_north[identifier],identifier
+  overlay=row['reading_overlay'];review=north_reviews['B4:'+identifier]
+  assert overlay['review_key']==review['key'] and row['geographic_coordinates'] is None
+  assert overlay['new_historical_discovery'] is False
+  if identifier=='NG15':
+   manual=review['manual_context_review']
+   assert overlay['quote']==manual['corrected_quote']=='瑤光寺北有承明門，有金墉城，即魏氏所築。'
+   assert overlay['quote']!=row['quote'] and overlay['correction_applied'] is True
+   assert overlay['legacy_quote_display_allowed_as_body'] is False
+   notes=[{**note,'author':manual['editorial_note']['author']} for note in manual['source_contexts'] if note['layer']=='现代夹注']
+   assert overlay['annotations']==notes and len(notes)==2
+   assert all(note['quote'] not in overlay['quote'] for note in notes)
+  else:
+   assert overlay['quote']==row['quote'] and overlay['annotations']==[] and overlay['correction_applied'] is False
+ expected_groups={'G01':['NG01','NG02','NG03','NG04','NG07','NG08','NG09'],
+  'G02':['NG13','NG14','NG15','NG16'],'G03':['NG05','NG06','NG10','NG11','NG12']}
+ assert {row['id']:row['evidence_ids'] for row in nd['evidence_groups']}==expected_groups
+ assert sum(len(row['constraints']) for row in nd['evidence'])==21
+ assert nd['constraint_basis_counts']=={'direct':14,'editorial_supplement':1,'qualitative_text':1,
+  'paragraph_context':2,'direct_section_context':1,'explicit_direction_ambiguous_referent':1,'narrative_context':1}
+ original_entities={row['id']:row for row in baseline_entities}
+ bindings=nd['entity_bindings']
+ assert len(bindings)==16 and {row['entity_id'] for row in bindings}=={key for row in north['evidence'] for key in row['entities']}
+ assert {row['entity_id'] for row in bindings if row['feature_ids']}=={'ic_jinyong','gate_daxia','gate_guangmo'}
+ assert sum(len(row['feature_ids']) for row in bindings)==4
+ assert sum(not row['feature_ids'] for row in bindings)==13
+ for binding in bindings:
+  assert binding['name']==original_entities[binding['entity_id']]['name']
+  assert binding['temporal_state']==original_entities[binding['entity_id']].get('temporal_state')
+  assert binding['geographic_coordinates'] is None
+  if not binding['feature_ids']:assert binding['entry_id'] is None and binding['binding_scope'] is None
+  else:assert all(nf[key]['entity_id']==binding['entity_id'] for key in binding['feature_ids'])
+ assert nd['road_role_bindings']==[] and nd['water_navigation_semantics']=='context_link_only'
+ assert {row['ref'] for row in nd['water_relations']}=={'P467/outer/O02','P467/outer/O03','P467/outer/O04','P467/outer/O05','P467/inner/I01'}
+ assert all(row==br[row['ref']] and row['geographic_coordinates'] is None and row['annual_flow_516_528_confirmed'] is False for row in nd['water_relations'])
+ original_roads={row['code']:row for row in json.loads(get('network-462/roads.json'))['routes']}
+ assert {row['code'] for row in nd['roads']}=={'Lz-2','Lz-4','Lh-4'}
+ assert all(row==original_roads[row['code']] for row in nd['roads'])
+ north_plan=json.loads(get('north-471/reuse-plan.json'))
+ assert north_plan['expected_counts']==expected_north_counts and nd['display_frames']==north_plan['display_frames']
+ assert nd['display_frames']['north']['native_bounds']==[270,230,390,280]
+ assert all(frame['native_units']=='PDF point' and frame['semantics']=='display_crop_only' for frame in nd['display_frames'].values())
+ assert len(nd['source_inputs_sha256'])==15
+ assert nd['source_inputs_sha256']==north_view['source_inputs_sha256']=={
+  **north_plan['required_input_sha256'],
+  'research/prosperity-v4/north-471/reuse-plan.json':hashlib.sha256(get('north-471/reuse-plan.json')).hexdigest()}
+ assert all(nd['source_inputs_sha256'][path]==digest for path,digest in cd['source_inputs_sha256'].items())
+ north_downloads={'north-471/city-overview.svg','north-471/north-detail.svg','north-471/readings.json',
+  'north-471/evidence.csv','north-471/reuse-plan.json','north-471/bundle-manifest.json','downloads/north-471.zip'}
+ north_assets=(north_downloads-{'north-471/bundle-manifest.json','downloads/north-471.zip'})|{'north-471/study.css','north-471/north-ui.js'}
+ assert set(north_view['download_files'])==north_downloads
+ assert {north_view['page'],*north_downloads,*north_assets}<=set(info['files_sha256'])
+ for filename,identifier,native in [('city-overview.svg','north-overview-map','north-overview-native'),('north-detail.svg','north-detail-map','north-detail-native')]:
+  drawing=ET.fromstring(get('north-471/'+filename))
+  assert drawing.get('id')==identifier
+  marks=[node for node in drawing.iter() if node.get('data-feature-id')]
+  assert len(marks)==27 and {node.get('data-feature-id') for node in marks}==set(nf)
+  assert len([node for node in drawing.iter() if node.get('id')==native])==1
+  geometry=[node for node in drawing.iter() if node.get('data-source-feature-id')]
+  assert {node.get('data-source-feature-id') for node in geometry}==set(nf)
+  for key,feature in nf.items():
+   nodes=[node for node in geometry if node.get('data-source-feature-id')==key]
+   source=feature['source_pdf_geometry']
+   if source['type']=='Point':
+    assert len(nodes)==1 and nodes[0].tag=='{http://www.w3.org/2000/svg}circle'
+    assert [float(nodes[0].get('cx')),float(nodes[0].get('cy'))]==source['coordinates']
+   else:
+    parts=[source['coordinates']] if source['type']=='LineString' else source['coordinates']
+    assert len(nodes)==len(parts) and len({node.get('data-part') for node in nodes})==len(parts)
+    assert [node.get('data-part') for node in nodes]==[str(number) for number in range(1,len(parts)+1)]
+    for node,part in zip(nodes,parts):
+     assert node.tag=='{http://www.w3.org/2000/svg}path' and node.get('data-part') is not None
+     path=node.get('d','');assert set(re.findall('[A-DF-Za-df-z]',path))<={'M','L'}
+     pairs=re.findall(r'([-+]?(?:\d*\.\d+|\d+\.?\d*)(?:[eE][-+]?\d+)?)[,\s]+([-+]?(?:\d*\.\d+|\d+\.?\d*)(?:[eE][-+]?\d+)?)',path)
+     assert [[float(x),float(y)] for x,y in pairs]==part,(filename,key)
+ north_csv=list(csv.DictReader(io.StringIO(get('north-471/evidence.csv').decode('utf-8-sig'))))
+ assert len(north_csv)==16 and {row['evidence_id'] for row in north_csv}==set(ne)
+ for row in north_csv:
+  original=ne[row['evidence_id']]
+  assert row['display_quote']==original['reading_overlay']['quote'] and row['legacy_quote']==original['quote']
+  assert json.loads(row['annotations'])==original['reading_overlay']['annotations']
+  assert row['limit']==original['limit'] and row['temporal_note']==(original['temporal_note'] or '')
+  assert row['geographic_coordinates']==''
+ north_manifest=json.loads(get(north_view['manifest']))
+ assert north_manifest['version']==north_view['version'] and north_manifest['source_commit']==info['source_commit']
+ assert north_manifest['source_inputs_sha256']==nd['source_inputs_sha256']
+ assert set(north_manifest['files_sha256'])==north_assets
+ assert all(info['files_sha256'][path]==digest for path,digest in north_manifest['files_sha256'].items())
+ with zipfile.ZipFile(io.BytesIO(get(north_view['bundle']))) as archive:
+  assert len(archive.namelist())==9 and set(archive.namelist())==north_assets|{north_view['manifest'],'index.html'}
+  assert archive.read(north_view['manifest'])==get(north_view['manifest'])
+  for path,digest in north_manifest['files_sha256'].items():
+   assert hashlib.sha256(archive.read(path)).hexdigest()==digest and archive.read(path)==get(path),path
+ north_preservation=north_view['preservation']
+ assert north_preservation==north_manifest['preservation'] and north_preservation['previous_page']==common['page']
+ previous_html=get(north_preservation['previous_page']);entry=north_preservation['entry_html'].encode('utf-8')
+ assert north_preservation['entry_id']=='p471-entry' and previous_html.count(b'id="p471-entry"')==previous_html.count(entry)==1
+ assert hashlib.sha256(previous_html.replace(entry,b'')).hexdigest()==north_preservation['previous_page_sha256']
+ protected=north_preservation['protected_files_sha256']
+ assert set(common['download_files'])|{'common-470/study.css','common-470/common-ui.js'}<=set(protected)
+ assert set(common['preservation']['protected_files_sha256'])<=set(protected) and backbone['page'] in protected
+ assert all(info['files_sha256'][path]==digest for path,digest in protected.items())
+
  report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
@@ -753,6 +897,7 @@ try:
  report['prosperity_water_p468']=remainder
  report['prosperity_backbone_p469']=backbone
  report['prosperity_city_common_p470']=common
+ report['prosperity_city_north_p471']=north_view
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors
