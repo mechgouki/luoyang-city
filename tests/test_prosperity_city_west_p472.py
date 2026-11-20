@@ -1,6 +1,4 @@
 """Regress the paired readings, identities, native drawings and publication chain."""
-import csv
-import io
 import json
 import re
 import sys
@@ -13,7 +11,7 @@ from test_prosperity_city_common_p470 import Markup
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT/"_site"
 sys.path.insert(0,str(ROOT/"tools"))
-from city_west_472_data import B5, CATALOG, CROSSWALK, P1, build_data
+from city_west_472_data import B5, CATALOG, P1, build_data
 from verify_city_west_p472 import PAGE, check_preservation, verify
 
 
@@ -89,6 +87,16 @@ class WestCity(unittest.TestCase):
             self.assertTrue(all(self.page.by_id(a.get("href")[1:]) for a in plate.findall(".//*[@href]")))
         self.assertEqual(self.rows["WR02"]["p1"]["affected_entity_ids"],["gate_changhe_west","ic_changhe_palace"])
         self.assertEqual(self.page.by_id("entity-gate_changhe_west")["attrs"]["data-records"],"WR01 WR02 WR03")
+
+    def test_relation_plate_distinguishes_distance_outside_gate_from_road_side(self):
+        plate = ET.fromstring((SITE/"west-472/west-relations.svg").read_bytes())
+        for record, wording in (("WR19","门外一里／道南"), ("WR23","门外三里／道南"), ("WR17","门外一里／道北")):
+            box, = plate.findall(f'.//*[@data-reading="{record}"]')
+            self.assertIn(wording,"".join(box.itertext()))
+            constraint = self.rows[record]["b5"]["constraints"]
+            self.assertEqual(constraint[0]["relation"],"outside_gate")
+            self.assertIsNone(constraint[0]["distance_endpoints"])
+            self.assertNotIn("distance",constraint[1])
 
     def test_site_downloads_and_both_prior_release_chains(self):
         report = verify(self.info,lambda path:(SITE/path).read_bytes())
