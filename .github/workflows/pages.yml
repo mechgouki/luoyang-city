@@ -158,6 +158,10 @@ jobs:
         run: |
           node --check research/prosperity-r4/atlas.js
           python tools/prosperity_city_atlas_r4.py
+      - name: Build the R5 panorama and camera-aligned source views
+        run: |
+          node --check research/prosperity-r5/panorama.js
+          python tools/prosperity_city_panorama_r5.py
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: |
@@ -181,6 +185,7 @@ jobs:
               python tests/browser_city_north_p471.py
               python tests/browser_city_west_p472.py
               python tests/browser_city_atlas_r4.py
+              python tests/browser_city_panorama_r5.py
               python tests/browser_prosperity_hydro_roads_p46.py
               python tests/browser_backbone_p469.py
               python tests/browser_prosperity_gate_v3.py
@@ -277,6 +282,7 @@ jobs:
               python tests/browser_city_north_p471.py --base-url "$SITE_URL" --output artifacts/live-city-north-p471-browser
               python tests/browser_city_west_p472.py --base-url "$SITE_URL" --output artifacts/live-city-west-p472-browser
               python tests/browser_city_atlas_r4.py --base-url "$SITE_URL" --output artifacts/live-city-atlas-r4-browser
+              python tests/browser_city_panorama_r5.py --base-url "$SITE_URL" --output artifacts/live-city-panorama-r5-browser
               python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
               python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser
               python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser

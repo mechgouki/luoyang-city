@@ -30,6 +30,9 @@ def predecessors(info,get,fixture):
     for path in ("index.html",WEST):
         content=get(path)
         assert content.count(ENTRY)==1 and digest(content)==sums[path]
+        if path=="index.html" and "prosperity_city_panorama_r5" in info:
+            from city_panorama_r5_contract import before_r5
+            content=before_r5(info,path,content)
         before=content.replace(ENTRY,b"")
         assert digest(before)==data["entry_predecessors"][path]
         if path==WEST:
