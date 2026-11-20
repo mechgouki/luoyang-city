@@ -76,10 +76,12 @@ jobs:
           python -m py_compile tools/prosperity_water_p468.py tests/browser_water_p468.py tests/test_prosperity_water_p468.py
           python -m py_compile tools/build_backbone_469_data.py tools/prosperity_backbone_p469.py tests/browser_backbone_p469.py tests/test_prosperity_backbone_p469.py
           python -m py_compile tools/city_common_470_data.py tools/city_common_470_relations.py tools/prosperity_city_common_p470.py tests/test_prosperity_city_common_p470.py tests/browser_city_common_p470.py
+          python -m py_compile tools/city_north_471_data.py tools/city_north_471_map.py tools/prosperity_city_north_p471.py tests/test_prosperity_city_north_p471.py tests/browser_city_north_p471.py
           node --check research/prosperity-v4/water-467/water-ui.js
           node --check research/prosperity-v4/water-468/water-ui.js
           node --check research/prosperity-v4/backbone-469/backbone-ui.js
           node --check research/prosperity-v4/common-470/common-ui.js
+          node --check research/prosperity-v4/north-471/north-ui.js
           node --check web/prosperity-taiji-courts.js
           node --check web/prosperity-architecture.js
           node --check web/prosperity-city-distribution.js
@@ -170,6 +172,7 @@ jobs:
             bash -euo pipefail -c '
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0 pypdf==5.9.0
               python tests/browser_city_common_p470.py
+              python tests/browser_city_north_p471.py
               python tests/browser_prosperity_hydro_roads_p46.py
               python tests/browser_backbone_p469.py
               python tests/browser_prosperity_gate_v3.py
@@ -263,6 +266,7 @@ jobs:
             bash -euo pipefail -c '
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0 pypdf==5.9.0
               python tests/browser_city_common_p470.py --base-url "$SITE_URL" --output artifacts/live-city-common-p470-browser
+              python tests/browser_city_north_p471.py --base-url "$SITE_URL" --output artifacts/live-city-north-p471-browser
               python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
               python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser
               python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser

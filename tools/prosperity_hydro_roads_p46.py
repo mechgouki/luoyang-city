@@ -433,6 +433,7 @@ if __name__=="__main__":
     from prosperity_water_p468 import build as publish_water_remainders
     from prosperity_backbone_p469 import build as publish_backbone
     from prosperity_city_common_p470 import build as publish_city_common
+    from prosperity_city_north_p471 import build as publish_city_north
     from prosperity_gates_p465 import build as publish_gates
     from prosperity_field_p464 import build as publish_field
     from prosperity_corridors_p463 import build as publish_corridors
@@ -449,3 +450,4 @@ if __name__=="__main__":
     publish_water_remainders()
     publish_backbone()
     publish_city_common()
+    publish_city_north()
