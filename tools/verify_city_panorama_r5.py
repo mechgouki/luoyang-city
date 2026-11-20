@@ -80,9 +80,21 @@ def verify(info,reader):
     labels="".join(ET.fromstring(source_svg).itertext())
     for label in field["labels_px"]:
         assert label in labels or (label=="广莫门内道路" and "广莫门" in labels and "内道路" in labels)
+    sima=scene["sima_road"]
+    raw=json.loads((ROOT/"research/prosperity-r5/sima-road.json").read_bytes())
+    assert sima["image"]==raw["image"] and sima["transfer"]==raw["transfer"]
+    for item,source in zip(sima["landmarks"],raw["landmarks"],strict=True):
+        assert all(item[k]==v for k,v in source.items())
+        assert item["r4_pdf_point"]==expected[item["r4_feature"]]["source_pdf_geometry"]["coordinates"]
+    check=sima["diagnostic"]
+    assert check["predicted_px"]==[434.575,905.104] and check["offset_px"]==39.344
+    assert check["box_graphic_size_m"]==[190,567] and check["map_equivalent_m"]==44.71
+    assert sima["transfer"]["wall_clear_span_m"] is None and sima["transfer"]["accepted_wall_segments"]==0
+    from city_panorama_sima import plate
+    assert get(FOLDER+"/sima-road.svg")==plate(sima).encode()
     page=get(PAGE);doc=Links(page)
     assert doc.downloads==list(FILES) and len(doc.ids)==len(set(doc.ids))
-    assert set(original)|{"art","core","city","palace-east","show-anchors"}<=set(doc.ids)
+    assert set(original)|{"art","core","city","palace-east","sima-road","show-anchors"}<=set(doc.ids)
     for p in Resources(page).urls:
         u=urlsplit(p)
         if u.scheme:continue
@@ -97,5 +109,5 @@ def verify(info,reader):
             u=urlsplit(url)
             if not u.scheme and u.path:assert u.path.removeprefix("./") in members,url
     return dict(status="passed",source_commit=info["source_commit"],source_features=len(expected),models=len(original),
-                views=4,download_count=len(FILES),offline_members=len(members),distinct_resources=get.cache_info().misses,
+                views=5,download_count=len(FILES),offline_members=len(members),distinct_resources=get.cache_info().misses,
                 protected_prior_pages=2,approved_homepage_images=2)
