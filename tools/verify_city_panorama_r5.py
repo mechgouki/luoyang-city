@@ -69,9 +69,20 @@ def verify(info,reader):
         assert {a.get("data-label") for a in tree.iter(NS+"a") if a.get("data-label")}==set(original)
         area=tree.find(".//*[@data-feature='geo-palace-layout-envelope']/"+NS+"polygon")
         assert area is not None and area.get("stroke")=="none"
+    east=scene["east_palace"]
+    assert east==json.loads((ROOT/"research/prosperity-r5/palace-east.json").read_bytes())
+    source_ids={s[0] for s in east["sources"]}
+    assert len(east["records"])==4 and all(set(r["sources"])<=source_ids for r in east["records"])
+    field=east["field_image"]
+    assert field["size_px"]==[1024,506] and len(field["labels_px"])==9
+    source_svg=get(FOLDER+"/palace-east.svg")
+    assert source_svg==(ROOT/"research/prosperity-r5/palace-east.svg").read_bytes()
+    labels="".join(ET.fromstring(source_svg).itertext())
+    for label in field["labels_px"]:
+        assert label in labels or (label=="广莫门内道路" and "广莫门" in labels and "内道路" in labels)
     page=get(PAGE);doc=Links(page)
     assert doc.downloads==list(FILES) and len(doc.ids)==len(set(doc.ids))
-    assert set(original)|{"art","core","city","show-anchors"}<=set(doc.ids)
+    assert set(original)|{"art","core","city","palace-east","show-anchors"}<=set(doc.ids)
     for p in Resources(page).urls:
         u=urlsplit(p)
         if u.scheme:continue
@@ -86,5 +97,5 @@ def verify(info,reader):
             u=urlsplit(url)
             if not u.scheme and u.path:assert u.path.removeprefix("./") in members,url
     return dict(status="passed",source_commit=info["source_commit"],source_features=len(expected),models=len(original),
-                views=3,download_count=len(FILES),offline_members=len(members),distinct_resources=get.cache_info().misses,
+                views=4,download_count=len(FILES),offline_members=len(members),distinct_resources=get.cache_info().misses,
                 protected_prior_pages=2,approved_homepage_images=2)

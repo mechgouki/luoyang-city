@@ -44,6 +44,14 @@ def exercise(browser,base,device,out):
             p.go_back();expect(p.locator("#city")).to_be_visible()
             assert p.evaluate("document.documentElement.scrollWidth<=innerWidth")
             report["checks"].append("Two entrances, responsive artwork, four comparison marks, source cards and restoration of shared views")
+            p.locator(".tabbar [href='#palace-east']").click()
+            expect(p.locator("#palace-east")).to_be_visible()
+            expect(p.locator("#palace-east article")).to_have_count(4)
+            p.locator("#palace-east img").evaluate("im=>im.decode()")
+            p.reload(wait_until="domcontentloaded")
+            expect(p.locator("#east-title")).to_be_visible()
+            assert p.evaluate("document.documentElement.scrollWidth<=innerWidth")
+            capture(p.locator("#palace-east figure img"),"palace-east")
             with tempfile.TemporaryDirectory() as tmp:
                 for path in meta["download_files"]:
                     with p.expect_download() as ev:p.locator(f'[download][href="./{path}"]').click()
@@ -54,13 +62,16 @@ def exercise(browser,base,device,out):
                 with browser.new_context(**opts,offline=True) as off:
                     page=off.new_page();page.goto((Path(tmp)/"index.html").as_uri())
                     page.locator(".illustration img").evaluate("(im)=>im.decode()")
+                    page.locator(".tabbar [href='#palace-east']").click()
+                    page.locator("#palace-east img").evaluate("im=>im.decode()")
+                    expect(page.locator("#palace-east")).to_contain_text("东围墙")
                     page.locator(".tabbar [href='#city']").click();expect(page.locator("#city")).to_be_visible()
                     page.locator("#city [data-label=C03]").click();expect(page.locator("#C03")).to_contain_text("太极殿")
             with browser.new_context(**opts,java_script_enabled=False) as disabled:
                 page=disabled.new_page();page.goto(base+PAGE+"#core")
                 expect(page.locator("#core")).to_be_visible();expect(page.locator("#city")).to_be_visible()
                 assert page.evaluate("document.documentElement.scrollWidth<=innerWidth")
-            report["checks"].append("Six actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation")
+            report["checks"].append("Seven actual downloads, verified hashes, disconnected artwork and models, native no-JavaScript navigation")
             assert not report["errors"];report["status"]="passed"
         except Exception as e:
             report.update(status="failed",error=str(e));p.screenshot(path=out/(device+"-failure.png"));raise
