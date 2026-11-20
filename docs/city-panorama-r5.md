@@ -16,3 +16,11 @@
 艺术图使用投影底稿绘制，采用1628 × 966原幅与900像素宽手机版。下载提供 WebP、两幅可缩放 SVG、场景 JSON、校验清单与离线 ZIP。网页在无 JavaScript 时仍可逐图阅读。在断网环境打开解压后的 index.html 可使用原幅、体量图及四处建筑卡。
 
 现行 R4 与首页各增一个可逆入口。验收使用 R4 生产提交的页面指纹，逐字节还原插入前页面，核对 H2 两个分辨率的既有校验值，继续运行全项目原有研究与浏览器测试。发布、验收与六世纪史料续查分别记录于[固定交接](https://github.com/mechgouki/luoyang-city/issues/52)和[研究记录](https://github.com/mechgouki/luoyang-city/issues/47)。
+
+## R5.2 宫城东部工作图
+
+[打开宫城东部](https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html#palace-east) · [矢量工作图](../research/prosperity-r5/palace-east.svg) · [逐项来源及原图读点](../research/prosperity-r5/palace-east.json)
+
+从太极殿向东，司马门内道路隔开宫院与宫内仓储区。宫墙以内分北部建筑区、南部窖穴区；以东另见一片宫外仓储遗迹。将地下窖穴的数量换算成地上房屋数量，或把每处遗迹都归入516—528年，会夸大复原把握。图中保留「太仓」为考古解释。
+
+第二幅局部图据新华社所刊现场示意图，核读P3一排的七个窖号、东围墙与广莫门内道路。原图读点属于照片上的红字注记。上图与下图分别绘制，不拼接到R4。下一处可推进的测绘问题是司马门内路两侧的墙线，需核带尺原图及共同控制点。旧全景原幅与两幅体量图仍各按其原有依据阅读。

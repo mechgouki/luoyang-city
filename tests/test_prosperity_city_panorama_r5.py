@@ -16,7 +16,7 @@ class Panorama(unittest.TestCase):
 
     def test_release(self):
         info=json.loads((self.site/"build-info.json").read_bytes())
-        self.assertEqual(verify(info,lambda p:(self.site/p).read_bytes())["offline_members"],9)
+        self.assertEqual(verify(info,lambda p:(self.site/p).read_bytes())["offline_members"],10)
 
     def test_painted_and_projected_landmark_order(self):
         scene=json.loads((self.site/"city-panorama/scene.json").read_bytes())
