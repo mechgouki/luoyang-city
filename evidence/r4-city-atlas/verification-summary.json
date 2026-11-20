@@ -1,0 +1,903 @@
+{
+  "milestone": "R4.1 盛时洛阳城市分布总图",
+  "research_scope": "R2 全城覆盖与 R3 定位依据随 R4 集成交付",
+  "site": "https://mechgouki.github.io/luoyang-city/prosperity-city-atlas.html",
+  "github": {
+    "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+    "source_tree": "8402dade56c2298f14fac0130f6828a66d4bd4c4",
+    "previous_production": "7d43121b5aa3f77f3d3e825a3822ed83db7f94f4",
+    "research_commit": "baa6bef096506f93b090fc2b5a3c6c26f34a2a9a",
+    "pull_request": "https://github.com/mechgouki/luoyang-city/pull/65",
+    "pr_browser_source_commit": "883f14229804db57b5438f7a16700288bafcf05f",
+    "pr_workflow": {
+      "id": 44706304415,
+      "event": "pull_request",
+      "head_branch": "research/r4-city-atlas",
+      "head_sha": "baa6bef096506f93b090fc2b5a3c6c26f34a2a9a",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44706304415",
+      "created_at": "2026-11-20T08:54:45Z",
+      "updated_at": "2026-11-20T09:02:34Z",
+      "jobs": [
+        {
+          "name": "build",
+          "id": 136186644530,
+          "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44706304415/job/136186644530",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-20T08:54:49Z",
+          "completed_at": "2026-11-20T09:02:33Z"
+        },
+        {
+          "name": "deploy",
+          "id": 136190114459,
+          "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44706304415/job/136190114459",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-20T09:02:33Z",
+          "completed_at": "2026-11-20T09:02:33Z"
+        },
+        {
+          "name": "verify-live",
+          "id": 136190116014,
+          "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44706304415/job/136190116014",
+          "status": "completed",
+          "conclusion": "skipped",
+          "started_at": "2026-11-20T09:02:34Z",
+          "completed_at": "2026-11-20T09:02:33Z"
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "github-pages",
+          "id": 14616220120,
+          "size_in_bytes": 323208313,
+          "digest": "sha256:7f15d6236c0a6aa89f79bb73a797b6f151f5e0f9763fe41d05e980ac2f8ad9bd",
+          "expired": false,
+          "created_at": "2026-11-20T09:02:29Z",
+          "expires_at": "2026-11-27T09:02:19Z"
+        },
+        {
+          "name": "browser-build-evidence",
+          "id": 14614933896,
+          "size_in_bytes": 146964078,
+          "digest": "sha256:77ab5baea0207a40d2540d510363e73d25bbdba0ebfcca1d02190d43158ef202",
+          "expired": false,
+          "created_at": "2026-11-20T09:02:18Z",
+          "expires_at": "2026-12-04T09:02:13Z"
+        }
+      ]
+    },
+    "production_workflow": {
+      "id": 44707629313,
+      "event": "push",
+      "head_branch": "main",
+      "head_sha": "1a7df53882eca40a44777b6e0717969a09f0f634",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44707629313",
+      "created_at": "2026-11-20T09:04:37Z",
+      "updated_at": "2026-11-20T09:20:15Z",
+      "jobs": [
+        {
+          "name": "build",
+          "id": 136191069657,
+          "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44707629313/job/136191069657",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-20T09:04:41Z",
+          "completed_at": "2026-11-20T09:12:26Z"
+        },
+        {
+          "name": "deploy",
+          "id": 136194750144,
+          "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44707629313/job/136194750144",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-20T09:12:30Z",
+          "completed_at": "2026-11-20T09:12:59Z"
+        },
+        {
+          "name": "verify-live",
+          "id": 136195012413,
+          "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44707629313/job/136195012413",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-20T09:13:02Z",
+          "completed_at": "2026-11-20T09:20:14Z"
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "github-pages",
+          "id": 14616690229,
+          "size_in_bytes": 323209058,
+          "digest": "sha256:5891fecf52ae7f76bb9ce1995c393ec0ca16bcf649a069e74e77eecb8dae5648",
+          "expired": false,
+          "created_at": "2026-11-20T09:12:22Z",
+          "expires_at": "2026-11-27T09:12:12Z"
+        },
+        {
+          "name": "live-acceptance-evidence",
+          "id": 14616616928,
+          "size_in_bytes": 95918065,
+          "digest": "sha256:1567fd0127cd6bfb8b7d7f32b59fe781f545384dece32167f92da8234c707704",
+          "expired": false,
+          "created_at": "2026-11-20T09:20:11Z",
+          "expires_at": "2026-12-20T09:20:07Z"
+        },
+        {
+          "name": "browser-build-evidence",
+          "id": 14614849986,
+          "size_in_bytes": 146966148,
+          "digest": "sha256:46d15b4915f32cb2587d6ed6a9aaa939b1ad3ae6f3dff51e57d79cb758bac2e4",
+          "expired": false,
+          "created_at": "2026-11-20T09:12:11Z",
+          "expires_at": "2026-12-04T09:12:06Z"
+        }
+      ]
+    }
+  },
+  "published_registers": {
+    "status": "passed",
+    "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+    "counts": {
+      "entities": 339,
+      "levels": {
+        "source": 11,
+        "relative": 315,
+        "unlocated": 12,
+        "candidate": 1
+      },
+      "periods": {
+        "attested": 29,
+        "later": 7,
+        "undated": 47,
+        "unspecified": 252,
+        "conditional": 2,
+        "name": 2
+      },
+      "features": 30,
+      "direct_bindings": 13,
+      "records": 183,
+      "literal_targets": 236,
+      "manual_context_reviews": 11,
+      "cases": 14,
+      "water_records": 34,
+      "water_relations": 100,
+      "road_records": 21
+    },
+    "downloads": 11,
+    "basis_rows": 97,
+    "archive_members": 13,
+    "coverage_rows": 339,
+    "distinct_resources": 47,
+    "preservation": {
+      "p472_stable_assets": 7,
+      "p472_offline_members": 9,
+      "entry_pages": 2
+    }
+  },
+  "public_https": {
+    "r4": {
+      "status": "passed",
+      "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+      "counts": {
+        "entities": 339,
+        "levels": {
+          "source": 11,
+          "relative": 315,
+          "unlocated": 12,
+          "candidate": 1
+        },
+        "periods": {
+          "attested": 29,
+          "later": 7,
+          "undated": 47,
+          "unspecified": 252,
+          "conditional": 2,
+          "name": 2
+        },
+        "features": 30,
+        "direct_bindings": 13,
+        "records": 183,
+        "literal_targets": 236,
+        "manual_context_reviews": 11,
+        "cases": 14,
+        "water_records": 34,
+        "water_relations": 100,
+        "road_records": 21
+      },
+      "downloads": 11,
+      "basis_rows": 97,
+      "archive_members": 13,
+      "coverage_rows": 339,
+      "distinct_resources": 47,
+      "preservation": {
+        "p472_stable_assets": 7,
+        "p472_offline_members": 9,
+        "entry_pages": 2
+      }
+    },
+    "predecessors": {
+      "status": "passed",
+      "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+      "distinct_resources": 45,
+      "counts": {
+        "records": 24,
+        "entities": 22,
+        "bound": 3,
+        "unlocated": 19,
+        "source_features": 14,
+        "original_constraint_entries": 24,
+        "electronic_matches": 24,
+        "manual_context_reviews": 0,
+        "new_historical_coordinates": 0,
+        "new_measurements": 0,
+        "new_footprints": 0
+      },
+      "downloads": 7,
+      "archive_members": 9,
+      "preservation": {
+        "frozen_files": 28,
+        "protected_in_build": 33,
+        "previous_offline_members": 17,
+        "previous_pages": 2,
+        "previous_manifests": 2,
+        "previous_bundles": 2
+      }
+    },
+    "origin": "https://mechgouki.github.io/luoyang-city/",
+    "checked_at_utc": "2026-11-20T09:13:53.678972+00:00",
+    "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+    "distinct_public_resources": 71,
+    "resources": {
+      "_assets/4b5c1b5251bfe49854d3-luoyang-panorama-small.webp": {
+        "bytes": 239164,
+        "sha256": "4b5c1b5251bfe49854d3a3a1cf70bb622d9b37efae5d772358f01c4f47673235"
+      },
+      "_assets/55037b42abb3a1401f13-runtime.js": {
+        "bytes": 1906,
+        "sha256": "55037b42abb3a1401f1347e91b503959ba0081262c40e052556e10f693405df1"
+      },
+      "_assets/6465657667ba740d3fc9-luoyang-panorama-approved-v9.webp": {
+        "bytes": 742398,
+        "sha256": "6465657667ba740d3fc99cde2495a864d3a8a446e2086c25984c0c547eed5825"
+      },
+      "_assets/98459529d0a2d8210aaf-luoyang-panorama-approved-v9-small.webp": {
+        "bytes": 274354,
+        "sha256": "98459529d0a2d8210aaf2728b0c1673ca38b46df2f7b761c9064f1c21fe053b6"
+      },
+      "_assets/c887056d075fa92c2514-luoyang-panorama.webp": {
+        "bytes": 599550,
+        "sha256": "c887056d075fa92c251422aece642df5def7af5b8ff087f3ff31f47ea6fdf4ee"
+      },
+      "backbone-469/frame-06a.svg": {
+        "bytes": 37894,
+        "sha256": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04"
+      },
+      "backbone-469/frame-qian2018.svg": {
+        "bytes": 16502,
+        "sha256": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba"
+      },
+      "backbone-469/jianchun-plan-audit.json": {
+        "bytes": 15772,
+        "sha256": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f"
+      },
+      "backbone-469/jianchun-source-context.svg": {
+        "bytes": 7572,
+        "sha256": "eaf696a70f7df2d446305599c9c679ab2cb48032fe9f556b834b62a72799528d"
+      },
+      "backbone-469/jianchun-structure-reading.svg": {
+        "bytes": 3955,
+        "sha256": "197be999a471879cf60884485ded7bd3fcbabfca52b897587d0c82f582a17377"
+      },
+      "backbone-469/readings.json": {
+        "bytes": 468561,
+        "sha256": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a"
+      },
+      "backbone-469/urban-contexts.json": {
+        "bytes": 33551,
+        "sha256": "47817e58ea63ccea1c3f2c83e4914333c6886ac30c6c6af0c182e77da406e6d7"
+      },
+      "build-info.json": {
+        "bytes": 126925,
+        "sha256": "e93771e5aa556f032056a28c26f8cf67f3ddf1d20cb4433290d16c8da5ae8fe2"
+      },
+      "city-atlas/atlas.css": {
+        "bytes": 5214,
+        "sha256": "831f048205a1136ca53ca15a427583e4768c2adef0f0fb1a85c5a539862e1cb8"
+      },
+      "city-atlas/atlas.js": {
+        "bytes": 5715,
+        "sha256": "362273341151b9b20c7c275bd09cbcacf2ce2b70ddba774bdab788c6e682041a"
+      },
+      "city-atlas/atlas.json": {
+        "bytes": 1878817,
+        "sha256": "783cb46c355d13cf9d1cd5137ed8a4bc7d6dba24b28debcc65803a493ed5aca2"
+      },
+      "city-atlas/basis.csv": {
+        "bytes": 33083,
+        "sha256": "2183e7ed36b2d002a3a0733d3e7b9d33940bbfa6061e6675e8c96929af98aad0"
+      },
+      "city-atlas/city.svg": {
+        "bytes": 40181,
+        "sha256": "9d1dff104cd01b3a78c45979bf5ab904589c26ccef85b6715f85657620b0ad04"
+      },
+      "city-atlas/core.svg": {
+        "bytes": 42591,
+        "sha256": "d88d8b1121cb92bdbde9c20d227bcb9003a473dd3ab953de66554232cda0d03a"
+      },
+      "city-atlas/coverage.csv": {
+        "bytes": 192449,
+        "sha256": "51876e3cf04bca021123caf80e18a5b5b0582f44123f29f649fb3aaac4a341ed"
+      },
+      "city-atlas/literary.svg": {
+        "bytes": 315984,
+        "sha256": "f636db11cb335fa0c44af6c3b3732aa7f1a98dd253a69b708f5e407df3315f83"
+      },
+      "city-atlas/manifest.json": {
+        "bytes": 2416,
+        "sha256": "b22d528955970c5c370155e82c6201c6cc1e13956df77a778d48db0e15a06304"
+      },
+      "city-atlas/qian.svg": {
+        "bytes": 16502,
+        "sha256": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba"
+      },
+      "city-atlas/relations.svg": {
+        "bytes": 13134,
+        "sha256": "571479720d54e9c8d23be5ff0cd72ab2e1fb15e05b893c71fd72c6c06a0e392c"
+      },
+      "city-review/cases.json": {
+        "bytes": 89275,
+        "sha256": "a9bfaa0f71636bab30ccb1c058e4e1ccfa5c593a6558a40fd1626e4ed61792e8"
+      },
+      "city-review/ledger.json": {
+        "bytes": 1035576,
+        "sha256": "b451fc136e495424ed1f99682b31304af530c15c644df3d5760c081417c713ae"
+      },
+      "common-470/bundle-manifest.json": {
+        "bytes": 4726,
+        "sha256": "a2791620286f2c4dbc695cae7bbe925db01fcef56b0ca0304ef0f84ea6c93722"
+      },
+      "common-470/city-common.svg": {
+        "bytes": 43433,
+        "sha256": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89"
+      },
+      "common-470/common-ui.js": {
+        "bytes": 6538,
+        "sha256": "b4f46e2351342267b6ecf2c4b73f0960cfd660eefd2c34a4d92a00882afd6ef2"
+      },
+      "common-470/places.csv": {
+        "bytes": 1340,
+        "sha256": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232"
+      },
+      "common-470/readings.json": {
+        "bytes": 471604,
+        "sha256": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870"
+      },
+      "common-470/reuse-plan.json": {
+        "bytes": 6752,
+        "sha256": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346"
+      },
+      "common-470/study.css": {
+        "bytes": 12761,
+        "sha256": "11298174abfe0005b3b402565632fdd5be56ea725f3ac852ab017fe2b822b435"
+      },
+      "data/entities.json": {
+        "bytes": 182309,
+        "sha256": "829f0c1f97a34fc4155346dec1e765f8efb4981d4a48f0d5aaad0e47c2cec5ed"
+      },
+      "downloads/backbone-469.pdf": {
+        "bytes": 1051225,
+        "sha256": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6"
+      },
+      "downloads/city-atlas.pdf": {
+        "bytes": 287609,
+        "sha256": "af104bffa46e8623ddc8acb043fa1ea5d2d8b7f5d4bfcc686d1f90b66c544f5c"
+      },
+      "downloads/city-atlas.zip": {
+        "bytes": 790641,
+        "sha256": "67c6ef22867c55f80b5f2076d354426de3fbd3a97a2920d9922c44480c663faa"
+      },
+      "downloads/common-470.zip": {
+        "bytes": 117628,
+        "sha256": "72267ae900af6fa414833d49a9068bf4c6308d5c83bb02df06c885c1d75f7163"
+      },
+      "downloads/north-471.zip": {
+        "bytes": 189987,
+        "sha256": "354ec05763634ce3e38ef74241ca9b95e51f8d8d08f6b1ebeb3ed69ebaef5938"
+      },
+      "downloads/west-472.zip": {
+        "bytes": 78696,
+        "sha256": "563bdc7d9bb2d265d192bf9285840c48975d21dc85824fe472eddc9eee77fa6e"
+      },
+      "homepage/history/index-before-r4.html": {
+        "bytes": 25461,
+        "sha256": "29ab436be3c29a05a9e8b97189989cd6773e45dd3f2b6471595b4df396836cac"
+      },
+      "index.html": {
+        "bytes": 25620,
+        "sha256": "56ef9a73b382863b6e7de427c56f2a132319de118fac4627db95bee8bac86ef3"
+      },
+      "north-471/bundle-manifest.json": {
+        "bytes": 7917,
+        "sha256": "535bb04635e66e437787f1a3a49c387adec482e649b51dd359817b2ce5d6a658"
+      },
+      "north-471/city-overview.svg": {
+        "bytes": 57193,
+        "sha256": "b1fe93b79986d41158d00b7fcb79b4a52ea1234915489827dd0a28f2541849e3"
+      },
+      "north-471/evidence.csv": {
+        "bytes": 8177,
+        "sha256": "32828311a27257a0af0a043b29b6707124c389ae3603c1cbf8b01b503fbedd1c"
+      },
+      "north-471/north-detail.svg": {
+        "bytes": 56889,
+        "sha256": "454ca63a992761d02d8370142e6658bd11ab13f613f06fb337cc64088e62d43c"
+      },
+      "north-471/north-ui.js": {
+        "bytes": 7286,
+        "sha256": "6ef22bb06584ea8d816ba88d596405dfc5c16c2a725ba482ac58bfc5c0418257"
+      },
+      "north-471/readings.json": {
+        "bytes": 779099,
+        "sha256": "883ba2756666b9926bdbd065cd3dca81de7bd2f011ab9021f42f6da687a59fab"
+      },
+      "north-471/reuse-plan.json": {
+        "bytes": 7896,
+        "sha256": "ff2fb3e449207797e0d2bd941c89eb07257be2efe578e136db79fc4d7bc56d17"
+      },
+      "north-471/study.css": {
+        "bytes": 9206,
+        "sha256": "63b1e588db523c98a65fe32c1107c44b534b686e2a250926011f8b14609703b7"
+      },
+      "prosperity-backbone-p469.html": {
+        "bytes": 232701,
+        "sha256": "748508d7018ded7bcfbdc27a8f1a17cd5db103f4039d89a835d87acf894d4394"
+      },
+      "prosperity-city-atlas.html": {
+        "bytes": 1404893,
+        "sha256": "068059f596c7321e4a5ff4db77d6f60341214c73ba863b5957263c938e8fa5cc"
+      },
+      "prosperity-city-common.html": {
+        "bytes": 85425,
+        "sha256": "a3ac034bc5f7fa8de9249cf9014bc6d6a62596bd3a1de34afbe1d4d4b73ca8bd"
+      },
+      "prosperity-city-distribution/grounded-distribution.svg": {
+        "bytes": 47065,
+        "sha256": "5e626f70d28bde7217f2cdb5184657ea0533c5f9514d1355f4368cc1247b200e"
+      },
+      "prosperity-city-north.html": {
+        "bytes": 165068,
+        "sha256": "0068e2eca28b2a4c80941b721ace5d257be131df3a1daae171b3fa6eb2084f37"
+      },
+      "prosperity-city-west.html": {
+        "bytes": 85786,
+        "sha256": "46ba9d8ef07f44df4f2a4d68809a9cab8ea56ff4099522c8ea600e9a79636c80"
+      },
+      "prosperity/data.json": {
+        "bytes": 850216,
+        "sha256": "61313c30090218e0ee967f6e61dd723d861cf5b7964a785fe88125bc6fdcbf62"
+      },
+      "prosperity/geographic-evidence.json": {
+        "bytes": 190189,
+        "sha256": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79"
+      },
+      "prosperity/literary-plan.svg": {
+        "bytes": 297940,
+        "sha256": "f85ed030433f2a4c066fde049448c42fd48a333ec6bf9ea63172853b6db224f1"
+      },
+      "prosperity/source-layout.svg": {
+        "bytes": 44032,
+        "sha256": "3e8706abbc0fe44c28e3d41e7039363f32d16f29943001cf12cc7546ede47c47"
+      },
+      "prosperity/terrain-constraints.json": {
+        "bytes": 7628,
+        "sha256": "2280ad1e0163e2e330d61ba093a603d15662cd268a18099d3609209930d8de51"
+      },
+      "prosperity/text-review.json": {
+        "bytes": 757885,
+        "sha256": "e897985535b46d802708e628da4bad5a40c667ad2283caad55aeb0b347cb3836"
+      },
+      "release.json": {
+        "bytes": 3317,
+        "sha256": "c17a106a4fda31c1d7cf03fe53a4452736c26fb474659344e3c72f0e7bce8e91"
+      },
+      "west-472/bundle-manifest.json": {
+        "bytes": 6594,
+        "sha256": "10b6cf6609029dafd90470e7d30c7921331434f439a10978af789be37b646e5c"
+      },
+      "west-472/crosswalk.json": {
+        "bytes": 7971,
+        "sha256": "32d615c3435bb9dcda0a8a588601188c78441bd4a557f860da40973b86d3aea6"
+      },
+      "west-472/evidence.csv": {
+        "bytes": 38696,
+        "sha256": "87e3a0b30d013245c4750451de4a69adcaa274c494644f8dc45416adfdf88212"
+      },
+      "west-472/readings.json": {
+        "bytes": 213408,
+        "sha256": "dec5beaa1b6a4b8616b743aefad0418c3d1f456adf10bc8f1cffdddc06dd865f"
+      },
+      "west-472/study.css": {
+        "bytes": 4590,
+        "sha256": "7ef745a19dbe1b9e776387e2b5e2c9bfa2d905734657abb1b1e26fdfc347e662"
+      },
+      "west-472/west-relations.svg": {
+        "bytes": 8608,
+        "sha256": "a7f7b2d1d9652a1e4b5f1598f9a3f271afe68eac41bbef5ee2001a09d92ee7b2"
+      },
+      "west-472/west-source.svg": {
+        "bytes": 25353,
+        "sha256": "127d86abf37868e634a97fefd71f5be80fcd6e09ffd6dd0a41681fa13bf13105"
+      },
+      "west-472/west-ui.js": {
+        "bytes": 2601,
+        "sha256": "e4629ca3a27b6b3858be74393b2691834b7312add470e1d9d450f3e727aefdc3"
+      }
+    }
+  },
+  "production_http": {
+    "commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+    "status": "passed",
+    "checked_files": 752,
+    "checked_at": "2026-11-20T09:13:41Z",
+    "http_retries": [
+      {
+        "path": "ground-review/crops/NI49-8-compilation.png",
+        "failed_attempt": 1,
+        "next_attempt": 2,
+        "retry_number": 1,
+        "status": 503,
+        "reason": "HTTP 503: Service Unavailable",
+        "delay_seconds": 1.0
+      }
+    ],
+    "prosperity_city_atlas_r4": {
+      "status": "passed",
+      "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+      "counts": {
+        "entities": 339,
+        "levels": {
+          "source": 11,
+          "relative": 315,
+          "unlocated": 12,
+          "candidate": 1
+        },
+        "periods": {
+          "attested": 29,
+          "later": 7,
+          "undated": 47,
+          "unspecified": 252,
+          "conditional": 2,
+          "name": 2
+        },
+        "features": 30,
+        "direct_bindings": 13,
+        "records": 183,
+        "literal_targets": 236,
+        "manual_context_reviews": 11,
+        "cases": 14,
+        "water_records": 34,
+        "water_relations": 100,
+        "road_records": 21
+      },
+      "downloads": 11,
+      "basis_rows": 97,
+      "archive_members": 13,
+      "coverage_rows": 339,
+      "distinct_resources": 47,
+      "preservation": {
+        "p472_stable_assets": 7,
+        "p472_offline_members": 9,
+        "entry_pages": 2
+      }
+    },
+    "prosperity_city_west_p472": {
+      "status": "passed",
+      "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+      "distinct_resources": 45,
+      "counts": {
+        "records": 24,
+        "entities": 22,
+        "bound": 3,
+        "unlocated": 19,
+        "source_features": 14,
+        "original_constraint_entries": 24,
+        "electronic_matches": 24,
+        "manual_context_reviews": 0,
+        "new_historical_coordinates": 0,
+        "new_measurements": 0,
+        "new_footprints": 0
+      },
+      "downloads": 7,
+      "archive_members": 9,
+      "preservation": {
+        "frozen_files": 28,
+        "protected_in_build": 33,
+        "previous_offline_members": 17,
+        "previous_pages": 2,
+        "previous_manifests": 2,
+        "previous_bundles": 2
+      }
+    }
+  },
+  "semantics": {
+    "pr": {
+      "prosperity": 209,
+      "approved_homepage": 5
+    },
+    "build": {
+      "prosperity": 209,
+      "approved_homepage": 5
+    }
+  },
+  "browser_reports": {
+    "pr": {
+      "desktop": {
+        "device": "desktop",
+        "checks": [
+          "Homepage, native source feature, shared layer URL, filtered SVG download",
+          "Regional relation, corrected quote and modern annotation, shared literary symbol and individual object",
+          "Region, period and name filters, restored query, empty results, source limits, corrected water links",
+          "Eleven public downloads with hashes, offline ZIP, native navigation without JavaScript"
+        ],
+        "downloads": {
+          "downloads/city-atlas.pdf": "af104bffa46e8623ddc8acb043fa1ea5d2d8b7f5d4bfcc686d1f90b66c544f5c",
+          "city-atlas/city.svg": "9d1dff104cd01b3a78c45979bf5ab904589c26ccef85b6715f85657620b0ad04",
+          "city-atlas/core.svg": "d88d8b1121cb92bdbde9c20d227bcb9003a473dd3ab953de66554232cda0d03a",
+          "city-atlas/literary.svg": "f636db11cb335fa0c44af6c3b3732aa7f1a98dd253a69b708f5e407df3315f83",
+          "city-atlas/relations.svg": "571479720d54e9c8d23be5ff0cd72ab2e1fb15e05b893c71fd72c6c06a0e392c",
+          "city-atlas/qian.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+          "city-atlas/coverage.csv": "51876e3cf04bca021123caf80e18a5b5b0582f44123f29f649fb3aaac4a341ed",
+          "city-atlas/basis.csv": "2183e7ed36b2d002a3a0733d3e7b9d33940bbfa6061e6675e8c96929af98aad0",
+          "city-atlas/atlas.json": "256d033d51fecd1aa3fc596e94b8990fe9e190a86689f9c5427836c44d79f69e",
+          "city-atlas/manifest.json": "1297c487649ebe5f7fc785f0d0be63e2bdf5d053c0e297108fa6d3010e8e8500",
+          "downloads/city-atlas.zip": "f8a3cca09b0e77ffe3c2a6385c391e57907d16b81d71af9a19711597913a9efe"
+        },
+        "screenshots": {
+          "desktop-overview.png": "989e7cc2e7f942e6989097e9c0d3c7dc539949fb98effa9501b417dc1f2290f7",
+          "desktop-corrected-reading.png": "8bbeff73626918c03aa088fb18182ce7b500fe25c32679e86011a6b9b42516f7",
+          "desktop-baoming.png": "41efa4d365053d6facaaa84b9d0458217ab68ed712b2fdf71119fb3a52a21492"
+        },
+        "errors": [],
+        "source_commit": "883f14229804db57b5438f7a16700288bafcf05f",
+        "status": "passed"
+      },
+      "mobile": {
+        "device": "mobile",
+        "checks": [
+          "Homepage, native source feature, shared layer URL, filtered SVG download",
+          "Regional relation, corrected quote and modern annotation, shared literary symbol and individual object",
+          "Region, period and name filters, restored query, empty results, source limits, corrected water links",
+          "Eleven public downloads with hashes, offline ZIP, native navigation without JavaScript"
+        ],
+        "downloads": {
+          "downloads/city-atlas.pdf": "af104bffa46e8623ddc8acb043fa1ea5d2d8b7f5d4bfcc686d1f90b66c544f5c",
+          "city-atlas/city.svg": "9d1dff104cd01b3a78c45979bf5ab904589c26ccef85b6715f85657620b0ad04",
+          "city-atlas/core.svg": "d88d8b1121cb92bdbde9c20d227bcb9003a473dd3ab953de66554232cda0d03a",
+          "city-atlas/literary.svg": "f636db11cb335fa0c44af6c3b3732aa7f1a98dd253a69b708f5e407df3315f83",
+          "city-atlas/relations.svg": "571479720d54e9c8d23be5ff0cd72ab2e1fb15e05b893c71fd72c6c06a0e392c",
+          "city-atlas/qian.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+          "city-atlas/coverage.csv": "51876e3cf04bca021123caf80e18a5b5b0582f44123f29f649fb3aaac4a341ed",
+          "city-atlas/basis.csv": "2183e7ed36b2d002a3a0733d3e7b9d33940bbfa6061e6675e8c96929af98aad0",
+          "city-atlas/atlas.json": "256d033d51fecd1aa3fc596e94b8990fe9e190a86689f9c5427836c44d79f69e",
+          "city-atlas/manifest.json": "1297c487649ebe5f7fc785f0d0be63e2bdf5d053c0e297108fa6d3010e8e8500",
+          "downloads/city-atlas.zip": "f8a3cca09b0e77ffe3c2a6385c391e57907d16b81d71af9a19711597913a9efe"
+        },
+        "screenshots": {
+          "mobile-overview.png": "9c84248e41ff1c5b8651565efbe0e4a6c7ef5ac5d944c0ea1f8d669f3282a086",
+          "mobile-corrected-reading.png": "8f26ae553eb325f04cb9c01c8e1f4e72372f3d38760db28bd01bd2a40ec86bbd",
+          "mobile-baoming.png": "73cfffcc2bcc1987b55684ce2bb2c8021427cd635d22c2f665dc7db6879ffcbe"
+        },
+        "errors": [],
+        "source_commit": "883f14229804db57b5438f7a16700288bafcf05f",
+        "status": "passed"
+      }
+    },
+    "build": {
+      "desktop": {
+        "device": "desktop",
+        "checks": [
+          "Homepage, native source feature, shared layer URL, filtered SVG download",
+          "Regional relation, corrected quote and modern annotation, shared literary symbol and individual object",
+          "Region, period and name filters, restored query, empty results, source limits, corrected water links",
+          "Eleven public downloads with hashes, offline ZIP, native navigation without JavaScript"
+        ],
+        "downloads": {
+          "downloads/city-atlas.pdf": "af104bffa46e8623ddc8acb043fa1ea5d2d8b7f5d4bfcc686d1f90b66c544f5c",
+          "city-atlas/city.svg": "9d1dff104cd01b3a78c45979bf5ab904589c26ccef85b6715f85657620b0ad04",
+          "city-atlas/core.svg": "d88d8b1121cb92bdbde9c20d227bcb9003a473dd3ab953de66554232cda0d03a",
+          "city-atlas/literary.svg": "f636db11cb335fa0c44af6c3b3732aa7f1a98dd253a69b708f5e407df3315f83",
+          "city-atlas/relations.svg": "571479720d54e9c8d23be5ff0cd72ab2e1fb15e05b893c71fd72c6c06a0e392c",
+          "city-atlas/qian.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+          "city-atlas/coverage.csv": "51876e3cf04bca021123caf80e18a5b5b0582f44123f29f649fb3aaac4a341ed",
+          "city-atlas/basis.csv": "2183e7ed36b2d002a3a0733d3e7b9d33940bbfa6061e6675e8c96929af98aad0",
+          "city-atlas/atlas.json": "783cb46c355d13cf9d1cd5137ed8a4bc7d6dba24b28debcc65803a493ed5aca2",
+          "city-atlas/manifest.json": "b22d528955970c5c370155e82c6201c6cc1e13956df77a778d48db0e15a06304",
+          "downloads/city-atlas.zip": "67c6ef22867c55f80b5f2076d354426de3fbd3a97a2920d9922c44480c663faa"
+        },
+        "screenshots": {
+          "desktop-overview.png": "989e7cc2e7f942e6989097e9c0d3c7dc539949fb98effa9501b417dc1f2290f7",
+          "desktop-corrected-reading.png": "8bbeff73626918c03aa088fb18182ce7b500fe25c32679e86011a6b9b42516f7",
+          "desktop-baoming.png": "41efa4d365053d6facaaa84b9d0458217ab68ed712b2fdf71119fb3a52a21492"
+        },
+        "errors": [],
+        "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+        "status": "passed"
+      },
+      "mobile": {
+        "device": "mobile",
+        "checks": [
+          "Homepage, native source feature, shared layer URL, filtered SVG download",
+          "Regional relation, corrected quote and modern annotation, shared literary symbol and individual object",
+          "Region, period and name filters, restored query, empty results, source limits, corrected water links",
+          "Eleven public downloads with hashes, offline ZIP, native navigation without JavaScript"
+        ],
+        "downloads": {
+          "downloads/city-atlas.pdf": "af104bffa46e8623ddc8acb043fa1ea5d2d8b7f5d4bfcc686d1f90b66c544f5c",
+          "city-atlas/city.svg": "9d1dff104cd01b3a78c45979bf5ab904589c26ccef85b6715f85657620b0ad04",
+          "city-atlas/core.svg": "d88d8b1121cb92bdbde9c20d227bcb9003a473dd3ab953de66554232cda0d03a",
+          "city-atlas/literary.svg": "f636db11cb335fa0c44af6c3b3732aa7f1a98dd253a69b708f5e407df3315f83",
+          "city-atlas/relations.svg": "571479720d54e9c8d23be5ff0cd72ab2e1fb15e05b893c71fd72c6c06a0e392c",
+          "city-atlas/qian.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+          "city-atlas/coverage.csv": "51876e3cf04bca021123caf80e18a5b5b0582f44123f29f649fb3aaac4a341ed",
+          "city-atlas/basis.csv": "2183e7ed36b2d002a3a0733d3e7b9d33940bbfa6061e6675e8c96929af98aad0",
+          "city-atlas/atlas.json": "783cb46c355d13cf9d1cd5137ed8a4bc7d6dba24b28debcc65803a493ed5aca2",
+          "city-atlas/manifest.json": "b22d528955970c5c370155e82c6201c6cc1e13956df77a778d48db0e15a06304",
+          "downloads/city-atlas.zip": "67c6ef22867c55f80b5f2076d354426de3fbd3a97a2920d9922c44480c663faa"
+        },
+        "screenshots": {
+          "mobile-overview.png": "9c84248e41ff1c5b8651565efbe0e4a6c7ef5ac5d944c0ea1f8d669f3282a086",
+          "mobile-corrected-reading.png": "8f26ae553eb325f04cb9c01c8e1f4e72372f3d38760db28bd01bd2a40ec86bbd",
+          "mobile-baoming.png": "73cfffcc2bcc1987b55684ce2bb2c8021427cd635d22c2f665dc7db6879ffcbe"
+        },
+        "errors": [],
+        "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+        "status": "passed"
+      }
+    },
+    "live": {
+      "desktop": {
+        "device": "desktop",
+        "checks": [
+          "Homepage, native source feature, shared layer URL, filtered SVG download",
+          "Regional relation, corrected quote and modern annotation, shared literary symbol and individual object",
+          "Region, period and name filters, restored query, empty results, source limits, corrected water links",
+          "Eleven public downloads with hashes, offline ZIP, native navigation without JavaScript"
+        ],
+        "downloads": {
+          "downloads/city-atlas.pdf": "af104bffa46e8623ddc8acb043fa1ea5d2d8b7f5d4bfcc686d1f90b66c544f5c",
+          "city-atlas/city.svg": "9d1dff104cd01b3a78c45979bf5ab904589c26ccef85b6715f85657620b0ad04",
+          "city-atlas/core.svg": "d88d8b1121cb92bdbde9c20d227bcb9003a473dd3ab953de66554232cda0d03a",
+          "city-atlas/literary.svg": "f636db11cb335fa0c44af6c3b3732aa7f1a98dd253a69b708f5e407df3315f83",
+          "city-atlas/relations.svg": "571479720d54e9c8d23be5ff0cd72ab2e1fb15e05b893c71fd72c6c06a0e392c",
+          "city-atlas/qian.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+          "city-atlas/coverage.csv": "51876e3cf04bca021123caf80e18a5b5b0582f44123f29f649fb3aaac4a341ed",
+          "city-atlas/basis.csv": "2183e7ed36b2d002a3a0733d3e7b9d33940bbfa6061e6675e8c96929af98aad0",
+          "city-atlas/atlas.json": "783cb46c355d13cf9d1cd5137ed8a4bc7d6dba24b28debcc65803a493ed5aca2",
+          "city-atlas/manifest.json": "b22d528955970c5c370155e82c6201c6cc1e13956df77a778d48db0e15a06304",
+          "downloads/city-atlas.zip": "67c6ef22867c55f80b5f2076d354426de3fbd3a97a2920d9922c44480c663faa"
+        },
+        "screenshots": {
+          "desktop-overview.png": "989e7cc2e7f942e6989097e9c0d3c7dc539949fb98effa9501b417dc1f2290f7",
+          "desktop-corrected-reading.png": "8bbeff73626918c03aa088fb18182ce7b500fe25c32679e86011a6b9b42516f7",
+          "desktop-baoming.png": "41efa4d365053d6facaaa84b9d0458217ab68ed712b2fdf71119fb3a52a21492"
+        },
+        "errors": [],
+        "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+        "status": "passed"
+      },
+      "mobile": {
+        "device": "mobile",
+        "checks": [
+          "Homepage, native source feature, shared layer URL, filtered SVG download",
+          "Regional relation, corrected quote and modern annotation, shared literary symbol and individual object",
+          "Region, period and name filters, restored query, empty results, source limits, corrected water links",
+          "Eleven public downloads with hashes, offline ZIP, native navigation without JavaScript"
+        ],
+        "downloads": {
+          "downloads/city-atlas.pdf": "af104bffa46e8623ddc8acb043fa1ea5d2d8b7f5d4bfcc686d1f90b66c544f5c",
+          "city-atlas/city.svg": "9d1dff104cd01b3a78c45979bf5ab904589c26ccef85b6715f85657620b0ad04",
+          "city-atlas/core.svg": "d88d8b1121cb92bdbde9c20d227bcb9003a473dd3ab953de66554232cda0d03a",
+          "city-atlas/literary.svg": "f636db11cb335fa0c44af6c3b3732aa7f1a98dd253a69b708f5e407df3315f83",
+          "city-atlas/relations.svg": "571479720d54e9c8d23be5ff0cd72ab2e1fb15e05b893c71fd72c6c06a0e392c",
+          "city-atlas/qian.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+          "city-atlas/coverage.csv": "51876e3cf04bca021123caf80e18a5b5b0582f44123f29f649fb3aaac4a341ed",
+          "city-atlas/basis.csv": "2183e7ed36b2d002a3a0733d3e7b9d33940bbfa6061e6675e8c96929af98aad0",
+          "city-atlas/atlas.json": "783cb46c355d13cf9d1cd5137ed8a4bc7d6dba24b28debcc65803a493ed5aca2",
+          "city-atlas/manifest.json": "b22d528955970c5c370155e82c6201c6cc1e13956df77a778d48db0e15a06304",
+          "downloads/city-atlas.zip": "67c6ef22867c55f80b5f2076d354426de3fbd3a97a2920d9922c44480c663faa"
+        },
+        "screenshots": {
+          "mobile-overview.png": "9c84248e41ff1c5b8651565efbe0e4a6c7ef5ac5d944c0ea1f8d669f3282a086",
+          "mobile-corrected-reading.png": "8f26ae553eb325f04cb9c01c8e1f4e72372f3d38760db28bd01bd2a40ec86bbd",
+          "mobile-baoming.png": "73cfffcc2bcc1987b55684ce2bb2c8021427cd635d22c2f665dc7db6879ffcbe"
+        },
+        "errors": [],
+        "source_commit": "1a7df53882eca40a44777b6e0717969a09f0f634",
+        "status": "passed"
+      }
+    }
+  },
+  "screenshots": {
+    "desktop": {
+      "desktop-overview.png": {
+        "pr_equals_live": true,
+        "build_equals_live": true,
+        "sha256": "989e7cc2e7f942e6989097e9c0d3c7dc539949fb98effa9501b417dc1f2290f7"
+      },
+      "desktop-corrected-reading.png": {
+        "pr_equals_live": true,
+        "build_equals_live": true,
+        "sha256": "8bbeff73626918c03aa088fb18182ce7b500fe25c32679e86011a6b9b42516f7"
+      },
+      "desktop-baoming.png": {
+        "pr_equals_live": true,
+        "build_equals_live": true,
+        "sha256": "41efa4d365053d6facaaa84b9d0458217ab68ed712b2fdf71119fb3a52a21492"
+      }
+    },
+    "mobile": {
+      "mobile-overview.png": {
+        "pr_equals_live": true,
+        "build_equals_live": true,
+        "sha256": "9c84248e41ff1c5b8651565efbe0e4a6c7ef5ac5d944c0ea1f8d669f3282a086"
+      },
+      "mobile-corrected-reading.png": {
+        "pr_equals_live": true,
+        "build_equals_live": true,
+        "sha256": "8f26ae553eb325f04cb9c01c8e1f4e72372f3d38760db28bd01bd2a40ec86bbd"
+      },
+      "mobile-baoming.png": {
+        "pr_equals_live": true,
+        "build_equals_live": true,
+        "sha256": "73cfffcc2bcc1987b55684ce2bb2c8021427cd635d22c2f665dc7db6879ffcbe"
+      }
+    }
+  },
+  "evidence_scope": "本目录永久保存本批六幅正式站浏览器截图、分阶段操作报告、公开资源校验与保留边界。全站 Actions 原始日志与附件另按 GitHub 各自的保留期提供。",
+  "limits": [
+    "11个实体有直接来源对应，宫城候选范围单列；可检索339个实体。",
+    "仅关系统计包括受限的文献次序、范围及事件；328个实体没有直接几何。",
+    "现代洛水与邙山独立控制，钱氏图与06a保持不同图框。",
+    "历史新坐标为0；建春门共同控制点对0；古岸线、完整道路与古地面保留待证。"
+  ],
+  "recorded_utc": "2026-11-20T09:21:27.813532+00:00",
+  "public_screenshot_files": {
+    "desktop-baoming.png": {
+      "relative_path": "screenshots/desktop-baoming.png",
+      "git_blob": "5a3627741811648f2ec265213d735cb620854aca",
+      "sha256": "41efa4d365053d6facaaa84b9d0458217ab68ed712b2fdf71119fb3a52a21492"
+    },
+    "desktop-corrected-reading.png": {
+      "relative_path": "screenshots/desktop-corrected-reading.png",
+      "git_blob": "5f477e11b792bb041f6a695b18ac8660a3c260be",
+      "sha256": "8bbeff73626918c03aa088fb18182ce7b500fe25c32679e86011a6b9b42516f7"
+    },
+    "desktop-overview.png": {
+      "relative_path": "screenshots/desktop-overview.png",
+      "git_blob": "96931285bdba4b10c2d269cc204ba8b822dcf40a",
+      "sha256": "989e7cc2e7f942e6989097e9c0d3c7dc539949fb98effa9501b417dc1f2290f7"
+    },
+    "mobile-baoming.png": {
+      "relative_path": "screenshots/mobile-baoming.png",
+      "git_blob": "8ee37548bf964a1b2f653acb3e70d40f5edd560d",
+      "sha256": "73cfffcc2bcc1987b55684ce2bb2c8021427cd635d22c2f665dc7db6879ffcbe"
+    },
+    "mobile-corrected-reading.png": {
+      "relative_path": "screenshots/mobile-corrected-reading.png",
+      "git_blob": "1cdc7896bd0811fe6e014519cff39774facfef3d",
+      "sha256": "8f26ae553eb325f04cb9c01c8e1f4e72372f3d38760db28bd01bd2a40ec86bbd"
+    },
+    "mobile-overview.png": {
+      "relative_path": "screenshots/mobile-overview.png",
+      "git_blob": "179312ee31ff73d40bd77c0717451485544bad08",
+      "sha256": "9c84248e41ff1c5b8651565efbe0e4a6c7ef5ac5d944c0ea1f8d669f3282a086"
+    }
+  }
+}
