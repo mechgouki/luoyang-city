@@ -2,6 +2,10 @@
 
 更新：2026-11-20。当前进度、验收状态及下一条断点以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新正文和评论为准；史料、图源、量测和验收依据存于[研究记录 #47](https://github.com/mechgouki/luoyang-city/issues/47)。以真实主分支、发布清单和正式站验收为准；不要从较早ZIP恢复覆盖主分支。
 
+## 2026-11-20　P4.7.2 城西门道与坊寺
+
+R1的[逐条对照](../research/prosperity-v4/west-472/crosswalk.json)、[图面与变更说明](prosperity-city-west-p472-notes.md)接入现行城市视图。页面为 `prosperity-city-west.html`，从北门与金墉专题可达。24条证据、22个已有实体，3个有来源图符、19个未定位。城西阊阖门空绑定，宫城阊阖仅供辨名。P1人工语境字段仍全部为空。后续按R2全城文献覆盖、R3地形与定位依据分级推进，再收束R4总图与R5全景。[固定交接与正式验收状态](https://github.com/mechgouki/luoyang-city/issues/52)。
+
 ## 2026-11-20　P4.7.1 北门—金墉城市分布联读（内部p471）
 
 本批以P4.7提交`e16c28d`为来源基线，增加独立页面`prosperity-city-north.html`、城市总图与北部局部两幅SVG、JSON、CSV及离线ZIP，不新造PDF。P470的25项原对象加P1已有金墉丙城残墙与代表点，合为27项同源显示要素（26项遗存、1项默认关闭的近现代洛水参照）；新增显示不等于新测古址。N01金墉丙城、N02大夏门、N03广莫门三个入口联读B4原16条证据与P1现行校读。金墉墙线保持5段13顶点开放多折线，代表点不是门址、现场控制点或完整金墉中心；北部放大只是原PDF裁切。

@@ -898,6 +898,8 @@ try:
  report['prosperity_backbone_p469']=backbone
  report['prosperity_city_common_p470']=common
  report['prosperity_city_north_p471']=north_view
+ from verify_city_west_p472 import verify as verify_city_west
+ report['prosperity_city_west_p472']=verify_city_west(info,get)
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors
