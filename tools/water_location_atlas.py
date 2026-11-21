@@ -1,4 +1,5 @@
 """Publish a source-frame hydrography plate and a locational register for every water ID."""
+import base64
 import csv
 import json
 from collections import Counter
@@ -117,6 +118,7 @@ def build(site):
                     if s.get("url") and s.get("title"):
                         sources[s["title"]] = s["url"]
             if wid == "W30":
+                sources["河南省文物考古研究院 · 2025年度偃师商城田野工作汇报"] = "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=2809"
                 for s in load(V4 / "anchor-461/hongchi.json")["sources"]:
                     if s.get("url"): sources[s["title"]] = s["url"]
             method = "研究图河段／符号" if wid in traced else ("近现代底图线" if wid == "W02" else "相对位置或遗迹地段")
@@ -161,7 +163,27 @@ def build(site):
     groups = list(dict.fromkeys(r["group"] for r in rows))
     jumps = "　".join(link("#group-"+str(next(i for i,r in enumerate(rows) if r["group"]==g)),g) for g in groups)
     page = (DATA / "atlas.html").read_text()
-    substitutions = {"REGION":regional(fig), "CITY":city(atlas["features"]), "ROWS":"".join(sections),
+    districts = [
+        ("城西水源／王城以西", ["W05","W07","W08","W09"]),
+        ("城西北／内城诸门", ["W33","W04"]),
+        ("西郭、内城两侧与城西园地", ["W10","W11","W12","W25","W26"]),
+        ("宫城西墙／千秋门一带", ["W13","W14","W21","W28"]),
+        ("华林园内外", ["W15","W16","W17","W18","W19","W34"]),
+        ("长秋寺、昭仪寺与永和里", ["W20","W22","W23","W24"]),
+        ("城东南／城东水道与湖陂", ["W32","W29","W06","W31","W30"]),
+        ("城南御道与伊洛河谷", ["W27","W01","W03"]),
+        ("近现代底图对照", ["W02"])
+    ]
+    assert sorted(wid for _, ids in districts for wid in ids) == sorted(current)
+    locality_index = "".join("<div><b>"+area+"</b><p>"+" ".join(link("#"+wid,baseline[wid]["name"])
+                             for wid in ids)+"</p></div>" for area,ids in districts)
+    localplates = []
+    for name, label in [("fig25","城南古洛河与现洛河的图内取样"),("trench","宫城西南角附近的横探沟"),
+                        ("qianqiu","千秋门发掘窗口"),("hongchi","鸿池陂残存范围")]:
+        blob = (V4 / "anchor-461" / (name+".svg")).read_bytes()
+        uri = "data:image/svg+xml;base64,"+base64.b64encode(blob).decode()
+        localplates.append(f'<img class="localplate" loading="lazy" alt="{label}" src="{uri}">')
+    substitutions = {"DISTRICTS":locality_index, "LOCALPLATES":"".join(localplates),"REGION":regional(fig), "CITY":city(atlas["features"]), "ROWS":"".join(sections),
                      "GROUPS":jumps, "ORIGINAL":link(fig["image"],"查看黄学超图1原图"),
                      "PAPER":link(fig["publication"],"原刊与摘要"),"CSV":CSV,"DATA":JSON}
     for key, value in substitutions.items():
