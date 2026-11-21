@@ -6,6 +6,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 from PIL import Image
 from water_location_atlas import build as build_water_atlas
+from homepage_artwork_v10 import publish as publish_homepage_artwork
 from city_panorama_sima import compare, plate as sima_plate
 from city_panorama_r5_contract import ATLAS, BASELINE, ENTRY, HOME, KEY, VERSION, before_r5, digest
 from city_panorama_r5_page import BUNDLE, FILES, FOLDER, MANIFEST, PAGE, make_page
@@ -87,6 +88,7 @@ def build(site=ROOT/"_site"):
     info[KEY]=study
     for p in [*water_files,*assets,MANIFEST,BUNDLE,PAGE,HOME,ATLAS,"release.json"]:info["files_sha256"][p]=sha(site/p)
     dump(site/"build-info.json",info)
+    publish_homepage_artwork(site)
     return study
 
 

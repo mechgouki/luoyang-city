@@ -87,7 +87,8 @@ class ApprovedPanoramaH2(unittest.TestCase):
     def test_new_homepage_and_both_releases_reference_approved_image(self):
         h=self.home["hero"]
         for name in ("index.html","v3.0-dual.html"):
-            code=(SITE/name).read_text(encoding="utf-8")
+            archived=SITE/"homepage/history"/name.replace(".html","-before-v10.html")
+            code=archived.read_text(encoding="utf-8")
             self.assertIn('data-hero-revision="'+REV+'"',code)
             self.assertIn('src="./'+h["asset"]+'"',code)
             self.assertIn('srcset="./'+h["small_asset"]+'"',code)
@@ -99,8 +100,20 @@ class ApprovedPanoramaH2(unittest.TestCase):
             self.assertIn('id="home-research"',code)
             self.assertIn('id="map-viewport"',code)
 
+    def test_current_homepage_matches_reviewed_519_panorama(self):
+        import sys
+        sys.path.insert(0,str(ROOT/"tools"))
+        from homepage_artwork_v10 import verify, FULL, SMALL
+        verify(self.info,self.release,lambda path:(SITE/path).read_bytes())
+        for name,size in ((FULL,(1672,941)),(SMALL,(960,540))):
+            with Image.open(SITE/name) as artwork:
+                self.assertEqual(artwork.size,size)
+                self.assertEqual(artwork.format,"WEBP")
+
     def test_release_provenance_matches_all_versions(self):
-        self.assertEqual(self.release["homepage_hero_revision"],REV)
+        current=read(SITE/"homepage/approval-v10.json")
+        self.assertEqual(current["previous_revision"],REV)
+        self.assertEqual(self.release["homepage_hero_revision"],current["hero"]["revision"])
         self.assertEqual(self.release["homepage_hero_status"],"approved")
         self.assertIn(VERSION,self.release["extensions"])
         self.assertEqual(self.info["homepage"]["hero_revision"],OLD_REV)

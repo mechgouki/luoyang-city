@@ -319,14 +319,14 @@ try:
  assert info['files_sha256'][homepage['hero']['small_asset']]==homepage['hero']['small_asset_sha256']=='4b5c1b5251bfe49854d3a3a1cf70bb622d9b37efae5d772358f01c4f47673235'
  archived_home=json.loads(get('homepage/history/panorama-interim-v8.json'))
  assert homepage==archived_home
- # The approved current visual is versioned independently, not inserted into
- # the historical H1 manifest already protected by the P1/P2/P3 audit trail.
+ # The H2 approval remains independently verifiable alongside
+ # the historical H1 manifest and the current homepage illustration.
  visual_approval=json.loads(get('homepage/approval-v9.json'))
  approved=visual_approval['hero']
  approval_preserved=json.loads(get('homepage/approval-preservation-v9.json'))
  assert visual_approval['version']==info['homepage_approved_v9']['version']=='homepage-approved-v9'
  assert visual_approval['source_commit']==info['source_commit']==info['homepage_approved_v9']['source_commit']
- assert approved['revision']==info['homepage_approved_v9']['hero_revision']==release['homepage_hero_revision']=='panorama-approved-v9'
+ assert approved['revision']==info['homepage_approved_v9']['hero_revision']=='panorama-approved-v9'
  assert approved['status']==info['homepage_approved_v9']['hero_status']==release['homepage_hero_status']=='approved'
  assert approved['visual_review']=='approved_for_homepage' and approved['publication_authorized'] is True
  assert approved['approval_scope']=='homepage_visual_only' and approved['historical_ground_truth_upgraded'] is False
@@ -344,7 +344,8 @@ try:
  assert all(f'id="{ident}"' in home_html for ident in ['home-hero','home-start','home-questions','home-research'])
  assert home_html.index('id="home-hero"') < home_html.index('id="home-questions"') < home_html.index('id="map-viewport"') < home_html.index('id="home-research"')
  assert '研究性复原示意' in home_html
- assert 'data-hero-revision="panorama-approved-v9"' in home_html
+ from homepage_artwork_v10 import verify as verify_homepage_artwork
+ verify_homepage_artwork(info,release,get)
  # Prosperity P1 adds a source-coordinate layer without promoting the literary canvas to ground truth.
  prosperity=json.loads(get('prosperity/data.json'))
  prosperity_geo=json.loads(get('prosperity/geographic-evidence.json'))

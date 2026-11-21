@@ -121,7 +121,8 @@ class SourceDistributionP451(unittest.TestCase):
             self.assertEqual(sha(SITE/path),value,path)
         for name in ("index.html","v3.0-dual.html"):
             old=(OUT/"history"/name.replace(".html","-before-p451.html")).read_text(encoding="utf-8")
-            preserved = "homepage/history/index-before-r4.html" if name == "index.html" else name
+            preserved = {"index.html": "homepage/history/index-before-r4.html",
+                         "v3.0-dual.html": "homepage/history/v3.0-dual-before-v10.html"}.get(name, name)
             now=(SITE/preserved).read_text(encoding="utf-8")
             self.assertEqual(sha(OUT/"history"/name.replace(".html","-before-p451.html")),proof["pre_edit_html_sha256"][name])
             self.assertEqual(now.count('id="prosperity-p451-entry"'),1)
