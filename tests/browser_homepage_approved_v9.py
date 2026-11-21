@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""H2: real browser validates approved image in the current homepage and mobile picture."""
+"""Validate the current approved image at both screen sizes and its archived predecessors."""
 import argparse
 import functools
 import http.server
@@ -53,28 +53,31 @@ try:
         r=p.goto(base,wait_until="networkidle")
         assert r.status==200
         ready(p)
-        h=ctx.request.get(base+"homepage/approval-v9.json").json()["hero"]
-        approval=ctx.request.get(base+"homepage/approval-v9.json").json()
+        approval=ctx.request.get(base+"homepage/approval-v10.json").json()
+        h=approval["hero"]
+        previous=ctx.request.get(base+approval["previous_metadata"]).json()["hero"]
+        assert previous["revision"]==approval["previous_revision"]=="panorama-approved-v9"
         old=ctx.request.get(base+"homepage/history/panorama-interim-v8.json").json()
-        assert h["revision"]=="panorama-approved-v9" and h["status"]=="approved"
-        assert h["source_sha256"]=="2a59bf83886d77f7c9226ec7f5d99c94ea6c63c6e207c2e560ee82f80ed93891"
-        assert approval["source_sha256"]==h["source_sha256"]
+        assert h["revision"]=="panorama-approved-v10" and h["status"]=="approved"
+        assert h["source_sha256"]=="262e0797c09788f7871bca81c05d5e2c15d5ebc7ab8cf6c559ced68cf883a41e"
+        assert h["approval_date"]=="2026-11-21"
         assert old["hero"]["revision"]=="panorama-interim-v8"
         im=p.locator("#home-hero img")
         im.wait_for(state="visible")
         p.wait_for_function("()=>{const im=document.querySelector('#home-hero img');return im&&im.complete&&im.naturalWidth===1672;}")
         assert im.evaluate("(el)=>el.currentSrc.endsWith('/'+el.getAttribute('src').replace('./',''))")
         assert im.get_attribute("src").endswith(h["asset"])
-        assert p.locator("#home-hero").get_attribute("data-hero-revision")=="panorama-approved-v9"
+        assert p.locator("#home-hero").get_attribute("data-hero-revision")==h["revision"]
+        assert im.get_attribute("alt")==h["alt"]
         expect(p.locator("#home-hero")).to_contain_text("研究性复原示意")
         assert p.locator("#home-questions a[data-question]").count()==3
         no_overflow(p)
         p.screenshot(path=str(out/"approved-desktop.png"),full_page=False)
-        ok("Desktop hero uses the approved 1672×941 image, with verified metadata and preserved v8")
+        ok("Desktop hero uses the approved 1672×941 image, with verified metadata and preserved v8/v9")
         for page in ("index.html","v3.0-dual.html"):
             res=ctx.request.get(base+page)
             assert res.status==200
-            assert b'data-hero-revision="panorama-approved-v9"' in res.body()
+            assert b'data-hero-revision="panorama-approved-v10"' in res.body()
             assert h["asset"].encode() in res.body()
         for asset in (h["asset"],h["small_asset"]):
             r=ctx.request.get(base+asset)
@@ -87,7 +90,8 @@ try:
         m.goto(base,wait_until="networkidle")
         ready(m)
         m.wait_for_function("()=>{const im=document.querySelector('#home-hero img');return im&&im.complete&&im.naturalWidth===960;}")
-        assert m.locator("#home-hero img").evaluate("(el)=>el.currentSrc.includes('luoyang-panorama-approved-v9-small.webp')")
+        assert m.locator("#home-hero img").evaluate("el=>el.currentSrc").endswith("/"+h["small_asset"])
+        assert m.locator("#home-hero img").evaluate("el=>getComputedStyle(el).objectFit")=="contain"
         no_overflow(m)
         m.screenshot(path=str(out/"approved-mobile.png"),full_page=False)
         m.locator("#home-start").tap()

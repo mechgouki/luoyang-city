@@ -101,7 +101,8 @@ class P452RoadReview(unittest.TestCase):
         self.assertTrue(self.preserve["protected_unchanged"])
         self.assertEqual(len(self.preserve["protected_sha256"]),self.preserve["protected_files"])
         for name,digest in self.preserve["protected_sha256"].items():
-            name = "homepage/history/index-before-r4.html" if name == "index.html" else name
+            name = {"index.html": "homepage/history/index-before-r4.html",
+                         "v3.0-dual.html": "homepage/history/v3.0-dual-before-v10.html"}.get(name, name)
             self.assertEqual(sha(SITE/name),digest,name)
             self.assertEqual(self.info["files_sha256"][name],digest,name)
         previous=OUT/"history/prosperity-city-distribution-before-p452.html"
@@ -113,7 +114,7 @@ class P452RoadReview(unittest.TestCase):
             re.sub(r'<section id="p452-next".*?</section>','',new,count=1,flags=re.S),
             previous.read_text(encoding="utf-8")
         )
-        self.assertIn('data-hero-revision="panorama-approved-v9"',(SITE/"index.html").read_text())
+        self.assertIn('data-hero-revision="panorama-approved-v9"',(SITE/"homepage/history/index-before-r4.html").read_text())
         self.assertEqual(read(SITE/"prosperity-city-distribution/data.json")["version"],"prosperity-city-distribution-p451")
     def test_page_atlas_and_integrity(self):
         self.assertIn('data-road-id="D01"',self.page)

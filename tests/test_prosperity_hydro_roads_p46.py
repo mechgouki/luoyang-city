@@ -119,7 +119,8 @@ class P46AnchorAudit(unittest.TestCase):
     def test_unchanged_legacy_and_approved_hero(self):
         self.assertTrue(self.proof["protected_unchanged"])
         for name,digest in self.proof["protected_sha256"].items():
-            name = "homepage/history/index-before-r4.html" if name == "index.html" else name
+            name = {"index.html": "homepage/history/index-before-r4.html",
+                         "v3.0-dual.html": "homepage/history/v3.0-dual-before-v10.html"}.get(name, name)
             self.assertEqual(sha(SITE/name),digest,name)
             self.assertEqual(self.info["files_sha256"][name],digest,name)
         old=OUT/"history/prosperity-street-clusters-before-p46.html"
