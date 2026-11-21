@@ -155,10 +155,23 @@ def exercise(browser, base, device, output):
                     plain = disabled.new_page()
                     plain.goto(base + PAGE + "#X02", wait_until="domcontentloaded")
                     expect(plain.locator("details[data-road]")).to_have_count(21)
-                    plain.locator("#X02 > summary").click()
-                    expect(plain.locator("#X02")).to_contain_text("7.5")
-                    expect(plain.locator("#X02")).to_have_attribute("open", "")
-                    fits(plain)
+                    report["no_javascript"] = {
+                        "url": plain.url,
+                        "scroll_behavior": plain.evaluate("getComputedStyle(document.documentElement).scrollBehavior"),
+                        "summary_before": plain.locator("#X02 > summary").bounding_box(),
+                    }
+                    try:
+                        expect(plain.locator("#X02 > summary")).to_be_in_viewport()
+                        plain.locator("#X02 > summary").click()
+                        expect(plain.locator("#X02")).to_contain_text("7.5")
+                        expect(plain.locator("#X02")).to_have_attribute("open", "")
+                        fits(plain)
+                        report["no_javascript"]["status"] = "passed"
+                    except Exception:
+                        report["no_javascript"]["status"] = "failed"
+                        report["no_javascript"]["summary_after"] = plain.locator("#X02 > summary").bounding_box()
+                        capture(plain.locator("body"), "no-javascript-failure")
+                        raise
             report["checks"].append("Five actual downloads with SHA-256, disconnected ZIP reading and search, native reading without JavaScript")
 
             approval = context.request.get(base + "homepage/approval-v11.json").json()
