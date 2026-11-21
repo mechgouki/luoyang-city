@@ -19,9 +19,9 @@ def digest(b):
 
 def before_r5(info,path,content):
     assert content.count(ENTRY)==1,path
-    if path==HOME and b'data-hero-revision="panorama-approved-v10"' in content:
-        from homepage_artwork_v10 import replace_hero
-        content=replace_hero(content,restore=True)
+    if path==HOME:
+        from homepage_artwork_v10 import restore_baseline
+        content=restore_baseline(content)
     original=content.replace(ENTRY,b"")
     if KEY in info:
         assert digest(original)==info[KEY]["entry_predecessors"][path]

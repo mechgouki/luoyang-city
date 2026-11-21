@@ -53,13 +53,15 @@ try:
         r=p.goto(base,wait_until="networkidle")
         assert r.status==200
         ready(p)
-        approval=ctx.request.get(base+"homepage/approval-v10.json").json()
+        approval=ctx.request.get(base+"homepage/approval-v11.json").json()
         h=approval["hero"]
         previous=ctx.request.get(base+approval["previous_metadata"]).json()["hero"]
-        assert previous["revision"]==approval["previous_revision"]=="panorama-approved-v9"
+        assert previous["revision"]==approval["previous_revision"]=="panorama-approved-v10"
+        assert previous["source_sha256"]=="262e0797c09788f7871bca81c05d5e2c15d5ebc7ab8cf6c559ced68cf883a41e"
         old=ctx.request.get(base+"homepage/history/panorama-interim-v8.json").json()
-        assert h["revision"]=="panorama-approved-v10" and h["status"]=="approved"
-        assert h["source_sha256"]=="262e0797c09788f7871bca81c05d5e2c15d5ebc7ab8cf6c559ced68cf883a41e"
+        assert h["revision"]=="panorama-approved-v11" and h["status"]=="approved"
+        assert h["selection_number"]=="07"
+        assert h["source_sha256"]=="4d45e831b59f2f7550fe7129455f1da823098e8f34cf633223cd584d5b64a5bf"
         assert h["approval_date"]=="2026-11-21"
         assert old["hero"]["revision"]=="panorama-interim-v8"
         im=p.locator("#home-hero img")
@@ -73,11 +75,11 @@ try:
         assert p.locator("#home-questions a[data-question]").count()==3
         no_overflow(p)
         p.screenshot(path=str(out/"approved-desktop.png"),full_page=False)
-        ok("Desktop hero uses the approved 1672×941 image, with verified metadata and preserved v8/v9")
+        ok("Desktop hero uses selected candidate 07 at 1672×941 with its verified source digest")
         for page in ("index.html","v3.0-dual.html"):
             res=ctx.request.get(base+page)
             assert res.status==200
-            assert b'data-hero-revision="panorama-approved-v10"' in res.body()
+            assert b'data-hero-revision="panorama-approved-v11"' in res.body()
             assert h["asset"].encode() in res.body()
         for asset in (h["asset"],h["small_asset"]):
             r=ctx.request.get(base+asset)
@@ -99,7 +101,7 @@ try:
         expect(m.locator("#home-hero")).to_be_hidden()
         expect(m.locator("#map-viewport")).to_be_in_viewport()
         no_overflow(m)
-        ok("390px mobile uses 960×540 source; map and back-navigation remain interactive")
+        ok("390px mobile loads candidate 07 at 960×540 without cropping and opens the map")
         assert not errors,errors
         mobile.close()
         ctx.close()
