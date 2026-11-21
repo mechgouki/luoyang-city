@@ -1,0 +1,1086 @@
+{
+  "pr": {
+    "tested_source_commit": "190c485e7c325324aebd183c20ae91bc8603c9df",
+    "run": {
+      "id": 44903475054,
+      "name": "Validate and deploy Luoyang Atlas",
+      "node_id": "WFR_kwLOVpoYrs8AAAAKdHSnbg",
+      "head_branch": "homepage/full-frame-v12-20261121",
+      "head_sha": "11e4d049cfd81d70ee0023bf03451351425cb00b",
+      "path": ".github/workflows/pages.yml",
+      "display_title": "首页 V12：采用用户批准的全幅取景图，所有设备完整展示",
+      "run_number": 169,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "workflow_id": 413938528,
+      "check_suite_id": 121532424105,
+      "check_suite_node_id": "CS_kwDOVpoYrs8AAAAcS-WfqQ",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44903475054",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44903475054",
+      "pull_requests": [
+        {
+          "url": "https://api.github.com/repos/mechgouki/luoyang-city/pulls/74",
+          "id": 5427741061,
+          "number": 74,
+          "head": {
+            "ref": "homepage/full-frame-v12-20261121",
+            "sha": "11e4d049cfd81d70ee0023bf03451351425cb00b",
+            "repo": {
+              "id": 1452939438,
+              "url": "https://api.github.com/repos/mechgouki/luoyang-city",
+              "name": "luoyang-city"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+            "repo": {
+              "id": 1452939438,
+              "url": "https://api.github.com/repos/mechgouki/luoyang-city",
+              "name": "luoyang-city"
+            }
+          }
+        }
+      ],
+      "created_at": "2026-11-21T12:21:16Z",
+      "updated_at": "2026-11-21T12:29:27Z",
+      "actor": {
+        "login": "mechgouki",
+        "id": 8364215,
+        "node_id": "MDQ6VXNlcjgzNjQyMTU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8364215?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/mechgouki",
+        "html_url": "https://github.com/mechgouki",
+        "followers_url": "https://api.github.com/users/mechgouki/followers",
+        "following_url": "https://api.github.com/users/mechgouki/following{/other_user}",
+        "gists_url": "https://api.github.com/users/mechgouki/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/mechgouki/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/mechgouki/subscriptions",
+        "organizations_url": "https://api.github.com/users/mechgouki/orgs",
+        "repos_url": "https://api.github.com/users/mechgouki/repos",
+        "events_url": "https://api.github.com/users/mechgouki/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/mechgouki/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "run_attempt": 1,
+      "referenced_workflows": [],
+      "run_started_at": "2026-11-21T12:21:16Z",
+      "triggering_actor": {
+        "login": "mechgouki",
+        "id": 8364215,
+        "node_id": "MDQ6VXNlcjgzNjQyMTU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8364215?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/mechgouki",
+        "html_url": "https://github.com/mechgouki",
+        "followers_url": "https://api.github.com/users/mechgouki/followers",
+        "following_url": "https://api.github.com/users/mechgouki/following{/other_user}",
+        "gists_url": "https://api.github.com/users/mechgouki/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/mechgouki/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/mechgouki/subscriptions",
+        "organizations_url": "https://api.github.com/users/mechgouki/orgs",
+        "repos_url": "https://api.github.com/users/mechgouki/repos",
+        "events_url": "https://api.github.com/users/mechgouki/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/mechgouki/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "jobs_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44903475054/jobs",
+      "logs_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44903475054/logs",
+      "check_suite_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-suites/121532424105",
+      "artifacts_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44903475054/artifacts",
+      "cancel_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44903475054/cancel",
+      "rerun_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44903475054/rerun",
+      "previous_attempt_url": null,
+      "workflow_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/workflows/413938528",
+      "head_commit": {
+        "id": "11e4d049cfd81d70ee0023bf03451351425cb00b",
+        "tree_id": "4fbbfc972a7bdc5696788fba1bb6b75cb37913b0",
+        "message": "Publish approved full-frame Luoyang homepage v12\n\nUse the exact user-selected city-and-river painting, preserve its complete frame on desktop, tablet and mobile, and keep the former 07/v11 assets and entry pages archived. Add direct road and water evidence links without changing historical research data.",
+        "timestamp": "2026-11-21T12:21:00Z",
+        "author": {
+          "name": "Yu Teng (滕昱)",
+          "email": "8364215+mechgouki@users.noreply.github.com"
+        },
+        "committer": {
+          "name": "Yu Teng (滕昱)",
+          "email": "8364215+mechgouki@users.noreply.github.com"
+        }
+      },
+      "repository": {
+        "id": 1452939438,
+        "node_id": "R_kgDOVpoYrg",
+        "name": "luoyang-city",
+        "full_name": "mechgouki/luoyang-city",
+        "private": false,
+        "owner": {
+          "login": "mechgouki",
+          "id": 8364215,
+          "node_id": "MDQ6VXNlcjgzNjQyMTU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8364215?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/mechgouki",
+          "html_url": "https://github.com/mechgouki",
+          "followers_url": "https://api.github.com/users/mechgouki/followers",
+          "following_url": "https://api.github.com/users/mechgouki/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mechgouki/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mechgouki/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mechgouki/subscriptions",
+          "organizations_url": "https://api.github.com/users/mechgouki/orgs",
+          "repos_url": "https://api.github.com/users/mechgouki/repos",
+          "events_url": "https://api.github.com/users/mechgouki/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mechgouki/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/mechgouki/luoyang-city",
+        "description": "从<洛阳伽蓝记>重建北魏洛阳城",
+        "fork": false,
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city",
+        "forks_url": "https://api.github.com/repos/mechgouki/luoyang-city/forks",
+        "keys_url": "https://api.github.com/repos/mechgouki/luoyang-city/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/mechgouki/luoyang-city/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/mechgouki/luoyang-city/teams",
+        "hooks_url": "https://api.github.com/repos/mechgouki/luoyang-city/hooks",
+        "issue_events_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/mechgouki/luoyang-city/events",
+        "assignees_url": "https://api.github.com/repos/mechgouki/luoyang-city/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/mechgouki/luoyang-city/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/mechgouki/luoyang-city/tags",
+        "blobs_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/mechgouki/luoyang-city/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/mechgouki/luoyang-city/languages",
+        "stargazers_url": "https://api.github.com/repos/mechgouki/luoyang-city/stargazers",
+        "contributors_url": "https://api.github.com/repos/mechgouki/luoyang-city/contributors",
+        "subscribers_url": "https://api.github.com/repos/mechgouki/luoyang-city/subscribers",
+        "subscription_url": "https://api.github.com/repos/mechgouki/luoyang-city/subscription",
+        "commits_url": "https://api.github.com/repos/mechgouki/luoyang-city/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/mechgouki/luoyang-city/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/mechgouki/luoyang-city/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/mechgouki/luoyang-city/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/mechgouki/luoyang-city/merges",
+        "archive_url": "https://api.github.com/repos/mechgouki/luoyang-city/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/mechgouki/luoyang-city/downloads",
+        "issues_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/mechgouki/luoyang-city/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/mechgouki/luoyang-city/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/mechgouki/luoyang-city/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/mechgouki/luoyang-city/labels{/name}",
+        "releases_url": "https://api.github.com/repos/mechgouki/luoyang-city/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/mechgouki/luoyang-city/deployments"
+      },
+      "head_repository": {
+        "id": 1452939438,
+        "node_id": "R_kgDOVpoYrg",
+        "name": "luoyang-city",
+        "full_name": "mechgouki/luoyang-city",
+        "private": false,
+        "owner": {
+          "login": "mechgouki",
+          "id": 8364215,
+          "node_id": "MDQ6VXNlcjgzNjQyMTU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8364215?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/mechgouki",
+          "html_url": "https://github.com/mechgouki",
+          "followers_url": "https://api.github.com/users/mechgouki/followers",
+          "following_url": "https://api.github.com/users/mechgouki/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mechgouki/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mechgouki/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mechgouki/subscriptions",
+          "organizations_url": "https://api.github.com/users/mechgouki/orgs",
+          "repos_url": "https://api.github.com/users/mechgouki/repos",
+          "events_url": "https://api.github.com/users/mechgouki/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mechgouki/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/mechgouki/luoyang-city",
+        "description": "从<洛阳伽蓝记>重建北魏洛阳城",
+        "fork": false,
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city",
+        "forks_url": "https://api.github.com/repos/mechgouki/luoyang-city/forks",
+        "keys_url": "https://api.github.com/repos/mechgouki/luoyang-city/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/mechgouki/luoyang-city/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/mechgouki/luoyang-city/teams",
+        "hooks_url": "https://api.github.com/repos/mechgouki/luoyang-city/hooks",
+        "issue_events_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/mechgouki/luoyang-city/events",
+        "assignees_url": "https://api.github.com/repos/mechgouki/luoyang-city/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/mechgouki/luoyang-city/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/mechgouki/luoyang-city/tags",
+        "blobs_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/mechgouki/luoyang-city/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/mechgouki/luoyang-city/languages",
+        "stargazers_url": "https://api.github.com/repos/mechgouki/luoyang-city/stargazers",
+        "contributors_url": "https://api.github.com/repos/mechgouki/luoyang-city/contributors",
+        "subscribers_url": "https://api.github.com/repos/mechgouki/luoyang-city/subscribers",
+        "subscription_url": "https://api.github.com/repos/mechgouki/luoyang-city/subscription",
+        "commits_url": "https://api.github.com/repos/mechgouki/luoyang-city/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/mechgouki/luoyang-city/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/mechgouki/luoyang-city/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/mechgouki/luoyang-city/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/mechgouki/luoyang-city/merges",
+        "archive_url": "https://api.github.com/repos/mechgouki/luoyang-city/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/mechgouki/luoyang-city/downloads",
+        "issues_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/mechgouki/luoyang-city/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/mechgouki/luoyang-city/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/mechgouki/luoyang-city/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/mechgouki/luoyang-city/labels{/name}",
+        "releases_url": "https://api.github.com/repos/mechgouki/luoyang-city/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/mechgouki/luoyang-city/deployments"
+      }
+    },
+    "jobs": [
+      {
+        "id": 136844057463,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 44903475054,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Install pinned terrain and document dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Install pinned rendering font outside the published directory",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Assemble and verify unchanged baseline PDF",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Check baseline data and JavaScript",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Check all spatial, temporal, terrain and dual-map semantics",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Build preserved research, terrain, B1-B8 and historical map review",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Build prosperity documentary maps and source-geographic layout",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Promote the explicitly approved H2 panorama without changing research maps",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          },
+          {
+            "name": "P4.5.1 source-anchored architecture distribution and citation tiers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12
+          },
+          {
+            "name": "P4.5.2 build source road remnants and qualitative functions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          },
+          {
+            "name": "P4.5.3 build three qualitative historic road/building clusters",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "P4.6 audit Northern Wei water and major road anchor evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Build the unified city atlas, coverage and evidence registers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Build the R5 panorama and camera-aligned source views",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          },
+          {
+            "name": "Build the citywide graded road atlas and evidence register",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 18
+          },
+          {
+            "name": "Build the complete road, palace, ward and passage evidence atlas",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19
+          },
+          {
+            "name": "Check the built prosperity maps and their evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 20
+          },
+          {
+            "name": "Fetch pinned browser runtime with preinstalled dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21
+          },
+          {
+            "name": "Exercise current and all earlier map interactions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22
+          },
+          {
+            "name": "Preserve build and browser evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23
+          },
+          {
+            "name": "Upload verified Pages artifact",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 24
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 47
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 48
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 49
+          }
+        ]
+      },
+      {
+        "id": 136846073437,
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "skipped",
+        "run_id": 44903475054,
+        "logs_url": null,
+        "steps": null
+      },
+      {
+        "id": 136846073696,
+        "name": "verify-live",
+        "status": "completed",
+        "conclusion": "skipped",
+        "run_id": 44903475054,
+        "logs_url": null,
+        "steps": null
+      }
+    ]
+  },
+  "live": {
+    "source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+    "run": {
+      "id": 44904341782,
+      "name": "Validate and deploy Luoyang Atlas",
+      "node_id": "WFR_kwLOVpoYrs8AAAAKdIHhFg",
+      "head_branch": "main",
+      "head_sha": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+      "path": ".github/workflows/pages.yml",
+      "display_title": "Merge PR #74: adopt approved full-frame homepage v12",
+      "run_number": 170,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "workflow_id": 413938528,
+      "check_suite_id": 121534656873,
+      "check_suite_node_id": "CS_kwDOVpoYrs8AAAAcTAexaQ",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44904341782",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44904341782",
+      "pull_requests": [],
+      "created_at": "2026-11-21T12:31:30Z",
+      "updated_at": "2026-11-21T12:46:13Z",
+      "actor": {
+        "login": "mechgouki",
+        "id": 8364215,
+        "node_id": "MDQ6VXNlcjgzNjQyMTU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8364215?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/mechgouki",
+        "html_url": "https://github.com/mechgouki",
+        "followers_url": "https://api.github.com/users/mechgouki/followers",
+        "following_url": "https://api.github.com/users/mechgouki/following{/other_user}",
+        "gists_url": "https://api.github.com/users/mechgouki/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/mechgouki/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/mechgouki/subscriptions",
+        "organizations_url": "https://api.github.com/users/mechgouki/orgs",
+        "repos_url": "https://api.github.com/users/mechgouki/repos",
+        "events_url": "https://api.github.com/users/mechgouki/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/mechgouki/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "run_attempt": 1,
+      "referenced_workflows": [],
+      "run_started_at": "2026-11-21T12:31:30Z",
+      "triggering_actor": {
+        "login": "mechgouki",
+        "id": 8364215,
+        "node_id": "MDQ6VXNlcjgzNjQyMTU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8364215?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/mechgouki",
+        "html_url": "https://github.com/mechgouki",
+        "followers_url": "https://api.github.com/users/mechgouki/followers",
+        "following_url": "https://api.github.com/users/mechgouki/following{/other_user}",
+        "gists_url": "https://api.github.com/users/mechgouki/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/mechgouki/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/mechgouki/subscriptions",
+        "organizations_url": "https://api.github.com/users/mechgouki/orgs",
+        "repos_url": "https://api.github.com/users/mechgouki/repos",
+        "events_url": "https://api.github.com/users/mechgouki/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/mechgouki/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "jobs_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44904341782/jobs",
+      "logs_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44904341782/logs",
+      "check_suite_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-suites/121534656873",
+      "artifacts_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44904341782/artifacts",
+      "cancel_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44904341782/cancel",
+      "rerun_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44904341782/rerun",
+      "previous_attempt_url": null,
+      "workflow_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/workflows/413938528",
+      "head_commit": {
+        "id": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+        "tree_id": "4fbbfc972a7bdc5696788fba1bb6b75cb37913b0",
+        "message": "Merge PR #74: adopt approved full-frame homepage v12\n\nUse the exact full-frame city-and-river painting approved by the user on 2026-11-21. Preserve the complete image at all viewports, place text below the panorama, retain v11/07 history and all research baselines. PR run 44903475054 passed; 218 research tests, 6 homepage tests, and eight two-entry browser layouts verified. Production acceptance follows the automatic Pages workflow.",
+        "timestamp": "2026-11-21T12:31:27Z",
+        "author": {
+          "name": "Yu Teng (滕昱)",
+          "email": "8364215+mechgouki@users.noreply.github.com"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com"
+        }
+      },
+      "repository": {
+        "id": 1452939438,
+        "node_id": "R_kgDOVpoYrg",
+        "name": "luoyang-city",
+        "full_name": "mechgouki/luoyang-city",
+        "private": false,
+        "owner": {
+          "login": "mechgouki",
+          "id": 8364215,
+          "node_id": "MDQ6VXNlcjgzNjQyMTU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8364215?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/mechgouki",
+          "html_url": "https://github.com/mechgouki",
+          "followers_url": "https://api.github.com/users/mechgouki/followers",
+          "following_url": "https://api.github.com/users/mechgouki/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mechgouki/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mechgouki/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mechgouki/subscriptions",
+          "organizations_url": "https://api.github.com/users/mechgouki/orgs",
+          "repos_url": "https://api.github.com/users/mechgouki/repos",
+          "events_url": "https://api.github.com/users/mechgouki/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mechgouki/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/mechgouki/luoyang-city",
+        "description": "从<洛阳伽蓝记>重建北魏洛阳城",
+        "fork": false,
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city",
+        "forks_url": "https://api.github.com/repos/mechgouki/luoyang-city/forks",
+        "keys_url": "https://api.github.com/repos/mechgouki/luoyang-city/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/mechgouki/luoyang-city/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/mechgouki/luoyang-city/teams",
+        "hooks_url": "https://api.github.com/repos/mechgouki/luoyang-city/hooks",
+        "issue_events_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/mechgouki/luoyang-city/events",
+        "assignees_url": "https://api.github.com/repos/mechgouki/luoyang-city/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/mechgouki/luoyang-city/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/mechgouki/luoyang-city/tags",
+        "blobs_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/mechgouki/luoyang-city/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/mechgouki/luoyang-city/languages",
+        "stargazers_url": "https://api.github.com/repos/mechgouki/luoyang-city/stargazers",
+        "contributors_url": "https://api.github.com/repos/mechgouki/luoyang-city/contributors",
+        "subscribers_url": "https://api.github.com/repos/mechgouki/luoyang-city/subscribers",
+        "subscription_url": "https://api.github.com/repos/mechgouki/luoyang-city/subscription",
+        "commits_url": "https://api.github.com/repos/mechgouki/luoyang-city/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/mechgouki/luoyang-city/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/mechgouki/luoyang-city/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/mechgouki/luoyang-city/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/mechgouki/luoyang-city/merges",
+        "archive_url": "https://api.github.com/repos/mechgouki/luoyang-city/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/mechgouki/luoyang-city/downloads",
+        "issues_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/mechgouki/luoyang-city/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/mechgouki/luoyang-city/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/mechgouki/luoyang-city/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/mechgouki/luoyang-city/labels{/name}",
+        "releases_url": "https://api.github.com/repos/mechgouki/luoyang-city/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/mechgouki/luoyang-city/deployments"
+      },
+      "head_repository": {
+        "id": 1452939438,
+        "node_id": "R_kgDOVpoYrg",
+        "name": "luoyang-city",
+        "full_name": "mechgouki/luoyang-city",
+        "private": false,
+        "owner": {
+          "login": "mechgouki",
+          "id": 8364215,
+          "node_id": "MDQ6VXNlcjgzNjQyMTU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8364215?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/mechgouki",
+          "html_url": "https://github.com/mechgouki",
+          "followers_url": "https://api.github.com/users/mechgouki/followers",
+          "following_url": "https://api.github.com/users/mechgouki/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mechgouki/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mechgouki/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mechgouki/subscriptions",
+          "organizations_url": "https://api.github.com/users/mechgouki/orgs",
+          "repos_url": "https://api.github.com/users/mechgouki/repos",
+          "events_url": "https://api.github.com/users/mechgouki/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mechgouki/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/mechgouki/luoyang-city",
+        "description": "从<洛阳伽蓝记>重建北魏洛阳城",
+        "fork": false,
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city",
+        "forks_url": "https://api.github.com/repos/mechgouki/luoyang-city/forks",
+        "keys_url": "https://api.github.com/repos/mechgouki/luoyang-city/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/mechgouki/luoyang-city/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/mechgouki/luoyang-city/teams",
+        "hooks_url": "https://api.github.com/repos/mechgouki/luoyang-city/hooks",
+        "issue_events_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/mechgouki/luoyang-city/events",
+        "assignees_url": "https://api.github.com/repos/mechgouki/luoyang-city/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/mechgouki/luoyang-city/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/mechgouki/luoyang-city/tags",
+        "blobs_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/mechgouki/luoyang-city/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/mechgouki/luoyang-city/languages",
+        "stargazers_url": "https://api.github.com/repos/mechgouki/luoyang-city/stargazers",
+        "contributors_url": "https://api.github.com/repos/mechgouki/luoyang-city/contributors",
+        "subscribers_url": "https://api.github.com/repos/mechgouki/luoyang-city/subscribers",
+        "subscription_url": "https://api.github.com/repos/mechgouki/luoyang-city/subscription",
+        "commits_url": "https://api.github.com/repos/mechgouki/luoyang-city/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/mechgouki/luoyang-city/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/mechgouki/luoyang-city/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/mechgouki/luoyang-city/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/mechgouki/luoyang-city/merges",
+        "archive_url": "https://api.github.com/repos/mechgouki/luoyang-city/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/mechgouki/luoyang-city/downloads",
+        "issues_url": "https://api.github.com/repos/mechgouki/luoyang-city/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/mechgouki/luoyang-city/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/mechgouki/luoyang-city/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/mechgouki/luoyang-city/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/mechgouki/luoyang-city/labels{/name}",
+        "releases_url": "https://api.github.com/repos/mechgouki/luoyang-city/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/mechgouki/luoyang-city/deployments"
+      }
+    },
+    "jobs": [
+      {
+        "id": 136846605773,
+        "run_id": 44904341782,
+        "workflow_name": "Validate and deploy Luoyang Atlas",
+        "head_branch": "main",
+        "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44904341782",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVpoYrs8AAAAf3LF9zQ",
+        "head_sha": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/136846605773",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44904341782/job/136846605773",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-21T12:31:30Z",
+        "started_at": "2026-11-21T12:31:32Z",
+        "completed_at": "2026-11-21T12:39:11Z",
+        "name": "build",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-11-21T12:31:33Z",
+            "completed_at": "2026-11-21T12:31:34Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-11-21T12:31:34Z",
+            "completed_at": "2026-11-21T12:31:35Z"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-11-21T12:31:35Z",
+            "completed_at": "2026-11-21T12:31:35Z"
+          },
+          {
+            "name": "Install pinned terrain and document dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-11-21T12:31:35Z",
+            "completed_at": "2026-11-21T12:31:48Z"
+          },
+          {
+            "name": "Install pinned rendering font outside the published directory",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-11-21T12:31:48Z",
+            "completed_at": "2026-11-21T12:31:51Z"
+          },
+          {
+            "name": "Assemble and verify unchanged baseline PDF",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-11-21T12:31:51Z",
+            "completed_at": "2026-11-21T12:31:51Z"
+          },
+          {
+            "name": "Check baseline data and JavaScript",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-11-21T12:31:51Z",
+            "completed_at": "2026-11-21T12:31:53Z"
+          },
+          {
+            "name": "Check all spatial, temporal, terrain and dual-map semantics",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-11-21T12:31:53Z",
+            "completed_at": "2026-11-21T12:31:59Z"
+          },
+          {
+            "name": "Build preserved research, terrain, B1-B8 and historical map review",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-11-21T12:31:59Z",
+            "completed_at": "2026-11-21T12:32:47Z"
+          },
+          {
+            "name": "Build prosperity documentary maps and source-geographic layout",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-11-21T12:32:47Z",
+            "completed_at": "2026-11-21T12:32:56Z"
+          },
+          {
+            "name": "Promote the explicitly approved H2 panorama without changing research maps",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-11-21T12:32:56Z",
+            "completed_at": "2026-11-21T12:32:56Z"
+          },
+          {
+            "name": "P4.5.1 source-anchored architecture distribution and citation tiers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12,
+            "started_at": "2026-11-21T12:32:56Z",
+            "completed_at": "2026-11-21T12:32:58Z"
+          },
+          {
+            "name": "P4.5.2 build source road remnants and qualitative functions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-11-21T12:32:58Z",
+            "completed_at": "2026-11-21T12:32:59Z"
+          },
+          {
+            "name": "P4.5.3 build three qualitative historic road/building clusters",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-11-21T12:32:59Z",
+            "completed_at": "2026-11-21T12:33:01Z"
+          },
+          {
+            "name": "P4.6 audit Northern Wei water and major road anchor evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-11-21T12:33:01Z",
+            "completed_at": "2026-11-21T12:33:02Z"
+          },
+          {
+            "name": "Build the unified city atlas, coverage and evidence registers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16,
+            "started_at": "2026-11-21T12:33:02Z",
+            "completed_at": "2026-11-21T12:33:03Z"
+          },
+          {
+            "name": "Build the R5 panorama and camera-aligned source views",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17,
+            "started_at": "2026-11-21T12:33:03Z",
+            "completed_at": "2026-11-21T12:33:04Z"
+          },
+          {
+            "name": "Build the citywide graded road atlas and evidence register",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 18,
+            "started_at": "2026-11-21T12:33:04Z",
+            "completed_at": "2026-11-21T12:33:04Z"
+          },
+          {
+            "name": "Build the complete road, palace, ward and passage evidence atlas",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19,
+            "started_at": "2026-11-21T12:33:04Z",
+            "completed_at": "2026-11-21T12:33:04Z"
+          },
+          {
+            "name": "Check the built prosperity maps and their evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 20,
+            "started_at": "2026-11-21T12:33:04Z",
+            "completed_at": "2026-11-21T12:33:09Z"
+          },
+          {
+            "name": "Fetch pinned browser runtime with preinstalled dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21,
+            "started_at": "2026-11-21T12:33:09Z",
+            "completed_at": "2026-11-21T12:33:34Z"
+          },
+          {
+            "name": "Exercise current and all earlier map interactions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22,
+            "started_at": "2026-11-21T12:33:34Z",
+            "completed_at": "2026-11-21T12:38:55Z"
+          },
+          {
+            "name": "Preserve build and browser evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23,
+            "started_at": "2026-11-21T12:38:55Z",
+            "completed_at": "2026-11-21T12:39:00Z"
+          },
+          {
+            "name": "Upload verified Pages artifact",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 24,
+            "started_at": "2026-11-21T12:39:00Z",
+            "completed_at": "2026-11-21T12:39:09Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 47,
+            "started_at": "2026-11-21T12:39:09Z",
+            "completed_at": "2026-11-21T12:39:09Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 48,
+            "started_at": "2026-11-21T12:39:09Z",
+            "completed_at": "2026-11-21T12:39:09Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 49,
+            "started_at": "2026-11-21T12:39:09Z",
+            "completed_at": "2026-11-21T12:39:09Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/136846605773",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000000301,
+        "runner_name": "GitHub Actions 1000000301",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 136848490807,
+        "run_id": 44904341782,
+        "workflow_name": "Validate and deploy Luoyang Atlas",
+        "head_branch": "main",
+        "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44904341782",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVpoYrs8AAAAf3M5BNw",
+        "head_sha": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/136848490807",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44904341782/job/136848490807",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-21T12:39:11Z",
+        "started_at": "2026-11-21T12:39:16Z",
+        "completed_at": "2026-11-21T12:39:38Z",
+        "name": "deploy",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-11-21T12:39:17Z",
+            "completed_at": "2026-11-21T12:39:19Z"
+          },
+          {
+            "name": "Read existing Pages configuration",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-11-21T12:39:19Z",
+            "completed_at": "2026-11-21T12:39:24Z"
+          },
+          {
+            "name": "Deploy verified website",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-11-21T12:39:24Z",
+            "completed_at": "2026-11-21T12:39:36Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-11-21T12:39:36Z",
+            "completed_at": "2026-11-21T12:39:36Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/136848490807",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000000302,
+        "runner_name": "GitHub Actions 1000000302",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 136848599166,
+        "run_id": 44904341782,
+        "workflow_name": "Validate and deploy Luoyang Atlas",
+        "head_branch": "main",
+        "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44904341782",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVpoYrs8AAAAf3M_ofg",
+        "head_sha": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/136848599166",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44904341782/job/136848599166",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-21T12:39:38Z",
+        "started_at": "2026-11-21T12:39:40Z",
+        "completed_at": "2026-11-21T12:46:12Z",
+        "name": "verify-live",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-11-21T12:39:41Z",
+            "completed_at": "2026-11-21T12:39:43Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-11-21T12:39:43Z",
+            "completed_at": "2026-11-21T12:39:46Z"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-11-21T12:39:46Z",
+            "completed_at": "2026-11-21T12:39:47Z"
+          },
+          {
+            "name": "Check actual HTTPS resources and hashes",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-11-21T12:39:47Z",
+            "completed_at": "2026-11-21T12:40:15Z"
+          },
+          {
+            "name": "Fetch the same pinned browser runtime",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-11-21T12:40:15Z",
+            "completed_at": "2026-11-21T12:40:30Z"
+          },
+          {
+            "name": "Exercise current and all earlier deployed map versions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-11-21T12:40:30Z",
+            "completed_at": "2026-11-21T12:46:06Z"
+          },
+          {
+            "name": "Preserve live acceptance evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-11-21T12:46:06Z",
+            "completed_at": "2026-11-21T12:46:11Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-11-21T12:46:11Z",
+            "completed_at": "2026-11-21T12:46:11Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-11-21T12:46:11Z",
+            "completed_at": "2026-11-21T12:46:11Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-11-21T12:46:11Z",
+            "completed_at": "2026-11-21T12:46:11Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/136848599166",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000000303,
+        "runner_name": "GitHub Actions 1000000303",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      }
+    ]
+  }
+}

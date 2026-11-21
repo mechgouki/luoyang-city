@@ -1,0 +1,206 @@
+{
+  "status": "passed",
+  "started_at": "2026-11-21T12:39:58+00:00",
+  "base_url": "https://mechgouki.github.io/luoyang-city/",
+  "expected_source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "checks": [
+    {
+      "name": "validators_match_exact_commit",
+      "status": "passed"
+    },
+    {
+      "name": "published_commit_and_current_hero",
+      "status": "passed"
+    },
+    {
+      "name": "both_homepages_v12_artwork_css_metadata_and_reversible_v11_history",
+      "status": "passed"
+    },
+    {
+      "name": "84_road_records_339_entities_34_waters_and_8_member_offline_zip",
+      "status": "passed"
+    },
+    {
+      "name": "unchanged_start_end_publication",
+      "status": "passed"
+    }
+  ],
+  "runner_sha256": "eef3b04fd163719eeb18f51c4ee332ff2759c3702fc21d5978487b665d773bad",
+  "public_asset_policy": "Actual HTTPS response bytes only; no local fallback",
+  "headers_policy": "Actual urllib response header pairs and serialized HTTPMessage retained per attempt",
+  "repository_policy": "Source validators checked against the exact requested commit; repository never modified",
+  "local_checkout_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "reference_files": {
+    "tools/live_http.py": {
+      "sha256": "ed95c991ebd6d1e27a1cec999d0b918490f8ffcbd2f664fbc088e97e08da5c24",
+      "matches_requested_commit": true
+    },
+    "tools/homepage_artwork_v10.py": {
+      "sha256": "3602c7b895465d77aacbbe57d8ca5c6c6b04d90bb77b3221829511fe197a6171",
+      "matches_requested_commit": true
+    },
+    "web/homepage-full-frame-v12.css": {
+      "sha256": "663d6df2ab8d6868a8cce86ecd83fcc8f4ce8470b3eb9f9fcc80e7f6d08ab827",
+      "matches_requested_commit": true
+    }
+  },
+  "observed_source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "build_info_sha256": "e96eb947beb586e0622960249e61f3d002552fac85b8d0a7f5936c388a39a074",
+  "homepage": {
+    "revision": "panorama-approved-v12",
+    "label": "全幅取景版",
+    "layout_asset": "_assets/663d6df2ab8d6868a8cc-homepage-full-frame-v12.css",
+    "layout_sha256": "663d6df2ab8d6868a8cce86ecd83fcc8f4ce8470b3eb9f9fcc80e7f6d08ab827",
+    "source_image_sha256": "c7954dfc3ee659de756c62d0f634e40eddfd2ecc93cc8b833f53f6c0e0dc69ca",
+    "image_dimensions": {
+      "_assets/905ba057ff5eb2b1ad6b-luoyang-panorama-approved-v11.webp": [
+        1672,
+        941
+      ],
+      "_assets/7c53185140885a40b280-luoyang-panorama-approved-v11-small.webp": [
+        960,
+        540
+      ],
+      "_assets/d8d5be74d123b5eeaac5-luoyang-panorama-approved-v12.webp": [
+        1672,
+        941
+      ],
+      "_assets/eb836bc7ba458ae392c3-luoyang-panorama-approved-v12-small.webp": [
+        960,
+        540
+      ]
+    },
+    "entrances": {
+      "index.html": {
+        "sha256": "3187493bb3f7acc5c2f327f24918b3c419f991145e25949781df695c5470b514",
+        "previous_v11_archive": "homepage/history/index-before-v12.html",
+        "previous_v11_sha256": "6a319416e23401d82c038a797cd6c7637b93b5839cad94712e470dfcd59b1e7a",
+        "direct_road_and_water_links": true
+      },
+      "v3.0-dual.html": {
+        "sha256": "da122fbf738849378f9ad013acb2343b47490dcd5623c7a664e2323395954730",
+        "previous_v11_archive": "homepage/history/v3.0-dual-before-v12.html",
+        "previous_v11_sha256": "27b92898d755b1f74e867700e67a0c81a8170f81d6343a020855a886d7d7460d",
+        "direct_road_and_water_links": true
+      }
+    },
+    "v11_retained": true
+  },
+  "research_downloads": {
+    "records": {
+      "rows": 84,
+      "columns": [
+        "id",
+        "name",
+        "group",
+        "record_kind",
+        "entity_ids",
+        "legacy_ids",
+        "period",
+        "locatable_segment",
+        "start",
+        "end",
+        "endpoint_status",
+        "gates",
+        "water_constraints",
+        "reported_metrics",
+        "identity_notes",
+        "missing_evidence",
+        "source_refs",
+        "source_citations",
+        "geometry_refs",
+        "source_inputs"
+      ]
+    },
+    "coverage": {
+      "rows": 339,
+      "columns": [
+        "entity_id",
+        "name",
+        "entity_type",
+        "record_ids",
+        "status",
+        "reason",
+        "source_input"
+      ]
+    },
+    "water": {
+      "rows": 34,
+      "columns": [
+        "编号",
+        "名称",
+        "类型",
+        "定位精度",
+        "地段",
+        "方位依据",
+        "时代与界限",
+        "出处",
+        "关系索引"
+      ]
+    },
+    "groups": {
+      "legacy": 21,
+      "documentary": 26,
+      "palace": 11,
+      "ward": 7,
+      "gate": 14,
+      "bridge": 5
+    },
+    "offline_members": {
+      "index.html": {
+        "bytes": 412362,
+        "sha256": "62ce4885532d7d4f128421b29fa42f92c18f2506ded08f71b70db9b7de2fa8d6",
+        "integrity_basis": "ZIP CRC; offline index intentionally not a separate manifest-hashed public resource"
+      },
+      "all-roads/city-all-roads.svg": {
+        "bytes": 90431,
+        "sha256": "18dedfa9c37321a959de537d65336b125b82b50610d081c6ab06f238a8082297",
+        "matches_public_resource": true
+      },
+      "all-roads/records.csv": {
+        "bytes": 172394,
+        "sha256": "e532d7dfab82b90b34c9e889f1299bf5a5cfa1e71d622e6a47d49d27029a1987",
+        "matches_public_resource": true
+      },
+      "all-roads/records.json": {
+        "bytes": 688533,
+        "sha256": "f813c7c7cfc6ea6f1602f3c1cec9f0d3a7dba6c8430ff7c9be6ee7a92dada23e",
+        "matches_public_resource": true
+      },
+      "all-roads/coverage.csv": {
+        "bytes": 84546,
+        "sha256": "1255359e18d6a4366bc72663e1222a387ba8c7788b8156b3e51a151dd5b53f44",
+        "matches_public_resource": true
+      },
+      "all-roads/atlas.css": {
+        "bytes": 9124,
+        "sha256": "a8fdf5009f762a3b2c4164e81a77993d290ffec2183a289132bc673cbecc6ac2",
+        "matches_public_resource": true
+      },
+      "all-roads/atlas.js": {
+        "bytes": 4667,
+        "sha256": "4d22996a57806f2f17f7306a20bf6e2b81571e2ad72fc29402b0edbe9c6a2286",
+        "matches_public_resource": true
+      },
+      "all-roads/manifest.json": {
+        "bytes": 16040,
+        "sha256": "da406c0e679d0cbbd6774973f298a3d36bb3055a4852155586902bd71d18d9b5",
+        "matches_public_resource": true
+      }
+    },
+    "scope": "Published download bytes, counts, identities and bundle integrity; no new historical research"
+  },
+  "ending_build_info_sha256": "e96eb947beb586e0622960249e61f3d002552fac85b8d0a7f5936c388a39a074",
+  "ending_source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "completed_at": "2026-11-21T12:41:24+00:00",
+  "response_count": 32,
+  "distinct_public_resources": 31,
+  "successful_response_bytes": 5448865,
+  "readback_cache_hits": 21,
+  "http_attempt_count": 32,
+  "http_retries": [],
+  "response_index": {
+    "path": "response-index.json",
+    "sha256": "09bda5e10c36a7fb00eed8e55bebdb52dcf06b243701f3655ff8419cfc493e70"
+  }
+}

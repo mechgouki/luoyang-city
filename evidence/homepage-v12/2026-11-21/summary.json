@@ -1,0 +1,137 @@
+{
+  "schema": "luoyang-homepage-v12-acceptance-v1",
+  "status": "passed",
+  "recorded_at": "2026-11-21T12:47:23+00:00",
+  "recorded_at_shanghai": "2026-11-21T20:47:23+08:00",
+  "hero_revision": "panorama-approved-v12",
+  "selection_label": "全幅取景版",
+  "pr_tested_source_commit": "190c485e7c325324aebd183c20ae91bc8603c9df",
+  "production_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "source_png_sha256": "c7954dfc3ee659de756c62d0f634e40eddfd2ecc93cc8b833f53f6c0e0dc69ca",
+  "asset_sha256": {
+    "_assets/d8d5be74d123b5eeaac5-luoyang-panorama-approved-v12.webp": "d8d5be74d123b5eeaac50ce68955787e26686b92c1a30031f6c3289692fbf4c2",
+    "_assets/eb836bc7ba458ae392c3-luoyang-panorama-approved-v12-small.webp": "eb836bc7ba458ae392c313c030ee7ed9654bd838bb46b62e8fdf418e5e369f21"
+  },
+  "workflows": {
+    "pr": {
+      "snapshot_key": "pr",
+      "run_id": 44903475054,
+      "run_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44903475054",
+      "source_commit": "190c485e7c325324aebd183c20ae91bc8603c9df",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": {
+        "build": {
+          "status": "completed",
+          "conclusion": "success"
+        },
+        "deploy": {
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        "verify-live": {
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      }
+    },
+    "live": {
+      "snapshot_key": "live",
+      "run_id": 44904341782,
+      "run_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44904341782",
+      "source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": {
+        "build": {
+          "status": "completed",
+          "conclusion": "success"
+        },
+        "deploy": {
+          "status": "completed",
+          "conclusion": "success"
+        },
+        "verify-live": {
+          "status": "completed",
+          "conclusion": "success"
+        }
+      }
+    }
+  },
+  "public_hash_checked_files": 801,
+  "independent_public_responses": 32,
+  "distinct_public_resources": 31,
+  "screenshots": [
+    {
+      "name": "approved-desktop-dual.png",
+      "pr_sha256": "85e73fcfc6c66f220a8f3df1f75cca0337bf6d14a83a9308c4525d1d114b13eb",
+      "live_sha256": "85e73fcfc6c66f220a8f3df1f75cca0337bf6d14a83a9308c4525d1d114b13eb",
+      "pr_live_identical": true
+    },
+    {
+      "name": "approved-desktop-full-hero.png",
+      "pr_sha256": "5f07d04420c9a2a806c49be50a9594753c0f544d1e5611e854aac050bf272346",
+      "live_sha256": "5f07d04420c9a2a806c49be50a9594753c0f544d1e5611e854aac050bf272346",
+      "pr_live_identical": true
+    },
+    {
+      "name": "approved-desktop.png",
+      "pr_sha256": "85e73fcfc6c66f220a8f3df1f75cca0337bf6d14a83a9308c4525d1d114b13eb",
+      "live_sha256": "85e73fcfc6c66f220a8f3df1f75cca0337bf6d14a83a9308c4525d1d114b13eb",
+      "pr_live_identical": true
+    },
+    {
+      "name": "approved-mobile-dual.png",
+      "pr_sha256": "701fe02616fb70beb7cb67d3c364b2e529022cd2627240cd8fdafcd2ef524b96",
+      "live_sha256": "701fe02616fb70beb7cb67d3c364b2e529022cd2627240cd8fdafcd2ef524b96",
+      "pr_live_identical": true
+    },
+    {
+      "name": "approved-mobile-full-hero.png",
+      "pr_sha256": "6f2323dd67eac6f4d3da4b253fa088539498c0a8725f6312ae6517c927a03e4b",
+      "live_sha256": "6f2323dd67eac6f4d3da4b253fa088539498c0a8725f6312ae6517c927a03e4b",
+      "pr_live_identical": true
+    },
+    {
+      "name": "approved-mobile.png",
+      "pr_sha256": "701fe02616fb70beb7cb67d3c364b2e529022cd2627240cd8fdafcd2ef524b96",
+      "live_sha256": "701fe02616fb70beb7cb67d3c364b2e529022cd2627240cd8fdafcd2ef524b96",
+      "pr_live_identical": true
+    },
+    {
+      "name": "approved-tablet-dual.png",
+      "pr_sha256": "07ca07885bc51a0c711a27603018cbd240427c197054f41ef7155a5772ed36dd",
+      "live_sha256": "07ca07885bc51a0c711a27603018cbd240427c197054f41ef7155a5772ed36dd",
+      "pr_live_identical": true
+    },
+    {
+      "name": "approved-tablet.png",
+      "pr_sha256": "07ca07885bc51a0c711a27603018cbd240427c197054f41ef7155a5772ed36dd",
+      "live_sha256": "07ca07885bc51a0c711a27603018cbd240427c197054f41ef7155a5772ed36dd",
+      "pr_live_identical": true
+    },
+    {
+      "name": "approved-wide-dual.png",
+      "pr_sha256": "8b565188a0ec4c01d20363617c65f56b8fc8196429fe5585b327a9ac7520d577",
+      "live_sha256": "8b565188a0ec4c01d20363617c65f56b8fc8196429fe5585b327a9ac7520d577",
+      "pr_live_identical": true
+    },
+    {
+      "name": "approved-wide.png",
+      "pr_sha256": "8b565188a0ec4c01d20363617c65f56b8fc8196429fe5585b327a9ac7520d577",
+      "live_sha256": "8b565188a0ec4c01d20363617c65f56b8fc8196429fe5585b327a9ac7520d577",
+      "pr_live_identical": true
+    }
+  ],
+  "reported_screenshot_hashes_verified": 20,
+  "total_screenshots_retained": 26,
+  "screenshot_comparison_policy": "Each report hash checked against its actual PNG; cross-phase equality recorded, not required or substituted for visual review.",
+  "evidence_files": {
+    "pr": 20,
+    "live": 19,
+    "production": 66
+  },
+  "retention": "All files from all three validated input directories, including actual public response bodies and HTTP header records.",
+  "workflow_provenance": "Original supplied GitHub workflow snapshot retained verbatim; explicit run and job success required.",
+  "research_scope": "Homepage artwork/layout release only. Research evidence levels and unknown ancient endpoints are unchanged."
+}

@@ -1,0 +1,189 @@
+{
+  "schema": "luoyang-homepage-v12-selected-evidence-v1",
+  "phase": "live",
+  "expected_source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "collection_validation": "passed_for_selected_evidence",
+  "collected_at": "2026-11-21T12:47:22+00:00",
+  "input_archive": {
+    "name": "h12-live-evidence.zip",
+    "bytes": 117400894,
+    "sha256": "22c672650b02ab82896742bf07e175e238e59d7b20944351c57f7374de979eb7"
+  },
+  "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44904341782",
+  "workflow_conclusion": null,
+  "workflow_conclusion_note": "Check actual GitHub workflow/job results separately; this collector verifies retained evidence only.",
+  "browser_runtime_digests": [
+    "mcr.microsoft.com/playwright/python@sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1"
+  ],
+  "hero_revision": "panorama-approved-v12",
+  "approved_source_png_sha256": "c7954dfc3ee659de756c62d0f634e40eddfd2ecc93cc8b833f53f6c0e0dc69ca",
+  "approved_webp_sha256": {
+    "_assets/d8d5be74d123b5eeaac5-luoyang-panorama-approved-v12.webp": "d8d5be74d123b5eeaac50ce68955787e26686b92c1a30031f6c3289692fbf4c2",
+    "_assets/eb836bc7ba458ae392c3-luoyang-panorama-approved-v12-small.webp": "eb836bc7ba458ae392c313c030ee7ed9654bd838bb46b62e8fdf418e5e369f21"
+  },
+  "whitelist": [
+    "browser-runtime-digest.json",
+    "live-homepage-approved-v9-browser/approved-desktop-dual.png",
+    "live-homepage-approved-v9-browser/approved-desktop-full-hero.png",
+    "live-homepage-approved-v9-browser/approved-desktop.png",
+    "live-homepage-approved-v9-browser/approved-mobile-dual.png",
+    "live-homepage-approved-v9-browser/approved-mobile-full-hero.png",
+    "live-homepage-approved-v9-browser/approved-mobile.png",
+    "live-homepage-approved-v9-browser/approved-tablet-dual.png",
+    "live-homepage-approved-v9-browser/approved-tablet.png",
+    "live-homepage-approved-v9-browser/approved-wide-dual.png",
+    "live-homepage-approved-v9-browser/approved-wide.png",
+    "live-homepage-approved-v9-browser/results.json",
+    "live-homepage-v1-browser/homepage-desktop-first-screen.png",
+    "live-homepage-v1-browser/homepage-mobile-first-screen.png",
+    "live-homepage-v1-browser/homepage-tablet-first-screen.png",
+    "live-homepage-v1-browser/results.json",
+    "live-http.json"
+  ],
+  "selected_files": 17,
+  "excluded_archive_file_count": 412,
+  "screenshots_retained": 13,
+  "screenshot_hashes_verified_against_browser_report": 10,
+  "report_validations": [
+    {
+      "path": "live-homepage-approved-v9-browser/results.json",
+      "reported_status": "passed",
+      "reported_source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+      "hero_revision": "panorama-approved-v12",
+      "source_png_sha256": "c7954dfc3ee659de756c62d0f634e40eddfd2ecc93cc8b833f53f6c0e0dc69ca",
+      "reported_asset_sha256": {
+        "_assets/d8d5be74d123b5eeaac5-luoyang-panorama-approved-v12.webp": "d8d5be74d123b5eeaac50ce68955787e26686b92c1a30031f6c3289692fbf4c2",
+        "_assets/eb836bc7ba458ae392c3-luoyang-panorama-approved-v12-small.webp": "eb836bc7ba458ae392c313c030ee7ed9654bd838bb46b62e8fdf418e5e369f21"
+      },
+      "checks": [
+        "Both homepage URLs use the approved full-frame source; actual WebP hashes and the v11 archive match their provenance",
+        "1500px index displays the entire panorama in proportion, with its title and caption below the image",
+        "1500px dual displays the entire panorama in proportion, with its title and caption below the image",
+        "1920px index displays the entire panorama in proportion, with its title and caption below the image",
+        "1920px dual displays the entire panorama in proportion, with its title and caption below the image",
+        "768px index displays the entire panorama in proportion, with its title and caption below the image",
+        "768px dual displays the entire panorama in proportion, with its title and caption below the image",
+        "390px index displays the entire panorama in proportion, with its title and caption below the image",
+        "390px index opens the actual map from the full-frame homepage",
+        "390px dual displays the entire panorama in proportion, with its title and caption below the image",
+        "390px dual opens the actual map from the full-frame homepage"
+      ],
+      "layout_observations_checked": 8,
+      "screenshot_hashes_verified": 10,
+      "base_url": "https://mechgouki.github.io/luoyang-city/",
+      "asset_validation_scope": "Browser-reported source/asset identities; WebP bytes are not in the evidence ZIP. Live HTTP hashes are cross-checked in live phase."
+    },
+    {
+      "path": "live-homepage-v1-browser/results.json",
+      "reported_status": null,
+      "reported_source_commit": null,
+      "recorded_check_count": 10,
+      "base_url": "https://mechgouki.github.io/luoyang-city/",
+      "source_commit_binding": "same artifact as the V12 browser report checked against expected_source_commit",
+      "bound_source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+      "retained_first_screens": 3,
+      "screenshot_hashes_in_original_report": false,
+      "note": "Missing status/source_commit and screenshot hashes are not invented; collector hashes are in the retained-file inventory."
+    },
+    {
+      "path": "live-http.json",
+      "reported_status": "passed",
+      "reported_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+      "checked_files": 801,
+      "checked_at": "2026-11-21T12:40:09Z",
+      "all_reported_public_files_passed": true,
+      "browser_and_http_v12_image_hashes_match": true,
+      "full_frame_stylesheet": "_assets/663d6df2ab8d6868a8cc-homepage-full-frame-v12.css"
+    }
+  ],
+  "semantic_tests": "The live job does not contain semantic-test TXT files; retain the PR evidence separately.",
+  "files": [
+    {
+      "path": "browser-runtime-digest.json",
+      "bytes": 112,
+      "sha256": "b97115d42a0afe42e713e1a27f776ae513b45e9070861024d7f5cb7066a11aa6"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-desktop-dual.png",
+      "bytes": 2675417,
+      "sha256": "85e73fcfc6c66f220a8f3df1f75cca0337bf6d14a83a9308c4525d1d114b13eb"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-desktop-full-hero.png",
+      "bytes": 2699682,
+      "sha256": "5f07d04420c9a2a806c49be50a9594753c0f544d1e5611e854aac050bf272346"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-desktop.png",
+      "bytes": 2675417,
+      "sha256": "85e73fcfc6c66f220a8f3df1f75cca0337bf6d14a83a9308c4525d1d114b13eb"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-mobile-dual.png",
+      "bytes": 243911,
+      "sha256": "701fe02616fb70beb7cb67d3c364b2e529022cd2627240cd8fdafcd2ef524b96"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-mobile-full-hero.png",
+      "bytes": 214242,
+      "sha256": "6f2323dd67eac6f4d3da4b253fa088539498c0a8725f6312ae6517c927a03e4b"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-mobile.png",
+      "bytes": 243911,
+      "sha256": "701fe02616fb70beb7cb67d3c364b2e529022cd2627240cd8fdafcd2ef524b96"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-tablet-dual.png",
+      "bytes": 793245,
+      "sha256": "07ca07885bc51a0c711a27603018cbd240427c197054f41ef7155a5772ed36dd"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-tablet.png",
+      "bytes": 793245,
+      "sha256": "07ca07885bc51a0c711a27603018cbd240427c197054f41ef7155a5772ed36dd"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-wide-dual.png",
+      "bytes": 3730917,
+      "sha256": "8b565188a0ec4c01d20363617c65f56b8fc8196429fe5585b327a9ac7520d577"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/approved-wide.png",
+      "bytes": 3730917,
+      "sha256": "8b565188a0ec4c01d20363617c65f56b8fc8196429fe5585b327a9ac7520d577"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/results.json",
+      "bytes": 11301,
+      "sha256": "504288117278719018fca2d11e3e615bdcfc8578a956b10a1027f68ccb49ee98"
+    },
+    {
+      "path": "live-homepage-v1-browser/homepage-desktop-first-screen.png",
+      "bytes": 2676087,
+      "sha256": "6e2462571aebae0db5afbcc747ff872cc554215a207354e8a88349fef47611fa"
+    },
+    {
+      "path": "live-homepage-v1-browser/homepage-mobile-first-screen.png",
+      "bytes": 243911,
+      "sha256": "701fe02616fb70beb7cb67d3c364b2e529022cd2627240cd8fdafcd2ef524b96"
+    },
+    {
+      "path": "live-homepage-v1-browser/homepage-tablet-first-screen.png",
+      "bytes": 1118990,
+      "sha256": "310660da0634c2ae54b608c39cd46225ccdda42b276b8c3541e1e703186b60df"
+    },
+    {
+      "path": "live-homepage-v1-browser/results.json",
+      "bytes": 1531,
+      "sha256": "ba701e51c9660144819efc444b05727ff35436b24629537d7ac2a410122443fa"
+    },
+    {
+      "path": "live-http.json",
+      "bytes": 191922,
+      "sha256": "318e8a68466e6934a15b4c0253cc958af12b4dadd95ac77c263c956bed241481"
+    }
+  ],
+  "checksum_file": "SHA256SUMS",
+  "checksum_scope": "All copied source files and evidence-metadata.json; excludes the checksum file itself."
+}
