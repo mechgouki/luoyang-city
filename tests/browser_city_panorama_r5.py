@@ -59,6 +59,22 @@ def exercise(browser,base,device,out):
             p.locator("#sima-road img").evaluate("im=>im.decode()")
             assert p.evaluate("document.documentElement.scrollWidth<=innerWidth")
             capture(p.locator("#sima-road figure img"),"sima-road")
+            with ctx.new_page() as water:
+                water.goto(base+PAGE)
+                water.get_by_role("link",name="河流与水系定位图集").click()
+                expect(water.locator(".grid article")).to_have_count(34)
+                water.locator("#query").fill("W21")
+                expect(water.locator("article:not([hidden])[id^=W]")).to_have_count(1)
+                water.locator("#clear").click()
+                water.locator("svg a[href='#W30']").last.click()
+                expect(water.locator("#W30")).to_be_in_viewport()
+                water.reload()
+                expect(water.locator("#W30")).to_be_in_viewport()
+                assert water.evaluate("document.documentElement.scrollWidth<=innerWidth")
+                for filename in ["water-locations.csv","water-location-data.json","downloads/luoyang-water-atlas.zip"]:
+                    blob=ctx.request.get(base+filename)
+                    assert blob.ok and hashlib.sha256(blob.body()).hexdigest()==info["files_sha256"][filename]
+                water.screenshot(path=out/(device+"-water.png"))
             with tempfile.TemporaryDirectory() as tmp:
                 for path in meta["download_files"]:
                     with p.expect_download() as ev:p.locator(f'[download][href="./{path}"]').click()
