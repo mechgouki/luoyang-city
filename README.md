@@ -1,7 +1,7 @@
 # 北魏洛阳文献地图 · Luoyang Atlas
 
 以《洛阳伽蓝记》及其校注、相关史地文献为基础的可追溯历史城市地图。
-仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前研究批次：**R6.2 / all-road-atlas-r6.2**（全城道路、门道与桥道）；首页沿用用户选定的**07号 `panorama-approved-v11`**。本批发布及验收状态以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新记录为准。
+仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前研究批次：**R6.2 / all-road-atlas-r6.2**（全城道路、门道与桥道）；首页采用用户批准的**全幅取景版 `panorama-approved-v12`**。本批发布及验收状态以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新记录为准。
 
 > 盛时图采用 516—528 年河阴之变前的文献合成时层，不是某一年实测地图。文献关系画布的图形大小与显示间距不代表历史测量；来源图坐标、表列尺寸、工作朝向和未定院界分别记录，不能拼接成未经验证的精确遗址边线。
 
@@ -29,7 +29,7 @@ P2继续把3座核心建筑的表列尺度落实到[核心建筑尺度页](https
 
 P3把阊阖门从外接尺度片推进到[局部考古平面](https://mechgouki.github.io/luoyang-city/prosperity-gate.html)：依据申遗原件的门址图及其20m比例尺，逐项量读可辨的门基、通道与两阙，并提供原图叠照、尺度核对和城市接合视图。原图量读与独立表列尺寸分别保留；城市视图仍沿用P1来源锚点，不宣称已经完成实测配准。附3页图册、SVG、CSV、JSON和复现包。详见[P3说明](docs/prosperity-gate-v3-release-notes.md)与[量读方法](docs/prosperity-gate-method.md)。
 
-首页沿用用户从九张对照图中选定的07号 `panorama-approved-v11`，由[PR #71](https://github.com/mechgouki/luoyang-city/pull/71)纠正此前误用的09号；旧H2/v9说明仅作历史记录。R4城市总图、R5全景与R5.3司马门道路已交付，主页画面的建筑造型与构图不作为历史定位或量测依据。
+首页采用2026-11-21用户明确批准的「全幅取景版」`panorama-approved-v12`，依据本轮道路、水系成果，在原07号构图上提高视点、后撤取景；桌面、平板和手机均整图等比展示，标题和图注放在图下。此前07号 `panorama-approved-v11`及[PR #71](https://github.com/mechgouki/luoyang-city/pull/71)的更正记录继续保留，不与本次新图混同。R4城市总图、R5全景、R5.3司马门道路与R6.2全城道路已交付，主页画面的建筑造型与构图不作为历史定位或量测依据。详见[本次首页变更说明](docs/homepage-full-frame-v12-release-notes.md)。
 
 | 工作线 | 内容 | 入口 |
 | --- | --- | --- |
