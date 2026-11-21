@@ -390,8 +390,8 @@ def build(site=ROOT / '_site'):
         old_html = old_html.replace(old_meta['preservation']['entry_html'], '')
     entry = '<section id="all-roads-entry" class="wrap" style="padding-top:24px;padding-bottom:24px"><h2>全城道路总览已补齐</h2><p>宫路、坊街、文献道路、门道与桥道同批登记；原有21条主干道来源继续保留。</p><p><a href="./luoyang-all-roads.html">进入全城道路总览 →</a></p></section>'
     previous_hash = hashlib.sha256(old_html.encode()).hexdigest()
-    assert old_html.count('</main>') == 1 and 'id="all-roads-entry"' not in old_html
-    old_page.write_text(old_html.replace('</main>', '</main>' + entry))
+    assert old_html.count('</header>') == 1 and 'id="all-roads-entry"' not in old_html
+    old_page.write_text(old_html.replace('</header>', '</header>' + entry))
     old = info['road_locations']
     protected = {p: sha(site / p) for p in set(old['files_sha256']) | {old['manifest'],old['bundle']}}
     study = dict(version=VERSION,research_version='R6.2',source_commit=info['source_commit'],
