@@ -1,0 +1,52 @@
+{
+  "purpose": "Read-only CSV import and source-column verification",
+  "authoring_changes": 0,
+  "tables": {
+    "records": {
+      "rows": 84,
+      "columns": 20,
+      "headers": [
+        "id",
+        "name",
+        "group",
+        "record_kind",
+        "entity_ids",
+        "legacy_ids",
+        "period",
+        "locatable_segment",
+        "start",
+        "end",
+        "endpoint_status",
+        "gates",
+        "water_constraints",
+        "reported_metrics",
+        "identity_notes",
+        "missing_evidence",
+        "source_refs",
+        "source_citations",
+        "geometry_refs",
+        "source_inputs"
+      ],
+      "encoding": "UTF-8 with BOM",
+      "sha256": "e532d7dfab82b90b34c9e889f1299bf5a5cfa1e71d622e6a47d49d27029a1987",
+      "inspection": "{\"kind\":\"table\",\"sheet\":\"records\",\"address\":\"A1:D4\",\"rows\":4,\"cols\":4,\"values\":[[\"id\",\"name\",\"group\",\"record_kind\"],[\"R01\",\"铜驼大道原图纵道\",\"legacy\",\"retained_main_road_source_record\"],[\"R02\",\"宫城南横街\",\"legacy\",\"retained_main_road_source_record\"],[\"R03\",\"内城南横道\",\"legacy\",\"retained_main_road_source_record\"]]}"
+    },
+    "coverage": {
+      "rows": 339,
+      "columns": 7,
+      "headers": [
+        "entity_id",
+        "name",
+        "entity_type",
+        "record_ids",
+        "status",
+        "reason",
+        "source_input"
+      ],
+      "encoding": "UTF-8 with BOM",
+      "sha256": "1255359e18d6a4366bc72663e1222a387ba8c7788b8156b3e51a151dd5b53f44",
+      "inspection": "{\"kind\":\"table\",\"sheet\":\"coverage\",\"address\":\"A1:D4\",\"rows\":4,\"cols\":4,\"values\":[[\"entity_id\",\"name\",\"entity_type\",\"record_ids\"],[\"ic_yongning\",\"永宁寺\",\"temple\",\"T01\"],[\"ic_jianzhong\",\"建中寺（城内）\",\"temple\",\"T02\"],[\"ic_changqiu\",\"长秋寺\",\"temple\",\"T02\"]]}"
+    }
+  },
+  "status": "passed"
+}

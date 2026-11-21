@@ -1,0 +1,89 @@
+{
+  "schema": "luoyang-road-independent-history-review-v1",
+  "checked_date": "2026-11-21",
+  "reviewer_role": "independent source research agent",
+  "status": "no_additional_historical_blocker_after_listed_render_updates",
+  "scope": "Latest catalog source bindings and palace chronology; palace/lower map previews. Not a browser acceptance or deployment report.",
+  "reviewed_artifacts": [
+    {
+      "path": "/workspace/scratch/2e4734c9aa1d/luoyang-city/research/roads-r62/catalog.json",
+      "sha256": "ae2d1733ab8ff67df2c1bd003001323314e43990f9840daced059baf9c69d5cc"
+    },
+    {
+      "path": "/workspace/scratch/2e4734c9aa1d/luoyang-city/tools/all_road_atlas_r62.py",
+      "sha256": "6cf839ead6dd8585f9704f6ad70d0d73b2a298b885cc47134138081e408cf1b0"
+    },
+    {
+      "path": "/workspace/scratch/2e4734c9aa1d/all-roads-palace-preview.png",
+      "sha256": "7de30a8949b6dac0a3d99f361cc8788acff388317d174b15ce8e21870cfb65a0"
+    },
+    {
+      "path": "/workspace/scratch/2e4734c9aa1d/all-roads-lower-preview.png",
+      "sha256": "170de1f1edcc92b37be27ec88a6a58635759082627235b53b161cb1bf7b36a51"
+    }
+  ],
+  "source_input_pointer_check": {
+    "record_ids": [
+      "T26",
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P09",
+      "P10",
+      "P11",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G13",
+      "G14"
+    ],
+    "errors": []
+  },
+  "confirmed": [
+    "P11 name and chronology now distinguish Northern Wei warehouse context from undated road layer.",
+    "P05/P06 multi-period paving not assigned directly to 516–528; P07/P08 retain their separate measurement scopes.",
+    "P09 has six source direction-arrow stems with original pixel coordinates, gaps retained, no road-edge claim or city registration.",
+    "G13 4.8m gate width and 4.2m total depth are separate; G14 group of three gates does not inherit G09 2.5m width.",
+    "E record cards and J index expressly use reading order, not historical coordinates.",
+    "F three rectangles are labeled visible passage middles, not full passage lengths or enclosed walls."
+  ],
+  "remaining_render_updates": [
+    {
+      "owner": "root",
+      "issue": "Preview P11 still shows old name though current catalog is corrected; regenerate final images.",
+      "historical_risk": "Avoid title asserting independently dated Northern Wei road."
+    },
+    {
+      "owner": "root",
+      "issue": "G node labels in preview truncate; shorten display labels with full names available in records.",
+      "historical_risk": "Avoid incomplete gate names or counts."
+    },
+    {
+      "owner": "root",
+      "issue": "F01–F03 glyphs to be vertical as already planned; do not change source coordinates.",
+      "historical_risk": "Avoid all six local streets looking east–west."
+    },
+    {
+      "owner": "root",
+      "issue": "H measurement caption should specify central longitudinal street width 22m and adjacent transverse-street spacing 40m.",
+      "suggested_text": "居中纵街宽约22米；相邻横街间距约40米。",
+      "historical_risk": "40m must not imply spacing of all six streets; catalog correctly has 86m for the lateral longitudinal streets."
+    }
+  ],
+  "new_research_required": false,
+  "repo_files_modified_by_reviewer": false,
+  "live_acceptance_claimed": false
+}

@@ -1,0 +1,244 @@
+{
+  "schema": "luoyang-roads-r62-selected-evidence-v1",
+  "phase": "live",
+  "expected_source_commit": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+  "collection_validation": "passed_for_selected_evidence",
+  "collected_at": "2026-11-21T10:30:14+00:00",
+  "input_archive": {
+    "name": "r62-live-evidence.zip",
+    "bytes": 102074643,
+    "sha256": "6f01c1a3637385b6da1f0183b5ad83312bedf9ba9ef3141db26518a89090c096"
+  },
+  "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44893240321",
+  "workflow_conclusion": null,
+  "workflow_conclusion_note": "Workflow/job conclusions must be checked separately; this script validates only retained reports.",
+  "browser_runtime_digests": [
+    "mcr.microsoft.com/playwright/python@sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1"
+  ],
+  "whitelist": [
+    "browser-runtime-digest.json",
+    "live-all-road-atlas-r62-browser/desktop-palace-evidence.png",
+    "live-all-road-atlas-r62-browser/desktop-report.json",
+    "live-all-road-atlas-r62-browser/desktop-ward-bridge-map.png",
+    "live-all-road-atlas-r62-browser/desktop-ward-evidence.png",
+    "live-all-road-atlas-r62-browser/desktop-whole-atlas.png",
+    "live-all-road-atlas-r62-browser/mobile-palace-evidence.png",
+    "live-all-road-atlas-r62-browser/mobile-report.json",
+    "live-all-road-atlas-r62-browser/mobile-ward-bridge-map.png",
+    "live-all-road-atlas-r62-browser/mobile-ward-evidence.png",
+    "live-all-road-atlas-r62-browser/mobile-whole-atlas.png",
+    "live-homepage-approved-v9-browser/results.json",
+    "live-homepage-v1-browser/results.json",
+    "live-http.json"
+  ],
+  "selected_files": 14,
+  "excluded_archive_file_count": 407,
+  "road_screenshots": 8,
+  "report_validations": [
+    {
+      "path": "live-all-road-atlas-r62-browser/desktop-report.json",
+      "reported_status": "passed",
+      "source_commit": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+      "screenshot_hashes_verified": 4,
+      "reported_download_hashes": {
+        "all-roads/city-all-roads.svg": "18dedfa9c37321a959de537d65336b125b82b50610d081c6ab06f238a8082297",
+        "all-roads/records.csv": "e532d7dfab82b90b34c9e889f1299bf5a5cfa1e71d622e6a47d49d27029a1987",
+        "all-roads/records.json": "ce9c37222f64bf2b540bf165a6e6fa5d904a392774040ad9c5e5adbeb2671697",
+        "all-roads/coverage.csv": "1255359e18d6a4366bc72663e1222a387ba8c7788b8156b3e51a151dd5b53f44",
+        "all-roads/manifest.json": "bf3d28bdbee72c7f48442afb2fd06185e7b04a1a55961f6722f97c9f421c336c",
+        "downloads/luoyang-all-roads.zip": "0e020881a25fab218039c48785b2a594a995578d9f0a544a95c6e02033d81525"
+      },
+      "record_count": 84,
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "checks": [
+        "R6.1 entrance preserves its 21 records; complete catalog, coverage and exclusions are present",
+        "All six categories filter correctly; exact documentary ID, persistent filters, no-result and reset work",
+        "Palace and ward deep links open; a new search clears an older anchor and survives reload",
+        "Source, inference and unknown layers persist; magnification and keyboard horizontal panning work",
+        "Disconnected ZIP restores a ward deep link, searches a gate record, and preserves it after reload",
+        "Native details open by an actual click without JavaScript",
+        "All six advertised downloads were actually downloaded and matched release SHA-256"
+      ]
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/mobile-report.json",
+      "reported_status": "passed",
+      "source_commit": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+      "screenshot_hashes_verified": 4,
+      "reported_download_hashes": {
+        "all-roads/city-all-roads.svg": "18dedfa9c37321a959de537d65336b125b82b50610d081c6ab06f238a8082297",
+        "all-roads/records.csv": "e532d7dfab82b90b34c9e889f1299bf5a5cfa1e71d622e6a47d49d27029a1987",
+        "all-roads/records.json": "ce9c37222f64bf2b540bf165a6e6fa5d904a392774040ad9c5e5adbeb2671697",
+        "all-roads/coverage.csv": "1255359e18d6a4366bc72663e1222a387ba8c7788b8156b3e51a151dd5b53f44",
+        "all-roads/manifest.json": "bf3d28bdbee72c7f48442afb2fd06185e7b04a1a55961f6722f97c9f421c336c",
+        "downloads/luoyang-all-roads.zip": "0e020881a25fab218039c48785b2a594a995578d9f0a544a95c6e02033d81525"
+      },
+      "record_count": 84,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "checks": [
+        "R6.1 entrance preserves its 21 records; complete catalog, coverage and exclusions are present",
+        "All six categories filter correctly; exact documentary ID, persistent filters, no-result and reset work",
+        "Palace and ward deep links open; a new search clears an older anchor and survives reload",
+        "Source, inference and unknown layers persist; magnification and keyboard horizontal panning work",
+        "Disconnected ZIP restores a ward deep link, searches a gate record, and preserves it after reload",
+        "Native details open by an actual click without JavaScript",
+        "All six advertised downloads were actually downloaded and matched release SHA-256"
+      ]
+    },
+    {
+      "path": "live-homepage-v1-browser/results.json",
+      "reported_status": null,
+      "reported_source_commit": null,
+      "validation": "complete_expected_checks_without_recorded_errors",
+      "recorded_check_count": 10,
+      "base_url": "https://mechgouki.github.io/luoyang-city/",
+      "source_commit_binding": "same artifact as commit-checked R6.2 browser reports",
+      "note": "The original report's optional status/source_commit are recorded as supplied; absent fields are not fabricated."
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/results.json",
+      "reported_status": null,
+      "reported_source_commit": null,
+      "validation": "complete_expected_checks_without_recorded_errors",
+      "recorded_check_count": 3,
+      "base_url": "https://mechgouki.github.io/luoyang-city/",
+      "source_commit_binding": "same artifact as commit-checked R6.2 browser reports",
+      "note": "The original report's optional status/source_commit are recorded as supplied; absent fields are not fabricated."
+    },
+    {
+      "path": "live-http.json",
+      "reported_status": "passed",
+      "source_commit": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+      "checked_files": 795,
+      "checked_at": "2026-11-21T10:21:25Z",
+      "all_road_locations": {
+        "status": "passed",
+        "source_commit": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+        "counts": {
+          "records": 84,
+          "groups": {
+            "legacy": 21,
+            "documentary": 26,
+            "palace": 11,
+            "ward": 7,
+            "gate": 14,
+            "bridge": 5
+          },
+          "documentary_entities": 21,
+          "bridge_entities": 5,
+          "coverage": 339,
+          "exclusions": 13,
+          "legacy_research": {
+            "source_traces": 8,
+            "reconstruction_traces": 5,
+            "endpoint_pairs": 6,
+            "excavation_localities": 2
+          }
+        },
+        "downloads": 6,
+        "offline_members": 8,
+        "preservation": {
+          "protected_r6_files": 7,
+          "old_sources": 21,
+          "homepage": "panorama-approved-v11 / 07"
+        },
+        "evidence_boundaries": {
+          "ward_streets": 6,
+          "unresolved_ward_road_class": 1,
+          "third_gate_passage_count": null,
+          "source_gate_passage_bands": 3
+        },
+        "native_figure": {
+          "old_inner_records": 8,
+          "old_outer_records": 11,
+          "sima_native_parts": 6,
+          "gate_native_polygons": 3,
+          "directional_arrow_stems": 6
+        },
+        "distinct_resources": 24
+      },
+      "six_browser_download_hashes_match_http": true
+    }
+  ],
+  "semantic_tests": "The live job does not produce semantic-test TXT files; retain the PR build evidence separately.",
+  "files": [
+    {
+      "path": "browser-runtime-digest.json",
+      "bytes": 112,
+      "sha256": "b97115d42a0afe42e713e1a27f776ae513b45e9070861024d7f5cb7066a11aa6"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/desktop-palace-evidence.png",
+      "bytes": 159169,
+      "sha256": "9db0d5d7d70c0ae25a4b88cbf6e080526f7903c15788ae97b30a6f085c0f3a2f"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/desktop-report.json",
+      "bytes": 1949,
+      "sha256": "2f3adaf694aaa4696be800830177aa6719390f77a0bf0e73af1c319034d9750a"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/desktop-ward-bridge-map.png",
+      "bytes": 170766,
+      "sha256": "d294e34d58cb2563f4ea22beb13e37d82a1d97dc980afd1c91be74e6da710108"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/desktop-ward-evidence.png",
+      "bytes": 173410,
+      "sha256": "2201e4039ceaccffefa54ba3c92d0f508604f0b0b0cbb8704837fca5cf212f6e"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/desktop-whole-atlas.png",
+      "bytes": 163623,
+      "sha256": "bf9eb28320f34e7737299d57ec97e701a69817398d1ba4b31c00aa3c1df10828"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/mobile-palace-evidence.png",
+      "bytes": 156316,
+      "sha256": "a1c20a52961b89628e76a4fb190ac6d6c58b4e3c3456f953fb8a94fb62a50c32"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/mobile-report.json",
+      "bytes": 1943,
+      "sha256": "437129e776868216df7821aa19fc66bc390af66a8ba3d945490ad50cc3759db8"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/mobile-ward-bridge-map.png",
+      "bytes": 55539,
+      "sha256": "cd5e40143b30f928bc358a8cae4d208b2bbd16e07549cee2c927a96c0f6f1627"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/mobile-ward-evidence.png",
+      "bytes": 172118,
+      "sha256": "ffe914521c2ac64c25251b48d2cb3a3501168a372ebbe0b08a8fc60b10e5ca19"
+    },
+    {
+      "path": "live-all-road-atlas-r62-browser/mobile-whole-atlas.png",
+      "bytes": 53969,
+      "sha256": "fed6758f25adfeeaee81c939805b1f3cbf67c9f52e18d13262e936faeb3256ce"
+    },
+    {
+      "path": "live-homepage-approved-v9-browser/results.json",
+      "bytes": 358,
+      "sha256": "fbfb004322bbae8424f648ae5107a5968a99e10f9347a79927943ff7b3876f1e"
+    },
+    {
+      "path": "live-homepage-v1-browser/results.json",
+      "bytes": 1531,
+      "sha256": "ba701e51c9660144819efc444b05727ff35436b24629537d7ac2a410122443fa"
+    },
+    {
+      "path": "live-http.json",
+      "bytes": 191012,
+      "sha256": "759c5f30ae521f4241160f7545f3243906a71b239bd38c36f42e7a10378f4b41"
+    }
+  ],
+  "checksum_file": "SHA256SUMS",
+  "checksum_scope": "All retained source files plus evidence-metadata.json; checksum file excludes itself."
+}

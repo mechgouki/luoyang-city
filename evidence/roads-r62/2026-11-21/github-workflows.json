@@ -1,0 +1,862 @@
+{
+  "schema": "luoyang-roads-r62-workflow-provenance-v1",
+  "pr": {
+    "number": 73,
+    "url": "https://github.com/mechgouki/luoyang-city/pull/73",
+    "head_sha": "813415c60d634f8d5da95cb12975d8b236c1c896",
+    "tested_source_commit": "bdd8cf493d810659e31cb276ea21af9a83b5fda9",
+    "tree_sha": "0566c278e063b8b2607e5a2bb7dd3a6ee115efed",
+    "tree_check": "git fetch origin refs/pull/73/merge; FETCH_HEAD^{tree} equals HEAD^{tree}; read before merge",
+    "run": {
+      "id": 44892508146,
+      "name": "Validate and deploy Luoyang Atlas",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44892508146",
+      "event": "pull_request",
+      "head_branch": "research/roads-all-r62-20261121",
+      "head_sha": "813415c60d634f8d5da95cb12975d8b236c1c896",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 167,
+      "run_attempt": 1,
+      "created_at": "2026-11-21T10:03:44Z",
+      "updated_at": "2026-11-21T10:11:59Z",
+      "run_started_at": "2026-11-21T10:03:44Z"
+    },
+    "jobs": [
+      {
+        "id": 136811168712,
+        "run_id": 44892508146,
+        "workflow_name": "Validate and deploy Luoyang Atlas",
+        "head_branch": "research/roads-all-r62-20261121",
+        "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44892508146",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVpoYrs8AAAAf2pTDyA",
+        "head_sha": "813415c60d634f8d5da95cb12975d8b236c1c896",
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/136811168712",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44892508146/job/136811168712",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-21T10:03:45Z",
+        "started_at": "2026-11-21T10:03:47Z",
+        "completed_at": "2026-11-21T10:11:59Z",
+        "name": "build",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-11-21T10:03:48Z",
+            "completed_at": "2026-11-21T10:03:49Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-11-21T10:03:49Z",
+            "completed_at": "2026-11-21T10:03:51Z"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-11-21T10:03:51Z",
+            "completed_at": "2026-11-21T10:03:51Z"
+          },
+          {
+            "name": "Install pinned terrain and document dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-11-21T10:03:51Z",
+            "completed_at": "2026-11-21T10:04:04Z"
+          },
+          {
+            "name": "Install pinned rendering font outside the published directory",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-11-21T10:04:04Z",
+            "completed_at": "2026-11-21T10:04:08Z"
+          },
+          {
+            "name": "Assemble and verify unchanged baseline PDF",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-11-21T10:04:08Z",
+            "completed_at": "2026-11-21T10:04:08Z"
+          },
+          {
+            "name": "Check baseline data and JavaScript",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-11-21T10:04:08Z",
+            "completed_at": "2026-11-21T10:04:10Z"
+          },
+          {
+            "name": "Check all spatial, temporal, terrain and dual-map semantics",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-11-21T10:04:10Z",
+            "completed_at": "2026-11-21T10:04:17Z"
+          },
+          {
+            "name": "Build preserved research, terrain, B1-B8 and historical map review",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-11-21T10:04:17Z",
+            "completed_at": "2026-11-21T10:05:13Z"
+          },
+          {
+            "name": "Build prosperity documentary maps and source-geographic layout",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-11-21T10:05:13Z",
+            "completed_at": "2026-11-21T10:05:23Z"
+          },
+          {
+            "name": "Promote the explicitly approved H2 panorama without changing research maps",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-11-21T10:05:23Z",
+            "completed_at": "2026-11-21T10:05:24Z"
+          },
+          {
+            "name": "P4.5.1 source-anchored architecture distribution and citation tiers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12,
+            "started_at": "2026-11-21T10:05:24Z",
+            "completed_at": "2026-11-21T10:05:25Z"
+          },
+          {
+            "name": "P4.5.2 build source road remnants and qualitative functions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-11-21T10:05:25Z",
+            "completed_at": "2026-11-21T10:05:26Z"
+          },
+          {
+            "name": "P4.5.3 build three qualitative historic road/building clusters",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-11-21T10:05:26Z",
+            "completed_at": "2026-11-21T10:05:28Z"
+          },
+          {
+            "name": "P4.6 audit Northern Wei water and major road anchor evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-11-21T10:05:28Z",
+            "completed_at": "2026-11-21T10:05:30Z"
+          },
+          {
+            "name": "Build the unified city atlas, coverage and evidence registers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16,
+            "started_at": "2026-11-21T10:05:30Z",
+            "completed_at": "2026-11-21T10:05:31Z"
+          },
+          {
+            "name": "Build the R5 panorama and camera-aligned source views",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17,
+            "started_at": "2026-11-21T10:05:31Z",
+            "completed_at": "2026-11-21T10:05:31Z"
+          },
+          {
+            "name": "Build the citywide graded road atlas and evidence register",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 18,
+            "started_at": "2026-11-21T10:05:31Z",
+            "completed_at": "2026-11-21T10:05:32Z"
+          },
+          {
+            "name": "Build the complete road, palace, ward and passage evidence atlas",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19,
+            "started_at": "2026-11-21T10:05:32Z",
+            "completed_at": "2026-11-21T10:05:32Z"
+          },
+          {
+            "name": "Check the built prosperity maps and their evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 20,
+            "started_at": "2026-11-21T10:05:32Z",
+            "completed_at": "2026-11-21T10:05:38Z"
+          },
+          {
+            "name": "Fetch pinned browser runtime with preinstalled dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21,
+            "started_at": "2026-11-21T10:05:38Z",
+            "completed_at": "2026-11-21T10:06:05Z"
+          },
+          {
+            "name": "Exercise current and all earlier map interactions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22,
+            "started_at": "2026-11-21T10:06:05Z",
+            "completed_at": "2026-11-21T10:11:40Z"
+          },
+          {
+            "name": "Preserve build and browser evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23,
+            "started_at": "2026-11-21T10:11:40Z",
+            "completed_at": "2026-11-21T10:11:46Z"
+          },
+          {
+            "name": "Upload verified Pages artifact",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 24,
+            "started_at": "2026-11-21T10:11:46Z",
+            "completed_at": "2026-11-21T10:11:56Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 47,
+            "started_at": "2026-11-21T10:11:56Z",
+            "completed_at": "2026-11-21T10:11:56Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 48,
+            "started_at": "2026-11-21T10:11:56Z",
+            "completed_at": "2026-11-21T10:11:56Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 49,
+            "started_at": "2026-11-21T10:11:56Z",
+            "completed_at": "2026-11-21T10:11:56Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/136811168712",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000000296,
+        "runner_name": "GitHub Actions 1000000296",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 136813187970,
+        "run_id": 44892508146,
+        "workflow_name": "Validate and deploy Luoyang Atlas",
+        "head_branch": "research/roads-all-r62-20261121",
+        "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44892508146",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVpoYrs8AAAAf2rOTgg",
+        "head_sha": "813415c60d634f8d5da95cb12975d8b236c1c896",
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/136813187970",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44892508146/job/136813187970",
+        "status": "completed",
+        "conclusion": "skipped",
+        "created_at": "2026-11-21T10:11:59Z",
+        "started_at": "2026-11-21T10:11:59Z",
+        "completed_at": "2026-11-21T10:11:59Z",
+        "name": "verify-live",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/136813187970",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": null,
+        "runner_name": null,
+        "runner_group_id": null,
+        "runner_group_name": null
+      },
+      {
+        "id": 136813188261,
+        "run_id": 44892508146,
+        "workflow_name": "Validate and deploy Luoyang Atlas",
+        "head_branch": "research/roads-all-r62-20261121",
+        "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44892508146",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVpoYrs8AAAAf2rOUpQ",
+        "head_sha": "813415c60d634f8d5da95cb12975d8b236c1c896",
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/136813188261",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44892508146/job/136813188261",
+        "status": "completed",
+        "conclusion": "skipped",
+        "created_at": "2026-11-21T10:11:59Z",
+        "started_at": "2026-11-21T10:11:59Z",
+        "completed_at": "2026-11-21T10:11:59Z",
+        "name": "deploy",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/136813188261",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": null,
+        "runner_name": null,
+        "runner_group_id": null,
+        "runner_group_name": null
+      }
+    ],
+    "artifacts": [
+      {
+        "id": 14703275415,
+        "name": "github-pages",
+        "size_in_bytes": 327774079,
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703275415",
+        "archive_download_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703275415/zip",
+        "expired": false,
+        "created_at": "2026-11-21T10:11:56Z",
+        "expires_at": "2026-11-28T10:11:46Z",
+        "updated_at": "2026-11-21T10:11:56Z",
+        "digest": "sha256:dbce5fbf4bd17c35faf58f2096bbbb41f534ce8edb1de32839f845814b9f43bf",
+        "workflow_run": {
+          "id": 44892508146,
+          "repository_id": 1452939438,
+          "head_repository_id": 1452939438,
+          "head_branch": "research/roads-all-r62-20261121",
+          "head_sha": "813415c60d634f8d5da95cb12975d8b236c1c896"
+        }
+      },
+      {
+        "id": 14703031842,
+        "name": "browser-build-evidence",
+        "size_in_bytes": 153104564,
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703031842",
+        "archive_download_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703031842/zip",
+        "expired": false,
+        "created_at": "2026-11-21T10:11:45Z",
+        "expires_at": "2026-12-05T10:11:40Z",
+        "updated_at": "2026-11-21T10:11:45Z",
+        "digest": "sha256:c0355912984a38795241a2ee426906e8970789eff5b4abb1bb7e0e0b924881e7",
+        "workflow_run": {
+          "id": 44892508146,
+          "repository_id": 1452939438,
+          "head_repository_id": 1452939438,
+          "head_branch": "research/roads-all-r62-20261121",
+          "head_sha": "813415c60d634f8d5da95cb12975d8b236c1c896"
+        }
+      }
+    ],
+    "selected_evidence_artifact_id": 14703031842
+  },
+  "production": {
+    "commit": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+    "tree_sha": "0566c278e063b8b2607e5a2bb7dd3a6ee115efed",
+    "tree_check": "git fetch origin main after merge; FETCH_HEAD^{tree} equals the final PR tested tree; git diff HEAD FETCH_HEAD empty",
+    "run_id": 44893240321,
+    "run": {
+      "id": 44893240321,
+      "name": "Validate and deploy Luoyang Atlas",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44893240321",
+      "event": "push",
+      "head_branch": "main",
+      "head_sha": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 168,
+      "run_attempt": 1,
+      "created_at": "2026-11-21T10:12:41Z",
+      "updated_at": "2026-11-21T10:28:48Z",
+      "run_started_at": "2026-11-21T10:12:41Z"
+    },
+    "jobs": [
+      {
+        "id": 136813361696,
+        "run_id": 44893240321,
+        "workflow_name": "Validate and deploy Luoyang Atlas",
+        "head_branch": "main",
+        "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44893240321",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVpoYrs8AAAAf2rY6IA",
+        "head_sha": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/136813361696",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44893240321/job/136813361696",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-21T10:12:42Z",
+        "started_at": "2026-11-21T10:12:43Z",
+        "completed_at": "2026-11-21T10:20:33Z",
+        "name": "build",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-11-21T10:12:44Z",
+            "completed_at": "2026-11-21T10:12:45Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-11-21T10:12:45Z",
+            "completed_at": "2026-11-21T10:12:47Z"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-11-21T10:12:47Z",
+            "completed_at": "2026-11-21T10:12:47Z"
+          },
+          {
+            "name": "Install pinned terrain and document dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-11-21T10:12:47Z",
+            "completed_at": "2026-11-21T10:12:56Z"
+          },
+          {
+            "name": "Install pinned rendering font outside the published directory",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-11-21T10:12:56Z",
+            "completed_at": "2026-11-21T10:12:58Z"
+          },
+          {
+            "name": "Assemble and verify unchanged baseline PDF",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-11-21T10:12:58Z",
+            "completed_at": "2026-11-21T10:12:58Z"
+          },
+          {
+            "name": "Check baseline data and JavaScript",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-11-21T10:12:58Z",
+            "completed_at": "2026-11-21T10:13:00Z"
+          },
+          {
+            "name": "Check all spatial, temporal, terrain and dual-map semantics",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-11-21T10:13:00Z",
+            "completed_at": "2026-11-21T10:13:05Z"
+          },
+          {
+            "name": "Build preserved research, terrain, B1-B8 and historical map review",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-11-21T10:13:05Z",
+            "completed_at": "2026-11-21T10:13:57Z"
+          },
+          {
+            "name": "Build prosperity documentary maps and source-geographic layout",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-11-21T10:13:57Z",
+            "completed_at": "2026-11-21T10:14:05Z"
+          },
+          {
+            "name": "Promote the explicitly approved H2 panorama without changing research maps",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-11-21T10:14:05Z",
+            "completed_at": "2026-11-21T10:14:06Z"
+          },
+          {
+            "name": "P4.5.1 source-anchored architecture distribution and citation tiers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12,
+            "started_at": "2026-11-21T10:14:06Z",
+            "completed_at": "2026-11-21T10:14:08Z"
+          },
+          {
+            "name": "P4.5.2 build source road remnants and qualitative functions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-11-21T10:14:08Z",
+            "completed_at": "2026-11-21T10:14:09Z"
+          },
+          {
+            "name": "P4.5.3 build three qualitative historic road/building clusters",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-11-21T10:14:09Z",
+            "completed_at": "2026-11-21T10:14:10Z"
+          },
+          {
+            "name": "P4.6 audit Northern Wei water and major road anchor evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-11-21T10:14:10Z",
+            "completed_at": "2026-11-21T10:14:12Z"
+          },
+          {
+            "name": "Build the unified city atlas, coverage and evidence registers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16,
+            "started_at": "2026-11-21T10:14:12Z",
+            "completed_at": "2026-11-21T10:14:13Z"
+          },
+          {
+            "name": "Build the R5 panorama and camera-aligned source views",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17,
+            "started_at": "2026-11-21T10:14:13Z",
+            "completed_at": "2026-11-21T10:14:13Z"
+          },
+          {
+            "name": "Build the citywide graded road atlas and evidence register",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 18,
+            "started_at": "2026-11-21T10:14:13Z",
+            "completed_at": "2026-11-21T10:14:14Z"
+          },
+          {
+            "name": "Build the complete road, palace, ward and passage evidence atlas",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19,
+            "started_at": "2026-11-21T10:14:14Z",
+            "completed_at": "2026-11-21T10:14:14Z"
+          },
+          {
+            "name": "Check the built prosperity maps and their evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 20,
+            "started_at": "2026-11-21T10:14:14Z",
+            "completed_at": "2026-11-21T10:14:19Z"
+          },
+          {
+            "name": "Fetch pinned browser runtime with preinstalled dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21,
+            "started_at": "2026-11-21T10:14:19Z",
+            "completed_at": "2026-11-21T10:14:46Z"
+          },
+          {
+            "name": "Exercise current and all earlier map interactions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22,
+            "started_at": "2026-11-21T10:14:46Z",
+            "completed_at": "2026-11-21T10:20:16Z"
+          },
+          {
+            "name": "Preserve build and browser evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23,
+            "started_at": "2026-11-21T10:20:16Z",
+            "completed_at": "2026-11-21T10:20:22Z"
+          },
+          {
+            "name": "Upload verified Pages artifact",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 24,
+            "started_at": "2026-11-21T10:20:22Z",
+            "completed_at": "2026-11-21T10:20:32Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 47,
+            "started_at": "2026-11-21T10:20:32Z",
+            "completed_at": "2026-11-21T10:20:32Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 48,
+            "started_at": "2026-11-21T10:20:32Z",
+            "completed_at": "2026-11-21T10:20:32Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 49,
+            "started_at": "2026-11-21T10:20:32Z",
+            "completed_at": "2026-11-21T10:20:32Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/136813361696",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000000297,
+        "runner_name": "GitHub Actions 1000000297",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 136815275160,
+        "run_id": 44893240321,
+        "workflow_name": "Validate and deploy Luoyang Atlas",
+        "head_branch": "main",
+        "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44893240321",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVpoYrs8AAAAf2tNsmA",
+        "head_sha": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/136815275160",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44893240321/job/136815275160",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-21T10:20:34Z",
+        "started_at": "2026-11-21T10:20:38Z",
+        "completed_at": "2026-11-21T10:20:59Z",
+        "name": "deploy",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-11-21T10:20:39Z",
+            "completed_at": "2026-11-21T10:20:42Z"
+          },
+          {
+            "name": "Read existing Pages configuration",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-11-21T10:20:42Z",
+            "completed_at": "2026-11-21T10:20:46Z"
+          },
+          {
+            "name": "Deploy verified website",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-11-21T10:20:46Z",
+            "completed_at": "2026-11-21T10:20:58Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-11-21T10:20:58Z",
+            "completed_at": "2026-11-21T10:20:58Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/136815275160",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000000298,
+        "runner_name": "GitHub Actions 1000000298",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 136815388741,
+        "run_id": 44893240321,
+        "workflow_name": "Validate and deploy Luoyang Atlas",
+        "head_branch": "main",
+        "run_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/44893240321",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVpoYrs8AAAAf2tUoRQ",
+        "head_sha": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/136815388741",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44893240321/job/136815388741",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-21T10:21:01Z",
+        "started_at": "2026-11-21T10:21:02Z",
+        "completed_at": "2026-11-21T10:28:47Z",
+        "name": "verify-live",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-11-21T10:21:03Z",
+            "completed_at": "2026-11-21T10:21:04Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-11-21T10:21:04Z",
+            "completed_at": "2026-11-21T10:21:05Z"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-11-21T10:21:05Z",
+            "completed_at": "2026-11-21T10:21:06Z"
+          },
+          {
+            "name": "Check actual HTTPS resources and hashes",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-11-21T10:21:06Z",
+            "completed_at": "2026-11-21T10:21:32Z"
+          },
+          {
+            "name": "Fetch the same pinned browser runtime",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-11-21T10:21:32Z",
+            "completed_at": "2026-11-21T10:21:54Z"
+          },
+          {
+            "name": "Exercise current and all earlier deployed map versions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-11-21T10:21:54Z",
+            "completed_at": "2026-11-21T10:28:39Z"
+          },
+          {
+            "name": "Preserve live acceptance evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-11-21T10:28:39Z",
+            "completed_at": "2026-11-21T10:28:44Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-11-21T10:28:44Z",
+            "completed_at": "2026-11-21T10:28:44Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-11-21T10:28:44Z",
+            "completed_at": "2026-11-21T10:28:44Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-11-21T10:28:44Z",
+            "completed_at": "2026-11-21T10:28:44Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/136815388741",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000000299,
+        "runner_name": "GitHub Actions 1000000299",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": 14703660216,
+        "name": "live-acceptance-evidence",
+        "size_in_bytes": 102074643,
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703660216",
+        "archive_download_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703660216/zip",
+        "expired": false,
+        "created_at": "2026-11-21T10:28:44Z",
+        "expires_at": "2026-12-21T10:28:40Z",
+        "updated_at": "2026-11-21T10:28:44Z",
+        "digest": "sha256:6f01c1a3637385b6da1f0183b5ad83312bedf9ba9ef3141db26518a89090c096",
+        "workflow_run": {
+          "id": 44893240321,
+          "repository_id": 1452939438,
+          "head_repository_id": 1452939438,
+          "head_branch": "main",
+          "head_sha": "0f5904a109751e5a24ab0d0c95592362f1e26c94"
+        }
+      },
+      {
+        "id": 14703460832,
+        "name": "github-pages",
+        "size_in_bytes": 327774074,
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703460832",
+        "archive_download_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703460832/zip",
+        "expired": false,
+        "created_at": "2026-11-21T10:20:31Z",
+        "expires_at": "2026-11-28T10:20:22Z",
+        "updated_at": "2026-11-21T10:20:31Z",
+        "digest": "sha256:04769309e21b19975571c0f788a56237b6cd9275612359ca060cf037596c6ed6",
+        "workflow_run": {
+          "id": 44893240321,
+          "repository_id": 1452939438,
+          "head_repository_id": 1452939438,
+          "head_branch": "main",
+          "head_sha": "0f5904a109751e5a24ab0d0c95592362f1e26c94"
+        }
+      },
+      {
+        "id": 14703176858,
+        "name": "browser-build-evidence",
+        "size_in_bytes": 153108425,
+        "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703176858",
+        "archive_download_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14703176858/zip",
+        "expired": false,
+        "created_at": "2026-11-21T10:20:21Z",
+        "expires_at": "2026-12-05T10:20:16Z",
+        "updated_at": "2026-11-21T10:20:21Z",
+        "digest": "sha256:7529f076482802ee6bb0b52294969aa734dd53d65b588754a489a9b34d0856b9",
+        "workflow_run": {
+          "id": 44893240321,
+          "repository_id": 1452939438,
+          "head_repository_id": 1452939438,
+          "head_branch": "main",
+          "head_sha": "0f5904a109751e5a24ab0d0c95592362f1e26c94"
+        }
+      }
+    ],
+    "selected_evidence_artifact_id": 14703660216
+  }
+}

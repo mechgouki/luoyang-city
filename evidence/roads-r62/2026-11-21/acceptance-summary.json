@@ -1,0 +1,113 @@
+{
+  "schema": "luoyang-all-roads-r62-acceptance-v1",
+  "status": "passed",
+  "recorded_at": "2026-11-21T10:30:15+00:00",
+  "research_version": "R6.2",
+  "implementation_version": "all-road-atlas-r6.2",
+  "period": "516–528",
+  "production_commit": "0f5904a109751e5a24ab0d0c95592362f1e26c94",
+  "tested_and_released_tree": "0566c278e063b8b2607e5a2bb7dd3a6ee115efed",
+  "counts": {
+    "evidence_records": 84,
+    "legacy": 21,
+    "documentary": 26,
+    "palace": 11,
+    "ward": 7,
+    "gate": 14,
+    "bridge": 5,
+    "entity_coverage": 339,
+    "road_locating_primary_quotes": 100,
+    "crosswalk_relations": 60,
+    "exclusions_and_references": 13
+  },
+  "count_qualification": "84 evidence records, not 84 distinct ancient roads; F01–F06 are six streets and F07 is an unresolved collective record.",
+  "public_hash_checked_files": 795,
+  "downloads_per_device": 6,
+  "offline_zip_members": 8,
+  "browser_viewports": {
+    "desktop": [
+      1440,
+      960
+    ],
+    "mobile": [
+      390,
+      844
+    ]
+  },
+  "browser_checks_per_device": 7,
+  "screenshots_retained": 16,
+  "screenshot_comparison": [
+    {
+      "name": "desktop-whole-atlas.png",
+      "pr_sha256": "bf9eb28320f34e7737299d57ec97e701a69817398d1ba4b31c00aa3c1df10828",
+      "live_sha256": "bf9eb28320f34e7737299d57ec97e701a69817398d1ba4b31c00aa3c1df10828",
+      "pr_live_identical": true,
+      "matches_manually_reviewed_initial_image": true
+    },
+    {
+      "name": "desktop-palace-evidence.png",
+      "pr_sha256": "9db0d5d7d70c0ae25a4b88cbf6e080526f7903c15788ae97b30a6f085c0f3a2f",
+      "live_sha256": "9db0d5d7d70c0ae25a4b88cbf6e080526f7903c15788ae97b30a6f085c0f3a2f",
+      "pr_live_identical": true,
+      "matches_manually_reviewed_initial_image": true
+    },
+    {
+      "name": "desktop-ward-evidence.png",
+      "pr_sha256": "2201e4039ceaccffefa54ba3c92d0f508604f0b0b0cbb8704837fca5cf212f6e",
+      "live_sha256": "2201e4039ceaccffefa54ba3c92d0f508604f0b0b0cbb8704837fca5cf212f6e",
+      "pr_live_identical": true,
+      "matches_manually_reviewed_initial_image": true
+    },
+    {
+      "name": "desktop-ward-bridge-map.png",
+      "pr_sha256": "d294e34d58cb2563f4ea22beb13e37d82a1d97dc980afd1c91be74e6da710108",
+      "live_sha256": "d294e34d58cb2563f4ea22beb13e37d82a1d97dc980afd1c91be74e6da710108",
+      "pr_live_identical": true,
+      "matches_manually_reviewed_initial_image": true
+    },
+    {
+      "name": "mobile-whole-atlas.png",
+      "pr_sha256": "fed6758f25adfeeaee81c939805b1f3cbf67c9f52e18d13262e936faeb3256ce",
+      "live_sha256": "fed6758f25adfeeaee81c939805b1f3cbf67c9f52e18d13262e936faeb3256ce",
+      "pr_live_identical": true,
+      "matches_manually_reviewed_initial_image": true
+    },
+    {
+      "name": "mobile-palace-evidence.png",
+      "pr_sha256": "a1c20a52961b89628e76a4fb190ac6d6c58b4e3c3456f953fb8a94fb62a50c32",
+      "live_sha256": "a1c20a52961b89628e76a4fb190ac6d6c58b4e3c3456f953fb8a94fb62a50c32",
+      "pr_live_identical": true,
+      "matches_manually_reviewed_initial_image": true
+    },
+    {
+      "name": "mobile-ward-evidence.png",
+      "pr_sha256": "ffe914521c2ac64c25251b48d2cb3a3501168a372ebbe0b08a8fc60b10e5ca19",
+      "live_sha256": "ffe914521c2ac64c25251b48d2cb3a3501168a372ebbe0b08a8fc60b10e5ca19",
+      "pr_live_identical": true,
+      "matches_manually_reviewed_initial_image": true
+    },
+    {
+      "name": "mobile-ward-bridge-map.png",
+      "pr_sha256": "cd5e40143b30f928bc358a8cae4d208b2bbd16e07549cee2c927a96c0f6f1627",
+      "live_sha256": "cd5e40143b30f928bc358a8cae4d208b2bbd16e07549cee2c927a96c0f6f1627",
+      "pr_live_identical": true,
+      "matches_manually_reviewed_initial_image": true
+    }
+  ],
+  "manual_visual_review": "All eight initial PR images were inspected for text readability, source-frame boundaries, unknown endpoints, mobile panning and evidence cards. Each final PR/live image is compared above; a nonidentical image requires a separate review before this archive is published.",
+  "homepage_preserved": "07 / panorama-approved-v11, both entries",
+  "fixed_ci_tests": {
+    "research_semantics": 218,
+    "homepage": 6,
+    "result": "passed"
+  },
+  "local_preparatory_tests": "Python 3.12: 216/218 research checks passed; two old frozen numeric fingerprints differ. These are not the final gate. Final pinned Python 3.11 CI passed 218/218 without changing frozen expectations.",
+  "research_limits": [
+    "No new geographic registration, ancient road coordinates or 516–528 bank lines.",
+    "Source drawing strokes, directional arrows and illustrative relations remain distinguished from surveyed road edges.",
+    "1993 report pages 602–608 and complete untrimmed map/legend remain missing; last measured road points and measured/inferred line types remain unresolved.",
+    "Water records W01–W34 retain their existing levels; Yong Bridge landings remain unknown.",
+    "2022 canal report deferred; post-destruction Luoyang deferred."
+  ],
+  "original_response_retention": "Production reports and full response-index retained; initial/end build-info bytes retained. Other response bodies remain in session scratch and their actual hashes are retained in the index; they are not silently reconstructed in this archive."
+}

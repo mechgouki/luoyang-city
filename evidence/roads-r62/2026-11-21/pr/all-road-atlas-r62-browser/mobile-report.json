@@ -1,0 +1,34 @@
+{
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "R6.1 entrance preserves its 21 records; complete catalog, coverage and exclusions are present",
+    "All six categories filter correctly; exact documentary ID, persistent filters, no-result and reset work",
+    "Palace and ward deep links open; a new search clears an older anchor and survives reload",
+    "Source, inference and unknown layers persist; magnification and keyboard horizontal panning work",
+    "Disconnected ZIP restores a ward deep link, searches a gate record, and preserves it after reload",
+    "Native details open by an actual click without JavaScript",
+    "All six advertised downloads were actually downloaded and matched release SHA-256"
+  ],
+  "downloads": {
+    "all-roads/city-all-roads.svg": "18dedfa9c37321a959de537d65336b125b82b50610d081c6ab06f238a8082297",
+    "all-roads/records.csv": "e532d7dfab82b90b34c9e889f1299bf5a5cfa1e71d622e6a47d49d27029a1987",
+    "all-roads/records.json": "a1bcf67091072c34027963c5b2171e51bb66ba190e95625151f0a25304628b6f",
+    "all-roads/coverage.csv": "1255359e18d6a4366bc72663e1222a387ba8c7788b8156b3e51a151dd5b53f44",
+    "all-roads/manifest.json": "5ed826b0fc3f9780dc2cf3237e69f3f8c9e3ea143e33191637a1a349a94579b8",
+    "downloads/luoyang-all-roads.zip": "02f4ee7e00a16187e7c5ded452750fa932f4d57427d066cf3ffc084fb3167ad7"
+  },
+  "screenshots": {
+    "mobile-whole-atlas.png": "fed6758f25adfeeaee81c939805b1f3cbf67c9f52e18d13262e936faeb3256ce",
+    "mobile-palace-evidence.png": "a1c20a52961b89628e76a4fb190ac6d6c58b4e3c3456f953fb8a94fb62a50c32",
+    "mobile-ward-evidence.png": "ffe914521c2ac64c25251b48d2cb3a3501168a372ebbe0b08a8fc60b10e5ca19",
+    "mobile-ward-bridge-map.png": "cd5e40143b30f928bc358a8cae4d208b2bbd16e07549cee2c927a96c0f6f1627"
+  },
+  "errors": [],
+  "source_commit": "bdd8cf493d810659e31cb276ea21af9a83b5fda9",
+  "record_count": 84,
+  "status": "passed"
+}
