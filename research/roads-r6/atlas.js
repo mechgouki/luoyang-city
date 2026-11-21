@@ -28,6 +28,12 @@
     $('#zoom-value').textContent = zoom.value + '%';
     if (write) {
       const u = new URL(location.href);
+      let selected;
+      try { selected = document.getElementById(decodeURIComponent(u.hash.slice(1))); } catch { selected = null; }
+      if (selected?.matches('[data-road]') && selected.hidden) {
+        u.hash = '';
+        document.querySelectorAll('.map-selected').forEach(e => e.classList.remove('map-selected'));
+      }
       for (const [key,value] of [['q',query.value],['level',level.value],['layers',layers.filter(k => boxes[k].checked).join(',')],['zoom',zoom.value]]) {
         const defaultValue = key === 'layers' ? layers.join(',') : key === 'zoom' ? '100' : '';
         if (value === defaultValue) u.searchParams.delete(key); else u.searchParams.set(key, value);

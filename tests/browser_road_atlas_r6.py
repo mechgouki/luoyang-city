@@ -96,6 +96,15 @@ def exercise(browser, base, device, output):
             assert page.url.endswith("#R01")
             page.reload(wait_until="domcontentloaded")
             expect(page.locator("#R01")).to_have_attribute("open", "")
+            page.locator("#query").fill("X02")
+            count(page, 1)
+            assert not page.url.endswith("#R01"), "Old road anchor conflicts with the new search"
+            page.reload(wait_until="domcontentloaded")
+            expect(page.locator("#query")).to_have_value("X02")
+            expect(page.locator("#X02")).to_be_visible()
+            count(page, 1)
+            assert page.evaluate("location.hash") == ""
+            report["checks"].append("A new ID search clears the previous road anchor and survives reload")
             page.goto(base + PAGE + "#O11", wait_until="domcontentloaded")
             expect(page.locator("#O11")).to_have_attribute("open", "")
             fits(page)
@@ -135,6 +144,12 @@ def exercise(browser, base, device, output):
                     expect(local.locator("details[data-road]")).to_have_count(21)
                     local.locator("#query").fill("O11")
                     count(local, 1)
+                    assert local.evaluate("location.hash") == ""
+                    local.reload(wait_until="domcontentloaded")
+                    expect(local.locator("#query")).to_have_value("O11")
+                    expect(local.locator("#O11")).to_be_visible()
+                    count(local, 1)
+                    assert local.evaluate("location.hash") == ""
                     fits(local)
                 with browser.new_context(**settings, java_script_enabled=False) as disabled:
                     plain = disabled.new_page()
