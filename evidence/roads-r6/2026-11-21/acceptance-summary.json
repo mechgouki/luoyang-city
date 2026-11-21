@@ -1,0 +1,135 @@
+{
+  "schema": "luoyang-roads-r6-acceptance-v1",
+  "status": "passed",
+  "date_beijing": "2026-11-21",
+  "research_version": "R6.1",
+  "implementation_version": "road-atlas-r6.1",
+  "source_commit": "0e04a0018f085321afbecc7a4e35be0b8cc9da51",
+  "pull_request": "https://github.com/mechgouki/luoyang-city/pull/72",
+  "production_workflow": "https://github.com/mechgouki/luoyang-city/actions/runs/44887623733",
+  "workflow_conclusion": "success",
+  "jobs": [
+    {
+      "name": "build",
+      "conclusion": "success"
+    },
+    {
+      "name": "deploy",
+      "conclusion": "success"
+    },
+    {
+      "name": "verify-live",
+      "conclusion": "success"
+    }
+  ],
+  "research_tests": 215,
+  "homepage_tests": 6,
+  "public_files_verified": 786,
+  "http_retries": [],
+  "independent_readback": {
+    "status": "passed",
+    "source_commit": "0e04a0018f085321afbecc7a4e35be0b8cc9da51",
+    "records": 21,
+    "supplements": 3,
+    "downloads": 5,
+    "research_counts": {
+      "source_traces": 8,
+      "reconstruction_traces": 5,
+      "endpoint_pairs": 6,
+      "excavation_localities": 2
+    },
+    "offline_members": 7,
+    "distinct_resources": 17,
+    "preserved_homepage": "panorama-approved-v11 / 07",
+    "base_url": "https://mechgouki.github.io/luoyang-city/",
+    "checked_at": "2026-11-21T09:11:44+00:00",
+    "verifier": "tools/verify_road_atlas_r6.py::verify",
+    "verifier_source_commit": "0e04a0018f085321afbecc7a4e35be0b8cc9da51",
+    "build_info_sha256": "9a15f991120cae994ba667f092e5a94130063b18222e4297acc38c699a0f01a0",
+    "csv_rows": 21,
+    "csv_columns": [
+      "id",
+      "name",
+      "来源组",
+      "道路图号",
+      "时代",
+      "可定位路段",
+      "起点",
+      "终点",
+      "端点状态",
+      "城门",
+      "桥渠与证据等级",
+      "推定连接",
+      "对应记录编号",
+      "对应结论",
+      "报告量值与口径",
+      "待补原件与测线",
+      "出处编号",
+      "出处页码图号与链接",
+      "独立图框",
+      "几何性质"
+    ],
+    "download_hashes": {
+      "road-atlas/city-roads.svg": "d90170e019c67502a761cdbafc97090929338d608ff6550c00ced09ea7d040b6",
+      "road-atlas/roads.csv": "254facb627a106f6e4472aedd51ba52bd94cf08cc92b831f9c0ad3cd1ac006ba",
+      "road-atlas/roads.json": "646254d003cf6cfe5fe6d97ad9a797a36eaca405cf8e11dc1306a51c90519fde",
+      "road-atlas/manifest.json": "73fcc683bc209fac6ed00f47c7ebd03fcd1f08b061ac34e594b50aeb294c065b",
+      "downloads/luoyang-road-atlas.zip": "cb5998ef9c7332c04fb43ed7c695218ada25ad6b130c210d90baeb8d70e3977d"
+    },
+    "http_retries": []
+  },
+  "browser_acceptance": {
+    "desktop": {
+      "width": 1440,
+      "height": 960,
+      "status": "passed"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": "passed"
+    },
+    "screenshots": {
+      "pr": 6,
+      "production": 6,
+      "manual_review": "All six PR screenshots inspected; all six production screenshot SHA-256 values exactly match their PR images."
+    },
+    "checks": [
+      "R5 and water entrances",
+      "21 road records",
+      "Search and evidence filter with reload",
+      "Cleared stale road anchors after a new search",
+      "Three layer switches",
+      "Map keyboard links and deep links",
+      "Zoom and horizontal keyboard panning",
+      "Five real downloads on each viewport with SHA-256",
+      "Disconnected offline ZIP reading and search",
+      "Native no-JavaScript anchor and details reading",
+      "Both homepage entries retain candidate 07 / v11"
+    ],
+    "runtime_errors": 0
+  },
+  "historical_limits": {
+    "source_records": 21,
+    "independent_road_count_established": false,
+    "source_trace_records": 8,
+    "reconstruction_trace_records": 5,
+    "endpoint_pair_records": 6,
+    "excavation_localities": 2,
+    "crosswalk_relations": 12,
+    "supplements": 3,
+    "new_field_measurements": 0,
+    "new_ancient_geographic_coordinates": 0,
+    "original_1993_full_text_obtained": false,
+    "original_1993_complete_figure_obtained": false,
+    "canal_report_2022": "deferred",
+    "target_years": [
+      516,
+      528
+    ]
+  },
+  "preserved_homepage": {
+    "selection_number": "07",
+    "revision": "panorama-approved-v11"
+  }
+}
