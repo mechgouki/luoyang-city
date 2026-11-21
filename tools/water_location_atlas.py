@@ -191,6 +191,6 @@ def build(site):
     (site / PAGE).write_text(page.replace("@ZIP@", ZIP))
     (site / ZIP).parent.mkdir(exist_ok=True)
     with ZipFile(site / ZIP,"w",ZIP_DEFLATED) as bundle:
-        bundle.writestr(PAGE, page.replace("@ZIP@", BASE+ZIP))
+        bundle.writestr(PAGE, page.replace("@ZIP@", BASE+ZIP).replace('href="./luoyang-road-atlas.html"', 'href="'+BASE+'luoyang-road-atlas.html"'))
         for name in [CSV, JSON]: bundle.write(site/name, name)
     return [PAGE, CSV, JSON, ZIP]

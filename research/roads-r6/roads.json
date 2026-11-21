@@ -1,0 +1,4365 @@
+{
+  "schema": "luoyang-roads-r6-v1",
+  "version": "R6.1",
+  "title": "盛时洛阳全城主干道分级定位",
+  "target_years": [
+    516,
+    528
+  ],
+  "basis_commit": "7e0cd639b56bb9f77c368cfc2d4bc396f1e4876e",
+  "source_count": 21,
+  "counting_note": "21条是来源记录，不是21条彼此独立的道路；8内城图迹、11外围调查、2单列发掘。3项补充不增加主表条数。",
+  "map_policy": "图面摘读实线表示原图可读路迹，不自动等于田野实测。虚线只表示两端对应或文献拟接；空心端点为取读/截绘端，古道实际端点未知。不同图框不作地理拼接。",
+  "new_field_measurements": 0,
+  "new_geographic_coordinates": 0,
+  "accepted_516_528_bank_geometries": 0,
+  "original_1993_figure_verified": false,
+  "period_rule": "原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+  "frames": [
+    {
+      "id": "frame-06a",
+      "name": "申遗保护管理图06a",
+      "unit": "PDF版面点",
+      "source_refs": [
+        "p462:D"
+      ],
+      "source_path": "research/prosperity-v1/geographic-evidence.json",
+      "locator": "PDF第3457页；原编号辅助见3455页图04",
+      "origin": "PDF左上；x右、y下",
+      "geographic_transform": null,
+      "note": "只使用源PDF平面坐标；八条道路按原有子路径分开。底图是1997航摄／1999实测，遗存附表有不同时层。图面已有路迹不是本次逐段田野实测。"
+    },
+    {
+      "id": "frame-qian2018",
+      "name": "钱国祥2018图一／朱岩石2024图6",
+      "unit": "原嵌图像素",
+      "image_size": [
+        1145,
+        951
+      ],
+      "source_refs": [
+        "outer:Q2018",
+        "outer:Z2024"
+      ],
+      "locator": "《华夏考古》2018(6)图一；Acta Asiatica 126（2024）印页17图6",
+      "source_path": "research/prosperity-v4/network-462/outer.json",
+      "origin": "嵌图左上；x右、y下",
+      "scale_ticks": [
+        [
+          980.5,
+          933
+        ],
+        [
+          1072.5,
+          933
+        ]
+      ],
+      "scale_metres": 1000,
+      "geographic_transform": null,
+      "note": "后世复原图的独立原图框；不能把实线读墨称为1993实测道路，不能与06a套合。六东西道仅取两端；五路有既有样线。",
+      "context": {
+        "inner_north_wall": [
+          [
+            467,
+            251
+          ],
+          [
+            474,
+            212
+          ],
+          [
+            481,
+            181
+          ],
+          [
+            552,
+            183
+          ],
+          [
+            608,
+            184
+          ],
+          [
+            612,
+            147
+          ],
+          [
+            617,
+            146
+          ],
+          [
+            648,
+            150
+          ],
+          [
+            706,
+            160
+          ],
+          [
+            714,
+            172
+          ],
+          [
+            715,
+            220
+          ]
+        ],
+        "outer_north_wall": [
+          [
+            430,
+            53
+          ],
+          [
+            469,
+            55
+          ],
+          [
+            507,
+            56
+          ],
+          [
+            546,
+            54
+          ],
+          [
+            575,
+            56
+          ],
+          [
+            611,
+            59
+          ],
+          [
+            655,
+            60
+          ],
+          [
+            679,
+            56
+          ],
+          [
+            705,
+            55
+          ]
+        ],
+        "southern_places": {
+          "灵台": [
+            611,
+            655.5
+          ],
+          "明堂": [
+            647,
+            656.5
+          ],
+          "辟雍": [
+            685.5,
+            647.5
+          ],
+          "太学": [
+            712,
+            630
+          ]
+        },
+        "yongqiao_symbol_ends": [
+          [
+            561.5,
+            641.5
+          ],
+          [
+            560.5,
+            700
+          ]
+        ],
+        "yongqiao_note": "图内桥符号端点，非发掘登陆点"
+      }
+    },
+    {
+      "id": "frame-sima2023",
+      "name": "2023考古队宫城仓窖区位置图",
+      "unit": "原图像素",
+      "image_size": [
+        1080,
+        1702
+      ],
+      "source_refs": [
+        "sima:map"
+      ],
+      "locator": "2023年1月18日公开转载首图，无正式图号",
+      "source_path": "research/prosperity-r5/sima-road.json",
+      "image_sha256": "10e0b198bb727a0bc640dacb9dafd5099ba91a92a896f5fb463c9a529a7d2653",
+      "origin": "下载原幅左上；x右、y下",
+      "geographic_transform": null,
+      "note": "司马门路三段双线留在本框。R5.3两门试对齐后太极殿图符偏差39.34像素；没有可接受的现场共同控制点，不转入06a。"
+    },
+    {
+      "id": "frame-relations",
+      "name": "发掘与文献接续示意",
+      "unit": null,
+      "source_refs": [
+        "baima:cass2025",
+        "south:g3"
+      ],
+      "geographic_transform": null,
+      "note": "仅排版关系，不按比例，不赋地理坐标。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "p46:G01",
+      "family": "unesco-1442",
+      "title": "汉魏洛阳故城2012申遗保护管理图06a及附录",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf",
+      "kind": "institutional_compilation",
+      "caution": "古籍时期、考古遗存、1997航摄/1999现代底图分别显示；有源图格不等于北魏精测全图"
+    },
+    {
+      "id": "p46:G02",
+      "family": "p1-original-geography",
+      "title": "本站已封存的30项2012来源图几何",
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "kind": "project_source_transcription",
+      "caution": "只有原有近现代洛水线，且含多朝代部分道路，不能等同完整北魏水网"
+    },
+    {
+      "id": "p46:H01",
+      "family": "Huang2026",
+      "title": "黄学超《汉魏洛阳城周边的水利建设》",
+      "url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+      "accessible_reprint": "https://www.sohu.com/a/1082362449_121124389",
+      "kind": "peer_reviewed_historical_geography",
+      "publication": "《中国历史地理论丛》2026(3):28–42+52",
+      "caution": "重建环城水网拓扑含作者对错简及渠道功能的判断；转载缺注释/全图原测线，不能输出精确GIS"
+    },
+    {
+      "id": "p46:L01",
+      "family": "LuoyangJialanji",
+      "title": "《洛阳伽蓝记》卷一：华林园翟泉与池苑",
+      "url": "https://www.shidianguji.com/book/SBCK422/chapter/1j713ou9mlgdy_2",
+      "kind": "primary_text_edition",
+      "caution": "明示相对位置、别名与园池联系，不足以复原湖岸和渠道宽深"
+    },
+    {
+      "id": "p46:L02",
+      "family": "LuoyangJialanji",
+      "title": "《洛阳伽蓝记》卷二建春东渠及桥梁",
+      "url": "https://deerpark.app/cbeta/B0077/2",
+      "kind": "primary_text_edition",
+      "caution": "文献古距离和别名不能直接产生地理坐标"
+    },
+    {
+      "id": "p46:L03",
+      "family": "LuoyangJialanji",
+      "title": "《洛阳伽蓝记》卷三永桥、洛南",
+      "url": "https://deerpark.app/cbeta/B0077/3",
+      "kind": "primary_text_edition",
+      "caution": "四里无统一现代尺度；古洛水岸线未定"
+    },
+    {
+      "id": "p46:T01",
+      "family": "P1-terrain",
+      "title": "既有水文地层与南城垣改道考古汇总",
+      "path": "research/prosperity-v1/terrain-constraints.json",
+      "kind": "preserved_source_review",
+      "caution": "西东壕局部宽与深只见表，缺孔位控制及时期分层"
+    },
+    {
+      "id": "p46:R01",
+      "family": "heritage-local-2023",
+      "title": "地方史料综述：北魏外郭九条御道与城南三雍两路",
+      "url": "https://www.thepaper.cn/newsDetail_forward_24428757",
+      "kind": "review_of_survey",
+      "caution": "9条外郭道来自勘探叙述，不自动获得该文完整带尺地理折线"
+    },
+    {
+      "id": "p46:R02",
+      "family": "Xinhua2020",
+      "title": "2020考古：西明门至青阳门大道遗址",
+      "url": "https://www.xinhuanet.com/politics/2020-09/22/c_1126525395.htm",
+      "kind": "excavation_news_report",
+      "caution": "长度2.5km/宽34m来自报告综合，未取得各剖面地理控制点"
+    },
+    {
+      "id": "p46:R03",
+      "family": "PeopleDaily2026",
+      "title": "2025白马寺里坊西阳门外大道与坊内道路交会",
+      "url": "https://paper.people.com.cn/rmrb/pad/content/202603/25/content_30147047.html",
+      "kind": "excavation_news_report",
+      "caution": "宽约7.5m为推断坊门缺口，不是内城大道宽度"
+    },
+    {
+      "id": "p46:R04",
+      "family": "ZhangHui2019",
+      "title": "张辉《汉魏洛阳城道路遗址的考古发现与研究》",
+      "url": "https://m.fx361.com/news/2019/1205/6076367.html",
+      "kind": "research_summary",
+      "caution": "可访问为摘要/截断前文，原刊全版与实测图未量读"
+    },
+    {
+      "id": "p46:A01",
+      "family": "2022-water-archaeology",
+      "title": "2022汉魏洛阳宫城发现魏晋时期大型水利设施",
+      "url": "https://cul.china.com.cn/2022-06/14/content_42001607.htm",
+      "kind": "excavation_news_and_photo",
+      "caution": "局部多层渠遗迹，不能强称北魏516–528仍同时通流"
+    },
+    {
+      "id": "p46:L04",
+      "family": "LuoyangJialanji",
+      "title": "《洛阳伽蓝记》卷四：城西园池与张方沟",
+      "url": "https://deerpark.app/cbeta/B0077/4",
+      "kind": "primary_text_edition",
+      "caution": "西郭园池见原文名物，未据以画面积和真实岸线"
+    },
+    {
+      "id": "p46:Y2024",
+      "family": "YinLuo2024",
+      "title": "尹玲玲、罗丽娟《从地质背景看汉魏隋唐时期洛阳盆地的河道变迁》",
+      "url": "https://www.lsdlyj.com.cn/CN/10.20166/j.issn.2096-6822.L20230083",
+      "kind": "peer_reviewed_geological_historical_synthesis",
+      "caution": "摘要指洛水北移、伊水东南调整与汇洛口东移；未提供本站可验证516–528古河槽或里程控制点"
+    },
+    {
+      "id": "p46:CN2023INNER",
+      "family": "local_heritage2023",
+      "title": "洛阳考古综述：内城东西五、南北五条道路",
+      "url": "https://www.thepaper.cn/newsDetail_forward_24443356",
+      "kind": "archaeological_survey_summary",
+      "caution": "5+5与旧8项P1概略残线属于不同调查/命名口径；逐线与古址共控尚待原图"
+    },
+    {
+      "id": "p46:BAIMA2024LOCAL",
+      "family": "BaimaLocal2024",
+      "title": "白马寺附近2024北魏里坊六条局部道路发掘报道",
+      "url": "https://cbgc.scol.com.cn/news/6067403",
+      "kind": "excavation_news_report",
+      "caution": "所报40m与86m为道路间距、不是道路宽度；仅属于局部里坊，不能复制为全郭标准格网"
+    },
+    {
+      "id": "p46:CSSN2024OUTER",
+      "family": "CSSN2024",
+      "title": "外郭九条主干大道考古勘查综述",
+      "url": "https://www.cssn.cn/lsx/lsx_kgx/202412/t20241213_5822224.shtml",
+      "kind": "archaeological_research_summary",
+      "caution": "九大道见总数但本站未逐条取得原勘探路线/独立配准同一图框"
+    },
+    {
+      "id": "p462:A",
+      "title": "中国科学院考古研究所洛阳工作队《汉魏洛阳城初步勘查》，《考古》1973年第4期，198–208页",
+      "url": "https://www.scribd.com/document/968336271/%E6%B1%89%E9%AD%8F%E6%B4%9B%E9%98%B3%E5%9F%8E%E5%88%9D%E6%AD%A5%E5%8B%98%E6%9F%A5",
+      "locator": "图一在199页；城内街道在202–203页。",
+      "evidence_type": "1960年代实地勘查的原报告。此处使用公开OCR，部分门名和数字有识别歧义。"
+    },
+    {
+      "id": "p462:B",
+      "title": "曹陽《中国歴史城郭楷式の一考察 : 南北朝都城を中心に》，《待兼山論叢》日本学篇22，1988",
+      "url": "https://ir.library.osaka-u.ac.jp/repo/ouka/all/56501/mrj_022_021A.pdf#page=9",
+      "locator": "印刷页28，图6，据《考古》1973年第4期。",
+      "evidence_type": "同源重绘。可读出横二西Ⅲ、东Ⅸ；横一西Ⅰ、东Ⅹ。"
+    },
+    {
+      "id": "p462:C",
+      "title": "张炜《略论北魏都城城市规划》，内蒙古大学，2012",
+      "url": "https://ygx.sxu.edu.cn/db/%E5%AD%A6%E4%BD%8D/Y2146295.pdf",
+      "locator": "第三章表3.1。",
+      "evidence_type": "对照数字的二手汇表，纵四列疑似误抄横四；该处采用A正文。"
+    },
+    {
+      "id": "p462:D",
+      "title": "丝绸之路跨国申遗文本，汉魏洛阳城相关遗存图06a",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=3457",
+      "locator": "PDF第3457页图06a；第3455页图04辅助查编号。",
+      "evidence_type": "本图道路形状沿用项目P1所提取的原PDF路径。图尺单位为版面点，向右为x正向，向下为y正向。"
+    },
+    {
+      "id": "p462:E",
+      "title": "钱国祥、刘涛、郭晓涛《汉魏故都 丝路起点——汉魏洛阳故城遗址的考古勘察收获》，《洛阳考古》2014年第2期，20–29页",
+      "url": "https://www.chugoku-shoten.com/mokuji/cmokuji/73457/73457.pdf",
+      "locator": "期刊目录可核篇名及起页；第23页道路资料由F指引转述。",
+      "evidence_type": "仅目录直接核读，正文道路数据通过F。"
+    },
+    {
+      "id": "p462:F",
+      "title": "Patrick Wertmann, The City and a Gate, the Pass and a Road，德国考古研究院 e-Forschungsberichte 2019年第1辑",
+      "url": "https://publications.dainst.org/journals/efb/issue/download/168/43",
+      "locator": "印刷页25–26，Road remains。",
+      "evidence_type": "援引E第23页。西阳、东阳连线与阊阖门前交会明确，同一资料链。"
+    },
+    {
+      "id": "p462:G",
+      "title": "《文化瀍河》第二章第五节，政务号“精彩瀍河”，2023年8月30日转述2013年西阳门发掘",
+      "url": "https://m.thepaper.cn/baijiahao_24443356",
+      "locator": "西阳门及其城内道路的发掘段。",
+      "evidence_type": "具名工作队的地方汇编；门内35米道路剖面另有2013年现场工作，非新的全线丈量。"
+    },
+    {
+      "id": "p462:H",
+      "title": "孙红飞《漢魏洛陽故城の保護及びその園林》，岩手大学",
+      "url": "https://iwate-u.repo.nii.ac.jp/record/8898/files/arhs-v2p41-49.pdf",
+      "locator": "2013年度工作清单。",
+      "evidence_type": "确认2013年度西阳门遗址发掘和道路保护展示，不作探沟尺度的独立证据。"
+    },
+    {
+      "id": "p462:I",
+      "title": "新华社《汉魏洛阳城东西向大道重现天日》，2020",
+      "url": "https://www.xinhuanet.com/politics/2020-09/22/c_1126525395.htm",
+      "locator": "西明门至青阳门与铜驼街交会；发掘路土分期。",
+      "evidence_type": "另一次现场发掘，报道整路约数不等同逐米实测。"
+    },
+    {
+      "id": "p462:J",
+      "title": "钱国祥《漢魏洛陽城宮城調査における新発見とその構造》",
+      "url": "https://iwate-u.repo.nii.ac.jp/record/14433/files/arhs-v5p1-22.pdf",
+      "locator": "中文正文，印刷页13–14。",
+      "evidence_type": "项目研究者记述2007年宫城阊阖门前对铜驼街的勘察发掘。"
+    },
+    {
+      "id": "p462:K",
+      "title": "钱国祥《北魏洛阳内城的空间格局复原研究——北魏洛阳城遗址复原研究之一》，《华夏考古》2019年第4期，78–83页",
+      "url": "https://www.sohu.com/a/351999859_199807",
+      "locator": "印刷页81–82，城内道路；西阳门现场资料见第82页注11。",
+      "evidence_type": "项目研究者综合历次勘察与文献复原。论文直接列西阳门内、东阳门内同一御道，宫门前呈丁字相交，并给出南北御道分段。",
+      "original_pagination_url": "https://www.scribd.com/document/918798233/"
+    },
+    {
+      "id": "outer:Q2018",
+      "author": "钱国祥",
+      "title": "汉魏洛阳城城门与宫院门的考察研究",
+      "publication": "《华夏考古》2018年第6期",
+      "locator": "图一（汉魏洛阳城北魏城门分布图）及第一节（一）末段",
+      "url": "https://www.sohu.com/a/298263205_199807",
+      "chinese_image": "https://5b0988e595225.cdn.sohucs.com/images/20190228/5ebdfd6c46904391b01a567c1bc9d868.jpeg",
+      "scope": "据勘探确认1984—1989年调查的三条东西道及两条北出道；郭门在城墙、道路交会处的判断包含复原。图不等于1993年勘探底图。"
+    },
+    {
+      "id": "outer:Z2024",
+      "author": "朱岩石（ZHU Yanshi）",
+      "title": "The Establishment and Maturation of New Palace Plans in the Han-Chin Period",
+      "publication": "Acta Asiatica 126 (2024), pp. 1–26",
+      "locator": "印页17，图6。图下明确注明钱国祥2018年图1为图源。",
+      "url": "https://www.jstage.jst.go.jp/article/actaasiatica/126/0/126_1262/_pdf/-char/en#page=17",
+      "doi": "10.69382/actaasiatica.126.0_1",
+      "pdf_sha256": "93a9ec94a8a29fc1537c3c30902299cf287a4cdf4c08b2ba75d35a1da4ff04fb",
+      "scope": "读点采用PDF内嵌图（第17页唯一栅格，1145×951），不采用网页预览或缩略图。"
+    },
+    {
+      "id": "outer:CHANHE2023",
+      "author": "《文化瀍河》，澎湃号·政务刊发",
+      "title": "《文化瀍河》第二章（第五节）中华文明史上重要王朝的都城遗址——汉魏洛阳故城（中）",
+      "locator": "“关于外郭城的城门”与“外郭城的街道”两段",
+      "url": "https://www.thepaper.cn/newsDetail_forward_24428757",
+      "scope": "地方文史材料对勘查的转述。三处门址量值只按该来源著录，钱氏图与段氏回忆不重复给出这些宽度。"
+    },
+    {
+      "id": "outer:D2020",
+      "author": "段鹏琦",
+      "title": "《都城与陵墓研究——段鹏琦考古文集》自序",
+      "publication": "自序署2020年10月18日；文物出版社2022年刊载",
+      "locator": "1984年秋与1989年两段",
+      "url": "https://www.wenwu.com/newsinfo/3210484.html",
+      "scope": "队长回顾1989年在东西郭城查到三条东西大道与阳渠，并另述南郭大道。证明调查背景，不逐条证实图上端点。"
+    },
+    {
+      "id": "outer:GALAN2",
+      "author": "杨衒之",
+      "title": "洛阳伽蓝记",
+      "locator": "卷二，出建春门外一里余与崇义里东有七里桥两段",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷二",
+      "scope": "以古里与相对顺序记两桥、东郭门；不直接换算为今米。"
+    },
+    {
+      "id": "outer:WU2016",
+      "author": "吴梦蕾",
+      "title": "北魏洛阳城里坊数探析",
+      "locator": "文末印页7“图片来源”，指向2000年《汉魏洛阳故城研究》所收勘察报告图一",
+      "url": "https://www.academia.edu/26735011/",
+      "scope": "可见题名和原图出处；所在公开文字预览未能核准末页图面，暂不能按1993年图一取点。"
+    },
+    {
+      "id": "outer:YANG2022",
+      "author": "《城随境迁：佛教影响下的北魏洛阳城市变迁》",
+      "title": "2019年复原图版线索",
+      "locator": "注15、23、33明确为钱国祥2019年第6期第74页图一；作者说明自己修改过底图",
+      "url": "https://www.sohu.com/a/566300644_501362",
+      "scope": "与钱氏2018年图一及1993年报告图一为不同来源。"
+    },
+    {
+      "id": "outer:NC1993",
+      "title": "北魏洛阳外廓城和水道的勘查",
+      "catalogue": "国家哲学社会科学文献中心《考古》1993年第7期目录",
+      "listed_authors": [
+        "杜玉生",
+        "肖淮雁",
+        "钱国祥"
+      ],
+      "pages": [
+        602,
+        608
+      ],
+      "article_id": "1002554709",
+      "url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993",
+      "scope": "目录核准题名、编目作者与页码。馆方阅读入口在未登录状态转到登录页，原文附图未核。"
+    },
+    {
+      "title": "中国科学院考古研究所洛阳工作队《汉魏洛阳城初步勘查》",
+      "locator": "《考古》1973年第4期，198—208页。第一节西垣Ⅱ、Ⅳ、Ⅴ与北垣Ⅵ、Ⅶ号门，同节护城河段；第二节横四道。",
+      "url": "https://www.scribd.com/document/968336271/",
+      "id": "north:survey1973"
+    },
+    {
+      "title": "1973年原刊199页《汉魏洛阳城平面实测图》，谢美婧《北魏洛阳城的营建》附录5转载",
+      "locator": "东北师范大学，2009，印页40，PDF第44页。转载图下将篇名写作“初步调查”。",
+      "url": "https://ygx.sxu.edu.cn/db/%E5%AD%A6%E4%BD%8D/Y1465886.pdf#page=44",
+      "pdf_sha256": "508dde67a55562ba06212a3fd457da0aad5704cf174107414ef4a80a2b9a3a10",
+      "id": "north:field_plan"
+    },
+    {
+      "title": "钱国祥《汉魏洛阳城城门与宫院门的考察研究》",
+      "locator": "《华夏考古》2018年第6期，图一与第一节外郭城段。调查回顾记两条北路，墙路交点设郭门属作者判断。",
+      "url": "https://www.sohu.com/a/298263205_199807",
+      "id": "north:qian2018"
+    },
+    {
+      "title": "朱岩石，Acta Asiatica 126（2024）",
+      "locator": "印页17，图6，图注引钱国祥2018年图一。",
+      "url": "https://www.jstage.jst.go.jp/article/actaasiatica/126/0/126_1262/_pdf/-char/en#page=17",
+      "pdf_sha256": "93a9ec94a8a29fc1537c3c30902299cf287a4cdf4c08b2ba75d35a1da4ff04fb",
+      "id": "north:qian_reprint"
+    },
+    {
+      "title": "《文化瀍河》第二章第五节，中篇",
+      "locator": "外郭城北垣、城门及街道三段。作者述两路登邙会合，也提出经山沟穿郭，可能未建北郭门。",
+      "url": "https://www.thepaper.cn/newsDetail_forward_24428757",
+      "id": "north:chanhe_mid"
+    },
+    {
+      "title": "《文化瀍河》第二章第五节，下篇",
+      "locator": "Ⅳ—Ⅶ号门、护城河段。用于校读上下栏错排的数字，与早期报告有承袭关系。",
+      "url": "https://www.thepaper.cn/newsDetail_forward_24443356",
+      "id": "north:chanhe_lower"
+    },
+    {
+      "title": "洛阳汉魏城工作队《北魏洛阳外廓城和水道的勘查》",
+      "locator": "《考古》1993年第7期602—608页。另收入《洛阳考古集成·秦汉魏晋南北朝卷》190—196页。当前仅核篇名、目录及转引。",
+      "url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993",
+      "id": "north:survey1993"
+    },
+    {
+      "title": "魏采如《〈洛陽伽藍記〉之時空敘事與記憶認同》",
+      "locator": "國立臺灣大學，2006。目录列附图六，印页165，引调查附图。源机构列有偿授权，本次未核该页。",
+      "url": "https://tdr.lib.ntu.edu.tw/handle/123456789/34647",
+      "id": "north:wei2006"
+    },
+    {
+      "title": "钱国祥《汉魏洛阳城城门与宫院门的考察研究》",
+      "locator": "《华夏考古》2018年第6期，图一。下列像素取朱岩石2024年文印页17图6转载。",
+      "url": "https://www.sohu.com/a/298263205_199807",
+      "reprint": "https://www.jstage.jst.go.jp/article/actaasiatica/126/0/126_1262/_pdf/-char/en#page=17",
+      "pdf_sha256": "93a9ec94a8a29fc1537c3c30902299cf287a4cdf4c08b2ba75d35a1da4ff04fb",
+      "extract": "pdftocairo 或截图后像素会有差异。用 pdfimages -f 17 -l 17 -png 提取第一个图像，1145×951，原点在左上，右为东、下为南。",
+      "png_sha256": "ec31893f990e708058b9871b11130953d7ec64a2be3d0be0bfbaae5015d174ec",
+      "id": "south:q18"
+    },
+    {
+      "title": "汉魏洛阳故城南郊礼制建筑考古发掘项目成果选介",
+      "locator": "全国哲学社会科学规划办公室《国家社科基金项目成果选介汇编》第六辑，2010年。课题负责人钱国祥。南郊遗址分布、明堂、辟雍及总结各段。",
+      "url": "https://www.pishu.com.cn/skwx_ps/ps/literature?ID=8644335&SiteID=14",
+      "catalog": "https://www.pishu.com.cn/skwx_ps/initDatabaseDetail?contentId=8644335&contentType=literature&siteId=14",
+      "id": "south:south10"
+    },
+    {
+      "title": "郦道元《水经注》卷十六·穀水",
+      "locator": "西明门以下，经津阳、宣阳、平昌、开阳至太学石经一段。",
+      "url": "https://www.shidianguji.com/book/NGJ89241200000329016941/chapter/1lvyb6bpa836u",
+      "parallel": "https://zh.wikisource.org/zh-hant/水經注/16",
+      "id": "south:gu16"
+    },
+    {
+      "title": "杨衒之《洛阳伽蓝记》卷三·城南",
+      "locator": "大统寺一段所记明堂营建，宣阳门外至洛水浮桥、永桥以南的御道与四通市。",
+      "url": "https://www.shidianguji.com/book/NGJ89241199902232538648/chapter/1lvkouhpsdflr",
+      "id": "south:g3"
+    },
+    {
+      "title": "洛阳市文物考古研究院等《洛阳汉唐运河遗址调查与古沉船发掘报告》",
+      "locator": "科学出版社，2022年。公开样章第一章印页8；插图及图版目录。",
+      "url": "https://www.ecsponline.com/goods.php?id=218604",
+      "sample": "https://www.ecsponline.com/book_2019/2022/yz/9787030738288-001001-curved-sam.pdf",
+      "sample_sha256": "fffbd4698ee3680909724c99c2e4ded4895d4d308bc372c4cfed578fb849fee7",
+      "reader": "https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=BEE866DDD5E330A68E053020B0A0A23B4000",
+      "id": "south:survey22"
+    },
+    {
+      "title": "洛阳市文物考古研究院《隋唐洛阳含嘉仓城考古发掘报告》",
+      "locator": "科学出版社，2023年，第2页图一。西大郊与永桥相对位置见P4.6.2的原图读点。",
+      "url": "https://www.ecsponline.com/book_2019/2023/yz/9787030737496-001001-curved-sam.pdf#page=34",
+      "id": "south:warehouse23"
+    },
+    {
+      "id": "baima:henan2024",
+      "url": "https://www.sohu.com/a/844439767_121124392",
+      "title": "2024年度河南考古工作成果交流会（四）",
+      "publication_date": "2025-01-02",
+      "source_status": "转载自河南考古公众号；原报道郭晓涛的2024年发掘汇报",
+      "locator": "PART.37，郭晓涛《制里割宅：北魏洛阳里坊考古新进展》段落；正文无页码或图号",
+      "access": "正文可读，相关图片已下载目检",
+      "reusable_paraphrase": "北魏里坊有三条南北路和三条东西路；居中纵街约22米，两侧次级纵街距它均86米；两侧次级横街距居中横街均40米。文章未说明这些间距取中心线还是路缘，也不提供南门至中央交点的距离。",
+      "image_files": [
+        "2024-henan-speaker.png"
+      ]
+    },
+    {
+      "id": "baima:cass2024",
+      "url": "https://www.sohu.com/a/852557453_121119016",
+      "title": "中国社会科学院考古研究所2024年度田野考古工作汇报会纪要（三）",
+      "publication_date": "2025-01-23",
+      "source_status": "研究所汇报纪要的转载",
+      "locator": "郭晓涛白马寺里坊遗址汇报段，正文无页码/图号",
+      "access": "正文可读，两张相关图片已下载目检",
+      "reusable_paraphrase": "六条里坊路与坊间道路共同分区；多数探方③层下有厚约10—20厘米的料礓石、素土铺面，作者据叠压关系推测关联北魏筑坊行为。公开纪要称框架仍需继续发掘补充。",
+      "image_files": [
+        "2024-cass-speaker.jpeg",
+        "2024-cass-presentation-cover.jpeg"
+      ]
+    },
+    {
+      "id": "baima:cass2025",
+      "url": "https://www.sohu.com/a/975311315_121119016",
+      "title": "中国社会科学院考古研究所2025年度考古工作成果汇报会纪要（三）",
+      "publication_date": "2026-01-12",
+      "source_status": "署中国考古网整理，文末称经相关汇报人审阅；本次读取为转载",
+      "locator": "张效儒《2025年河南洛阳白马寺北魏里坊遗址项目新收获》段落及汇报人图；无页码/图号",
+      "access": "正文可读，相关图片已下载目检",
+      "reusable_paraphrase": "南部发掘区确认居中纵街与西阳门外大道的交汇。北侧开口约7.5米，车辙密集带4.6米；南端沟槽东西约4.6米、南北0.4米，门槛解释仍为推测。同段另述金元建筑和道路，不可并入北魏坊区尺寸。",
+      "image_files": [
+        "2025-cass-speaker.jpeg"
+      ]
+    },
+    {
+      "id": "baima:henan2025",
+      "url": "https://hnswwkgyjy.cn/NewsView.php?News_ID=2810",
+      "title": "会议纪要|2025年度河南考古工作成果交流会（三）",
+      "publication_date": null,
+      "source_status": "河南省文物考古研究院官方网站",
+      "locator": "张效儒报告段；配图题为洛阳白马寺北魏里坊南门坊间路与西阳门大道，索引文件名1768441620831330.jpg",
+      "access": "搜索索引正文、图题可读；原站HTTPS多次超时、HTTP超时、www HTTPS返回503。未取得原图二进制，未目检图面。",
+      "reusable_paraphrase": "里坊路向南与西阳门外大道交会；路南沟槽和两侧基槽可能与门址相关；文章将其认定为坊门缺口与十字街纵街。另幅金元建筑图属于不同阶段。",
+      "unfetched_image": {
+        "indexed_filename": "1768441620831330.jpg",
+        "caption": "洛阳白马寺北魏里坊南门坊间路与西阳门大道",
+        "resolved_image_url": null,
+        "plan_or_photo": null,
+        "scale_bar": null,
+        "central_cross_visible": null
+      }
+    },
+    {
+      "id": "baima:rmrb2026",
+      "url": "https://paper.people.com.cn/rmrb/pc/content/202603/25/content_30147047.html",
+      "title": "汉魏洛阳城田野考古成果“上新”",
+      "publication_date": "2026-03-25",
+      "source_status": "人民日报记者采访考古队；同一发掘项目的报道，非独立发掘证据",
+      "locator": "印刷第11版，首次确定里坊坊门一节",
+      "access": "正文可读",
+      "reusable_paraphrase": "报道2025年度实际发掘920平方米，在北魏废弃堆积下见西阳门外大道与居中纵街的交会，以及大道北缘约7.5米的缺口；没有给出坊门至中央横街距离。"
+    },
+    {
+      "id": "baima:procurement2026a",
+      "url": "https://zfcg.henan.gov.cn/luoyang/content?channelCode=H641301&infoId=1936971",
+      "title": "洛阳市考古研究院2026年国家文物保护资金项目（第一批下达资金）",
+      "publication_date": "2026-03-28",
+      "source_status": "政府采购公告",
+      "access": "正文索引可读",
+      "use": "4000平方米为采购范围中的约数，不能代替2025实际发掘面积或推导图幅/街长。"
+    },
+    {
+      "id": "baima:procurement2026b",
+      "url": "https://lankao.zfcg.henan.gov.cn/henan/content?channelCode=H601301&infoId=2038569",
+      "title": "洛阳市考古研究院2026年文物保护专项资金项目单一来源论证公示",
+      "publication_date": "2026-11-02",
+      "source_status": "政府采购公告",
+      "access": "正文索引可读",
+      "use": "2000平方米属于拟采购工作范围，不是已完成发掘的通报；没有提供本轮所需总平面。"
+    },
+    {
+      "id": "sima:map",
+      "title": "考古队供图 · 宫城仓窖区位置示意图",
+      "url": "https://www.thepaper.cn/newsDetail_forward_21610581",
+      "locator": "河南共青团2023年1月18日转载，首图署中国社会科学院考古研究所洛阳汉魏城队。"
+    },
+    {
+      "id": "sima:west",
+      "title": "宫院东界 · 2017年度田野汇报",
+      "url": "https://news.sina.com.cn/o/2017-12-27/doc-ifyqchnr6339114.shtml",
+      "locator": "太极殿宫院东北角院落段。"
+    },
+    {
+      "id": "sima:east",
+      "title": "仓区西北角 · 2023年度发掘",
+      "url": "https://www.thepaper.cn/newsDetail_forward_26569466",
+      "locator": "瀍河区政务发布转述考古队汇报，2024年3月4日。"
+    },
+    {
+      "id": "sima:road",
+      "title": "司马门内路 · 2024年度田野汇报",
+      "url": "https://www.sohu.com/a/852557453_121119016",
+      "locator": "研究所年度汇报会纪要（三）刘涛汇报段。"
+    },
+    {
+      "id": "sima:region",
+      "title": "宫内仓窖区四至与范围",
+      "url": "https://sc.people.com.cn/n2/2023/0116/c345528-40268904.html",
+      "locator": "新华社2023年1月报道，刘涛介绍2022年工作。"
+    },
+    {
+      "id": "audit1993:vip",
+      "title": "《北魏洛阳外廓城和水道的勘查》维普官方题录与公开摘要",
+      "url": "https://www.cqvip.com/doc/journal/1002554709",
+      "locator": "《考古》1993年第7期602—608页；完整地形图图号未核",
+      "evidence_type": "2026-11-21核读题录/摘要；没有取得全文、完整附图或图例。"
+    }
+  ],
+  "roads": [
+    {
+      "id": "R01",
+      "name": "铜驼大道原图纵道",
+      "source_group": "内城来源图路迹",
+      "source_code": "Lz-3",
+      "period": "魏晋至北魏；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "p462:A",
+        "p462:B",
+        "p462:C",
+        "p462:D",
+        "p462:E",
+        "p462:F",
+        "p462:I",
+        "p462:J",
+        "p462:K"
+      ],
+      "source_feature_id": "geo-tongtuo-avenue",
+      "locatable_segment": "图06a Lz-3三段原生路径；北段在宫前、南行交横二与横一，原断笔保留。",
+      "start": "宫城南正门阊阖门附近的来源图路迹",
+      "end": "来源图南端；调查文字指当时洛河北岸、辨为宣阳门方向",
+      "gates": [
+        "宫城阊阖门",
+        "宣阳门（方向比定）"
+      ],
+      "water_constraints": [
+        {
+          "id": "W01",
+          "level": "研究图河段／符号",
+          "locality": "城南洛水",
+          "limit": "北魏文献与后世复原；各段古槽与岸线未测定。",
+          "url": "luoyang-water-atlas.html#W01",
+          "relation": "永桥跨洛水属于宣阳门外御道的后续关系；不延长R01至研究图河线。"
+        },
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "谷水经宣阳门南；交叉点及道路过水结构待证。"
+        },
+        {
+          "id": "W27",
+          "level": "相对位置或遗迹地段",
+          "locality": "宣阳门外御道东、景明寺内",
+          "limit": "“三”可定；各池轮廓、相互连通及水功设施取水口未定。",
+          "url": "luoyang-water-atlas.html#W27",
+          "relation": "景明寺三池在宣阳门外御道东，只作外段方位参照。"
+        }
+      ],
+      "inferred_connections": "R02横二与R01在06a原笔画间留空，报告记丁字交会；向宣阳门、永桥和圜丘接续只用文献关系，不能把整条御道与图中铜驼残段等同。",
+      "missing_evidence": "宫前交会的共同测点、南端与宣阳门遗址关系、永桥两岸登陆点及同期古岸。",
+      "overlap_ids": [
+        "S03"
+      ],
+      "overlap_note": "与S03为南向御道研究关系，不将桥南御道或宫前御道全段并成R01。",
+      "trace_grade": "来源图路迹",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              314.108795,
+              324.082092
+            ],
+            [
+              314.048798,
+              326.046082
+            ]
+          ],
+          [
+            [
+              313.986084,
+              328.077209
+            ],
+            [
+              313.779083,
+              334.803223
+            ],
+            [
+              313.223083,
+              353.901215
+            ],
+            [
+              312.588074,
+              372.747192
+            ],
+            [
+              312.184082,
+              388.0112
+            ]
+          ],
+          [
+            [
+              312.156799,
+              389.026733
+            ],
+            [
+              312.104797,
+              390.990723
+            ]
+          ]
+        ],
+        "frame_id": "frame-06a",
+        "kind": "trace",
+        "note": "图06a原生路径；分段是原绘图断笔，不等于每一断笔处均已由发掘证实道路缺失。"
+      },
+      "reconstruction_geometry": null,
+      "reported_metrics": [
+        {
+          "label": "1973报告残存或勘查长度",
+          "value": 1650,
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "残存或勘查路段，非两城门间绝对距离",
+          "new_measurement": false
+        },
+        {
+          "label": "1973报告宽度",
+          "value": [
+            40,
+            42
+          ],
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "报告路段宽，非图上笔画宽；参照B/C校读",
+          "new_measurement": false
+        },
+        {
+          "label": "2012附表及钱2019残段宽",
+          "value": [
+            40,
+            65
+          ],
+          "unit": "米",
+          "source_ref": "p462:K",
+          "scope": "与1973的40—42米分别记录；不是新增测量",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "原图路迹端可复读；命名路段的古代实际端点及全部连通性未证。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "R01",
+        "name": "铜驼大道原图纵道",
+        "position_tier": "preserved_source_map_geometry",
+        "scope": "原P1 2012来源图概略遗存多段折线；编号Lz-3；未补端点或连通性",
+        "source_ids": [
+          "G01",
+          "G02"
+        ],
+        "linked_prior_road_id": "P452:D01",
+        "registered_source_feature_id": "geo-tongtuo-avenue",
+        "sourced_metrics": {
+          "reported_segment_length_m": 1650,
+          "reported_width_min_m": 40,
+          "reported_width_max_m": 65
+        },
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "source",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "R02",
+      "name": "宫城南横街",
+      "source_group": "内城来源图路迹",
+      "source_code": "Lh-2",
+      "period": "魏晋至北魏；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "p462:A",
+        "p462:B",
+        "p462:C",
+        "p462:D",
+        "p462:E",
+        "p462:F",
+        "p462:G",
+        "p462:K"
+      ],
+      "source_feature_id": "geo-tongtuo-cross-street",
+      "locatable_segment": "图06a Lh-2三段原生路径；宫城南侧的横道。2013西阳门内侧约35米另有解剖记录。",
+      "start": "西阳门方向",
+      "end": "东阳门方向",
+      "gates": [
+        "西阳门",
+        "东阳门",
+        "宫城阊阖门（北侧参照）"
+      ],
+      "water_constraints": [
+        {
+          "id": "W11",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城西墙外侧",
+          "limit": "钻探分期为东汉至北魏，未落实北魏各段孔位与流向。",
+          "url": "luoyang-water-atlas.html#W11",
+          "relation": "西阳门外侧城壕是邻接水工地段，不能据门中心补桥。"
+        },
+        {
+          "id": "W12",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东墙外侧",
+          "limit": "东西壕之间的连接及东壕完整范围未定。",
+          "url": "luoyang-water-atlas.html#W12",
+          "relation": "东阳门外东壕的道路过水结构未知。"
+        },
+        {
+          "id": "W32",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东南隅以北、故太仓西",
+          "limit": "次序可定；不据门址强连两点为沟的中心线。",
+          "url": "luoyang-water-atlas.html#W32",
+          "relation": "郦注记水经东阳门东，未定与本路的具体交点。"
+        }
+      ],
+      "inferred_connections": "东西两端与O02、O08属对应门内外关系；X02属于O02的门外交会地段，不是R02的城内剖面。",
+      "missing_evidence": "2013年鉴原页330—331页及路沟平剖面；门内外共同测线；宫前丁字交会精确点。",
+      "overlap_ids": [
+        "O02",
+        "O08",
+        "X02"
+      ],
+      "overlap_note": "R02/O02/O08按同名城门分成门内、门外记录；X02部分约束O02，不能视作第四条独立大街。",
+      "trace_grade": "来源图路迹",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              385.198395,
+              329.711914
+            ],
+            [
+              383.236389,
+              329.621918
+            ]
+          ],
+          [
+            [
+              381.266083,
+              329.537598
+            ],
+            [
+              361.770081,
+              328.754608
+            ],
+            [
+              352.920122,
+              328.389699
+            ],
+            [
+              344.068896,
+              328.061739
+            ],
+            [
+              335.216638,
+              327.764367
+            ],
+            [
+              326.363583,
+              327.491219
+            ],
+            [
+              317.509965,
+              327.235932
+            ],
+            [
+              308.656021,
+              326.992144
+            ],
+            [
+              299.801984,
+              326.753491
+            ],
+            [
+              290.94809,
+              326.513611
+            ],
+            [
+              275.852081,
+              325.943604
+            ]
+          ],
+          [
+            [
+              274.866791,
+              325.905823
+            ],
+            [
+              272.903778,
+              325.831818
+            ]
+          ]
+        ],
+        "frame_id": "frame-06a",
+        "kind": "trace",
+        "note": "图06a原生路径；分段是原绘图断笔，不等于每一断笔处均已由发掘证实道路缺失。"
+      },
+      "reconstruction_geometry": null,
+      "reported_metrics": [
+        {
+          "label": "1973报告残存或勘查长度",
+          "value": 2630,
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "残存或勘查路段，非两城门间绝对距离",
+          "new_measurement": false
+        },
+        {
+          "label": "1973报告宽度",
+          "value": [
+            41,
+            41
+          ],
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "报告路段宽，非图上笔画宽；参照B/C校读",
+          "new_measurement": false
+        },
+        {
+          "label": "钱2019宽约",
+          "value": 40,
+          "unit": "米",
+          "source_ref": "p462:K",
+          "scope": "综述约数；2013门内剖面不等于全线测宽",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "原图路迹端可复读；命名路段的古代实际端点及全部连通性未证。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "R02",
+        "name": "宫城南横街",
+        "position_tier": "preserved_source_map_geometry",
+        "scope": "原P1 2012来源图概略遗存多段折线；编号Lh-2；未补端点或连通性",
+        "source_ids": [
+          "G01",
+          "G02"
+        ],
+        "linked_prior_road_id": "P452:D02",
+        "registered_source_feature_id": "geo-tongtuo-cross-street",
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "source",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "R03",
+      "name": "内城南横道",
+      "source_group": "内城来源图路迹",
+      "source_code": "Lh-1",
+      "period": "魏晋至北魏；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "p462:A",
+        "p462:B",
+        "p462:C",
+        "p462:D",
+        "p462:I",
+        "p462:K"
+      ],
+      "source_feature_id": "geo-road-east-west-south",
+      "locatable_segment": "图06a Lh-1三段原生路径；原图断笔不补；2020发掘X01提供同名大道的另次调查。",
+      "start": "西明门方向",
+      "end": "青阳门方向",
+      "gates": [
+        "西明门",
+        "青阳门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W11",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城西墙外侧",
+          "limit": "钻探分期为东汉至北魏，未落实北魏各段孔位与流向。",
+          "url": "luoyang-water-atlas.html#W11",
+          "relation": "西明门外西壕及相关谷水未落实桥涵位置。"
+        },
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "谷水西明门以下的记载可约束地段，不指定R03过水坐标。"
+        },
+        {
+          "id": "W32",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东南隅以北、故太仓西",
+          "limit": "次序可定；不据门址强连两点为沟的中心线。",
+          "url": "luoyang-water-atlas.html#W32",
+          "relation": "水经青阳门东；接续O09后的过水点未定位。"
+        }
+      ],
+      "inferred_connections": "与X01为同名同走向候选对应，尚无共同测线登记；O01、O09分别在两门外侧，不并为全线已测。",
+      "missing_evidence": "2020多点解剖的探方／探沟总平面、各路面层位与原图共控；两门外道路的测线。",
+      "overlap_ids": [
+        "X01",
+        "O01",
+        "O09"
+      ],
+      "overlap_note": "X01是本路候选重复来源，保留两条来源记录但不累计路长；O01/O09是门外延续关系。",
+      "trace_grade": "来源图路迹",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              272.733093,
+              381.999237
+            ],
+            [
+              274.692108,
+              382.150238
+            ]
+          ],
+          [
+            [
+              276.663879,
+              382.281097
+            ],
+            [
+              290.059875,
+              382.296112
+            ],
+            [
+              300.794843,
+              382.296727
+            ],
+            [
+              311.530162,
+              382.286807
+            ],
+            [
+              322.265715,
+              382.271192
+            ],
+            [
+              333.001385,
+              382.254723
+            ],
+            [
+              343.737053,
+              382.242238
+            ],
+            [
+              354.472601,
+              382.23858
+            ],
+            [
+              365.207913,
+              382.248587
+            ],
+            [
+              375.942871,
+              382.2771
+            ],
+            [
+              376.504883,
+              382.286102
+            ]
+          ],
+          [
+            [
+              377.493195,
+              382.301514
+            ],
+            [
+              379.104187,
+              382.326508
+            ],
+            [
+              379.457184,
+              382.333527
+            ]
+          ]
+        ],
+        "frame_id": "frame-06a",
+        "kind": "trace",
+        "note": "图06a原生路径；分段是原绘图断笔，不等于每一断笔处均已由发掘证实道路缺失。"
+      },
+      "reconstruction_geometry": null,
+      "reported_metrics": [
+        {
+          "label": "1973报告残存或勘查长度",
+          "value": 2460,
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "残存或勘查路段，非两城门间绝对距离",
+          "new_measurement": false
+        },
+        {
+          "label": "1973报告宽度",
+          "value": [
+            29,
+            36
+          ],
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "报告路段宽，非图上笔画宽；参照B/C校读",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "原图路迹端可复读；命名路段的古代实际端点及全部连通性未证。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "R03",
+        "name": "内城南横道",
+        "position_tier": "preserved_source_map_geometry",
+        "scope": "原P1 2012来源图概略遗存多段折线；编号Lh-1；未补端点或连通性",
+        "source_ids": [
+          "G01",
+          "G02"
+        ],
+        "linked_prior_road_id": "P452:D03",
+        "registered_source_feature_id": "geo-road-east-west-south",
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "source",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "R04",
+      "name": "内城中横道",
+      "source_group": "内城来源图路迹",
+      "source_code": "Lh-3",
+      "period": "魏晋至北魏；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "p462:A",
+        "p462:B",
+        "p462:C",
+        "p462:D",
+        "p462:K"
+      ],
+      "source_feature_id": "geo-road-east-west-middle",
+      "locatable_segment": "图06a Lh-3三段原生路径；穿宫城中部。钱2019把它与宫城东西门对读。",
+      "start": "内城西垣阊阖门方向",
+      "end": "建春门方向",
+      "gates": [
+        "内城西垣阊阖门",
+        "宫城千秋门（论文对应）",
+        "宫城万岁门（论文对应）",
+        "建春门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W11",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城西墙外侧",
+          "limit": "钻探分期为东汉至北魏，未落实北魏各段孔位与流向。",
+          "url": "luoyang-water-atlas.html#W11",
+          "relation": "西壕过水点未定。"
+        },
+        {
+          "id": "W12",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东墙外侧",
+          "limit": "东西壕之间的连接及东壕完整范围未定。",
+          "url": "luoyang-water-atlas.html#W12",
+          "relation": "建春门外东壕及城东渠道分别登记。"
+        },
+        {
+          "id": "W06",
+          "level": "研究图河段／符号",
+          "locality": "建春门外至东郭以东",
+          "limit": "调查与文献包含不同时段；北魏过桥线路、池东通航及东端入洛口有争议。",
+          "url": "luoyang-water-atlas.html#W06",
+          "relation": "东石桥与七里桥见O07；不把两桥移到R04城内图端。"
+        }
+      ],
+      "inferred_connections": "O03和O07分别对应西、东城门外；宫城内经过何种门道与各层时期仍须独立核对。",
+      "missing_evidence": "内城西垣阊阖门及相关宫门共同测线、建春门原始位置联测图；R4建春共同控制点对仍为0。",
+      "overlap_ids": [
+        "O03",
+        "O07"
+      ],
+      "overlap_note": "西垣阊阖门与R01宫城阊阖门同名异地；不可相互替代。",
+      "trace_grade": "来源图路迹",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              272.898987,
+              293.311035
+            ],
+            [
+              274.860992,
+              293.411041
+            ]
+          ],
+          [
+            [
+              276.802979,
+              293.509033
+            ],
+            [
+              280.942993,
+              293.719025
+            ],
+            [
+              299.717987,
+              294.452026
+            ],
+            [
+              317.71698,
+              294.808044
+            ],
+            [
+              339.796967,
+              294.966034
+            ],
+            [
+              350.741974,
+              295.131042
+            ],
+            [
+              363.326965,
+              295.858032
+            ],
+            [
+              373.929993,
+              296.272034
+            ],
+            [
+              377.257996,
+              296.493042
+            ],
+            [
+              386.590973,
+              297.023041
+            ]
+          ],
+          [
+            [
+              387.561798,
+              297.078735
+            ],
+            [
+              389.522797,
+              297.189728
+            ]
+          ]
+        ],
+        "frame_id": "frame-06a",
+        "kind": "trace",
+        "note": "图06a原生路径；分段是原绘图断笔，不等于每一断笔处均已由发掘证实道路缺失。"
+      },
+      "reconstruction_geometry": null,
+      "reported_metrics": [
+        {
+          "label": "1973报告残存或勘查长度",
+          "value": 2510,
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "残存或勘查路段，非两城门间绝对距离",
+          "new_measurement": false
+        },
+        {
+          "label": "1973报告宽度",
+          "value": [
+            35,
+            51
+          ],
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "报告路段宽，非图上笔画宽；参照B/C校读",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "原图路迹端可复读；命名路段的古代实际端点及全部连通性未证。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "R04",
+        "name": "内城中横道",
+        "position_tier": "preserved_source_map_geometry",
+        "scope": "原P1 2012来源图概略遗存多段折线；编号Lh-3；未补端点或连通性",
+        "source_ids": [
+          "G01",
+          "G02"
+        ],
+        "linked_prior_road_id": "P452:D04",
+        "registered_source_feature_id": "geo-road-east-west-middle",
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "source",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "R05",
+      "name": "内城北横道",
+      "source_group": "内城来源图路迹",
+      "source_code": "Lh-4",
+      "period": "魏晋至北魏；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "p462:A",
+        "p462:B",
+        "p462:C",
+        "p462:D",
+        "p462:K"
+      ],
+      "source_feature_id": "geo-road-east-west-north",
+      "locatable_segment": "图06a Lh-4六段原生路径；只有原图可见墨迹。1973平面另有承明门及横四读点。",
+      "start": "承明门方向",
+      "end": "宫城北侧；调查时金村寨墙东南路土中断处",
+      "gates": [
+        "承明门",
+        "大夏门（R08早期绕接描述）"
+      ],
+      "water_constraints": [
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "北垣谷水与本路不强设交点。"
+        },
+        {
+          "id": "W11",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城西墙外侧",
+          "limit": "钻探分期为东汉至北魏，未落实北魏各段孔位与流向。",
+          "url": "luoyang-water-atlas.html#W11",
+          "relation": "承明门外西壕相交桥涵未知。"
+        }
+      ],
+      "inferred_connections": "门外O04与门内R05只有方向接续；R08早期报告的北端折线路段未全部绘于06a。",
+      "missing_evidence": "承明门内外联测、路土东断点及西出最后勘探点；1993完整图例。",
+      "overlap_ids": [
+        "O04",
+        "R08"
+      ],
+      "overlap_note": "R08在横四的拐接见1973文字，2019将大夏、津阳两段分计，不能按不同口径重复加总。",
+      "trace_grade": "来源图路迹",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              334.796204,
+              269.918945
+            ],
+            [
+              332.836212,
+              269.791931
+            ]
+          ],
+          [
+            [
+              330.651489,
+              269.651306
+            ],
+            [
+              322.067505,
+              269.097321
+            ],
+            [
+              312.081482,
+              268.463318
+            ]
+          ],
+          [
+            [
+              310.98999,
+              268.394531
+            ],
+            [
+              309.029999,
+              268.270538
+            ]
+          ],
+          [
+            [
+              309.029388,
+              268.270325
+            ],
+            [
+              308.024384,
+              268.206329
+            ],
+            [
+              307.069397,
+              268.139313
+            ]
+          ],
+          [
+            [
+              305.232391,
+              268.011841
+            ],
+            [
+              292.085388,
+              267.097839
+            ],
+            [
+              284.221405,
+              266.650848
+            ],
+            [
+              278.604401,
+              266.115845
+            ]
+          ],
+          [
+            [
+              277.687988,
+              266.028198
+            ],
+            [
+              275.731995,
+              265.842194
+            ]
+          ]
+        ],
+        "frame_id": "frame-06a",
+        "kind": "trace",
+        "note": "图06a原生路径；分段是原绘图断笔，不等于每一断笔处均已由发掘证实道路缺失。"
+      },
+      "reconstruction_geometry": null,
+      "reported_metrics": [
+        {
+          "label": "1973报告残存或勘查长度",
+          "value": 1410,
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "残存或勘查路段，非两城门间绝对距离",
+          "new_measurement": false
+        },
+        {
+          "label": "1973报告宽度",
+          "value": [
+            17,
+            22
+          ],
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "报告路段宽，非图上笔画宽；参照B/C校读",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "原图路迹端可复读；命名路段的古代实际端点及全部连通性未证。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "R05",
+        "name": "内城北横道",
+        "position_tier": "preserved_source_map_geometry",
+        "scope": "原P1 2012来源图概略遗存多段折线；编号Lh-4；未补端点或连通性",
+        "source_ids": [
+          "G01",
+          "G02"
+        ],
+        "linked_prior_road_id": "P452:D05",
+        "registered_source_feature_id": "geo-road-east-west-north",
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "source",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "R06",
+      "name": "内城东纵道",
+      "source_group": "内城来源图路迹",
+      "source_code": "Lz-1",
+      "period": "北魏；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "p462:A",
+        "p462:B",
+        "p462:C",
+        "p462:D",
+        "p462:K"
+      ],
+      "source_feature_id": "geo-road-north-south-east",
+      "locatable_segment": "图06a Lz-1三段原生路径；经横二、横一；未给最北未探段补线。",
+      "start": "建春门内横三；最北段因地下水高未探明",
+      "end": "调查时洛河北岸，推为开阳门方向",
+      "gates": [
+        "开阳门（报告推定）",
+        "建春门内横三"
+      ],
+      "water_constraints": [
+        {
+          "id": "W02",
+          "level": "近现代底图线",
+          "locality": "内城南部至城东",
+          "limit": "近现代图层，单独显示。",
+          "url": "luoyang-water-atlas.html#W02",
+          "relation": "早期调查的当时洛河终点并非北魏岸线。"
+        },
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "谷水开阳门南的关系只约束O10外段。"
+        },
+        {
+          "id": "W01",
+          "level": "研究图河段／符号",
+          "locality": "城南洛水",
+          "limit": "北魏文献与后世复原；各段古槽与岸线未测定。",
+          "url": "luoyang-water-atlas.html#W01",
+          "relation": "外段同期古洛水岸与道路止点待证。"
+        }
+      ],
+      "inferred_connections": "与O10开阳门外大道在门名方向上候选相接，南部门址与跨古岸全线未证。",
+      "missing_evidence": "北端未探段、开阳门位置与南外道路共同测线、南端北魏层古岸。",
+      "overlap_ids": [
+        "O10"
+      ],
+      "overlap_note": "R06与O10按推定城门分段；不能用现代岸线连成北魏完整线路。",
+      "trace_grade": "来源图路迹",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              363.338287,
+              295.833923
+            ],
+            [
+              363.243286,
+              297.795929
+            ]
+          ],
+          [
+            [
+              363.148895,
+              299.729919
+            ],
+            [
+              361.813904,
+              327.204926
+            ],
+            [
+              360.678894,
+              351.530914
+            ],
+            [
+              359.06189,
+              383.708923
+            ],
+            [
+              358.832886,
+              391.5979
+            ]
+          ],
+          [
+            [
+              358.805206,
+              392.56543
+            ],
+            [
+              358.748199,
+              394.529419
+            ]
+          ]
+        ],
+        "frame_id": "frame-06a",
+        "kind": "trace",
+        "note": "图06a原生路径；分段是原绘图断笔，不等于每一断笔处均已由发掘证实道路缺失。"
+      },
+      "reconstruction_geometry": null,
+      "reported_metrics": [
+        {
+          "label": "1973报告残存或勘查长度",
+          "value": 2400,
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "残存或勘查路段，非两城门间绝对距离",
+          "new_measurement": false
+        },
+        {
+          "label": "1973报告宽度",
+          "value": [
+            12,
+            15
+          ],
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "报告路段宽，非图上笔画宽；参照B/C校读",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "原图路迹端可复读；命名路段的古代实际端点及全部连通性未证。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "R06",
+        "name": "内城东纵道",
+        "position_tier": "preserved_source_map_geometry",
+        "scope": "原P1 2012来源图概略遗存多段折线；编号Lz-1；未补端点或连通性",
+        "source_ids": [
+          "G01",
+          "G02"
+        ],
+        "linked_prior_road_id": "P452:D06",
+        "registered_source_feature_id": "geo-road-north-south-east",
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "source",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "R07",
+      "name": "内城中东纵道",
+      "source_group": "内城来源图路迹",
+      "source_code": "Lz-2",
+      "period": "北魏；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "p462:A",
+        "p462:B",
+        "p462:C",
+        "p462:D",
+        "p462:K"
+      ],
+      "source_feature_id": "geo-road-north-south-mid-east",
+      "locatable_segment": "图06a Lz-2六段原生路径，保存南行、东折、再南折的原图笔画。",
+      "start": "广莫门方向",
+      "end": "平昌门方向；早期调查称至当时河岸",
+      "gates": [
+        "广莫门",
+        "平昌门（方向比定）"
+      ],
+      "water_constraints": [
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "广莫门附近谷水与北出路的桥涵点未知；南部谷水经平昌门南。"
+        },
+        {
+          "id": "W02",
+          "level": "近现代底图线",
+          "locality": "内城南部至城东",
+          "limit": "近现代图层，单独显示。",
+          "url": "luoyang-water-atlas.html#W02",
+          "relation": "报告河岸止点属于调查时地貌。"
+        },
+        {
+          "id": "W01",
+          "level": "研究图河段／符号",
+          "locality": "城南洛水",
+          "limit": "北魏文献与后世复原；各段古槽与岸线未测定。",
+          "url": "luoyang-water-atlas.html#W01",
+          "relation": "南部古岸与O11关系未得同期剖面。"
+        }
+      ],
+      "inferred_connections": "O06为同门北出关系，O11为平昌方向南外关系；宫内司马门路S02独立保存，不因平行而合并。",
+      "missing_evidence": "南端平昌门基与门外道路联测、北出越水点、司马路与本路线别关系。",
+      "overlap_ids": [
+        "O06",
+        "O11",
+        "S02"
+      ],
+      "overlap_note": "与O06/O11是方向接续；与S02没有可接受的同一路证据，明确分列。",
+      "trace_grade": "来源图路迹",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              349.190308,
+              239.059143
+            ],
+            [
+              349.126312,
+              239.50914
+            ],
+            [
+              348.948303,
+              241.008148
+            ]
+          ],
+          [
+            [
+              348.674683,
+              243.317932
+            ],
+            [
+              348.024689,
+              248.805939
+            ],
+            [
+              347.236694,
+              256.026917
+            ]
+          ],
+          [
+            [
+              347.110291,
+              257.183228
+            ],
+            [
+              346.896301,
+              259.13623
+            ],
+            [
+              348.848297,
+              259.359222
+            ]
+          ],
+          [
+            [
+              350.147583,
+              259.507507
+            ],
+            [
+              352.099579,
+              259.730499
+            ],
+            [
+              351.984589,
+              261.691498
+            ]
+          ],
+          [
+            [
+              351.870789,
+              263.646545
+            ],
+            [
+              351.383789,
+              271.981537
+            ],
+            [
+              350.788978,
+              283.999142
+            ],
+            [
+              350.180304,
+              296.016055
+            ],
+            [
+              349.560779,
+              308.032429
+            ],
+            [
+              348.933414,
+              320.048416
+            ],
+            [
+              348.301222,
+              332.064169
+            ],
+            [
+              347.667213,
+              344.079839
+            ],
+            [
+              347.034399,
+              356.095579
+            ],
+            [
+              346.405792,
+              368.111542
+            ],
+            [
+              345.819794,
+              380.005554
+            ]
+          ],
+          [
+            [
+              345.771179,
+              380.983337
+            ],
+            [
+              345.674194,
+              382.945343
+            ]
+          ]
+        ],
+        "frame_id": "frame-06a",
+        "kind": "trace",
+        "note": "图06a原生路径；分段是原绘图断笔，不等于每一断笔处均已由发掘证实道路缺失。"
+      },
+      "reconstruction_geometry": null,
+      "reported_metrics": [
+        {
+          "label": "1973报告残存或勘查长度",
+          "value": 4045,
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "残存或勘查路段，非两城门间绝对距离",
+          "new_measurement": false
+        },
+        {
+          "label": "1973报告宽度",
+          "value": [
+            14,
+            29
+          ],
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "报告路段宽，非图上笔画宽；参照B/C校读",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "原图路迹端可复读；命名路段的古代实际端点及全部连通性未证。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "R07",
+        "name": "内城中东纵道",
+        "position_tier": "preserved_source_map_geometry",
+        "scope": "原P1 2012来源图概略遗存多段折线；编号Lz-2；未补端点或连通性",
+        "source_ids": [
+          "G01",
+          "G02"
+        ],
+        "linked_prior_road_id": "P452:D07",
+        "registered_source_feature_id": "geo-road-north-south-mid-east",
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "source",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "R08",
+      "name": "内城西纵道",
+      "source_group": "内城来源图路迹",
+      "source_code": "Lz-4",
+      "period": "北魏；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "p462:A",
+        "p462:B",
+        "p462:D",
+        "p462:K"
+      ],
+      "source_feature_id": "geo-road-north-south-west",
+      "locatable_segment": "图06a Lz-4三段原生路径，北于横四的两段文字路线不在06a补绘。",
+      "start": "06a从横四以南绘出；1973另述大夏门南行后折西",
+      "end": "调查时洛河北岸，推为津阳门方向",
+      "gates": [
+        "津阳门（方向比定）",
+        "大夏门（1973分段定义）",
+        "承明门内横四"
+      ],
+      "water_constraints": [
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "谷水经津阳门南；具体交叉点待定。"
+        },
+        {
+          "id": "W01",
+          "level": "研究图河段／符号",
+          "locality": "城南洛水",
+          "limit": "北魏文献与后世复原；各段古槽与岸线未测定。",
+          "url": "luoyang-water-atlas.html#W01",
+          "relation": "津阳门外大街东侧引洛渠属于另期工程关系，2022报告继续暂缓。"
+        },
+        {
+          "id": "W02",
+          "level": "近现代底图线",
+          "locality": "内城南部至城东",
+          "limit": "近现代图层，单独显示。",
+          "url": "luoyang-water-atlas.html#W02",
+          "relation": "调查时河岸不能替作盛时道路终点。"
+        }
+      ],
+      "inferred_connections": "1973长3620米含大夏门南约320米及沿横四西约300米；2019津阳门内路2990米另列大夏路400余米。O05只是北出同门方向关系。",
+      "missing_evidence": "大夏—横四折段及津阳南端实测图；分段定义、层位与津阳门址；津阳门外东侧引洛渠过水关系。",
+      "overlap_ids": [
+        "O05",
+        "R05"
+      ],
+      "overlap_note": "与O05经大夏门只作接续参照；1973与2019统计范围不同，不能把3620与2990理解为同一测线的新旧差值。",
+      "trace_grade": "来源图路迹",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              292.191681,
+              267.105103
+            ],
+            [
+              292.143677,
+              269.069092
+            ]
+          ],
+          [
+            [
+              292.097687,
+              270.986023
+            ],
+            [
+              291.830688,
+              281.976013
+            ],
+            [
+              291.545685,
+              296.778015
+            ],
+            [
+              291.166687,
+              315.034027
+            ],
+            [
+              290.901672,
+              326.28302
+            ],
+            [
+              291.431702,
+              331.983032
+            ],
+            [
+              292.282684,
+              339.880005
+            ],
+            [
+              292.090698,
+              347.040039
+            ],
+            [
+              291.801697,
+              359.225037
+            ],
+            [
+              291.837677,
+              373.473022
+            ],
+            [
+              291.614685,
+              384.995026
+            ]
+          ],
+          [
+            [
+              291.595581,
+              385.953918
+            ],
+            [
+              291.557587,
+              387.917908
+            ]
+          ]
+        ],
+        "frame_id": "frame-06a",
+        "kind": "trace",
+        "note": "图06a原生路径；分段是原绘图断笔，不等于每一断笔处均已由发掘证实道路缺失。"
+      },
+      "reconstruction_geometry": null,
+      "reported_metrics": [
+        {
+          "label": "1973报告残存或勘查长度",
+          "value": 3620,
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "残存或勘查路段，非两城门间绝对距离",
+          "new_measurement": false
+        },
+        {
+          "label": "1973报告宽度",
+          "value": [
+            36,
+            40
+          ],
+          "unit": "米",
+          "source_ref": "p462:A",
+          "scope": "报告路段宽，非图上笔画宽；参照B/C校读",
+          "new_measurement": false
+        },
+        {
+          "label": "钱2019津阳门内路残长",
+          "value": 2990,
+          "unit": "米",
+          "source_ref": "p462:K",
+          "scope": "止于承明门内横道；另列大夏门段",
+          "new_measurement": false
+        },
+        {
+          "label": "钱2019另列大夏门内路残长",
+          "value": "400余",
+          "unit": "米",
+          "source_ref": "p462:K",
+          "scope": "通宫城西北角附近，宽约30米，未新增第22条主来源记录",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "原图路迹端可复读；命名路段的古代实际端点及全部连通性未证。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "R08",
+        "name": "内城西纵道",
+        "position_tier": "preserved_source_map_geometry",
+        "scope": "原P1 2012来源图概略遗存多段折线；编号Lz-4；未补端点或连通性",
+        "source_ids": [
+          "G01",
+          "G02"
+        ],
+        "linked_prior_road_id": "P452:D08",
+        "registered_source_feature_id": "geo-road-north-south-west",
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "source",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "O01",
+      "name": "西明门外郭御道",
+      "source_group": "外围调查记录",
+      "source_code": "W1",
+      "period": "北魏外郭道路的调查综述；钱2018图为后世复原；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "outer:Q2018",
+        "outer:Z2024",
+        "outer:CHANHE2023",
+        "outer:NC1993",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图一／朱2024图6的内城门与郭墙处两个图面读点。约30米阙口，两侧有长方形夯土。 地方转述地段：分金沟村西南、今洛河北岸。",
+      "start": "西明门（复原图内城门读点）",
+      "end": "西郭南起第一门（复原图读点，非最后实测点）",
+      "gates": [
+        "西明门",
+        "西郭南起第一门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W11",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城西墙外侧",
+          "limit": "钻探分期为东汉至北魏，未落实北魏各段孔位与流向。",
+          "url": "luoyang-water-atlas.html#W11",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        },
+        {
+          "id": "W10",
+          "level": "相对位置或遗迹地段",
+          "locality": "西郭墙、寿丘里以西",
+          "limit": "沟的两端、常流状态和与内城西壕的接续均未定。",
+          "url": "luoyang-water-atlas.html#W10",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        }
+      ],
+      "inferred_connections": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。",
+      "missing_evidence": "1993《考古》第7期602—608页正文及完整《汉魏洛阳城遗址及地形图》、图例、道路勘探点与测线终点；尚不能区分其逐段实测线和推定线。 逐路缺件：沿线探孔、门阙至路缘的实测关系、最后测点；不能把门际约3.9公里图面弦长写作实测路长。",
+      "overlap_ids": [
+        "R03"
+      ],
+      "overlap_note": "与R03是门内外对应关系；不合并成已测全线。",
+      "trace_grade": "复原图两端",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "endpoint_only",
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            469,
+            490
+          ],
+          [
+            110,
+            473
+          ]
+        ],
+        "note": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。"
+      },
+      "reported_metrics": [
+        {
+          "label": "既有图上两端直距约",
+          "value": 3.9,
+          "unit": "公里",
+          "source_ref": "outer:Z2024",
+          "scope": "P462既有读数，非实测路长、非新测；图上读点灵敏度约0.12公里，不是地面误差",
+          "new_measurement": false
+        },
+        {
+          "label": "门阙口",
+          "value": 30,
+          "unit": "米",
+          "source_ref": "outer:CHANHE2023",
+          "scope": "约；属于该局部量测对象，不能用作全路宽度",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "约30米阙口，两侧有长方形夯土。 道路最后勘探点与古代止点均待原图。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O01",
+        "name": "西明门外郭御道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "2023地方文史归纳外郭九条道路，延续内城相应门道；当前缺原测线端点",
+        "source_ids": [
+          "R01",
+          "R04"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "沿线探孔、门阙至路缘的实测关系、最后测点；不能把门际约3.9公里图面弦长写作实测路长。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O02",
+      "name": "西阳门外郭御道",
+      "source_group": "外围调查记录",
+      "source_code": "W2",
+      "period": "北魏外郭道路的调查综述；钱2018图为后世复原；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "outer:Q2018",
+        "outer:Z2024",
+        "outer:CHANHE2023",
+        "outer:NC1993",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图一／朱2024图6的内城门与郭墙处两个图面读点。转述称遗迹受损，未探明。",
+      "start": "西阳门（复原图内城门读点）",
+      "end": "西郭南起第二门（复原图读点，非最后实测点）",
+      "gates": [
+        "西阳门",
+        "西郭南起第二门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W11",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城西墙外侧",
+          "limit": "钻探分期为东汉至北魏，未落实北魏各段孔位与流向。",
+          "url": "luoyang-water-atlas.html#W11",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        },
+        {
+          "id": "W25",
+          "level": "相对位置或遗迹地段",
+          "locality": "西阳门外御道北、宝光寺园",
+          "limit": "池距御道多远、引水来自何处未载。",
+          "url": "luoyang-water-atlas.html#W25",
+          "relation": "宝光寺咸池属西阳门外御道北的园池，不直接连入道旁沟。"
+        }
+      ],
+      "inferred_connections": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。",
+      "missing_evidence": "1993《考古》第7期602—608页正文及完整《汉魏洛阳城遗址及地形图》、图例、道路勘探点与测线终点；尚不能区分其逐段实测线和推定线。 逐路缺件：西郭第二门原始勘探记录和门位、内外门之间逐段实测范围；不能以推定郭门封口。",
+      "overlap_ids": [
+        "R02",
+        "X02",
+        "S01"
+      ],
+      "overlap_note": "与R02是门内外对应关系；X02/S01为本路上同一坊门交会项目的不同层次记录，不累计成新主干道。",
+      "trace_grade": "复原图两端",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "endpoint_only",
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            469,
+            355
+          ],
+          [
+            68,
+            349
+          ]
+        ],
+        "note": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。"
+      },
+      "reported_metrics": [
+        {
+          "label": "既有图上两端直距约",
+          "value": 4.4,
+          "unit": "公里",
+          "source_ref": "outer:Z2024",
+          "scope": "P462既有读数，非实测路长、非新测；图上读点灵敏度约0.12公里，不是地面误差",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "转述称遗迹受损，未探明。 道路最后勘探点与古代止点均待原图。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O02",
+        "name": "西阳门外郭御道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "2023地方文史归纳外郭九条道路，延续内城相应门道；当前缺原测线端点",
+        "source_ids": [
+          "R01",
+          "R04"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "西郭第二门原始勘探记录和门位、内外门之间逐段实测范围；不能以推定郭门封口。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O03",
+      "name": "阊阖城门（西门）外郭御道",
+      "source_group": "外围调查记录",
+      "source_code": "W3",
+      "period": "北魏外郭道路的调查综述；钱2018图为后世复原；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "outer:Q2018",
+        "outer:Z2024",
+        "outer:CHANHE2023",
+        "outer:NC1993",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图一／朱2024图6的内城门与郭墙处两个图面读点。约40米阙口，两侧有长方形夯土。 地方转述地段：尤村南、齐郭村北。",
+      "start": "内城阊阖门（复原图内城门读点）",
+      "end": "西郭南起第三门（复原图读点，非最后实测点）",
+      "gates": [
+        "内城阊阖门",
+        "西郭南起第三门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W11",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城西墙外侧",
+          "limit": "钻探分期为东汉至北魏，未落实北魏各段孔位与流向。",
+          "url": "luoyang-water-atlas.html#W11",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        },
+        {
+          "id": "W10",
+          "level": "相对位置或遗迹地段",
+          "locality": "西郭墙、寿丘里以西",
+          "limit": "沟的两端、常流状态和与内城西壕的接续均未定。",
+          "url": "luoyang-water-atlas.html#W10",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        }
+      ],
+      "inferred_connections": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。",
+      "missing_evidence": "1993《考古》第7期602—608页正文及完整《汉魏洛阳城遗址及地形图》、图例、道路勘探点与测线终点；尚不能区分其逐段实测线和推定线。 逐路缺件：道路西段拐折的实测/推定分界、门阙路缘关系和最后测点；与宫前阊阖门不是同一门。",
+      "overlap_ids": [
+        "R04"
+      ],
+      "overlap_note": "与R04是门内外对应关系；不合并成已测全线。",
+      "trace_grade": "复原图两端",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "endpoint_only",
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            468,
+            278
+          ],
+          [
+            54,
+            252
+          ]
+        ],
+        "note": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。"
+      },
+      "reported_metrics": [
+        {
+          "label": "既有图上两端直距约",
+          "value": 4.5,
+          "unit": "公里",
+          "source_ref": "outer:Z2024",
+          "scope": "P462既有读数，非实测路长、非新测；图上读点灵敏度约0.12公里，不是地面误差",
+          "new_measurement": false
+        },
+        {
+          "label": "门阙口",
+          "value": 40,
+          "unit": "米",
+          "source_ref": "outer:CHANHE2023",
+          "scope": "约；属于该局部量测对象，不能用作全路宽度",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "约40米阙口，两侧有长方形夯土。 道路最后勘探点与古代止点均待原图。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O03",
+        "name": "阊阖城门（西门）外郭御道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "2023地方文史归纳外郭九条道路，延续内城相应门道；当前缺原测线端点",
+        "source_ids": [
+          "R01",
+          "R04"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "道路西段拐折的实测/推定分界、门阙路缘关系和最后测点；与宫前阊阖门不是同一门。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O04",
+      "name": "承明门外郭御道",
+      "source_group": "外围调查记录",
+      "source_code": "承明西出",
+      "period": "北魏道路研究；1973门址勘查与钱2018复原图分层；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "north:survey1973",
+        "north:field_plan",
+        "north:qian2018",
+        "north:qian_reprint",
+        "north:survey1993",
+        "north:chanhe_mid",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图中承明门西出短线；末端转为点线。",
+      "start": "承明门（图内门位）",
+      "end": "西侧图墨末端，最后勘探点未知",
+      "gates": [
+        "承明门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W11",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城西墙外侧",
+          "limit": "钻探分期为东汉至北魏，未落实北魏各段孔位与流向。",
+          "url": "luoyang-water-atlas.html#W11",
+          "relation": "承明门外西壕过路结构未定位。"
+        }
+      ],
+      "inferred_connections": "与R05门内方向关系保留。不按短线末点另设西郭门。",
+      "missing_evidence": "1993《考古》第7期602—608页正文及完整《汉魏洛阳城遗址及地形图》、图例、道路勘探点与测线终点；尚不能区分其逐段实测线和推定线。 优先核承明门外最西测点。 逐路缺件：承明门以西最后一处路土实测点、点线图例、是否及如何通至西郭；西端保留未知。",
+      "overlap_ids": [
+        "R05"
+      ],
+      "overlap_note": "同名门的内外接续，不是重复整线；无证据把短线接到西郭门。",
+      "trace_grade": "复原图路迹",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "trace",
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              474,
+              212
+            ],
+            [
+              454,
+              211
+            ],
+            [
+              441,
+              210
+            ]
+          ]
+        ],
+        "note": "仅保留后期复原图读线，不能判为1993实测线；图墨端／图框边不是古道止点。"
+      },
+      "reported_metrics": [],
+      "endpoint_status": "最后实测点未知；没有补绘未知末端或合流。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O04",
+        "name": "承明门外郭御道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "2023地方文史归纳外郭九条道路，延续内城相应门道；当前缺原测线端点",
+        "source_ids": [
+          "R01",
+          "R04"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "承明门以西最后一处路土实测点、点线图例、是否及如何通至西郭；西端保留未知。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O05",
+      "name": "大夏门外郭御道",
+      "source_group": "外围调查记录",
+      "source_code": "VI",
+      "period": "北魏道路研究；1973门址勘查与钱2018复原图分层；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "north:survey1973",
+        "north:field_plan",
+        "north:qian2018",
+        "north:qian_reprint",
+        "north:survey1993",
+        "north:chanhe_mid",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图中大夏门向邙山的道路，分别保存至北郭标记和越郭至图框边的原读线。",
+      "start": "大夏门（图内门位）",
+      "end": "北侧图框边，实际路线终点及两路合流点未知",
+      "gates": [
+        "大夏门",
+        "北郭墙路交会处（郭门建筑未证）"
+      ],
+      "water_constraints": [
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "北垣谷水距墙约20—35米、宽约20—24米为1973局部汇报；未提供道路桥涵位置。"
+        }
+      ],
+      "inferred_connections": "与R08门内方向关系保留。两北路在邙山会合见地方综述，钱图所读范围内看不到合流；图框外不补接。",
+      "missing_evidence": "1993《考古》第7期602—608页正文及完整《汉魏洛阳城遗址及地形图》、图例、道路勘探点与测线终点；尚不能区分其逐段实测线和推定线。 优先核大夏门北出最后测点、越水结构与邙山合流点。 逐路缺件：北郭交点是否为门、北路最后探孔、越邙路线与广莫门道的合流实测依据；不把图框边缘作为古代终点。",
+      "overlap_ids": [
+        "R08",
+        "O06"
+      ],
+      "overlap_note": "同名门的内外接续，不是重复整线；两北路末端不因综述“会合”而画成同一已测交点。",
+      "trace_grade": "复原图路迹",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "trace",
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              552,
+              183
+            ],
+            [
+              554,
+              119
+            ],
+            [
+              558,
+              86
+            ],
+            [
+              567,
+              70
+            ],
+            [
+              575,
+              56
+            ]
+          ],
+          [
+            [
+              575,
+              56
+            ],
+            [
+              582,
+              39
+            ],
+            [
+              594,
+              22
+            ],
+            [
+              609,
+              6
+            ]
+          ]
+        ],
+        "note": "仅保留后期复原图读线，不能判为1993实测线；图墨端／图框边不是古道止点。"
+      },
+      "reported_metrics": [
+        {
+          "label": "既有门至北郭图点弦长约",
+          "value": 1.4,
+          "unit": "公里",
+          "source_ref": "north:qian_reprint",
+          "scope": "P465既有读数，非曲线路长、非实测；读图灵敏度≤约0.12公里",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "最后实测点未知；没有补绘未知末端或合流。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O05",
+        "name": "大夏门外郭御道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "2023地方文史归纳外郭九条道路，延续内城相应门道；当前缺原测线端点",
+        "source_ids": [
+          "R01",
+          "R04"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "北郭交点是否为门、北路最后探孔、越邙路线与广莫门道的合流实测依据；不把图框边缘作为古代终点。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O06",
+      "name": "广莫门外郭御道",
+      "source_group": "外围调查记录",
+      "source_code": "VII",
+      "period": "北魏道路研究；1973门址勘查与钱2018复原图分层；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "north:survey1973",
+        "north:field_plan",
+        "north:qian2018",
+        "north:qian_reprint",
+        "north:survey1993",
+        "north:chanhe_mid",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图中广莫门向邙山的道路，分别保存至北郭标记和越郭至图框边的原读线。",
+      "start": "广莫门（图内门位）",
+      "end": "北侧图框边，实际路线终点及两路合流点未知",
+      "gates": [
+        "广莫门",
+        "北郭墙路交会处（郭门建筑未证）"
+      ],
+      "water_constraints": [
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "北垣谷水距墙约20—35米、宽约20—24米为1973局部汇报；未提供道路桥涵位置。"
+        }
+      ],
+      "inferred_connections": "与R07门内方向关系保留。两北路在邙山会合见地方综述，钱图所读范围内看不到合流；图框外不补接。",
+      "missing_evidence": "1993《考古》第7期602—608页正文及完整《汉魏洛阳城遗址及地形图》、图例、道路勘探点与测线终点；尚不能区分其逐段实测线和推定线。 优先核广莫门北出最后测点、越水结构与邙山合流点。 逐路缺件：北郭交点是否为门、最后探孔、跨城壕设施、越邙合流依据；1973门址与路土跨墙记录不能代替桥涵定位。",
+      "overlap_ids": [
+        "R07",
+        "O05"
+      ],
+      "overlap_note": "同名门的内外接续，不是重复整线；两北路末端不因综述“会合”而画成同一已测交点。",
+      "trace_grade": "复原图路迹",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "trace",
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              648,
+              150
+            ],
+            [
+              654,
+              128
+            ],
+            [
+              665,
+              108
+            ],
+            [
+              672,
+              93
+            ],
+            [
+              678,
+              72
+            ],
+            [
+              679,
+              56
+            ]
+          ],
+          [
+            [
+              679,
+              56
+            ],
+            [
+              678,
+              36
+            ],
+            [
+              668,
+              19
+            ],
+            [
+              661,
+              6
+            ]
+          ]
+        ],
+        "note": "仅保留后期复原图读线，不能判为1993实测线；图墨端／图框边不是古道止点。"
+      },
+      "reported_metrics": [
+        {
+          "label": "既有门至北郭图点弦长约",
+          "value": 1.1,
+          "unit": "公里",
+          "source_ref": "north:qian_reprint",
+          "scope": "P465既有读数，非曲线路长、非实测；读图灵敏度≤约0.12公里",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "最后实测点未知；没有补绘未知末端或合流。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O06",
+        "name": "广莫门外郭御道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "2023地方文史归纳外郭九条道路，延续内城相应门道；当前缺原测线端点",
+        "source_ids": [
+          "R01",
+          "R04"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "北郭交点是否为门、最后探孔、跨城壕设施、越邙合流依据；1973门址与路土跨墙记录不能代替桥涵定位。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O07",
+      "name": "建春门外郭御道",
+      "source_group": "外围调查记录",
+      "source_code": "E1",
+      "period": "北魏外郭道路的调查综述；钱2018图为后世复原；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "outer:Q2018",
+        "outer:Z2024",
+        "outer:CHANHE2023",
+        "outer:NC1993",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图一／朱2024图6的内城门与郭墙处两个图面读点。未探明。七里桥以东一里的三门为文献比定。",
+      "start": "建春门（复原图内城门读点）",
+      "end": "东郭北起第一门（复原图读点，非最后实测点）",
+      "gates": [
+        "建春门",
+        "东郭北起第一门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W12",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东墙外侧",
+          "limit": "东西壕之间的连接及东壕完整范围未定。",
+          "url": "luoyang-water-atlas.html#W12",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        },
+        {
+          "id": "W06",
+          "level": "研究图河段／符号",
+          "locality": "建春门外至东郭以东",
+          "limit": "调查与文献包含不同时段；北魏过桥线路、池东通航及东端入洛口有争议。",
+          "url": "luoyang-water-atlas.html#W06",
+          "relation": "建春门外路北平行渠南折过路；东石桥、七里桥分列，跨渠路线和落点未定位。"
+        },
+        {
+          "id": "W31",
+          "level": "研究图河段／符号",
+          "locality": "城东、马市石桥以东",
+          "limit": "区域图采用黄图读法；汇点与旅人桥的关系有异说。",
+          "url": "luoyang-water-atlas.html#W31",
+          "relation": "七里涧与旅人桥、七里桥的关系另有异说，不能用桥名相似合并。"
+        }
+      ],
+      "inferred_connections": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。",
+      "missing_evidence": "1993《考古》第7期602—608页正文及完整《汉魏洛阳城遗址及地形图》、图例、道路勘探点与测线终点；尚不能区分其逐段实测线和推定线。 逐路缺件：东郭北起第一门的实测门址、沿道路末测点与阳渠渡处；东石桥与七里桥不可合并。",
+      "overlap_ids": [
+        "R04"
+      ],
+      "overlap_note": "与R04是门内外对应关系；不合并成已测全线。",
+      "trace_grade": "复原图两端",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "endpoint_only",
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            722,
+            284
+          ],
+          [
+            1064,
+            292
+          ]
+        ],
+        "note": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。"
+      },
+      "reported_metrics": [
+        {
+          "label": "既有图上两端直距约",
+          "value": 3.7,
+          "unit": "公里",
+          "source_ref": "outer:Z2024",
+          "scope": "P462既有读数，非实测路长、非新测；图上读点灵敏度约0.12公里，不是地面误差",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "未探明。七里桥以东一里的三门为文献比定。 道路最后勘探点与古代止点均待原图。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O07",
+        "name": "建春门外郭御道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "2023地方文史归纳外郭九条道路，延续内城相应门道；当前缺原测线端点",
+        "source_ids": [
+          "R01",
+          "R04"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "东郭北起第一门的实测门址、沿道路末测点与阳渠渡处；东石桥与七里桥不可合并。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O08",
+      "name": "东阳门外郭御道",
+      "source_group": "外围调查记录",
+      "source_code": "E2",
+      "period": "北魏外郭道路的调查综述；钱2018图为后世复原；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "outer:Q2018",
+        "outer:Z2024",
+        "outer:CHANHE2023",
+        "outer:NC1993",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图一／朱2024图6的内城门与郭墙处两个图面读点。近城垣处路土宽18米，阙口处路土宽8米。 地方转述地段：后张村东、白村北。",
+      "start": "东阳门（复原图内城门读点）",
+      "end": "东郭北起第二门（复原图读点，非最后实测点）",
+      "gates": [
+        "东阳门",
+        "东郭北起第二门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W12",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东墙外侧",
+          "limit": "东西壕之间的连接及东壕完整范围未定。",
+          "url": "luoyang-water-atlas.html#W12",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        },
+        {
+          "id": "W32",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东南隅以北、故太仓西",
+          "limit": "次序可定；不据门址强连两点为沟的中心线。",
+          "url": "luoyang-water-atlas.html#W32",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        }
+      ],
+      "inferred_connections": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。",
+      "missing_evidence": "1993《考古》第7期602—608页正文及完整《汉魏洛阳城遗址及地形图》、图例、道路勘探点与测线终点；尚不能区分其逐段实测线和推定线。 逐路缺件：18米/8米量测对应的原剖面与测线、全程路缘、道路与阳渠交会点。",
+      "overlap_ids": [
+        "R02"
+      ],
+      "overlap_note": "与R02是门内外对应关系；不合并成已测全线。",
+      "trace_grade": "复原图两端",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "endpoint_only",
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            733,
+            359
+          ],
+          [
+            1057,
+            367
+          ]
+        ],
+        "note": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。"
+      },
+      "reported_metrics": [
+        {
+          "label": "既有图上两端直距约",
+          "value": 3.5,
+          "unit": "公里",
+          "source_ref": "outer:Z2024",
+          "scope": "P462既有读数，非实测路长、非新测；图上读点灵敏度约0.12公里，不是地面误差",
+          "new_measurement": false
+        },
+        {
+          "label": "靠近城垣的路土",
+          "value": 18,
+          "unit": "米",
+          "source_ref": "outer:CHANHE2023",
+          "scope": "原文未加约字；属于该局部量测对象，不能用作全路宽度",
+          "new_measurement": false
+        },
+        {
+          "label": "阙口处的路土",
+          "value": 8,
+          "unit": "米",
+          "source_ref": "outer:CHANHE2023",
+          "scope": "原文未加约字；属于该局部量测对象，不能用作全路宽度",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "近城垣处路土宽18米，阙口处路土宽8米。 道路最后勘探点与古代止点均待原图。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O08",
+        "name": "东阳门外郭御道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "2023地方文史归纳外郭九条道路，延续内城相应门道；当前缺原测线端点",
+        "source_ids": [
+          "R01",
+          "R04"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "18米/8米量测对应的原剖面与测线、全程路缘、道路与阳渠交会点。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O09",
+      "name": "青阳门外郭御道",
+      "source_group": "外围调查记录",
+      "source_code": "E3",
+      "period": "北魏外郭道路的调查综述；钱2018图为后世复原；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "outer:Q2018",
+        "outer:Z2024",
+        "outer:CHANHE2023",
+        "outer:NC1993",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图一／朱2024图6的内城门与郭墙处两个图面读点。未探明。图上内城门字样为“清阳门”；此处采用项目通名青阳门。道路线至郭墙处有缺笔，取同纵位投点。",
+      "start": "青阳门（复原图内城门读点）",
+      "end": "东郭北起第三门（复原图读点，非最后实测点）",
+      "gates": [
+        "青阳门",
+        "东郭北起第三门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W12",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东墙外侧",
+          "limit": "东西壕之间的连接及东壕完整范围未定。",
+          "url": "luoyang-water-atlas.html#W12",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        },
+        {
+          "id": "W32",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东南隅以北、故太仓西",
+          "limit": "次序可定；不据门址强连两点为沟的中心线。",
+          "url": "luoyang-water-atlas.html#W32",
+          "relation": "相关地段或门外水体；未取得此路与该水体的同期交叉测点，不补桥涵。"
+        }
+      ],
+      "inferred_connections": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。",
+      "missing_evidence": "1993《考古》第7期602—608页正文及完整《汉魏洛阳城遗址及地形图》、图例、道路勘探点与测线终点；尚不能区分其逐段实测线和推定线。 逐路缺件：郭墙缺笔处的原图线型、东郭第三门实测记录、最后测点；不得用同纵位投点升格为已测门址。",
+      "overlap_ids": [
+        "R03"
+      ],
+      "overlap_note": "与R03是门内外对应关系；不合并成已测全线。",
+      "trace_grade": "复原图两端",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "endpoint_only",
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            717,
+            488
+          ],
+          [
+            1048,
+            489
+          ]
+        ],
+        "note": "六条门际记录均只存同图两端读点，虚线可表达两端对应，不代表沿线原图描迹。"
+      },
+      "reported_metrics": [
+        {
+          "label": "既有图上两端直距约",
+          "value": 3.6,
+          "unit": "公里",
+          "source_ref": "outer:Z2024",
+          "scope": "P462既有读数，非实测路长、非新测；图上读点灵敏度约0.12公里，不是地面误差",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "未探明。图上内城门字样为“清阳门”；此处采用项目通名青阳门。道路线至郭墙处有缺笔，取同纵位投点。 道路最后勘探点与古代止点均待原图。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O09",
+        "name": "青阳门外郭御道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "2023地方文史归纳外郭九条道路，延续内城相应门道；当前缺原测线端点",
+        "source_ids": [
+          "R01",
+          "R04"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "郭墙缺笔处的原图线型、东郭第三门实测记录、最后测点；不得用同纵位投点升格为已测门址。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O10",
+      "name": "开阳门外大道",
+      "source_group": "外围调查记录",
+      "source_code": "开阳南出",
+      "period": "南郊道路调查及北魏复原图；附近遗址含东汉魏晋与北魏不同层；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "south:q18",
+        "south:south10",
+        "south:gu16",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图的开阳门外南出样线；2010南郊成果以明堂东侧开阳大道、西侧平城大道夹峙对读。",
+      "start": "开阳门方向（图内样线北端）",
+      "end": "明堂东侧的原图截绘末端，古路实际止点未知",
+      "gates": [
+        "开阳门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "郦注记谷水经开阳门南；平交点和桥涵未知。"
+        },
+        {
+          "id": "W01",
+          "level": "研究图河段／符号",
+          "locality": "城南洛水",
+          "limit": "北魏文献与后世复原；各段古槽与岸线未测定。",
+          "url": "luoyang-water-atlas.html#W01",
+          "relation": "图中南郊古河带只作复原图关系，不能据图墨终点认定北魏登陆点。"
+        }
+      ],
+      "inferred_connections": "与R06按门名方向候选接续；不把现代河岸或古河带画成已证道路端点。",
+      "missing_evidence": "南郊道路带尺勘探总图、道路测线/层位/止点与明堂的共控；开阳门基与门外大道的联测。1993正文602—608页及附图中若有本段，须核其测线。2022运河报告暂缓。 逐路缺件：门外大道的原勘探测线、南端止点、同期古岸和过水设施；南郊不同时期道路与516—528年的沿用须另核。",
+      "overlap_ids": [
+        "R06"
+      ],
+      "overlap_note": "计入21条来源中的11条外围记录；不能把两条南路并入外郭九道总数，也不按复原图间距新增道路。",
+      "trace_grade": "复原图路迹",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "trace",
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              674.5,
+              549
+            ],
+            [
+              670.5,
+              604
+            ],
+            [
+              667.5,
+              647
+            ],
+            [
+              666.5,
+              665
+            ]
+          ]
+        ],
+        "note": "既有P466摘录样线；两端只是截绘范围。"
+      },
+      "reported_metrics": [
+        {
+          "label": "平昌／开阳在同一图行的间距约",
+          "value": 0.4,
+          "unit": "公里",
+          "source_ref": "south:q18",
+          "scope": "P466既有39像素／92像素每公里，非全线恒定间距、非实测门距或路宽",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "图内取样端已知，勘探末点及北魏道路端未知。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O10",
+        "name": "开阳门外大道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "与内城开阳门对应，城南三雍近邻另见钻探；实际外郭道路端点另核",
+        "source_ids": [
+          "R01"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "门外大道的原勘探测线、南端止点、同期古岸和过水设施；南郊不同时期道路与516—528年的沿用须另核。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "O11",
+      "name": "平昌门外大道",
+      "source_group": "外围调查记录",
+      "source_code": "平昌南出",
+      "period": "南郊道路调查及北魏复原图；附近遗址含东汉魏晋与北魏不同层；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "south:q18",
+        "south:south10",
+        "south:gu16",
+        "audit1993:vip"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "钱2018图的平昌门外南出样线；2010南郊成果以明堂东侧开阳大道、西侧平城大道夹峙对读。",
+      "start": "平昌门方向（图内样线北端）",
+      "end": "明堂西侧的原图截绘末端，古路实际止点未知",
+      "gates": [
+        "平昌门（2010成果称平城，按夹峙明堂位置比较）"
+      ],
+      "water_constraints": [
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "郦注记谷水经平昌门南；平交点和桥涵未知。"
+        },
+        {
+          "id": "W01",
+          "level": "研究图河段／符号",
+          "locality": "城南洛水",
+          "limit": "北魏文献与后世复原；各段古槽与岸线未测定。",
+          "url": "luoyang-water-atlas.html#W01",
+          "relation": "图中南郊古河带只作复原图关系，不能据图墨终点认定北魏登陆点。"
+        }
+      ],
+      "inferred_connections": "与R07按门名方向候选接续；不把现代河岸或古河带画成已证道路端点。平城／平昌名称保留原来源差异。",
+      "missing_evidence": "南郊道路带尺勘探总图、道路测线/层位/止点与明堂的共控；平城门与北魏平昌门的分期门基对应。1993正文602—608页及附图中若有本段，须核其测线。2022运河报告暂缓。 逐路缺件：平城/平昌名称与门基分期、原报告两路和礼制建筑联测图、南端止点及谷水过路位置。",
+      "overlap_ids": [
+        "R07"
+      ],
+      "overlap_note": "计入21条来源中的11条外围记录；不能把两条南路并入外郭九道总数，也不按复原图间距新增道路。",
+      "trace_grade": "复原图路迹",
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "trace",
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              635,
+              549
+            ],
+            [
+              631.5,
+              604
+            ],
+            [
+              629,
+              646
+            ],
+            [
+              627,
+              678
+            ]
+          ]
+        ],
+        "note": "既有P466摘录样线；两端只是截绘范围。"
+      },
+      "reported_metrics": [
+        {
+          "label": "平昌／开阳在同一图行的间距约",
+          "value": 0.4,
+          "unit": "公里",
+          "source_ref": "south:q18",
+          "scope": "P466既有39像素／92像素每公里，非全线恒定间距、非实测门距或路宽",
+          "new_measurement": false
+        }
+      ],
+      "endpoint_status": "图内取样端已知，勘探末点及北魏道路端未知。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "O11",
+        "name": "平昌门外大道",
+        "position_tier": "external_survey_without_registered_line",
+        "scope": "北魏外郭城南通路报道，底图精准度与时相待核",
+        "source_ids": [
+          "R01"
+        ],
+        "linked_prior_road_id": null,
+        "registered_source_feature_id": null,
+        "sourced_metrics": null,
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "reconstruction",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ],
+      "missing_original": {
+        "missing": "平城/平昌名称与门基分期、原报告两路和礼制建筑联测图、南端止点及谷水过路位置。",
+        "original_article_pages": "602—608，逐路准确所在页未核",
+        "original_figure": "完整《汉魏洛阳城遗址及地形图》，图号待原件核验"
+      }
+    },
+    {
+      "id": "X01",
+      "name": "西明门—青阳门东西大道",
+      "source_group": "单列发掘记录",
+      "source_code": "2020西明大道",
+      "period": "东汉始建，魏晋和北魏多期路土；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "p462:I",
+        "p462:A",
+        "p462:K"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "2020西明门—青阳门大道多点钻探解剖及与铜驼街交会的报道地段；没有可与06a配准的探沟平面。",
+      "start": "西明门方向；各发掘点实际起点未公开登记",
+      "end": "青阳门方向；各发掘点实际止点未公开登记",
+      "gates": [
+        "西明门",
+        "青阳门"
+      ],
+      "water_constraints": [
+        {
+          "id": "W11",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城西墙外侧",
+          "limit": "钻探分期为东汉至北魏，未落实北魏各段孔位与流向。",
+          "url": "luoyang-water-atlas.html#W11",
+          "relation": "对应西明门地段，桥涵不能从大道存在推出。"
+        },
+        {
+          "id": "W32",
+          "level": "相对位置或遗迹地段",
+          "locality": "内城东南隅以北、故太仓西",
+          "limit": "次序可定；不据门址强连两点为沟的中心线。",
+          "url": "luoyang-water-atlas.html#W32",
+          "relation": "东端水系另案，未有共同测线。"
+        },
+        {
+          "id": "local-x01-drain",
+          "level": "局部报道；分期为汉晋推测",
+          "relation": "新闻另记路土下方发现宽1.5—1.6米的砖水道，推为汉晋排水设施；不证明516—528通水。",
+          "limit": "缺原剖面及北魏层路面—水道关系。",
+          "url": "https://www.xinhuanet.com/politics/2020-09/22/c_1126525395.htm"
+        }
+      ],
+      "inferred_connections": "R03/Lh-1与X01同名同走向，可列候选对应；没有共同位置控制，未把报道长度贴到R03原笔画或补齐断笔。",
+      "missing_evidence": "2020年度道路发掘报告的总平面、各探沟编号、剖面层位、起终测点及坐标系统。",
+      "overlap_ids": [
+        "R03",
+        "R01",
+        "O01",
+        "O09"
+      ],
+      "overlap_note": "与R03可能为同一大道的独立发掘来源；与R01是交会关系而非同路；不把X01另算一条无重叠实体道路。",
+      "reported_metrics": [
+        {
+          "label": "报道全路长度约",
+          "value": 2500,
+          "unit": "米",
+          "source_ref": "p462:I",
+          "scope": "新闻综合值，非逐米揭露或本项目重测",
+          "new_measurement": false
+        },
+        {
+          "label": "报道宽约",
+          "value": 34,
+          "unit": "米",
+          "source_ref": "p462:I",
+          "scope": "报告约数，不代表各时期或各段恒宽",
+          "new_measurement": false
+        }
+      ],
+      "trace_grade": "发掘地段",
+      "geometry": null,
+      "reconstruction_geometry": null,
+      "endpoint_status": "发掘文字可指认地段或相接关系；缺同图总平面，未生成地理坐标。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "X01",
+        "name": "西明门—青阳门东西大道",
+        "position_tier": "published_excavation_unregistered",
+        "scope": "2020多点钻探解剖，东西大道与铜驼街交会；与P1 Lh-1可视为研究候选对应，未取得原图共同测线",
+        "source_ids": [
+          "R02"
+        ],
+        "linked_prior_road_id": "candidate:P451_D03_only_not_confirmed",
+        "registered_source_feature_id": null,
+        "sourced_metrics": {
+          "length_approx_m": 2500,
+          "width_approx_m": 34,
+          "phase": "Eastern_Han_to_Northern_Wei"
+        },
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "relation",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "X02",
+      "name": "西阳门外大道—白马寺里坊南北街交会",
+      "source_group": "单列发掘记录",
+      "source_code": "2025白马寺南坊门",
+      "period": "北魏废弃堆积下的道路和坊门；原材料未逐段细分至516—528年；纳入盛时研究参照不等于各段均已证同时通行。",
+      "source_refs": [
+        "baima:cass2025",
+        "baima:henan2025",
+        "baima:rmrb2026",
+        "baima:henan2024"
+      ],
+      "source_feature_id": null,
+      "locatable_segment": "白马寺北侧里坊南部发掘区；坊内居中纵街接西阳门外大道北缘的缺口（发掘者推断为坊门）。2024六路与2025南门分年报告，非全段连续揭露。",
+      "start": "西阳门外大道北缘约7.5米缺口（推断为坊门）",
+      "end": "坊内居中纵街，向中央横街／十字的间距未知",
+      "gates": [
+        "西阳门（大道得名）",
+        "白马寺北里坊南坊门（发掘者辨识）"
+      ],
+      "water_constraints": [
+        {
+          "id": "W25",
+          "level": "相对位置或遗迹地段",
+          "locality": "西阳门外御道北、宝光寺园",
+          "limit": "池距御道多远、引水来自何处未载。",
+          "url": "luoyang-water-atlas.html#W25",
+          "relation": "咸池仅同属西阳门外御道北的文献地望，不与此坊门沟槽合并。"
+        }
+      ],
+      "inferred_connections": "南坊门向北接居中纵街，居中纵街与居中横街构成十字；接续关系可用，坊门至十字长度和连续发掘范围未知。",
+      "missing_evidence": "同时标出南坊门、中央横街、北箭、比例尺、路号与层位的整体发掘／勘探平面；官方配图需核是否确含中央交点。",
+      "overlap_ids": [
+        "O02",
+        "R02",
+        "S01"
+      ],
+      "overlap_note": "X02是O02上的局部发掘约束，S01为同一项目的细化；R02是同名门内道路，不是此门外交会处。",
+      "reported_metrics": [
+        {
+          "label": "2025实际发掘面积",
+          "value": 920,
+          "unit": "平方米",
+          "source_ref": "baima:rmrb2026",
+          "scope": "项目发掘面积，不代表道路面积或完整道路范围",
+          "new_measurement": false
+        },
+        {
+          "label": "大道北缘坊门缺口约",
+          "value": 7.5,
+          "unit": "米",
+          "source_ref": "baima:cass2025",
+          "scope": "缺口宽，非主干道宽",
+          "new_measurement": false
+        },
+        {
+          "label": "密集车辙带宽",
+          "value": 4.6,
+          "unit": "米",
+          "source_ref": "baima:cass2025",
+          "scope": "车辙带，非整个坊门路幅",
+          "new_measurement": false
+        },
+        {
+          "label": "可能门槛沟槽东西长约",
+          "value": 4.6,
+          "unit": "米",
+          "source_ref": "baima:cass2025",
+          "scope": "沟槽长度，非与车辙带的同一量测",
+          "new_measurement": false
+        },
+        {
+          "label": "同沟槽南北宽",
+          "value": 0.4,
+          "unit": "米",
+          "source_ref": "baima:cass2025",
+          "scope": "局部沟槽宽",
+          "new_measurement": false
+        }
+      ],
+      "trace_grade": "发掘地段",
+      "geometry": null,
+      "reconstruction_geometry": null,
+      "endpoint_status": "交会与缺口据发掘文字；坊门辨识为发掘者推断，形制和门缘未全揭露；缺同图总平面，未生成地理坐标。",
+      "surveyed_full_line": false,
+      "geographic_transform": null,
+      "legacy_source_record": {
+        "id": "X02",
+        "name": "西阳门外大道—白马寺里坊南北街交会",
+        "position_tier": "published_excavation_unregistered",
+        "scope": "2025发掘确认交会路土、车辙及约7.5m坊门缺口；缺口宽度不能换算主干道宽",
+        "source_ids": [
+          "R03"
+        ],
+        "linked_prior_road_id": "connects_qualitatively:O02",
+        "registered_source_feature_id": null,
+        "sourced_metrics": {
+          "excavated_area_m2": 920,
+          "neighborhood_gate_gap_approx_m": 7.5,
+          "phase": "Northern_Wei"
+        },
+        "ancient_full_route_georegistered": false,
+        "new_route_polyline": null
+      },
+      "evidence_level": "relation",
+      "ancient_endpoint_coordinates": [
+        null,
+        null
+      ]
+    }
+  ],
+  "supplements": [
+    {
+      "id": "S01",
+      "name": "白马寺南坊门—坊内中央十字",
+      "links": [
+        "X02",
+        "O02"
+      ],
+      "period": "2025遗迹处在北魏废弃堆积下；2024地坪以叠压关系推论筑坊行为。现公开材料未给出这些路面使用层的独立细分年代，不能将整个三纵三横的每段都视为516—528年同期实测。",
+      "source_refs": [
+        "baima:henan2024",
+        "baima:cass2024",
+        "baima:cass2025",
+        "baima:henan2025",
+        "baima:rmrb2026"
+      ],
+      "geometry": null,
+      "reconstruction_geometry": null,
+      "frame_id": "frame-relations",
+      "relations": [
+        {
+          "a": "xiyang_avenue",
+          "b": "ward_south_opening",
+          "relation": "开口位于大道北侧交汇位置",
+          "basis": [
+            "cass2025",
+            "henan2025",
+            "rmrb2026"
+          ],
+          "class": "发掘文字报告",
+          "reference_scope": "research/prosperity-v4/backbone-469/road01-source-audit.json sources",
+          "source_refs": [
+            "baima:cass2025",
+            "baima:henan2025",
+            "baima:rmrb2026"
+          ]
+        },
+        {
+          "a": "ward_south_opening",
+          "b": "ward_central_ns",
+          "relation": "门道向北接居中纵街",
+          "basis": [
+            "cass2025",
+            "henan2025"
+          ],
+          "class": "发掘文字报告",
+          "reference_scope": "research/prosperity-v4/backbone-469/road01-source-audit.json sources",
+          "source_refs": [
+            "baima:cass2025",
+            "baima:henan2025"
+          ]
+        },
+        {
+          "a": "ward_central_ns",
+          "b": "ward_central_ew",
+          "relation": "居中纵街、横街构成十字；结合2024与2025报告识别为同一坊内主街体系",
+          "basis": [
+            "henan2024",
+            "cass2024",
+            "cass2025"
+          ],
+          "class": "跨年度报告综合，不能表示全段连续揭露",
+          "reference_scope": "research/prosperity-v4/backbone-469/road01-source-audit.json sources",
+          "source_refs": [
+            "baima:henan2024",
+            "baima:cass2024",
+            "baima:cass2025"
+          ]
+        }
+      ],
+      "metrics": {
+        "south_opening_width_approx_m": 7.5,
+        "rut_band_width_m": 4.6,
+        "possible_threshold_groove_ew_length_approx_m": 4.6,
+        "possible_threshold_groove_ns_width_m": 0.4,
+        "central_ns_street_width_approx_m": 22,
+        "lateral_ns_street_distance_from_central_street_reported_m": [
+          86,
+          86
+        ],
+        "lateral_ew_street_distance_from_central_street_reported_m": [
+          40,
+          40
+        ],
+        "distance_reference_edge_or_centerline": null
+      },
+      "unknown": "坊门至中央十字距离、连续揭露长度、整体发掘平面和516—528细分层位。",
+      "next_evidence": "本轮停止同源关键词重复检索。未来出现同时标注南门、中央横街、指北针及比例尺的整体发掘/勘探图，再核对路号与层位后量测；官方河南配图恢复可读时先核图面是否真包含中央交点。当前骨架只保存接续关系和局部门道读数。",
+      "source_path": "research/prosperity-v4/backbone-469/road01-source-audit.json"
+    },
+    {
+      "id": "S02",
+      "name": "司马门内道路与两侧墙",
+      "links": [
+        "R07"
+      ],
+      "period": "各年度报告中的北魏遗存均保留原断代；当前材料未逐段细分至516—528年。",
+      "source_refs": [
+        "sima:map",
+        "sima:west",
+        "sima:east",
+        "sima:road"
+      ],
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-sima2023",
+        "kind": "trace",
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              573,
+              900
+            ],
+            [
+              575,
+              1050
+            ]
+          ],
+          [
+            [
+              583,
+              900
+            ],
+            [
+              585,
+              1050
+            ]
+          ],
+          [
+            [
+              576,
+              1120
+            ],
+            [
+              578,
+              1300
+            ]
+          ],
+          [
+            [
+              585,
+              1120
+            ],
+            [
+              587,
+              1300
+            ]
+          ],
+          [
+            [
+              579,
+              1332
+            ],
+            [
+              579,
+              1448
+            ]
+          ],
+          [
+            [
+              588,
+              1332
+            ],
+            [
+              588,
+              1448
+            ]
+          ]
+        ],
+        "note": "选取司马门内南北向双线的三段可读图墨。原图像素系，不补中间缺段。图绘街线未交代测点或北魏层位；不能用双线间距推算实测路宽。"
+      },
+      "rows": [
+        [
+          "宫院东墙",
+          "2017年发掘辨认了宫院东北角，院落东围廊外侧为整座宫院的东墙。报告所记4.7米是东北角院落中的夹道宽。",
+          "west"
+        ],
+        [
+          "司马门内道路",
+          "发掘剖开了道路堆积，东汉始建，魏晋与北魏沿用；北魏路面最宽处约40米。汇报没有给出三者在同一断面上的两墙净距。",
+          "road"
+        ],
+        [
+          "仓窖区西墙",
+          "2023年确认仓区西北角的位置和建筑结构。2024年又把仓区西墙同道路及宫院东墙联系起来。2023年公开位置图的蓝框只标示仓区范围。",
+          "east",
+          "road",
+          "map"
+        ]
+      ],
+      "reported_metrics": [
+        {
+          "label": "北魏路面最宽约",
+          "value": 40,
+          "unit": "米",
+          "source_ref": "sima:road",
+          "scope": "2024发掘汇报值，不由双线图距换算；并非两墙净距",
+          "new_measurement": false
+        }
+      ],
+      "unknown": "两墙内缘、路缘与同一测线、北魏路面层位；仓区蓝框不是已测西墙。",
+      "next_evidence": "取得标有两墙内缘、路面边缘和同一测线的发掘平面或平剖面对照，并核对测点、比例尺与北魏层位。",
+      "source_path": "research/prosperity-r5/sima-road.json",
+      "accepted_transfer_to_06a": false,
+      "rows_reference_scope": "research/prosperity-r5/sima-road.json sources; each row has title,statement,then local source IDs",
+      "structured_rows": [
+        {
+          "title": "宫院东墙",
+          "statement": "2017年发掘辨认了宫院东北角，院落东围廊外侧为整座宫院的东墙。报告所记4.7米是东北角院落中的夹道宽。",
+          "source_refs": [
+            "sima:west"
+          ]
+        },
+        {
+          "title": "司马门内道路",
+          "statement": "发掘剖开了道路堆积，东汉始建，魏晋与北魏沿用；北魏路面最宽处约40米。汇报没有给出三者在同一断面上的两墙净距。",
+          "source_refs": [
+            "sima:road"
+          ]
+        },
+        {
+          "title": "仓窖区西墙",
+          "statement": "2023年确认仓区西北角的位置和建筑结构。2024年又把仓区西墙同道路及宫院东墙联系起来。2023年公开位置图的蓝框只标示仓区范围。",
+          "source_refs": [
+            "sima:east",
+            "sima:road",
+            "sima:map"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "name": "宣阳门外御道—永桥—桥南御道",
+      "links": [
+        "R01"
+      ],
+      "period": "《洛阳伽蓝记》六世纪初城南叙述；桥段有神龟年间记事。同期古岸和逐段路面未证。",
+      "source_refs": [
+        "south:g3",
+        "south:gu16",
+        "south:q18"
+      ],
+      "geometry": null,
+      "reconstruction_geometry": {
+        "frame_id": "frame-qian2018",
+        "kind": "symbol",
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            561.5,
+            641.5
+          ],
+          [
+            560.5,
+            700
+          ]
+        ],
+        "note": "只为原图桥符号上下端，不是北魏两岸登陆点"
+      },
+      "frame_id": "frame-relations",
+      "relations": [
+        {
+          "a": "宣阳门",
+          "b": "洛水／永桥",
+          "relation": "门外四里至洛水浮桥，保留古里数"
+        },
+        {
+          "a": "永桥",
+          "b": "桥南御道／圜丘方向",
+          "relation": "过桥后御道朝圜丘；501年后迁置的圜丘现址仍为候选"
+        }
+      ],
+      "water_constraints": [
+        {
+          "id": "W01",
+          "level": "研究图河段／符号",
+          "locality": "城南洛水",
+          "limit": "北魏文献与后世复原；各段古槽与岸线未测定。",
+          "url": "luoyang-water-atlas.html#W01",
+          "relation": "永桥为洛水渡河关系；两岸登陆点均未知。"
+        },
+        {
+          "id": "W04",
+          "level": "研究图河段／符号",
+          "locality": "城西北及内城诸门",
+          "limit": "分支与城门的次序有据，分水点及各段河宽仍不明。",
+          "url": "luoyang-water-atlas.html#W04",
+          "relation": "谷水经宣阳门南；不把谷水、洛水或引洛渠并成一个过水点。"
+        },
+        {
+          "id": "W27",
+          "level": "相对位置或遗迹地段",
+          "locality": "宣阳门外御道东、景明寺内",
+          "limit": "“三”可定；各池轮廓、相互连通及水功设施取水口未定。",
+          "url": "luoyang-water-atlas.html#W27",
+          "relation": "景明寺三池在门外一里御道东，池群不充当道路边界。"
+        }
+      ],
+      "reported_metrics": [
+        {
+          "label": "宣阳门外至洛水",
+          "value": 4,
+          "unit": "古里",
+          "source_ref": "south:g3",
+          "scope": "原文距离，不统一换算米；非桥长",
+          "new_measurement": false
+        }
+      ],
+      "bank_landings": [
+        null,
+        null
+      ],
+      "unknown": "永桥两岸登陆点、桥长、同期河宽、道路与古岸接面；图中桥符不能补此缺口。",
+      "next_evidence": "待有同测线道路、桥头及同期古岸平剖面再核接续；2022运河报告按决定暂缓。",
+      "source_path": "research/prosperity-v4/south-466/readings.json"
+    }
+  ],
+  "crosswalk": [
+    {
+      "id": "C01",
+      "records": [
+        "R03",
+        "X01"
+      ],
+      "relation": "同名大道的候选重复来源",
+      "decision": "保持21条来源记录，不把两者计为两条互不重叠的实体路，也不把两份长度相加。",
+      "basis": "西明—青阳命名、方向及铜驼交会一致；缺共同测线。"
+    },
+    {
+      "id": "C02",
+      "records": [
+        "O02",
+        "X02",
+        "S01"
+      ],
+      "relation": "总体道路与局部发掘",
+      "decision": "X02/S01约束O02上的南坊门交会；不是新增独立主干道。",
+      "basis": "2025年度汇报及人民日报明确西阳门外大道与坊内纵街交会。"
+    },
+    {
+      "id": "C03",
+      "records": [
+        "R02",
+        "O02",
+        "O08"
+      ],
+      "relation": "同门对应的内外段",
+      "decision": "按门内、门外分列，不判连续实测全线。",
+      "basis": "西阳／东阳门名对应；两侧共控未得。"
+    },
+    {
+      "id": "C04",
+      "records": [
+        "R03",
+        "O01",
+        "O09"
+      ],
+      "relation": "同门对应的内外段",
+      "decision": "保存分段，X01仅候选覆盖R03。",
+      "basis": "西明／青阳门名对应。"
+    },
+    {
+      "id": "C05",
+      "records": [
+        "R04",
+        "O03",
+        "O07"
+      ],
+      "relation": "同门对应的内外段",
+      "decision": "西垣阊阖与宫前阊阖严格区分；建春共控仍为0。",
+      "basis": "1973图号／2019命名校核及钱2018郭路图。"
+    },
+    {
+      "id": "C06",
+      "records": [
+        "R05",
+        "O04"
+      ],
+      "relation": "承明门内外",
+      "decision": "西出最后勘探点未知；不封闭端点。",
+      "basis": "1973门址缺口与横四；钱2018西出图墨。"
+    },
+    {
+      "id": "C07",
+      "records": [
+        "R06",
+        "O10"
+      ],
+      "relation": "开阳门方向的候选接续",
+      "decision": "不凭门名将两图框直连。",
+      "basis": "1973推断与南郊调查；南门基、古岸缺口未解决。"
+    },
+    {
+      "id": "C08",
+      "records": [
+        "O06",
+        "R07",
+        "O11"
+      ],
+      "relation": "广莫—平昌方向的分段关系",
+      "decision": "北出、内城折线、南郊样线分别保存；不跨图框自动拼线。",
+      "basis": "各来源门向一致但没有共测线。"
+    },
+    {
+      "id": "C09",
+      "records": [
+        "R08",
+        "R05",
+        "O05"
+      ],
+      "relation": "大夏、横四、津阳的不同分段口径",
+      "decision": "1973组合残长3620米与2019津阳路2990米分别列量，北侧缺线不补。",
+      "basis": "1973描述两次折行；2019另列大夏门内路400余米。"
+    },
+    {
+      "id": "C10",
+      "records": [
+        "O05",
+        "O06"
+      ],
+      "relation": "邙山合流的文字记载",
+      "decision": "没有已核合流点或最后实测点；图框外不连成实测路。",
+      "basis": "地方综述称登邙会合，钱氏图范围内未见合流。"
+    },
+    {
+      "id": "C11",
+      "records": [
+        "R01",
+        "S03"
+      ],
+      "relation": "宫前—宣阳—永桥的文献轴线",
+      "decision": "相关道路系统但不能证明同一名称全段同体；古岸与桥头保持未知。",
+      "basis": "宫前铜驼路迹与《伽蓝记》城南御道叙述来自不同证据。"
+    },
+    {
+      "id": "C12",
+      "records": [
+        "R07",
+        "S02"
+      ],
+      "relation": "未证同路",
+      "decision": "司马路保持独立图框和地方关系，不并入广莫—平昌纵道。",
+      "basis": "2023宫城区图与06a尚无可接受现场共控。"
+    }
+  ],
+  "junctions_source_path": "research/prosperity-v4/network-462/roads.json",
+  "junctions": [
+    {
+      "pair": [
+        "Lh-1",
+        "Lz-1"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "交接",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        359.135559,
+        382.242927
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-1",
+        "Lz-2"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "交接",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        345.708983,
+        382.241566
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-1",
+        "Lz-3"
+      ],
+      "source_ids": [
+        "A",
+        "D",
+        "I",
+        "K"
+      ],
+      "text_relation": "交接",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        312.33562,
+        382.285635
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D",
+        "p462:I",
+        "p462:K"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-1",
+        "Lz-4"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "交接",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        291.666917,
+        382.296204
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-2",
+        "Lz-1"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "交接",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        361.741653,
+        328.753436
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-2",
+        "Lz-2"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "交接",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        348.50316,
+        328.22604
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-2",
+        "Lz-3"
+      ],
+      "source_ids": [
+        "A",
+        "D",
+        "E",
+        "F",
+        "K"
+      ],
+      "text_relation": "宫城阊阖门前，横二与铜驼街交会。",
+      "geometry_status": "两条原图折线未相交，交会落在纵三的版面断笔处",
+      "closest_pdf_xy": {
+        "horizontal": [
+          314.0119,
+          327.139615
+        ],
+        "vertical": [
+          313.986084,
+          328.077209
+        ]
+      },
+      "min_gap_pdf_points": 0.937949,
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D",
+        "p462:E",
+        "p462:F",
+        "p462:K"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-2",
+        "Lz-4"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "交接",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        290.923026,
+        326.512665
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-3",
+        "Lz-1"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "纵一北端起横三，最北段因水位高未探明。",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        363.3371,
+        295.858428
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-3",
+        "Lz-2"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "交接",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        350.225526,
+        295.123256
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-3",
+        "Lz-4"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "交接",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        291.596575,
+        294.134955
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    },
+    {
+      "pair": [
+        "Lh-4",
+        "Lz-4"
+      ],
+      "source_ids": [
+        "A",
+        "D"
+      ],
+      "text_relation": "报告记循横四西行约300米再向南；原图06a仅见南支接横四的一处。",
+      "geometry_status": "原图折线相交",
+      "intersection_pdf_xy": [
+        292.191678,
+        267.105228
+      ],
+      "reference_scope": "research/prosperity-v4/network-462/roads.json sources",
+      "source_refs": [
+        "p462:A",
+        "p462:D"
+      ]
+    }
+  ],
+  "input_sha256": {
+    "research/prosperity-v4/hydro-roads-anchor-p46.json": "a14790ea3a635ee751e64e8e2fa639ebc5fa40ac7736fa6828d0035ca13d2b73",
+    "research/prosperity-v4/network-462/roads.json": "6a48b686ef2c133731f080405d525b4a60e9bf0506cfb35a78ff0cfa2b0efb8d",
+    "research/prosperity-v4/network-462/outer.json": "761da9e0abace43fc14e04dd330becc3c288df0a8a239a5d55417632bc5d1e5a",
+    "research/prosperity-v4/gates-465/readings.json": "8db5f40297be313abe55f0c49ac32f706d1ce82da91adac7e74f8a743e2292e1",
+    "research/prosperity-v4/south-466/readings.json": "545c09e3a0fc6f91f686e02ff34784455868faf434cc299945e8a49cd9bd0106",
+    "research/prosperity-v4/backbone-469/road01-source-audit.json": "7ecaf20678c961f281216e370019fe9206f68bc118375e532c85b92072b7ff2d",
+    "research/prosperity-r5/sima-road.json": "acc9efd19ed253fee68c0dd25e4e2289c021c33b6e9db5033ecaa3f00e2ed946",
+    "research/water-atlas/locations.tsv": "ff2a05093c52c54715891b121e82b9b8199220c5b45a33b14c5c63844bf09c9c",
+    "research/prosperity-v1/geographic-evidence.json": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79"
+  },
+  "research_limits": [
+    "原图图例与勘探测线未取得时，不以钱2018复原图线型倒推1993实测／推定。",
+    "六条东西外道目前只有同图两端坐标；若绘虚线联络，必须写明不是原图路径。",
+    "06a原笔画端、钱图截绘端和图框边均不能当作古道终点。",
+    "白马寺7.5米为坊门缺口；22米为坊内居中纵街宽；40/86米为道路间距；四类量不得互换。",
+    "司马门内双线图距不作40米路宽依据；两墙净距待证。",
+    "永桥登陆点、鸿池陂出口及谷水／阳渠分合点沿用水系证据等级；2022运河报告暂缓。",
+    "首页沿用用户选定07号panorama-approved-v11。"
+  ],
+  "source_access_1993": "research/roads-r6/source-1993-audit.json",
+  "statistics": {
+    "source_records": 21,
+    "inner_source_traces": 8,
+    "outer_survey_records": 11,
+    "excavation_records": 2,
+    "source_frame_traces": 8,
+    "reconstruction_frame_traces": 5,
+    "reconstruction_endpoint_pairs": 6,
+    "excavation_localities": 2,
+    "supplements": 3,
+    "crosswalk_relations": 12,
+    "new_field_measurements": 0,
+    "new_geographic_coordinates": 0
+  }
+}
