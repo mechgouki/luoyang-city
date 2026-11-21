@@ -170,7 +170,9 @@ def exercise(browser, base, device, output):
                     except Exception:
                         report["no_javascript"]["status"] = "failed"
                         report["no_javascript"]["summary_after"] = plain.locator("#X02 > summary").bounding_box()
-                        capture(plain.locator("body"), "no-javascript-failure")
+                        filename = device + "-no-javascript-failure.png"
+                        raw = plain.screenshot(path=output / filename)
+                        report["screenshots"][filename] = hashlib.sha256(raw).hexdigest()
                         raise
             report["checks"].append("Five actual downloads with SHA-256, disconnected ZIP reading and search, native reading without JavaScript")
 
