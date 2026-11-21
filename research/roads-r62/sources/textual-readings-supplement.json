@@ -1,0 +1,58 @@
+{
+  "schema": "luoyang-roads-textual-reading-supplement-v1",
+  "checked_date": "2026-11-21",
+  "readings": [
+    {
+      "name": "乐里道",
+      "scope": "水经注水流叙述中的地段词组，不据此补道路几何",
+      "sources": [
+        {
+          "url": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/30",
+          "title": "四部丛刊水经注卷十六原页转写",
+          "web_ref": "turn625020167view0",
+          "read_state": "转写已读，原页图未目检；页面标未校对",
+          "text": "其水依柱又自樂里道屈而東出陽渠",
+          "variant_note": "夹注说明“又”近刻讹作“文”"
+        },
+        {
+          "url": "https://www.shidianguji.com/zh/book/CADAL01035103/chapter/1l4cko9wg0iz7",
+          "title": "合校水经注卷十六",
+          "web_ref": "turn625020167search5",
+          "read_state": "本轮只核到搜索索引句读",
+          "text": "其水依柱，又自樂里道，屈而東出陽渠。"
+        },
+        {
+          "url": "https://www.shidianguji.com/zh/book/NGJ89241200000329665657/chapter/1lwxmpz435fe6",
+          "title": "赵一清水经注释卷十六",
+          "web_ref": "turn616515659search2",
+          "read_state": "全文页面可打开，相关句在本轮索引展示",
+          "text": "其水依柱文，自樂里道，屈而東出陽渠。"
+        }
+      ],
+      "interpretation": "校读未发现必须改为“自乐里，道屈”的依据；可保留“乐里道”为原文候选词组。但文本主语是水，并不独立证明道路方向、宽度、两端或与1993外郭某道同一。",
+      "geometry": null,
+      "merge_with_O07": false
+    },
+    {
+      "name": "太极殿北廊三门与东堂北院廊门",
+      "constraint": {
+        "candidate_key": "taiji_north_corridor_three_gates",
+        "name": "太极殿北侧廊庑三处门道组",
+        "source_ids": [
+          "henan-taiji2017"
+        ],
+        "reported_gate_count": 3,
+        "relation": "太极主殿北侧东西向廊庑，与太极东堂北侧院落廊庑的结构相似，但为另一处所。",
+        "width_m": null,
+        "spacing_m": null,
+        "period_limit": "2017汇报同述北魏宫院与北周改建；这组三门无逐门层位。",
+        "counts_scope": "一组建筑廊道上的三个门道，不计三条独立街。",
+        "limit": "不把qian-gates2018太极东堂北院几处廊道式门约2.5m直接移给本组三门；组别对应待原图。",
+        "geometry": null
+      },
+      "source_url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=583",
+      "source_ref": "turn404412532search0",
+      "comparison_source_url": "https://www.sohu.com/a/298263205_199807"
+    }
+  ]
+}

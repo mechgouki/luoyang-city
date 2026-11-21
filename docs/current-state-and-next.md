@@ -1,5 +1,7 @@
 # 洛阳城复原：当前状态与续接顺序
 
+> 2026-11-21接续：当前为R6.2全城道路同批整理，84条证据记录及339实体覆盖核对，详见[本批研究说明](roads-r62-research.md)。首页已定07号 `panorama-approved-v11`，旧文中的首页待选、v9或早期P批次仅为历史记录。发布及验收以[#52最新交接](https://github.com/mechgouki/luoyang-city/issues/52)为准。
+
 更新：2026-11-20。当前进度、验收状态及下一条断点以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新正文和评论为准；史料、图源、量测和验收依据存于[研究记录 #47](https://github.com/mechgouki/luoyang-city/issues/47)。以真实主分支、发布清单和正式站验收为准；不要从较早ZIP恢复覆盖主分支。
 
 ## 2026-11-20　R4 统一城市分布总图

@@ -1,7 +1,7 @@
 # 北魏洛阳文献地图 · Luoyang Atlas
 
 以《洛阳伽蓝记》及其校注、相关史地文献为基础的可追溯历史城市地图。
-仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前研究批次：**P4.6.8 / prosperity-water-p468**（城壕、宫西水道与独立园池）；首页沿用**已批准的 H2《北魏洛阳盛景全景俯瞰》**。本批发布及验收状态以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新记录为准。
+仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前研究批次：**R6.2 / all-road-atlas-r6.2**（全城道路、门道与桥道）；首页沿用用户选定的**07号 `panorama-approved-v11`**。本批发布及验收状态以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新记录为准。
 
 > 盛时图采用 516—528 年河阴之变前的文献合成时层，不是某一年实测地图。文献关系画布的图形大小与显示间距不代表历史测量；来源图坐标、表列尺寸、工作朝向和未定院界分别记录，不能拼接成未经验证的精确遗址边线。
 
@@ -15,6 +15,8 @@
 
 正式网站：[mechgouki.github.io/luoyang-city](https://mechgouki.github.io/luoyang-city/)。现有GitHub Actions在main提交后自动构建、部署、验收；无需重新设置Pages。每批正式完成以对应提交的build、deploy、verify-live全部成功为准。
 
+**R6.2 全城道路总览**把现有材料一次收齐：[道路总图与逐路表](https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html)，共84条证据记录（旧主干道来源21、文献道路26、宫路11、坊街证据7、门道14、桥道5），覆盖339个原实体和100条道路定位主引文；记录数不是独立古代道路数。六条坊街与未分条集合分别计数，来源图、推定连接和未知端点分别表示，保留全部原图框与分期限制。附CSV、JSON、覆盖表、SVG和离线包；[研究说明](docs/roads-r62-research.md)，实际发布与验收状态见#52。R6.1的[21条主干道来源图](https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html)继续保留。
+
 **P4.6.8 城壕、宫西水道与独立园池**补入[五图专题](https://mechgouki.github.io/luoyang-city/prosperity-water-p468.html)：城西排水与内城壕沟、宫西水道、两处方湖与昭仪池、独立园池、宫苑池逐项复核。补核12个前册保留对象并重核5个池名；W20濛汜池／W21碧海曲池撤回I09旧索引，P467前页显示勘误。九行原典／报告数值区分宽度、残长、埋深和淤积语义。相邻、包含、层位不作水流，报告值不计为本项目新增图测。研究与未定项见[P4.6.8说明](docs/prosperity-water-p468-notes.md)，实际发布与验收状态以#52为准。
 
 **P4.6.7 河流与水道**整理为[五图专题](https://mechgouki.github.io/luoyang-city/prosperity-water-p467.html)：绕城干流与城东南支、入城支渠与园池、七里涧的两种读法与调查止点、两处引洛与河渠分期、伊洛与西北来水。共53段关系，分为流向36、连接8、解释假说5、工程提议2、相邻2；数量不表示53条已定位古河道。目标时层为516—528年，旧道、已涸水体、工程提议与跨期证据分别标识。新增历史位置0、米制量测0，尚未完成全部河岸及各年通水核定。研究依据、图层边界及旧版衔接见[P4.6.7说明](docs/prosperity-water-p467-notes.md)。已由[发布提交e6d0aae](https://github.com/mechgouki/luoyang-city/commit/e6d0aaec76b5d25ed347f377ce19d7361b47f9a2)完成正式站验收，674项公网资源及桌面／手机／下载均通过；[长期验收副本](https://github.com/mechgouki/luoyang-city/tree/54bc53f53a95f0390c5f3c8fd181c6e070e16623/evidence/p467)已保存。
@@ -27,10 +29,14 @@ P2继续把3座核心建筑的表列尺度落实到[核心建筑尺度页](https
 
 P3把阊阖门从外接尺度片推进到[局部考古平面](https://mechgouki.github.io/luoyang-city/prosperity-gate.html)：依据申遗原件的门址图及其20m比例尺，逐项量读可辨的门基、通道与两阙，并提供原图叠照、尺度核对和城市接合视图。原图量读与独立表列尺寸分别保留；城市视图仍沿用P1来源锚点，不宣称已经完成实测配准。附3页图册、SVG、CSV、JSON和复现包。详见[P3说明](docs/prosperity-gate-v3-release-notes.md)与[量读方法](docs/prosperity-gate-method.md)。
 
-首页沿用用户于2026-11-17批准的H2主图，连接历史问题、互动地图和研究资料。主图的建筑造型及构图不作为新的历史定位或尺寸证据；建筑扩绘与全景重绘留待城市骨架确定之后。见[H2批准图说明](docs/homepage-approved-v9-release-notes.md)。[H1首页说明](docs/homepage-v1-release-notes.md)保留为历史记录，其中第八版暂用稿状态已由H2批准记录接续。
+首页沿用用户从九张对照图中选定的07号 `panorama-approved-v11`，由[PR #71](https://github.com/mechgouki/luoyang-city/pull/71)纠正此前误用的09号；旧H2/v9说明仅作历史记录。R4城市总图、R5全景与R5.3司马门道路已交付，主页画面的建筑造型与构图不作为历史定位或量测依据。
 
 | 工作线 | 内容 | 入口 |
 | --- | --- | --- |
+| 盛时R6.2 | 84条道路、门道与桥道证据，339实体覆盖核对；分级图、逐路表、离线包 | [全城道路总览](https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html) |
+| 盛时R6.1 | 原有21条主干道来源与三处接续专题 | [主干道来源图](https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html) |
+| 盛时R5 | 城市全景与司马门内道路专题 | [全景](https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html) |
+| 盛时R4 | 城市分布及定位依据 | [城市总图](https://mechgouki.github.io/luoyang-city/prosperity-city-atlas.html) |
 | 盛时P4.6.8 | 城壕、宫西水道与园池五图47段；补核12项、重核5项，含I09索引勘误及9行原值，发布状态见#52 | [水系补遗](https://mechgouki.github.io/luoyang-city/prosperity-water-p468.html) |
 | 盛时P4.6.7 | 五图、53段河流与水道关系，七里涧两种校读与分期；发布状态见#52 | [河流与水道](https://mechgouki.github.io/luoyang-city/prosperity-water-p467.html) |
 | 盛时P4.6.6 | 城南两条大道、谷水与永桥；旧PDF封存 | [城南道路与水系](https://mechgouki.github.io/luoyang-city/prosperity-south-p466.html) |

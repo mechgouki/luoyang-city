@@ -1,0 +1,274 @@
+{
+  "schema": "luoyang-roads-source-frames-v1",
+  "geographic_transform": null,
+  "frames": [
+    {
+      "schema": "luoyang-road-source-image-reading-v1",
+      "id": "frame-yongxiang2021",
+      "title": "永巷位置与走向示意图",
+      "source_id": "xinhua-yongxiang2022",
+      "image": {
+        "width": 1023,
+        "height": 652,
+        "sha256": "f8363a43e26358a9e7036260f0864a56c05dea552433696b8d9e10d67ea432db",
+        "source_url": "https://www.xinhuanet.com/culture/20220119/8a372c6ae7d24ff0b5d919b6232d2068/202201198a372c6ae7d24ff0b5d919b6232d2068_217QvIIX1bEK8HZaL2.jpg.jpg",
+        "credit": "中国社会科学院考古研究所洛阳汉魏城队供图，新华社刊载",
+        "caption": "永巷位置与走向示意图（上为北，资料照片）",
+        "north": "up per published caption",
+        "scale_bar_present": false,
+        "legend_present": false,
+        "visually_inspected": true,
+        "original_filename": "yongxiang-2021-context.jpg",
+        "archive_policy": "原幅见来源发布页；保留原始文件名、哈希与目检信息，不镜像全部来源图。"
+      },
+      "coordinate_system": {
+        "unit": "image_pixel",
+        "origin": "top_left",
+        "x": "right",
+        "y": "down"
+      },
+      "period": {
+        "article_context": "魏晋至北魏宫城布局，北魏沿用",
+        "specific_516_528_layer_verified": false,
+        "naming": "依据位置与文献推测为永巷"
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              66,
+              382
+            ],
+            [
+              194,
+              382
+            ]
+          ],
+          [
+            [
+              200,
+              373
+            ],
+            [
+              204,
+              276
+            ]
+          ],
+          [
+            [
+              209,
+              260
+            ],
+            [
+              317,
+              263
+            ]
+          ],
+          [
+            [
+              485,
+              264
+            ],
+            [
+              607,
+              267
+            ]
+          ],
+          [
+            [
+              735,
+              276
+            ],
+            [
+              835,
+              277
+            ]
+          ],
+          [
+            [
+              872,
+              283
+            ],
+            [
+              869,
+              362
+            ]
+          ]
+        ],
+        "geometry_role": "source_direction_arrow_stems",
+        "reading_method": "目检原图，摘读6段黄色箭杆的首末点；不是路缘、田野中心线或坐标测量。",
+        "arrowheads": "原图均在各段末端；仅表示图示走向，不解释为通行方向。",
+        "gaps": "黄色箭头之间留白按原图保留，不补成连续路迹。"
+      },
+      "context_symbols": [
+        {
+          "label": "千秋门示意框",
+          "kind": "source_annotation_not_gate_measurement",
+          "approx_center_px": [
+            157,
+            379
+          ]
+        },
+        {
+          "label": "显阳殿遗址示意范围",
+          "kind": "source_annotation_not_excavation_boundary",
+          "approx_box_px": [
+            422,
+            483,
+            595,
+            596
+          ]
+        },
+        {
+          "label": "司马门内道路题注",
+          "kind": "source_annotation",
+          "approx_label_px": [
+            926,
+            313
+          ]
+        }
+      ],
+      "reported_metrics": [
+        {
+          "label": "显阳殿宫院北侧已发现道路南北宽约",
+          "value": 6,
+          "unit": "m",
+          "source_id": "xinhua-yongxiang2022",
+          "source_kind": "excavator_interview",
+          "scope": "局部道路报道宽度，不由本图像素量出，不扩及整条永巷"
+        },
+        {
+          "label": "2022东端折角局部宽度变化",
+          "values": [
+            6.5,
+            11
+          ],
+          "unit": "m",
+          "source_id": "shen-review2022",
+          "scope": "不以像素测得；不替代2021北侧局部约6m；不标到六根箭头各段"
+        }
+      ],
+      "use_limits": [
+        "仅可在独立原图框标示来源绘出的路线转折；图面箭头不等于连续发掘证明。",
+        "不据图生成地理坐标、地面尺度或与06a/钱图的配准。",
+        "照片中两段发掘区之间的箭头跨过未揭露田地；保持原图的解释性表达。",
+        "红框与红线是来源标注，未附各线颜色含义图例，不据此重绘实测路缘。",
+        "原图右侧虽标司马门内道路，不由箭头端点推出已核交会测点。",
+        "2022文章描述的东折处门址不由这幅2021示意图确定像素门位。"
+      ],
+      "geographic_transform": null,
+      "new_ground_coordinates": 0
+    },
+    {
+      "id": "frame-xianyang2021-plan",
+      "title": "显阳殿发掘区夯土遗迹分布图",
+      "source_id": "xinhua-yongxiang2022",
+      "image": {
+        "width": 1023,
+        "height": 695,
+        "sha256": "8d00afe7e566ef656b46cccf003374d23854f4c7691fe50b6bec2e782893f977",
+        "north": "right per caption",
+        "scale_bar_present": false,
+        "legend_present": false,
+        "visually_inspected": true,
+        "original_filename": "xianyang-2021-plan.jpg",
+        "archive_policy": "原幅见来源发布页；保留原始文件名、哈希与目检信息，不镜像全部来源图。"
+      },
+      "legend": [],
+      "geometry": null,
+      "use_limits": [
+        "墙基分布图，不抽取未知颜色线为道路",
+        "不与城市图配准"
+      ],
+      "geographic_transform": null
+    },
+    {
+      "id": "frame-xianyang2021-ramps",
+      "title": "显阳殿北侧廊房与漫道照片",
+      "source_id": "xinhua-yongxiang2022",
+      "image": {
+        "width": 1024,
+        "height": 688,
+        "sha256": "e519f5b9b3fcc074a7763d5df970b52f06e7f38b16a976b561d2b85f5729da31",
+        "north": "not marked in image",
+        "scale_bar_present": false,
+        "legend_present": false,
+        "visually_inspected": true,
+        "original_filename": "xianyang-2021-photo.jpg",
+        "archive_policy": "原幅见来源发布页；保留原始文件名、哈希与目检信息，不镜像全部来源图。"
+      },
+      "legend": [],
+      "geometry": null,
+      "use_limits": [
+        "局部漫道和庭院车辙；不计独立街道",
+        "无比例和逐处年代图例"
+      ],
+      "geographic_transform": null
+    },
+    {
+      "id": "frame-qianqiu2023-location",
+      "title": "图2 汉魏洛阳城千秋门遗址位置示意",
+      "source_id": "shen-review2022",
+      "image": {
+        "width": 1731,
+        "height": 1954,
+        "sha256": "2ee2d5a343228467fff89ab9915b759557116237d59cff7182e20413e1ee46a6",
+        "north": "up as city-map orientation; no arrow",
+        "scale_bar_present": false,
+        "legend_present": false,
+        "visually_inspected": true,
+        "original_filename": "shen2023-qianqiu-location.png",
+        "archive_policy": "原幅见来源发布页；保留原始文件名、哈希与目检信息，不镜像全部来源图。"
+      },
+      "legend": [],
+      "geometry": null,
+      "use_limits": [
+        "多期城市位置示意，含汉和隋标记",
+        "不得把每根坊格线作北魏实测道"
+      ],
+      "geographic_transform": null
+    },
+    {
+      "id": "frame-qianqiu2023-excavation",
+      "title": "图3 千秋门遗址发掘平面图",
+      "source_id": "shen-review2022",
+      "image": {
+        "width": 1080,
+        "height": 1016,
+        "sha256": "a133bbf8d1c049b2caf233720e51506c8ebba449ce601862aa78de4d502f445b",
+        "north": "up per red arrow",
+        "scale_bar_present": false,
+        "legend_present": true,
+        "visually_inspected": true,
+        "original_filename": "shen2023-qianqiu-excavation.png",
+        "archive_policy": "原幅见来源发布页；保留原始文件名、哈希与目检信息，不镜像全部来源图。"
+      },
+      "legend": [
+        {
+          "symbol": "yellow_outline",
+          "label": "晚期遗迹"
+        },
+        {
+          "symbol": "white_outline",
+          "label": "北朝遗迹"
+        },
+        {
+          "symbol": "red_dashed_outline",
+          "label": "魏晋遗迹"
+        },
+        {
+          "symbol": "cyan_fill",
+          "label": "魏晋水道"
+        }
+      ],
+      "geometry": null,
+      "use_limits": [
+        "北朝白线不细分北魏/北周",
+        "图中北周夯土不属于516—528",
+        "不由永巷标签直接抽出北魏路缘"
+      ],
+      "geographic_transform": null
+    }
+  ]
+}
