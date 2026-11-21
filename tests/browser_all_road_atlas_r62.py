@@ -197,6 +197,18 @@ def exercise(browser, base, device, output):
             approval = context.request.get(base + "homepage/approval-v11.json").json()
             assert approval["hero"]["selection_number"] == "07"
             assert approval["hero"]["revision"] == "panorama-approved-v11"
+            current = context.request.get(base + "homepage/approval-v12.json").json()
+            assert current["previous_revision"] == approval["hero"]["revision"]
+            assert current["hero"]["revision"] == "panorama-approved-v12"
+            assert current["hero"]["source_sha256"] == "c7954dfc3ee659de756c62d0f634e40eddfd2ecc93cc8b833f53f6c0e0dc69ca"
+            for name in ("index.html", "v3.0-dual.html"):
+                raw = context.request.get(base + name).body()
+                assert b'data-hero-revision="panorama-approved-v12"' in raw
+                assert current["hero"]["asset"].encode() in raw
+                archived = context.request.get(base + "homepage/history/" + name.replace(".html", "-before-v12.html")).body()
+                assert b'data-hero-revision="panorama-approved-v11"' in archived
+                assert hashlib.sha256(archived).hexdigest() == current["previous_html_sha256"][name]
+            report["homepage"] = dict(current=current["hero"]["revision"], archived=approval["hero"]["revision"])
             assert not report["errors"], report["errors"]
             report["status"] = "passed"
         except Exception as error:

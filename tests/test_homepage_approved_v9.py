@@ -100,24 +100,35 @@ class ApprovedPanoramaH2(unittest.TestCase):
             self.assertIn('id="home-research"',code)
             self.assertIn('id="map-viewport"',code)
 
-    def test_current_homepage_matches_selected_candidate_07(self):
+    def test_current_homepage_matches_approved_full_frame(self):
         import sys
         sys.path.insert(0,str(ROOT/"tools"))
-        from homepage_artwork_v10 import verify, V11
+        from homepage_artwork_v10 import verify, V11, V12
         verify(self.info,self.release,lambda path:(SITE/path).read_bytes())
-        for name,size in ((V11.full,(1672,941)),(V11.small,(960,540))):
+        for name,size in ((V12.full,(1672,941)),(V12.small,(960,540))):
             with Image.open(SITE/name) as artwork:
                 self.assertEqual(artwork.size,size)
                 self.assertEqual(artwork.format,"WEBP")
+        for page in ("index.html","v3.0-dual.html"):
+            archived=(SITE/V12.archive(page)).read_bytes()
+            self.assertIn(f'data-hero-revision="{V11.revision}"'.encode(),archived)
+            self.assertIn(V11.full.encode(),archived)
+            self.assertIn(V11.small.encode(),archived)
 
     def test_release_provenance_matches_all_versions(self):
-        current=read(SITE/"homepage/approval-v11.json")
+        current=read(SITE/"homepage/approval-v12.json")
         previous=read(SITE/current["previous_metadata"])
-        self.assertEqual(current["previous_revision"],"panorama-approved-v10")
-        self.assertEqual(previous["previous_revision"],REV)
-        self.assertEqual(current["hero"]["selection_number"],"07")
-        self.assertEqual(current["hero"]["source_sha256"],"4d45e831b59f2f7550fe7129455f1da823098e8f34cf633223cd584d5b64a5bf")
-        self.assertEqual(previous["hero"]["source_sha256"],"262e0797c09788f7871bca81c05d5e2c15d5ebc7ab8cf6c559ced68cf883a41e")
+        earlier=read(SITE/previous["previous_metadata"])
+        self.assertEqual(current["previous_revision"],"panorama-approved-v11")
+        self.assertEqual(previous["previous_revision"],"panorama-approved-v10")
+        self.assertEqual(earlier["previous_revision"],REV)
+        self.assertEqual(current["hero"]["selection_label"],"全幅取景版")
+        self.assertEqual(current["hero"]["display_mode"],"full_frame")
+        self.assertEqual(current["hero"]["based_on_revision"],previous["hero"]["revision"])
+        self.assertEqual(current["hero"]["source_sha256"],"c7954dfc3ee659de756c62d0f634e40eddfd2ecc93cc8b833f53f6c0e0dc69ca")
+        self.assertEqual(previous["hero"]["selection_number"],"07")
+        self.assertEqual(previous["hero"]["source_sha256"],"4d45e831b59f2f7550fe7129455f1da823098e8f34cf633223cd584d5b64a5bf")
+        self.assertEqual(earlier["hero"]["source_sha256"],"262e0797c09788f7871bca81c05d5e2c15d5ebc7ab8cf6c559ced68cf883a41e")
         self.assertEqual(self.release["homepage_hero_revision"],current["hero"]["revision"])
         self.assertEqual(self.release["homepage_hero_status"],"approved")
         self.assertIn(VERSION,self.release["extensions"])

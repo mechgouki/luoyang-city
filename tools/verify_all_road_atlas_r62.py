@@ -289,15 +289,26 @@ def _preservation(meta, info, get):
     old_data = json.loads(get("road-atlas/roads.json"))
     assert [r["id"] for r in old_data["roads"]] == ROAD_IDS
     assert len(old_data["supplements"]) == 3
-    from homepage_artwork_v10 import V11
+    from homepage_artwork_v10 import V11, V12
     approval = json.loads(get(V11.metadata))
     assert approval["hero"]["selection_number"] == "07"
     assert approval["hero"]["revision"] == V11.revision
     for path, checksum in ((V11.full, V11.full_sha), (V11.small, V11.small_sha)):
         assert digest(get(path)) == info["files_sha256"][path] == checksum
+    current = json.loads(get(V12.metadata))
+    assert current["previous_revision"] == V11.revision
+    assert current["hero"]["revision"] == V12.revision
+    assert current["hero"]["source_sha256"] == V12.source_sha
+    for path, checksum in ((V12.full, V12.full_sha), (V12.small, V12.small_sha)):
+        assert digest(get(path)) == info["files_sha256"][path] == checksum
     for homepage in ("index.html", "v3.0-dual.html"):
-        assert b'data-hero-revision="panorama-approved-v11"' in get(homepage)
-    return dict(protected_r6_files=len(protected), old_sources=21, homepage="panorama-approved-v11 / 07")
+        archived = get(V12.archive(homepage))
+        assert b'data-hero-revision="panorama-approved-v11"' in archived
+        assert digest(archived) == current["previous_html_sha256"][homepage]
+        assert f'data-hero-revision="{V12.revision}"'.encode() in get(homepage)
+        assert V12.full.encode() in get(homepage) and V12.small.encode() in get(homepage)
+    return dict(protected_r6_files=len(protected), old_sources=21,
+                homepage="panorama-approved-v11 / 07 (archived)", current_homepage=V12.revision)
 
 
 def verify(info, reader):
