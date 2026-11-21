@@ -1,0 +1,41 @@
+{
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "R5 and water entrances, all 21 source records, source map and viewport fit",
+    "Name/ID search, persistent evidence filter, empty results, reset and expanded field evidence",
+    "A new ID search clears the previous road anchor and survives reload",
+    "Three evidence layers persist, map keyboard link and deep link restore, zoom and keyboard horizontal panning",
+    "Five actual downloads with SHA-256, disconnected ZIP reading and search, native reading without JavaScript",
+    "Both homepage entries retain selected panorama 07 / v11"
+  ],
+  "downloads": {
+    "road-atlas/city-roads.svg": "d90170e019c67502a761cdbafc97090929338d608ff6550c00ced09ea7d040b6",
+    "road-atlas/roads.csv": "254facb627a106f6e4472aedd51ba52bd94cf08cc92b831f9c0ad3cd1ac006ba",
+    "road-atlas/roads.json": "46ddbc906e8c5e2de589b0da39b2c5bff2601f36b0e9bd55867d6bb0369202e1",
+    "road-atlas/manifest.json": "6c906a8fd11fc7cb5dabaa6413d7d3090af9c4ba45e10b208b84147b9f8c32b6",
+    "downloads/luoyang-road-atlas.zip": "4fa7c752fd69c6f950341a4600d8bdc931ebf6293a718525f76079e51a408ba6"
+  },
+  "screenshots": {
+    "mobile-map.png": "25b476839a6de5f293069a02c0ac6c2235be0030e9500d114986bd294197da65",
+    "mobile-baima-evidence.png": "76a3401533a3d3fe5153307f38477af73984dfa5c1af2f6e726de5b5d8a02709",
+    "mobile-unknown-endpoint.png": "0da260162360b99efccb8c173571e23b2cbe56d0e229325ecd8a6dd3470733a0"
+  },
+  "errors": [],
+  "source_commit": "d6cc02119759fd0eda61c306c1cb067410117834",
+  "no_javascript": {
+    "url": "http://127.0.0.1:38051/luoyang-city/luoyang-road-atlas.html#X02",
+    "scroll_behavior": "auto",
+    "summary_before": {
+      "x": 19,
+      "y": 20.671875,
+      "width": 352,
+      "height": 78
+    },
+    "status": "passed"
+  },
+  "status": "passed"
+}

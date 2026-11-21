@@ -1,0 +1,180 @@
+{
+  "schema": "luoyang-roads-r6-selected-evidence-v1",
+  "phase": "pr",
+  "expected_source_commit": "d6cc02119759fd0eda61c306c1cb067410117834",
+  "collection_validation": "passed_for_selected_evidence",
+  "collected_at": "2026-11-21T09:01:20+00:00",
+  "input_archive": {
+    "name": "r6-pr-evidence.zip",
+    "bytes": 152025453,
+    "sha256": "38368514b099054b49b182ac423e9f1916b113d41e807d189a035b1faa04dc77"
+  },
+  "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44886935582",
+  "workflow_conclusion": null,
+  "workflow_conclusion_note": "Workflow/job conclusions must be checked separately; this script validates only retained reports.",
+  "browser_runtime_digests": [
+    "mcr.microsoft.com/playwright/python@sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1"
+  ],
+  "whitelist": [
+    "browser-runtime-digest.json",
+    "homepage-approved-v9-browser/results.json",
+    "homepage-approved-v9-tests.txt",
+    "homepage-v1-browser/results.json",
+    "prosperity-semantic-tests.txt",
+    "road-atlas-r6-browser/desktop-baima-evidence.png",
+    "road-atlas-r6-browser/desktop-map.png",
+    "road-atlas-r6-browser/desktop-report.json",
+    "road-atlas-r6-browser/desktop-unknown-endpoint.png",
+    "road-atlas-r6-browser/mobile-baima-evidence.png",
+    "road-atlas-r6-browser/mobile-map.png",
+    "road-atlas-r6-browser/mobile-report.json",
+    "road-atlas-r6-browser/mobile-unknown-endpoint.png"
+  ],
+  "selected_files": 13,
+  "excluded_archive_file_count": 434,
+  "road_screenshots": 6,
+  "report_validations": [
+    {
+      "path": "road-atlas-r6-browser/desktop-report.json",
+      "reported_status": "passed",
+      "source_commit": "d6cc02119759fd0eda61c306c1cb067410117834",
+      "screenshot_hashes_verified": 3,
+      "reported_download_hashes": {
+        "road-atlas/city-roads.svg": "d90170e019c67502a761cdbafc97090929338d608ff6550c00ced09ea7d040b6",
+        "road-atlas/roads.csv": "254facb627a106f6e4472aedd51ba52bd94cf08cc92b831f9c0ad3cd1ac006ba",
+        "road-atlas/roads.json": "46ddbc906e8c5e2de589b0da39b2c5bff2601f36b0e9bd55867d6bb0369202e1",
+        "road-atlas/manifest.json": "6c906a8fd11fc7cb5dabaa6413d7d3090af9c4ba45e10b208b84147b9f8c32b6",
+        "downloads/luoyang-road-atlas.zip": "4fa7c752fd69c6f950341a4600d8bdc931ebf6293a718525f76079e51a408ba6"
+      },
+      "checks": [
+        "R5 and water entrances, all 21 source records, source map and viewport fit",
+        "Name/ID search, persistent evidence filter, empty results, reset and expanded field evidence",
+        "A new ID search clears the previous road anchor and survives reload",
+        "Three evidence layers persist, map keyboard link and deep link restore, zoom and keyboard horizontal panning",
+        "Five actual downloads with SHA-256, disconnected ZIP reading and search, native reading without JavaScript",
+        "Both homepage entries retain selected panorama 07 / v11"
+      ]
+    },
+    {
+      "path": "road-atlas-r6-browser/mobile-report.json",
+      "reported_status": "passed",
+      "source_commit": "d6cc02119759fd0eda61c306c1cb067410117834",
+      "screenshot_hashes_verified": 3,
+      "reported_download_hashes": {
+        "road-atlas/city-roads.svg": "d90170e019c67502a761cdbafc97090929338d608ff6550c00ced09ea7d040b6",
+        "road-atlas/roads.csv": "254facb627a106f6e4472aedd51ba52bd94cf08cc92b831f9c0ad3cd1ac006ba",
+        "road-atlas/roads.json": "46ddbc906e8c5e2de589b0da39b2c5bff2601f36b0e9bd55867d6bb0369202e1",
+        "road-atlas/manifest.json": "6c906a8fd11fc7cb5dabaa6413d7d3090af9c4ba45e10b208b84147b9f8c32b6",
+        "downloads/luoyang-road-atlas.zip": "4fa7c752fd69c6f950341a4600d8bdc931ebf6293a718525f76079e51a408ba6"
+      },
+      "checks": [
+        "R5 and water entrances, all 21 source records, source map and viewport fit",
+        "Name/ID search, persistent evidence filter, empty results, reset and expanded field evidence",
+        "A new ID search clears the previous road anchor and survives reload",
+        "Three evidence layers persist, map keyboard link and deep link restore, zoom and keyboard horizontal panning",
+        "Five actual downloads with SHA-256, disconnected ZIP reading and search, native reading without JavaScript",
+        "Both homepage entries retain selected panorama 07 / v11"
+      ]
+    },
+    {
+      "path": "homepage-v1-browser/results.json",
+      "reported_status": null,
+      "reported_source_commit": null,
+      "validation": "complete_expected_checks_without_recorded_errors",
+      "recorded_check_count": 10,
+      "base_url": "http://127.0.0.1:35779/luoyang-city/",
+      "note": "Original report has no overall status/source commit; neither is fabricated."
+    },
+    {
+      "path": "homepage-approved-v9-browser/results.json",
+      "reported_status": null,
+      "reported_source_commit": null,
+      "validation": "complete_expected_checks_without_recorded_errors",
+      "recorded_check_count": 3,
+      "base_url": "http://127.0.0.1:41015/luoyang-city/",
+      "note": "Original report has no overall status/source commit; neither is fabricated."
+    },
+    {
+      "path": "prosperity-semantic-tests.txt",
+      "reported_result": "OK",
+      "tests": 215,
+      "source_commit_binding": "same artifact as commit-checked road reports"
+    },
+    {
+      "path": "homepage-approved-v9-tests.txt",
+      "reported_result": "OK",
+      "tests": 6,
+      "source_commit_binding": "same artifact as commit-checked road reports"
+    }
+  ],
+  "semantic_tests": "Retained in this PR artifact.",
+  "files": [
+    {
+      "path": "browser-runtime-digest.json",
+      "bytes": 112,
+      "sha256": "b97115d42a0afe42e713e1a27f776ae513b45e9070861024d7f5cb7066a11aa6"
+    },
+    {
+      "path": "homepage-approved-v9-browser/results.json",
+      "bytes": 353,
+      "sha256": "b783059251c82f3d4fb314933bc5988c0cdd509f71dfe23e13e37e89e478e0e5"
+    },
+    {
+      "path": "homepage-approved-v9-tests.txt",
+      "bytes": 1026,
+      "sha256": "f952c8283cfba8133bf3e100f7c5016990b9727dfb894d8e475a1cafc8980e53"
+    },
+    {
+      "path": "homepage-v1-browser/results.json",
+      "bytes": 1526,
+      "sha256": "91882e08536e3b359e106a585418dab622ff2dc23de1c152b77574fe3022cdaf"
+    },
+    {
+      "path": "prosperity-semantic-tests.txt",
+      "bytes": 37160,
+      "sha256": "4dc9da87c60fa8b4c864ec2c6e51ade151a124bc94bd876f1dfc80908afc2d01"
+    },
+    {
+      "path": "road-atlas-r6-browser/desktop-baima-evidence.png",
+      "bytes": 245848,
+      "sha256": "0712ef9d3db736ddfe464b016412930ca377a62cee1b335dfc8f21275dde69e2"
+    },
+    {
+      "path": "road-atlas-r6-browser/desktop-map.png",
+      "bytes": 273525,
+      "sha256": "417208fe934349133eef4fc046e730f4cff51cdcc14ff30a6252e7a9a1841836"
+    },
+    {
+      "path": "road-atlas-r6-browser/desktop-report.json",
+      "bytes": 1857,
+      "sha256": "8b981a80122e95e0840b94df64ee9395bbd90f148fc4f7d1c9548a2c52a39151"
+    },
+    {
+      "path": "road-atlas-r6-browser/desktop-unknown-endpoint.png",
+      "bytes": 248828,
+      "sha256": "d625bbef302b78957254fbba151aa2fada44b1986623845edc4d412ea69a4577"
+    },
+    {
+      "path": "road-atlas-r6-browser/mobile-baima-evidence.png",
+      "bytes": 243269,
+      "sha256": "76a3401533a3d3fe5153307f38477af73984dfa5c1af2f6e726de5b5d8a02709"
+    },
+    {
+      "path": "road-atlas-r6-browser/mobile-map.png",
+      "bytes": 87409,
+      "sha256": "25b476839a6de5f293069a02c0ac6c2235be0030e9500d114986bd294197da65"
+    },
+    {
+      "path": "road-atlas-r6-browser/mobile-report.json",
+      "bytes": 1856,
+      "sha256": "d57c1fe8ef250bef51d38f29e061eb33eabbfb1e2f3e3931e2a5572716f25f57"
+    },
+    {
+      "path": "road-atlas-r6-browser/mobile-unknown-endpoint.png",
+      "bytes": 248193,
+      "sha256": "0da260162360b99efccb8c173571e23b2cbe56d0e229325ecd8a6dd3470733a0"
+    }
+  ],
+  "checksum_file": "SHA256SUMS",
+  "checksum_scope": "All retained source files plus evidence-metadata.json; checksum file excludes itself."
+}
