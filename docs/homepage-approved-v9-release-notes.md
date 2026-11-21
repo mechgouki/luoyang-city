@@ -38,4 +38,8 @@
 
 ## 2026-11-21 后续首页版本
 
-首页和 `v3.0-dual.html#home` 现采用用户确认的神龟二年（519）秋高视角全景 `panorama-approved-v10`。两档网页图片沿用同一画幅，展示洛水永桥、宣阳门、永宁寺和宫城。城南里程经过透视压缩。新图的来源校验值、尺寸和批准日期见 [V10 发布记录](https://mechgouki.github.io/luoyang-city/homepage/approval-v10.json)。本页上文记录 11 月 17 日批准的 V9。
+当天首先在首页和 `v3.0-dual.html#home` 发布了对照表中 09 号的神龟二年（519）秋高视角全景 `panorama-approved-v10`。两档网页图片沿用同一画幅，展示洛水永桥、宣阳门、永宁寺和宫城。城南里程经过透视压缩。新图的来源校验值、尺寸和批准日期见 [V10 发布记录](https://mechgouki.github.io/luoyang-city/homepage/approval-v10.json)。本页上文记录 11 月 17 日批准的 V9。
+
+## 2026-11-21 首页选图更正
+
+用户在九张原图的对照表中指定了 07 号。首页和 `v3.0-dual.html#home` 均改用 07 号的全幅原图，发布版本为 `panorama-approved-v11`。原始 PNG 的 SHA-256 为 `4d45e831b59f2f7550fe7129455f1da823098e8f34cf633223cd584d5b64a5bf`。此前上线的 09 号保留在 V10 记录里。[07 号发布记录](https://mechgouki.github.io/luoyang-city/homepage/approval-v11.json)
