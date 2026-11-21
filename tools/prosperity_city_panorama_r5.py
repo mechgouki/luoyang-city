@@ -5,6 +5,7 @@ from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
 
 from PIL import Image
+from water_location_atlas import build as build_water_atlas
 from city_panorama_sima import compare, plate as sima_plate
 from city_panorama_r5_contract import ATLAS, BASELINE, ENTRY, HOME, KEY, VERSION, before_r5, digest
 from city_panorama_r5_page import BUNDLE, FILES, FOLDER, MANIFEST, PAGE, make_page
@@ -81,8 +82,10 @@ def build(site=ROOT/"_site"):
     release[KEY+"_version"]=VERSION
     release["current_milestone"]="盛时 R5.3 · 司马门内道路"
     dump(site/"release.json",release)
+    water_files=build_water_atlas(site)
+    info["water_locations"]={"version":"1.0","page":water_files[0],"register_count":34,"regional_source_features":10}
     info[KEY]=study
-    for p in [*assets,MANIFEST,BUNDLE,PAGE,HOME,ATLAS,"release.json"]:info["files_sha256"][p]=sha(site/p)
+    for p in [*water_files,*assets,MANIFEST,BUNDLE,PAGE,HOME,ATLAS,"release.json"]:info["files_sha256"][p]=sha(site/p)
     dump(site/"build-info.json",info)
     return study
 
