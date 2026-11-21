@@ -1,0 +1,158 @@
+{
+  "schema": "luoyang-road-source-image-reading-v1",
+  "id": "frame-yongxiang2021",
+  "title": "永巷位置与走向示意图",
+  "source_id": "xinhua-yongxiang2022",
+  "image": {
+    "width": 1023,
+    "height": 652,
+    "sha256": "f8363a43e26358a9e7036260f0864a56c05dea552433696b8d9e10d67ea432db",
+    "source_url": "https://www.xinhuanet.com/culture/20220119/8a372c6ae7d24ff0b5d919b6232d2068/202201198a372c6ae7d24ff0b5d919b6232d2068_217QvIIX1bEK8HZaL2.jpg.jpg",
+    "credit": "中国社会科学院考古研究所洛阳汉魏城队供图，新华社刊载",
+    "caption": "永巷位置与走向示意图（上为北，资料照片）",
+    "north": "up per published caption",
+    "scale_bar_present": false,
+    "legend_present": false,
+    "visually_inspected": true,
+    "original_filename": "yongxiang-2021-context.jpg",
+    "archive_policy": "原幅见来源发布页；保留原始文件名、哈希与目检信息，不镜像全部来源图。"
+  },
+  "coordinate_system": {
+    "unit": "image_pixel",
+    "origin": "top_left",
+    "x": "right",
+    "y": "down"
+  },
+  "period": {
+    "article_context": "魏晋至北魏宫城布局，北魏沿用",
+    "specific_516_528_layer_verified": false,
+    "naming": "依据位置与文献推测为永巷"
+  },
+  "geometry": {
+    "type": "MultiLineString",
+    "coordinates": [
+      [
+        [
+          66,
+          382
+        ],
+        [
+          194,
+          382
+        ]
+      ],
+      [
+        [
+          200,
+          373
+        ],
+        [
+          204,
+          276
+        ]
+      ],
+      [
+        [
+          209,
+          260
+        ],
+        [
+          317,
+          263
+        ]
+      ],
+      [
+        [
+          485,
+          264
+        ],
+        [
+          607,
+          267
+        ]
+      ],
+      [
+        [
+          735,
+          276
+        ],
+        [
+          835,
+          277
+        ]
+      ],
+      [
+        [
+          872,
+          283
+        ],
+        [
+          869,
+          362
+        ]
+      ]
+    ],
+    "geometry_role": "source_direction_arrow_stems",
+    "reading_method": "目检原图，摘读6段黄色箭杆的首末点；不是路缘、田野中心线或坐标测量。",
+    "arrowheads": "原图均在各段末端；仅表示图示走向，不解释为通行方向。",
+    "gaps": "黄色箭头之间留白按原图保留，不补成连续路迹。"
+  },
+  "context_symbols": [
+    {
+      "label": "千秋门示意框",
+      "kind": "source_annotation_not_gate_measurement",
+      "approx_center_px": [
+        157,
+        379
+      ]
+    },
+    {
+      "label": "显阳殿遗址示意范围",
+      "kind": "source_annotation_not_excavation_boundary",
+      "approx_box_px": [
+        422,
+        483,
+        595,
+        596
+      ]
+    },
+    {
+      "label": "司马门内道路题注",
+      "kind": "source_annotation",
+      "approx_label_px": [
+        926,
+        313
+      ]
+    }
+  ],
+  "reported_metrics": [
+    {
+      "label": "显阳殿宫院北侧已发现道路南北宽约",
+      "value": 6,
+      "unit": "m",
+      "source_id": "xinhua-yongxiang2022",
+      "source_kind": "excavator_interview",
+      "scope": "局部道路报道宽度，不由本图像素量出，不扩及整条永巷"
+    },
+    {
+      "label": "2022东端折角局部宽度变化",
+      "values": [
+        6.5,
+        11
+      ],
+      "unit": "m",
+      "source_id": "shen-review2022",
+      "scope": "不以像素测得；不替代2021北侧局部约6m；不标到六根箭头各段"
+    }
+  ],
+  "use_limits": [
+    "仅可在独立原图框标示来源绘出的路线转折；图面箭头不等于连续发掘证明。",
+    "不据图生成地理坐标、地面尺度或与06a/钱图的配准。",
+    "照片中两段发掘区之间的箭头跨过未揭露田地；保持原图的解释性表达。",
+    "红框与红线是来源标注，未附各线颜色含义图例，不据此重绘实测路缘。",
+    "原图右侧虽标司马门内道路，不由箭头端点推出已核交会测点。",
+    "2022文章描述的东折处门址不由这幅2021示意图确定像素门位。"
+  ],
+  "geographic_transform": null,
+  "new_ground_coordinates": 0
+}

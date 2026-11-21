@@ -907,6 +907,8 @@ try:
  report['prosperity_city_panorama_r5']=verify_panorama(info,get)
  from verify_road_atlas_r6 import verify as verify_roads
  report['road_locations']=verify_roads(info,get)
+ from verify_all_road_atlas_r62 import verify as verify_all_roads
+ report['all_road_locations']=verify_all_roads(info,get)
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors
