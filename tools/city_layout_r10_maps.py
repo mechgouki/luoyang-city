@@ -263,7 +263,7 @@ def _positions(ids, relations, bounds, kind="spatial"):
     # This is an unscaled compass arrangement; same-side members remain unordered.
     if len(ids) == 9 and len(relations) == 8 and all(r["type"] in DIRECTIONS for r in relations):
         references = {r["to"] for r in relations}
-        groups = {typ: [r["from"] for r in relations if r["type"] == typ] for typ in DIRECTIONS}
+        groups = {typ: [r["from"] for r in relations if r["type"] == typ] for typ in sorted(DIRECTIONS)}
         if len(references) == 1 and all(len(group) == 2 for group in groups.values()):
             center = next(iter(references))
             slots = {"north_of": ((.37, .16), (.63, .16)), "south_of": ((.37, .84), (.63, .84)),
