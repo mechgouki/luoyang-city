@@ -19,6 +19,8 @@ CURRENT_MILESTONE = '盛时 R9.1 · 城市空间总图与V13二修候选联读'
 
 
 def strip_current_entries(content):
+    from city_layout_r10_contract import strip_current_entries as strip_r10_entries
+    content = strip_r10_entries(content)
     markers = (b'id="r9-spatial-entry"', b'id="r9-panorama-entry"')
     if not any(marker in content for marker in markers):
         return content

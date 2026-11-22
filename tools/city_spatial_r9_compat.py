@@ -16,6 +16,8 @@ def digest(raw):
 
 
 def restore_r8_context(info, reader):
+    from city_layout_r10_contract import restore_r9_context
+    info, reader = restore_r9_context(info, reader)
     if "city_spatial_r9" not in info:
         return info, reader
     restored = copy.deepcopy(info)

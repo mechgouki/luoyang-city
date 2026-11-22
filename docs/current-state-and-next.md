@@ -1,14 +1,16 @@
 # 洛阳城复原：当前状态与续接顺序
 
 <!-- current-state:start -->
-当前状态（2026-11-22）：研究 **R9.1 / city-spatial-r9 + panorama-review-v13-r2**（四节点城市空间总图、20项判断对照与V13南门二修候选）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-22）：研究 **R10.1 / city-layout-r10**（全城总平面与十一片区布局系统深化）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-spatial.html) · [上一已验收发布 `fc62dd0`](https://github.com/mechgouki/luoyang-city/actions/runs/44991627755) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/6b87a799fc0d94cb0b19cf127836f9e3e9f7cd1a/evidence/panorama-v13/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html) · [上一已验收发布 `1a988bc`](https://github.com/mechgouki/luoyang-city/actions/runs/44998481483) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/32621e28d2c917338b29996c3248e509ea5bcea8/evidence/city-spatial-r9/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](../research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->
 
-本批城市空间总图、20项判断对照见[R9.1交付说明](city-spatial-r9.md)；南门三重的成图修正与V13二修审看见[候选图说明](panorama-v13-r2.md)。本轮复用既有可靠关系改善图面，原件续查没有新增古代坐标、古岸或定位等级；最终发布验收以交接#52为准。
+本批完成范围为全城总平面与十一片区布局系统深化，见[R10.1研究与交付说明](city-layout-r10-research.md)及[城市布局图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html)。原有339个对象、84条道路证据与34项水系索引全部保留；本轮新增总平面、十一片区关系图、逐项判断与16页图册。图面深化不新增古代坐标、古岸或定位等级，最终发布验收以交接#52为准。
+
+此前四节点城市空间总图、20项判断对照见[R9.1交付说明](city-spatial-r9.md)；永宁寺南门三重的成图修正与V13二修审看见[候选图说明](panorama-v13-r2.md)。R10不把永宁寺南门修正误作内城宣阳门定位，也不改写V13候选或首页V12图像。
 
 此前四处关键节点、28条联读来源记录与V12依据导览见[R7.1研究与交付说明](city-nodes-r7.md)。R6.2的84条道路证据及339实体覆盖仍见[完整道路说明](roads-r62-research.md)。下文保留历批接续原文；旧文中的首页待选、V9、07号／V11及早期P批次进度只表示当时状态。
 
