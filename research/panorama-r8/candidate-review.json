@@ -1,0 +1,230 @@
+{
+  "schema": "luoyang-panorama-candidate-review-v1",
+  "reviewed_at_beijing": "2026-11-22T13:30:39.985215+08:00",
+  "baseline_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+  "candidate_revision": "panorama-candidate-v13",
+  "reviewer_role": "independent_visual_evidence_review",
+  "review_status": "accepted_for_user_review_with_known_limits",
+  "homepage_replacement_approved": false,
+  "historical_gate_reconstruction_completed": false,
+  "entire_scene_historically_validated": false,
+  "selected_candidate": {
+    "candidate_number": 2,
+    "generated_filename": "exec-066b00de-4a58-403e-a244-b938a0eafbe1.png",
+    "sha256": "1808eeb9c2a25a2c22777ae8fba7ae437c983b091de5674b094d10e47cb1c0b1",
+    "bytes": 3162506,
+    "size_px": [
+      1671,
+      941
+    ],
+    "project_source_path": "research/panorama-r8/panorama-v13-source.png"
+  },
+  "selection_reason": "第二张实现九层塔这一明确改进，保留宫寺道路与浮桥的整体关系；后续三重门草案引入寺门与城市南墙混属的新问题，因此回退。接受范围仅为带已知限制的用户审看候选。",
+  "method": "对原生成PNG逐张使用view_image目检；楼层依据成图可见内容计数，不依据提示词。PNG字节、SHA-256与编码尺寸另从实际文件读取。没有修改源图或从画面导出历史坐标。",
+  "source_refs": [
+    {
+      "id": "TOWER",
+      "file": "research/prosperity-r5/interpretation.json",
+      "pointer": "/art_direction/0",
+      "external_url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/5227/1/AN00181387_1995_2_3.pdf",
+      "locator": "PDF第1页／印本第2页；本轮已整页目检"
+    },
+    {
+      "id": "RELATION",
+      "file": "research/city-nodes-r7/reviews/palace-yongning.json",
+      "pointer": "/findings/2",
+      "finding_id": "PY03"
+    },
+    {
+      "id": "SOUTH_GATE_ZHOU",
+      "file": "research/prosperity-v2/core-relations.json",
+      "pointer": "/evidence/13/quote",
+      "locator": "B12n0077_p0048a13—15"
+    },
+    {
+      "id": "SOUTH_GATE_FAN",
+      "file": "research/prosperity-v2/core-relations.json",
+      "pointer": "/evidence/13/edition_comparison/quote",
+      "locator": "B12n0078_p0343a10—12"
+    },
+    {
+      "id": "BRIDGE",
+      "file": "docs/prosperity-road-functions-p452-notes.md",
+      "section": "R04 宣阳门—永桥—四通市"
+    },
+    {
+      "id": "BANKS",
+      "file": "docs/prosperity-backbone-p469-notes.md",
+      "section": "继续保持未知的内城南墙、宣阳门点、永桥桥头与古岸"
+    },
+    {
+      "id": "MATERIAL",
+      "external_url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/5227/1/AN00181387_1995_2_3.pdf",
+      "locator": "PDF第1页／印本第2页，永宁寺西墙版筑、白土表面与局部赤彩痕"
+    },
+    {
+      "id": "V12_FRAME",
+      "file": "docs/homepage-full-frame-v12-release-notes.md",
+      "section": "图像身份与显示"
+    }
+  ],
+  "checks": [
+    {
+      "id": "CR01",
+      "label": "九层木塔",
+      "status": "passed_for_this_visual_feature",
+      "observed": "第二张主塔自下而上可辨九组主要木构楼层及对应檐层；顶部金刹与基座台阶未计为楼层。",
+      "principal_storeys_counted": 9,
+      "source_refs": [
+        "TOWER"
+      ],
+      "limit": "层高、总高、收分、屋檐及金刹尺寸仍为展示取值，未恢复米制原高。"
+    },
+    {
+      "id": "CR02",
+      "label": "寺、宫前门与御道的关系",
+      "status": "passed_for_relative_composition",
+      "observed": "在南望北、西在左的画面读法中，永宁寺位于宫前门以南、大道以西。",
+      "source_refs": [
+        "RELATION"
+      ],
+      "limit": "只核相对构图，不把图中连续大道、寺墙闭合轮廓或画面距离升级为实测。"
+    },
+    {
+      "id": "CR03",
+      "label": "舟承木面浮桥",
+      "status": "passed_for_structure_readability",
+      "observed": "前景桥面下可辨承托舟体，仍为浮桥读法，没有改成多孔石拱桥。",
+      "source_refs": [
+        "BRIDGE",
+        "BANKS"
+      ],
+      "limit": "河宽、桥长、舟数、桥头和古岸位置未得到考古测定。"
+    },
+    {
+      "id": "CR04",
+      "label": "全幅取景",
+      "status": "passed_for_full_scene_presentation",
+      "observed": "城市、宫寺、洛水、浮桥和前景均保留在完整横幅，未见为突出单体而裁掉主要场景；无文字压图。",
+      "actual_source_size_px": [
+        1671,
+        941
+      ],
+      "v12_size_px": [
+        1672,
+        941
+      ],
+      "source_refs": [
+        "V12_FRAME"
+      ],
+      "limit": "生成图宽度比V12少1像素；不得声称像素尺寸完全相同或所有未指定区域逐像素不变。网站须按本张实际宽高比显示。"
+    },
+    {
+      "id": "CR05",
+      "label": "局部材质表达",
+      "status": "accepted_as_illustration_with_scope_limit",
+      "observed": "浅色墙面主要集中永宁寺，城市其他墙体仍以土色为主。",
+      "source_refs": [
+        "MATERIAL"
+      ],
+      "limit": "直接重读的白土与赤彩考古证据属于永宁寺西墙局部。画中寺院其他墙面的浅色处理是艺术延伸，不冒称各段均有相同实测涂层。"
+    },
+    {
+      "id": "CR06",
+      "label": "寺南门三重形制",
+      "status": "known_unresolved_visual_limitation",
+      "observed": "第二张寺南门约在画面(540,455)，仍只清楚呈现一组主要屋顶，未落实三重木楼。门楼与寺南墙的从属较后续草案清楚。",
+      "source_refs": [
+        "SOUTH_GATE_ZHOU",
+        "SOUTH_GATE_FAN"
+      ],
+      "required_followup": "后续必须在保持寺南墙门址从属与原底层入口的前提下表现三重楼；不能把门基向南推到城市南墙。",
+      "limit": "三重形制已知，不可把本张的单层简化称为史料支持；通三阁道／通三道两读也不能直接成为三个已发掘地面门孔。"
+    }
+  ],
+  "discarded_candidates": [
+    {
+      "candidate_number": 1,
+      "generated_filename": "exec-503b0b8a-8d3d-4cfd-81c7-1e8d6145b48f.png",
+      "sha256": "fef6595904687e525700d17ad57a10cf256632c4f2a93d98ea6534fd75e68cb8",
+      "bytes": 3582216,
+      "size_px": [
+        1672,
+        941
+      ],
+      "status": "discarded",
+      "inspected_independently": true,
+      "reason": "主要塔檐／木构楼层仅约八组可清楚辨认，未满足九层的可读性要求。",
+      "principal_storeys_read": "about_8",
+      "decision": "改塔后另成第二张；第一张不接受为九层改进结果。"
+    },
+    {
+      "candidate_number": 3,
+      "generated_filename": "exec-a07f7f80-f44e-4032-bc06-787cb41eedb9.png",
+      "sha256": "9488ebfae59d65c9716dce216d20c12cf1c9349526fc437d283141352ec47398",
+      "bytes": 2907368,
+      "size_px": [
+        1670,
+        941
+      ],
+      "status": "discarded",
+      "inspected_independently": true,
+      "reason": "虽然增加三重寺门，但门楼基脚明显向前伸到前景城市南墙线上，像新增一座城市南门，脱离寺院南墙的空间从属。",
+      "decision": "拒绝空间错误；未采用。"
+    },
+    {
+      "candidate_number": 4,
+      "generated_filename": "exec-3184ef97-4279-48fd-bed5-f669fb3e4b7b.png",
+      "sha256": "940975052f5d49592a2e530dc8275e08f48a48ced449da32313f659d78a820d8",
+      "bytes": 2894693,
+      "size_px": [
+        1670,
+        941
+      ],
+      "status": "discarded",
+      "inspected_independently": true,
+      "reason": "三重门楼基脚仍约到y495，近前景城墙顶线；白寺墙在较高位置从其后方横过，门楼底层与寺墙两翼未清楚连接。",
+      "decision": "要求回到原寺南门基脚位置，并恢复门前隔带；未接受。"
+    },
+    {
+      "candidate_number": 5,
+      "generated_filename": "exec-76efbe49-84ed-4b62-9624-2b893bf38230.png",
+      "sha256": "36de8d1d4966776ee6760441d58d497506500d17d3ca23fa5a1282c1dbcf945f",
+      "bytes": 2877789,
+      "size_px": [
+        1670,
+        942
+      ],
+      "status": "discarded",
+      "inspected_independently": true,
+      "reason": "再次调整后门楼底层仍在白寺墙以南隔带，接近城市南墙；未能看出足以纠正空间从属的位置改善。",
+      "decision": "停止累积编辑并回退第二张；不能以楼层数正确抵消门址关系错误。"
+    }
+  ],
+  "known_limits": [
+    "寺院南门三重楼有文献依据，但选中图仍简化，未宣告门楼复原完成。",
+    "寺院西墙局部白土证据不能证明全部寺墙均为相同色彩；其他墙段配色属于艺术延伸。",
+    "普通坊街、仓区地上房群、人员密度、屋面和古地形仍含艺术概化。",
+    "城东桥渠的共同桥头、接合点、古岸与分期仍未解决，不能由画面细节反推测定位置。",
+    "全景为516—528年综合时层，不能据此断言每栋建筑、道路和水流逐年同时存在。"
+  ],
+  "metadata_correction": {
+    "superseded_scratch_record": "/tmp/luoyang-v13-candidate2-review.json",
+    "field": "image.size_px",
+    "previous_assumed_value": [
+      1672,
+      941
+    ],
+    "verified_actual_value": [
+      1671,
+      941
+    ],
+    "reason": "先前临时审查沿用了V12尺寸；最终从所选PNG实际编码读取，九层和相对关系目检结论不变。"
+  },
+  "coordinate_contract": "本文件像素位置和观察框只用于指认画面对象；不是遗址坐标、测绘范围或历史米制距离。",
+  "accepted_new_ancient_coordinates": 0,
+  "accepted_new_bank_geometries": 0,
+  "accepted_new_field_measurements": 0,
+  "publication_contract": "候选图可作为明确标注限制的审看成果；正式首页替换须按用户审看决定另行记录。网站部署与资源验证由相应发布记录证明，本视觉审查不替代生产验收。",
+  "source_png_sha256": "1808eeb9c2a25a2c22777ae8fba7ae437c983b091de5674b094d10e47cb1c0b1"
+}

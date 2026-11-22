@@ -1,9 +1,9 @@
 # 洛阳城复原：当前状态与续接顺序
 
 <!-- current-state:start -->
-当前状态（2026-11-22）：研究 **R7.1 / city-nodes-r7.1**（四处城市节点、联读总览与V12首页依据导览）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-22）：研究 **R8.1 / panorama-review-v13**（依据R7四节点与建筑材料修订全景，V13候选审看与原件续查）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html) · [上一已验收发布 `d334747`](https://github.com/mechgouki/luoyang-city/actions/runs/44904341782) · [长期验收证据](https://github.com/mechgouki/luoyang-city/tree/9125f4ca282aba99387fe40a54822b9dd7ecd272/evidence/homepage-v12/2026-11-21) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13.html) · [上一已验收发布 `557c468`](https://github.com/mechgouki/luoyang-city/actions/runs/44984166317) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/637dd943fee13a30ca754cdd3d97c85bb8adc8b9/evidence/city-nodes-r7/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](../research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->

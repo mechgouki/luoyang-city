@@ -1,0 +1,113 @@
+V13 actual generation record
+Selected deliverable: pass 02. Passes 01, 03, 04 and 05 were rejected.
+All edits used built-in image_gen. No source painting was manually retouched. WebP conversion only resizes/encodes the selected full frame.
+The selected image has nine tower stories but retains the known simplified south-gate depiction. It is a user-review candidate, not an approved homepage replacement.
+
+
+PASS 01 — rejected
+Output: exec-503b0b8a-8d3d-4cfd-81c7-1e8d6145b48f.png
+SHA-256: fef6595904687e525700d17ad57a10cf256632c4f2a93d98ea6534fd75e68cb8
+Review: Main tower shows approximately eight readable stories rather than nine.
+
+Use case: historical-scene / precise-object-edit
+Asset type: revised panoramic homepage artwork for the Northern Wei Luoyang historical research project, candidate V13.
+Input image 1 is the edit target: the approved V12 full-frame panorama. Edit this same image; preserve its distinctive city, viewing angle, natural wide landscape aspect ratio, full foreground river and complete pontoon bridge, main gate and palace placement, warm restrained daylight, and overall grand city scale. Keep the entire original composition visible. No cropping, zooming, text, labels, watermark, border or inset.
+
+Historical context: an explicitly interpretive composite of prosperous Northern Wei Luoyang, AD 516–528. The viewer looks north from south of the Luo River. Palace is in the rear, Yongning Temple stands SOUTH of the palace front gate and WEST (left in this view) of the broad ceremonial road. These relationships must remain as in the reference.
+
+Priority 1 — correct the Yongning tower:
+The existing prominent temple tower left of the main avenue has too few visible stories. Replace that tower, at the SAME ground location inside the SAME temple enclosure, with a tall, square-plan WOODEN tower having EXACTLY NINE clearly separated, individually countable roofed stories, with a slender finial above the ninth roof. Nine stacked inhabited timber levels, one principal eave/roof tier for each level; the finial is not another story. Make all nine levels legible at this panoramic scale. Use restrained dark grey tile roofs, red-brown timber supports and a coherent progressively tapering silhouette. Modest roof-corner lift rather than extravagant later-imperial curls. It should be a major skyline landmark, taller than the reference's short tower, without turning into an implausible fantasy skyscraper. Keep its base and temple position fixed. Do not add any additional tower in that enclosure.
+
+Priority 2 — express the temple's independently documented building fabric:
+Keep a substantial Buddha hall NORTH/behind the tower within the temple enclosure, separate from the palace. On the temple enclosure only, especially the visible western and southern wall stretches, show pale off-white earthen plaster over substantial rammed-earth walls, restrained localized red-painted architectural surfaces, and dark tiled wall cappings. Archaeological traces support white-earth coating and red pigment on the western wall; do not turn the entire city into uniform white walls or claim a precise complete decorative scheme. Keep the temple as a rich, coherent complex with courtyards and subordinate halls.
+
+Priority 3 — improve functional differences in the palace and city without inventing a measured plan:
+Preserve the palace and principal gate positions and the main large hall. In the palace complex, distinguish the broad main ceremonial hall from narrower covered corridors, smaller subsidiary halls and low service courtyards. To the palace complex's east/right, retain a legible internal circulation lane and modest low service/storage buildings INSIDE the palace perimeter; avoid an array of identical grand palace halls. Do not add a new measured-looking warehouse grid or count underground storage pits as roofs.
+Across the surrounding city, preserve the major street directions while making blocks less mechanically repetitive: diverse small and medium courtyards, some denser residential clusters, lower ordinary roofs, varied gardens and open working spaces, natural differences in roof ageing and building size. Main roads should remain distinguishable from smaller lanes. Do not place a newly named White Horse Temple, fabricate a perfect six-street/nine-intersection grid, or interrupt streets to signify archaeological uncertainty.
+
+Priority 4 — preserve water and bridge cautions:
+Keep the full Luo River foreground and a convincingly boat-supported timber pontoon bridge as already visible in V12, including its two banks. Improve material coherence if needed but do not substitute a stone-arch bridge. Do not relocate either landing, redraw the riverbanks as a supposedly surveyed course, add a chain of three equal bridges, or introduce a new canal along the ceremonial road. The distant eastern water and uncertain connecting routes remain background interpretation, not a new precise geographic claim.
+
+Visual quality:
+Detailed, credible archaeological reconstruction painting with coherent perspective, roofs and structural supports; architecture is the main subject. Retain the reference's prosperous scale and quiet human/horse/cart movement, distributed irregularly along roads, not patterned crowds. Natural grey tiles, earthen walls, red-brown structural timber and subdued vegetation, with realistic weathering. Avoid repetitive AI texture, melted roofs, impossible walls, generic Ming/Qing yellow-glazed palace motifs, exaggerated upturned eaves, modern structures, or fantasy additions.
+The most critical visible improvement is EXACTLY NINE clear roofed timber stories on the single Yongning tower while preserving its correct west-of-road, south-of-palace position.
+
+
+
+PASS 02 — selected_for_user_review_with_known_limits
+Output: exec-066b00de-4a58-403e-a244-b938a0eafbe1.png
+SHA-256: 1808eeb9c2a25a2c22777ae8fba7ae437c983b091de5674b094d10e47cb1c0b1
+Review: Nine stories readable; original temple-wall affiliation retained. South-gate three-storey form remains simplified.
+
+Use case: historical-scene / precise-object-edit.
+This is a strictly localized correction to the supplied V13 candidate panorama. Preserve every part of the current wide image, its entire 1672:941 composition, perspective, river, complete pontoon bridge, gate, palace, buildings, temple walls, colors and daylight.
+
+Edit ONLY the single prominent wooden Yongning pagoda in the left-of-centre temple enclosure, roughly x=0.307 of image width. The current generated tower has only EIGHT legible roofed wooden stories. It must have EXACTLY NINE.
+
+Add ONE additional complete timber story and its own dark tile roof/eave tier within this existing tower, extending the tower upward while keeping its ground footprint and bottom tier fixed. Do not remove or merge any of the eight existing stories. Make the full body read as nine distinct, separated, occupied red-brown wooden levels with NINE principal tier roofs. Each roof must have a clearly visible wall/window band beneath it. There must be nine countable roof tiers from the lowest to the highest; the thin gold finial above is NOT one of the nine. Give the ninth/top roof a distinctly separate timber level rather than using the spire as a substitute. Do not add a double-eaved cap that makes the total ambiguous. Keep the individual eave silhouettes separated visually from the large Buddha hall roof behind.
+
+The tower stays WEST/left of the ceremonial avenue and SOUTH/in front of the palace gate, inside the same temple. Keep the main tower square and wooden, with restrained dark grey tile roofs and red-brown supports, progressively tapering toward the top. Its physical height and roof profile are illustrative, so add no measurements.
+
+Do not change any other building or riverbank. Do not zoom, crop, add text, arrows, inset, border, legend or watermark. Output the same complete landscape panorama with only this one-storey tower correction.
+
+
+
+PASS 03 — rejected
+Output: exec-a07f7f80-f44e-4032-bc06-787cb41eedb9.png
+SHA-256: 9488ebfae59d65c9716dce216d20c12cf1c9349526fc437d283141352ec47398
+Review: Three-storey gate shifted toward the foreground city wall, creating spatial misreading.
+
+Use case: historical-scene / precise-object-edit.
+Make ONE small, precise historical correction to this existing panorama. Preserve the entire landscape composition and all other features.
+
+Target: the SOUTH ENTRANCE of the Yongning TEMPLE enclosure, the small low gate centered approximately at pixel (540,455) in this 1672×941 image, within approximate rectangle x512–569,y437–477. It is in the pale temple wall immediately in front of the tall nine-storey pagoda, on the LEFT side of the main avenue. It is NOT the much larger CITY gate at about (800,500).
+
+The temple south gate currently has one low roof. Replace ONLY this little temple gate with a modest but clearly THREE-STOREY timber gatehouse with three separate roof/eave levels, reflecting the historical description of a three-level southern gate tower. Keep its ground entrance, approximate footprint, wall connections and position. Use dark grey tile roofs, muted reddish-brown timber and pale earthen wall supports, coherent with this temple. Keep one central ground entrance in the illustration; do not invent three proven passageways. The gatehouse should remain small relative to the tall pagoda and the city gate. Its narrow upper tiers must not hide or visually merge the pagoda's nine distinct storeys: keep the tower's left-side eave profile legible. Do not convert other corner pavilions to gates.
+
+Critical invariants:
+- The single Yongning wooden pagoda already has NINE clearly readable roofed storeys. Preserve exactly these NINE and its finial, base, ground location and entire visible eave structure. Do not shorten, replace or alter the tower.
+- Preserve the Buddha hall behind the pagoda and the temple's west-of-avenue, south-of-palace relationship.
+- Preserve the large city south gate at (800,500), all palace buildings, city streets, riverbank and complete boat-supported pontoon bridge.
+- Preserve the full 1672:941 wide frame with both riverbanks; no crop or zoom.
+- No words, annotations, numerals, labels, border or watermark.
+The resulting change should be limited to the temple's small south gate becoming a credible three-level wooden gatehouse.
+
+
+
+PASS 04 — rejected
+Output: exec-3184ef97-4279-48fd-bed5-f669fb3e4b7b.png
+SHA-256: 940975052f5d49592a2e530dc8275e08f48a48ced449da32313f659d78a820d8
+Review: Gate remained detached from the pale temple wall and too close to the city wall.
+
+Precisely edit the supplied panorama (candidate with the CORRECT NINE-STOREY Yongning pagoda). Make a tiny local addition to the existing TEMPLE SOUTH GATE only.
+
+The target is the small gate embedded in the PALE WHITE TEMPLE ENCLOSURE wall just in front of the nine-storey tower, at about (540,455). This white wall is BEHIND a narrow band of ordinary houses/trees and BEHIND the long tan city wall. The small existing gate has a dark grey roof around y450 and its foot stays around y472. Keep this exact original gate's ground-floor portal, supports, foot, and adjoining pale wall UNCHANGED.
+
+Add TWO small, narrow, roofed timber upper storeys ON TOP of that existing gate roof. The original one storey plus two compact additions must read as THREE storeys in total. Put the three principal eave lines at roughly y430, y441 and the existing y453. The whole little gatehouse remains roughly 45–50 pixels wide and under 50 pixels high; its base stays at the original y472. Use muted red-brown wood and dark grey tile. Retain the existing single ground portal; do not add doorways.
+
+CRITICAL SPATIAL RULE: do not extend the gate downward or toward the viewer. Do not change any houses or trees in front of it. Do not attach anything to the foreground TAN CITY WALL running around y500. That long city wall and its main gate at x800 are completely untouched. Do not build a new freestanding gate, a second pagoda, or a giant tower in the foreground. We are adding two SMALL upper levels to the EXISTING little white-wall temple entrance, with its ground location and original lower parts fixed.
+
+Preserve exactly nine clearly countable stories on the large pagoda behind it; its left eave profile remains readable. Preserve everything else: palace, roads, temple walls, all city blocks, riverbanks, complete boat-supported floating bridge, daylight, color and full 1672:941 landscape frame. No text, borders, annotations, inset, crop or zoom.
+
+
+
+PASS 05 — rejected
+Output: exec-76efbe49-84ed-4b62-9624-2b893bf38230.png
+SHA-256: 36de8d1d4966776ee6760441d58d497506500d17d3ca23fa5a1282c1dbcf945f
+Review: Position correction did not reliably reconnect the gate to the temple wall.
+
+Use case: precise-object-edit / historical-scene.
+Two supplied images:
+IMAGE 1 is the edit target: the latest panorama with a nine-storey pagoda and a three-storey small temple gate.
+IMAGE 2 is a POSITION REFERENCE only: its original small one-storey temple gate is correctly embedded in the white temple wall.
+Keep the three-storey gate appearance from IMAGE 1, but restore its ground position from IMAGE 2.
+
+In IMAGE 1 the small three-storey temple gate has accidentally slipped toward the viewer and now stands almost against the TAN CITY WALL. Correct this single spatial error: MOVE THE ENTIRE SMALL THREE-STOREY TEMPLE GATE BACK/NORTH, about 20 image pixels UP, without enlarging it. Its base should be at the position of the original little gate in IMAGE 2, about (540,474), rather than at y495. The top of the relocated gate will therefore be around y414. The pale temple wall must meet the LOWER GROUND-FLOOR sides of the gate. The white wall must not pass behind its upper stories.
+
+Restore the short strip of low houses, small path and vegetation between this temple gate and the tan CITY WALL, using IMAGE 2 as reference. Keep the tan city wall entirely uninterrupted at x540. The separate large CITY gate at about (800,500) is untouched. This is an entrance OF THE TEMPLE, not a new city gate or an isolated gate tower.
+
+Keep exactly THREE clearly separated timber storeys on the small temple gate and NINE clearly separated timber storeys on the prominent pagoda behind it. Keep the pagoda's left eave profile readable. Maintain the existing single ground portal in the temple gate, not three openings.
+
+Preserve the rest of IMAGE 1: the original full wide landscape frame, palace, Buddha hall, all unrelated streets/buildings, both riverbanks and the complete boat-supported floating bridge. No new architectural elements. No crop, zoom, label, number, border, watermark or annotation.
+Only correct the misplaced little temple gate's position and the small background strip vacated by it.
+

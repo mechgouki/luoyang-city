@@ -174,9 +174,18 @@ def exercise(browser, base, device, output, expected_commit=None):
             scroll.focus()
             page.keyboard.press("ArrowRight")
             page.wait_for_function("document.querySelector('#map-overview .map-scroll').scrollLeft > 0")
+            page.keyboard.press("ArrowDown")
+            page.wait_for_function("document.querySelector('#map-overview .map-scroll').scrollTop > 0")
+            report["overview_reset"] = {"before": scroll.evaluate("el => ({left:el.scrollLeft,top:el.scrollTop})")}
             page.locator('[data-map-reset="overview"]').click()
             expect(zoom).to_have_value("100")
             expect(scroll).to_have_js_property("scrollLeft", 0)
+            expect(scroll).to_have_js_property("scrollTop", 0)
+            expect(scroll).to_be_focused()
+            capture(scroll, "overview-reset")
+            expect(scroll).to_have_js_property("scrollLeft", 0)
+            expect(scroll).to_have_js_property("scrollTop", 0)
+            report["overview_reset"]["after"] = scroll.evaluate("el => ({left:el.scrollLeft,top:el.scrollTop})")
             fits(page)
             report["checks"].append("Finding and water anchors reveal their evidence; overview zoom persists, keyboard panning works, and reset restores the whole map")
 

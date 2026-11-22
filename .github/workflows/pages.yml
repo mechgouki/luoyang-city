@@ -123,6 +123,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
           python -m unittest discover -s tests -p 'test_homepage_approved_v9.py' -v 2>&1 | tee artifacts/homepage-approved-v9-tests.txt
           python -m unittest discover -s tests -p 'test_city_nodes_r7.py' -v 2>&1 | tee artifacts/city-nodes-r7-tests.txt
+          python -m unittest discover -s tests -p 'test_panorama_v13.py' -v 2>&1 | tee artifacts/panorama-v13-tests.txt
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
@@ -145,6 +146,7 @@ jobs:
               python tests/browser_road_atlas_r6.py
               python tests/browser_all_road_atlas_r62.py
               python tests/browser_city_nodes_r7.py
+              python tests/browser_panorama_v13.py
               python tests/browser_prosperity_hydro_roads_p46.py
               python tests/browser_backbone_p469.py
               python tests/browser_prosperity_gate_v3.py
@@ -233,7 +235,7 @@ jobs:
         run: |
           docker run --rm --init --ipc=host \
             --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \
-            --workdir /work --env SITE_URL \
+            --workdir /work --env SITE_URL --env GITHUB_SHA \
             mcr.microsoft.com/playwright/python:v1.57.0-noble \
             bash -euo pipefail -c '
               python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0 pypdf==5.9.0
@@ -245,6 +247,7 @@ jobs:
               python tests/browser_road_atlas_r6.py --base-url "$SITE_URL" --output artifacts/live-road-atlas-r6-browser
               python tests/browser_all_road_atlas_r62.py --base-url "$SITE_URL" --output artifacts/live-all-road-atlas-r62-browser
               python tests/browser_city_nodes_r7.py --base-url "$SITE_URL" --output artifacts/live-city-nodes-r7-browser
+              python tests/browser_panorama_v13.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-panorama-v13-browser
               python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
               python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser
               python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser
