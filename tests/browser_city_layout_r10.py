@@ -11,6 +11,7 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import tempfile
+import time
 from urllib.parse import parse_qs, urlsplit
 from zipfile import ZipFile
 
@@ -47,7 +48,8 @@ def expected_rows(data, group, region="all", basis="all", query=""):
 def exercise(browser, base, device, output, expected_commit=None):
     settings = dict(viewport=SIZES[device], is_mobile=device == "mobile", has_touch=device == "mobile",
                     reduced_motion="reduce")
-    report = dict(device=device, viewport=SIZES[device], checks=[], downloads={}, retained_downloads={}, screenshots={}, errors=[], maps={})
+    report = dict(device=device, viewport=SIZES[device], checks=[], downloads={}, retained_downloads={},
+                  download_attempts=[], attempt_path=None, screenshots={}, errors=[], maps={})
     active = None
 
     def watch(page):
@@ -237,11 +239,20 @@ def exercise(browser, base, device, output, expected_commit=None):
             report["checks"].append("Each regional decision, object, road/water row, gap and region anchor overrides conflicting filters and reveals collapsed evidence; map links work by keyboard")
 
             with tempfile.TemporaryDirectory() as temporary:
+                download_start = time.monotonic()
                 for path in meta["download_files"]:
+                    report["attempt_path"] = path
                     link = page.locator('a[data-download="' + path + '"][download]')
                     expect(link).to_have_count(1)
+                    started = time.monotonic()
+                    attempt = dict(path=path, url=link.get_attribute("href"), status="pending",
+                                   started_seconds=round(started - download_start, 3), click_delay_ms=150)
+                    report["download_attempts"].append(attempt)
                     with page.expect_download() as event:
-                        link.click()
+                        # Blink LocalFrame::ShouldThrottleDownload drops request 11
+                        # within one second. Pace genuine clicks without changing
+                        # browser policy, retrying, or replacing downloads with GETs.
+                        link.click(delay=150)
                     downloaded = event.value
                     assert downloaded.failure() is None, (path, downloaded.failure())
                     raw = Path(downloaded.path()).read_bytes()
@@ -255,6 +266,8 @@ def exercise(browser, base, device, output, expected_commit=None):
                     retained.parent.mkdir(parents=True, exist_ok=True)
                     retained.write_bytes(raw)
                     report["retained_downloads"][path] = dict(sha256=checksum, bytes=len(raw), retained_path=str(retained_path))
+                    attempt.update(status="passed", duration_seconds=round(time.monotonic() - started, 3),
+                                   sha256=checksum, bytes=len(raw), suggested_filename=downloaded.suggested_filename)
                     if path.endswith(".pdf"):
                         actual_pdf = PdfReader(io.BytesIO(raw))
                         assert len(actual_pdf.pages) == meta["pdf_pages"]
@@ -266,6 +279,7 @@ def exercise(browser, base, device, output, expected_commit=None):
                                 member = PurePosixPath(name)
                                 assert not member.is_absolute() and ".." not in member.parts and "\\" not in name
                             archive.extractall(temporary)
+                    report["attempt_path"] = None
                 assert len(report["downloads"]) == 21 and set(report["downloads"]) == set(meta["download_files"])
                 with browser.new_context(**settings, offline=True) as disconnected:
                     local = disconnected.new_page()
@@ -311,6 +325,9 @@ def exercise(browser, base, device, output, expected_commit=None):
         except Exception as error:
             target = active if active and not active.is_closed() else page
             report.update(status="failed", url=target.url, error=str(error))
+            if (report["attempt_path"] and report["download_attempts"] and
+                    report["download_attempts"][-1]["path"] == report["attempt_path"]):
+                report["download_attempts"][-1].update(status="failed", error=str(error))
             if not target.is_closed():
                 capture(target, "failure")
             raise
