@@ -1,0 +1,439 @@
+{
+  "schema": "luoyang-panorama-visual-audit-v1",
+  "reviewed_at_beijing": "2026-11-22T13:14:06.954195+08:00",
+  "baseline_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+  "target_period_ce": [
+    516,
+    528
+  ],
+  "image": {
+    "revision": "panorama-approved-v12",
+    "path": "web/assets/luoyang-panorama-approved-v12.webp",
+    "sha256": "d8d5be74d123b5eeaac50ce68955787e26686b92c1a30031f6c3289692fbf4c2",
+    "size_px": [
+      1672,
+      941
+    ],
+    "inspection": "原WebP完整图幅直接view_image目检，未改图、未裁切。"
+  },
+  "scope": "识别可由已有证据修正或保留的画面关系，并区分艺术表现和未定部分；不测量古地理坐标或宣告图像历史真实性得到完整验证。",
+  "region_coordinate_meaning": "仅归一化画面观察区域，用于视觉导航，不是遗址范围或地理坐标。",
+  "source_refs": [
+    {
+      "id": "S01",
+      "title": "北魏洛陽城永寧寺址の調査",
+      "authors": [
+        "玉田芳英",
+        "巽淳"
+      ],
+      "year": 1995,
+      "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/5227/1/AN00181387_1995_2_3.pdf",
+      "locator": "PDF第1页／印本第2页；第2页为印本第3页图版",
+      "access_this_audit": "web工具全文提取并对PDF第1页作整页截图目检",
+      "scope_read": "九层木塔；调查背景；西门及西墙段落；白土、局部赤彩、瓦与鸱尾；未将局部尺寸直接配到R4",
+      "novelty": "项目已列来源，本轮重读并把可用材质细节明确限定到永宁寺局部，不称新发现。"
+    },
+    {
+      "id": "S02",
+      "title": "洛阳伽蓝记·永宁寺九层木塔既有核读",
+      "url": "https://deerpark.app/cbeta/B0078/1",
+      "locator": "既有项目记录B12n0078_p0341a11—15",
+      "access_this_audit": "依据已存P4.5.1与R5记录；本轮周本网页仅返回前部，find未定位九层正文，不冒充重新取得全部原文。"
+    },
+    {
+      "id": "S03",
+      "title": "R7宫前节点复核",
+      "project_file": "research/city-nodes-r7/reviews/palace-yongning.json",
+      "access_this_audit": "完整读取既有结构化核验与说明文档"
+    },
+    {
+      "id": "S04",
+      "title": "R7司马门与仓区复核",
+      "project_file": "research/city-nodes-r7/reviews/sima.json",
+      "access_this_audit": "完整读取既有结构化核验与说明文档"
+    },
+    {
+      "id": "S05",
+      "title": "R7白马寺坊街复核",
+      "project_file": "research/city-nodes-r7/reviews/baima.json",
+      "access_this_audit": "完整读取既有结构化核验与说明文档"
+    },
+    {
+      "id": "S06",
+      "title": "永桥道路功能、水系与骨架既有核读",
+      "project_files": [
+        "docs/prosperity-road-functions-p452-notes.md",
+        "docs/prosperity-water-p467-notes.md",
+        "docs/prosperity-backbone-p469-notes.md"
+      ],
+      "access_this_audit": "读取项目已有结论与原件边界，未新取古岸或桥头图"
+    },
+    {
+      "id": "S07",
+      "title": "R7建春门三桥与水道复核",
+      "project_file": "research/city-nodes-r7/reviews/jianchun.json",
+      "access_this_audit": "完整读取既有结构化核验与说明文档"
+    },
+    {
+      "id": "S08",
+      "title": "V12全幅图批准与显示记录",
+      "project_file": "docs/homepage-full-frame-v12-release-notes.md",
+      "access_this_audit": "读取批准记录并目检批准WebP原幅"
+    }
+  ],
+  "records": [
+    {
+      "id": "VA01",
+      "priority": 1,
+      "category": "supported_correction",
+      "subject": "永宁寺九层木塔",
+      "observed_in_v12": "寺内主塔的主要外檐约五道清楚可见，不能在现幅可靠读成九层；塔身并非九层的清楚图示。",
+      "observation_region_normalized": [
+        0.28,
+        0.28,
+        0.34,
+        0.44
+      ],
+      "evidence": "《洛阳伽蓝记》的九层、木构叙述已进入P4.5.1与R5；本轮又实际核读奈良文研1995联合调查报告印本2页的九层木塔说明。",
+      "source_refs": [
+        "S01",
+        "S02"
+      ],
+      "project_refs": [
+        {
+          "file": "research/prosperity-r5/interpretation.json",
+          "pointer": "/art_direction/0",
+          "finding_ids": []
+        },
+        {
+          "file": "docs/prosperity-building-dimensions.md",
+          "pointer": null,
+          "finding_ids": [
+            "M05"
+          ]
+        }
+      ],
+      "edit_action": "在原寺院范围内画成九层可数的木构塔，保持寺在宫前门南、御道西；每层檐线清楚，但各层收分、层高和刹高仍为表现取值。",
+      "must_not_infer": [
+        "不把九十丈或一千尺直接换成确定米制原高。",
+        "不把九层推成九段等高实测楼层。",
+        "不以塔心自动定义整座寺院的几何中心。"
+      ],
+      "acceptance": "全幅和细部都能辨认九个主要楼层／檐层；无额外第十层被误读为主层。"
+    },
+    {
+      "id": "VA02",
+      "priority": 1,
+      "category": "supported_relation_to_preserve",
+      "subject": "宫前门、御道、永宁寺与官署",
+      "observed_in_v12": "主寺位于前景宫门以南、中央大道左侧；在南望北、西在左的读法中，基本方向正确。画面将前后道路组织为一条连续视觉轴线。",
+      "evidence": "R7 PY03分别确认寺在宫前阊阖门南一里、御道西；PY02只接受铜驼遗迹残段与文献御道的候选对应；PY04、PY05不支持对称复制官署。",
+      "source_refs": [
+        "S03"
+      ],
+      "project_refs": [
+        {
+          "file": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/findings/2",
+          "finding_ids": [
+            "PY03"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/findings/1",
+          "finding_ids": [
+            "PY02"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/findings/3",
+          "finding_ids": [
+            "PY04"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/findings/4",
+          "finding_ids": [
+            "PY05"
+          ]
+        }
+      ],
+      "edit_action": "保持已成立的南／西关系；两侧建筑群不镜像同规模，不把寺移到宫城内部或御道中央。保留可读大道，但在说明中明确其全程连续线属于展示组织。",
+      "must_not_infer": [
+        "不能因缺实测而画出古代道路实际不存在的断口。",
+        "不能把古里数换成画面可量的现代距离。",
+        "不能从画面像素证明道路已测定直达宣阳门与永桥。"
+      ],
+      "acceptance": "寺、宫前门、路的关系可一眼辨认；画面说明区分文献关系和整幅透视组织。"
+    },
+    {
+      "id": "VA03",
+      "priority": 2,
+      "category": "supported_functional_relation",
+      "subject": "宫院东侧道路与仓储功能区",
+      "observed_in_v12": "宫殿群东侧呈连片规则屋顶与街巷，不能仅由外观辨认宫院墙、宫城墙与仓储范围；画中没有可验证的逐座仓窖身份。",
+      "evidence": "R7 SI01、SI02、SI03明确宫院东墙—司马门内路—宫内仓区西墙及三种不同道路对象；SI04—SI08要求宫内／宫外及不同计数范围分列。",
+      "source_refs": [
+        "S04"
+      ],
+      "project_refs": [
+        {
+          "file": "research/city-nodes-r7/reviews/sima.json",
+          "pointer": "/findings/0",
+          "finding_ids": [
+            "SI01"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/sima.json",
+          "pointer": "/findings/1",
+          "finding_ids": [
+            "SI02"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/sima.json",
+          "pointer": "/findings/2",
+          "finding_ids": [
+            "SI03"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/sima.json",
+          "pointer": "/findings/4",
+          "finding_ids": [
+            "SI05"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/sima.json",
+          "pointer": "/findings/6",
+          "finding_ids": [
+            "SI07"
+          ]
+        }
+      ],
+      "edit_action": "若在画中展开宫东功能，保持大道位于宫院东墙之外而仍在宫城之内；低矮概化建筑、开敞工作地与院界共同表达功能差异，避免一整片相同大殿。",
+      "must_not_infer": [
+        "不能用40米、4.7米和13米相加或套给整条轴路。",
+        "不能按168口、约240口、13口或3排生成同数量地面屋顶。",
+        "不能声称新增房屋轮廓为已发掘仓房；这些屋顶及地表工作区是表现选择。",
+        "不能把宫内仓区与宫外太仓合成同一片同期建筑区。"
+      ],
+      "acceptance": "宫院墙与外层宫城边界不混称；画面采用功能疏密差异，文案不赋予逐栋遗址身份。"
+    },
+    {
+      "id": "VA04",
+      "priority": 2,
+      "category": "illustrative_texture_with_evidence_limits",
+      "subject": "坊街与普通院落",
+      "observed_in_v12": "远近有大量反复出现的同色小屋顶，主次街虽可读，密度与院落形式在大范围较均匀；这属于视觉概化，不能据此识别特定坊。",
+      "evidence": "R7 BA01—BA07给出局部坊门、纵横街和量值对象，同时保留全城配准、门至中央十字、九交点揭露范围和同期性缺口。R5明确普通院落与车马密度为展示取值。",
+      "source_refs": [
+        "S05"
+      ],
+      "project_refs": [
+        {
+          "file": "research/city-nodes-r7/reviews/baima.json",
+          "pointer": "/findings/0",
+          "finding_ids": [
+            "BA01"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/baima.json",
+          "pointer": "/findings/2",
+          "finding_ids": [
+            "BA03"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/baima.json",
+          "pointer": "/findings/3",
+          "finding_ids": [
+            "BA04"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/baima.json",
+          "pointer": "/findings/6",
+          "finding_ids": [
+            "BA07"
+          ]
+        },
+        {
+          "file": "research/prosperity-r5/interpretation.json",
+          "pointer": "/art_direction/2",
+          "finding_ids": []
+        }
+      ],
+      "edit_action": "用大小不一的低层院落、院内空地和道路等级改善城市读法；繁忙主路和较安静内部街巷可有密度差异。不要在未配准地段标出所谓白马寺精确坊界。",
+      "must_not_infer": [
+        "减少重复是美术改良，并非新发现的住宅平面。",
+        "三纵三横不能画成九个全经发掘的交点。",
+        "不能将22米街宽、7.5米缺口和4.6米车辙带互换或外推全城。"
+      ],
+      "acceptance": "住宅体量、院落间隙和人流疏密有可见变化；页面把普通街坊整体列为艺术概化。"
+    },
+    {
+      "id": "VA05",
+      "priority": 1,
+      "category": "supported_structure_to_preserve",
+      "subject": "永桥浮桥及洛水两岸",
+      "observed_in_v12": "前景桥面下可辨多只承托舟体，已经采用浮桥读法；两端接岸和桥北接路则被画成连续完整场景。",
+      "evidence": "既有R4／P4.5.2道路功能核读保存宣阳门外四里、洛水上永桥浮桥的文献关系；P4.6.7与P4.6.9保留古岸与桥头未定。",
+      "source_refs": [
+        "S06"
+      ],
+      "project_refs": [
+        {
+          "file": "docs/prosperity-road-functions-p452-notes.md",
+          "pointer": null,
+          "finding_ids": [
+            "R04"
+          ]
+        },
+        {
+          "file": "docs/prosperity-water-p467-notes.md",
+          "pointer": null,
+          "finding_ids": []
+        },
+        {
+          "file": "docs/prosperity-backbone-p469-notes.md",
+          "pointer": null,
+          "finding_ids": []
+        }
+      ],
+      "edit_action": "保持舟承木面浮桥的清楚结构，避免改成多孔石拱桥或固定高台石桥；岸边与桥头作为自然景观和交通连接示意，不增加可误作测定节点的标记。",
+      "must_not_infer": [
+        "古岸轮廓、河宽、桥长和舟数仍未确定。",
+        "不能从画面桥头位置反推永桥考古坐标。",
+        "不能把前景永桥与城东三座石桥混为一体。"
+      ],
+      "acceptance": "舟体和木桥面可辨，图注明确桥头与古岸为展示安排。"
+    },
+    {
+      "id": "VA06",
+      "priority": 1,
+      "category": "unresolved_water_topology",
+      "subject": "城东桥渠及右侧画面水系",
+      "observed_in_v12": "右侧水道在城市东缘呈连续可追踪弯曲线，并在近景形成明确接河关系；画中无证据可以给其每个支口、桥头指定历史身份。",
+      "evidence": "R7 JC01、JC03区分三桥及东石桥南北通行；JC05、JC06保存路北渠迹与路南解释、七里涧两种读法；JC07、JC08明确缺共同控制。",
+      "source_refs": [
+        "S07"
+      ],
+      "project_refs": [
+        {
+          "file": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/findings/0",
+          "finding_ids": [
+            "JC01"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/findings/2",
+          "finding_ids": [
+            "JC03"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/findings/4",
+          "finding_ids": [
+            "JC05"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/findings/5",
+          "finding_ids": [
+            "JC06"
+          ]
+        },
+        {
+          "file": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/findings/7",
+          "finding_ids": [
+            "JC08"
+          ]
+        }
+      ],
+      "edit_action": "不新增三桥沿同一东西直线串排的场景，不细化鸿池出口或七里涧与主渠的确定接合。水道在全景中保持概化，重点视觉信息留给已知宫寺道路关系；未决水网放在附属对照说明中。",
+      "must_not_infer": [
+        "减少视觉强调不等于考古证实了另一条河道。",
+        "不能把路北、路南两种时层／解释画成同一时期两条已测平行河岸。",
+        "527年颓桥事件只能归第一石桥；盛时综合图不能让三桥一齐损毁。"
+      ],
+      "acceptance": "没有新增确定桥头或命名渠口；水系形状的展示性质在说明中可回查。"
+    },
+    {
+      "id": "VA07",
+      "priority": 2,
+      "category": "localized_material_evidence",
+      "subject": "永宁寺墙体材质与北魏建筑表面",
+      "observed_in_v12": "寺墙和城墙大体都为同一暖土色，局部建筑呈鲜红木色；用色本身不能作为年代鉴定。",
+      "evidence": "实际目检的1995联合调查报告印本2页说明永宁寺西墙为版筑，表面白土，局部赤彩痕；同处有瓦与鸱尾等建筑材料。这是局部遗存证据。",
+      "source_refs": [
+        "S01"
+      ],
+      "project_refs": [
+        {
+          "file": "research/prosperity-r5/interpretation.json",
+          "pointer": "/art_direction/1",
+          "finding_ids": []
+        }
+      ],
+      "edit_action": "寺院局部墙面可表现浅白土抹面、露土与少量红色差异；以木、土、瓦的自然表面降低统一塑料质感。所有具体屋顶收分、斗栱和配色仍作为艺术选择。",
+      "must_not_infer": [
+        "不能将西墙局部证据泛化为全城统一白墙红柱。",
+        "不能由出土鸱尾直接恢复每栋建筑的完整屋顶。",
+        "不能仅凭AI画面“像明清”便声称某种替换屋面已经考古证实。"
+      ],
+      "acceptance": "材料差异可见且避免全城复制；来源说明点明局部适用范围。"
+    },
+    {
+      "id": "VA08",
+      "priority": 3,
+      "category": "display_invariants",
+      "subject": "全幅、视角和历史定位边界",
+      "observed_in_v12": "批准图以完整横幅展现洛水、宫寺、城市与远山，页面自然比例展示；天空、光照、山体与全城密度属于视觉组织。",
+      "evidence": "V12批准记录及R5解释文件明确全幅显示，既有地理体系区分现代地表、来源图与古代时层。",
+      "source_refs": [
+        "S08"
+      ],
+      "project_refs": [
+        {
+          "file": "docs/homepage-full-frame-v12-release-notes.md",
+          "pointer": null,
+          "finding_ids": []
+        },
+        {
+          "file": "research/prosperity-r5/interpretation.json",
+          "pointer": "/art_direction/3",
+          "finding_ids": []
+        }
+      ],
+      "edit_action": "保留宽幅完整城市视野、南望北的读法和无文字压图；不以裁切或超大近景官署挤掉城市空间。继续把古地面高程、远山轮廓和透视压缩列为展示取值。",
+      "must_not_infer": [
+        "新版更自然不等于新增古地形测量。",
+        "图内像素热点只能导航，不能导出地理坐标。"
+      ],
+      "acceptance": "新版可与V12按完整图幅对照，原图未被覆盖，所有历史定位等级保持原样。"
+    }
+  ],
+  "highest_value_actions": [
+    "九层木塔可数",
+    "保留寺在宫门南、御道西",
+    "宫院／宫城与宫内仓区关系不混",
+    "浮桥结构保留、桥头古岸不升格",
+    "不新增城东三桥直线串联或确定渠口"
+  ],
+  "new_ancient_coordinates": 0,
+  "new_bank_geometries": 0,
+  "new_field_measurements": 0,
+  "review_status": "V12审查已完成；V13成图尚待另行逐项目检，不能凭提示词声称成图已满足。"
+}

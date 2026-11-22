@@ -911,6 +911,8 @@ try:
  report['all_road_locations']=verify_all_roads(info,get)
  from city_nodes_r7_verify import verify as verify_city_nodes
  report['city_nodes_r7']=verify_city_nodes(info,get)
+ from panorama_v13_verify import verify as verify_candidate_panorama
+ report['panorama_review_v13']=verify_candidate_panorama(info,get)
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors

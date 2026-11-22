@@ -73,6 +73,10 @@ SITE = [
         ('node', '--check', 'research/city-nodes-r7/atlas.js'),
         ('python', 'tools/city_nodes_r7.py'),
     ]),
+    ('R8.1 evidence-led panorama candidate review', [
+        ('node', '--check', 'web/panorama-v13.js'),
+        ('python', 'tools/panorama_v13.py'),
+    ]),
 ]
 
 
