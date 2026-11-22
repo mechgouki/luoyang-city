@@ -1,0 +1,177 @@
+{
+  "schema": "luoyang-panorama-r8-source-audit-v1",
+  "checked_at_beijing": "2026-11-22T13:14:42.963019+08:00",
+  "baseline_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+  "scope": "优先续查1993外郭道路水道原刊与完整附图、2011东阳渠/鸿池陂原页；为V13候选图划定可改与待证范围。",
+  "summary": "本轮核到1993报告的国家哲学社会科学文献中心期次条目及真实阅读入口；阅读入口跳转登录页，原刊7印页和完整附图仍未取得。2011简报新增2024重印本的可核馆藏路径，尚未取得重印正文。没有新实测道路、桥头或古岸。",
+  "newly_obtained_historical_source_pages": 0,
+  "newly_obtained_complete_original_plans": 0,
+  "new_ancient_coordinates": 0,
+  "new_ancient_shoreline_geometries": 0,
+  "target_1993": {
+    "title": "北魏洛阳外廓城和水道的勘查",
+    "corporate_author": "中国社会科学院考古研究所洛阳汉魏城工作队",
+    "catalogue_personal_authors": [
+      "杜玉生",
+      "肖淮雁",
+      "钱国祥"
+    ],
+    "journal": "考古",
+    "year": 1993,
+    "issue": 7,
+    "pages": "602—608",
+    "catalogue_id": "1002554709",
+    "cnki_filename": "KAGU199307004",
+    "required_figure": "完整《汉魏洛阳城遗址及地形图》，含图例、图尺、边缘注记和实测/推定线型",
+    "original_printed_pages_read": [],
+    "complete_original_figure_read": false,
+    "figure_number_verified_in_original": false,
+    "new_verified_access_route": {
+      "catalogue_url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993",
+      "catalogue_result": "本轮普通GET为200，实际HTML列出题名、三位个人作者和602—608页；不再沿用前批403作为当前状态。",
+      "catalogue_checked_bytes": 299251,
+      "catalogue_sha256": "9106a087930bf75f5ca56f042c06bc0d64af120c107c723d53344b23cb8b0346",
+      "observed_reader_url": "https://ncpssd.org/Literature/readurl?id=1002554709",
+      "reader_url_provenance": "由目标篇条目实际提供的ViewHandleCount/AddHandleCount阅读参数逐字取出，未猜测文献ID或改写授权参数。",
+      "reader_result": "普通GET重定向至https://ncpssd.org/login；200响应体为登录页，未得到PDF或页图。",
+      "reader_http": {
+        "url": "https://ncpssd.org/Literature/readurl?id=1002554709",
+        "http_status": 200,
+        "final_url": "https://ncpssd.org/login",
+        "bytes": 60019,
+        "sha256": "abe587bd0af8d293483b556bd3fb5c1495634cd7832decdd39e9fd7fccb892ed",
+        "content_type": "text/html;charset=UTF-8"
+      },
+      "authentication_used": false,
+      "access_control_bypassed": false,
+      "practical_next_step": "经合法的已授权阅读环境获取这篇的602—608页与不裁边完整附图，再核图例及各路最后实测点。"
+    },
+    "other_access_attempts": [
+      {
+        "url": "https://www.cqvip.com/doc/journal/1002554709",
+        "http_status": 200,
+        "final_url": "https://www.cqvip.com/?serve=http://www.cqvip.com/doc/journal/1002554709&appCode=101",
+        "bytes": 141725,
+        "sha256": "40328b5dcdf29003bca9e4353f5fbae7bc61a13fb8fd08f76ff21c3530c987c3",
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.cqvip.com/journal/94762X/1000076712",
+        "http_status": 200,
+        "final_url": "https://www.cqvip.com/journal/94762X/1000076712",
+        "bytes": 142910,
+        "sha256": "4779f85e56ba2f8cd956611a60ca853ddaa02bd19b22740b211ed30c96c7b1bb",
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993",
+        "http_status": 200,
+        "final_url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993",
+        "bytes": 299251,
+        "sha256": "9106a087930bf75f5ca56f042c06bc0d64af120c107c723d53344b23cb8b0346",
+        "content_type": "text/html;charset=UTF-8"
+      },
+      {
+        "url": "https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&dbname=CJFD9093&filename=KAGU199307004",
+        "error": "HTTP Error 503: Service Unavailable"
+      }
+    ],
+    "attempt_interpretations": [
+      "维普文献详情的HTTP200最终跳转至首页服务包装地址，不能记作已读目标篇正文。",
+      "维普期次页HTTP200只作目录访问记录，不据此称完整原刊取得。",
+      "CNKI普通HTTPS入口本轮503，未反复改参数或绕过访问要求。"
+    ],
+    "previous_audit": "research/roads-r6/source-1993-audit.json"
+  },
+  "target_2011": {
+    "title": "汉魏洛阳城东阳渠、鸿池陂考古勘察简报",
+    "author": "偃师市文物管理局",
+    "journal": "华夏考古",
+    "year": 2011,
+    "issue": 1,
+    "required_original_pages": "20—25，优先22—23页及其图版；页码沿用R7核定题录与黄学超正式参考文献，不冒称本轮看到原印页。",
+    "original_printed_pages_read": [],
+    "new_reprint_lead": {
+      "title": "汉魏洛阳城考古发现和研究",
+      "editor": "洛阳汉魏隋唐都城遗址保护中心",
+      "publisher": "中州古籍出版社",
+      "publication_date": "2024-06",
+      "isbn": "9787573814067",
+      "physical_description": "16, 5, 738页，另有1张不编号图版；来自CiNii题录，不能判定这张图版即目标水道图。",
+      "known_holdings": [
+        {
+          "institution": "北京大学考古文博学院",
+          "locator": "上架书目第48期第84项，索书号K872.615/0170",
+          "url": "https://archaeology.pku.edu.cn/info/1032/40605.htm"
+        },
+        {
+          "institution": "关西大学图书馆",
+          "locator": "CiNii NCID BD12756950，馆藏号212633716",
+          "url": "https://ci.nii.ac.jp/ncid/BD12756950"
+        },
+        {
+          "institution": "国际日本文化研究中心",
+          "locator": "CiNii NCID BD12756950，GE||372||Ra 00634222",
+          "url": "https://ci.nii.ac.jp/ncid/BD12756950"
+        }
+      ],
+      "table_of_contents_lead": {
+        "url": "https://www.sohu.com/a/871524168_121124388",
+        "publication_date": "2025-03-15",
+        "source_level": "考古书店微信书讯的第三方转载，仅作篇目检索线索",
+        "observed_content": "其目录列有偃师市文物管理局撰目标简报。",
+        "original_reprint_page_numbers_verified": false
+      },
+      "evidence_limit": "官方馆藏目录确认书籍身份与可查馆藏；目标篇收入此书目前只有书讯目录线索。未核该篇重印页、图版完整性或原刊逐字一致性。"
+    },
+    "drawing_consequence": "不据书籍存在或目录条目补出鸿池陂出入口、桥头或道路/渠道交叉坐标。"
+  },
+  "publisher_metadata_recheck": {
+    "id": "HUANG2026-PUBLISHER",
+    "title": "汉魏洛阳城周边的水利建设",
+    "author": "黄学超",
+    "journal": "中国历史地理论丛",
+    "year": 2026,
+    "volume": 41,
+    "issue": 3,
+    "pages": "28—42、52",
+    "published_on": "2026-07-10",
+    "url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+    "actually_read": "期刊官网题录、公开摘要、参考文献；页面明确全文需访问cnki.net。",
+    "article_fulltext_obtained": false,
+    "confirmations": [
+      "正式参考文献引用1993报告607及607—608页。",
+      "参考文献指向2011简报22—23页及杨萧杨2021年358—369页。"
+    ],
+    "meaning": "确认原件获取顺序与分期研究背景；不重复登记R7已有历史判断，不以本次摘要阅读替代已核全文或原图。"
+  },
+  "panorama_constraints_carried_forward": [
+    {
+      "id": "R8-SOURCE-C01",
+      "basis": "R7 PY08；本轮未获新的联测原图",
+      "decision": "宫前御道保持陆路；夹路支水只可在路侧低强度提示，不能添成贯穿中轴的一条明渠。",
+      "evidence_upgrade": false
+    },
+    {
+      "id": "R8-SOURCE-C02",
+      "basis": "R7 JC05—JC08；1993、2011原图仍缺",
+      "decision": "城东只保留概化水环境；路北渠迹与路南分期解释不能同时画成两条同期实测河岸，也不能从门下暗渠补接桥渠。",
+      "evidence_upgrade": false
+    },
+    {
+      "id": "R8-SOURCE-C03",
+      "basis": "R7 JC01—JC04",
+      "decision": "三桥不画成一条东西直路上的等距桥列；若景幅不足以表达各自桥向及不确定位置，省去可辨认的城东桥头细节。",
+      "evidence_upgrade": false
+    },
+    {
+      "id": "R8-SOURCE-C04",
+      "basis": "R6.1逐路缺件矩阵；1993全文和完整图例未得",
+      "decision": "未知道路端点、郭门与渠口不借新全景“补齐”；画面可以降低这些位置的细节强度，不能让艺术补景成为研究几何。",
+      "evidence_upgrade": false
+    }
+  ],
+  "excluded_work": "2022运河报告继续按既定决定暂缓；未请求登录、购买、机构账户或额外访问授权。",
+  "archive_policy": "保存本次访问结果、稳定地址、响应长度与指纹；原始网络响应仅作暂存核查，不公开转载登录页、签名参数或整篇现代论文。",
+  "metric_scope": "计数仅针对本文件的1993与2011道路水道原件续查；其他并行建筑形制或图像审查不在本表计数范围。"
+}

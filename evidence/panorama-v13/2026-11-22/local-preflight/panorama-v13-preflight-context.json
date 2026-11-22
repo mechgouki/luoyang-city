@@ -1,0 +1,50 @@
+{
+  "scope": "Local V13-only preflight over a previous generated site; not a full build or release acceptance",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "borrowed_site": "/workspace/scratch/2e4734c9aa1d/luoyang-city/_site",
+  "borrowed_source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "borrowed_file_count": 819,
+  "worktree_head": "557c468649d6919bd249ddd891b9c97cd37cf706",
+  "worktree_changes_committed": false,
+  "full_python311_ci_required": true,
+  "started_at_utc": "2026-11-22T05:32:09.972483+00:00",
+  "finished_at_utc": "2026-11-22T05:32:37.573556+00:00",
+  "v13_semantic_tests": {
+    "status": "passed",
+    "tests": 4
+  },
+  "approved_homepage_tests": {
+    "status": "passed",
+    "tests": 6
+  },
+  "r7_full_unittest": {
+    "status": "blocked_at_import",
+    "missing_dependency": "rasterio"
+  },
+  "r7_independent_publication_verifier": {
+    "status": "passed",
+    "source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288"
+  },
+  "final_source_association": {
+    "status": "passed",
+    "source_png_sha256": "1808eeb9c2a25a2c22777ae8fba7ae437c983b091de5674b094d10e47cb1c0b1",
+    "png_ihdr_size": [
+      1671,
+      941
+    ],
+    "source_input_registered": true,
+    "checks": [
+      "actual original PNG SHA-256 equals both recorded SHA-256 fields",
+      "PNG signature, IHDR size and CRC validated",
+      "IHDR dimensions equal source PNG and full WebP record",
+      "final candidate review references the same source PNG"
+    ],
+    "commands": [
+      "python3 tools/panorama_v13.py",
+      "python3 -m unittest discover -s tests -p test_panorama_v13.py -v"
+    ],
+    "semantic_tests": 4,
+    "all_passed": true,
+    "completed_at_utc": "2026-11-22T05:34:59.412830+00:00"
+  }
+}

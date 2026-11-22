@@ -1,0 +1,115 @@
+{
+  "schema": "luoyang-v13-ci-outcome-v1",
+  "captured_at_utc": "2026-11-22T06:07:29.844801+00:00",
+  "stage": "main_build_success",
+  "repository": "mechgouki/luoyang-city",
+  "workflow_run_id": 44991627755,
+  "run_attempt": 1,
+  "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44991627755",
+  "workflow_status_at_capture": "in_progress",
+  "workflow_conclusion_at_capture": null,
+  "build_job_id": 137113740849,
+  "build_job_conclusion": "success",
+  "tested_checkout_commit": "fc62dd0fa439e01fbf13899fe8b9eea7f9c101f0",
+  "source_tree": "760adfa3f4f851213853a786e94551354d25db04",
+  "source_verification": {
+    "checkout_git_log": "fc62dd0fa439e01fbf13899fe8b9eea7f9c101f0",
+    "report_sources": [
+      "fc62dd0fa439e01fbf13899fe8b9eea7f9c101f0"
+    ],
+    "main_commit_api": "main-commit.json",
+    "source_file_manifest": "source-files.json",
+    "source_file_manifest_head": "33604407bb1dd8a35336c58d6aa49143d61bcc5e",
+    "source_file_manifest_tree_matches_main": true,
+    "source_files": 34,
+    "source_bytes": 4391549
+  },
+  "build_python": "3.11.18",
+  "browser_runtime": "mcr.microsoft.com/playwright/python:v1.57.0-noble; browser test Python is container Python 3.12",
+  "full_build_step": "success",
+  "v13_semantic_tests": {
+    "status": "passed",
+    "tests": 4,
+    "raw_report": "panorama-v13-tests.txt"
+  },
+  "full_browser_chain": "success",
+  "r7_browser": {
+    "desktop": {
+      "status": "passed",
+      "check_groups": 8,
+      "overview_reset": {
+        "before": {
+          "left": 40,
+          "top": 40
+        },
+        "after": {
+          "left": 0,
+          "top": 0
+        }
+      },
+      "report": "city-nodes-r7-browser/desktop-report.json"
+    },
+    "mobile": {
+      "status": "passed",
+      "check_groups": 8,
+      "overview_reset": {
+        "before": {
+          "left": 40,
+          "top": 40
+        },
+        "after": {
+          "left": 0,
+          "top": 0
+        }
+      },
+      "report": "city-nodes-r7-browser/mobile-report.json"
+    }
+  },
+  "v13_browser": {
+    "desktop": {
+      "status": "passed",
+      "check_groups": 5,
+      "downloads": 7,
+      "screenshots": 2,
+      "report": "panorama-v13-browser/desktop-report.json"
+    },
+    "mobile": {
+      "status": "passed",
+      "check_groups": 5,
+      "downloads": 7,
+      "screenshots": 2,
+      "report": "panorama-v13-browser/mobile-report.json"
+    }
+  },
+  "pages_artifact_uploaded": true,
+  "subsequent_job_snapshot": {
+    "deploy": {
+      "id": 137115497227,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "verify-live": {
+      "id": 137115586372,
+      "status": "in_progress",
+      "conclusion": null
+    }
+  },
+  "production_release_accepted": false,
+  "homepage_replacement_approved": false,
+  "historical_gate_reconstruction_completed": false,
+  "artifact": {
+    "id": 14741827982,
+    "name": "browser-build-evidence",
+    "original_zip_bytes": 187261459,
+    "original_zip_sha256": "d0c8f861c9315c451ea2c18a685f1b5ba2941f15996e81cd8896d56b0891adda",
+    "matches_github_artifact_digest": true,
+    "raw_entries_retained": 132,
+    "raw_screenshots_retained": 50,
+    "v13_json_png_files": 6
+  },
+  "logs": {
+    "path": "build-job.log",
+    "provenance": "Exact UTF-8 encoding of complete decoded job text; not independently captured raw HTTP response bytes"
+  },
+  "meaning": "Actual main build and browser CI passed. This snapshot does not establish subsequent deployment or live acceptance; final live evidence is preserved separately and does not approve replacing the homepage."
+}

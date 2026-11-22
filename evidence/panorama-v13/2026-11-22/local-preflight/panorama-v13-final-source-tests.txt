@@ -1,0 +1,12 @@
+Executed: python3 tools/panorama_v13.py
+Build passed: panorama-review-v13; candidate_for_review; 7 changes; approved homepage remains panorama-approved-v12.
+
+Executed: python3 -m unittest discover -s tests -p test_panorama_v13.py -v
+test_candidate_metadata_cannot_claim_approval_or_crop_mobile ... ok
+test_exact_entry_restores_the_previous_homepage ... ok
+test_changed_candidate_or_earlier_evidence_is_rejected ... ok
+test_resources_provenance_and_previous_homepage ... ok
+Ran 4 tests in 1.356s
+OK
+
+Scope: local preflight using previous generated d334 site and Python 3.12.14; not full Python 3.11 CI or release acceptance.

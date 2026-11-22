@@ -1,0 +1,29 @@
+{
+  "schema": "luoyang-v13-live-manual-browser-review-v1",
+  "checked_at_beijing": "2026-11-22T14:09:43.332706+08:00",
+  "source_commit": "fc62dd0fa439e01fbf13899fe8b9eea7f9c101f0",
+  "source_identity_basis": "Independent public build-info and captured HTTP bodies; homepage also visibly showed fc62dd0.",
+  "method": "Direct CUA interaction with the public GitHub Pages site, using actual accessibility state and viewport screenshots.",
+  "status": "passed",
+  "entry_url": "https://mechgouki.github.io/luoyang-city/",
+  "final_verified_url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13.html?view=compare#comparison",
+  "evidence_link_verified_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#map-palace-yongning",
+  "observations": [
+    "Public homepage showed the original V12 hero and one V13 review entry; clicking that entry opened the candidate page.",
+    "The candidate status and continued V12 homepage use were explicit in the visible page.",
+    "V13 full image loaded; V12 switch displayed the approved comparison and changed the URL to ?view=v12.",
+    "Side-by-side comparison displayed both images, changed URL to ?view=compare, and survived an actual page reload.",
+    "The palace/Yongning evidence link reached the correct R7 map anchor and its visible distinction between source geometry and textual relationships.",
+    "The south-gate card visibly disclosed the unimplemented three-storey shape and rejected displaced-gate drafts.",
+    "Return-to-comparison link reached #comparison; after the normal scroll transition, the final observed screenshot showed both entire compositions and captions.",
+    "The final comparison tab was marked as the user-facing deliverable."
+  ],
+  "limits": [
+    "This was a desktop manual browser check. Mobile and no-JavaScript evidence comes from the separate actual CI reports.",
+    "The manual page review does not replace the full verify-live workflow gate, which was still running at this capture.",
+    "Browser viewport images were observed in-session; the durable screenshot files in this archive are the separately identified original CI screenshots."
+  ],
+  "homepage_replacement_approved": false,
+  "historical_gate_reconstruction_completed": false,
+  "overall_release_accepted_at_capture": false
+}

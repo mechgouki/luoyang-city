@@ -1,0 +1,31 @@
+{
+  "schema": "luoyang-v13-page-visual-review-v1",
+  "stage": "pull_request_static_screenshot_review",
+  "pull_request": 79,
+  "workflow_run_id": 44990962140,
+  "tested_source_commit": "2792d5986852a87eee3ab607197c17df9a59fcfe",
+  "source_tree": "760adfa3f4f851213853a786e94551354d25db04",
+  "review_method": "All four original screenshots were individually opened with view_image and visually inspected; this record summarizes that observed review.",
+  "status": "passed_with_known_artwork_limits",
+  "screenshots": [
+    {"path": "pr/panorama-v13-browser/desktop-comparison.png", "width": 1440, "height": 4144, "sha256": "10cadcb9287a10596fbbcbb5535d93067b603bd0749503cbc60d0940d81be485"},
+    {"path": "pr/panorama-v13-browser/mobile-comparison.png", "width": 390, "height": 7322, "sha256": "adda52b8ecd2a6017c6e3e85a00ebad20469293417bd4dbeba2cbecfa3f47456"},
+    {"path": "pr/panorama-v13-browser/desktop-without-javascript.png", "width": 1440, "height": 5417, "sha256": "66e30295969195da0b127bf86683ca0e4a5c76558dcc29826b3d594a6d24cfa8"},
+    {"path": "pr/panorama-v13-browser/mobile-without-javascript.png", "width": 390, "height": 7251, "sha256": "a04aa647a9ad03d4c976a40f71b0a94793e36560131ae09f56116ef5f8ce684e"}
+  ],
+  "observations": [
+    "Both complete city, river and foreground compositions are visible, without image cropping.",
+    "Desktop comparison places the two images side by side; narrow-screen comparison stacks them with readable titles, controls, evidence cards and downloads.",
+    "With JavaScript disabled, both complete artworks, the written evidence and downloads remain available.",
+    "V13 is visibly marked as a candidate awaiting review; V12 is identified as the current approved homepage.",
+    "The unimplemented three-storey temple south gate is explicitly disclosed in its own early evidence card and again in the remaining limits.",
+    "West-wall material evidence, unmeasured palace/storage details, unknown banks, bridgeheads and canal mouths retain readable qualifications."
+  ],
+  "limitations": [
+    "This visual review covers actual PR screenshots, not the subsequently deployed production page.",
+    "Mobile full-frame images are naturally small; the nine tower storeys were independently assessed in the original full-size image.",
+    "Passing the page layout review is not approval to replace the homepage or a claim of complete historical accuracy."
+  ],
+  "homepage_replacement_approved": false,
+  "historical_gate_reconstruction_completed": false
+}

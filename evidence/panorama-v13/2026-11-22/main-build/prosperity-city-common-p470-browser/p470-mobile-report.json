@@ -1,0 +1,129 @@
+{
+  "base_url": "http://127.0.0.1:35767/luoyang-city/",
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "status": "passed",
+  "checks": [
+    "Visible P469 continuation opens the independent P470 page",
+    "Initial C01/K01 state shows source roads and walls with modern reference hidden",
+    "Four actual SVG point clicks select original cards; C04 highlights tower and temple wall, C03 has no scene binding",
+    "Four visible card controls select the same map features and preserve scene scope",
+    "Three scene controls expose all 17 original quotations/scopes and two events; K03 clears geographic selection",
+    "Road, wall and modern-reference toggles operate on the actual SVG source groups",
+    "Zoom enlarges the native map within a horizontally scrollable viewport and restores the overview",
+    "C04 layers and unbound K03 deep links restore on reload without inventing a map selection",
+    "Function filter shows two T04 objects, its evidence link opens the scene, and all restores 15 objects",
+    "Six actual SVG/JSON/CSV/ZIP browser downloads match public hashes and the complete offline manifest",
+    "No-JS retains four cards, three scenes, 17 relations, two events, 15 function objects and working SVG fallback links",
+    "Header returns to the previous source-frame study"
+  ],
+  "errors": [],
+  "download_sha256": {
+    "common-470/city-common.svg": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89",
+    "common-470/readings.json": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870",
+    "common-470/places.csv": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232",
+    "common-470/reuse-plan.json": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+    "common-470/bundle-manifest.json": "5ffd1a96e1bfd969c5b3da182584679324822095dab56626760b5066a374cf09",
+    "downloads/common-470.zip": "cda3933fd5e00d2421514d9d9feb4dc4e417fd01f785f52bed4a462687133a94"
+  },
+  "download_attempts": [
+    {
+      "path": "common-470/city-common.svg",
+      "status": "passed",
+      "bytes": 43433,
+      "sha256": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89",
+      "suggested_filename": "city-common.svg"
+    },
+    {
+      "path": "common-470/readings.json",
+      "status": "passed",
+      "bytes": 471604,
+      "sha256": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870",
+      "suggested_filename": "readings.json"
+    },
+    {
+      "path": "common-470/places.csv",
+      "status": "passed",
+      "bytes": 1340,
+      "sha256": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232",
+      "suggested_filename": "places.csv"
+    },
+    {
+      "path": "common-470/reuse-plan.json",
+      "status": "passed",
+      "bytes": 6752,
+      "sha256": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+      "suggested_filename": "reuse-plan.json"
+    },
+    {
+      "path": "common-470/bundle-manifest.json",
+      "status": "passed",
+      "bytes": 4726,
+      "sha256": "5ffd1a96e1bfd969c5b3da182584679324822095dab56626760b5066a374cf09",
+      "suggested_filename": "bundle-manifest.json"
+    },
+    {
+      "path": "downloads/common-470.zip",
+      "status": "passed",
+      "bytes": 117623,
+      "sha256": "cda3933fd5e00d2421514d9d9feb4dc4e417fd01f785f52bed4a462687133a94",
+      "suggested_filename": "common-470.zip"
+    }
+  ],
+  "download_target": null,
+  "screenshot_sha256": {
+    "p470-mobile-initial.png": "e5a3b33cc17a4944f15c6a3104f5ff694871eb8ef5a657027abcca315a92eaca",
+    "p470-mobile-map-default.png": "22c8d564984aa29db55fb94320173f6920be8773153787978922069f61b11d98",
+    "p470-mobile-place-C01.png": "21f6127ecfd84f42c796da4d4d7a1928dae69efbd446b757b4c1396f69291a41",
+    "p470-mobile-place-C02.png": "55b252e6fd3675ca80cc4ee6f6c87023a5fdab4e98984ac08b9a53e8031638cc",
+    "p470-mobile-place-C03.png": "d4fda8b28c7fcec581e374597f39d85532be58de890b42d435e67f1c9241a879",
+    "p470-mobile-place-C04.png": "be0d13130e5fa4a42b6c568bcdfa96b418b1ef561ed0328b5910143abe520bd6",
+    "p470-mobile-scene-K01.png": "077832e78911cc06f4df3144e2dc896fab3f4e4aaed4a35076af8dbc6155c9fc",
+    "p470-mobile-scene-K02.png": "1ec0a524e5aa9a997bbc59a97173deae3d3c66a774569297fd75bcd6853ddbd1",
+    "p470-mobile-scene-K03.png": "e900ca3d39c838d2cdf6ed8c871fd47afa2c2ef0eafc49dc6f8f12cce1f3977c",
+    "p470-mobile-map-modern.png": "e2441fc26016fc681073031ce92d0abe05d2a5a355a0d7fd8bb8541ee3e473b2",
+    "p470-mobile-map-zoom.png": "58b0735a9100786c9aab20700e4774f1d2ba0a425bf0713d6a103758a100d448",
+    "p470-mobile-deep-link.png": "9e25cfc54042b84fe8b3215ae2e69c2b6de5e66ef9f07b57b2ed14c9490891c9",
+    "p470-mobile-functions-T04.png": "dc6edb928a2e133a4813fae2b41557019ac843bed4be2dc9da024e48b397fdcb",
+    "p470-mobile-nojs-map.png": "1ed4e756c8fd6129f49b7ca927492a2777eb5ac944a8dca008103e10d946fe0e",
+    "p470-mobile-nojs-C04.png": "af335c587f324ee1d2ca758876a585df16e591ab9bc1221b9cd00bb957809eeb",
+    "p470-mobile-nojs-K03.png": "82455ba82be5aa106af6951ab00f705b1b1ac863d814e418daeb4469d4a9cd5a"
+  },
+  "source_commit": "fc62dd0fa439e01fbf13899fe8b9eea7f9c101f0",
+  "counts": {
+    "source_features": 30,
+    "features": 25,
+    "site_remains": 24,
+    "modern_features": 1,
+    "prior_backbone_features": 22,
+    "added_existing_features": 3,
+    "building_cards": 4,
+    "roads": 8,
+    "gate_points": 10,
+    "wall_groups": 4,
+    "partial_enclosure_parts": 7,
+    "water_records": 34,
+    "water_relations": 100,
+    "water_context_links": 9,
+    "urban_scenes": 3,
+    "urban_relations": 17,
+    "new_geographic_coordinates": 0,
+    "new_metric_measurements": 0,
+    "new_historical_edges": 0,
+    "new_geographic_footprints": 0
+  },
+  "bundle_members": 8,
+  "no_javascript": {
+    "status": "passed",
+    "building_cards": 4,
+    "scenes": 3,
+    "relations": 17,
+    "events": 2,
+    "function_objects": 15,
+    "download_links": 6,
+    "fallback_fragment": "place-C04"
+  }
+}

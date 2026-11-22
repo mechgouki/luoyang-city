@@ -1,0 +1,1290 @@
+﻿2026-11-22T05:40:15.2696741Z Current runner version: '2.338.2'
+2026-11-22T05:40:15.2751443Z ##[group]Runner Image Provisioner
+2026-11-22T05:40:15.2752363Z Hosted Compute Agent
+2026-11-22T05:40:15.2752968Z Version: 20261111.635
+2026-11-22T05:40:15.2753598Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-22T05:40:15.2754294Z Build Date: 2026-11-11T01:49:01Z
+2026-11-22T05:40:15.2755009Z Worker ID: {aede8745-a8dd-4bee-acc6-28b1b1274f05}
+2026-11-22T05:40:15.2755704Z Region: southcentralus
+2026-11-22T05:40:15.2756237Z Cloud: Azure
+2026-11-22T05:40:15.2756789Z ##[endgroup]
+2026-11-22T05:40:15.2758330Z ##[group]Operating System
+2026-11-22T05:40:15.2759019Z Ubuntu
+2026-11-22T05:40:15.2759532Z 24.04.5
+2026-11-22T05:40:15.2760009Z LTS
+2026-11-22T05:40:15.2760539Z ##[endgroup]
+2026-11-22T05:40:15.2761067Z ##[group]Runner Image
+2026-11-22T05:40:15.2761685Z Image: ubuntu-24.04
+2026-11-22T05:40:15.2762241Z Version: 20261116.376.1
+2026-11-22T05:40:15.2763528Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261116.376/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-22T05:40:15.2765014Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261116.376
+2026-11-22T05:40:15.2765966Z ##[endgroup]
+2026-11-22T05:40:15.2767060Z ##[group]GITHUB_TOKEN Permissions
+2026-11-22T05:40:15.2769607Z Contents: read
+2026-11-22T05:40:15.2770187Z Metadata: read
+2026-11-22T05:40:15.2770809Z ##[endgroup]
+2026-11-22T05:40:15.2773549Z Secret source: Actions
+2026-11-22T05:40:15.2774465Z Cache mode: write
+2026-11-22T05:40:15.2775383Z Prepare workflow directory
+2026-11-22T05:40:15.3166537Z Prepare all required actions
+2026-11-22T05:40:15.3218236Z Getting action download info
+2026-11-22T05:40:15.6346002Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-22T05:40:15.7638861Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-22T05:40:15.8729251Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-22T05:40:16.0255892Z Download action repository 'actions/upload-pages-artifact@v4' (SHA:7b1f4a764d45c48632c6b24a0339c27f5614fb0b)
+2026-11-22T05:40:16.4621926Z Getting action download info
+2026-11-22T05:40:16.5580967Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-22T05:40:16.7288965Z Complete job name: build
+2026-11-22T05:40:16.8207951Z ##[group]Run actions/checkout@v4
+2026-11-22T05:40:16.8209064Z with:
+2026-11-22T05:40:16.8209599Z   repository: mechgouki/luoyang-city
+2026-11-22T05:40:16.8213928Z   token: ***
+2026-11-22T05:40:16.8214426Z   ssh-strict: true
+2026-11-22T05:40:16.8214927Z   ssh-user: git
+2026-11-22T05:40:16.8215483Z   persist-credentials: true
+2026-11-22T05:40:16.8216036Z   clean: true
+2026-11-22T05:40:16.8216657Z   sparse-checkout-cone-mode: true
+2026-11-22T05:40:16.8217248Z   fetch-depth: 1
+2026-11-22T05:40:16.8217970Z   fetch-tags: false
+2026-11-22T05:40:16.8218591Z   show-progress: true
+2026-11-22T05:40:16.8219099Z   lfs: false
+2026-11-22T05:40:16.8219610Z   submodules: false
+2026-11-22T05:40:16.8220140Z   set-safe-directory: true
+2026-11-22T05:40:16.8220708Z   allow-unsafe-pr-checkout: false
+2026-11-22T05:40:16.8221504Z ##[endgroup]
+2026-11-22T05:40:17.1191458Z Syncing repository: mechgouki/luoyang-city
+2026-11-22T05:40:17.1195428Z ##[group]Getting Git version info
+2026-11-22T05:40:17.1197305Z Working directory is '/home/runner/work/luoyang-city/luoyang-city'
+2026-11-22T05:40:17.1199569Z [command]/usr/bin/git version
+2026-11-22T05:40:17.1293854Z git version 2.56.1
+2026-11-22T05:40:17.1314135Z ##[endgroup]
+2026-11-22T05:40:17.1331206Z Temporarily overriding HOME='/home/runner/work/_temp/ed95911f-1e2d-4107-bbe3-c2b6eaa0942f' before making global git config changes
+2026-11-22T05:40:17.1334217Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-22T05:40:17.1337821Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luoyang-city/luoyang-city
+2026-11-22T05:40:17.1403341Z Deleting the contents of '/home/runner/work/luoyang-city/luoyang-city'
+2026-11-22T05:40:17.1411875Z ##[group]Initializing the repository
+2026-11-22T05:40:17.1419794Z [command]/usr/bin/git init /home/runner/work/luoyang-city/luoyang-city
+2026-11-22T05:40:17.1560836Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-22T05:40:17.1563325Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-22T05:40:17.1565421Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-22T05:40:17.1567272Z hint: call:
+2026-11-22T05:40:17.1568518Z hint:
+2026-11-22T05:40:17.1569889Z hint: 	git config --global init.defaultBranch <name>
+2026-11-22T05:40:17.1571136Z hint:
+2026-11-22T05:40:17.1572652Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-22T05:40:17.1574650Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-22T05:40:17.1576351Z hint:
+2026-11-22T05:40:17.1578395Z hint: 	git branch -m <name>
+2026-11-22T05:40:17.1579915Z hint:
+2026-11-22T05:40:17.1581344Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-22T05:40:17.1583438Z Initialized empty Git repository in /home/runner/work/luoyang-city/luoyang-city/.git/
+2026-11-22T05:40:17.1586930Z [command]/usr/bin/git remote add origin https://github.com/mechgouki/luoyang-city
+2026-11-22T05:40:17.1648573Z ##[endgroup]
+2026-11-22T05:40:17.1649835Z ##[group]Disabling automatic garbage collection
+2026-11-22T05:40:17.1653116Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-22T05:40:17.1693356Z ##[endgroup]
+2026-11-22T05:40:17.1694671Z ##[group]Setting up auth
+2026-11-22T05:40:17.1703933Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T05:40:17.1745743Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T05:40:17.2195767Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T05:40:17.2233758Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T05:40:17.2453117Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T05:40:17.2491324Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T05:40:17.2721077Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-22T05:40:17.2769292Z ##[endgroup]
+2026-11-22T05:40:17.2771008Z ##[group]Fetching the repository
+2026-11-22T05:40:17.2783766Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a338e8dd60151e959b443ab466a983ce799293e2:refs/remotes/pull/79/merge
+2026-11-22T05:40:18.8252523Z From https://github.com/mechgouki/luoyang-city
+2026-11-22T05:40:18.8255713Z  * [new ref]         a338e8dd60151e959b443ab466a983ce799293e2 -> pull/79/merge
+2026-11-22T05:40:18.8261812Z ##[endgroup]
+2026-11-22T05:40:18.8264265Z ##[group]Determining the checkout info
+2026-11-22T05:40:18.8266519Z ##[endgroup]
+2026-11-22T05:40:18.8268229Z [command]/usr/bin/git sparse-checkout disable
+2026-11-22T05:40:18.8341036Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-22T05:40:18.8375013Z ##[group]Checking out the ref
+2026-11-22T05:40:18.8377878Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/79/merge
+2026-11-22T05:40:18.9703954Z Note: switching to 'refs/remotes/pull/79/merge'.
+2026-11-22T05:40:18.9705317Z 
+2026-11-22T05:40:18.9706171Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-22T05:40:18.9708940Z changes and commit them, and you can discard any commits you make in this
+2026-11-22T05:40:18.9711153Z state without impacting any branches by switching back to a branch.
+2026-11-22T05:40:18.9712827Z 
+2026-11-22T05:40:18.9714072Z If you want to create a new branch to retain commits you create, you may
+2026-11-22T05:40:18.9716406Z do so (now or later) by using -c with the switch command. Example:
+2026-11-22T05:40:18.9717955Z 
+2026-11-22T05:40:18.9718703Z   git switch -c <new-branch-name>
+2026-11-22T05:40:18.9719748Z 
+2026-11-22T05:40:18.9720396Z Or undo this operation with:
+2026-11-22T05:40:18.9721570Z 
+2026-11-22T05:40:18.9722214Z   git switch -
+2026-11-22T05:40:18.9723182Z 
+2026-11-22T05:40:18.9724526Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-22T05:40:18.9726532Z 
+2026-11-22T05:40:18.9728892Z HEAD is now at a338e8d Merge 00c7b4a16cc45e2d0d867b9e50ae336ca8ade159 into 557c468649d6919bd249ddd891b9c97cd37cf706
+2026-11-22T05:40:18.9736273Z ##[endgroup]
+2026-11-22T05:40:18.9771176Z [command]/usr/bin/git log -1 --format=%H
+2026-11-22T05:40:18.9798254Z a338e8dd60151e959b443ab466a983ce799293e2
+2026-11-22T05:40:19.0230821Z ##[group]Run actions/setup-python@v5
+2026-11-22T05:40:19.0232105Z with:
+2026-11-22T05:40:19.0233252Z   python-version: 3.11
+2026-11-22T05:40:19.0234335Z   check-latest: false
+2026-11-22T05:40:19.0245369Z   token: ***
+2026-11-22T05:40:19.0246515Z   update-environment: true
+2026-11-22T05:40:19.0247967Z   allow-prereleases: false
+2026-11-22T05:40:19.0249194Z   freethreaded: false
+2026-11-22T05:40:19.0250234Z ##[endgroup]
+2026-11-22T05:40:19.1722091Z ##[group]Installed versions
+2026-11-22T05:40:19.1826041Z (node:2326) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-22T05:40:19.1830359Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-22T05:40:19.1832933Z Successfully set up CPython (3.11.18)
+2026-11-22T05:40:19.1836134Z ##[endgroup]
+2026-11-22T05:40:19.2080081Z ##[group]Run python -m pip install numpy==2.2.6 rasterio==1.4.3 scipy==1.15.3 pyproj==3.7.2 pillow==11.2.1 contourpy==1.3.2 cairosvg==2.8.2 pypdf==5.9.0
+2026-11-22T05:40:19.2085629Z [36;1mpython -m pip install numpy==2.2.6 rasterio==1.4.3 scipy==1.15.3 pyproj==3.7.2 pillow==11.2.1 contourpy==1.3.2 cairosvg==2.8.2 pypdf==5.9.0[0m
+2026-11-22T05:40:19.2128409Z shell: /usr/bin/bash -e {0}
+2026-11-22T05:40:19.2129995Z env:
+2026-11-22T05:40:19.2131189Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:19.2133239Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:40:19.2135825Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:19.2137873Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:19.2139828Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:19.2141610Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:40:19.2143285Z ##[endgroup]
+2026-11-22T05:40:20.4561098Z Collecting numpy==2.2.6
+2026-11-22T05:40:20.5395992Z   Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+2026-11-22T05:40:20.6522359Z Collecting rasterio==1.4.3
+2026-11-22T05:40:20.6655046Z   Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.1 kB)
+2026-11-22T05:40:20.7776814Z Collecting scipy==1.15.3
+2026-11-22T05:40:20.7905337Z   Downloading scipy-1.15.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+2026-11-22T05:40:20.8900360Z Collecting pyproj==3.7.2
+2026-11-22T05:40:20.9038348Z   Downloading pyproj-3.7.2-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (31 kB)
+2026-11-22T05:40:21.0561983Z Collecting pillow==11.2.1
+2026-11-22T05:40:21.0696082Z   Downloading pillow-11.2.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+2026-11-22T05:40:21.1361365Z Collecting contourpy==1.3.2
+2026-11-22T05:40:21.1506652Z   Downloading contourpy-1.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+2026-11-22T05:40:21.1777131Z Collecting cairosvg==2.8.2
+2026-11-22T05:40:21.1911813Z   Downloading cairosvg-2.8.2-py3-none-any.whl.metadata (2.7 kB)
+2026-11-22T05:40:21.2281276Z Collecting pypdf==5.9.0
+2026-11-22T05:40:21.2408588Z   Downloading pypdf-5.9.0-py3-none-any.whl.metadata (7.1 kB)
+2026-11-22T05:40:21.2680482Z Collecting affine (from rasterio==1.4.3)
+2026-11-22T05:40:21.2805526Z   Downloading affine-3.0.1-py3-none-any.whl.metadata (4.5 kB)
+2026-11-22T05:40:21.5950964Z Collecting attrs (from rasterio==1.4.3)
+2026-11-22T05:40:21.6079598Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-11-22T05:40:21.9182366Z Collecting certifi (from rasterio==1.4.3)
+2026-11-22T05:40:21.9313068Z   Downloading certifi-2026.11.20-py3-none-any.whl.metadata (2.5 kB)
+2026-11-22T05:40:22.1375092Z Collecting click>=4.0 (from rasterio==1.4.3)
+2026-11-22T05:40:22.1510641Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+2026-11-22T05:40:22.1780390Z Collecting cligj>=0.5 (from rasterio==1.4.3)
+2026-11-22T05:40:22.1917769Z   Downloading cligj-0.7.2-py3-none-any.whl.metadata (5.0 kB)
+2026-11-22T05:40:22.2188781Z Collecting click-plugins (from rasterio==1.4.3)
+2026-11-22T05:40:22.2316578Z   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+2026-11-22T05:40:22.2653505Z Collecting pyparsing (from rasterio==1.4.3)
+2026-11-22T05:40:22.2779638Z   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+2026-11-22T05:40:22.3061008Z Collecting cairocffi (from cairosvg==2.8.2)
+2026-11-22T05:40:22.3198538Z   Downloading cairocffi-1.7.1-py3-none-any.whl.metadata (3.3 kB)
+2026-11-22T05:40:22.3624264Z Collecting cssselect2 (from cairosvg==2.8.2)
+2026-11-22T05:40:22.3754646Z   Downloading cssselect2-0.10.1-py3-none-any.whl.metadata (2.9 kB)
+2026-11-22T05:40:22.4028677Z Collecting defusedxml (from cairosvg==2.8.2)
+2026-11-22T05:40:22.4153554Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-11-22T05:40:22.4429982Z Collecting tinycss2 (from cairosvg==2.8.2)
+2026-11-22T05:40:22.4556047Z   Downloading tinycss2-1.5.1-py3-none-any.whl.metadata (3.0 kB)
+2026-11-22T05:40:22.5557874Z Collecting cffi>=1.1.0 (from cairocffi->cairosvg==2.8.2)
+2026-11-22T05:40:22.5702663Z   Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-11-22T05:40:22.5951899Z Collecting pycparser (from cffi>=1.1.0->cairocffi->cairosvg==2.8.2)
+2026-11-22T05:40:22.6074914Z   Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+2026-11-22T05:40:22.6313040Z Collecting webencodings (from cssselect2->cairosvg==2.8.2)
+2026-11-22T05:40:22.6436992Z   Downloading webencodings-0.6.1-py3-none-any.whl.metadata (3.4 kB)
+2026-11-22T05:40:22.6662993Z Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+2026-11-22T05:40:23.3053164Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 27.6 MB/s  0:00:00
+2026-11-22T05:40:23.3221039Z Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (22.2 MB)
+2026-11-22T05:40:23.6394990Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.2/22.2 MB 70.3 MB/s  0:00:00
+2026-11-22T05:40:23.6548764Z Downloading scipy-1.15.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+2026-11-22T05:40:24.0945597Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 85.6 MB/s  0:00:00
+2026-11-22T05:40:24.1117335Z Downloading pyproj-3.7.2-cp311-cp311-manylinux_2_28_x86_64.whl (9.5 MB)
+2026-11-22T05:40:24.2148054Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 92.1 MB/s  0:00:00
+2026-11-22T05:40:24.2293884Z Downloading pillow-11.2.1-cp311-cp311-manylinux_2_28_x86_64.whl (4.6 MB)
+2026-11-22T05:40:24.2638787Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 137.4 MB/s  0:00:00
+2026-11-22T05:40:24.2777954Z Downloading contourpy-1.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (326 kB)
+2026-11-22T05:40:24.2948575Z Downloading cairosvg-2.8.2-py3-none-any.whl (45 kB)
+2026-11-22T05:40:24.3270839Z Downloading pypdf-5.9.0-py3-none-any.whl (313 kB)
+2026-11-22T05:40:24.3434679Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+2026-11-22T05:40:24.3612218Z Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+2026-11-22T05:40:24.3769069Z Downloading affine-3.0.1-py3-none-any.whl (10 kB)
+2026-11-22T05:40:24.3922582Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-11-22T05:40:24.4077808Z Downloading cairocffi-1.7.1-py3-none-any.whl (75 kB)
+2026-11-22T05:40:24.4238022Z Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+2026-11-22T05:40:24.4398471Z Downloading certifi-2026.11.20-py3-none-any.whl (127 kB)
+2026-11-22T05:40:24.4550364Z Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+2026-11-22T05:40:24.4709530Z Downloading cssselect2-0.10.1-py3-none-any.whl (15 kB)
+2026-11-22T05:40:24.4866856Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-11-22T05:40:24.5044881Z Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+2026-11-22T05:40:24.5209649Z Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+2026-11-22T05:40:24.5457945Z Downloading tinycss2-1.5.1-py3-none-any.whl (28 kB)
+2026-11-22T05:40:24.5624567Z Downloading webencodings-0.6.1-py3-none-any.whl (8.7 kB)
+2026-11-22T05:40:24.8269477Z Installing collected packages: webencodings, pypdf, pyparsing, pycparser, pillow, numpy, defusedxml, click, certifi, attrs, tinycss2, scipy, pyproj, contourpy, cligj, click-plugins, cffi, affine, rasterio, cssselect2, cairocffi, cairosvg
+2026-11-22T05:40:31.2431091Z 
+2026-11-22T05:40:31.2450438Z Successfully installed affine-3.0.1 attrs-26.1.0 cairocffi-1.7.1 cairosvg-2.8.2 certifi-2026.11.20 cffi-2.1.1 click-8.5.1 click-plugins-1.1.1.2 cligj-0.7.2 contourpy-1.3.2 cssselect2-0.10.1 defusedxml-0.7.1 numpy-2.2.6 pillow-11.2.1 pycparser-3.12 pyparsing-3.3.3 pypdf-5.9.0 pyproj-3.7.2 rasterio-1.4.3 scipy-1.15.3 tinycss2-1.5.1 webencodings-0.6.1
+2026-11-22T05:40:31.3687981Z ##[group]Run mkdir -p "$HOME/.local/share/fonts" artifacts
+2026-11-22T05:40:31.3688662Z [36;1mmkdir -p "$HOME/.local/share/fonts" artifacts[0m
+2026-11-22T05:40:31.3689232Z [36;1mFONT="$HOME/.local/share/fonts/NotoSansCJKsc-Regular.otf"[0m
+2026-11-22T05:40:31.3690292Z [36;1mcurl --fail --location --retry 2 --max-time 90 'https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf' -o "$FONT"[0m
+2026-11-22T05:40:31.3691330Z [36;1mtest "$(git hash-object "$FONT")" = dc15562470b4f842321894787a0d066879ccff8b[0m
+2026-11-22T05:40:31.3691814Z [36;1mfc-cache -f[0m
+2026-11-22T05:40:31.3692308Z [36;1mfc-match 'Noto Sans CJK SC' > artifacts/pdf-font-resolution.txt[0m
+2026-11-22T05:40:31.3709324Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-22T05:40:31.3709756Z env:
+2026-11-22T05:40:31.3710119Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:31.3710824Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:40:31.3711320Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:31.3711817Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:31.3712278Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:31.3712751Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:40:31.3713197Z ##[endgroup]
+2026-11-22T05:40:31.3853183Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-11-22T05:40:31.3855271Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-11-22T05:40:31.3855757Z 
+2026-11-22T05:40:31.6261800Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-22T05:40:31.6262660Z 100 15.6M  100 15.6M    0     0  65.0M      0 --:--:-- --:--:-- --:--:-- 65.3M
+2026-11-22T05:40:33.8053629Z ##[group]Run python tools/build_all.py --prepare-only
+2026-11-22T05:40:33.8054144Z [36;1mpython tools/build_all.py --prepare-only[0m
+2026-11-22T05:40:33.8072453Z shell: /usr/bin/bash -e {0}
+2026-11-22T05:40:33.8072847Z env:
+2026-11-22T05:40:33.8073237Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:33.8073770Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:40:33.8074303Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:33.8074821Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:33.8075280Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:33.8075748Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:40:33.8076457Z ##[endgroup]
+2026-11-22T05:40:33.8402248Z Check current summaries
+2026-11-22T05:40:33.8402862Z   python tools/current_state.py --check
+2026-11-22T05:40:33.8656993Z Current state: summaries match
+2026-11-22T05:40:33.8703062Z Assemble unchanged baseline PDF
+2026-11-22T05:40:33.8703813Z   python tools/assemble_pdf.py
+2026-11-22T05:40:33.9086834Z OK: restored luoyang-v24-regional-atlas.pdf (8612460 bytes), SHA-256 verified
+2026-11-22T05:40:33.9236197Z ##[group]Run python tools/validate_site.py
+2026-11-22T05:40:33.9236850Z [36;1mpython tools/validate_site.py[0m
+2026-11-22T05:40:33.9237286Z [36;1mnode --check app.js[0m
+2026-11-22T05:40:33.9237879Z [36;1mnode --test tests/map-interactions.test.cjs[0m
+2026-11-22T05:40:33.9238332Z [36;1mnode --check research.js[0m
+2026-11-22T05:40:33.9238713Z [36;1mnode --check models-v26.js[0m
+2026-11-22T05:40:33.9239090Z [36;1mnode --check models-v26-click.js[0m
+2026-11-22T05:40:33.9239556Z [36;1mnode --check networks-v27.js[0m
+2026-11-22T05:40:33.9239938Z [36;1mnode --check portal-v28.js[0m
+2026-11-22T05:40:33.9240391Z [36;1mnode --check chronology-v29.js[0m
+2026-11-22T05:40:33.9240779Z [36;1mnode --check web/dual-main.js[0m
+2026-11-22T05:40:33.9241136Z [36;1mnode --check web/north-b4.js[0m
+2026-11-22T05:40:33.9241585Z [36;1mnode --check web/north-main-b4.js[0m
+2026-11-22T05:40:33.9241993Z [36;1mnode --check web/historical-frame-b4.js[0m
+2026-11-22T05:40:33.9242569Z [36;1mnode --check web/west-roads-b5.js[0m
+2026-11-22T05:40:33.9242978Z [36;1mnode --check web/west-roads-main-b5.js[0m
+2026-11-22T05:40:33.9243408Z [36;1mnode --check web/historical-datum-b5.js[0m
+2026-11-22T05:40:33.9243860Z [36;1mnode --check web/southeast-b6.js[0m
+2026-11-22T05:40:33.9244273Z [36;1mnode --check web/southeast-main-b6.js[0m
+2026-11-22T05:40:33.9244763Z [36;1mnode --check web/ground-review-b6.js[0m
+2026-11-22T05:40:33.9245162Z [36;1mnode --check web/luonan-b7.js[0m
+2026-11-22T05:40:33.9245570Z [36;1mnode --check web/luonan-main-b7.js[0m
+2026-11-22T05:40:33.9246007Z [36;1mnode --check web/source-continuity-b7.js[0m
+2026-11-22T05:40:33.9246583Z [36;1mnode --check web/city-review-b8.js[0m
+2026-11-22T05:40:33.9246977Z [36;1mnode --check web/city-main-b8.js[0m
+2026-11-22T05:40:33.9247347Z [36;1mnode --check web/homepage-v1.js[0m
+2026-11-22T05:40:33.9248553Z [36;1mnode --check web/prosperity-v1.js[0m
+2026-11-22T05:40:33.9249117Z [36;1mnode --check web/prosperity-core-v2.js[0m
+2026-11-22T05:40:33.9249524Z [36;1mnode --check web/prosperity-gate-v3.js[0m
+2026-11-22T05:40:33.9249961Z [36;1mnode --check web/prosperity-axis-sources.js[0m
+2026-11-22T05:40:33.9250555Z [36;1mpython -m py_compile tools/prosperity_axis_sources_p41.py tests/browser_prosperity_axis_sources_p41.py[0m
+2026-11-22T05:40:33.9251313Z [36;1mpython -m py_compile tools/prosperity_taiji_courts_p42.py tests/browser_prosperity_taiji_courts_p42.py[0m
+2026-11-22T05:40:33.9252110Z [36;1m python -m py_compile tools/prosperity_palace_boundaries_p43.py tests/browser_prosperity_palace_boundaries_p43.py[0m
+2026-11-22T05:40:33.9252902Z [36;1mpython -m py_compile tools/prosperity_architecture_p44.py tests/browser_prosperity_architecture_p44.py[0m
+2026-11-22T05:40:33.9253700Z [36;1mpython -m py_compile tools/homepage_approved_v9.py tests/browser_homepage_approved_v9.py tests/test_homepage_approved_v9.py[0m
+2026-11-22T05:40:33.9254523Z [36;1mpython -m py_compile tools/prosperity_city_distribution_p451.py tests/browser_prosperity_city_distribution_p451.py[0m
+2026-11-22T05:40:33.9255496Z [36;1mpython -m py_compile tools/prosperity_road_functions_p452.py tests/browser_prosperity_road_functions_p452.py[0m
+2026-11-22T05:40:33.9256281Z [36;1mpython -m py_compile tools/prosperity_street_clusters_p453.py tests/browser_prosperity_street_clusters_p453.py[0m
+2026-11-22T05:40:33.9257149Z [36;1mpython -m py_compile tools/prosperity_hydro_roads_p46.py tests/browser_prosperity_hydro_roads_p46.py[0m
+2026-11-22T05:40:33.9258146Z [36;1mpython -m py_compile tools/prosperity_water_p467.py tests/browser_water_p467.py tests/test_prosperity_water_p467.py[0m
+2026-11-22T05:40:33.9258932Z [36;1mpython -m py_compile tools/prosperity_water_p468.py tests/browser_water_p468.py tests/test_prosperity_water_p468.py[0m
+2026-11-22T05:40:33.9259839Z [36;1mpython -m py_compile tools/build_backbone_469_data.py tools/prosperity_backbone_p469.py tests/browser_backbone_p469.py tests/test_prosperity_backbone_p469.py[0m
+2026-11-22T05:40:33.9261143Z [36;1mpython -m py_compile tools/city_common_470_data.py tools/city_common_470_relations.py tools/prosperity_city_common_p470.py tests/test_prosperity_city_common_p470.py tests/browser_city_common_p470.py[0m
+2026-11-22T05:40:33.9262361Z [36;1mpython -m py_compile tools/city_north_471_data.py tools/city_north_471_map.py tools/prosperity_city_north_p471.py tests/test_prosperity_city_north_p471.py tests/browser_city_north_p471.py[0m
+2026-11-22T05:40:33.9263215Z [36;1mnode --check research/prosperity-v4/water-467/water-ui.js[0m
+2026-11-22T05:40:33.9263744Z [36;1mnode --check research/prosperity-v4/water-468/water-ui.js[0m
+2026-11-22T05:40:33.9264231Z [36;1mnode --check research/prosperity-v4/backbone-469/backbone-ui.js[0m
+2026-11-22T05:40:33.9264780Z [36;1mnode --check research/prosperity-v4/common-470/common-ui.js[0m
+2026-11-22T05:40:33.9265305Z [36;1mnode --check research/prosperity-v4/north-471/north-ui.js[0m
+2026-11-22T05:40:33.9265809Z [36;1mnode --check research/prosperity-v4/west-472/west-ui.js[0m
+2026-11-22T05:40:33.9266608Z [36;1mpython -m py_compile tools/city_west_472_data.py tools/city_west_472_maps.py tools/prosperity_city_west_p472.py tools/verify_city_west_p472.py tests/browser_city_west_p472.py[0m
+2026-11-22T05:40:33.9267779Z [36;1mpython -m py_compile tools/road_location_atlas.py tools/verify_road_atlas_r6.py tests/test_prosperity_road_atlas_r6.py tests/browser_road_atlas_r6.py[0m
+2026-11-22T05:40:33.9268815Z [36;1mpython -m py_compile tools/all_road_atlas_r62.py tools/verify_all_road_atlas_r62.py tests/test_prosperity_all_road_atlas_r62.py tests/browser_all_road_atlas_r62.py[0m
+2026-11-22T05:40:33.9270083Z [36;1mpython -m py_compile tools/city_nodes_r7.py tools/city_nodes_r7_data.py tools/city_nodes_r7_maps.py tools/city_nodes_r7_core_maps.py tools/city_nodes_r7_page.py tools/city_nodes_r7_verify.py tests/test_city_nodes_r7.py tests/browser_city_nodes_r7.py[0m
+2026-11-22T05:40:33.9271061Z [36;1mnode --check web/prosperity-taiji-courts.js[0m
+2026-11-22T05:40:33.9271534Z [36;1mnode --check web/prosperity-architecture.js[0m
+2026-11-22T05:40:33.9271964Z [36;1mnode --check web/prosperity-city-distribution.js[0m
+2026-11-22T05:40:33.9272456Z [36;1mnode --check web/prosperity-road-functions.js[0m
+2026-11-22T05:40:33.9272908Z [36;1mnode --check web/prosperity-street-clusters.js[0m
+2026-11-22T05:40:33.9273402Z [36;1mnode --check web/prosperity-hydro-roads.js[0m
+2026-11-22T05:40:33.9287579Z shell: /usr/bin/bash -e {0}
+2026-11-22T05:40:33.9287991Z env:
+2026-11-22T05:40:33.9288547Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:33.9289118Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:40:33.9289664Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:33.9290130Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:33.9290608Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:33.9291238Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:40:33.9291667Z ##[endgroup]
+2026-11-22T05:40:34.0286550Z OK: 339 entities; 179 map targets; 30 disputes; 11 regions; 37 sheets
+2026-11-22T05:40:34.3351504Z TAP version 13
+2026-11-22T05:40:34.3874442Z # Subtest: all 11 region boxes are consumed as x,y,width,height
+2026-11-22T05:40:34.3876634Z ok 1 - all 11 region boxes are consumed as x,y,width,height
+2026-11-22T05:40:34.3878459Z   ---
+2026-11-22T05:40:34.3879311Z   duration_ms: 6.640616
+2026-11-22T05:40:34.3879714Z   type: 'test'
+2026-11-22T05:40:34.3880110Z   ...
+2026-11-22T05:40:34.3884409Z # Subtest: a simple map click is not captured away from a building marker
+2026-11-22T05:40:34.3885840Z ok 2 - a simple map click is not captured away from a building marker
+2026-11-22T05:40:34.3886711Z   ---
+2026-11-22T05:40:34.3887228Z   duration_ms: 1.840493
+2026-11-22T05:40:34.3888021Z   type: 'test'
+2026-11-22T05:40:34.3888522Z   ...
+2026-11-22T05:40:34.3889182Z # Subtest: dragging captures only after the threshold and releases on pointerup
+2026-11-22T05:40:34.3891439Z ok 3 - dragging captures only after the threshold and releases on pointerup
+2026-11-22T05:40:34.3892391Z   ---
+2026-11-22T05:40:34.3893320Z   duration_ms: 1.279513
+2026-11-22T05:40:34.3893813Z   type: 'test'
+2026-11-22T05:40:34.3894129Z   ...
+2026-11-22T05:40:34.3894756Z # Subtest: a secondary pointer does not replace the active drag
+2026-11-22T05:40:34.3895453Z ok 4 - a secondary pointer does not replace the active drag
+2026-11-22T05:40:34.3896098Z   ---
+2026-11-22T05:40:34.3896511Z   duration_ms: 1.799245
+2026-11-22T05:40:34.3896953Z   type: 'test'
+2026-11-22T05:40:34.3897367Z   ...
+2026-11-22T05:40:34.3898159Z # Subtest: drawing-to-page translation is shared by camera and marker overlay
+2026-11-22T05:40:34.3899090Z ok 5 - drawing-to-page translation is shared by camera and marker overlay
+2026-11-22T05:40:34.3899715Z   ---
+2026-11-22T05:40:34.3900081Z   duration_ms: 1.342803
+2026-11-22T05:40:34.3900537Z   type: 'test'
+2026-11-22T05:40:34.3900905Z   ...
+2026-11-22T05:40:34.4414668Z 1..5
+2026-11-22T05:40:34.4415363Z # tests 5
+2026-11-22T05:40:34.4415732Z # suites 0
+2026-11-22T05:40:34.4416295Z # pass 5
+2026-11-22T05:40:34.4416589Z # fail 0
+2026-11-22T05:40:34.4416875Z # cancelled 0
+2026-11-22T05:40:34.4417193Z # skipped 0
+2026-11-22T05:40:34.4417635Z # todo 0
+2026-11-22T05:40:34.4418016Z # duration_ms 133.704053
+2026-11-22T05:40:36.1694507Z ##[group]Run mkdir -p artifacts
+2026-11-22T05:40:36.1695211Z [36;1mmkdir -p artifacts[0m
+2026-11-22T05:40:36.1696124Z [36;1mpython -m unittest discover -s tests -p test_v26.py -v 2>&1 | tee artifacts/v26-semantic-tests.txt[0m
+2026-11-22T05:40:36.1697247Z [36;1mpython -m unittest discover -s tests -p test_v27.py -v 2>&1 | tee artifacts/v27-semantic-tests.txt[0m
+2026-11-22T05:40:36.1698617Z [36;1mpython -m unittest discover -s tests -p test_v29.py -v 2>&1 | tee artifacts/v29-semantic-tests.txt[0m
+2026-11-22T05:40:36.1699673Z [36;1mpython -m unittest discover -s tests -p test_v30.py -v 2>&1 | tee artifacts/v30-semantic-tests.txt[0m
+2026-11-22T05:40:36.1700759Z [36;1mpython -m unittest discover -s tests -p test_dual.py -v 2>&1 | tee artifacts/dual-semantic-tests.txt[0m
+2026-11-22T05:40:36.1701994Z [36;1mpython -m unittest discover -s tests -p test_west_b3.py -v 2>&1 | tee artifacts/west-b3-semantic-tests.txt[0m
+2026-11-22T05:40:36.1703313Z [36;1mpython -m unittest discover -s tests -p test_north_b4.py -v 2>&1 | tee artifacts/north-b4-semantic-tests.txt[0m
+2026-11-22T05:40:36.1704656Z [36;1mpython -m unittest discover -s tests -p test_historical_frame_b4.py -v 2>&1 | tee artifacts/historical-frame-b4-tests.txt[0m
+2026-11-22T05:40:36.1705934Z [36;1mpython -m unittest discover -s tests -p test_west_roads_b5.py -v 2>&1 | tee artifacts/west-roads-b5-tests.txt[0m
+2026-11-22T05:40:36.1707240Z [36;1mpython -m unittest discover -s tests -p test_historical_datum_b5.py -v 2>&1 | tee artifacts/historical-datum-b5-tests.txt[0m
+2026-11-22T05:40:36.1708751Z [36;1mpython -m unittest discover -s tests -p test_live_http.py -v 2>&1 | tee artifacts/live-http-tests.txt[0m
+2026-11-22T05:40:36.1710213Z [36;1mpython -m unittest discover -s tests -p test_ground_review_b6.py -v 2>&1 | tee artifacts/ground-review-b6-tests.txt[0m
+2026-11-22T05:40:36.1711513Z [36;1mpython -m unittest discover -s tests -p test_southeast_b6.py -v 2>&1 | tee artifacts/southeast-b6-tests.txt[0m
+2026-11-22T05:40:36.1712747Z [36;1mpython -m unittest discover -s tests -p test_source_continuity_b7.py -v 2>&1 | tee artifacts/source-continuity-b7-tests.txt[0m
+2026-11-22T05:40:36.1714025Z [36;1mpython -m unittest discover -s tests -p test_luonan_b7.py -v 2>&1 | tee artifacts/luonan-b7-tests.txt[0m
+2026-11-22T05:40:36.1715147Z [36;1mpython -m unittest discover -s tests -p test_city_audit_b8.py -v 2>&1 | tee artifacts/city-audit-b8-tests.txt[0m
+2026-11-22T05:40:36.1716386Z [36;1mpython -m unittest discover -s tests -p test_source_access_b8.py -v 2>&1 | tee artifacts/source-access-b8-tests.txt[0m
+2026-11-22T05:40:36.1717889Z [36;1mpython -m unittest discover -s tests -p test_city_review_b8.py -v 2>&1 | tee artifacts/city-review-b8-tests.txt[0m
+2026-11-22T05:40:36.1739723Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-22T05:40:36.1740374Z env:
+2026-11-22T05:40:36.1740907Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:36.1741819Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:40:36.1742678Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:36.1743408Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:36.1744081Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:36.1744770Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:40:36.1745434Z ##[endgroup]
+2026-11-22T05:40:37.0520650Z test_all_18_cards_atomized_and_dependencies_valid (test_v26.Registry.test_all_18_cards_atomized_and_dependencies_valid) ... ok
+2026-11-22T05:40:37.0529542Z test_all_482_relations_losslessly_retained (test_v26.Registry.test_all_482_relations_losslessly_retained) ... ok
+2026-11-22T05:40:37.0531042Z test_ambiguous_name_never_automerge (test_v26.Registry.test_ambiguous_name_never_automerge) ... ok
+2026-11-22T05:40:37.0532403Z test_broken_old_id_preserved_as_unresolved (test_v26.Registry.test_broken_old_id_preserved_as_unresolved) ... ok
+2026-11-22T05:40:37.0534586Z test_full_certificate_checks_unplotted_nodes_too (test_v26.Registry.test_full_certificate_checks_unplotted_nodes_too) ... ok
+2026-11-22T05:40:37.0536446Z test_has_east_projection_orientation (test_v26.Registry.test_has_east_projection_orientation) ... ok
+2026-11-22T05:40:37.0538245Z test_provenance_support_includes_enabling_evidence (test_v26.Registry.test_provenance_support_includes_enabling_evidence) ... ok
+2026-11-22T05:40:37.0539481Z test_road_side_sensitivity (test_v26.Registry.test_road_side_sensitivity) ... ok
+2026-11-22T05:40:37.0540395Z test_sixteen_scenarios (test_v26.Registry.test_sixteen_scenarios) ... ok
+2026-11-22T05:40:37.0541448Z test_temporal_audit_does_not_invent_dates (test_v26.Registry.test_temporal_audit_does_not_invent_dates) ... ok
+2026-11-22T05:40:37.0542693Z test_dependencies_are_removed_with_source (test_v26.Semantics.test_dependencies_are_removed_with_source) ... ok
+2026-11-22T05:40:37.0543816Z test_direction_reversal (test_v26.Semantics.test_direction_reversal) ... ok
+2026-11-22T05:40:37.0567184Z test_exhaustive_small_graph_feasibility_and_entailment (test_v26.Semantics.test_exhaustive_small_graph_feasibility_and_entailment) ... ok
+2026-11-22T05:40:37.0569113Z test_front_does_not_imply_south (test_v26.Semantics.test_front_does_not_imply_south) ... ok
+2026-11-22T05:40:37.0570548Z test_homonymous_gates_are_not_merged (test_v26.Semantics.test_homonymous_gates_are_not_merged) ... ok
+2026-11-22T05:40:37.0571966Z test_identity_time_boundary_all_required (test_v26.Semantics.test_identity_time_boundary_all_required) ... ok
+2026-11-22T05:40:37.0573407Z test_sequence_omission_is_not_absence (test_v26.Semantics.test_sequence_omission_is_not_absence) ... ok
+2026-11-22T05:40:37.0575273Z test_time_and_boundary_not_silently_collapsed (test_v26.Semantics.test_time_and_boundary_not_silently_collapsed) ... ok
+2026-11-22T05:40:37.0576759Z test_west_plus_east_does_not_decide_road_side (test_v26.Semantics.test_west_plus_east_does_not_decide_road_side) ... ok
+2026-11-22T05:40:37.0578603Z test_witnesses_satisfy_edges_after_monotone_rescaling (test_v26.Semantics.test_witnesses_satisfy_edges_after_monotone_rescaling) ... ok
+2026-11-22T05:40:37.0588540Z 
+2026-11-22T05:40:37.0589320Z ----------------------------------------------------------------------
+2026-11-22T05:40:37.0590140Z Ran 20 tests in 0.696s
+2026-11-22T05:40:37.0590392Z 
+2026-11-22T05:40:37.0590624Z OK
+2026-11-22T05:40:37.1250764Z test_527_damage_belongs_only_to_jianchun_bridge (test_v27.Events.test_527_damage_belongs_only_to_jianchun_bridge) ... ok
+2026-11-22T05:40:37.1252417Z test_all_dated_events_have_original_era_labels (test_v27.Events.test_all_dated_events_have_original_era_labels) ... ok
+2026-11-22T05:40:37.1254224Z test_earlier_damage_does_not_create_547_persistent_damage_state (test_v27.Events.test_earlier_damage_does_not_create_547_persistent_damage_state) ... ok
+2026-11-22T05:40:37.1255776Z test_foundation_and_construction_start_are_different (test_v27.Events.test_foundation_and_construction_start_are_different) ... ok
+2026-11-22T05:40:37.1257106Z test_future_event_does_not_prove_object_absence (test_v27.Events.test_future_event_does_not_prove_object_absence) ... ok
+2026-11-22T05:40:37.1258709Z test_general_observation_has_no_individual_object (test_v27.Events.test_general_observation_has_no_individual_object) ... ok
+2026-11-22T05:40:37.1260053Z test_moving_stones_is_not_removing_school_site (test_v27.Events.test_moving_stones_is_not_removing_school_site) ... ok
+2026-11-22T05:40:37.1261455Z test_start_year_window_is_not_completion (test_v27.Events.test_start_year_window_is_not_completion) ... ok
+2026-11-22T05:40:37.1269275Z test_tower_fire_does_not_apply_to_whole_temple (test_v27.Events.test_tower_fire_does_not_apply_to_whole_temple) ... ok
+2026-11-22T05:40:37.1270578Z test_undated_to_this_day_is_not_forced_to_547 (test_v27.Events.test_undated_to_this_day_is_not_forced_to_547) ... ok
+2026-11-22T05:40:37.1271884Z test_alignment_does_not_prove_confluence (test_v27.Networks.test_alignment_does_not_prove_confluence) ... ok
+2026-11-22T05:40:37.1386965Z test_all_480_query_results_have_checkable_typed_certificates (test_v27.Networks.test_all_480_query_results_have_checkable_typed_certificates) ... ok
+2026-11-22T05:40:37.1388874Z test_all_edges_have_real_passage_references (test_v27.Networks.test_all_edges_have_real_passage_references) ... ok
+2026-11-22T05:40:37.1390164Z test_bridge_identity_never_creates_water_flow (test_v27.Networks.test_bridge_identity_never_creates_water_flow) ... ok
+2026-11-22T05:40:37.1391544Z test_crossing_does_not_allow_flow_from_the_bridge (test_v27.Networks.test_crossing_does_not_allow_flow_from_the_bridge) ... ok
+2026-11-22T05:40:37.1393090Z test_east_cross_source_join_requires_explicit_identity (test_v27.Networks.test_east_cross_source_join_requires_explicit_identity) ... ok
+2026-11-22T05:40:37.1394529Z test_flood_relief_requires_the_condition (test_v27.Networks.test_flood_relief_requires_the_condition) ... ok
+2026-11-22T05:40:37.1395770Z test_flow_is_not_implicitly_reversed (test_v27.Networks.test_flow_is_not_implicitly_reversed) ... ok
+2026-11-22T05:40:37.1396980Z test_itinerary_scopes_cannot_be_mixed (test_v27.Networks.test_itinerary_scopes_cannot_be_mixed) ... ok
+2026-11-22T05:40:37.1398132Z test_node_ids_are_unique (test_v27.Networks.test_node_ids_are_unique) ... ok
+2026-11-22T05:40:37.1399234Z test_primary_water_sequence_is_supported (test_v27.Networks.test_primary_water_sequence_is_supported) ... ok
+2026-11-22T05:40:37.1400610Z test_reach_name_does_not_merge_distinct_receiving_segments (test_v27.Networks.test_reach_name_does_not_merge_distinct_receiving_segments) ... ok
+2026-11-22T05:40:37.1402519Z test_source_ablation_removes_dependent_joins (test_v27.Networks.test_source_ablation_removes_dependent_joins) ... ok
+2026-11-22T05:40:37.1404673Z test_southern_canal_identification_is_not_default (test_v27.Networks.test_southern_canal_identification_is_not_default) ... ok
+2026-11-22T05:40:37.1409164Z test_water_edge_endpoints_are_only_water_reaches (test_v27.Networks.test_water_edge_endpoints_are_only_water_reaches) ... ok
+2026-11-22T05:40:37.1409872Z 
+2026-11-22T05:40:37.1410202Z ----------------------------------------------------------------------
+2026-11-22T05:40:37.1410772Z Ran 25 tests in 0.015s
+2026-11-22T05:40:37.1411056Z 
+2026-11-22T05:40:37.1411208Z OK
+2026-11-22T05:40:37.2009730Z test_alternative_years_not_continuous_interval (test_v29.Dates.test_alternative_years_not_continuous_interval) ... ok
+2026-11-22T05:40:37.2011309Z test_exact_event_is_not_persistent_state (test_v29.Dates.test_exact_event_is_not_persistent_state) ... ok
+2026-11-22T05:40:37.2019467Z test_future_not_visible_as_past (test_v29.Dates.test_future_not_visible_as_past) ... ok
+2026-11-22T05:40:37.2020235Z test_interval_is_not_whole_period_event (test_v29.Dates.test_interval_is_not_whole_period_event) ... ok
+2026-11-22T05:40:37.2021049Z test_lower_bound_remains_unclosed (test_v29.Dates.test_lower_bound_remains_unclosed) ... ok
+2026-11-22T05:40:37.2021653Z test_narrator_now_not_547 (test_v29.Dates.test_narrator_now_not_547) ... ok
+2026-11-22T05:40:37.2022377Z test_undated_repairs_not_exact_year (test_v29.Dates.test_undated_repairs_not_exact_year) ... ok
+2026-11-22T05:40:37.2023011Z test_unknown_date_type_rejected (test_v29.Dates.test_unknown_date_type_rejected) ... ok
+2026-11-22T05:40:37.2023592Z test_547_unknown_not_mass_ruin (test_v29.Research.test_547_unknown_not_mass_ruin) ... ok
+2026-11-22T05:40:37.2024275Z test_all_source_versions_one_family (test_v29.Research.test_all_source_versions_one_family) ... ok
+2026-11-22T05:40:37.2024946Z test_counts_and_unique_identifiers (test_v29.Research.test_counts_and_unique_identifiers) ... ok
+2026-11-22T05:40:37.2025692Z test_every_record_has_source_scope_and_limit (test_v29.Research.test_every_record_has_source_scope_and_limit) ... ok
+2026-11-22T05:40:37.2026537Z test_explicit_completion_not_transferred_to_jingming (test_v29.Research.test_explicit_completion_not_transferred_to_jingming) ... ok
+2026-11-22T05:40:37.2027255Z test_fire_only_tower (test_v29.Research.test_fire_only_tower) ... ok
+2026-11-22T05:40:37.2028523Z test_jingle_activity_not_temple_fire (test_v29.Research.test_jingle_activity_not_temple_fire) ... ok
+2026-11-22T05:40:37.2029386Z test_no_fabricated_status_intervals (test_v29.Research.test_no_fabricated_status_intervals) ... ok
+2026-11-22T05:40:37.2030302Z test_portable_stones_not_palace_school (test_v29.Research.test_portable_stones_not_palace_school) ... ok
+2026-11-22T05:40:37.2031264Z test_prior_event_links_not_duplicate_claims (test_v29.Research.test_prior_event_links_not_duplicate_claims) ... ok
+2026-11-22T05:40:37.2032108Z test_two_jianzhong_not_merged (test_v29.Research.test_two_jianzhong_not_merged) ... ok
+2026-11-22T05:40:37.2032919Z test_yaoguang_intrusion_not_fire (test_v29.Research.test_yaoguang_intrusion_not_fire) ... ok
+2026-11-22T05:40:37.2033263Z 
+2026-11-22T05:40:37.2033483Z ----------------------------------------------------------------------
+2026-11-22T05:40:37.2034015Z Ran 20 tests in 0.001s
+2026-11-22T05:40:37.2034195Z 
+2026-11-22T05:40:37.2034355Z OK
+2026-11-22T05:40:37.6888959Z test_authorized_window (test_v30.TerrainSemantics.test_authorized_window) ... ok
+2026-11-22T05:40:37.6909166Z test_boundary_derivatives_masked (test_v30.TerrainSemantics.test_boundary_derivatives_masked) ... ok
+2026-11-22T05:40:37.6948432Z test_constant_smoothing (test_v30.TerrainSemantics.test_constant_smoothing) ... ok
+2026-11-22T05:40:37.6968794Z test_east_gradient (test_v30.TerrainSemantics.test_east_gradient) ... ok
+2026-11-22T05:40:37.6969619Z test_flat_slope (test_v30.TerrainSemantics.test_flat_slope) ... ok
+2026-11-22T05:40:37.6970414Z test_graph_not_transformed (test_v30.TerrainSemantics.test_graph_not_transformed) ... ok
+2026-11-22T05:40:37.6972119Z test_no_sinkfill (test_v30.TerrainSemantics.test_no_sinkfill) ... ok
+2026-11-22T05:40:37.6973055Z test_no_zero_height_for_void (test_v30.TerrainSemantics.test_no_zero_height_for_void) ... ok
+2026-11-22T05:40:37.6998521Z test_north_gradient (test_v30.TerrainSemantics.test_north_gradient) ... ok
+2026-11-22T05:40:37.7028689Z test_not_native_resolution_claim (test_v30.TerrainSemantics.test_not_native_resolution_claim) ... ok
+2026-11-22T05:40:37.7029681Z test_plane_gradient_both_axes (test_v30.TerrainSemantics.test_plane_gradient_both_axes) ... ok
+2026-11-22T05:40:37.7030628Z test_positive_spacing (test_v30.TerrainSemantics.test_positive_spacing) ... ok
+2026-11-22T05:40:37.7031436Z test_shade_bounds (test_v30.TerrainSemantics.test_shade_bounds) ... ok
+2026-11-22T05:40:37.7032469Z test_smoothing_does_not_fill_missing (test_v30.TerrainSemantics.test_smoothing_does_not_fill_missing) ... ok
+2026-11-22T05:40:37.7033416Z test_source_attribution (test_v30.TerrainSemantics.test_source_attribution) ... ok
+2026-11-22T05:40:37.7034310Z test_sources_are_pinned (test_v30.TerrainSemantics.test_sources_are_pinned) ... ok
+2026-11-22T05:40:37.7034838Z 
+2026-11-22T05:40:37.7035290Z ----------------------------------------------------------------------
+2026-11-22T05:40:37.7058294Z Ran 16 tests in 0.004s
+2026-11-22T05:40:37.7058667Z 
+2026-11-22T05:40:37.7058905Z OK
+2026-11-22T05:40:38.1827658Z test_01_snapshot_full_hash (test_dual.DualMaps.test_01_snapshot_full_hash) ... ok
+2026-11-22T05:40:38.1829035Z test_02_b1_decisions_unique (test_dual.DualMaps.test_02_b1_decisions_unique) ... ok
+2026-11-22T05:40:38.1830002Z test_03_b2_evidence_unique (test_dual.DualMaps.test_03_b2_evidence_unique) ... ok
+2026-11-22T05:40:38.1830832Z test_04_references_valid (test_dual.DualMaps.test_04_references_valid) ... ok
+2026-11-22T05:40:38.1831817Z test_05_quotes_and_layers (test_dual.DualMaps.test_05_quotes_and_layers) ... ok
+2026-11-22T05:40:38.1832913Z test_06_no_new_absolute_coordinates (test_dual.DualMaps.test_06_no_new_absolute_coordinates) ... ok
+2026-11-22T05:40:38.1834311Z test_07_same_source_family_not_double_votes (test_dual.DualMaps.test_07_same_source_family_not_double_votes) ... ok
+2026-11-22T05:40:38.1835532Z test_08_seven_reviewed_groups (test_dual.DualMaps.test_08_seven_reviewed_groups) ... ok
+2026-11-22T05:40:38.1839363Z test_09_eight_new_groups (test_dual.DualMaps.test_09_eight_new_groups) ... ok
+2026-11-22T05:40:38.2113875Z test_10_all_other_world_children_preserved (test_dual.DualMaps.test_10_all_other_world_children_preserved) ... ok
+2026-11-22T05:40:38.2114692Z test_11_existing_anchors_not_moved (test_dual.DualMaps.test_11_existing_anchors_not_moved) ... ok
+2026-11-22T05:40:38.2116000Z test_12_figures_are_not_footprints (test_dual.DualMaps.test_12_figures_are_not_footprints) ... ok
+2026-11-22T05:40:38.2129802Z test_13_unlocated_stays_unlocated (test_dual.DualMaps.test_13_unlocated_stays_unlocated) ... ok
+2026-11-22T05:40:38.2131754Z test_14_qingshu_baiguo_no_added_order (test_dual.DualMaps.test_14_qingshu_baiguo_no_added_order) ... ok
+2026-11-22T05:40:38.2134078Z test_15_distinguish_same_named_hills (test_dual.DualMaps.test_15_distinguish_same_named_hills) ... ok
+2026-11-22T05:40:38.2135720Z test_16_underwater_is_not_surface (test_dual.DualMaps.test_16_underwater_is_not_surface) ... ok
+2026-11-22T05:40:38.2137807Z test_17_alternative_membership_not_placement (test_dual.DualMaps.test_17_alternative_membership_not_placement) ... ok
+2026-11-22T05:40:38.2139737Z test_18_yongning_destruction_limited (test_dual.DualMaps.test_18_yongning_destruction_limited) ... ok
+2026-11-22T05:40:38.2141506Z test_19_jianchun_event_not_eastbridge (test_dual.DualMaps.test_19_jianchun_event_not_eastbridge) ... ok
+2026-11-22T05:40:38.2143184Z test_20_scalar_grid_not_ancient_bounds (test_dual.DualMaps.test_20_scalar_grid_not_ancient_bounds) ... ok
+2026-11-22T05:40:38.2144882Z test_21_quantities_not_grid_of_rooms (test_dual.DualMaps.test_21_quantities_not_grid_of_rooms) ... ok
+2026-11-22T05:40:38.2146725Z test_22_collective_four_not_new_fourth_location (test_dual.DualMaps.test_22_collective_four_not_new_fourth_location) ... ok
+2026-11-22T05:40:38.2148357Z 
+2026-11-22T05:40:38.2148772Z ----------------------------------------------------------------------
+2026-11-22T05:40:38.2149716Z Ran 22 tests in 0.130s
+2026-11-22T05:40:38.2150123Z 
+2026-11-22T05:40:38.2150340Z OK
+2026-11-22T05:40:39.0301858Z test_01_namespace_is_separate (test_west_b3.WestB3.test_01_namespace_is_separate) ... ok
+2026-11-22T05:40:39.0302953Z test_02_no_new_geocoordinates (test_west_b3.WestB3.test_02_no_new_geocoordinates) ... ok
+2026-11-22T05:40:39.0304257Z test_03_quotations_and_decisions (test_west_b3.WestB3.test_03_quotations_and_decisions) ... ok
+2026-11-22T05:40:39.0305427Z test_04_source_family_not_independent (test_west_b3.WestB3.test_04_source_family_not_independent) ... ok
+2026-11-22T05:40:39.0306532Z test_05_all_icons_reuse_old_anchors (test_west_b3.WestB3.test_05_all_icons_reuse_old_anchors) ... ok
+2026-11-22T05:40:39.0307795Z test_06_no_published_b2_entities (test_west_b3.WestB3.test_06_no_published_b2_entities) ... ok
+2026-11-22T05:40:39.0309238Z test_07_no_false_market_grid (test_west_b3.WestB3.test_07_no_false_market_grid) ... ok
+2026-11-22T05:40:39.0310853Z test_08_royal_temple_membership_unlocated (test_west_b3.WestB3.test_08_royal_temple_membership_unlocated) ... ok
+2026-11-22T05:40:39.0311898Z 
+2026-11-22T05:40:39.0312326Z ----------------------------------------------------------------------
+2026-11-22T05:40:39.0313210Z Ran 8 tests in 0.004s
+2026-11-22T05:40:39.0313601Z 
+2026-11-22T05:40:39.0313854Z OK
+2026-11-22T05:40:39.6366069Z test_01_source_identity_and_quote_attribution (test_north_b4.NorthB4.test_01_source_identity_and_quote_attribution) ... ok
+2026-11-22T05:40:39.6367415Z test_02_no_ancient_geographic_registration (test_north_b4.NorthB4.test_02_no_ancient_geographic_registration) ... ok
+2026-11-22T05:40:39.6372246Z test_03_existing_anchors_and_region_identity (test_north_b4.NorthB4.test_03_existing_anchors_and_region_identity) ... ok
+2026-11-22T05:40:39.6373881Z test_04_daxia_layer_count_remains_a_selected_reading (test_north_b4.NorthB4.test_04_daxia_layer_count_remains_a_selected_reading) ... ok
+2026-11-22T05:40:39.6379064Z test_05_two_fields_are_not_merged_or_oriented (test_north_b4.NorthB4.test_05_two_fields_are_not_merged_or_oriented) ... ok
+2026-11-22T05:40:39.6380403Z test_06_high_ground_is_not_a_modern_coordinate (test_north_b4.NorthB4.test_06_high_ground_is_not_a_modern_coordinate) ... ok
+2026-11-22T05:40:39.6381585Z test_07_front_and_membership_do_not_create_addresses (test_north_b4.NorthB4.test_07_front_and_membership_do_not_create_addresses) ... ok
+2026-11-22T05:40:39.6382699Z test_08_west_shouqiu_rendered_direction_regression (test_north_b4.NorthB4.test_08_west_shouqiu_rendered_direction_regression) ... ok
+2026-11-22T05:40:39.6383230Z 
+2026-11-22T05:40:39.6383424Z ----------------------------------------------------------------------
+2026-11-22T05:40:39.6383881Z Ran 8 tests in 0.005s
+2026-11-22T05:40:39.6384152Z 
+2026-11-22T05:40:39.6384365Z OK
+2026-11-22T05:40:39.8636713Z test_affine_inverse_reproduces_known_scan_pixel (test_historical_frame_b4.HistoricalFrameChecks.test_affine_inverse_reproduces_known_scan_pixel) ... ok
+2026-11-22T05:40:39.8651195Z test_holdout_observations_cannot_change_fitted_model (test_historical_frame_b4.HistoricalFrameChecks.test_holdout_observations_cannot_change_fitted_model) ... ok
+2026-11-22T05:40:39.8669459Z test_internal_checks_and_rectification_do_not_extrapolate (test_historical_frame_b4.HistoricalFrameChecks.test_internal_checks_and_rectification_do_not_extrapolate) ... ok
+2026-11-22T05:40:39.8671218Z test_known_source_identity_and_observation_counts (test_historical_frame_b4.HistoricalFrameChecks.test_known_source_identity_and_observation_counts) ... ok
+2026-11-22T05:40:39.8673033Z test_no_ground_or_ancient_registration_claim (test_historical_frame_b4.HistoricalFrameChecks.test_no_ground_or_ancient_registration_claim) ... ok
+2026-11-22T05:40:39.8816512Z test_rectification_respects_pixel_centre_sampling (test_historical_frame_b4.HistoricalFrameChecks.test_rectification_respects_pixel_centre_sampling) ... ok
+2026-11-22T05:40:39.8832265Z test_residuals_are_scan_internal_and_preserve_measurements (test_historical_frame_b4.HistoricalFrameChecks.test_residuals_are_scan_internal_and_preserve_measurements) ... ok
+2026-11-22T05:40:39.8833105Z 
+2026-11-22T05:40:39.8833386Z ----------------------------------------------------------------------
+2026-11-22T05:40:39.8833837Z Ran 7 tests in 0.044s
+2026-11-22T05:40:39.8834105Z 
+2026-11-22T05:40:39.8834220Z OK
+2026-11-22T05:40:40.4369578Z test_house_and_undated_temples_keep_distinct_states (test_west_roads_b5.WestRoadsB5.test_house_and_undated_temples_keep_distinct_states) ... ok
+2026-11-22T05:40:40.4371015Z test_no_ancient_positions_or_new_region_geometry (test_west_roads_b5.WestRoadsB5.test_no_ancient_positions_or_new_region_geometry) ... ok
+2026-11-22T05:40:40.4374234Z test_only_old_node_anchors_and_distinct_city_gate (test_west_roads_b5.WestRoadsB5.test_only_old_node_anchors_and_distinct_city_gate) ... ok
+2026-11-22T05:40:40.4376046Z test_partial_order_allows_both_temples_first (test_west_roads_b5.WestRoadsB5.test_partial_order_allows_both_temples_first) ... ok
+2026-11-22T05:40:40.4377599Z test_relation_plate_retains_non_entailments (test_west_roads_b5.WestRoadsB5.test_relation_plate_retains_non_entailments) ... ok
+2026-11-22T05:40:40.4379124Z test_same_name_records_remain_unresolved (test_west_roads_b5.WestRoadsB5.test_same_name_records_remain_unresolved) ... ok
+2026-11-22T05:40:40.4380739Z test_sidecar_records_do_not_become_new_site_symbols (test_west_roads_b5.WestRoadsB5.test_sidecar_records_do_not_become_new_site_symbols) ... ok
+2026-11-22T05:40:40.4382115Z test_sources_and_existing_entities (test_west_roads_b5.WestRoadsB5.test_sources_and_existing_entities) ... ok
+2026-11-22T05:40:40.4383094Z 
+2026-11-22T05:40:40.4383493Z ----------------------------------------------------------------------
+2026-11-22T05:40:40.4384343Z Ran 8 tests in 0.005s
+2026-11-22T05:40:40.4384743Z 
+2026-11-22T05:40:40.4384985Z OK
+2026-11-22T05:40:40.6429844Z test_changed_scan_bytes_are_rejected_before_image_use (test_historical_datum_b5.HistoricalDatumChecks.test_changed_scan_bytes_are_rejected_before_image_use) ... ok
+2026-11-22T05:40:40.6439604Z test_crops_are_valid_original_pixel_rectangles (test_historical_datum_b5.HistoricalDatumChecks.test_crops_are_valid_original_pixel_rectangles) ... ok
+2026-11-22T05:40:40.6448736Z test_latitude_band_and_compilation_lineages_remain_distinct (test_historical_datum_b5.HistoricalDatumChecks.test_latitude_band_and_compilation_lineages_remain_distinct) ... ok
+2026-11-22T05:40:40.6478631Z test_no_ground_features_or_ancient_positions_are_invented (test_historical_datum_b5.HistoricalDatumChecks.test_no_ground_features_or_ancient_positions_are_invented) ... ok
+2026-11-22T05:40:40.6508579Z test_paper_datum_cannot_inherit_digitizer_working_definition (test_historical_datum_b5.HistoricalDatumChecks.test_paper_datum_cannot_inherit_digitizer_working_definition) ... ok
+2026-11-22T05:40:40.6528562Z test_residual_conditions_and_values_are_not_conflated (test_historical_datum_b5.HistoricalDatumChecks.test_residual_conditions_and_values_are_not_conflated) ... ok
+2026-11-22T05:40:40.6538251Z test_verified_source_identities_are_pinned (test_historical_datum_b5.HistoricalDatumChecks.test_verified_source_identities_are_pinned) ... ok
+2026-11-22T05:40:40.6567573Z 
+2026-11-22T05:40:40.6588182Z ----------------------------------------------------------------------
+2026-11-22T05:40:40.6617890Z Ran 7 tests in 0.004s
+2026-11-22T05:40:40.6627544Z 
+2026-11-22T05:40:40.6652100Z OK
+2026-11-22T05:40:40.7816358Z test_01_transient_503_and_network_errors_retry_then_return_exact_bytes (test_live_http.LiveHTTP.test_01_transient_503_and_network_errors_retry_then_return_exact_bytes) ... ok
+2026-11-22T05:40:40.7824403Z test_02_429_is_bounded_and_honors_safe_retry_after (test_live_http.LiveHTTP.test_02_429_is_bounded_and_honors_safe_retry_after) ... ok
+2026-11-22T05:40:40.7827096Z test_03_404_and_hash_mismatches_are_not_recovered (test_live_http.LiveHTTP.test_03_404_and_hash_mismatches_are_not_recovered) ... ok
+2026-11-22T05:40:40.7843993Z test_04_certificate_and_url_boundary_failures_never_retry (test_live_http.LiveHTTP.test_04_certificate_and_url_boundary_failures_never_retry) ... ok
+2026-11-22T05:40:40.7893037Z test_05_parallel_retry_log_is_complete_and_detached (test_live_http.LiveHTTP.test_05_parallel_retry_log_is_complete_and_detached) ... ok
+2026-11-22T05:40:40.7893662Z 
+2026-11-22T05:40:40.7893868Z ----------------------------------------------------------------------
+2026-11-22T05:40:40.7894305Z Ran 5 tests in 0.009s
+2026-11-22T05:40:40.7894519Z 
+2026-11-22T05:40:40.7894615Z OK
+2026-11-22T05:40:40.8733000Z test_bad_original_scan_is_rejected_before_any_publication (test_ground_review_b6.GroundReviewChecks.test_bad_original_scan_is_rejected_before_any_publication) ... ok
+2026-11-22T05:40:40.8734573Z test_candidate_decisions_have_distinct_and_specific_evidence (test_ground_review_b6.GroundReviewChecks.test_candidate_decisions_have_distinct_and_specific_evidence) ... ok
+2026-11-22T05:40:40.8737617Z test_cited_compilation_year_is_not_substituted_for_observed_printing (test_ground_review_b6.GroundReviewChecks.test_cited_compilation_year_is_not_substituted_for_observed_printing) ... ok
+2026-11-22T05:40:40.8851365Z test_fixed_iiif_responses_match_reviewed_sha_and_original_region_dimensions (test_ground_review_b6.GroundReviewChecks.test_fixed_iiif_responses_match_reviewed_sha_and_original_region_dimensions) ... ok
+2026-11-22T05:40:40.8854133Z test_named_regions_do_not_become_ground_points_or_ancient_positions (test_ground_review_b6.GroundReviewChecks.test_named_regions_do_not_become_ground_points_or_ancient_positions) ... ok
+2026-11-22T05:40:40.8859436Z test_original_scan_identity_and_datum_are_inherited_without_redefinition (test_ground_review_b6.GroundReviewChecks.test_original_scan_identity_and_datum_are_inherited_without_redefinition) ... ok
+2026-11-22T05:40:40.8860139Z 
+2026-11-22T05:40:40.8860386Z ----------------------------------------------------------------------
+2026-11-22T05:40:40.8862589Z Ran 6 tests in 0.015s
+2026-11-22T05:40:40.8863033Z 
+2026-11-22T05:40:40.8863240Z OK
+2026-11-22T05:40:41.5955705Z test_01_34_records_keep_regions_and_attributed_sources (test_southeast_b6.SoutheastB6.test_01_34_records_keep_regions_and_attributed_sources) ... ok
+2026-11-22T05:40:41.5957588Z test_02_old_region_boxes_and_no_ancient_coordinates (test_southeast_b6.SoutheastB6.test_02_old_region_boxes_and_no_ancient_coordinates) ... ok
+2026-11-22T05:40:41.5964689Z test_03_only_17_old_nodes_and_three_old_gates_are_changed (test_southeast_b6.SoutheastB6.test_03_only_17_old_nodes_and_three_old_gates_are_changed) ... ok
+2026-11-22T05:40:41.6031632Z test_04_prior_batch_counts_and_contents_are_unchanged (test_southeast_b6.SoutheastB6.test_04_prior_batch_counts_and_contents_are_unchanged) ... ok
+2026-11-22T05:40:41.6322334Z test_05_unselected_map_children_are_preserved_byte_for_byte (test_southeast_b6.SoutheastB6.test_05_unselected_map_children_are_preserved_byte_for_byte) ... ok
+2026-11-22T05:40:41.6323701Z test_06_five_sidecars_do_not_become_new_site_glyphs (test_southeast_b6.SoutheastB6.test_06_five_sidecars_do_not_become_new_site_glyphs) ... ok
+2026-11-22T05:40:41.6331758Z test_07_179_target_registry_is_unchanged_and_glyphs_are_pointer_transparent (test_southeast_b6.SoutheastB6.test_07_179_target_registry_is_unchanged_and_glyphs_are_pointer_transparent) ... ok
+2026-11-22T05:40:41.6333518Z test_08_two_taicangs_and_two_pools_remain_distinct (test_southeast_b6.SoutheastB6.test_08_two_taicangs_and_two_pools_remain_distinct) ... ok
+2026-11-22T05:40:41.6334416Z test_09_office_order_stays_attributed_to_commentary (test_southeast_b6.SoutheastB6.test_09_office_order_stays_attributed_to_commentary) ... ok
+2026-11-22T05:40:41.6335354Z test_10_temple_relative_directions_do_not_transfer_road_sides (test_southeast_b6.SoutheastB6.test_10_temple_relative_directions_do_not_transfer_road_sides) ... ok
+2026-11-22T05:40:41.6338055Z test_11_yonghe_referent_is_an_interpretation_not_direct_text (test_southeast_b6.SoutheastB6.test_11_yonghe_referent_is_an_interpretation_not_direct_text) ... ok
+2026-11-22T05:40:41.6339349Z test_12_shared_ward_does_not_make_dianyu_the_eastern_neighbor (test_southeast_b6.SoutheastB6.test_12_shared_ward_does_not_make_dianyu_the_eastern_neighbor) ... ok
+2026-11-22T05:40:41.6340321Z test_13_tomb_corner_is_not_inherited_by_baoming (test_southeast_b6.SoutheastB6.test_13_tomb_corner_is_not_inherited_by_baoming) ... ok
+2026-11-22T05:40:41.6341293Z test_14_pingdeng_tower_is_late_with_two_unmerged_completion_readings (test_southeast_b6.SoutheastB6.test_14_pingdeng_tower_is_late_with_two_unmerged_completion_readings) ... ok
+2026-11-22T05:40:41.6343323Z test_15_baoming_dating_retains_the_same_name_identity_condition (test_southeast_b6.SoutheastB6.test_15_baoming_dating_retains_the_same_name_identity_condition) ... ok
+2026-11-22T05:40:41.6345144Z test_16_undated_temples_and_post_conversion_residence_remain_distinct (test_southeast_b6.SoutheastB6.test_16_undated_temples_and_post_conversion_residence_remain_distinct) ... ok
+2026-11-22T05:40:41.6347017Z test_17_rendered_relations_keep_non_entailments_visible (test_southeast_b6.SoutheastB6.test_17_rendered_relations_keep_non_entailments_visible) ... ok
+2026-11-22T05:40:41.6348486Z test_18_rendered_dates_and_named_components_do_not_date_whole_temples (test_southeast_b6.SoutheastB6.test_18_rendered_dates_and_named_components_do_not_date_whole_temples) ... ok
+2026-11-22T05:40:41.6349096Z 
+2026-11-22T05:40:41.6349288Z ----------------------------------------------------------------------
+2026-11-22T05:40:41.6349725Z Ran 18 tests in 0.207s
+2026-11-22T05:40:41.6349965Z 
+2026-11-22T05:40:41.6350115Z OK
+2026-11-22T05:40:41.7675747Z test_catalog_dates_do_not_collapse_into_survey_or_printing_dates (test_source_continuity_b7.SourceContinuityChecks.test_catalog_dates_do_not_collapse_into_survey_or_printing_dates) ... ok
+2026-11-22T05:40:41.8088940Z test_isolated_build_preserves_identity_and_packages_a_reproducible_review (test_source_continuity_b7.SourceContinuityChecks.test_isolated_build_preserves_identity_and_packages_a_reproducible_review) ... ok
+2026-11-22T05:40:41.8092872Z test_no_datum_point_coordinate_or_historical_scan_is_invented (test_source_continuity_b7.SourceContinuityChecks.test_no_datum_point_coordinate_or_historical_scan_is_invented) ... ok
+2026-11-22T05:40:41.8096156Z test_official_record_identities_and_catalog_only_evidence_are_explicit (test_source_continuity_b7.SourceContinuityChecks.test_official_record_identities_and_catalog_only_evidence_are_explicit) ... ok
+2026-11-22T05:40:41.8098570Z test_period_and_scale_compatibility_are_not_actual_source_matches (test_source_continuity_b7.SourceContinuityChecks.test_period_and_scale_compatibility_are_not_actual_source_matches) ... ok
+2026-11-22T05:40:41.8108360Z 
+2026-11-22T05:40:41.8108754Z ----------------------------------------------------------------------
+2026-11-22T05:40:41.8109344Z Ran 5 tests in 0.044s
+2026-11-22T05:40:41.8109500Z 
+2026-11-22T05:40:41.8109719Z OK
+2026-11-22T05:40:41.8110282Z B7 source continuity: 3 catalog records, 1 period candidate, 2 earlier editions, 2 plates; 0 actual-source matches or ground points.
+2026-11-22T05:40:42.5726271Z test_01_25_records_keep_attributed_text_and_one_source_family (test_luonan_b7.LuonanB7.test_01_25_records_keep_attributed_text_and_one_source_family) ... ok
+2026-11-22T05:40:42.5728375Z test_02_same_R11_box_and_no_ancient_coordinates_or_new_entities (test_luonan_b7.LuonanB7.test_02_same_R11_box_and_no_ancient_coordinates_or_new_entities) ... ok
+2026-11-22T05:40:42.5739474Z test_03_seven_reading_groups_keep_old_anchors_and_plural_membership (test_luonan_b7.LuonanB7.test_03_seven_reading_groups_keep_old_anchors_and_plural_membership) ... ok
+2026-11-22T05:40:42.6328863Z test_04_all_original_map_children_survive_unchanged_even_when_wrapped (test_luonan_b7.LuonanB7.test_04_all_original_map_children_survive_unchanged_even_when_wrapped) ... ok
+2026-11-22T05:40:42.6416039Z test_05_prior_batch_counts_and_subtrees_are_unchanged (test_luonan_b7.LuonanB7.test_05_prior_batch_counts_and_subtrees_are_unchanged) ... ok
+2026-11-22T05:40:42.6420725Z test_06_179_targets_unchanged_and_no_individual_site_glyphs_added (test_luonan_b7.LuonanB7.test_06_179_targets_unchanged_and_no_individual_site_glyphs_added) ... ok
+2026-11-22T05:40:42.6422372Z test_07_sidecars_bridge_and_altar_keep_their_nonlocating_roles (test_luonan_b7.LuonanB7.test_07_sidecars_bridge_and_altar_keep_their_nonlocating_roles) ... ok
+2026-11-22T05:40:42.6423940Z test_08_catalogue_is_not_internal_order_or_opposite_street_pairs (test_luonan_b7.LuonanB7.test_08_catalogue_is_not_internal_order_or_opposite_street_pairs) ... ok
+2026-11-22T05:40:42.6426654Z test_09_only_two_institutional_transitions_explicitly_say_three_years (test_luonan_b7.LuonanB7.test_09_only_two_institutional_transitions_explicitly_say_three_years) ... ok
+2026-11-22T05:40:42.6428416Z test_10_court_rank_seasonal_service_and_external_names_do_not_make_sites (test_luonan_b7.LuonanB7.test_10_court_rank_seasonal_service_and_external_names_do_not_make_sites) ... ok
+2026-11-22T05:40:42.6429920Z test_11_zhengde_arrival_readings_do_not_date_residence_or_temple (test_luonan_b7.LuonanB7.test_11_zhengde_arrival_readings_do_not_date_residence_or_temple) ... ok
+2026-11-22T05:40:42.6430989Z test_12_two_undated_temples_do_not_inherit_group_years_or_shared_address (test_luonan_b7.LuonanB7.test_12_two_undated_temples_do_not_inherit_group_years_or_shared_address) ... ok
+2026-11-22T05:40:42.6432003Z test_13_baoyin_former_residence_is_not_zhengdes_conversion (test_luonan_b7.LuonanB7.test_13_baoyin_former_residence_is_not_zhengdes_conversion) ... ok
+2026-11-22T05:40:42.6433008Z test_14_fish_market_ward_does_not_inherit_heading_or_neighbors (test_luonan_b7.LuonanB7.test_14_fish_market_ward_does_not_inherit_heading_or_neighbors) ... ok
+2026-11-22T05:40:42.6434023Z test_15_sitong_alias_does_not_merge_markets_or_supply_a_roadside (test_luonan_b7.LuonanB7.test_15_sitong_alias_does_not_merge_markets_or_supply_a_roadside) ... ok
+2026-11-22T05:40:42.6435047Z test_16_arrival_era_and_household_variants_are_not_market_date_or_area (test_luonan_b7.LuonanB7.test_16_arrival_era_and_household_variants_are_not_market_date_or_area) ... ok
+2026-11-22T05:40:42.6436518Z test_17_bridge_type_distance_and_commemoration_do_not_supply_geometry_or_date (test_luonan_b7.LuonanB7.test_17_bridge_type_distance_and_commemoration_do_not_supply_geometry_or_date) ... ok
+2026-11-22T05:40:42.6437950Z test_18_region_reference_and_ritual_do_not_locate_altar_or_crossing_route (test_luonan_b7.LuonanB7.test_18_region_reference_and_ritual_do_not_locate_altar_or_crossing_route) ... ok
+2026-11-22T05:40:42.6439078Z test_19_two_animal_wards_have_separate_events_and_no_simultaneous_scene (test_luonan_b7.LuonanB7.test_19_two_animal_wards_have_separate_events_and_no_simultaneous_scene) ... ok
+2026-11-22T05:40:42.6445497Z test_20_rendered_relations_expose_group_and_market_limits (test_luonan_b7.LuonanB7.test_20_rendered_relations_expose_group_and_market_limits) ... ok
+2026-11-22T05:40:42.6447120Z test_21_rendered_dates_do_not_turn_arrival_into_construction (test_luonan_b7.LuonanB7.test_21_rendered_dates_do_not_turn_arrival_into_construction) ... ok
+2026-11-22T05:40:42.6448343Z 
+2026-11-22T05:40:42.6448697Z ----------------------------------------------------------------------
+2026-11-22T05:40:42.6449613Z Ran 21 tests in 0.292s
+2026-11-22T05:40:42.6451227Z 
+2026-11-22T05:40:42.6451670Z OK
+2026-11-22T05:40:42.7957935Z test_all_339_rows_remain_structural_not_new_historical_verifications (test_city_audit_b8.CityAuditB8Tests.test_all_339_rows_remain_structural_not_new_historical_verifications) ... ok
+2026-11-22T05:40:42.7959364Z test_b3_parent_batch_and_b7_plural_entity_tags_are_both_read (test_city_audit_b8.CityAuditB8Tests.test_b3_parent_batch_and_b7_plural_entity_tags_are_both_read) ... ok
+2026-11-22T05:40:42.8169938Z test_builder_is_deterministic_read_only_and_does_not_fallback_when_master_missing (test_city_audit_b8.CityAuditB8Tests.test_builder_is_deterministic_read_only_and_does_not_fallback_when_master_missing) ... ok
+2026-11-22T05:40:42.8171723Z test_chronology_retains_component_scope_and_site_context (test_city_audit_b8.CityAuditB8Tests.test_chronology_retains_component_scope_and_site_context) ... ok
+2026-11-22T05:40:42.8174187Z test_evidence_is_explicit_indexing_and_not_transitive_or_independent_votes (test_city_audit_b8.CityAuditB8Tests.test_evidence_is_explicit_indexing_and_not_transitive_or_independent_votes) ... ok
+2026-11-22T05:40:42.8176306Z test_focus_crop_and_unlocated_bridge_are_not_equated (test_city_audit_b8.CityAuditB8Tests.test_focus_crop_and_unlocated_bridge_are_not_equated) ... ok
+2026-11-22T05:40:42.8178407Z test_known_external_reference_and_conditional_temporal_reading_stay_explicit (test_city_audit_b8.CityAuditB8Tests.test_known_external_reference_and_conditional_temporal_reading_stay_explicit) ... ok
+2026-11-22T05:40:42.8180378Z test_target_entities_and_target_groups_are_counted_separately (test_city_audit_b8.CityAuditB8Tests.test_target_entities_and_target_groups_are_counted_separately) ... ok
+2026-11-22T05:40:42.8181415Z 
+2026-11-22T05:40:42.8181974Z ----------------------------------------------------------------------
+2026-11-22T05:40:42.8182719Z Ran 8 tests in 0.046s
+2026-11-22T05:40:42.8182994Z 
+2026-11-22T05:40:42.8183146Z OK
+2026-11-22T05:40:42.8834225Z test_access_routes_do_not_assert_images_copy_permission_or_geographic_points (test_source_access_b8.SourceAccessChecks.test_access_routes_do_not_assert_images_copy_permission_or_geographic_points) ... ok
+2026-11-22T05:40:42.8839708Z test_catalog_identifier_and_documented_index_do_not_become_obtained_sheet (test_source_access_b8.SourceAccessChecks.test_catalog_identifier_and_documented_index_do_not_become_obtained_sheet) ... ok
+2026-11-22T05:40:42.8845118Z test_numbered_pier_is_an_exclusion_from_a_retrospective_account (test_source_access_b8.SourceAccessChecks.test_numbered_pier_is_an_exclusion_from_a_retrospective_account) ... ok
+2026-11-22T05:40:42.8893724Z test_offline_builder_binds_commit_and_writes_only_its_three_files (test_source_access_b8.SourceAccessChecks.test_offline_builder_binds_commit_and_writes_only_its_three_files) ... ok
+2026-11-22T05:40:42.8900137Z test_years_editions_and_complete_series_identity_stay_distinct (test_source_access_b8.SourceAccessChecks.test_years_editions_and_complete_series_identity_stay_distinct) ... ok
+2026-11-22T05:40:42.8908346Z 
+2026-11-22T05:40:42.8908904Z ----------------------------------------------------------------------
+2026-11-22T05:40:42.8909543Z Ran 5 tests in 0.008s
+2026-11-22T05:40:42.8909758Z 
+2026-11-22T05:40:42.8909872Z OK
+2026-11-22T05:40:43.7620785Z test_01_all_entities_keep_baseline_while_two_current_readings_are_explicit (test_city_review_b8.CityReviewB8.test_01_all_entities_keep_baseline_while_two_current_readings_are_explicit) ... ok
+2026-11-22T05:40:43.7961441Z test_02_review_rings_reuse_exact_existing_targets_and_preserve_old_geometry (test_city_review_b8.CityReviewB8.test_02_review_rings_reuse_exact_existing_targets_and_preserve_old_geometry) ... ok
+2026-11-22T05:40:43.7963569Z test_03_shared_area_is_one_target_for_two_entities_not_two_locations (test_city_review_b8.CityReviewB8.test_03_shared_area_is_one_target_for_two_entities_not_two_locations) ... ok
+2026-11-22T05:40:43.7965333Z test_04_no_target_does_not_create_missing_sites_or_lose_region_membership (test_city_review_b8.CityReviewB8.test_04_no_target_does_not_create_missing_sites_or_lose_region_membership) ... ok
+2026-11-22T05:40:43.7969655Z test_05_cases_use_real_records_and_attribute_direct_and_context_objects (test_city_review_b8.CityReviewB8.test_05_cases_use_real_records_and_attribute_direct_and_context_objects) ... ok
+2026-11-22T05:40:43.7972996Z test_06_g15_correction_preserves_original_and_separates_body_from_commentary (test_city_review_b8.CityReviewB8.test_06_g15_correction_preserves_original_and_separates_body_from_commentary) ... ok
+2026-11-22T05:40:43.7993728Z test_07_html_notice_preserves_exact_old_bytes_and_relative_routes (test_city_review_b8.CityReviewB8.test_07_html_notice_preserves_exact_old_bytes_and_relative_routes) ... ok
+2026-11-22T05:40:43.7995654Z 
+2026-11-22T05:40:43.7996068Z ----------------------------------------------------------------------
+2026-11-22T05:40:43.7996941Z Ran 7 tests in 0.371s
+2026-11-22T05:40:43.7997349Z 
+2026-11-22T05:40:43.7997750Z OK
+2026-11-22T05:40:43.9020155Z ##[group]Run python tools/build_all.py --site-only
+2026-11-22T05:40:43.9020645Z [36;1mpython tools/build_all.py --site-only[0m
+2026-11-22T05:40:43.9035468Z shell: /usr/bin/bash -e {0}
+2026-11-22T05:40:43.9035873Z env:
+2026-11-22T05:40:43.9036261Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:43.9036786Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:40:43.9037385Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:43.9038003Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:43.9038482Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:40:43.9038955Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:40:43.9039390Z ##[endgroup]
+2026-11-22T05:40:43.9349874Z Preserved research, terrain and B1—B8
+2026-11-22T05:40:43.9350485Z   python tools/build_site.py
+2026-11-22T05:40:44.1040303Z OK: 52 published files, 13,893,662 bytes; PDF hash and local links verified
+2026-11-22T05:40:44.1041393Z Excluded: Git metadata, research sources, PDF fragments, scripts and tests
+2026-11-22T05:40:44.1100387Z   python tools/research_v25.py
+2026-11-22T05:40:44.1615748Z R07 v2.5: 18 evidence records; 3 diagrams; 30 status records; baseline hashes unchanged
+2026-11-22T05:40:44.1664946Z   python tools/milestone_v26.py
+2026-11-22T05:40:45.0687876Z v2.6 BUILD {'relations': 482, 'atoms': 69, 'cases': 16, 'candidates': 13} baseline hashes unchanged; numerical ranges remain unbounded
+2026-11-22T05:40:45.0747785Z   python tools/link_model_points_v26.py
+2026-11-22T05:40:45.1516261Z v2.6 candidate point links: 13 generated SVGs, 21 object targets each; no old-map input
+2026-11-22T05:40:45.1585594Z   python tools/network_v27.py
+2026-11-22T05:40:45.2605066Z v2.7 BUILD {'passages': 20, 'nodes': 48, 'edges': 42, 'queries': 10, 'scenarios': 48, 'events': 10, 'event_coverage': {'scoped_events_sampled': 5, 'event_series_not_reviewed': 309, 'passages_reviewed_no_dated_event_added': 25}} previous public assets unchanged except index.html
+2026-11-22T05:40:45.2670522Z   python tools/portal_v28.py
+2026-11-22T05:40:45.3962583Z v2.8: 35 original marker groups with research coverage; immutable geometry and source data verified; versioned entrypoint and dependencies emitted.
+2026-11-22T05:40:45.4028330Z   python tools/chronology_v29.py
+2026-11-22T05:40:45.5014768Z v2.9: {'dossiers': 12, 'records': 25, 'anchors': 11, 'entity_ledger': 339, 'unreviewed_in_this_batch': 327} ; previous data, baseline geometry and v2.8 archive unchanged
+2026-11-22T05:40:45.5079631Z   python tools/terrain_v30.py
+2026-11-22T05:41:00.8525504Z {"version": "v3.0-alpha.1", "grid": [1695, 1860], "elevation": {"min": 98.82994079589844, "max": 934.9072875976562, "median": 171.3938751220703, "p05": 112.30571746826172, "p95": 401.30609130859375}, "contours": 509, "old_data_unchanged": true}
+2026-11-22T05:41:00.9254225Z   python tools/dual_release.py
+2026-11-22T05:41:11.9517195Z Dual B1+B2: {'b1_decisions': 14, 'b2_evidence': 16, 'regions': 4, 'changed_groups': 15, 'new_ancient_coordinates': 0} preserved files 154
+2026-11-22T05:41:12.0653946Z   python tools/west_b3.py
+2026-11-22T05:41:13.3324578Z Built west B3, 16 evidence records, new region L05, preserved published B1 and palace B2
+2026-11-22T05:41:13.4278000Z   python tools/historical_frame_b4.py
+2026-11-22T05:41:15.3506412Z NI49-7 8 fit / 5 internal holdout: RMS 84.9 printed-grid m; 2.34 scan px; no ground accuracy claim
+2026-11-22T05:41:15.3507110Z NI49-8 8 fit / 5 internal holdout: RMS 83.6 printed-grid m; 2.31 scan px; no ground accuracy claim
+2026-11-22T05:41:15.3748785Z   python tools/north_b4.py
+2026-11-22T05:41:20.6332805Z Built B4: 16 evidence records, L06, 4 type groups, 6-page atlas; prior files preserved: 248
+2026-11-22T05:41:20.7592791Z   python tools/historical_datum_b5.py
+2026-11-22T05:41:34.3705465Z B5 datum investigation: 2 reviewed scans, 14 reproducible crops, 2 source plates; original datum unresolved; 0 approved ground points.
+2026-11-22T05:41:34.3828167Z   python tools/west_roads_b5.py
+2026-11-22T05:41:36.9152915Z Built B5: 24 evidence, 11 type groups, L07, six-page atlas; protected 288
+2026-11-22T05:41:37.0180185Z   python tools/ground_review_b6.py
+2026-11-22T05:41:40.3016580Z B6 ground review: 2 named region/line records, 7 raw L500 crops, 4 fixed L531 crops, 2 plates; 0 approved ground points.
+2026-11-22T05:41:40.3137265Z   python tools/southeast_b6.py
+2026-11-22T05:41:44.6566579Z Built B6: 34 evidence, 20 type groups, L08+L09, eight-page atlas; protected 324
+2026-11-22T05:41:44.7686959Z   python tools/source_continuity_b7.py
+2026-11-22T05:41:44.8495204Z B7 source continuity: 3 catalog records, 1 period candidate, 2 earlier editions, 2 plates; 0 actual-source matches or ground points.
+2026-11-22T05:41:44.8596130Z   python tools/luonan_b7.py
+2026-11-22T05:41:48.0986509Z Built B7: 25 evidence, 7 reading groups, L10, eight-page atlas; protected 352
+2026-11-22T05:41:48.2048352Z   python tools/city_review_b8.py
+2026-11-22T05:41:51.8038580Z Built B8: 339 structural rows, 14 review cases, 179 retained targets, eight-page atlas; 370 prior resources protected
+2026-11-22T05:41:51.9186502Z   python tools/homepage_v1.py
+2026-11-22T05:41:52.9741318Z H1: panoramic homepage, 3 evidence routes, research after the map; 398 research assets preserved.
+2026-11-22T05:41:52.9889687Z Prosperity documentary maps and source-geographic layout
+2026-11-22T05:41:52.9890212Z   python tools/prosperity_v1.py
+2026-11-22T05:41:55.6367278Z Prosperity: {"version": "prosperity-v1", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "entities": 339, "source_geometries": 30, "located_entities": 11, "evidence_records": 183, "source_crs": "EPSG:4610", "terrain_constraints": 5, "building_dimension_items": 8, "wgs84_registration_completed": false, "ancient_ground_surface_reconstructed": false, "full_city_reconstruction_completed": false, "atlas_pages": 6, "protected_files": 404, "metadata": "prosperity/data.json"}
+2026-11-22T05:41:55.7463866Z   python tools/prosperity_core_v2.py
+2026-11-22T05:41:57.8446429Z {"version": "prosperity-core-v2", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "metric_templates": 3, "local_relation_scenes": 3, "local_components": 27, "local_relations": 30, "atlas_pages": 7, "source_crs": "EPSG:4610", "new_ancient_absolute_coordinates": 0, "historical_heights_reconstructed": false, "roofs_reconstructed": false, "ancient_ground_surface_reconstructed": false, "court_template_placed_in_city": false, "protected_files": 422, "metadata": "prosperity-core/data.json"}
+2026-11-22T05:41:57.9389183Z   python tools/prosperity_gate_v3.py
+2026-11-22T05:41:59.8831124Z {"version": "prosperity-gate-v3", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "components": 10, "atlas_pages": 3, "source_raster_sha256": "8f3b722fc60cdf29ec04553022185d3c5b073ba7454be9430c97197a8da24cc7", "comparison_version": "source-pixel-side-by-side-v1", "axis_evidence_version": "palace-axis-p4-initial", "registration_verified": false, "new_ancient_absolute_coordinates": 0, "historical_heights_reconstructed": false, "roofs_reconstructed": false, "ancient_ground_surface_reconstructed": false, "protected_files": 444, "metadata": "prosperity-gate/data.json"}
+2026-11-22T05:41:59.9764406Z   python tools/prosperity_axis_v4.py
+2026-11-22T05:42:01.0086925Z {"version": "prosperity-axis-p4-metric-review", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "figure_count": 3, "source_count": 6, "atlas_pages": 3, "unresolved_registration": true, "absolute_points_added": 0, "metadata": "prosperity-axis/data.json"}
+2026-11-22T05:42:01.0923503Z   python tools/prosperity_axis_sources_p41.py
+2026-11-22T05:42:02.1074026Z {"version": "prosperity-axis-p41-source-audit", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "source_count": 9, "figures": 2, "conflict_variants": [200, 300], "identity_merged_count": 1, "registration_verified": false, "new_ancient_coordinates": 0, "metadata": "prosperity-axis-sources/audit.json"}
+2026-11-22T05:42:02.1912306Z   python tools/prosperity_taiji_courts_p42.py
+2026-11-22T05:42:03.2257073Z {"version": "prosperity-taiji-courts-p42", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "sources": 6, "diagrams": 3, "atlas_pages": 3, "registered_absolute_locations_added": 0, "verified_geographic_controls": 0, "metadata": "prosperity-taiji-courts/data.json"}
+2026-11-22T05:42:03.3060160Z   python tools/prosperity_palace_boundaries_p43.py
+2026-11-22T05:42:04.2638259Z {"version": "prosperity-palace-boundaries-p43", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "source_reports": 6, "scope_variants": 3, "registered_absolute_locations_added": 0, "verified_geographic_controls": 0, "metadata": "prosperity-palace-boundaries/data.json", "atlas_pages": 1}
+2026-11-22T05:42:04.3426976Z   python tools/prosperity_architecture_p44.py
+2026-11-22T05:42:05.4082561Z {"version": "prosperity-architecture-p44", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "types": 6, "source_count": 4, "plates": 3, "atlas_pages": 3, "new_absolute_ancient_coordinates": 0, "common_geographic_controls": 0, "metadata": "prosperity-architecture/data.json"}
+2026-11-22T05:42:05.4926227Z Preserved approved homepage and P4 city studies
+2026-11-22T05:42:05.4926867Z   python tools/homepage_approved_v9.py
+2026-11-22T05:42:06.5727792Z H2: approved panorama 742,398B desktop + 274,354B mobile; preserved 524 historical/research files; legacy v8 archived.
+2026-11-22T05:42:06.5873318Z   python tools/prosperity_city_distribution_p451.py
+2026-11-22T05:42:08.4128217Z {"version": "prosperity-city-distribution-p451", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "source_feature_count": 30, "source_entity_bound_feature_count": 13, "anchored_building_count": 4, "unlocated_gate_type_count": 4, "atlas_pages": 3, "new_absolute_ancient_coordinates": 0, "measured_roof_heights_added": 0, "source_map_sha256": "3e8706abbc0fe44c28e3d41e7039363f32d16f29943001cf12cc7546ede47c47", "metadata": "prosperity-city-distribution/data.json"}
+2026-11-22T05:42:08.5058074Z   python tools/prosperity_road_functions_p452.py
+2026-11-22T05:42:10.3505630Z {"version": "prosperity-road-functions-p452", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "source_feature_count": 30, "road_feature_count": 8, "documentary_context_count": 5, "function_groups": 5, "atlas_pages": 3, "source_map_sha256": "3e8706abbc0fe44c28e3d41e7039363f32d16f29943001cf12cc7546ede47c47", "new_ancient_coordinates": 0, "measured_historical_road_connections": 0, "historical_traffic_density_estimated": false, "metadata": "prosperity-road-functions/data.json"}
+2026-11-22T05:42:10.4431142Z   python tools/prosperity_street_clusters_p453.py
+2026-11-22T05:42:12.3454687Z {"version": "prosperity-street-clusters-p453", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "cluster_count": 3, "documentary_entities": 20, "direct_relations": 16, "conditional_relations": 1, "source_map_sha256": "5e626f70d28bde7217f2cdb5184657ea0533c5f9514d1355f4368cc1247b200e", "atlas_pages": 4, "ancient_geographic_coordinates_added": 0, "estimated_population_density": false, "metadata": "prosperity-street-clusters/data.json"}
+2026-11-22T05:42:12.4309248Z   python tools/prosperity_hydro_roads_p46.py
+2026-11-22T05:42:15.0397024Z {"version": "prosperity-hydro-roads-anchor-p46", "source_commit": "a338e8dd60151e959b443ab466a983ce799293e2", "water_feature_records": 34, "road_source_records": 21, "registered_historical_water_polygons": 0, "registered_historical_complete_road_lines": 0, "modern_luo_source_reference_lines": 1, "existing_inner_road_features_preserved": 8, "outer_major_road_reports_pending_registration": 9, "independent_ancient_common_controls_added": 0, "atlas_pages": 4, "metadata": "prosperity-hydro-roads/data.json"}
+2026-11-22T05:42:15.1236822Z R4 city atlas
+2026-11-22T05:42:15.1238108Z   node --check research/prosperity-r4/atlas.js
+2026-11-22T05:42:15.1495138Z   python tools/prosperity_city_atlas_r4.py
+2026-11-22T05:42:16.2185994Z {'entities': 339, 'levels': {'source': 11, 'relative': 315, 'unlocated': 12, 'candidate': 1}, 'periods': {'attested': 29, 'later': 7, 'undated': 47, 'unspecified': 252, 'conditional': 2, 'name': 2}, 'features': 30, 'direct_bindings': 13, 'records': 183, 'literal_targets': 236, 'manual_context_reviews': 11, 'cases': 14, 'water_records': 34, 'water_relations': 100, 'road_records': 21}
+2026-11-22T05:42:16.3018973Z R5 panorama and approved current homepage
+2026-11-22T05:42:16.3019781Z   node --check research/prosperity-r5/panorama.js
+2026-11-22T05:42:16.3286406Z   python tools/prosperity_city_panorama_r5.py
+2026-11-22T05:42:16.8431791Z prosperity-city-panorama-r5.3 28 4
+2026-11-22T05:42:16.9082242Z R6.1 source road atlas
+2026-11-22T05:42:16.9083021Z   python tools/road_location_atlas.py
+2026-11-22T05:42:17.0017736Z {'source_records': 21, 'inner': 8, 'outer': 11, 'excavation': 2, 'supplements': 3, 'original_source_traces': 8, 'later_plan_traces': 5, 'endpoint_pairs': 6}
+2026-11-22T05:42:17.0090185Z R6.2 complete road evidence atlas
+2026-11-22T05:42:17.0090787Z   node --check research/roads-r62/atlas.js
+2026-11-22T05:42:17.0347184Z   python tools/all_road_atlas_r62.py
+2026-11-22T05:42:17.1708139Z {'records': 84, 'groups': {'legacy': 21, 'documentary': 26, 'palace': 11, 'ward': 7, 'gate': 14, 'bridge': 5}, 'coverage': 339, 'exclusions': 13}
+2026-11-22T05:42:17.1781664Z R7 city nodes, joined evidence and approved homepage guide
+2026-11-22T05:42:17.1782338Z   node --check research/city-nodes-r7/atlas.js
+2026-11-22T05:42:17.2067925Z   python tools/city_nodes_r7.py
+2026-11-22T05:42:18.3113568Z {"nodes": 4, "findings": 32, "relations": 32, "segments": 28, "waters": 9, "entities_indexed": 339, "roads_indexed": 84, "waters_indexed": 34}
+2026-11-22T05:42:18.3664782Z R8.1 evidence-led panorama candidate review
+2026-11-22T05:42:18.3665694Z   node --check web/panorama-v13.js
+2026-11-22T05:42:18.3936852Z   python tools/panorama_v13.py
+2026-11-22T05:42:18.8531941Z {"version": "panorama-review-v13", "status": "candidate_for_review", "change_count": 7, "homepage_revision": "panorama-approved-v12", "homepage_replacement_approved": false}
+2026-11-22T05:42:18.8750215Z ##[group]Run python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
+2026-11-22T05:42:18.8751137Z [36;1mpython -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt[0m
+2026-11-22T05:42:18.8752053Z [36;1mpython -m unittest discover -s tests -p 'test_homepage_approved_v9.py' -v 2>&1 | tee artifacts/homepage-approved-v9-tests.txt[0m
+2026-11-22T05:42:18.8752910Z [36;1mpython -m unittest discover -s tests -p 'test_city_nodes_r7.py' -v 2>&1 | tee artifacts/city-nodes-r7-tests.txt[0m
+2026-11-22T05:42:18.8753683Z [36;1mpython -m unittest discover -s tests -p 'test_panorama_v13.py' -v 2>&1 | tee artifacts/panorama-v13-tests.txt[0m
+2026-11-22T05:42:18.8768833Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-22T05:42:18.8769301Z env:
+2026-11-22T05:42:18.8769678Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:42:18.8770326Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:42:18.8770847Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:42:18.8771290Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:42:18.8771793Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:42:18.8772261Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:42:18.8772683Z ##[endgroup]
+2026-11-22T05:42:20.7415383Z test_all_known_road_families_have_evidence_records (test_prosperity_all_road_atlas_r62.AllRoadAtlas.test_all_known_road_families_have_evidence_records) ... ok
+2026-11-22T05:42:22.2161815Z test_downloads_offline_bundle_and_predecessors (test_prosperity_all_road_atlas_r62.AllRoadAtlas.test_downloads_offline_bundle_and_predecessors) ... ok
+2026-11-22T05:42:22.2213813Z test_local_widths_passage_components_and_unknowns_are_not_promoted (test_prosperity_all_road_atlas_r62.AllRoadAtlas.test_local_widths_passage_components_and_unknowns_are_not_promoted) ... ok
+2026-11-22T05:42:22.2247247Z test_prior_page_restorable_to_archived_bytes (test_prosperity_anchors_p461.AnchorReadings.test_prior_page_restorable_to_archived_bytes) ... ok
+2026-11-22T05:42:22.2370407Z test_sources_and_offline_links (test_prosperity_anchors_p461.AnchorReadings.test_sources_and_offline_links) ... ok
+2026-11-22T05:42:22.2442103Z test_downloads_zip_and_website (test_prosperity_architecture_p44.P44Architecture.test_downloads_zip_and_website) ... ok
+2026-11-22T05:42:22.2443202Z test_explicit_uncertainty_and_source_lineages (test_prosperity_architecture_p44.P44Architecture.test_explicit_uncertainty_and_source_lineages) ... ok
+2026-11-22T05:42:22.2444942Z test_release_and_predecessor_still_accessible (test_prosperity_architecture_p44.P44Architecture.test_release_and_predecessor_still_accessible) ... ok
+2026-11-22T05:42:22.2446225Z test_reports_not_silently_merged_or_average (test_prosperity_architecture_p44.P44Architecture.test_reports_not_silently_merged_or_average) ... ok
+2026-11-22T05:42:22.2447664Z test_six_types_are_structurally_different (test_prosperity_architecture_p44.P44Architecture.test_six_types_are_structurally_different) ... ok
+2026-11-22T05:42:22.2459753Z test_svg_structure_and_originality (test_prosperity_architecture_p44.P44Architecture.test_svg_structure_and_originality) ... ok
+2026-11-22T05:42:22.2467062Z test_unchanged_source_and_prior_data (test_prosperity_architecture_p44.P44Architecture.test_unchanged_source_and_prior_data) ... ok
+2026-11-22T05:42:22.2497275Z test_figure_catalog_and_formal_reports_not_falsely_claimed (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_figure_catalog_and_formal_reports_not_falsely_claimed) ... ok
+2026-11-22T05:42:22.2498685Z test_gate_one_is_not_duplicated (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_gate_one_is_not_duplicated) ... ok
+2026-11-22T05:42:22.2500100Z test_geographic_proofs_not_fabricated (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_geographic_proofs_not_fabricated) ... ok
+2026-11-22T05:42:22.2501372Z test_page_readable_links_and_both_scenarios (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_page_readable_links_and_both_scenarios) ... ok
+2026-11-22T05:42:22.2502372Z test_record_matches_original_payload (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_record_matches_original_payload) ... ok
+2026-11-22T05:42:22.2504036Z test_source_page_is_findable_without_wiping_previous_release (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_source_page_is_findable_without_wiping_previous_release) ... ok
+2026-11-22T05:42:22.2505171Z test_two_distance_scenarios_are_not_silent_normalized (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_two_distance_scenarios_are_not_silent_normalized) ... ok
+2026-11-22T05:42:22.2510399Z test_two_original_svg_charts_are_valid (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_two_original_svg_charts_are_valid) ... ok
+2026-11-22T05:42:22.2511462Z test_two_publication_phase_gate_widths_remain_separate (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_two_publication_phase_gate_widths_remain_separate) ... ok
+2026-11-22T05:42:22.2542645Z test_zip_pdf_and_release_integrity (test_prosperity_axis_sources_p41.PrimarySourceAudit.test_zip_pdf_and_release_integrity) ... ok
+2026-11-22T05:42:22.2577301Z test_entry_links_and_prior_source_plan_are_preserved (test_prosperity_axis_v4.P4AxisEvidence.test_entry_links_and_prior_source_plan_are_preserved) ... ok
+2026-11-22T05:42:22.2579064Z test_gate_2_roads_and_architecture_not_promoted_to_map (test_prosperity_axis_v4.P4AxisEvidence.test_gate_2_roads_and_architecture_not_promoted_to_map) ... ok
+2026-11-22T05:42:22.2583790Z test_generated_svg_are_three_distinct_nonempty_documents (test_prosperity_axis_v4.P4AxisEvidence.test_generated_svg_are_three_distinct_nonempty_documents) ... ok
+2026-11-22T05:42:22.2589327Z test_original_map_links_and_source_dependency_flags (test_prosperity_axis_v4.P4AxisEvidence.test_original_map_links_and_source_dependency_flags) ... ok
+2026-11-22T05:42:22.2590461Z test_page_exposes_original_sources_and_caveats (test_prosperity_axis_v4.P4AxisEvidence.test_page_exposes_original_sources_and_caveats) ... ok
+2026-11-22T05:42:22.2615085Z test_pdf_and_zip_manifest_reproducible (test_prosperity_axis_v4.P4AxisEvidence.test_pdf_and_zip_manifest_reproducible) ... ok
+2026-11-22T05:42:22.2626331Z test_release_index_has_all_new_hashes (test_prosperity_axis_v4.P4AxisEvidence.test_release_index_has_all_new_hashes) ... ok
+2026-11-22T05:42:22.2628162Z test_segment_chain_and_independent_measurement_both_preserved (test_prosperity_axis_v4.P4AxisEvidence.test_segment_chain_and_independent_measurement_both_preserved) ... ok
+2026-11-22T05:42:22.2629571Z test_source_data_is_published_without_revision (test_prosperity_axis_v4.P4AxisEvidence.test_source_data_is_published_without_revision) ... ok
+2026-11-22T05:42:22.2630901Z test_taiji_shapes_preserve_asymmetry_and_unknown_west_hall (test_prosperity_axis_v4.P4AxisEvidence.test_taiji_shapes_preserve_asymmetry_and_unknown_west_hall) ... ok
+2026-11-22T05:42:22.2639617Z test_three_gate_3_phases_not_merged (test_prosperity_axis_v4.P4AxisEvidence.test_three_gate_3_phases_not_merged) ... ok
+2026-11-22T05:42:22.2640491Z test_zero_common_controls_is_hard_invariant (test_prosperity_axis_v4.P4AxisEvidence.test_zero_common_controls_is_hard_invariant) ... ok
+2026-11-22T05:42:22.2711639Z test_all_water_ids_resolve_without_turning_the_modern_river_into_ancient_water (test_prosperity_backbone_p469.Backbone469Evidence.test_all_water_ids_resolve_without_turning_the_modern_river_into_ancient_water) ... ok
+2026-11-22T05:42:22.2718998Z test_archival_geometry_and_prior_water_data_are_not_rewritten (test_prosperity_backbone_p469.Backbone469Evidence.test_archival_geometry_and_prior_water_data_are_not_rewritten) ... ok
+2026-11-22T05:42:22.2720576Z test_coordinate_frames_do_not_acquire_a_shared_registration (test_prosperity_backbone_p469.Backbone469Evidence.test_coordinate_frames_do_not_acquire_a_shared_registration) ... ok
+2026-11-22T05:42:22.2722025Z test_current_pool_correction_is_effective_in_both_directions (test_prosperity_backbone_p469.Backbone469Evidence.test_current_pool_correction_is_effective_in_both_directions) ... ok
+2026-11-22T05:42:22.2751189Z test_drought_rain_and_seasonality_are_not_flattened_to_perennial_water (test_prosperity_backbone_p469.Backbone469Evidence.test_drought_rain_and_seasonality_are_not_flattened_to_perennial_water) ... ok
+2026-11-22T05:42:22.2753016Z test_mapped_evidence_navigation_does_not_place_water_at_gate_symbols (test_prosperity_backbone_p469.Backbone469Evidence.test_mapped_evidence_navigation_does_not_place_water_at_gate_symbols) ... ok
+2026-11-22T05:42:22.2762059Z test_original_geometry_and_qian_pixel_readings_are_preserved_deeply (test_prosperity_backbone_p469.Backbone469Evidence.test_original_geometry_and_qian_pixel_readings_are_preserved_deeply) ... ok
+2026-11-22T05:42:22.2785594Z test_relation_export_is_complete_without_layout_or_geographic_coordinates (test_prosperity_backbone_p469.Backbone469Evidence.test_relation_export_is_complete_without_layout_or_geographic_coordinates) ... ok
+2026-11-22T05:42:22.2789117Z test_synthesis_does_not_claim_new_ancient_banks_or_measurements (test_prosperity_backbone_p469.Backbone469Evidence.test_synthesis_does_not_claim_new_ancient_banks_or_measurements) ... ok
+2026-11-22T05:42:22.3268088Z test_06a_rendering_keeps_original_vertices_and_does_not_complete_missing_walls (test_prosperity_backbone_p469.Backbone469Publication.test_06a_rendering_keeps_original_vertices_and_does_not_complete_missing_walls) ... ok
+2026-11-22T05:42:22.3288651Z test_context_links_reach_evidence_without_becoming_spatial_connections (test_prosperity_backbone_p469.Backbone469Publication.test_context_links_reach_evidence_without_becoming_spatial_connections) ... ok
+2026-11-22T05:42:22.3353010Z test_current_corrections_and_unknowns_are_visible_in_the_public_page (test_prosperity_backbone_p469.Backbone469Publication.test_current_corrections_and_unknowns_are_visible_in_the_public_page) ... ok
+2026-11-22T05:42:22.4258047Z test_downloads_and_offline_bundle_match_the_two_source_frames (test_prosperity_backbone_p469.Backbone469Publication.test_downloads_and_offline_bundle_match_the_two_source_frames) ... ok
+2026-11-22T05:42:22.4259484Z test_frames_remain_separate_and_documentary_water_is_not_drawn_as_geography (test_prosperity_backbone_p469.Backbone469Publication.test_frames_remain_separate_and_documentary_water_is_not_drawn_as_geography) ... ok
+2026-11-22T05:42:22.4266011Z test_inline_gate_links_do_not_modify_the_map_drawing (test_prosperity_backbone_p469.Backbone469Publication.test_inline_gate_links_do_not_modify_the_map_drawing) ... ok
+2026-11-22T05:42:22.4269319Z test_modern_luo_is_a_separate_dated_reference_layer (test_prosperity_backbone_p469.Backbone469Publication.test_modern_luo_is_a_separate_dated_reference_layer) ... ok
+2026-11-22T05:42:22.4294677Z test_page_context_extension_keeps_published_map_and_pdf_bytes (test_prosperity_backbone_p469.Backbone469Publication.test_page_context_extension_keeps_published_map_and_pdf_bytes) ... ok
+2026-11-22T05:42:22.4306380Z test_qian_lines_and_symbols_preserve_the_same_raster_without_joining_endpoints (test_prosperity_backbone_p469.Backbone469Publication.test_qian_lines_and_symbols_preserve_the_same_raster_without_joining_endpoints) ... ok
+2026-11-22T05:42:22.4309569Z test_urban_bridge_events_and_interpretive_grade_keep_their_scope (test_prosperity_backbone_p469.Backbone469Publication.test_urban_bridge_events_and_interpretive_grade_keep_their_scope) ... ok
+2026-11-22T05:42:22.4402322Z test_urban_export_reuses_the_reviewed_clusters_and_sources (test_prosperity_backbone_p469.Backbone469Publication.test_urban_export_reuses_the_reviewed_clusters_and_sources) ... ok
+2026-11-22T05:42:22.4419265Z test_urban_navigation_uses_the_two_explicit_gate_bindings (test_prosperity_backbone_p469.Backbone469Publication.test_urban_navigation_uses_the_two_explicit_gate_bindings) ... ok
+2026-11-22T05:42:22.4420849Z test_urban_records_are_visible_and_source_linked_without_javascript (test_prosperity_backbone_p469.Backbone469Publication.test_urban_records_are_visible_and_source_linked_without_javascript) ... ok
+2026-11-22T05:42:22.4600529Z test_atlas_pdf_has_three_vector_pages (test_prosperity_city_atlas_r4.UnifiedAtlas.test_atlas_pdf_has_three_vector_pages) ... ok
+2026-11-22T05:42:22.5242642Z test_full_rebuild_and_identity_checks (test_prosperity_city_atlas_r4.UnifiedAtlas.test_full_rebuild_and_identity_checks) ... ok
+2026-11-22T05:42:22.9587624Z test_public_contract_and_predecessor_preservation (test_prosperity_city_atlas_r4.UnifiedAtlas.test_public_contract_and_predecessor_preservation) ... ok
+2026-11-22T05:42:22.9597296Z test_unequal_frames_and_coverage_membership (test_prosperity_city_atlas_r4.UnifiedAtlas.test_unequal_frames_and_coverage_membership) ... ok
+2026-11-22T05:42:23.0212841Z test_offline_archive_is_complete_and_all_declared_bytes_match (test_prosperity_city_common_p470.Common470Published.test_offline_archive_is_complete_and_all_declared_bytes_match) ... ok
+2026-11-22T05:42:23.0251134Z test_prior_page_only_gains_one_reversible_entry_and_old_assets_keep_hashes (test_prosperity_city_common_p470.Common470Published.test_prior_page_only_gains_one_reversible_entry_and_old_assets_keep_hashes) ... ok
+2026-11-22T05:42:23.0443796Z test_public_dataset_and_release_describe_the_same_reviewed_view (test_prosperity_city_common_p470.Common470Published.test_public_dataset_and_release_describe_the_same_reviewed_view) ... ok
+2026-11-22T05:42:23.0456816Z test_six_download_targets_are_visible_unique_and_hash_registered (test_prosperity_city_common_p470.Common470Published.test_six_download_targets_are_visible_unique_and_hash_registered) ... ok
+2026-11-22T05:42:23.0816332Z test_static_cards_scenes_fallback_links_and_all_relations_are_present (test_prosperity_city_common_p470.Common470Published.test_static_cards_scenes_fallback_links_and_all_relations_are_present) ... ok
+2026-11-22T05:42:23.0826494Z test_svg_retains_every_native_vertex_and_point_without_new_closure (test_prosperity_city_common_p470.Common470Published.test_svg_retains_every_native_vertex_and_point_without_new_closure) ... ok
+2026-11-22T05:42:23.1067002Z test_building_cards_keep_identity_dimensions_and_nonfootprint_scope (test_prosperity_city_common_p470.Common470Sources.test_building_cards_keep_identity_dimensions_and_nonfootprint_scope) ... ok
+2026-11-22T05:42:23.1086519Z test_eleven_prior_inputs_remain_byte_exact (test_prosperity_city_common_p470.Common470Sources.test_eleven_prior_inputs_remain_byte_exact) ... ok
+2026-11-22T05:42:23.1088506Z test_only_three_existing_features_join_the_prior_source_view (test_prosperity_city_common_p470.Common470Sources.test_only_three_existing_features_join_the_prior_source_view) ... ok
+2026-11-22T05:42:23.1156445Z test_relation_sources_are_full_original_records_with_source_locators (test_prosperity_city_common_p470.Common470Sources.test_relation_sources_are_full_original_records_with_source_locators) ... ok
+2026-11-22T05:42:23.1170131Z test_roads_gates_and_seven_open_wall_parts_reuse_source_records (test_prosperity_city_common_p470.Common470Sources.test_roads_gates_and_seven_open_wall_parts_reuse_source_records) ... ok
+2026-11-22T05:42:23.1171939Z test_scenes_and_functions_preserve_all_original_records_and_bindings (test_prosperity_city_common_p470.Common470Sources.test_scenes_and_functions_preserve_all_original_records_and_bindings) ... ok
+2026-11-22T05:42:23.1175432Z test_water_corrections_remain_non_geographic_and_unchanged (test_prosperity_city_common_p470.Common470Sources.test_water_corrections_remain_non_geographic_and_unchanged) ... ok
+2026-11-22T05:42:23.4620624Z test_approved_homepage_kept_and_new_navigation_injected_once (test_prosperity_city_distribution_p451.SourceDistributionP451.test_approved_homepage_kept_and_new_navigation_injected_once) ... ok
+2026-11-22T05:42:23.4683833Z test_existing_svg_is_same_and_highlights_its_original_centers (test_prosperity_city_distribution_p451.SourceDistributionP451.test_existing_svg_is_same_and_highlights_its_original_centers) ... ok
+2026-11-22T05:42:23.4686120Z test_honest_same_meter_scale_without_geographic_footprints (test_prosperity_city_distribution_p451.SourceDistributionP451.test_honest_same_meter_scale_without_geographic_footprints) ... ok
+2026-11-22T05:42:23.4687973Z test_no_silent_source_or_type_promotion (test_prosperity_city_distribution_p451.SourceDistributionP451.test_no_silent_source_or_type_promotion) ... ok
+2026-11-22T05:42:23.4689005Z test_source_scope_and_separate_reference_layers (test_prosperity_city_distribution_p451.SourceDistributionP451.test_source_scope_and_separate_reference_layers) ... ok
+2026-11-22T05:42:23.4768910Z test_web_entry_assets_archive_and_hashes (test_prosperity_city_distribution_p451.SourceDistributionP451.test_web_entry_assets_archive_and_hashes) ... ok
+2026-11-22T05:42:23.5109142Z test_both_svgs_keep_every_native_vertex_part_and_point (test_prosperity_city_north_p471.North471Published.test_both_svgs_keep_every_native_vertex_part_and_point) ... ok
+2026-11-22T05:42:23.5361299Z test_offline_zip_has_nine_members_and_matching_local_links (test_prosperity_city_north_p471.North471Published.test_offline_zip_has_nine_members_and_matching_local_links) ... ok
+2026-11-22T05:42:23.5408508Z test_previous_page_entry_is_reversible_and_older_assets_unchanged (test_prosperity_city_north_p471.North471Published.test_previous_page_entry_is_reversible_and_older_assets_unchanged) ... ok
+2026-11-22T05:42:23.5775009Z test_public_data_metadata_and_release_agree (test_prosperity_city_north_p471.North471Published.test_public_data_metadata_and_release_agree) ... ok
+2026-11-22T05:42:23.5794260Z test_seven_unique_downloads_hashes_and_corrected_csv (test_prosperity_city_north_p471.North471Published.test_seven_unique_downloads_hashes_and_corrected_csv) ... ok
+2026-11-22T05:42:23.5869761Z test_static_html_keeps_readings_annotations_scope_and_native_links (test_prosperity_city_north_p471.North471Published.test_static_html_keeps_readings_annotations_scope_and_native_links) ... ok
+2026-11-22T05:42:23.6664557Z test_all_legacy_records_keep_p1_overlay_and_ng15_notes_separate (test_prosperity_city_north_p471.North471Sources.test_all_legacy_records_keep_p1_overlay_and_ng15_notes_separate) ... ok
+2026-11-22T05:42:23.6862650Z test_common_data_and_all_twenty_seven_source_features_are_exact (test_prosperity_city_north_p471.North471Sources.test_common_data_and_all_twenty_seven_source_features_are_exact) ... ok
+2026-11-22T05:42:23.6883761Z test_groups_entities_and_constraints_do_not_create_locations (test_prosperity_city_north_p471.North471Sources.test_groups_entities_and_constraints_do_not_create_locations) ... ok
+2026-11-22T05:42:23.6885948Z test_jinyong_is_five_open_parts_and_a_representative_point (test_prosperity_city_north_p471.North471Sources.test_jinyong_is_five_open_parts_and_a_representative_point) ... ok
+2026-11-22T05:42:23.6919874Z test_source_hashes_and_original_frame_remain_unchanged (test_prosperity_city_north_p471.North471Sources.test_source_hashes_and_original_frame_remain_unchanged) ... ok
+2026-11-22T05:42:23.6962154Z test_water_and_roads_are_complete_existing_records_with_their_limits (test_prosperity_city_north_p471.North471Sources.test_water_and_roads_are_complete_existing_records_with_their_limits) ... ok
+2026-11-22T05:42:23.6979078Z test_clips_line_parts_without_joining_undocumented_gaps (test_prosperity_city_panorama_r5.Panorama.test_clips_line_parts_without_joining_undocumented_gaps) ... ok
+2026-11-22T05:42:23.7235495Z test_painted_and_projected_landmark_order (test_prosperity_city_panorama_r5.Panorama.test_painted_and_projected_landmark_order) ... ok
+2026-11-22T05:42:23.7841285Z test_release (test_prosperity_city_panorama_r5.Panorama.test_release) ... ok
+2026-11-22T05:42:23.8207016Z test_all_24_pairs_keep_editions_locators_manual_review_and_drawing_separate (test_prosperity_city_west_p472.WestCity.test_all_24_pairs_keep_editions_locators_manual_review_and_drawing_separate) ... ok
+2026-11-22T05:42:23.8234993Z test_download_and_inline_drawings_differ_only_in_link_destination (test_prosperity_city_west_p472.WestCity.test_download_and_inline_drawings_differ_only_in_link_destination) ... ok
+2026-11-22T05:42:23.8247357Z test_huai_huan_late_towers_and_house_identity (test_prosperity_city_west_p472.WestCity.test_huai_huan_late_towers_and_house_identity) ... ok
+2026-11-22T05:42:23.8251311Z test_relation_plate_distinguishes_distance_outside_gate_from_road_side (test_prosperity_city_west_p472.WestCity.test_relation_plate_distinguishes_distance_outside_gate_from_road_side) ... ok
+2026-11-22T05:42:23.8282572Z test_review_groups_and_object_ids_cover_each_record_and_original_period (test_prosperity_city_west_p472.WestCity.test_review_groups_and_object_ids_cover_each_record_and_original_period) ... ok
+2026-11-22T05:42:23.8730843Z test_site_downloads_and_both_prior_release_chains (test_prosperity_city_west_p472.WestCity.test_site_downloads_and_both_prior_release_chains) ... ok
+2026-11-22T05:42:23.8881313Z test_unlisted_change_to_a_prior_page_or_nested_manifest_fails (test_prosperity_city_west_p472.WestCity.test_unlisted_change_to_a_prior_page_or_nested_manifest_fails) ... ok
+2026-11-22T05:42:23.8951381Z test_actual_plan_and_oblique_polygons_use_models_and_only_seven_pixel_lift (test_prosperity_core_v2.ProsperityCorePublicationTests.test_actual_plan_and_oblique_polygons_use_models_and_only_seven_pixel_lift) ... ok
+2026-11-22T05:42:24.2165483Z test_all_p1_and_earlier_assets_remain_byte_identical (test_prosperity_core_v2.ProsperityCorePublicationTests.test_all_p1_and_earlier_assets_remain_byte_identical) ... ok
+2026-11-22T05:42:24.2177201Z test_court_is_unplaced_and_source_wall_paths_are_preserved_without_closure (test_prosperity_core_v2.ProsperityCorePublicationTests.test_court_is_unplaced_and_source_wall_paths_are_preserved_without_closure) ... ok
+2026-11-22T05:42:24.2178951Z test_metric_edges_and_centroids_match_dimensions_and_unchanged_p1_anchors (test_prosperity_core_v2.ProsperityCorePublicationTests.test_metric_edges_and_centroids_match_dimensions_and_unchanged_p1_anchors) ... ok
+2026-11-22T05:42:24.2181037Z test_north_gate_is_roofless_and_unknown_south_passages_are_not_completed (test_prosperity_core_v2.ProsperityCorePublicationTests.test_north_gate_is_roofless_and_unknown_south_passages_are_not_completed) ... ok
+2026-11-22T05:42:24.2266692Z test_p1_and_homepage_entrypoints_and_release_counts_are_published (test_prosperity_core_v2.ProsperityCorePublicationTests.test_p1_and_homepage_entrypoints_and_release_counts_are_published) ... ok
+2026-11-22T05:42:24.2384410Z test_pdf_zip_and_all_advertised_downloads_are_real_consistent_artifacts (test_prosperity_core_v2.ProsperityCorePublicationTests.test_pdf_zip_and_all_advertised_downloads_are_real_consistent_artifacts) ... ok
+2026-11-22T05:42:24.2390966Z test_three_relation_scenes_and_rendered_nodes_remain_nonmetric (test_prosperity_core_v2.ProsperityCorePublicationTests.test_three_relation_scenes_and_rendered_nodes_remain_nonmetric) ... ok
+2026-11-22T05:42:24.2413402Z test_three_templates_keep_the_reviewed_source_and_entity_identities (test_prosperity_core_v2.ProsperityCorePublicationTests.test_three_templates_keep_the_reviewed_source_and_entity_identities) ... ok
+2026-11-22T05:42:24.2416226Z test_working_angle_has_the_right_sign_and_does_not_certify_height_or_roof (test_prosperity_core_v2.ProsperityCorePublicationTests.test_working_angle_has_the_right_sign_and_does_not_certify_height_or_roof) ... ok
+2026-11-22T05:42:24.2449723Z test_field_supplement (test_prosperity_corridors_p463.CorridorsStudy.test_field_supplement) ... ok
+2026-11-22T05:42:24.2483580Z test_gate_readings_in_their_source_frames (test_prosperity_corridors_p463.CorridorsStudy.test_gate_readings_in_their_source_frames) ... ok
+2026-11-22T05:42:24.2558007Z test_offline_edition (test_prosperity_corridors_p463.CorridorsStudy.test_offline_edition) ... ok
+2026-11-22T05:42:24.2592178Z test_southern_roads_and_water_evidence (test_prosperity_corridors_p463.CorridorsStudy.test_southern_roads_and_water_evidence) ... ok
+2026-11-22T05:42:24.2595184Z test_study_and_readings (test_prosperity_corridors_p463.CorridorsStudy.test_study_and_readings) ... ok
+2026-11-22T05:42:24.2634361Z test_city_link_does_not_publish_new_absolute_coordinates_or_a_verified_transform (test_prosperity_gate_v3.PublishedGatePlan.test_city_link_does_not_publish_new_absolute_coordinates_or_a_verified_transform) ... ok
+2026-11-22T05:42:24.2645035Z test_csv_keeps_pixels_and_local_metres_in_separate_columns (test_prosperity_gate_v3.PublishedGatePlan.test_csv_keeps_pixels_and_local_metres_in_separate_columns) ... ok
+2026-11-22T05:42:24.2773712Z test_downloads_atlas_and_bundle_are_complete_and_hash_consistent (test_prosperity_gate_v3.PublishedGatePlan.test_downloads_atlas_and_bundle_are_complete_and_hash_consistent) ... ok
+2026-11-22T05:42:24.2775617Z test_image_north_and_east_keep_the_intended_axis_directions (test_prosperity_gate_v3.PublishedGatePlan.test_image_north_and_east_keep_the_intended_axis_directions)
+2026-11-22T05:42:24.2777390Z Recover the affine basis from published points, independently of conversion helpers. ... ok
+2026-11-22T05:42:24.2792464Z test_invalid_source_bounds_scale_and_solved_city_claim_are_rejected (test_prosperity_gate_v3.PublishedGatePlan.test_invalid_source_bounds_scale_and_solved_city_claim_are_rejected) ... ok
+2026-11-22T05:42:24.2794615Z test_local_conversion_preserves_shape_instead_of_fitting_table_dimensions (test_prosperity_gate_v3.PublishedGatePlan.test_local_conversion_preserves_shape_instead_of_fitting_table_dimensions)
+2026-11-22T05:42:24.2803538Z One image scale must preserve ratios across all independently traced parts. ... ok
+2026-11-22T05:42:24.2982406Z test_no_script_page_is_useful_and_all_new_assets_are_in_release_manifest (test_prosperity_gate_v3.PublishedGatePlan.test_no_script_page_is_useful_and_all_new_assets_are_in_release_manifest) ... ok
+2026-11-22T05:42:24.2987171Z test_original_raster_and_pixel_readings_are_preserved (test_prosperity_gate_v3.PublishedGatePlan.test_original_raster_and_pixel_readings_are_preserved) ... ok
+2026-11-22T05:42:24.2999295Z test_partial_que_traces_and_connection_paths_remain_open_lines (test_prosperity_gate_v3.PublishedGatePlan.test_partial_que_traces_and_connection_paths_remain_open_lines) ... ok
+2026-11-22T05:42:24.6238715Z test_prior_html_updates_are_explicit_reversible_and_preserve_p2_proofs (test_prosperity_gate_v3.PublishedGatePlan.test_prior_html_updates_are_explicit_reversible_and_preserve_p2_proofs) ... ok
+2026-11-22T05:42:24.6240256Z test_source_comparison_and_axis_sequence_keep_raw_evidence_boundaries (test_prosperity_gate_v3.PublishedGatePlan.test_source_comparison_and_axis_sequence_keep_raw_evidence_boundaries)
+2026-11-22T05:42:24.6263944Z Original and drawn views use one image grid; P4 does not invent locations. ... ok
+2026-11-22T05:42:24.6290919Z test_svg_selection_and_source_layer_have_distinct_contents (test_prosperity_gate_v3.PublishedGatePlan.test_svg_selection_and_source_layer_have_distinct_contents) ... ok
+2026-11-22T05:42:24.6299470Z test_table_dimensions_do_not_control_the_local_calibration (test_prosperity_gate_v3.PublishedGatePlan.test_table_dimensions_do_not_control_the_local_calibration) ... ok
+2026-11-22T05:42:24.6347896Z test_feature_coordinates_remain_reproducible_from_the_reviewed_pdf_page (test_prosperity_geography.ProsperityGeographyChecks.test_feature_coordinates_remain_reproducible_from_the_reviewed_pdf_page) ... ok
+2026-11-22T05:42:24.6350640Z test_missing_southern_wall_and_gate_are_not_closed_with_a_protection_boundary (test_prosperity_geography.ProsperityGeographyChecks.test_missing_southern_wall_and_gate_are_not_closed_with_a_protection_boundary) ... ok
+2026-11-22T05:42:24.6352970Z test_mixed_period_remains_and_same_name_gates_are_not_merged (test_prosperity_geography.ProsperityGeographyChecks.test_mixed_period_remains_and_same_name_gates_are_not_merged) ... ok
+2026-11-22T05:42:24.6355176Z test_modern_river_and_regional_label_cannot_become_northern_wei_terrain (test_prosperity_geography.ProsperityGeographyChecks.test_modern_river_and_regional_label_cannot_become_northern_wei_terrain) ... ok
+2026-11-22T05:42:24.6357865Z test_palace_display_envelope_cannot_supply_an_evidence_wall_stroke (test_prosperity_geography.ProsperityGeographyChecks.test_palace_display_envelope_cannot_supply_an_evidence_wall_stroke) ... ok
+2026-11-22T05:42:24.6359783Z test_printed_grid_fit_stays_distinct_from_ground_accuracy (test_prosperity_geography.ProsperityGeographyChecks.test_printed_grid_fit_stays_distinct_from_ground_accuracy) ... ok
+2026-11-22T05:42:24.6361910Z test_xian_datum_and_longitude_first_axes_are_not_silently_relabelled (test_prosperity_geography.ProsperityGeographyChecks.test_xian_datum_and_longitude_first_axes_are_not_silently_relabelled) ... ok
+2026-11-22T05:42:24.6443130Z test_diagrams_same_original_unchanged_and_four_page_atlas (test_prosperity_hydro_roads_p46.P46AnchorAudit.test_diagrams_same_original_unchanged_and_four_page_atlas) ... ok
+2026-11-22T05:42:24.6445297Z test_eight_prior_source_features_and_nine_distinct_outer_survey_mentions (test_prosperity_hydro_roads_p46.P46AnchorAudit.test_eight_prior_source_features_and_nine_distinct_outer_survey_mentions) ... ok
+2026-11-22T05:42:24.6526410Z test_html_bundle_hashes_and_version (test_prosperity_hydro_roads_p46.P46AnchorAudit.test_html_bundle_hashes_and_version) ... ok
+2026-11-22T05:42:24.6528610Z test_modern_source_map_not_northern_wei_and_lakes_not_merged (test_prosperity_hydro_roads_p46.P46AnchorAudit.test_modern_source_map_not_northern_wei_and_lakes_not_merged) ... ok
+2026-11-22T05:42:24.6530669Z test_parallel_research_consolidated_inner_avenues_local_lanes_and_geology (test_prosperity_hydro_roads_p46.P46AnchorAudit.test_parallel_research_consolidated_inner_avenues_local_lanes_and_geology) ... ok
+2026-11-22T05:42:24.6532915Z test_report_counts_and_no_manufactured_ancient_water_polygons (test_prosperity_hydro_roads_p46.P46AnchorAudit.test_report_counts_and_no_manufactured_ancient_water_polygons) ... ok
+2026-11-22T05:42:24.9855041Z test_unchanged_legacy_and_approved_hero (test_prosperity_hydro_roads_p46.P46AnchorAudit.test_unchanged_legacy_and_approved_hero) ... ok
+2026-11-22T05:42:25.0325022Z test_context_crop_keeps_exact_source_vertices_and_symbol_center (test_prosperity_jianchun_plan.JianchunSourceAudit.test_context_crop_keeps_exact_source_vertices_and_symbol_center) ... ok
+2026-11-22T05:42:25.0335039Z test_five_archived_inputs_still_match_the_reviewed_source_bytes (test_prosperity_jianchun_plan.JianchunSourceAudit.test_five_archived_inputs_still_match_the_reviewed_source_bytes) ... ok
+2026-11-22T05:42:25.0336433Z test_reported_residual_dimensions_and_inferred_count_remain_distinct (test_prosperity_jianchun_plan.JianchunSourceAudit.test_reported_residual_dimensions_and_inferred_count_remain_distinct) ... ok
+2026-11-22T05:42:25.0338049Z test_republished_plan_is_not_promoted_to_original_or_ground_control (test_prosperity_jianchun_plan.JianchunSourceAudit.test_republished_plan_is_not_promoted_to_original_or_ground_control) ... ok
+2026-11-22T05:42:25.0347297Z test_structure_is_unscaled_and_does_not_trace_or_republish_source_image (test_prosperity_jianchun_plan.JianchunSourceAudit.test_structure_is_unscaled_and_does_not_trace_or_republish_source_image) ... ok
+2026-11-22T05:42:25.0365701Z test_documentary_evidence_and_limits (test_prosperity_network_p462.NetworkStudy.test_documentary_evidence_and_limits) ... ok
+2026-11-22T05:42:25.0540720Z test_packaged_study (test_prosperity_network_p462.NetworkStudy.test_packaged_study) ... ok
+2026-11-22T05:42:25.0569787Z test_source_road_relations (test_prosperity_network_p462.NetworkStudy.test_source_road_relations) ... ok
+2026-11-22T05:42:25.0603440Z test_complete_source_retained_and_older_p42_not_replaced (test_prosperity_palace_boundaries_p43.PalaceBoundaryP43.test_complete_source_retained_and_older_p42_not_replaced) ... ok
+2026-11-22T05:42:25.0621779Z test_downloads_bundle_and_published_manifest (test_prosperity_palace_boundaries_p43.PalaceBoundaryP43.test_downloads_bundle_and_published_manifest) ... ok
+2026-11-22T05:42:25.0623529Z test_no_ground_truth_promoted (test_prosperity_palace_boundaries_p43.PalaceBoundaryP43.test_no_ground_truth_promoted) ... ok
+2026-11-22T05:42:25.0625695Z test_report_and_source_lineage (test_prosperity_palace_boundaries_p43.PalaceBoundaryP43.test_report_and_source_lineage) ... ok
+2026-11-22T05:42:25.0627116Z test_true_same_scale_svg_and_provenance (test_prosperity_palace_boundaries_p43.PalaceBoundaryP43.test_true_same_scale_svg_and_provenance) ... ok
+2026-11-22T05:42:25.0628261Z test_version_identity_and_links (test_prosperity_palace_boundaries_p43.PalaceBoundaryP43.test_version_identity_and_links) ... ok
+2026-11-22T05:42:25.0644910Z test_old_source_ids_are_preserved_without_counting_supplements_as_new_roads (test_prosperity_road_atlas_r6.RoadAtlas.test_old_source_ids_are_preserved_without_counting_supplements_as_new_roads) ... ok
+2026-11-22T05:42:25.1046505Z test_published_release_and_downloads_are_traceable (test_prosperity_road_atlas_r6.RoadAtlas.test_published_release_and_downloads_are_traceable) ... ok
+2026-11-22T05:42:25.1081866Z test_source_fragments_independent_frames_and_unknown_landings_remain_explicit (test_prosperity_road_atlas_r6.RoadAtlas.test_source_fragments_independent_frames_and_unknown_landings_remain_explicit) ... ok
+2026-11-22T05:42:25.4437654Z test_archived_p451_original_and_approved_h2_untouched (test_prosperity_road_functions_p452.P452RoadReview.test_archived_p451_original_and_approved_h2_untouched) ... ok
+2026-11-22T05:42:25.4439031Z test_authoritative_inputs_and_exact_eight_road_ids (test_prosperity_road_functions_p452.P452RoadReview.test_authoritative_inputs_and_exact_eight_road_ids) ... ok
+2026-11-22T05:42:25.4448845Z test_only_textual_contexts_and_no_bridge_conflation (test_prosperity_road_functions_p452.P452RoadReview.test_only_textual_contexts_and_no_bridge_conflation) ... ok
+2026-11-22T05:42:25.4492883Z test_original_all_source_geometries_identical_and_overlays_exact (test_prosperity_road_functions_p452.P452RoadReview.test_original_all_source_geometries_identical_and_overlays_exact) ... ok
+2026-11-22T05:42:25.4575164Z test_page_atlas_and_integrity (test_prosperity_road_functions_p452.P452RoadReview.test_page_atlas_and_integrity) ... ok
+2026-11-22T05:42:25.4577875Z test_road_geometry_metrics_are_only_structural_not_new_routes (test_prosperity_road_functions_p452.P452RoadReview.test_road_geometry_metrics_are_only_structural_not_new_routes) ... ok
+2026-11-22T05:42:25.7927398Z test_all_prior_site_and_metadata_unchanged_except_one_link (test_prosperity_street_clusters_p453.P453SourceRelations.test_all_prior_site_and_metadata_unchanged_except_one_link) ... ok
+2026-11-22T05:42:25.7947528Z test_diagrams_exact_index_and_nonspatial_attestation (test_prosperity_street_clusters_p453.P453SourceRelations.test_diagrams_exact_index_and_nonspatial_attestation) ... ok
+2026-11-22T05:42:25.7949680Z test_no_fake_bridges_market_location_river_or_roof (test_prosperity_street_clusters_p453.P453SourceRelations.test_no_fake_bridges_market_location_river_or_roof) ... ok
+2026-11-22T05:42:25.8034670Z test_page_bundles_hash_integrity_and_four_page_atlas (test_prosperity_street_clusters_p453.P453SourceRelations.test_page_bundles_hash_integrity_and_four_page_atlas) ... ok
+2026-11-22T05:42:25.8062876Z test_true_source_entities_and_graded_relations (test_prosperity_street_clusters_p453.P453SourceRelations.test_true_source_entities_and_graded_relations) ... ok
+2026-11-22T05:42:25.8095473Z test_3_independent_svg_figures_with_source_caveats (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_3_independent_svg_figures_with_source_caveats) ... ok
+2026-11-22T05:42:25.8098972Z test_courtyard_extent_variants_remain_independent (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_courtyard_extent_variants_remain_independent) ... ok
+2026-11-22T05:42:25.8100760Z test_data_published_verbatim_and_release_identity (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_data_published_verbatim_and_release_identity) ... ok
+2026-11-22T05:42:25.8101937Z test_hall_dimensions_provenance_and_no_height (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_hall_dimensions_provenance_and_no_height) ... ok
+2026-11-22T05:42:25.8103070Z test_page_source_links_and_interactions_explicit (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_page_source_links_and_interactions_explicit) ... ok
+2026-11-22T05:42:25.8104396Z test_partial_court_dimensions_cannot_form_closed_polygon (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_partial_court_dimensions_cannot_form_closed_polygon) ... ok
+2026-11-22T05:42:25.8136665Z test_pdf_zip_manifest_has_verifiable_raw_files (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_pdf_zip_manifest_has_verifiable_raw_files) ... ok
+2026-11-22T05:42:25.8140415Z test_previous_milestones_and_access_paths_remain (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_previous_milestones_and_access_paths_remain) ... ok
+2026-11-22T05:42:25.8142144Z test_source_lineage_and_unknown_types_are_explicit (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_source_lineage_and_unknown_types_are_explicit) ... ok
+2026-11-22T05:42:25.8143491Z test_three_phase_models_are_not_collapsed (test_prosperity_taiji_courts_p42.TaijiCourtsEvidence.test_three_phase_models_are_not_collapsed) ... ok
+2026-11-22T05:42:25.8202339Z test_corrections_retain_body_note_boundary_and_prior_provenance (test_prosperity_text_audit.PublishedLedgerTests.test_corrections_retain_body_note_boundary_and_prior_provenance) ... ok
+2026-11-22T05:42:25.8203712Z test_counts_describe_matching_not_all_version_collation (test_prosperity_text_audit.PublishedLedgerTests.test_counts_describe_matching_not_all_version_collation) ... ok
+2026-11-22T05:42:25.8260003Z test_full_legacy_coverage_and_original_quotes_are_preserved (test_prosperity_text_audit.PublishedLedgerTests.test_full_legacy_coverage_and_original_quotes_are_preserved) ... ok
+2026-11-22T05:42:25.8298875Z test_full_literal_reference_coverage_without_identity_promotion (test_prosperity_text_audit.PublishedLedgerTests.test_full_literal_reference_coverage_without_identity_promotion) ... ok
+2026-11-22T05:42:25.8301412Z test_excerpt_order_must_be_preserved (test_prosperity_text_audit.SourceLayerTests.test_excerpt_order_must_be_preserved) ... ok
+2026-11-22T05:42:25.8304837Z test_modern_inline_annotation_is_not_ancient_subcommentary (test_prosperity_text_audit.SourceLayerTests.test_modern_inline_annotation_is_not_ancient_subcommentary) ... ok
+2026-11-22T05:42:25.8306692Z test_unmarked_omission_and_changed_historical_nouns_do_not_pass (test_prosperity_text_audit.SourceLayerTests.test_unmarked_omission_and_changed_historical_nouns_do_not_pass) ... ok
+2026-11-22T05:42:25.8308736Z test_wiki_small_text_rule_depends_on_edition (test_prosperity_text_audit.SourceLayerTests.test_wiki_small_text_rule_depends_on_edition) ... ok
+2026-11-22T05:42:26.1554684Z test_all_prior_public_assets_remain_byte_identical (test_prosperity_v1.ProsperityPublicationTests.test_all_prior_public_assets_remain_byte_identical) ... ok
+2026-11-22T05:42:26.1575254Z test_corrected_quote_and_edition_links_are_published_together (test_prosperity_v1.ProsperityPublicationTests.test_corrected_quote_and_edition_links_are_published_together) ... ok
+2026-11-22T05:42:26.1695398Z test_downloads_are_real_complete_artifacts_with_bounded_metadata (test_prosperity_v1.ProsperityPublicationTests.test_downloads_are_real_complete_artifacts_with_bounded_metadata) ... ok
+2026-11-22T05:42:26.1793216Z test_existing_entities_and_shared_reading_positions_survive (test_prosperity_v1.ProsperityPublicationTests.test_existing_entities_and_shared_reading_positions_survive) ... ok
+2026-11-22T05:42:26.1804481Z test_geographic_bindings_are_only_explicit_reviewed_source_bindings (test_prosperity_v1.ProsperityPublicationTests.test_geographic_bindings_are_only_explicit_reviewed_source_bindings) ... ok
+2026-11-22T05:42:26.1823101Z test_map_and_oblique_share_source_geometry_and_separate_modern_references (test_prosperity_v1.ProsperityPublicationTests.test_map_and_oblique_share_source_geometry_and_separate_modern_references) ... ok
+2026-11-22T05:42:26.1825116Z test_temporal_uncertainty_is_visible_in_entity_records (test_prosperity_v1.ProsperityPublicationTests.test_temporal_uncertainty_is_visible_in_entity_records) ... ok
+2026-11-22T05:42:26.1839736Z test_terrain_constraints_and_building_depths_do_not_become_ancient_surface (test_prosperity_v1.ProsperityPublicationTests.test_terrain_constraints_and_building_depths_do_not_become_ancient_surface) ... ok
+2026-11-22T05:42:26.1841709Z test_early_events_and_proposals_do_not_become_current_water (test_prosperity_water_p467.WaterEvidence.test_early_events_and_proposals_do_not_become_current_water) ... ok
+2026-11-22T05:42:26.2033466Z test_gate_inlets_and_pool_entities_remain_distinct (test_prosperity_water_p467.WaterEvidence.test_gate_inlets_and_pool_entities_remain_distinct) ... ok
+2026-11-22T05:42:26.2034933Z test_legacy_coverage_and_layout_only_coordinates (test_prosperity_water_p467.WaterEvidence.test_legacy_coverage_and_layout_only_coordinates) ... ok
+2026-11-22T05:42:26.2035934Z test_outer_flow_keeps_the_unlocated_junctions_open (test_prosperity_water_p467.WaterEvidence.test_outer_flow_keeps_the_unlocated_junctions_open) ... ok
+2026-11-22T05:42:26.2036916Z test_qili_alternatives_and_survey_endpoint_stay_conditional (test_prosperity_water_p467.WaterEvidence.test_qili_alternatives_and_survey_endpoint_stay_conditional) ... ok
+2026-11-22T05:42:26.2176120Z test_atlas_and_source_downloads_match_the_published_sections (test_prosperity_water_p467.WaterPublication.test_atlas_and_source_downloads_match_the_published_sections) ... ok
+2026-11-22T05:42:26.2201121Z test_published_svg_arrows_follow_evidence_types (test_prosperity_water_p467.WaterPublication.test_published_svg_arrows_follow_evidence_types) ... ok
+2026-11-22T05:42:26.2222200Z test_ancient_pool_dimensions_remain_in_original_units (test_prosperity_water_p468.Water468Evidence.test_ancient_pool_dimensions_remain_in_original_units) ... ok
+2026-11-22T05:42:26.2223646Z test_independent_ponds_and_waterpower_do_not_acquire_a_supply_network (test_prosperity_water_p468.Water468Evidence.test_independent_ponds_and_waterpower_do_not_acquire_a_supply_network) ... ok
+2026-11-22T05:42:26.2225716Z test_moat_summary_preserves_the_scope_and_distinct_depth_quantities (test_prosperity_water_p468.Water468Evidence.test_moat_summary_preserves_the_scope_and_distinct_depth_quantities) ... ok
+2026-11-22T05:42:26.2227678Z test_palace_connections_do_not_invent_a_pool_outlet_or_current_old_channel (test_prosperity_water_p468.Water468Evidence.test_palace_connections_do_not_invent_a_pool_outlet_or_current_old_channel) ... ok
+2026-11-22T05:42:26.2229515Z test_palace_windows_and_channel_numbering_do_not_become_one_measured_line (test_prosperity_water_p468.Water468Evidence.test_palace_windows_and_channel_numbering_do_not_become_one_measured_line) ... ok
+2026-11-22T05:42:26.2230948Z test_rechecked_palace_pools_preserve_seasonality_and_unproved_individual_inlets (test_prosperity_water_p468.Water468Evidence.test_rechecked_palace_pools_preserve_seasonality_and_unproved_individual_inlets) ... ok
+2026-11-22T05:42:26.2232184Z test_reported_values_do_not_merge_windows_or_turn_structural_height_into_water_depth (test_prosperity_water_p468.Water468Evidence.test_reported_values_do_not_merge_windows_or_turn_structural_height_into_water_depth) ... ok
+2026-11-22T05:42:26.2238970Z test_reviewed_objects_have_evidence_without_new_bank_geometry (test_prosperity_water_p468.Water468Evidence.test_reviewed_objects_have_evidence_without_new_bank_geometry) ... ok
+2026-11-22T05:42:26.2239976Z test_two_fanghu_pools_and_zhaoyi_dry_pit_do_not_merge (test_prosperity_water_p468.Water468Evidence.test_two_fanghu_pools_and_zhaoyi_dry_pit_do_not_merge) ... ok
+2026-11-22T05:42:26.2240928Z test_western_flood_event_does_not_identify_a_current_moat (test_prosperity_water_p468.Water468Evidence.test_western_flood_event_does_not_identify_a_current_moat) ... ok
+2026-11-22T05:42:26.2474958Z test_all_maps_and_source_downloads_match_the_page_and_pdf (test_prosperity_water_p468.Water468Publication.test_all_maps_and_source_downloads_match_the_page_and_pdf) ... ok
+2026-11-22T05:42:26.2488224Z test_current_correction_withdraws_both_old_indexes_and_restores_the_condition (test_prosperity_water_p468.Water468Publication.test_current_correction_withdraws_both_old_indexes_and_restores_the_condition) ... ok
+2026-11-22T05:42:26.2519141Z test_p467_archive_retains_historical_bytes_including_the_withdrawn_index (test_prosperity_water_p468.Water468Publication.test_p467_archive_retains_historical_bytes_including_the_withdrawn_index) ... ok
+2026-11-22T05:42:26.2544486Z test_rendered_arrows_distinguish_water_from_containment_and_strata (test_prosperity_water_p468.Water468Publication.test_rendered_arrows_distinguish_water_from_containment_and_strata) ... ok
+2026-11-22T05:42:26.2545309Z 
+2026-11-22T05:42:26.2545483Z ----------------------------------------------------------------------
+2026-11-22T05:42:26.2545996Z Ran 218 tests in 6.844s
+2026-11-22T05:42:26.2546375Z 
+2026-11-22T05:42:26.2546466Z OK
+2026-11-22T05:42:26.5470475Z test_current_homepage_matches_approved_full_frame (test_homepage_approved_v9.ApprovedPanoramaH2.test_current_homepage_matches_approved_full_frame) ... ok
+2026-11-22T05:42:26.5471439Z test_explicit_approval_and_correct_source (test_homepage_approved_v9.ApprovedPanoramaH2.test_explicit_approval_and_correct_source) ... ok
+2026-11-22T05:42:26.5493027Z test_full_and_mobile_images_match_approved_blobs (test_homepage_approved_v9.ApprovedPanoramaH2.test_full_and_mobile_images_match_approved_blobs) ... ok
+2026-11-22T05:42:26.5495779Z test_new_homepage_and_both_releases_reference_approved_image (test_homepage_approved_v9.ApprovedPanoramaH2.test_new_homepage_and_both_releases_reference_approved_image) ... ok
+2026-11-22T05:42:26.8881385Z test_protected_research_and_interim_images_preserved (test_homepage_approved_v9.ApprovedPanoramaH2.test_protected_research_and_interim_images_preserved) ... ok
+2026-11-22T05:42:26.8882692Z test_release_provenance_matches_all_versions (test_homepage_approved_v9.ApprovedPanoramaH2.test_release_provenance_matches_all_versions) ... ok
+2026-11-22T05:42:26.8883980Z 
+2026-11-22T05:42:26.8884225Z ----------------------------------------------------------------------
+2026-11-22T05:42:26.8884721Z Ran 6 tests in 0.381s
+2026-11-22T05:42:26.8884932Z 
+2026-11-22T05:42:26.8885043Z OK
+2026-11-22T05:42:27.3105620Z test_csv_rejects_lossy_road_endpoints_and_measurements (test_city_nodes_r7.CityNodesDelivery.test_csv_rejects_lossy_road_endpoints_and_measurements) ... ok
+2026-11-22T05:42:27.3129345Z test_homepage_insertions_are_exactly_reversible (test_city_nodes_r7.CityNodesDelivery.test_homepage_insertions_are_exactly_reversible) ... ok
+2026-11-22T05:42:27.3164208Z test_manifest_cannot_hide_a_changed_download (test_city_nodes_r7.CityNodesDelivery.test_manifest_cannot_hide_a_changed_download) ... ok
+2026-11-22T05:42:28.2413178Z test_release_downloads_protected_files_and_offline_bundle (test_city_nodes_r7.CityNodesDelivery.test_release_downloads_protected_files_and_offline_bundle) ... ok
+2026-11-22T05:42:28.2414987Z test_resource_closure_includes_picture_srcset_and_nested_downloads (test_city_nodes_r7.CityNodesDelivery.test_resource_closure_includes_picture_srcset_and_nested_downloads) ... ok
+2026-11-22T05:42:28.2421469Z test_local_marker_bytes_are_checked_without_requesting_them_over_http (test_city_nodes_r7.CityNodesPreservationBoundary.test_local_marker_bytes_are_checked_without_requesting_them_over_http) ... ok
+2026-11-22T05:42:28.2423082Z test_metadata_cannot_hide_an_asset_as_a_control_or_omit_marker_protection (test_city_nodes_r7.CityNodesPreservationBoundary.test_metadata_cannot_hide_an_asset_as_a_control_or_omit_marker_protection) ... ok
+2026-11-22T05:42:28.2424818Z test_missing_or_changed_public_assets_still_fail_in_both_manifest_shapes (test_city_nodes_r7.CityNodesPreservationBoundary.test_missing_or_changed_public_assets_still_fail_in_both_manifest_shapes) ... ok
+2026-11-22T05:42:28.2426238Z test_new_and_legacy_manifests_do_not_request_the_pages_control_marker (test_city_nodes_r7.CityNodesPreservationBoundary.test_new_and_legacy_manifests_do_not_request_the_pages_control_marker) ... ok
+2026-11-22T05:42:28.5705279Z test_baima_unknown_distance_and_sima_contemporaneity_remain_explicit (test_city_nodes_r7.CityNodesResearch.test_baima_unknown_distance_and_sima_contemporaneity_remain_explicit) ... ok
+2026-11-22T05:42:28.6085762Z test_complete_indexes_and_source_joins_keep_previous_values (test_city_nodes_r7.CityNodesResearch.test_complete_indexes_and_source_joins_keep_previous_values) ... ok
+2026-11-22T05:42:28.6469802Z test_coverage_is_checked_by_identifier_not_claimed_count (test_city_nodes_r7.CityNodesResearch.test_coverage_is_checked_by_identifier_not_claimed_count) ... ok
+2026-11-22T05:42:28.6471518Z test_json_pointer_preserves_escaped_keys_and_rejects_negative_indices (test_city_nodes_r7.CityNodesResearch.test_json_pointer_preserves_escaped_keys_and_rejects_negative_indices) ... ok
+2026-11-22T05:42:28.6530952Z test_overview_does_not_shift_original_road_ink_or_water_symbols (test_city_nodes_r7.CityNodesResearch.test_overview_does_not_shift_original_road_ink_or_water_symbols) ... ok
+2026-11-22T05:42:28.7246673Z test_period_geometry_and_water_values_cannot_be_promoted (test_city_nodes_r7.CityNodesResearch.test_period_geometry_and_water_values_cannot_be_promoted) ... ok
+2026-11-22T05:42:28.7256576Z test_sima_six_atomic_lines_and_blue_range_box_keep_native_values (test_city_nodes_r7.CityNodesResearch.test_sima_six_atomic_lines_and_blue_range_box_keep_native_values) ... ok
+2026-11-22T05:42:28.8253821Z test_sources_resolve_and_hashes_cannot_silently_drift (test_city_nodes_r7.CityNodesResearch.test_sources_resolve_and_hashes_cannot_silently_drift) ... ok
+2026-11-22T05:42:28.8254703Z 
+2026-11-22T05:42:28.8254939Z ----------------------------------------------------------------------
+2026-11-22T05:42:28.8255442Z Ran 17 tests in 1.582s
+2026-11-22T05:42:28.8255643Z 
+2026-11-22T05:42:28.8255742Z OK
+2026-11-22T05:42:28.9716151Z test_candidate_metadata_cannot_claim_approval_or_crop_mobile (test_panorama_v13.CandidateContract.test_candidate_metadata_cannot_claim_approval_or_crop_mobile) ... ok
+2026-11-22T05:42:28.9728712Z test_exact_entry_restores_the_previous_homepage (test_panorama_v13.CandidateContract.test_exact_entry_restores_the_previous_homepage) ... ok
+2026-11-22T05:42:29.4669991Z test_changed_candidate_or_earlier_evidence_is_rejected (test_panorama_v13.CandidateDelivery.test_changed_candidate_or_earlier_evidence_is_rejected) ... ok
+2026-11-22T05:42:30.1651663Z test_resources_provenance_and_previous_homepage (test_panorama_v13.CandidateDelivery.test_resources_provenance_and_previous_homepage) ... ok
+2026-11-22T05:42:30.1652996Z 
+2026-11-22T05:42:30.1653356Z ----------------------------------------------------------------------
+2026-11-22T05:42:30.1654123Z Ran 4 tests in 1.208s
+2026-11-22T05:42:30.1654419Z 
+2026-11-22T05:42:30.1654612Z OK
+2026-11-22T05:42:30.1932864Z ##[group]Run docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-22T05:42:30.1933396Z [36;1mdocker pull mcr.microsoft.com/playwright/python:v1.57.0-noble[0m
+2026-11-22T05:42:30.1934080Z [36;1mdocker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json[0m
+2026-11-22T05:42:30.1949364Z shell: /usr/bin/bash -e {0}
+2026-11-22T05:42:30.1949633Z env:
+2026-11-22T05:42:30.1949916Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:42:30.1950325Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:42:30.1950730Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:42:30.1951100Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:42:30.1951461Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:42:30.1951873Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:42:30.1952184Z ##[endgroup]
+2026-11-22T05:42:30.5378976Z v1.57.0-noble: Pulling from playwright/python
+2026-11-22T05:42:30.6163231Z 02de03a7213b: Pulling fs layer
+2026-11-22T05:42:30.6164075Z 7b5874a20bcf: Pulling fs layer
+2026-11-22T05:42:30.6164510Z 4b7186aead47: Pulling fs layer
+2026-11-22T05:42:30.6164891Z b7c8fb4e771e: Pulling fs layer
+2026-11-22T05:42:30.6165543Z b7c8fb4e771e: Waiting
+2026-11-22T05:42:30.9171856Z 7b5874a20bcf: Verifying Checksum
+2026-11-22T05:42:30.9172378Z 7b5874a20bcf: Download complete
+2026-11-22T05:42:30.9329150Z 02de03a7213b: Verifying Checksum
+2026-11-22T05:42:30.9329750Z 02de03a7213b: Download complete
+2026-11-22T05:42:31.0746307Z 4b7186aead47: Verifying Checksum
+2026-11-22T05:42:31.0747398Z 4b7186aead47: Download complete
+2026-11-22T05:42:31.9398041Z 02de03a7213b: Pull complete
+2026-11-22T05:42:34.1079804Z b7c8fb4e771e: Verifying Checksum
+2026-11-22T05:42:34.1080697Z b7c8fb4e771e: Download complete
+2026-11-22T05:42:40.1263725Z 7b5874a20bcf: Pull complete
+2026-11-22T05:42:40.9621127Z 4b7186aead47: Pull complete
+2026-11-22T05:43:00.9135146Z b7c8fb4e771e: Pull complete
+2026-11-22T05:43:00.9193208Z Digest: sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1
+2026-11-22T05:43:00.9212232Z Status: Downloaded newer image for mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-22T05:43:00.9227694Z mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-22T05:43:00.9470993Z ##[group]Run docker run --rm --init --ipc=host \
+2026-11-22T05:43:00.9472027Z [36;1mdocker run --rm --init --ipc=host \[0m
+2026-11-22T05:43:00.9473882Z [36;1m  --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \[0m
+2026-11-22T05:43:00.9474605Z [36;1m  --workdir /work mcr.microsoft.com/playwright/python:v1.57.0-noble \[0m
+2026-11-22T05:43:00.9476135Z [36;1m  bash -euo pipefail -c '[0m
+2026-11-22T05:43:00.9476923Z [36;1m    python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0 pypdf==5.9.0[0m
+2026-11-22T05:43:00.9477948Z [36;1m    python tests/browser_city_common_p470.py[0m
+2026-11-22T05:43:00.9478461Z [36;1m    python tests/browser_city_north_p471.py[0m
+2026-11-22T05:43:00.9479409Z [36;1m    python tests/browser_city_west_p472.py[0m
+2026-11-22T05:43:00.9480457Z [36;1m    python tests/browser_city_atlas_r4.py[0m
+2026-11-22T05:43:00.9480942Z [36;1m    python tests/browser_city_panorama_r5.py[0m
+2026-11-22T05:43:00.9481491Z [36;1m    python tests/browser_road_atlas_r6.py[0m
+2026-11-22T05:43:00.9481979Z [36;1m    python tests/browser_all_road_atlas_r62.py[0m
+2026-11-22T05:43:00.9482589Z [36;1m    python tests/browser_city_nodes_r7.py[0m
+2026-11-22T05:43:00.9483074Z [36;1m    python tests/browser_panorama_v13.py[0m
+2026-11-22T05:43:00.9483592Z [36;1m    python tests/browser_prosperity_hydro_roads_p46.py[0m
+2026-11-22T05:43:00.9484126Z [36;1m    python tests/browser_backbone_p469.py[0m
+2026-11-22T05:43:00.9484583Z [36;1m    python tests/browser_prosperity_gate_v3.py[0m
+2026-11-22T05:43:00.9485519Z [36;1m    python tests/browser_prosperity_axis_v4.py[0m
+2026-11-22T05:43:00.9486058Z [36;1m    python tests/browser_prosperity_axis_sources_p41.py[0m
+2026-11-22T05:43:00.9486652Z [36;1m    python tests/browser_prosperity_taiji_courts_p42.py[0m
+2026-11-22T05:43:00.9487277Z [36;1m     python tests/browser_prosperity_palace_boundaries_p43.py[0m
+2026-11-22T05:43:00.9488097Z [36;1m    python tests/browser_prosperity_architecture_p44.py[0m
+2026-11-22T05:43:00.9488624Z [36;1m    python tests/browser_v25.py[0m
+2026-11-22T05:43:00.9489062Z [36;1m    python tests/browser_v26.py[0m
+2026-11-22T05:43:00.9489494Z [36;1m    python tests/browser_v27.py[0m
+2026-11-22T05:43:00.9489911Z [36;1m    python tests/browser_v28.py[0m
+2026-11-22T05:43:00.9490300Z [36;1m    python tests/browser_v29.py[0m
+2026-11-22T05:43:00.9490683Z [36;1m    python tests/browser_v30.py[0m
+2026-11-22T05:43:00.9491094Z [36;1m    python tests/browser_dual.py[0m
+2026-11-22T05:43:00.9491531Z [36;1m    python tests/browser_west_b3.py[0m
+2026-11-22T05:43:00.9491978Z [36;1m    python tests/browser_north_b4.py[0m
+2026-11-22T05:43:00.9492451Z [36;1m    python tests/browser_west_roads_b5.py[0m
+2026-11-22T05:43:00.9492931Z [36;1m    python tests/browser_southeast_b6.py[0m
+2026-11-22T05:43:00.9493426Z [36;1m    python tests/browser_luonan_b7.py[0m
+2026-11-22T05:43:00.9493873Z [36;1m    python tests/browser_city_b8.py[0m
+2026-11-22T05:43:00.9494355Z [36;1m    python tests/browser_homepage_v1.py[0m
+2026-11-22T05:43:00.9494863Z [36;1m    python tests/browser_homepage_approved_v9.py[0m
+2026-11-22T05:43:00.9495952Z [36;1m    python tests/browser_prosperity_city_distribution_p451.py[0m
+2026-11-22T05:43:00.9496584Z [36;1m    python tests/browser_prosperity_road_functions_p452.py[0m
+2026-11-22T05:43:00.9497625Z [36;1m    python tests/browser_prosperity_street_clusters_p453.py[0m
+2026-11-22T05:43:00.9498208Z [36;1m    python tests/browser_prosperity_v1.py[0m
+2026-11-22T05:43:00.9498733Z [36;1m    python tests/browser_prosperity_core_v2.py[0m
+2026-11-22T05:43:00.9499142Z [36;1m  '[0m
+2026-11-22T05:43:00.9522244Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-22T05:43:00.9522762Z env:
+2026-11-22T05:43:00.9523175Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:43:00.9524375Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:43:00.9526676Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:43:00.9527622Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:43:00.9528629Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:43:00.9529450Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:43:00.9530283Z ##[endgroup]
+2026-11-22T05:43:01.5701473Z Collecting playwright==1.57.0
+2026-11-22T05:43:01.6807605Z   Downloading playwright-1.57.0-py3-none-manylinux1_x86_64.whl.metadata (3.5 kB)
+2026-11-22T05:43:01.7167046Z Collecting pypdf==5.9.0
+2026-11-22T05:43:01.7308502Z   Downloading pypdf-5.9.0-py3-none-any.whl.metadata (7.1 kB)
+2026-11-22T05:43:01.7624755Z Collecting pyee<14,>=13 (from playwright==1.57.0)
+2026-11-22T05:43:01.7763852Z   Downloading pyee-13.0.1-py3-none-any.whl.metadata (3.0 kB)
+2026-11-22T05:43:01.9638365Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright==1.57.0)
+2026-11-22T05:43:01.9776339Z   Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-11-22T05:43:02.0067095Z Collecting typing-extensions (from pyee<14,>=13->playwright==1.57.0)
+2026-11-22T05:43:02.0207330Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-22T05:43:02.0426059Z Downloading playwright-1.57.0-py3-none-manylinux1_x86_64.whl (46.0 MB)
+2026-11-22T05:43:02.6366590Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 MB 81.5 MB/s  0:00:00
+2026-11-22T05:43:02.6531003Z Downloading pypdf-5.9.0-py3-none-any.whl (313 kB)
+2026-11-22T05:43:02.6756662Z Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)
+2026-11-22T05:43:02.6818958Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 621.4/621.4 kB 89.3 MB/s  0:00:00
+2026-11-22T05:43:02.6956381Z Downloading pyee-13.0.1-py3-none-any.whl (15 kB)
+2026-11-22T05:43:02.7132166Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-22T05:43:02.7765715Z Installing collected packages: typing-extensions, pypdf, greenlet, pyee, playwright
+2026-11-22T05:43:03.9064414Z 
+2026-11-22T05:43:03.9078394Z Successfully installed greenlet-3.5.6 playwright-1.57.0 pyee-13.0.1 pypdf-5.9.0 typing-extensions-4.16.0
+2026-11-22T05:43:03.9082253Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-11-22T05:43:11.9575513Z PASS P4.7 desktop: four map cards, three scenes, six downloads and no-JS
+2026-11-22T05:43:18.6396706Z PASS P4.7 mobile: four map cards, three scenes, six downloads and no-JS
+2026-11-22T05:43:29.7391373Z PASS P4.7.1 desktop: two maps, three entries, 16 readings, seven downloads and no-JS
+2026-11-22T05:43:39.5843393Z PASS P4.7.1 mobile: two maps, three entries, 16 readings, seven downloads and no-JS
+2026-11-22T05:43:45.1450235Z PASS P472 desktop: 6 groups, 7 downloads, 6 screenshots
+2026-11-22T05:43:49.7419851Z PASS P472 mobile: 6 groups, 7 downloads, 6 screenshots
+2026-11-22T05:44:45.6069764Z Traceback (most recent call last):
+2026-11-22T05:44:45.6080498Z   File "/work/tests/browser_city_nodes_r7.py", line 269, in <module>
+2026-11-22T05:44:45.6081252Z     exercise(browser, base, device, output, args.commit)
+2026-11-22T05:44:45.6081961Z   File "/work/tests/browser_city_nodes_r7.py", line 179, in exercise
+2026-11-22T05:44:45.6082604Z     expect(scroll).to_have_js_property("scrollLeft", 0)
+2026-11-22T05:44:45.6083553Z   File "/usr/local/lib/python3.12/dist-packages/playwright/sync_api/_generated.py", line 19829, in to_have_js_property
+2026-11-22T05:44:45.6097800Z     self._sync(
+2026-11-22T05:44:45.6100181Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+2026-11-22T05:44:45.6100963Z     return task.result()
+2026-11-22T05:44:45.6101322Z            ^^^^^^^^^^^^^
+2026-11-22T05:44:45.6102342Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_assertions.py", line 455, in to_have_js_property
+2026-11-22T05:44:45.6102847Z     await self._expect_impl(
+2026-11-22T05:44:45.6103306Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_assertions.py", line 85, in _expect_impl
+2026-11-22T05:44:45.6103774Z     raise AssertionError(
+2026-11-22T05:44:45.6104087Z AssertionError: Locator expected to have JS Property '0'
+2026-11-22T05:44:45.6104406Z Actual value: 31 
+2026-11-22T05:44:45.6104619Z Call log:
+2026-11-22T05:44:45.6104863Z   - Expect "to_have_property" with timeout 5000ms
+2026-11-22T05:44:45.6105224Z   - waiting for locator("#map-overview .map-scroll")
+2026-11-22T05:44:45.6106029Z     2 × locator resolved to <div tabindex="0" class="map-scroll" aria-label="四处城市节点联读总览，可上下左右滚动">…</div>
+2026-11-22T05:44:45.6106599Z       - unexpected value "7"
+2026-11-22T05:44:45.6107085Z     7 × locator resolved to <div tabindex="0" class="map-scroll" aria-label="四处城市节点联读总览，可上下左右滚动">…</div>
+2026-11-22T05:44:45.6107734Z       - unexpected value "31"
+2026-11-22T05:44:45.6107962Z 
+2026-11-22T05:44:45.9568130Z ##[error]Process completed with exit code 1.
+2026-11-22T05:44:45.9639938Z ##[group]Run actions/upload-artifact@v4
+2026-11-22T05:44:45.9640238Z with:
+2026-11-22T05:44:45.9640461Z   name: browser-build-evidence
+2026-11-22T05:44:45.9640716Z   path: artifacts
+2026-11-22T05:44:45.9640939Z   retention-days: 14
+2026-11-22T05:44:45.9641171Z   if-no-files-found: warn
+2026-11-22T05:44:45.9641407Z   compression-level: 6
+2026-11-22T05:44:45.9641638Z   overwrite: false
+2026-11-22T05:44:45.9641859Z   include-hidden-files: false
+2026-11-22T05:44:45.9642101Z env:
+2026-11-22T05:44:45.9642360Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:44:45.9642782Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T05:44:45.9643213Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:44:45.9643585Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:44:45.9643948Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T05:44:45.9644361Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T05:44:45.9644684Z ##[endgroup]
+2026-11-22T05:44:46.1428371Z (node:5123) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-22T05:44:46.1429039Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-22T05:44:46.2140032Z With the provided path, there will be 229 files uploaded
+2026-11-22T05:44:46.2140740Z Artifact name is valid!
+2026-11-22T05:44:46.2141072Z Root directory input is valid!
+2026-11-22T05:44:46.5199994Z Beginning upload of artifact content to blob storage
+2026-11-22T05:44:46.8625278Z (node:5123) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-22T05:44:47.3699956Z Uploaded bytes 8388608
+2026-11-22T05:44:47.7216239Z Uploaded bytes 16777216
+2026-11-22T05:44:47.8888357Z Uploaded bytes 25165824
+2026-11-22T05:44:48.2483021Z Uploaded bytes 33554432
+2026-11-22T05:44:48.5324056Z Uploaded bytes 41943040
+2026-11-22T05:44:48.8415309Z Uploaded bytes 50331648
+2026-11-22T05:44:49.1058698Z Uploaded bytes 58720256
+2026-11-22T05:44:49.3754176Z Uploaded bytes 67108864
+2026-11-22T05:44:49.6781890Z Uploaded bytes 75497472
+2026-11-22T05:44:49.7434477Z Uploaded bytes 76230574
+2026-11-22T05:44:49.7832489Z Finished uploading artifact content to blob storage!
+2026-11-22T05:44:49.7835169Z SHA256 digest of uploaded artifact zip is 17efa6162947cc5165aba7670baee32c9c7a849b7c1a6bc3f97b8c30da141366
+2026-11-22T05:44:49.7837262Z Finalizing artifact upload
+2026-11-22T05:44:50.1131013Z Artifact browser-build-evidence.zip successfully finalized. Artifact ID 14741532177
+2026-11-22T05:44:50.1132202Z Artifact browser-build-evidence has been successfully uploaded! Final size is 76230574 bytes. Artifact ID is 14741532177
+2026-11-22T05:44:50.1140973Z Artifact download URL: https://github.com/mechgouki/luoyang-city/actions/runs/44990398220/artifacts/14741532177
+2026-11-22T05:44:50.1396479Z Post job cleanup.
+2026-11-22T05:44:50.2365062Z [command]/usr/bin/git version
+2026-11-22T05:44:50.2418684Z git version 2.56.1
+2026-11-22T05:44:50.2500120Z Temporarily overriding HOME='/home/runner/work/_temp/d3cd0da8-c2c2-463f-90cb-c1c8201e46bf' before making global git config changes
+2026-11-22T05:44:50.2501286Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-22T05:44:50.2502242Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luoyang-city/luoyang-city
+2026-11-22T05:44:50.2505645Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T05:44:50.2589396Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T05:44:50.2839118Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T05:44:50.2865282Z http.https://github.com/.extraheader
+2026-11-22T05:44:50.2909964Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-22T05:44:50.2933940Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T05:44:50.3244267Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T05:44:50.3303160Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T05:44:50.3947778Z Cleaning up orphan processes
+2026-11-22T05:44:50.4231857Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

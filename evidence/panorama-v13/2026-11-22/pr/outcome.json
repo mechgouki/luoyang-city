@@ -1,0 +1,106 @@
+{
+  "schema": "luoyang-v13-ci-outcome-v1",
+  "captured_at_utc": "2026-11-22T05:58:10.830713+00:00",
+  "stage": "corrected_pr_success",
+  "repository": "mechgouki/luoyang-city",
+  "pull_request": 79,
+  "workflow_run_id": 44990962140,
+  "run_attempt": 1,
+  "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44990962140",
+  "workflow_status": "completed",
+  "workflow_conclusion": "success",
+  "head_commit": "33604407bb1dd8a35336c58d6aa49143d61bcc5e",
+  "base_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+  "tested_checkout_commit": "2792d5986852a87eee3ab607197c17df9a59fcfe",
+  "source_tree": "760adfa3f4f851213853a786e94551354d25db04",
+  "source_verification": {
+    "checkout_fetch_ref": "refs/remotes/pull/79/merge",
+    "checkout_git_log": "2792d5986852a87eee3ab607197c17df9a59fcfe",
+    "report_sources": [
+      "2792d5986852a87eee3ab607197c17df9a59fcfe"
+    ],
+    "api_head_sha_is_pr_head_not_tested_checkout": true,
+    "merge_commit_api": "merge-commit.json",
+    "source_file_manifest": "source-files.json",
+    "source_files": 34,
+    "source_bytes": 4391549
+  },
+  "build_python": "3.11.18",
+  "browser_runtime": "mcr.microsoft.com/playwright/python:v1.57.0-noble; browser test Python is container Python 3.12",
+  "full_build_step": "success",
+  "v13_semantic_tests": {
+    "status": "passed",
+    "tests": 4,
+    "raw_report": "panorama-v13-tests.txt"
+  },
+  "full_browser_chain": "success",
+  "r7_browser": {
+    "desktop": {
+      "status": "passed",
+      "check_groups": 8,
+      "overview_reset": {
+        "before": {
+          "left": 40,
+          "top": 40
+        },
+        "after": {
+          "left": 0,
+          "top": 0
+        }
+      },
+      "report": "city-nodes-r7-browser/desktop-report.json"
+    },
+    "mobile": {
+      "status": "passed",
+      "check_groups": 8,
+      "overview_reset": {
+        "before": {
+          "left": 40,
+          "top": 40
+        },
+        "after": {
+          "left": 0,
+          "top": 0
+        }
+      },
+      "report": "city-nodes-r7-browser/mobile-report.json"
+    }
+  },
+  "v13_browser": {
+    "desktop": {
+      "status": "passed",
+      "check_groups": 5,
+      "downloads": 7,
+      "screenshots": 2,
+      "report": "panorama-v13-browser/desktop-report.json"
+    },
+    "mobile": {
+      "status": "passed",
+      "check_groups": 5,
+      "downloads": 7,
+      "screenshots": 2,
+      "report": "panorama-v13-browser/mobile-report.json"
+    }
+  },
+  "pages_artifact_uploaded": true,
+  "deploy": "skipped_as_expected_for_pull_request",
+  "verify_live": "skipped_as_expected_for_pull_request",
+  "production_release_accepted": false,
+  "homepage_replacement_approved": false,
+  "historical_gate_reconstruction_completed": false,
+  "artifact": {
+    "id": 14741682665,
+    "name": "browser-build-evidence",
+    "original_zip_bytes": 187336643,
+    "original_zip_sha256": "6715a84b142357742edb7655c0d7c3dfea99d6d89f319d61d025e9e537767feb",
+    "matches_github_artifact_digest": true,
+    "raw_entries_retained": 132,
+    "raw_screenshots_retained": 50,
+    "v13_json_png_files": 6
+  },
+  "logs": {
+    "path": "build-job.log",
+    "provenance": "Exact UTF-8 encoding of the complete decoded text returned by github_fetch_workflow_job_logs; not asserted to be independently captured raw HTTP response bytes"
+  },
+  "meaning": "Corrected PR full CI passed against its actual merge-ref. This is not main deployment acceptance and does not approve replacing the homepage. The initial failed run remains separately archived."
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "luoyang-v13-ci-outcome-v1",
+  "captured_at_utc": "2026-11-22T05:46:54.735756+00:00",
+  "stage": "initial_pr_failure",
+  "repository": "mechgouki/luoyang-city",
+  "pull_request": 79,
+  "workflow_run_id": 44990398220,
+  "run_attempt": 1,
+  "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44990398220",
+  "workflow_status": "completed",
+  "workflow_conclusion": "failure",
+  "head_commit": "00c7b4a16cc45e2d0d867b9e50ae336ca8ade159",
+  "base_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+  "tested_checkout_commit": "a338e8dd60151e959b443ab466a983ce799293e2",
+  "source_tree": "bf3549c6feb91214d28fd20f66d53357f09923d7",
+  "source_tree_basis": "Root verified Git commit API; checkout is independently confirmed here by actual job log and original browser reports",
+  "source_verification": {
+    "checkout_fetch_ref": "refs/remotes/pull/79/merge",
+    "checkout_git_log": "a338e8dd60151e959b443ab466a983ce799293e2",
+    "report_sources": [
+      "a338e8dd60151e959b443ab466a983ce799293e2"
+    ],
+    "api_head_sha_is_pr_head_not_tested_checkout": true
+  },
+  "build_python": "3.11.18",
+  "browser_runtime": "mcr.microsoft.com/playwright/python:v1.57.0-noble; browser test Python is container Python 3.12",
+  "full_build_step": "success",
+  "v13_semantic_tests": {
+    "status": "passed",
+    "tests": 4,
+    "raw_report": "panorama-v13-tests.txt"
+  },
+  "full_browser_chain": "failure",
+  "failure": {
+    "test": "tests/browser_city_nodes_r7.py",
+    "line": 179,
+    "device": "mobile",
+    "selector": "#map-overview .map-scroll",
+    "expected_scroll_left": 0,
+    "observed_scroll_left": 31,
+    "earlier_observed_scroll_left": 7,
+    "raw_report": "city-nodes-r7-browser/mobile-report.json",
+    "failure_screenshot": "city-nodes-r7-browser/mobile-failure.png",
+    "summary": "Existing R7 mobile reset check failed before the V13 browser test was reached"
+  },
+  "v13_browser": {
+    "status": "not_run",
+    "original_json_png_files": 0,
+    "absence_reason": "Earlier R7 browser command failed in a fail-fast shell"
+  },
+  "pages_artifact_uploaded": false,
+  "deploy": "skipped",
+  "verify_live": "skipped",
+  "release_accepted": false,
+  "homepage_replacement_approved": false,
+  "historical_gate_reconstruction_completed": false,
+  "artifact": {
+    "id": 14741532177,
+    "name": "browser-build-evidence",
+    "original_zip_bytes": 76230574,
+    "original_zip_sha256": "17efa6162947cc5165aba7670baee32c9c7a849b7c1a6bc3f97b8c30da141366",
+    "matches_github_artifact_digest": true,
+    "raw_entries_retained": 80,
+    "raw_screenshots_retained": 33
+  },
+  "logs": {
+    "path": "build-job.log",
+    "provenance": "Exact UTF-8 encoding of the complete decoded text returned by github_fetch_workflow_job_logs; not asserted to be independently captured raw HTTP response bytes"
+  },
+  "meaning": "A failed PR run with a successful full build and semantic tests. It is not a complete browser pass, production deployment, or approval to replace the homepage."
+}
