@@ -220,9 +220,10 @@ def verify(info, release, get):
     for name, html in pages.items():
         from city_nodes_r7_contract import KEY as NODES_KEY, restore_home
         from panorama_v13_contract import restore_home as restore_candidate_entry
+        from panorama_v13_r2_contract import strip_current_entries
         current = get(name)
         assert digest(current) == hashes[name]
-        current = restore_candidate_entry(current)
+        current = restore_candidate_entry(strip_current_entries(current))
         assert html == (restore_home(current) if NODES_KEY in info else current)
     assert release["homepage_hero_revision"] == CURRENT.revision
     assert release["homepage_hero_status"] == "approved" and release["homepage_hero_approval_date"] == APPROVED
