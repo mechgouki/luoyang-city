@@ -18,7 +18,7 @@ from urllib.parse import unquote, urlsplit
 from xml.etree import ElementTree as ET
 from zipfile import ZipFile
 
-from city_nodes_r7_contract import BASE, BUNDLE, FOLDER, HOME_EDITS, KEY, MANIFEST, PAGE, ROAD_ENTRY, VERSION, restore_home
+from city_nodes_r7_contract import BASE, BUILD_CONTROL_FILES, BUNDLE, FOLDER, HOME_EDITS, KEY, MANIFEST, PAGE, ROAD_ENTRY, VERSION, restore_home
 from homepage_artwork_v10 import V12
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -469,7 +469,32 @@ def verify_csv(raw, data):
     return len(rows)
 
 
-def verify(info, reader):
+def verify_protected_files(meta, hashes, get, build_control_reader=None):
+    """Verify public bytes and separately account for Pages' root control marker.
+
+    Early R7.1 manifests kept the marker in protected_files_sha256. Accept that
+    shape by extracting only the exact known path; never infer exclusions from
+    an HTTP error, a leading dot, or a caller-supplied list. New manifests split
+    the two sets explicitly. The build checks both sets' actual local bytes;
+    callers can additionally supply a local reader for control-byte validation.
+    """
+    protected = dict(meta["protected_files_sha256"])
+    if "build_control_files_sha256" in meta:
+        controls = meta["build_control_files_sha256"]
+        assert not BUILD_CONTROL_FILES.intersection(protected), "Control file remains in public protection table"
+    else:
+        controls = {path: protected.pop(path) for path in BUILD_CONTROL_FILES if path in protected}
+    expected_controls = {path: hashes[path] for path in BUILD_CONTROL_FILES}
+    assert controls == expected_controls, "Build controls differ from the fixed Pages contract or release hashes"
+    for path, checksum in protected.items():
+        assert digest(get(path)) == hashes[path] == checksum, (path, "Protected predecessor changed")
+    if build_control_reader is not None:
+        for path, checksum in controls.items():
+            assert digest(build_control_reader(path)) == checksum, (path, "Build control bytes changed")
+    return protected, controls
+
+
+def verify(info, reader, *, build_control_reader=None):
     get = lru_cache(maxsize=None)(reader)
     hashes = info["files_sha256"]
     meta = info[KEY]
@@ -503,12 +528,10 @@ def verify(info, reader):
     public_roads = json.loads(get("all-roads/records.json"))
     for key, value in load("research/roads-r62/catalog.json").items():
         assert public_roads[key] == value, (key, "Predecessor road catalog changed")
-    protected = meta["protected_files_sha256"]
+    protected, build_controls = verify_protected_files(meta, hashes, get, build_control_reader)
     mandatory_protected = {"all-roads/records.json", "all-roads/manifest.json", "downloads/luoyang-all-roads.zip",
                            "city-atlas/atlas.json", "water-location-data.json", "water-locations.csv", V12.full, V12.small, V12.metadata}
     assert mandatory_protected <= set(protected), "A predecessor is outside R7 preservation coverage"
-    for path, checksum in protected.items():
-        assert digest(get(path)) == hashes[path] == checksum, (path, "Protected predecessor changed")
     old_road = meta["predecessor_road_page"]
     road_html = get(old_road["path"])
     assert road_html.count(ROAD_ENTRY) == road_html.count(b'id="r7-road-entry"') == 1
@@ -563,5 +586,7 @@ def verify(info, reader):
         assert meta["hero"]["full"] in members and meta["hero"]["small"] in members, "Offline guide omitted the approved full or small image"
     return dict(status="passed", source_commit=info["source_commit"], **report,
                 csv_rows=csv_rows, figures=figures, homepage=homepage,
-                protected_files=len(protected), downloads=len(expected_downloads), offline_members=len(members),
+                protected_files=len(protected) + len(build_controls), protected_public_files=len(protected),
+                build_control_files=len(build_controls), build_control_content_verified=build_control_reader is not None,
+                downloads=len(expected_downloads), offline_members=len(members),
                 distinct_resources=get.cache_info().misses)

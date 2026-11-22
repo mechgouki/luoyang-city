@@ -1,6 +1,7 @@
 """Regression guards for R7's evidence limits and actual downloadable delivery."""
 import copy
 import csv
+import hashlib
 import io
 import json
 from pathlib import Path
@@ -16,8 +17,86 @@ from city_nodes_r7_data import build_data
 from city_nodes_r7_maps import overview, sima_map
 from city_nodes_r7_verify import (
     CSV, DATA, KEY, NS, pointer, verify, verify_csv, verify_data, verify_links,
-    verify_native_features, verify_sima_geometry, verify_source_inputs, verify_water_frame,
+    verify_native_features, verify_protected_files, verify_sima_geometry, verify_source_inputs, verify_water_frame,
 )
+
+
+class CityNodesPreservationBoundary(unittest.TestCase):
+    def setUp(self):
+        # Only the root Pages control marker is consumed by hosting. A public
+        # dotfile or a nested file with the same name must still be requested.
+        self.contents = {".nojekyll": b"", "map.svg": b"<svg/>",
+                         ".reader-note": b"public note", "downloads/.nojekyll": b"public attachment"}
+        self.hashes = {path: hashlib.sha256(raw).hexdigest() for path, raw in self.contents.items()}
+
+    def metadata(self, legacy=False):
+        if legacy:
+            return dict(protected_files_sha256=dict(self.hashes))
+        return dict(protected_files_sha256={p: v for p, v in self.hashes.items() if p != ".nojekyll"},
+                    build_control_files_sha256={".nojekyll": self.hashes[".nojekyll"]})
+
+    def public_reader(self, path):
+        if path == ".nojekyll":
+            raise FileNotFoundError("Pages consumed its root control marker")
+        return self.contents[path]
+
+    def test_new_and_legacy_manifests_do_not_request_the_pages_control_marker(self):
+        for legacy in (False, True):
+            with self.subTest(legacy=legacy):
+                requests = []
+                def read(path):
+                    requests.append(path)
+                    return self.public_reader(path)
+                public, controls = verify_protected_files(self.metadata(legacy), self.hashes, read)
+                self.assertEqual(set(requests), set(self.contents) - {".nojekyll"})
+                self.assertEqual(set(public), set(requests))
+                self.assertEqual(controls, {".nojekyll": self.hashes[".nojekyll"]})
+
+    def test_missing_or_changed_public_assets_still_fail_in_both_manifest_shapes(self):
+        for legacy in (False, True):
+            for missing in ("map.svg", ".reader-note", "downloads/.nojekyll"):
+                with self.subTest(legacy=legacy, path=missing):
+                    def read(path):
+                        if path == missing:
+                            raise FileNotFoundError("404: " + path)
+                        return self.public_reader(path)
+                    with self.assertRaisesRegex(FileNotFoundError, "404"):
+                        verify_protected_files(self.metadata(legacy), self.hashes, read)
+                    def changed(path):
+                        return b"changed" if path == missing else self.public_reader(path)
+                    with self.assertRaises(AssertionError):
+                        verify_protected_files(self.metadata(legacy), self.hashes, changed)
+
+    def test_metadata_cannot_hide_an_asset_as_a_control_or_omit_marker_protection(self):
+        cases = []
+        wrong = self.metadata()
+        wrong["build_control_files_sha256"]["map.svg"] = wrong["protected_files_sha256"].pop("map.svg")
+        cases.append(wrong)
+        wrong = self.metadata()
+        wrong["build_control_files_sha256"] = {}
+        cases.append(wrong)
+        wrong = self.metadata()
+        wrong["build_control_files_sha256"][".nojekyll"] = "0" * 64
+        cases.append(wrong)
+        wrong = self.metadata()
+        wrong["protected_files_sha256"][".nojekyll"] = self.hashes[".nojekyll"]
+        cases.append(wrong)
+        wrong = self.metadata(legacy=True)
+        del wrong["protected_files_sha256"][".nojekyll"]
+        cases.append(wrong)
+        for meta in cases:
+            with self.subTest(meta=meta):
+                with self.assertRaises(AssertionError):
+                    verify_protected_files(meta, self.hashes, self.public_reader)
+
+    def test_local_marker_bytes_are_checked_without_requesting_them_over_http(self):
+        for legacy in (False, True):
+            with self.subTest(legacy=legacy):
+                verify_protected_files(self.metadata(legacy), self.hashes, self.public_reader,
+                                       build_control_reader=lambda path: self.contents[path])
+                with self.assertRaisesRegex(AssertionError, "Build control bytes changed"):
+                    verify_protected_files(self.metadata(legacy), self.hashes, self.public_reader,
+                                           build_control_reader=lambda path: b"modified marker")
 
 
 class CityNodesResearch(unittest.TestCase):
@@ -140,8 +219,11 @@ class CityNodesDelivery(unittest.TestCase):
 
     def test_release_downloads_protected_files_and_offline_bundle(self):
         info = json.loads((self.site / "build-info.json").read_bytes())
-        result = verify(info, lambda path: (self.site / path).read_bytes())
+        read = lambda path: (self.site / path).read_bytes()
+        result = verify(info, read, build_control_reader=read)
         self.assertEqual(result["status"], "passed")
+        self.assertEqual(result["build_control_files"], 1)
+        self.assertTrue(result["build_control_content_verified"])
         self.assertEqual(result["downloads"], 9)
         self.assertEqual(result["homepage"]["revision"], "panorama-approved-v12")
         self.assertEqual(result["homepage"]["full_size"], [1672, 941])
