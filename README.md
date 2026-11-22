@@ -1,7 +1,15 @@
 # 北魏洛阳文献地图 · Luoyang Atlas
 
 以《洛阳伽蓝记》及其校注、相关史地文献为基础的可追溯历史城市地图。
-仓库：`mechgouki/luoyang-city`。几何封存基线：**v2.4**；既有研究工作线：**B1—B8**；当前研究批次：**R6.2 / all-road-atlas-r6.2**（全城道路、门道与桥道）；首页采用用户批准的**全幅取景版 `panorama-approved-v12`**。本批发布及验收状态以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新记录为准。
+仓库：`mechgouki/luoyang-city`；既有研究工作线：**B1—B8**。
+
+<!-- current-state:start -->
+当前状态（2026-11-22）：研究 **R7.1 / city-nodes-r7.1**（四处城市节点、联读总览与V12首页依据导览）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html) · [上一已验收发布 `d334747`](https://github.com/mechgouki/luoyang-city/actions/runs/44904341782) · [长期验收证据](https://github.com/mechgouki/luoyang-city/tree/9125f4ca282aba99387fe40a54822b9dd7ecd272/evidence/homepage-v12/2026-11-21) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+
+以上摘要由[当前状态登记](research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
+<!-- current-state:end -->
 
 > 盛时图采用 516—528 年河阴之变前的文献合成时层，不是某一年实测地图。文献关系画布的图形大小与显示间距不代表历史测量；来源图坐标、表列尺寸、工作朝向和未定院界分别记录，不能拼接成未经验证的精确遗址边线。
 
@@ -62,41 +70,21 @@ P3把阊阖门从外接尺度片推进到[局部考古平面](https://mechgouki.
 
 ## 本地构建
 
-需要 Python 3.11+、Node.js；固定依赖与完整验收以`.github/workflows/pages.yml`为准。
+需要 **Python 3.11**、Node.js，以及[生产流程](.github/workflows/pages.yml)列明的固定依赖和 Noto Sans CJK SC 字体。请使用 Python 3.11 创建的环境，与 CI 保持一致；其他 Python 版本的浮点输出可能改变受保护 SVG 的字节校验值，因此完整构建入口会先检查运行版本。完整构建顺序集中在 `tools/build_all.py`；README 与 CI 共用这一入口。
 
 ```sh
-python3 tools/assemble_pdf.py
-python3 tools/validate_site.py
-node --check app.js
+python3.11 tools/build_all.py
+python3.11 tools/validate_site.py
 node --test tests/map-interactions.test.cjs
-python3 tools/build_site.py
-python3 tools/research_v25.py
-python3 tools/milestone_v26.py
-python3 tools/link_model_points_v26.py
-python3 tools/network_v27.py
-python3 tools/portal_v28.py
-python3 tools/chronology_v29.py
-python3 tools/terrain_v30.py
-python3 tools/dual_release.py
-python3 tools/west_b3.py
-python3 tools/historical_frame_b4.py
-python3 tools/north_b4.py
-python3 tools/historical_datum_b5.py
-python3 tools/west_roads_b5.py
-python3 tools/ground_review_b6.py
-python3 tools/southeast_b6.py
-python3 tools/source_continuity_b7.py
-python3 tools/luonan_b7.py
-python3 tools/city_review_b8.py
-python3 tools/homepage_v1.py
-python3 tools/prosperity_v1.py
-python3 tools/prosperity_core_v2.py
-python3 tools/prosperity_gate_v3.py
-python3 -m unittest discover -s tests -p 'test_prosperity*.py' -v
-python3 -m http.server 8000 --directory _site
+python3.11 -m unittest discover -s tests -p 'test_prosperity*.py' -v
+python3.11 -m http.server 8000 --directory _site
 ```
 
-在浏览器访问 `http://localhost:8000/`。不要直接双击 HTML。
+在浏览器访问 `http://localhost:8000/`。不要直接双击 HTML。`python3 tools/build_all.py --list` 可在其他 Python 版本下查看完整顺序；构建不替代正式流程里的数据、语义、桌面／手机与线上验收。CI 在原有预检之前执行 `--prepare-only`，预检之后执行 `--site-only`，保留原来的阶段先后。
+
+构建入口保留 CI 已提供的 `GITHUB_SHA`；本地默认读取当前 Git HEAD 的完整提交号。若使用不含 Git 元数据的源码副本，须通过 `--source-commit` 提供其完整40位来源提交号，供各批保护契约使用。
+
+当前状态只在 `research/current-state.json` 登记；修改后运行 `python3 tools/current_state.py --write` 同步 README 与续接文档的当前摘要。`--check` 可验证摘要是否一致，不改写历史批次说明。
 
 ## 文件与版本
 
@@ -104,7 +92,9 @@ python3 -m http.server 8000 --directory _site
 - `assets/`：母图与各页 SVG；母图排版变换与文献绘图坐标分别处理。
 - `research/v2.4/`：原始资料、审计和模板。
 - `downloads/parts/`：原始 PDF 分片；`tools/assemble_pdf.py` 合并并校验 SHA-256。
-- `tools/build_site.py`：生成 `_site/`；只收录浏览网站需要的文件。
+- `tools/build_all.py`：当前完整构建入口；调用各历史阶段并保持原顺序。
+- `tools/build_site.py`：生成最初的 `_site/`，后续阶段继续加入研究与专题。
+- `research/current-state.json`：当前研究、首页、封存基线及上一已验收发布指针。
 - `_site/build-info.json`：构建所用提交、记录数、坐标格式及文件校验值。
 - `tests/`：区域坐标与点击／拖动回归测试。
 - `research/dual-b1`至`research/dual-b6`：各批证据、解释边界和绘图决定。

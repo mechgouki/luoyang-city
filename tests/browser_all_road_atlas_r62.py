@@ -119,6 +119,38 @@ def exercise(browser, base, device, output):
             capture(page.locator("#" + ward), "ward-evidence")
             report["checks"].append("Palace and ward deep links open; a new search clears an older anchor and survives reload")
 
+            # A reader can return from evidence to its existing source frame or qualitative index.
+            # Screen bounds are checked on both desktop and mobile, independently of ancient geometry.
+            for identifier in (palace, ward):
+                page.goto(base + PAGE + "#" + identifier, wait_until="domcontentloaded")
+                return_link = page.locator(f'#{identifier} [data-show-record="{identifier}"]')
+                if identifier == palace:
+                    page.locator("#show-source").uncheck()
+                return_link.click()
+                assert page.url.endswith("#map-record-" + identifier)
+                target = page.locator("#map-record-" + identifier)
+                assert target.evaluate("node => node.classList.contains('map-selected')")
+                assert page.evaluate("document.activeElement.id") == "map-record-" + identifier
+                assert target.evaluate("""node => {
+                    const item = node.getBoundingClientRect();
+                    const frame = document.getElementById('map-scroll').getBoundingClientRect();
+                    return item.right > frame.left && item.left < frame.right &&
+                           item.bottom > frame.top && item.top < frame.bottom;
+                }"""), "Return link did not reveal the selected item inside its source/index frame"
+                expect(page.locator("#map-status")).to_contain_text(identifier)
+                if identifier == palace:
+                    expect(page.locator("#show-source")).to_be_checked()
+                page.reload(wait_until="domcontentloaded")
+                assert page.url.endswith("#map-record-" + identifier)
+                assert target.evaluate("node => node.classList.contains('map-selected')")
+                target.focus()
+                page.keyboard.press("Enter")
+                assert page.url.endswith("#" + identifier)
+                expect(page.locator("#" + identifier)).to_have_attribute("open", "")
+                expect(return_link).to_be_in_viewport()
+                fits(page)
+            report["checks"].append("Evidence returns to the existing source/index item with highlight and keyboard focus; required layers, reload and map-to-card round trip work")
+
             page.locator("#show-source").uncheck()
             page.locator("#show-inferred").uncheck()
             page.locator("#show-unknown").check()

@@ -1,0 +1,458 @@
+{
+  "schema": "luoyang-node-review-v1",
+  "id": "baima",
+  "title": "白马寺南坊门与坊内六街",
+  "question": "南坊门、居中纵街和中央横街，哪些接续有据，哪些距离仍未知？",
+  "summary": "南部交会可依发掘报道定位到地段；六街之间的关系可查。坊门至中央十字没有可核测线，图面保留距离空缺，各街使用层不自动收窄为516—528年。",
+  "reviewed_on": "2026-11-22",
+  "baseline_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "target_years": [
+    516,
+    528
+  ],
+  "road_ids": [
+    "O02",
+    "X02",
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "G11"
+  ],
+  "water_ids": [
+    "W25"
+  ],
+  "entity_ids": [],
+  "source_refs": [
+    {
+      "id": "baima_people2026",
+      "title": "张文豪：汉魏洛阳城田野考古成果“上新”",
+      "url": "https://paper.people.com.cn/rmrb/pc/content/202603/25/content_30147047.html",
+      "locator": "《人民日报》2026-03-25第11版，郭晓涛谈里坊南部交会与坊门的两段",
+      "access_status": "本轮在报纸原站重新核读正文；采访同一考古项目，不另计独立发掘",
+      "checked_on": "2026-11-22",
+      "source_kind": "excavator_interview_original_publisher"
+    },
+    {
+      "id": "baima_henan2024",
+      "title": "郭晓涛：制里割宅——北魏洛阳里坊考古新进展",
+      "url": "https://www.sohu.com/a/844439767_121124392",
+      "locator": "2024年度河南考古工作成果交流会（四），PART.37；2025-01-02转载",
+      "access_status": "本轮核读河南考古公众号纪要的转载正文；未取得带尺发掘总图",
+      "checked_on": "2026-11-22",
+      "source_kind": "excavator_report_reprint"
+    },
+    {
+      "id": "baima_cass2024",
+      "title": "中国社会科学院考古研究所2024年度田野考古工作汇报会纪要（三）",
+      "url": "https://www.sohu.com/a/852557453_121119016",
+      "locator": "郭晓涛白马寺里坊报告段；2025-01-23转载",
+      "access_status": "本轮可读相关正文；研究所纪要转载，不是正式发掘报告",
+      "checked_on": "2026-11-22",
+      "source_kind": "excavator_report_reprint"
+    },
+    {
+      "id": "baima_cass2025",
+      "title": "中国社会科学院考古研究所2025年度考古工作成果汇报会纪要（三）",
+      "url": "https://www.sohu.com/a/975311315_121119016",
+      "locator": "张效儒白马寺里坊南部发掘段；2026-01-12转载",
+      "access_status": "本轮网页读取只返回前段，未重获白马段全文；直接取回返回403。4.6米等沿用P469/P464已有核读，不记作本轮原文取得",
+      "checked_on": "2026-11-22",
+      "source_kind": "prior_project_extraction_from_excavator_report_reprint"
+    },
+    {
+      "id": "baima_henan2025",
+      "title": "2025年度河南考古工作成果交流会（三）",
+      "url": "https://hnswwkgyjy.cn/NewsView.php?News_ID=2810",
+      "locator": "张效儒报告段；既有索引图题为洛阳白马寺北魏里坊南门坊间路与西阳门大道，图文件名1768441620831330.jpg",
+      "access_status": "本轮原站检索工具超时，独立HTTP读取503；未取得图像，未判断图中是否含中央十字",
+      "checked_on": "2026-11-22",
+      "source_kind": "institutional_original_unavailable"
+    },
+    {
+      "id": "baima_prior_audit",
+      "title": "白马寺南门至中央十字原件审计",
+      "url": "https://github.com/mechgouki/luoyang-city/blob/d33474764aab494ef8a61e243f2c919a0e4f6288/research/prosperity-v4/backbone-469/road01-source-audit.json",
+      "locator": "reusable_topology、metrics_reported_not_remeasured、chronology及图源排除记录",
+      "access_status": "本轮重读现有逐项审计；不是新的田野证据",
+      "checked_on": "2026-11-22",
+      "source_kind": "project_source_audit"
+    }
+  ],
+  "findings": [
+    {
+      "id": "BA01",
+      "title": "南部交会与坊门辨识",
+      "claim": "西阳门外大道北缘与居中纵街的交会有发掘报道；约7.5米缺口被发掘者辨识为坊门位置。",
+      "basis_kind": "reported_excavation_with_interpretation",
+      "period": "北魏遗迹报道；516—528年的具体使用层未独立限定",
+      "source_ids": [
+        "baima_people2026"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/20"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/75"
+        }
+      ],
+      "drawing_decision": "以局部交会符号标示G11，坊门建筑轮廓用未定标记，不补完整门楼。",
+      "change_from_prior": "把交会发现与坊门建筑解释分层展示；不把已有解释升级为完整门址实测。",
+      "limitation": "门缘、建筑平面及与街面的细分层位未全部公布。",
+      "road_ids": [
+        "X02",
+        "G11"
+      ],
+      "water_ids": [],
+      "public_label": "南口交会与坊门解释"
+    },
+    {
+      "id": "BA02",
+      "title": "三种宽度对应三种对象",
+      "claim": "22米对应居中纵街，7.5米对应大道北缘缺口，4.6米对应车辙密集带；车辙带与可能门槛槽的4.6米也不是同一量测。",
+      "basis_kind": "reported_metrics_differentiated",
+      "period": "2024与2025年度材料分项记录；非同一测线",
+      "source_ids": [
+        "baima_henan2024",
+        "baima_people2026",
+        "baima_cass2025",
+        "baima_prior_audit"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/58"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/75"
+        },
+        {
+          "path": "research/prosperity-v4/source-checks/readings.json",
+          "pointer": "/ward"
+        }
+      ],
+      "drawing_decision": "三种宽度各附着于自己的示意段或量值卡；图中不按比例画成完整门道横断面。",
+      "change_from_prior": "将旧表里的数值拆成可点击对象，消除读者把缺口宽当街宽的可能。",
+      "limitation": "4.6米细项本轮沿用既有核读；尺度之间没有共同测点。",
+      "road_ids": [
+        "F01",
+        "G11"
+      ],
+      "water_ids": [],
+      "public_label": "三种宽度各归其位"
+    },
+    {
+      "id": "BA03",
+      "title": "六街不等于九个已揭露路口",
+      "claim": "报告分别列三纵三横六条街道；居中纵横道路可按十字关系联读，材料未逐一公布九个交点的连续揭露范围。",
+      "basis_kind": "cross_report_synthesis",
+      "period": "北魏里坊框架，逐街同期性未定",
+      "source_ids": [
+        "baima_henan2024",
+        "baima_cass2024"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/58"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/61"
+        },
+        {
+          "path": "research/prosperity-v4/backbone-469/road01-source-audit.json",
+          "pointer": "/reusable_topology"
+        }
+      ],
+      "drawing_decision": "突出中央纵横关系；次级街用独立短线或关系项，不封闭成九处已测十字网。",
+      "change_from_prior": "把六街登记转换成可读关系，控制由排版带来的过度确定感。",
+      "limitation": "南门至中央十字是否连续发掘仍为空值。",
+      "road_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "water_ids": [],
+      "public_label": "六街与未证交点"
+    },
+    {
+      "id": "BA04",
+      "title": "街间距没有给出坊宽与坊深",
+      "claim": "两侧次级纵街距中央纵街各86米；两侧横街距中央横街各40米。报道未说明量距基准是路缘还是中心线。",
+      "basis_kind": "reported_metric_with_unknown_reference",
+      "period": "2024报告语境；不外推各期坊界",
+      "source_ids": [
+        "baima_henan2024"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v4/backbone-469/road01-source-audit.json",
+          "pointer": "/metrics_reported_not_remeasured"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/59"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/62"
+        }
+      ],
+      "drawing_decision": "86米和40米列为报告间距注记，不能累计成完整坊宽、坊深或门到十字距离。",
+      "change_from_prior": "增加量值用途限制，使街间距与未测边界在图上同时可见。",
+      "limitation": "缺同图路缘、中心线、边界与测量基准。",
+      "road_ids": [
+        "F02",
+        "F03",
+        "F05",
+        "F06"
+      ],
+      "water_ids": [],
+      "public_label": "街间距不作坊界"
+    },
+    {
+      "id": "BA05",
+      "title": "筑坊地坪与目标年份分开",
+      "claim": "2024材料据铺垫地面及叠压推论筑坊活动；2025材料说交会遗迹处在北魏废弃堆积下。两类信息均未将每段路面独立定到516—528年。",
+      "basis_kind": "chronology_review",
+      "period": "北魏归属可用；516—528年同期通行待核",
+      "source_ids": [
+        "baima_cass2024",
+        "baima_people2026"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v4/backbone-469/road01-source-audit.json",
+          "pointer": "/chronology"
+        }
+      ],
+      "drawing_decision": "节点时层标为北魏参照、目标窗口未细分；不把六街全部标成十三年内同一状态。",
+      "change_from_prior": "把目标时段适用性从笼统北魏标签中单列。",
+      "limitation": "需要具体路面与废弃堆积的层号、剖面及断代材料。",
+      "road_ids": [
+        "X02",
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "G11"
+      ],
+      "water_ids": [],
+      "public_label": "北魏归属与同期性"
+    },
+    {
+      "id": "BA06",
+      "title": "门槛槽和基槽仍保留解释性质",
+      "claim": "旧核读所记南端沟槽、两侧基槽及红土基础提供门址解释线索，相关构件尚非完整门址平面。",
+      "basis_kind": "archaeological_interpretation_retained",
+      "period": "2025发掘报道的北魏遗迹语境",
+      "source_ids": [
+        "baima_cass2025",
+        "baima_prior_audit"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v4/source-checks/readings.json",
+          "pointer": "/ward"
+        }
+      ],
+      "drawing_decision": "沟槽作为可能门槛槽注记，不作为水渠；不补左右对称墩台或门楼。",
+      "change_from_prior": "把局部遗迹与建筑补绘分开，保持原报告可能性的表述。",
+      "limitation": "本轮未取得该段全文与带尺门址原图。",
+      "road_ids": [
+        "G11"
+      ],
+      "water_ids": [],
+      "public_label": "门槛槽解释仍待核"
+    },
+    {
+      "id": "BA07",
+      "title": "局部发掘接入外郭道路的方式",
+      "claim": "X02/G11是O02西阳门外大道上的局部交会约束；外郭复原图的门际端点与白马发掘区尚无共同配准。",
+      "basis_kind": "identity_and_frame_review",
+      "period": "不同年度研究参照，完整同期路线未证",
+      "source_ids": [
+        "baima_prior_audit"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/9"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/20"
+        }
+      ],
+      "drawing_decision": "用记录关系接入全城总览，局部图保留独立关系框；不由O02端点插值出坊门坐标。",
+      "change_from_prior": "在全城入口与局部核验之间建立可回查连接，同时维持图框边界。",
+      "limitation": "缺同一基准的发掘总平面或可复认控制点。",
+      "road_ids": [
+        "O02",
+        "X02",
+        "G11"
+      ],
+      "water_ids": [],
+      "public_label": "局部接入外郭道路"
+    },
+    {
+      "id": "BA08",
+      "title": "咸池只作同大道地望参照",
+      "claim": "W25咸池与白马发掘区都关联西阳门外大道地望，现有证据不把咸池与坊门沟槽连成水道。",
+      "basis_kind": "relation_boundary",
+      "period": "文献地望与发掘局部的时期、身份未核同",
+      "source_ids": [
+        "baima_prior_audit"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/20"
+        }
+      ],
+      "drawing_decision": "可跳转W25阅读水系地望，不从坊门槽画引水线。",
+      "change_from_prior": "将道路—水系联读与实际水工接续分开。",
+      "limitation": "池距御道、引水来源及至坊门的关系未记。",
+      "road_ids": [
+        "X02",
+        "G11"
+      ],
+      "water_ids": [
+        "W25"
+      ],
+      "public_label": "咸池只供地望联读"
+    }
+  ],
+  "relations": [
+    {
+      "id": "BA-R01",
+      "from": "O02",
+      "to": "G11",
+      "relation": "坊门缺口处在西阳门外大道北缘的交会位置",
+      "status": "reported_local_contact",
+      "period": "北魏报道，具体使用层待核",
+      "source_ids": [
+        "baima_people2026"
+      ],
+      "drawing_decision": "同图无比例局部接点；不落古代坐标。"
+    },
+    {
+      "id": "BA-R02",
+      "from": "G11",
+      "to": "F01",
+      "relation": "由南缺口向北进入居中纵街",
+      "status": "reported_local_connection",
+      "period": "北魏报道，具体使用层待核",
+      "source_ids": [
+        "baima_people2026",
+        "baima_prior_audit"
+      ],
+      "drawing_decision": "画短接续关系。"
+    },
+    {
+      "id": "BA-R03",
+      "from": "F01",
+      "to": "F04",
+      "relation": "居中纵横街组成中央十字；由跨年报道综合联读",
+      "status": "cross_year_synthesis",
+      "period": "六街与南口未取得逐段同期测线",
+      "source_ids": [
+        "baima_henan2024",
+        "baima_cass2024",
+        "baima_people2026"
+      ],
+      "drawing_decision": "门至中央十字中间留断口，标长度/连续揭露未知。"
+    },
+    {
+      "id": "BA-R04",
+      "from": "F01",
+      "to": "F02,F03",
+      "relation": "两侧次级纵街相对于中央纵街各有86米报告间距",
+      "status": "reported_distance_reference_unknown",
+      "period": "2024报告，细分层未定",
+      "source_ids": [
+        "baima_henan2024"
+      ],
+      "drawing_decision": "两条短线旁列量值，不作为精确轴线坐标。"
+    },
+    {
+      "id": "BA-R05",
+      "from": "F04",
+      "to": "F05,F06",
+      "relation": "两侧次级横街相对于中央横街各有40米报告间距",
+      "status": "reported_distance_reference_unknown",
+      "period": "2024报告，细分层未定",
+      "source_ids": [
+        "baima_henan2024"
+      ],
+      "drawing_decision": "两条短线旁列量值，不画完备九交点。"
+    },
+    {
+      "id": "BA-R06",
+      "from": "G11",
+      "to": "F04",
+      "relation": "坊门至中央横街的长度及连续揭露状态没有取得",
+      "status": "unknown_connection_extent",
+      "period": "516—528目标窗口未核",
+      "source_ids": [
+        "baima_prior_audit"
+      ],
+      "drawing_decision": "空圈与断线保留，数值为空。"
+    },
+    {
+      "id": "BA-R07",
+      "from": "G11",
+      "to": "W25",
+      "relation": "同大道地望参照；无池—坊门槽直接接续证据",
+      "status": "context_only_not_hydraulic_connection",
+      "period": "文献与考古参照不自动同体",
+      "source_ids": [
+        "baima_prior_audit"
+      ],
+      "drawing_decision": "仅资料跳转，不画水流。"
+    }
+  ],
+  "geometry_refs": [],
+  "display_requirements": [
+    "关系示意不设米制比例尺；报告量值独立附注。",
+    "六街使用各自R6.2编号；X02与G11不能另算新增第七条坊街。",
+    "门到中央十字留显著空缺；不以40或86米代入。",
+    "地图中的节点排版不表达已测方位角或古代经纬度。"
+  ],
+  "next_originals": [
+    {
+      "title": "白马寺北魏里坊整体发掘／勘探总平面",
+      "locator": "须在同图标出南坊门、居中横街、各次级街、北向、比例尺、路号、层位；当前未取得具体印页/图号",
+      "needed_to_decide": "门至中央十字距离、连续揭露范围、六街相交与同期性",
+      "status": "missing"
+    },
+    {
+      "title": "2025年度河南考古工作成果交流会（三）配图原幅",
+      "locator": "News_ID=2810；既有索引文件名1768441620831330.jpg，题为洛阳白马寺北魏里坊南门坊间路与西阳门大道",
+      "needed_to_decide": "先判断图中是否真的包含中央十字及图尺，不能从图题直接认定为总平面",
+      "status": "original_site_timeout_and_503_on_2026-11-22"
+    },
+    {
+      "title": "南坊门与道路的正式平剖面",
+      "locator": "南口、门缘/基槽与相邻路面、北魏废弃层的同测线；页图号未取得",
+      "needed_to_decide": "门建筑辨识、缺口净宽与车辙带的关系及516—528年使用层",
+      "status": "missing"
+    }
+  ],
+  "accepted_new_geographic_coordinates": 0,
+  "new_field_measurements": 0,
+  "gate_to_central_cross_m": null,
+  "all_six_roads_proven_contemporary_516_528": false
+}

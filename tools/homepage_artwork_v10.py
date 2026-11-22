@@ -125,6 +125,8 @@ def replace_hero(html, old, new):
 
 
 def restore_baseline(html):
+    from city_nodes_r7_contract import restore_home
+    html = restore_home(html)
     for previous, artwork, _ in reversed(RELEASES):
         if f'data-hero-revision="{artwork.revision}"'.encode() in html:
             html = replace_hero(html, artwork, previous)
@@ -214,6 +216,9 @@ def verify(info, release, get):
             assert html == get(archive) and digest(html) == hashes[archive] == approval["previous_html_sha256"][page]
             pages[page] = replace_hero(html, previous, artwork)
     for name, html in pages.items():
-        assert html == get(name) and digest(html) == hashes[name]
+        from city_nodes_r7_contract import KEY as NODES_KEY, restore_home
+        current = get(name)
+        assert digest(current) == hashes[name]
+        assert html == (restore_home(current) if NODES_KEY in info else current)
     assert release["homepage_hero_revision"] == CURRENT.revision
     assert release["homepage_hero_status"] == "approved" and release["homepage_hero_approval_date"] == APPROVED

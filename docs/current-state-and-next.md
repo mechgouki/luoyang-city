@@ -1,6 +1,14 @@
 # 洛阳城复原：当前状态与续接顺序
 
-> 2026-11-21接续：当前为R6.2全城道路同批整理，84条证据记录及339实体覆盖核对，详见[本批研究说明](roads-r62-research.md)。首页已定07号 `panorama-approved-v11`，旧文中的首页待选、v9或早期P批次仅为历史记录。发布及验收以[#52最新交接](https://github.com/mechgouki/luoyang-city/issues/52)为准。
+<!-- current-state:start -->
+当前状态（2026-11-22）：研究 **R7.1 / city-nodes-r7.1**（四处城市节点、联读总览与V12首页依据导览）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html) · [上一已验收发布 `d334747`](https://github.com/mechgouki/luoyang-city/actions/runs/44904341782) · [长期验收证据](https://github.com/mechgouki/luoyang-city/tree/9125f4ca282aba99387fe40a54822b9dd7ecd272/evidence/homepage-v12/2026-11-21) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+
+以上摘要由[当前状态登记](../research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
+<!-- current-state:end -->
+
+本批四处关键节点、28条联读来源记录与V12依据导览见[R7.1研究与交付说明](city-nodes-r7.md)。R6.2的84条道路证据及339实体覆盖仍见[完整道路说明](roads-r62-research.md)。下文保留历批接续原文；旧文中的首页待选、V9、07号／V11及早期P批次进度只表示当时状态。
 
 更新：2026-11-20。当前进度、验收状态及下一条断点以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新正文和评论为准；史料、图源、量测和验收依据存于[研究记录 #47](https://github.com/mechgouki/luoyang-city/issues/47)。以真实主分支、发布清单和正式站验收为准；不要从较早ZIP恢复覆盖主分支。
 

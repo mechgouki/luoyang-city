@@ -1,0 +1,552 @@
+{
+  "schema": "luoyang-node-review-v1",
+  "id": "sima",
+  "title": "司马门内道路与宫城东部仓区",
+  "question": "宫院、道路、仓区怎样相接，哪些尺度与仓窖统计能够放在同一张图里？",
+  "summary": "太极宫院东墙—司马门内路—宫内仓区西墙的东西次序有报道依据。40米道路、13米仓区内路、4.7米夹道分属不同对象；宫外仓区分排统计暂未核同，不能拼成完整同期仓储平面。",
+  "reviewed_on": "2026-11-22",
+  "baseline_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "target_years": [
+    516,
+    528
+  ],
+  "road_ids": [
+    "P01",
+    "P07",
+    "P08",
+    "P11"
+  ],
+  "water_ids": [],
+  "entity_ids": [],
+  "source_refs": [
+    {
+      "id": "sima_report2024",
+      "title": "刘涛：汉魏洛阳城宫城遗址2024年度田野工作",
+      "url": "https://www.sohu.com/a/852557453_121119016",
+      "locator": "研究所2024年度田野汇报纪要（三），刘涛报告两段；2025-01-23转载",
+      "access_status": "本轮重新核读相关正文；机构汇报转载，不是带尺发掘原报告",
+      "checked_on": "2026-11-22",
+      "source_kind": "excavator_report_reprint"
+    },
+    {
+      "id": "sima_report2017",
+      "title": "中国社会科学院考古研究所2017年度田野考古汇报会（上）",
+      "url": "https://news.sina.com.cn/o/2017-12-27/doc-ifyqchnr6339114.shtml",
+      "locator": "2017年度汉魏洛阳城宫城太极殿宫院的考古发掘与收获段；2017-12-27",
+      "access_status": "本轮取回全文核读4.7米夹道上下文；网页署中国社会科学网",
+      "checked_on": "2026-11-22",
+      "source_kind": "institutional_report_reprint"
+    },
+    {
+      "id": "sima_map2023",
+      "title": "宫城仓窖区位置示意图，考古队供图",
+      "url": "https://www.thepaper.cn/newsDetail_forward_21610581",
+      "locator": "2023-01-18转载首图；原图1080×1702，比例尺0—200米",
+      "access_status": "本轮重新下载并目检图像，SHA-256与既有记录一致；该图早于2024道路解剖",
+      "checked_on": "2026-11-22",
+      "source_kind": "excavator_supplied_location_diagram"
+    },
+    {
+      "id": "sima_inner2023",
+      "title": "汉魏洛阳城遗址发现大型仓窖遗迹",
+      "url": "https://www.cssn.cn/kgxc/lbt/202301/t20230116_5583171.shtml",
+      "locator": "《光明日报》2023-01-16第9版，刘涛谈宫内仓区、围墙及勘察数量段",
+      "access_status": "本轮在中国社会科学网重新核读采访正文",
+      "checked_on": "2026-11-22",
+      "source_kind": "excavator_interview_institutional_reprint"
+    },
+    {
+      "id": "sima_outer2026",
+      "title": "河南汉魏洛阳城遗址发现北魏“国家粮仓”",
+      "url": "https://www.xinhuanet.com/20260116/691942d5375a4060b5bfd0d0363e1cf8/c.html",
+      "locator": "新华社2026-01-16，刘涛谈宫城东侧系统勘探段、已发掘段及首幅现场图",
+      "access_status": "本轮原站重新核读正文并下载目检首图；图片哈希与既有记录一致",
+      "checked_on": "2026-11-22",
+      "source_kind": "excavator_interview_original_publisher"
+    },
+    {
+      "id": "sima_people2026",
+      "title": "汉魏洛阳城田野考古成果“上新”",
+      "url": "https://paper.people.com.cn/rmrb/pc/content/202603/25/content_30147047.html",
+      "locator": "《人民日报》2026-03-25第11版，刘涛谈东掖门与宫外仓窖分排、叠压的段落",
+      "access_status": "本轮报纸原站重新核读正文；与新华社报道为同一项目采访，不另计独立发掘",
+      "checked_on": "2026-11-22",
+      "source_kind": "excavator_interview_original_publisher"
+    },
+    {
+      "id": "sima_prior",
+      "title": "司马门与宫城东部既有原图核读",
+      "url": "https://github.com/mechgouki/luoyang-city/blob/d33474764aab494ef8a61e243f2c919a0e4f6288/research/prosperity-r5/sima-road.json",
+      "locator": "image、landmarks、rows、transfer；另与palace-east.json核对",
+      "access_status": "本轮重读记录，并复验两张原图的文件身份",
+      "checked_on": "2026-11-22",
+      "source_kind": "project_source_audit"
+    }
+  ],
+  "findings": [
+    {
+      "id": "SI01",
+      "title": "两墙与司马门道路的相对次序",
+      "claim": "2024汇报将宫院东墙、司马门内道路、宫内仓区西墙联系起来；北魏路面最宽约40米属于该道路的报告量值。",
+      "basis_kind": "reported_excavation_relation",
+      "period": "道路东汉始建、魏晋北魏沿用；目标窗口内各段使用层待核",
+      "source_ids": [
+        "sima_report2024"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-r5/sima-road.json",
+          "pointer": "/rows/1"
+        },
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/records/0"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/47"
+        }
+      ],
+      "drawing_decision": "画西侧宫院—道路—东侧仓区的关系；40米只附着P01，不把它当两墙净距。",
+      "change_from_prior": "将方向关系与尚未公布的共同断面尺寸分开。",
+      "limitation": "两墙内缘、路缘的同一测线和完整平面未取得。",
+      "road_ids": [
+        "P01"
+      ],
+      "water_ids": [],
+      "public_label": "两墙之间的道路"
+    },
+    {
+      "id": "SI02",
+      "title": "4.7米是宫院内部夹道",
+      "claim": "2017汇报把4.7米夹道置于东北角院落东围廊与太极宫院东墙之间；它与宫墙外侧司马门道路的测量对象不同。",
+      "basis_kind": "reported_metric_context_review",
+      "period": "2017发掘含北魏及北周改建背景；夹道独立使用年未定",
+      "source_ids": [
+        "sima_report2017"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v4/axis-measurements.json",
+          "pointer": "/northeast_court"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/53"
+        }
+      ],
+      "drawing_decision": "P07放在宫院关系框内单列；不与40米相加计算整段东西宽度。",
+      "change_from_prior": "本轮重新核了原汇报的量值上下文，落实夹道所在的两条边界。",
+      "limitation": "缺同图层位平面，无法把夹道统一到516—528年横断面。",
+      "road_ids": [
+        "P07"
+      ],
+      "water_ids": [],
+      "public_label": "宫院内部的夹道"
+    },
+    {
+      "id": "SI03",
+      "title": "13米道路位于宫内仓窖区内",
+      "claim": "2024汇报的约13米道路将窖穴区分为东西两部分；它与分隔南部窖穴区、北部建筑区的夯土墙承担不同空间作用。",
+      "basis_kind": "reported_functional_partition",
+      "period": "宫内仓区北魏归属；道路具体使用层待核",
+      "source_ids": [
+        "sima_report2024"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/records/1"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/54"
+        }
+      ],
+      "drawing_decision": "把P08放在仓区内部；道路东西分区和墙的南北分区分别表示。",
+      "change_from_prior": "将两种分区方向拆开，避免把仓区内路画成司马门路的延长。",
+      "limitation": "路的南北端、与分区墙的接点及北部道路接续未公布。",
+      "road_ids": [
+        "P08"
+      ],
+      "water_ids": [],
+      "public_label": "仓区内路与分隔墙"
+    },
+    {
+      "id": "SI04",
+      "title": "宫内外仓区的年代都不足以证明同时运行",
+      "claim": "道路多期沿用、宫内仓区北魏解释，以及宫外仓窖被北魏墙体叠压，是不同的年代证据；后者仅约束仓窖不晚于北魏。",
+      "basis_kind": "chronology_and_stratigraphic_review",
+      "period": "516—528年同期组合尚未逐项核定",
+      "source_ids": [
+        "sima_report2024",
+        "sima_inner2023",
+        "sima_people2026"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/47"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/54"
+        },
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/period"
+        },
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/records/2"
+        }
+      ],
+      "drawing_decision": "每个功能区显示自己的年代标签；地上构筑物与窖穴分层，不一次画成同时工作的建筑群。",
+      "change_from_prior": "将宽年代与具体同期性拆成独立字段和图面说明。",
+      "limitation": "尚缺可将路面、仓窖及叠压建筑互相对照的层位材料。",
+      "road_ids": [
+        "P01",
+        "P07",
+        "P08",
+        "P11"
+      ],
+      "water_ids": [],
+      "public_label": "使用年代分别核验"
+    },
+    {
+      "id": "SI05",
+      "title": "宫内仓窖和宫外太仓解释分开",
+      "claim": "2023材料讨论宫城墙内皇家仓储；2026材料讨论宫城东侧另一仓区并提出太仓解释。两者的调查范围、数量与功能称名不能合并。",
+      "basis_kind": "spatial_identity_review",
+      "period": "均属北魏研究背景，具体先后及同期性未定",
+      "source_ids": [
+        "sima_inner2023",
+        "sima_outer2026",
+        "sima_people2026"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/records/1"
+        },
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/records/2"
+        }
+      ],
+      "drawing_decision": "宫内/宫外两框并列；只显示来源范围和已公开局部，窖数不生成房屋阵列。",
+      "change_from_prior": "把既有两组仓区的引用与统计各归其范围。",
+      "limitation": "太仓名称为考古解释，已发现宫外仓窖也不等于太仓全体。",
+      "road_ids": [
+        "P01",
+        "P08",
+        "P11"
+      ],
+      "water_ids": [],
+      "public_label": "宫内外仓区分开"
+    },
+    {
+      "id": "SI06",
+      "title": "东阳门、东掖门与广莫门内道路各有参照作用",
+      "claim": "东阳门属于文献太仓方位，东掖门属于宫城东墙门址，广莫门内道路来自宫外仓区现场图注。P11墙外路与P01也未证同路。",
+      "basis_kind": "reference_identity_review",
+      "period": "文献、发掘门址与照片注记分别保留时段",
+      "source_ids": [
+        "sima_outer2026",
+        "sima_people2026",
+        "sima_prior"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/records/3"
+        },
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/field_image/labels_px"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/57"
+        }
+      ],
+      "drawing_decision": "采用三个不同标签；不以同一条连续道路或单个门点串联。",
+      "change_from_prior": "把容易混读的三个空间参照和墙外道路关系明确分离。",
+      "limitation": "现场注记没有提供可与R4共用的控制点或路缘测线。",
+      "road_ids": [
+        "P01",
+        "P11"
+      ],
+      "water_ids": [],
+      "public_label": "三类空间参照分开"
+    },
+    {
+      "id": "SI07",
+      "title": "宫外仓窖分排口径暂未核同",
+      "claim": "新华社总勘探段给出14列、12排、168口；人民日报另述南北向3排，并列已发掘13口。两文未说明这些分排是否同一统计范围。",
+      "basis_kind": "cross_source_scope_review",
+      "period": "两次2026采访汇报同一项目；不据发表先后判断古代先后",
+      "source_ids": [
+        "sima_outer2026",
+        "sima_people2026"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/records/2"
+        }
+      ],
+      "drawing_decision": "将总勘探、已发掘和两种分排表述并列注记；不拼合网格，不据数补画同期仓区或地上建筑。",
+      "change_from_prior": "本批新增统计范围核同问题，保留两报道可并存的可能。",
+      "limitation": "需原勘探总图、已发掘分区及窖号对应，才能判断3排所指范围。",
+      "road_ids": [],
+      "water_ids": [],
+      "public_label": "仓窖统计范围待核同",
+      "context_road_ids": [
+        "P11"
+      ],
+      "record_scope": "仓窖范围核同，不另立道路实体；P11仅为宫东墙外交通语境。"
+    },
+    {
+      "id": "SI08",
+      "title": "原图可复读，跨图位置仍不转移",
+      "claim": "2023位置图的司马门三对双线与仓区蓝框可复读；蓝框只标范围。2026现场图只支持所见注记次序，缺比例尺与共同控制。",
+      "basis_kind": "source_image_boundary_review",
+      "period": "2023示意图早于2024道路解剖；2026照片仍有多期遗迹",
+      "source_ids": [
+        "sima_map2023",
+        "sima_outer2026",
+        "sima_prior"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-r5/sima-road.json",
+          "pointer": "/image"
+        },
+        {
+          "path": "research/prosperity-r5/sima-road.json",
+          "pointer": "/transfer"
+        },
+        {
+          "path": "research/prosperity-r5/palace-east.json",
+          "pointer": "/field_image"
+        }
+      ],
+      "drawing_decision": "原三对断线逐值复用，保持独立像素框；蓝框不作墙；图注点不作窖心，不新增R4墙段。",
+      "change_from_prior": "本轮重验两张图像身份；把读图与实测配准的边界落实到图例。",
+      "limitation": "未取得可复认的共同物理点及两墙路缘同测线。",
+      "road_ids": [
+        "P01",
+        "P11"
+      ],
+      "water_ids": [],
+      "public_label": "原图可读而未配准"
+    }
+  ],
+  "relations": [
+    {
+      "id": "SI-R01",
+      "from": "太极宫院东墙",
+      "to": "P01",
+      "relation": "司马门内路位于宫院东墙以东",
+      "status": "reported_relative_order",
+      "period": "2024汇报，目标窗口逐段未定",
+      "source_ids": [
+        "sima_report2024"
+      ],
+      "drawing_decision": "保留东西关系，不填两者间精确距离。"
+    },
+    {
+      "id": "SI-R02",
+      "from": "P01",
+      "to": "宫内仓区西墙",
+      "relation": "仓区西墙在道路以东",
+      "status": "reported_relative_order",
+      "period": "2024汇报，目标窗口逐段未定",
+      "source_ids": [
+        "sima_report2024"
+      ],
+      "drawing_decision": "保留道路与仓区相邻关系；40米不作墙间净距。"
+    },
+    {
+      "id": "SI-R03",
+      "from": "东北角院落东围廊",
+      "to": "P07",
+      "relation": "P07夹道介于围廊和宫院东墙之间",
+      "status": "reported_local_placement",
+      "period": "2017发掘背景，独立使用期未定",
+      "source_ids": [
+        "sima_report2017"
+      ],
+      "drawing_decision": "在宫院框内单列4.7米。"
+    },
+    {
+      "id": "SI-R04",
+      "from": "宫内仓区",
+      "to": "P08",
+      "relation": "P08为仓区内东西分区道路",
+      "status": "reported_internal_partition",
+      "period": "北魏仓区报道，具体路层待核",
+      "source_ids": [
+        "sima_report2024"
+      ],
+      "drawing_decision": "仓区内部独立路符号，不接成司马门路。"
+    },
+    {
+      "id": "SI-R05",
+      "from": "北部建筑区",
+      "to": "南部窖穴区",
+      "relation": "两区由夯土墙作南北分隔",
+      "status": "reported_internal_partition",
+      "period": "北魏仓区，细分使用层待核",
+      "source_ids": [
+        "sima_report2024"
+      ],
+      "drawing_decision": "与P08东西分区同时说明，不合成一条边界。"
+    },
+    {
+      "id": "SI-R06",
+      "from": "宫内仓区",
+      "to": "宫外仓区",
+      "relation": "处宫墙两侧，名称和统计范围分开",
+      "status": "separate_identity",
+      "period": "不同报道与考古范围，不自动同期",
+      "source_ids": [
+        "sima_inner2023",
+        "sima_outer2026",
+        "sima_people2026"
+      ],
+      "drawing_decision": "两独立关系框，不以数量扩建成连续建筑群。"
+    },
+    {
+      "id": "SI-R07",
+      "from": "宫外仓区东围墙",
+      "to": "广莫门内道路图注",
+      "relation": "现场图注从窖号向东依次列东围墙、道路",
+      "status": "source_image_label_order",
+      "period": "照片所见位置关系，路层未细分",
+      "source_ids": [
+        "sima_outer2026",
+        "sima_prior"
+      ],
+      "drawing_decision": "只保留原图注次序，不量距、不作R4坐标。"
+    },
+    {
+      "id": "SI-R08",
+      "from": "P11",
+      "to": "P01",
+      "relation": "宫东墙外局部路与司马门内路没有已证同体关系",
+      "status": "identity_unproven",
+      "period": "各自路面使用层待核",
+      "source_ids": [
+        "sima_prior"
+      ],
+      "drawing_decision": "图中保持分段，不补跨墙连线。"
+    }
+  ],
+  "geometry_refs": [
+    {
+      "source_path": "research/prosperity-r5/sima-road.json",
+      "json_pointer": "/image/sima_road_ink_px",
+      "frame_id": "frame-sima2023",
+      "kind": "source_trace",
+      "city_registration": false,
+      "scope": "三对双线共6根原子线，1080×1702原图像素；逐值复用，不补中间缺段。"
+    },
+    {
+      "source_path": "research/prosperity-r5/palace-east.json",
+      "json_pointer": "/field_image/labels_px",
+      "frame_id": "frame-palace-east2026",
+      "kind": "source_annotation",
+      "city_registration": false,
+      "scope": "现场图标签位置，不是仓窖中心或实测道路坐标。"
+    }
+  ],
+  "new_source_comparison": {
+    "id": "SI-C01",
+    "question": "宫外仓窖的不同分排表述是否同一统计范围？",
+    "decision": "统计范围尚未核同，暂不拼合。",
+    "readings": [
+      {
+        "source_id": "sima_outer2026",
+        "publication_date": "2026-01-16",
+        "locator": "刘涛谈系统勘探的正文第二段；下一段另述已发掘13口",
+        "short_quote": "东西14列、南北12排，共计168口仓窖",
+        "reported_columns": 14,
+        "reported_rows": 12,
+        "surveyed_pits": 168,
+        "excavated_pits": 13
+      },
+      {
+        "source_id": "sima_people2026",
+        "publication_date": "2026-03-25",
+        "locator": "东掖门北阙台外仓窖段，刘涛解释地层与排列；同段末列已发掘13口",
+        "short_quote": "可分为南北向3排",
+        "reported_north_south_rows": 3,
+        "excavated_pits": 13
+      }
+    ],
+    "not_concluded": [
+      "不认定两篇报道互相矛盾。",
+      "不认定3排必定指已发掘13口的排列。",
+      "不把14×12与3排互相换算为古代仓区长度、宽度或地上建筑数。"
+    ],
+    "drawing_effect": "宫外仓区保留来源范围与公开发掘位置；不按任一统计拼完整同期网格。"
+  },
+  "image_rechecks": [
+    {
+      "source_id": "sima_map2023",
+      "url": "https://imagepphcloud.thepaper.cn/pph/image/234/634/443.jpg",
+      "bytes": 157211,
+      "sha256": "10e0b198bb727a0bc640dacb9dafd5099ba91a92a896f5fb463c9a529a7d2653",
+      "size_px": [
+        1080,
+        1702
+      ],
+      "visually_checked_on": "2026-11-22",
+      "result": "与既有原幅哈希一致；蓝框是范围注记，道路断线保持。"
+    },
+    {
+      "source_id": "sima_outer2026",
+      "url": "https://www.xinhuanet.com/20260116/691942d5375a4060b5bfd0d0363e1cf8/20260116691942d5375a4060b5bfd0d0363e1cf8_a36190a63b1243eab908c82a0b6b9231.jpg",
+      "bytes": 108245,
+      "sha256": "e3c51d49f5c4c9f07696687032b7de30b4fdee05ef605a70b85c0944fe3a0d9d",
+      "size_px": [
+        1024,
+        506
+      ],
+      "visually_checked_on": "2026-11-22",
+      "result": "与既有原幅哈希一致；可见P3等窖号及东围墙、广莫门内道路注记，无可用图尺；不由标签量距。"
+    }
+  ],
+  "display_requirements": [
+    "40米、13米、4.7米各置于对应道路说明，不合成同一横断面。",
+    "宫内外仓区、东阳门/东掖门/广莫门内道路分别标名。",
+    "2023位置示意图与2026现场图各保留独立图框。",
+    "图像来源链接可查原幅，仓窖计数不生成地上屋顶阵列。"
+  ],
+  "next_originals": [
+    {
+      "title": "司马门道路与两墙的同测线平剖面",
+      "locator": "2024宫城发掘：须标太极宫院东墙内缘、路面两缘、仓区西墙内缘、比例尺、测点与层位；具体印页/图号尚未取得",
+      "needed_to_decide": "墙间净距、路面宽度变化、断段接续和516—528年同层关系",
+      "status": "missing"
+    },
+    {
+      "title": "宫外仓区系统勘探总图与已发掘分区图",
+      "locator": "能对照168口总勘探、13口已发掘、14列/12排与3排的范围及窖号；具体页图号未取得",
+      "needed_to_decide": "两种分排口径是否指同一范围；不得先认定相互矛盾或自行合并",
+      "status": "missing"
+    },
+    {
+      "title": "宫内仓区北部建筑、分隔墙与13米道路总平面",
+      "locator": "同图标出北部建筑区、南部窖穴、两区隔墙、内部道路及与司马门道路的关系；具体页图号未取得",
+      "needed_to_decide": "内部道路端点、墙路关系与各区同时使用范围",
+      "status": "missing"
+    }
+  ],
+  "accepted_new_geographic_coordinates": 0,
+  "accepted_new_r4_wall_segments": 0,
+  "new_field_measurements": 0,
+  "all_roads_proven_contemporary_516_528": false
+}

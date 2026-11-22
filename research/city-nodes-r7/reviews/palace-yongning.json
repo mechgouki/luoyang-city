@@ -1,0 +1,593 @@
+{
+  "schema": "luoyang-node-review-v1",
+  "id": "palace-yongning",
+  "title": "宫前阊阖、御道与永宁寺",
+  "question": "寺院、官署、道路与夹路支渠，哪些方向有明文，哪些形状和连接仍是复原？",
+  "summary": "永宁寺在宫前阊阖门南、御道西可直接回查。太尉府在寺东及右卫府南有明文，置于御道西仍属段落承接解释。铜驼残段与宫前御道保留候选对应，夹路水支只作关系提示，图中不补齐院墙、河岸或未知路端。",
+  "reviewed_on": "2026-11-22",
+  "baseline_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "target_years": [
+    516,
+    528
+  ],
+  "road_ids": [
+    "R01",
+    "T01",
+    "G01"
+  ],
+  "water_ids": [],
+  "water_scope_note": "本节点联读《水经注》铜驼街夹路支水；现有W01—W34未给此局部支段单列号码。R6.2给T01继承的W01、W04、W27是外围限制，不把其中任何一号冒充这条局部水支。",
+  "entity_ids": [
+    "ic_changhe_palace",
+    "ic_palace_avenue",
+    "ic_yongning",
+    "ic_zuowei",
+    "ic_youwei",
+    "ic_situ",
+    "ic_guozixue",
+    "ic_taiwei"
+  ],
+  "source_refs": [
+    {
+      "id": "py_zhou1",
+      "title": "杨衒之《洛阳伽蓝记》卷一，周祖谟校释电子文本",
+      "url": "https://deerpark.app/cbeta/B0077/1",
+      "locator": "B12n0077_p0043a07、0043a11、0043a15、0044a08—15；正文与古书子注，剔除现代夹注后复读",
+      "access_status": "本轮实际取得HTML并复核指代；不是古刻影印本",
+      "checked_on": "2026-11-22",
+      "source_kind": "classical_primary_text_digital_edition",
+      "response_sha256": "3cde638a30fad10b42629bdc50f2e3bc4a3d7ee739671a1ccb74d8f8f13e9d91",
+      "response_bytes": 1542035
+    },
+    {
+      "id": "py_fan1",
+      "title": "杨衒之《洛阳伽蓝记》卷一，范祥雍校注电子文本",
+      "url": "https://deerpark.app/cbeta/B0078/1",
+      "locator": "B12n0078_p0341a04—09；国子学堂断句及两卫府段",
+      "access_status": "本轮实际取得HTML作校读对照；与周校不是两项独立历史证人",
+      "checked_on": "2026-11-22",
+      "source_kind": "classical_primary_text_digital_edition",
+      "response_sha256": "fd5f844ee7aa07ccaefeef2704c4c270c5eed273d8edfe20c1c93cefbac6f331",
+      "response_bytes": 1501780
+    },
+    {
+      "id": "py_map06a",
+      "title": "2012保护管理规划图06a及现有逐图提取",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=3457",
+      "locator": "PDF第3457页图06a；第3455页名称；现有features/6、7、8、10",
+      "access_status": "本轮复核已存来源几何与元数据，未重新下载全卷或做新配准",
+      "checked_on": "2026-11-22",
+      "source_kind": "existing_project_extraction_of_primary_management_map"
+    },
+    {
+      "id": "py_sj16",
+      "title": "《水经注》卷十六，铜驼街夹路支水段",
+      "url": "https://zh.wikisource.org/wiki/水經注_(四部叢刊本)/卷第十六",
+      "locator": "千秋门、宫前阊阖门后，太尉司徒两坊间、永宁寺及南渠段；既有water-03-source-records/E17",
+      "access_status": "本轮复核既有逐条录文与解释；不记作本轮取得原版书影",
+      "checked_on": "2026-11-22",
+      "source_kind": "prior_project_extraction_of_classical_primary_text"
+    }
+  ],
+  "text_checks": [
+    {
+      "id": "PY-TEXT-01",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "locator": "周0043a07、0043a11；范0341a04",
+      "excerpt": "永寧寺，熙平元年靈太后胡氏所立也。在宮前閶闔門南一里御道西。",
+      "reading": "创立年、宫门南向、道路西侧分列；一里不转换为米。"
+    },
+    {
+      "id": "PY-TEXT-02",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "locator": "周0043a15、0044a14；范0341a05、0341a08",
+      "excerpt": "其寺東有太尉府。御道西有右衛府，府南有太尉府。",
+      "reading": "其寺回指永宁寺；第二句府南承接右卫府。道西用于太尉为段落归组解释。周校中的古书子注与现代夹注分别辨识。"
+    },
+    {
+      "id": "PY-TEXT-03",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "locator": "周0044a08—11；范0341a06—07",
+      "excerpt": "閶闔門前御道東有左衛府。府南有司徒府。司徒府南有國子學，堂內有孔丘像。",
+      "reading": "周校断作国子学、堂内；范校断作国子学堂、内。两读均不改变国子学在司徒府南的关系，均未另写国子学在御道东。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "PY01",
+      "title": "门、寺与道在同一来源图中的参照",
+      "public_label": "门寺路迹各守边界",
+      "claim": "图06a可联看宫前阊阖门图符、永宁寺三侧断续墙迹和铜驼大道残段；图符中心、寺墙片段、路迹是三种不同对象。",
+      "basis_kind": "source_geometry",
+      "period": "来源图汇集魏晋至北魏道路与门、北魏寺院遗存；不等于516—528同一测年层",
+      "source_ids": [
+        "py_map06a"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v1/geographic-evidence.json",
+          "pointer": "/features/6"
+        },
+        {
+          "path": "research/prosperity-v1/geographic-evidence.json",
+          "pointer": "/features/7"
+        },
+        {
+          "path": "research/prosperity-v1/geographic-evidence.json",
+          "pointer": "/features/8"
+        },
+        {
+          "path": "research/prosperity-v1/geographic-evidence.json",
+          "pointer": "/features/10"
+        }
+      ],
+      "drawing_decision": "保持原图门符、寺墙断笔、道路三段；不把塔基中心作为整个寺院坐标，也不闭合缺墙。",
+      "change_from_prior": "将分散的既有同框来源并列到一个节点，保留其几何对象类型。",
+      "limitation": "100米是项目工作显示容差，不是实测误差；不能从缩图符号推算院墙或路宽。",
+      "road_ids": [
+        "R01",
+        "G01"
+      ],
+      "water_ids": []
+    },
+    {
+      "id": "PY02",
+      "title": "铜驼残段与宫前御道仍属候选对应",
+      "public_label": "铜驼御道候选对应",
+      "claim": "R01是来源图的铜驼大道残段，T01是文献宫前御道；宫前地段可联读，但全段起讫与名称范围未证明完全重合。",
+      "basis_kind": "interpretation",
+      "period": "R01宽年代魏晋至北魏；T01为北魏文献地段，逐段516—528路面未核",
+      "source_ids": [
+        "py_map06a",
+        "py_zhou1"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/0"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/21"
+        },
+        {
+          "path": "research/prosperity-v1/geographic-evidence.json",
+          "pointer": "/features/10"
+        }
+      ],
+      "drawing_decision": "并列R01与T01，用候选关联；保持三段之间空隙和南端未知，不补到宣阳门或永桥。",
+      "change_from_prior": "把候选同路与已证同体的差别直接交给读者，旧ID和来源线不合并。",
+      "limitation": "残存1650米和40—65米为来源附表量值，不能证明每段同宽或整条御道全长。",
+      "road_ids": [
+        "R01",
+        "T01"
+      ],
+      "water_ids": []
+    },
+    {
+      "id": "PY03",
+      "title": "寺在门南道西：两个参照分别成立",
+      "public_label": "寺在门南道西",
+      "claim": "永宁寺在宫前阊阖门南一里、御道西是原文两个明确的方向约束；宫前阊阖门不与内城西垣同名门混用。",
+      "basis_kind": "documentary",
+      "period": "熙平元年创寺之后的北魏叙述；目标516—528内适用范围见PY07",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/text_checks/0"
+        },
+        {
+          "path": "research/prosperity-v4/street-clusters-p453.json",
+          "pointer": "/clusters/0/edges/0"
+        },
+        {
+          "path": "research/prosperity-v4/street-clusters-p453.json",
+          "pointer": "/clusters/0/edges/1"
+        }
+      ],
+      "drawing_decision": "在关系图标出门南与道西，原文一里另作文字；不据此移位现有来源图几何。",
+      "change_from_prior": "明确两个不同参照物，避免把门到寺的古里数当作测地标尺。",
+      "limitation": "原文未给寺中心、门中心或道路边缘的量距基准。",
+      "road_ids": [
+        "T01",
+        "G01"
+      ],
+      "water_ids": []
+    },
+    {
+      "id": "PY04",
+      "title": "太尉府的寺东、府南和道西分层",
+      "public_label": "寺东不等于道东",
+      "claim": "太尉府位于永宁寺东、右卫府南，分别有直接指代；将太尉府归入御道西侧为承接官署段落的工作解释，不能把寺东改写成道东。",
+      "basis_kind": "documentary",
+      "period": "北魏官署段的相对次序，个体院址和逐年状态未测定",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/text_checks/1"
+        },
+        {
+          "path": "research/prosperity-v4/street-clusters-p453.json",
+          "pointer": "/clusters/0/edges/6"
+        },
+        {
+          "path": "research/prosperity-v4/street-clusters-p453.json",
+          "pointer": "/clusters/0/edges/7"
+        }
+      ],
+      "drawing_decision": "寺东和右卫府南用明文关系；御道西另用解释关系，府址用无轮廓节点。",
+      "change_from_prior": "补出旧K01未独立画出的右卫府南关系；既有道西C级解释保持为解释。",
+      "limitation": "东西关系不能给出府院面积、跨路与否或与寺墙间距；不将太尉府与别名争议中的太府寺自动合并。",
+      "road_ids": [
+        "T01"
+      ],
+      "water_ids": []
+    },
+    {
+      "id": "PY05",
+      "title": "两卫分居道路两侧并不证明对称",
+      "public_label": "左右卫路侧有据",
+      "claim": "左卫府在御道东、右卫府在御道西有直接文字；这不保证两府正对、等距或形制相同。",
+      "basis_kind": "documentary",
+      "period": "北魏宫前官署叙述",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/text_checks/1"
+        },
+        {
+          "path": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/text_checks/2"
+        },
+        {
+          "path": "research/prosperity-v4/street-clusters-p453.json",
+          "pointer": "/clusters/0/edges/2"
+        },
+        {
+          "path": "research/prosperity-v4/street-clusters-p453.json",
+          "pointer": "/clusters/0/edges/3"
+        }
+      ],
+      "drawing_decision": "两侧节点只表示东西关系，不排成可量测的镜像院落。",
+      "change_from_prior": "把布局中容易被画面对称暗示的部分显式降为未定。",
+      "limitation": "两府南北错位、退距、门向均无本段独立量测。",
+      "road_ids": [
+        "T01"
+      ],
+      "water_ids": []
+    },
+    {
+      "id": "PY06",
+      "title": "官学南向次序不自动给出路侧",
+      "public_label": "官学南序与路侧分开",
+      "claim": "司徒府承接左卫府之南，国子学又在司徒府南。周、范对学与堂的断句不同，不影响南向关系；国子学的独立路侧仍须解释。",
+      "basis_kind": "documentary",
+      "period": "北魏官署、学校关系；不由建筑分期推定T01全段路面年代",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/text_checks/2"
+        },
+        {
+          "path": "research/prosperity-v1/text-review.json",
+          "pointer": "/records/3"
+        },
+        {
+          "path": "research/prosperity-v4/street-clusters-p453.json",
+          "pointer": "/clusters/0/edges/4"
+        },
+        {
+          "path": "research/prosperity-v4/street-clusters-p453.json",
+          "pointer": "/clusters/0/edges/5"
+        }
+      ],
+      "drawing_decision": "保留两条南向边，国子学不得仅因排版在路东就得到明文等级。",
+      "change_from_prior": "将旧校读中的断句差别与实际不受影响的空间约束并列呈现。",
+      "limitation": "南向序列没有距离；现代校注的道东说明不冒充古书独立方位句。",
+      "road_ids": [
+        "T01"
+      ],
+      "water_ids": []
+    },
+    {
+      "id": "PY07",
+      "title": "516创寺与研究时窗的适用边界",
+      "public_label": "创寺年不等于全期完工",
+      "claim": "熙平元年（516）的创立记载可为永宁寺进入盛时研究提供时间锚点，但不能把全部上部建筑完成时间、官署使用期或沿线水况统一锁在516年初。",
+      "basis_kind": "temporal",
+      "period": "516—528为展示窗口；创立事件、宽年代遗存和具体使用状态分列",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1",
+        "py_map06a"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/palace-yongning.json",
+          "pointer": "/text_checks/0"
+        },
+        {
+          "path": "research/prosperity-v1/geographic-evidence.json",
+          "pointer": "/features/6/temporal_interpretation"
+        },
+        {
+          "path": "research/prosperity-v1/geographic-evidence.json",
+          "pointer": "/features/10/temporal_interpretation"
+        }
+      ],
+      "drawing_decision": "首页依据导览说明为盛时综合复原；节点关系不伪装为每年状态完全相同的快照。",
+      "change_from_prior": "把来源的宽年代与项目时窗对应写明，保留已有盛时范围。",
+      "limitation": "未取得逐项施工与修缮时间序列；不以本轮核验推迟或提前旧实体年代。",
+      "road_ids": [
+        "R01",
+        "T01",
+        "G01"
+      ],
+      "water_ids": []
+    },
+    {
+      "id": "PY08",
+      "title": "夹路支水不能画成一条中轴水沟",
+      "public_label": "夹路分支保留接口",
+      "claim": "既有《水经注》校读记支水夹路南出、经太尉司徒两坊间及水西永宁寺；后文南注南渠没有逐一说明每支的接口。",
+      "basis_kind": "documentary",
+      "period": "原段接永宁寺熙平创立，支持516以后文献层；不证明逐年通流",
+      "source_ids": [
+        "py_sj16"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v4/water-467/water-03-source-records.json",
+          "pointer": "/evidence/16"
+        },
+        {
+          "path": "research/prosperity-v1/text-review.json",
+          "pointer": "/records/14"
+        },
+        {
+          "path": "research/prosperity-v1/text-review.json",
+          "pointer": "/records/23"
+        }
+      ],
+      "drawing_decision": "关系图可在路旁提示分支及未定接口；不在R01中心线上添河沟，也不补桥涵和完整岸线。",
+      "change_from_prior": "把已有水系解释落实为宫前画面的具体取舍，没有新增水道坐标或W号。",
+      "limitation": "各水支与来源图R01各段如何对应、渠宽、桥涵、南渠与城外水道同一性均未核。",
+      "road_ids": [
+        "R01",
+        "T01"
+      ],
+      "water_ids": []
+    }
+  ],
+  "relations": [
+    {
+      "id": "PY-R01",
+      "from": "永宁寺",
+      "to": "宫前御道",
+      "relation": "在西侧",
+      "status": "explicit",
+      "period": "北魏寺院叙述",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "drawing_decision": "方向边；不标米距",
+      "entity_ids": [
+        "ic_yongning",
+        "ic_palace_avenue"
+      ]
+    },
+    {
+      "id": "PY-R02",
+      "from": "永宁寺",
+      "to": "宫前阊阖门",
+      "relation": "在南一里",
+      "status": "explicit",
+      "period": "516创立后叙述",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "drawing_decision": "一里原文标注；不作为比例尺",
+      "entity_ids": [
+        "ic_yongning",
+        "ic_changhe_palace"
+      ]
+    },
+    {
+      "id": "PY-R03",
+      "from": "左卫府",
+      "to": "宫前御道",
+      "relation": "在东侧",
+      "status": "explicit",
+      "period": "北魏官署段",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "drawing_decision": "仅给路侧",
+      "entity_ids": [
+        "ic_zuowei",
+        "ic_palace_avenue"
+      ]
+    },
+    {
+      "id": "PY-R04",
+      "from": "右卫府",
+      "to": "宫前御道",
+      "relation": "在西侧",
+      "status": "explicit",
+      "period": "北魏官署段",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "drawing_decision": "仅给路侧",
+      "entity_ids": [
+        "ic_youwei",
+        "ic_palace_avenue"
+      ]
+    },
+    {
+      "id": "PY-R05",
+      "from": "司徒府",
+      "to": "左卫府",
+      "relation": "在南侧",
+      "status": "explicit",
+      "period": "北魏官署段",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "drawing_decision": "指代承接，距离留白",
+      "entity_ids": [
+        "ic_situ",
+        "ic_zuowei"
+      ]
+    },
+    {
+      "id": "PY-R06",
+      "from": "国子学",
+      "to": "司徒府",
+      "relation": "在南侧",
+      "status": "explicit",
+      "period": "北魏官署段",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "drawing_decision": "南序保留，路侧另论",
+      "entity_ids": [
+        "ic_guozixue",
+        "ic_situ"
+      ]
+    },
+    {
+      "id": "PY-R07",
+      "from": "太尉府",
+      "to": "永宁寺",
+      "relation": "在东侧",
+      "status": "explicit",
+      "period": "北魏官署段",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "drawing_decision": "明确参照物是寺",
+      "entity_ids": [
+        "ic_taiwei",
+        "ic_yongning"
+      ]
+    },
+    {
+      "id": "PY-R08",
+      "from": "太尉府",
+      "to": "右卫府",
+      "relation": "在南侧",
+      "status": "explicit",
+      "period": "北魏官署段",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "drawing_decision": "单列府南直接边",
+      "entity_ids": [
+        "ic_taiwei",
+        "ic_youwei"
+      ]
+    },
+    {
+      "id": "PY-R09",
+      "from": "太尉府",
+      "to": "宫前御道",
+      "relation": "归入西侧官署组",
+      "status": "interpretive",
+      "period": "北魏官署段的工作解释",
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "drawing_decision": "使用解释线型；不升级为直接路侧明文",
+      "entity_ids": [
+        "ic_taiwei",
+        "ic_palace_avenue"
+      ]
+    }
+  ],
+  "native_geometry_refs": [
+    {
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "pointer": "/features/6/source_pdf_geometry"
+    },
+    {
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "pointer": "/features/7/source_pdf_geometry"
+    },
+    {
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "pointer": "/features/8/source_pdf_geometry"
+    },
+    {
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "pointer": "/features/10/source_pdf_geometry"
+    }
+  ],
+  "diagram_spec": {
+    "frame": "原图06a局部与无比例关系图并置",
+    "physical_coordinate_system": "只读既有来源图框；不生成新地理坐标",
+    "new_geographic_edges": false,
+    "candidate_identity": [
+      "R01",
+      "T01"
+    ],
+    "required_distinctions": [
+      "门符／墙迹／路迹",
+      "太尉寺东／右卫府南／御道西解释",
+      "南向次序／道路侧别",
+      "夹路支分／接口未知"
+    ]
+  },
+  "next_originals": [
+    {
+      "title": "宫前道路、官署与永宁寺的同框分期联测资料",
+      "locator": "能同时给出R01路缘、宫前阊阖门接面和寺东邻署的原发掘总图、剖面及测量控制",
+      "needed_to_decide": "R01与T01逐段同体、府路侧别的考古支持、夹路支渠与路面接口",
+      "status": "未取得；目前仅有各自来源图和文字约束"
+    },
+    {
+      "title": "《洛阳伽蓝记》宫前官署段原版书影",
+      "locator": "永宁寺条及其子注；周校0043—0044、范校0341所对应底本叶",
+      "needed_to_decide": "版本层次及官署断句的逐叶校核；不以两种现代电子排版替代底本",
+      "status": "电子文本已重读；本轮未取得底本影印"
+    }
+  ],
+  "accepted_new_geographic_coordinates": 0,
+  "accepted_new_bank_geometries": 0,
+  "new_excavation_claims": 0,
+  "public_illustration_note": "V12画面的院落形状、建筑外观、河岸弯折和点间距离属于表现性复原。此节点提供可回查的方向及证据层，不将首页像素反标为遗址坐标。"
+}
