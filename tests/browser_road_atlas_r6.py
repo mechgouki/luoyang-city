@@ -8,6 +8,7 @@ import tempfile
 from zipfile import ZipFile
 
 from playwright.sync_api import expect, sync_playwright
+from browser_layout import assert_loaded_viewport
 from browser_city_west_p472 import SIZES, base_url
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,29 +28,7 @@ def exercise(browser, base, device, output):
         report["screenshots"][name] = hashlib.sha256(raw).hexdigest()
 
     def fits(page):
-        # The preceding text/count assertions can pass as soon as the new HTML
-        # arrives, before its stylesheet and deferred script finish loading.
-        # Measure the loaded document, without retrying an overflowing layout.
-        page.wait_for_load_state("load", timeout=30_000)
-        layout = page.evaluate("""() => ({
-            ready_state: document.readyState,
-            document_width: document.documentElement.scrollWidth,
-            client_width: document.documentElement.clientWidth,
-            inner_width: innerWidth,
-            body_margin: getComputedStyle(document.body).margin,
-            map_overflow_x: getComputedStyle(document.getElementById('map-scroll')).overflowX
-        })""")
-        if layout["document_width"] > layout["inner_width"] + 1:
-            layout["overflow_elements"] = page.evaluate("""() => Array.from(document.querySelectorAll(
-                'body, header, main, .wrap, .figure, #map-scroll, #road-map, .reading, .filter, .road summary, .supplements, .audit, .downloads, footer'
-            )).map(el => {
-                const box = el.getBoundingClientRect();
-                return {tag: el.tagName, id: el.id, class_name: el.getAttribute('class'),
-                    left: box.left, right: box.right, width: box.width,
-                    overflow_x: getComputedStyle(el).overflowX};
-            }).filter(box => box.left < -1 || box.right > innerWidth + 1).slice(0, 20)""")
-        report.setdefault("layout_checks", []).append(dict(url=page.url, **layout))
-        assert layout["document_width"] <= layout["inner_width"] + 1, dict(url=page.url, **layout)
+        assert_loaded_viewport(page, tolerance=1, report=report)
 
     def count(page, number):
         expect(page.locator("details[data-road]:visible")).to_have_count(number)
@@ -61,14 +40,14 @@ def exercise(browser, base, device, output):
             info = context.request.get(base + "build-info.json").json()
             meta = info[KEY]
             report["source_commit"] = info["source_commit"]
-            page.goto(base + "prosperity-city-panorama.html", wait_until="domcontentloaded")
+            page.goto(base + "prosperity-city-panorama.html", wait_until="load")
             page.locator("#road-atlas-entry a").click()
             expect(page.locator("h1")).to_contain_text("主干道")
             expect(page.locator("details[data-road]")).to_have_count(21)
             assert set(page.locator("details[data-road]").evaluate_all("nodes => nodes.map(n => n.id)")) == set(ROAD_IDS)
             fits(page)
             capture(page.locator("#map-scroll"), "map")
-            page.goto(base + "luoyang-water-atlas.html", wait_until="domcontentloaded")
+            page.goto(base + "luoyang-water-atlas.html", wait_until="load")
             page.locator("#road-atlas-entry a").click()
             expect(page.locator("#road-map")).to_be_visible()
             report["checks"].append("R5 and water entrances, all 21 source records, source map and viewport fit")
@@ -77,7 +56,7 @@ def exercise(browser, base, device, output):
             count(page, 1)
             expect(page.locator("#X02")).to_be_visible()
             assert "q=X02" in page.url
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#query")).to_have_value("X02")
             count(page, 1)
             page.locator("#X02 > summary").click()
@@ -93,7 +72,7 @@ def exercise(browser, base, device, output):
             page.locator("#evidence-filter").select_option("source")
             source_count = page.locator("details[data-road]:visible").count()
             assert 0 < source_count < 21
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#evidence-filter")).to_have_value("source")
             count(page, source_count)
             page.locator("#clear").click()
@@ -102,7 +81,7 @@ def exercise(browser, base, device, output):
             page.locator("#show-source").uncheck()
             page.locator("#show-inferred").uncheck()
             page.locator("#show-unknown").check()
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#show-source")).not_to_be_checked()
             expect(page.locator("#show-inferred")).not_to_be_checked()
             expect(page.locator("#show-unknown")).to_be_checked()
@@ -116,18 +95,18 @@ def exercise(browser, base, device, output):
             page.keyboard.press("Enter")
             expect(page.locator("#R01")).to_have_attribute("open", "")
             assert page.url.endswith("#R01")
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#R01")).to_have_attribute("open", "")
             page.locator("#query").fill("X02")
             count(page, 1)
             assert not page.url.endswith("#R01"), "Old road anchor conflicts with the new search"
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#query")).to_have_value("X02")
             expect(page.locator("#X02")).to_be_visible()
             count(page, 1)
             assert page.evaluate("location.hash") == ""
             report["checks"].append("A new ID search clears the previous road anchor and survives reload")
-            page.goto(base + PAGE + "#O11", wait_until="domcontentloaded")
+            page.goto(base + PAGE + "#O11", wait_until="load")
             expect(page.locator("#O11")).to_have_attribute("open", "")
             fits(page)
             capture(page.locator("#O11"), "unknown-endpoint")
@@ -167,7 +146,7 @@ def exercise(browser, base, device, output):
                     local.locator("#query").fill("O11")
                     count(local, 1)
                     assert local.evaluate("location.hash") == ""
-                    local.reload(wait_until="domcontentloaded")
+                    local.reload(wait_until="load")
                     expect(local.locator("#query")).to_have_value("O11")
                     expect(local.locator("#O11")).to_be_visible()
                     count(local, 1)
@@ -175,7 +154,7 @@ def exercise(browser, base, device, output):
                     fits(local)
                 with browser.new_context(**settings, java_script_enabled=False) as disabled:
                     plain = disabled.new_page()
-                    plain.goto(base + PAGE + "#X02", wait_until="domcontentloaded")
+                    plain.goto(base + PAGE + "#X02", wait_until="load")
                     expect(plain.locator("details[data-road]")).to_have_count(21)
                     report["no_javascript"] = {
                         "url": plain.url,

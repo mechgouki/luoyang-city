@@ -8,6 +8,7 @@ from xml.etree import ElementTree as ET
 from zipfile import ZipFile
 
 from playwright.sync_api import expect, sync_playwright
+from browser_layout import assert_loaded_viewport
 from browser_city_west_p472 import SIZES, base_url
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -27,18 +28,18 @@ def exercise(browser,base,device,output):
         try:
             info=ctx.request.get(base+"build-info.json").json(); meta=info[KEY]
             report["source_commit"]=info["source_commit"]
-            p.goto(base,wait_until="domcontentloaded")
+            p.goto(base,wait_until="load")
             p.locator("#r4-atlas-entry a").click()
             expect(p.locator("h1")).to_have_text("盛时洛阳城市分布总图")
             expect(p.locator("[data-object]")).to_have_count(339)
             expect(p.locator("#view-city")).to_be_visible()
-            assert p.evaluate("document.documentElement.scrollWidth <= innerWidth")
+            assert_loaded_viewport(p, tolerance=0, report=report)
             capture(p.locator("#view-city figure"),"overview")
             p.locator("[data-tab=core]").click()
             p.locator("#modern").check()
             p.locator("#candidate").uncheck()
             assert "modern=1" in p.url and "candidate=0" in p.url
-            p.reload(wait_until="domcontentloaded")
+            p.reload(wait_until="load")
             expect(p.locator("#modern")).to_be_checked(); expect(p.locator("#candidate")).not_to_be_checked()
             with p.expect_download() as event:p.locator("#export-view").click()
             saved=ET.parse(event.value.path()).getroot()
@@ -71,12 +72,12 @@ def exercise(browser,base,device,output):
             p.locator("#period").select_option("conditional")
             p.locator("#q").fill("宝明")
             expect(p.locator("[data-object]:visible")).to_have_count(1)
-            p.reload(wait_until="domcontentloaded")
+            p.reload(wait_until="load")
             expect(p.locator("#q")).to_have_value("宝明")
             expect(p.locator("[data-object]:visible")).to_have_count(1)
             p.locator("#entity-v2_baoming > summary").click()
             expect(p.locator("#entity-v2_baoming")).to_contain_text("前期身份有条件")
-            assert p.evaluate("document.documentElement.scrollWidth <= innerWidth")
+            assert_loaded_viewport(p, tolerance=0, report=report)
             capture(p.locator("#entity-v2_baoming"),"baoming")
             p.locator("#q").fill("missing-000");expect(p.locator("#matched")).to_contain_text("没有符合条件")
             p.locator("#reset").click();expect(p.locator("[data-object]:visible")).to_have_count(339)
@@ -107,7 +108,7 @@ def exercise(browser,base,device,output):
                 n.locator('#view-relations [data-entity="ic_nailin"]').click()
                 n.locator("#entity-ic_nailin > summary").click()
                 expect(n.locator("#entity-ic_nailin")).to_contain_text("文献")
-                assert n.evaluate("document.documentElement.scrollWidth <= innerWidth")
+                assert_loaded_viewport(n, tolerance=0, report=report)
             report["checks"].append("Eleven public downloads with hashes, offline ZIP, native navigation without JavaScript")
             assert not report["errors"],report["errors"]
             report["status"]="passed"
