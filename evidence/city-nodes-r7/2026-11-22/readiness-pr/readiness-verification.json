@@ -1,0 +1,153 @@
+{
+  "schema": "luoyang-r7-readiness-verification-v1",
+  "workflow_run_id": 44981414863,
+  "workflow_conclusion": "success",
+  "pull_request": 77,
+  "pr_head_commit": "87a2b52cbd5ae3923f30ca9221c4d88bd769ecc8",
+  "actual_tested_source_commit": "3fa80ae293a753b2c04bfe98e83b249229ab123c",
+  "overall_release_accepted": false,
+  "scope": "PR77 build and browser evidence only. Production deployment and public verification belong to separate later stages.",
+  "extracted_artifact_files": {
+    "files": 123,
+    "bytes": 28013962,
+    "screenshots": 44,
+    "summarized_browser_or_http_reports": 49
+  },
+  "browser_report_error_count": 0,
+  "r6_layout_checks": [
+    {
+      "report": "road-atlas-r6-browser/desktop-report.json",
+      "device": "desktop",
+      "source_commit": "3fa80ae293a753b2c04bfe98e83b249229ab123c",
+      "status": "passed",
+      "layout_check_count": 6,
+      "all_ready_state_complete": true,
+      "original_assertion": "document_width <= inner_width + 1",
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html?q=X02",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "file:///tmp/tmpvqd_mc5d/index.html?q=O11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html#X02",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        }
+      ]
+    },
+    {
+      "report": "road-atlas-r6-browser/mobile-report.json",
+      "device": "mobile",
+      "source_commit": "3fa80ae293a753b2c04bfe98e83b249229ab123c",
+      "status": "passed",
+      "layout_check_count": 6,
+      "all_ready_state_complete": true,
+      "original_assertion": "document_width <= inner_width + 1",
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html?q=X02",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "file:///tmp/tmpo213zafq/index.html?q=O11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        },
+        {
+          "url": "http://127.0.0.1:41315/luoyang-city/luoyang-road-atlas.html#X02",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto"
+        }
+      ]
+    }
+  ],
+  "screenshot_comparison": "screenshot-comparison.json",
+  "metadata_note": "pull-request-77.json is an authentic pre-merge snapshot, preserved without relabeling its head or merge ref."
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "luoyang-r7-manual-ui-review-v1",
+  "reviewed_at_beijing": "2026-11-22T11:37:41.729167+08:00",
+  "source_commit_visible_in_footer": "9599123701766cbdfe5971095af638898f407efe",
+  "method": "Direct public-site interaction using cloud browser; UI inspection and screenshots, no DOM mutation",
+  "viewport_inner_width": 1363,
+  "checks": [
+    {
+      "homepage": "https://mechgouki.github.io/luoyang-city/",
+      "approved_v12_image_natural_size": [
+        1672,
+        941
+      ],
+      "full_frame_visually_preserved": true,
+      "guide_entry_clicked": true
+    },
+    {
+      "guide_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#panorama",
+      "six_guide_cards_visible": true,
+      "guide_image_natural_size": [
+        1672,
+        941
+      ],
+      "artistic_and_unknown_relationship_limits_visible": true
+    },
+    {
+      "finding": "SI02",
+      "expanded_actual_content": "太极宫院东墙外侧、宫城内部的司马门内道路",
+      "boundary_distinction_verified": true
+    },
+    {
+      "overview_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#overview",
+      "map_text_legend_and_uncertainty_visible": true
+    },
+    {
+      "register_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#register",
+      "initial_records": 28,
+      "P01_filtered_visible_records": 1,
+      "evidence_detail_opened": true,
+      "return_to_existing_line_parts_highlight_verified": true,
+      "actual_return_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html?q=P01&map=sima&segment=P01#map-sima"
+    },
+    {
+      "downloads_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#downloads",
+      "download_links_visible": 9,
+      "actual_bytes_verified_separately": "live-independent/http-capture.json"
+    }
+  ],
+  "r6_diagnostic": {
+    "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html",
+    "loaded_scroll_width": 1348,
+    "inner_width": 1363,
+    "overflow_elements_past_right_edge": 0,
+    "interpretation": "Loaded page has no persistent viewport overflow at inspected size; this does not reproduce the exact earlier CI measurement instant."
+  },
+  "final_tab": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#panorama",
+  "tab_marked_deliverable": true,
+  "limits": "Manual inspection is of deployed source9599123. Any later test-only commit requires its own CI and source/hash verification; this record does not claim final workflow success."
+}

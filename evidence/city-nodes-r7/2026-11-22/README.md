@@ -1,20 +1,29 @@
 # R7.1 城市节点联读与 V12 导览：发布验收档案
 
-当前档案状态：修正PR已通过；最终主干发布验收进行中。本次快照不宣告正式站验收完成。
+当前档案状态：研究与图文交付已部署；最终主干正式站验收仍待完成。本次快照不宣告发布验收完成。
 
 - 研究窗口：516—528年；研究R7.1，实现city-nodes-r7.1；批准首页panorama-approved-v12。
-- 最终源提交：9599123701766cbdfe5971095af638898f407efe。
-- 修正PR：#76；运行44979526114成功。实际测试merge-ref为2827a108e68bc113453df66bf18e5133e6072b65。
-- 修正PR与最终main的Git树均为e9f3f16df602680ee4e5a465c2c922812fc88d96。
-- 最终主干运行：[44980204847](https://github.com/mechgouki/luoyang-city/actions/runs/44980204847)。
+- PR75实现本批成果；主干ccf2453的正式站检查因根.nojekyll被误作公开资源而失败。
+- PR76修正构建控制文件处理及SI02边界表述；PR运行44979526114成功，测试merge-ref为2827a108e68bc113453df66bf18e5133e6072b65。
+- 中间主干9599123701766cbdfe5971095af638898f407efe的运行44980204847：build、deploy成功；818公开资源核对成功，但旧R6首次导航的浏览器宽度检查失败。
+- PR77仅补验收前文档加载等待与实际尺寸诊断，保留原溢出断言、不改产品CSS和研究成果；运行44981414863已成功；桌面与手机各6次尺寸检查均在完整加载后通过。
 
-## 已保留材料
+- 最终主干d7cd18a832e30e718dfd360b240c15b79927306b与PR77实际测试提交的Git树相同；最终发布运行44982066390进行中。
 
-- `original-pr/`：原PR75检查的必要报告与截图，精确保留范围见其selection-manifest.json。
-- `original-live-failure/`：原正式运行44972925535因根.nojekyll误作公开资源而失败的实际报告。该报告不被后来的成功覆盖。
-- `corrected-pr/`：修正PR76的实际构建、测试、截图、下载与离线检查证据；测试源码与PR head分列。
-- `full-svg-review.json`：五张完整SVG的原指纹和逐图目视检查；本地渲染核查不替代正式站验收。
-- `source-provenance.json`：原版、修正PR、最终main之间的来源关系。
-- `extract-actions-evidence.py`、`capture-production.py`：原Actions成员提取与实际公网回读脚本。
+## 证据目录
 
-最终主干构建、正式站浏览器报告、独立HTTP回读与完成清单将在同一证据分支继续补齐；最终结果以本档案后续提交及Issue #47、#52的完成记录为准。
+| 目录或文件 | 证明范围 |
+| --- | --- |
+| original-pr/ | 原PR75测试的必要报告与截图 |
+| original-live-failure/ | 原正式运行44972925535的.nojekyll失败报告 |
+| corrected-pr/ | PR76实际构建、测试、截图、下载和离线检查；PR head与实际测试merge-ref分列 |
+| merge-build/ | 中间main9599123已成功的构建阶段报告、44幅选取截图 |
+| main959-live-failure/ | 同版正式站HTTP通过结果及旧R6的失败报告、截图、job日志 |
+| live-independent/ | 同版39次实际公网响应、28行30字段CSV、13成员ZIP及V12指纹核对；不代替浏览器验收 |
+| full-svg-review.json | 五张完整SVG的指纹及逐图目视检查 |
+| manual-live-ui-review.json | 同版正式页的首页入口、六点导览、证据展开、检索与原图回链人工操作 |
+| readiness-pr/ | PR77实际测试提交、R6加载诊断及44张与先前图文一致的截图 |
+| content-source-continuity.json | 人工检查版至最终主干仅有说明与验收脚本两文件变化 |
+| source-provenance.json | 各阶段源码、PR测试merge-ref、主干与运行ID关系 |
+
+原失败报告不会被后续成功覆盖。下一次正式站成功运行将追加在独立目录，并更新本页。研究内容不因网站发布而提升证据等级：缺失共同测线、层位和原始图版的关系仍按图文中的待核边界保留。

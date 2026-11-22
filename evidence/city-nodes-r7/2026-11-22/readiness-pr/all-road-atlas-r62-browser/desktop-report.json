@@ -1,0 +1,39 @@
+{
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "checks": [
+    "R6.1 entrance preserves its 21 records; complete catalog, coverage and exclusions are present",
+    "All six categories filter correctly; exact documentary ID, persistent filters, no-result and reset work",
+    "Palace and ward deep links open; a new search clears an older anchor and survives reload",
+    "Evidence returns to the existing source/index item with highlight and keyboard focus; required layers, reload and map-to-card round trip work",
+    "Source, inference and unknown layers persist; magnification and keyboard horizontal panning work",
+    "Disconnected ZIP restores a ward deep link, searches a gate record, and preserves it after reload",
+    "Native details open by an actual click without JavaScript",
+    "All six advertised downloads were actually downloaded and matched release SHA-256"
+  ],
+  "downloads": {
+    "all-roads/city-all-roads.svg": "bbe92a2f8255598d8045116a85637bd5faf664552d42ef202ed58104328c24b0",
+    "all-roads/records.csv": "e532d7dfab82b90b34c9e889f1299bf5a5cfa1e71d622e6a47d49d27029a1987",
+    "all-roads/records.json": "fd320a21d13fcb20fce7fbe3c07d207b254af772d539937149bebeab4422475e",
+    "all-roads/coverage.csv": "1255359e18d6a4366bc72663e1222a387ba8c7788b8156b3e51a151dd5b53f44",
+    "all-roads/manifest.json": "09a367cb4eb84b732f87d831a920ccf7fb17784a3871f4efa3f2a81abe2deed0",
+    "downloads/luoyang-all-roads.zip": "c45c6e3e893f6be3cda6598c3ab82c0fe54886f09ee15263db5063e54fa483be"
+  },
+  "screenshots": {
+    "desktop-whole-atlas.png": "b6557a16a3d08b050ec41da8b7fd1e42c50e106769258d580b0dd608e70e6565",
+    "desktop-palace-evidence.png": "fbe88b385eb2f772f1da9d0fa56ea32cadf580c6df37f5ba2013475e5606588c",
+    "desktop-ward-evidence.png": "3e92eb6347a3712435ad9ef099bc7641eb39f39f7bd160848a728b33e341a1e4",
+    "desktop-ward-bridge-map.png": "d294e34d58cb2563f4ea22beb13e37d82a1d97dc980afd1c91be74e6da710108"
+  },
+  "errors": [],
+  "source_commit": "3fa80ae293a753b2c04bfe98e83b249229ab123c",
+  "record_count": 84,
+  "homepage": {
+    "current": "panorama-approved-v12",
+    "archived": "panorama-approved-v11"
+  },
+  "status": "passed"
+}

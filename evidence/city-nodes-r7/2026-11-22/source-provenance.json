@@ -1,15 +1,37 @@
 {
-  "schema": "luoyang-r7-source-provenance-v1",
+  "schema": "luoyang-r7-source-provenance-v2",
   "original_pr_head": "9242bf54a6a45328d0d5a16633c063743de3219f",
   "original_pr_tested_source": "6fae2767ca220a59e8357f2d4483ac57c32922be",
   "original_production_source": "ccf24530910a5efd9de7f860be913933b916a8a0",
   "correction_pr_head": "fb24d5919adc52557078c7fd4af8a4ba81bc79f2",
   "correction_pr_tested_source": "2827a108e68bc113453df66bf18e5133e6072b65",
-  "final_main_source": "9599123701766cbdfe5971095af638898f407efe",
   "correction_pr_and_main_tree": "e9f3f16df602680ee4e5a465c2c922812fc88d96",
-  "comparison": "The corrected pull-request test source and final main have the same Git tree; source commit metadata differs.",
+  "comparison": "PR76 test source and intermediate main9599123 have the same Git tree. Intermediate production browser acceptance failed on the legacy R6 initial viewport measurement.",
   "original_run": 44972925535,
   "correction_pr_run": 44979526114,
-  "final_main_run": 44980204847
+  "intermediate_main_source": "9599123701766cbdfe5971095af638898f407efe",
+  "intermediate_main_run": 44980204847,
+  "intermediate_main_status": {
+    "build": "success",
+    "deploy": "success",
+    "verify-live": "failure"
+  },
+  "readiness_pr": {
+    "number": 77,
+    "head": "87a2b52cbd5ae3923f30ca9221c4d88bd769ecc8",
+    "tested_merge_ref": "3fa80ae293a753b2c04bfe98e83b249229ab123c",
+    "tree": "e23869126dda47da76487518aed7886bf17f51b2",
+    "run_id": 44981414863,
+    "status_at_checkpoint": "success",
+    "files_changed": [
+      "tests/browser_road_atlas_r6.py",
+      "docs/city-nodes-r7.md"
+    ],
+    "outcome": "build success; deploy and verify-live correctly skipped for pull_request"
+  },
+  "final_release_accepted": false,
+  "final_main_source": "d7cd18a832e30e718dfd360b240c15b79927306b",
+  "final_main_tree": "e23869126dda47da76487518aed7886bf17f51b2",
+  "final_main_run": 44982066390,
+  "final_main_status_at_checkpoint": "in_progress"
 }
-
