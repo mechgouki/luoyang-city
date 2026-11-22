@@ -23,7 +23,7 @@
 
 正式网站：[mechgouki.github.io/luoyang-city](https://mechgouki.github.io/luoyang-city/)。现有GitHub Actions在main提交后自动构建、部署、验收；无需重新设置Pages。每批正式完成以对应提交的build、deploy、verify-live全部成功为准。
 
-**R10.1 全城总平面与十一片区布局系统深化**把来源总图与各区内部关系接入[城市布局图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html)。全城图保留28项古迹来源几何与既有缺口；十一片区分别展开方位、通行次序、成员归属和沿革，不把无序名录画成街坊坐标。339个原对象、84条道路证据和34项水系索引均保留完整去向，提供逐项“空间判断—依据—图面变化”、15页PDF、12张SVG、4份CSV及离线包。[本轮研究与完成范围](docs/city-layout-r10-research.md)。首页继续使用V12，全景候选保留V13二修；新增古代坐标、古岸和定位等级提升均为0。正式上线及长期验收证据以#52的本轮交接为准。
+**R10.1 全城总平面与十一片区布局系统深化**把来源总图与各区内部关系接入[城市布局图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html)。全城图保留28项古迹来源几何与既有缺口；十一片区分别展开方位、通行次序、成员归属和沿革，不把无序名录画成街坊坐标。339个原对象、84条道路证据和34项水系索引均保留完整去向，提供逐项“空间判断—依据—图面变化”、16页PDF、12张SVG、4份CSV及离线包。[本轮研究与完成范围](docs/city-layout-r10-research.md)。首页继续使用V12，全景候选保留V13二修；新增古代坐标、古岸和定位等级提升均为0。正式上线及长期验收证据以#52的本轮交接为准。
 
 **R6.2 全城道路总览**把现有材料一次收齐：[道路总图与逐路表](https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html)，共84条证据记录（旧主干道来源21、文献道路26、宫路11、坊街证据7、门道14、桥道5），覆盖339个原实体和100条道路定位主引文；记录数不是独立古代道路数。六条坊街与未分条集合分别计数，来源图、推定连接和未知端点分别表示，保留全部原图框与分期限制。附CSV、JSON、覆盖表、SVG和离线包；[研究说明](docs/roads-r62-research.md)，实际发布与验收状态见#52。R6.1的[21条主干道来源图](https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html)继续保留。
 
@@ -43,7 +43,7 @@ P3把阊阖门从外接尺度片推进到[局部考古平面](https://mechgouki.
 
 | 工作线 | 内容 | 入口 |
 | --- | --- | --- |
-| 盛时R10.1 | 全城总平面、十一片区深化、339对象与118条路水记录覆盖、逐项依据和15页图册 | [城市布局图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html) |
+| 盛时R10.1 | 全城总平面、十一片区深化、339对象与118条路水记录覆盖、逐项依据和16页图册 | [城市布局图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html) |
 | 盛时R6.2 | 84条道路、门道与桥道证据，339实体覆盖核对；分级图、逐路表、离线包 | [全城道路总览](https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html) |
 | 盛时R6.1 | 原有21条主干道来源与三处接续专题 | [主干道来源图](https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html) |
 | 盛时R5 | 城市全景与司马门内道路专题 | [全景](https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html) |

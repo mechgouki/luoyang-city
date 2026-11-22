@@ -370,6 +370,66 @@ def verify_csv(raw, rows, fields):
     return len(actual)
 
 
+def verify_source_review(review, data):
+    assert review["schema"] == "luoyang-city-layout-r10-source-review-v1"
+    assert review["research_version"] == RESEARCH_VERSION and review["target_years"] == [516, 528]
+    assert review["baseline_commit"] == data["baseline_commit"]
+    assert review["review_mode"] == "existing_repository_sources_only"
+    assert all(type(value) is int and value == 0 for value in review["actual_new_acquisition"].values())
+    nodes = [node for region in data["regions"] for panel in region["panels"] for node in panel["nodes"]]
+    relations = [row for region in data["regions"] for panel in region["panels"] for row in panel["relations"]]
+    decisions = [row for region in data["regions"] for row in region["decisions"]]
+    gaps = [row for region in data["regions"] for row in region["gaps"]]
+    used_by, occurrences = defaultdict(set), 0
+    for row in [*nodes, *relations, *decisions, *gaps]:
+        for ref in row["source_inputs"]:
+            used_by[(ref["path"], ref["pointer"])].add(row["id"])
+            occurrences += 1
+    paths = {path for path, _ in used_by}
+    documents = {path: json.loads((ROOT / path).read_bytes()) for path in paths}
+    files = unique(review["reviewed_files"], "path")
+    assert set(files) == paths
+    for path, row in files.items():
+        raw = (ROOT / path).read_bytes()
+        assert row["bytes"] == len(raw) and row["sha256"] == digest(raw) == data["source_inputs_sha256"][path]
+        assert row["reviewed_pointer_count"] == sum(file == path for file, _ in used_by)
+    records = {(row["path"], row["pointer"]): row for row in review["reviewed_records"]}
+    assert len(records) == len(review["reviewed_records"]) and set(records) == set(used_by)
+    for (path, where), row in records.items():
+        original = pointer(documents[path], where)
+        canonical = json.dumps(original, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+        assert row["canonical_record_sha256"] == digest(canonical), (path, where, "Reviewed-record fingerprint differs")
+        assert row["used_by"] == sorted(used_by[(path, where)]), (path, where, "Source-review usage join differs")
+        preserved(original, row["record_extract"], path + where)
+        assert "不是古籍原句" in row["extract_layer"] and "不是新考古发现" in row["extract_layer"]
+    entity_ids = {eid for row in [*nodes, *decisions] for eid in row["entity_ids"]}
+    road_ids = {rid for row in decisions for rid in row["road_ids"]}
+    water_ids = {wid for row in decisions for wid in row["water_ids"]}
+    counts = dict(regions=len(data["regions"]), panels=sum(len(region["panels"]) for region in data["regions"]),
+                  nodes=len(nodes), relations=len(relations), decisions=len(decisions), gaps=len(gaps),
+                  referenced_entity_ids=len(entity_ids), referenced_road_ids=len(road_ids), referenced_water_ids=len(water_ids),
+                  reviewed_json_files=len(paths), unique_json_pointers=len(used_by), source_input_occurrences=occurrences,
+                  distinct_diagram_entity_ids=len({eid for node in nodes for eid in node["entity_ids"]}), diagram_label_occurrences=len(nodes))
+    documentation = unique(review["existing_drawing_records_rechecked_for_documentation"], "path")
+    assert set(documentation) == {"research/prosperity-v2/core-scale-basis.json", "research/prosperity-v3/gate-plan.json"}
+    for path, row in documentation.items():
+        raw = (ROOT / path).read_bytes()
+        assert row["bytes"] == len(raw) and row["sha256"] == digest(raw), (path, "Existing drawing documentation changed")
+        assert row["review_scope"].strip()
+    counts["documentation_only_existing_drawing_files"] = len(documentation)
+    assert review["counts"] == counts, "Source-review counts differ from the actual research graph"
+    assert review["validation"]["graph_items_with_relevant_decision"] == len(nodes) + len(relations)
+    assert review["validation"]["graph_items_without_relevant_decision"] == 0
+    assert review["network_reference_policy"]["unassigned_roads"] == 84 - len(road_ids)
+    assert review["network_reference_policy"]["unassigned_waters"] == 34 - len(water_ids)
+    assert review["regional_register_audit_summary"]["pdf_layout_plan_pages"] == data["pdf_pages"]
+    for original in review["primary_original_access"]:
+        assert original["original_pages_read"] == [] and original["complete_original_plan_read"] is False
+        for reference in original["source_inputs"]:
+            pointer(json.loads((ROOT / reference["path"]).read_bytes()), reference["pointer"])
+    return dict(reviewed_records=len(records), reviewed_files=len(files), actual_new_acquisition=review["actual_new_acquisition"])
+
+
 def verify_item_links(element, item, data, region_id):
     """A valid page anchor alone is insufficient: it must carry this evidence."""
     links = list(element.iter(NS + "a"))
@@ -433,6 +493,9 @@ def verify_svg(raw, data, region_id=None, *, standalone=True):
         frame = frames[0]
         assert frame.get("data-coordinate-space") == "06a-source-pdf-units"
         assert frame.get("data-city-registration") == "false"
+        number = r"[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[Ee][+-]?\d+)?"
+        transform = re.fullmatch(r"translate\((" + number + r")[ ,]+(" + number + r")\)\s+scale\((" + number + r")\)", frame.get("transform", ""))
+        assert transform and float(transform.group(3)) > 0, "Source frame was distorted, rotated or reflected"
         historical = copy.deepcopy(root)
         originals = {feature["id"]: feature for feature in json.loads(
             (ROOT / "research/prosperity-v1/geographic-evidence.json").read_bytes())["features"]}
@@ -446,6 +509,11 @@ def verify_svg(raw, data, region_id=None, *, standalone=True):
             fid = element.get("data-native-geometry")
             if fid:
                 assert json.loads(element.get("data-source-geometry")) == originals[fid]["source_pdf_geometry"]
+                assert not element.get("transform"), (fid, "Source ink was moved independently inside its source frame")
+                if originals[fid]["layer"] == "layout_envelope":
+                    assert element.get("stroke") == "none" and element.get("data-role") == "candidate-fill-not-evidenced-north-wall", (fid, "Candidate fill acquired an unevidenced wall edge")
+                elif element.tag == NS + "path":
+                    assert "Z" not in element.get("d", "").upper(), (fid, "A source gap was closed without new geometry vertices")
                 if fid.startswith("geo-modern-"):
                     assert fid in modern_ids
                     del element.attrib["data-native-geometry"]
@@ -655,7 +723,7 @@ def verify(info, reader, *, build_control_reader=None):
         assert row["record_id"] in network_pages[row["kind"]].ids, (row["id"], "Previous network anchor no longer resolves")
     assert get(REVIEW) == (ROOT / SOURCE_REVIEW).read_bytes(), "Source-access report changed in publication"
     review = json.loads(get(REVIEW))
-    assert review["research_version"] == RESEARCH_VERSION
+    review_result = verify_source_review(review, data)
     assert set(data["csv_fields"]) == set(CSVS)
     for name, required in CSV_REQUIRED.items():
         assert required <= set(data["csv_fields"][name]), (name, "CSV omitted required evidence columns")
@@ -710,7 +778,7 @@ def verify(info, reader, *, build_control_reader=None):
                                                           ("#" + parsed.fragment if parsed.fragment else "") + '"').encode())
         assert offline == expected_offline, "Offline HTML differs beyond its required navigation rewrites"
         archive_count = len(names)
-    return dict(status="passed", source_commit=info["source_commit"], research=research, csv_rows=csv_counts,
+    return dict(status="passed", source_commit=info["source_commit"], research=research, source_review=review_result, csv_rows=csv_counts,
                 maps=maps, pdf_pages=pdf_pages, region_pages=region_pages, downloads=len(downloads), offline_members=archive_count,
                 protected_public_files=len(protected), reversible_homepages=len(HOME_PAGES),
                 new_historical_coordinates=0, new_shoreline_geometries=0, evidence_grade_upgrades=0,

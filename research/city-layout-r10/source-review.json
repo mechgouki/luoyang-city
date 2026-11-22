@@ -22,16 +22,19 @@
   "counts": {
     "regions": 11,
     "panels": 42,
-    "nodes": 314,
-    "relations": 254,
+    "nodes": 321,
+    "relations": 259,
     "decisions": 96,
     "gaps": 23,
-    "referenced_entity_ids": 250,
+    "referenced_entity_ids": 256,
     "referenced_road_ids": 46,
     "referenced_water_ids": 20,
     "reviewed_json_files": 22,
-    "unique_json_pointers": 345,
-    "source_input_occurrences": 1192
+    "unique_json_pointers": 349,
+    "source_input_occurrences": 1229,
+    "distinct_diagram_entity_ids": 245,
+    "diagram_label_occurrences": 321,
+    "documentation_only_existing_drawing_files": 2
   },
   "coordinate_contract": {
     "new_ancient_coordinates": 0,
@@ -160,8 +163,12 @@
     "panels_per_region_min": 3,
     "panels_per_region_max": 4,
     "decisions_per_region_min": 6,
-    "max_nodes_per_panel": 14,
-    "validation_boundary": "研究数据与引用自检；网页、SVG方向排版、PDF、手机、下载及线上验收由主控另执行，未在此提前宣称通过。"
+    "max_nodes_per_panel": 15,
+    "validation_boundary": "研究数据与引用自检；网页、SVG方向排版、PDF、手机、下载及线上验收由主控另执行，未在此提前宣称通过。",
+    "graph_items_with_relevant_decision": 580,
+    "graph_items_without_relevant_decision": 0,
+    "every_graph_item_has_relevant_source_or_entity_overlap": true,
+    "all_twenty_r9_decisions_used_in_matching_graphs_and_decisions": true
   },
   "region_coverage": [
     {
@@ -219,8 +226,8 @@
       "region": "R03",
       "title": "宫苑与西北",
       "panels": 4,
-      "nodes": 47,
-      "relations": 38,
+      "nodes": 48,
+      "relations": 39,
       "decisions": 10,
       "gaps": 2,
       "panel_ids": [
@@ -344,8 +351,8 @@
       "region": "R08",
       "title": "城东南门内",
       "panels": 4,
-      "nodes": 21,
-      "relations": 17,
+      "nodes": 26,
+      "relations": 20,
       "decisions": 9,
       "gaps": 2,
       "panel_ids": [
@@ -395,8 +402,8 @@
       "region": "R10",
       "title": "城南门道与寺学",
       "panels": 4,
-      "nodes": 37,
-      "relations": 30,
+      "nodes": 38,
+      "relations": 31,
       "decisions": 11,
       "gaps": 2,
       "panel_ids": [
@@ -451,7 +458,7 @@
       "path": "data/entities.json",
       "bytes": 182309,
       "sha256": "829f0c1f97a34fc4155346dec1e765f8efb4981d4a48f0d5aaad0e47c2cec5ed",
-      "reviewed_pointer_count": 46,
+      "reviewed_pointer_count": 50,
       "review_scope": "既有339对象实体、原文登记、名物与时态核对；本轮不重定实体坐标"
     },
     {
@@ -620,6 +627,78 @@
         "name": "刘腾旧宅〔后建中〕",
         "source_quote": "在西陽門內御道北，所謂延年里劉騰宅。東有太僕寺，寺東有乘黃署，署東有武庫署。",
         "source_ref": "B12n0078_p0378a14-0379a03"
+      }
+    },
+    {
+      "path": "data/entities.json",
+      "pointer": "/101",
+      "record_title": "温风室",
+      "canonical_record_sha256": "ef7d9773a587f5435ceec49a93eb0994fc078063f4f264082d76a5d5c0adb4db",
+      "used_by": [
+        "R03-P04-L13",
+        "R03-P04-wenfeng",
+        "R10-R03-10"
+      ],
+      "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
+      "record_extract": {
+        "id": "ic_wenfeng",
+        "name": "温风室",
+        "source_quote": "嶺上有溫風室。",
+        "source_ref": "B12n0078_p0406a04"
+      }
+    },
+    {
+      "path": "data/entities.json",
+      "pointer": "/102",
+      "record_title": "露寒馆／寒露馆",
+      "canonical_record_sha256": "16370775d2579805b557220e450c5ae49e8d28234a7d0e720ca371c1482954a1",
+      "used_by": [
+        "R03-P04-L10",
+        "R03-P04-luhan",
+        "R10-R03-10"
+      ],
+      "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
+      "record_extract": {
+        "id": "ic_luhan",
+        "name": "露寒馆／寒露馆",
+        "source_quote": "峰上有露寒館。",
+        "source_ref": "B12n0078_p0406a04-05"
+      }
+    },
+    {
+      "path": "data/entities.json",
+      "pointer": "/103",
+      "record_title": "临涧亭",
+      "canonical_record_sha256": "acca6bfe1b8c8e0427e0143d6d0a980aeca0a1c8b5d4b3b1a99d503891f74e91",
+      "used_by": [
+        "R03-P04-L11",
+        "R03-P04-linjian",
+        "R10-R03-10"
+      ],
+      "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
+      "record_extract": {
+        "id": "ic_linjian",
+        "name": "临涧亭",
+        "source_quote": "殿東有臨澗亭。",
+        "source_ref": "B12n0078_p0406a05"
+      }
+    },
+    {
+      "path": "data/entities.json",
+      "pointer": "/104",
+      "record_title": "临危台",
+      "canonical_record_sha256": "e7bd8a2a02797cd6b223dd343c1d3d8372439801740df7ef92111ba3ec49637b",
+      "used_by": [
+        "R03-P04-L12",
+        "R03-P04-linwei",
+        "R10-R03-10"
+      ],
+      "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
+      "record_extract": {
+        "id": "ic_linwei",
+        "name": "临危台",
+        "source_quote": "殿西有臨危臺。",
+        "source_ref": "B12n0078_p0406a06"
       }
     },
     {
@@ -1051,7 +1130,9 @@
       "canonical_record_sha256": "52b2790376273289a6e3d58ea27ed71942655a057a29d0b1ccfefa450870c277",
       "used_by": [
         "R10-P03-L09",
+        "R10-P03-L12",
         "R10-P03-gaoyang",
+        "R10-P03-jin-gate",
         "R10-P03-jin-road",
         "R10-R10-11"
       ],
@@ -1662,6 +1743,8 @@
       "record_title": "永宁寺同时满足门南与道西",
       "canonical_record_sha256": "c756f602fa6656da3334b1af060b70eb4c87a844deb95ff7a32970c88c9b3878",
       "used_by": [
+        "R07-P01-L01",
+        "R07-P01-L02",
         "R10-R07-01",
         "R10-R07-02"
       ],
@@ -1762,6 +1845,7 @@
       "canonical_record_sha256": "9b16619f0fce49f011458a854be79ab4cd9c416999be8b6221d49b03af12e67d",
       "used_by": [
         "R03-G01",
+        "R03-P03-mainroad",
         "R10-R03-07"
       ],
       "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
@@ -1779,6 +1863,7 @@
       "canonical_record_sha256": "36c442df037482d124423210f6a7c058ea3b4e87619b56f5692512c7531155b4",
       "used_by": [
         "R04-G01",
+        "R04-P01-bridge",
         "R10-R04-01"
       ],
       "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
@@ -1796,6 +1881,8 @@
       "canonical_record_sha256": "b3cb8a0a5f5df43299cd189cb27d73a0974c2471b678fffd291c8cafbd350210",
       "used_by": [
         "R04-G01",
+        "R04-P02-L07",
+        "R04-P02-eastbridge",
         "R10-R04-01"
       ],
       "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
@@ -1887,6 +1974,9 @@
       "canonical_record_sha256": "295d5c99340212896ef30284b5585b34be03f6001c686dd3cc22cdcee8b80c4d",
       "used_by": [
         "R07-G01",
+        "R07-P02-L01",
+        "R07-P03-L01",
+        "R07-P03-L02",
         "R10-R07-02",
         "R10-R07-03"
       ],
@@ -3572,6 +3662,11 @@
       "record_title": "东墙二门与南墙开阳：同名异写不增门",
       "canonical_record_sha256": "81f4d603b1b5d781f6b5ae8fc89647bfa86f598bc3d2bc25c47e5cbe115fa124",
       "used_by": [
+        "R08-P01-L04",
+        "R08-P01-L05",
+        "R08-P01-dongyang-gate",
+        "R08-P01-jianchun-gate",
+        "R08-P01-qingyang-gate",
         "R10-R08-01"
       ],
       "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
@@ -3887,6 +3982,9 @@
       "record_title": "胡统在永宁以南，五重仅作非定位构件",
       "canonical_record_sha256": "25718e1f9d74aecafc733c1e5dfae7026cd676eaddba9b9ec63363610e6fd2bd",
       "used_by": [
+        "R08-P02-L06",
+        "R08-P02-hutong",
+        "R08-P02-yongning-ref",
         "R10-R08-08"
       ],
       "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
@@ -3905,6 +4003,11 @@
       "record_title": "东墙门序与青／清阳的真实版本关系",
       "canonical_record_sha256": "369166f1b5fb2936ce12362c11b2bce73360a3fb52754f5f7379239c9ccf48a7",
       "used_by": [
+        "R08-P01-L04",
+        "R08-P01-L05",
+        "R08-P01-dongyang-gate",
+        "R08-P01-jianchun-gate",
+        "R08-P01-qingyang-gate",
         "R10-R08-01"
       ],
       "extract_layer": "既有仓库记录摘录；其中reading/judgment/finding等是旧项目核验，不是古籍原句，也不是新考古发现。quote/source_quote为原记录登记，引用边界另列。",
@@ -7260,6 +7363,134 @@
         "reading": "这一路出口与青阳出口、建春外阳渠分别登记；同名受水道未提供三出口的完整连接。",
         "quote": "渠水自銅駝街東逕司馬門南……渠水歴司空府前，逕太倉南，出東陽門石橋下注陽渠。"
       }
+    }
+  ],
+  "counting_policy": [
+    "321等节点数是图签出现次数，含重复参照、构件组、来源路段与未定接口；不能当作古城建筑数。",
+    "去重图内实体数只数引用的既有339对象ID，仍不代表每一对象已有独立测绘足迹。",
+    "96等决策数是本轮逐项解释与改图条目数，不是新发现或独立古籍来源数；东北分成两方向边仍只有一条原判断。",
+    "84条道路和34项水系完整保留既有清单；本轮只对确实论及的记录增加区域/判断关联，未关联记录不强行分区。"
+  ],
+  "network_reference_policy": {
+    "road_links": "仅显式道路、门道、桥或道路来源记录；T与O/R为不同证据层，不合计为真实古路数。",
+    "water_links": "按当前P468复核覆盖表优先映射旧W号，其余使用P467的旧ID目录；目录索引不是新的池口或水流证明。",
+    "unassigned_roads": 38,
+    "unassigned_waters": 14,
+    "unassigned_meaning": "保留原有可回查索引，不为满足覆盖数字强赋片区或接线。",
+    "biyong_note": "辟雍残渠有本地来源关系，但不在原34项W编号中；本轮不虚造W35。"
+  },
+  "retained_regional_register_audit": [
+    {
+      "entity_id": "ic_sizhou",
+      "reason": "《河南志》另一官署链，在R07逐项对读保留；不把异书方案直接画成确定同期的另一院落。",
+      "decision_ids": [
+        "R10-R07-04"
+      ]
+    },
+    {
+      "entity_id": "ic_taifu_alternative",
+      "reason": "太府与太尉同书分列而身份未合，作为异书方案而非另一处已定地理节点。",
+      "decision_ids": [
+        "R10-R07-04"
+      ]
+    },
+    {
+      "entity_id": "ic_lvzhu",
+      "reason": "赵逸所述晋旧池旁楼，516—528楼仍存未证；旧址说留表，不补为盛时现存楼阁。",
+      "decision_ids": [
+        "R10-R08-03"
+      ]
+    },
+    {
+      "entity_id": "ic_diaotai_palace",
+      "reason": "回指九华台或蓬莱山的对象未统一；两候选保留而不择一补入园内位置。",
+      "decision_ids": [
+        "R10-R03-03"
+      ]
+    },
+    {
+      "entity_id": "v2_dongan_taxfield",
+      "reason": "北的参照可指庄严寺或东安里，与常满旧址租场的同体/连续性未定。",
+      "decision_ids": [
+        "R10-R04-03",
+        "R10-R09-01"
+      ]
+    },
+    {
+      "entity_id": "altar_yuanqiu",
+      "reason": "作为馆里段的南向范围参照保留在图注与判断；本轮没有独立坛址控制点。",
+      "decision_ids": [
+        "R10-R11-03"
+      ]
+    },
+    {
+      "entity_id": "water_yi",
+      "reason": "伊洛之间的宽区域与W03索引已有图注；不把整条河当单一古址点或新增古槽。",
+      "decision_ids": [
+        "R10-R11-03"
+      ]
+    },
+    {
+      "entity_id": "li_yongan",
+      "reason": "宝夤后迁城内的目的里名明确，但街址和里界未给；迁居说明不作城市路线。",
+      "decision_ids": [
+        "R10-R11-07"
+      ]
+    },
+    {
+      "entity_id": "gushui",
+      "reason": "由完整旧水系与W04来源关系承接；局部新图不把全河压为单一几何点，也不新增未证分水口。",
+      "decision_ids": [
+        "R10-R05-07",
+        "R10-R04-06",
+        "R10-R07-06"
+      ]
+    },
+    {
+      "entity_id": "r_baima_chanjian",
+      "reason": "与西阳门外白马的同体未决；保留独立旧记录，不强合并也不认定必为另一处已定位古寺。",
+      "decision_ids": [
+        "R10-R02-05",
+        "R10-R02-12"
+      ]
+    },
+    {
+      "entity_id": "a_wangnan",
+      "reason": "城西的城及相关回指未定，不能据此给承明门、金墉或寺址补唯一方向。",
+      "decision_ids": [
+        "R10-R01-06"
+      ]
+    }
+  ],
+  "regional_register_audit_summary": {
+    "first_build_regional_register_count": 46,
+    "expanded_from_that_register": 35,
+    "retained_from_that_register": 11,
+    "additional_existing_relations": "新增殿台、景阳山景、南郊寺院、胡统、东墙门序与宅前身；白马考古坊街另加来源框，不与文献白马同体。",
+    "retention_is_not_due_to_panel_size": true,
+    "pdf_layout_plan_pages": 16,
+    "pdf_layout_note": "R02、R03、R10各上下两页，其余8区各一页；总图与图例各一页。版面验证由主控另执行。"
+  },
+  "coverage_interpretation": {
+    "complete_catalog_entities": 339,
+    "distinct_diagram_entities": 245,
+    "regional_register_entities": 11,
+    "unassigned_register_entities": 83,
+    "unassigned_means": "本轮工作归组状态；包含远郊、异名互见、历史层以及尚未纳入新关系窗的对象，不能翻译成原典完全没有地点，更不是83处已证失踪遗址。",
+    "scope_boundary": "十一片区本轮都有实质布局深化，不等于339对象均有独立足迹、全部古街已发现或城市全景已得到逐栋验证。"
+  },
+  "existing_drawing_records_rechecked_for_documentation": [
+    {
+      "path": "research/prosperity-v2/core-scale-basis.json",
+      "bytes": 25891,
+      "sha256": "4f858de7ead2ee9d2be50aa055279df8cad2c66e2fa58b184fa0822efce14528",
+      "review_scope": "既有三张尺度参考片，不是尚未绘制；不升级为实测完整足迹。"
+    },
+    {
+      "path": "research/prosperity-v3/gate-plan.json",
+      "bytes": 18236,
+      "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+      "review_scope": "既有阊阖门局部米制图及10构件；共同地面控制仍缺。"
     }
   ]
 }

@@ -6,7 +6,6 @@ the graph layout is written into an archaeological or geographic geometry.
 from collections import defaultdict
 import json
 import math
-import re
 import unicodedata
 from xml.etree import ElementTree as ET
 
@@ -22,12 +21,6 @@ INK, GREEN, GOLD, BLUE, GRAY = "#203a34", "#245f4c", "#966b39", "#4a6f91", "#687
 PALE, WHITE, BORDER = "#f3f5ef", "#fffefa", "#ccd7cd"
 COLORS = {"source": GREEN, "relation": GOLD, "interpretation": BLUE, "unknown": GRAY}
 KIND_LABELS = {"spatial": "方位关系", "sequence": "叙述次序", "comparison": "解释对照", "membership": "无序归属"}
-RELATION_LABELS = {
-    "north_of": "在北", "south_of": "在南", "east_of": "在东", "west_of": "在西",
-    "within": "范围内", "adjacent": "相邻", "sequence": "先后次序",
-    "identity_candidate": "同一性待考", "unknown_connection": "接续未明",
-    "membership": "属于", "same_source": "同一来源关联",
-}
 DIRECTIONS = {"north_of", "south_of", "east_of", "west_of"}
 BOUNDARIES = [
     ("宣阳门与内城南墙", "缺同期门墙联测，现有残段不补成闭合南界。"),
@@ -195,8 +188,9 @@ def _draw_node(parent, region, node, x, y, width=190, size=21, container=False):
         if vertical:
             points = [(x, y - span / 2), (x, y + span / 2)]
         else:
-            points = [(x - width / 2 + 6, y), (x + width / 2 - 6, y)]
-        path(a, points, stroke=color, stroke_width=7,
+            points = [(x - width / 2 - 8, y), (x + width / 2 + 8, y)]
+        path(a, points, stroke=color, stroke_width=3.5 if kind == "road" and any(word in node["label"] for word in ("次级", "夹道")) else 7,
+             data_role="road-or-water-symbol-not-surveyed-segment",
              stroke_dasharray="8 5" if kind in {"water", "river", "canal", "channel"} else None)
         for px, py in points:
             el(a, "circle", cx=px, cy=py, r=4.5, fill=WHITE, stroke=color, stroke_width=1.8,
@@ -378,6 +372,8 @@ def _positions(ids, relations, bounds, kind="spatial"):
     cell_width, cell_height = width / cols, height / rows
     size = 21 if cell_width >= 200 and cell_height >= 85 else 18 if cell_width >= 145 and cell_height >= 58 else 16
     node_width = min(218, cell_width * .86)
+    if cols == 1 and yp:
+        node_width = min(node_width, max(80, cell_width - 64))
     points = {n: (x + (xx + .5) * cell_width, y + (yy + .5) * cell_height) for n, (xx, yy) in answer.items()}
     for r in relations:
         if r["from"] not in points or r["to"] not in points:
@@ -389,7 +385,7 @@ def _positions(ids, relations, bounds, kind="spatial"):
     return points, node_width, size
 
 
-def _edge(parent, region, relation, points, widths, duplicate=0, bounds=None):
+def _edge(parent, region, relation, points, widths, duplicate=0, bounds=None, heights=None):
     if relation["from"] not in points or relation["to"] not in points:
         return
     g = _relation_group(parent, relation)
@@ -402,32 +398,59 @@ def _edge(parent, region, relation, points, widths, duplicate=0, bounds=None):
     dx, dy = ex - sx, ey - sy
     length = math.hypot(dx, dy) or 1
     ux, uy = dx / length, dy / length
-    offset_start = min(widths[start_id] / 2 / max(abs(ux), .01), 29 / max(abs(uy), .01)) + 4
-    offset_end = min(widths[end_id] / 2 / max(abs(ux), .01), 29 / max(abs(uy), .01)) + 6
-    if offset_start + offset_end > length * .78:
-        shrink = length * .78 / (offset_start + offset_end)
+    offset_start = min(widths[start_id] / 2 / max(abs(ux), .01), (heights or {}).get(start_id, 58) / 2 / max(abs(uy), .01)) + 4
+    offset_end = min(widths[end_id] / 2 / max(abs(ux), .01), (heights or {}).get(end_id, 58) / 2 / max(abs(uy), .01)) + 6
+    if offset_start + offset_end > length - 2:
+        shrink = max(1, length - 2) / (offset_start + offset_end)
         offset_start *= shrink
         offset_end *= shrink
     a, b = (sx + ux * offset_start, sy + uy * offset_start), (ex - ux * offset_end, ey - uy * offset_end)
     bend = duplicate * 24
-    if abs(dy) < 1 and typ in {"within", "membership", "same_source", "identity_candidate"}:
-        between = [p for identifier, p in points.items() if identifier not in (start_id, end_id)
-                   and min(sx, ex) < p[0] < max(sx, ex) and abs(p[1] - sy) < 25]
-        if between:
-            # Bypass intermediate members. A continuous line through another
-            # member would imply a chain which the documentary source does not give.
-            room = max(24, sy - bounds[1] - 4) if bounds else 36
-            bend = -2 * min(58, room) * (1 if dx >= 0 else -1)
     cx, cy = (a[0] + b[0]) / 2 - uy * bend, (a[1] + b[1]) / 2 + ux * bend
+    if bounds and (abs(dx) < 1 or abs(dy) < 1):
+        # A relation arrow must not run through a third label: that would
+        # visually add an undocumented connection. Bow the arrow around it;
+        # this publication curve is not a surveyed road or channel course.
+        horizontal = abs(dy) < 1
+        obstacles = []
+        for identifier, (px, py) in points.items():
+            if identifier in (start_id, end_id):
+                continue
+            along = (px - sx) / dx if horizontal else (py - sy) / dy
+            half = (heights or {}).get(identifier, 58) / 2 if horizontal else widths[identifier] / 2
+            across = abs(py - sy) if horizontal else abs(px - sx)
+            if .02 < along < .98 and across <= half + 3:
+                obstacles.append((along, half))
+        if obstacles:
+            origin = sy if horizontal else sx
+            lower = bounds[1] if horizontal else bounds[0]
+            extent = bounds[3] if horizontal else bounds[2]
+            room_minus, room_plus = origin - lower - 4, lower + extent - origin - 4
+            sign = -1 if room_minus >= room_plus else 1
+            room = max(room_minus, room_plus)
+            required = max((half + 6) / (4 * along * (1 - along)) for along, half in obstacles)
+            amplitude = min(required, max(0, room))
+            if horizontal:
+                cy = origin + sign * 2 * amplitude
+            else:
+                cx = origin + sign * 2 * amplitude
     dashed = typ in {"unknown_connection", "identity_candidate", "same_source", "within", "membership"}
     el(g, "path", d=f"M{a[0]:.3f} {a[1]:.3f} Q{cx:.3f} {cy:.3f} {b[0]:.3f} {b[1]:.3f}",
        fill="none", stroke=color, stroke_width=2.3, stroke_dasharray="7 5" if dashed else None)
+    symbol_box = None
+    if typ == "adjacent" and "十字" in relation["label"]:
+        mx, my = (a[0] + 2 * cx + b[0]) / 4, (a[1] + 2 * cy + b[1]) / 4
+        symbol_box = (mx - 23, my - 23, 46, 46)
+        rect(g, *symbol_box, fill=WHITE, stroke="none", rx=4,
+             data_role="cross-intersection-topology-not-surveyed-coordinate")
+        path(g, [(mx - 17, my), (mx + 17, my)], stroke=color, stroke_width=5)
+        path(g, [(mx, my - 17), (mx, my + 17)], stroke=color, stroke_width=5)
     if typ not in {"unknown_connection", "identity_candidate", "adjacent", "same_source"}:
         _arrow(g, (cx, cy), b, color)
     elif typ == "unknown_connection":
         for px, py in (a, b): el(g, "circle", cx=px, cy=py, r=4.8, fill=WHITE, stroke=color, stroke_width=2)
     return {"group": g, "relation": relation, "center": ((a[0] + 2 * cx + b[0]) / 4, (a[1] + 2 * cy + b[1]) / 4), "color": color,
-            "horizontal": abs(dx) >= abs(dy), "sign": 1 if duplicate >= 0 else -1}
+            "horizontal": abs(dx) >= abs(dy), "sign": 1 if duplicate >= 0 else -1, "symbol_box": symbol_box, "length": length}
 
 
 def _intersects(a, b, padding=3):
@@ -467,13 +490,31 @@ def _place_edge_markers(specs, bounds, occupied):
     """Use compact numbered markers on edges; full captions are in the key."""
     x, y, width, height = bounds
     for spec in specs:
+        if spec.get("symbol_box"):
+            occupied.append(spec["symbol_box"])
+    for spec in sorted(specs, key=lambda value: value["length"]):
         cx, cy = spec["center"]
         marker = 22
-        candidates = [(cx, cy)]
+        candidates = [(cx + dx, cy + dy) for dx in range(-6, 7) for dy in range(-6, 7)]
         for distance in (17, 29, 42, 58, 76, 96, 124):
             for angle in range(0, 360, 30):
                 rad = math.radians(angle)
                 candidates.append((cx + distance * math.cos(rad), cy + distance * math.sin(rad)))
+        local_boxes = [box for box in occupied if box[0] >= x - 1 and box[1] >= y - 1
+                       and box[0] + box[2] <= x + width + 1 and box[1] + box[3] <= y + height + 1]
+        for left in local_boxes:
+            for right in local_boxes:
+                if left is right:
+                    continue
+                top, bottom = max(left[1], right[1]), min(left[1] + left[3], right[1] + right[3])
+                if left[0] + left[2] + marker + 2 <= right[0] and top < bottom:
+                    candidates.append(((left[0] + left[2] + right[0]) / 2, (top + bottom) / 2))
+                lo, hi = max(left[0], right[0]), min(left[0] + left[2], right[0] + right[2])
+                if left[1] + left[3] + marker + 2 <= right[1] and lo < hi:
+                    candidates.append(((lo + hi) / 2, (left[1] + left[3] + right[1]) / 2))
+        for gx in range(math.ceil(x + 12), math.floor(x + width - 11), 18):
+            for gy in range(math.ceil(y + 12), math.floor(y + height - 11), 18):
+                candidates.append((gx, gy))
         candidates.sort(key=lambda a: (a[0] - cx) ** 2 + (a[1] - cy) ** 2)
         chosen = None
         for px, py in candidates:
@@ -485,14 +526,10 @@ def _place_edge_markers(specs, bounds, occupied):
             chosen = (px, py, box)
             break
         if chosen is None:
-            # An exceptionally short edge may have no free position between
-            # node labels. The marker uses the nearest page margin with an
-            # explicit dotted annotation leader, never a new relation.
-            px = min(x + width - 12, max(x + 12, cx))
-            py = min(y + height - 12, max(y + 12, cy))
-            chosen = (px, py, (px - 11, py - 11, 22, 22))
+            raise ValueError("No visible relation marker position for " + spec["relation"]["id"])
         px, py, box = chosen
         g = spec["group"]
+        g.set("data-marker-box", _json(box))
         if math.hypot(px - cx, py - cy) > 18:
             path(g, [(cx, cy), (px, py)], stroke="#a1aba3", stroke_width=1, stroke_dasharray="2 3",
                  data_role="annotation-leader-not-spatial-connection")
@@ -533,7 +570,16 @@ def _draw_graph(parent, region, panel, bounds):
     # city blocks, courtyard walls, or jointly controlled archaeological maps.
     ids = list(nodes)
     components = _weak_components(ids, relations)
-    if len(components) == 1:
+    if panel["id"] == "R08-P01" and len(components) == 3:
+        # The east-gate order is a separate vertical group. Giving it the
+        # full plot height avoids squeezing three gates into a header strip.
+        available = width - 24
+        ratios = (.47, .16, .37)
+        cells, left = [], x
+        for ratio in ratios:
+            cw = available * ratio
+            cells.append((left, y, cw, height)); left += cw + 12
+    elif len(components) == 1:
         cells = [graph_bounds]
     elif len(components) == 3 and width >= 650 and max(map(len, components)) >= 4:
         largest = max(range(3), key=lambda i: len(components[i]))
@@ -560,6 +606,21 @@ def _draw_graph(parent, region, panel, bounds):
         gap = 12
         cw, ch = (width - gap * (columns - 1)) / columns, (height - gap * (rows - 1)) / rows
         cells = [(x + (i % columns) * (cw + gap), y + (i // columns) * (ch + gap), cw, ch) for i in range(len(components))]
+        if columns == 1 and len(components) >= 4:
+            # A two-rank spatial group needs more height than an independent
+            # one-row membership or uncertain-connection group.
+            needs = []
+            for group in components:
+                pairs = [(r["from"], r["to"]) if r["type"] == "north_of" else (r["to"], r["from"])
+                         for r in relations if r["type"] in {"north_of", "south_of"}
+                         and r["from"] in group and r["to"] in group]
+                levels = max([0] + [v for v in _ranks(group, pairs).values() if v is not None]) + 1
+                needs.append(21 + levels * 38)
+            extra = (height - gap * (len(components) - 1) - sum(needs)) / len(components)
+            if extra >= 0:
+                cells, yy = [], y
+                for need in needs:
+                    cells.append((x, yy, width, need + extra)); yy += need + extra + gap
     label_specs, occupied = [], []
     index = {r["id"]: i + 1 for i, r in enumerate(relations)}
     # Frames are all drawn first, so a subsequent group cannot cover an
@@ -580,24 +641,25 @@ def _draw_graph(parent, region, panel, bounds):
         max_width = min(218, node_width / .86 - 7)
         widths = {n: min(max_width, max(node_width, max(_units(line) for line in nodes[n]["label"].split("\n")) * size + 22))
                   for n in ids}
+        heights = {n: max(32 if size <= 18 else 44,
+                         len(wrap(nodes[n]["label"], (widths[n] - 22) / size)) * (size + 4) + 8)
+                   for n in ids}
         duplicates = defaultdict(list)
         for r in subrelations:
             duplicates[tuple(sorted((r["from"], r["to"])))].append(r)
         group_specs = []
         for rels in duplicates.values():
             for j, r in enumerate(rels):
-                spec = _edge(parent, region, r, points, widths, j - (len(rels) - 1) / 2, cell)
+                spec = _edge(parent, region, r, points, widths, j - (len(rels) - 1) / 2, cell, heights)
                 spec["number"] = index[r["id"]]
                 group_specs.append(spec)
                 label_specs.append(spec)
-        group_boxes = []
         for identifier, (px, py) in points.items():
             node = nodes[identifier]
             if node["kind"] == "road":
                 sides = [r["type"] for r in subrelations if identifier in (r["from"], r["to"])]
                 node["_display_road_axis"] = "vertical" if any(t in {"east_of", "west_of"} for t in sides) else "horizontal"
             box = _draw_node(parent, region, node, px, py, widths[identifier], size)
-            group_boxes.append(box)
             occupied.append(box)
         _place_edge_markers(group_specs, cell, occupied)
     _draw_relation_keys(parent, region, label_specs, entries, graph_bounds)
@@ -612,7 +674,7 @@ def _panel(parent, region, panel, bounds):
     caption_height = paragraph(group, x + 21, y + 63, panel["caption"], width - 42, 17, leading=23, fill=GRAY)
     graph_y = y + 69 + caption_height
     if panel["kind"] == "spatial":
-        text(group, x + width - 22, y + height - 12, "北在上、东在右；无比例", 15, fill=GRAY, text_anchor="end")
+        text(group, x + width - 22, y + height - 12, "北在上、东在右；无比例，箭线非路段", 15, fill=GRAY, text_anchor="end")
     else:
         text(group, x + width - 22, y + height - 12, "本窗排列不表示地理方向", 15, fill=GRAY, text_anchor="end")
     _draw_graph(group, region, panel, (x + 21, graph_y, width - 42, y + height - 30 - graph_y))
@@ -720,7 +782,7 @@ def _source_frame(root, atlas, bounds):
                 if not modern and primitive.get("stroke") not in (None, "none"):
                     primitive.set("stroke", GREEN)
                 if feature["layer"] == "layout_envelope":
-                    primitive.set("fill", "#dfe9d5")
+                    primitive.set("fill", "#e5edf4")
                     primitive.set("data-role", "candidate-fill-not-evidenced-north-wall")
     # Reading labels are outside the native geometry group and never become
     # archaeological coordinates or substituted source vertices.
@@ -802,7 +864,7 @@ def build_legend(data):
         paragraph(root, xx + 20, yy + 112, body, 345, 20, leading=29, fill=GRAY)
     text(root, 42, 445, "几种图面表达，各自回答不同的问题", 25, fill=GREEN, font_weight="700")
     descriptions = [
-        "方位窗：北在上、东在右，但不按比例；不得由未连接的节点或方向传递补出新判断。",
+        "方位窗：箭线只标关系，不表示路段；间距与线宽不按比例，不由未连接节点或方向传递补出判断。",
         "归属窗：表示无序成员集合；框线只分阅读组，不是里墙、院墙或市场边界，排列不表示街序。",
         "次序窗与对照窗：解释营建、沿革、仪式或版本关系，不把时间先后画成城市道路。",
     ]

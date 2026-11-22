@@ -22,6 +22,16 @@ TYPES = {"temple": "寺院", "palace_gate": "宫门", "road": "道路", "office"
          "river": "河流", "mountain_region": "山地范围", "residence_building": "宅内建筑",
          "bridge": "桥", "historical_site": "历史地点", "weir": "堰", "training_ground": "训练场",
          "regional_landmark": "区域参照", "pass": "关隘", "watercourse_region": "水道地段", "area": "区域"}
+EXISTING_DRAWINGS = {
+    "R02": [("luoyang-city-spatial.html#map-panel-baima", "白马坊街的既有空间联读")],
+    "R03": [("prosperity-axis.html", "宫城中轴与分段量距"),
+            ("prosperity-taiji-courts.html", "太极殿、东堂与北侧宫院"),
+            ("prosperity-palace-boundaries.html", "宫城边界与仓区")],
+    "R04": [("prosperity-backbone-p469.html", "建春门原图与城市接合")],
+    "R07": [("prosperity-gate.html", "阊阖门局部考古平面"),
+            ("prosperity-core.html", "核心建筑尺度与局部结构")],
+    "R10": [("prosperity-south-p466.html", "城南道路与水系分期")],
+}
 
 
 def h(value):
@@ -125,11 +135,13 @@ def make_page(data, overview, region_svgs, downloads, offline=False):
         cards.append(f'''<a class="region-nav-card" href="#region-{rid}"><span>{rid}</span><h3>{h(region['title'])}</h3><p>{len(region['panels'])}个关系窗 · {len(region['decisions'])}项判断 · 涉及{n}个名录对象</p></a>''')
         decision_chips = " ".join(link("#decision-" + d["id"], d["id"], 'class="decision-chip"') for d in region["decisions"])
         gaps = " ".join(link("#gap-" + g["id"], g["title"]) for g in region["gaps"])
+        previous = " ".join(link(BASE + path, label) for path, label in EXISTING_DRAWINGS.get(rid, []))
+        drawing_links = '<p class="small">继续联读既有图纸：</p><div class="record-links">' + previous + '</div>' if previous else ""
         sheets.append(f'''<section class="region-sheet" id="region-{rid}" data-region="{rid}" tabindex="-1">
 <div class="section-heading"><div><p class="eyebrow">{rid} · 片区布局深化</p><h2>{h(region['title'])}</h2></div><a class="text-link" href="#decision-{first}">本区逐项依据 →</a></div>
 <p class="section-intro">{h(region['intro'])}</p>{map_block(region_svgs[rid], rid, region['title'])}
 <div class="region-reading"><div><h3>本区现在能看清什么</h3><p>{h(region['summary'])}</p><div class="record-links">{decision_chips}</div></div>
-<div><h3>对全景布局的约束</h3><p>{h(region['panorama_implication'])}</p><p>{link(BASE + region['old_topic_url'], '回到既有专题')}</p><div class="record-links">{gaps}</div></div></div></section>''')
+<div><h3>对全景布局的约束</h3><p>{h(region['panorama_implication'])}</p><p>{link(BASE + region['old_topic_url'], '回到既有专题')}</p>{drawing_links}<div class="record-links">{gaps}</div></div></div></section>''')
     download_links = []
     for path, title, note in downloads:
         url = BASE + path if offline and path.endswith(".zip") else path

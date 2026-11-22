@@ -47,7 +47,7 @@ def expected_rows(data, group, region="all", basis="all", query=""):
 def exercise(browser, base, device, output, expected_commit=None):
     settings = dict(viewport=SIZES[device], is_mobile=device == "mobile", has_touch=device == "mobile",
                     reduced_motion="reduce")
-    report = dict(device=device, viewport=SIZES[device], checks=[], downloads={}, screenshots={}, errors=[], maps={})
+    report = dict(device=device, viewport=SIZES[device], checks=[], downloads={}, retained_downloads={}, screenshots={}, errors=[], maps={})
     active = None
 
     def watch(page):
@@ -95,6 +95,7 @@ def exercise(browser, base, device, output, expected_commit=None):
             assert data_response.ok
             data, meta = data_response.json(), info[KEY]
             assert info["source_commit"] == data["source_commit"] == meta["source_commit"]
+            assert data["pdf_pages"] == data["counts"]["pdf_pages"] == meta["pdf_pages"]
             if expected_commit:
                 assert info["source_commit"] == expected_commit, "Browser reached a different deployment"
             report["source_commit"] = info["source_commit"]
@@ -109,6 +110,9 @@ def exercise(browser, base, device, output, expected_commit=None):
             open_tables(page)
             check_rows(page, data)
             check_sheets(page, "all")
+            parts = page.locator(".region-sheet svg").evaluate_all("nodes => nodes.map(node => Number(node.dataset.pdfPages))")
+            assert len(parts) == 11 and all(count in (1, 2) for count in parts)
+            assert sum(parts) + 2 == meta["pdf_pages"], "PDF page count differs from the complete visible SVGs"
             report["checks"].append("All twelve inline figures, 339 original objects and 118 original road/water records load from the released commit")
 
             for region in [*REGIONS, "register", "all"]:
@@ -244,9 +248,16 @@ def exercise(browser, base, device, output, expected_commit=None):
                     checksum = hashlib.sha256(raw).hexdigest()
                     assert checksum == info["files_sha256"][path], path
                     report["downloads"][path] = checksum
+                    member = PurePosixPath(path)
+                    assert not member.is_absolute() and ".." not in member.parts and "\\" not in path
+                    retained_path = PurePosixPath("downloads") / device / member
+                    retained = output / Path(retained_path)
+                    retained.parent.mkdir(parents=True, exist_ok=True)
+                    retained.write_bytes(raw)
+                    report["retained_downloads"][path] = dict(sha256=checksum, bytes=len(raw), retained_path=str(retained_path))
                     if path.endswith(".pdf"):
                         actual_pdf = PdfReader(io.BytesIO(raw))
-                        assert len(actual_pdf.pages) == 13
+                        assert len(actual_pdf.pages) == meta["pdf_pages"]
                         assert all(any("\u3400" <= char <= "\u9fff" for char in pdf_page.extract_text()) for pdf_page in actual_pdf.pages)
                         report["pdf_pages"] = len(actual_pdf.pages)
                     if path == meta["bundle"]:
@@ -276,7 +287,7 @@ def exercise(browser, base, device, output, expected_commit=None):
                     fits(local)
                     capture(local, "offline")
             active = page
-            report["checks"].append("All 21 real browser downloads match released hashes, the PDF has 13 readable pages, and the complete ZIP works with network disabled and state restored")
+            report["checks"].append("All 21 real browser downloads match released hashes, the PDF has " + str(meta["pdf_pages"]) + " readable pages matching the SVG continuations, and the complete ZIP works with network disabled and state restored")
 
             with browser.new_context(**settings, java_script_enabled=False) as disabled:
                 plain = disabled.new_page()

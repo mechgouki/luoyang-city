@@ -138,7 +138,9 @@
               "id": "R01-P02-daxia-road",
               "label": "大夏门御道参照",
               "kind": "road",
-              "entity_ids": [],
+              "entity_ids": [
+                "road_daxia"
+              ],
               "basis": "relation",
               "note": "仅在本关系窗中表达已列约束；图上间距不是古代距离。",
               "source_inputs": [
@@ -168,7 +170,9 @@
               "id": "R01-P02-guangmo-road",
               "label": "广莫门御道参照",
               "kind": "road",
-              "entity_ids": [],
+              "entity_ids": [
+                "road_guangmo"
+              ],
               "basis": "relation",
               "note": "仅在本关系窗中表达已列约束；图上间距不是古代距离。",
               "source_inputs": [
@@ -3086,7 +3090,7 @@
           "id": "R03-P03",
           "title": "宫院、司马门内路与仓区",
           "kind": "spatial",
-          "caption": "墙外主路、墙内夹道和仓区内部道路各归其对象。三个宽度不合成一条道路断面，分区只示关系。",
+          "caption": "墙外主路、墙内夹道和仓区内路分别量测，不合成同一断面。P01不接独立原图P11，范围框不作仓墙；分区仅示关系。",
           "nodes": [
             {
               "id": "R03-P03-palace",
@@ -3130,11 +3134,15 @@
               "kind": "road",
               "entity_ids": [],
               "basis": "relation",
-              "note": "仅在本关系窗中表达已列约束；图上间距不是古代距离。",
+              "note": "P01不接独立原图P11；无跨图共同控制，不从蓝色范围框推仓墙，也不由此推宫外仓区坐标。",
               "source_inputs": [
                 {
                   "path": "research/city-spatial-r9/decisions.json",
                   "pointer": "/decisions/10"
+                },
+                {
+                  "path": "research/city-spatial-r9/decisions.json",
+                  "pointer": "/decisions/14"
                 }
               ]
             },
@@ -3290,7 +3298,7 @@
           "id": "R03-P04",
           "title": "金墉成员与景阳山景分组",
           "kind": "spatial",
-          "caption": "金墉组与园林山景组独立排版，不表示两组相互位置。景山殿／景阳山身份保留校读；山南清暑与百果未定彼此次序。",
+          "caption": "金墉组只读成员与补句条件；山景组只读标明方位，两组不共同定位。景山殿／景阳山存校读；清暑与百果未定彼次。",
           "nodes": [
             {
               "id": "R03-P04-jinyong",
@@ -3469,6 +3477,10 @@
                 {
                   "path": "research/dual-b2/palace-gardens.json",
                   "pointer": "/evidence/10"
+                },
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/102"
                 }
               ]
             },
@@ -3485,6 +3497,10 @@
                 {
                   "path": "research/dual-b2/palace-gardens.json",
                   "pointer": "/evidence/10"
+                },
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/103"
                 }
               ]
             },
@@ -3501,6 +3517,26 @@
                 {
                   "path": "research/dual-b2/palace-gardens.json",
                   "pointer": "/evidence/10"
+                },
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/104"
+                }
+              ]
+            },
+            {
+              "id": "R03-P04-wenfeng",
+              "label": "岭上温风室",
+              "kind": "building",
+              "entity_ids": [
+                "ic_wenfeng"
+              ],
+              "basis": "relation",
+              "note": "仅在本关系窗中表达已列约束；图上间距不是古代距离。",
+              "source_inputs": [
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/101"
                 }
               ]
             }
@@ -3544,7 +3580,7 @@
                   "pointer": "/56"
                 }
               ],
-              "uncertainty": "这是校读条件说明，不在成员窗布置实测东方城址。",
+              "uncertainty": "这是校读条件说明，金墉独立组不据排版确定东侧城址。",
               "id": "R03-P04-L03",
               "from": "R03-P04-small"
             },
@@ -3642,6 +3678,10 @@
                 {
                   "path": "research/dual-b2/palace-gardens.json",
                   "pointer": "/evidence/10"
+                },
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/102"
                 }
               ],
               "uncertainty": "不同参照不自动传递；没有殿台间距、山体轮廓和古高程。"
@@ -3656,6 +3696,10 @@
                 {
                   "path": "research/dual-b2/palace-gardens.json",
                   "pointer": "/evidence/10"
+                },
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/103"
                 }
               ],
               "uncertainty": "不同参照不自动传递；没有殿台间距、山体轮廓和古高程。"
@@ -3670,9 +3714,27 @@
                 {
                   "path": "research/dual-b2/palace-gardens.json",
                   "pointer": "/evidence/10"
+                },
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/104"
                 }
               ],
               "uncertainty": "不同参照不自动传递；没有殿台间距、山体轮廓和古高程。"
+            },
+            {
+              "id": "R03-P04-L13",
+              "from": "R03-P04-wenfeng",
+              "to": "R03-P04-xihe",
+              "type": "membership",
+              "label": "羲和岭上温风室",
+              "source_inputs": [
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/101"
+                }
+              ],
+              "uncertainty": "岭上只给所属，不量高度、朝向或古坡面。"
             }
           ]
         }
@@ -4080,8 +4142,8 @@
         {
           "id": "R10-R03-10",
           "title": "景阳山景保持部分方向而不排成全序",
-          "judgment": "海西南的景山殿／景阳山仍有名物校读；以该山为参照的羲和东、姮娥西、清暑南、百果南分别保存。",
-          "map_change": "补山景组和峰上、殿侧成员；清暑与百果不互连为南北先后，名物未决主体用条件签。",
+          "judgment": "海西南的景山殿／景阳山仍有名物校读；以该山为参照的羲和东、姮娥西、清暑南、百果南分别保存。；羲和岭上的温风室与姮娥峰上的露寒馆分别归属，不同名互换",
+          "map_change": "补山景组和峰上、殿侧成员；清暑与百果不互连为南北先后，名物未决主体用条件签。；补岭上温风室，山景构件均无古代地形坐标",
           "remaining_unknown": "山与殿身份、人工地形轮廓、峰岭高差和清暑百果次序未知。",
           "phase_note": "命名和文学游赏不等于现代地貌实测或统一施工时点。",
           "source_inputs": [
@@ -4100,6 +4162,22 @@
             {
               "path": "research/dual-b8/cross-batch-review.json",
               "pointer": "/records/11"
+            },
+            {
+              "path": "data/entities.json",
+              "pointer": "/101"
+            },
+            {
+              "path": "data/entities.json",
+              "pointer": "/102"
+            },
+            {
+              "path": "data/entities.json",
+              "pointer": "/103"
+            },
+            {
+              "path": "data/entities.json",
+              "pointer": "/104"
             }
           ],
           "entity_ids": [
@@ -4111,7 +4189,8 @@
             "ic_baiguo",
             "ic_luhan",
             "ic_linjian",
-            "ic_linwei"
+            "ic_linwei",
+            "ic_wenfeng"
           ],
           "road_ids": [],
           "water_ids": []
@@ -4197,6 +4276,10 @@
                 {
                   "path": "research/v2.7/passages.json",
                   "pointer": "/passages/16"
+                },
+                {
+                  "path": "research/city-spatial-r9/decisions.json",
+                  "pointer": "/decisions/15"
                 }
               ]
             },
@@ -4419,6 +4502,10 @@
                 {
                   "path": "research/v2.7/passages.json",
                   "pointer": "/passages/1"
+                },
+                {
+                  "path": "research/city-spatial-r9/decisions.json",
+                  "pointer": "/decisions/16"
                 }
               ]
             },
@@ -4669,6 +4756,10 @@
                 {
                   "path": "data/entities.json",
                   "pointer": "/154"
+                },
+                {
+                  "path": "research/city-spatial-r9/decisions.json",
+                  "pointer": "/decisions/16"
                 }
               ],
               "uncertainty": "一里另起；不量出古城郭墙。",
@@ -7449,6 +7540,10 @@
                 {
                   "path": "research/v2.5/evidence.json",
                   "pointer": "/evidence/0"
+                },
+                {
+                  "path": "research/city-spatial-r9/decisions.json",
+                  "pointer": "/decisions/1"
                 }
               ],
               "uncertainty": "一里不确定以门、院界还是塔心量距。",
@@ -7463,6 +7558,10 @@
                 {
                   "path": "research/v2.5/evidence.json",
                   "pointer": "/evidence/0"
+                },
+                {
+                  "path": "research/city-spatial-r9/decisions.json",
+                  "pointer": "/decisions/1"
                 }
               ],
               "uncertainty": "不据当前画面读道路实宽。",
@@ -7699,6 +7798,10 @@
                 {
                   "path": "research/v2.5/evidence.json",
                   "pointer": "/evidence/2"
+                },
+                {
+                  "path": "research/city-spatial-r9/decisions.json",
+                  "pointer": "/decisions/3"
                 }
               ],
               "uncertainty": "其他署不自动加同侧边。",
@@ -7927,6 +8030,10 @@
                 {
                   "path": "research/v2.5/evidence.json",
                   "pointer": "/evidence/4"
+                },
+                {
+                  "path": "research/city-spatial-r9/decisions.json",
+                  "pointer": "/decisions/3"
                 }
               ],
               "uncertainty": "后续路侧为段落解释，不逐项升级。",
@@ -7941,6 +8048,10 @@
                 {
                   "path": "research/v2.5/evidence.json",
                   "pointer": "/evidence/4"
+                },
+                {
+                  "path": "research/city-spatial-r9/decisions.json",
+                  "pointer": "/decisions/3"
                 }
               ],
               "uncertainty": "另有太府异记，身份未合。",
@@ -8688,7 +8799,7 @@
           "id": "R08-P01",
           "title": "东阳门内：道北二署与道南昭仪",
           "kind": "spatial",
-          "caption": "太仓、导官共同道北而未由正文排定先后；治粟东南的参照对象未完全写明，暂不增加方向边。",
+          "caption": "东墙三门次序与东阳门内路侧分组；门序无门距。太仓、导官共道北不排先后，治粟东南的参照仍未定。",
           "nodes": [
             {
               "id": "R08-P01-road",
@@ -8773,6 +8884,66 @@
                   "pointer": "/evidence/3"
                 }
               ]
+            },
+            {
+              "id": "R08-P01-jianchun-gate",
+              "label": "建春门",
+              "kind": "gate",
+              "entity_ids": [
+                "gate_jianchun"
+              ],
+              "basis": "relation",
+              "note": "仅在本关系窗中表达已列约束；图上间距不是古代距离。",
+              "source_inputs": [
+                {
+                  "path": "research/dual-b6/southeast-inner.json",
+                  "pointer": "/evidence/0"
+                },
+                {
+                  "path": "research/dual-b6/southeast-outer.json",
+                  "pointer": "/evidence/0"
+                }
+              ]
+            },
+            {
+              "id": "R08-P01-dongyang-gate",
+              "label": "东阳门",
+              "kind": "gate",
+              "entity_ids": [
+                "gate_dongyang"
+              ],
+              "basis": "relation",
+              "note": "仅在本关系窗中表达已列约束；图上间距不是古代距离。",
+              "source_inputs": [
+                {
+                  "path": "research/dual-b6/southeast-inner.json",
+                  "pointer": "/evidence/0"
+                },
+                {
+                  "path": "research/dual-b6/southeast-outer.json",
+                  "pointer": "/evidence/0"
+                }
+              ]
+            },
+            {
+              "id": "R08-P01-qingyang-gate",
+              "label": "青阳／清阳门",
+              "kind": "gate",
+              "entity_ids": [
+                "gate_qingyang"
+              ],
+              "basis": "relation",
+              "note": "仅在本关系窗中表达已列约束；图上间距不是古代距离。",
+              "source_inputs": [
+                {
+                  "path": "research/dual-b6/southeast-inner.json",
+                  "pointer": "/evidence/0"
+                },
+                {
+                  "path": "research/dual-b6/southeast-outer.json",
+                  "pointer": "/evidence/0"
+                }
+              ]
             }
           ],
           "relations": [
@@ -8817,6 +8988,42 @@
               "uncertainty": "正文并列不给东西先后或共院。",
               "id": "R08-P01-L03",
               "from": "R08-P01-daoguan"
+            },
+            {
+              "id": "R08-P01-L04",
+              "from": "R08-P01-dongyang-gate",
+              "to": "R08-P01-jianchun-gate",
+              "type": "south_of",
+              "label": "东墙门序：东阳在建春南",
+              "source_inputs": [
+                {
+                  "path": "research/dual-b6/southeast-inner.json",
+                  "pointer": "/evidence/0"
+                },
+                {
+                  "path": "research/dual-b6/southeast-outer.json",
+                  "pointer": "/evidence/0"
+                }
+              ],
+              "uncertainty": "只给门序，不量墙线或门距。"
+            },
+            {
+              "id": "R08-P01-L05",
+              "from": "R08-P01-qingyang-gate",
+              "to": "R08-P01-dongyang-gate",
+              "type": "south_of",
+              "label": "东墙门序：青阳又在南",
+              "source_inputs": [
+                {
+                  "path": "research/dual-b6/southeast-inner.json",
+                  "pointer": "/evidence/0"
+                },
+                {
+                  "path": "research/dual-b6/southeast-outer.json",
+                  "pointer": "/evidence/0"
+                }
+              ],
+              "uncertainty": "青清异写不新造城门。"
             }
           ]
         },
@@ -8824,7 +9031,7 @@
           "id": "R08-P02",
           "title": "昭仪池、愿会与宜寿里",
           "kind": "spatial",
-          "caption": "愿会的西南参照是池；宜寿寺南采用回指愿会的工作读法。方向链不向后传播东阳御道路侧。",
+          "caption": "愿会西南参照昭仪池，宜寿寺南含回指条件。另组胡统在永宁南一里许，不接东阳道路，不从永宁继承路侧。",
           "nodes": [
             {
               "id": "R08-P02-zhaoyi",
@@ -8911,6 +9118,38 @@
                   "pointer": "/evidence/8"
                 }
               ]
+            },
+            {
+              "id": "R08-P02-yongning-ref",
+              "label": "永宁寺〔独立参照组〕",
+              "kind": "temple",
+              "entity_ids": [
+                "ic_yongning"
+              ],
+              "basis": "relation",
+              "note": "仅在本关系窗中表达已列约束；图上间距不是古代距离。",
+              "source_inputs": [
+                {
+                  "path": "research/dual-b6/southeast-inner.json",
+                  "pointer": "/evidence/9"
+                }
+              ]
+            },
+            {
+              "id": "R08-P02-hutong",
+              "label": "胡统寺\n塔五重记述",
+              "kind": "temple",
+              "entity_ids": [
+                "ic_hutong"
+              ],
+              "basis": "relation",
+              "note": "一里许以永宁为参照；没有道路侧别，塔的独立完工年未明。",
+              "source_inputs": [
+                {
+                  "path": "research/dual-b6/southeast-inner.json",
+                  "pointer": "/evidence/9"
+                }
+              ]
             }
           ],
           "relations": [
@@ -8983,6 +9222,20 @@
               "uncertainty": "宅改寺不证明建筑原样不动。",
               "id": "R08-P02-L05",
               "from": "R08-P02-guangming"
+            },
+            {
+              "id": "R08-P02-L06",
+              "from": "R08-P02-hutong",
+              "to": "R08-P02-yongning-ref",
+              "type": "south_of",
+              "label": "永宁南一里许",
+              "source_inputs": [
+                {
+                  "path": "research/dual-b6/southeast-inner.json",
+                  "pointer": "/evidence/9"
+                }
+              ],
+              "uncertainty": "不继承永宁道西，不量寺门或塔心间距。"
             }
           ]
         },
@@ -9310,7 +9563,7 @@
           "id": "R10-R08-01",
           "title": "门墙身份与青清异写分开",
           "judgment": "东阳、青阳属于东墙门序，开阳属于南墙东首；青／清是传本及校读异写，不是新城门。",
-          "map_change": "每条门内道路使用原门ID；三窗口不组成同一东西长街。",
+          "map_change": "补东墙三门南北次序并沿用原门ID；开阳仍属南墙东首，门内道路各自成窗，不组成统一横街。",
           "remaining_unknown": "门距、门洞形体、门内外道路连续线未知。",
           "phase_note": "城门旧故事不给北魏门楼层数和实测构造。",
           "source_inputs": [
@@ -9573,7 +9826,7 @@
           "id": "R10-R08-08",
           "title": "胡统的南距不继承永宁路侧",
           "judgment": "胡统在永宁南一里许，五重为正文塔形制；未给御道侧别和独立完工年。",
-          "map_change": "胡统在本项保留为跨区相对索引，未另绘独立关系节点；不在三条门道上任意附加道西点。",
+          "map_change": "补胡统—永宁的独立南向关系组，保留一里许与五重塔注记；不把胡统附到三条门道或继承永宁道西。",
           "remaining_unknown": "寺门、塔心或院界的量距端点，塔内址与竣工年未知。",
           "phase_note": "太后活动支持寺院活动层，不保证每个构件在整个目标窗口都已完成。",
           "source_inputs": [
@@ -10280,7 +10533,8 @@
               "label": "刘胡兄弟宅〔后归觉〕",
               "kind": "residence",
               "entity_ids": [
-                "v2_guijue"
+                "v2_guijue",
+                "house_liuhu"
               ],
               "basis": "interpretation",
               "note": "沿原群组记录，不新增独立宅址或寺院点。",
@@ -11554,7 +11808,8 @@
               "label": "高阳王雍宅〔后寺〕",
               "kind": "temple",
               "entity_ids": [
-                "v3_gaoyang"
+                "v3_gaoyang",
+                "house_gaoyang"
               ],
               "basis": "relation",
               "note": "此窗口仅按明确参照连线，里距、方位或里属不提供古代测点。",
@@ -11610,6 +11865,22 @@
                 {
                   "path": "data/entities.json",
                   "pointer": "/200"
+                }
+              ]
+            },
+            {
+              "id": "R10-P03-jin-gate",
+              "label": "津阳门〔里距参照〕",
+              "kind": "gate",
+              "entity_ids": [
+                "gate_jinyang"
+              ],
+              "basis": "relation",
+              "note": "仅在本关系窗中表达已列约束；图上间距不是古代距离。",
+              "source_inputs": [
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/205"
                 }
               ]
             }
@@ -11772,6 +12043,20 @@
                 }
               ],
               "uncertainty": "不知寺门和里内街址。"
+            },
+            {
+              "id": "R10-P03-L12",
+              "from": "R10-P03-gaoyang",
+              "to": "R10-P03-jin-gate",
+              "type": "unknown_connection",
+              "label": "津阳门外三里；路径未测",
+              "source_inputs": [
+                {
+                  "path": "data/entities.json",
+                  "pointer": "/205"
+                }
+              ],
+              "uncertainty": "与御道西是不同约束，门距不确定宅门坐标。"
             }
           ]
         },
@@ -12302,8 +12587,8 @@
         {
           "id": "R10-R10-11",
           "title": "报德门距、高阳路侧与延贤里属各归参照",
-          "judgment": "报德开阳门外三里未记道路侧别；高阳王雍宅在津阳门外三里御道西；延贤在劝学东，正觉属于延贤。",
-          "map_change": "补三组分立约束，不用两个三里把寺宅对齐；高阳保持前身宅层，正觉仅作里内成员。",
+          "judgment": "报德开阳门外三里未记道路侧别；高阳王雍宅在津阳门外三里御道西；延贤在劝学东，正觉属于延贤。；津阳门仅作该宅门外里距参照",
+          "map_change": "补三组分立约束，不用两个三里把寺宅对齐；高阳保持前身宅层，正觉仅作里内成员。；补津阳门的里距参照，不闭合门墙或路端",
           "remaining_unknown": "报德与道路的接线、两处量距端点、里界和高阳宅改寺足迹未知。",
           "phase_note": "为太后追福、高阳遇害后改寺及王肃所立分别定时，不能合成同一营造批次。",
           "source_inputs": [
@@ -12322,6 +12607,10 @@
             {
               "path": "research/roads-r62/catalog.json",
               "pointer": "/records/36"
+            },
+            {
+              "path": "data/entities.json",
+              "pointer": "/205"
             }
           ],
           "entity_ids": [
@@ -12331,7 +12620,9 @@
             "road_jinyang",
             "li_quanxue",
             "li_yanxian",
-            "v3_zhengjue"
+            "v3_zhengjue",
+            "gate_jinyang",
+            "house_gaoyang"
           ],
           "road_ids": [
             "T16"

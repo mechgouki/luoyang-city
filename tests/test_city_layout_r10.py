@@ -19,7 +19,7 @@ from city_layout_r10_contract import (
 )
 from city_layout_r10_verify import (
     BASE, CSVS, OVERVIEW, PUBLIC_INPUTS, REGIONS, SVGS, pointer, source_inputs,
-    verify, verify_csv, verify_data, verify_page, verify_svg,
+    verify, verify_csv, verify_data, verify_page, verify_source_review, verify_svg,
 )
 from panorama_v13_r2_contract import (
     HOME_ANCHOR as R9_HOME_ANCHOR,
@@ -204,6 +204,15 @@ class R10DeliveredEvidence(unittest.TestCase):
         with self.assertRaises(AssertionError):
             source_inputs(data, meta)
 
+    def test_source_review_records_are_actual_resolved_fields_with_exact_usage(self):
+        review = json.loads((self.site / FOLDER / "source-review.json").read_bytes())
+        result = verify_source_review(review, self.data)
+        self.assertEqual(result["reviewed_records"], self.data["counts"]["source_pointers"])
+        changed = copy.deepcopy(review)
+        changed["reviewed_records"][0]["canonical_record_sha256"] = "0" * 64
+        with self.assertRaises(AssertionError):
+            verify_source_review(changed, self.data)
+
     def test_native_06a_geometry_and_every_region_figure_have_actual_semantic_targets(self):
         self.assertEqual(verify_svg((self.site / OVERVIEW).read_bytes(), self.data)["source_features"], 28)
         for rid, path in zip(REGIONS, SVGS[1:], strict=True):
@@ -214,6 +223,12 @@ class R10DeliveredEvidence(unittest.TestCase):
         root = ET.fromstring((self.site / OVERVIEW).read_bytes())
         point = next(element for element in root.iter() if element.get("data-native-geometry") and element.tag.endswith("circle"))
         point.set("cx", str(float(point.get("cx")) + 1))
+        with self.assertRaises(AssertionError):
+            verify_svg(ET.tostring(root), self.data)
+        root = ET.fromstring((self.site / OVERVIEW).read_bytes())
+        line = next(element for element in root.iter() if element.get("data-native-geometry")
+                    and element.tag.endswith("}path") and element.get("stroke") != "none")
+        line.set("d", line.get("d") + " Z")
         with self.assertRaises(AssertionError):
             verify_svg(ET.tostring(root), self.data)
         root = ET.fromstring((self.site / SVGS[1]).read_bytes())
@@ -275,29 +290,62 @@ class R10DeliveredEvidence(unittest.TestCase):
         with self.assertRaises(AssertionError):
             verify(info, read)
 
-    def test_pdf_contains_thirteen_real_readable_pages_and_embedded_fonts(self):
+    def test_pdf_pages_preserve_each_svg_slice_evidence_links_and_embedded_fonts(self):
         pdf = PdfReader(io.BytesIO((self.site / PDF).read_bytes()))
-        self.assertEqual(len(pdf.pages), 13)
-        self.assertEqual(len(pdf.outline), 13)
+        region_pages, page_assignments, roots = {}, {}, {}
+        cursor = 1
+        for rid, path in zip(REGIONS, SVGS[1:], strict=True):
+            root = ET.fromstring((self.site / path).read_bytes())
+            roots[rid] = root
+            count = int(root.get("data-pdf-pages"))
+            self.assertIn(count, (1, 2))
+            region_pages[rid] = cursor
+            for offset in range(count):
+                page_assignments[cursor + offset] = (rid, offset)
+            cursor += count
+        self.assertEqual(len(pdf.pages), cursor + 1)
+        self.assertEqual(len(pdf.pages), self.meta["pdf_pages"])
+        self.assertEqual(len(pdf.pages), self.data["pdf_pages"])
+        self.assertEqual(self.meta["region_pages"], region_pages)
+
+        def outline_items(items):
+            for item in items:
+                if isinstance(item, list):
+                    yield from outline_items(item)
+                else:
+                    yield item
+
+        bookmarks = list(outline_items(pdf.outline))
+        self.assertGreaterEqual(len(bookmarks), 13)
+        for rid, index in region_pages.items():
+            self.assertTrue(any(str(item.get("/Title", "")).startswith(rid)
+                                and pdf.get_destination_page_number(item) == index for item in bookmarks),
+                            (rid, "Bookmark does not reach this region's first actual page"))
         self.assertIn("R10.1", str(pdf.metadata.get("/Title")))
         self.assertIn(self.info["source_commit"], str(pdf.metadata.get("/Keywords")))
-        seen_fonts = set()
+        seen_fonts, region_uris = set(), {rid: set() for rid in REGIONS}
+        regions = {region["id"]: region for region in self.data["regions"]}
         for index, page in enumerate(pdf.pages):
             with self.subTest(page=index + 1):
-                self.assertGreater(float(page.mediabox.width), 500)
-                self.assertGreater(float(page.mediabox.height), 500)
+                self.assertAlmostEqual(float(page.mediabox.width), 420 / 25.4 * 72, delta=.2)
+                self.assertAlmostEqual(float(page.mediabox.height), 297 / 25.4 * 72, delta=.2)
                 text = page.extract_text()
                 self.assertGreater(len(text.strip()), 40)
                 self.assertTrue(any("\u3400" <= char <= "\u9fff" for char in text), "Missing extractable Chinese text")
-                if 1 <= index <= 11:
-                    region = self.data["regions"][index - 1]
-                    self.assertIn(region["id"], text)
+                if index in page_assignments:
+                    rid, offset = page_assignments[index]
+                    region, root = regions[rid], roots[rid]
+                    self.assertIn(rid, text)
                     compact = "".join(text.split())
                     self.assertIn("".join(region["title"].split()), compact)
+                    panels = {element.get("data-panel"): element for element in root.iter() if element.get("data-panel")}
                     for panel in region["panels"]:
-                        for value in [panel["caption"], *(row["label"] for row in panel["nodes"]),
+                        box = json.loads(panels[panel["id"]].get("data-panel-bounds"))
+                        if int(box[1] // 1188) != offset:
+                            continue
+                        for value in [panel["title"], panel["caption"], *(row["label"] for row in panel["nodes"]),
                                       *(row["label"] for row in panel["relations"])]:
-                            self.assertIn("".join(value.split()), compact, (region["id"], "PDF lost figure text", value))
+                            self.assertIn("".join(value.split()), compact, (rid, offset, "PDF crop lost figure text", value))
                     uris = set()
                     for annotation in page.get("/Annots", []):
                         action = annotation.get_object().get("/A")
@@ -305,8 +353,14 @@ class R10DeliveredEvidence(unittest.TestCase):
                             action = action.get_object()
                             if action.get("/S") == "/URI":
                                 uris.add(str(action["/URI"]))
-                    self.assertLessEqual({BASE + PAGE + "#decision-" + row["id"] for row in region["decisions"]}, uris,
-                                         "PDF evidence links do not correspond to regional decisions")
+                    expected_uris = set()
+                    for element in root.iter():
+                        if element.get("data-decision") and element.get("data-link-box"):
+                            box = json.loads(element.get("data-link-box"))
+                            if int(box[1] // 1188) == offset:
+                                expected_uris.add(element.get("href"))
+                    self.assertLessEqual(expected_uris, uris, (rid, offset, "PDF evidence links were lost or placed on another crop"))
+                    region_uris[rid].update(uris)
                 resources = page["/Resources"].get_object()
                 objects = resources.get("/XObject", {})
                 if hasattr(objects, "get_object"):
@@ -328,6 +382,23 @@ class R10DeliveredEvidence(unittest.TestCase):
                                             "PDF font was not embedded")
                             seen_fonts.add(str(descriptor.get("/FontName")))
         self.assertTrue(seen_fonts)
+        for rid, uris in region_uris.items():
+            self.assertLessEqual({BASE + PAGE + "#decision-" + row["id"] for row in regions[rid]["decisions"]}, uris,
+                                 (rid, "PDF page group lost a regional decision link"))
+        destinations = []
+        for annotation in pdf.pages[0].get("/Annots", []):
+            item = annotation.get_object()
+            target = item.get("/Dest")
+            if target is None and item.get("/A"):
+                target = item["/A"].get_object().get("/D")
+            if isinstance(target, list) and target:
+                first = target[0]
+                if hasattr(first, "idnum"):
+                    destinations.extend(index for index, page in enumerate(pdf.pages)
+                                        if page.indirect_reference.idnum == first.idnum)
+                elif isinstance(first, int):
+                    destinations.append(first)
+        self.assertLessEqual(set(region_pages.values()), set(destinations), "PDF overview index misses a region or points to the wrong continuation page")
 
 
 if __name__ == "__main__":
