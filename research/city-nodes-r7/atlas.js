@@ -227,6 +227,16 @@
   });
   maps.forEach((map, key) => {
     map.figure.querySelector('.map-controls').hidden = false;
+    map.viewport.addEventListener('keydown', event => {
+      if (event.target !== map.viewport || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      const delta = { ArrowLeft: [-40, 0], ArrowRight: [40, 0], ArrowUp: [0, -40], ArrowDown: [0, 40] }[event.key];
+      if (!delta) return;
+      // Native animated key scrolling can continue after "reset" and move the
+      // map again. Finish each viewport key step before the next interaction.
+      // Events from SVG links retain their normal keyboard behavior.
+      event.preventDefault();
+      map.viewport.scrollBy({ left: delta[0], top: delta[1], behavior: 'instant' });
+    });
     map.slider.addEventListener('input', () => {
       sizeMap(map);
       const url = new URL(location.href);
@@ -241,7 +251,7 @@
       clearSelection();
       map.slider.value = '100';
       sizeMap(map);
-      map.viewport.scrollTo({ left: 0, top: 0, behavior: 'auto' });
+      map.viewport.scrollTo({ left: 0, top: 0, behavior: 'instant' });
       const url = new URL(location.href);
       ['segment', 'zoom', 'guide'].forEach(name => url.searchParams.delete(name));
       url.searchParams.set('map', key);
