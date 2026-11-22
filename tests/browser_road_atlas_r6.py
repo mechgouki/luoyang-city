@@ -27,7 +27,29 @@ def exercise(browser, base, device, output):
         report["screenshots"][name] = hashlib.sha256(raw).hexdigest()
 
     def fits(page):
-        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), page.url
+        # The preceding text/count assertions can pass as soon as the new HTML
+        # arrives, before its stylesheet and deferred script finish loading.
+        # Measure the loaded document, without retrying an overflowing layout.
+        page.wait_for_load_state("load", timeout=30_000)
+        layout = page.evaluate("""() => ({
+            ready_state: document.readyState,
+            document_width: document.documentElement.scrollWidth,
+            client_width: document.documentElement.clientWidth,
+            inner_width: innerWidth,
+            body_margin: getComputedStyle(document.body).margin,
+            map_overflow_x: getComputedStyle(document.getElementById('map-scroll')).overflowX
+        })""")
+        if layout["document_width"] > layout["inner_width"] + 1:
+            layout["overflow_elements"] = page.evaluate("""() => Array.from(document.querySelectorAll(
+                'body, header, main, .wrap, .figure, #map-scroll, #road-map, .reading, .filter, .road summary, .supplements, .audit, .downloads, footer'
+            )).map(el => {
+                const box = el.getBoundingClientRect();
+                return {tag: el.tagName, id: el.id, class_name: el.getAttribute('class'),
+                    left: box.left, right: box.right, width: box.width,
+                    overflow_x: getComputedStyle(el).overflowX};
+            }).filter(box => box.left < -1 || box.right > innerWidth + 1).slice(0, 20)""")
+        report.setdefault("layout_checks", []).append(dict(url=page.url, **layout))
+        assert layout["document_width"] <= layout["inner_width"] + 1, dict(url=page.url, **layout)
 
     def count(page, number):
         expect(page.locator("details[data-road]:visible")).to_have_count(number)
