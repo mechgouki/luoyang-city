@@ -6,7 +6,7 @@ import shutil
 from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
 
-from city_nodes_r7_contract import BASE, BUNDLE, FOLDER, KEY, MANIFEST, PAGE, ROAD_ENTRY, VERSION, add_home, restore_home
+from city_nodes_r7_contract import BASE, BUILD_CONTROL_FILES, BUNDLE, FOLDER, KEY, MANIFEST, PAGE, ROAD_ENTRY, VERSION, add_home, restore_home
 from city_nodes_r7_data import build_data
 from city_nodes_r7_maps import build_maps
 from city_nodes_r7_page import make_page
@@ -97,7 +97,10 @@ def build(site=ROOT / "_site"):
     protected = {path: expected for path, expected in info["files_sha256"].items()
                  if path not in excluded and not path.startswith(FOLDER + "/")}
     for path, expected in protected.items():
-        assert sha(site / path) == expected, "Earlier public resource changed: " + path
+        assert sha(site / path) == expected, "Earlier build input or public resource changed: " + path
+    # Preserve control-file bytes locally without presenting a consumed Pages
+    # marker as a downloadable predecessor resource.
+    build_controls = {path: protected.pop(path) for path in BUILD_CONTROL_FILES}
     meta = dict(version=VERSION, research_version="R7.1", source_commit=info["source_commit"],
                 page=PAGE, manifest=MANIFEST, bundle=BUNDLE,
                 download_files=[*(FOLDER + "/" + key + ".svg" for key in svgs), FOLDER + "/segments.csv", FOLDER + "/readings.json", MANIFEST, BUNDLE],
@@ -106,7 +109,8 @@ def build(site=ROOT / "_site"):
                 source_frames_registered_together=False, homepage_revision=V12.revision,
                 source_inputs_sha256=data["source_inputs_sha256"], published_inputs_sha256=data["published_inputs_sha256"],
                 files_sha256={path: sha(site / path) for path in assets},
-                protected_files_sha256=protected, predecessor_homepage=previous_home,
+                protected_files_sha256=protected, build_control_files_sha256=build_controls,
+                predecessor_homepage=previous_home,
                 predecessor_road_page=dict(path=ROAD_PAGE, archive=road_archive, sha256=digest(road_before)),
                 hero=hero, scope=data["scope"])
     dump(site / MANIFEST, meta)

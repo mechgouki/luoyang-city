@@ -7,6 +7,9 @@ FOLDER = "city-nodes"
 MANIFEST = FOLDER + "/manifest.json"
 BUNDLE = "downloads/luoyang-city-nodes.zip"
 BASE = "https://mechgouki.github.io/luoyang-city/"
+# Pages consumes this exact root marker while publishing; it is not an HTTP
+# resource. Other dotfiles, including a nested .nojekyll, are not excluded.
+BUILD_CONTROL_FILES = frozenset({".nojekyll"})
 
 HOME_EDITS = tuple((a.encode(), b.encode()) for a, b in (
     ("北魏洛阳 · 研究性复原示意 · 全幅取景版</figcaption>",
