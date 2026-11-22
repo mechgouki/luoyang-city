@@ -246,6 +246,14 @@ def plate(data, old_svg):
     text(a, 32, 3350, 'X01 西明—青阳大道局部发掘：与R03候选对应，原测线未取得；不重复算成另一条大道。', 16, TEAL)
     text(root, 32, 3380, 'R6.2 · 本批完整登记现有材料；不是古代道路总数。1993年602—608页及完整附图仍待取得。', 16, AMBER)
     text(root, 32, 3410, '全部原始读点、时代、报告量值、桥渠约束与缺件见逐路表。地理配准为零；未新增盛时北魏古岸线。', 14, MUTED)
+    # Stable reading anchors point into the existing SVG, never to invented city coordinates.
+    anchored = set()
+    for anchor in root.iter('{' + NS + '}a'):
+        rid = anchor.get('data-record-ref')
+        if rid and rid not in anchored:
+            anchor.set('id', 'map-record-' + rid)
+            anchored.add(rid)
+    assert anchored == {row['id'] for row in records}, 'Every evidence record must return to its existing source or index position'
     return ET.tostring(root, encoding='unicode') + '\n'
 
 
@@ -280,6 +288,9 @@ def card(row, data):
         else:
             water.append('<p>' + escape(human(item)) + '</p>')
     geometry = '保留独立来源图读点；图的性质与限制见出处和定位说明。' if row['geometry_refs'] else '尚无可直接描绘的原图路段；以文献或发掘地段关系登记。'
+    map_label = '在图上看 ' if row['geometry_refs'] else '查看关系／索引位置 '
+    map_return = ('<a class="map-return" href="#map-record-' + row['id'] + '" data-show-record="' +
+                  row['id'] + '">' + map_label + row['id'] + ' ↑</a>')
     names = {r['id']:r['name'] for r in data['records']}
     neighbors = set()
     for relation in data.get('identity_crosswalk', []):
@@ -290,7 +301,7 @@ def card(row, data):
     related = ' · '.join(link('#'+rid, rid+' '+names[rid]) for rid in sorted(neighbors) if rid in names)
     if related:
         related = '<p class="related"><strong>对照记录：</strong>' + related + '</p>'
-    return f'''<details class="road" data-record="{row['id']}" data-group="{row['group']}" id="{row['id']}"><summary><span class="road-id">{row['id']}</span><span class="road-title">{escape(row['name'])}</span><span class="badge">{GROUPS[row['group']]}</span></summary><div class="road-body"><p class="geometry-note">{geometry}</p><dl class="facts">{facts}</dl>{related}<div class="constraint"><strong>桥渠约束与仍待证部分</strong>{''.join(water)}<p>{escape(human(row['missing_evidence']))}</p></div><div class="sources"><strong>出处、页码与图号</strong>{source_html(data,row['source_refs'])}</div></div></details>'''
+    return f'''<details class="road" data-record="{row['id']}" data-group="{row['group']}" id="{row['id']}"><summary><span class="road-id">{row['id']}</span><span class="road-title">{escape(row['name'])}</span><span class="badge">{GROUPS[row['group']]}</span></summary><div class="road-body"><p class="geometry-note">{geometry}</p><p>{map_return}</p><dl class="facts">{facts}</dl>{related}<div class="constraint"><strong>桥渠约束与仍待证部分</strong>{''.join(water)}<p>{escape(human(row['missing_evidence']))}</p></div><div class="sources"><strong>出处、页码与图号</strong>{source_html(data,row['source_refs'])}</div></div></details>'''
 
 
 def table(rows, columns):
@@ -316,7 +327,7 @@ def make_page(data, svg, commit, offline=False):
 <header><div class="wrap">{link(prefix,'盛时洛阳 · 城市复原')}<nav>{link(prefix+'luoyang-road-atlas.html','主干道来源图')}{link(prefix+'luoyang-water-atlas.html','水系定位')}{link(prefix+'prosperity-city-panorama.html','城市全景')}{link('#downloads','下载图表')}</nav></div></header>
 <main class="wrap"><section class="mast"><div><p class="eyebrow">北魏都城研究 / 516—528 年 / R6.2</p><h1>全城道路总览</h1></div><p class="lead">从御道、宫路到坊街、门道与桥道，把现有材料一次收齐。每条记录都能回查时代、出处、路段和端点；同路候选并列核对，原图断点继续保留。</p></section>
 <div class="numbers">{numbers}</div><p class="scope-note"><strong>{len(data['records'])} 条是证据记录数，不是独立古代道路总数。</strong> 21条旧主干道来源与21个既有文献道路实体采用不同统计口径；同路、同段或相接关系见逐路表。缺原件的部分已列入，不代表已复原全部古代街巷。</p>
-<figure class="figure"><div class="map-tools" id="map-tools" hidden><label><input id="show-source" type="checkbox" checked><span class="key-line"></span>图面路迹</label><label><input id="show-inferred" type="checkbox" checked><span class="key-line inferred"></span>示意／推定</label><label><input id="show-unknown" type="checkbox" checked><span class="key-point"></span>端点未知</label><label for="zoom">放大 <input id="zoom" type="range" min="100" max="220" step="20" value="100"><output id="zoom-value">100%</output></label><div class="panel-nav"><button data-map-panel="0,0">内城与外围</button><button data-map-panel="0,850">司马门与永巷</button><button data-map-panel="0,1450">宫路与门道</button><button data-map-panel="0,2130">坊街与桥道</button><button data-map-panel="0,2640">文献道路</button></div></div><div id="map-scroll" tabindex="0" aria-label="全城道路总图，可上下左右滚动或用分区按钮阅读">{inline}</div><figcaption><p><strong>一张总图，多幅独立来源图框。</strong> 实线说明来源图上有可读笔画；其中后世复原样线仍保留其性质。虚线与永巷箭杆表示示意关系，空圈表示古路端点或接续仍未知。下方局部卡片与文献索引只按阅读顺序排版。点选编号可展开证据。</p>{link('./all-roads/city-all-roads.svg','打开完整矢量图 ↗')}</figcaption></figure>
+<figure class="figure"><div class="map-tools" id="map-tools" hidden><label><input id="show-source" type="checkbox" checked><span class="key-line"></span>图面路迹</label><label><input id="show-inferred" type="checkbox" checked><span class="key-line inferred"></span>示意／推定</label><label><input id="show-unknown" type="checkbox" checked><span class="key-point"></span>端点未知</label><label for="zoom">放大 <input id="zoom" type="range" min="100" max="220" step="20" value="100"><output id="zoom-value">100%</output></label><div class="panel-nav"><button data-map-panel="0,0">内城与外围</button><button data-map-panel="0,850">司马门与永巷</button><button data-map-panel="0,1450">宫路与门道</button><button data-map-panel="0,2130">坊街与桥道</button><button data-map-panel="0,2640">文献道路</button></div></div><div id="map-scroll" tabindex="0" aria-label="全城道路总图，可上下左右滚动或用分区按钮阅读">{inline}</div><p id="map-status" class="map-status" aria-live="polite" hidden></p><figcaption><p><strong>一张总图，多幅独立来源图框。</strong> 实线说明来源图上有可读笔画；其中后世复原样线仍保留其性质。虚线与永巷箭杆表示示意关系，空圈表示古路端点或接续仍未知。下方局部卡片与文献索引只按阅读顺序排版。点选编号可展开证据。</p>{link('./all-roads/city-all-roads.svg','打开完整矢量图 ↗')}</figcaption></figure>
 <div class="reading"><article><h3>完整登记，不抹平差别</h3><p>全部既有道路实体、桥实体及有依据的门道一起核对。宫城阊阖门与西垣阊阖门、道路与门道、同路的不同出处分别保存。</p></article><article><h3>宽度必须跟着路段读</h3><p>司马门内道路、仓区内路、永巷各期路面、坊门缺口与车辙带使用不同量值。探沟长宽和遗迹残长均不转写成整条街道尺寸。</p></article><article><h3>跨水处保留未知</h3><p>五处桥道逐项登记。永桥两岸登陆点、谷水／阳渠部分分合点继续沿用水系等级；不凭道路方向补出古岸线与桥头。</p></article></div>
 <section id="register"><div class="section-head"><h2>全部逐路证据</h2><p>可按编号、路名、城门、桥渠查找</p></div><div class="filter" id="filter" hidden><label for="query">查找 <input id="query" type="search" placeholder="如 T04、永巷、白马寺"></label><label for="group-filter">类别 <select id="group-filter"><option value="">全部类别</option>{''.join('<option value="'+g+'">'+n+'</option>' for g,n in GROUPS.items())}</select></label><button id="clear" type="button">显示全部</button><output id="count" aria-live="polite">{len(data['records'])} / {len(data['records'])} 条证据记录</output></div><noscript><p>可直接点开每条记录；地图编号和下载无需脚本。</p></noscript><p id="empty" class="empty" hidden>没有符合条件的记录。可清空条件后继续查阅。</p>{registers}</section>
 <section class="audit" id="coverage"><h2>全库覆盖核对</h2><p>逐项核对原实体库及本次补入的局部路段。寺院、里坊引文中的道路地址指向相应道路记录，不把每次道路提及另算一条路；可下载完整覆盖表。</p><details><summary>展开 {len(data['coverage'])} 项覆盖记录</summary>{coverage}</details></section>

@@ -1,0 +1,805 @@
+{
+  "schema": "luoyang-node-review-v1",
+  "id": "jianchun",
+  "title": "建春门、三桥与城东水道",
+  "question": "出建春门后，三座石桥分别跨什么关系，527年变化和南北渠线解释怎样影响复原？",
+  "summary": "建春石桥、南北通行的东石桥、七里桥必须分开。527年大雨受损只归建春石桥。道路北侧渠迹与北魏渠在路南的解释分别表达；门下汉晋暗渠和七里涧异说均不补成已证北魏接线。",
+  "reviewed_on": "2026-11-22",
+  "baseline_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "target_years": [
+    516,
+    528
+  ],
+  "road_ids": [
+    "O07",
+    "T09",
+    "T10",
+    "T22",
+    "T26",
+    "G10",
+    "B01",
+    "B02",
+    "B03"
+  ],
+  "water_ids": [
+    "W04",
+    "W06",
+    "W12",
+    "W31"
+  ],
+  "entity_ids": [
+    "gate_jianchun",
+    "bridge_jianchun",
+    "bridge_eaststone",
+    "bridge_qili",
+    "road_jianchun",
+    "road_eaststone_north",
+    "li_jianyang",
+    "li_suimin",
+    "gate_sanmen"
+  ],
+  "source_refs": [
+    {
+      "id": "jc_zhou2",
+      "title": "杨衒之《洛阳伽蓝记》卷二，周祖谟校释电子文本",
+      "url": "https://deerpark.app/cbeta/B0077/2",
+      "locator": "B12n0077_p0099a05—14；0100a04—06；0106a11—0107a11；0111a04—08",
+      "access_status": "本轮实际取得HTML，剔除现代夹注后重读三桥上下文",
+      "checked_on": "2026-11-22",
+      "source_kind": "classical_primary_text_digital_edition",
+      "response_sha256": "f876bc2fc1e821de8e35f7fc8dbda6d2df3798e394a5370641b24b7646ff9d3a",
+      "response_bytes": 934090
+    },
+    {
+      "id": "jc_qianfig2",
+      "title": "钱国祥《汉魏洛阳城城门与宫院门的考察研究》图二",
+      "url": "https://www.sohu.com/a/298263205_199807",
+      "locator": "原刊《华夏考古》2018(6)，北魏内城建春门遗址平面图；考古所账号2019-02-28转载",
+      "access_status": "本轮文章入口403；图像独立公开地址200，已目视复核且哈希同旧审计。未取得1988原刊整图",
+      "checked_on": "2026-11-22",
+      "source_kind": "researcher_publication_figure_in_institutional_reprint",
+      "figure_url": "https://5b0988e595225.cdn.sohucs.com/images/20190228/98357df099984848b60a9c704da175dd.jpeg",
+      "figure_sha256": "1fa5f90c42aa1f7a0c595f412b817cfaac6b039dd21d9ee4183fe12347e52e80",
+      "figure_bytes": 25056,
+      "figure_size_px": [
+        288,
+        525
+      ],
+      "figure_storage": "link_only_not_republished"
+    },
+    {
+      "id": "jc_map06a",
+      "title": "2012保护管理规划图06a中的建春门图符",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=3457",
+      "locator": "Cnm-8；现有geographic-evidence/features/20",
+      "access_status": "本轮复核既有图符提取；未作新的地理配准",
+      "checked_on": "2026-11-22",
+      "source_kind": "existing_project_extraction_of_primary_management_map"
+    },
+    {
+      "id": "jc_huang2026",
+      "title": "黄学超《汉魏洛阳城周边的水利建设》",
+      "url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+      "locator": "《中国历史地理论丛》2026(3):28—42+52；第一节图1、第三节第一项图4，2021校勘来源见官网注释",
+      "access_status": "本轮官网检索可见元数据及注释；转载直取403。南北分期及图1、4解释沿用已核项目摘录，不记作重获全文",
+      "checked_on": "2026-11-22",
+      "source_kind": "research_article_with_prior_project_extraction",
+      "prior_fulltext_url": "https://www.sohu.com/a/1082362449_121124389"
+    },
+    {
+      "id": "jc_collation",
+      "title": "城东水道既有校读：黄学超读法与熊会贞按语",
+      "url": "https://github.com/mechgouki/luoyang-city/blob/d33474764aab494ef8a61e243f2c919a0e4f6288/research/prosperity-v4/water-467/water-01-collation.json",
+      "locator": "claims/0—2；原文来源、图源及校读边界均见该逐条记录",
+      "access_status": "本轮重读现有对照，不声称取得杨萧杨2021原页或2011勘探原图",
+      "checked_on": "2026-11-22",
+      "source_kind": "project_audit_of_named_scholarly_interpretations"
+    },
+    {
+      "id": "jc_sj16",
+      "title": "《水经注》卷十六，马市石桥、七里涧及旅人桥",
+      "url": "https://zh.wikisource.org/wiki/水經注/16",
+      "locator": "建春门、乐里道、马市桥及七里涧段；朱超石书太康三年记载",
+      "access_status": "本轮网页入口可达，具体句义与异文采用已存crossings和water-01逐条校读；未取得原版书影",
+      "checked_on": "2026-11-22",
+      "source_kind": "prior_project_extraction_of_classical_primary_text"
+    },
+    {
+      "id": "jc_jin3",
+      "title": "《晋书》卷三武帝纪",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷003",
+      "locator": "泰始十年冬十一月七里涧石桥条",
+      "access_status": "沿用crossings中已登记原文出处，本轮未重新取得全卷",
+      "checked_on": "2026-11-22",
+      "source_kind": "prior_project_extraction_of_classical_primary_text"
+    },
+    {
+      "id": "jc_1993",
+      "title": "中国社科院考古所洛阳汉魏城队《北魏洛阳外廓城和水道的勘查》",
+      "url": "https://www.cqvip.com/doc/journal/1002554709",
+      "locator": "《考古》1993(7):602—608及完整《汉魏洛阳城遗址及地形图》",
+      "access_status": "已有原刊目录与摘要，全文及完整附图未得。本轮一次题名/PDF检索未取得新原件，不重复旧失败入口",
+      "checked_on": "2026-11-22",
+      "source_kind": "original_report_not_acquired"
+    }
+  ],
+  "text_checks": [
+    {
+      "id": "JC-TEXT-01",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "locator": "0099a05—14，明悬尼寺条",
+      "excerpt": "在建春門外石橋南。……漢陽嘉四年將作大匠馬憲造。……孝昌三年大雨頹橋，南柱始埋沒，道北二柱，至今猶存。",
+      "reading": "135年铭与527年事件均属于本段建春门外石桥；不套给后文东石桥和七里桥。"
+    },
+    {
+      "id": "JC-TEXT-02",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "locator": "0106a11—0107a01，东石桥及桥北大道",
+      "excerpt": "出建春門外一里餘，至東石橋。南北而行，晉太康元年造。……橋北大道西有建陽里，大道東有綏民里。",
+      "reading": "桥的南北通行与桥北大道两侧坊里为明文。出门一里余不换算为桥心坐标，也不能指定未写明的精确行进折线。"
+    },
+    {
+      "id": "JC-TEXT-03",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "locator": "0107a08—11，魏昌尼寺后",
+      "excerpt": "東臨石橋。此橋南北行。晉太康元年中朝時市南橋也。……石橋南道有景興尼寺。",
+      "reading": "同一叙述再次给出桥向及桥南道路。景兴尼寺的年代不自动成为道路层位。"
+    },
+    {
+      "id": "JC-TEXT-04",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "locator": "0111a04、0111a08",
+      "excerpt": "崇義里東有七里橋，以石為之。……七里橋東一里，郭門開三道，時人號為三門。",
+      "reading": "桥名七里不等于建春门至桥七里；桥东一里指向郭门，是另一段起讫。"
+    },
+    {
+      "id": "JC-TEXT-05",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "locator": "0100a04—06，龙华寺条",
+      "excerpt": "在建春門外陽渠南。……陽渠北有建陽里。",
+      "reading": "寺在渠南、里在渠北为局部方向，不能仅凭共享建阳里一名反推整条道路与水道的无折线连续关系。"
+    }
+  ],
+  "figure_check": {
+    "source_id": "jc_qianfig2",
+    "rechecked_on": "2026-11-22",
+    "visually_read_this_round": true,
+    "readable_features": [
+      "北箭头及0—3米图尺",
+      "南北城门墩台和两道隔墙",
+      "北部排水暗渠",
+      "门道路土、车辙、础坑及中部淤土"
+    ],
+    "identity": "同名建春门局部遗迹图；不是外郭御道或三桥联测图",
+    "accepted_control_pairs": [],
+    "scope": "图上可见构件不等于全部同期。汉晋暗渠的层位解释沿用既有报告摘录，图像本身不证明516—528继续通水。"
+  },
+  "findings": [
+    {
+      "id": "JC01",
+      "title": "三桥各有叙述，不合成一座或一条串线",
+      "public_label": "三桥分列各守出处",
+      "claim": "建春门外石桥、东石桥、七里桥在《伽蓝记》分段出现；135年铭属于第一桥，280年南北通行桥属于东石桥。马市石桥与旅人桥的跨书比定分别保留。",
+      "basis_kind": "documentary",
+      "period": "汉135、西晋280营造记载是前史；北魏叙述分别归属各桥",
+      "source_ids": [
+        "jc_zhou2",
+        "jc_sj16"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/text_checks/0"
+        },
+        {
+          "path": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/text_checks/1"
+        },
+        {
+          "path": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/text_checks/3"
+        },
+        {
+          "path": "research/prosperity-v4/network-462/crossings.json",
+          "pointer": "/crossings/0"
+        },
+        {
+          "path": "research/prosperity-v4/network-462/crossings.json",
+          "pointer": "/crossings/1"
+        },
+        {
+          "path": "research/prosperity-v4/network-462/crossings.json",
+          "pointer": "/crossings/2"
+        }
+      ],
+      "drawing_decision": "B01、B02、B03独立节点；马市／旅人使用候选别名，三桥不画成一条东西道路上的等距三点。",
+      "change_from_prior": "把旧三桥区分带入同一读图入口，并明确桥向使其不能串成无条件直线。",
+      "limitation": "桥基、桥头及水道共同实测控制点均未取得；同名比定不生成同物主键。",
+      "road_ids": [
+        "B01",
+        "B02",
+        "B03"
+      ],
+      "water_ids": [
+        "W04",
+        "W06",
+        "W31"
+      ]
+    },
+    {
+      "id": "JC02",
+      "title": "527年大雨事件只改变第一桥状态",
+      "public_label": "527受损只归建春桥",
+      "claim": "孝昌三年（527）大雨颓桥与南柱埋没承接建春门外石桥；不扩散为全部城东桥梁受损。是否于528年前修复，现有材料未定。",
+      "basis_kind": "temporal",
+      "period": "516—526：本条未记同一受损事件；527—528：记录受损，修复状态未知",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/text_checks/0"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/79"
+        },
+        {
+          "path": "research/prosperity-v4/street-clusters-p453.json",
+          "pointer": "/clusters/1/temporal_events/0"
+        }
+      ],
+      "drawing_decision": "B01加527事件标识；516—528综合图不得保证该桥全时窗完好，B02、B03不套同标。",
+      "change_from_prior": "把时间事件直接映射到对应桥和目标时窗，不把纪年仅留在注释。",
+      "limitation": "不能由未记受损推定此前各年始终畅通，也不能由未记修复断言之后永久废弃。",
+      "road_ids": [
+        "B01"
+      ],
+      "water_ids": [
+        "W04",
+        "W06"
+      ]
+    },
+    {
+      "id": "JC03",
+      "title": "东石桥的南北通行与桥北大道",
+      "public_label": "东石桥南北通行",
+      "claim": "东石桥南北通行、桥北大道西为建阳里而东为绥民里，均为明文；T10桥北大道与T09建春门外御道保留不同对象，具体交叉位置属于研究复原。",
+      "basis_kind": "documentary",
+      "period": "北魏记述并追溯西晋太康元年；具体桥身沿用和路层未分年",
+      "source_ids": [
+        "jc_zhou2",
+        "jc_huang2026"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/text_checks/1"
+        },
+        {
+          "path": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/text_checks/2"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/29"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/30"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/42"
+        },
+        {
+          "path": "research/prosperity-v4/network-462/crossings.json",
+          "pointer": "/crossings/1"
+        }
+      ],
+      "drawing_decision": "关系图让东石桥保留南北桥向，北接大道两侧里坊；与东西御道的接点用推定标记。",
+      "change_from_prior": "将确定桥向与作者推定交叉口拆开，避免俯瞰图把桥转为东西向。",
+      "limitation": "路口到桥的距离、路缘、桥头及T22与T10跨桥连续路面未实测。",
+      "road_ids": [
+        "T09",
+        "T10",
+        "T22",
+        "B02"
+      ],
+      "water_ids": [
+        "W06"
+      ]
+    },
+    {
+      "id": "JC04",
+      "title": "七里桥的两个里程起点与营造异说",
+      "public_label": "七里桥里程不混用",
+      "claim": "七里桥在崇义里东，桥东一里至三门。七里是桥名；朱超石书所述距洛阳宫六七里另有起点。既有《晋书》274年与《水经注》引书282年营造记载并存。",
+      "basis_kind": "documentary",
+      "period": "北魏地望叙述；274／282为早期营造异说，不擅定一条为重修",
+      "source_ids": [
+        "jc_zhou2",
+        "jc_sj16",
+        "jc_jin3"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/text_checks/3"
+        },
+        {
+          "path": "research/prosperity-v4/network-462/crossings.json",
+          "pointer": "/crossings/2"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/74"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/81"
+        }
+      ],
+      "drawing_decision": "B03至G10只标向东一里原文；不从建春门量出七里固定桥位，不根据年差制造两座同名桥。",
+      "change_from_prior": "把桥名、两段原文距离和年代异说一起约束绘图。",
+      "limitation": "未取得能把旅人桥与七里桥归一的桥址铭、桥基分期和联测图。",
+      "road_ids": [
+        "B03",
+        "G10"
+      ],
+      "water_ids": [
+        "W31",
+        "W06"
+      ]
+    },
+    {
+      "id": "JC05",
+      "title": "路北渠迹与北魏路南水线分开",
+      "public_label": "渠迹与分期解释分开",
+      "claim": "既有调查材料叙述建春门外御道北侧宽渠；把其主要分为东汉、将西晋至北魏阳渠置于御道南侧，是黄学超据桥向等材料提出的解释。两者不能作为同一时期两条已测平行河线。",
+      "basis_kind": "interpretation",
+      "period": "北侧遗迹宽年代记录与东汉／西晋至北魏分期解释分层",
+      "source_ids": [
+        "jc_huang2026",
+        "jc_1993",
+        "jc_zhou2"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v4/network-462/crossings.json",
+          "pointer": "/period_comparison"
+        },
+        {
+          "path": "research/roads-r62/catalog.json",
+          "pointer": "/records/14"
+        },
+        {
+          "path": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/text_checks/4"
+        },
+        {
+          "path": "research/roads-r6/source-1993-audit.json",
+          "pointer": "/route_missing_evidence/6"
+        }
+      ],
+      "drawing_decision": "把北侧调查记录与南侧复原分别列入图例；南侧画关系提示，避免画成已测岸线。",
+      "change_from_prior": "将路与渠的分期差异变成可见的两层，而非一条无年代蓝线。",
+      "limitation": "1993完整附图和探孔、2011原页未得；不能判断每一段宽渠的516—528水况。",
+      "road_ids": [
+        "O07",
+        "T09",
+        "B02"
+      ],
+      "water_ids": [
+        "W06",
+        "W12"
+      ]
+    },
+    {
+      "id": "JC06",
+      "title": "七里涧两种校读不能接成一个水网",
+      "public_label": "七里涧两读并列",
+      "claim": "黄学超援杨萧杨校读，把七里涧段移接马市桥后，解释为北来支流；熊会贞按语依传本文序解释为城北东水下流异名。两种拓扑不合并成鸿池东出口到七里桥的确定水线。",
+      "basis_kind": "interpretation",
+      "period": "学术校读及复原假说，均不新增516—528岸线",
+      "source_ids": [
+        "jc_collation",
+        "jc_huang2026",
+        "jc_sj16"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v4/water-467/water-01-collation.json",
+          "pointer": "/claims/0"
+        },
+        {
+          "path": "research/prosperity-v4/water-467/water-01-collation.json",
+          "pointer": "/claims/1"
+        },
+        {
+          "path": "research/prosperity-v4/water-467/water-01-collation.json",
+          "pointer": "/claims/2"
+        },
+        {
+          "path": "research/prosperity-v4/water-467/water-01-collation.json",
+          "pointer": "/affected_scope/1"
+        }
+      ],
+      "drawing_decision": "并列两个有署名的关系方案；七里涧、旅人桥同一性与汇口都保留解释标记。",
+      "change_from_prior": "把已取得的对立校读真正转为读图选项，保留区域图既用黄氏读法的来源。",
+      "limitation": "杨萧杨2021原书358—369页未得，移接尾界未逐句核定；不借此重绘鸿池出口。",
+      "road_ids": [
+        "O07",
+        "T09",
+        "B02",
+        "B03"
+      ],
+      "water_ids": [
+        "W06",
+        "W31"
+      ]
+    },
+    {
+      "id": "JC07",
+      "title": "建春门下层暗渠与外侧阳渠不能直连",
+      "public_label": "下层暗渠不补接线",
+      "claim": "钱2018图二可读北道下的排水暗渠；既有报道把该砖石渠归汉晋下层。它不直接证明北魏门址继续通水，也没有门下渠到门外阳渠、石桥的共同控制。",
+      "basis_kind": "negative_control",
+      "period": "汉晋下层暗渠与北魏门址分期；516—528通流未证",
+      "source_ids": [
+        "jc_qianfig2",
+        "jc_map06a"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/city-nodes-r7/reviews/jianchun.json",
+          "pointer": "/figure_check"
+        },
+        {
+          "path": "research/prosperity-v4/backbone-469/jianchun-plan-audit.json",
+          "pointer": "/phase_and_structure/northern_passage_underlying_drain"
+        },
+        {
+          "path": "research/prosperity-v4/backbone-469/jianchun-plan-audit.json",
+          "pointer": "/candidate_control_pairs/3"
+        },
+        {
+          "path": "research/prosperity-v4/backbone-469/jianchun-plan-audit.json",
+          "pointer": "/candidate_control_pairs/4"
+        }
+      ],
+      "drawing_decision": "只在独立局部图说明暗渠层位，不从门符向B01或W06画实线水道。",
+      "change_from_prior": "将既有地层限制用于本轮水陆连接取舍，阻止图上邻接被读作同期贯通。",
+      "limitation": "图尺只对局部图有效；门道残宽、各道宽度与隔墙宽不得拼成闭合整门量测。",
+      "road_ids": [
+        "O07",
+        "T09",
+        "B01"
+      ],
+      "water_ids": [
+        "W04",
+        "W06",
+        "W12"
+      ]
+    },
+    {
+      "id": "JC08",
+      "title": "门符、局部图与外郭测线保持独立",
+      "public_label": "门图与桥路尚无联测",
+      "claim": "图06a建春门仅为概化门符；钱2018图二是局部遗迹平面；1993原始道路末测点与完整附图仍缺。现有材料未提供可接受的跨图控制点，无法由同名门址补出三桥或东郭门坐标。",
+      "basis_kind": "source_geometry",
+      "period": "来源图跨东汉至北魏；局部遗迹与北魏道路逐段同期仍待核",
+      "source_ids": [
+        "jc_map06a",
+        "jc_qianfig2",
+        "jc_1993"
+      ],
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v1/geographic-evidence.json",
+          "pointer": "/features/20"
+        },
+        {
+          "path": "research/prosperity-v4/backbone-469/jianchun-plan-audit.json",
+          "pointer": "/read_status"
+        },
+        {
+          "path": "research/prosperity-v4/backbone-469/jianchun-plan-audit.json",
+          "pointer": "/candidate_control_pairs"
+        },
+        {
+          "path": "research/roads-r6/source-1993-audit.json",
+          "pointer": "/required_original_pages"
+        },
+        {
+          "path": "research/roads-r6/source-1993-audit.json",
+          "pointer": "/route_missing_evidence/6"
+        }
+      ],
+      "drawing_decision": "同一页联读独立图框与关系示意；未知端点用空心标识，不以图框边缘或推定郭门封闭道路。",
+      "change_from_prior": "将不可配准的具体原因与可用门符同时呈现；本次不增加坐标。",
+      "limitation": "仍缺沿O07最后探孔、门阙路缘及过渠处测线。T26乐里道句主语为水，不用作道路方向补线。",
+      "road_ids": [
+        "O07",
+        "T09",
+        "T26",
+        "G10",
+        "B01",
+        "B02",
+        "B03"
+      ],
+      "water_ids": [
+        "W06",
+        "W12",
+        "W31"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "JC-R01",
+      "from": "建春石桥",
+      "to": "建春门",
+      "relation": "位于门外",
+      "status": "explicit",
+      "period": "北魏叙述；527受损另标",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "drawing_decision": "方向关系，不给桥头坐标",
+      "entity_ids": [
+        "bridge_jianchun",
+        "gate_jianchun"
+      ],
+      "road_ids": [
+        "B01"
+      ]
+    },
+    {
+      "id": "JC-R02",
+      "from": "东石桥",
+      "to": "桥北大道",
+      "relation": "南北通行并北接大道地段",
+      "status": "explicit",
+      "period": "北魏叙述；280前史",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "drawing_decision": "南北桥向与北侧路段分列",
+      "entity_ids": [
+        "bridge_eaststone",
+        "road_eaststone_north"
+      ],
+      "road_ids": [
+        "B02",
+        "T10"
+      ]
+    },
+    {
+      "id": "JC-R03",
+      "from": "建阳里",
+      "to": "桥北大道",
+      "relation": "在西侧",
+      "status": "explicit",
+      "period": "北魏记述",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "drawing_decision": "只画方位，无坊界",
+      "entity_ids": [
+        "li_jianyang",
+        "road_eaststone_north"
+      ],
+      "road_ids": [
+        "T10"
+      ]
+    },
+    {
+      "id": "JC-R04",
+      "from": "绥民里",
+      "to": "桥北大道",
+      "relation": "在东侧",
+      "status": "explicit",
+      "period": "北魏记述",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "drawing_decision": "只画方位，无坊界",
+      "entity_ids": [
+        "li_suimin",
+        "road_eaststone_north"
+      ],
+      "road_ids": [
+        "T10"
+      ]
+    },
+    {
+      "id": "JC-R05",
+      "from": "三门",
+      "to": "七里桥",
+      "relation": "在桥东一里",
+      "status": "explicit",
+      "period": "北魏记述",
+      "source_ids": [
+        "jc_zhou2"
+      ],
+      "drawing_decision": "古里数原样保留；郭门不变成实测终点",
+      "entity_ids": [
+        "gate_sanmen",
+        "bridge_qili"
+      ],
+      "road_ids": [
+        "G10",
+        "B03"
+      ]
+    },
+    {
+      "id": "JC-R06",
+      "from": "东石桥",
+      "to": "马市石桥",
+      "relation": "跨书名称比定",
+      "status": "candidate",
+      "period": "两部书叙述时层各保留",
+      "source_ids": [
+        "jc_zhou2",
+        "jc_sj16",
+        "jc_huang2026"
+      ],
+      "drawing_decision": "双称候选，不合并主键",
+      "entity_ids": [
+        "bridge_eaststone"
+      ],
+      "road_ids": [
+        "B02"
+      ]
+    },
+    {
+      "id": "JC-R07",
+      "from": "七里桥",
+      "to": "旅人桥",
+      "relation": "跨书名称比定",
+      "status": "candidate",
+      "period": "274／282前史记载并列",
+      "source_ids": [
+        "jc_zhou2",
+        "jc_sj16",
+        "jc_huang2026"
+      ],
+      "drawing_decision": "双称候选，不合并主键",
+      "entity_ids": [
+        "bridge_qili"
+      ],
+      "road_ids": [
+        "B03"
+      ]
+    },
+    {
+      "id": "JC-R08",
+      "from": "北魏阳渠",
+      "to": "建春门外御道",
+      "relation": "置于道路南侧",
+      "status": "interpretive",
+      "period": "黄氏对西晋至北魏的分期复原",
+      "source_ids": [
+        "jc_huang2026"
+      ],
+      "drawing_decision": "解释线型；与路北宽渠记录分层",
+      "road_ids": [
+        "O07",
+        "T09"
+      ],
+      "water_ids": [
+        "W06"
+      ]
+    }
+  ],
+  "interpretive_scenarios": [
+    {
+      "id": "JC-SCENARIO-NORTH-TRIBUTARY",
+      "label": "北来支流读法",
+      "attribution": "黄学超2026援杨萧杨2021校读",
+      "source_ids": [
+        "jc_collation",
+        "jc_huang2026"
+      ],
+      "topology": [
+        "马市桥之后衔接七里涧段",
+        "七里涧从北来，南入阳渠",
+        "旅人桥／七里桥置于其越建春门外大道处；同名仍属比定"
+      ],
+      "drawing": "无比例关系示意；图4位置不是勘探坐标",
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v4/water-467/water-01-collation.json",
+          "pointer": "/claims/0"
+        },
+        {
+          "path": "research/prosperity-v4/water-467/water-01-collation.json",
+          "pointer": "/claims/1"
+        }
+      ]
+    },
+    {
+      "id": "JC-SCENARIO-TRANSMITTED-ORDER",
+      "label": "传本文序读法",
+      "attribution": "熊会贞按语，既有公开录文核读",
+      "source_ids": [
+        "jc_collation",
+        "jc_sj16"
+      ],
+      "topology": [
+        "七里涧作为城北、东水的下流异名",
+        "鸿池以下城南、北之水合一为学术解释"
+      ],
+      "drawing": "并列异说，不把鸿池东汇口画成实测",
+      "source_inputs": [
+        {
+          "path": "research/prosperity-v4/water-467/water-01-collation.json",
+          "pointer": "/claims/2"
+        }
+      ]
+    }
+  ],
+  "native_geometry_refs": [
+    {
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "pointer": "/features/20/source_pdf_geometry"
+    }
+  ],
+  "diagram_spec": {
+    "frame": "图06a门符、钱2018独立局部图与三桥关系示意分框",
+    "existing_relation_diagram": "research/prosperity-v4/network-462/crossings.svg",
+    "accepted_joint_control_pairs": 0,
+    "new_geographic_edges": false,
+    "required_distinctions": [
+      "三桥身份",
+      "东石桥南北向",
+      "527事件归属",
+      "路北遗迹／路南分期解释",
+      "七里涧两种校读",
+      "汉晋门下暗渠／北魏运行未知"
+    ]
+  },
+  "next_originals": [
+    {
+      "title": "《北魏洛阳外廓城和水道的勘查》",
+      "locator": "《考古》1993(7)602—608全部7页＋完整《汉魏洛阳城遗址及地形图》；建春门外大道及东郭北起第一门相关测线、最后探孔、过渠处",
+      "needed_to_decide": "原图实测／推定线型、O07末测点与水道横穿的真实控制；各条所在准确页未核，不预造图号",
+      "status": "未取得；目录及摘要已核，本轮限定检索未新增原件"
+    },
+    {
+      "title": "《汉魏洛阳城北魏建春门遗址的发掘》",
+      "locator": "《考古》1988年第9期原发掘简报整页、位置图及带完整图尺和图例的平面／剖面",
+      "needed_to_decide": "北道下暗渠层位、门道尺寸基准、可与外侧道路配对的物理点",
+      "status": "未取得；本轮重新目视钱2018图二衍生图，不能替代原刊"
+    },
+    {
+      "title": "偃师市文物管理局《汉魏洛阳城东阳渠、鸿池陂考古勘察简报》",
+      "locator": "《华夏考古》2011(1)20—25页，重点22—23页及完整附图、道路—阳渠孔位／剖面；文献号HXKG2011001003",
+      "needed_to_decide": "路北宽渠遗迹的测线、分期和路南复原的考古支持",
+      "status": "原页及完整附图未取得；不混入暂缓的2022运河报告"
+    },
+    {
+      "title": "杨萧杨《〈水经·谷水注〉中的错简、脱文与汉魏洛阳城及其周边水系》",
+      "locator": "李晓杰主编《水经注校笺图释·洛水流域诸篇》，科学出版社2021，第358—369页",
+      "needed_to_decide": "七里涧移接的逐句尾界及桥、涧关系；用于判断两种校读，不能直接给地理坐标",
+      "status": "期刊官网参考注释确认书目；原书页未取得"
+    }
+  ],
+  "accepted_new_geographic_coordinates": 0,
+  "accepted_new_bank_geometries": 0,
+  "accepted_new_bridgeheads": 0,
+  "new_excavation_claims": 0,
+  "public_illustration_note": "V12城东水陆场景可由这些方向关系解释；河岸、桥位距离、城门外整段路形与建筑外观属于表现性复原。导览不应把首页图案当作新增测量。"
+}

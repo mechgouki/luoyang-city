@@ -7,6 +7,21 @@
   const boxes = Object.fromEntries(layers.map(k => [k, $('#show-' + k)]));
   $('#filter').hidden = false;
   $('#map-tools').hidden = false;
+  function hashId() {
+    try { return decodeURIComponent(location.hash.slice(1)); } catch { return ''; }
+  }
+  function hashRecord() {
+    const id = hashId().replace(/^map-record-/, '');
+    const target = document.getElementById(id);
+    return target?.matches('[data-record]') ? target : null;
+  }
+  function selectRecord(row) {
+    document.querySelectorAll('.map-selected').forEach(e => e.classList.remove('map-selected'));
+    row.open = true;
+    document.querySelectorAll('#all-road-map a').forEach(a => {
+      if (a.getAttribute('href') === '#' + row.id) a.classList.add('map-selected');
+    });
+  }
   function apply(write = true) {
     const q = query.value.trim().toLowerCase();
     let count = 0;
@@ -28,11 +43,11 @@
     $('#zoom-value').textContent = zoom.value + '%';
     if (write) {
       const u = new URL(location.href);
-      let selected;
-      try { selected = document.getElementById(decodeURIComponent(u.hash.slice(1))); } catch { selected = null; }
-      if (selected?.matches('[data-record]') && selected.hidden) {
+      const selected = hashRecord();
+      if (selected?.hidden) {
         u.hash = '';
         document.querySelectorAll('.map-selected').forEach(e => e.classList.remove('map-selected'));
+        $('#map-status').hidden = true;
       }
       for (const [key,value] of [['q',query.value],['level',level.value],['layers',layers.filter(k => boxes[k].checked).join(',')],['zoom',zoom.value]]) {
         const defaultValue = key === 'layers' ? layers.join(',') : key === 'zoom' ? '100' : '';
@@ -41,16 +56,47 @@
       history.replaceState(null, '', u);
     }
   }
+  function showOnMap(id, write = true, focus = true) {
+    const row = document.getElementById(id);
+    const target = document.getElementById('map-record-' + id);
+    if (!row?.matches('[data-record]') || !target) return;
+    if (row.hidden) { query.value = ''; level.value = ''; }
+    // Enable only the layers needed to see this existing map item.
+    target.querySelectorAll('[data-layer]').forEach(node => {
+      const box = boxes[node.dataset.layer];
+      if (box) box.checked = true;
+    });
+    apply(write);
+    selectRecord(row);
+    if (write) {
+      const u = new URL(location.href);
+      u.hash = target.id;
+      if (u.href !== location.href) history.pushState(null, '', u);
+    }
+    const scroll = $('#map-scroll');
+    const box = scroll.getBoundingClientRect(), item = target.getBoundingClientRect();
+    // Rendered bounds include a source panel's presentation transform; they are screen positions only.
+    scroll.scrollLeft += item.left - box.left - Math.max(20, (scroll.clientWidth - item.width) / 2);
+    scroll.scrollTop += item.top - box.top - Math.max(20, (scroll.clientHeight - item.height) / 2);
+    scroll.scrollIntoView({block: 'center', behavior: 'instant'});
+    if (focus) target.focus({preventScroll: true});
+    const status = $('#map-status');
+    status.textContent = id + ' ' + row.querySelector('.road-title').textContent + '：已返回原图面位置。关系符号与索引排列不表示古代坐标。';
+    status.hidden = false;
+  }
   function openHash(scroll = true) {
-    let id;
-    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const id = hashId();
+    if (id.startsWith('map-record-')) {
+      showOnMap(id.slice('map-record-'.length), false, scroll);
+      return;
+    }
     const target = document.getElementById(id);
     document.querySelectorAll('.map-selected').forEach(e => e.classList.remove('map-selected'));
+    $('#map-status').hidden = true;
     if (!target) return;
     if (target.matches('[data-record]')) {
       if (target.hidden) { query.value = ''; level.value = ''; apply(); }
-      target.open = true;
-      document.querySelectorAll('#all-road-map a').forEach(a => { if(a.getAttribute('href') === '#' + id) a.classList.add('map-selected'); });
+      selectRecord(target);
     }
     if (scroll) target.scrollIntoView({block: 'start', behavior: 'instant'});
   }
@@ -80,6 +126,12 @@
     scroll.scrollTop = y * scale;
   }));
   document.addEventListener('click', e => {
+    const back = e.target.closest('[data-show-record]');
+    if (back) {
+      e.preventDefault();
+      showOnMap(back.dataset.showRecord);
+      return;
+    }
     const a = e.target.closest('a[href^="#"]');
     if (a && a.getAttribute('href') === location.hash) openHash();
   });

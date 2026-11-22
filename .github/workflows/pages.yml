@@ -30,8 +30,8 @@ jobs:
           test "$(git hash-object "$FONT")" = dc15562470b4f842321894787a0d066879ccff8b
           fc-cache -f
           fc-match 'Noto Sans CJK SC' > artifacts/pdf-font-resolution.txt
-      - name: Assemble and verify unchanged baseline PDF
-        run: python tools/assemble_pdf.py
+      - name: Check current summaries and prepare unchanged baseline PDF
+        run: python tools/build_all.py --prepare-only
       - name: Check baseline data and JavaScript
         run: |
           python tools/validate_site.py
@@ -86,6 +86,7 @@ jobs:
           python -m py_compile tools/city_west_472_data.py tools/city_west_472_maps.py tools/prosperity_city_west_p472.py tools/verify_city_west_p472.py tests/browser_city_west_p472.py
           python -m py_compile tools/road_location_atlas.py tools/verify_road_atlas_r6.py tests/test_prosperity_road_atlas_r6.py tests/browser_road_atlas_r6.py
           python -m py_compile tools/all_road_atlas_r62.py tools/verify_all_road_atlas_r62.py tests/test_prosperity_all_road_atlas_r62.py tests/browser_all_road_atlas_r62.py
+          python -m py_compile tools/city_nodes_r7.py tools/city_nodes_r7_data.py tools/city_nodes_r7_maps.py tools/city_nodes_r7_core_maps.py tools/city_nodes_r7_page.py tools/city_nodes_r7_verify.py tests/test_city_nodes_r7.py tests/browser_city_nodes_r7.py
           node --check web/prosperity-taiji-courts.js
           node --check web/prosperity-architecture.js
           node --check web/prosperity-city-distribution.js
@@ -114,67 +115,14 @@ jobs:
           python -m unittest discover -s tests -p test_city_audit_b8.py -v 2>&1 | tee artifacts/city-audit-b8-tests.txt
           python -m unittest discover -s tests -p test_source_access_b8.py -v 2>&1 | tee artifacts/source-access-b8-tests.txt
           python -m unittest discover -s tests -p test_city_review_b8.py -v 2>&1 | tee artifacts/city-review-b8-tests.txt
-      - name: Build preserved research, terrain, B1-B8 and historical map review
-        run: |
-          python tools/build_site.py
-          python tools/research_v25.py
-          python tools/milestone_v26.py
-          python tools/link_model_points_v26.py
-          python tools/network_v27.py
-          python tools/portal_v28.py
-          python tools/chronology_v29.py
-          python tools/terrain_v30.py
-          python tools/dual_release.py
-          python tools/west_b3.py
-          python tools/historical_frame_b4.py
-          python tools/north_b4.py
-          python tools/historical_datum_b5.py
-          python tools/west_roads_b5.py
-          python tools/ground_review_b6.py
-          python tools/southeast_b6.py
-          python tools/source_continuity_b7.py
-          python tools/luonan_b7.py
-          python tools/city_review_b8.py
-          python tools/homepage_v1.py
-      - name: Build prosperity documentary maps and source-geographic layout
-        run: |
-          python tools/prosperity_v1.py
-          python tools/prosperity_core_v2.py
-          python tools/prosperity_gate_v3.py
-          python tools/prosperity_axis_v4.py
-          python tools/prosperity_axis_sources_p41.py
-          python tools/prosperity_taiji_courts_p42.py
-           python tools/prosperity_palace_boundaries_p43.py
-          python tools/prosperity_architecture_p44.py
-      - name: Promote the explicitly approved H2 panorama without changing research maps
-        run: python tools/homepage_approved_v9.py
-      - name: P4.5.1 source-anchored architecture distribution and citation tiers
-        run: python tools/prosperity_city_distribution_p451.py
-      - name: P4.5.2 build source road remnants and qualitative functions
-        run: python tools/prosperity_road_functions_p452.py
-      - name: P4.5.3 build three qualitative historic road/building clusters
-        run: python tools/prosperity_street_clusters_p453.py
-      - name: P4.6 audit Northern Wei water and major road anchor evidence
-        run: python tools/prosperity_hydro_roads_p46.py
-      - name: Build the unified city atlas, coverage and evidence registers
-        run: |
-          node --check research/prosperity-r4/atlas.js
-          python tools/prosperity_city_atlas_r4.py
-      - name: Build the R5 panorama and camera-aligned source views
-        run: |
-          node --check research/prosperity-r5/panorama.js
-          python tools/prosperity_city_panorama_r5.py
-      - name: Build the citywide graded road atlas and evidence register
-        run: python tools/road_location_atlas.py
-      - name: Build the complete road, palace, ward and passage evidence atlas
-        run: |
-          node --check research/roads-r62/atlas.js
-          python tools/all_road_atlas_r62.py
+      - name: Build all published research stages in preserved order
+        run: python tools/build_all.py --site-only
       - name: Check the built prosperity maps and their evidence
         shell: bash
         run: |
           python -m unittest discover -s tests -p 'test_prosperity*.py' -v 2>&1 | tee artifacts/prosperity-semantic-tests.txt
           python -m unittest discover -s tests -p 'test_homepage_approved_v9.py' -v 2>&1 | tee artifacts/homepage-approved-v9-tests.txt
+          python -m unittest discover -s tests -p 'test_city_nodes_r7.py' -v 2>&1 | tee artifacts/city-nodes-r7-tests.txt
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
@@ -196,6 +144,7 @@ jobs:
               python tests/browser_city_panorama_r5.py
               python tests/browser_road_atlas_r6.py
               python tests/browser_all_road_atlas_r62.py
+              python tests/browser_city_nodes_r7.py
               python tests/browser_prosperity_hydro_roads_p46.py
               python tests/browser_backbone_p469.py
               python tests/browser_prosperity_gate_v3.py
@@ -295,6 +244,7 @@ jobs:
               python tests/browser_city_panorama_r5.py --base-url "$SITE_URL" --output artifacts/live-city-panorama-r5-browser
               python tests/browser_road_atlas_r6.py --base-url "$SITE_URL" --output artifacts/live-road-atlas-r6-browser
               python tests/browser_all_road_atlas_r62.py --base-url "$SITE_URL" --output artifacts/live-all-road-atlas-r62-browser
+              python tests/browser_city_nodes_r7.py --base-url "$SITE_URL" --output artifacts/live-city-nodes-r7-browser
               python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
               python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser
               python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser
