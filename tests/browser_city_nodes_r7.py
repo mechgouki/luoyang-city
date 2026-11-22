@@ -8,6 +8,7 @@ import tempfile
 from zipfile import ZipFile
 
 from playwright.sync_api import expect, sync_playwright
+from browser_layout import assert_loaded_viewport
 from browser_city_west_p472 import SIZES, base_url
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,7 +27,7 @@ def exercise(browser, base, device, output, expected_commit=None):
         page.on("pageerror", lambda error: report["errors"].append(str(error)))
 
     def fits(page):
-        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), page.url
+        assert_loaded_viewport(page, tolerance=1, report=report)
 
     def count(page, number):
         expect(page.locator(".segment[data-segment]:visible")).to_have_count(number)
@@ -53,7 +54,7 @@ def exercise(browser, base, device, output, expected_commit=None):
             assert data["counts"]["roads_indexed"] == 84 and data["counts"]["waters_indexed"] == 34
 
             for homepage in ("index.html", "v3.0-dual.html"):
-                page.goto(base + homepage, wait_until="domcontentloaded")
+                page.goto(base + homepage, wait_until="load")
                 expect(page.locator('[data-hero-revision="panorama-approved-v12"]')).to_be_visible()
                 page.locator("#r7-home-guide").click()
                 page.wait_for_url("**/" + PAGE + "#panorama")
@@ -76,7 +77,7 @@ def exercise(browser, base, device, output, expected_commit=None):
             capture(page.locator(".panorama-figure"), "v12-guide")
             report["checks"].append("Both V12 home entries reach the six-point guide; desktop/mobile image dimensions and full-frame proportions remain intact")
 
-            page.goto(base + "luoyang-all-roads.html", wait_until="domcontentloaded")
+            page.goto(base + "luoyang-all-roads.html", wait_until="load")
             expect(page.locator("details[data-record]")).to_have_count(84)
             page.locator("#r7-road-entry a").click()
             page.wait_for_url("**/" + PAGE)
@@ -96,13 +97,13 @@ def exercise(browser, base, device, output, expected_commit=None):
             for evidence in ("source_frame", "relation_only"):
                 page.locator("#evidence-filter").select_option(evidence)
                 count(page, sum(r["geometry_status"] == evidence for r in records))
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#evidence-filter")).to_have_value("relation_only")
             page.locator("#segment-clear").click()
             page.locator("#segment-query").fill("P01")
             count(page, 1)
             expect(page.locator("#segment-P01")).to_be_visible()
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#segment-query")).to_have_value("P01")
             count(page, 1)
             page.locator("#segment-query").fill("no-such-r7-record")
@@ -112,23 +113,23 @@ def exercise(browser, base, device, output, expected_commit=None):
             count(page, len(records))
             # Shareable filters combine; a direct record link is still allowed to
             # reveal its record and clears a conflicting filter rather than hiding it.
-            page.goto(base + PAGE + "?q=G11&node=baima&evidence=relation_only", wait_until="domcontentloaded")
+            page.goto(base + PAGE + "?q=G11&node=baima&evidence=relation_only", wait_until="load")
             count(page, 1)
             expect(page.locator("#segment-G11")).to_be_visible()
-            page.goto(base + PAGE + "?q=G11&node=baima#segment-P01", wait_until="domcontentloaded")
+            page.goto(base + PAGE + "?q=G11&node=baima#segment-P01", wait_until="load")
             expect(page.locator("#segment-P01")).to_have_attribute("open", "")
             expect(page.locator("#segment-query")).to_have_value("")
             expect(page.locator("#node-filter")).to_have_value("")
             page.locator("#segment-query").fill("G11")
             count(page, 1)
             assert page.evaluate("location.hash") == "#register", "A stale deep link overrides a later search"
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             count(page, 1)
             expect(page.locator("#segment-query")).to_have_value("G11")
             report["checks"].append("Every node and evidence filter works; exact IDs, combined URL filters, reload, no-result state and conflicting deep links retain a usable result")
 
             for node, rid in NODE_ROADS.items():
-                page.goto(base + PAGE + "#segment-" + rid, wait_until="domcontentloaded")
+                page.goto(base + PAGE + "#segment-" + rid, wait_until="load")
                 card = page.locator("#segment-" + rid)
                 expect(card).to_have_attribute("open", "")
                 fits(page)
@@ -145,7 +146,7 @@ def exercise(browser, base, device, output, expected_commit=None):
                 }"""), (node, "Selected item remains outside the map viewport")
                 expect(page.locator("#map-" + node + " .map-status")).to_contain_text(rid)
                 capture(page.locator("#map-" + node + " .map-scroll"), node + "-map")
-                page.reload(wait_until="domcontentloaded")
+                page.reload(wait_until="load")
                 expect(target).to_be_attached()
                 target.focus()
                 page.keyboard.press("Enter")
@@ -154,19 +155,19 @@ def exercise(browser, base, device, output, expected_commit=None):
                 fits(page)
             report["checks"].append("All four local maps return from evidence to the existing item with selection, focus and visible bounds; reload and keyboard Enter return to the same source record")
 
-            page.goto(base + PAGE + "#finding-SI07", wait_until="domcontentloaded")
+            page.goto(base + PAGE + "#finding-SI07", wait_until="load")
             expect(page.locator("#finding-SI07")).to_have_attribute("open", "")
             expect(page.locator("#finding-SI07")).to_contain_text("统计范围")
             capture(page.locator("#finding-SI07"), "warehouse-scope")
-            page.goto(base + PAGE + "#water-W01", wait_until="domcontentloaded")
+            page.goto(base + PAGE + "#water-W01", wait_until="load")
             expect(page.locator("#water-W01")).to_be_visible()
-            page.goto(base + PAGE + "#map-overview", wait_until="domcontentloaded")
+            page.goto(base + PAGE + "#map-overview", wait_until="load")
             zoom = page.locator("#zoom-overview")
             initial_width = page.locator("#map-overview svg").bounding_box()["width"]
             zoom.focus()
             page.keyboard.press("End")
             assert page.locator("#map-overview svg").bounding_box()["width"] > initial_width * 1.5
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(zoom).to_have_value("220")
             scroll = page.locator("#map-overview .map-scroll")
             assert scroll.evaluate("el => el.scrollWidth > el.clientWidth")
@@ -179,13 +180,13 @@ def exercise(browser, base, device, output, expected_commit=None):
             fits(page)
             report["checks"].append("Finding and water anchors reveal their evidence; overview zoom persists, keyboard panning works, and reset restores the whole map")
 
-            page.goto(base + PAGE + "#panorama", wait_until="domcontentloaded")
+            page.goto(base + PAGE + "#panorama", wait_until="load")
             page.locator("#point-bridge").click()
             expect(page.locator("#guide-bridge")).to_have_class("guide-card is-selected")
             expect(page.locator("#guide-bridge")).to_contain_text("登陆点")
             page.locator('#guide-bridge [data-return-guide="bridge"]').click()
             expect(page.locator("#point-bridge")).to_have_attribute("aria-current", "true")
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#point-bridge")).to_have_attribute("aria-current", "true")
             page.locator("#show-panorama-guides").uncheck()
             expect(page.locator(".panorama-points")).to_be_hidden()
@@ -215,7 +216,7 @@ def exercise(browser, base, device, output, expected_commit=None):
                     expect(local.locator(".finding")).to_have_count(data["counts"]["findings"])
                     local.locator("#segment-query").fill("G11")
                     count(local, 1)
-                    local.reload(wait_until="domcontentloaded")
+                    local.reload(wait_until="load")
                     expect(local.locator("#segment-query")).to_have_value("G11")
                     count(local, 1)
                     local.goto((Path(temporary) / "index.html").as_uri() + "#panorama")
@@ -229,7 +230,7 @@ def exercise(browser, base, device, output, expected_commit=None):
                 plain = disabled.new_page()
                 active_page = plain
                 watch(plain)
-                plain.goto(base + PAGE, wait_until="domcontentloaded")
+                plain.goto(base + PAGE, wait_until="load")
                 expect(plain.locator(".segment[data-segment]")).to_have_count(len(records))
                 expect(plain.locator(".map-figure")).to_have_count(5)
                 plain.locator("#segment-G11 > summary").click()

@@ -1,6 +1,6 @@
 {
   "schema": "luoyang-r7-source-provenance-v3",
-  "updated_at_beijing": "2026-11-22T12:07:06.228650+08:00",
+  "updated_at_beijing": "2026-11-22T12:35:12.432037+08:00",
   "research_version": "R7.1",
   "implementation": "city-nodes-r7.1",
   "homepage": "panorama-approved-v12",
@@ -95,17 +95,34 @@
       "tested_source": "251e8e0a3c537699ed0900d379087b8e65ecf102",
       "tree": "b05e0692132f085adf9f00c3702fb095e3f06c5f",
       "run_id": 44983493286,
-      "outcome_at_checkpoint": "in_progress",
-      "archive_planned": [
+      "outcome": "success",
+      "archive": [
         "family-readiness-pr"
       ]
     }
   ],
-  "accepted_main": null,
-  "overall_release_accepted": false,
+  "accepted_main": {
+    "source": "557c468649d6919bd249ddd891b9c97cd37cf706",
+    "tree": "b05e0692132f085adf9f00c3702fb095e3f06c5f",
+    "run_id": 44984166317,
+    "run_attempt": 1,
+    "jobs": {
+      "build": "success",
+      "deploy": "success",
+      "verify-live": "success"
+    },
+    "production_completed_at_beijing": "2026-11-22T12:32:14+08:00",
+    "archive": [
+      "final-build",
+      "final-live",
+      "final-live-independent"
+    ]
+  },
+  "overall_release_accepted": true,
   "notes": [
     "Pull-request artifacts identify the tested GitHub merge-ref, not the PR head.",
     "Later screenshots do not prove the layout or document readyState at the earlier failed assertion instant.",
     "PR77 and PR78 change only browser-test readiness and documentation, preserving product code and historical content."
-  ]
+  ],
+  "acceptance_scope": "Completed production pipeline and independently captured public source/files; archive Git tree/blob readback is recorded separately in Issue52."
 }

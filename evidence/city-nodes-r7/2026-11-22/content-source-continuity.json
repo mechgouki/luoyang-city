@@ -1,16 +1,23 @@
 {
-  "schema": "luoyang-r7-content-source-continuity-v1",
-  "verified_at_beijing": "2026-11-22T11:46:21.980571+08:00",
+  "schema": "luoyang-r7-content-source-continuity-v2",
   "manually_inspected_deployed_source": "9599123701766cbdfe5971095af638898f407efe",
+  "successor_source_at_capture": "557c468649d6919bd249ddd891b9c97cd37cf706",
+  "successor_release_accepted": true,
   "changed_files": [
     "docs/city-nodes-r7.md",
+    "tests/browser_all_road_atlas_r62.py",
+    "tests/browser_city_atlas_r4.py",
+    "tests/browser_city_nodes_r7.py",
+    "tests/browser_city_panorama_r5.py",
+    "tests/browser_layout.py",
     "tests/browser_road_atlas_r6.py"
   ],
   "changed_product_generators_data_css_or_images": false,
-  "git_tree": "e23869126dda47da76487518aed7886bf17f51b2",
-  "pull_request_tested_merge_ref": "3fa80ae293a753b2c04bfe98e83b249229ab123c",
-  "pull_request_tested_tree": "e23869126dda47da76487518aed7886bf17f51b2",
-  "meaning": "Only documentation and browser-test readiness changed after manual UI review; the d7 successor later failed the separate R6.2 live layout check. This source comparison does not assert final deployment acceptance.",
-  "successor_source_at_capture": "d7cd18a832e30e718dfd360b240c15b79927306b",
-  "successor_release_accepted": false
+  "git_tree": "b05e0692132f085adf9f00c3702fb095e3f06c5f",
+  "pull_request_tested_merge_ref": "251e8e0a3c537699ed0900d379087b8e65ecf102",
+  "pull_request_tested_tree": "b05e0692132f085adf9f00c3702fb095e3f06c5f",
+  "meaning": "Only documentation and browser-test readiness changed after the recorded manual UI review. The exact successor source557c468 passed the complete production pipeline; final public bytes are captured separately.",
+  "content_continuity_verified_at_beijing": "2026-11-22T12:15:52.768000+08:00",
+  "production_completed_at_beijing": "2026-11-22T12:32:14+08:00",
+  "acceptance_updated_at_beijing": "2026-11-22T12:42:41.847083+08:00"
 }

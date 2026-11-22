@@ -1,0 +1,884 @@
+{
+  "schema": "luoyang-atlas-family-layout-verification-v1",
+  "actual_tested_source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+  "evidence_mode": "build-or-pr",
+  "release_acceptance": "not_asserted_by_this_report_verification",
+  "scope": "Exact recorded measurements in ten completed browser reports. Source, nonempty coverage, PR78 call counts, readyState, and unchanged original tolerances checked.",
+  "expected_coverage_origin": "PR78 source: per device R4=3, R5=5, R6=6, R6.2=8, R7=14. R6.2 includes two return links; R7 includes two homepage entries and four node round trips.",
+  "totals": {
+    "reports": 10,
+    "layout_checks": 72
+  },
+  "reports": [
+    {
+      "family": "R4",
+      "device": "desktop",
+      "path": "city-atlas-r4-browser/desktop-report.json",
+      "report_sha256": "edc6ae9b6f2b932f5baff448ba4740cd1c6d6d02db773269e155ff069b9b2fbf",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 3,
+      "actual_layout_checks": 3,
+      "original_width_tolerance": 0,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:39303/luoyang-city/prosperity-city-atlas.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:39303/luoyang-city/prosperity-city-atlas.html#filter?q=%E5%AE%9D%E6%98%8E&region=R09&period=conditional",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:39303/luoyang-city/prosperity-city-atlas.html#entity-ic_nailin",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "family": "R4",
+      "device": "mobile",
+      "path": "city-atlas-r4-browser/mobile-report.json",
+      "report_sha256": "364af1fef5d8a5a481293028071496a5bf46e3d9d9e8b47d64229f6ca16287dc",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 3,
+      "actual_layout_checks": 3,
+      "original_width_tolerance": 0,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:39303/luoyang-city/prosperity-city-atlas.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:39303/luoyang-city/prosperity-city-atlas.html#filter?q=%E5%AE%9D%E6%98%8E&region=R09&period=conditional",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:39303/luoyang-city/prosperity-city-atlas.html#entity-ic_nailin",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "family": "R5",
+      "device": "desktop",
+      "path": "city-panorama-r5-browser/desktop-report.json",
+      "report_sha256": "562f8c561bd1706f409cf187183c145e395ffc0ded3656ecddca1635b9d1c81c",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 5,
+      "actual_layout_checks": 5,
+      "original_width_tolerance": 0,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/prosperity-city-panorama.html#city",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/prosperity-city-panorama.html#palace-east",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/prosperity-city-panorama.html#sima-road",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/luoyang-water-atlas.html#W30",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/prosperity-city-panorama.html#core",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "family": "R5",
+      "device": "mobile",
+      "path": "city-panorama-r5-browser/mobile-report.json",
+      "report_sha256": "2f524b1226996a778fa0125e3f13c4b5751b6c929b39340e88a83c6e4660466b",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 5,
+      "actual_layout_checks": 5,
+      "original_width_tolerance": 0,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/prosperity-city-panorama.html#city",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/prosperity-city-panorama.html#palace-east",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/prosperity-city-panorama.html#sima-road",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/luoyang-water-atlas.html#W30",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "http://127.0.0.1:35371/luoyang-city/prosperity-city-panorama.html#core",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "family": "R6",
+      "device": "desktop",
+      "path": "road-atlas-r6-browser/desktop-report.json",
+      "report_sha256": "b3fe7d4bda07975c402d205ba0bba37f3e70876ac2d64289511e82f285dbfc78",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 6,
+      "actual_layout_checks": 6,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html?q=X02",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmpe1_o5d54/index.html?q=O11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html#X02",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R6",
+      "device": "mobile",
+      "path": "road-atlas-r6-browser/mobile-report.json",
+      "report_sha256": "14ee4d4dc41e67a36a481cea0c9b5697cb1faf2a9748c3fc1f3645f66ba3158a",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 6,
+      "actual_layout_checks": 6,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html?q=X02",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmpaduj13vh/index.html?q=O11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:38101/luoyang-city/luoyang-road-atlas.html#X02",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R6.2",
+      "device": "desktop",
+      "path": "all-road-atlas-r62-browser/desktop-report.json",
+      "report_sha256": "1950225944bbfb20bd7dd36eee58566b4c30710d0cebc89637bf958a727b2317",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 8,
+      "actual_layout_checks": 8,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmp4zzdr2fz/index.html?q=G01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R6.2",
+      "device": "mobile",
+      "path": "all-road-atlas-r62-browser/mobile-report.json",
+      "report_sha256": "882bed3443dca19db629a2ab74328f8f99516a32d1e0f059670453c895299690",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 8,
+      "actual_layout_checks": 8,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmp5lhxp9x1/index.html?q=G01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:40865/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R7",
+      "device": "desktop",
+      "path": "city-nodes-r7-browser/desktop-report.json",
+      "report_sha256": "314eb6351d1cd984311fbe93f002c180cdd96358ea620740f25ba90105ff5ac0",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 14,
+      "actual_layout_checks": 14,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#panorama",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#panorama",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-R01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-R01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-G11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-G11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-B01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-B01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html?map=overview#map-overview",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmp402so88u/index.html#panorama",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R7",
+      "device": "mobile",
+      "path": "city-nodes-r7-browser/mobile-report.json",
+      "report_sha256": "c144b90aa5008aa799cdb6c121ab4df9e4033da346b17724b30e11a34df37677",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 14,
+      "actual_layout_checks": 14,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#panorama",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#panorama",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-R01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-R01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-G11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-G11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-B01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html#segment-B01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html?map=overview#map-overview",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmp8jpl23xp/index.html#panorama",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "http://127.0.0.1:41043/luoyang-city/luoyang-city-nodes.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import tempfile
 from zipfile import ZipFile
 
 from playwright.sync_api import expect, sync_playwright
+from browser_layout import assert_loaded_viewport
 from browser_city_west_p472 import SIZES, base_url
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,7 +28,7 @@ def exercise(browser, base, device, output):
         page.on("pageerror", lambda error: report["errors"].append(str(error)))
 
     def fits(page):
-        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), page.url
+        assert_loaded_viewport(page, tolerance=1, report=report)
 
     def count(page, number):
         expect(page.locator("details[data-record]:visible")).to_have_count(number)
@@ -66,7 +67,7 @@ def exercise(browser, base, device, output):
             gate = grouped["gate"][0]["id"]
             report["source_commit"] = info["source_commit"]
             report["record_count"] = len(records)
-            page.goto(base + "luoyang-road-atlas.html", wait_until="domcontentloaded")
+            page.goto(base + "luoyang-road-atlas.html", wait_until="load")
             expect(page.locator("details[data-road]")).to_have_count(21)
             page.locator("#all-roads-entry a").click()
             expect(page.locator("h1")).to_have_text("全城道路总览")
@@ -83,7 +84,7 @@ def exercise(browser, base, device, output):
                 page.locator("#group-filter").select_option(group)
                 count(page, len(grouped[group]))
                 assert set(page.locator("details[data-record]:visible").evaluate_all("nodes => nodes.map(n => n.dataset.group)")) == {group}
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#group-filter")).to_have_value("bridge")
             count(page, len(grouped["bridge"]))
             page.locator("#clear").click()
@@ -91,7 +92,7 @@ def exercise(browser, base, device, output):
             page.locator("#query").fill(textual)
             count(page, 1)
             expect(page.locator("#" + textual)).to_be_visible()
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#query")).to_have_value(textual)
             count(page, 1)
             page.locator("#query").fill("missing-r62-no-match")
@@ -102,18 +103,18 @@ def exercise(browser, base, device, output):
             count(page, len(records))
             report["checks"].append("All six categories filter correctly; exact documentary ID, persistent filters, no-result and reset work")
 
-            page.goto(base + PAGE + "#" + palace, wait_until="domcontentloaded")
+            page.goto(base + PAGE + "#" + palace, wait_until="load")
             expect(page.locator("#" + palace)).to_have_attribute("open", "")
             fits(page)
             capture(page.locator("#" + palace), "palace-evidence")
             page.locator("#query").fill(textual)
             count(page, 1)
             assert page.evaluate("location.hash") == "", "Old palace anchor overrides the new query"
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#query")).to_have_value(textual)
             count(page, 1)
             assert page.evaluate("location.hash") == ""
-            page.goto(base + PAGE + "#" + ward, wait_until="domcontentloaded")
+            page.goto(base + PAGE + "#" + ward, wait_until="load")
             expect(page.locator("#" + ward)).to_have_attribute("open", "")
             fits(page)
             capture(page.locator("#" + ward), "ward-evidence")
@@ -122,7 +123,7 @@ def exercise(browser, base, device, output):
             # A reader can return from evidence to its existing source frame or qualitative index.
             # Screen bounds are checked on both desktop and mobile, independently of ancient geometry.
             for identifier in (palace, ward):
-                page.goto(base + PAGE + "#" + identifier, wait_until="domcontentloaded")
+                page.goto(base + PAGE + "#" + identifier, wait_until="load")
                 return_link = page.locator(f'#{identifier} [data-show-record="{identifier}"]')
                 if identifier == palace:
                     page.locator("#show-source").uncheck()
@@ -140,7 +141,7 @@ def exercise(browser, base, device, output):
                 expect(page.locator("#map-status")).to_contain_text(identifier)
                 if identifier == palace:
                     expect(page.locator("#show-source")).to_be_checked()
-                page.reload(wait_until="domcontentloaded")
+                page.reload(wait_until="load")
                 assert page.url.endswith("#map-record-" + identifier)
                 assert target.evaluate("node => node.classList.contains('map-selected')")
                 target.focus()
@@ -154,7 +155,7 @@ def exercise(browser, base, device, output):
             page.locator("#show-source").uncheck()
             page.locator("#show-inferred").uncheck()
             page.locator("#show-unknown").check()
-            page.reload(wait_until="domcontentloaded")
+            page.reload(wait_until="load")
             expect(page.locator("#show-source")).not_to_be_checked()
             expect(page.locator("#show-inferred")).not_to_be_checked()
             expect(page.locator('#all-road-map [data-layer="source"]:visible')).to_have_count(0)
@@ -207,7 +208,7 @@ def exercise(browser, base, device, output):
                     local.locator("#query").fill(gate)
                     count(local, 1)
                     assert local.evaluate("location.hash") == ""
-                    local.reload(wait_until="domcontentloaded")
+                    local.reload(wait_until="load")
                     expect(local.locator("#query")).to_have_value(gate)
                     expect(local.locator("#" + gate)).to_be_visible()
                     count(local, 1)
@@ -216,7 +217,7 @@ def exercise(browser, base, device, output):
                 active_page = page
                 with browser.new_context(**settings, java_script_enabled=False) as disabled, checked_page(disabled) as plain:
                     active_page = plain
-                    plain.goto(base + PAGE + "#" + ward, wait_until="domcontentloaded")
+                    plain.goto(base + PAGE + "#" + ward, wait_until="load")
                     expect(plain.locator("details[data-record]")).to_have_count(len(records))
                     summary = plain.locator("#" + ward + " > summary")
                     expect(summary).to_be_in_viewport()

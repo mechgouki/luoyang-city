@@ -1,0 +1,884 @@
+{
+  "schema": "luoyang-atlas-family-layout-verification-v1",
+  "actual_tested_source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+  "evidence_mode": "public-live",
+  "release_acceptance": "not_asserted_by_this_report_verification",
+  "scope": "Exact recorded measurements in ten completed browser reports. Source, nonempty coverage, PR78 call counts, readyState, and unchanged original tolerances checked.",
+  "expected_coverage_origin": "PR78 source: per device R4=3, R5=5, R6=6, R6.2=8, R7=14. R6.2 includes two return links; R7 includes two homepage entries and four node round trips.",
+  "totals": {
+    "reports": 10,
+    "layout_checks": 72
+  },
+  "reports": [
+    {
+      "family": "R4",
+      "device": "desktop",
+      "path": "live-city-atlas-r4-browser/desktop-report.json",
+      "report_sha256": "a0a84dd04097006298a18bc701cf451f5b65a56503af35061574d2578f112b37",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 3,
+      "actual_layout_checks": 3,
+      "original_width_tolerance": 0,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-atlas.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-atlas.html#filter?q=%E5%AE%9D%E6%98%8E&region=R09&period=conditional",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-atlas.html#entity-ic_nailin",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "family": "R4",
+      "device": "mobile",
+      "path": "live-city-atlas-r4-browser/mobile-report.json",
+      "report_sha256": "ab22e1c4107062fc422d96bf602fa77ad74bf2fb5be6a32edf752f6fe23ad778",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 3,
+      "actual_layout_checks": 3,
+      "original_width_tolerance": 0,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-atlas.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-atlas.html#filter?q=%E5%AE%9D%E6%98%8E&region=R09&period=conditional",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-atlas.html#entity-ic_nailin",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "family": "R5",
+      "device": "desktop",
+      "path": "live-city-panorama-r5-browser/desktop-report.json",
+      "report_sha256": "e6f3802018d7e65a7f853bbd73c2eca792ff9d2d14b8cd84937933bc448c4111",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 5,
+      "actual_layout_checks": 5,
+      "original_width_tolerance": 0,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html#city",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html#palace-east",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html#sima-road",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-water-atlas.html#W30",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html#core",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "family": "R5",
+      "device": "mobile",
+      "path": "live-city-panorama-r5-browser/mobile-report.json",
+      "report_sha256": "51151e18eb4863b72403db2dcab6229ad241bdb5b28083669a82cad1d743cdd4",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 5,
+      "actual_layout_checks": 5,
+      "original_width_tolerance": 0,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html#city",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html#palace-east",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html#sima-road",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-water-atlas.html#W30",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/prosperity-city-panorama.html#core",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": null,
+          "tolerance": 0
+        }
+      ]
+    },
+    {
+      "family": "R6",
+      "device": "desktop",
+      "path": "live-road-atlas-r6-browser/desktop-report.json",
+      "report_sha256": "8543f104636293e6312b92ac42057c8a8ce8217c2160634595836db42d0909aa",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 6,
+      "actual_layout_checks": 6,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html?q=X02",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmp2i25q3hh/index.html?q=O11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html#X02",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R6",
+      "device": "mobile",
+      "path": "live-road-atlas-r6-browser/mobile-report.json",
+      "report_sha256": "86b40d4978f7b3421f5b56372fd91da7a49e2d068b86a356430ebca9261455ff",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 6,
+      "actual_layout_checks": 6,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html?q=X02",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html#O11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmpsdr3nw6t/index.html?q=O11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html#X02",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R6.2",
+      "device": "desktop",
+      "path": "live-all-road-atlas-r62-browser/desktop-report.json",
+      "report_sha256": "abd9e0078263a9e7c1bebf28666bb908c5c9bc095a9a0cb144e1a6a9d3954e9f",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 8,
+      "actual_layout_checks": 8,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmpxb5aofwy/index.html?q=G01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R6.2",
+      "device": "mobile",
+      "path": "live-all-road-atlas-r62-browser/mobile-report.json",
+      "report_sha256": "dfc91e7d814a228df3268d906766752860f2cac8cab52244f50e23de16c65ee4",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 8,
+      "actual_layout_checks": 8,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmpcw5yu5f1/index.html?q=G01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html#F01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R7",
+      "device": "desktop",
+      "path": "live-city-nodes-r7-browser/desktop-report.json",
+      "report_sha256": "36daa35d009d246c8a74e2627bc5d3aed9d3ad620c17f6e263b6ea7f365046e7",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 14,
+      "actual_layout_checks": 14,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#panorama",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#panorama",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-R01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-R01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-G11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-G11",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-P01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-B01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-B01",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html?map=overview#map-overview",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmpkrww50or/index.html#panorama",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html",
+          "ready_state": "complete",
+          "document_width": 1440,
+          "client_width": 1440,
+          "inner_width": 1440,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    },
+    {
+      "family": "R7",
+      "device": "mobile",
+      "path": "live-city-nodes-r7-browser/mobile-report.json",
+      "report_sha256": "91fac98625368d536af8b2cdd4911746187e0a6fc991b850fe3e71b4564f7737",
+      "status": "passed",
+      "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
+      "expected_layout_checks": 14,
+      "actual_layout_checks": 14,
+      "original_width_tolerance": 1,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0,
+      "layout_checks": [
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#panorama",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#panorama",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-R01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-R01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-G11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-G11",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-P01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-B01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html#segment-B01",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html?map=overview#map-overview",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "file:///tmp/tmpz0z_wcwn/index.html#panorama",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        },
+        {
+          "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-nodes.html",
+          "ready_state": "complete",
+          "document_width": 390,
+          "client_width": 390,
+          "inner_width": 390,
+          "body_margin": "0px",
+          "map_overflow_x": "auto",
+          "tolerance": 1
+        }
+      ]
+    }
+  ]
+}
