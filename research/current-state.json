@@ -6,10 +6,10 @@
     528
   ],
   "research": {
-    "version": "R8.1",
-    "implementation_version": "panorama-review-v13",
-    "title": "依据R7四节点与建筑材料修订全景，V13候选审看与原件续查",
-    "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13.html"
+    "version": "R9.1",
+    "implementation_version": "city-spatial-r9 + panorama-review-v13-r2",
+    "title": "四节点城市空间总图、20项判断对照与V13南门二修候选",
+    "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-spatial.html"
   },
   "homepage": {
     "revision": "panorama-approved-v12",
@@ -20,20 +20,22 @@
   "geometry_baseline": "v2.4",
   "historical_research_series": "B1—B8",
   "last_verified_release": {
-    "source_commit": "557c468649d6919bd249ddd891b9c97cd37cf706",
-    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44984166317",
-    "acceptance_url": "https://github.com/mechgouki/luoyang-city/blob/637dd943fee13a30ca754cdd3d97c85bb8adc8b9/evidence/city-nodes-r7/2026-11-22/README.md",
+    "source_commit": "fc62dd0fa439e01fbf13899fe8b9eea7f9c101f0",
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44991627755",
+    "acceptance_url": "https://github.com/mechgouki/luoyang-city/blob/6b87a799fc0d94cb0b19cf127836f9e3e9f7cd1a/evidence/panorama-v13/2026-11-22/README.md",
     "status": "build, deploy and verify-live passed",
-    "verified_at_beijing": "2026-11-22 12:32:14"
+    "verified_at_beijing": "2026-11-22 14:15:06"
   },
   "handoff_url": "https://github.com/mechgouki/luoyang-city/issues/52",
   "research_log_url": "https://github.com/mechgouki/luoyang-city/issues/47",
   "meaning": "当前研究批次、首页图像、封存底图与上一已验收发布分别登记。历史批次文件只记录当时的状态；本表不把尚未发布的工作称为已上线。",
   "homepage_candidate": {
-    "revision": "panorama-candidate-v13",
+    "revision": "panorama-candidate-v13-r2",
     "status": "candidate_for_review",
     "homepage_replacement_approved": false,
-    "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13.html",
-    "meaning": "候选图供用户审看，已批准首页继续为V12；候选状态不代表本批网站发布已经验收。"
+    "gate_visual_issue_resolved": true,
+    "historical_gate_reconstruction_completed": false,
+    "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13-r2.html",
+    "meaning": "四节点空间深化与南门二修一起供用户审看；视觉问题修正不等于历史全构件复原，首页继续V12；正式发布验收另见交接。"
   }
 }

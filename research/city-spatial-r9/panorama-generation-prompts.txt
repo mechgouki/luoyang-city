@@ -1,0 +1,46 @@
+V13 二修：实际生成提示词与选择顺序
+
+所有图像编辑使用 built-in image_gen。下面记录实际四次调用；成图是否满足要求另由 panorama-candidate-review.json 目检核定。
+位置参考 panorama-gate-layout.svg 只约束画面像素，非历史坐标、测量或建筑尺度。
+
+=== PASS 01 ===
+输入：前版 V13 选定PNG
+Use case: precise-object-edit. Asset: a historically informed Northern Wei Luoyang panorama for a review webpage.
+The supplied full panorama is the edit target. Preserve its complete landscape composition, camera and architectural layout.
+
+Make ONE local architectural correction to the small SOUTH GATE OF THE YONGNING TEMPLE. It is centered approximately at x540,y455 in this 1671x941 image: the little dark-roofed entrance in the WHITE temple wall, immediately in front of the tall nine-storey pagoda. It is NOT the much larger city gate at x800,y500.
+
+Keep the existing temple gate's ground-floor doorway and its bottom exactly where they are, at y472. The white wall must still join the two sides of this ground floor. Preserve the white wall, and preserve the visible strip of small houses and trees between the white temple wall and the separate tan city wall below it. The temple gate must not extend down into that strip or into the city wall.
+
+Turn this existing temple gate into a compact THREE-STOREY timber gatehouse by adding TWO small roofed timber levels ABOVE its existing roof. Three distinct occupied timber levels and three main dark-grey tiled eave lines must be readable, approximately at y418, y435, y451. Base remains at y472, width about 48 pixels. Muted red-brown timber, modest early-medieval Chinese roof curvature, clearly smaller and far lower than the pagoda. Retain the original single visible ground portal; do not invent three excavated doorways. Grow the gate only upward, never downward or forward. The edit is confined approximately to x508–570,y409–474.
+
+Preserve the large pagoda with NINE clearly countable principal timber storeys, its separate finial, the hall north of it, the separately enclosed palace, all roads, river, banks and boat-supported floating bridge. Preserve natural daylight, colors, tiny non-uniform people and carts, and the full original frame. No added labels, text, diagrams, inset, borders or watermark. Do not change any other building, move the temple gate, or add a second gate.
+
+=== PASS 02 ===
+输入：前版 V13 选定PNG
+精确局部编辑这张全景，保持完整原幅。只修改白色永宁寺南墙中央的小门楼（位于画面左侧九层木塔正前方），不要修改前景土黄色城墙和大城门。
+
+原有小门楼的一层门洞、柱脚、地面位置全部保持原样，白色寺墙与门洞两边的连接全部保持原样。只在原有小门楼屋顶的上方，叠加两个非常矮小的木构楼层和各自的一道灰瓦屋檐。原有底层加上两个新增上层，一共三层。每个新增上层仅约原底层高度的一半；整个门楼仍是一个很小的寺院入口。现有门楼底部不动，现有底层的屋顶高度不动，门楼向上增加两层，绝不能向下延长。三道屋檐约在原画面y430、y440、y451，原门洞基脚仍在y472。新增部分比下面的门洞窄，灰瓦、暗红木柱。
+
+必须保持小门楼下方原有的小屋、树木、道路隔带完整可见。小门楼应始终镶在白色寺墙中，脚下仍是原门洞位置，而不是站到南面的隔带中。九层木塔保持原有九层。宫城、寺院大殿、街坊、水道、浮桥、人员车马、色彩、构图和其他建筑全部保持原样，无文字、无边框、不裁切。
+
+=== PASS 03 ===
+输入：PASS 01 PNG + panorama-gate-layout.svg 栅格化位置示意
+Edit IMAGE 1, the full city panorama. IMAGE 2 is ONLY a schematic placement guide for the tiny temple gate; do not put its diagram, colors, labels or text into the panorama.
+
+Correct ONE error in IMAGE 1: the small three-storey temple gate immediately in front of the pagoda is standing OUTSIDE the white temple wall. Move that WHOLE small three-storey gate BACK into the white wall so that its ground-floor doorway is contained in that wall, precisely as shown in IMAGE 2. Its current foot at about image y495 must move UP to y473. Both sides of its bottom storey must visibly join the white temple wall at the same ground level. The wall must NOT pass behind the gate's middle storey. Do not move the white wall. Do not move the tan city wall.
+
+Erase the lower portion of the currently misplaced gate from the strip between the two walls, and restore the uninterrupted small path, low houses and vegetation in that strip. There must be a clear band of small houses/trees between the temple entrance and the separate foreground city wall. The new three-storey temple gate is smaller in the picture and further back, the width of the original doorway, with three compact timber floors above a single portal. Build it UP into the courtyard view, not DOWN into the foreground. This is the gate of the WHITE TEMPLE WALL, not a city gate or a freestanding building.
+
+Keep nine principal storeys on the large pagoda. Preserve all other city layout, buildings, roads, boats, floating bridge, river and complete wide composition. Render the moved gate in the same restrained red-brown timber and grey tiles as the painting. No lettering, labels, diagram, border, watermark, crop or zoom.
+
+=== PASS 04 ===
+输入：PASS 03 PNG
+Precisely edit the supplied full panorama. Only change the SMALL YONGNING TEMPLE SOUTH GATE in the white temple wall, at about x535,y450, in front of the large pagoda.
+
+The small temple gate is NOW CORRECTLY POSITIONED: its ground doorway and foot are in the white temple wall at approximately y478, and a strip of houses and trees separates it from the tan city wall. Keep that entire ground-floor doorway, base, sidewall connections, steps, nearby houses and trees EXACTLY unchanged.
+
+It currently has TWO storeys: one ground doorway and one windowed timber floor. Add ONE MORE distinct windowed timber floor on top of its current roof, with its own separate grey tile roof. The final small gate must visibly have THREE occupied architectural storeys: (1) ground doorway, (2) a row of dark windows, (3) another row of dark windows, capped by its third roof. Two upper rows of windows must both be clearly visible. Do not count the big pagoda's eaves behind it as a roof of this gate. The new uppermost floor is narrow and modest, only about 12–15 pixels tall, extending upward into the courtyard view; it must have the same red-brown timber and grey tiles as the existing gate. The whole gate is still far shorter than the pagoda. Make the new tiny top storey distinguishable from the pagoda behind by a clear silhouette on its RIGHT side.
+
+Absolutely no change below the existing small gate's lower roof: do not lengthen the ground floor, move its foot, change the white wall, shrink or move the gate, or disturb the strip between walls. Preserve the nine-storey pagoda, palace, all urban blocks, roads, complete floating bridge, river, colors and full wide image frame. No text, crop, border or annotation.
+

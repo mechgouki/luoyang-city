@@ -1,0 +1,317 @@
+{
+  "schema": "luoyang-panorama-v13-r2-image-v1",
+  "revision": "panorama-candidate-v13-r2",
+  "title": "盛时洛阳 · V13 二修：南门形制与城市空间依据",
+  "status": "candidate_for_review",
+  "created_at_beijing": "2026-11-22T14:56:00+08:00",
+  "research_version": "R9.1",
+  "target_years": [
+    516,
+    528
+  ],
+  "baseline_commit": "fc62dd0fa439e01fbf13899fe8b9eea7f9c101f0",
+  "homepage_replacement_approved": false,
+  "historical_gate_reconstruction_completed": false,
+  "gate_visual_issue_resolved": true,
+  "entire_scene_historically_validated": false,
+  "generation_tool": "built-in image_gen",
+  "source_image": {
+    "path": "web/assets/luoyang-panorama-candidate-v13.webp",
+    "sha256": "ddded211c38b2c27e2268c74d22a9151f861ac335e90118c5d244a2effbb9a78",
+    "meaning": "前版V13公开图像身份；实际编辑输入使用其原始PNG，见generation_steps。"
+  },
+  "source_png": {
+    "path": "research/city-spatial-r9/panorama-v13-r2-source.png",
+    "sha256": "b2bc1486c1e6a7461fcbafd7234b4e15365cc3f65d3f454eb20882818284ade4",
+    "bytes": 2934722,
+    "width": 1672,
+    "height": 941
+  },
+  "full": {
+    "path": "web/assets/luoyang-panorama-candidate-v13-r2.webp",
+    "sha256": "1dcddaf559dce7dc47017b3c257d684c78ffef9b4c459eab869a9ca782cbdf57",
+    "bytes": 615144,
+    "width": 1672,
+    "height": 941
+  },
+  "small": {
+    "path": "web/assets/luoyang-panorama-candidate-v13-r2-small.webp",
+    "sha256": "abcc8c8581f4f2bd710ccbe4e960f0aa9236cdd176a8f0c0304262f8f6530be2",
+    "bytes": 288174,
+    "width": 960,
+    "height": 540
+  },
+  "source_png_sha256": "b2bc1486c1e6a7461fcbafd7234b4e15365cc3f65d3f454eb20882818284ade4",
+  "prompt_file": "research/city-spatial-r9/panorama-generation-prompts.txt",
+  "candidate_review_file": "research/city-spatial-r9/panorama-candidate-review.json",
+  "position_guide": {
+    "path": "research/city-spatial-r9/panorama-gate-layout.svg",
+    "sha256": "8d89418bf2467fb6a1cd34d6b0c422dfac9b6451bd35cfb45f7c30c283d5806a",
+    "meaning": "仅为局部画面位置约束；渲染后作为PASS03参考，不是历史建筑图或测绘。"
+  },
+  "selected_generation_pass": 4,
+  "generation_steps": [
+    {
+      "pass": 1,
+      "generated_filename": "exec-5597ce88-4b56-4449-b34a-27c575ec5a86.png",
+      "sha256": "c86011c629d048e47c3b8ed1fd0eca18110de38326e8b1a7407901df879cd002",
+      "bytes": 2880973,
+      "size_px": [
+        1671,
+        941
+      ],
+      "input": "research/panorama-r8/panorama-v13-source.png",
+      "status": "rejected_gate_foot_displaced"
+    },
+    {
+      "pass": 2,
+      "generated_filename": "exec-e697967f-30fe-4cf8-a488-fd274bf4fc78.png",
+      "sha256": "70f42671666488df72f5d2871b0ea24c7ca22471c3f66f4abb72f550b54cbd5b",
+      "bytes": 2876750,
+      "size_px": [
+        1671,
+        941
+      ],
+      "input": "research/panorama-r8/panorama-v13-source.png",
+      "status": "rejected_gate_foot_displaced"
+    },
+    {
+      "pass": 3,
+      "generated_filename": "exec-71ede197-0692-4023-b1a3-1449514edf06.png",
+      "sha256": "825703a5d91e01593bb041dc1634f56f40826ba7dc3c374f5d4aaac8c8c77e80",
+      "bytes": 3197417,
+      "size_px": [
+        1672,
+        941
+      ],
+      "input": "PASS01 PNG + panorama-gate-layout.svg rendered reference",
+      "status": "position_corrected_but_only_two_gate_storeys"
+    },
+    {
+      "pass": 4,
+      "generated_filename": "exec-5c33a27a-9331-4324-a5dc-54aa8f81e5ff.png",
+      "sha256": "b2bc1486c1e6a7461fcbafd7234b4e15365cc3f65d3f454eb20882818284ade4",
+      "bytes": 2934722,
+      "size_px": [
+        1672,
+        941
+      ],
+      "input": "PASS03 PNG",
+      "status": "selected_three_gate_storeys_attached_to_temple_wall"
+    }
+  ],
+  "encoding": {
+    "operation": "原始生成PNG转WebP，full不缩放；small整幅等比缩至960×540；无像素修补、拼贴或裁切。",
+    "tool": "Pillow",
+    "quality": 95,
+    "method": 6,
+    "resampling": "LANCZOS for small only"
+  },
+  "alt": "北魏盛时洛阳研究性全景候选二修：永宁寺位于宫前门南、主路西；九层木塔前的南门可辨三层，并接入白色寺墙。宫城、街坊、洛水与舟承浮桥保留在完整横幅中。",
+  "detail_view": {
+    "width": 380,
+    "height": 175,
+    "views": {
+      "v13r2": {
+        "x": 350,
+        "y": 380
+      },
+      "v13": {
+        "x": 350,
+        "y": 380
+      }
+    },
+    "caption": "两窗读取各自原图同样380×175像素范围，按相同倍率呈现南门、寺墙与前景城墙；只是观察视窗，不另行绘图或测量古代空间。"
+  },
+  "changes": [
+    {
+      "id": "south-gate",
+      "title": "南门三重落到寺墙原入口",
+      "treatment_type": "changed",
+      "observation": "前版南门只可辨一组主要屋顶；本版可辨底层门洞和两层独立有窗木楼，共三层。白寺墙两翼接入底层，门前隔带保留。",
+      "evidence": "《洛阳伽蓝记》永宁寺段分述四面寺门，南门为三重，东西门两重，北门不施屋。三重是形制依据，不能直接恢复全部构件和精确高度。",
+      "change": "在寺南墙入口增加两层木楼并校正门基从属；前三张试稿分别因门基前移或只有两层而未作为最终候选。",
+      "limitation": "仅解决已知视觉问题；门楼开间、层高、屋顶收分和精确米制高度仍含复原取值。单一画面门洞不构成考古门道数量判断。",
+      "evidence_links": [
+        {
+          "label": "永宁寺原文电子校释",
+          "url": "https://deerpark.app/cbeta/B0077/1"
+        },
+        {
+          "label": "空间判断 SP02",
+          "url": "./luoyang-city-spatial.html#decision-SP02"
+        },
+        {
+          "label": "本版成图独立核查",
+          "url": "./panorama-v13-r2/candidate-review.json"
+        }
+      ]
+    },
+    {
+      "id": "palace-temple-road",
+      "title": "宫门、寺院与大道分属不同空间",
+      "treatment_type": "retained",
+      "observation": "寺院仍在宫前门南、大道西；宫城与寺院分别围合。南门修订没有把寺院入口接到前景城市南墙。",
+      "evidence": "SP02分别保留门南、道西两个方向约束；SP03把来源道路残段与文献御道名称作为候选对应；SP04区分官署路侧与南向次序。",
+      "change": "沿用并重新检查基本构图；把原文一里、道路缺段与官署非镜像关系接入总图和逐项导览。",
+      "limitation": "画中的连续大道、完整围墙与间距仍是艺术表达，不升级为实测平面；不能从一里或画面像素推出准确距离。",
+      "evidence_links": [
+        {
+          "label": "空间判断 SP02",
+          "url": "./luoyang-city-spatial.html#decision-SP02"
+        },
+        {
+          "label": "空间判断 SP03",
+          "url": "./luoyang-city-spatial.html#decision-SP03"
+        },
+        {
+          "label": "空间判断 SP04",
+          "url": "./luoyang-city-spatial.html#decision-SP04"
+        }
+      ]
+    },
+    {
+      "id": "nine-storey-tower",
+      "title": "九层木塔保持可辨",
+      "treatment_type": "retained",
+      "observation": "主塔仍可辨九层主要木构楼层，顶部金刹另计。南门遮住最低层中央与右部，左侧最低层仍可独立辨认。",
+      "evidence": "永宁寺九层木塔见文献，1995年日中联合调查报告亦述及木塔。塔北佛殿的方位有文献与既有布局研究支持。",
+      "change": "本轮以正确门楼位置和三层可读性为修改目标，保留前版已落实的九层主塔与塔北殿。",
+      "limitation": "塔总高、层高、檐形、金刹尺寸未因此获得新量测；生成图其他区域不作逐像素不变承诺。",
+      "evidence_links": [
+        {
+          "label": "联合调查报告（印本2—3页）",
+          "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/5227/1/AN00181387_1995_2_3.pdf"
+        },
+        {
+          "label": "前版V13核查",
+          "url": "./panorama-v13/candidate-review.json"
+        },
+        {
+          "label": "空间判断 SP01",
+          "url": "./luoyang-city-spatial.html#decision-SP01"
+        }
+      ]
+    },
+    {
+      "id": "street-hierarchy",
+      "title": "街、坊口与交通带各守自己的尺度",
+      "treatment_type": "retained",
+      "observation": "全景沿用主路与小巷的视觉层级；没有把白马寺局部六街复制成全城均匀九宫格。",
+      "evidence": "SP06—SP10把中央十字、南口与不同宽度分开，22米纵街、7.5米缺口和4.6米车辙带各有对象。",
+      "change": "本轮具体空间改进落实在总图的白马寺关系窗和对照表；全景保留概括，未新增白马寺坊门精确位置。",
+      "limitation": "普通街坊、房屋数量与交通密度仍为艺术概化；不能声称画中每一条小巷均有发掘依据。",
+      "evidence_links": [
+        {
+          "label": "空间判断 SP06",
+          "url": "./luoyang-city-spatial.html#decision-SP06"
+        },
+        {
+          "label": "空间判断 SP07",
+          "url": "./luoyang-city-spatial.html#decision-SP07"
+        },
+        {
+          "label": "空间判断 SP08",
+          "url": "./luoyang-city-spatial.html#decision-SP08"
+        },
+        {
+          "label": "空间判断 SP09",
+          "url": "./luoyang-city-spatial.html#decision-SP09"
+        }
+      ]
+    },
+    {
+      "id": "storage-area",
+      "title": "仓区分区进入总图，窖数不换成屋顶阵列",
+      "treatment_type": "not_located",
+      "observation": "本版没有按报道窖数新增整齐地上房屋阵列，也没有把宫内外仓区合为一个有精确边界的片区。",
+      "evidence": "SP11—SP15区分宫院内夹道、司马门路与仓区内路，并分别处理宫内仓区与宫外太仓解释。",
+      "change": "总图明确宫院—主路—仓区的相对次序，以及仓区内部道路与分隔墙的不同作用；全景继续采用概括建筑体量。",
+      "limitation": "宫外仓区地望、全部范围、地上建筑形制和516—528年同期运行状态仍不能由现有统计推定。",
+      "evidence_links": [
+        {
+          "label": "空间判断 SP11",
+          "url": "./luoyang-city-spatial.html#decision-SP11"
+        },
+        {
+          "label": "空间判断 SP12",
+          "url": "./luoyang-city-spatial.html#decision-SP12"
+        },
+        {
+          "label": "空间判断 SP13",
+          "url": "./luoyang-city-spatial.html#decision-SP13"
+        },
+        {
+          "label": "空间判断 SP14",
+          "url": "./luoyang-city-spatial.html#decision-SP14"
+        },
+        {
+          "label": "空间判断 SP15",
+          "url": "./luoyang-city-spatial.html#decision-SP15"
+        }
+      ]
+    },
+    {
+      "id": "eastern-bridges-canals",
+      "title": "桥向、渠线分期与未定接口分开阅读",
+      "treatment_type": "not_located",
+      "observation": "没有新增城东三桥连成一线的景观，也没有因同时出现路北渠与路南解释就补画两条同期水道。",
+      "evidence": "SP16—SP20区分三桥叙述、东石桥南北方向、527年事件、路北渠迹与路南分期解释，并保留暗渠和七里涧异读的界限。",
+      "change": "总图新增纵向桥符与分期关系签，候选图依据导览逐项连接这些决定；美术图不补画待核桥头、渠口和鸿池出口。",
+      "limitation": "1993和2011原刊完整附图仍缺；既有推论没有升级为共同测绘位置，古岸、桥头、渠口保持未定。",
+      "evidence_links": [
+        {
+          "label": "空间判断 SP16",
+          "url": "./luoyang-city-spatial.html#decision-SP16"
+        },
+        {
+          "label": "空间判断 SP17",
+          "url": "./luoyang-city-spatial.html#decision-SP17"
+        },
+        {
+          "label": "空间判断 SP18",
+          "url": "./luoyang-city-spatial.html#decision-SP18"
+        },
+        {
+          "label": "空间判断 SP19",
+          "url": "./luoyang-city-spatial.html#decision-SP19"
+        },
+        {
+          "label": "空间判断 SP20",
+          "url": "./luoyang-city-spatial.html#decision-SP20"
+        }
+      ]
+    },
+    {
+      "id": "floating-bridge-frame",
+      "title": "浮桥结构与完整取景继续保留",
+      "treatment_type": "retained",
+      "observation": "前景仍为舟体承托的木面浮桥；河面、两岸、城市与前景均在完整横幅内，未以突出门楼为由裁切场景。",
+      "evidence": "原永桥与道路研究区分通达关系和未知桥头；R7宫前水路判断保留支水接口，不从全景补成确定水网。",
+      "change": "沿用已有浮桥与大场景表达；全幅和手机图按各自实际比例呈现，文字说明位于图外。",
+      "limitation": "河宽、桥长、舟数、古岸和前景城墙位置仍为示意。门楼修订不意味着全城每栋建筑及古代地面已经复原。",
+      "evidence_links": [
+        {
+          "label": "空间判断 SP03",
+          "url": "./luoyang-city-spatial.html#decision-SP03"
+        },
+        {
+          "label": "空间判断 SP05",
+          "url": "./luoyang-city-spatial.html#decision-SP05"
+        },
+        {
+          "label": "V12画面依据导览",
+          "url": "./luoyang-city-nodes.html#panorama"
+        }
+      ]
+    }
+  ],
+  "remaining_limits": [
+    "本轮落实南门三重的画面表达及其寺墙从属；完整历史构件、开间和精确高度仍未复原。",
+    "城市总图深化20项既有判断，本轮没有取得1993、2011原刊新印页或完整图版，也没有新增古代坐标、古岸几何或提高历史定位等级。",
+    "白马寺、司马门与建春门局部资料尚未共同配准；局部图框位置与图像像素不能转作古代距离。",
+    "永宁寺西墙局部白土与赤彩证据不证明全部寺墙同色；画中其他墙段配色仍含艺术延伸。",
+    "街坊屋顶、人员车马、河宽桥长与地形仍含概化；516—528年为综合研究窗口，不能视作同一年全城快照。",
+    "本张是供集中审看的具体候选，首页继续使用已批准的V12。"
+  ]
+}

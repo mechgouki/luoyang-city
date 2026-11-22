@@ -1,14 +1,16 @@
 # 洛阳城复原：当前状态与续接顺序
 
 <!-- current-state:start -->
-当前状态（2026-11-22）：研究 **R8.1 / panorama-review-v13**（依据R7四节点与建筑材料修订全景，V13候选审看与原件续查）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-22）：研究 **R9.1 / city-spatial-r9 + panorama-review-v13-r2**（四节点城市空间总图、20项判断对照与V13南门二修候选）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13.html) · [上一已验收发布 `557c468`](https://github.com/mechgouki/luoyang-city/actions/runs/44984166317) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/637dd943fee13a30ca754cdd3d97c85bb8adc8b9/evidence/city-nodes-r7/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-spatial.html) · [上一已验收发布 `fc62dd0`](https://github.com/mechgouki/luoyang-city/actions/runs/44991627755) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/6b87a799fc0d94cb0b19cf127836f9e3e9f7cd1a/evidence/panorama-v13/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](../research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->
 
-本批四处关键节点、28条联读来源记录与V12依据导览见[R7.1研究与交付说明](city-nodes-r7.md)。R6.2的84条道路证据及339实体覆盖仍见[完整道路说明](roads-r62-research.md)。下文保留历批接续原文；旧文中的首页待选、V9、07号／V11及早期P批次进度只表示当时状态。
+本批城市空间总图、20项判断对照见[R9.1交付说明](city-spatial-r9.md)；南门三重的成图修正与V13二修审看见[候选图说明](panorama-v13-r2.md)。本轮复用既有可靠关系改善图面，原件续查没有新增古代坐标、古岸或定位等级；最终发布验收以交接#52为准。
+
+此前四处关键节点、28条联读来源记录与V12依据导览见[R7.1研究与交付说明](city-nodes-r7.md)。R6.2的84条道路证据及339实体覆盖仍见[完整道路说明](roads-r62-research.md)。下文保留历批接续原文；旧文中的首页待选、V9、07号／V11及早期P批次进度只表示当时状态。
 
 更新：2026-11-20。当前进度、验收状态及下一条断点以[固定交接表 #52](https://github.com/mechgouki/luoyang-city/issues/52)最新正文和评论为准；史料、图源、量测和验收依据存于[研究记录 #47](https://github.com/mechgouki/luoyang-city/issues/47)。以真实主分支、发布清单和正式站验收为准；不要从较早ZIP恢复覆盖主分支。
 
