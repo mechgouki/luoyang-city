@@ -19,6 +19,8 @@ def digest(raw):
 
 
 def verify(info, reader, *, build_control_reader=None):
+    from city_layout_r10_contract import restore_r9_context
+    info, reader = restore_r9_context(info, reader)
     get = lru_cache(maxsize=None)(reader)
     hashes, meta = info['files_sha256'], info[KEY]
     assert json.loads(get(MANIFEST)) == meta

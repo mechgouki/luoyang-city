@@ -85,6 +85,10 @@ SITE = [
         ('node', '--check', 'web/panorama-v13-r2.js'),
         ('python', 'tools/panorama_v13_r2.py'),
     ]),
+    ('R10.1 whole-city plan and eleven regional layouts', [
+        ('node', '--check', 'web/city-layout-r10.js'),
+        ('python', 'tools/city_layout_r10.py'),
+    ]),
 ]
 
 

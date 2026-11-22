@@ -376,6 +376,8 @@ def verify(info, reader, *, build_control_reader=None):
     # verifiers, and the upstream validator checks .nojekyll only via its local
     # build-control reader, never as a public HTTP resource.
     del build_control_reader
+    from city_layout_r10_contract import restore_r9_context
+    info, reader = restore_r9_context(info, reader)
     get = lru_cache(maxsize=None)(reader)
     hashes = info["files_sha256"]
     meta = info[KEY]
