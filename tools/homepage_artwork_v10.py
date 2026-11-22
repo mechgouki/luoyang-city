@@ -125,9 +125,10 @@ def replace_hero(html, old, new):
 
 
 def restore_baseline(html):
+    from panorama_v13_r2_contract import strip_current_entries
     from panorama_v13_contract import restore_home as restore_candidate_entry
     from city_nodes_r7_contract import restore_home
-    html = restore_home(restore_candidate_entry(html))
+    html = restore_home(restore_candidate_entry(strip_current_entries(html)))
     for previous, artwork, _ in reversed(RELEASES):
         if f'data-hero-revision="{artwork.revision}"'.encode() in html:
             html = replace_hero(html, artwork, previous)
