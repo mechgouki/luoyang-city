@@ -1,0 +1,40 @@
+{
+  "schema": "luoyang-failed-live-review-v1",
+  "source_commit": "d7cd18a832e30e718dfd360b240c15b79927306b",
+  "overall_release_accepted": false,
+  "manual_screenshot_review": {
+    "path": "live-all-road-atlas-r62-browser/desktop-failure.png",
+    "sha256": "e1b9e9c2cd9b0a370dc7c5a57e287c3f268ed4e93f63915305c30c2f165473f6",
+    "pixels": [
+      1440,
+      960
+    ],
+    "method": "Opened the original PNG with view_image. No image transformation.",
+    "observations": [
+      "The captured screenshot has loaded page styling, heading, controls, legend, and map.",
+      "The main content shown is aligned inside the 1440-pixel screenshot; no obvious horizontal displacement is visible in this capture.",
+      "Only the visible viewport was inspected; the map continues below the image."
+    ],
+    "limitation": "The failure handler captured this screenshot after the assertion. The original failing R6.2 report contains no measured width or readyState, so this later image does not establish the exact layout at assertion time."
+  },
+  "machine_checked_preceding_r6_reports": [
+    {
+      "path": "live-road-atlas-r6-browser/desktop-report.json",
+      "status": "passed",
+      "source_commit": "d7cd18a832e30e718dfd360b240c15b79927306b",
+      "layout_check_count": 6,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0
+    },
+    {
+      "path": "live-road-atlas-r6-browser/mobile-report.json",
+      "status": "passed",
+      "source_commit": "d7cd18a832e30e718dfd360b240c15b79927306b",
+      "layout_check_count": 6,
+      "all_ready_state_complete": true,
+      "maximum_document_minus_inner_width": 0
+    }
+  ],
+  "failure_report": "live-all-road-atlas-r62-browser/desktop-report.json",
+  "failure_status": "failed before any R6.2 check groups completed"
+}

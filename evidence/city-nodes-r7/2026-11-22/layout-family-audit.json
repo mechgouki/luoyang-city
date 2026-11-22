@@ -1,0 +1,2077 @@
+{
+  "schema": "luoyang-browser-layout-family-audit-v1",
+  "audited_at_beijing": "2026-11-22",
+  "baseline_commit": "d7cd18a832e30e718dfd360b240c15b79927306b",
+  "fix_head_commit": "3cdf900ebfc4e4b851556360d175bb7798aeea3b",
+  "pr_number": 78,
+  "ci_run_id": 44983493286,
+  "scope": "Static source audit and preserved assertion tolerances. Browser execution and release acceptance are recorded separately in workflow reports.",
+  "original_browser_scripts": 40,
+  "changed_browser_scripts": 5,
+  "unchanged_browser_scripts": 35,
+  "explicit_navigation_modes_changed": 45,
+  "shared_helper": {
+    "path": "tests/browser_layout.py",
+    "sha256": "58b295a740330adab3245834aa92f53a2cf3b2c6c55ea7e504bf8cc2be651606",
+    "load_timeout_ms": 30000,
+    "fit_attempts": 1,
+    "sleep_added": false,
+    "retry_until_fit_added": false,
+    "product_or_research_files_changed": false
+  },
+  "additional_r5_cross_document_url_load_waits": 2,
+  "sdk_confirmation": {
+    "playwright_version": "1.57.0",
+    "implementation_file": "/tmp/luoyang-r7-venv/lib/python3.12/site-packages/playwright/_impl/_frame.py",
+    "wait_for_url_implementation_excerpt": "    async def wait_for_url(\n        self,\n        url: URLMatch,\n        waitUntil: DocumentLoadState = None,\n        timeout: float = None,\n    ) -> None:\n        assert self._page\n        if url_matches(self._page._browser_context._base_url, self.url, url):\n            await self._wait_for_load_state_impl(state=waitUntil, timeout=timeout)\n            return\n        async with self.expect_navigation(\n            url=url, waitUntil=waitUntil, timeout=timeout\n        ):\n            pass\n",
+    "finding": "Even when the requested URL already matches, Frame.wait_for_url waits for the load state. Unspecified state defaults to load."
+  },
+  "scripts": [
+    {
+      "path": "tests/browser_all_road_atlas_r62.py",
+      "baseline_sha256": "ccc5d8d91e0695f170e7dcc7c8c38474308044e082dcbb93d1d0f2298483cb7f",
+      "audited_navigation_waits": [
+        {
+          "line": 69,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 86,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 94,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 105,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 112,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 116,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 125,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 143,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 157,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 203,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 210,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 219,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        }
+      ],
+      "action": "changed",
+      "navigation_modes_changed": 11,
+      "original_width_tolerance_px": 1,
+      "new_width_tolerances_px": [
+        1
+      ],
+      "new_sha256": "2af35eb4e6cd75ed983e3aaf3e8dc9dc44bee1cb8d402a023b74fdc2a2d185a8",
+      "shared_helper": "tests/browser_layout.py",
+      "reason": "Atlas family geometry now waits for current-document load; original tolerance retained."
+    },
+    {
+      "path": "tests/browser_anchors_p461.py",
+      "baseline_sha256": "5802d87bbd54d78749479b8970a996cf89a9f752a687a235a1850fd175a77728",
+      "audited_navigation_waits": [
+        {
+          "line": 7,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 10,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 16,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 29,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "A domcontentloaded entry is followed by wait_for_url (default load); reload/no-script geometry paths already wait for load."
+    },
+    {
+      "path": "tests/browser_backbone_p469.py",
+      "baseline_sha256": "9dff3363022268397804f7f708686a256563dae6bede9c1456547fd6039c0ca7",
+      "audited_navigation_waits": [
+        {
+          "line": 262,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 269,
+          "operation": "go_back",
+          "wait_until": "load"
+        },
+        {
+          "line": 446,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 484,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 490,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 511,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 547,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 563,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 572,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 577,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 589,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 597,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 611,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "A domcontentloaded entry is followed by wait_for_url (default load); reload/no-script geometry paths already wait for load."
+    },
+    {
+      "path": "tests/browser_city_atlas_r4.py",
+      "baseline_sha256": "5ab60ad1ed9deb4aca5d4364c2bcf9025c8c38d0617b29b61b24a4705b3234cc",
+      "audited_navigation_waits": [
+        {
+          "line": 30,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 41,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 57,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 61,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 69,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 74,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 83,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 87,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 100,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 106,
+          "operation": "goto",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "changed",
+      "navigation_modes_changed": 3,
+      "original_width_tolerance_px": 0,
+      "new_width_tolerances_px": [
+        0,
+        0,
+        0
+      ],
+      "new_sha256": "d8e372b911f429ecc4509779e16afbdf209a5fb4331258b8f2316e105b856c80",
+      "shared_helper": "tests/browser_layout.py",
+      "reason": "Atlas family geometry now waits for current-document load; original tolerance retained."
+    },
+    {
+      "path": "tests/browser_city_b8.py",
+      "baseline_sha256": "145c9d3aa19fcbcc65746fa5c23b47168165e0f8898fb9fc245c31abfb04f41d",
+      "audited_navigation_waits": [
+        {
+          "line": 91,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 106,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 112,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 125,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 220,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 264,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 342,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 346,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 355,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 378,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_city_common_p470.py",
+      "baseline_sha256": "67db1c3f314b1d8adc5679b401e98481bf8d96cf65f4d43cc8dc24ac2e8fe905",
+      "audited_navigation_waits": [
+        {
+          "line": 192,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 202,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 233,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 239,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 310,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 317,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 320,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 323,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 351,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "A domcontentloaded entry is followed by wait_for_url (default load); reload/no-script geometry paths already wait for load."
+    },
+    {
+      "path": "tests/browser_city_nodes_r7.py",
+      "baseline_sha256": "c38a9bef68c819bb3549899739bbec28f2ba96256b884a9e4ad28ee7e5309013",
+      "audited_navigation_waits": [
+        {
+          "line": 56,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 59,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 79,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 82,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 99,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 105,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 115,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 118,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 125,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 131,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 148,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 157,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 161,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 163,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 169,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 182,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 188,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 212,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 218,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 221,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 232,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        }
+      ],
+      "action": "changed",
+      "navigation_modes_changed": 17,
+      "original_width_tolerance_px": 1,
+      "new_width_tolerances_px": [
+        1
+      ],
+      "new_sha256": "260920d86aa6b7c13bb11da29b822467b12b37b24d94d5bc7bd2d099343ea9d8",
+      "shared_helper": "tests/browser_layout.py",
+      "reason": "Atlas family geometry now waits for current-document load; original tolerance retained."
+    },
+    {
+      "path": "tests/browser_city_north_p471.py",
+      "baseline_sha256": "b7c3c5caf8a9045ca7e9ff573dfc0c8f54472aef4129e861d37d903dceaa4b9a",
+      "audited_navigation_waits": [
+        {
+          "line": 271,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 285,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 315,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 321,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 424,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 430,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 449,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 452,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 455,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 468,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "A domcontentloaded entry is followed by wait_for_url (default load); reload/no-script geometry paths already wait for load."
+    },
+    {
+      "path": "tests/browser_city_panorama_r5.py",
+      "baseline_sha256": "46b187abbf923a58c21853f5f52b1a0be6234baad23948eb7c0d69749b0111af",
+      "audited_navigation_waits": [
+        {
+          "line": 27,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 37,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 41,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 44,
+          "operation": "go_back",
+          "wait_until": "default load"
+        },
+        {
+          "line": 51,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 57,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 63,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 71,
+          "operation": "reload",
+          "wait_until": "default load"
+        },
+        {
+          "line": 86,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 97,
+          "operation": "goto",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "changed",
+      "navigation_modes_changed": 4,
+      "original_width_tolerance_px": 0,
+      "new_width_tolerances_px": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "new_sha256": "aab2363852b6806684128899f0c675d44944cd6cce08a4b65fbb0dc9a14b9f1a",
+      "shared_helper": "tests/browser_layout.py",
+      "reason": "Atlas family geometry now waits for current-document load; original tolerance retained."
+    },
+    {
+      "path": "tests/browser_city_west_p472.py",
+      "baseline_sha256": "e5598d54bca802edbdc135a6fc802d4f5f6b0f4122d416426b5d69bb79fa3735",
+      "audited_navigation_waits": [
+        {
+          "line": 66,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 68,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 117,
+          "operation": "reload",
+          "wait_until": "default load"
+        },
+        {
+          "line": 120,
+          "operation": "go_back",
+          "wait_until": "default load"
+        },
+        {
+          "line": 123,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 146,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 155,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 159,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_dual.py",
+      "baseline_sha256": "dbf9d6d5b6b211dccb0ff4606e09a62482c2c24de9b77afce9a27b8df9cde07a",
+      "audited_navigation_waits": [
+        {
+          "line": 22,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 25,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 27,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 33,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 37,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 56,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_homepage_approved_v9.py",
+      "baseline_sha256": "d1a39c19f1af6b8d1a930f6851cc1d107b97171ead7082499e8c4c6efd48926a",
+      "audited_navigation_waits": [
+        {
+          "line": 139,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_homepage_v1.py",
+      "baseline_sha256": "1dc09346ed1d6b9bbe244c4109d4a30dafc286864927ced3923fbf36414586d5",
+      "audited_navigation_waits": [
+        {
+          "line": 76,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 110,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 116,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 130,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 149,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 152,
+          "operation": "go_back",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 157,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 162,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 166,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 175,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 193,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 208,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 214,
+          "operation": "go_back",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_luonan_b7.py",
+      "baseline_sha256": "540fb2c45719009ff35fa9facfb7771dc1255aef606e69094507c8c25f145df9",
+      "audited_navigation_waits": [
+        {
+          "line": 87,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 113,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 118,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 124,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 140,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 196,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 207,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 222,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 271,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 287,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 352,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 356,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 360,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 376,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 385,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_network_p462.py",
+      "baseline_sha256": "a416e0d5ae3e02dd9741769c619314055a86112a0b51e46e01b29efaa26b9ec6",
+      "audited_navigation_waits": [
+        {
+          "line": 8,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 11,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 15,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 40,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 43,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 55,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 58,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 69,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 73,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 87,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 91,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 108,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 110,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 112,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 114,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 116,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "A domcontentloaded entry is followed by wait_for_url (default load); reload/no-script geometry paths already wait for load."
+    },
+    {
+      "path": "tests/browser_north_b4.py",
+      "baseline_sha256": "88f959e1f09f070210e1dead12fed0b8f8107b017dbb602b5a409f79655618d5",
+      "audited_navigation_waits": [
+        {
+          "line": 25,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 33,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 38,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 47,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 58,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 70,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 86,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 88,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 92,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_architecture_p44.py",
+      "baseline_sha256": "a5bb0589baa6145e5b59e1d477ea75f74944d31a2735d5af3167ba0ad748d51a",
+      "audited_navigation_waits": [
+        {
+          "line": 48,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 67,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 96,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 109,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_axis_sources_p41.py",
+      "baseline_sha256": "1bf974ded1507a97cc15db433b1015118e0d1dbe5a6b9686d63042a4739da0db",
+      "audited_navigation_waits": [
+        {
+          "line": 50,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 69,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 109,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 124,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_axis_v4.py",
+      "baseline_sha256": "b2a68ce7fd2837ba5e530374a9b8d96e0f8d4429d233940b63a082c741765821",
+      "audited_navigation_waits": [
+        {
+          "line": 59,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 79,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 122,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 137,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_city_distribution_p451.py",
+      "baseline_sha256": "33ffdf7fb3d30b67f72403dccd370c753e32878305c7f24df9d413f7d1c1c9f2",
+      "audited_navigation_waits": [
+        {
+          "line": 47,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 64,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 69,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 102,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 117,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_core_v2.py",
+      "baseline_sha256": "44f89f35bac72b487e10d71dc1b395c37188e2734a6f4d397e1763bbd518ed53",
+      "audited_navigation_waits": [
+        {
+          "line": 95,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 190,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 195,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 200,
+          "operation": "go_back",
+          "wait_until": "default load"
+        },
+        {
+          "line": 206,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 216,
+          "operation": "wait_for_load_state",
+          "wait_until": "default load"
+        },
+        {
+          "line": 243,
+          "operation": "wait_for_load_state",
+          "wait_until": "default load"
+        },
+        {
+          "line": 253,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 267,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 284,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_gate_v3.py",
+      "baseline_sha256": "62b594eb94cf4c1835c1237dcd547d4d17c717367e01d14744c9f8966b58102c",
+      "audited_navigation_waits": [
+        {
+          "line": 94,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 181,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 188,
+          "operation": "go_back",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 197,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 222,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 248,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 265,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_hydro_roads_p46.py",
+      "baseline_sha256": "a3a9f6f208ff6e6c1fdc4197f4a5436158a6c024295d86c770ee32bdf76421e2",
+      "audited_navigation_waits": [
+        {
+          "line": 44,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 75,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 110,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 131,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_palace_boundaries_p43.py",
+      "baseline_sha256": "5314421cd0c51736a979ab5e948c83e7e33bd2a9567dcf6ce19b3762fb7cb573",
+      "audited_navigation_waits": [
+        {
+          "line": 42,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 70,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_road_functions_p452.py",
+      "baseline_sha256": "0c354ce96abccd4de33f5c91a0524d769d1c8b5a0c6291d6e9ae6a6278d23a16",
+      "audited_navigation_waits": [
+        {
+          "line": 44,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 72,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 105,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 121,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_street_clusters_p453.py",
+      "baseline_sha256": "5bb2200b25d7b257ec121f21a2d3eec3945b686abacee638705b5ebc30ca3555",
+      "audited_navigation_waits": [
+        {
+          "line": 42,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 64,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 97,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 113,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_taiji_courts_p42.py",
+      "baseline_sha256": "7b1fea3072c4d01e3aa89f502a57e42fbe3cad6fce654400c7572cf5518aa156",
+      "audited_navigation_waits": [
+        {
+          "line": 37,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 55,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 64,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 97,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 109,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_prosperity_v1.py",
+      "baseline_sha256": "ff651c0f0f223f1276ff1ba73f9ffa9d9c2070404c604d7a74dc10cf0ef23f95",
+      "audited_navigation_waits": [
+        {
+          "line": 89,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 172,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 187,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 260,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 313,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 320,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 323,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 328,
+          "operation": "go_back",
+          "wait_until": "default load"
+        },
+        {
+          "line": 336,
+          "operation": "wait_for_load_state",
+          "wait_until": "default load"
+        },
+        {
+          "line": 379,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 392,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_road_atlas_r6.py",
+      "baseline_sha256": "1bab14b8b482f51d1f9fb17ea0ec5ab60b24a7dc9b542d8dda8bdb7657027c65",
+      "audited_navigation_waits": [
+        {
+          "line": 33,
+          "operation": "wait_for_load_state",
+          "wait_until": "load"
+        },
+        {
+          "line": 64,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 71,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 80,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 96,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 105,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 119,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 124,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 130,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 163,
+          "operation": "goto",
+          "wait_until": "default load"
+        },
+        {
+          "line": 170,
+          "operation": "reload",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 178,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        }
+      ],
+      "action": "changed",
+      "navigation_modes_changed": 10,
+      "original_width_tolerance_px": 1,
+      "new_width_tolerances_px": [
+        1
+      ],
+      "new_sha256": "a9583367e6817022ce8b4d6534c8f84f307ca7e4b3783062cf6e3b704f99a748",
+      "shared_helper": "tests/browser_layout.py",
+      "reason": "Atlas family geometry now waits for current-document load; original tolerance retained."
+    },
+    {
+      "path": "tests/browser_southeast_b6.py",
+      "baseline_sha256": "0ec007c66b4f39e38ad7e0c5743c6ced7f305cf777f1ad22d21c6119caeab64a",
+      "audited_navigation_waits": [
+        {
+          "line": 87,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 107,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 114,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 139,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 155,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 193,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 237,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 256,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 274,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 283,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 333,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 337,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 344,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 355,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 366,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_v25.py",
+      "baseline_sha256": "3458ebd66aed11679a206c12e06cf876b9129424ae431bb661f05f7ef82e02d1",
+      "audited_navigation_waits": [
+        {
+          "line": 27,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 35,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 40,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 48,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 48,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 56,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 59,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 62,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 69,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 71,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 73,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_v26.py",
+      "baseline_sha256": "3d26884065cc7c2955e34270fa53678d77bda6745b6bb7f3a1cb8ab7d7a76aaf",
+      "audited_navigation_waits": [
+        {
+          "line": 26,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 30,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 44,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 47,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 51,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 53,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 55,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 56,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 64,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 68,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_v27.py",
+      "baseline_sha256": "43c843bd27194616240bf1734247ae4e3f4bb5ef1cebebb055c093e26263b505",
+      "audited_navigation_waits": [
+        {
+          "line": 24,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 28,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 36,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 41,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 42,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 51,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 52,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 53,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 59,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 61,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_v28.py",
+      "baseline_sha256": "e31c18cac9fd774ecfc934aabc9f5d1469eaeae06248a52744afc17f135cb0eb",
+      "audited_navigation_waits": [
+        {
+          "line": 29,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 45,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 48,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 51,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 51,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 62,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 74,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_v29.py",
+      "baseline_sha256": "ac300f52c5d2f355c76c94c3dbaa84380f536949f6ef978f2561002ea99dd182",
+      "audited_navigation_waits": [
+        {
+          "line": 25,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 43,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 43,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 48,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 53,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_v30.py",
+      "baseline_sha256": "ec3814c8917627dd12a9411d4f3afd44fa2be3cea1399172007251df07a46ff5",
+      "audited_navigation_waits": [
+        {
+          "line": 22,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 33,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 41,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_water_p467.py",
+      "baseline_sha256": "01cfb3e5a659a83f605c84d1acae170ac33b5acb7456b934589ce31e407d609d",
+      "audited_navigation_waits": [
+        {
+          "line": 100,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 128,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 132,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 160,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 177,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 251,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 257,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 267,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "A domcontentloaded entry is followed by wait_for_url (default load); reload/no-script geometry paths already wait for load."
+    },
+    {
+      "path": "tests/browser_water_p468.py",
+      "baseline_sha256": "eb4fa17e2769e3829a30743935c806117bd72af72251db512fa753ad4a3e4135",
+      "audited_navigation_waits": [
+        {
+          "line": 189,
+          "operation": "goto",
+          "wait_until": "load"
+        },
+        {
+          "line": 220,
+          "operation": "goto",
+          "wait_until": "domcontentloaded"
+        },
+        {
+          "line": 224,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 237,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 272,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 293,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 301,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 382,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 389,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 395,
+          "operation": "reload",
+          "wait_until": "load"
+        },
+        {
+          "line": 405,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        },
+        {
+          "line": 409,
+          "operation": "wait_for_url",
+          "wait_until": "default load"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "A domcontentloaded entry is followed by wait_for_url (default load); reload/no-script geometry paths already wait for load."
+    },
+    {
+      "path": "tests/browser_west_b3.py",
+      "baseline_sha256": "b1b8b20ebf61aadca1bcfc3d4fe5394d0c867052b46646fa41fd9744c743788c",
+      "audited_navigation_waits": [
+        {
+          "line": 25,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 33,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 52,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 68,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    },
+    {
+      "path": "tests/browser_west_roads_b5.py",
+      "baseline_sha256": "c01950cae9c1b8e0f1a5fe872e297eccbb9b11ceb762873ba926a7d9218e6874",
+      "audited_navigation_waits": [
+        {
+          "line": 25,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 35,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 40,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 48,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 59,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 73,
+          "operation": "reload",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 94,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 96,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        },
+        {
+          "line": 100,
+          "operation": "goto",
+          "wait_until": "networkidle"
+        }
+      ],
+      "action": "unchanged",
+      "reason": "Reviewed geometry paths already have networkidle or default/explicit load navigation guards."
+    }
+  ]
+}

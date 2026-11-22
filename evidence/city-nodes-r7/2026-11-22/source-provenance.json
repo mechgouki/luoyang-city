@@ -1,37 +1,111 @@
 {
-  "schema": "luoyang-r7-source-provenance-v2",
-  "original_pr_head": "9242bf54a6a45328d0d5a16633c063743de3219f",
-  "original_pr_tested_source": "6fae2767ca220a59e8357f2d4483ac57c32922be",
-  "original_production_source": "ccf24530910a5efd9de7f860be913933b916a8a0",
-  "correction_pr_head": "fb24d5919adc52557078c7fd4af8a4ba81bc79f2",
-  "correction_pr_tested_source": "2827a108e68bc113453df66bf18e5133e6072b65",
-  "correction_pr_and_main_tree": "e9f3f16df602680ee4e5a465c2c922812fc88d96",
-  "comparison": "PR76 test source and intermediate main9599123 have the same Git tree. Intermediate production browser acceptance failed on the legacy R6 initial viewport measurement.",
-  "original_run": 44972925535,
-  "correction_pr_run": 44979526114,
-  "intermediate_main_source": "9599123701766cbdfe5971095af638898f407efe",
-  "intermediate_main_run": 44980204847,
-  "intermediate_main_status": {
-    "build": "success",
-    "deploy": "success",
-    "verify-live": "failure"
-  },
-  "readiness_pr": {
-    "number": 77,
-    "head": "87a2b52cbd5ae3923f30ca9221c4d88bd769ecc8",
-    "tested_merge_ref": "3fa80ae293a753b2c04bfe98e83b249229ab123c",
-    "tree": "e23869126dda47da76487518aed7886bf17f51b2",
-    "run_id": 44981414863,
-    "status_at_checkpoint": "success",
-    "files_changed": [
-      "tests/browser_road_atlas_r6.py",
-      "docs/city-nodes-r7.md"
-    ],
-    "outcome": "build success; deploy and verify-live correctly skipped for pull_request"
-  },
-  "final_release_accepted": false,
-  "final_main_source": "d7cd18a832e30e718dfd360b240c15b79927306b",
-  "final_main_tree": "e23869126dda47da76487518aed7886bf17f51b2",
-  "final_main_run": 44982066390,
-  "final_main_status_at_checkpoint": "in_progress"
+  "schema": "luoyang-r7-source-provenance-v3",
+  "updated_at_beijing": "2026-11-22T12:07:06.228650+08:00",
+  "research_version": "R7.1",
+  "implementation": "city-nodes-r7.1",
+  "homepage": "panorama-approved-v12",
+  "stages": [
+    {
+      "role": "original_implementation_pr",
+      "pr": 75,
+      "head": "9242bf54a6a45328d0d5a16633c063743de3219f",
+      "tested_source": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "run_id": 44971941825,
+      "outcome": "success",
+      "archive": [
+        "original-pr"
+      ]
+    },
+    {
+      "role": "original_main",
+      "source": "ccf24530910a5efd9de7f860be913933b916a8a0",
+      "run_id": 44972925535,
+      "jobs": {
+        "build": "success",
+        "deploy": "success",
+        "verify-live": "failure"
+      },
+      "failure": "Root .nojekyll build marker was incorrectly fetched as a published HTTP asset",
+      "archive": [
+        "original-live-failure"
+      ]
+    },
+    {
+      "role": "control_marker_and_SI02_fix_pr",
+      "pr": 76,
+      "head": "fb24d5919adc52557078c7fd4af8a4ba81bc79f2",
+      "tested_source": "2827a108e68bc113453df66bf18e5133e6072b65",
+      "tree": "e9f3f16df602680ee4e5a465c2c922812fc88d96",
+      "run_id": 44979526114,
+      "outcome": "success",
+      "archive": [
+        "corrected-pr"
+      ]
+    },
+    {
+      "role": "intermediate_main_959",
+      "source": "9599123701766cbdfe5971095af638898f407efe",
+      "tree": "e9f3f16df602680ee4e5a465c2c922812fc88d96",
+      "run_id": 44980204847,
+      "jobs": {
+        "build": "success",
+        "deploy": "success",
+        "verify-live": "failure"
+      },
+      "failure": "Legacy R6 initial viewport assertion before explicit document-load readiness",
+      "archive": [
+        "merge-build",
+        "main959-live-failure",
+        "live-independent"
+      ]
+    },
+    {
+      "role": "R6_readiness_fix_pr",
+      "pr": 77,
+      "head": "87a2b52cbd5ae3923f30ca9221c4d88bd769ecc8",
+      "tested_source": "3fa80ae293a753b2c04bfe98e83b249229ab123c",
+      "tree": "e23869126dda47da76487518aed7886bf17f51b2",
+      "run_id": 44981414863,
+      "outcome": "success",
+      "archive": [
+        "readiness-pr"
+      ]
+    },
+    {
+      "role": "intermediate_main_d7",
+      "source": "d7cd18a832e30e718dfd360b240c15b79927306b",
+      "tree": "e23869126dda47da76487518aed7886bf17f51b2",
+      "run_id": 44982066390,
+      "jobs": {
+        "build": "success",
+        "deploy": "success",
+        "verify-live": "failure"
+      },
+      "failure": "R6 passed publicly; adjacent R6.2 initial viewport assertion lacked the same load precondition",
+      "archive": [
+        "main-d7-build",
+        "main-d7-independent",
+        "main-d7-live-failure"
+      ]
+    },
+    {
+      "role": "atlas_family_readiness_fix_pr",
+      "pr": 78,
+      "head": "3cdf900ebfc4e4b851556360d175bb7798aeea3b",
+      "tested_source": "251e8e0a3c537699ed0900d379087b8e65ecf102",
+      "tree": "b05e0692132f085adf9f00c3702fb095e3f06c5f",
+      "run_id": 44983493286,
+      "outcome_at_checkpoint": "in_progress",
+      "archive_planned": [
+        "family-readiness-pr"
+      ]
+    }
+  ],
+  "accepted_main": null,
+  "overall_release_accepted": false,
+  "notes": [
+    "Pull-request artifacts identify the tested GitHub merge-ref, not the PR head.",
+    "Later screenshots do not prove the layout or document readyState at the earlier failed assertion instant.",
+    "PR77 and PR78 change only browser-test readiness and documentation, preserving product code and historical content."
+  ]
 }
