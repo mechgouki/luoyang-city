@@ -1,0 +1,16 @@
+[
+  {
+    "case": "frozen-pre-R9-local-base",
+    "source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+    "exact_homepage_restoration": "passed",
+    "R4_complete": "pre-existing local frozen-manifest limitation",
+    "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 10, in <module>\n  File \"/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/verify_city_atlas_r4.py\", line 184, in verify\n    protected=predecessors(info,get,fixture)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/verify_city_atlas_r4.py\", line 62, in predecessors\n    assert digest(json_bytes(original))==fixture[\"manifest\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+  },
+  {
+    "case": "R9-local-incremental",
+    "source_commit": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+    "exact_homepage_restoration": "passed",
+    "R4_complete": "pre-existing local frozen-manifest limitation",
+    "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 10, in <module>\n  File \"/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/verify_city_atlas_r4.py\", line 184, in verify\n    protected=predecessors(info,get,fixture)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/verify_city_atlas_r4.py\", line 62, in predecessors\n    assert digest(json_bytes(original))==fixture[\"manifest\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+  }
+]

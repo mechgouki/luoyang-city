@@ -1,0 +1,1127 @@
+{
+  "baseline_commit": "6a316c00be9433b67ab91e71ad6846576a397b4f",
+  "decision": "可以立即发布来源分开的水陆骨架联读：06a原图框架是真实既有几何；钱2018图框架可合并已读南北路、水带与东西郭门端点；其余水道为独立关系层。没有新古河岸地理几何。",
+  "input_sha256": {
+    "research/prosperity-v1/geographic-evidence.json": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79",
+    "research/prosperity-v4/network-462/network.json": "f1081cfc39fb16e67e81271be177755fdab4cd46a18283e0d1ed46efb3e1275b",
+    "research/prosperity-v4/network-462/roads.json": "6a48b686ef2c133731f080405d525b4a60e9bf0506cfb35a78ff0cfa2b0efb8d",
+    "research/prosperity-v4/network-462/outer.json": "761da9e0abace43fc14e04dd330becc3c288df0a8a239a5d55417632bc5d1e5a",
+    "research/prosperity-v4/gates-465/readings.json": "8db5f40297be313abe55f0c49ac32f706d1ce82da91adac7e74f8a743e2292e1",
+    "research/prosperity-v4/south-466/readings.json": "545c09e3a0fc6f91f686e02ff34784455868faf434cc299945e8a49cd9bd0106",
+    "research/prosperity-v4/water-467/readings.json": "bf51dad84680792dafbaacb14bea0a0715fa31a5cf13842fd0096f762132a789",
+    "research/prosperity-v4/water-468/readings.json": "6703af3308fff4e266c3e50c6fcd2d8f8e357c08ceb678f0e327d37dbd18467d"
+  },
+  "frames": [
+    {
+      "id": "frame-06a",
+      "input": "research/prosperity-v1/geographic-evidence.json",
+      "source": "UNESCO 1442 2012管理规划图06a PDF第3457页",
+      "native_geometry": "features[].source_pdf_geometry",
+      "geographic_geometry": "features[].geometry",
+      "crs": "EPSG:4610",
+      "count": 30,
+      "geographic_warning": "Geometry objects use GeoJSON geometry structure but coordinates remain Xian 1980. This collection is not RFC7946 WGS84 GeoJSON and must not be silently read as EPSG:4326.",
+      "use": "城墙遗存、原图道路残段、门址图符；现代洛水另开关；不新增闭合古墙或古河岸",
+      "road_bindings": [
+        {
+          "code": "Lh-1",
+          "title": "西明门—青阳门",
+          "p1_feature_id": "geo-road-east-west-south",
+          "source_drawing_indices": [
+            110,
+            111,
+            112
+          ]
+        },
+        {
+          "code": "Lh-2",
+          "title": "西阳门—东阳门",
+          "p1_feature_id": "geo-tongtuo-cross-street",
+          "source_drawing_indices": [
+            113,
+            114,
+            115
+          ]
+        },
+        {
+          "code": "Lh-3",
+          "title": "内城西垣阊阖门—建春门",
+          "p1_feature_id": "geo-road-east-west-middle",
+          "source_drawing_indices": [
+            116,
+            117,
+            118
+          ]
+        },
+        {
+          "code": "Lh-4",
+          "title": "承明门—宫城北侧",
+          "p1_feature_id": "geo-road-east-west-north",
+          "source_drawing_indices": [
+            128,
+            129,
+            130,
+            131,
+            132,
+            133
+          ]
+        },
+        {
+          "code": "Lz-1",
+          "title": "建春门内横三—调查时洛河北岸",
+          "p1_feature_id": "geo-road-north-south-east",
+          "source_drawing_indices": [
+            100,
+            101,
+            102
+          ]
+        },
+        {
+          "code": "Lz-2",
+          "title": "广莫门—平昌门方向",
+          "p1_feature_id": "geo-road-north-south-mid-east",
+          "source_drawing_indices": [
+            119,
+            120,
+            121,
+            122,
+            123,
+            124
+          ]
+        },
+        {
+          "code": "Lz-3",
+          "title": "宫城南正门阊阖门—宣阳门方向（铜驼街）",
+          "p1_feature_id": "geo-tongtuo-avenue",
+          "source_drawing_indices": [
+            106,
+            107,
+            108
+          ]
+        },
+        {
+          "code": "Lz-4",
+          "title": "大夏门—津阳门方向",
+          "p1_feature_id": "geo-road-north-south-west",
+          "source_drawing_indices": [
+            103,
+            104,
+            105
+          ]
+        }
+      ],
+      "feature_summary": [
+        {
+          "id": "geo-inner-wall-aboveground",
+          "label": "内城北、东、西墙地上遗存",
+          "layer": "site_remains",
+          "source_historical_period": "东汉至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-inner-wall-underground",
+          "label": "内城及金墉相接处地下墙线",
+          "layer": "site_remains",
+          "source_historical_period": "东汉至北魏；金墉相接部分为魏晋至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-palace-walls",
+          "label": "宫城西、南、东墙遗存",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-palace-layout-envelope",
+          "label": "宫城图示布局范围（北缘暂闭合）",
+          "layer": "layout_envelope",
+          "source_historical_period": "魏晋至北魏墙线加本项目显示推定边",
+          "entity_id": null
+        },
+        {
+          "id": "geo-jinyong-bing-wall",
+          "label": "金墉城丙城东、南墙图示遗存",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": "ic_jinyong"
+        },
+        {
+          "id": "geo-jinyong-bing-reference",
+          "label": "金墉丙城位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": "ic_jinyong"
+        },
+        {
+          "id": "geo-yongning-temple-walls",
+          "label": "永宁寺围墙图示遗存",
+          "layer": "site_remains",
+          "source_historical_period": "北魏",
+          "entity_id": "ic_yongning"
+        },
+        {
+          "id": "geo-yongning-pagoda-reference",
+          "label": "永宁寺塔基位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "北魏",
+          "entity_id": "ic_yongning"
+        },
+        {
+          "id": "geo-changhe-palace-gate",
+          "label": "宫城阊阖门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": "ic_changhe_palace"
+        },
+        {
+          "id": "geo-taiji-hall-reference",
+          "label": "太极殿遗址位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-tongtuo-avenue",
+          "label": "铜驼大道图示残段",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-tongtuo-cross-street",
+          "label": "宫城南侧横街图示线路",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-road-east-west-south",
+          "label": "内城南部横道图示线路",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-road-east-west-middle",
+          "label": "内城中部横道图示线路",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-road-east-west-north",
+          "label": "宫城北侧横道图示线路",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-road-north-south-east",
+          "label": "内城东部纵道图示线路",
+          "layer": "site_remains",
+          "source_historical_period": "北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-road-north-south-mid-east",
+          "label": "内城中东部纵道图示线路",
+          "layer": "site_remains",
+          "source_historical_period": "北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-road-north-south-west",
+          "label": "内城西部纵道图示线路",
+          "layer": "site_remains",
+          "source_historical_period": "北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-qianqiu-gate",
+          "label": "宫城千秋门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "东汉至北魏",
+          "entity_id": "ic_qianqiu_gate"
+        },
+        {
+          "id": "geo-yunlong-gate",
+          "label": "宫城云龙门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "魏晋至北魏",
+          "entity_id": null
+        },
+        {
+          "id": "geo-jianchun-gate",
+          "label": "内城建春门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "东汉至北魏",
+          "entity_id": "gate_jianchun"
+        },
+        {
+          "id": "geo-daxia-gate",
+          "label": "内城大夏门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "东汉至北魏",
+          "entity_id": "gate_daxia"
+        },
+        {
+          "id": "geo-guangmo-gate",
+          "label": "内城广莫门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "东汉至北魏",
+          "entity_id": "gate_guangmo"
+        },
+        {
+          "id": "geo-xiyang-gate",
+          "label": "内城西阳门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "北魏",
+          "entity_id": "gate_xiyang"
+        },
+        {
+          "id": "geo-dongyang-gate",
+          "label": "内城东阳门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "东汉至北魏",
+          "entity_id": "gate_dongyang"
+        },
+        {
+          "id": "geo-qingyang-gate",
+          "label": "内城青阳门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "东汉至北魏",
+          "entity_id": "gate_qingyang"
+        },
+        {
+          "id": "geo-ximing-gate",
+          "label": "内城西明门位置参考",
+          "layer": "site_remains",
+          "source_historical_period": "东汉至北魏",
+          "entity_id": "gate_ximing"
+        },
+        {
+          "id": "geo-outer-city-related-remains",
+          "label": "外郭相关遗存范围图示",
+          "layer": "regional_reconstruction_range",
+          "source_historical_period": "2012年对外郭相关遗存范围的概略表达，精确古代阶段未逐段划分",
+          "entity_id": null
+        },
+        {
+          "id": "geo-modern-luo-river",
+          "label": "洛水中东段参考线（1997/1999底图）",
+          "layer": "modern_geographic_reference",
+          "source_historical_period": "1997年航摄、1999年实测底图",
+          "entity_id": null
+        },
+        {
+          "id": "geo-modern-mang-hill-label",
+          "label": "邙山方位参照（来源图标注）",
+          "layer": "regional_label_reference",
+          "source_historical_period": "1997年航摄、1999年实测底图",
+          "entity_id": null
+        }
+      ]
+    },
+    {
+      "id": "frame-qian2018-zhu2024",
+      "input": [
+        "research/prosperity-v4/network-462/outer.json",
+        "research/prosperity-v4/gates-465/readings.json",
+        "research/prosperity-v4/south-466/readings.json"
+      ],
+      "source": "钱国祥2018图一，朱岩石2024印页17图6转载",
+      "image_size_px": [
+        1145,
+        951
+      ],
+      "png_sha256": "ec31893f990e708058b9871b11130953d7ec64a2be3d0be0bfbaae5015d174ec",
+      "scale_endpoints_px": [
+        [
+          980.5,
+          933
+        ],
+        [
+          1072.5,
+          933
+        ]
+      ],
+      "scale_represents_m": 1000,
+      "crs": null,
+      "mergeable_paths": [
+        "gates-465/readings.json:later_plan.inner_wall_px",
+        "gates-465/readings.json:later_plan.outer_wall_px",
+        "gates-465/readings.json:later_plan.west.trace_px",
+        "gates-465/readings.json:later_plan.north",
+        "south-466/readings.json:plan.road_samples_px",
+        "south-466/readings.json:plan.bridge_symbol_ends_px",
+        "south-466/readings.json:plan.places_px",
+        "south-466/readings.json:plan.north_bank_sample_px",
+        "south-466/readings.json:plan.south_bank_sample_px",
+        "network-462/outer.json:corridors[].inner_station_px/outer_station_px"
+      ],
+      "use": "已读同一复原图的南北道路和古洛水图带可同框；东西六走廊仅两端及弦长读点，不画新增实测路线；北路合流未知",
+      "forbidden": "不得转投06a或现代经纬度；不得把古河图带当成516—528断代河岸；桥符号端不是考古桥头"
+    },
+    {
+      "id": "frame-relations",
+      "input": [
+        "research/prosperity-v4/water-467/readings.json",
+        "research/prosperity-v4/water-468/readings.json"
+      ],
+      "layout": "页面排版坐标，不能地理配准",
+      "crs": null,
+      "geographic_coordinates": null,
+      "segments": 100,
+      "use": "P467 53段 + P468 47段分图浏览；各段关系类型、时期、出处、未知项可点击。I09当前判断使用P468勘误。"
+    }
+  ],
+  "water_evidence_navigation": [
+    {
+      "mapped_feature_id": "geo-daxia-gate",
+      "evidence_refs": [
+        "P467/outer/O03",
+        "P467/inner/I01"
+      ],
+      "semantics": "context_link_only",
+      "limit": "大夏门下、门东来水；仅同名门参照，不定位河槽"
+    },
+    {
+      "mapped_feature_id": "geo-guangmo-gate",
+      "evidence_refs": [
+        "P467/outer/O04",
+        "P467/outer/O05"
+      ],
+      "semantics": "context_link_only",
+      "limit": "广莫门北；无渠距、桥口和岸线坐标"
+    },
+    {
+      "mapped_feature_id": "geo-jianchun-gate",
+      "evidence_refs": [
+        "P467/outer/O05"
+      ],
+      "semantics": "context_link_only",
+      "limit": "建春门石桥上下文；门址图符不等于石桥坐标"
+    },
+    {
+      "mapped_feature_id": "geo-ximing-gate",
+      "evidence_refs": [
+        "P467/outer/O08",
+        "P467/outer/O09"
+      ],
+      "semantics": "context_link_only",
+      "limit": "西明门支流分出和南行；分口坐标未知"
+    },
+    {
+      "mapped_feature_id": "geo-qingyang-gate",
+      "evidence_refs": [
+        "P467/outer/O14"
+      ],
+      "semantics": "context_link_only",
+      "limit": "青阳门东；相对东侧不换成给定偏移距离"
+    },
+    {
+      "mapped_feature_id": "geo-dongyang-gate",
+      "evidence_refs": [
+        "P467/outer/O14",
+        "P467/outer/O15",
+        "P467/inner/I06"
+      ],
+      "semantics": "context_link_only",
+      "limit": "门东绕流与宫前支渠出门两类记载分开"
+    },
+    {
+      "mapped_feature_id": "geo-qianqiu-gate",
+      "evidence_refs": [
+        "P467/inner/I03",
+        "P467/inner/I04",
+        "P467/inner/I05",
+        "P468/palace-pools-audit/H03",
+        "P468/palace-pools-audit/H04"
+      ],
+      "semantics": "context_link_only",
+      "limit": "水道与西游园分别阅读；不因共有千秋门参照合成通水"
+    },
+    {
+      "mapped_feature_id": "geo-tongtuo-avenue",
+      "evidence_refs": [
+        "P467/inner/I07",
+        "P467/inner/I08"
+      ],
+      "semantics": "context_link_only",
+      "limit": "铜驼街两侧支；展示关系卡，禁止沿道路偏移生成渠线"
+    },
+    {
+      "mapped_feature_id": "geo-xiyang-gate",
+      "evidence_refs": [
+        "P468/independent-pools/L05"
+      ],
+      "semantics": "context_link_only",
+      "limit": "宝光寺在门外御道北；不把寺池点位附着到门址"
+    }
+  ],
+  "correction": {
+    "id": "P467-I09-POOL-SCOPE",
+    "previous_version": "prosperity-water-p467",
+    "previous_page": "prosperity-water-p467.html",
+    "previous_segment": "I09",
+    "withdrawn_legacy_ids": [
+      "W20",
+      "W21"
+    ],
+    "withdrawn_fields": [
+      "plates[inner].segments[I09].legacy_water_ids",
+      "legacy_water_coverage[W20/W21].本册图段"
+    ],
+    "reason": "W20属长秋寺北的季节性池，W21属西游园凌云台下；后文华林园“凡此诸海”不足以承担两池的供水索引。撤回索引不证明两池绝无水路。",
+    "replacement_plate": "palace-pools-audit",
+    "quote_scope": "若旱魃為害，穀水注之不竭；離畢滂潤，陽穀泄之不盈。",
+    "quote_limit": "保留旱涝条件；群体记述不拆为各池口已证连接，不作全年恒定流量或516—528逐年供水表。",
+    "legacy_bytes_policy": "旧PDF、JSON和索引保留发布时字节；前页显著勘误及本记录为当前采用判断。",
+    "source_ids": [
+      "P-Z1",
+      "P-F1",
+      "P-G1"
+    ]
+  },
+  "corrected_current_I09": {
+    "original_archive": "research/prosperity-v4/water-467/readings.json:plates[inner].segments[I09]",
+    "legacy_water_ids": [
+      "W17",
+      "W18",
+      "W19",
+      "W34"
+    ],
+    "quote": "若旱魃為害，穀水注之不竭；離畢滂潤，陽穀泄之不盈。",
+    "meaning": "华林园池群的旱涝条件下供排水总说，非各池独立接口、全年恒流或逐年516—528运行证明",
+    "derived_view_only": true,
+    "original_bytes_change": false
+  },
+  "current_water_ledger": [
+    {
+      "id": "W01",
+      "name": "北魏洛水主河道",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W01",
+        "旧称": "北魏洛水主河道",
+        "本册图段": "P03、P08、R02、R07、R08",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W01",
+        "旧称": "北魏洛水主河道",
+        "本册图段": "P03、P08、R02、R07、R08",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W02",
+      "name": "1997/1999近现代洛水参考线",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W02",
+        "旧称": "1997/1999近现代洛水参考线",
+        "本册图段": "—",
+        "状态": "仅作近现代参照，不纳古水系通水图"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W02",
+        "旧称": "1997/1999近现代洛水参考线",
+        "本册图段": "—",
+        "状态": "仅作近现代参照，不纳古水系通水图"
+      },
+      "modern_only": true
+    },
+    {
+      "id": "W03",
+      "name": "伊水",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W03",
+        "旧称": "伊水",
+        "本册图段": "R01、R02、R03",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W03",
+        "旧称": "伊水",
+        "本册图段": "R01、R02、R03",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W04",
+      "name": "谷水／城周阳渠水系",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W04",
+        "旧称": "谷水／城周阳渠水系",
+        "本册图段": "O01、O02、O03、O04、O05、O07、O08、O09、O10、O11、O12、O13、I01、I03、I05、I06、I07、I08、P04、P08、R06、R07、R08、R09",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W04",
+        "旧称": "谷水／城周阳渠水系",
+        "本册图段": "O01、O02、O03、O04、O05、O07、O08、O09、O10、O11、O12、O13、I01、I03、I05、I06、I07、I08、P04、P08、R06、R07、R08、R09",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W05",
+      "name": "瀍水",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W05",
+        "旧称": "瀍水",
+        "本册图段": "R04、R05、R11",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W05",
+        "旧称": "瀍水",
+        "本册图段": "R04、R05、R11",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W06",
+      "name": "北魏城东阳渠",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W06",
+        "旧称": "北魏城东阳渠",
+        "本册图段": "O05、O06、O08、I06、I11、EAST03、EAST05、EAST06、EAST07",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W06",
+        "旧称": "北魏城东阳渠",
+        "本册图段": "O05、O06、O08、I06、I11、EAST03、EAST05、EAST06、EAST07",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W07",
+      "name": "千金堨／千金渠",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W07",
+        "旧称": "千金堨／千金渠",
+        "本册图段": "O01、P07、R05、R06",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W07",
+        "旧称": "千金堨／千金渠",
+        "本册图段": "O01、P07、R05、R06",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W08",
+      "name": "湖沟故道",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W08",
+        "旧称": "湖沟故道",
+        "本册图段": "R10、R11",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W08",
+        "旧称": "湖沟故道",
+        "本册图段": "R10、R11",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W09",
+      "name": "洛水枝渎（北魏引洛入谷候选）",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W09",
+        "旧称": "洛水枝渎（北魏引洛入谷候选）",
+        "本册图段": "P01、P02、P05",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W09",
+        "旧称": "洛水枝渎（北魏引洛入谷候选）",
+        "本册图段": "P01、P02、P05",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W10",
+      "name": "张方沟／外郭城西侧排水渠",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W10",
+        "旧称": "张方沟／外郭城西侧排水渠",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W10",
+        "本册图": "west-moats",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W11",
+      "name": "内城西侧壕沟",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W11",
+        "旧称": "内城西侧壕沟",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W11",
+        "本册图": "west-moats",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W12",
+      "name": "内城东侧壕沟",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W12",
+        "旧称": "内城东侧壕沟",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W12",
+        "本册图": "west-moats",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W13",
+      "name": "宫城西墙汉晋河渠遗迹",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W13",
+        "旧称": "宫城西墙汉晋河渠遗迹",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W13",
+        "本册图": "palace-water",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W14",
+      "name": "宫城西侧魏晋大型水利设施",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W14",
+        "旧称": "宫城西侧魏晋大型水利设施",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W14",
+        "本册图": "palace-water",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W15",
+      "name": "翟泉／苍龙海",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W15",
+        "旧称": "翟泉／苍龙海",
+        "本册图段": "I02、I10",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W15",
+        "旧称": "翟泉／苍龙海",
+        "本册图段": "I02、I10",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W16",
+      "name": "华林园大海／天渊池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W16",
+        "旧称": "华林园大海／天渊池",
+        "本册图段": "I01、I02",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W16",
+        "旧称": "华林园大海／天渊池",
+        "本册图段": "I01、I02",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W17",
+      "name": "玄武池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W17",
+        "旧称": "玄武池",
+        "本册图段": "I09",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W17",
+        "本册图": "palace-pools-audit",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W18",
+      "name": "流觞池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W18",
+        "旧称": "流觞池",
+        "本册图段": "I09",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W18",
+        "本册图": "palace-pools-audit",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W19",
+      "name": "扶桑海",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W19",
+        "旧称": "扶桑海",
+        "本册图段": "I09",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W19",
+        "本册图": "palace-pools-audit",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W20",
+      "name": "濛汜池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W20",
+        "旧称": "濛汜池",
+        "本册图段": "I09",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W20",
+        "本册图": "palace-pools-audit",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      },
+      "withdrawn_links": [
+        "P467/inner/I09"
+      ],
+      "replacement": "P468/palace-pools-audit"
+    },
+    {
+      "id": "W21",
+      "name": "碧海曲池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W21",
+        "旧称": "碧海曲池",
+        "本册图段": "I09",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W21",
+        "本册图": "palace-pools-audit",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      },
+      "withdrawn_links": [
+        "P467/inner/I09"
+      ],
+      "replacement": "P468/palace-pools-audit"
+    },
+    {
+      "id": "W22",
+      "name": "昭仪寺池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W22",
+        "旧称": "昭仪寺池",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W22",
+        "本册图": "fanghu-zhaoyi",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W23",
+      "name": "永和里北池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W23",
+        "旧称": "永和里北池",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W23",
+        "本册图": "independent-pools",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W24",
+      "name": "永和里南池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W24",
+        "旧称": "永和里南池",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W24",
+        "本册图": "independent-pools",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W25",
+      "name": "咸池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W25",
+        "旧称": "咸池",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W25",
+        "本册图": "independent-pools",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W26",
+      "name": "土山鱼池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W26",
+        "旧称": "土山鱼池",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W26",
+        "本册图": "independent-pools",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W27",
+      "name": "景明寺三池",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W27",
+        "旧称": "景明寺三池",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W27",
+        "本册图": "independent-pools",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W28",
+      "name": "九龙池（灵芝九龙池）",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W28",
+        "旧称": "九龙池（灵芝九龙池）",
+        "本册图段": "I04",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W28",
+        "旧称": "九龙池（灵芝九龙池）",
+        "本册图段": "I04",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W29",
+      "name": "方湖",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W29",
+        "旧称": "方湖",
+        "本册图段": "—",
+        "状态": "保留前册记录；本册未补绘其完整水线"
+      },
+      "current_record_source": "P468",
+      "current_record": {
+        "旧编号": "W29",
+        "本册图": "fanghu-zhaoyi",
+        "状态": "已核可读关系、分期与边界；完整岸线或池口仍未定"
+      }
+    },
+    {
+      "id": "W30",
+      "name": "鸿池陂",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W30",
+        "旧称": "鸿池陂",
+        "本册图段": "O16、EAST01、EAST05、EAST06、P06",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W30",
+        "旧称": "鸿池陂",
+        "本册图段": "O16、EAST01、EAST05、EAST06、P06",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W31",
+      "name": "七里涧",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W31",
+        "旧称": "七里涧",
+        "本册图段": "EAST01、EAST02、EAST03、EAST04",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W31",
+        "旧称": "七里涧",
+        "本册图段": "EAST01、EAST02、EAST03、EAST04",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W32",
+      "name": "洛阳沟",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W32",
+        "旧称": "洛阳沟",
+        "本册图段": "O13、O14、O15",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W32",
+        "旧称": "洛阳沟",
+        "本册图段": "O13、O14、O15",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W33",
+      "name": "金谷水",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W33",
+        "旧称": "金谷水",
+        "本册图段": "R09",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W33",
+        "旧称": "金谷水",
+        "本册图段": "R09",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    },
+    {
+      "id": "W34",
+      "name": "园池地下石窦联系",
+      "baseline_source": "P46",
+      "P467_archive_record": {
+        "旧编号": "W34",
+        "旧称": "园池地下石窦联系",
+        "本册图段": "I09、I10、I11",
+        "状态": "本册分段或分期；不新增岸线"
+      },
+      "current_record_source": "P467",
+      "current_record": {
+        "旧编号": "W34",
+        "旧称": "园池地下石窦联系",
+        "本册图段": "I09、I10、I11",
+        "状态": "本册分段或分期；不新增岸线"
+      }
+    }
+  ],
+  "required_semantic_checks": [
+    "P1 source_pdf_geometry and geometry deep-equal before/after; old source hashes preserved",
+    "all geometry has source_frame_id and period_class",
+    "no P467/P468 points/x/y transferred to geospatial geometry",
+    "no EPSG:4610 silently recast as EPSG:4326",
+    "W20/W21 absent from current I09 direct and reverse indices; old archives preserved",
+    "I09 current quote includes 若旱魃為害 and 離畢滂潤条件; no perennial annual flow claim",
+    "Qian frame combines identical raster only; outer chord endpoints not labeled surveyed continuous routes",
+    "P1 modern river retains 1997/1999 tag; no ancient bank/new Yongqiao landing created",
+    "inner south wall, Xuanyang gate location and north road confluence remain unresolved",
+    "H2 unchanged; P467/P468 download artifacts unchanged"
+  ],
+  "excluded_from_merging": [
+    "Nara2009 fig25 in anchor-461/fig25.json: unscaled separate page, no common ground controls",
+    "1973 field plan in gates-465/readings.json:field_plan: separate 2402×3457 raster; cannot overlay06a or Qian without registration",
+    "P451 building dimensions: separate scale cards, not map footprint geometry",
+    "Biyong180m/4–5m trunk: relative excavation measurements only; target-period flow unknown",
+    "north moat20–35m offset/20–24mwidth/≥4msilt: distance scope and section unresolved; not precise bank/bridge points",
+    "Qian2018 six outer corridors: selected endpoint chord, no continuously traced or drilled lines",
+    "P46 obsolete generalized schematic: 永和里 exactlytwo池 and original blanketpoollinks must not override P468"
+  ]
+}

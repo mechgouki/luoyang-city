@@ -1,0 +1,33 @@
+test_city_nodes_r7 (unittest.loader._FailedTest.test_city_nodes_r7) ... ERROR
+
+======================================================================
+ERROR: test_city_nodes_r7 (unittest.loader._FailedTest.test_city_nodes_r7)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_city_nodes_r7
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tests/test_city_nodes_r7.py", line 17, in <module>
+    from city_nodes_r7_maps import overview, sima_map
+  File "/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/city_nodes_r7_maps.py", line 6, in <module>
+    from city_atlas_r4_maps import geometry
+  File "/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/city_atlas_r4_maps.py", line 5, in <module>
+    from city_atlas_r4_data import index
+  File "/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/city_atlas_r4_data.py", line 5, in <module>
+    from prosperity_city_common_p470 import load, sha
+  File "/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/prosperity_city_common_p470.py", line 16, in <module>
+    from prosperity_anchors_p461 import offline_page
+  File "/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/prosperity_anchors_p461.py", line 10, in <module>
+    from dual_cartography import dump, load, sha
+  File "/workspace/scratch/b7f9dff5a3b9/luoyang-r9/tools/dual_cartography.py", line 6, in <module>
+    import rasterio
+ModuleNotFoundError: No module named 'rasterio'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

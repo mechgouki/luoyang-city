@@ -1,0 +1,141 @@
+{
+  "schema": "luoyang-r9-production-acceptance-v1",
+  "status": "passed",
+  "recorded_at_utc": "2026-11-22T07:55:38.681087+00:00",
+  "scope": "Production release acceptance; subsequent permanent archive remote readback and issue handoff are recorded in Issue #52.",
+  "research_version": "R9.1",
+  "production_commit": "1a988bc51adc74288ec8a8aa682499444007a33c",
+  "production_tree": "83bb6b252dd568ee9c3f58f8c5f66cb3c2cb935d",
+  "pr_number": 80,
+  "pr_head": "191556e5ebf63ba106d1ee2979edb3b4b1c84a05",
+  "tested_pr_merge": "a86b665d27a17a3ab176c0ee82c32a6414f2d833",
+  "head_tested_merge_production_tree_equal": true,
+  "successful_pr_run": 44997501898,
+  "production_run": 44998481483,
+  "production_completed_at_utc": "2026-11-22T07:49:47Z",
+  "production_completed_at_shanghai": "2026-11-22 15:49:47 +08:00",
+  "jobs": {
+    "build": "success",
+    "deploy": "success",
+    "verify-live": "success"
+  },
+  "deliverables": [
+    {
+      "name": "R9.1 city spatial overview",
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-spatial.html#overview",
+      "nodes": 4,
+      "decisions": 20
+    },
+    {
+      "name": "Spatial judgment, source, and drawing-change evidence table",
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-spatial.html#decisions",
+      "csv_url": "https://mechgouki.github.io/luoyang-city/city-spatial-r9/decisions.csv",
+      "rows": 20
+    },
+    {
+      "name": "V13 second candidate and evidence guide",
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13-r2.html?view=compare#comparison",
+      "guide_items": 7,
+      "actual_new_raster_change": "Yongning Temple south gate three-storey reading and gate-to-temple-wall connection"
+    }
+  ],
+  "validation": {
+    "production_tests": {
+      "prosperity_semantics": 218,
+      "homepage": 6,
+      "city_spatial_r9": 10,
+      "panorama_v13_r2": 4
+    },
+    "public_manifest_entries": 862,
+    "public_http_files_checked": 861,
+    "build_control_excluded": [
+      ".nojekyll"
+    ],
+    "build_info_identity_read_separately": true,
+    "unique_new_download_files": 12,
+    "actual_new_page_downloads_per_build_or_live_phase": 24,
+    "new_page_screenshots_per_build_or_live_phase": 16,
+    "download_hashes_equal_across_build_desktop_build_mobile_live_desktop_live_mobile_and_http": true,
+    "six_new_and_old_candidate_image_hashes_equal_to_frozen_sources": true,
+    "root_additional_http_resources": 28,
+    "root_public_desktop_interaction": "passed",
+    "mobile_layout_no_javascript_and_offline_checks": "passed in CI",
+    "local_python_312_preflight_not_substituted_for_python_311_ci": true
+  },
+  "research_boundaries": {
+    "new_ancient_coordinates": 0,
+    "new_shoreline_geometries": 0,
+    "evidence_grade_upgrades": 0,
+    "new_original_1993_or_2011_pages_or_complete_figures_obtained": 0,
+    "unobtained_sources": [
+      "1993 北魏洛阳外廓城和水道的勘查 pp. 602–608 and complete figures/legend/terminal survey extent",
+      "2011 汉魏洛阳城东阳渠、鸿池陂考古勘察简报 pp. 20–25 and complete figures"
+    ],
+    "source_frames_and_relative_diagrams_are_not_common_geographic_registration": true,
+    "gate_visual_issue_resolved": true,
+    "historical_gate_reconstruction_completed": false,
+    "entire_scene_historically_validated": false,
+    "homepage_revision": "panorama-approved-v12",
+    "homepage_replacement_approved": false,
+    "2022_canal_report_deferred": true
+  },
+  "failed_run_history_preserved": [
+    44996609953,
+    44996939502
+  ],
+  "archive_scope": "Filtered permanent archive retains extracted evidence and actual browser downloads. The generated archive-scope.json lists exact omitted wrapper ZIPs and SHA-verified unchanged terrain intermediates; raw stage files remain unchanged locally.",
+  "final_handoff": "https://github.com/mechgouki/luoyang-city/issues/52",
+  "evidence": [
+    {
+      "path": "pr/summary.json",
+      "bytes": 76102,
+      "sha256": "f5f62efed6f437cb27c9ea7ef09cd525714396126ec9458e4423eba24cbacd26"
+    },
+    {
+      "path": "main-build/summary.json",
+      "bytes": 76078,
+      "sha256": "ed95e557ccecc284e842710032e39c46ed21cd81cbfd3a5593cfc8b4376a6918"
+    },
+    {
+      "path": "main-live/summary.json",
+      "bytes": 72657,
+      "sha256": "466628f825641736916ad03239678bd4368dafd1540f36e7374cd1f1c797bc3f"
+    },
+    {
+      "path": "main-live/cross-stage-verification.json",
+      "bytes": 5090,
+      "sha256": "cfd38a85057442804c27440fce583a5a4280047bf5d6648b17c09df8bc72bec8"
+    },
+    {
+      "path": "main-live/artifacts/live-http.json",
+      "bytes": 206838,
+      "sha256": "e0138c81032e26824aa9e31593fe9eb017a7737c08d48ff7eb8729baaf104654"
+    },
+    {
+      "path": "root-public/public-http-review.json",
+      "bytes": 6776,
+      "sha256": "fcce1e1fecd4d1a1d81732c8542c09498a4dce8d08b875dba645f61c50b8de90"
+    },
+    {
+      "path": "root-public/browser/public-browser-review.json",
+      "bytes": 1841,
+      "sha256": "eefb1cfcab11154f2f9a90c9372d71dbe5d97486a994edb6720ccd681b2afd8f"
+    },
+    {
+      "path": "root-public/final-release-api.json",
+      "bytes": 49726,
+      "sha256": "5beeafa3e785930cd6ee500d5829ce1f934612d4ded0337ffdf254e009d05450"
+    },
+    {
+      "path": "root-review/legacy-homepage-compatibility-review.json",
+      "bytes": 3858,
+      "sha256": "0c0acbb1fab7577fdb0d4a27dc324074b7a61e13539eb3f011b58d50a757054b"
+    },
+    {
+      "path": "root-review/r9-r2-independent-ci-visual-review.json",
+      "bytes": 19202,
+      "sha256": "72fe37152992109f2ae7b874a12fb15ac95e5cadda0849aad70a3c4df6a96f6a"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,372 @@
+{
+  "schema": "luoyang-r9-independent-ci-visual-review-v1",
+  "reviewed_at_utc": "2026-11-22T07:31:08.458469+00:00",
+  "reviewer": "r9_validation",
+  "status": "passed_with_scope_limits",
+  "blocking_findings": [],
+  "workflow": {
+    "id": 44997501898,
+    "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44997501898",
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "191556e5ebf63ba106d1ee2979edb3b4b1c84a05"
+  },
+  "workflow_record_sha256": "bc5404798a1d3646f74505999a7760dcd0452154b58ab4083780d26e6f8f70b0",
+  "tested_source_commit": "a86b665d27a17a3ab176c0ee82c32a6414f2d833",
+  "ci_artifact_summary_sha256": "f5f62efed6f437cb27c9ea7ef09cd525714396126ec9458e4423eba24cbacd26",
+  "methods": [
+    "Read original CI screenshots through image viewing, independently of test status.",
+    "Read all four new-page JSON reports and independently match all sixteen screenshot bytes to the hashes recorded there.",
+    "Inspect one read-only viewport of the unusually tall desktop no-JavaScript screenshot; original PNG remains unchanged.",
+    "Inspect all four map relation panels using a read-only SVG viewport only after the local SVG byte hash exactly matches the actual CI download hash."
+  ],
+  "scope": {
+    "pages": [
+      "luoyang-city-spatial.html",
+      "luoyang-panorama-v13-r2.html"
+    ],
+    "desktop_viewport": [
+      1440,
+      960
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "reports": 4,
+    "screenshots_byte_verified": 16,
+    "layout_measurements": 34,
+    "source_files_modified": false,
+    "new_browser_or_test_runs_by_this_review": false
+  },
+  "reports": [
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/desktop-report.json",
+      "sha256": "ac35f18f601cebb68e173ef6da5b70f9430814c05973875fe8b5c0fdcfc8c92c",
+      "status": "passed",
+      "source_commit": "a86b665d27a17a3ab176c0ee82c32a6414f2d833",
+      "checks": [
+        "The unified spatial figure and every reviewed decision load from the exact released commit",
+        "All four nodes and three evidence categories filter by real row IDs; combined search survives reload, and empty results reset correctly",
+        "Source and all four node windows have working zoom, button and keyboard panning, exact current-view reset and URL-restored view selection",
+        "Each node can be opened by a shareable evidence anchor despite conflicting filters, refreshed, and reached from its SVG link using the keyboard",
+        "Every real download matches its released SHA-256; the ZIP opens without a network and retains the complete map, evidence, filtering and reload state",
+        "With JavaScript disabled, the full map and all source-linked decisions remain readable and native evidence anchors work"
+      ],
+      "javascript_errors": [],
+      "layout_measurements": 9,
+      "download_count": 6
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/mobile-report.json",
+      "sha256": "2ac7fd5d3cf78aaeb4e06fc092b729319f65e9797b7aa1dbfd5a475f688a29ac",
+      "status": "passed",
+      "source_commit": "a86b665d27a17a3ab176c0ee82c32a6414f2d833",
+      "checks": [
+        "The unified spatial figure and every reviewed decision load from the exact released commit",
+        "All four nodes and three evidence categories filter by real row IDs; combined search survives reload, and empty results reset correctly",
+        "Source and all four node windows have working zoom, button and keyboard panning, exact current-view reset and URL-restored view selection",
+        "Each node can be opened by a shareable evidence anchor despite conflicting filters, refreshed, and reached from its SVG link using the keyboard",
+        "Every real download matches its released SHA-256; the ZIP opens without a network and retains the complete map, evidence, filtering and reload state",
+        "With JavaScript disabled, the full map and all source-linked decisions remain readable and native evidence anchors work"
+      ],
+      "javascript_errors": [],
+      "layout_measurements": 9,
+      "download_count": 6
+    },
+    {
+      "path": "pr/artifacts/panorama-v13-r2-browser/desktop-report.json",
+      "sha256": "d4373924c4dce71b113ff25fb6392985ff8018b441f46af97374649b3e282276",
+      "status": "passed",
+      "source_commit": "a86b665d27a17a3ab176c0ee82c32a6414f2d833",
+      "checks": [
+        "Both homepages preserve V12 and old V13 while linking the spatial overview and new unapproved candidate",
+        "Three full-frame modes, keyboard before/after comparison and URL-restored modes work at natural proportions",
+        "Both gate details reference the original full images at identical source-pixel magnification",
+        "Spatial-decision links, shareable change anchors and return-to-image navigation work",
+        "Every actual candidate, audit and manifest download matches released bytes",
+        "Without JavaScript all three complete images, gate details and source decisions remain readable"
+      ],
+      "javascript_errors": [],
+      "layout_measurements": 8,
+      "download_count": 6
+    },
+    {
+      "path": "pr/artifacts/panorama-v13-r2-browser/mobile-report.json",
+      "sha256": "b247aa7eb79ce0081a2627358883a80606d3e9bcbd32807c5ffc2ff0b1558664",
+      "status": "passed",
+      "source_commit": "a86b665d27a17a3ab176c0ee82c32a6414f2d833",
+      "checks": [
+        "Both homepages preserve V12 and old V13 while linking the spatial overview and new unapproved candidate",
+        "Three full-frame modes, keyboard before/after comparison and URL-restored modes work at natural proportions",
+        "Both gate details reference the original full images at identical source-pixel magnification",
+        "Spatial-decision links, shareable change anchors and return-to-image navigation work",
+        "Every actual candidate, audit and manifest download matches released bytes",
+        "Without JavaScript all three complete images, gate details and source decisions remain readable"
+      ],
+      "javascript_errors": [],
+      "layout_measurements": 8,
+      "download_count": 6
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/desktop-overview.png",
+      "sha256": "afdee3d53387690fb9b85cf52d64cf34d047c824e48447a0cd8bbd3ceb1133f5",
+      "width": 1440,
+      "height": 960,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/desktop-filtered-evidence.png",
+      "sha256": "2889f040ab44a7c0dcc2c49a8a15faeba1b8f4c7e6e7a7fc3e12f3953b768a2a",
+      "width": 1440,
+      "height": 960,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/desktop-map-reset.png",
+      "sha256": "d9010f8eb0e3d3d4acd15d9022282df7fc81ec65c99ecd53ae6a465b0b11e35c",
+      "width": 1440,
+      "height": 960,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/desktop-node-evidence.png",
+      "sha256": "02d452a1b43a5418bda25bc0cd49871afe5c2d91df6e640736bc60e80f1f0520",
+      "width": 1440,
+      "height": 960,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/desktop-offline.png",
+      "sha256": "bae6aefbccb36e6a0bb8bf16819cf497112e9389c1a5b6351803a87466a7f0d2",
+      "width": 1440,
+      "height": 960,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/desktop-without-javascript.png",
+      "sha256": "2738e232438dc76341d9be30cf3b94d3d3ac77211da45b9827388d290eb8f419",
+      "width": 1440,
+      "height": 960,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/mobile-overview.png",
+      "sha256": "addc2d6a2e284ccc994bdc749569311262093773fd9f65f97967f6f7d29aa120",
+      "width": 390,
+      "height": 844,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/mobile-filtered-evidence.png",
+      "sha256": "b4a89a0e5477cdbe3507ac873dc06dc229d599a435dbada075a4da688904c1cb",
+      "width": 390,
+      "height": 844,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/mobile-map-reset.png",
+      "sha256": "21534eeb61c44b0ec3945d46d011cf805094cd5d0daefb4e7a0d2ad371334f70",
+      "width": 390,
+      "height": 844,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/mobile-node-evidence.png",
+      "sha256": "d83ae49221143e5224eb09527ecc8b77e5f9dcc4ebecb9fa4f77dd2cc74648b1",
+      "width": 390,
+      "height": 844,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/mobile-offline.png",
+      "sha256": "a7634e50da1da95d779e70cccb7d26c4b4332190b1ceb0e2b2965c29b6ebb346",
+      "width": 390,
+      "height": 844,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/city-spatial-r9-browser/mobile-without-javascript.png",
+      "sha256": "1aa084a756be3d874cf965ab13be4cea567d615cd7d128a54fe54ef86f57ca2d",
+      "width": 390,
+      "height": 844,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/panorama-v13-r2-browser/desktop-comparison.png",
+      "sha256": "231b9b35b804117c90e333c9d8198dc9a51d9378e501da14b57ab243a55d89ad",
+      "width": 1440,
+      "height": 5015,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/panorama-v13-r2-browser/desktop-without-javascript.png",
+      "sha256": "2189fcc16bfe8b8667d2db412596f3f50b475b1aef05c2af164741681c5b35fb",
+      "width": 1440,
+      "height": 7179,
+      "visually_reviewed": true,
+      "review_extent": "upper three complete images and gate comparison through a read-only SVG viewport; shared lower text also reviewed in desktop-comparison.png"
+    },
+    {
+      "path": "pr/artifacts/panorama-v13-r2-browser/mobile-comparison.png",
+      "sha256": "b67526c778461ae744433ae463dd6637e5893dd7d633fed7ac06ffac47b3a38c",
+      "width": 390,
+      "height": 8778,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    },
+    {
+      "path": "pr/artifacts/panorama-v13-r2-browser/mobile-without-javascript.png",
+      "sha256": "3c1450170c2a73806ed395f2d49881da3b5e2ad9e06ea2ed8cfae33df6c689fc",
+      "width": 390,
+      "height": 8983,
+      "visually_reviewed": true,
+      "review_extent": "original screenshot"
+    }
+  ],
+  "visual_findings": [
+    {
+      "id": "V01",
+      "result": "pass",
+      "subject": "R9 page text and controls",
+      "observation": "Desktop and mobile titles, navigation, filters, result count and evidence cards are legible in the captured views. Desktop multi-column evidence and mobile stacked fields remain separated. No visible overlap or clipped text in these views; all 34 recorded layout measurements keep document width within the viewport tolerance.",
+      "evidence": [
+        "city-spatial-r9-browser/desktop-overview.png",
+        "city-spatial-r9-browser/mobile-overview.png",
+        "city-spatial-r9-browser/mobile-filtered-evidence.png",
+        "city-spatial-r9-browser/desktop-node-evidence.png",
+        "city-spatial-r9-browser/mobile-node-evidence.png"
+      ]
+    },
+    {
+      "id": "V02",
+      "result": "pass",
+      "subject": "Three spatial evidence categories",
+      "observation": "The source frame and legend explicitly distinguish 来源图位置, 文献／报告关系 and 仍待定位. Lines, colors, hollow endpoints and separate panels are accompanied by words; the legend says original map symbols are not upgraded to surveyed controls, relationship panels have no scale, and unknown connections remain open. The page explicitly forbids treating panel spacing as ancient distances or a shared surveyed plane.",
+      "evidence": [
+        "city-spatial-r9-browser/desktop-map-reset.png",
+        "city-spatial-r9-browser/desktop-offline.png",
+        "root-review/r9-four-nodes-ci-hash-matched-viewport.png"
+      ]
+    },
+    {
+      "id": "V03",
+      "result": "pass",
+      "subject": "All four relation panels",
+      "observation": "No visible label collisions in the hash-matched four-panel figure. The palace window separates gate south / road west and offset office labels; the Baima window separates central crossing and southern opening; Sima separates palace court, main road and warehouse sectors; Jianchun separates three bridges, bridge direction, channel phase interpretation and unknown junctions. North/east orientation and no-scale/independent-frame notices remain visible.",
+      "evidence": [
+        "root-review/r9-four-nodes-ci-hash-matched-viewport.png"
+      ],
+      "asset_sha256": "f43809673dfe1da093d2f05f85f3b375e001c96fd56df7889f4d567a58574c7a"
+    },
+    {
+      "id": "V04",
+      "result": "pass",
+      "subject": "Mobile figure access and evidence",
+      "observation": "Mobile controls wrap without page overflow, and evidence turns into readable stacked cards. The full-map thumbnail is necessarily compact and its wide figure is locally scrollable; detailed reading relies on node view selection, zoom and local scrolling. The CI reports exercised every view, URL restore, zoom, button/keyboard panning and reset. This review does not treat a viewport screenshot as proof that every map label is simultaneously readable on a narrow screen.",
+      "evidence": [
+        "city-spatial-r9-browser/mobile-map-reset.png",
+        "city-spatial-r9-browser/mobile-report.json",
+        "city-spatial-r9-browser/mobile-node-evidence.png"
+      ]
+    },
+    {
+      "id": "V05",
+      "result": "pass",
+      "subject": "V13 R2 gate, wall and intervening strip",
+      "observation": "In both desktop and mobile gate-detail screenshots the new candidate visibly has a ground doorway and two separate windowed timber storeys above it. The two white temple-wall wings join the ground storey; the strip between the temple entrance and foreground ochre city wall remains visible. The previous candidate in the adjacent comparison has its original single primary gate-roof group. These are visible image judgments, not inferred from the generation prompt.",
+      "evidence": [
+        "panorama-v13-r2-browser/desktop-comparison.png",
+        "panorama-v13-r2-browser/mobile-comparison.png",
+        "root-review/r2-desktop-nojs-readonly-viewport.png"
+      ]
+    },
+    {
+      "id": "V06",
+      "result": "pass",
+      "subject": "Full-frame comparison and retained scene",
+      "observation": "The desktop side-by-side images and mobile stacked images retain the entire landscape, river, both banks, bridge and city horizon; no crop is used to hide the changed gate position. The new gate remains within the temple wall, the tower remains behind it, and the boat-supported bridge remains in the foreground. The page gives exact source-image dimensions and the same 380 × 175 source-pixel viewport for the two gate details. The CI measurements use contain and natural proportions for all three full-image modes.",
+      "evidence": [
+        "panorama-v13-r2-browser/desktop-comparison.png",
+        "panorama-v13-r2-browser/mobile-comparison.png",
+        "panorama-v13-r2-browser/desktop-report.json",
+        "panorama-v13-r2-browser/mobile-report.json"
+      ]
+    },
+    {
+      "id": "V07",
+      "result": "pass",
+      "subject": "No-JavaScript and offline visibility",
+      "observation": "The no-JavaScript panorama screenshots display all three complete versions and both gate views with their evidence narrative. The no-JavaScript spatial screenshots expose SP01 and subsequent source-linked rows; original quotation and prior-review-summary presentation remain distinct. Offline spatial screenshots retain the map and filtered SP16 evidence. Filtering, refresh restoration and exact download hashes are functional claims from the CI reports, not inferred from screenshots alone.",
+      "evidence": [
+        "panorama-v13-r2-browser/mobile-without-javascript.png",
+        "root-review/r2-desktop-nojs-readonly-viewport.png",
+        "city-spatial-r9-browser/desktop-without-javascript.png",
+        "city-spatial-r9-browser/mobile-without-javascript.png",
+        "city-spatial-r9-browser/desktop-offline.png",
+        "city-spatial-r9-browser/mobile-offline.png"
+      ]
+    },
+    {
+      "id": "V08",
+      "result": "pass",
+      "subject": "Historical and approval boundaries",
+      "observation": "Visible text marks the revision as a candidate for review while retaining approved V12 on the homepage. It states that three-storey visual correction does not determine all historical components, gate opening count or exact height; the total scene remains partly artistic. Spatial refinement is not presented as newly excavated geometry. The missing 1993/2011 full originals and the deferred 2022 report remain disclosed.",
+      "evidence": [
+        "panorama-v13-r2-browser/desktop-comparison.png",
+        "panorama-v13-r2-browser/mobile-comparison.png",
+        "city-spatial-r9-browser/desktop-filtered-evidence.png"
+      ]
+    }
+  ],
+  "supplementary_views": [
+    {
+      "path": "root-review/r2-desktop-nojs-readonly-viewport.png",
+      "sha256": "3cb584325b9e917db5ced9c052e8e5ce14d633e0498c9501afbefbf6f4952b17",
+      "source": "pr/artifacts/panorama-v13-r2-browser/desktop-without-javascript.png",
+      "viewbox": [
+        0,
+        400,
+        1440,
+        3600
+      ],
+      "purpose": "Read-only display window for a 7179-pixel-high screenshot; not a changed site asset."
+    },
+    {
+      "path": "root-review/r9-four-nodes-ci-hash-matched-viewport.png",
+      "sha256": "7d26fafe1708070496a16486583aa91202fdf320fa8eb583a7a75a378e791f88",
+      "source_svg_sha256": "f43809673dfe1da093d2f05f85f3b375e001c96fd56df7889f4d567a58574c7a",
+      "ci_actual_download_hash_matches": true,
+      "viewbox": [
+        20,
+        735,
+        1560,
+        1125
+      ],
+      "purpose": "Inspect all four labels at readable scale; the SVG bytes were required to match the downloaded CI asset before rendering."
+    }
+  ],
+  "not_claimed": [
+    "This is not a public production-site or deploy acceptance; the parent performs that after publication.",
+    "Screenshots and browser pass reports do not validate the ancient city as a complete archaeological reconstruction.",
+    "Gate visual issue resolution does not set historical_gate_reconstruction_completed or entire_scene_historically_validated to true.",
+    "This review does not approve replacing the V12 homepage hero.",
+    "No unrelated test scope was added and no frozen source file was changed."
+  ]
+}

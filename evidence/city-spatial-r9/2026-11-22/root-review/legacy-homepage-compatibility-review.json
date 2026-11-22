@@ -1,0 +1,60 @@
+{
+  "schema": "luoyang-r9-independent-legacy-homepage-review-v1",
+  "reviewed_at_beijing": "2026-11-22T15:19:02.496102+08:00",
+  "reviewer": "r9_validation",
+  "method": "Read-only source inspection using targeted searches and bounded reads; no source modifications or new test execution.",
+  "local_head": "191556e5ebf63ba106d1ee2979edb3b4b1c84a05",
+  "local_head_tree": "83bb6b252dd568ee9c3f58f8c5f66cb3c2cb935d",
+  "source_files_sha256": {
+    "tools/homepage_artwork_v10.py": "415495114e5efe799fc18c6e4b4eff04825e782a64790af14d3b9aae930d450d",
+    "tools/city_panorama_r5_contract.py": "c18580bd7d1925966c1784368fc6eb4680fa1fc91c4140743980a11adf7435ff",
+    "tools/verify_city_atlas_r4.py": "900e8db710a88172d3ea291b549ebb5592c174a57b998510a7c75f48715de06a",
+    "tools/city_nodes_r7_verify.py": "70a5b1c2dc67e374078f909f224b314138084894bbae89e2a0fa15313fd2310e",
+    "tools/panorama_v13_verify.py": "7d507964c8ebd8d892708f06dd04d3be91a3741ec5b0192c1d8ee20966e58d9d",
+    "tools/city_spatial_r9_compat.py": "d7e09b59682981e3fb44e8d255350ebbdfe72ff639de81815eede2d125644967",
+    "tools/panorama_v13_r2_contract.py": "c276f99696d3065b66b5558debd06406901d51c852e079b2bc7c35d6bab88416",
+    "tools/verify_road_atlas_r6.py": "51f877e3af5eae92e1d635917b6cdecebe0d42f4600373a0c221b9b369e6a7ec",
+    "tools/verify_all_road_atlas_r62.py": "eb9cfde07e15fdd0ad8264312e3101c451888f5272af3f5b06104a9e2fc1090b",
+    "tests/test_city_nodes_r7.py": "7e33076c351efa00ac4af5e34bf85a924c85de20783eee79cc5c42ff7d659d9f",
+    "tests/test_homepage_approved_v9.py": "04afa654c54747bb00b52f415a861158cf3ffef3409c44b7c54c093f4c42c8c8",
+    "tests/browser_homepage_v1.py": "1dc09346ed1d6b9bbe244c4109d4a30dafc286864927ced3923fbf36414586d5",
+    "tests/browser_homepage_approved_v9.py": "d1a39c19f1af6b8d1a930f6851cc1d107b97171ead7082499e8c4c6efd48926a"
+  },
+  "scope": "Find current clean-build and verify-live homepage restore/validation paths that still fail to remove the newly inserted R9 spatial and panorama links before comparing earlier page bytes.",
+  "status": "no_additional_active_path_gap_found",
+  "observed_fix": "homepage_artwork_v10.verify now strips current R9 entries before restoring R8 and R7 entries; old equality assertions remain present.",
+  "paths_reviewed": [
+    {
+      "path": "homepage_artwork_v10.restore_baseline",
+      "finding": "Strips R9, then R8, then R7 before reversing approved artwork revisions."
+    },
+    {
+      "path": "R4/R5 predecessor verification",
+      "finding": "before_r5 routes current homepage bytes through restore_baseline before original predecessor/hash comparison."
+    },
+    {
+      "path": "R7 verify_homepage and corresponding unit test",
+      "finding": "Strip R9 and R8 entries before R7 restoration and archive comparison."
+    },
+    {
+      "path": "R8 panorama verification",
+      "finding": "restore_r8_context checks public R9 release/homepage archives and hashes, then supplies exact predecessor bytes to unchanged R8 assertions."
+    },
+    {
+      "path": "R6 and R6.2 approved-homepage protection",
+      "finding": "Checks historical archive provenance plus current V12 identifiers/image bytes; does not incorrectly compare the entire extended homepage with pre-R9 bytes."
+    },
+    {
+      "path": "Legacy homepage browser checks",
+      "finding": "Uses defined hero, three question links and 179 map targets, not a total anchor count that would reject two new research links."
+    }
+  ],
+  "changes_made": [],
+  "tests_executed_by_this_review": [],
+  "testing_scope_not_expanded": true,
+  "limitations": [
+    "Static compatibility-chain review, not a substitute for successful clean Python 3.11 CI or public-site acceptance.",
+    "This review does not claim future standalone incremental re-runs of earlier-stage builders are a supported workflow."
+  ],
+  "requested_ci_run": 44997501898
+}

@@ -1,0 +1,103 @@
+{
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "checks": [
+    "R5 and water entrances, all 21 source records, source map and viewport fit",
+    "Name/ID search, persistent evidence filter, empty results, reset and expanded field evidence",
+    "A new ID search clears the previous road anchor and survives reload",
+    "Three evidence layers persist, map keyboard link and deep link restore, zoom and keyboard horizontal panning",
+    "Five actual downloads with SHA-256, disconnected ZIP reading and search, native reading without JavaScript",
+    "Both homepage entries use approved full-frame v12 and preserve selected panorama 07 / v11 in the archive"
+  ],
+  "downloads": {
+    "road-atlas/city-roads.svg": "d90170e019c67502a761cdbafc97090929338d608ff6550c00ced09ea7d040b6",
+    "road-atlas/roads.csv": "254facb627a106f6e4472aedd51ba52bd94cf08cc92b831f9c0ad3cd1ac006ba",
+    "road-atlas/roads.json": "8351f7cf2dd5e90b06493a55b10f4a02c901b013ad110c05181e244f220769f9",
+    "road-atlas/manifest.json": "3b0b84494174a22a654205a00ec18e5272312e6d09c77283aa62da1109f0ab73",
+    "downloads/luoyang-road-atlas.zip": "e8bdd307f2bb10456d7eb4ceb8c6f9fea1c95031e6e3a9ddcb6b2a8c6f2c8d26"
+  },
+  "screenshots": {
+    "desktop-map.png": "f6056448b0838ac6c89733acb7835b3016648549112d3cea618a7ca5fcd68e70",
+    "desktop-baima-evidence.png": "07b115e3ccb5b4afc8b8044fdca81d8ac7b3d2b90571ac717fdc63b6b5ada4bf",
+    "desktop-unknown-endpoint.png": "d625bbef302b78957254fbba151aa2fada44b1986623845edc4d412ea69a4577"
+  },
+  "errors": [],
+  "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c",
+  "layout_checks": [
+    {
+      "url": "http://127.0.0.1:43855/luoyang-city/luoyang-road-atlas.html",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:43855/luoyang-city/luoyang-road-atlas.html?q=X02",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:43855/luoyang-city/luoyang-road-atlas.html#O11",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:43855/luoyang-city/luoyang-road-atlas.html#O11",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "file:///tmp/tmp26eg6jqc/index.html?q=O11",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:43855/luoyang-city/luoyang-road-atlas.html#X02",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    }
+  ],
+  "no_javascript": {
+    "url": "http://127.0.0.1:43855/luoyang-city/luoyang-road-atlas.html#X02",
+    "scroll_behavior": "auto",
+    "summary_before": {
+      "x": 91,
+      "y": 20.796875,
+      "width": 1258,
+      "height": 72.5
+    },
+    "status": "passed"
+  },
+  "status": "passed"
+}

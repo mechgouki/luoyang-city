@@ -1,0 +1,640 @@
+﻿2026-11-22T07:40:17.7459033Z Current runner version: '2.338.2'
+2026-11-22T07:40:17.7487985Z ##[group]Runner Image Provisioner
+2026-11-22T07:40:17.7489121Z Hosted Compute Agent
+2026-11-22T07:40:17.7489864Z Version: 20261111.635
+2026-11-22T07:40:17.7490849Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-22T07:40:17.7491767Z Build Date: 2026-11-11T01:49:01Z
+2026-11-22T07:40:17.7492611Z Worker ID: {4584a5ae-8f02-4158-9a5a-197e67a33b9c}
+2026-11-22T07:40:17.7493540Z Region: eastus2
+2026-11-22T07:40:17.7494257Z Cloud: Azure
+2026-11-22T07:40:17.7494891Z ##[endgroup]
+2026-11-22T07:40:17.7496766Z ##[group]Operating System
+2026-11-22T07:40:17.7497519Z Ubuntu
+2026-11-22T07:40:17.7498224Z 24.04.5
+2026-11-22T07:40:17.7498881Z LTS
+2026-11-22T07:40:17.7499463Z ##[endgroup]
+2026-11-22T07:40:17.7500210Z ##[group]Runner Image
+2026-11-22T07:40:17.7501148Z Image: ubuntu-24.04
+2026-11-22T07:40:17.7501863Z Version: 20261116.376.1
+2026-11-22T07:40:17.7503502Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261116.376/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-22T07:40:17.7505579Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261116.376
+2026-11-22T07:40:17.7506790Z ##[endgroup]
+2026-11-22T07:40:17.7508299Z ##[group]GITHUB_TOKEN Permissions
+2026-11-22T07:40:17.7510971Z Contents: read
+2026-11-22T07:40:17.7511788Z Metadata: read
+2026-11-22T07:40:17.7512494Z ##[endgroup]
+2026-11-22T07:40:17.7515003Z Secret source: Actions
+2026-11-22T07:40:17.7516233Z Cache mode: write
+2026-11-22T07:40:17.7517404Z Prepare workflow directory
+2026-11-22T07:40:17.7896419Z Prepare all required actions
+2026-11-22T07:40:17.7952887Z Getting action download info
+2026-11-22T07:40:17.9495160Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-22T07:40:18.0977318Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-22T07:40:18.2346852Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-22T07:40:18.4948801Z Complete job name: verify-live
+2026-11-22T07:40:18.5643040Z ##[group]Run actions/checkout@v4
+2026-11-22T07:40:18.5643712Z with:
+2026-11-22T07:40:18.5644083Z   repository: mechgouki/luoyang-city
+2026-11-22T07:40:18.5647403Z   token: ***
+2026-11-22T07:40:18.5647759Z   ssh-strict: true
+2026-11-22T07:40:18.5648109Z   ssh-user: git
+2026-11-22T07:40:18.5648469Z   persist-credentials: true
+2026-11-22T07:40:18.5648854Z   clean: true
+2026-11-22T07:40:18.5649211Z   sparse-checkout-cone-mode: true
+2026-11-22T07:40:18.5649628Z   fetch-depth: 1
+2026-11-22T07:40:18.5649970Z   fetch-tags: false
+2026-11-22T07:40:18.5650314Z   show-progress: true
+2026-11-22T07:40:18.5650812Z   lfs: false
+2026-11-22T07:40:18.5651152Z   submodules: false
+2026-11-22T07:40:18.5651516Z   set-safe-directory: true
+2026-11-22T07:40:18.5651910Z   allow-unsafe-pr-checkout: false
+2026-11-22T07:40:18.5652480Z ##[endgroup]
+2026-11-22T07:40:18.8095903Z Syncing repository: mechgouki/luoyang-city
+2026-11-22T07:40:18.8097712Z ##[group]Getting Git version info
+2026-11-22T07:40:18.8098785Z Working directory is '/home/runner/work/luoyang-city/luoyang-city'
+2026-11-22T07:40:18.8100078Z [command]/usr/bin/git version
+2026-11-22T07:40:18.8201223Z git version 2.56.1
+2026-11-22T07:40:18.8206741Z ##[endgroup]
+2026-11-22T07:40:18.8222368Z Temporarily overriding HOME='/home/runner/work/_temp/e9dcd7c6-b09c-43f2-bf54-4009b7459ede' before making global git config changes
+2026-11-22T07:40:18.8224016Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-22T07:40:18.8225141Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luoyang-city/luoyang-city
+2026-11-22T07:40:18.8260452Z Deleting the contents of '/home/runner/work/luoyang-city/luoyang-city'
+2026-11-22T07:40:18.8268468Z ##[group]Initializing the repository
+2026-11-22T07:40:18.8269252Z [command]/usr/bin/git init /home/runner/work/luoyang-city/luoyang-city
+2026-11-22T07:40:18.8374217Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-22T07:40:18.8375702Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-22T07:40:18.8376636Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-22T07:40:18.8377344Z hint: call:
+2026-11-22T07:40:18.8377784Z hint:
+2026-11-22T07:40:18.8378338Z hint: 	git config --global init.defaultBranch <name>
+2026-11-22T07:40:18.8378946Z hint:
+2026-11-22T07:40:18.8379520Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-22T07:40:18.8380361Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-22T07:40:18.8381369Z hint:
+2026-11-22T07:40:18.8381883Z hint: 	git branch -m <name>
+2026-11-22T07:40:18.8382668Z hint:
+2026-11-22T07:40:18.8383429Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-22T07:40:18.8384766Z Initialized empty Git repository in /home/runner/work/luoyang-city/luoyang-city/.git/
+2026-11-22T07:40:18.8400109Z [command]/usr/bin/git remote add origin https://github.com/mechgouki/luoyang-city
+2026-11-22T07:40:18.8441518Z ##[endgroup]
+2026-11-22T07:40:18.8442469Z ##[group]Disabling automatic garbage collection
+2026-11-22T07:40:18.8445628Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-22T07:40:18.8475528Z ##[endgroup]
+2026-11-22T07:40:18.8476264Z ##[group]Setting up auth
+2026-11-22T07:40:18.8482282Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T07:40:18.8516434Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T07:40:18.8857146Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T07:40:18.8898246Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T07:40:18.9108009Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T07:40:18.9145003Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T07:40:18.9351026Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-22T07:40:18.9399264Z ##[endgroup]
+2026-11-22T07:40:18.9400209Z ##[group]Fetching the repository
+2026-11-22T07:40:18.9411105Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1a988bc51adc74288ec8a8aa682499444007a33c:refs/remotes/origin/main
+2026-11-22T07:40:20.3005101Z From https://github.com/mechgouki/luoyang-city
+2026-11-22T07:40:20.3007425Z  * [new ref]         1a988bc51adc74288ec8a8aa682499444007a33c -> origin/main
+2026-11-22T07:40:20.3010520Z ##[endgroup]
+2026-11-22T07:40:20.3011827Z ##[group]Determining the checkout info
+2026-11-22T07:40:20.3012994Z ##[endgroup]
+2026-11-22T07:40:20.3014306Z [command]/usr/bin/git sparse-checkout disable
+2026-11-22T07:40:20.3073490Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-22T07:40:20.3108293Z ##[group]Checking out the ref
+2026-11-22T07:40:20.3111060Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-22T07:40:20.4281740Z Switched to a new branch 'main'
+2026-11-22T07:40:20.4284985Z branch 'main' set up to track 'origin/main'.
+2026-11-22T07:40:20.4297968Z ##[endgroup]
+2026-11-22T07:40:20.4344896Z [command]/usr/bin/git log -1 --format=%H
+2026-11-22T07:40:20.4374420Z 1a988bc51adc74288ec8a8aa682499444007a33c
+2026-11-22T07:40:20.4763943Z ##[group]Run actions/setup-python@v5
+2026-11-22T07:40:20.4764947Z with:
+2026-11-22T07:40:20.4765668Z   python-version: 3.11
+2026-11-22T07:40:20.4766487Z   check-latest: false
+2026-11-22T07:40:20.4774873Z   token: ***
+2026-11-22T07:40:20.4775861Z   update-environment: true
+2026-11-22T07:40:20.4776750Z   allow-prereleases: false
+2026-11-22T07:40:20.4777596Z   freethreaded: false
+2026-11-22T07:40:20.4778378Z ##[endgroup]
+2026-11-22T07:40:20.5961602Z ##[group]Installed versions
+2026-11-22T07:40:20.6476368Z (node:2246) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-22T07:40:20.6476984Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-22T07:40:20.6477752Z Successfully set up CPython (3.11.18)
+2026-11-22T07:40:20.6478266Z ##[endgroup]
+2026-11-22T07:40:20.6635970Z ##[group]Run python tools/verify_live.py --base-url "$SITE_URL" --commit "$GITHUB_SHA"
+2026-11-22T07:40:20.6636562Z [36;1mpython tools/verify_live.py --base-url "$SITE_URL" --commit "$GITHUB_SHA"[0m
+2026-11-22T07:40:20.6708939Z shell: /usr/bin/bash -e {0}
+2026-11-22T07:40:20.6709297Z env:
+2026-11-22T07:40:20.6709636Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:40:20.6710238Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T07:40:20.6710933Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:40:20.6711430Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:40:20.6711917Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:40:20.6712394Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T07:40:20.6713032Z   SITE_URL: https://mechgouki.github.io/luoyang-city/
+2026-11-22T07:40:20.6713425Z ##[endgroup]
+2026-11-22T07:42:37.4432032Z LIVE PASS: 861 public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: 0
+2026-11-22T07:42:37.5116048Z ##[group]Run docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-22T07:42:37.5116508Z [36;1mdocker pull mcr.microsoft.com/playwright/python:v1.57.0-noble[0m
+2026-11-22T07:42:37.5116815Z [36;1mmkdir -p artifacts[0m
+2026-11-22T07:42:37.5117323Z [36;1mdocker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json[0m
+2026-11-22T07:42:37.5136340Z shell: /usr/bin/bash -e {0}
+2026-11-22T07:42:37.5136538Z env:
+2026-11-22T07:42:37.5136759Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:42:37.5137098Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T07:42:37.5137434Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:42:37.5137732Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:42:37.5138031Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:42:37.5138360Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T07:42:37.5138614Z ##[endgroup]
+2026-11-22T07:42:37.7464503Z v1.57.0-noble: Pulling from playwright/python
+2026-11-22T07:42:37.7974249Z 02de03a7213b: Pulling fs layer
+2026-11-22T07:42:37.7974632Z 7b5874a20bcf: Pulling fs layer
+2026-11-22T07:42:37.7975020Z 4b7186aead47: Pulling fs layer
+2026-11-22T07:42:37.7975227Z b7c8fb4e771e: Pulling fs layer
+2026-11-22T07:42:37.7975411Z b7c8fb4e771e: Waiting
+2026-11-22T07:42:37.9713400Z 02de03a7213b: Verifying Checksum
+2026-11-22T07:42:37.9713911Z 02de03a7213b: Download complete
+2026-11-22T07:42:38.0411268Z 7b5874a20bcf: Verifying Checksum
+2026-11-22T07:42:38.0411904Z 7b5874a20bcf: Download complete
+2026-11-22T07:42:38.2307858Z 4b7186aead47: Verifying Checksum
+2026-11-22T07:42:38.2308257Z 4b7186aead47: Download complete
+2026-11-22T07:42:38.8436048Z 02de03a7213b: Pull complete
+2026-11-22T07:42:41.2552800Z b7c8fb4e771e: Verifying Checksum
+2026-11-22T07:42:41.2554932Z b7c8fb4e771e: Download complete
+2026-11-22T07:42:46.0189509Z 7b5874a20bcf: Pull complete
+2026-11-22T07:42:46.6856551Z 4b7186aead47: Pull complete
+2026-11-22T07:43:04.2811431Z b7c8fb4e771e: Pull complete
+2026-11-22T07:43:04.2893746Z Digest: sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1
+2026-11-22T07:43:04.2908027Z Status: Downloaded newer image for mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-22T07:43:04.2915702Z mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-22T07:43:04.3129340Z ##[group]Run docker run --rm --init --ipc=host \
+2026-11-22T07:43:04.3129953Z [36;1mdocker run --rm --init --ipc=host \[0m
+2026-11-22T07:43:04.3130429Z [36;1m  --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \[0m
+2026-11-22T07:43:04.3131172Z [36;1m  --workdir /work --env SITE_URL --env GITHUB_SHA \[0m
+2026-11-22T07:43:04.3131666Z [36;1m  mcr.microsoft.com/playwright/python:v1.57.0-noble \[0m
+2026-11-22T07:43:04.3132095Z [36;1m  bash -euo pipefail -c '[0m
+2026-11-22T07:43:04.3132759Z [36;1m    python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0 pypdf==5.9.0[0m
+2026-11-22T07:43:04.3133752Z [36;1m    python tests/browser_city_common_p470.py --base-url "$SITE_URL" --output artifacts/live-city-common-p470-browser[0m
+2026-11-22T07:43:04.3134737Z [36;1m    python tests/browser_city_north_p471.py --base-url "$SITE_URL" --output artifacts/live-city-north-p471-browser[0m
+2026-11-22T07:43:04.3135749Z [36;1m    python tests/browser_city_west_p472.py --base-url "$SITE_URL" --output artifacts/live-city-west-p472-browser[0m
+2026-11-22T07:43:04.3136710Z [36;1m    python tests/browser_city_atlas_r4.py --base-url "$SITE_URL" --output artifacts/live-city-atlas-r4-browser[0m
+2026-11-22T07:43:04.3137678Z [36;1m    python tests/browser_city_panorama_r5.py --base-url "$SITE_URL" --output artifacts/live-city-panorama-r5-browser[0m
+2026-11-22T07:43:04.3138649Z [36;1m    python tests/browser_road_atlas_r6.py --base-url "$SITE_URL" --output artifacts/live-road-atlas-r6-browser[0m
+2026-11-22T07:43:04.3139701Z [36;1m    python tests/browser_all_road_atlas_r62.py --base-url "$SITE_URL" --output artifacts/live-all-road-atlas-r62-browser[0m
+2026-11-22T07:43:04.3141287Z [36;1m    python tests/browser_city_nodes_r7.py --base-url "$SITE_URL" --output artifacts/live-city-nodes-r7-browser[0m
+2026-11-22T07:43:04.3142430Z [36;1m    python tests/browser_panorama_v13.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-panorama-v13-browser[0m
+2026-11-22T07:43:04.3143570Z [36;1m    python tests/browser_city_spatial_r9.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-city-spatial-r9-browser[0m
+2026-11-22T07:43:04.3144721Z [36;1m    python tests/browser_panorama_v13_r2.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-panorama-v13-r2-browser[0m
+2026-11-22T07:43:04.3145837Z [36;1m    python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser[0m
+2026-11-22T07:43:04.3146878Z [36;1m    python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser[0m
+2026-11-22T07:43:04.3148026Z [36;1m    python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser[0m
+2026-11-22T07:43:04.3149260Z [36;1m    python tests/browser_prosperity_taiji_courts_p42.py --base-url "$SITE_URL" --output artifacts/live-prosperity-taiji-courts-p42-browser[0m
+2026-11-22T07:43:04.3150765Z [36;1m     python tests/browser_prosperity_palace_boundaries_p43.py --base-url "$SITE_URL" --output artifacts/live-prosperity-palace-boundaries-p43-browser[0m
+2026-11-22T07:43:04.3152149Z [36;1m    python tests/browser_prosperity_architecture_p44.py --base-url "$SITE_URL" --output artifacts/live-prosperity-architecture-p44-browser[0m
+2026-11-22T07:43:04.3153166Z [36;1m    python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser[0m
+2026-11-22T07:43:04.3153974Z [36;1m    python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser[0m
+2026-11-22T07:43:04.3154758Z [36;1m    python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser[0m
+2026-11-22T07:43:04.3155530Z [36;1m    python tests/browser_v28.py --base-url "$SITE_URL" --output artifacts/live-v28-browser[0m
+2026-11-22T07:43:04.3156701Z [36;1m    python tests/browser_v29.py --base-url "$SITE_URL" --output artifacts/live-v29-browser[0m
+2026-11-22T07:43:04.3157471Z [36;1m    python tests/browser_v30.py --base-url "$SITE_URL" --output artifacts/live-v30-browser[0m
+2026-11-22T07:43:04.3158237Z [36;1m    python tests/browser_dual.py --base-url "$SITE_URL" --output artifacts/live-dual-browser[0m
+2026-11-22T07:43:04.3159062Z [36;1m    python tests/browser_west_b3.py --base-url "$SITE_URL" --output artifacts/live-west-b3-browser[0m
+2026-11-22T07:43:04.3159914Z [36;1m    python tests/browser_north_b4.py --base-url "$SITE_URL" --output artifacts/live-north-b4-browser[0m
+2026-11-22T07:43:04.3160967Z [36;1m    python tests/browser_west_roads_b5.py --base-url "$SITE_URL" --output artifacts/live-west-roads-b5-browser[0m
+2026-11-22T07:43:04.3161926Z [36;1m    python tests/browser_southeast_b6.py --base-url "$SITE_URL" --output artifacts/live-southeast-b6-browser[0m
+2026-11-22T07:43:04.3162850Z [36;1m    python tests/browser_luonan_b7.py --base-url "$SITE_URL" --output artifacts/live-luonan-b7-browser[0m
+2026-11-22T07:43:04.3163715Z [36;1m    python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser[0m
+2026-11-22T07:43:04.3164615Z [36;1m    python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser[0m
+2026-11-22T07:43:04.3165646Z [36;1m    python tests/browser_homepage_approved_v9.py --base-url "$SITE_URL" --output artifacts/live-homepage-approved-v9-browser[0m
+2026-11-22T07:43:04.3166904Z [36;1m    python tests/browser_prosperity_city_distribution_p451.py --base-url "$SITE_URL" --output artifacts/live-prosperity-city-distribution-p451-browser[0m
+2026-11-22T07:43:04.3168271Z [36;1m    python tests/browser_prosperity_road_functions_p452.py --base-url "$SITE_URL" --output artifacts/live-prosperity-road-functions-p452-browser[0m
+2026-11-22T07:43:04.3169572Z [36;1m    python tests/browser_prosperity_street_clusters_p453.py --base-url "$SITE_URL" --output artifacts/live-prosperity-street-clusters-p453-browser[0m
+2026-11-22T07:43:04.3171032Z [36;1m    python tests/browser_prosperity_hydro_roads_p46.py --base-url "$SITE_URL" --output artifacts/live-prosperity-hydro-roads-p46-browser[0m
+2026-11-22T07:43:04.3172223Z [36;1m    python tests/browser_backbone_p469.py --base-url "$SITE_URL" --output artifacts/live-prosperity-backbone-p469-browser[0m
+2026-11-22T07:43:04.3173263Z [36;1m    python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser[0m
+2026-11-22T07:43:04.3174313Z [36;1m    python tests/browser_prosperity_core_v2.py --base-url "$SITE_URL" --output artifacts/live-prosperity-core-v2-browser[0m
+2026-11-22T07:43:04.3175017Z [36;1m  '[0m
+2026-11-22T07:43:04.3200879Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-22T07:43:04.3201298Z env:
+2026-11-22T07:43:04.3201636Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:43:04.3202198Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T07:43:04.3202754Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:43:04.3203268Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:43:04.3203748Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:43:04.3204235Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T07:43:04.3204725Z   SITE_URL: https://mechgouki.github.io/luoyang-city/
+2026-11-22T07:43:04.3205110Z ##[endgroup]
+2026-11-22T07:43:04.8753183Z Collecting playwright==1.57.0
+2026-11-22T07:43:04.9303887Z   Downloading playwright-1.57.0-py3-none-manylinux1_x86_64.whl.metadata (3.5 kB)
+2026-11-22T07:43:04.9606174Z Collecting pypdf==5.9.0
+2026-11-22T07:43:04.9675510Z   Downloading pypdf-5.9.0-py3-none-any.whl.metadata (7.1 kB)
+2026-11-22T07:43:04.9865259Z Collecting pyee<14,>=13 (from playwright==1.57.0)
+2026-11-22T07:43:04.9930023Z   Downloading pyee-13.0.1-py3-none-any.whl.metadata (3.0 kB)
+2026-11-22T07:43:05.1262369Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright==1.57.0)
+2026-11-22T07:43:05.1331400Z   Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-11-22T07:43:05.1541343Z Collecting typing-extensions (from pyee<14,>=13->playwright==1.57.0)
+2026-11-22T07:43:05.1606201Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-22T07:43:05.1726038Z Downloading playwright-1.57.0-py3-none-manylinux1_x86_64.whl (46.0 MB)
+2026-11-22T07:43:05.7462732Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 MB 82.6 MB/s  0:00:00
+2026-11-22T07:43:05.7521462Z Downloading pypdf-5.9.0-py3-none-any.whl (313 kB)
+2026-11-22T07:43:05.7637331Z Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)
+2026-11-22T07:43:05.7681555Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 621.4/621.4 kB 132.5 MB/s  0:00:00
+2026-11-22T07:43:05.7747928Z Downloading pyee-13.0.1-py3-none-any.whl (15 kB)
+2026-11-22T07:43:05.7830180Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-22T07:43:05.8320886Z Installing collected packages: typing-extensions, pypdf, greenlet, pyee, playwright
+2026-11-22T07:43:06.6810299Z 
+2026-11-22T07:43:06.6822870Z Successfully installed greenlet-3.5.6 playwright-1.57.0 pyee-13.0.1 pypdf-5.9.0 typing-extensions-4.16.0
+2026-11-22T07:43:06.6825481Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-11-22T07:43:13.6868389Z PASS P4.7 desktop: four map cards, three scenes, six downloads and no-JS
+2026-11-22T07:43:19.5072005Z PASS P4.7 mobile: four map cards, three scenes, six downloads and no-JS
+2026-11-22T07:43:29.2513967Z PASS P4.7.1 desktop: two maps, three entries, 16 readings, seven downloads and no-JS
+2026-11-22T07:43:37.8569447Z PASS P4.7.1 mobile: two maps, three entries, 16 readings, seven downloads and no-JS
+2026-11-22T07:43:42.8632661Z PASS P472 desktop: 6 groups, 7 downloads, 6 screenshots
+2026-11-22T07:43:47.1116201Z PASS P472 mobile: 6 groups, 7 downloads, 6 screenshots
+2026-11-22T07:44:53.7683081Z PASS opening comparison shows both original JPEG and aligned ten-source-pixel traces with working overlay controls
+2026-11-22T07:44:54.0972118Z PASS desktop source-backed plan occupies the main workspace and verifies its release
+2026-11-22T07:44:54.1282487Z PASS comparison tracing selects the evidence-backed component and updates its deep link
+2026-11-22T07:44:54.1585419Z PASS keyboard map selection and native component selector expose the actual source notes
+2026-11-22T07:44:56.2168158Z PASS zoom, keyboard camera controls, drag, reset, and component framing work
+2026-11-22T07:44:57.3429116Z PASS three views, original-layer state, reload, and browser history retain deep-link selection
+2026-11-22T07:44:57.6651583Z PASS share URL fallback, unknown-state normalization, and in-page original comparison work
+2026-11-22T07:44:57.9853063Z PASS every advertised SVG, source raster, PDF, ZIP, CSV, JSON, and method download resolves
+2026-11-22T07:44:59.0692492Z PASS mobile layout has no overflow and keeps view, source, component, and download controls usable
+2026-11-22T07:44:59.8689464Z PASS without JavaScript the static plan, initial evidence, original, and complete download list remain
+2026-11-22T07:45:00.5206428Z PASS a failed data request preserves static reading and direct downloads
+2026-11-22T07:45:02.1072199Z PASS three genuine scale figures and visible 475/460 difference load in P4 desktop
+2026-11-22T07:45:02.7350946Z PASS three archaeological phases switch evidence and preserve URL state after reload
+2026-11-22T07:45:02.7551871Z PASS original publications are directly reachable as links and Taiji uncertainty remains visible
+2026-11-22T07:45:02.9148870Z PASS all three SVGs, source-scoped CSV/JSON, three-page PDF and ZIP download correctly
+2026-11-22T07:45:02.9359462Z PASS P4 is discoverable from the already-published original comparison and home entry
+2026-11-22T07:45:03.8613109Z PASS mobile reading, all source comparison figures and phase selection have no overflow
+2026-11-22T07:45:04.5002440Z PASS without JavaScript all source diagrams, public links and default archaeological phase remain readable
+2026-11-22T07:45:06.1097178Z PASS P4.1 opens two auditable comparison SVGs, source list, gate identity and 200m default
+2026-11-22T07:45:06.6652359Z PASS 200m/300m source alternatives have correct 375/475 totals and reload-stable selection
+2026-11-22T07:45:06.6801641Z PASS 2009/2010/2011/2013 public originals link to their precise journal PDFs and formal missing plans stay flagged
+2026-11-22T07:45:06.8039238Z PASS SVG, CSV, JSON, 2-page PDF, ZIP and source reading limits all download successfully
+2026-11-22T07:45:06.8364745Z PASS home, original comparison and earlier P4 view all expose the new source-audit entry
+2026-11-22T07:45:07.7292899Z PASS 390px mobile shows source inventory, both original-based charts and scenario selection without overflow
+2026-11-22T07:45:08.3599322Z PASS static no-JavaScript fallback retains both diagrams, original links and default uncertainty explanation
+2026-11-22T07:45:09.9204122Z PASS P4.2 displays three legitimate source-scope figures and the default Northern Wei reconstruction phase
+2026-11-22T07:45:10.5565005Z PASS three chronological building types toggle correctly and maintain the URL/refresh state
+2026-11-22T07:45:11.1055185Z PASS alternative 340x310 and 320x380 courtyard-report dimensions remain separately selectable
+2026-11-22T07:45:11.1138000Z PASS partial excavation limits, hall dimension variations, phase labels and original publications are explicit
+2026-11-22T07:45:11.3137021Z PASS all three P4.2 SVGs and the public JSON, CSV, PDF and ZIP resolve from the built or live site
+2026-11-22T07:45:11.3531556Z PASS the home and all earlier source comparison pages link to the new P4.2 milestone
+2026-11-22T07:45:12.2369911Z PASS 390px mobile has usable source comparisons and phase/extents controls without horizontal overflow
+2026-11-22T07:45:12.8738886Z PASS without JavaScript all three figures and their citations are still readable
+2026-11-22T07:45:14.2032511Z PASS Desktop renders three same-scale reported scopes with explicit provenance and caveat
+2026-11-22T07:45:14.4482215Z PASS All public evidence downloads and old P4.2 next-stage link resolve
+2026-11-22T07:45:15.2010125Z PASS Mobile 390px viewport has no horizontal overflow, all source material readable
+2026-11-22T07:45:16.6537718Z PASS P4.4 desktop displays three original morphology panels with the east-ge source scope selected
+2026-11-22T07:45:17.2399996Z PASS Architecture type selection changes actual evidence panels and persists in URL/refresh
+2026-11-22T07:45:17.4564059Z PASS Live assets and old P4.3 next-stage link resolve, with zero inferred geographic controls
+2026-11-22T07:45:18.3295281Z PASS 390px mobile supports type selection, all original diagrams and no horizontal overflow
+2026-11-22T07:45:18.9472564Z PASS All six source interpretations remain readable without JavaScript
+2026-11-22T07:45:20.3778587Z PASS project subpath loads all baseline records and marker overlay
+2026-11-22T07:45:21.6277741Z PASS all 11 region centers lie inside the selected camera
+2026-11-22T07:45:21.7654450Z PASS ordinary physical marker click opens Yongning
+2026-11-22T07:45:22.7949927Z PASS copied entity URL opens the same place in a fresh page
+2026-11-22T07:45:22.9219924Z PASS Yongning to Taiwei relationship navigation
+2026-11-22T07:45:23.5428075Z PASS C01 preserves legacy plate and links current stable sheet IDs
+2026-11-22T07:45:23.5862464Z PASS 30 questions are classified; clarified status is not an unresolved count
+2026-11-22T07:45:24.3005050Z PASS evidence deep link restores panel B and E07 after full reload
+2026-11-22T07:45:25.4946044Z PASS all three diagrams render with evidence cards
+2026-11-22T07:45:25.7119505Z PASS site search works
+2026-11-22T07:45:25.7210388Z PASS unlocated record does not acquire a map point
+2026-11-22T07:45:25.7661001Z PASS 37 original atlas sheets remain available
+2026-11-22T07:45:25.9569523Z PASS overview/detail label switch does not mutate source SVG
+2026-11-22T07:45:28.1813112Z PASS mobile filters, region selection and evidence drawer
+2026-11-22T07:45:28.4480784Z PASS mobile research layout has no page overflow
+2026-11-22T07:45:28.4481228Z PASS no browser runtime errors
+2026-11-22T07:45:29.7305090Z PASS s011 provides two feasible sides for the same premises
+2026-11-22T07:45:30.5519593Z PASS candidate deep link restores the east witness after full reload
+2026-11-22T07:45:30.6778160Z PASS candidate point click explains both active and disabled premises
+2026-11-22T07:45:31.4761466Z PASS enabling west-side inheritance removes the incompatible east witness
+2026-11-22T07:45:31.6085874Z PASS removing emendation alone retains alternative deduction
+2026-11-22T07:45:31.7598023Z PASS removing both supporting premises exposes indeterminacy
+2026-11-22T07:45:31.7747425Z PASS same identity-time-reference model exposes conflict cores
+2026-11-22T07:45:31.9914045Z PASS relaxing each conflict premise restores consistency without asserting historical migration
+2026-11-22T07:45:33.5739261Z PASS atomic assumptions link to underlying v2.5 evidence
+2026-11-22T07:45:33.7544962Z PASS 482 lossless rows and the broken pre-existing reference remain reviewable
+2026-11-22T07:45:33.7715453Z PASS all 16 scenario results are visible
+2026-11-22T07:45:33.8186194Z PASS source ablations and identity comparison do not fabricate new geographic layouts
+2026-11-22T07:45:34.0144487Z PASS baseline map links to the new model without changing entity IDs
+2026-11-22T07:45:34.6136371Z PASS all 13 generated SVG candidates load
+2026-11-22T07:45:35.6991756Z PASS mobile candidate switching stays within page width
+2026-11-22T07:45:35.8768218Z PASS mobile relation review has contained table scrolling
+2026-11-22T07:45:35.8768799Z PASS no runtime errors in desktop or mobile
+2026-11-22T07:45:37.1641794Z PASS new network entry loads all queries and four explicit conditions
+2026-11-22T07:45:37.3097058Z PASS cross-source east path needs J1
+2026-11-22T07:45:37.9934118Z PASS join settings survive a complete reload
+2026-11-22T07:45:38.1414361Z PASS southern canal path changes only with J2
+2026-11-22T07:45:38.2761264Z PASS bridge identity and alignment never become flow
+2026-11-22T07:45:38.4042405Z PASS historical overflow is conditional rather than default permanent flow
+2026-11-22T07:45:38.4242804Z PASS source filtering removes its text and dependent joins
+2026-11-22T07:45:38.4867985Z PASS path certificate shows actual selected edges and premises
+2026-11-22T07:45:39.4160434Z PASS all four typed network diagrams render
+2026-11-22T07:45:39.4481762Z PASS evidence deep link preserves source wording and selection
+2026-11-22T07:45:39.4735744Z PASS 527 bridge event does not shift to Yong bridge or to 534 tower fire
+2026-11-22T07:45:39.7146038Z PASS construction interval does not generate completion or permanent construction status
+2026-11-22T07:45:39.7405256Z PASS 547 preserves undated columns, unknown later condition and aggregate scope
+2026-11-22T07:45:40.0059872Z PASS a bridge without a sampled event does not inherit another bridge damage
+2026-11-22T07:45:40.0882254Z PASS event coverage audit retains every baseline object
+2026-11-22T07:45:40.6268478Z PASS baseline entity links to its scoped event view
+2026-11-22T07:45:40.7990824Z PASS standalone reports and data exports are public
+2026-11-22T07:45:41.9121944Z PASS mobile controls, tables and event cards remain within viewport
+2026-11-22T07:45:41.9123551Z PASS no desktop or mobile runtime errors
+2026-11-22T07:45:43.5243900Z PASS root homepage visibly shows current integrated release, not v2.4 title
+2026-11-22T07:45:43.5316868Z PASS 35 research overlays and 179 original click targets share the default map
+2026-11-22T07:45:43.5738960Z PASS actual release metadata matches deployed build commit
+2026-11-22T07:45:44.6995474Z PASS baseline and research layers genuinely change the displayed map
+2026-11-22T07:45:44.8282588Z PASS event layer marks only four existing anchors; unmapped movable objects get no invented point
+2026-11-22T07:45:44.9018378Z PASS 547 entity reading retains scoped past events without asserting permanent destruction
+2026-11-22T07:45:45.4538777Z PASS real marker click opens integrated evidence and model entry
+2026-11-22T07:45:46.8776709Z PASS separate release URL restores layer and year on reload
+2026-11-22T07:45:46.8823025Z PASS every executing script and stylesheet uses content-addressed URLs
+2026-11-22T07:45:47.7356758Z PASS new entry ignores simulated stale unversioned v2.4 JS, CSS, JSON and map cache
+2026-11-22T07:45:47.8584754Z PASS different release commit produces an explicit update path
+2026-11-22T07:45:47.9876266Z PASS failed online check never claims verified freshness
+2026-11-22T07:45:48.2409814Z PASS new map download, release report and coverage data are publicly accessible
+2026-11-22T07:45:49.1752188Z PASS mobile prior-release page retains release and working event-layer controls without overflow
+2026-11-22T07:45:49.1752983Z PASS no runtime errors in normal and stale-cache browser contexts
+2026-11-22T07:45:50.6463773Z PASS default homepage visibly links the new temporal comparison
+2026-11-22T07:45:50.6891383Z PASS current release and build manifest agree
+2026-11-22T07:45:50.8735063Z PASS twelve dossiers share eleven pre-existing independent anchors
+2026-11-22T07:45:50.9796379Z PASS zoom synchronizes both reference views
+2026-11-22T07:45:51.1567070Z PASS drag synchronizes both reference views
+2026-11-22T07:45:51.3418267Z PASS physical existing map anchor opens the matching dossier
+2026-11-22T07:45:51.4362835Z PASS 534 tower fire does not become a 547 whole-temple state
+2026-11-22T07:45:51.8038410Z PASS group-only inner Jianzhong remains unplaced and preserves competing dates
+2026-11-22T07:45:51.8751779Z PASS alternative chronology is not flattened to a continuous interval
+2026-11-22T07:45:51.9591400Z PASS eastern Jianzhong remains a separate entity with an open time bound
+2026-11-22T07:45:52.2260208Z PASS explicit 533 tower completion is not projected backward into the prosperous layer
+2026-11-22T07:45:52.3122800Z PASS Jingming construction start and inscription commission remain distinct
+2026-11-22T07:45:53.9535165Z PASS deep-link reload preserves site, year and activity-versus-building distinction
+2026-11-22T07:45:54.0320706Z PASS portable stones use a related place, not an invented object coordinate
+2026-11-22T07:45:55.0518172Z PASS every dossier maintains the same reference and two matching viewports
+2026-11-22T07:45:56.0250372Z PASS main map inspector links directly into new research
+2026-11-22T07:45:56.2167110Z PASS new downloads exist and executing dependencies stay fingerprinted
+2026-11-22T07:45:57.5051034Z PASS mobile dossier controls, unknown placement and side-by-side reference stack without overflow
+2026-11-22T07:45:57.5051514Z PASS no runtime errors in desktop or mobile
+2026-11-22T07:45:58.9460118Z PASS default website visibly shows current terrain release and real preview
+2026-11-22T07:45:59.2559130Z PASS real terrain entry loads under the repository subpath
+2026-11-22T07:45:59.2577240Z PASS real raster, not synthetic fixture or empty placeholder
+2026-11-22T07:45:59.4972574Z PASS elevation, hillshade, raw and smoothed slopes switch actual images
+2026-11-22T07:45:59.5665739Z PASS contours and archival sheet seam are independent overlays
+2026-11-22T07:45:59.6332841Z PASS terrain camera zoom and reset
+2026-11-22T07:45:59.6457778Z PASS physical map click reads a labelled coarse modern-surface sample
+2026-11-22T07:46:00.2873768Z PASS terrain layer and contour deep link restore after full reload
+2026-11-22T07:46:00.3043543Z PASS archival maps expose edition, compilation, printing and unresolved datum
+2026-11-22T07:46:00.6594816Z PASS historical network remains textual, filtered and explicitly unregistered
+2026-11-22T07:46:01.6673344Z PASS actual product downloads and manifest are publicly accessible
+2026-11-22T07:46:02.9593553Z PASS mobile terrain controls work without horizontal page overflow
+2026-11-22T07:46:02.9594410Z PASS zero runtime errors
+2026-11-22T07:46:04.3465370Z PASS default home exposes the released B1+B2, not a hidden branch
+2026-11-22T07:46:04.3547133Z PASS current main map really redraws 15 groups while preserving all original click targets
+2026-11-22T07:46:04.5252796Z PASS physical main-map click opens the new evidence section
+2026-11-22T07:46:05.6196876Z PASS approved B1 independently published with its original first-region entry
+2026-11-22T07:46:05.8732097Z PASS archive comparison actually loads the old SVG rather than hiding a ring
+2026-11-22T07:46:06.2309115Z PASS all four regional maps load from the same current masters
+2026-11-22T07:46:06.9160942Z PASS B2 actual release metadata and zoom/reset controls work
+2026-11-22T07:46:07.0571160Z PASS B2 physical building click resolves to component evidence
+2026-11-22T07:46:07.7839681Z PASS region and selected object restore after full page reload
+2026-11-22T07:46:07.8973237Z PASS Diaotai alternatives affect an explicit membership diagram, not a new coordinate
+2026-11-22T07:46:08.0463491Z PASS underground collective relationships are distinct from surface-flow geometry
+2026-11-22T07:46:08.4350411Z PASS independent terrain board shows unregistered ancient inserts without fake coordinates
+2026-11-22T07:46:08.7912864Z PASS modern raw relief, heuristic classification and interpretive board are distinct views
+2026-11-22T07:46:08.9400445Z PASS 14 prior decisions and 16 next-region evidence records are inspectable
+2026-11-22T07:46:09.6111521Z PASS published PDFs, reports, data and archive downloads are reachable and match the release
+2026-11-22T07:46:09.6112051Z PASS new evidence and modern terrain do not manufacture ancient geographic positions
+2026-11-22T07:46:09.6356925Z PASS all independently archived earlier entrypoints remain available
+2026-11-22T07:46:10.6073663Z PASS mobile tabs, terrain and object selection work without page overflow
+2026-11-22T07:46:10.6074161Z PASS zero JavaScript runtime errors
+2026-11-22T07:46:12.0103142Z PASS homepage new B3 glyphs and banner; B1+B2 and 179 original targets preserved
+2026-11-22T07:46:12.6717858Z PASS separate city-west research page and 16 evidence records load
+2026-11-22T07:46:12.6804335Z PASS four-boundary Shouqiu evidence shows its original units and coordinate limits
+2026-11-22T07:46:12.7570984Z PASS text relations and actual modern terrain are separate views
+2026-11-22T07:46:12.8011191Z PASS all 16 full evidence cards inspectable
+2026-11-22T07:46:13.5104985Z PASS deep link and selected evidence survive reload
+2026-11-22T07:46:13.7801575Z PASS PDF/CSV/SVG/JSON and all prior independent version entries accessible
+2026-11-22T07:46:14.7176704Z PASS mobile evidence and terrain toggles work with no horizontal page overflow
+2026-11-22T07:46:14.7177253Z PASS no browser runtime errors
+2026-11-22T07:46:16.1141342Z PASS current main contains four B4 type groups and preserves B1/B2/B3 and 179 original targets
+2026-11-22T07:46:16.2672313Z PASS physical Daxia main-map click opens B4 evidence without script-order errors
+2026-11-22T07:46:17.2052094Z PASS new region and 16 attributed evidence records load with matching build metadata
+2026-11-22T07:46:18.0596488Z PASS same-region archive comparison, selection deep link and zoom/reset work
+2026-11-22T07:46:18.2160072Z PASS directions, front relations and unlocated membership have separate readable views
+2026-11-22T07:46:19.1972569Z PASS printed-grid controls, held-out point crop and removable crosshair are inspectable
+2026-11-22T07:46:20.5553217Z PASS both sheets, physical point clicks, image rectification and deep-link restoration work
+2026-11-22T07:46:21.8951345Z PASS PDF/CSV/ZIP/SVG and research records publish with source identity and no ancient registration
+2026-11-22T07:46:24.5759332Z PASS mobile main navigation, evidence and both map sheets work without page overflow
+2026-11-22T07:46:24.5759871Z PASS zero browser runtime errors
+2026-11-22T07:46:26.0318074Z PASS eleven B5 symbols coexist with B1-B4; 179 original targets and nonspatial sidecars preserved
+2026-11-22T07:46:26.1443268Z PASS physical Rongjue click opens attributed B5 evidence
+2026-11-22T07:46:26.9692333Z PASS L07 and 24 source records load with correct release identity
+2026-11-22T07:46:27.6977003Z PASS archive, evidence deep link and zoom restore correctly
+2026-11-22T07:46:27.8167170Z PASS partial-order, neighbour and house-to-temple time layers are inspectable
+2026-11-22T07:46:28.5519256Z PASS both original scan margins and digital-provider provenance are inspectable
+2026-11-22T07:46:29.3738455Z PASS candidate screening and deep links preserve zero approved ground controls
+2026-11-22T07:46:30.9701456Z PASS new downloads, all prior assets and research metadata retain identity and interpretation boundaries
+2026-11-22T07:46:33.4697132Z PASS 390px main, literary evidence and historical datum controls work without horizontal overflow
+2026-11-22T07:46:33.4697618Z PASS zero browser runtime errors
+2026-11-22T07:46:34.9426651Z PASS twenty B6 symbols coexist with B1-B5 and all 179 original hit targets
+2026-11-22T07:46:35.1904843Z PASS physical Zhaoyi and Dianyu clicks open the corresponding B6 evidence
+2026-11-22T07:46:36.0084509Z PASS five literary views and 34 evidence records load with matching build identity
+2026-11-22T07:46:36.0370079Z PASS selecting evidence automatically follows its inner or outer literary region
+2026-11-22T07:46:36.7236747Z PASS L08 archive, evidence hash and zoom survive the expected interactions
+2026-11-22T07:46:37.4667634Z PASS L09 has its own working archive and restores its evidence deep link
+2026-11-22T07:46:37.9657132Z PASS relation, time-layer and full-source views keep attribution and regional navigation
+2026-11-22T07:46:38.8471935Z PASS Baima opens three distinct original-scan crops with explicit source access
+2026-11-22T07:46:39.4065265Z PASS railway-bridge record loads its own crops and modern-source attribution
+2026-11-22T07:46:39.9981235Z PASS pending, excluded and empty approved filters work and restore without false controls
+2026-11-22T07:46:40.6680851Z PASS independent source selection and expanded provenance restore from the ground-review hash
+2026-11-22T07:46:41.4948500Z PASS four upstream-map lineage records remain distinct and persist independently of source selection
+2026-11-22T07:46:47.5533801Z PASS sixteen actual downloads and diagrams match the published SHA256 manifest
+2026-11-22T07:46:47.5884312Z PASS B6 metadata preserves source identity, prior assets and zero unearned geographic controls
+2026-11-22T07:46:49.9343108Z PASS 390px main map and literary tabs, evidence and archive controls work without page overflow
+2026-11-22T07:46:51.3770864Z PASS 390px ground-review filters, crops, source details and lineage survive reload and empty results
+2026-11-22T07:46:51.3771571Z PASS zero browser runtime errors
+2026-11-22T07:46:52.8244388Z PASS seven B7 reading groups preserve earlier symbols and 179 targets without a new bridge point
+2026-11-22T07:46:53.1589246Z PASS existing ward and market clicks plus the unlocated bridge record expose B7 evidence links
+2026-11-22T07:46:54.0016466Z PASS five literary views and all 25 evidence records load with matching build identity
+2026-11-22T07:46:54.7823550Z PASS L10 archive, evidence deep link and all zoom controls restore correctly
+2026-11-22T07:46:54.8479139Z PASS institutional correspondences retain unrecorded waiting periods and undated temple conversion
+2026-11-22T07:46:55.0714195Z PASS market records remain distinct and the textual date variants are accessible
+2026-11-22T07:46:55.7078197Z PASS time layers preserve the former residence, unscaled huabiao and later lion events
+2026-11-22T07:46:56.4202692Z PASS the full evidence view restores from its hash and links back to the selected map record
+2026-11-22T07:46:57.3344495Z PASS three catalog records open with separate production dates and zero new historical scans
+2026-11-22T07:46:57.3766537Z PASS period and earlier-edition filters select only eligible records and their official source links
+2026-11-22T07:46:57.4121951Z PASS timeline and source lineage switch for the same record without asserting an AMS source match
+2026-11-22T07:46:58.2988279Z PASS record, filter, view and expanded source details restore from all four hash fields
+2026-11-22T07:47:00.5536333Z PASS eighteen actual downloads and diagrams match the published SHA256 manifest
+2026-11-22T07:47:00.5757623Z PASS B7 metadata binds the release and preserves unlocated literary records and unconfirmed catalog matches
+2026-11-22T07:47:03.0186681Z PASS 390px main map and all literary tabs, archive and evidence controls work without page overflow
+2026-11-22T07:47:04.4168946Z PASS 390px source-continuity filtering, reading views and expanded details survive reload without overflow
+2026-11-22T07:47:04.4169459Z PASS zero browser runtime errors
+2026-11-22T07:47:05.9004624Z PASS B8 reading rings retain all earlier drawing batches and the original 179 interactive targets
+2026-11-22T07:47:06.0821678Z PASS the main inspector separates Baoming conditions from its legacy field and keeps Yong bridge unlocated
+2026-11-22T07:47:07.2923186Z PASS four city views load all 339 records and 179 reading rings with the matching release identity
+2026-11-22T07:47:07.3532729Z PASS interaction filters expose the actual 136 individual, 101 grouped and 102 untargeted entities
+2026-11-22T07:47:07.4228437Z PASS evidence and case filters distinguish explicit references from historical verification
+2026-11-22T07:47:07.6248591Z PASS name, map-number and entity-ID searches work and empty results do not create a selected point
+2026-11-22T07:47:07.7550051Z PASS region filtering uses explicit focus membership while bridge and incidental crop matches retain their limits
+2026-11-22T07:47:07.9487923Z PASS the shared palace-reserve area keeps one target for two members and supports physical ring selection
+2026-11-22T07:47:08.8165155Z PASS zoom and overlay controls work and all seven city hash fields restore the selected filtered record
+2026-11-22T07:47:09.0721937Z PASS the full ledger and filtered rows navigate to the same entity without assigning a new marker
+2026-11-22T07:47:09.0925095Z PASS Baoming presents its current identity condition beside the preserved baseline temporal field
+2026-11-22T07:47:10.0446362Z PASS fourteen cases include a restored G15 quotation correction while the earlier B2 record remains unchanged
+2026-11-22T07:47:10.5248586Z PASS source access distinguishes catalog and index leads from scans, actual map matches and surviving controls
+2026-11-22T07:47:10.5249550Z PASS published metadata retains one commit and zero added historical verification, coordinates or control points
+2026-11-22T07:47:11.6286427Z PASS all 23 declared B8 downloads and metadata match their actual published SHA256 hashes
+2026-11-22T07:47:14.0232646Z PASS 390px main and city maps retain 179 targets and restore the untargeted bridge filter without overflow
+2026-11-22T07:47:15.1575450Z PASS 390px ledger, quotation correction and source views remain usable and restore without page overflow
+2026-11-22T07:47:15.1575972Z PASS zero browser runtime errors
+2026-11-22T07:47:17.8003757Z PASS desktop homepage presents the large panorama, three questions, live map and research in order
+2026-11-22T07:47:20.3462897Z PASS start exploration reaches the actual map; zoom, region, search and shared entity reload work
+2026-11-22T07:47:20.4822949Z PASS the relocated research area keeps B1-B8 access and the working map overlay control
+2026-11-22T07:47:21.9462376Z PASS yongning question opens the intended evidence, survives reload and returns to the homepage
+2026-11-22T07:47:23.3243867Z PASS markets question opens the intended evidence, survives reload and returns to the homepage
+2026-11-22T07:47:24.7787122Z PASS identity question opens the intended evidence, survives reload and returns to the homepage
+2026-11-22T07:47:25.5944990Z PASS existing research and about routes stay direct; the current release URL has the same homepage
+2026-11-22T07:47:26.6523949Z PASS 900px wrapped navigation stays above the panorama without overlap or horizontal overflow
+2026-11-22T07:47:29.8728669Z PASS 390px homepage, tap-to-map, regional filters and question navigation work without page overflow
+2026-11-22T07:47:29.8729182Z PASS zero browser runtime errors during the homepage journeys
+2026-11-22T07:47:30.7463792Z PASS Both homepage URLs use the approved full-frame source; actual WebP hashes and the v11 archive match their provenance
+2026-11-22T07:47:32.6321530Z PASS 1500px index displays the entire panorama in proportion, with its title and caption below the image
+2026-11-22T07:47:33.6575347Z PASS 1500px dual displays the entire panorama in proportion, with its title and caption below the image
+2026-11-22T07:47:35.2286937Z PASS 1920px index displays the entire panorama in proportion, with its title and caption below the image
+2026-11-22T07:47:36.4301477Z PASS 1920px dual displays the entire panorama in proportion, with its title and caption below the image
+2026-11-22T07:47:37.4726051Z PASS 768px index displays the entire panorama in proportion, with its title and caption below the image
+2026-11-22T07:47:38.3055598Z PASS 768px dual displays the entire panorama in proportion, with its title and caption below the image
+2026-11-22T07:47:39.3626687Z PASS 390px index displays the entire panorama in proportion, with its title and caption below the image
+2026-11-22T07:47:39.5238943Z PASS 390px index opens the actual map from the full-frame homepage
+2026-11-22T07:47:40.2688069Z PASS 390px dual displays the entire panorama in proportion, with its title and caption below the image
+2026-11-22T07:47:40.4408343Z PASS 390px dual opens the actual map from the full-frame homepage
+2026-11-22T07:47:42.0897762Z PASS Desktop renders four selectable source-map anchors without adding geodetic locations
+2026-11-22T07:47:43.3338917Z PASS Selection from cards or original map markers updates the evidence, URL and reloaded focus
+2026-11-22T07:47:43.6753681Z PASS Published SVG/PDF/ZIP/CSV/JSON and H2-approved homepage link resolve on the same host
+2026-11-22T07:47:44.5731983Z PASS 390px mobile shows full evidence maps, source content and working tap selection
+2026-11-22T07:47:45.1960348Z PASS All static source diagrams and explanatory data stay readable without JavaScript
+2026-11-22T07:47:46.7774041Z PASS Desktop displays eight source-map road remnants and five separate documentary contexts
+2026-11-22T07:47:47.5537381Z PASS Road cards, map keyboard selection, text contexts and URL deep links update real evidence
+2026-11-22T07:47:47.9042511Z PASS New PDF/ZIP/SVG/CSV/JSON download; approved H2 hero and P4.5.1 upstream link preserved
+2026-11-22T07:47:48.8781748Z PASS 390px mobile displays both relation diagrams without overflow and permits real taps
+2026-11-22T07:47:49.4973002Z PASS No-JS fallback still shows original map, road table and source/function diagrams
+2026-11-22T07:47:50.9032111Z PASS Desktop defaults to the 8 palace textual relations, without showing all cluster panels at once
+2026-11-22T07:47:51.5593729Z PASS Cluster tabs and A/C evidence filter update visible rows and deep links survive refresh
+2026-11-22T07:47:51.9713229Z PASS JSON, three source-graded SVGs, byte-preserved original index, PDF/ZIP/CSVs and upstream link accessible
+2026-11-22T07:47:52.8427933Z PASS 390px mobile supports direct-link to Luonan and switches back to palace, without horizontal overflow
+2026-11-22T07:47:53.5153652Z PASS All three source manuscript context plates remain visible without JavaScript
+2026-11-22T07:47:55.1661840Z PASS Desktop: 34 water entries, 21 road reports and four source-review diagrams
+2026-11-22T07:47:55.8104096Z PASS Source-tier filters separate one modern river from eight source roads and eleven outer road reports
+2026-11-22T07:47:56.1471597Z PASS Public source SVG is byte-identical; PDF/ZIP/CSV JSON and upstream link accessible
+2026-11-22T07:47:58.1426207Z PASS P4.6.1 desktop and mobile: navigate from P4.6, inspect source readings, reload an anchor and return
+2026-11-22T07:48:13.4304880Z PASS P4.6.7 desktop: 5 maps, layers, deep links, zoom/pan, downloads and no-JS evidence
+2026-11-22T07:48:20.6968326Z PASS P4.6.8 desktop: 5 maps, layers, deep links, zoom/pan, downloads and no-JS evidence
+2026-11-22T07:48:28.5296462Z PASS P4.6.7 mobile: 5 maps, layers, deep links, zoom/pan, downloads and no-JS evidence
+2026-11-22T07:48:37.0164351Z PASS P4.6.8 mobile: 5 maps, layers, deep links, zoom/pan, downloads and no-JS evidence
+2026-11-22T07:48:37.3884971Z PASS P4.6.2–P4.6.4 desktop and mobile: navigate through all three studies, reload deep links, inspect figures, fetch downloads, return
+2026-11-22T07:48:37.3929002Z PASS 390px mobile supports water/road selection and shows all four diagrams without overflow
+2026-11-22T07:48:38.0673503Z PASS No-JS fallback shows full unmodified evidence inventory
+2026-11-22T07:48:56.9941956Z PASS P4.6.9 desktop: two source frames, context interactions, downloads and no-JS
+2026-11-22T07:49:17.3992577Z PASS P4.6.9 mobile: two source frames, context interactions, downloads and no-JS
+2026-11-22T07:49:18.9226504Z PASS the prosperity page loads its real documentary map, bounded geography mode and all object records
+2026-11-22T07:49:19.2342951Z PASS the actual SVG supports zoom, drag and restoration of its original view
+2026-11-22T07:49:19.4353469Z PASS keyboard and pointer selection on real map features open existing entities and clear incompatible filters
+2026-11-22T07:49:20.1955495Z PASS shared map positions first offer members, preserve group identity and never silently choose a separate address
+2026-11-22T07:49:20.9183373Z PASS search, empty results, clearing and deep-link reload preserve the selected documentary record
+2026-11-22T07:49:21.0795775Z PASS region and type filters show the records explicitly assigned to each selection
+2026-11-22T07:49:21.1528144Z PASS the selected record loads its actual relationship figure together with its explanatory caption
+2026-11-22T07:49:21.4703737Z PASS documentary and geographic maps retain separate camera positions and display their own source basis
+2026-11-22T07:49:22.2499616Z PASS modern geographic references start hidden and can be toggled independently with their deep-link state preserved
+2026-11-22T07:49:22.2718809Z PASS unlocated objects keep their records but acquire no selectable geographic point or focus position
+2026-11-22T07:49:22.3018288Z PASS mapped source positions, extents or candidates open their actual geometry and retain their stated evidential limits
+2026-11-22T07:49:23.0048803Z PASS independent source-map features open their own evidence, focus their drawn geometry and restore without adding city entities
+2026-11-22T07:49:23.7116832Z PASS geographic entity links survive reload and browser back navigation
+2026-11-22T07:49:26.6798910Z PASS the current SVG, source catalog, global text-review decisions and downloadable artifacts remain accessible
+2026-11-22T07:49:28.7729856Z PASS the optional layout-derived panorama loads its declared model and evidential basis
+2026-11-22T07:49:29.6954818Z PASS the 900px layout keeps navigation, both maps and the inspector within the page
+2026-11-22T07:49:31.3446417Z PASS 390px touch navigation, object search, unlocated records and sources work without horizontal overflow
+2026-11-22T07:49:31.3446969Z PASS zero browser runtime errors during the prosperity journeys
+2026-11-22T07:49:32.7380010Z PASS the core-scale page loads real data, three formal keyboard targets and a matching public build
+2026-11-22T07:49:33.0071221Z PASS the real map zooms, drags and restores the selected regional view
+2026-11-22T07:49:33.0899453Z PASS each scale fragment is keyboard-selectable and opens its actual dimension, position, orientation and height notes
+2026-11-22T07:49:33.2408503Z PASS ordinary pointer clicks on a real drawing hit zone select the building without forced events
+2026-11-22T07:49:33.7262790Z PASS regional focus uses the supplied bounds and planar and oblique drawings retain their separate cameras
+2026-11-22T07:49:34.3617552Z PASS mode, selected building and regional focus survive a deep-link reload and browser back
+2026-11-22T07:49:34.4009416Z PASS empty or unknown URL parameters return to a valid overview and existing building
+2026-11-22T07:49:34.5310435Z PASS the current SVG opens and the original sources and downloadable artifacts have valid links
+2026-11-22T07:49:38.2263363Z PASS the actual scale comparison and local relationship drawings load with their explanatory captions
+2026-11-22T07:49:39.0223968Z PASS the 900px layout keeps the map, selection controls and evidence within the page
+2026-11-22T07:49:40.8067975Z PASS 390px touch controls, focus, selected evidence and reload work without horizontal overflow
+2026-11-22T07:49:40.8068488Z PASS zero JavaScript runtime errors throughout the core-scale journeys
+2026-11-22T07:49:41.1174706Z ##[group]Run actions/upload-artifact@v4
+2026-11-22T07:49:41.1174942Z with:
+2026-11-22T07:49:41.1175118Z   name: live-acceptance-evidence
+2026-11-22T07:49:41.1175322Z   path: artifacts
+2026-11-22T07:49:41.1175491Z   retention-days: 30
+2026-11-22T07:49:41.1175670Z   if-no-files-found: warn
+2026-11-22T07:49:41.1175883Z   compression-level: 6
+2026-11-22T07:49:41.1176055Z   overwrite: false
+2026-11-22T07:49:41.1176225Z   include-hidden-files: false
+2026-11-22T07:49:41.1176414Z env:
+2026-11-22T07:49:41.1176618Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:49:41.1176957Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T07:49:41.1177283Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:49:41.1177576Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:49:41.1177863Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:49:41.1178186Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T07:49:41.1178440Z ##[endgroup]
+2026-11-22T07:49:41.2561834Z (node:6311) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-22T07:49:41.2562800Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-22T07:49:41.3438134Z With the provided path, there will be 485 files uploaded
+2026-11-22T07:49:41.3443569Z Artifact name is valid!
+2026-11-22T07:49:41.3444143Z Root directory input is valid!
+2026-11-22T07:49:41.5689000Z Beginning upload of artifact content to blob storage
+2026-11-22T07:49:41.8424572Z (node:6311) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-22T07:49:41.9775588Z Uploaded bytes 8388608
+2026-11-22T07:49:42.2992943Z Uploaded bytes 16777216
+2026-11-22T07:49:42.4871789Z Uploaded bytes 25165824
+2026-11-22T07:49:42.7346390Z Uploaded bytes 33554432
+2026-11-22T07:49:42.9113984Z Uploaded bytes 41943040
+2026-11-22T07:49:43.1629249Z Uploaded bytes 50331648
+2026-11-22T07:49:43.3738654Z Uploaded bytes 58720256
+2026-11-22T07:49:43.5981646Z Uploaded bytes 67108864
+2026-11-22T07:49:43.7959100Z Uploaded bytes 75497472
+2026-11-22T07:49:44.0424704Z Uploaded bytes 83886080
+2026-11-22T07:49:44.1840304Z Uploaded bytes 92274688
+2026-11-22T07:49:44.4823827Z Uploaded bytes 100663296
+2026-11-22T07:49:44.6467900Z Uploaded bytes 109051904
+2026-11-22T07:49:44.9581479Z Uploaded bytes 117440512
+2026-11-22T07:49:45.2303697Z Uploaded bytes 125829120
+2026-11-22T07:49:45.4041790Z Uploaded bytes 134217728
+2026-11-22T07:49:45.5783221Z Uploaded bytes 142606336
+2026-11-22T07:49:45.8389826Z Uploaded bytes 150994944
+2026-11-22T07:49:45.8810368Z Uploaded bytes 152365820
+2026-11-22T07:49:45.8951391Z Finished uploading artifact content to blob storage!
+2026-11-22T07:49:45.8953876Z SHA256 digest of uploaded artifact zip is f92825d946925833091b1e33e7473f2d2ec7186b47bae117827d291919592861
+2026-11-22T07:49:45.8955786Z Finalizing artifact upload
+2026-11-22T07:49:46.2133449Z Artifact live-acceptance-evidence.zip successfully finalized. Artifact ID 14745476863
+2026-11-22T07:49:46.2134469Z Artifact live-acceptance-evidence has been successfully uploaded! Final size is 152365820 bytes. Artifact ID is 14745476863
+2026-11-22T07:49:46.2141062Z Artifact download URL: https://github.com/mechgouki/luoyang-city/actions/runs/44998481483/artifacts/14745476863
+2026-11-22T07:49:46.2365481Z Post job cleanup.
+2026-11-22T07:49:46.3376464Z (node:6329) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-22T07:49:46.3377080Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-22T07:49:46.3495860Z Post job cleanup.
+2026-11-22T07:49:46.4277408Z [command]/usr/bin/git version
+2026-11-22T07:49:46.4315987Z git version 2.56.1
+2026-11-22T07:49:46.4352888Z Temporarily overriding HOME='/home/runner/work/_temp/0f06abcd-437f-4212-b511-d7b59a7dcde8' before making global git config changes
+2026-11-22T07:49:46.4354126Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-22T07:49:46.4355980Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luoyang-city/luoyang-city
+2026-11-22T07:49:46.4401941Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T07:49:46.4449163Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T07:49:46.4736933Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T07:49:46.4783722Z http.https://github.com/.extraheader
+2026-11-22T07:49:46.4790450Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-22T07:49:46.4873025Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T07:49:46.5141645Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T07:49:46.5185005Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T07:49:46.5536050Z Cleaning up orphan processes
+2026-11-22T07:49:46.5841840Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

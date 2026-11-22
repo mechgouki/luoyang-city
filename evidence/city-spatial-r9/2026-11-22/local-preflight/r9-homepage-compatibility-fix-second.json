@@ -1,0 +1,17 @@
+{
+  "case": "R9 homepage approved-image verifier compatibility",
+  "local_build_source": "d33474764aab494ef8a61e243f2c919a0e4f6288",
+  "command": "/tmp/luoyang-r7-venv/bin/python -m unittest discover -s tests -p 'test_homepage*.py' -v",
+  "tests_run": 6,
+  "passed": 6,
+  "failed": 0,
+  "exit_code": 0,
+  "assertion_policy": "Original full-frame byte equality and hashes retained; exactly reversible R9 homepage links stripped before historical comparison.",
+  "file": {
+    "path": "tools/homepage_artwork_v10.py",
+    "bytes": 12340,
+    "sha256": "415495114e5efe799fc18c6e4b4eff04825e782a64790af14d3b9aae930d450d",
+    "git_blob": "29c9caee0dd8b663f3aa965cf8d405bfc6d271bf",
+    "binary": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "luoyang-r9-root-public-browser-review-v1",
+  "status": "passed",
+  "observed_at_utc": "2026-11-22T07:46:40.796Z",
+  "expected_production_commit": "1a988bc51adc74288ec8a8aa682499444007a33c",
+  "homepage_observed_release": "已核对在线发布 · 1a988bc",
+  "spatial_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-spatial.html",
+  "candidate_url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13-r2.html",
+  "review_url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13-r2.html?view=compare#comparison",
+  "checks": [
+    "Homepage shows both new R9 links and the existing approved full-frame artwork.",
+    "Keyword 7.5 narrows the table to SP08; selecting the Baima node updates the URL.",
+    "Reload preserves the keyword, node choice and one matching evidence row.",
+    "Cross-node SP16 link clears conflicting filters, reveals and focuses the requested row.",
+    "Jianchun map view shows the separate bridge groups, north/south canal distinctions and unknown endpoints readably.",
+    "V13 second-candidate comparison shows both complete panoramas; reload preserves compare mode.",
+    "Same-scale gate detail visibly shows a ground doorway plus two upper windowed timber storeys, with white temple walls meeting the gate and the foreground separation preserved."
+  ],
+  "scope": "Root desktop interaction on the actual public site; automated CI supplies the separate desktop/mobile, download, no-JavaScript and offline results.",
+  "automation_recovery": "One exact-label selector for the node dropdown did not resolve after keyword entry. The fresh visible state showed the keyword had applied; using its observed node-filter ID succeeded. Reload confirmed the selected node and visible result. No site code or browser settings were changed.",
+  "deliverable_tab": "8"
+}

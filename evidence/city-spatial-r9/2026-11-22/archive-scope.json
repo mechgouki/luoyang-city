@@ -1,0 +1,330 @@
+{
+  "schema": "luoyang-r9-permanent-evidence-scope-v1",
+  "meaning": "长期档案收录本目录可获得的报告、日志、截图、源与审核记录；原始下载 ZIP 本体和已核未改地形计算中间产物不纳入。ZIP 解包成员按同一规则筛选，不能据此声称全部 ZIP 成员均已永久留存。全部原始 ZIP 和解包文件继续保留在本地源目录。",
+  "acceptance_statement": "本文件只记录过滤范围与文件身份，不声明 PR、部署或正式站验收已经成功。各次运行状态以所收录的 workflow 记录及报告为准。",
+  "source_file_count": 1694,
+  "source_total_bytes": 1419738016,
+  "included_files_before_index": 1661,
+  "included_source_bytes": 499471685,
+  "generated_archive_records": [
+    "archive-inventory.json",
+    "archive-scope.json",
+    "archive-sensitive-scan.json"
+  ],
+  "excluded_redundant_or_intermediate_files": [
+    {
+      "path": "main-build/artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "main-build/evidence.zip",
+      "bytes": 203495669,
+      "sha256": "88a2ef4d940515e536dc6de6de96c7e285bc1707ce09b0da0225c4a9ad888041",
+      "gitblob": "70b3cd18a1262e6f25a95f3b17f020045d725601",
+      "reason_code": "redundant_download_zip",
+      "reason": "原始下载 ZIP 的成员已与本地解包文件逐一核对；永久档案仅收录筛选后的报告、日志、截图及记录，部分地形中间成员另列排除。ZIP 本体和全部原解包文件仍保留在本地源目录，不声称全部 ZIP 成员均已永久留存。",
+      "member_count": 525,
+      "members_retained_separately": 518,
+      "members_not_retained_separately": 7
+    },
+    {
+      "path": "main-live/evidence.zip",
+      "bytes": 152365820,
+      "sha256": "f92825d946925833091b1e33e7473f2d2ec7186b47bae117827d291919592861",
+      "gitblob": "a4be51816a174f1dc2516f2d9f00020a1b4b592c",
+      "reason_code": "redundant_download_zip",
+      "reason": "原始下载 ZIP 的成员已与本地解包文件逐一核对；永久档案仅收录筛选后的报告、日志、截图及记录，部分地形中间成员另列排除。ZIP 本体和全部原解包文件仍保留在本地源目录，不声称全部 ZIP 成员均已永久留存。",
+      "member_count": 485,
+      "members_retained_separately": 485,
+      "members_not_retained_separately": 0
+    },
+    {
+      "path": "pr-failed-44996609953/artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996609953/artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996609953/artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996609953/artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996609953/artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996609953/artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996609953/artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996609953/browser-build-evidence.zip",
+      "bytes": 51125239,
+      "sha256": "cdb41f62915e9ba779f00f58fcaebb99e4f6404c7a7a45f5994bc854d2f763f5",
+      "gitblob": "6958ce31d92018f4162aea6d5c9bce3cc62f2501",
+      "reason_code": "redundant_download_zip",
+      "reason": "原始下载 ZIP 的成员已与本地解包文件逐一核对；永久档案仅收录筛选后的报告、日志、截图及记录，部分地形中间成员另列排除。ZIP 本体和全部原解包文件仍保留在本地源目录，不声称全部 ZIP 成员均已永久留存。",
+      "member_count": 36,
+      "members_retained_separately": 29,
+      "members_not_retained_separately": 7
+    },
+    {
+      "path": "pr-failed-44996939502/artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996939502/artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996939502/artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996939502/artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996939502/artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996939502/artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996939502/artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr-failed-44996939502/browser-build-evidence.zip",
+      "bytes": 51125458,
+      "sha256": "ec3b35c944a9812c2cdfed985bc21d6ecc29c3874e7c19dc5f2c16482aabc4cf",
+      "gitblob": "eb89b628468f9c960d6c51a1643a849cbac3a9d2",
+      "reason_code": "redundant_download_zip",
+      "reason": "原始下载 ZIP 的成员已与本地解包文件逐一核对；永久档案仅收录筛选后的报告、日志、截图及记录，部分地形中间成员另列排除。ZIP 本体和全部原解包文件仍保留在本地源目录，不声称全部 ZIP 成员均已永久留存。",
+      "member_count": 37,
+      "members_retained_separately": 30,
+      "members_not_retained_separately": 7
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "未改的 terrain-products-v30 计算中间产物，SHA256 与已核基线相同；metadata.json 与 SOURCE-NOTICE.txt 仍纳入。原文件仅在本地源目录保留。"
+    },
+    {
+      "path": "pr/browser-build-evidence.zip",
+      "bytes": 203457337,
+      "sha256": "9e2576544387bed31e71952d7376db5bfef4e9209f8e44cea5b8e2cfd7022a6b",
+      "gitblob": "9c28c27217cdb49d671bd7a6364f13573848ae55",
+      "reason_code": "redundant_download_zip",
+      "reason": "原始下载 ZIP 的成员已与本地解包文件逐一核对；永久档案仅收录筛选后的报告、日志、截图及记录，部分地形中间成员另列排除。ZIP 本体和全部原解包文件仍保留在本地源目录，不声称全部 ZIP 成员均已永久留存。",
+      "member_count": 525,
+      "members_retained_separately": 518,
+      "members_not_retained_separately": 7
+    }
+  ],
+  "changed_or_unrecognized_terrain_retained": [],
+  "retained_download_zip_files": [
+    "main-build/artifacts/city-west-p472-browser/downloads/desktop/west-472.zip",
+    "main-build/artifacts/city-west-p472-browser/downloads/mobile/west-472.zip",
+    "main-build/artifacts/prosperity-backbone-p469-browser/downloads/desktop/backbone-469.zip",
+    "main-build/artifacts/prosperity-backbone-p469-browser/downloads/mobile/backbone-469.zip",
+    "main-build/artifacts/prosperity-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+    "main-build/artifacts/prosperity-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+    "main-build/artifacts/prosperity-city-north-p471-browser/downloads/desktop/downloads/north-471.zip",
+    "main-build/artifacts/prosperity-city-north-p471-browser/downloads/mobile/downloads/north-471.zip",
+    "main-live/artifacts/live-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+    "main-live/artifacts/live-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+    "main-live/artifacts/live-city-north-p471-browser/downloads/desktop/downloads/north-471.zip",
+    "main-live/artifacts/live-city-north-p471-browser/downloads/mobile/downloads/north-471.zip",
+    "main-live/artifacts/live-city-west-p472-browser/downloads/desktop/west-472.zip",
+    "main-live/artifacts/live-city-west-p472-browser/downloads/mobile/west-472.zip",
+    "main-live/artifacts/live-prosperity-backbone-p469-browser/downloads/desktop/backbone-469.zip",
+    "main-live/artifacts/live-prosperity-backbone-p469-browser/downloads/mobile/backbone-469.zip",
+    "pr/artifacts/city-west-p472-browser/downloads/desktop/west-472.zip",
+    "pr/artifacts/city-west-p472-browser/downloads/mobile/west-472.zip",
+    "pr/artifacts/prosperity-backbone-p469-browser/downloads/desktop/backbone-469.zip",
+    "pr/artifacts/prosperity-backbone-p469-browser/downloads/mobile/backbone-469.zip",
+    "pr/artifacts/prosperity-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+    "pr/artifacts/prosperity-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+    "pr/artifacts/prosperity-city-north-p471-browser/downloads/desktop/downloads/north-471.zip",
+    "pr/artifacts/prosperity-city-north-p471-browser/downloads/mobile/downloads/north-471.zip"
+  ],
+  "unexpected_payload_files_not_in_upload_list": [],
+  "raw_source_deleted": false,
+  "zip_member_details": "archive-inventory.json",
+  "sensitive_scan": "archive-sensitive-scan.json",
+  "filter_script": {
+    "filename": "r9_prepare_archive.py",
+    "sha256": "228309b4c5168f74128f439ccf97cd3956e3520e8a46a7e14c149875455e83a2"
+  }
+}

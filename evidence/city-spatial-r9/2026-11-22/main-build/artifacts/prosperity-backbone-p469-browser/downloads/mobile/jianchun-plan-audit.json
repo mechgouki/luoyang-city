@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "p469-jianchun-local-plan",
+  "research_version": "prosperity-backbone-p469",
+  "study_date": "2026-11-19",
+  "title": "建春门局部遗址图与06a城市位置参照核查",
+  "entity_id": "gate_jianchun",
+  "feature_id": "geo-jianchun-gate",
+  "source_feature_code": "Cnm-8",
+  "reference_period": "516—528年盛时研究目标；各项遗迹沿用自身来源时期，不自动提升为该时段每年均在使用",
+  "conclusion": "2018年图二的带尺重刊图已取得并目读，可核读门址内部遗迹；06a只保留城门图符中心，未建立同一物理点的共同控制，两图分框联读。",
+  "read_status": {
+    "qian2018_figure2_derivative_visually_read": true,
+    "original_1988_full_journal_pages_read": false,
+    "original_1988_full_metric_plan_read": false,
+    "p44_archived_original_metric_plan_read": false,
+    "p44_archive_modified": false,
+    "same_feature_association": true,
+    "same_feature_association_scope": "既有门实体与重刊图所述建春门的身份联读，不等于图符中心对应局部遗址的几何中心",
+    "accepted_control_pairs": [],
+    "geographic_transform": null,
+    "georegistration_completed": false
+  },
+  "sources": [
+    {
+      "id": "QIAN2018-FIG2-REPRINT",
+      "title": "钱国祥《汉魏洛阳城城门与宫院门的考察研究》图二及建春门段落",
+      "original_publication": "《华夏考古》2018年第6期",
+      "accessed_publication": "社科院考古所中国考古网账号公开转载，2019-02-28",
+      "url": "https://www.sohu.com/a/298263205_199807",
+      "locator": "一、（一）北魏内城、外郭城城门的考察：图二前的建春门段落；图二《北魏内城建春门遗址平面图》",
+      "source_type": "researcher_publication_republished_by_institutional_account",
+      "access_date": "2026-11-19",
+      "figure_number": "图二",
+      "figure_url": "https://5b0988e595225.cdn.sohucs.com/images/20190228/98357df099984848b60a9c704da175dd.jpeg",
+      "figure_sha256": "1fa5f90c42aa1f7a0c595f412b817cfaac6b039dd21d9ee4183fe12347e52e80",
+      "figure_bytes": 25056,
+      "figure_size_px": [
+        288,
+        525
+      ],
+      "figure_format": "JPEG",
+      "figure_storage": "link_only_not_republished_in_repository_or_download_bundle",
+      "figure_original_journal_page": null,
+      "figure_original_excavation_report": "《汉魏洛阳城北魏建春门遗址的发掘》，《考古》1988年第9期；本次未取得原刊整页",
+      "independent_survey_source": false,
+      "note": "这是已有考古资料的研究重刊，不视为新增独立测绘。与P469的钱2018图一全城复原图不共享像素图框。"
+    },
+    {
+      "id": "DUAN2020-PREFACE-2022",
+      "title": "段鹏琦《都城与陵墓研究——段鹏琦考古文集》自序",
+      "url": "https://www.wenwu.com/newsinfo/3210484.html",
+      "publisher": "文物出版社",
+      "source_type": "excavation_participant_author_foreword_on_publisher_website",
+      "preface_signed_date": "2020-10-18",
+      "book_publication": "2022-03",
+      "webpage_created": "2022-08-09",
+      "access_date": "2026-11-19",
+      "locator": "网页《自序》部分，列举计划内考古工作的建春门条目；网页另附文集目录",
+      "access_scope": "已核网页自序及目录，未因此声称读到文集中建春门原报告章节",
+      "chapter_listing_start_page": 104,
+      "chapter_listing_is_fulltext": false
+    },
+    {
+      "id": "UNESCO-1442-06A-EXISTING",
+      "title": "2012管理规划图06a及既有来源图地理数据",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=3457",
+      "source_type": "existing_project_extraction_of_primary_management_map",
+      "pdf_page_1_based": 3457,
+      "printed_map_identifier": "06a",
+      "identity_crosscheck_pdf_page_1_based": 3455,
+      "input_path": "research/prosperity-v1/geographic-evidence.json",
+      "new_source_map_calibration_performed": false
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "path": "research/prosperity-v1/geographic-evidence.json",
+      "sha256": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79",
+      "role": "06a建春门图符、城墙和道路既有几何，禁止因本补充改变"
+    },
+    {
+      "path": "research/prosperity-v4/architecture-types-p44.json",
+      "sha256": "ce5a57b8ecd636097b563eae5c7702935a1f9bf9a496cb9ac6b2166cd389b7f4",
+      "role": "P44内城城门尺度与original_metric_plan_read=false历史记录"
+    },
+    {
+      "path": "research/prosperity-v4/city-distribution-p451.json",
+      "sha256": "8749bac2e6f56f017b99790b11d757edb165a4903749665a30b67c5430f932f9",
+      "role": "C02已有身份关联与独立尺寸卡，不允许新增地理门基多边形"
+    },
+    {
+      "path": "research/prosperity-v4/backbone-469/readings.json",
+      "sha256": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+      "role": "P469原水系关系和来源骨架，保持原数据字节"
+    },
+    {
+      "path": "research/prosperity-v4/street-clusters-p453.json",
+      "sha256": "9b69da412a86d5e21e82b2cfdcac747b667ecad053de868618fd7474e4bcd116",
+      "role": "K02两座石桥及桥北大道关系，未升级为地理位置"
+    }
+  ],
+  "existing_map_reference": {
+    "source_id": "unesco-1442-management-06a",
+    "source_pdf_point": [
+      378.463791,
+      296.44101
+    ],
+    "source_pdf_point_origin": "top_left_y_down",
+    "existing_source_coordinates": [
+      112.6395236,
+      34.7322188
+    ],
+    "existing_source_coordinates_order": "longitude,latitude",
+    "crs": "EPSG:4610",
+    "datum": "Xian 1980",
+    "geometry_semantics": "generalized_source_map_symbol_center_not_exposed_building_corner_or_survey_control",
+    "coordinates_copied_from_frozen_input": true,
+    "coordinates_newly_measured": false,
+    "absolute_ground_accuracy_m": null,
+    "is_field_verified_gcp": false,
+    "working_display_tolerance_m": 100,
+    "tolerance_note": "100m是原项目显示容差，不是原图发表精度或统计置信区间；本补充未重算或改进精度。",
+    "map_tick_control_note": "既有16条经纬刻度约束只校准印刷图格，不是考古实体共同控制点。",
+    "source_historical_period": "东汉至北魏",
+    "site_registered_polygon_allowed": false
+  },
+  "figure_reading": {
+    "frame_id": "qian2018-figure2-jianchun-local",
+    "shared_frame_with_qian2018_city_figure1": false,
+    "scale_bar": {
+      "visible": true,
+      "labels_m": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "use_scope": "原图图面比例参照；本补充未据其进行像素到米的新量测",
+      "new_pixels_per_metre_estimate": null,
+      "establishes_geographic_registration": false
+    },
+    "north_indicator": {
+      "visible": true,
+      "label": "北",
+      "azimuth_degrees": null,
+      "reference_datum": null,
+      "use_scope": "保留原图北向提示，不据箭头宣称已知真北方位角或绝对朝向"
+    },
+    "coordinate_grid_visible": false,
+    "named_survey_control_points_visible": false,
+    "outer_rectangle_is_accepted_building_footprint": false,
+    "outer_rectangle_note": "图框边缘不代表已核门基边界；不能将整幅矩形图框变为30×12.5m建筑足迹。",
+    "legible_features": [
+      "南、北城门墩台",
+      "两道隔墙及残缺边缘",
+      "础石与础坑",
+      "北部排水暗渠",
+      "南部车辙及门道路土",
+      "局部砖基沟",
+      "中央标示淤土的区域"
+    ],
+    "central_area_note": "中央淤土区不能补成完整门道净宽，也不能据其平整外形恢复全部使用面。",
+    "boundary_note": "南北相邻墙段在此局部图中未给可对应06a的周边折角；残损、缺口与排水遗迹应分别保留。",
+    "geographic_geometry": null
+  },
+  "reported_quantities": [
+    {
+      "id": "JQ01",
+      "label": "门址南北长度",
+      "value": 30,
+      "unit": "m",
+      "semantics": "研究正文报告的门址南北尺度，不是本项目新量测，也不是完整门楼立面的宽度",
+      "evidence_kind": "source_reported_dimension",
+      "source_id": "QIAN2018-FIG2-REPRINT",
+      "new_measurement": false
+    },
+    {
+      "id": "JQ02",
+      "label": "门址东西宽度",
+      "value": 12.5,
+      "unit": "m",
+      "semantics": "研究正文报告的门址东西尺度；不与06a图符自动拼成实址多边形",
+      "evidence_kind": "source_reported_dimension",
+      "source_id": "QIAN2018-FIG2-REPRINT",
+      "new_measurement": false
+    },
+    {
+      "id": "JQ03",
+      "label": "中门道残宽",
+      "value": 8,
+      "unit": "m",
+      "semantics": "残宽，不是已经证明的完整设计净宽；不能补齐中央淤土区",
+      "evidence_kind": "source_reported_surviving_width",
+      "source_id": "QIAN2018-FIG2-REPRINT",
+      "new_measurement": false
+    },
+    {
+      "id": "JQ04",
+      "label": "南、北门道各宽",
+      "value_each": 6,
+      "unit": "m",
+      "members": [
+        "南门道",
+        "北门道"
+      ],
+      "semantics": "正文分别给南、北两道的报告宽度，不是两道合计6m",
+      "evidence_kind": "source_reported_passage_width",
+      "source_id": "QIAN2018-FIG2-REPRINT",
+      "new_measurement": false
+    },
+    {
+      "id": "JQ05",
+      "label": "门道之间隔墙宽度",
+      "range": [
+        4,
+        5
+      ],
+      "unit": "m",
+      "semantics": "正文报告的隔墙宽度范围；未分配各道隔墙独立精确值，不取中点拼接统一建筑网格",
+      "evidence_kind": "source_reported_partition_width_range",
+      "source_id": "QIAN2018-FIG2-REPRINT",
+      "new_measurement": false
+    },
+    {
+      "id": "JQ06",
+      "label": "北门道南侧排叉柱础坑",
+      "reported_surviving_count": 6,
+      "author_inferred_original_count": 8,
+      "unit": "count",
+      "semantics": "存6个是正文所报残存数，8个是作者推测的原有数；后者不能当成全部出土柱础，也不能转为全门柱网",
+      "evidence_kind": "source_reported_surviving_count_with_author_inference",
+      "source_id": "QIAN2018-FIG2-REPRINT",
+      "new_measurement": false
+    }
+  ],
+  "phase_and_structure": {
+    "reported_passage_count": 3,
+    "structure_interpretation": "排叉柱支撑的大过梁式城门是研究者依据遗迹提出的结构解释",
+    "roof_height_m": null,
+    "complete_superstructure_verified": false,
+    "northern_passage_underlying_drain": {
+      "reported_material": "砖石",
+      "reported_period": "汉晋时期",
+      "reported_relationship": "位于北侧门道下",
+      "source_id": "QIAN2018-FIG2-REPRINT",
+      "northern_wei_continuous_flow_verified": false,
+      "external_yangqu_connection_verified": false
+    },
+    "reuse_interpretation": "钱文据下层排水遗迹解释北魏门址沿用汉晋三门道基址；本补充不据此把所有图中构件同时归入516—528年使用面。",
+    "dimension_chain_note": "门址总尺度、门道残宽与隔墙范围来自不同含义的报告量；未形成可闭合的完整尺寸链，不应把这些值逐段相加后强制分配墩台厚度或恢复全部门址轮廓。"
+  },
+  "candidate_control_pairs": [
+    {
+      "id": "JC01",
+      "candidate": "建春门中心",
+      "source_06a": "Cnm-8概化图符中心",
+      "source_local_plan": "同名门址局部平面，没有定义并标出与该图符相同的实测中心",
+      "same_named_feature": true,
+      "accepted": false,
+      "reason": "对象身份可关联，几何控制点身份未建立；不得用图幅中心或墩台包络中心替代。"
+    },
+    {
+      "id": "JC02",
+      "candidate": "南北墩台角点",
+      "source_06a": "底图保留门符，不显示对应墩台实测角点",
+      "source_local_plan": "可见部分构件残边，但没有地理坐标",
+      "accepted": false,
+      "reason": "缺同一实体角点在06a上的对应位置，不能由图符大小反推。"
+    },
+    {
+      "id": "JC03",
+      "candidate": "门址与城墙交接或墙线折角",
+      "source_06a": "概化墙线分段及门边缺口",
+      "source_local_plan": "局部图边缘裁断相邻城墙，未示可确认的同一周边折角",
+      "accepted": false,
+      "reason": "两图均无证据定义出同一物理交接点；图面断笔不能自动视为原发掘边界。"
+    },
+    {
+      "id": "JC04",
+      "candidate": "门道边缘、道路接点或排水渠口",
+      "source_06a": "Lh-3等为道路图示残线，没有局部门道边或渠口编号",
+      "source_local_plan": "可见路土、车辙、排水暗渠等不同性质遗迹",
+      "accepted": false,
+      "reason": "没有同一几何点的配对；汉晋下层排水遗迹也不能直接认作北魏门外阳渠连接口。"
+    },
+    {
+      "id": "JC05",
+      "candidate": "门外桥头",
+      "source_06a": "没有本次可用的实测桥头点",
+      "source_local_plan": "不含门外两座石桥及桥头",
+      "accepted": false,
+      "reason": "两侧均无可配对桥头；文献门桥关系仍属相对关系，不能据门址强置桥位。"
+    }
+  ],
+  "excavation_date_discrepancy": {
+    "event": "建春门考古发掘的现代工作时间",
+    "status": "unresolved_source_discrepancy_pending_original_report",
+    "records": [
+      {
+        "source_id": "QIAN2018-FIG2-REPRINT",
+        "reported_year": 1986,
+        "reported_months": null,
+        "locator": "图二前建春门段落"
+      },
+      {
+        "source_id": "DUAN2020-PREFACE-2022",
+        "reported_year": 1985,
+        "reported_months": [
+          10,
+          11,
+          12
+        ],
+        "locator": "自序计划内工作列表的建春门条目"
+      }
+    ],
+    "selected_date": null,
+    "note": "保留1986与1985年10—12月两种记载；未以作者身份或回忆时间自行裁定，也不臆定两次不同发掘。现代发掘年不等于古代构件建造或使用年代。"
+  },
+  "research_accounting": {
+    "new_ancient_absolute_coordinates": 0,
+    "new_metric_measurements": 0,
+    "accepted_control_pairs": 0,
+    "new_geographic_building_footprints": 0,
+    "new_geographic_bridge_positions": 0,
+    "new_geographic_water_lines": 0,
+    "new_reported_quantity_rows": 6,
+    "note": "报告值与残存数的再核对不计作本项目新增测绘。"
+  },
+  "display_constraints": [
+    "06a与图二使用独立图框；不作地理叠置，不共享像素原点或缩放。",
+    "如派生局部关系图，应明确其为依据重刊图整理的构件关系，不能冒充原测绘轮廓或新量测。",
+    "图尺、北箭头和门址尺寸均不单独建立共同控制点。",
+    "门道残宽、隔墙范围、报告残存础坑与推测原有数分别表达。",
+    "局部排水遗迹的汉晋时期与北魏沿用解释分开，不外推渠口、桥头或516—528年持续通水。",
+    "原重刊图只提供外链，不将图片收入网站、PDF或离线包。"
+  ],
+  "next_evidence_needed": [
+    "1988原发掘简报整页及其遗址位置图、图例、完整比例尺和说明，用以核对工作年份与局部图来源。",
+    "能在原发掘图及较大范围来源图上独立复认的同一物理控制点，并保留各点身份、时期、测量含义与对应不确定性。",
+    "拟定变换前先说明所需几何模型及独立校核条件；仅同名门址和一个概化符号不满足。"
+  ],
+  "deferred_source": {
+    "title": "2022《洛阳汉唐运河遗址调查与古沉船发掘报告》",
+    "status": "deferred_by_user",
+    "required_for_this_audit": false
+  }
+}
