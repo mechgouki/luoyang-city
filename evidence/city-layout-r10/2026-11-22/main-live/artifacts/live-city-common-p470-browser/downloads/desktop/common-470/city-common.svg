@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" id="city-common-map" viewBox="0 0 900 1080" width="900" height="1080" role="img" aria-labelledby="common-map-title common-map-description" lang="zh-CN" data-source-frame="frame-06a" data-native-units="PDF point">
+  <title id="common-map-title">宫城、道路与寺院：06a同源城市共同视图</title>
+  <desc id="common-map-description">25项已有来源要素，包含四处建筑图符、八条道路原分段及永宁寺七段残墙。现代洛水默认关闭。没有新增古代位置、建筑足迹或古河线。</desc>
+  <metadata>{"version": "prosperity-city-common-p470", "source_frame": {"id": "frame-06a", "source": "UNESCO 1442 2012管理规划图06a PDF第3457页", "source_path": "research/prosperity-v1/geographic-evidence.json", "native_geometry": "features[].source_pdf_geometry", "native_units": "PDF point", "crs": "EPSG:4610", "coordinate_order": "longitude,latitude", "geographic_geometry_note": "Geometry objects use GeoJSON geometry structure but coordinates remain Xian 1980. This collection is not RFC7946 WGS84 GeoJSON and must not be silently read as EPSG:4326.", "source_feature_count": 30, "display_feature_count": 25, "prior_backbone_display_feature_ids": ["geo-inner-wall-aboveground", "geo-inner-wall-underground", "geo-palace-walls", "geo-road-east-west-south", "geo-tongtuo-cross-street", "geo-road-east-west-middle", "geo-road-east-west-north", "geo-road-north-south-east", "geo-road-north-south-mid-east", "geo-tongtuo-avenue", "geo-road-north-south-west", "geo-changhe-palace-gate", "geo-qianqiu-gate", "geo-yunlong-gate", "geo-jianchun-gate", "geo-daxia-gate", "geo-guangmo-gate", "geo-xiyang-gate", "geo-dongyang-gate", "geo-qingyang-gate", "geo-ximing-gate", "geo-modern-luo-river"], "added_existing_feature_ids": ["geo-taiji-hall-reference", "geo-yongning-pagoda-reference", "geo-yongning-temple-walls"], "display_feature_ids": ["geo-inner-wall-aboveground", "geo-inner-wall-underground", "geo-palace-walls", "geo-road-east-west-south", "geo-tongtuo-cross-street", "geo-road-east-west-middle", "geo-road-east-west-north", "geo-road-north-south-east", "geo-road-north-south-mid-east", "geo-tongtuo-avenue", "geo-road-north-south-west", "geo-changhe-palace-gate", "geo-qianqiu-gate", "geo-yunlong-gate", "geo-jianchun-gate", "geo-daxia-gate", "geo-guangmo-gate", "geo-xiyang-gate", "geo-dongyang-gate", "geo-qingyang-gate", "geo-ximing-gate", "geo-modern-luo-river", "geo-taiji-hall-reference", "geo-yongning-pagoda-reference", "geo-yongning-temple-walls"], "shared_source_not_new_registration": true, "new_geographic_transform": null}, "counts": {"source_features": 30, "features": 25, "site_remains": 24, "modern_features": 1, "prior_backbone_features": 22, "added_existing_features": 3, "building_cards": 4, "roads": 8, "gate_points": 10, "wall_groups": 4, "partial_enclosure_parts": 7, "water_records": 34, "water_relations": 100, "water_context_links": 9, "urban_scenes": 3, "urban_relations": 17, "new_geographic_coordinates": 0, "new_metric_measurements": 0, "new_historical_edges": 0, "new_geographic_footprints": 0}, "new_historical_coordinates": 0, "new_geographic_footprints": 0, "modern_reference_default_visible": false}</metadata>
+  <style>
+    text{font-family:'Noto Sans CJK SC','Microsoft YaHei',sans-serif}
+    a{cursor:pointer} a:focus{outline:none}
+    [data-place-id] circle{transition:fill .12s}
+    [data-place-id].is-selected circle:not(.hit-area){fill:#b7772e;stroke:#64491e;stroke-width:.8}
+    [data-place-id].is-selected path{stroke:#b7772e;stroke-width:1.3}
+    [data-place-id]:focus circle:not(.hit-area){stroke:#b7772e;stroke-width:1}
+    .place-label{font-weight:700}
+    </style>
+  <rect width="900" height="1080" fill="#fbfaf5" />
+  <text x="36" y="35" font-size="16" fill="#627265">盛时洛阳 / P4.7 / 06a同源共同视图</text>
+  <text x="36" y="77" font-size="31" fill="#243e35" font-weight="700">四处建筑参照，连同城墙与八条道路</text>
+  <text x="36" y="106" font-size="16" fill="#627265">保留原图符与断笔；报告尺度、文献关系在网页卡片中联读。</text>
+  <rect x="35" y="125" width="830" height="825" rx="12" fill="#eff1e7" stroke="#d4d9c8" />
+  <defs>
+    <clipPath id="common-map-clip">
+      <rect x="36" y="126" width="828" height="823" rx="11" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#common-map-clip)">
+    <g id="common-native-06a" transform="translate(70 130) scale(4) translate(-245 -230)" data-native-units="PDF point" data-source-frame="frame-06a">
+      <g data-city-layer="modern" style="display:none" aria-hidden="true">
+        <g data-feature-id="geo-modern-luo-river" data-period="1997/1999" data-not-ancient-river="true">
+          <title>洛水中东段参考线（1997/1999底图）</title>
+          <path d="M134.929227 400.157756 L147.165456 390.897907 L158.078849 391.890034 L170.315078 398.173503 L190.48832 399.496338 L215.622196 402.14201 L237.779692 403.134136 L259.275769 404.126263 L274.819087 408.09477 L290.693114 410.740441 L305.244305 406.110516 L320.456914 402.472718 L330.378181 406.771934 L336.330941 416.693201 L347.244334 422.315252 L360.803398 422.645961 L374.362463 415.039656 L386.267983 413.055403 L396.18925 415.701074 L409.086896 413.716821 L420.992416 417.354618 L438.189278 420.992416 L460.677483 426.614467 L480.189307 427.275885 L501.354676 425.622341 L522.189336 420.00029 L544.677541 415.039656 L563.858656 413.386112" fill="none" stroke="#8faaa8" stroke-width="1.1" stroke-dasharray="3 1.3" data-source-feature-id="geo-modern-luo-river" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-modern-luo-river" />
+          <text x="292" y="418" font-size="4" fill="#678b89">近现代洛水参照 · 1997／1999</text>
+        </g>
+      </g>
+      <g data-city-layer="walls">
+        <g data-feature-id="geo-inner-wall-aboveground">
+          <title>内城北、东、西墙地上遗存；东汉至北魏</title>
+          <path d="M349.609894 241.371704 L364.162903 243.511703 L374.642883 246.176697 L376.208893 247.066711 L376.971893 248.30571 L377.513885 249.802704 L377.798889 251.029709 L378.167908 253.105698 L379.155884 260.417694 L378.984894 270.691711 L378.529907 289.631714 L378.361908 295.920715" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-inner-wall-aboveground" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-aboveground" />
+          <path d="M333.637482 255.410828 L334.619476 240.862823 L334.907471 240.023834 L335.772491 239.410828 L336.514496 239.377823 L339.312469 239.823822 L344.013489 240.479828 L348.239471 241.069824" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-inner-wall-aboveground" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-aboveground" />
+          <path d="M276.644684 325.357117 L276.934692 315.430115 L277.294678 307.779114 L277.473694 301.13913 L277.720673 294.414124" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-inner-wall-aboveground" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-aboveground" />
+          <path d="M275.82489 347.198334 L276.05188 340.453339 L276.299896 333.832336 L276.5159 326.65033" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-inner-wall-aboveground" data-part="4" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-aboveground" />
+          <path d="M276.364807 388.723633 L276.126801 381.796631 L276.035797 380.142639 L275.143799 379.038635 L275.189819 373.373627 L275.5578 366.594635 L275.749817 359.443634 L275.855804 354.502625" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-inner-wall-aboveground" data-part="5" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-aboveground" />
+          <path d="M380.962585 330.249115 L379.721588 341.33313 L378.324585 353.249115 L376.702576 365.712128 L376.411591 368.562103 L375.580597 371.215118 L375.348572 379.888123 L375.215576 382.23111" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-inner-wall-aboveground" data-part="6" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-aboveground" />
+          <path d="M378.311279 297.393494 L378.300293 297.798492 L380.422272 298.352509 L384.231293 299.190491 L385.068268 299.384491 L384.261292 305.401489 L383.305267 312.734497 L382.213287 321.059509 L381.180267 328.6875" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-inner-wall-aboveground" data-part="7" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-aboveground" />
+        </g>
+        <g data-feature-id="geo-inner-wall-underground">
+          <title>内城及金墉相接处地下墙线；东汉至北魏；金墉相接部分为魏晋至北魏</title>
+          <path d="M278.075806 292.386841 L275.506805 292.250854 L275.558807 290.778839" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+          <path d="M275.740906 287.969238 L277.016907 280.714233 L278.636902 271.454224 L279.539917 266.470245 L280.010895 264.720245 L280.989899 259.230225 L281.549896 256.075226" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+          <path d="M281.795807 254.686646 L282.010803 253.478653 L282.062805 253.23764 L282.3078 253.096649 L282.659821 253.050644 L283.493805 253.09465" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+          <path d="M286.356293 253.244934 L288.606293 253.36293 L291.173279 253.431931 L308.740295 254.322937 L330.734283 255.283936" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="4" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+          <path d="M332.165588 255.346497 L333.637573 255.410492" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="5" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+          <path d="M276.6073 387.734436 L276.572296 386.261444" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="6" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+          <path d="M276.454498 383.706207 L276.364502 382.235199" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="7" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+          <path d="M375.215088 382.226929 L375.161102 383.698914" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="8" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+          <path d="M375.077881 385.983826 L374.785889 393.979828" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="9" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+          <path d="M374.760895 395.12262 L374.729889 396.595612" fill="none" stroke="#a5a28b" stroke-width="0.7" stroke-dasharray="1.4 .7" data-source-feature-id="geo-inner-wall-underground" data-part="10" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-inner-wall-underground" />
+        </g>
+        <g data-feature-id="geo-palace-walls">
+          <title>宫城西、南、东墙遗存；魏晋至北魏</title>
+          <path d="M308.892792 269.766235 L308.809784 271.237244" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-palace-walls" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-palace-walls" />
+          <path d="M308.637085 274.328796 L308.026093 285.246796 L307.815094 291.420807 L307.786072 294.137787 L307.579071 311.308807 L307.332092 322.297791" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-palace-walls" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-palace-walls" />
+          <path d="M307.297089 323.84613 L307.264099 325.319122 L308.737091 325.341125" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-palace-walls" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-palace-walls" />
+          <path d="M311.87439 325.390442 L313.275391 325.412445 L321.954376 325.787445 L329.120392 325.966431" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-palace-walls" data-part="4" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-palace-walls" />
+          <path d="M330.688385 326.006042 L332.161377 326.04303 L332.271393 324.573029" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-palace-walls" data-part="5" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-palace-walls" />
+          <path d="M332.481201 321.786743 L332.595215 320.265747 L332.9605 314.604596 L333.251421 308.948167 L333.487924 303.294997 L333.689953 297.64362 L333.877452 291.99257 L334.070365 286.340382 L334.288639 280.685592 L334.552216 275.026733 L334.630188 272.930756" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-palace-walls" data-part="6" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-palace-walls" />
+          <path d="M334.681091 271.534729 L334.735077 270.062744" fill="none" stroke="#a5a28b" stroke-width="1.25" data-source-feature-id="geo-palace-walls" data-part="7" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-palace-walls" />
+        </g>
+        <a data-feature-id="geo-yongning-temple-walls" data-place-id="C04" href="https://mechgouki.github.io/luoyang-city/prosperity-city-common.html#place-C04" aria-label="永宁寺七段残墙：查看塔基与寺院范围">
+          <title>永宁寺围墙图示遗存；北魏</title>
+          <path d="M293.766785 351.495331 L293.718781 352.968323" fill="none" stroke="#94723c" stroke-width="0.85" data-source-feature-id="geo-yongning-temple-walls" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-yongning-temple-walls" />
+          <path d="M293.650391 355.072021 L293.547394 358.228027" fill="none" stroke="#94723c" stroke-width="0.85" data-source-feature-id="geo-yongning-temple-walls" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-yongning-temple-walls" />
+          <path d="M293.513489 359.280029 L293.465485 360.753021 L294.938477 360.789032" fill="none" stroke="#94723c" stroke-width="0.85" data-source-feature-id="geo-yongning-temple-walls" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-yongning-temple-walls" />
+          <path d="M297.527985 360.852631 L301.411987 360.948639" fill="none" stroke="#94723c" stroke-width="0.85" data-source-feature-id="geo-yongning-temple-walls" data-part="4" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-yongning-temple-walls" />
+          <path d="M302.706879 360.980408 L304.179871 361.016418 L304.214874 359.544403" fill="none" stroke="#94723c" stroke-width="0.85" data-source-feature-id="geo-yongning-temple-walls" data-part="5" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-yongning-temple-walls" />
+          <path d="M304.285706 356.591125 L304.377716 352.73114 L304.395691 352.16214" fill="none" stroke="#94723c" stroke-width="0.85" data-source-feature-id="geo-yongning-temple-walls" data-part="6" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-yongning-temple-walls" />
+          <path d="M304.440186 350.686523 L304.485199 349.213531" fill="none" stroke="#94723c" stroke-width="0.85" data-source-feature-id="geo-yongning-temple-walls" data-part="7" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-yongning-temple-walls" />
+        </a>
+      </g>
+      <g data-city-layer="roads">
+        <g data-feature-id="geo-road-east-west-south" data-road="Lh-1">
+          <title>Lh-1 · 西明门—青阳门；道路图示残段</title>
+          <path d="M272.733093 381.999237 L274.692108 382.150238" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-south" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-south" />
+          <path d="M276.663879 382.281097 L290.059875 382.296112 L300.794843 382.296727 L311.530162 382.286807 L322.265715 382.271192 L333.001385 382.254723 L343.737053 382.242238 L354.472601 382.23858 L365.207913 382.248587 L375.942871 382.2771 L376.504883 382.286102" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-south" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-south" />
+          <path d="M377.493195 382.301514 L379.104187 382.326508 L379.457184 382.333527" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-south" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-south" />
+          <text x="257" y="383" font-size="4.1" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" class="road-label" font-weight="600">Lh-1</text>
+          <text x="257" y="383" font-size="4.1" fill="#a45b3d" class="road-label" font-weight="600">Lh-1</text>
+        </g>
+        <g data-feature-id="geo-tongtuo-cross-street" data-road="Lh-2">
+          <title>Lh-2 · 西阳门—东阳门；道路图示残段</title>
+          <path d="M385.198395 329.711914 L383.236389 329.621918" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-tongtuo-cross-street" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-tongtuo-cross-street" />
+          <path d="M381.266083 329.537598 L361.770081 328.754608 L352.920122 328.389699 L344.068896 328.061739 L335.216638 327.764367 L326.363583 327.491219 L317.509965 327.235932 L308.656021 326.992144 L299.801984 326.753491 L290.94809 326.513611 L275.852081 325.943604" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-tongtuo-cross-street" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-tongtuo-cross-street" />
+          <path d="M274.866791 325.905823 L272.903778 325.831818" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-tongtuo-cross-street" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-tongtuo-cross-street" />
+          <text x="257" y="325" font-size="4.1" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" class="road-label" font-weight="600">Lh-2</text>
+          <text x="257" y="325" font-size="4.1" fill="#a45b3d" class="road-label" font-weight="600">Lh-2</text>
+        </g>
+        <g data-feature-id="geo-road-east-west-middle" data-road="Lh-3">
+          <title>Lh-3 · 内城西垣阊阖门—建春门；道路图示残段</title>
+          <path d="M272.898987 293.311035 L274.860992 293.411041" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-middle" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-middle" />
+          <path d="M276.802979 293.509033 L280.942993 293.719025 L299.717987 294.452026 L317.71698 294.808044 L339.796967 294.966034 L350.741974 295.131042 L363.326965 295.858032 L373.929993 296.272034 L377.257996 296.493042 L386.590973 297.023041" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-middle" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-middle" />
+          <path d="M387.561798 297.078735 L389.522797 297.189728" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-middle" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-middle" />
+          <text x="257" y="292" font-size="4.1" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" class="road-label" font-weight="600">Lh-3</text>
+          <text x="257" y="292" font-size="4.1" fill="#a45b3d" class="road-label" font-weight="600">Lh-3</text>
+        </g>
+        <g data-feature-id="geo-road-east-west-north" data-road="Lh-4">
+          <title>Lh-4 · 承明门—宫城北侧；道路图示残段</title>
+          <path d="M334.796204 269.918945 L332.836212 269.791931" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-north" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-north" />
+          <path d="M330.651489 269.651306 L322.067505 269.097321 L312.081482 268.463318" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-north" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-north" />
+          <path d="M310.98999 268.394531 L309.029999 268.270538" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-north" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-north" />
+          <path d="M309.029388 268.270325 L308.024384 268.206329 L307.069397 268.139313" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-north" data-part="4" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-north" />
+          <path d="M305.232391 268.011841 L292.085388 267.097839 L284.221405 266.650848 L278.604401 266.115845" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-north" data-part="5" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-north" />
+          <path d="M277.687988 266.028198 L275.731995 265.842194" fill="none" stroke="#a45b3d" stroke-width="0.8" data-source-feature-id="geo-road-east-west-north" data-part="6" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-east-west-north" />
+          <text x="257" y="265" font-size="4.1" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" class="road-label" font-weight="600">Lh-4</text>
+          <text x="257" y="265" font-size="4.1" fill="#a45b3d" class="road-label" font-weight="600">Lh-4</text>
+        </g>
+        <g data-feature-id="geo-road-north-south-east" data-road="Lz-1">
+          <title>Lz-1 · 建春门内横三—调查时洛河北岸；道路图示残段</title>
+          <path d="M363.338287 295.833923 L363.243286 297.795929" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-east" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-east" />
+          <path d="M363.148895 299.729919 L361.813904 327.204926 L360.678894 351.530914 L359.06189 383.708923 L358.832886 391.5979" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-east" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-east" />
+          <path d="M358.805206 392.56543 L358.748199 394.529419" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-east" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-east" />
+          <text x="360" y="400" font-size="4.1" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" class="road-label" font-weight="600">Lz-1</text>
+          <text x="360" y="400" font-size="4.1" fill="#38715c" class="road-label" font-weight="600">Lz-1</text>
+        </g>
+        <g data-feature-id="geo-road-north-south-mid-east" data-road="Lz-2">
+          <title>Lz-2 · 广莫门—平昌门方向；道路图示残段</title>
+          <path d="M349.190308 239.059143 L349.126312 239.50914 L348.948303 241.008148" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-mid-east" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-mid-east" />
+          <path d="M348.674683 243.317932 L348.024689 248.805939 L347.236694 256.026917" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-mid-east" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-mid-east" />
+          <path d="M347.110291 257.183228 L346.896301 259.13623 L348.848297 259.359222" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-mid-east" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-mid-east" />
+          <path d="M350.147583 259.507507 L352.099579 259.730499 L351.984589 261.691498" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-mid-east" data-part="4" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-mid-east" />
+          <path d="M351.870789 263.646545 L351.383789 271.981537 L350.788978 283.999142 L350.180304 296.016055 L349.560779 308.032429 L348.933414 320.048416 L348.301222 332.064169 L347.667213 344.079839 L347.034399 356.095579 L346.405792 368.111542 L345.819794 380.005554" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-mid-east" data-part="5" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-mid-east" />
+          <path d="M345.771179 380.983337 L345.674194 382.945343" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-mid-east" data-part="6" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-mid-east" />
+          <text x="343" y="396" font-size="4.1" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" class="road-label" font-weight="600">Lz-2</text>
+          <text x="343" y="396" font-size="4.1" fill="#38715c" class="road-label" font-weight="600">Lz-2</text>
+        </g>
+        <a data-feature-id="geo-tongtuo-avenue" data-road="Lz-3" href="https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#context-geo-tongtuo-avenue" data-water-context-id="geo-tongtuo-avenue" aria-label="宫城南正门阊阖门—宣阳门方向（铜驼街）：查看水系证据">
+          <title>Lz-3 · 宫城南正门阊阖门—宣阳门方向（铜驼街）；道路图示残段</title>
+          <path d="M314.108795 324.082092 L314.048798 326.046082" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-tongtuo-avenue" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-tongtuo-avenue" />
+          <path d="M313.986084 328.077209 L313.779083 334.803223 L313.223083 353.901215 L312.588074 372.747192 L312.184082 388.0112" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-tongtuo-avenue" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-tongtuo-avenue" />
+          <path d="M312.156799 389.026733 L312.104797 390.990723" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-tongtuo-avenue" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-tongtuo-avenue" />
+          <text x="312" y="398" font-size="4.1" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" class="road-label" font-weight="600">Lz-3</text>
+          <text x="312" y="398" font-size="4.1" fill="#38715c" class="road-label" font-weight="600">Lz-3</text>
+        </a>
+        <g data-feature-id="geo-road-north-south-west" data-road="Lz-4">
+          <title>Lz-4 · 大夏门—津阳门方向；道路图示残段</title>
+          <path d="M292.191681 267.105103 L292.143677 269.069092" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-west" data-part="1" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-west" />
+          <path d="M292.097687 270.986023 L291.830688 281.976013 L291.545685 296.778015 L291.166687 315.034027 L290.901672 326.28302 L291.431702 331.983032 L292.282684 339.880005 L292.090698 347.040039 L291.801697 359.225037 L291.837677 373.473022 L291.614685 384.995026" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-west" data-part="2" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-west" />
+          <path d="M291.595581 385.953918 L291.557587 387.917908" fill="none" stroke="#38715c" stroke-width="0.8" data-source-feature-id="geo-road-north-south-west" data-part="3" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-road-north-south-west" />
+          <text x="287" y="398" font-size="4.1" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" class="road-label" font-weight="600">Lz-4</text>
+          <text x="287" y="398" font-size="4.1" fill="#38715c" class="road-label" font-weight="600">Lz-4</text>
+        </g>
+      </g>
+      <g data-city-layer="points">
+        <a data-feature-id="geo-changhe-palace-gate" href="https://mechgouki.github.io/luoyang-city/prosperity-city-common.html#place-C01" data-place-id="C01" aria-label="C01 宫城阊阖门">
+          <title>宫城阊阖门位置参考；来源图符中心</title>
+          <circle cx="314.001495" cy="325.356506" r="3.3" fill="transparent" class="hit-area" />
+          <circle cx="314.001495" cy="325.356506" r="1.8" fill="#243e35" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-changhe-palace-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-changhe-palace-gate" />
+          <text x="319.001495" y="320.356506" font-size="4.8" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" text-anchor="start" class="place-label">C01 阊阖门</text>
+          <text x="319.001495" y="320.356506" font-size="4.8" fill="#243e35" text-anchor="start" class="place-label">C01 阊阖门</text>
+        </a>
+        <a data-feature-id="geo-qianqiu-gate" href="https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#context-geo-qianqiu-gate" data-water-context-id="geo-qianqiu-gate" aria-label="宫城千秋门位置参考：查看水系证据">
+          <title>宫城千秋门位置参考；来源图符中心</title>
+          <circle cx="307.890701" cy="294.529648" r="1.15" fill="#fbfaf5" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-qianqiu-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-qianqiu-gate" />
+          <text x="304.890701" y="292.529648" font-size="3.7" fill="#627265" text-anchor="end">千秋门</text>
+        </a>
+        <g data-feature-id="geo-yunlong-gate">
+          <title>宫城云龙门位置参考；来源图符中心</title>
+          <circle cx="333.963791" cy="294.764023" r="1.15" fill="#fbfaf5" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-yunlong-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-yunlong-gate" />
+          <text x="336.963791" y="292.764023" font-size="3.7" fill="#627265" text-anchor="start">云龙门</text>
+        </g>
+        <a data-feature-id="geo-jianchun-gate" href="https://mechgouki.github.io/luoyang-city/prosperity-city-common.html#place-C02" data-place-id="C02" aria-label="C02 内城建春门">
+          <title>内城建春门位置参考；来源图符中心</title>
+          <circle cx="378.463791" cy="296.44101" r="3.3" fill="transparent" class="hit-area" />
+          <circle cx="378.463791" cy="296.44101" r="1.8" fill="#243e35" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-jianchun-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-jianchun-gate" />
+          <text x="382.463791" y="291.44101" font-size="4.8" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" text-anchor="start" class="place-label">C02 建春门</text>
+          <text x="382.463791" y="291.44101" font-size="4.8" fill="#243e35" text-anchor="start" class="place-label">C02 建春门</text>
+        </a>
+        <a data-feature-id="geo-daxia-gate" href="https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#context-geo-daxia-gate" data-water-context-id="geo-daxia-gate" aria-label="内城大夏门位置参考：查看水系证据">
+          <title>内城大夏门位置参考；来源图符中心</title>
+          <circle cx="309.102692" cy="254.332802" r="1.15" fill="#fbfaf5" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-daxia-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-daxia-gate" />
+          <text x="306.102692" y="251.332802" font-size="3.7" fill="#627265" text-anchor="end">大夏门</text>
+        </a>
+        <a data-feature-id="geo-guangmo-gate" href="https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#context-geo-guangmo-gate" data-water-context-id="geo-guangmo-gate" aria-label="内城广莫门位置参考：查看水系证据">
+          <title>内城广莫门位置参考；来源图符中心</title>
+          <circle cx="348.868378" cy="242.956947" r="1.15" fill="#fbfaf5" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-guangmo-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-guangmo-gate" />
+          <text x="351.868378" y="239.956947" font-size="3.7" fill="#627265" text-anchor="start">广莫门</text>
+        </a>
+        <a data-feature-id="geo-xiyang-gate" href="https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#context-geo-xiyang-gate" data-water-context-id="geo-xiyang-gate" aria-label="内城西阳门位置参考：查看水系证据">
+          <title>内城西阳门位置参考；来源图符中心</title>
+          <circle cx="276.850998" cy="326.041718" r="1.15" fill="#fbfaf5" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-xiyang-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-xiyang-gate" />
+          <text x="279.850998" y="322.041718" font-size="3.7" fill="#627265" text-anchor="start">西阳门</text>
+        </a>
+        <a data-feature-id="geo-dongyang-gate" href="https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#context-geo-dongyang-gate" data-water-context-id="geo-dongyang-gate" aria-label="内城东阳门位置参考：查看水系证据">
+          <title>内城东阳门位置参考；来源图符中心</title>
+          <circle cx="380.949478" cy="329.471313" r="1.15" fill="#fbfaf5" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-dongyang-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-dongyang-gate" />
+          <text x="383.949478" y="326.471313" font-size="3.7" fill="#627265" text-anchor="start">东阳门</text>
+        </a>
+        <a data-feature-id="geo-qingyang-gate" href="https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#context-geo-qingyang-gate" data-water-context-id="geo-qingyang-gate" aria-label="内城青阳门位置参考：查看水系证据">
+          <title>内城青阳门位置参考；来源图符中心</title>
+          <circle cx="375.34549" cy="382.307999" r="1.15" fill="#fbfaf5" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-qingyang-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-qingyang-gate" />
+          <text x="378.34549" y="379.307999" font-size="3.7" fill="#627265" text-anchor="start">青阳门</text>
+        </a>
+        <a data-feature-id="geo-ximing-gate" href="https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#context-geo-ximing-gate" data-water-context-id="geo-ximing-gate" aria-label="内城西明门位置参考：查看水系证据">
+          <title>内城西明门位置参考；来源图符中心</title>
+          <circle cx="276.322495" cy="382.197418" r="1.15" fill="#fbfaf5" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-ximing-gate" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-ximing-gate" />
+          <text x="279.322495" y="378.197418" font-size="3.7" fill="#627265" text-anchor="start">西明门</text>
+        </a>
+        <a data-feature-id="geo-taiji-hall-reference" href="https://mechgouki.github.io/luoyang-city/prosperity-city-common.html#place-C03" data-place-id="C03" aria-label="C03 太极殿">
+          <title>太极殿遗址位置参考；来源图符中心</title>
+          <circle cx="314.71759" cy="302.261993" r="3.3" fill="transparent" class="hit-area" />
+          <circle cx="314.71759" cy="302.261993" r="1.8" fill="#243e35" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-taiji-hall-reference" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-taiji-hall-reference" />
+          <text x="319.71759" y="308.261993" font-size="4.8" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" text-anchor="start" class="place-label">C03 太极殿</text>
+          <text x="319.71759" y="308.261993" font-size="4.8" fill="#243e35" text-anchor="start" class="place-label">C03 太极殿</text>
+        </a>
+        <a data-feature-id="geo-yongning-pagoda-reference" href="https://mechgouki.github.io/luoyang-city/prosperity-city-common.html#place-C04" data-place-id="C04" aria-label="C04 永宁寺塔基">
+          <title>永宁寺塔基位置参考；来源图符中心</title>
+          <circle cx="298.994202" cy="354.840515" r="3.3" fill="transparent" class="hit-area" />
+          <circle cx="298.994202" cy="354.840515" r="1.8" fill="#243e35" stroke="#243e35" stroke-width="0.45" data-source-feature-id="geo-yongning-pagoda-reference" data-source-frame="frame-06a" data-source-path="research/prosperity-v1/geographic-evidence.json#geo-yongning-pagoda-reference" />
+          <text x="291.994202" y="356.840515" font-size="4.8" fill="none" stroke="#fbfaf5" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true" text-anchor="end" class="place-label">C04 永宁寺塔基</text>
+          <text x="291.994202" y="356.840515" font-size="4.8" fill="#243e35" text-anchor="end" class="place-label">C04 永宁寺塔基</text>
+        </a>
+      </g>
+      <text x="307" y="409" font-size="4" fill="#627265">南墙与宣阳门未补绘</text>
+    </g>
+  </g>
+  <text x="64" y="163" font-size="17" fill="#243e35" font-weight="700">N</text>
+  <path d="M70 202 L70 174 M63 184 L70 174 L77 184" stroke="#243e35" stroke-width="2" fill="none" />
+  <line x1="48" y1="980" x2="74" y2="980" stroke="#a45b3d" stroke-width="4" />
+  <text x="85" y="986" font-size="16" fill="#243e35">横向道路原段</text>
+  <line x1="260" y1="980" x2="286" y2="980" stroke="#38715c" stroke-width="4" />
+  <text x="297" y="986" font-size="16" fill="#243e35">纵向道路原段</text>
+  <line x1="472" y1="980" x2="498" y2="980" stroke="#a5a28b" stroke-width="4" />
+  <text x="509" y="986" font-size="16" fill="#243e35">城墙遗存</text>
+  <line x1="660" y1="980" x2="686" y2="980" stroke="#94723c" stroke-width="4" />
+  <text x="697" y="986" font-size="16" fill="#243e35">永宁寺残墙</text>
+  <text x="36" y="1022" font-size="14" fill="#627265">图源：2012管理规划06a（申遗PDF第3457页）；原PDF点框与既有西安1980参照。</text>
+  <text x="36" y="1053" font-size="14" fill="#627265">图符不代表足迹；尺寸和文献关系不转为地理轮廓。古岸线、桥头与古高仍待证。</text>
+</svg>

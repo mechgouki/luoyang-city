@@ -1,0 +1,420 @@
+{
+  "schema": "luoyang-r10-actual-ci-pdf-visual-qa-v1",
+  "reviewed_at_utc": "2026-11-22T14:39:25.465259+00:00",
+  "reviewer": "/root/r9_spatial_delivery",
+  "workflow_run": 45032715660,
+  "workflow_status": "failed-browser-download",
+  "scope": "Read-only review of the actual PDF downloaded before the workflow failed at the eleventh browser download. This report certifies only the inspected PDF document and cannot be used as an overall successful CI result.",
+  "document_status": "pass-no-blocking-layout-defect",
+  "source_or_module_changes": false,
+  "actual_pdf": {
+    "path": "/tmp/r10-archive-work/incoming/pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.pdf",
+    "bytes": 2292427,
+    "sha256": "347fe46bd1d6687a95892a58ff8ac4dce40c29adb40f5d2c1e49214881215b3b",
+    "metadata": {
+      "/Producer": "pypdf",
+      "/Title": "盛时洛阳城市布局图集 R10.1",
+      "/Subject": "来源骨架、十一片区关系图、证据与未定边界；非完整同期实测城市平面",
+      "/Creator": "luoyang-city / CairoSVG and pypdf",
+      "/Keywords": "R10.1; 516-528; source_commit=4685350548c9e8135c1e543314395bbd6d36b783"
+    },
+    "source_commit": "4685350548c9e8135c1e543314395bbd6d36b783",
+    "pages": 16
+  },
+  "local_reference_pdf": {
+    "path": "/tmp/r10-map-qa/final/city-layout-r10.pdf",
+    "bytes": 3218858,
+    "sha256": "6b9f2ad8f4b13cf80e918d5666b6948e27896938144e506465bb251d8c6ae497",
+    "metadata": {
+      "/Producer": "pypdf",
+      "/Title": "盛时洛阳城市布局图集 R10.1",
+      "/Subject": "来源骨架、十一片区关系图、证据与未定边界；非完整同期实测城市平面",
+      "/Creator": "luoyang-city / CairoSVG and pypdf",
+      "/Keywords": "R10.1; 516-528; source_commit=1a988bc51adc74288ec8a8aa682499444007a33c"
+    },
+    "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c",
+    "pages": 16
+  },
+  "comparison_report": {
+    "path": "/tmp/r10-map-qa/ci-pr-45032715660/comparison.json",
+    "sha256": "c8b41189bb4875c904e6f8ce8caa05098664498b7ab22ce76733ac58f5b168a6"
+  },
+  "comparison_summary": {
+    "text_exact_equal_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "text_different_pages": [
+      16
+    ],
+    "all_text_equal_after_only_source_commit_replacement": true,
+    "all_media_boxes_equal": true,
+    "all_annotation_semantics_equal": true,
+    "annotation_total": 687,
+    "external_uri_count": 676,
+    "external_unique_uri_count": 96,
+    "decision_unique_uri_count": 96,
+    "internal_goto_count": 11,
+    "pixel_equal_pages": [],
+    "pixel_different_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  "font_findings": {
+    "actual_ci": {
+      "font_count": 32,
+      "embedded_all": true,
+      "unicode_maps_all": true,
+      "base_names": [
+        "CairoFont-0-0",
+        "CairoFont-1-0",
+        "NotoSansCJKsc-Regular"
+      ]
+    },
+    "local_reference": {
+      "font_count": 32,
+      "embedded_all": true,
+      "unicode_maps_all": true,
+      "base_names": [
+        "NotoSansCJKsc-Bold",
+        "NotoSansCJKsc-Regular"
+      ]
+    },
+    "observation": "Both PDFs embed all 32 used font subsets and all have Unicode maps. CI reports CairoFont-0-0/CairoFont-1-0 plus NotoSansCJKsc-Regular, while local reference reports NotoSansCJKsc-Bold plus Regular. The visible weight/shape differs; text fits its existing boxes on all inspected pages.",
+    "layout_conclusion": "No missing-glyph boxes, clipped labels, displaced page continuations, obscured evidence keys, or changed page geometry found in the actual CI render.",
+    "byte_pixel_equivalence_claimed": false
+  },
+  "text_and_links_findings": {
+    "pages_1_through_15": "Extracted text is exactly equal to the local reviewed PDF.",
+    "page_16": "Only the expected printed source_commit differs; replacing exactly the known commit values makes the complete extracted text identical.",
+    "annotations": "All 687 annotation dictionaries are semantically identical, including rectangles and targets: 676 external links reach 96 unique decision anchors, and 11 internal links reach the region first pages.",
+    "page_sizes": "All 16 page media boxes equal the local A3 landscape reference."
+  },
+  "render_provenance": {
+    "existing_poppler_pngs_reused": true,
+    "render_parameters": "pdftoppm -png -scale-to 1680",
+    "manifest": {
+      "path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/render-comparison.json",
+      "sha256": "ce71d8ce72b2f63d99351dc019438c9b07f380aeb92a077d159f0c1a3d392139",
+      "pdf_sha_matches_actual": true,
+      "all_png_hashes_match_manifest": true
+    },
+    "all_16_pngs_actually_visually_reviewed": true,
+    "all_16_differ_from_local_pixels": true,
+    "difference_interpretation": "Observed glyph weight/face changes are consistent with the font inventories; page 16 also has a different source commit stamp. Pixel equality is explicitly not asserted."
+  },
+  "readability_limits": [
+    "These are A3 landscape diagrams. Full-page fit on a narrow display is an overview; dense relation keys should be read by zooming or at A3 size.",
+    "Numbered graph markers are smaller than the complete relation keys. The printed keys retain full labels, so reading does not depend on hover.",
+    "This review does not change evidence grades or establish new coordinates, bank geometries, or a common source registration."
+  ],
+  "pages_reviewed": 16,
+  "blocking_defects": [],
+  "pages": [
+    {
+      "page": 1,
+      "title": "全城来源骨架与十一片区总览",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-01.png",
+      "png_sha256": "d9281cee4b20ce447e9e84ef019791cd518664fc1bd862d265504509ad6652c1",
+      "observed": "原图来源框、十一片区索引和六类未定边界分开清楚；来源引线、北箭、候选宫城填色及底部说明完整，没有重叠或裁切。",
+      "blocking_defects": []
+    },
+    {
+      "page": 2,
+      "title": "R01 北门与北郊",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-02.png",
+      "png_sha256": "f2f0ea5400b3ea967d3c14cebf88f2bda862101c598e249e744933946e9a046e",
+      "observed": "大夏—广莫门序、东北关系的两个分量、两条独立门外道路和闻义里无序构成均可读；寺前阅武场未画成寺南，编号说明和六项判断完整。",
+      "blocking_defects": []
+    },
+    {
+      "page": 3,
+      "title": "R02 西面门道〔上〕",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-03.png",
+      "png_sha256": "96868d65f5087f0064a8aa23294f826eeee3ecea41a80168389cf1e9d646a16c",
+      "observed": "四门次序与门外冲觉独立分组；阊阖道外寺序、宅第里属和未定五层塔标签完整，关系编号及上页续读提示没有遮挡。",
+      "blocking_defects": []
+    },
+    {
+      "page": 4,
+      "title": "R02 西面门道〔下〕",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-04.png",
+      "png_sha256": "ba8d78675fe625d06dc587682c39949ae42048bdee240a00f6fc1d87a9fa95ed",
+      "observed": "文献白马与考古坊街分窗；中央十字、未证南续、次级街与22/7.5/4.6米的对象标签可辨，完整九项关系说明和十二项判断没有溢出。",
+      "blocking_defects": []
+    },
+    {
+      "page": 5,
+      "title": "R03 宫苑与西北〔上〕",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-05.png",
+      "png_sha256": "64c875e9aa0948d867b2dfd57023024f1bf85439ce8264a73ec15411ac6b65b7",
+      "observed": "西游园、华林园和各构件组分层清楚；灵芝三侧殿、园台池及苗茨堂碑关系的全名、编号与说明可读，双窗底部和续页行均完整。",
+      "blocking_defects": []
+    },
+    {
+      "page": 6,
+      "title": "R03 宫苑与西北〔下〕",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-06.png",
+      "png_sha256": "2fee011c59e410ee3eca7c8d771e7c811a21d379c666c6e73c6d46f09ba8b57f",
+      "observed": "宫院—P01—仓区三带与P07/P08独立宽度可读；金墉成员组和景阳山方向组明确分离，密集山景图签未相互覆盖，判断区没有跨页裁切。",
+      "blocking_defects": []
+    },
+    {
+      "page": 7,
+      "title": "R04 建春门与城东北",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-07.png",
+      "png_sha256": "9540e905dbeb1df17ae9c19e2b3fca8feba88b5892d9d70cb8befa7da612b613",
+      "observed": "第一桥、东石桥和七里桥分组；右上密集里序中节点全名与十项关系说明仍完整，527年事件只随第一桥，渠迹与分期解释四卡独立。",
+      "blocking_defects": []
+    },
+    {
+      "page": 8,
+      "title": "R05 大市与寿丘",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-08.png",
+      "png_sha256": "60de5af3a8bcfb1f340b1b0c07e84ef3d56b703a14d640307de951b8d67fc496",
+      "observed": "大市四向八里围绕共同参照排列，编号及完整关系说明不再压住节点；皇女台、西北旧迹、寿丘四至与无序成员窗保持清楚，八项判断完整。",
+      "blocking_defects": []
+    },
+    {
+      "page": 9,
+      "title": "R06 西阳门内与永宁西邻",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-09.png",
+      "png_sha256": "8c6b4e4ddaba3c23c06b13f7569a9d17abff344a2723b135a974e20f54a809a7",
+      "observed": "道北/补南条件、旧宅以东官署链、长秋旧址与季节池、永康宅属分别可读；长标签和两行节点未溢出边框，来源限制及六项判断清楚。",
+      "blocking_defects": []
+    },
+    {
+      "page": 10,
+      "title": "R07 宫前御道",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-10.png",
+      "png_sha256": "e781710d234dc7ae28f8cd388836f5d1ceafb46d5167d65c79e4d83706bc06c0",
+      "observed": "永宁四邻、两列官署南序和景乐条件接口分别呈现；窄官署窗中的完整节点、逐段关系说明及九项判断可读，底部全景约束没有被覆盖。",
+      "blocking_defects": []
+    },
+    {
+      "page": 11,
+      "title": "R08 城东南门内",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-11.png",
+      "png_sha256": "341606ee1e06e41dd2f0aa6e8e335093e2de3f48090c13dc61df5edd8009acaa",
+      "observed": "东门序与东阳门内三个独立组清楚，治粟未明参照的小框文字完整；昭仪池、修梵—永和及开阳景林关系无缺字或裁切，九项判断可回读。",
+      "blocking_defects": []
+    },
+    {
+      "page": 12,
+      "title": "R09 城东南门外",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-12.png",
+      "png_sha256": "bd26e8a57ece28699a7597357eb7cb414062cb51e3a072ceb47e6dccba935063",
+      "observed": "东阳/青阳门外寺里、小市—殖货关系与后出时序分窗；日期和条件字样全部可见，三条时间线没有被误画成同一地理线，八项判断完整。",
+      "blocking_defects": []
+    },
+    {
+      "page": 13,
+      "title": "R10 城南门道与寺学〔上〕",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-13.png",
+      "png_sha256": "1665b5e4f717b7a14a0226a9a02e4e79ff6aa02146cf87f2f1926b54b30c626e",
+      "observed": "礼制遗址与独立残渠组分开；平城/平昌、大统寺、三池数量、水功及未完七层塔标签完整，长节点采用换行而未裁切，上页续读提示清楚。",
+      "blocking_defects": []
+    },
+    {
+      "page": 14,
+      "title": "R10 城南门道与寺学〔下〕",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-14.png",
+      "png_sha256": "d881db92e34325ec78487d07de4be6730b88711596224ea00ece648ed099a7ba",
+      "observed": "左侧五组独立约束中的长名、未知门接线和十二项关系说明均可辨；右侧营造与行像两条时间线分离，下页十一项判断及全景约束没有裁切。",
+      "blocking_defects": []
+    },
+    {
+      "page": 15,
+      "title": "R11 永桥与洛南",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-15.png",
+      "png_sha256": "dd2fc8735fc29abd0b1601c5cf417c97e48219f7c66d53d897cfabacfbdfb30a",
+      "observed": "桥、洛水与两岸标志不形成实测桥跨；四馆四里及制度对应、里内市场成员分别可读，只有前两制度组标三年，九项判断和说明完整。",
+      "blocking_defects": []
+    },
+    {
+      "page": 16,
+      "title": "图例、证据与尚未完成的空间",
+      "visual_status": "pass",
+      "review_method": "Actual CI Poppler PNG individually viewed at 1680-pixel long edge; not inherited from local reference review.",
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/page-16.png",
+      "png_sha256": "c234903e13b4065bacb5de946d422b3bc723ab5d92bcc6319aae18f1506044e6",
+      "observed": "四类证据颜色、三种图面语义、六类缺口、十一分区/九十六判断入口及实际来源提交行完整，URL、提交号与页码互不遮挡。",
+      "blocking_defects": []
+    }
+  ],
+  "supporting_files": [
+    {
+      "name": "actual-ci-pdf-fonts.txt",
+      "sha256": "09fa65cfd9be0f1f92e7e3aa940e7c805c0c028e8d6a5e877ef1279fd5705686",
+      "bytes": 3196
+    },
+    {
+      "name": "annotations.json",
+      "sha256": "b918d8a7a55195b81604c9eef5a1c8899afd63becf332cf9c057dc93b053e1cb",
+      "bytes": 617550
+    },
+    {
+      "name": "ci-page02-header.png",
+      "sha256": "5bf78196d116ef1b60d3fab93a0f1eb0410929a9c27e395b6f53853305201434",
+      "bytes": 28761
+    },
+    {
+      "name": "comparison.json",
+      "sha256": "c8b41189bb4875c904e6f8ce8caa05098664498b7ab22ce76733ac58f5b168a6",
+      "bytes": 21355
+    },
+    {
+      "name": "fonts.json",
+      "sha256": "cb827c0cece5d69106aeb1c38603f2b3bfcb1261dd9e381b090a078b4fe17d9d",
+      "bytes": 19150
+    },
+    {
+      "name": "local-page02-header.png",
+      "sha256": "bc3f231a961a90a65812e3071888ccbd070726c8740707d1a6837037990a37dd",
+      "bytes": 28552
+    },
+    {
+      "name": "page-01-ci-text.txt",
+      "sha256": "9f541cb280ac14ebe8f10d58e03110244c73fa73f8e1c8cbfb682bf6ebef8feb",
+      "bytes": 1690
+    },
+    {
+      "name": "page-02-ci-text.txt",
+      "sha256": "646a45b4ab50009492fc349a09538f87e304f57541228ab602f50c5fbc163521",
+      "bytes": 1935
+    },
+    {
+      "name": "page-03-ci-text.txt",
+      "sha256": "af76f137318ddbe4346d578fe4f6c03b85b1c24e8450a332efdef40c4ec9c9a1",
+      "bytes": 1402
+    },
+    {
+      "name": "page-04-ci-text.txt",
+      "sha256": "afe35539359b5beccad5585f003ff809b9d54779196db9d811bb47f450813d12",
+      "bytes": 2732
+    },
+    {
+      "name": "page-05-ci-text.txt",
+      "sha256": "5907017b37063e52efe0952d61c71b911162327f77c6a1b65afa27aa91a90371",
+      "bytes": 1713
+    },
+    {
+      "name": "page-06-ci-text.txt",
+      "sha256": "372807e454711f9734b3ddd1dbcd7dc63ebdede346303c83b1f78f3d112985f4",
+      "bytes": 2544
+    },
+    {
+      "name": "page-07-ci-text.txt",
+      "sha256": "c43138c54ac9cb9b7c357b5bb18d516f23af35148682355e04754bf20601a5c1",
+      "bytes": 2950
+    },
+    {
+      "name": "page-08-ci-text.txt",
+      "sha256": "8214a3312f8836e29a41f33da7751dbdaf23a7dd51639944e8dc6e6b747d5b7d",
+      "bytes": 2816
+    },
+    {
+      "name": "page-09-ci-text.txt",
+      "sha256": "88b0491a0cc844f3612375b65df80e2e884d245c8059b5aa56964342032ae68c",
+      "bytes": 2189
+    },
+    {
+      "name": "page-10-ci-text.txt",
+      "sha256": "ebf200125256e53eb45b38a7734083e2ecee41d104fc754116690643dc72e5d0",
+      "bytes": 2966
+    },
+    {
+      "name": "page-11-ci-text.txt",
+      "sha256": "09d0b0198baa0bc31eba0bfe599d77cb64ff001192dae696b06c56b17625d054",
+      "bytes": 2983
+    },
+    {
+      "name": "page-12-ci-text.txt",
+      "sha256": "0ebbebc3aa0647658e0b305858ed773877b8a64c04bf8cb21c9ee8e022bcd344",
+      "bytes": 2893
+    },
+    {
+      "name": "page-13-ci-text.txt",
+      "sha256": "49128db377a572e0824f55442809b3be250ea4b5361b850f29c042acd333d736",
+      "bytes": 1663
+    },
+    {
+      "name": "page-14-ci-text.txt",
+      "sha256": "bf034708bab93ed94c2eada78a3d6e076caafa88ffd886e741e542c0fc1c97e7",
+      "bytes": 2600
+    },
+    {
+      "name": "page-15-ci-text.txt",
+      "sha256": "ccd69b856a95af00edf6bcb42b10a2304220203c7cee08a6abd87d09d4e84de0",
+      "bytes": 3179
+    },
+    {
+      "name": "page-16-ci-text.txt",
+      "sha256": "31aa79385e86a355644a862118b05ae9339f385af22359eaf63a8238b5ae3951",
+      "bytes": 2213
+    },
+    {
+      "name": "page-16-text.diff",
+      "sha256": "b2b4200733a101e059357b5e48ce787062232a377e321881f36e89e6048b3f0f",
+      "bytes": 471
+    }
+  ]
+}

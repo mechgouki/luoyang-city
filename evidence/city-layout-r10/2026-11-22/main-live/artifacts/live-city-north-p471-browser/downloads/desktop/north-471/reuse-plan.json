@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0.0",
+  "version": "P4.7.1",
+  "title": "北门—金墉城市分布联读：同源几何与现行校读复用约定",
+  "study_date": "2026-11-20",
+  "source_baseline_commit": "e16c28d52ec743492b6ac248b7ae3076a04b47a2",
+  "required_input_sha256": {
+    "research/prosperity-v4/common-470/reuse-plan.json": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+    "research/prosperity-v1/geographic-evidence.json": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79",
+    "research/prosperity-v4/city-distribution-p451.json": "8749bac2e6f56f017b99790b11d757edb165a4903749665a30b67c5430f932f9",
+    "research/prosperity-v4/network-462/network.json": "f1081cfc39fb16e67e81271be177755fdab4cd46a18283e0d1ed46efb3e1275b",
+    "research/prosperity-v4/network-462/roads.json": "6a48b686ef2c133731f080405d525b4a60e9bf0506cfb35a78ff0cfa2b0efb8d",
+    "research/prosperity-v4/backbone-469/readings.json": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+    "research/prosperity-v4/backbone-469/jianchun-plan-audit.json": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f",
+    "research/prosperity-v4/street-clusters-p453.json": "9b69da412a86d5e21e82b2cfdcac747b667ecad053de868618fd7474e4bcd116",
+    "research/prosperity-v4/road-functions-p452.json": "6f963d3dfcfe7c74f02fefd4528958d65868cb53691259f40aa890f0649e074c",
+    "research/prosperity-v1/text-review.json": "e897985535b46d802708e628da4bad5a40c667ad2283caad55aeb0b347cb3836",
+    "research/dual-b1/decisions.json": "aee1cdc54a4f0888f3793712c559a75489ea484e9786d2bfe370466faedfb26f",
+    "research/dual-b7/luonan-river-markets.json": "0acfc920d242f26f3e8de894085d0e7963ed2a4a74ec981a626a8f8450f8e42d",
+    "research/dual-b4/north-gates.json": "31810a50d3ddd93eee9c23a609f92a55a3bac0533cf2b72f494e47b8cb31f53f",
+    "data/entities.json": "829f0c1f97a34fc4155346dec1e765f8efb4981d4a48f0d5aaad0e47c2cec5ed"
+  },
+  "source_frame_id": "frame-06a",
+  "added_existing_feature_ids": [
+    "geo-jinyong-bing-wall",
+    "geo-jinyong-bing-reference"
+  ],
+  "north_entry_features": {
+    "N01": [
+      "geo-jinyong-bing-wall",
+      "geo-jinyong-bing-reference"
+    ],
+    "N02": [
+      "geo-daxia-gate"
+    ],
+    "N03": [
+      "geo-guangmo-gate"
+    ]
+  },
+  "north_entry_entities": {
+    "N01": "ic_jinyong",
+    "N02": "gate_daxia",
+    "N03": "gate_guangmo"
+  },
+  "north_entry_evidence": {
+    "N01": [
+      "NG13",
+      "NG14",
+      "NG15",
+      "NG16"
+    ],
+    "N02": [
+      "NG01",
+      "NG02",
+      "NG03",
+      "NG04",
+      "NG05",
+      "NG06"
+    ],
+    "N03": [
+      "NG01",
+      "NG02",
+      "NG03",
+      "NG07",
+      "NG08",
+      "NG09"
+    ]
+  },
+  "evidence_groups": [
+    {
+      "id": "G01",
+      "title": "北门与御道两侧",
+      "evidence_ids": [
+        "NG01",
+        "NG02",
+        "NG03",
+        "NG04",
+        "NG07",
+        "NG08",
+        "NG09"
+      ],
+      "scope": "原文门序、路侧、楼制校读及凝玄的地势、用途和年代分别阅读；不生成连续城上建筑或寺院位置。"
+    },
+    {
+      "id": "G02",
+      "title": "金墉与承明通行",
+      "evidence_ids": [
+        "NG13",
+        "NG14",
+        "NG15",
+        "NG16"
+      ],
+      "scope": "承明门道、王南通行、瑶光北向与金墉内部构成保留原指代限度；正文与现代夹注分开。"
+    },
+    {
+      "id": "G03",
+      "title": "北城用地与成员",
+      "evidence_ids": [
+        "NG05",
+        "NG06",
+        "NG10",
+        "NG11",
+        "NG12"
+      ],
+      "scope": "禅虚寺前阅武场、旧宣武场与光风园、闻义里生业及宅第是不同对象和时间叙述，不补院界、窑址或宅第排序。"
+    }
+  ],
+  "water_relation_ids": [
+    "P467/outer/O02",
+    "P467/outer/O03",
+    "P467/outer/O04",
+    "P467/outer/O05",
+    "P467/inner/I01"
+  ],
+  "north_entry_water_relations": {
+    "N01": [
+      "P467/outer/O02",
+      "P467/outer/O03"
+    ],
+    "N02": [
+      "P467/outer/O03",
+      "P467/outer/O04",
+      "P467/inner/I01"
+    ],
+    "N03": [
+      "P467/outer/O04",
+      "P467/outer/O05"
+    ]
+  },
+  "road_codes": [
+    "Lh-4",
+    "Lz-2",
+    "Lz-4"
+  ],
+  "display_frames": {
+    "overview": {
+      "id": "overview",
+      "title": "城市总图",
+      "native_bounds": [
+        236.5,
+        229,
+        443.5,
+        434.75
+      ],
+      "source_frame": "frame-06a",
+      "native_units": "PDF point",
+      "semantics": "display_crop_only",
+      "scope": "沿用P470的原PDF显示范围；27项同源参照不是新增的古代测量。"
+    },
+    "north": {
+      "id": "north",
+      "title": "北门与金墉局部",
+      "native_bounds": [
+        270,
+        230,
+        390,
+        280
+      ],
+      "source_frame": "frame-06a",
+      "native_units": "PDF point",
+      "semantics": "display_crop_only",
+      "scope": "同一原PDF坐标框的局部裁切；仅为便于阅读，不是新的地理配准、实测范围或城市边界。"
+    }
+  },
+  "expected_counts": {
+    "source_features": 30,
+    "features": 27,
+    "site_remains": 26,
+    "modern_features": 1,
+    "prior_common_features": 25,
+    "added_existing_features": 2,
+    "north_entries": 3,
+    "evidence_records": 16,
+    "evidence_groups": 3,
+    "entities": 16,
+    "bound_entities": 3,
+    "unbound_entities": 13,
+    "source_binding_features": 4,
+    "constraints": 21,
+    "water_relations": 5,
+    "roads": 3,
+    "jinyong_wall_parts": 5,
+    "jinyong_wall_vertices": 13,
+    "corrected_quotations": 1,
+    "modern_annotations": 2,
+    "new_geographic_coordinates": 0,
+    "new_metric_measurements": 0,
+    "new_historical_relationships": 0,
+    "new_geographic_footprints": 0
+  },
+  "constraint_accounting": "21是B4原有constraints条目数，包含校补、定性、段落与指代等不同basis；不是21条新发现或21处已定位的空间关系。",
+  "limitations": [
+    "新页把27项同源参照放在同一来源图框内；新增展示的2项均为P1已有金墉丙城记录，不是两处新测古址。",
+    "金墉丙城仅有五段墙线及一个范围内图示代表点；不闭合墙线，不用附表310×240米补矩形，也不把丙城扩成甲乙丙完整三城。",
+    "丙城代表点不是来源图印出的门址点、现场控制点、建筑中心或完整金墉中心；两门图符也不是门基足迹。",
+    "16个B4实体中仅3个沿用4项来源图参照，其他13个保持无地理绑定；御道、城阙、制瓦活动等关系角色不另增实体或图上点。",
+    "NG15继承P1正文／周氏现代夹注分离更正；原B4混层旧引仅为历史记录，不作为已校正文显示。",
+    "NG02三层楼及宣武帝营造是带异文和年代限制的校读；NG04禅虚寺仍为undated，门外的外为校补；NG07一里不表示永平里中心或边界距门一里。",
+    "寺前阅武场与旧宣武场／光风园不合并；城前或寺前不自动译成正南，郭宅与宋宅不排临街次序，闻义里制瓦不产生窑址。",
+    "金墉城北的文字水程仍指原文金墉叙述，不能转指丙城北墙；五条水系记录仅提供context_link_only阅读入口，不生成古河线、支流点或逐年流量。",
+    "Lh-4、Lz-2、Lz-4保留报告残长与原图断段各自范围；文献中的御道与金墉城前大道角色不直接绑定为它们，不按320米及300米叙述补接Lz-4北段。",
+    "近现代洛水参照默认关闭；原来源仍为西安1980／EPSG:4610，不改标WGS84。北部放大图仅是原PDF裁切，不提供新共同控制。",
+    "来源的宽时期不证明516—528年每年同时具有相同完整建筑与运行状态；2022年运河报告继续暂缓。",
+    "P470的四建筑、三城市关系及所有原数据保持原样，P469与更早图册不因本次共同阅读入口而改写。"
+  ]
+}

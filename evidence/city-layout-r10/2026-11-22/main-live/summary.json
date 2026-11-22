@@ -1,0 +1,41 @@
+{
+  "schema": "luoyang-r10-production-live-evidence-v1",
+  "status": "passed",
+  "production_commit": "a2d1aac203d468ab0584a09f2c9ec0bfc6dd372b",
+  "workflow_run": 45035882296,
+  "verify_live_job": 137253370102,
+  "r10_unique_download_files": 21,
+  "r10_actual_download_count": 42,
+  "screenshot_counts": {
+    "desktop": 17,
+    "mobile": 18
+  },
+  "all_retained_bytes_and_screenshot_hashes_verified": true,
+  "cross_stage_reports": [
+    "../download-cross-stage-ci-http.json",
+    "../download-cross-stage-root-http.json"
+  ],
+  "pdf_pages": 16,
+  "ci_http_status": "passed",
+  "ci_http_checked_files": 888,
+  "artifact_member_count": 564,
+  "artifact_bytes": 171839176,
+  "artifact_sha256": "2cbd65019f4e8ae99d2c65af6a19f3b43afff5b331f96cd8e2d472d0964c9068",
+  "all_workflow_jobs": {
+    "build": {
+      "job_id": 137249422596,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "deploy": {
+      "job_id": 137253268867,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "verify-live": {
+      "job_id": 137253370102,
+      "status": "completed",
+      "conclusion": "success"
+    }
+  }
+}

@@ -1,0 +1,666 @@
+{
+  "schema": "luoyang-r10-production-pdf-comparison-v1",
+  "compared_at_utc": "2026-11-22T15:18:26.427256+00:00",
+  "scope": "Production main-build actually downloaded PDF versus previously visually reviewed actual CI PDF. This report makes no deployment or verify-live status claim.",
+  "production_pdf": {
+    "path": "/tmp/r10-archive-work/incoming/main-build/artifacts/city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.pdf",
+    "bytes": 2292515,
+    "sha256": "6251d946450719247d62ebef36e7770ea49c8fd8df646b4b592e15de110a9810",
+    "source_commit": "a2d1aac203d468ab0584a09f2c9ec0bfc6dd372b",
+    "metadata": {
+      "/Producer": "pypdf",
+      "/Title": "盛时洛阳城市布局图集 R10.1",
+      "/Subject": "来源骨架、十一片区关系图、证据与未定边界；非完整同期实测城市平面",
+      "/Creator": "luoyang-city / CairoSVG and pypdf",
+      "/Keywords": "R10.1; 516-528; source_commit=a2d1aac203d468ab0584a09f2c9ec0bfc6dd372b"
+    },
+    "pages": 16
+  },
+  "reviewed_reference_pdf": {
+    "path": "/tmp/r10-archive-work/incoming/pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.pdf",
+    "bytes": 2292427,
+    "sha256": "347fe46bd1d6687a95892a58ff8ac4dce40c29adb40f5d2c1e49214881215b3b",
+    "source_commit": "4685350548c9e8135c1e543314395bbd6d36b783",
+    "metadata": {
+      "/Producer": "pypdf",
+      "/Title": "盛时洛阳城市布局图集 R10.1",
+      "/Subject": "来源骨架、十一片区关系图、证据与未定边界；非完整同期实测城市平面",
+      "/Creator": "luoyang-city / CairoSVG and pypdf",
+      "/Keywords": "R10.1; 516-528; source_commit=4685350548c9e8135c1e543314395bbd6d36b783"
+    },
+    "pages": 16
+  },
+  "reference_visual_report": {
+    "path": "/tmp/r10-archive-work/incoming/map-qa/pr-failed-45032715660/visual-review.json",
+    "sha256": "29f1c83b8655f304379ce63a91859a7f038c0513cd4c2c7bd033934502bbb0e2"
+  },
+  "render_log": {
+    "path": "/tmp/r10-archive-work/incoming/map-qa/production/render-log.json",
+    "sha256": "9cf6fdac51aabafe4a13e6a9caf5f8da65a2fe33e8bbe1f1a83d1b2f3cf1c35e"
+  },
+  "summary": {
+    "text_exact_equal_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "text_different_pages": [
+      16
+    ],
+    "all_text_equal_after_only_expected_source_commit_replacement": true,
+    "png_bytes_equal_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "pixel_equal_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "pixel_different_pages": [
+      16
+    ],
+    "all_media_boxes_equal": true,
+    "all_annotations_semantically_equal": true,
+    "annotation_total": 687,
+    "external_uri_count": 676,
+    "external_unique_uri_count": 96,
+    "internal_goto_count": 11,
+    "font_summary_equals_reviewed_reference": true
+  },
+  "fonts": {
+    "production": {
+      "font_count": 32,
+      "all_embedded": true,
+      "all_unicode_mapped": true,
+      "base_names": [
+        "CairoFont-0-0",
+        "CairoFont-1-0",
+        "NotoSansCJKsc-Regular"
+      ]
+    },
+    "reviewed_ci_reference": {
+      "font_count": 32,
+      "all_embedded": true,
+      "all_unicode_mapped": true,
+      "base_names": [
+        "CairoFont-0-0",
+        "CairoFont-1-0",
+        "NotoSansCJKsc-Regular"
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page": 1,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-01-text.txt",
+      "text_sha256": "9f541cb280ac14ebe8f10d58e03110244c73fa73f8e1c8cbfb682bf6ebef8feb",
+      "cjk_characters": 491,
+      "annotations": 11,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-01.png",
+      "png_sha256": "d9281cee4b20ce447e9e84ef019791cd518664fc1bd862d265504509ad6652c1",
+      "png_bytes": 302694,
+      "reference_png_sha256": "d9281cee4b20ce447e9e84ef019791cd518664fc1bd862d265504509ad6652c1",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 2,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-02-text.txt",
+      "text_sha256": "646a45b4ab50009492fc349a09538f87e304f57541228ab602f50c5fbc163521",
+      "cjk_characters": 553,
+      "annotations": 29,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-02.png",
+      "png_sha256": "f2f0ea5400b3ea967d3c14cebf88f2bda862101c598e249e744933946e9a046e",
+      "png_bytes": 284549,
+      "reference_png_sha256": "f2f0ea5400b3ea967d3c14cebf88f2bda862101c598e249e744933946e9a046e",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 3,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-03-text.txt",
+      "text_sha256": "af76f137318ddbe4346d578fe4f6c03b85b1c24e8450a332efdef40c4ec9c9a1",
+      "cjk_characters": 399,
+      "annotations": 25,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-03.png",
+      "png_sha256": "96868d65f5087f0064a8aa23294f826eeee3ecea41a80168389cf1e9d646a16c",
+      "png_bytes": 219897,
+      "reference_png_sha256": "96868d65f5087f0064a8aa23294f826eeee3ecea41a80168389cf1e9d646a16c",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 4,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-04-text.txt",
+      "text_sha256": "afe35539359b5beccad5585f003ff809b9d54779196db9d811bb47f450813d12",
+      "cjk_characters": 740,
+      "annotations": 48,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-04.png",
+      "png_sha256": "ba8d78675fe625d06dc587682c39949ae42048bdee240a00f6fc1d87a9fa95ed",
+      "png_bytes": 404460,
+      "reference_png_sha256": "ba8d78675fe625d06dc587682c39949ae42048bdee240a00f6fc1d87a9fa95ed",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 5,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-05-text.txt",
+      "text_sha256": "5907017b37063e52efe0952d61c71b911162327f77c6a1b65afa27aa91a90371",
+      "cjk_characters": 482,
+      "annotations": 47,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-05.png",
+      "png_sha256": "64c875e9aa0948d867b2dfd57023024f1bf85439ce8264a73ec15411ac6b65b7",
+      "png_bytes": 294394,
+      "reference_png_sha256": "64c875e9aa0948d867b2dfd57023024f1bf85439ce8264a73ec15411ac6b65b7",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 6,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-06-text.txt",
+      "text_sha256": "372807e454711f9734b3ddd1dbcd7dc63ebdede346303c83b1f78f3d112985f4",
+      "cjk_characters": 696,
+      "annotations": 50,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-06.png",
+      "png_sha256": "2fee011c59e410ee3eca7c8d771e7c811a21d379c666c6e73c6d46f09ba8b57f",
+      "png_bytes": 369346,
+      "reference_png_sha256": "2fee011c59e410ee3eca7c8d771e7c811a21d379c666c6e73c6d46f09ba8b57f",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 7,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-07-text.txt",
+      "text_sha256": "c43138c54ac9cb9b7c357b5bb18d516f23af35148682355e04754bf20601a5c1",
+      "cjk_characters": 829,
+      "annotations": 57,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-07.png",
+      "png_sha256": "9540e905dbeb1df17ae9c19e2b3fca8feba88b5892d9d70cb8befa7da612b613",
+      "png_bytes": 412929,
+      "reference_png_sha256": "9540e905dbeb1df17ae9c19e2b3fca8feba88b5892d9d70cb8befa7da612b613",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 8,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-08-text.txt",
+      "text_sha256": "8214a3312f8836e29a41f33da7751dbdaf23a7dd51639944e8dc6e6b747d5b7d",
+      "cjk_characters": 777,
+      "annotations": 60,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-08.png",
+      "png_sha256": "60de5af3a8bcfb1f340b1b0c07e84ef3d56b703a14d640307de951b8d67fc496",
+      "png_bytes": 368920,
+      "reference_png_sha256": "60de5af3a8bcfb1f340b1b0c07e84ef3d56b703a14d640307de951b8d67fc496",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 9,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-09-text.txt",
+      "text_sha256": "88b0491a0cc844f3612375b65df80e2e884d245c8059b5aa56964342032ae68c",
+      "cjk_characters": 619,
+      "annotations": 35,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-09.png",
+      "png_sha256": "8c6b4e4ddaba3c23c06b13f7569a9d17abff344a2723b135a974e20f54a809a7",
+      "png_bytes": 307596,
+      "reference_png_sha256": "8c6b4e4ddaba3c23c06b13f7569a9d17abff344a2723b135a974e20f54a809a7",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 10,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-10-text.txt",
+      "text_sha256": "ebf200125256e53eb45b38a7734083e2ecee41d104fc754116690643dc72e5d0",
+      "cjk_characters": 815,
+      "annotations": 69,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-10.png",
+      "png_sha256": "e781710d234dc7ae28f8cd388836f5d1ceafb46d5167d65c79e4d83706bc06c0",
+      "png_bytes": 440018,
+      "reference_png_sha256": "e781710d234dc7ae28f8cd388836f5d1ceafb46d5167d65c79e4d83706bc06c0",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 11,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-11-text.txt",
+      "text_sha256": "09d0b0198baa0bc31eba0bfe599d77cb64ff001192dae696b06c56b17625d054",
+      "cjk_characters": 829,
+      "annotations": 55,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-11.png",
+      "png_sha256": "341606ee1e06e41dd2f0aa6e8e335093e2de3f48090c13dc61df5edd8009acaa",
+      "png_bytes": 399579,
+      "reference_png_sha256": "341606ee1e06e41dd2f0aa6e8e335093e2de3f48090c13dc61df5edd8009acaa",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 12,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-12-text.txt",
+      "text_sha256": "0ebbebc3aa0647658e0b305858ed773877b8a64c04bf8cb21c9ee8e022bcd344",
+      "cjk_characters": 798,
+      "annotations": 59,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-12.png",
+      "png_sha256": "bd26e8a57ece28699a7597357eb7cb414062cb51e3a072ceb47e6dccba935063",
+      "png_bytes": 396212,
+      "reference_png_sha256": "bd26e8a57ece28699a7597357eb7cb414062cb51e3a072ceb47e6dccba935063",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 13,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-13-text.txt",
+      "text_sha256": "49128db377a572e0824f55442809b3be250ea4b5361b850f29c042acd333d736",
+      "cjk_characters": 470,
+      "annotations": 32,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-13.png",
+      "png_sha256": "1665b5e4f717b7a14a0226a9a02e4e79ff6aa02146cf87f2f1926b54b30c626e",
+      "png_bytes": 281864,
+      "reference_png_sha256": "1665b5e4f717b7a14a0226a9a02e4e79ff6aa02146cf87f2f1926b54b30c626e",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 14,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-14-text.txt",
+      "text_sha256": "bf034708bab93ed94c2eada78a3d6e076caafa88ffd886e741e542c0fc1c97e7",
+      "cjk_characters": 713,
+      "annotations": 48,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-14.png",
+      "png_sha256": "d881db92e34325ec78487d07de4be6730b88711596224ea00ece648ed099a7ba",
+      "png_bytes": 376638,
+      "reference_png_sha256": "d881db92e34325ec78487d07de4be6730b88711596224ea00ece648ed099a7ba",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 15,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": true,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-15-text.txt",
+      "text_sha256": "ccd69b856a95af00edf6bcb42b10a2304220203c7cee08a6abd87d09d4e84de0",
+      "cjk_characters": 888,
+      "annotations": 62,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-15.png",
+      "png_sha256": "dd2fc8735fc29abd0b1601c5cf417c97e48219f7c66d53d897cfabacfbdfb30a",
+      "png_bytes": 430397,
+      "reference_png_sha256": "dd2fc8735fc29abd0b1601c5cf417c97e48219f7c66d53d897cfabacfbdfb30a",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": true,
+      "pixel_equal_to_reviewed_reference": true,
+      "pixel_difference_bbox": null,
+      "pixel_mean_absolute_difference_per_channel": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "page": 16,
+      "media_box": [
+        0.0,
+        0.0,
+        1190.55118,
+        841.889764
+      ],
+      "media_box_equals_reviewed_reference": true,
+      "text_exact_equal": false,
+      "text_equal_after_only_expected_source_commit_replacement": true,
+      "text_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-16-text.txt",
+      "text_sha256": "c92318239635fe84b71a2b7993c116e296634c3c0ff5d7339653cfa955206324",
+      "cjk_characters": 620,
+      "annotations": 0,
+      "annotations_exact_semantic_equal": true,
+      "png_path": "/tmp/r10-archive-work/incoming/map-qa/production/page-16.png",
+      "png_sha256": "484ed0b091b73e7432cfe5ac789afab980877c8d3cc6d04963141881bcc97bcd",
+      "png_bytes": 345979,
+      "reference_png_sha256": "c234903e13b4065bacb5de946d422b3bc723ab5d92bcc6319aae18f1506044e6",
+      "png_size": [
+        1680,
+        1189
+      ],
+      "png_bytes_equal_to_reviewed_reference": false,
+      "pixel_equal_to_reviewed_reference": false,
+      "pixel_difference_bbox": [
+        127,
+        1110,
+        508,
+        1125
+      ],
+      "pixel_mean_absolute_difference_per_channel": [
+        0.13146852096599784,
+        0.12097701149425287,
+        0.11928391205094317
+      ],
+      "text_diff_file": "page-16-text.diff"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "luoyang-r10-failed-pr-evidence-v1",
+  "workflow_run": 45032715660,
+  "workflow_status": "completed",
+  "workflow_conclusion": "failure",
+  "head_sha": "46c910e4193b84d18cb2f1da1d487e337ff465c9",
+  "job_conclusions": {
+    "build": "failure",
+    "deploy": "skipped",
+    "verify-live": "skipped"
+  },
+  "failed_step": "Exercise current and all earlier map interactions",
+  "browser_status": "failed",
+  "browser_error": "Timeout 30000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================",
+  "completed_r10_downloads": [
+    "city-layout-r10/overview.svg",
+    "downloads/city-layout-r10.pdf",
+    "city-layout-r10/regions/R01.svg",
+    "city-layout-r10/regions/R02.svg",
+    "city-layout-r10/regions/R03.svg",
+    "city-layout-r10/regions/R04.svg",
+    "city-layout-r10/regions/R05.svg",
+    "city-layout-r10/regions/R06.svg",
+    "city-layout-r10/regions/R07.svg",
+    "city-layout-r10/regions/R08.svg"
+  ],
+  "completed_r10_download_count": 10,
+  "r10_next_download_from_known_manifest": "city-layout-r10/regions/R09.svg",
+  "r10_completed_checks": [
+    "All twelve inline figures, 339 original objects and 118 original road/water records load from the released commit",
+    "All region and basis filters match original record IDs and counters; combined query restores from URL, empty results and reset work",
+    "All twelve maps support zoom, four-direction buttons, keyboard panning and exact reset; each has an actual viewport screenshot",
+    "Each regional decision, object, road/water row, gap and region anchor overrides conflicting filters and reveals collapsed evidence; map links work by keyboard"
+  ],
+  "failure_report": "artifacts/city-layout-r10-browser/desktop-report.json",
+  "failure_screenshot": "artifacts/city-layout-r10-browser/desktop-failure.png",
+  "interpretation": "Ten real downloads succeeded before the next download-event timeout. The archive does not infer the cause or waive this failed acceptance gate. Implementation diagnosis and subsequent repaired-run evidence are separate."
+}

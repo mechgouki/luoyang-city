@@ -1,0 +1,112 @@
+Check current summaries
+  python tools/current_state.py --check
+Current state: summaries match
+Assemble unchanged baseline PDF
+  python tools/assemble_pdf.py
+OK: restored luoyang-v24-regional-atlas.pdf (8612460 bytes), SHA-256 verified
+Preserved research, terrain and B1—B8
+  python tools/build_site.py
+OK: 52 published files, 13,893,662 bytes; PDF hash and local links verified
+Excluded: Git metadata, research sources, PDF fragments, scripts and tests
+  python tools/research_v25.py
+R07 v2.5: 18 evidence records; 3 diagrams; 30 status records; baseline hashes unchanged
+  python tools/milestone_v26.py
+v2.6 BUILD {'relations': 482, 'atoms': 69, 'cases': 16, 'candidates': 13} baseline hashes unchanged; numerical ranges remain unbounded
+  python tools/link_model_points_v26.py
+v2.6 candidate point links: 13 generated SVGs, 21 object targets each; no old-map input
+  python tools/network_v27.py
+v2.7 BUILD {'passages': 20, 'nodes': 48, 'edges': 42, 'queries': 10, 'scenarios': 48, 'events': 10, 'event_coverage': {'scoped_events_sampled': 5, 'event_series_not_reviewed': 309, 'passages_reviewed_no_dated_event_added': 25}} previous public assets unchanged except index.html
+  python tools/portal_v28.py
+v2.8: 35 original marker groups with research coverage; immutable geometry and source data verified; versioned entrypoint and dependencies emitted.
+  python tools/chronology_v29.py
+v2.9: {'dossiers': 12, 'records': 25, 'anchors': 11, 'entity_ledger': 339, 'unreviewed_in_this_batch': 327} ; previous data, baseline geometry and v2.8 archive unchanged
+  python tools/terrain_v30.py
+{"version": "v3.0-alpha.1", "grid": [1695, 1860], "elevation": {"min": 98.82994079589844, "max": 934.9072875976562, "median": 171.3938751220703, "p05": 112.30571746826172, "p95": 401.30609130859375}, "contours": 509, "old_data_unchanged": true}
+  python tools/dual_release.py
+Dual B1+B2: {'b1_decisions': 14, 'b2_evidence': 16, 'regions': 4, 'changed_groups': 15, 'new_ancient_coordinates': 0} preserved files 154
+  python tools/west_b3.py
+Built west B3, 16 evidence records, new region L05, preserved published B1 and palace B2
+  python tools/historical_frame_b4.py
+NI49-7 8 fit / 5 internal holdout: RMS 84.9 printed-grid m; 2.34 scan px; no ground accuracy claim
+NI49-8 8 fit / 5 internal holdout: RMS 83.6 printed-grid m; 2.31 scan px; no ground accuracy claim
+  python tools/north_b4.py
+Built B4: 16 evidence records, L06, 4 type groups, 6-page atlas; prior files preserved: 248
+  python tools/historical_datum_b5.py
+B5 datum investigation: 2 reviewed scans, 14 reproducible crops, 2 source plates; original datum unresolved; 0 approved ground points.
+  python tools/west_roads_b5.py
+Built B5: 24 evidence, 11 type groups, L07, six-page atlas; protected 288
+  python tools/ground_review_b6.py
+B6 ground review: 2 named region/line records, 7 raw L500 crops, 4 fixed L531 crops, 2 plates; 0 approved ground points.
+  python tools/southeast_b6.py
+Built B6: 34 evidence, 20 type groups, L08+L09, eight-page atlas; protected 324
+  python tools/source_continuity_b7.py
+B7 source continuity: 3 catalog records, 1 period candidate, 2 earlier editions, 2 plates; 0 actual-source matches or ground points.
+  python tools/luonan_b7.py
+Built B7: 25 evidence, 7 reading groups, L10, eight-page atlas; protected 352
+  python tools/city_review_b8.py
+Built B8: 339 structural rows, 14 review cases, 179 retained targets, eight-page atlas; 370 prior resources protected
+  python tools/homepage_v1.py
+H1: panoramic homepage, 3 evidence routes, research after the map; 398 research assets preserved.
+Prosperity documentary maps and source-geographic layout
+  python tools/prosperity_v1.py
+Prosperity: {"version": "prosperity-v1", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "entities": 339, "source_geometries": 30, "located_entities": 11, "evidence_records": 183, "source_crs": "EPSG:4610", "terrain_constraints": 5, "building_dimension_items": 8, "wgs84_registration_completed": false, "ancient_ground_surface_reconstructed": false, "full_city_reconstruction_completed": false, "atlas_pages": 6, "protected_files": 404, "metadata": "prosperity/data.json"}
+  python tools/prosperity_core_v2.py
+{"version": "prosperity-core-v2", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "metric_templates": 3, "local_relation_scenes": 3, "local_components": 27, "local_relations": 30, "atlas_pages": 7, "source_crs": "EPSG:4610", "new_ancient_absolute_coordinates": 0, "historical_heights_reconstructed": false, "roofs_reconstructed": false, "ancient_ground_surface_reconstructed": false, "court_template_placed_in_city": false, "protected_files": 422, "metadata": "prosperity-core/data.json"}
+  python tools/prosperity_gate_v3.py
+{"version": "prosperity-gate-v3", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "components": 10, "atlas_pages": 3, "source_raster_sha256": "8f3b722fc60cdf29ec04553022185d3c5b073ba7454be9430c97197a8da24cc7", "comparison_version": "source-pixel-side-by-side-v1", "axis_evidence_version": "palace-axis-p4-initial", "registration_verified": false, "new_ancient_absolute_coordinates": 0, "historical_heights_reconstructed": false, "roofs_reconstructed": false, "ancient_ground_surface_reconstructed": false, "protected_files": 444, "metadata": "prosperity-gate/data.json"}
+  python tools/prosperity_axis_v4.py
+{"version": "prosperity-axis-p4-metric-review", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "figure_count": 3, "source_count": 6, "atlas_pages": 3, "unresolved_registration": true, "absolute_points_added": 0, "metadata": "prosperity-axis/data.json"}
+  python tools/prosperity_axis_sources_p41.py
+{"version": "prosperity-axis-p41-source-audit", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "source_count": 9, "figures": 2, "conflict_variants": [200, 300], "identity_merged_count": 1, "registration_verified": false, "new_ancient_coordinates": 0, "metadata": "prosperity-axis-sources/audit.json"}
+  python tools/prosperity_taiji_courts_p42.py
+{"version": "prosperity-taiji-courts-p42", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "sources": 6, "diagrams": 3, "atlas_pages": 3, "registered_absolute_locations_added": 0, "verified_geographic_controls": 0, "metadata": "prosperity-taiji-courts/data.json"}
+  python tools/prosperity_palace_boundaries_p43.py
+{"version": "prosperity-palace-boundaries-p43", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "source_reports": 6, "scope_variants": 3, "registered_absolute_locations_added": 0, "verified_geographic_controls": 0, "metadata": "prosperity-palace-boundaries/data.json", "atlas_pages": 1}
+  python tools/prosperity_architecture_p44.py
+{"version": "prosperity-architecture-p44", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "types": 6, "source_count": 4, "plates": 3, "atlas_pages": 3, "new_absolute_ancient_coordinates": 0, "common_geographic_controls": 0, "metadata": "prosperity-architecture/data.json"}
+Preserved approved homepage and P4 city studies
+  python tools/homepage_approved_v9.py
+H2: approved panorama 742,398B desktop + 274,354B mobile; preserved 524 historical/research files; legacy v8 archived.
+  python tools/prosperity_city_distribution_p451.py
+{"version": "prosperity-city-distribution-p451", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "source_feature_count": 30, "source_entity_bound_feature_count": 13, "anchored_building_count": 4, "unlocated_gate_type_count": 4, "atlas_pages": 3, "new_absolute_ancient_coordinates": 0, "measured_roof_heights_added": 0, "source_map_sha256": "3e8706abbc0fe44c28e3d41e7039363f32d16f29943001cf12cc7546ede47c47", "metadata": "prosperity-city-distribution/data.json"}
+  python tools/prosperity_road_functions_p452.py
+{"version": "prosperity-road-functions-p452", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "source_feature_count": 30, "road_feature_count": 8, "documentary_context_count": 5, "function_groups": 5, "atlas_pages": 3, "source_map_sha256": "3e8706abbc0fe44c28e3d41e7039363f32d16f29943001cf12cc7546ede47c47", "new_ancient_coordinates": 0, "measured_historical_road_connections": 0, "historical_traffic_density_estimated": false, "metadata": "prosperity-road-functions/data.json"}
+  python tools/prosperity_street_clusters_p453.py
+{"version": "prosperity-street-clusters-p453", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "cluster_count": 3, "documentary_entities": 20, "direct_relations": 16, "conditional_relations": 1, "source_map_sha256": "5e626f70d28bde7217f2cdb5184657ea0533c5f9514d1355f4368cc1247b200e", "atlas_pages": 4, "ancient_geographic_coordinates_added": 0, "estimated_population_density": false, "metadata": "prosperity-street-clusters/data.json"}
+  python tools/prosperity_hydro_roads_p46.py
+{"version": "prosperity-hydro-roads-anchor-p46", "source_commit": "1a988bc51adc74288ec8a8aa682499444007a33c", "water_feature_records": 34, "road_source_records": 21, "registered_historical_water_polygons": 0, "registered_historical_complete_road_lines": 0, "modern_luo_source_reference_lines": 1, "existing_inner_road_features_preserved": 8, "outer_major_road_reports_pending_registration": 9, "independent_ancient_common_controls_added": 0, "atlas_pages": 4, "metadata": "prosperity-hydro-roads/data.json"}
+R4 city atlas
+  node --check research/prosperity-r4/atlas.js
+  python tools/prosperity_city_atlas_r4.py
+{'entities': 339, 'levels': {'source': 11, 'relative': 315, 'unlocated': 12, 'candidate': 1}, 'periods': {'attested': 29, 'later': 7, 'undated': 47, 'unspecified': 252, 'conditional': 2, 'name': 2}, 'features': 30, 'direct_bindings': 13, 'records': 183, 'literal_targets': 236, 'manual_context_reviews': 11, 'cases': 14, 'water_records': 34, 'water_relations': 100, 'road_records': 21}
+R5 panorama and approved current homepage
+  node --check research/prosperity-r5/panorama.js
+  python tools/prosperity_city_panorama_r5.py
+prosperity-city-panorama-r5.3 28 4
+R6.1 source road atlas
+  python tools/road_location_atlas.py
+{'source_records': 21, 'inner': 8, 'outer': 11, 'excavation': 2, 'supplements': 3, 'original_source_traces': 8, 'later_plan_traces': 5, 'endpoint_pairs': 6}
+R6.2 complete road evidence atlas
+  node --check research/roads-r62/atlas.js
+  python tools/all_road_atlas_r62.py
+{'records': 84, 'groups': {'legacy': 21, 'documentary': 26, 'palace': 11, 'ward': 7, 'gate': 14, 'bridge': 5}, 'coverage': 339, 'exclusions': 13}
+R7 city nodes, joined evidence and approved homepage guide
+  node --check research/city-nodes-r7/atlas.js
+  python tools/city_nodes_r7.py
+{"nodes": 4, "findings": 32, "relations": 32, "segments": 28, "waters": 9, "entities_indexed": 339, "roads_indexed": 84, "waters_indexed": 34}
+R8.1 evidence-led panorama candidate review
+  node --check web/panorama-v13.js
+  python tools/panorama_v13.py
+{"version": "panorama-review-v13", "status": "candidate_for_review", "change_count": 7, "homepage_revision": "panorama-approved-v12", "homepage_replacement_approved": false}
+R9.1 city spatial overview and auditable map decisions
+  node --check web/city-spatial-r9.js
+  python tools/city_spatial_r9.py
+{"nodes": 4, "decisions": 20, "source_features": 28, "existing_findings_reused": 31, "sources": 24, "source_sima_atomic_lines": 6}
+R9.1 V13 revised candidate and spatial evidence guide
+  node --check web/panorama-v13-r2.js
+  python tools/panorama_v13_r2.py
+{"version": "panorama-review-v13-r2", "status": "candidate_for_review", "change_count": 7, "homepage_revision": "panorama-approved-v12", "homepage_replacement_approved": false}
+R10.1 whole-city plan and eleven regional layouts
+  node --check web/city-layout-r10.js
+  python tools/city_layout_r10.py
+{"regions": 11, "panels": 42, "diagram_nodes": 267, "diagram_relations": 210, "decisions": 83, "gaps": 28, "city_scale_gaps": 6, "entities": 339, "coverage": 339, "location_levels": {"source": 11, "relative": 315, "unlocated": 12, "candidate": 1}, "representations": {"关系节点": 196, "分区名录": 46, "待分区名录": 97}, "source_features": 28, "road_records": 84, "water_records": 34, "network_records": 118, "source_files": 22, "source_pointers": 246}

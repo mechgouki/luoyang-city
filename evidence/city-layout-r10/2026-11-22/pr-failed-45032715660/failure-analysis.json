@@ -1,0 +1,327 @@
+{
+  "schema": "luoyang-r10-ci-download-failure-analysis-v1",
+  "created_at_utc": "2026-11-22T14:55:56.074412+00:00",
+  "author_role": "independent R10 validation agent",
+  "purpose": "Preserve the first failed CI observations, primary-source diagnosis and the bounded pacing correction separately from the immutable failure evidence.",
+  "source_modifications_in_this_reporting_task": [],
+  "failed_run": {
+    "repository": "mechgouki/luoyang-city",
+    "pull_request": 81,
+    "workflow_run": 45032715660,
+    "build_job": 137239697304,
+    "url": "https://github.com/mechgouki/luoyang-city/actions/runs/45032715660",
+    "job_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45032715660/job/137239697304",
+    "pr_head_sha": "46c910e4193b84d18cb2f1da1d487e337ff465c9",
+    "tested_merge_source_commit": "4685350548c9e8135c1e543314395bbd6d36b783",
+    "outcome": "failed",
+    "failed_device": "desktop"
+  },
+  "observations": {
+    "failure_location_at_that_commit": "tests/browser_city_layout_r10.py:243, page.expect_download()",
+    "error": "Timeout 30000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================",
+    "failure_log_timestamp_utc": "2026-11-22T14:31:03.4715505Z",
+    "completed_download_count": 10,
+    "completed_downloads": [
+      {
+        "sequence": 1,
+        "path": "city-layout-r10/overview.svg",
+        "sha256": "43b83126cb35624fe2d3f6919ddbf3e8a66729ad33b30416cd3cdf00b60a625e",
+        "bytes": 226268,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/city-layout-r10/overview.svg",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/overview.svg"
+      },
+      {
+        "sequence": 2,
+        "path": "downloads/city-layout-r10.pdf",
+        "sha256": "347fe46bd1d6687a95892a58ff8ac4dce40c29adb40f5d2c1e49214881215b3b",
+        "bytes": 2292427,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.pdf",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.pdf"
+      },
+      {
+        "sequence": 3,
+        "path": "city-layout-r10/regions/R01.svg",
+        "sha256": "578db14263fe7b93fbb39690f606325ada8c561001788ff41a7d6dc19fc25652",
+        "bytes": 39963,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R01.svg",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R01.svg"
+      },
+      {
+        "sequence": 4,
+        "path": "city-layout-r10/regions/R02.svg",
+        "sha256": "1016488050bc5e47f40f358753247a9a3bf6e92d7829735ee76b3a49597dddeb",
+        "bytes": 106140,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R02.svg",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R02.svg"
+      },
+      {
+        "sequence": 5,
+        "path": "city-layout-r10/regions/R03.svg",
+        "sha256": "848e88b8c083fb4e2de137b147b49beee71717a7bc5586d8d6e0a8cb9099a8fc",
+        "bytes": 133657,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R03.svg",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R03.svg"
+      },
+      {
+        "sequence": 6,
+        "path": "city-layout-r10/regions/R04.svg",
+        "sha256": "9945e42e8a0a6b743bb2f595c520da149c7480e55c0a9d5cf72829c5c209411a",
+        "bytes": 80972,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R04.svg",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R04.svg"
+      },
+      {
+        "sequence": 7,
+        "path": "city-layout-r10/regions/R05.svg",
+        "sha256": "a9b721167d3d14cd8c9bca316b0b6b9cb4e33d21d2abab95c9368212c1dde43a",
+        "bytes": 80935,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R05.svg",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R05.svg"
+      },
+      {
+        "sequence": 8,
+        "path": "city-layout-r10/regions/R06.svg",
+        "sha256": "432003c80257222d7814ec24903aca7e6704e21a6bc6406b6dad05e9fad07a2e",
+        "bytes": 46456,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R06.svg",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R06.svg"
+      },
+      {
+        "sequence": 9,
+        "path": "city-layout-r10/regions/R07.svg",
+        "sha256": "b539e5f8e2dbd1b85790d2b3930114497363e93df40290539a66541d8227694d",
+        "bytes": 92613,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R07.svg",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R07.svg"
+      },
+      {
+        "sequence": 10,
+        "path": "city-layout-r10/regions/R08.svg",
+        "sha256": "169d7ed3d08ac673efcc8b8613bf359fbc67ae01e82ae3899efad4be8186046c",
+        "bytes": 77353,
+        "zip_member": "city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R08.svg",
+        "zip_directory_timestamp": "2026-11-22T14:30:32",
+        "retained_path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R08.svg"
+      }
+    ],
+    "next_attempt_sequence": 11,
+    "next_attempt_path": "city-layout-r10/regions/R09.svg",
+    "next_attempt_identification": "Derived from the ordered download loop and the 10 completed entries; the retained failure screenshot shows the pointer/hover on the R09 download card.",
+    "page_url_after_failure": "http://127.0.0.1:37095/luoyang-city/luoyang-city-layout.html?region=R03#region-R03",
+    "page_errors": [],
+    "page_navigation_observed": false,
+    "completed_checks_before_failure": [
+      "All twelve inline figures, 339 original objects and 118 original road/water records load from the released commit",
+      "All region and basis filters match original record IDs and counters; combined query restores from URL, empty results and reset work",
+      "All twelve maps support zoom, four-direction buttons, keyboard panning and exact reset; each has an actual viewport screenshot",
+      "Each regional decision, object, road/water row, gap and region anchor overrides conflicting filters and reveals collapsed evidence; map links work by keyboard"
+    ],
+    "pdf_pages_already_verified": 16,
+    "timestamp_precision": "All 10 ZIP central-directory timestamps are 2026-11-22T14:30:32. ZIP/DOS timestamps have two-second resolution and no embedded timezone; they are consistent with the UTC CI timeline but do not independently prove a subsecond burst.",
+    "initial_report_has_click_timestamps": false
+  },
+  "primary_source": {
+    "publisher": "Chromium project, official Gitiles source repository",
+    "source_file": "third_party/blink/renderer/core/frame/local_frame.cc",
+    "source_revision": "ee621b77ed9b5a0193450dbab3b2476b85951f90",
+    "url": "https://chromium.googlesource.com/chromium/src/+/ee621b77ed9b5a0193450dbab3b2476b85951f90/third_party/blink/renderer/core/frame/local_frame.cc",
+    "retrieved_during_initial_failure_analysis": true,
+    "locators": [
+      {
+        "symbol": "kBurstDownloadLimit",
+        "short_excerpt": "const int kBurstDownloadLimit = 10;",
+        "meaning": "Maximum number of burst download requests."
+      },
+      {
+        "symbol": "LocalFrame::DownloadURL",
+        "short_excerpt": "if (ShouldThrottleDownload()) return;",
+        "meaning": "A throttled request exits before starting the download; it is not queued for a later download event."
+      },
+      {
+        "symbol": "LocalFrame::ShouldThrottleDownload",
+        "short_excerpt": "static constexpr auto kBurstDownloadLimitResetInterval = base::Seconds(1);",
+        "meaning": "After the request count reaches the burst limit, requests within the interval are rejected. A later request after the interval restarts the count."
+      }
+    ],
+    "version_scope": "This immutable official source revision was inspected for the mechanism. It is not represented as a separately verified source match to every byte of the CI browser binary."
+  },
+  "diagnosis": {
+    "assessment": "The exact 10-download cutoff, unaltered page, absence of page errors, official Blink burst limiter and subsequent successful paced run support a download-burst limit triggered by the original automation cadence.",
+    "evidence_class": "source-supported inference, followed by successful component verification",
+    "direct_internal_throttle_trace_available": false,
+    "reason_for_no_timeout_increase": "The inspected limiter drops the request instead of delaying it; waiting longer would not start that omitted download."
+  },
+  "minimal_correction": {
+    "file": "tests/browser_city_layout_r10.py",
+    "file_sha256_after_correction": "2ecd9a961095a9b3803e3ae1a61d8e8181f44fc81d456a83b6f4b30ce1ed1e21",
+    "behavioral_change": "Each existing real Playwright link click uses delay=150 milliseconds between mouse down and mouse up.",
+    "cadence_reasoning": "Sequential clicks each occupy at least 150 ms, so the first-to-tenth release interval is at least 9 * 150 ms = 1.35 seconds, beyond the inspected one-second burst window.",
+    "diagnostics_added": [
+      "attempt_path",
+      "per-attempt path and URL",
+      "start offset and duration",
+      "click_delay_ms",
+      "status and failure detail",
+      "bytes and SHA-256",
+      "suggested filename"
+    ],
+    "download_event_timeout_ms": 30000,
+    "required_devices": [
+      "desktop",
+      "mobile"
+    ],
+    "required_downloads_per_device": 21,
+    "hash_checks_retained": true,
+    "actual_download_byte_retention_retained": true,
+    "pdf_zip_offline_nojs_checks_retained": true,
+    "website_changes": false,
+    "browser_safety_policy_changes": false,
+    "automatic_retries_added": false,
+    "api_download_substitution_added": false
+  },
+  "subsequent_component_verification": {
+    "workflow_run": 45033555972,
+    "url": "https://github.com/mechgouki/luoyang-city/actions/runs/45033555972",
+    "component_evidence": {
+      "path": "pr-failed-45033555972/r10-component-verification.json",
+      "bytes": 2760,
+      "sha256": "e90acb4cb54d95f818f0103357151e651d89723250fa4dea9b06a2577e8480e6"
+    },
+    "r10_browser_component": "passed",
+    "actual_download_count": 42,
+    "all_retained_bytes_and_screenshot_hashes_verified_by_archive_agent": true,
+    "desktop_mobile_all_21_hashes_equal": true,
+    "reports": [
+      {
+        "device": "desktop",
+        "evidence": {
+          "path": "pr-failed-45033555972/artifacts/city-layout-r10-browser/desktop-report.json",
+          "bytes": 25371,
+          "sha256": "c73b4e6594d116ad5f6ba5b88e6b7d6f5a49168066250c371d09ddf3be36b9aa"
+        },
+        "status": "passed",
+        "source_commit": "a2d9f78678aa4895f4a6e9f1146abaaaae68c9f0",
+        "download_count": 21,
+        "retained_download_count": 21,
+        "attempt_count": 21,
+        "all_attempts_passed": true,
+        "click_delay_ms_values": [
+          150
+        ],
+        "eleventh_download": {
+          "path": "city-layout-r10/regions/R09.svg",
+          "url": "city-layout-r10/regions/R09.svg",
+          "status": "passed",
+          "started_seconds": 2.753,
+          "click_delay_ms": 150,
+          "duration_seconds": 0.222,
+          "sha256": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+          "bytes": 81037,
+          "suggested_filename": "R09.svg"
+        },
+        "last_download": {
+          "path": "downloads/city-layout-r10.zip",
+          "url": "downloads/city-layout-r10.zip",
+          "status": "passed",
+          "started_seconds": 5.117,
+          "click_delay_ms": 150,
+          "duration_seconds": 0.236,
+          "sha256": "e2c86cda65cc23603c58e503e12a678b1a57742a02a52ef72d3ab6afe8136579",
+          "bytes": 3549329,
+          "suggested_filename": "city-layout-r10.zip"
+        },
+        "pdf_pages": 16,
+        "screenshot_count": 17,
+        "page_errors": [],
+        "completed_checks": [
+          "All twelve inline figures, 339 original objects and 118 original road/water records load from the released commit",
+          "All region and basis filters match original record IDs and counters; combined query restores from URL, empty results and reset work",
+          "All twelve maps support zoom, four-direction buttons, keyboard panning and exact reset; each has an actual viewport screenshot",
+          "Each regional decision, object, road/water row, gap and region anchor overrides conflicting filters and reveals collapsed evidence; map links work by keyboard",
+          "All 21 real browser downloads match released hashes, the PDF has 16 readable pages matching the SVG continuations, and the complete ZIP works with network disabled and state restored",
+          "With JavaScript disabled all maps, original records and source excerpts remain readable through native links and disclosure controls"
+        ]
+      },
+      {
+        "device": "mobile",
+        "evidence": {
+          "path": "pr-failed-45033555972/artifacts/city-layout-r10-browser/mobile-report.json",
+          "bytes": 25408,
+          "sha256": "a4132f6fcd9d2ab64476767bbd981d813035814b576bb17139afadd4916aba0d"
+        },
+        "status": "passed",
+        "source_commit": "a2d9f78678aa4895f4a6e9f1146abaaaae68c9f0",
+        "download_count": 21,
+        "retained_download_count": 21,
+        "attempt_count": 21,
+        "all_attempts_passed": true,
+        "click_delay_ms_values": [
+          150
+        ],
+        "eleventh_download": {
+          "path": "city-layout-r10/regions/R09.svg",
+          "url": "city-layout-r10/regions/R09.svg",
+          "status": "passed",
+          "started_seconds": 2.78,
+          "click_delay_ms": 150,
+          "duration_seconds": 0.221,
+          "sha256": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+          "bytes": 81037,
+          "suggested_filename": "R09.svg"
+        },
+        "last_download": {
+          "path": "downloads/city-layout-r10.zip",
+          "url": "downloads/city-layout-r10.zip",
+          "status": "passed",
+          "started_seconds": 5.128,
+          "click_delay_ms": 150,
+          "duration_seconds": 0.233,
+          "sha256": "e2c86cda65cc23603c58e503e12a678b1a57742a02a52ef72d3ab6afe8136579",
+          "bytes": 3549329,
+          "suggested_filename": "city-layout-r10.zip"
+        },
+        "pdf_pages": 16,
+        "screenshot_count": 18,
+        "page_errors": [],
+        "completed_checks": [
+          "All twelve inline figures, 339 original objects and 118 original road/water records load from the released commit",
+          "All region and basis filters match original record IDs and counters; combined query restores from URL, empty results and reset work",
+          "All twelve maps support zoom, four-direction buttons, keyboard panning and exact reset; each has an actual viewport screenshot",
+          "Each regional decision, object, road/water row, gap and region anchor overrides conflicting filters and reveals collapsed evidence; map links work by keyboard",
+          "All 21 real browser downloads match released hashes, the PDF has 16 readable pages matching the SVG continuations, and the complete ZIP works with network disabled and state restored",
+          "With JavaScript disabled all maps, original records and source excerpts remain readable through native links and disclosure controls"
+        ]
+      }
+    ],
+    "whole_workflow_status": "failed-step-timeout",
+    "acceptance_scope": "The R10 component passed; the full workflow timed out later during the B7 legacy script, so this is not acceptance of the full release.",
+    "not_a_final_pr_or_release_success_claim": true
+  },
+  "immutable_evidence_references": [
+    {
+      "path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/desktop-report.json",
+      "bytes": 13092,
+      "sha256": "cad695ffd772150825f7ad19ee5792b4d91d6b43c7b415e27cdaf2a4be7a474e"
+    },
+    {
+      "path": "pr-failed-45032715660/build-job-137239697304.log",
+      "bytes": 166913,
+      "sha256": "a094d6d1713836d663cf56bb7027c1ba93e0ca502d3e6609a56a486e28993d68"
+    },
+    {
+      "path": "pr-failed-45032715660/artifacts/city-layout-r10-browser/desktop-failure.png",
+      "bytes": 203621,
+      "sha256": "c12f0785f25288641b4403162a973e24fadc95e1f49629d68388a9ccde60cd67"
+    }
+  ],
+  "original_failed_evidence_modified": false
+}

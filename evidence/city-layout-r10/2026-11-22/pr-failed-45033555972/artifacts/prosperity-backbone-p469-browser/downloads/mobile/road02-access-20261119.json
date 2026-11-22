@@ -1,0 +1,147 @@
+{
+  "schema": "luoyang-source-access-v1",
+  "task": "路-02：承明门外道路、邙山北路及两路合流",
+  "checked_at_beijing": "2026-11-19 19:40",
+  "scope": "2022年运河发掘报告按用户指示跳过；本次仅补查1993原报告和完整地形图的新公开/正式转载路径。未重复执行此前知网、维普和国家哲社中心的失败全文请求。",
+  "target": {
+    "article": "中国社会科学院考古研究所洛阳汉魏城工作队《北魏洛阳外廓城和水道的勘查》",
+    "edition": "《考古》1993年第7期，第602—608页",
+    "figure": "《汉魏洛阳城遗址及地形图》完整图及图例",
+    "article_read": false,
+    "complete_original_figure_read": false,
+    "new_measurement_count": 0
+  },
+  "unresolved": [
+    {
+      "id": "chengming-west-last-survey-point",
+      "question": "承明门以西最后一个实测点",
+      "status": "未取得可核原图或原刊点位叙述"
+    },
+    {
+      "id": "mangshan-north-road-end",
+      "question": "邙山北路实测终点",
+      "status": "未取得可核原图或原刊点位叙述"
+    },
+    {
+      "id": "road-junction",
+      "question": "两路合流的位置与实测证据",
+      "status": "未证，不连接成已测道路"
+    },
+    {
+      "id": "survey-inference-legend",
+      "question": "完整图例如何区分实测道路、推定道路或其他线型",
+      "status": "原图未读，不从后出简图反推"
+    }
+  ],
+  "access_records": [
+    {
+      "id": "dai2019",
+      "title": "Patrick Wertmann, Silk Road Fashion, China. The City and a Gate, the Pass and a Road",
+      "edition": "e-Forschungsberichte des DAI, 2019, Faszikel 1, pp. 19—37",
+      "landing_url": "https://publications.dainst.org/journals/efb/article/view/2178",
+      "fulltext_url": "https://publications.dainst.org/journals/efb/article/download/2178/6591",
+      "result": "官方单篇PDF可读且成功下载，20个数字页；整期PDF被检索工具以22,101,666字节过大拒收，PDF浏览器view路径两次超时；转直接公开download路径成功。",
+      "pages_checked": "印本23—26页/数字6—9页汉魏洛阳段；印本36页/数字19页参考文献。数字8、9页已本地渲染目视复核。",
+      "target_contribution": "仅引用1993报告，未复刊完整原地形图。道路段落讨论铜驼街和西阳门内大道，不能解决路-02四个目标。",
+      "source_level": "正式机构研究报告；对1993报告为后出转述",
+      "file": "dai-2019-article.pdf",
+      "sha256": "081191269749a4f4afac05c75c101fc83d86b3f2e5a714ffb01525a67230e26e",
+      "bytes": 8209706,
+      "followup_locator": "钱国祥、刘涛、郭晓涛《汉魏故都 丝路起点——汉魏洛阳故城遗址的考古勘察收获》，《洛阳考古》2014(2):20—29；本轮未读该原刊。"
+    },
+    {
+      "id": "shevchenko2021",
+      "title": "M. Y. Shevchenko, The Phenomenon of Semblance of Structure in Traditional Chinese Architecture",
+      "edition": "Academia. Architecture and Construction, 2021(4), pp. 39—48; DOI 10.22337/2077-9038-2021-4-39-48",
+      "url": "https://aac.raasn.ru/index.php/aac/article/download/345/276/649",
+      "final_url": "https://aac.raasn.ru/index.php/aac/ru/article/download/345/276/649",
+      "result": "正式期刊PDF下载成功，10个数字页；本地全文检索、印本42页/数字4页渲染目视复核。",
+      "target_contribution": "1993报告作为参考文献9引用；相关正文讨论宫门布局，没有目标原地形图或北部道路实测终点。不能当作原图转载。",
+      "file": "shevchenko-2021.pdf",
+      "sha256": "9070e1e1ef836f3e0ea1298382290661ed82931ea3f607f1d44b86024a8fe3b4",
+      "bytes": 811222
+    },
+    {
+      "id": "xie2009-2007-locator",
+      "title": "谢美婧《北魏洛阳城的营建》",
+      "edition": "东北师范大学硕士学位论文，2009",
+      "url": "https://ygx.sxu.edu.cn/db/%E5%AD%A6%E4%BD%8D/Y1465886.pdf",
+      "result": "检索可读段落将外郭城界定依据定位为《汉魏洛阳城遗址研究》（科学出版社2007）第621页。本轮直接下载403，PDF定位检索超时；未核该书原页。",
+      "target_contribution": "新增二手页码线索，不能标为已取得1993原刊或已核2007重印。该论文1973平面图已经项目使用，不重复列为新原图。",
+      "locator_only": true
+    },
+    {
+      "id": "sanmin2007",
+      "title": "《汉魏洛阳城遗址研究》2007版书目",
+      "url": "https://www.sanmin.com.tw/product/index/000543258",
+      "result": "书目和节略目录可读，杜金鹏、钱国祥，ISBN9787030184443，2007。未提供第621页或完整目标附图。",
+      "target_contribution": "仅核版本身份；不能核重印页码或图例。",
+      "locator_only": true
+    },
+    {
+      "id": "wu2016",
+      "title": "吴梦蕾《北魏洛阳城里坊数探析》",
+      "url": "https://www.academia.edu/26735011/吴梦蕾_北魏洛阳城里坊数探析",
+      "result": "公开文本可读，显示研究生课程论文及导师修改意见。图源末注明2000《汉魏洛阳故城研究》图一；没有取得可核图面。",
+      "target_contribution": "只能作为2000年版候选图源线索，不能用论文计算值替代实测，也不能称正式原图重刊已核。",
+      "locator_only": true
+    },
+    {
+      "id": "cinii2000",
+      "title": "《汉魏洛阳故城研究》CiNii书目",
+      "url": "https://ci.nii.ac.jp/ncid/BA50260641",
+      "result": "机构馆藏书目可读：洛阳市文物局、洛阳白马寺汉魏故城文物保管所编，科学出版社2000.9。未出现可读电子全文。",
+      "target_contribution": "只核版本存在，不核目标图或页码。",
+      "locator_only": true
+    },
+    {
+      "id": "cssn-xu2019",
+      "title": "徐龙国《汉魏两晋南北朝都城模式及其演变》",
+      "url": "https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552600.shtml",
+      "result": "中国社会科学网转载《中原文物》2019(1)正文可读，未提供目标1993原刊或完整地形图。",
+      "target_contribution": "城市制度层面讨论，未解决四个目标。"
+    },
+    {
+      "id": "luoyang2014-toc",
+      "title": "《洛阳考古》2014(2)目录",
+      "url": "https://www.chugoku-shoten.com/mokuji/cmokuji/73457/73457.pdf",
+      "result": "返回1页目录PDF，无可提取文字；不是钱国祥等20—29页正文。",
+      "target_contribution": "未得原刊，无量测。"
+    }
+  ],
+  "reusable_source_history": [
+    {
+      "id": "duan2020-preface",
+      "author": "段鹏琦",
+      "title": "《都城与陵墓研究——段鹏琦考古文集》自序（落款2020-10-18）",
+      "edition": "文物出版社，2022；出版社2022-08-09公开介绍页全文自序",
+      "url": "https://www.wenwu.com/newsinfo/3210484.html",
+      "finding": "主持考古者回顾1989年在北魏东、西外郭城内发现三条东西大道与阳渠，南外郭城大道随后找到。",
+      "supports": "外郭道路和阳渠的发现史；可解释1993报告的考古工作背景。",
+      "does_not_support": "每条道路完整实测长度、承明门外最西实测点、邙山北路终点及两路合流。",
+      "source_level": "作者本人自序，出版社原站"
+    },
+    {
+      "id": "guo2024-roads",
+      "author": "郭晓涛",
+      "title": "经涂九轨：道路考古的价值",
+      "published": "2024-12-13",
+      "url": "https://www.cssn.cn/lsx/lsx_kgx/202412/t20241213_5822224.shtml",
+      "finding": "研究者说明循内城门与道路线索发现外郭城9条大道；文章同时解释线性道路遗迹可由多个发掘点拼缀路网。",
+      "supports": "路网框架具有考古调查依据；需要分辨点状实测与复原连线。",
+      "does_not_support": "9条道路全部线段逐米实测，或任一后出图画线即原报告实测终点。",
+      "source_level": "考古队研究者署名，中国社会科学网/中国社会科学报原发"
+    }
+  ],
+  "map_decision": {
+    "change_geometry": false,
+    "change_confidence": false,
+    "instructions": [
+      "路-02维持待原图核验状态，不将合流位置、北端或西端封口。",
+      "P4.6.5已有约1.4/1.1公里仍为后出图上端点直线量距，不改称古道路实测残长。",
+      "全文搜得、目录有题名、书目有收藏、图注引用原图，均不得合并成原图已经读取。",
+      "可继续城市骨架整合；原图补证以独立断点保留。"
+    ]
+  },
+  "publication_note": "建议只将本访问记录及研究判断入库；下载的后出PDF和页面渲染图为本轮核查中间件，不因其公开可读而默认整篇转载到正式站。"
+}

@@ -1,0 +1,393 @@
+{
+  "schema": "luoyang-r10-permanent-evidence-scope-v1",
+  "source_file_count": 2982,
+  "source_total_bytes": 2130939696,
+  "included_file_count_before_indexes": 2941,
+  "included_total_bytes_before_indexes": 837712784,
+  "excluded": [
+    {
+      "path": "main-build/artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "main-build/artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "main-build/evidence.zip",
+      "bytes": 222985204,
+      "sha256": "7391fb1116a581a9d3c45d65f73bfcc4607a507710b7c588721fe1bf5b1d8939",
+      "gitblob": "d3422104367f32768394b35e0f60fa2f7e9cb0c1",
+      "reason_code": "verified_artifact_wrapper",
+      "reason": "Every extracted member matched this wrapper; retained and omitted members are itemized separately."
+    },
+    {
+      "path": "main-live/evidence.zip",
+      "bytes": 171839176,
+      "sha256": "2cbd65019f4e8ae99d2c65af6a19f3b43afff5b331f96cd8e2d472d0964c9068",
+      "gitblob": "e03c4bac7919650138941b9d08e9d92e7c3817b2",
+      "reason_code": "verified_artifact_wrapper",
+      "reason": "Every extracted member matched this wrapper; retained and omitted members are itemized separately."
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr/artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr/evidence.zip",
+      "bytes": 222975410,
+      "sha256": "ef508292fd2411d2597f32fb56d30b88f088aa1f18c5ae15801d78615a1260f4",
+      "gitblob": "a222ab7e7929991251836912cac7b2daa468127b",
+      "reason_code": "verified_artifact_wrapper",
+      "reason": "Every extracted member matched this wrapper; retained and omitted members are itemized separately."
+    },
+    {
+      "path": "pr-failed-45032715660/artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45032715660/artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45032715660/artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45032715660/artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45032715660/artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45032715660/artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45032715660/artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45032715660/evidence.zip",
+      "bytes": 109744579,
+      "sha256": "c40a637df1d8ace1eba8e57eeaa6a652957f9d9032504c475024f92c7ba29756",
+      "gitblob": "36f95eedae47ca8e45e2db77e9736c80c26912a1",
+      "reason_code": "verified_artifact_wrapper",
+      "reason": "Every extracted member matched this wrapper; retained and omitted members are itemized separately."
+    },
+    {
+      "path": "pr-failed-45033555972/artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45033555972/artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45033555972/artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45033555972/artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45033555972/artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45033555972/artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45033555972/artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-failed-45033555972/evidence.zip",
+      "bytes": 184964982,
+      "sha256": "e6aa2f907b77185ed95d22cb257caf76d4d4211d72556c654fc003fcbcfdbf42",
+      "gitblob": "7ac9ed5e0fb2f4858bb08514bbd7a9887979fe34",
+      "reason_code": "verified_artifact_wrapper",
+      "reason": "Every extracted member matched this wrapper; retained and omitted members are itemized separately."
+    },
+    {
+      "path": "pr-initial-45032488183/artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-initial-45032488183/artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-initial-45032488183/artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-initial-45032488183/artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-initial-45032488183/artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-initial-45032488183/artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-initial-45032488183/artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e",
+      "reason_code": "unchanged_terrain_intermediate",
+      "reason": "SHA256 matches the prior R9 permanent archive scope. Source notice and metadata remain included."
+    },
+    {
+      "path": "pr-initial-45032488183/evidence.zip",
+      "bytes": 57346551,
+      "sha256": "9d0acd435bcd547aa44f1763f6ed6c7f62ba563f65f05e87ddea7c2d344af569",
+      "gitblob": "4979eeded39b013c2286dbc6b053711608cbb2e9",
+      "reason_code": "verified_artifact_wrapper",
+      "reason": "Every extracted member matched this wrapper; retained and omitted members are itemized separately."
+    }
+  ],
+  "changed_terrain_retained": [],
+  "retained_actual_download_zips": [
+    "main-build/artifacts/city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.zip",
+    "main-build/artifacts/city-layout-r10-browser/downloads/mobile/downloads/city-layout-r10.zip",
+    "main-build/artifacts/city-west-p472-browser/downloads/desktop/west-472.zip",
+    "main-build/artifacts/city-west-p472-browser/downloads/mobile/west-472.zip",
+    "main-build/artifacts/prosperity-backbone-p469-browser/downloads/desktop/backbone-469.zip",
+    "main-build/artifacts/prosperity-backbone-p469-browser/downloads/mobile/backbone-469.zip",
+    "main-build/artifacts/prosperity-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+    "main-build/artifacts/prosperity-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+    "main-build/artifacts/prosperity-city-north-p471-browser/downloads/desktop/downloads/north-471.zip",
+    "main-build/artifacts/prosperity-city-north-p471-browser/downloads/mobile/downloads/north-471.zip",
+    "main-live/artifacts/live-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+    "main-live/artifacts/live-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+    "main-live/artifacts/live-city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.zip",
+    "main-live/artifacts/live-city-layout-r10-browser/downloads/mobile/downloads/city-layout-r10.zip",
+    "main-live/artifacts/live-city-north-p471-browser/downloads/desktop/downloads/north-471.zip",
+    "main-live/artifacts/live-city-north-p471-browser/downloads/mobile/downloads/north-471.zip",
+    "main-live/artifacts/live-city-west-p472-browser/downloads/desktop/west-472.zip",
+    "main-live/artifacts/live-city-west-p472-browser/downloads/mobile/west-472.zip",
+    "main-live/artifacts/live-prosperity-backbone-p469-browser/downloads/desktop/backbone-469.zip",
+    "main-live/artifacts/live-prosperity-backbone-p469-browser/downloads/mobile/backbone-469.zip",
+    "pr-failed-45032715660/artifacts/city-west-p472-browser/downloads/desktop/west-472.zip",
+    "pr-failed-45032715660/artifacts/city-west-p472-browser/downloads/mobile/west-472.zip",
+    "pr-failed-45032715660/artifacts/prosperity-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+    "pr-failed-45032715660/artifacts/prosperity-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+    "pr-failed-45032715660/artifacts/prosperity-city-north-p471-browser/downloads/desktop/downloads/north-471.zip",
+    "pr-failed-45032715660/artifacts/prosperity-city-north-p471-browser/downloads/mobile/downloads/north-471.zip",
+    "pr-failed-45033555972/artifacts/city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.zip",
+    "pr-failed-45033555972/artifacts/city-layout-r10-browser/downloads/mobile/downloads/city-layout-r10.zip",
+    "pr-failed-45033555972/artifacts/city-west-p472-browser/downloads/desktop/west-472.zip",
+    "pr-failed-45033555972/artifacts/city-west-p472-browser/downloads/mobile/west-472.zip",
+    "pr-failed-45033555972/artifacts/prosperity-backbone-p469-browser/downloads/desktop/backbone-469.zip",
+    "pr-failed-45033555972/artifacts/prosperity-backbone-p469-browser/downloads/mobile/backbone-469.zip",
+    "pr-failed-45033555972/artifacts/prosperity-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+    "pr-failed-45033555972/artifacts/prosperity-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+    "pr-failed-45033555972/artifacts/prosperity-city-north-p471-browser/downloads/desktop/downloads/north-471.zip",
+    "pr-failed-45033555972/artifacts/prosperity-city-north-p471-browser/downloads/mobile/downloads/north-471.zip",
+    "pr-initial-45032488183/artifacts/prosperity-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+    "pr-initial-45032488183/artifacts/prosperity-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+    "pr/artifacts/city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.zip",
+    "pr/artifacts/city-layout-r10-browser/downloads/mobile/downloads/city-layout-r10.zip",
+    "pr/artifacts/city-west-p472-browser/downloads/desktop/west-472.zip",
+    "pr/artifacts/city-west-p472-browser/downloads/mobile/west-472.zip",
+    "pr/artifacts/prosperity-backbone-p469-browser/downloads/desktop/backbone-469.zip",
+    "pr/artifacts/prosperity-backbone-p469-browser/downloads/mobile/backbone-469.zip",
+    "pr/artifacts/prosperity-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+    "pr/artifacts/prosperity-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+    "pr/artifacts/prosperity-city-north-p471-browser/downloads/desktop/downloads/north-471.zip",
+    "pr/artifacts/prosperity-city-north-p471-browser/downloads/mobile/downloads/north-471.zip",
+    "root-public/downloads/downloads/city-layout-r10.zip"
+  ],
+  "raw_sources_changed_or_deleted": false,
+  "payload_storage": "hardlink",
+  "payload_storage_limit": "Hardlinks, when selected, are only a local storage arrangement for frozen source bytes. Git stores each path by its content blob; final source hashes and remote byte readback remain mandatory.",
+  "acceptance_limit": "Archive integrity only. Workflow and public-site acceptance are stated in separate evidence, never inferred from this inventory."
+}

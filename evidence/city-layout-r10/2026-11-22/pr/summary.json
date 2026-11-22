@@ -1,0 +1,156 @@
+{
+  "schema": "luoyang-r10-successful-pr-evidence-v1",
+  "status": "passed",
+  "workflow_run": 45034680481,
+  "head_sha": "88c359588349f8c1f6bb2cd8d346fd7f4aada783",
+  "tested_merge": "d37e31cef48f23fdc62587622e27584e842e3d11",
+  "head_tree": "2efc3c9cfb26ee3a5d579b5a4df3d767bac62581",
+  "tested_merge_tree": "2efc3c9cfb26ee3a5d579b5a4df3d767bac62581",
+  "head_tested_merge_trees_equal": true,
+  "job_conclusions": {
+    "build": "success",
+    "deploy": "skipped",
+    "verify-live": "skipped"
+  },
+  "r10_actual_download_count": 42,
+  "r10_unique_download_files": 21,
+  "r10_all_retained_bytes_and_screenshot_hashes_verified": true,
+  "r10_desktop_mobile_all_21_hashes_equal": true,
+  "r10_screenshots": {
+    "desktop": 17,
+    "mobile": 18
+  },
+  "r10_pdf_pages": 16,
+  "r10_component_reports": {
+    "desktop": "artifacts/city-layout-r10-browser/desktop-report.json",
+    "mobile": "artifacts/city-layout-r10-browser/mobile-report.json"
+  },
+  "unittest_reports": [
+    {
+      "path": "artifacts/city-audit-b8-tests.txt",
+      "test_count": 8,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/city-layout-r10-tests.txt",
+      "test_count": 17,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/city-nodes-r7-tests.txt",
+      "test_count": 17,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/city-review-b8-tests.txt",
+      "test_count": 7,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/city-spatial-r9-tests.txt",
+      "test_count": 10,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/dual-semantic-tests.txt",
+      "test_count": 22,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/ground-review-b6-tests.txt",
+      "test_count": 6,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/historical-datum-b5-tests.txt",
+      "test_count": 7,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/historical-frame-b4-tests.txt",
+      "test_count": 7,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/homepage-approved-v9-tests.txt",
+      "test_count": 6,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/live-http-tests.txt",
+      "test_count": 5,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/luonan-b7-tests.txt",
+      "test_count": 21,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/north-b4-semantic-tests.txt",
+      "test_count": 8,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/panorama-v13-r2-tests.txt",
+      "test_count": 4,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/panorama-v13-tests.txt",
+      "test_count": 4,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/prosperity-semantic-tests.txt",
+      "test_count": 218,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/source-access-b8-tests.txt",
+      "test_count": 5,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/source-continuity-b7-tests.txt",
+      "test_count": 5,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/southeast-b6-tests.txt",
+      "test_count": 18,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/v26-semantic-tests.txt",
+      "test_count": 20,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/v27-semantic-tests.txt",
+      "test_count": 25,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/v29-semantic-tests.txt",
+      "test_count": 20,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/v30-semantic-tests.txt",
+      "test_count": 16,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/west-b3-semantic-tests.txt",
+      "test_count": 8,
+      "unittest_ok": true
+    },
+    {
+      "path": "artifacts/west-roads-b5-tests.txt",
+      "test_count": 8,
+      "unittest_ok": true
+    }
+  ],
+  "acceptance_scope": "Successful PR build and all browser suites; production deployment/HTTPS/live acceptance is recorded separately."
+}

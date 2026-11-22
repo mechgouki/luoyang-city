@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/luoyang-r10/tools/city_layout_r10.py", line 422, in <module>
+    result = verify(load(args.site / "build-info.json"), lambda p: (args.site / p).read_bytes())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/luoyang-r10/tools/city_layout_r10_verify.py", line 596, in verify
+    maps = {"overview": verify_svg(get(OVERVIEW), data)}
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/luoyang-r10/tools/city_layout_r10_verify.py", line 395, in verify_svg
+    assert fid in modern_ids
+           ^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "version": "P4.7",
+  "title": "城市骨架与建筑证据共同视图：同源复用约定",
+  "study_date": "2026-11-19",
+  "source_baseline_commit": "6e8ad4a9d485a74913574ad13f1a1df2f8bc1f46",
+  "required_input_sha256": {
+    "research/prosperity-v1/geographic-evidence.json": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79",
+    "research/prosperity-v4/city-distribution-p451.json": "8749bac2e6f56f017b99790b11d757edb165a4903749665a30b67c5430f932f9",
+    "research/prosperity-v4/network-462/network.json": "f1081cfc39fb16e67e81271be177755fdab4cd46a18283e0d1ed46efb3e1275b",
+    "research/prosperity-v4/network-462/roads.json": "6a48b686ef2c133731f080405d525b4a60e9bf0506cfb35a78ff0cfa2b0efb8d",
+    "research/prosperity-v4/backbone-469/readings.json": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+    "research/prosperity-v4/backbone-469/jianchun-plan-audit.json": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f"
+  },
+  "required_urban_input_sha256": {
+    "research/prosperity-v4/street-clusters-p453.json": "9b69da412a86d5e21e82b2cfdcac747b667ecad053de868618fd7474e4bcd116",
+    "research/prosperity-v4/road-functions-p452.json": "6f963d3dfcfe7c74f02fefd4528958d65868cb53691259f40aa890f0649e074c",
+    "research/prosperity-v1/text-review.json": "e897985535b46d802708e628da4bad5a40c667ad2283caad55aeb0b347cb3836",
+    "research/dual-b1/decisions.json": "aee1cdc54a4f0888f3793712c559a75489ea484e9786d2bfe370466faedfb26f",
+    "research/dual-b7/luonan-river-markets.json": "0acfc920d242f26f3e8de894085d0e7963ed2a4a74ec981a626a8f8450f8e42d"
+  },
+  "source_frame_id": "frame-06a",
+  "prior_backbone_wall_feature_ids": [
+    "geo-inner-wall-aboveground",
+    "geo-inner-wall-underground",
+    "geo-palace-walls"
+  ],
+  "modern_feature_id": "geo-modern-luo-river",
+  "modern_reference_default_visible": false,
+  "expected_card_feature_ids": {
+    "C01": "geo-changhe-palace-gate",
+    "C02": "geo-jianchun-gate",
+    "C03": "geo-taiji-hall-reference",
+    "C04": "geo-yongning-pagoda-reference"
+  },
+  "expected_enclosure_feature_id": "geo-yongning-temple-walls",
+  "expected_added_existing_feature_ids": [
+    "geo-taiji-hall-reference",
+    "geo-yongning-pagoda-reference",
+    "geo-yongning-temple-walls"
+  ],
+  "place_navigation_policy": {
+    "C01": {
+      "scene_binding_feature_id": "geo-changhe-palace-gate",
+      "scope": "宫城南门同名身份的阅读入口；不得绑定内城西墙阊阖门，也不把宫前官学关系画成新坐标。",
+      "detail_links": [
+        {"label": "四处建筑的独立尺寸卡", "href": "prosperity-city-distribution.html"},
+        {"label": "宫前城市关系联读", "href": "prosperity-backbone-p469.html#map=frame-06a&anchor=geo-changhe-palace-gate"}
+      ]
+    },
+    "C02": {
+      "scene_binding_feature_id": "geo-jianchun-gate",
+      "scope": "既有建春门图符关联门址与门外文本关系；门内尺度不用于推定两座石桥、渠口或里坊位置。",
+      "detail_links": [
+        {"label": "建春门局部平面与共同控制核查", "href": "prosperity-backbone-p469.html#map=frame-06a&anchor=geo-jianchun-gate"}
+      ]
+    },
+    "C03": {
+      "scene_binding_feature_id": null,
+      "scope": "只以既有太极殿来源图feature及C03报告卡导航；entity_id保持null，不新造实体或宫院坐标。",
+      "detail_links": [
+        {"label": "四处建筑的独立尺寸卡", "href": "prosperity-city-distribution.html"},
+        {"label": "太极殿与宫院证据", "href": "prosperity-taiji-courts.html"}
+      ]
+    },
+    "C04": {
+      "scene_binding_feature_id": "geo-yongning-temple-walls",
+      "scope": "塔基点与寺院残墙同属永宁寺的不同组成部分；K01只通过原残墙—寺院绑定联读，不把寺院与御道的文字关系改成塔心量距。",
+      "detail_links": [
+        {"label": "塔基尺度与寺院残墙边界", "href": "prosperity-city-distribution.html"},
+        {"label": "所属寺院的宫前关系", "href": "prosperity-street-clusters.html?cluster=K01&grade=all"}
+      ]
+    }
+  },
+  "expected_counts": {
+    "source_features": 30,
+    "features": 25,
+    "site_remains": 24,
+    "modern_features": 1,
+    "prior_backbone_features": 22,
+    "added_existing_features": 3,
+    "building_cards": 4,
+    "roads": 8,
+    "gate_points": 10,
+    "wall_groups": 4,
+    "partial_enclosure_parts": 7,
+    "water_records": 34,
+    "water_relations": 100,
+    "water_context_links": 9,
+    "urban_scenes": 3,
+    "urban_relations": 17,
+    "new_geographic_coordinates": 0,
+    "new_metric_measurements": 0,
+    "new_historical_edges": 0,
+    "new_geographic_footprints": 0
+  },
+  "derivation": "先取P469原06a视图的三组墙线、P462八条路、十个门点和一条现代参照；再由P451四卡自动找出尚未绘入该图的太极殿与永宁塔基点，加入P451所指永宁寺七段残墙。所有几何从P1原feature深拷贝，不在本文件手填或调整坐标。",
+  "excluded_geometry_sources": [
+    "P451生成页面中的徽标像素只适用于原页面，不搬到新的06a图框。",
+    "钱2018图一的1145×951像素框独立保留，不能把外郭门、南北路或古洛水图带转投06a。",
+    "钱2018图二建春门局部平面缺少已接受的共同控制，继续独立阅读。",
+    "P453与P467/P468关系图的排版位置不转成古建筑、古道路或水体坐标。"
+  ],
+  "limitations": [
+    "共同视图复用同一来源框，不是新完成的现场配准或新增地理发现。",
+    "保留每项来源的时期、概化程度、全部折点与断段，不因研究目标为516—528年就声称所有遗迹在该时段每年同时使用。",
+    "四卡尺寸只作独立报告值；地图图符不是门基、殿基或塔基的实测轮廓，不生成建筑足迹或屋高。",
+    "永宁寺残墙保持七段开放折线；301×212米表值与图示差异继续保留，不补成完整院界。",
+    "太极殿entity_id继续为null；宫城阊阖门与内城西墙阊阖门不合并。",
+    "水系采用P469当前校正索引，仅在已登记的门道入口联读；没有新增古河线、池岸、渠口或桥位。",
+    "现代洛水只表示1997/1999来源底图的参照，默认关闭；既有地理数据仍为西安1980/EPSG:4610，不改标WGS84。",
+    "宫城显示推定包络、外郭相关遗存范围、金墉丙城两项及邙山标签不属于本次25项主图；未绘入不表示来源中不存在。",
+    "宫前御道与图示铜驼道路保持既有身份边界；文本关系不增加物理道路连线。",
+    "2022年运河报告按用户要求继续暂缓，本共同视图不依赖该书。"
+  ]
+}

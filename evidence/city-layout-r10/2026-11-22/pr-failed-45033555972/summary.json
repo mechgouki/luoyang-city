@@ -1,0 +1,16 @@
+{
+  "schema": "luoyang-r10-failed-pr-evidence-v1",
+  "workflow_run": 45033555972,
+  "classification": "suite-budget-timeout",
+  "workflow_conclusion": "failure",
+  "head_sha": "7f2a96e46275e69867895cf9d6d6a8a005555e25",
+  "failure": "The browser suite exceeded its existing 8-minute step budget after the R10 desktop/mobile component had passed.",
+  "log_line": "2026-11-22T14:45:44.2372320Z ##[error]The action 'Exercise current and all earlier map interactions' has timed out after 8 minutes.",
+  "last_completed_legacy_suite": "B6 southeast and ground-review desktop/mobile",
+  "interrupted_legacy_suite": "B7 Luonan: market-record checks had printed success; later checks were not completed.",
+  "r10_component_status": "passed",
+  "r10_actual_downloads": 42,
+  "r10_reports": "r10-component-verification.json",
+  "next_revision_scope": "Only the build/live browser-step budget was increased from 8 to 12 minutes. Per-action timeout, assertions and all scripts remain required.",
+  "release_acceptance": false
+}

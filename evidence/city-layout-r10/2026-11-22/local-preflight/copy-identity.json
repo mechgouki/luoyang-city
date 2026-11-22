@@ -1,0 +1,37 @@
+{
+  "schema": "luoyang-r10-local-preflight-copy-v1",
+  "files": [
+    {
+      "source": "/workspace/luoyang-r10/artifacts/r10-local-final-tests.txt",
+      "retained": "r10-local-full58-tests.txt",
+      "bytes": 10541,
+      "sha256": "288d8e1fe830d9306f0ad9de7e5d4cb237e3944b7e253cd920b18a7c8939760b",
+      "note": "The initial 58-test log was retained under its explicit full58 name after the final-test filename was reused for the post-fix 17-test run."
+    },
+    {
+      "source": "/tmp/r10-local-build.log",
+      "retained": "initial-full-build.log",
+      "bytes": 12163,
+      "sha256": "290a70a597bd20679e425024103ebd08fae89e867552c08ef089e7cd343dc0fb"
+    },
+    {
+      "source": "/tmp/r10-first-verify.log",
+      "retained": "initial-verify-failure.log",
+      "bytes": 669,
+      "sha256": "c28032f89fd8e314e189ca7ecba3eb4b347370462db314d01fb4931e0db43b3d"
+    },
+    {
+      "source": "/workspace/luoyang-r10/artifacts/r10-local-validation.json",
+      "retained": "r10-local-validation.json",
+      "bytes": 12408,
+      "sha256": "75ddf15b99184099c1e7fbdcd109bc6fc5ba458c1379c63bf651e6d5569b3cc4"
+    },
+    {
+      "source": "/workspace/luoyang-r10/artifacts/r10-local-final-tests.txt",
+      "retained": "r10-local-final-tests.txt",
+      "bytes": 3434,
+      "sha256": "147382e59304d1469d68ae69405e3be15c556c941ef1a1b61800a844c2d57993"
+    }
+  ],
+  "scope": "Local preflight only; final PR and production workflow evidence is separate. Initial build and failed verification predate the final research and drawing freeze. No hosted-browser acceptance is inferred from these files."
+}

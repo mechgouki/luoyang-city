@@ -1,0 +1,34 @@
+{
+  "schema": "city-layout-r10-root-manual-browser-review-v1",
+  "status": "passed",
+  "completed_at_utc": "2026-11-22T15:21:52Z",
+  "reviewer": "root",
+  "environment": "actual public HTTPS page in the cloud Chrome browser; desktop viewport",
+  "entry_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html",
+  "final_observed_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html#overview",
+  "source_commit_visible_in_page": "a2d1aac203d468ab0584a09f2c9ec0bfc6dd372b",
+  "version_visible_in_page": "R10.1",
+  "observations": [
+    "The live entry rendered the R10.1 title, 516–528 composite research window and totals: 11 regions, 42 relationship windows, 96 spatial decisions, 339 catalog objects, 84 road evidence records and 34 water index records.",
+    "Selected R03 using the actual region select. The URL acquired region=R03. Visible counters were 10/96 decisions, 50/339 objects, 13/118 network records and 8/29 gaps.",
+    "Opened the R03 card. The actual palace/garden diagram rendered, including separate Xiyou and Hualin relationship windows. The page explicitly states that garden descriptions do not supply invented map coordinates.",
+    "Entered 流觞 in the actual search box. Counters changed to 2/96 decisions, 1/339 objects, 3/118 network records and 0/29 gaps.",
+    "Clicked the actual 瑶光寺 SVG node. The observed URL ended in #decision-R10-R03-01; the corresponding judgment row was visible and highlighted. This row was already included by the search because its source record contains the keyword, so this action is not claimed as an independent hidden-target recovery test.",
+    "Expanded 回查来源记录与字段 for R10-R03-01. The accessibility state exposed actual research/dual-b2/palace-gardens.json, research/prosperity-v4/water-468/readings.json and research/roads-r62/catalog.json links and source-field details.",
+    "Cleared the keyword and selected R07. Counters became 9/96 decisions, 32/339 objects, 5/118 network records and 8/29 gaps. The actual diagram showed Yongning four-neighbor relations and independent east/west office sequences.",
+    "Used the actual R07 zoom button and confirmed viewBox changed from 0 0 1680 1188 to 168 118.80000000000001 1344 950.4. Used reset and confirmed restoration to 0 0 1680 1188. The zoomed and reset layouts were visually inspected.",
+    "Used 清除筛选. The public URL returned to the base page, all regions and all basis types were selected, and counters returned to 96/96, 339/339, 118/118 and 29/29.",
+    "Opened the 全城总平面 navigation link, visually inspected the source skeleton and eleven-region index, and left this actual tab marked as the user deliverable. The final public URL is recorded above."
+  ],
+  "interaction_notes": [
+    "An initial Playwright label lookup did not resolve the region control; the observed DOM id region-select resolved and the real select operated normally.",
+    "The center of an SVG line-link bounding box did not navigate. Verification used the clearly visible Yaoguang node link instead; no claim is made that this manual review individually exercised all 580 diagram items.",
+    "An immediate batched zoom read returned the pre-action value; the separate native accessibility-button action and subsequent DOM read confirmed the actual viewBox change and reset."
+  ],
+  "screenshots": {
+    "displayed_and_visually_inspected_in_conversation": true,
+    "separate_root_screenshot_files_exported": false,
+    "note": "This record is an honest manual UI observation log. Retained desktop/mobile screenshot files are the independently collected actual CI artifacts."
+  },
+  "scope": "Manual public UI spot check only. Complete desktop/mobile, offline, no-JavaScript, download and historical-version regression claims belong to their separate CI reports. Production workflow completion is not inferred from this manual review."
+}

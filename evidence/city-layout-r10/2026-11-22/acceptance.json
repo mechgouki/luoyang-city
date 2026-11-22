@@ -1,0 +1,163 @@
+{
+  "schema": "luoyang-r10-release-acceptance-v1",
+  "status": "passed-release-gates",
+  "recorded_at_utc": "2026-11-22T15:32:50.065851+00:00",
+  "repository": "mechgouki/luoyang-city",
+  "research_version": "R10.1",
+  "production_commit": "a2d1aac203d468ab0584a09f2c9ec0bfc6dd372b",
+  "production_tree": "2efc3c9cfb26ee3a5d579b5a4df3d767bac62581",
+  "pull_request": 81,
+  "successful_pr_run": 45034680481,
+  "successful_pr_head": "88c359588349f8c1f6bb2cd8d346fd7f4aada783",
+  "successful_pr_tested_merge": "d37e31cef48f23fdc62587622e27584e842e3d11",
+  "production_run": 45035882296,
+  "production_run_updated_at": "2026-11-22T15:28:24Z",
+  "production_jobs": {
+    "build": {
+      "id": 137249422596,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "deploy": {
+      "id": 137253268867,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "verify-live": {
+      "id": 137253370102,
+      "status": "completed",
+      "conclusion": "success"
+    }
+  },
+  "published_counts": {
+    "regions": 11,
+    "panels": 42,
+    "diagram_nodes": 321,
+    "diagram_relations": 259,
+    "decisions": 96,
+    "gaps": 29,
+    "city_scale_gaps": 6,
+    "entities": 339,
+    "coverage": 339,
+    "location_levels": {
+      "source": 11,
+      "relative": 315,
+      "unlocated": 12,
+      "candidate": 1
+    },
+    "representations": {
+      "关系节点": 245,
+      "待分区名录": 83,
+      "分区名录": 11
+    },
+    "source_features": 28,
+    "road_records": 84,
+    "water_records": 34,
+    "network_records": 118,
+    "source_files": 25,
+    "source_pointers": 349,
+    "pdf_pages": 16
+  },
+  "production_pdf": {
+    "bytes": 2292515,
+    "sha256": "6251d946450719247d62ebef36e7770ea49c8fd8df646b4b592e15de110a9810",
+    "pages": 16,
+    "annotations": 687,
+    "embedded_font_subsets": 32
+  },
+  "verification": {
+    "production_build_live_browser_actual_downloads": 84,
+    "unique_download_files": 21,
+    "production_screenshots": 70,
+    "pr_actual_downloads": 42,
+    "pr_screenshots": 35,
+    "five_route_hash_comparison_passed": true,
+    "additional_independent_root_https_actual_files": 30,
+    "additional_independent_root_https_downloads": 21,
+    "root_https_actual_bytes_rechecked": true,
+    "root_manual_public_ui": "passed-spot-check",
+    "all_legacy_ci_browser_suites": "passed-per-production-workflow",
+    "actual_production_pdf_qa": "passed",
+    "independent_archive_readback": "reported separately after creation; not inferred by this release acceptance"
+  },
+  "sources": [
+    {
+      "path": "pr/summary.json",
+      "bytes": 3989,
+      "sha256": "01c5c4ea99d8048604dd4e9aa398bad06ac1ae198248930d04ce8c1cb635c03e"
+    },
+    {
+      "path": "main-build/summary.json",
+      "bytes": 1427,
+      "sha256": "a4901e8808f4388282f0417d43dc3d4686753c337f2fd5284f228cf0b8bc2228"
+    },
+    {
+      "path": "main-live/summary.json",
+      "bytes": 1133,
+      "sha256": "a632274231889b1c61ff0db1f2c48e071e40d372c35ccdfb9f758e1a71582091"
+    },
+    {
+      "path": "main-live/api-final-run.json",
+      "bytes": 12508,
+      "sha256": "963d83805ba64b5d4b596e3acacfef18688569b1f321c3b55d6752ded7781598"
+    },
+    {
+      "path": "main-live/api-final-jobs.json",
+      "bytes": 8203,
+      "sha256": "6c7549324870c82dfc1adbb61a4761af47cbb9ed7fa052b71cc1f07e062460cc"
+    },
+    {
+      "path": "root-public/build-info.json",
+      "bytes": 565101,
+      "sha256": "1b55d480694bcf00d9f511e8a7b5ef65175c163cc9112592326c385a50516d37"
+    },
+    {
+      "path": "root-public/https-report.json",
+      "bytes": 19236,
+      "sha256": "045e15fe3c77514cfe532ba4c3624efd3617d543d8d02249f11807652738d265"
+    },
+    {
+      "path": "root-public/manual-browser-review.json",
+      "bytes": 3917,
+      "sha256": "e62a939b5f7eb9eb9019187218dfc7ca33f21191095d94ebe8766a3998c1b203"
+    },
+    {
+      "path": "download-cross-stage-ci-http.json",
+      "bytes": 15967,
+      "sha256": "84de276ad2a9710ec389081b52f73759c4fbb1c79ef157493acd0dfaed1a3365"
+    },
+    {
+      "path": "download-cross-stage-root-http.json",
+      "bytes": 15967,
+      "sha256": "84de276ad2a9710ec389081b52f73759c4fbb1c79ef157493acd0dfaed1a3365"
+    },
+    {
+      "path": "map-qa/production/qa-report.json",
+      "bytes": 22330,
+      "sha256": "b7a0c99ca548c677b140a70fcd204164c247f559bbb61863d4bd1b93114ffb24"
+    },
+    {
+      "path": "map-qa/production/files-manifest.json",
+      "bytes": 6143,
+      "sha256": "2647f27a126363e342787191ace608edb8e89a99f229934b6a175ff83e537240"
+    },
+    {
+      "path": "independent-preflight/readiness-review.json",
+      "bytes": 19097,
+      "sha256": "af1668a14c35e2981a19c4327d2e5e62139a14276905653de57c9ff0d22838b2"
+    }
+  ],
+  "research_limits": [
+    "516–528 composite research window, not a fully measured single-date city plan",
+    "No invented ancient coordinates, common source registration or historical shoreline geometry",
+    "339 original catalog entities and their evidence grades preserved",
+    "23 regional gaps plus 6 city-wide gaps remain explicit",
+    "V12 and V13r2 raster images were not regenerated by this R10 layout milestone"
+  ],
+  "prior_attempts": {
+    "45032488183": "cancelled after new deterministic build head",
+    "45032715660": "failed at the eleventh rapid browser download; original evidence and source-supported diagnosis retained",
+    "45033555972": "R10 component passed both devices; overall suite exceeded its 8 minute budget; not an accepted run"
+  },
+  "archive_integrity_limit": "The archive inventory and independent remote readback are separate from release validation; final commit identity/readback is recorded in the implementation Issue handoff without recursive self-inclusion."
+}
