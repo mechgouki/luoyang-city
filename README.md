@@ -4,9 +4,9 @@
 仓库：`mechgouki/luoyang-city`；既有研究工作线：**B1—B8**。
 
 <!-- current-state:start -->
-当前状态（2026-11-22）：研究 **R8.1 / panorama-review-v13**（依据R7四节点与建筑材料修订全景，V13候选审看与原件续查）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-22）：研究 **R9.1 / city-spatial-r9 + panorama-review-v13-r2**（四节点城市空间总图、20项判断对照与V13南门二修候选）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13.html) · [上一已验收发布 `557c468`](https://github.com/mechgouki/luoyang-city/actions/runs/44984166317) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/637dd943fee13a30ca754cdd3d97c85bb8adc8b9/evidence/city-nodes-r7/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-spatial.html) · [上一已验收发布 `fc62dd0`](https://github.com/mechgouki/luoyang-city/actions/runs/44991627755) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/6b87a799fc0d94cb0b19cf127836f9e3e9f7cd1a/evidence/panorama-v13/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->

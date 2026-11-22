@@ -259,7 +259,8 @@ class CityNodesDelivery(unittest.TestCase):
         for path, entry in info[KEY]["predecessor_homepage"].items():
             original = (self.site / entry["archive"]).read_bytes()
             from panorama_v13_contract import restore_home as restore_candidate_entry
-            actual = restore_candidate_entry((self.site / path).read_bytes())
+            from panorama_v13_r2_contract import strip_current_entries
+            actual = restore_candidate_entry(strip_current_entries((self.site / path).read_bytes()))
             self.assertEqual(add_home(original), actual)
             self.assertEqual(restore_home(actual), original)
             self.assertEqual(add_home(actual), actual)

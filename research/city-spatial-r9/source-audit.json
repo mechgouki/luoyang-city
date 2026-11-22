@@ -1,0 +1,528 @@
+{
+  "schema": "luoyang-city-spatial-r9-source-audit-v1",
+  "research_version": "R9.1",
+  "checked_at_beijing": "2026-11-22T14:47:35.197551+08:00",
+  "baseline_commit": "fc62dd0fa439e01fbf13899fe8b9eea7f9c101f0",
+  "scope": "四处节点城市空间总图深化、空间判断—依据—图面变化对照表与V13修订约束；优先续查1993和2011道路水道原件。",
+  "summary": "本轮重新核读四节点32项既有判断与8项相关公开来源；1993、2011期次和实际阅读入口均已核，阅读均导向登录页，未获得新的原刊印页或完整图。可见改进来自把既有可成立关系落实为分型图符、分对象量值和不确定边界；不提升古址定位等级。",
+  "local_findings_reviewed": 32,
+  "rechecked_source_count": 8,
+  "new_historical_source_pages": 0,
+  "new_complete_original_plans": 0,
+  "new_ancient_coordinates": 0,
+  "new_bank_geometries": 0,
+  "new_bridgehead_coordinates": 0,
+  "evidence_grade_upgrades": 0,
+  "targets": [
+    {
+      "id": "ORIGINAL1993",
+      "title": "北魏洛阳外廓城和水道的勘查",
+      "author": "中国社会科学院考古研究所洛阳汉魏城工作队",
+      "publication": "《考古》1993年第7期，602—608页",
+      "catalogue_personal_authors": [
+        "杜玉生",
+        "肖淮雁",
+        "钱国祥"
+      ],
+      "catalogue_id": "1002554709",
+      "cnki_filename": "KAGU199307004",
+      "required_originals": [
+        "全部7印页",
+        "完整《汉魏洛阳城遗址及地形图》及图例、比例尺、边缘注记",
+        "各道路最后探孔、实测路土点及联测平面"
+      ],
+      "current_result": "期次目录普通GET成功，题名、作者和页程仍可核；由目录实际给出的阅读地址进入后跳至登录页。未得原页或完整图。",
+      "access_record_ids": [
+        "1993-catalog",
+        "1993-reader"
+      ],
+      "original_pages_read": [],
+      "complete_original_plan_read": false,
+      "verified_figure_number": null,
+      "drawing_limit": "O02/O07等旧道路证据仅按原级使用，不新增末测点、桥头、渠道交点或岸线。"
+    },
+    {
+      "id": "ORIGINAL2011",
+      "title": "汉魏洛阳城东阳渠、鸿池陂考古勘察简报",
+      "author": "偃师市文物管理局",
+      "publication": "《华夏考古》2011年第1期，20—25页",
+      "catalogue_id": "HXKG2011001003",
+      "required_originals": [
+        "20—25全部6印页，先核22—23页",
+        "完整图版、道路与阳渠测线、探孔、剖面和分期说明"
+      ],
+      "current_result": "单篇静态HTML本轮为页面框架，不能视为已读文章；期次目录重新确认题名、署名和20—25页。首次在本轮重核目录实际阅读链接，普通GET跳转登录页。2024重印书的北大及CiNii馆藏仍可核，但未得重印篇页。",
+      "access_record_ids": [
+        "2011-catalog",
+        "2011-issue",
+        "2011-reader",
+        "2011-reprint-pku",
+        "2011-reprint-cinii"
+      ],
+      "original_pages_read": [],
+      "complete_original_plan_read": false,
+      "reprint_title": "汉魏洛阳城考古发现和研究",
+      "reprint_isbn": "9787573814067",
+      "reprint_original_pages_verified": false,
+      "drawing_limit": "不由目录或重印本存在补出鸿池陂入出口、路渠交叉点、桥头、古岸；路北渠迹与路南解释仍分层。"
+    }
+  ],
+  "access_records": [
+    {
+      "id": "1993-reader",
+      "url": "https://ncpssd.org/Literature/readurl?id=1002554709",
+      "checked_at_beijing": "2026-11-22T14:44:37.339171+08:00",
+      "http_status": 200,
+      "final_url": "https://ncpssd.org/login",
+      "bytes": 60019,
+      "sha256": "abe587bd0af8d293483b556bd3fb5c1495634cd7832decdd39e9fd7fccb892ed",
+      "content_type": "text/html;charset=UTF-8"
+    },
+    {
+      "id": "1993-catalog",
+      "url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993",
+      "checked_at_beijing": "2026-11-22T14:44:37.340103+08:00",
+      "http_status": 200,
+      "final_url": "https://ncpssd.org/journal/details.aspx?gch=94762X&langType=1&num=7&years=1993",
+      "bytes": 299251,
+      "sha256": "9106a087930bf75f5ca56f042c06bc0d64af120c107c723d53344b23cb8b0346",
+      "content_type": "text/html;charset=UTF-8"
+    },
+    {
+      "id": "2011-catalog",
+      "url": "https://www.ncpssd.org/Literature/articleinfo?id=HXKG2011001003&type=journalArticle&langType=1",
+      "checked_at_beijing": "2026-11-22T14:44:37.340619+08:00",
+      "http_status": 200,
+      "final_url": "https://www.ncpssd.org/Literature/articleinfo?id=HXKG2011001003&type=journalArticle&langType=1",
+      "bytes": 140809,
+      "sha256": "728b2567734aa088b56553470c6df931ac63a8c120e2cdedc18e320812ffbdb5",
+      "content_type": "text/html;charset=UTF-8"
+    },
+    {
+      "id": "baima-2025-institution",
+      "url": "https://hnswwkgyjy.cn/NewsView.php?News_ID=2810",
+      "checked_at_beijing": "2026-11-22T14:44:37.341110+08:00",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "id": "2011-reprint-pku",
+      "url": "https://archaeology.pku.edu.cn/info/1032/40605.htm",
+      "checked_at_beijing": "2026-11-22T14:44:37.341922+08:00",
+      "http_status": 200,
+      "final_url": "https://archaeology.pku.edu.cn/info/1032/40605.htm",
+      "bytes": 283493,
+      "sha256": "d888f4ea1e7589645777a401f61462a29b07fba3b2d0411554c87bd13d19cd8d",
+      "content_type": "text/html"
+    },
+    {
+      "id": "2011-reprint-cinii",
+      "url": "https://ci.nii.ac.jp/ncid/BD12756950",
+      "checked_at_beijing": "2026-11-22T14:44:37.342757+08:00",
+      "http_status": 200,
+      "final_url": "https://ci.nii.ac.jp/ncid/BD12756950",
+      "bytes": 53074,
+      "sha256": "e217f95e9a2726fcd36bd33483d73a23d2287bd2100627b9cccc6bd0208c4140",
+      "content_type": "text/html;charset=UTF-8"
+    },
+    {
+      "id": "2011-issue",
+      "url": "https://www.ncpssd.org/journal/details?gch=83083X&years=2011&num=1&langType=1&nav=1",
+      "checked_at_beijing": "2026-11-22T14:45:32.304118+08:00",
+      "http_status": 200,
+      "final_url": "https://www.ncpssd.org/journal/details?gch=83083X&years=2011&num=1&langType=1&nav=1",
+      "bytes": 276129,
+      "sha256": "30964a9cf2dcd5bac7e2fe5fb9fc255bcaa417de6ac8243d524cd48e92bf84d9",
+      "content_type": "text/html;charset=UTF-8"
+    },
+    {
+      "id": "2011-reader",
+      "url": "https://www.ncpssd.org/Literature/readurl?id=HXKG2011001003",
+      "checked_at_beijing": "2026-11-22T14:45:49.011377+08:00",
+      "url_provenance": "2011期次目录目标条目的ViewHandleCount实际阅读地址",
+      "http_status": 200,
+      "final_url": "https://www.ncpssd.org/login",
+      "bytes": 60084,
+      "sha256": "2f602c0f2810ef81796ac617db0eb92a7ed15a095a55e0c8cc40b89269f7df4c",
+      "content_type": "text/html;charset=UTF-8"
+    }
+  ],
+  "rechecked_sources": [
+    {
+      "id": "R9-SRC01",
+      "title": "《洛阳伽蓝记校释》卷一电子录文",
+      "url": "https://deerpark.app/cbeta/B0077/1",
+      "locator": "永宁寺条：宫前阊阖门南一里御道西；塔北佛殿；寺墙与四门；南门三重、东西两门两重、北门不施屋。原有项目定位B12n0077_p0043a07等继续保留。",
+      "source_kind": "historical_text_with_modern_collation",
+      "read_this_round": "重新核读相关电子正文与紧邻校注，未取得新的古籍影印页。",
+      "supported_change": "门南道西、塔殿前后、寺门层级；南门修订必须附属于寺墙。",
+      "limit": "网页把正文和现代校释连排；不把校者解释冒充北魏原文。三重约束不等于上部形制实测或精确米制高度。",
+      "was_new_to_project": false
+    },
+    {
+      "id": "R9-SRC02",
+      "title": "《洛阳伽蓝记校释》卷二电子录文",
+      "url": "https://deerpark.app/cbeta/B0077/2",
+      "locator": "明悬尼寺与建春门外石桥段；东石桥南北而行、桥北大道两侧里坊段；七里桥与三门段。R7 jc_zhou2逐段行号沿用。",
+      "source_kind": "historical_text_with_modern_collation",
+      "read_this_round": "重新核读电子录文中建春石桥135/527事件和东石桥南北方向、北侧大道的上下文。",
+      "supported_change": "三桥不混并，桥向与桥北道路分开，527事件只附第一桥。",
+      "limit": "电子录文不提供桥头、路口或岸线测量。",
+      "was_new_to_project": false
+    },
+    {
+      "id": "R9-SRC03",
+      "title": "汉魏洛阳城田野考古成果“上新”",
+      "url": "https://paper.people.com.cn/rmrb/pc/content/202603/25/content_30147047.html",
+      "locator": "《人民日报》2026-03-25第11版；刘涛介绍宫外仓窖与叠压，郭晓涛介绍白马里坊南部交会与7.5米缺口。",
+      "source_kind": "excavator_interview_original_publisher",
+      "read_this_round": "重新打开报纸原站核读相关段落。",
+      "supported_change": "宫内外仓区分开、太仓为解释；白马南口坊门标辨识，年代不精确化。",
+      "limit": "为考古工作者采访报道，非完整带尺发掘原图；不直接产生坐标、完整门楼或同期仓区屋顶阵列。",
+      "was_new_to_project": false
+    },
+    {
+      "id": "R9-SRC04",
+      "title": "中国社会科学院考古研究所2024年度田野考古工作汇报会纪要（三）",
+      "url": "https://www.sohu.com/a/852557453_121119016",
+      "locator": "2025-01-23转载；刘涛报告两段、郭晓涛白马寺里坊报告段；末署中国考古网整理。",
+      "source_kind": "excavator_report_reprint",
+      "read_this_round": "重新核读40米司马门内路、13米仓区内部路、南北分区以及白马三纵三横道路相关段落。",
+      "supported_change": "三种道路量值分对象，仓区两种分区方向分开，白马六街不能自动变成完整揭露网格。",
+      "limit": "本轮仅核该转载正文；不是新取得考古报告整页或完整测绘图。",
+      "was_new_to_project": false
+    },
+    {
+      "id": "R9-SRC05",
+      "title": "河南汉魏洛阳城遗址发现北魏“国家粮仓”",
+      "url": "https://www.xinhuanet.com/20260116/691942d5375a4060b5bfd0d0363e1cf8/c.html",
+      "locator": "新华社2026-01-16；刘涛介绍东西14列南北12排共168口、已发掘13口及宫内外功能差异。",
+      "source_kind": "excavator_interview_original_publisher",
+      "read_this_round": "重新核读原发报道相关统计与范围限制。",
+      "supported_change": "分开总勘探数量和已发掘数量，保留与人民日报3排说法的范围核同问题。",
+      "limit": "两篇报道未提供同一套窖号/分区对照，不能借两种排数重建完整网格。",
+      "was_new_to_project": false
+    },
+    {
+      "id": "R9-SRC06",
+      "title": "钱国祥：汉魏洛阳城城门与宫院门的考察研究",
+      "url": "https://www.sohu.com/a/298263205_199807",
+      "locator": "原刊《华夏考古》2018(6)，考古所账号2019-02-28转载；内城建春门段与外郭城门段。",
+      "source_kind": "archaeologist_paper_official_account_reprint",
+      "read_this_round": "重新核读建春门北门道下汉晋排水渠的断代语句，以及外郭道路交城墙处应为郭门的推断语气。",
+      "supported_change": "汉晋暗渠与北魏运行分层；郭门推定点不成为道路最后实测点。",
+      "limit": "本轮未重新量读图二，1988原简报与1993完整附图仍未取得。",
+      "was_new_to_project": false
+    },
+    {
+      "id": "R9-SRC07",
+      "title": "郭晓涛：经涂九轨：道路考古的价值",
+      "url": "https://www.cssn.cn/lsx/lsx_kgx/202412/t20241213_5822224.shtml",
+      "locator": "中国社会科学网2024-12-13；第二部分汉魏洛阳内外城道路考古段。",
+      "source_kind": "excavator_authored_institutional_article",
+      "read_this_round": "重新核读道路调查、路网与复原的关系及外郭九条大道说明。",
+      "supported_change": "总图以道路为阅读骨架，并保留调查结果、局部发掘与连接解释的区别。",
+      "limit": "综述没有提供逐路钻孔、末测点或完整连续揭露测线，不能替代1993原图。",
+      "was_new_to_project": false
+    },
+    {
+      "id": "R9-SRC08",
+      "title": "黄学超：汉魏洛阳城周边的水利建设",
+      "url": "https://zgld.cbpt.cnki.net/portal/journal/portal/client/paper/54295f2f542f9053ceb1930fc8765eea",
+      "locator": "《中国历史地理论丛》2026，41(3)：28—42、52；官网摘要及参考文献1993报告607、607—608和2011简报22—23页。",
+      "source_kind": "publisher_metadata_abstract_references",
+      "read_this_round": "重新核到题录、摘要及公开参考文献；网页明确全文需至CNKI。",
+      "supported_change": "维持水道分期解释和调查渠迹的类别区别，明确原件获取页程。",
+      "limit": "本轮未获该文PDF全文，更未由该页获得1993/2011被引原页；R7已有解释不据摘要再次升等。",
+      "was_new_to_project": false
+    }
+  ],
+  "spatial_constraints": [
+    {
+      "id": "R9-SC01",
+      "node": "palace-yongning",
+      "title": "门符、断墙与道路残段保留各自形态",
+      "legacy_finding_ids": [
+        "PY01"
+      ],
+      "source_ids": [
+        "py_map06a"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/palace-yongning.json",
+      "drawing_consequence": "总图沿用图06a来源框，三种图符分开；保留寺墙断笔和铜驼大道三段，不闭合缺墙。",
+      "remaining_limit": "来源图位置依据；不是新发现的完整寺院边界。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC02",
+      "node": "palace-yongning",
+      "title": "门南、道西与候选道路对应分别表达",
+      "legacy_finding_ids": [
+        "PY02",
+        "PY03"
+      ],
+      "source_ids": [
+        "py_map06a",
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/palace-yongning.json",
+      "drawing_consequence": "关系层明确寺在宫前阊阖门南、御道西；一里以文字注明，R01与T01仅作候选对应。",
+      "remaining_limit": "不把古里数折算为新坐标，不补残路至宣阳门或永桥。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC03",
+      "node": "palace-yongning",
+      "title": "官署两侧关系不制造镜像院落",
+      "legacy_finding_ids": [
+        "PY04",
+        "PY05",
+        "PY06"
+      ],
+      "source_ids": [
+        "py_zhou1",
+        "py_fan1"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/palace-yongning.json",
+      "drawing_consequence": "两卫分别在路两侧；太尉府寺东和右卫府南作为明文关系，路西归属另列解释；国子学南向关系不升级为明文路侧。",
+      "remaining_limit": "只绘关系节点，不给无址官署画精确足迹。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC04",
+      "node": "palace-yongning",
+      "title": "支水在路旁，接口未定",
+      "legacy_finding_ids": [
+        "PY08"
+      ],
+      "source_ids": [
+        "py_sj16"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/palace-yongning.json",
+      "drawing_consequence": "路侧支水用关系提示，与陆路图符分开；支流入南渠的各接点用待核标记。",
+      "remaining_limit": "不能把夹路支水画成贯穿铜驼中心线的明渠。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC05",
+      "node": "baima",
+      "title": "中央交会、南口交会与其他街段分层",
+      "legacy_finding_ids": [
+        "BA01",
+        "BA03"
+      ],
+      "source_ids": [
+        "baima_people2026",
+        "baima_henan2024",
+        "baima_cass2024"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/baima.json",
+      "drawing_consequence": "突出居中纵横关系；南口G11单列，与中央十字之间保留未量距离；次级道路用独立短段。",
+      "remaining_limit": "六街不等于九个连续揭露路口，不能封闭完整坊格。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC06",
+      "node": "baima",
+      "title": "报告量值各归量测对象",
+      "legacy_finding_ids": [
+        "BA02",
+        "BA04",
+        "BA06"
+      ],
+      "source_ids": [
+        "baima_henan2024",
+        "baima_people2026",
+        "baima_cass2025",
+        "baima_prior_audit"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/baima.json",
+      "drawing_consequence": "22米归纵街，7.5米归大道北缘缺口，4.6米归车辙带；86米与40米间距单列；可能门槛槽作为解释注记。",
+      "remaining_limit": "不累计出坊宽/坊深，不把车辙带宽等同另一4.6米构件量，不画为有比例横断面。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC07",
+      "node": "baima",
+      "title": "局部坊街接入总览而不伪造坐标",
+      "legacy_finding_ids": [
+        "BA05",
+        "BA07",
+        "BA08"
+      ],
+      "source_ids": [
+        "baima_cass2024",
+        "baima_people2026",
+        "baima_prior_audit"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/baima.json",
+      "drawing_consequence": "通过O02与X02/G11记录关联接入全城阅读；时层标北魏参照；咸池W25仅作同大道地望参照。",
+      "remaining_limit": "无共同配准，不能端点插值坊门，不能从坊门沟槽连线咸池。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC08",
+      "node": "sima",
+      "title": "三种道路与两种分区各有位置",
+      "legacy_finding_ids": [
+        "SI01",
+        "SI02",
+        "SI03"
+      ],
+      "source_ids": [
+        "sima_report2024",
+        "sima_report2017"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/sima.json",
+      "drawing_consequence": "从西至东表达宫院东墙、P01、仓区西墙；4.7米夹道P07在宫院内，13米P08在仓区内；仓区东西分区与南北分区分开。",
+      "remaining_limit": "40米仅为P01报告最宽值，不能加4.7米和13米推断两墙净距，也不连成同一路。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC09",
+      "node": "sima",
+      "title": "宫内外仓区及年代分开",
+      "legacy_finding_ids": [
+        "SI04",
+        "SI05",
+        "SI07"
+      ],
+      "source_ids": [
+        "sima_report2024",
+        "sima_inner2023",
+        "sima_people2026",
+        "sima_outer2026"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/sima.json",
+      "drawing_consequence": "宫内与宫外范围分框，地穴仓窖和地上建筑用不同表达；168口总勘探与13口发掘各自保留统计口径。",
+      "remaining_limit": "北魏宽年代和被北魏墙体叠压不证明516—528年同期运行；窖数不生成房屋阵列。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC10",
+      "node": "sima",
+      "title": "门址参照和图上范围不变成新坐标",
+      "legacy_finding_ids": [
+        "SI06",
+        "SI08"
+      ],
+      "source_ids": [
+        "sima_outer2026",
+        "sima_people2026",
+        "sima_prior",
+        "sima_map2023"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/sima.json",
+      "drawing_consequence": "东阳门、东掖门、广莫门内道路三个参照分名；2023蓝框保留范围性质，司马门三对断线保留原值。",
+      "remaining_limit": "跨图控制未成立，不把蓝框当墙线，P11不与P01强连。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC11",
+      "node": "jianchun",
+      "title": "三桥身份、方向与事件各自表达",
+      "legacy_finding_ids": [
+        "JC01",
+        "JC02",
+        "JC03",
+        "JC04"
+      ],
+      "source_ids": [
+        "jc_zhou2",
+        "jc_sj16",
+        "jc_huang2026",
+        "jc_jin3"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/jianchun.json",
+      "drawing_consequence": "B01/B02/B03独立；东石桥以南北桥向北接大道，建阳/绥民居两侧；七里桥至三门标向东一里；527受损仅附B01。",
+      "remaining_limit": "不排成东西等距桥列，不从桥名七里反算桥位；不能认定527后何时修复。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    },
+    {
+      "id": "R9-SC12",
+      "node": "jianchun",
+      "title": "水道的层位与解释方案不拼成确定水网",
+      "legacy_finding_ids": [
+        "JC05",
+        "JC06",
+        "JC07",
+        "JC08"
+      ],
+      "source_ids": [
+        "jc_huang2026",
+        "jc_1993",
+        "jc_zhou2",
+        "jc_collation",
+        "jc_sj16",
+        "jc_qianfig2",
+        "jc_map06a"
+      ],
+      "source_review_path": "research/city-nodes-r7/reviews/jianchun.json",
+      "drawing_consequence": "路北调查渠迹与路南分期解释用不同类别；七里涧两读并列；门下汉晋暗渠只置独立局部框；未知桥头/渠口用空心标记。",
+      "remaining_limit": "本轮仍无共同控制点或原件路末测点，不新增古岸或桥头；解释线不是实测岸线。",
+      "new_historical_claim": false,
+      "evidence_grade_upgraded": false
+    }
+  ],
+  "generation_constraints": [
+    {
+      "id": "R9-GEN01",
+      "basis": "R9-SRC01；原有R8建筑依据",
+      "constraint": "永宁寺南门三重、东西门两重、北门无屋分别表达；南门保持在寺院南墙上，不能挪到前景城墙。",
+      "limit": "三重为文献形制约束，上部结构、装饰和精确高度仍属复原表达。"
+    },
+    {
+      "id": "R9-GEN02",
+      "basis": "PY01/PY03/PY08",
+      "constraint": "永宁寺保持宫前门南、主路西；塔北有殿，宫城与寺院各自围合；路侧支水不改为中轴渠。",
+      "limit": "画面不产生新坐标或实测院墙。"
+    },
+    {
+      "id": "R9-GEN03",
+      "basis": "BA01—BA08、SI01—SI08",
+      "constraint": "坊街采用主次道路与不同建筑群尺度，仓区避免由仓窖数制造整齐屋顶阵列。",
+      "limit": "不可借画面声称完整白马坊界、每口窖同期或全部地上构筑形制已知。"
+    },
+    {
+      "id": "R9-GEN04",
+      "basis": "JC01—JC08；1993/2011仍缺原图",
+      "constraint": "城东不新增可辨认而无据的桥头、汇口、三桥等距串列或两条同期确定河岸。",
+      "limit": "概化水环境不得反向用于历史测量。"
+    }
+  ],
+  "search_scope": {
+    "engines": [
+      "system2_search_query",
+      "system1_search_query"
+    ],
+    "query_families": [
+      "1993题名/外郭异写/页码/PDF",
+      "2011完整题名/鸿池陂/文献标识/原刊期次",
+      "相关考古工作者田野汇报与永宁寺南门文献"
+    ],
+    "result": "无新取得1993/2011原页；未以第三方下载站、目录、学位论文引文或综述图替代原件。"
+  },
+  "deferred_work": [
+    "2022运河报告继续暂缓",
+    "毁后洛阳继续后置"
+  ],
+  "access_boundaries": {
+    "authenticated": false,
+    "access_control_bypassed": false,
+    "login_requested": false,
+    "purchase_requested": false
+  },
+  "source_family_note": "同一考古项目的不同新闻稿、转载与目录不计算为独立考古互证；古籍正文、现代校注、考古报道和项目解释分层。",
+  "archive_policy": "只公开稳定URL、访问状态、响应字节数与指纹、判断和限制；不发布登录页全文、动态签名参数或整篇受版权保护的现代论文。"
+}

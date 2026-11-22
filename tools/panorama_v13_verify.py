@@ -18,6 +18,8 @@ def digest(raw):
 
 
 def verify(info, reader, *, build_control_reader=None):
+    from city_spatial_r9_compat import restore_r8_context
+    info, reader = restore_r8_context(info, reader)
     get = lru_cache(maxsize=None)(reader)
     hashes = info["files_sha256"]
     meta = info[KEY]

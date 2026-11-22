@@ -77,6 +77,14 @@ SITE = [
         ('node', '--check', 'web/panorama-v13.js'),
         ('python', 'tools/panorama_v13.py'),
     ]),
+    ('R9.1 city spatial overview and auditable map decisions', [
+        ('node', '--check', 'web/city-spatial-r9.js'),
+        ('python', 'tools/city_spatial_r9.py'),
+    ]),
+    ('R9.1 V13 revised candidate and spatial evidence guide', [
+        ('node', '--check', 'web/panorama-v13-r2.js'),
+        ('python', 'tools/panorama_v13_r2.py'),
+    ]),
 ]
 
 

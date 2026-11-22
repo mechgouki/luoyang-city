@@ -913,6 +913,10 @@ try:
  report['city_nodes_r7']=verify_city_nodes(info,get)
  from panorama_v13_verify import verify as verify_candidate_panorama
  report['panorama_review_v13']=verify_candidate_panorama(info,get)
+ from city_spatial_r9_verify import verify as verify_spatial_r9
+ report['city_spatial_r9']=verify_spatial_r9(info,get)
+ from panorama_v13_r2_verify import verify as verify_revised_panorama
+ report['panorama_review_v13_r2']=verify_revised_panorama(info,get)
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors

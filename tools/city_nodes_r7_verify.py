@@ -434,7 +434,8 @@ def verify_homepage(meta, hashes, get):
         archive = get(entry["archive"])
         assert digest(archive) == hashes[entry["archive"]] == entry["sha256"], entry["archive"]
         from panorama_v13_contract import restore_home as restore_candidate_entry
-        actual = restore_candidate_entry(get(path))
+        from panorama_v13_r2_contract import strip_current_entries
+        actual = restore_candidate_entry(strip_current_entries(get(path)))
         assert restore_home(actual) == archive, (path, "Homepage edit extends outside allowed insertions")
         for before, after in HOME_EDITS:
             assert actual.count(after) == 1 and archive.count(before) == 1, path
