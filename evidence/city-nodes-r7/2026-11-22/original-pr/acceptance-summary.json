@@ -1,0 +1,1222 @@
+{
+  "schema": "luoyang-r7-acceptance-summary-v1",
+  "scope": "PR #75固定CI构建与浏览器验收；本文件不代替生产merge提交的deploy和verify-live验收",
+  "repository": "mechgouki/luoyang-city",
+  "pull_request": 75,
+  "workflow_run": {
+    "id": 44971941825,
+    "url": "https://github.com/mechgouki/luoyang-city/actions/runs/44971941825",
+    "build_result": "success",
+    "source_commit": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+    "source_ref": "refs/pull/75/merge",
+    "source_evidence": [
+      "build-job.log",
+      "city-nodes-r7-browser/desktop-report.json",
+      "city-nodes-r7-browser/mobile-report.json"
+    ]
+  },
+  "production_reference": {
+    "merge_commit": "ccf24530910a5efd9de7f860be913933b916a8a0",
+    "acceptance_status": "separate production evidence required; not asserted by this PR summary"
+  },
+  "original_artifact": {
+    "file": "luoyang-r7-pr75-build-evidence.zip",
+    "bytes": 177246512,
+    "sha256": "8823d6dae05ceb5a2478521de7e19fa4c60c45a63d22f2e37a9158f3513197f5",
+    "artifact_url": "https://github.com/mechgouki/luoyang-city/actions/runs/44971941825/artifacts/14734342002",
+    "extraction_policy": "仅选取原有报告、R7关键截图及本次新增10张首页/道路截图；PNG逐字节保存，不重编码"
+  },
+  "runtime": {
+    "browser_image_digests": [
+      "mcr.microsoft.com/playwright/python@sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1"
+    ],
+    "evidence": "browser-runtime-digest.json",
+    "python_requirement": "3.11; Pages workflow and complete-build guard"
+  },
+  "totals": {
+    "python_semantic_report_files": 21,
+    "python_test_cases_passed": 453,
+    "python_test_cases_failed": 0,
+    "python_test_cases_skipped": 0,
+    "node_test_cases_passed": 5,
+    "node_test_cases_failed": 0,
+    "browser_report_files": 49,
+    "browser_report_files_passed": 49,
+    "browser_check_groups_passed": 493,
+    "browser_runtime_errors": 0,
+    "browser_reports_with_embedded_source_commit": 17,
+    "browser_reports_with_explicit_passed_status": 23,
+    "counting_note": "Python和Node数为执行用例；浏览器数为报告中的checks分组，单组可能含多项断言，不能相加后称为独立测试总数。没有把下载、截图或语法检查另计为测试。"
+  },
+  "focus_results": {
+    "r7": {
+      "semantic_report": "city-nodes-r7-tests.txt",
+      "semantic_cases_passed": 13,
+      "browser_reports": [
+        "city-nodes-r7-browser/desktop-report.json",
+        "city-nodes-r7-browser/mobile-report.json"
+      ],
+      "browser_check_groups_passed": 16,
+      "advertised_downloads_verified_per_device": 9,
+      "retained_original_screenshots": 26
+    },
+    "r62_return_navigation": {
+      "browser_reports": [
+        "all-road-atlas-r62-browser/desktop-report.json",
+        "all-road-atlas-r62-browser/mobile-report.json"
+      ],
+      "browser_check_groups_passed": 16,
+      "round_trip_check_index_zero_based": 3,
+      "round_trip_check": "Evidence returns to the existing source/index item with highlight and keyboard focus; required layers, reload and map-to-card round trip work",
+      "screenshot_scope_note": "选取宫路/坊街回图入口证据卡与所属图框。原CI没有单独截取回图瞬间；回跳、高亮、焦点和刷新恢复以两份原始报告第4条检查为证。"
+    },
+    "v12_two_home_entries": {
+      "browser_report": "homepage-approved-v9-browser/results.json",
+      "hero_revision": "panorama-approved-v12",
+      "browser_check_groups_passed": 11,
+      "layouts_verified": 8,
+      "retained_layouts": [
+        "desktop/index",
+        "desktop/dual",
+        "mobile/index",
+        "mobile/dual"
+      ],
+      "note": "目录沿用旧测试名称homepage-approved-v9-browser；报告schema与hero_revision确认实际验收V12。"
+    }
+  },
+  "python_semantic_reports": [
+    {
+      "path": "city-audit-b8-tests.txt",
+      "status": "passed",
+      "tests_run": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.033,
+      "bytes": 1530,
+      "sha256": "5482add6119bc0bb7f40c0575e192a82d8332f34657ec15ea88a9043304f1a1f",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "city-nodes-r7-tests.txt",
+      "status": "passed",
+      "tests_run": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 1.184,
+      "bytes": 2235,
+      "sha256": "4590eb8cb9df98a038aff9fa562fe83c0e0429adeb63388e3a02ba64dce66ae5",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "city-review-b8-tests.txt",
+      "status": "passed",
+      "tests_run": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.267,
+      "bytes": 1410,
+      "sha256": "d36a7e1d1efc288d9880cb56c12a9f8378216dd642af9cfc26dc29e0b98d24a3",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "dual-semantic-tests.txt",
+      "status": "passed",
+      "tests_run": 22,
+      "passed": 22,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.096,
+      "bytes": 2251,
+      "sha256": "91d458ad9c02a97f44d0e74bb735174a774ed6dd9b53bda25f2666da283ebc70",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "ground-review-b6-tests.txt",
+      "status": "passed",
+      "tests_run": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.01,
+      "bytes": 1208,
+      "sha256": "09f4d5a9044b4a47badafc89bd4d343ef017cbdd6b827d05501bdd5a2d0981f0",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "historical-datum-b5-tests.txt",
+      "status": "passed",
+      "tests_run": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.003,
+      "bytes": 1244,
+      "sha256": "8d8128b4f29f978af5b2c4249b398859023e12cf784beecb8f5130781c48b9af",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "historical-frame-b4-tests.txt",
+      "status": "passed",
+      "tests_run": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.02,
+      "bytes": 1216,
+      "sha256": "dbb98e1b06d6cce0769df7fc8dd03457d37d7516233be1fbceb38c3a497069fe",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "homepage-approved-v9-tests.txt",
+      "status": "passed",
+      "tests_run": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.292,
+      "bytes": 1022,
+      "sha256": "3af44732296ead91ae6c85bd141370a0788cd2a60552cb73c4cd2c5cdccb8b53",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "live-http-tests.txt",
+      "status": "passed",
+      "tests_run": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.006,
+      "bytes": 827,
+      "sha256": "c3b4a39a0321a9b54d300bcea1574b6867d9364d7ad6a94d6647bdec48505c24",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "luonan-b7-tests.txt",
+      "status": "passed",
+      "tests_run": 21,
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.207,
+      "bytes": 3580,
+      "sha256": "9927719115b40fc1a1ba29f574cedfa14e5ffedf699fcdd94b68c790f646c871",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "north-b4-semantic-tests.txt",
+      "status": "passed",
+      "tests_run": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.003,
+      "bytes": 1114,
+      "sha256": "275f593197f0334b8be6f8e9b4697fcc876f2b98db51209f1f45c9db039efcb1",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "prosperity-semantic-tests.txt",
+      "status": "passed",
+      "tests_run": 218,
+      "passed": 218,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 5.076,
+      "bytes": 37661,
+      "sha256": "b5725cf2e5ed694367bd1ddb0fee29bfb6e4d4c09cc62775f940940b7c8999e6",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "source-access-b8-tests.txt",
+      "status": "passed",
+      "tests_run": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.006,
+      "bytes": 1036,
+      "sha256": "6112b2378fac47eecfa6eb8c663fe0604f78008be846d615f2d05d1650fe74ac",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "source-continuity-b7-tests.txt",
+      "status": "passed",
+      "tests_run": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.008,
+      "bytes": 1197,
+      "sha256": "2a098c8974a9cab9be1eb03cfbee6cebfe4b8f1cb603ad58d6b4b69db1d39619",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "southeast-b6-tests.txt",
+      "status": "passed",
+      "tests_run": 18,
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.153,
+      "bytes": 2945,
+      "sha256": "39fb4012ee43d78165f285db2def1827c06a1aac09c27d1b0cff0d5057420599",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "v26-semantic-tests.txt",
+      "status": "passed",
+      "tests_run": 20,
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.507,
+      "bytes": 2281,
+      "sha256": "940b433fa999481937816ab2eebe0bd6ec4e1ffa28dc21169220b8fd3c3383bf",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "v27-semantic-tests.txt",
+      "status": "passed",
+      "tests_run": 25,
+      "passed": 25,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.011,
+      "bytes": 3100,
+      "sha256": "ebb1d30dd613a0fcc2f52dcdbdee8037fc8d7797085178459ff26c1d20037532",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "v29-semantic-tests.txt",
+      "status": "passed",
+      "tests_run": 20,
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.001,
+      "bytes": 2071,
+      "sha256": "202d776c2f6e22a50eb1a1e7f2ea6c933a5b41d59792ab25dc75e36964b5d396",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "v30-semantic-tests.txt",
+      "status": "passed",
+      "tests_run": 16,
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.002,
+      "bytes": 1451,
+      "sha256": "4a166c8e78a6033097f0725b121064d7681b16613cb09167912306b8a9ee5b89",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "west-b3-semantic-tests.txt",
+      "status": "passed",
+      "tests_run": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.002,
+      "bytes": 872,
+      "sha256": "1832a6c4699b56e8c0bb3be1ff0225a468bf2208732a8569b8bc3f76f1ecacd0",
+      "source_binding": "PR CI checkout in build-job.log"
+    },
+    {
+      "path": "west-roads-b5-tests.txt",
+      "status": "passed",
+      "tests_run": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 0.003,
+      "bytes": 1154,
+      "sha256": "49386fd99b33cfc9c152bfdc7b01e6996ac407a55cd845d0edb447ee88f7cf43",
+      "source_binding": "PR CI checkout in build-job.log"
+    }
+  ],
+  "node_report": {
+    "path": "build-job.log",
+    "command": "node --test tests/map-interactions.test.cjs",
+    "passed": 5,
+    "failed": 0,
+    "status": "passed"
+  },
+  "browser_reports": [
+    {
+      "path": "all-road-atlas-r62-browser/desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 8,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 2199,
+      "sha256": "6ee12f18ff8475fb9f60c30620a8fdbf2faa9c9a581153adcdbc69bd0adb126a"
+    },
+    {
+      "path": "all-road-atlas-r62-browser/mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 8,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 2193,
+      "sha256": "0c04f913209f7ad51e8c8899f0f33b3751d41bc9475c69e5564e80c4db517b65"
+    },
+    {
+      "path": "browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 16,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1765,
+      "sha256": "9f4b55557e318918a03a7dd266a43d0abdd3d797468254a1be8d1d78606fdd3f"
+    },
+    {
+      "path": "city-atlas-r4-browser/desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 4,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 1953,
+      "sha256": "2863e626b29709fde0ebea6e7d42d645262b18038dfd0973eb12c84ce8b20754"
+    },
+    {
+      "path": "city-atlas-r4-browser/mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 4,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 1949,
+      "sha256": "9539c24219a8821a6d9d489fa89275130399fdc099e96a05ae0531bf8eeb7a8f"
+    },
+    {
+      "path": "city-b8-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 18,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2781,
+      "sha256": "461e7bb0d51c26bdd13469145d668359ad2ad9815b887de3086f6419565237a1"
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 8,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 3597,
+      "sha256": "4563ec511264d10bb0e51e9445f293a1f040b4e80efe3472eade26c8542c282e"
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 8,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 3582,
+      "sha256": "273139f633b2d4883ef2e65cdd9266107bcd9b2dd2d6099b65efa299b2a92b0c"
+    },
+    {
+      "path": "city-panorama-r5-browser/desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 2,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 1610,
+      "sha256": "65e8dd5f2f6be8db6b50c0c05098a5a0253e63b245623c3985368046408393b8"
+    },
+    {
+      "path": "city-panorama-r5-browser/mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 2,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 1605,
+      "sha256": "6dbbcefef33a593deca44e162acdbdd5628747c60bfdd8756c6b1398a3864deb"
+    },
+    {
+      "path": "city-west-p472-browser/desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 6,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 2202,
+      "sha256": "761c40dd72c42d0f6aaab83a281f3824d41aafe56bdb310967a994817c94f212"
+    },
+    {
+      "path": "city-west-p472-browser/mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 6,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 2190,
+      "sha256": "ead17a116eeee732eb027eb1c4ceb4ee73b4852af792dd78ac34f1b432cc0336"
+    },
+    {
+      "path": "dual-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 19,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2453,
+      "sha256": "48d6b63b6187faa1e7cb2d92807807fd2f534481ee985d12db96de5e76252805"
+    },
+    {
+      "path": "homepage-approved-v9-browser/results.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 11,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 11216,
+      "sha256": "74ebd24afe964e2ce133f5a7738d6d047151a6b2d74a91087694970b92d104f9"
+    },
+    {
+      "path": "homepage-v1-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 10,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1526,
+      "sha256": "f22dc6c60af0252668fd4ce4ef610d93ccfce24698999d026d43c1a148a05bff"
+    },
+    {
+      "path": "luonan-b7-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 17,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2472,
+      "sha256": "e47f29cda4f3bc05a30e84d346fcd9f9f0de1d3eedd3864cdf1eec6e15c455bf"
+    },
+    {
+      "path": "north-b4-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 10,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1420,
+      "sha256": "cce376aacd61cfe9e174708c4faa1f044b19d63a7853cf438556b0dac5bffff4"
+    },
+    {
+      "path": "prosperity-architecture-p44-browser/report.json",
+      "status": "passed",
+      "status_basis": "completed_check_list_and_empty_error_list_in_successful_CI_job",
+      "check_groups_passed": 5,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 549,
+      "sha256": "7ea55805d6e52d3fea60ccbd0aa28f284e2478f3de8a56274cf89ca3b6c4e178"
+    },
+    {
+      "path": "prosperity-axis-sources-p41-browser/report.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 7,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1134,
+      "sha256": "d195f31cd7c5d509ccae85eecb60af04b39f6a0bdeefdcff88e9aacd603753fc"
+    },
+    {
+      "path": "prosperity-axis-v4-browser/report.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 7,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1074,
+      "sha256": "a520aefc5c6a828e21dd3e99f6d265047d4aef491e582fd36161c79fcd584f3c"
+    },
+    {
+      "path": "prosperity-backbone-p469-browser/p469-desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 10,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 19003,
+      "sha256": "b6c04859e5dcf98566ca6f889e4d8eec371088d5abe0e1b50cbd39c234e29031"
+    },
+    {
+      "path": "prosperity-backbone-p469-browser/p469-mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 10,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 19001,
+      "sha256": "992bd41af9ceb17dbd49654b185a04cd6c6c4bbe0a3a6780c3bd72fb0d4e8afa"
+    },
+    {
+      "path": "prosperity-city-common-p470-browser/p470-desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 12,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 5994,
+      "sha256": "fd3444ba40b81a7933f409b31fc377de44a8737424cb87722b81042faad94418"
+    },
+    {
+      "path": "prosperity-city-common-p470-browser/p470-mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 12,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 5976,
+      "sha256": "24ed6efea0a2b3e9a893783197d2f9cf8f543564b0b76ae05415e438fb8e2ab9"
+    },
+    {
+      "path": "prosperity-city-distribution-p451-browser/report.json",
+      "status": "passed",
+      "status_basis": "completed_check_list_and_empty_error_list_in_successful_CI_job",
+      "check_groups_passed": 5,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 556,
+      "sha256": "e8550463419ae66d932de38f8a66f904621e8c8790df52f8484b60a213f353c0"
+    },
+    {
+      "path": "prosperity-city-north-p471-browser/p471-desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 11,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 10348,
+      "sha256": "fd6658dc95c10efd4668e6fa897fd918ee727f051ce4691d4ed649d6537a8510"
+    },
+    {
+      "path": "prosperity-city-north-p471-browser/p471-mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 11,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 10323,
+      "sha256": "449ba69eb16d48f570ba36e333b72d820dfcf43cbb0993e3c6bd0c51f64be3e3"
+    },
+    {
+      "path": "prosperity-core-v2-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 12,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1821,
+      "sha256": "aae36432236ff28b139c677a7c2e1dbdbb434cf008ed86a4160f4e911e6f08a8"
+    },
+    {
+      "path": "prosperity-gate-v3-browser/report.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 11,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1648,
+      "sha256": "f31d6ca611193157fe5fbd09e3c83091bfaa5e040ac2763617facd71806e2476"
+    },
+    {
+      "path": "prosperity-hydro-roads-p46-browser/p467-desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 10,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2298,
+      "sha256": "77e68c8372c3097fa37834f56ed234e36182cf5c17734989aaa2577aea671dab"
+    },
+    {
+      "path": "prosperity-hydro-roads-p46-browser/p467-mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 10,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2297,
+      "sha256": "a7bf402e268d4449ec1d163bb77b81303e501dc385cb14f8c6169b5462ebeb96"
+    },
+    {
+      "path": "prosperity-hydro-roads-p46-browser/p468-desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 13,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 3122,
+      "sha256": "eb3117609c624cb3d81a292b96ace2c7defea9338c26050d1b9e53af589a7442"
+    },
+    {
+      "path": "prosperity-hydro-roads-p46-browser/p468-mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 13,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 3121,
+      "sha256": "a7892920c8be906b30d78716166164417d048bb2286d77fd3315d9e847ee3fe9"
+    },
+    {
+      "path": "prosperity-hydro-roads-p46-browser/report.json",
+      "status": "passed",
+      "status_basis": "completed_check_list_and_empty_error_list_in_successful_CI_job",
+      "check_groups_passed": 7,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 774,
+      "sha256": "9b1d1a14bf699d18aabd3fc92f7fa02fa7c513ab3c955d9f686c118808ca810d"
+    },
+    {
+      "path": "prosperity-palace-boundaries-p43-browser/report.json",
+      "status": "passed",
+      "status_basis": "completed_check_list_and_empty_error_list_in_successful_CI_job",
+      "check_groups_passed": 3,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 339,
+      "sha256": "32ac266f4e1858073999ddce7c80ea3f37492570494912020c03200649e59a81"
+    },
+    {
+      "path": "prosperity-road-functions-p452-browser/report.json",
+      "status": "passed",
+      "status_basis": "completed_check_list_and_empty_error_list_in_successful_CI_job",
+      "check_groups_passed": 5,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 555,
+      "sha256": "3b7383a1812a6d648851863327167ff5a2a7c6776035ba19b9511a77a185087e"
+    },
+    {
+      "path": "prosperity-street-clusters-p453-browser/report.json",
+      "status": "passed",
+      "status_basis": "completed_check_list_and_empty_error_list_in_successful_CI_job",
+      "check_groups_passed": 5,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 592,
+      "sha256": "57805d953c78ebef06141c735a77be2482d153884124703fd01a592a625e8ff6"
+    },
+    {
+      "path": "prosperity-taiji-courts-p42-browser/report.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 8,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1263,
+      "sha256": "7fad447a01039ebc5001385b1aae14ca3086fbc4b83963485fd42fa1796259d2"
+    },
+    {
+      "path": "prosperity-v1-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 18,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2791,
+      "sha256": "2f6e03432c749a2760460787b5af5a0f3c712d56bcd9a69b98c9e147b98d0f23"
+    },
+    {
+      "path": "road-atlas-r6-browser/desktop-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 6,
+      "device": "desktop",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 1913,
+      "sha256": "54d53b467d11b590a66b27fa151a274e8e48b43568a978584d4d1760effab1bf"
+    },
+    {
+      "path": "road-atlas-r6-browser/mobile-report.json",
+      "status": "passed",
+      "status_basis": "explicit_report_status_and_empty_error_list",
+      "check_groups_passed": 6,
+      "device": "mobile",
+      "runtime_errors": 0,
+      "source_commit_in_report": "6fae2767ca220a59e8357f2d4483ac57c32922be",
+      "source_binding": "embedded source_commit",
+      "bytes": 1905,
+      "sha256": "8444aa9932d92abe3f7c85fdbce4de5ddee6d82038c11bda6bf81accab109d89"
+    },
+    {
+      "path": "southeast-b6-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 17,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2344,
+      "sha256": "eef3e3c45f3a7aa0169d05000215dca22d051b6916406ddc0d66c75bb1c5096f"
+    },
+    {
+      "path": "v26-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 17,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2034,
+      "sha256": "833d4a9407f56a182eaea5d084d79f7f500dc2aa642c61083eed6a3c780e03cc"
+    },
+    {
+      "path": "v27-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 19,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2191,
+      "sha256": "948287ddc01fc016b33a42a353600794f59bab671614263e9fc43784ab71a802"
+    },
+    {
+      "path": "v28-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 15,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1963,
+      "sha256": "266f0aaa33c05f557267e5152179f126ff3abeda317b2408c4d904fe93169246"
+    },
+    {
+      "path": "v29-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 19,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 2325,
+      "sha256": "f3c012ed5ce79f86f236f14b2455c49e516471c87e13de5fbabaa919b8189159"
+    },
+    {
+      "path": "v30-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 13,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1566,
+      "sha256": "914fbdf2bc9393d6a79b03fe64320044ad4ec34721e5ebe7b81471bf3dc2fd00"
+    },
+    {
+      "path": "west-b3-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 9,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1125,
+      "sha256": "736f318deee5770f28e191ef2ddb18fb2ad269c55e6a22676f1d43d9002e8eeb"
+    },
+    {
+      "path": "west-roads-b5-browser/results.json",
+      "status": "passed",
+      "status_basis": "all_check_statuses_passed_and_empty_error_list",
+      "check_groups_passed": 10,
+      "device": null,
+      "runtime_errors": 0,
+      "source_commit_in_report": null,
+      "source_binding": "PR CI checkout in build-job.log",
+      "bytes": 1352,
+      "sha256": "ba95f5264b08f36112234cf087beb970dde8220ef6b721196f4016a9a3e59066"
+    }
+  ],
+  "newly_selected_screenshots": [
+    {
+      "path": "homepage-approved-v9-browser/approved-desktop.png",
+      "device": "desktop",
+      "entry": "index.html",
+      "purpose": "V12首页双入口整幅显示",
+      "report": "homepage-approved-v9-browser/results.json",
+      "bytes": 2676754,
+      "sha256": "03720bf71d233ee0a70f9c91c782a1f2ad02b55b7469ba3528bfdda57104bfdc",
+      "original_archive_member": "homepage-approved-v9-browser/approved-desktop.png",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "homepage-approved-v9-browser/approved-desktop-dual.png",
+      "device": "desktop",
+      "entry": "v3.0-dual.html#home",
+      "purpose": "V12首页双入口整幅显示",
+      "report": "homepage-approved-v9-browser/results.json",
+      "bytes": 2676754,
+      "sha256": "03720bf71d233ee0a70f9c91c782a1f2ad02b55b7469ba3528bfdda57104bfdc",
+      "original_archive_member": "homepage-approved-v9-browser/approved-desktop-dual.png",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "all-road-atlas-r62-browser/desktop-palace-evidence.png",
+      "device": "desktop",
+      "entry": "luoyang-all-roads.html",
+      "purpose": "宫路证据与返回来源图入口",
+      "report": "all-road-atlas-r62-browser/desktop-report.json",
+      "bytes": 161668,
+      "sha256": "fbe88b385eb2f772f1da9d0fa56ea32cadf580c6df37f5ba2013475e5606588c",
+      "original_archive_member": "all-road-atlas-r62-browser/desktop-palace-evidence.png",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "all-road-atlas-r62-browser/desktop-ward-evidence.png",
+      "device": "desktop",
+      "entry": "luoyang-all-roads.html",
+      "purpose": "坊街证据与返回关系索引入口",
+      "report": "all-road-atlas-r62-browser/desktop-report.json",
+      "bytes": 177693,
+      "sha256": "3e92eb6347a3712435ad9ef099bc7641eb39f39f7bd160848a728b33e341a1e4",
+      "original_archive_member": "all-road-atlas-r62-browser/desktop-ward-evidence.png",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "all-road-atlas-r62-browser/desktop-ward-bridge-map.png",
+      "device": "desktop",
+      "entry": "luoyang-all-roads.html",
+      "purpose": "坊街与桥道所属图框",
+      "report": "all-road-atlas-r62-browser/desktop-report.json",
+      "bytes": 170766,
+      "sha256": "d294e34d58cb2563f4ea22beb13e37d82a1d97dc980afd1c91be74e6da710108",
+      "original_archive_member": "all-road-atlas-r62-browser/desktop-ward-bridge-map.png",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "homepage-approved-v9-browser/approved-mobile.png",
+      "device": "mobile",
+      "entry": "index.html",
+      "purpose": "V12首页双入口整幅显示",
+      "report": "homepage-approved-v9-browser/results.json",
+      "bytes": 245036,
+      "sha256": "76b11827780445f4a37fdd868d243f2cdfcb158c1fa1259dd31d4e1c5ba9cabf",
+      "original_archive_member": "homepage-approved-v9-browser/approved-mobile.png",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "homepage-approved-v9-browser/approved-mobile-dual.png",
+      "device": "mobile",
+      "entry": "v3.0-dual.html#home",
+      "purpose": "V12首页双入口整幅显示",
+      "report": "homepage-approved-v9-browser/results.json",
+      "bytes": 245036,
+      "sha256": "76b11827780445f4a37fdd868d243f2cdfcb158c1fa1259dd31d4e1c5ba9cabf",
+      "original_archive_member": "homepage-approved-v9-browser/approved-mobile-dual.png",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "all-road-atlas-r62-browser/mobile-palace-evidence.png",
+      "device": "mobile",
+      "entry": "luoyang-all-roads.html",
+      "purpose": "宫路证据与返回来源图入口",
+      "report": "all-road-atlas-r62-browser/mobile-report.json",
+      "bytes": 158434,
+      "sha256": "6f9d2a648fe7e7f1197a4a62cfad43ed53c570560e4279e177085d00d800694a",
+      "original_archive_member": "all-road-atlas-r62-browser/mobile-palace-evidence.png",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "all-road-atlas-r62-browser/mobile-ward-evidence.png",
+      "device": "mobile",
+      "entry": "luoyang-all-roads.html",
+      "purpose": "坊街证据与返回关系索引入口",
+      "report": "all-road-atlas-r62-browser/mobile-report.json",
+      "bytes": 175770,
+      "sha256": "d41849687cdf7f4fadeb1ff2702f0650ca317f8024e4b262ae4a4523b00a69fd",
+      "original_archive_member": "all-road-atlas-r62-browser/mobile-ward-evidence.png",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "all-road-atlas-r62-browser/mobile-ward-bridge-map.png",
+      "device": "mobile",
+      "entry": "luoyang-all-roads.html",
+      "purpose": "坊街与桥道所属图框",
+      "report": "all-road-atlas-r62-browser/mobile-report.json",
+      "bytes": 55539,
+      "sha256": "cd5e40143b30f928bc358a8cae4d208b2bbd16e07549cee2c927a96c0f6f1627",
+      "original_archive_member": "all-road-atlas-r62-browser/mobile-ward-bridge-map.png",
+      "byte_identical_to_archive": true
+    }
+  ],
+  "existing_r7_screenshots": [
+    {
+      "path": "city-nodes-r7-browser/desktop-baima-evidence.png",
+      "bytes": 297679,
+      "sha256": "8f63e548fbd1f7506177de11d638d1d0f019f3db2cc4c587fa3cf0753edc652e",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-baima-map.png",
+      "bytes": 175375,
+      "sha256": "28a34894cd12aa8df9121802916df8702dffb534c521e377317997378b947878",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-jianchun-evidence.png",
+      "bytes": 309205,
+      "sha256": "c66264597c1b605bed348b12bae2bc8dbccb194204d4de23ecd632930cd5a390",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-jianchun-map.png",
+      "bytes": 182046,
+      "sha256": "d1f77626ac7a383fddde8e3cb7a2afb95aa5ceb96a818116f4b541ce91c6788c",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-offline-v12.png",
+      "bytes": 2132315,
+      "sha256": "d05c8c3caf28db0e9badbf5f351724c8663a750831536aaa62f79c1817c51ea3",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-overview.png",
+      "bytes": 144399,
+      "sha256": "fb98b4fd8c87c78655207129db1646a405e35122b1b1df15c74bd42895017985",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-palace-yongning-evidence.png",
+      "bytes": 332432,
+      "sha256": "620926df319ed29fb51a7bd9a94243482a8578956b06e06b2783f98242897259",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-palace-yongning-map.png",
+      "bytes": 165298,
+      "sha256": "fce176db5f574e162952738c32aa59d398b0970611fcc84186e7294f2cfd699e",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-sima-evidence.png",
+      "bytes": 257331,
+      "sha256": "134167760d746d80f59b80ec137263f7ac4a531c5d73aa1359e6811c980efda0",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-sima-map.png",
+      "bytes": 135157,
+      "sha256": "9e905d428b0f7a0e083d3b7266da60c0982fe83136c8d591e7de4a2dec895346",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-v12-guide.png",
+      "bytes": 2135071,
+      "sha256": "7361255da14e5b8cd1247de0631c666ca540d834d4c55d726b97626c453f9771",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-warehouse-scope.png",
+      "bytes": 114799,
+      "sha256": "1a4c34fac885403d5cd3491ca135e144913c30b0d64a4e19b7969c7fcbf18972",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-without-javascript.png",
+      "bytes": 297644,
+      "sha256": "1b8a93a024e8b1ca0ff962e4eb333c8e894c377fabf41f93905ce848423dbef1",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-baima-evidence.png",
+      "bytes": 265603,
+      "sha256": "cd17ade60b8684654ac80785348833cfe847351c7bc04f0e6013067d96d77bcc",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-baima-map.png",
+      "bytes": 52607,
+      "sha256": "bf9650d2210f3ed58ff2a7d9fccdd80fe429852a3686ae30757eb157a15b0604",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-jianchun-evidence.png",
+      "bytes": 281691,
+      "sha256": "2b869371f4c0bb5f0370ca2b44f6366e134612b547d1cee241114e41d5c3df0c",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-jianchun-map.png",
+      "bytes": 71622,
+      "sha256": "9b27c3f5e505b4eeb86ec19ccd246982846100d74f8ab7975f1edcbfbdb8458a",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-offline-v12.png",
+      "bytes": 175040,
+      "sha256": "3276c3645f02d0fb35f99072904ee0d40210a510637aa4c9f43d5fe4fd2070a8",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-overview.png",
+      "bytes": 45269,
+      "sha256": "e1211571777ac97091922eb2ad25b86e072c7e53809808bcd9843bc99978f510",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-palace-yongning-evidence.png",
+      "bytes": 340231,
+      "sha256": "0bbcf17fdd421ed5de02300cf2c77138be6d21a2ccb76675377ce0a86b972f85",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-palace-yongning-map.png",
+      "bytes": 64126,
+      "sha256": "e4c2cbbdb842dcc84871e9eb8700a8bb2947b1c9ec04a6b6d80714ec499b1aa3",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-sima-evidence.png",
+      "bytes": 229327,
+      "sha256": "16b5cdccc6e389118e9870d3dec58eba43fec04bc10761e90a11a3ffb89d20a3",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-sima-map.png",
+      "bytes": 52696,
+      "sha256": "c29027dafd80defe261c0244f5136f195a820a27033506641e8762b9fd6cd426",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-v12-guide.png",
+      "bytes": 174981,
+      "sha256": "a577fd004adedbdd49eca31360394bd95ccc82a45be7fcf6a090de9dbdc56a4a",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-warehouse-scope.png",
+      "bytes": 102473,
+      "sha256": "0507c85372818084a9d78ce3c4b5055b6ee018544d1c2e9e89029b37a821cbc8",
+      "byte_identical_to_archive": true
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-without-javascript.png",
+      "bytes": 303929,
+      "sha256": "771bf151e9b0e4a6ad6fa25bf95d11c99a5c1f390b369c5236b84f1afd1192ce",
+      "byte_identical_to_archive": true
+    }
+  ],
+  "archive_inventory": {
+    "files_excluding_this_summary": 156,
+    "bytes_excluding_this_summary": 20297164,
+    "selected_additional_png_count": 10,
+    "selected_additional_png_bytes": 6743450,
+    "retained_r7_png_count": 26,
+    "retained_r7_png_bytes": 8838346,
+    "all_retained_png_count": 36,
+    "all_retained_png_bytes": 15581796,
+    "summary_bytes": 45867,
+    "total_files_including_summary": 157,
+    "total_bytes_including_summary": 20343031,
+    "inventory_at_preparation": "Parent may append separate production evidence later; sizes here describe this PR directory immediately after this summary is written."
+  }
+}

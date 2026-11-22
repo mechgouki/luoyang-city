@@ -1,0 +1,80 @@
+{
+  "schema": "luoyang-r7-pr-screenshot-review-v1",
+  "reviewed_on_beijing": "2026-11-22",
+  "scope": "Visual review of original PR75 screenshots only; no final-live claim",
+  "reviewed": [
+    {
+      "path": "city-nodes-r7-browser/desktop-overview.png",
+      "sha256": "fb98b4fd8c87c78655207129db1646a405e35122b1b1df15c74bd42895017985"
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-palace-yongning-map.png",
+      "sha256": "fce176db5f574e162952738c32aa59d398b0970611fcc84186e7294f2cfd699e"
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-baima-map.png",
+      "sha256": "28a34894cd12aa8df9121802916df8702dffb534c521e377317997378b947878"
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-sima-map.png",
+      "sha256": "9e905d428b0f7a0e083d3b7266da60c0982fe83136c8d591e7de4a2dec895346"
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-jianchun-map.png",
+      "sha256": "d1f77626ac7a383fddde8e3cb7a2afb95aa5ceb96a818116f4b541ce91c6788c"
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-v12-guide.png",
+      "sha256": "7361255da14e5b8cd1247de0631c666ca540d834d4c55d726b97626c453f9771"
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-warehouse-scope.png",
+      "sha256": "1a4c34fac885403d5cd3491ca135e144913c30b0d64a4e19b7969c7fcbf18972"
+    },
+    {
+      "path": "city-nodes-r7-browser/desktop-without-javascript.png",
+      "sha256": "1b8a93a024e8b1ca0ff962e4eb333c8e894c377fabf41f93905ce848423dbef1"
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-overview.png",
+      "sha256": "e1211571777ac97091922eb2ad25b86e072c7e53809808bcd9843bc99978f510"
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-palace-yongning-map.png",
+      "sha256": "e4c2cbbdb842dcc84871e9eb8700a8bb2947b1c9ec04a6b6d80714ec499b1aa3"
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-baima-map.png",
+      "sha256": "bf9650d2210f3ed58ff2a7d9fccdd80fe429852a3686ae30757eb157a15b0604"
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-sima-map.png",
+      "sha256": "c29027dafd80defe261c0244f5136f195a820a27033506641e8762b9fd6cd426"
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-jianchun-map.png",
+      "sha256": "9b27c3f5e505b4eeb86ec19ccd246982846100d74f8ab7975f1edcbfbdb8458a"
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-v12-guide.png",
+      "sha256": "a577fd004adedbdd49eca31360394bd95ccc82a45be7fcf6a090de9dbdc56a4a"
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-warehouse-scope.png",
+      "sha256": "0507c85372818084a9d78ce3c4b5055b6ee018544d1c2e9e89029b37a821cbc8"
+    },
+    {
+      "path": "city-nodes-r7-browser/mobile-without-javascript.png",
+      "sha256": "771bf151e9b0e4a6ad6fa25bf95d11c99a5c1f390b369c5236b84f1afd1192ce"
+    }
+  ],
+  "findings": [
+    "No obvious overlapping text, displaced panels or missing V12 image within the reviewed viewports.",
+    "Desktop/local-map screenshots reflect highlighted source items and current inner-scroll position. Some top/bottom content is outside the captured viewport; screenshots are not a full-figure audit.",
+    "Mobile map views deliberately crop a scrollable, minimum-width SVG canvas. Horizontal clipping is confined to that map view and is not proof of missing data.",
+    "V12 panorama is fully visible in both device screenshots, with six non-overlapping numbered entry points and caption below.",
+    "SI07 evidence card keeps the two warehouse statistics scopes separate on desktop and mobile.",
+    "The no-JavaScript evidence screenshot shows native expanded record text. A focused skip link is visible in the mobile capture; this is an interaction state, not research content."
+  ],
+  "result": "No blocking visible layout defect in the reviewed original-PR viewports."
+}
