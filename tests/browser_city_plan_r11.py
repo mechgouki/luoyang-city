@@ -142,6 +142,26 @@ def painted(page):
     }""")
 
 
+def map_hit(locator, world_point=None):
+    """Read the topmost rendered hit target; never alter the DOM or dispatch."""
+    return locator.evaluate("""(el, world) => {
+        const box = el.getBoundingClientRect();
+        const point = world
+            ? new DOMPoint(world[0], -world[1]).matrixTransform(el.ownerSVGElement.getScreenCTM())
+            : {x: box.x + box.width / 2, y: box.y + box.height / 2};
+        const hit = document.elementFromPoint(point.x, point.y);
+        const owner = hit?.closest('[data-feature-id],[data-label-for]');
+        return {
+            screen: {x: point.x, y: point.y},
+            offset: {x: point.x - box.x, y: point.y - box.y},
+            target_box: {x: box.x, y: box.y, width: box.width, height: box.height},
+            hit_tag: hit?.tagName.toLowerCase() || null,
+            hit_feature: owner?.dataset.featureId || null,
+            hit_label: owner?.dataset.labelFor || null
+        };
+    }""", world_point)
+
+
 def layer_count(page, layer, number):
     page.wait_for_function("""({layer, number}) =>
         [...document.querySelectorAll('#city-plan-map [data-feature-id]')]
@@ -320,19 +340,48 @@ def exercise(browser, base, device, output, expected_commit=None):
             page.locator('[data-map-action="reset"]').click()
             painted(page)
             same_camera(camera(page), initial)
-            # This is an actual rendered polygon click, not a JS event dispatch.
-            page.locator(f'#city-plan-map [data-feature-id="{TOWER}"] > path').click()
+            # At the mobile whole-temple scale the plinth is only about 19 px
+            # wide, sharing its centre with other symbols and clickable leaders.
+            # Use the real controls to expose a distinct interior near its north
+            # edge, then require that point to hit the plinth's own painted path.
+            tower_path = page.locator(f'#city-plan-map [data-feature-id="{TOWER}"] > path')
+            tower_path.scroll_into_view_if_needed()
+            report["tower_hit_test"] = {"overview_center": map_hit(tower_path)}
+            page.locator("#label-toggle").uncheck()
+            expect(page.locator("#city-plan-map")).to_have_attribute("data-label-count", "0")
+            for _ in range(3):
+                page.locator('[data-map-action="in"]').click()
+                painted(page)
+            ring = features[TOWER]["geometry"]["coordinates"][0][:-1]
+            centre = [sum(p[i] for p in ring) / len(ring) for i in range(2)]
+            north_edge = [(ring[0][i] + ring[1][i]) / 2 for i in range(2)]
+            target_world = [edge * .8 + middle * .2 for edge, middle in zip(north_edge, centre)]
+            tower_path.scroll_into_view_if_needed()
+            hit = map_hit(tower_path, target_world)
+            report["tower_hit_test"].update({"world_point": target_world, "zoomed_camera": camera(page),
+                                              "labels_visible": False, "selected_point": hit})
+            assert hit["target_box"]["width"] >= 50, hit
+            assert hit["hit_tag"] == "path" and hit["hit_feature"] == TOWER and hit["hit_label"] is None, hit
+            # A normal, actionability-checked mouse click; no force or dispatch.
+            tower_path.click(position=hit["offset"])
             expect(page.locator("#selected-title")).to_have_text(features[TOWER]["label"])
             expect(page.locator(f'#city-plan-map [data-feature-id="{TOWER}"]')).to_have_class("is-selected")
             expect(page.locator("#selected-evidence")).to_contain_text("候选")
+            page.locator("#label-toggle").check()
+            expect(page.locator(f'#city-plan-map [data-label-for="{TOWER}"] text')).to_be_visible()
             fits(page)
             capture(page.locator("#map-viewport"), "yongning-selected")
             other_labels = page.locator("#city-plan-map [data-label-for]").evaluate_all(
                 "nodes => nodes.map(n => n.dataset.labelFor)")
             label_id = next(fid for fid in other_labels if fid != TOWER)
-            page.locator(f'#city-plan-map [data-label-for="{label_id}"] text').click()
+            label = page.locator(f'#city-plan-map [data-label-for="{label_id}"] text')
+            label.scroll_into_view_if_needed()
+            label_hit = map_hit(label)
+            report["tower_hit_test"]["independent_label"] = {"id": label_id, **label_hit}
+            assert label_hit["hit_label"] == label_id, label_hit
+            label.click()
             expect(page.locator("#selected-title")).to_have_text(features[label_id]["label"])
-            report["checks"].append("Buttons and keyboard zoom/pan/reset keep the same plane, and a real tower-polygon click opens its source/placement evidence")
+            report["checks"].append("Buttons and keyboard zoom/pan/reset keep the same plane; a visible, hit-verified tower-polygon click and a separate restored-label click select their own evidence")
 
             page.locator("#map-search").fill(TOWER)
             result = page.locator(f'[data-result-feature="{TOWER}"]')
