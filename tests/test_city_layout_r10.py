@@ -65,6 +65,21 @@ class R10PublicationContract(unittest.TestCase):
             with self.subTest(altered=altered), self.assertRaises(ValueError):
                 strip_current_entries(altered)
 
+    def test_r11_homepage_restores_through_the_direct_legacy_entry_chain(self):
+        from city_plan_r11_contract import HOME_ENTRY as R11_HOME_ENTRY, add_home as add_r11_home
+
+        r8 = b"<main>" + R9_HOME_ANCHOR + b"</main>"
+        r9 = add_r9_home(r8)
+        r10 = add_home(r9)
+        r11 = add_r11_home(r10)
+        self.assertEqual(strip_current_entries(r11), r9)
+        self.assertEqual(restore_r8_home(r11), r8)
+        for altered in (r11 + R11_HOME_ENTRY,
+                        r11.replace(b"./luoyang-city-plan.html", b"./wrong.html"),
+                        r11.replace(HOME_ENTRY + R11_HOME_ENTRY, R11_HOME_ENTRY + HOME_ENTRY)):
+            with self.subTest(altered=altered), self.assertRaises(AssertionError):
+                strip_current_entries(altered)
+
     def test_predecessor_context_comes_from_verified_exact_archived_bytes(self):
         info, files, before, prior = contract_fixture()
         restored, read = restore_r9_context(info, files.__getitem__)

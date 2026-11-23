@@ -1,14 +1,18 @@
 # 洛阳城复原：当前状态与续接顺序
 
 <!-- current-state:start -->
-当前状态（2026-11-22）：研究 **R10.1 / city-layout-r10**（全城总平面与十一片区布局系统深化）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-23）：研究 **R11.1 / city-plan-r11**（全城统一坐标复原工作平面）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html) · [上一已验收发布 `1a988bc`](https://github.com/mechgouki/luoyang-city/actions/runs/44998481483) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/32621e28d2c917338b29996c3248e509ea5bcea8/evidence/city-spatial-r9/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html) · [上一已验收发布 `a2d1aac`](https://github.com/mechgouki/luoyang-city/actions/runs/45035882296) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/e5340efff1ae72e9fbdc7ecf48cc79527438eaa4/evidence/city-layout-r10/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](../research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->
 
-本批完成范围为全城总平面与十一片区布局系统深化，见[R10.1研究与交付说明](city-layout-r10-research.md)及[城市布局图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html)。原有339个对象、84条道路证据与34项水系索引全部保留；本轮新增总平面、十一片区关系图、逐项判断与16页图册。图面深化不新增古代坐标、古岸或定位等级，最终发布验收以交接#52为准。
+本批推进到[全城统一坐标复原工作平面](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html)，见[R11.1研究与交付说明](city-plan-r11-research.md)。28项来源骨架、33项局部原图构件、4个有据尺度片、24项宫城刊图对照要素与148个文献候选位置签共用母图；16个取景和17页图册不再独立排位。339项目录全部登记，165项仍无可成立的落位；原定位等级不升级，古岸不补绘，候选接入不冒充实测共同控制。最终发布验收以交接#52为准。
+
+下一步有效增量是取得可明确对号的原平面与共同测量控制，补强尚未定位的坊院、宫院内部边界、白马坊路网及城南水岸，逐项替换候选假定。原图缺件不能用通用院落、房屋密度或旧显示矩形填充。2022年渠道报告继续按既定范围暂缓。
+
+前一批[全城总平面与十一片区关系图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html)及[R10.1说明](city-layout-r10-research.md)原样保留，包含339对象、84条道路证据与34项水系索引完整去向；R11没有覆盖其历史字节。
 
 此前四节点城市空间总图、20项判断对照见[R9.1交付说明](city-spatial-r9.md)；永宁寺南门三重的成图修正与V13二修审看见[候选图说明](panorama-v13-r2.md)。R10不把永宁寺南门修正误作内城宣阳门定位，也不改写V13候选或首页V12图像。
 

@@ -919,6 +919,8 @@ try:
  report['panorama_review_v13_r2']=verify_revised_panorama(info,get)
  from city_layout_r10_verify import verify as verify_city_layout_r10
  report['city_layout_r10']=verify_city_layout_r10(info,get)
+ from city_plan_r11_verify import verify as verify_city_plan_r11
+ report['city_plan_r11']=verify_city_plan_r11(info,get)
  report['prosperity_gates_p465']=gates
  report['prosperity_field_p464']=field
  report['prosperity_corridors_p463']=corridors

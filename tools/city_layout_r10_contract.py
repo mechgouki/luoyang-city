@@ -34,6 +34,10 @@ def digest(raw):
 
 
 def strip_current_entries(content):
+    # Direct legacy homepage readers also need the newest exact insertion
+    # removed before restoring R10, even without a release-metadata adapter.
+    from city_plan_r11_contract import strip_current_entries as strip_r11_entries
+    content = strip_r11_entries(content)
     marker = b'id="r10-layout-entry"'
     if marker not in content:
         return content
@@ -56,6 +60,8 @@ def add_home(content):
 
 def restore_r9_context(info, reader):
     """Validate R10's additions, then supply the exact prior release and homes."""
+    from city_plan_r11_contract import restore_r10_context
+    info, reader = restore_r10_context(info, reader)
     if KEY not in info:
         return info, reader
     get = lru_cache(maxsize=None)(reader)
