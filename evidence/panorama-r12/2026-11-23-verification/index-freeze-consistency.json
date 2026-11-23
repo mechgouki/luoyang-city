@@ -1,0 +1,109 @@
+{
+  "schema": "luoyang-r12-index-freeze-consistency-v1",
+  "status": "passed",
+  "started_at_utc": "2026-11-23T14:09:45.065148+00:00",
+  "root": "/workspace/r12-permanent-evidence",
+  "repository_prefix": "evidence/panorama-r12/2026-11-23",
+  "expected_single_parent": "4579a6b8990a91780bf83391967c301218c0711e",
+  "manifest": {
+    "path": "/workspace/r12-frozen-upload-manifest.json",
+    "bytes": 973964,
+    "sha256": "21cd95e9106ac85fc3d4d21d126cb0c6dfe157a1ea1375b71b22cd2ffa926d08",
+    "git_blob_sha1": "ef6c87c92f05ea3d0a4f67fdc0955abf374a02f2"
+  },
+  "planned_git_mode": "100644",
+  "final_statistics": {
+    "file_count": 2070,
+    "logical_bytes": 611475327,
+    "unique_blob_count": 1842,
+    "unique_blob_bytes": 581564830
+  },
+  "inventory_statistics": {
+    "file_count": 2067,
+    "logical_bytes": 610845333,
+    "unique_blob_count": 1839,
+    "unique_blob_bytes": 580934836
+  },
+  "assembly_statistics": {
+    "source_files": 2089,
+    "source_bytes": 5032458421,
+    "copied_files": 2066,
+    "copied_bytes": 610204961,
+    "excluded_files": 23,
+    "excluded_bytes": 4422253460,
+    "copied_cas_objects": 1617,
+    "unchanged_terrain_objects": 7,
+    "terrain_logical_exceptions": 49,
+    "actions_wrappers": 16,
+    "unchanged_ingest_files": 16
+  },
+  "sensitive_scan_accounting": {
+    "files_considered": 2067,
+    "utf8_text_files_scanned": 1300,
+    "utf8_text_bytes_scanned": 95220700,
+    "binary_files_not_text_scanned": 767
+  },
+  "required_files": [
+    {
+      "path": "README.md",
+      "bytes": 10505,
+      "sha256": "1405e0d21dca2b64eb17160299459eae7fd90edfd7aace2812b3603585a538fa",
+      "git_blob_sha1": "9c0445d9295f4948e92036ad5424016b44bab543",
+      "mode": "100644"
+    },
+    {
+      "path": "acceptance.json",
+      "bytes": 62986,
+      "sha256": "0a65497ed959ed8033ad9e71dc6c95fbb2cab7ef820ad99cc30d08fc7ea88b78",
+      "git_blob_sha1": "4187af518079d4b700d4c6767da31dd5956bcfc2",
+      "mode": "100644"
+    },
+    {
+      "path": "current-state-after-acceptance.json",
+      "bytes": 20235,
+      "sha256": "8114c71eb20b8d1e3d7052b5dc5cec3dcf54aa7ea5fdfb5925af6a7472a449d7",
+      "git_blob_sha1": "ca0d6e52bc8c8c64a43487c0bedc12d241b2e250",
+      "mode": "100644"
+    },
+    {
+      "path": "assembly-scope.json",
+      "bytes": 640372,
+      "sha256": "6e7e4b33bdd90dc21f7f605b9a2c5ff346f8abcdacc9d3c88794374a92393f7a",
+      "git_blob_sha1": "d55b2cc6f1f909bbe935044bfa19e9054c6be365",
+      "mode": "100644"
+    },
+    {
+      "path": "archive-inventory.json",
+      "bytes": 627323,
+      "sha256": "60fc87849f010df8dd33b68bde70808fb79fe8e461b5d86cd5711bfcacdca134",
+      "git_blob_sha1": "bad7344ba0b9907a2c04c78c57d838a12d14ab88",
+      "mode": "100644"
+    },
+    {
+      "path": "archive-scope.json",
+      "bytes": 1550,
+      "sha256": "d9ae25212d87879911ed098fb8eecf222809f86c3c47f6073fccddd3dd818290",
+      "git_blob_sha1": "a42b8f8e96e26fb1cc49f7659d45bd6f77ef4028",
+      "mode": "100644"
+    },
+    {
+      "path": "archive-sensitive-scan.json",
+      "bytes": 1121,
+      "sha256": "b51d950c239fcf0e6ed0c194dcf5091470e210fe99fd40162c1cc832e42b4f70",
+      "git_blob_sha1": "f8ad40fbc37d39b84db32fa8afe33319bed5810f",
+      "mode": "100644"
+    }
+  ],
+  "checks": {
+    "actual_files_match_frozen_identities_and_planned_modes": true,
+    "final_paths_equal_inventory_plus_exactly_three_indexes": true,
+    "inventory_identities_and_modes_match_frozen_manifest": true,
+    "final_paths_equal_assembly_copied_plus_scope_plus_indexes": true,
+    "assembly_copied_identities_match_frozen_manifest": true,
+    "archive_scope_assembly_identity_matches_frozen_manifest": true,
+    "recorded_statistics_recomputed": true,
+    "inputs_unchanged_during_check": true
+  },
+  "limits": "Local frozen-package consistency only; no remote verification, historical acceptance, completeness beyond assembly, or new sensitive-pattern certification.",
+  "completed_at_utc": "2026-11-23T14:09:46.313424+00:00"
+}

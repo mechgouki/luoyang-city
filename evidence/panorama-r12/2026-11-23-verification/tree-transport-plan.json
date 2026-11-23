@@ -1,0 +1,64 @@
+{
+  "schema": "luoyang-r12-batched-tree-transport-v1",
+  "purpose": "Smaller immutable-tree requests after two transport read timeouts; exact frozen paths/content unchanged.",
+  "cas_tree_path": "evidence/panorama-r12/2026-11-23/cas/objects/sha256",
+  "cas_entries": 1617,
+  "steps": [
+    {
+      "offset": 0,
+      "new_entries": 200,
+      "total_entries": 200,
+      "expected_sha": "d44b6d708695521f6938ba842ea29233f4c36a89"
+    },
+    {
+      "offset": 200,
+      "new_entries": 200,
+      "total_entries": 400,
+      "expected_sha": "d9e87b4df32320b5c976254f192448d4ecfc4c67"
+    },
+    {
+      "offset": 400,
+      "new_entries": 200,
+      "total_entries": 600,
+      "expected_sha": "e3f9ec7057afdfc8fbbd6c0d312b363989724a22"
+    },
+    {
+      "offset": 600,
+      "new_entries": 200,
+      "total_entries": 800,
+      "expected_sha": "3e5565d8d6842d1625093420b197d8a5c96987d6"
+    },
+    {
+      "offset": 800,
+      "new_entries": 200,
+      "total_entries": 1000,
+      "expected_sha": "2add135cd02192f4762a932091feadf133449645"
+    },
+    {
+      "offset": 1000,
+      "new_entries": 200,
+      "total_entries": 1200,
+      "expected_sha": "2e14e28348503b1f11b8cbb22331f5eaeff00b81"
+    },
+    {
+      "offset": 1200,
+      "new_entries": 200,
+      "total_entries": 1400,
+      "expected_sha": "70f68f3e7eb697d701968ded01d3f8c067bb3bb4"
+    },
+    {
+      "offset": 1400,
+      "new_entries": 200,
+      "total_entries": 1600,
+      "expected_sha": "976ba9a27210a149380412a9f7821d201b36fb9a"
+    },
+    {
+      "offset": 1600,
+      "new_entries": 17,
+      "total_entries": 1617,
+      "expected_sha": "7e6736064ca310c9dd06263dd992edabc7d1bec0"
+    }
+  ],
+  "expected_cas_tree": "7e6736064ca310c9dd06263dd992edabc7d1bec0",
+  "expected_final_root_tree": "c57c2006094bcadfbdb1d548c382a4802480c407"
+}

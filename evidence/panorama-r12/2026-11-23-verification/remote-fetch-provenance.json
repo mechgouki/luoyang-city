@@ -1,0 +1,109 @@
+{
+  "schema": "luoyang-r12-independent-remote-fetch-provenance-v1",
+  "repository_url": "https://github.com/mechgouki/luoyang-city.git",
+  "bare_repository": "/workspace/r12-evidence-remote-verify.git",
+  "created_fresh": true,
+  "local_source_objects_copied": false,
+  "alternates_used": false,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "init",
+        "--bare",
+        "/workspace/r12-evidence-remote-verify.git"
+      ],
+      "started_at_utc": "2026-11-23T12:56:04.120203+00:00",
+      "finished_at_utc": "2026-11-23T12:56:04.125878+00:00",
+      "exit_code": 0,
+      "stdout": "Initialized empty Git repository in /workspace/r12-evidence-remote-verify.git/\n",
+      "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n"
+    },
+    {
+      "argv": [
+        "git",
+        "--git-dir",
+        "/workspace/r12-evidence-remote-verify.git",
+        "fetch",
+        "--no-tags",
+        "--depth=1",
+        "https://github.com/mechgouki/luoyang-city.git",
+        "33c14be30f737598fd2b53354f1db14ff424a9ff"
+      ],
+      "started_at_utc": "2026-11-23T12:56:04.126410+00:00",
+      "finished_at_utc": "2026-11-23T12:56:13.314279+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/mechgouki/luoyang-city\n * branch            33c14be30f737598fd2b53354f1db14ff424a9ff -> FETCH_HEAD\n"
+    },
+    {
+      "argv": [
+        "git",
+        "--git-dir",
+        "/workspace/r12-evidence-remote-verify.git",
+        "rev-parse",
+        "FETCH_HEAD"
+      ],
+      "started_at_utc": "2026-11-23T12:56:13.314521+00:00",
+      "finished_at_utc": "2026-11-23T12:56:13.315970+00:00",
+      "exit_code": 0,
+      "stdout": "33c14be30f737598fd2b53354f1db14ff424a9ff\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--git-dir",
+        "/workspace/r12-evidence-remote-verify.git",
+        "fetch",
+        "--no-tags",
+        "--depth=1",
+        "https://github.com/mechgouki/luoyang-city.git",
+        "4579a6b8990a91780bf83391967c301218c0711e"
+      ],
+      "started_at_utc": "2026-11-23T13:20:21.385239+00:00",
+      "finished_at_utc": "2026-11-23T13:20:29.749730+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/mechgouki/luoyang-city\n * branch            4579a6b8990a91780bf83391967c301218c0711e -> FETCH_HEAD\n"
+    },
+    {
+      "argv": [
+        "git",
+        "--git-dir",
+        "/workspace/r12-evidence-remote-verify.git",
+        "fetch",
+        "--no-tags",
+        "--depth=2",
+        "--negotiation-tip=4579a6b8990a91780bf83391967c301218c0711e",
+        "https://github.com/mechgouki/luoyang-city.git",
+        "refs/heads/evidence/panorama-r12-20261123"
+      ],
+      "started_at_utc": "2026-11-23T14:18:20.874677+00:00",
+      "finished_at_utc": "2026-11-23T14:19:03.895586+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/mechgouki/luoyang-city\n * branch            evidence/panorama-r12-20261123 -> FETCH_HEAD\n"
+    },
+    {
+      "argv": [
+        "git",
+        "--git-dir",
+        "/workspace/r12-evidence-remote-verify.git",
+        "rev-parse",
+        "FETCH_HEAD"
+      ],
+      "started_at_utc": "2026-11-23T14:19:03.896327+00:00",
+      "finished_at_utc": "2026-11-23T14:19:03.898711+00:00",
+      "exit_code": 0,
+      "stdout": "12668fd6b0db76dd961b1233f6af9ab0b86cf2c7\n",
+      "stderr": ""
+    }
+  ],
+  "production_source_fetched": "4579a6b8990a91780bf83391967c301218c0711e",
+  "status": "primary_archive_fetched_from_remote_head_verified_byte_readback_follows",
+  "previous_candidate_source_fetched": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+  "archive_commit_fetched": "12668fd6b0db76dd961b1233f6af9ab0b86cf2c7",
+  "archive_fetch_completed_at_utc": "2026-11-23T14:19:03.898900+00:00",
+  "negotiation_note": "Negotiation tip was the exact final production commit already fetched independently from GitHub; no source-worktree objects or local alternate stores were used."
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "luoyang-r12-final-archive-preflight-v1",
+  "status": "passed",
+  "parent": "4579a6b8990a91780bf83391967c301218c0711e",
+  "base_tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+  "primary_branch_absent": true,
+  "verification_branch_absent": true,
+  "target_prefixes_absent_at_parent": true,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "https://github.com/mechgouki/luoyang-city.git",
+        "refs/heads/evidence/panorama-r12-20261123",
+        "refs/heads/evidence/panorama-r12-20261123-verification"
+      ],
+      "started_at_utc": "2026-11-23T14:03:47.488888+00:00",
+      "finished_at_utc": "2026-11-23T14:03:57.570654+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--git-dir",
+        "/workspace/r12-evidence-remote-verify.git",
+        "rev-parse",
+        "4579a6b8990a91780bf83391967c301218c0711e^{tree}"
+      ],
+      "started_at_utc": "2026-11-23T14:03:57.570695+00:00",
+      "finished_at_utc": "2026-11-23T14:03:57.577393+00:00",
+      "exit_code": 0,
+      "stdout": "69aef90f87200463e97a4f5331be90029cc0c9c2\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--git-dir",
+        "/workspace/r12-evidence-remote-verify.git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "4579a6b8990a91780bf83391967c301218c0711e",
+        "--",
+        "evidence/panorama-r12/2026-11-23/",
+        "evidence/panorama-r12/2026-11-23-verification/"
+      ],
+      "started_at_utc": "2026-11-23T14:03:57.577407+00:00",
+      "finished_at_utc": "2026-11-23T14:03:57.579604+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

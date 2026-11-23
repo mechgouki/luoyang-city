@@ -1,0 +1,197 @@
+{
+  "schema": "luoyang-r12-primary-archive-publication-receipts-v1",
+  "recorded_at_utc": "2026-11-23T14:17:49.094Z",
+  "status_at_receipt_write": "primary_ref_created_independent_byte_verification_follows",
+  "repository": "mechgouki/luoyang-city",
+  "production_parent": "4579a6b8990a91780bf83391967c301218c0711e",
+  "base_tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+  "frozen_manifest_sha256": "21cd95e9106ac85fc3d4d21d126cb0c6dfe157a1ea1375b71b22cd2ffa926d08",
+  "archive_commit": "12668fd6b0db76dd961b1233f6af9ab0b86cf2c7",
+  "archive_tree": "c57c2006094bcadfbdb1d548c382a4802480c407",
+  "archive_branch": "evidence/panorama-r12-20261123",
+  "initial_tree_attempts": [
+    {
+      "attempt": 1,
+      "tool": "github_create_tree",
+      "base_tree_sha": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+      "entry_count": 2070,
+      "result": {
+        "isError": true,
+        "structuredContent": {
+          "error": "ReadTimeout: ",
+          "error_code": "UNKNOWN"
+        }
+      },
+      "note": "Transport read timeout from first immutable-tree request; no commit/ref operation had been attempted."
+    },
+    {
+      "attempt": 2,
+      "started_at_utc": "2026-11-23T14:13:41.370Z",
+      "finished_at_utc": "2026-11-23T14:13:51.552Z",
+      "tool": "github_create_tree",
+      "base_tree_sha": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+      "entry_count": 2070,
+      "result": {
+        "error": "ReadTimeout: ",
+        "error_code": "UNKNOWN"
+      },
+      "isError": true
+    }
+  ],
+  "post_timeout_expected_tree_read": {
+    "started_at_utc": "2026-11-23T14:14:50.998Z",
+    "finished_at_utc": "2026-11-23T14:14:51.386Z",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"404\"}"
+        }
+      ],
+      "structuredContent": {
+        "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"404\"}",
+        "error_code": "NOT_FOUND",
+        "error_data": {
+          "message": "Not Found",
+          "documentation_url": "https://docs.github.com/rest/git/trees#get-a-tree",
+          "status": "404"
+        }
+      },
+      "isError": true
+    }
+  },
+  "cas_tree_batch_receipts": [
+    {
+      "offset": 0,
+      "started_at_utc": "2026-11-23T14:15:47.852Z",
+      "finished_at_utc": "2026-11-23T14:15:49.574Z",
+      "expected_sha": "d44b6d708695521f6938ba842ea29233f4c36a89",
+      "result": {
+        "sha": "d44b6d708695521f6938ba842ea29233f4c36a89"
+      },
+      "isError": false
+    },
+    {
+      "offset": 200,
+      "started_at_utc": "2026-11-23T14:15:58.804Z",
+      "finished_at_utc": "2026-11-23T14:16:01.261Z",
+      "base_tree_sha": "d44b6d708695521f6938ba842ea29233f4c36a89",
+      "expected_sha": "d9e87b4df32320b5c976254f192448d4ecfc4c67",
+      "result": {
+        "sha": "d9e87b4df32320b5c976254f192448d4ecfc4c67"
+      },
+      "isError": false
+    },
+    {
+      "offset": 400,
+      "started_at_utc": "2026-11-23T14:16:01.261Z",
+      "finished_at_utc": "2026-11-23T14:16:06.030Z",
+      "base_tree_sha": "d9e87b4df32320b5c976254f192448d4ecfc4c67",
+      "expected_sha": "e3f9ec7057afdfc8fbbd6c0d312b363989724a22",
+      "result": {
+        "sha": "e3f9ec7057afdfc8fbbd6c0d312b363989724a22"
+      },
+      "isError": false
+    },
+    {
+      "offset": 600,
+      "started_at_utc": "2026-11-23T14:16:06.030Z",
+      "finished_at_utc": "2026-11-23T14:16:13.197Z",
+      "base_tree_sha": "e3f9ec7057afdfc8fbbd6c0d312b363989724a22",
+      "expected_sha": "3e5565d8d6842d1625093420b197d8a5c96987d6",
+      "result": {
+        "sha": "3e5565d8d6842d1625093420b197d8a5c96987d6"
+      },
+      "isError": false
+    },
+    {
+      "offset": 800,
+      "started_at_utc": "2026-11-23T14:16:13.198Z",
+      "finished_at_utc": "2026-11-23T14:16:18.410Z",
+      "base_tree_sha": "3e5565d8d6842d1625093420b197d8a5c96987d6",
+      "expected_sha": "2add135cd02192f4762a932091feadf133449645",
+      "result": {
+        "sha": "2add135cd02192f4762a932091feadf133449645"
+      },
+      "isError": false
+    },
+    {
+      "offset": 1000,
+      "started_at_utc": "2026-11-23T14:16:18.411Z",
+      "finished_at_utc": "2026-11-23T14:16:24.050Z",
+      "base_tree_sha": "2add135cd02192f4762a932091feadf133449645",
+      "expected_sha": "2e14e28348503b1f11b8cbb22331f5eaeff00b81",
+      "result": {
+        "sha": "2e14e28348503b1f11b8cbb22331f5eaeff00b81"
+      },
+      "isError": false
+    },
+    {
+      "offset": 1200,
+      "started_at_utc": "2026-11-23T14:16:24.050Z",
+      "finished_at_utc": "2026-11-23T14:16:29.217Z",
+      "base_tree_sha": "2e14e28348503b1f11b8cbb22331f5eaeff00b81",
+      "expected_sha": "70f68f3e7eb697d701968ded01d3f8c067bb3bb4",
+      "result": {
+        "sha": "70f68f3e7eb697d701968ded01d3f8c067bb3bb4"
+      },
+      "isError": false
+    },
+    {
+      "offset": 1400,
+      "started_at_utc": "2026-11-23T14:16:29.217Z",
+      "finished_at_utc": "2026-11-23T14:16:34.473Z",
+      "base_tree_sha": "70f68f3e7eb697d701968ded01d3f8c067bb3bb4",
+      "expected_sha": "976ba9a27210a149380412a9f7821d201b36fb9a",
+      "result": {
+        "sha": "976ba9a27210a149380412a9f7821d201b36fb9a"
+      },
+      "isError": false
+    },
+    {
+      "offset": 1600,
+      "started_at_utc": "2026-11-23T14:16:34.473Z",
+      "finished_at_utc": "2026-11-23T14:16:35.447Z",
+      "base_tree_sha": "976ba9a27210a149380412a9f7821d201b36fb9a",
+      "expected_sha": "7e6736064ca310c9dd06263dd992edabc7d1bec0",
+      "result": {
+        "sha": "7e6736064ca310c9dd06263dd992edabc7d1bec0"
+      },
+      "isError": false
+    }
+  ],
+  "final_root_tree_attempt": {
+    "started_at_utc": "2026-11-23T14:16:54.253Z",
+    "finished_at_utc": "2026-11-23T14:16:58.868Z",
+    "entry_count": 454,
+    "base_tree_sha": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+    "result": {
+      "sha": "c57c2006094bcadfbdb1d548c382a4802480c407"
+    },
+    "isError": false
+  },
+  "create_commit": {
+    "started_at_utc": "2026-11-23T14:17:05.448Z",
+    "finished_at_utc": "2026-11-23T14:17:06.010Z",
+    "result": {
+      "sha": "12668fd6b0db76dd961b1233f6af9ab0b86cf2c7"
+    },
+    "isError": false
+  },
+  "branch_absence_check": {
+    "chunk_id": "b407af",
+    "wall_time_seconds": 4.834996266,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "create_branch": {
+    "started_at_utc": "2026-11-23T14:17:21.118Z",
+    "finished_at_utc": "2026-11-23T14:17:22.407Z",
+    "result": {
+      "branch": "evidence/panorama-r12-20261123"
+    },
+    "isError": false
+  },
+  "boundary": "Initial tree requests timed out and expected root GET returned 404. Smaller immutable subtree requests succeeded and the final root exactly matched the independently computed frozen tree. Only then was the archive commit/ref created. No main ref mutation was requested."
+}
