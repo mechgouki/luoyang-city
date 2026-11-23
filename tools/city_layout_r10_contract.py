@@ -34,6 +34,10 @@ def digest(raw):
 
 
 def strip_current_entries(content):
+    # Direct legacy homepage readers also need the newest exact insertion
+    # removed before restoring R10, even without a release-metadata adapter.
+    from city_plan_r11_contract import strip_current_entries as strip_r11_entries
+    content = strip_r11_entries(content)
     marker = b'id="r10-layout-entry"'
     if marker not in content:
         return content
