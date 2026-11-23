@@ -1,0 +1,421 @@
+{
+  "schema": "luoyang-current-state-after-technical-acceptance-v1",
+  "updated_at_beijing": "2026-11-23",
+  "target_years": [
+    516,
+    528
+  ],
+  "research": {
+    "version": "R12.1",
+    "implementation_version": "panorama-review-v14",
+    "title": "共同透视底稿与试绘审查（试绘未通过）",
+    "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html",
+    "publication_status": "technical_acceptance_passed",
+    "image_acceptance_status": "rejected_needs_revision"
+  },
+  "homepage": {
+    "revision": "panorama-approved-v12",
+    "label": "全幅取景版",
+    "approved_date": "2026-11-21",
+    "url": "https://mechgouki.github.io/luoyang-city/"
+  },
+  "geometry_baseline": "v2.4",
+  "historical_research_series": "B1—B8",
+  "last_verified_release": {
+    "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45182742216",
+    "run_id": 45182742216,
+    "run_attempt": 1,
+    "status": "build, deploy and verify-live passed; final preserved evidence and independent public readback verified",
+    "ci_completed_at_utc": "2026-11-23T13:51:21+00:00",
+    "ci_completed_at_shanghai": "2026-11-23T21:51:21+08:00",
+    "technical_acceptance_recorded_at_utc": "2026-11-23T14:06:48.197032+00:00",
+    "technical_acceptance_recorded_at_shanghai": "2026-11-23T22:06:48.197032+08:00",
+    "acceptance_record": {
+      "path": "acceptance.json",
+      "bytes": 62986,
+      "sha256": "0a65497ed959ed8033ad9e71dc6c95fbb2cab7ef820ad99cc30d08fc7ea88b78",
+      "git_blob_sha1": "4187af518079d4b700d4c6767da31dd5956bcfc2"
+    }
+  },
+  "handoff_url": "https://github.com/mechgouki/luoyang-city/issues/52",
+  "research_log_url": "https://github.com/mechgouki/luoyang-city/issues/47",
+  "meaning": "本文件另存本次真实技术验收后的状态。生产提交中的research/current-state.json保留发布前pending_verification快照，未改main、未为登记验收而触发部署。当前研究批次、技术发布、图像是否获准和最终档案核验分别登记。",
+  "homepage_candidate": {
+    "revision": "panorama-candidate-v14",
+    "status": "needs_revision",
+    "review_status": "rejected_needs_revision",
+    "homepage_replacement_approved": false,
+    "gate_visual_issue_resolved": false,
+    "historical_gate_reconstruction_completed": false,
+    "displayed_attempt": 5,
+    "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html",
+    "meaning": "R12共同透视依据与V14试绘审查页已通过技术发布验收。六次全景试绘仍全部未通过，主显示第五次，第六次为独立附录；图像空间校正、门塔层次及完整几何尚未完成。技术验收不接纳候选图，也不授权更换已批准的首页V12。",
+    "latest_attempt": 6,
+    "total_attempts": 6,
+    "all_attempts_rejected": true
+  },
+  "status": "technical_acceptance_passed",
+  "is_final_technical_acceptance": true,
+  "technical_acceptance_recorded_at_utc": "2026-11-23T14:06:48.197032+00:00",
+  "technical_acceptance_recorded_at_shanghai": "2026-11-23T22:06:48.197032+08:00",
+  "previous_verified_release": {
+    "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45103224890",
+    "acceptance_url": "https://github.com/mechgouki/luoyang-city/blob/b276f8e9495be7d4e8a38ddfa65ffc2bf9e85611/evidence/city-plan-r11/2026-11-23/README.md",
+    "status": "build, deploy and verify-live passed",
+    "verified_at_beijing": "2026-11-23 11:44:19"
+  },
+  "derived_from": {
+    "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "source_path": "research/current-state.json",
+    "path": "research/current-state.json",
+    "mode": "100644",
+    "git_blob": "7dae2c65fd906c668db9f0c131ad285bcdb38ad6",
+    "bytes": 2420,
+    "sha256": "37fe3daee9cb9fdca6ec9e52493113fb5a333fd1601cd418dd5a759a6af917f9",
+    "source_manifest": {
+      "path": "source-identity/production-4579a6b8-source-manifest.json",
+      "bytes": 20387,
+      "sha256": "dfe8360d93316600b941df1fdbf936394ecacbbe397e37c6f01d2d189db0b9af",
+      "git_blob_sha1": "2a9ecaca4561285d1f0644fe7e6ff23229335166"
+    },
+    "source_snapshot_preserved_in_main": true,
+    "main_modified": false,
+    "deployment_triggered": false
+  },
+  "source_snapshot_before_acceptance": {
+    "schema": "luoyang-current-state-v1",
+    "updated_at_beijing": "2026-11-23",
+    "target_years": [
+      516,
+      528
+    ],
+    "research": {
+      "version": "R12.1",
+      "implementation_version": "panorama-review-v14",
+      "title": "共同透视底稿与试绘审查（试绘未通过）",
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html",
+      "publication_status": "pending_verification"
+    },
+    "homepage": {
+      "revision": "panorama-approved-v12",
+      "label": "全幅取景版",
+      "approved_date": "2026-11-21",
+      "url": "https://mechgouki.github.io/luoyang-city/"
+    },
+    "geometry_baseline": "v2.4",
+    "historical_research_series": "B1—B8",
+    "last_verified_release": {
+      "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+      "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45103224890",
+      "acceptance_url": "https://github.com/mechgouki/luoyang-city/blob/b276f8e9495be7d4e8a38ddfa65ffc2bf9e85611/evidence/city-plan-r11/2026-11-23/README.md",
+      "status": "build, deploy and verify-live passed",
+      "verified_at_beijing": "2026-11-23 11:44:19"
+    },
+    "handoff_url": "https://github.com/mechgouki/luoyang-city/issues/52",
+    "research_log_url": "https://github.com/mechgouki/luoyang-city/issues/47",
+    "meaning": "当前研究批次、首页图像、封存底图与上一已验收发布分别登记。历史批次文件只记录当时的状态；本表不把尚未发布的工作称为已上线。",
+    "homepage_candidate": {
+      "revision": "panorama-candidate-v14",
+      "status": "needs_revision",
+      "review_status": "rejected_needs_revision",
+      "homepage_replacement_approved": false,
+      "gate_visual_issue_resolved": false,
+      "historical_gate_reconstruction_completed": false,
+      "displayed_attempt": 5,
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html",
+      "meaning": "R12共同透视底稿与偏差档案已形成，V14全景空间校正尚未完成。主显示保留第五次未通过试绘及其完整偏差审查；追加试绘单独附录回查，各轮结论不互相覆盖。V13r2作为既有候选保留，首页继续已批准的V12。图像未通过与页面技术发布分别登记；本轮正式发布验收尚待完成，不能将底稿成立或审查页发布表述为全景已校正通过。",
+      "latest_attempt": 6,
+      "total_attempts": 6,
+      "all_attempts_rejected": true
+    }
+  },
+  "technical_evidence_summary": {
+    "jobs": {
+      "build": {
+        "id": 137720438238,
+        "conclusion": "success"
+      },
+      "deploy": {
+        "id": 137727902581,
+        "conclusion": "success"
+      },
+      "verify-live": {
+        "id": 137728114930,
+        "conclusion": "success"
+      }
+    },
+    "http_resources": 958,
+    "http_retries": 0,
+    "browser_reports_per_phase": {
+      "build": {
+        "report_files": 62,
+        "directories": 42,
+        "literal_top_level_status_counts": {
+          "passed": 36,
+          "not_declared": 26
+        }
+      },
+      "live": {
+        "report_files": 62,
+        "directories": 42,
+        "literal_top_level_status_counts": {
+          "passed": 36,
+          "not_declared": 26
+        }
+      }
+    },
+    "v14_downloads_per_device_per_phase": 27,
+    "independent_public_files": 42,
+    "independent_public_required_downloads": 27,
+    "root_ui_byte_continuity_files": 9,
+    "second_root_browser_session_claimed": false
+  },
+  "local_structure_studies": {
+    "count": 2,
+    "counted_as_new_full_panorama_attempts": false,
+    "existing_six_reviews_modified": false,
+    "study_01": {
+      "image_sha256": "d63fd413527eebbf80486d5ade9fe7cc5a978f67495b4b34c41fc2e87f95aa8a",
+      "status": "local_structure_readability_improved_geometry_not_passed",
+      "review": {
+        "path": "next-step-yongning-study/independent-review.json",
+        "sha256": "13ab0a40c3b6b83960ca7aa894ac72646b5b6419cf51f557d24227f028939204"
+      },
+      "visible_storeys": {
+        "tower": 9,
+        "south_gate": 3
+      },
+      "canvas_aspect_preserved": false,
+      "whole_geometry_passed": false
+    },
+    "study_02": {
+      "image_sha256": "7456b5d932128ab74c5770dedfa5866f05b806f9fa08ff3214c884f5fe1ac70a",
+      "status": "suitable_as_local_structure_reference_with_partial_ground_checks",
+      "review": {
+        "path": "next-step-yongning-study/attempt-02/independent-review.json",
+        "sha256": "ce788a134e26bf1f81f631724f7c180f75ff6ea900512dfacde9c127f65b237a"
+      },
+      "visible_storeys": {
+        "tower": 9,
+        "south_gate": 3
+      },
+      "input_canvas": [
+        1536,
+        1536
+      ],
+      "output_canvas": [
+        1254,
+        1254
+      ],
+      "uniform_frame_scale": 0.81640625,
+      "same_named_visible_south_edge_samples": 8,
+      "ground_sample_status": "limited_agreement_not_whole_geometry_pass",
+      "reading_uncertainty_px_approx": 4,
+      "whole_geometry_passed": false,
+      "ready_for_direct_panorama_reintegration": false,
+      "accepted_as_homepage_candidate": false,
+      "layout_authority": "frozen SVG",
+      "use": "local structure and material reference only"
+    }
+  },
+  "palace_ground_control": {
+    "status": "actual_png_viewed_ground_control_window_usable_with_original_stroke_limits",
+    "readme": {
+      "path": "next-step-palace-control/README.md",
+      "bytes": 6304,
+      "sha256": "ad7c9a99beba38b95748e2a0ee477704e77d031f84c596ad349d256142332fdd"
+    },
+    "register": {
+      "path": "next-step-palace-control/control-register.json",
+      "bytes": 35296,
+      "sha256": "9f797bffae339c1d5e8b924d9fbdb51948fe5e1c9c243500a8957d80601247ed"
+    },
+    "source_svg": "research/panorama-r12/projection-clean.svg",
+    "source_sha256": "da975e1b4b3326bd976ff2ad9cd95b6aec230146422112971bcab58abe161c36",
+    "primary_objects_count": 13,
+    "groups_in_order": [
+      "Changhe Gate components",
+      "Gate 2 scale patch",
+      "Gate 3 early southern surviving scale patch",
+      "Taiji scale patch"
+    ],
+    "display_viewBox": [
+      590,
+      220,
+      110,
+      110
+    ],
+    "display_size_px": [
+      1536,
+      1536
+    ],
+    "uniform_scale": 13.963636363636363,
+    "source_children_bytes_unchanged": true,
+    "ground_homography_modified": false,
+    "source_geometry_modified": false,
+    "source_visibility_modified": false,
+    "height_parameters_modified": false,
+    "new_height_parameters": 0,
+    "new_ancient_coordinates": 0,
+    "field_registration_verified": false,
+    "unresolved_axis_conflict": {
+      "id": "palace-axis-length",
+      "source_path": "research/prosperity-v4/primary-source-audit.json",
+      "source_pointer": "/alternatives",
+      "source_map_symbol_distance_m_approx": 573.9,
+      "reported_chain_totals_m": [
+        375,
+        475
+      ],
+      "other_report_total_m": 460,
+      "same_endpoints_verified": false,
+      "adopted_policy": "保留06a两端点和95/80米近端候选链，不拉伸成闭合轴线。"
+    },
+    "no_new_upper_structure": [
+      "Existing R12 massing has only the Changhe main gate and Taiji upper placeholders in this region.",
+      "Gate 2 and Gate 3 do not receive upper bodies or height parameters in this control window.",
+      "Gate 3 remains the early surviving southern 40×10m scale patch, never a complete gate footprint."
+    ],
+    "independent_2013_markers_not_merged": [
+      {
+        "id": "r11-palace2013-P13-MARK-GATE1",
+        "source_ground_centre_px": [
+          650.0000000379441,
+          315.0000000301331
+        ],
+        "visible_in_clean_guide": false,
+        "reason": "2013宫城概览逐项时相未知，独立对照层不作为本轮地上建筑底稿。"
+      },
+      {
+        "id": "r11-palace2013-P13-MARK-GATE2",
+        "source_ground_centre_px": [
+          647.6198704466934,
+          298.02127760462093
+        ],
+        "visible_in_clean_guide": false,
+        "reason": "2013宫城概览逐项时相未知，独立对照层不作为本轮地上建筑底稿。"
+      },
+      {
+        "id": "r11-palace2013-P13-MARK-GATE3",
+        "source_ground_centre_px": [
+          645.4457262889182,
+          282.5119563544837
+        ],
+        "visible_in_clean_guide": false,
+        "reason": "2013宫城概览逐项时相未知，独立对照层不作为本轮地上建筑底稿。"
+      }
+    ],
+    "visual_inspection": {
+      "method": "Independent actual view of the 1536×1536 CairoSVG PNG; original projection overview, massing overview and S37 native gate plan also viewed.",
+      "primary_objects_inside_viewport": 13,
+      "four_groups_visible_in_order": [
+        "Changhe Gate components",
+        "Gate 2 scale template",
+        "Gate 3 early surviving southern-part scale template",
+        "Taiji scale template"
+      ],
+      "readable_use": [
+        "Locate the four existing ground-control groups in the unchanged projection.",
+        "Use register source coordinates and source geometry to identify all 13 objects.",
+        "Compare future separately identified objects to the same frozen projection."
+      ],
+      "limitations": [
+        "Original strokes enlarge uniformly with the viewport; the Changhe component strokes overlap densely.",
+        "Gate 3 is a shallow surviving-part template whose interior is partly obscured by the original stroke.",
+        "Stroke width is not building width; visual gaps or white areas are not evidence of absent buildings or permission to add walls.",
+        "For component boundaries, open ends and underground/direction semantics, read the exact register coordinates and original native local plan.",
+        "No full palace plan, elevation, historical phase synchronization or field registration is established."
+      ],
+      "geometry_pass_claim": false,
+      "new_panorama_candidate": false,
+      "homepage_approval": false
+    },
+    "limits": [
+      "Ground-control viewport only, not a complete palace model, elevation, full geometry pass or new panorama candidate.",
+      "Open gate/que/underground edges and connecting lines retain their original evidence roles; no courtyard, roof, width or height may be completed from them.",
+      "Original strokes were scaled with the viewport. Dense overlap and narrow Gate 3 traces require the source register/native image; stroke thickness, white space and dash gaps are not building dimensions or historical absence.",
+      "The existing candidate binding, uncertain measurement endpoints and conflicting axis reports remain unresolved."
+    ]
+  },
+  "research_checkpoint": {
+    "commit": "b91f102911753a95b378d88b1bbf80f8fd3599e2",
+    "tree": "874068c8e49fa7555a2c31c9fc7e1d813c58b32f",
+    "unique_parent": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+    "prefix": "research/panorama-r12/local-controls-20261123/",
+    "readme_url": "https://github.com/mechgouki/luoyang-city/blob/b91f102911753a95b378d88b1bbf80f8fd3599e2/research/panorama-r12/local-controls-20261123/README.md",
+    "remote_byte_verification_status": "passed",
+    "files_checked": 22,
+    "total_bytes": 3044036,
+    "original_staging_files_compared": 21,
+    "original_staging_files_unchanged": true,
+    "receipt": {
+      "path": "cross-checks/local-controls-remote-checkpoint.json",
+      "bytes": 2772,
+      "sha256": "0152f0d9981932a5a47d24348bececbcd170d4d41d6c90a483dd5366caee75b8"
+    },
+    "per_file_proof": {
+      "path": "cross-checks/local-controls-provenance/remote-verification.json",
+      "bytes": 21778,
+      "sha256": "562bdf9ae04a42a3063c94d5ff72d1262057d968b63b819343406b7c43bcb156"
+    },
+    "file_manifest": {
+      "path": "cross-checks/local-controls-provenance/file-manifest.json",
+      "bytes": 27846,
+      "sha256": "81b6d8305549666857901ebaf277e87693ac02ba5a1e7f82553bbcc9f320ec8f"
+    },
+    "scope": "Separate research checkpoint for two local Yongning studies plus the palace ground-control viewport. It does not certify the pending production release or approve a homepage image."
+  },
+  "next_step": [
+    "Use local study02 only as structure/material reference; frozen SVG remains the controlling layout input.",
+    "Check complete contours, corners, visible ground edges, wall endpoints and occlusion limits, then reintegrate using the same recorded display transform without per-object shifts or refitting H.",
+    "Use the 13-object palace ground viewport/register to retain Changhe components, Gate 2 and the surviving Gate 3 patch in the correct order; preserve open edges, scale-patch status and unresolved axis distances. Ground-up artistic hypotheses must remain identified as such.",
+    "Review actual panorama storey counts, separate gate/tower feet, full temple ground relations and palace-axis depth. After the complete candidate passes these checks, show that specific panorama to the user; retain homepage V12 until approval."
+  ],
+  "permanent_archive_protocol": {
+    "scope": "Protocol for assembling and independently verifying the technical-release archive; this document does not assert an archive commit or a completed archive readback.",
+    "sole_parent": "4579a6b8990a91780bf83391967c301218c0711e",
+    "only_added_prefix": "evidence/panorama-r12/2026-11-23/",
+    "parent_prefix_evidence": {
+      "path": "source-identity/archive-final-parent-scope.json",
+      "bytes": 526,
+      "sha256": "d5327160c62560db58abfd453bf9763029b6250275dce5889964f230c3a1384b"
+    },
+    "assembly_records_generated_by_parent": [
+      "assembly-scope.json",
+      "archive-inventory.json",
+      "archive-scope.json",
+      "archive-sensitive-scan.json"
+    ],
+    "assembly_record_rule": "Parent generates these records after assembly and includes them in the final frozen payload.",
+    "verification_rule": "Use the existing assemble/freeze/remote-byte-verify workflow. Verify the sole parent, prefix-only additions, all frozen paths/modes and independently fetched remote blob bytes.",
+    "external_results_location": "Actual remote archive commit and byte-readback proof belong in a separate verification branch and the final issue #52 handoff.",
+    "frozen_archive_is_not_rewritten_to_insert_its_own_commit_or_readback": true,
+    "main_is_not_modified_by_archive_preparation": true,
+    "retention_rule": "Retain actual browser-downloaded ZIP bytes; only verified Actions transport wrappers and exact fixed prior-terrain references may be omitted under assembly-scope."
+  },
+  "handoff_protocol": {
+    "scope": "Post-verification handoff protocol; no final issue comment or archive URL is asserted here.",
+    "issue_52_state": "OPEN",
+    "issue_47_state": "OPEN",
+    "already_sent_nonfinal_comments": [
+      {
+        "issue": 52,
+        "comment_id": 7102439255,
+        "url": "https://github.com/mechgouki/luoyang-city/issues/52#issuecomment-7102439255",
+        "purpose": "Technical pending continuation at 21:22 Shanghai, already sent by parent."
+      },
+      {
+        "issue": 47,
+        "comment_id": 7102531343,
+        "url": "https://github.com/mechgouki/luoyang-city/issues/47#issuecomment-7102531343",
+        "purpose": "Research checkpoint and next-step evidence, already sent by parent."
+      }
+    ],
+    "current_body_update_rule": "Re-read the latest issue body and replace only its R12 current-status block; preserve all historical sections and comments. Never overwrite current R12 progress with the initial R11 body snapshot.",
+    "final_handoff_rule": "Parent records actual archive/verification-branch links and independent remote readback in the final issue #52 handoff after those operations finish; #47 receives the corresponding research continuation. Existing failure/cancellation history remains.",
+    "proof_is_external_to_frozen_archive": true
+  }
+}

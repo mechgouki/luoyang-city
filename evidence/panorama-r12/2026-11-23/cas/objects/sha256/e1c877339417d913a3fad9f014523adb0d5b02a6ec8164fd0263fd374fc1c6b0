@@ -1,0 +1,650 @@
+{
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "All twelve inline figures, 339 original objects and 118 original road/water records load from the released commit",
+    "All region and basis filters match original record IDs and counters; combined query restores from URL, empty results and reset work",
+    "All twelve maps support zoom, four-direction buttons, keyboard panning and exact reset; each has an actual viewport screenshot",
+    "Each regional decision, object, road/water row, gap and region anchor overrides conflicting filters and reveals collapsed evidence; map links work by keyboard",
+    "All 21 real browser downloads match released hashes, the PDF has 16 readable pages matching the SVG continuations, and the complete ZIP works with network disabled and state restored",
+    "With JavaScript disabled all maps, original records and source excerpts remain readable through native links and disclosure controls"
+  ],
+  "downloads": {
+    "city-layout-r10/overview.svg": "43b83126cb35624fe2d3f6919ddbf3e8a66729ad33b30416cd3cdf00b60a625e",
+    "downloads/city-layout-r10.pdf": "011197dd7bc761a17644a33e40dd613cb9efc393c296f794b0b3e9576e45dcc6",
+    "city-layout-r10/regions/R01.svg": "578db14263fe7b93fbb39690f606325ada8c561001788ff41a7d6dc19fc25652",
+    "city-layout-r10/regions/R02.svg": "1016488050bc5e47f40f358753247a9a3bf6e92d7829735ee76b3a49597dddeb",
+    "city-layout-r10/regions/R03.svg": "848e88b8c083fb4e2de137b147b49beee71717a7bc5586d8d6e0a8cb9099a8fc",
+    "city-layout-r10/regions/R04.svg": "9945e42e8a0a6b743bb2f595c520da149c7480e55c0a9d5cf72829c5c209411a",
+    "city-layout-r10/regions/R05.svg": "a9b721167d3d14cd8c9bca316b0b6b9cb4e33d21d2abab95c9368212c1dde43a",
+    "city-layout-r10/regions/R06.svg": "432003c80257222d7814ec24903aca7e6704e21a6bc6406b6dad05e9fad07a2e",
+    "city-layout-r10/regions/R07.svg": "b539e5f8e2dbd1b85790d2b3930114497363e93df40290539a66541d8227694d",
+    "city-layout-r10/regions/R08.svg": "169d7ed3d08ac673efcc8b8613bf359fbc67ae01e82ae3899efad4be8186046c",
+    "city-layout-r10/regions/R09.svg": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+    "city-layout-r10/regions/R10.svg": "29b412b0c6952621778b10db52933636cb314c13772fc77cb9b5efe614c26555",
+    "city-layout-r10/regions/R11.svg": "cb99773544118d5f9fc57cc8dc97291128bf4fd9f642eefe18df0d044e57aae6",
+    "city-layout-r10/coverage.csv": "01024de7120d24fb6ae13505e86f35c4616c275289cca88af2607f89efe7f94b",
+    "city-layout-r10/decisions.csv": "07a8ed01d864ada7f1dd1f084594c0ad7a17ee37223777b198047e2ef96d844e",
+    "city-layout-r10/gaps.csv": "a0cd837c0edfcb4dc9a95233466b57a1d0d8197fb6e783ed46db0757d6978783",
+    "city-layout-r10/networks.csv": "3cdfa8dbac49546a969f786241292da0c60d68ae650d5b3c21e1a304bb44f905",
+    "city-layout-r10/atlas.json": "2a2d342ada421c0a0891720283c6b8c1f13347ae1857a4f36131ae2c4b3b7e00",
+    "city-layout-r10/source-review.json": "8e4d558d9b65677f112ae3916a319d679b27f3d706cd66beb855549ab8466ca7",
+    "city-layout-r10/manifest.json": "da3abd01caf3806e253e9449d5d13c29e890d7df50e53d37214f398d9da3e4bc",
+    "downloads/city-layout-r10.zip": "c13fc987079f9603c8ad9f4f334d3da4b378bf740a9911710e1b08ed3400b0ab"
+  },
+  "retained_downloads": {
+    "city-layout-r10/overview.svg": {
+      "sha256": "43b83126cb35624fe2d3f6919ddbf3e8a66729ad33b30416cd3cdf00b60a625e",
+      "bytes": 226268,
+      "retained_path": "downloads/mobile/city-layout-r10/overview.svg"
+    },
+    "downloads/city-layout-r10.pdf": {
+      "sha256": "011197dd7bc761a17644a33e40dd613cb9efc393c296f794b0b3e9576e45dcc6",
+      "bytes": 2292511,
+      "retained_path": "downloads/mobile/downloads/city-layout-r10.pdf"
+    },
+    "city-layout-r10/regions/R01.svg": {
+      "sha256": "578db14263fe7b93fbb39690f606325ada8c561001788ff41a7d6dc19fc25652",
+      "bytes": 39963,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R01.svg"
+    },
+    "city-layout-r10/regions/R02.svg": {
+      "sha256": "1016488050bc5e47f40f358753247a9a3bf6e92d7829735ee76b3a49597dddeb",
+      "bytes": 106140,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R02.svg"
+    },
+    "city-layout-r10/regions/R03.svg": {
+      "sha256": "848e88b8c083fb4e2de137b147b49beee71717a7bc5586d8d6e0a8cb9099a8fc",
+      "bytes": 133657,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R03.svg"
+    },
+    "city-layout-r10/regions/R04.svg": {
+      "sha256": "9945e42e8a0a6b743bb2f595c520da149c7480e55c0a9d5cf72829c5c209411a",
+      "bytes": 80972,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R04.svg"
+    },
+    "city-layout-r10/regions/R05.svg": {
+      "sha256": "a9b721167d3d14cd8c9bca316b0b6b9cb4e33d21d2abab95c9368212c1dde43a",
+      "bytes": 80935,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R05.svg"
+    },
+    "city-layout-r10/regions/R06.svg": {
+      "sha256": "432003c80257222d7814ec24903aca7e6704e21a6bc6406b6dad05e9fad07a2e",
+      "bytes": 46456,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R06.svg"
+    },
+    "city-layout-r10/regions/R07.svg": {
+      "sha256": "b539e5f8e2dbd1b85790d2b3930114497363e93df40290539a66541d8227694d",
+      "bytes": 92613,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R07.svg"
+    },
+    "city-layout-r10/regions/R08.svg": {
+      "sha256": "169d7ed3d08ac673efcc8b8613bf359fbc67ae01e82ae3899efad4be8186046c",
+      "bytes": 77353,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R08.svg"
+    },
+    "city-layout-r10/regions/R09.svg": {
+      "sha256": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+      "bytes": 81037,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R09.svg"
+    },
+    "city-layout-r10/regions/R10.svg": {
+      "sha256": "29b412b0c6952621778b10db52933636cb314c13772fc77cb9b5efe614c26555",
+      "bytes": 113606,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R10.svg"
+    },
+    "city-layout-r10/regions/R11.svg": {
+      "sha256": "cb99773544118d5f9fc57cc8dc97291128bf4fd9f642eefe18df0d044e57aae6",
+      "bytes": 86166,
+      "retained_path": "downloads/mobile/city-layout-r10/regions/R11.svg"
+    },
+    "city-layout-r10/coverage.csv": {
+      "sha256": "01024de7120d24fb6ae13505e86f35c4616c275289cca88af2607f89efe7f94b",
+      "bytes": 141785,
+      "retained_path": "downloads/mobile/city-layout-r10/coverage.csv"
+    },
+    "city-layout-r10/decisions.csv": {
+      "sha256": "07a8ed01d864ada7f1dd1f084594c0ad7a17ee37223777b198047e2ef96d844e",
+      "bytes": 403923,
+      "retained_path": "downloads/mobile/city-layout-r10/decisions.csv"
+    },
+    "city-layout-r10/gaps.csv": {
+      "sha256": "a0cd837c0edfcb4dc9a95233466b57a1d0d8197fb6e783ed46db0757d6978783",
+      "bytes": 17283,
+      "retained_path": "downloads/mobile/city-layout-r10/gaps.csv"
+    },
+    "city-layout-r10/networks.csv": {
+      "sha256": "3cdfa8dbac49546a969f786241292da0c60d68ae650d5b3c21e1a304bb44f905",
+      "bytes": 375628,
+      "retained_path": "downloads/mobile/city-layout-r10/networks.csv"
+    },
+    "city-layout-r10/atlas.json": {
+      "sha256": "2a2d342ada421c0a0891720283c6b8c1f13347ae1857a4f36131ae2c4b3b7e00",
+      "bytes": 2356100,
+      "retained_path": "downloads/mobile/city-layout-r10/atlas.json"
+    },
+    "city-layout-r10/source-review.json": {
+      "sha256": "8e4d558d9b65677f112ae3916a319d679b27f3d706cd66beb855549ab8466ca7",
+      "bytes": 369328,
+      "retained_path": "downloads/mobile/city-layout-r10/source-review.json"
+    },
+    "city-layout-r10/manifest.json": {
+      "sha256": "da3abd01caf3806e253e9449d5d13c29e890d7df50e53d37214f398d9da3e4bc",
+      "bytes": 102089,
+      "retained_path": "downloads/mobile/city-layout-r10/manifest.json"
+    },
+    "downloads/city-layout-r10.zip": {
+      "sha256": "c13fc987079f9603c8ad9f4f334d3da4b378bf740a9911710e1b08ed3400b0ab",
+      "bytes": 3550201,
+      "retained_path": "downloads/mobile/downloads/city-layout-r10.zip"
+    }
+  },
+  "download_attempts": [
+    {
+      "path": "city-layout-r10/overview.svg",
+      "url": "city-layout-r10/overview.svg",
+      "status": "passed",
+      "started_seconds": 0.008,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.231,
+      "sha256": "43b83126cb35624fe2d3f6919ddbf3e8a66729ad33b30416cd3cdf00b60a625e",
+      "bytes": 226268,
+      "suggested_filename": "overview.svg"
+    },
+    {
+      "path": "downloads/city-layout-r10.pdf",
+      "url": "downloads/city-layout-r10.pdf",
+      "status": "passed",
+      "started_seconds": 0.248,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.23,
+      "sha256": "011197dd7bc761a17644a33e40dd613cb9efc393c296f794b0b3e9576e45dcc6",
+      "bytes": 2292511,
+      "suggested_filename": "city-layout-r10.pdf"
+    },
+    {
+      "path": "city-layout-r10/regions/R01.svg",
+      "url": "city-layout-r10/regions/R01.svg",
+      "status": "passed",
+      "started_seconds": 0.752,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.187,
+      "sha256": "578db14263fe7b93fbb39690f606325ada8c561001788ff41a7d6dc19fc25652",
+      "bytes": 39963,
+      "suggested_filename": "R01.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R02.svg",
+      "url": "city-layout-r10/regions/R02.svg",
+      "status": "passed",
+      "started_seconds": 0.948,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.193,
+      "sha256": "1016488050bc5e47f40f358753247a9a3bf6e92d7829735ee76b3a49597dddeb",
+      "bytes": 106140,
+      "suggested_filename": "R02.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R03.svg",
+      "url": "city-layout-r10/regions/R03.svg",
+      "status": "passed",
+      "started_seconds": 1.15,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.19,
+      "sha256": "848e88b8c083fb4e2de137b147b49beee71717a7bc5586d8d6e0a8cb9099a8fc",
+      "bytes": 133657,
+      "suggested_filename": "R03.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R04.svg",
+      "url": "city-layout-r10/regions/R04.svg",
+      "status": "passed",
+      "started_seconds": 1.349,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.191,
+      "sha256": "9945e42e8a0a6b743bb2f595c520da149c7480e55c0a9d5cf72829c5c209411a",
+      "bytes": 80972,
+      "suggested_filename": "R04.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R05.svg",
+      "url": "city-layout-r10/regions/R05.svg",
+      "status": "passed",
+      "started_seconds": 1.548,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.193,
+      "sha256": "a9b721167d3d14cd8c9bca316b0b6b9cb4e33d21d2abab95c9368212c1dde43a",
+      "bytes": 80935,
+      "suggested_filename": "R05.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R06.svg",
+      "url": "city-layout-r10/regions/R06.svg",
+      "status": "passed",
+      "started_seconds": 1.749,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.191,
+      "sha256": "432003c80257222d7814ec24903aca7e6704e21a6bc6406b6dad05e9fad07a2e",
+      "bytes": 46456,
+      "suggested_filename": "R06.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R07.svg",
+      "url": "city-layout-r10/regions/R07.svg",
+      "status": "passed",
+      "started_seconds": 1.949,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.191,
+      "sha256": "b539e5f8e2dbd1b85790d2b3930114497363e93df40290539a66541d8227694d",
+      "bytes": 92613,
+      "suggested_filename": "R07.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R08.svg",
+      "url": "city-layout-r10/regions/R08.svg",
+      "status": "passed",
+      "started_seconds": 2.149,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.191,
+      "sha256": "169d7ed3d08ac673efcc8b8613bf359fbc67ae01e82ae3899efad4be8186046c",
+      "bytes": 77353,
+      "suggested_filename": "R08.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R09.svg",
+      "url": "city-layout-r10/regions/R09.svg",
+      "status": "passed",
+      "started_seconds": 2.348,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.192,
+      "sha256": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+      "bytes": 81037,
+      "suggested_filename": "R09.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R10.svg",
+      "url": "city-layout-r10/regions/R10.svg",
+      "status": "passed",
+      "started_seconds": 2.548,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.193,
+      "sha256": "29b412b0c6952621778b10db52933636cb314c13772fc77cb9b5efe614c26555",
+      "bytes": 113606,
+      "suggested_filename": "R10.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R11.svg",
+      "url": "city-layout-r10/regions/R11.svg",
+      "status": "passed",
+      "started_seconds": 2.75,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.191,
+      "sha256": "cb99773544118d5f9fc57cc8dc97291128bf4fd9f642eefe18df0d044e57aae6",
+      "bytes": 86166,
+      "suggested_filename": "R11.svg"
+    },
+    {
+      "path": "city-layout-r10/coverage.csv",
+      "url": "city-layout-r10/coverage.csv",
+      "status": "passed",
+      "started_seconds": 2.95,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.191,
+      "sha256": "01024de7120d24fb6ae13505e86f35c4616c275289cca88af2607f89efe7f94b",
+      "bytes": 141785,
+      "suggested_filename": "coverage.csv"
+    },
+    {
+      "path": "city-layout-r10/decisions.csv",
+      "url": "city-layout-r10/decisions.csv",
+      "status": "passed",
+      "started_seconds": 3.149,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.192,
+      "sha256": "07a8ed01d864ada7f1dd1f084594c0ad7a17ee37223777b198047e2ef96d844e",
+      "bytes": 403923,
+      "suggested_filename": "decisions.csv"
+    },
+    {
+      "path": "city-layout-r10/gaps.csv",
+      "url": "city-layout-r10/gaps.csv",
+      "status": "passed",
+      "started_seconds": 3.35,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.19,
+      "sha256": "a0cd837c0edfcb4dc9a95233466b57a1d0d8197fb6e783ed46db0757d6978783",
+      "bytes": 17283,
+      "suggested_filename": "gaps.csv"
+    },
+    {
+      "path": "city-layout-r10/networks.csv",
+      "url": "city-layout-r10/networks.csv",
+      "status": "passed",
+      "started_seconds": 3.549,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.19,
+      "sha256": "3cdfa8dbac49546a969f786241292da0c60d68ae650d5b3c21e1a304bb44f905",
+      "bytes": 375628,
+      "suggested_filename": "networks.csv"
+    },
+    {
+      "path": "city-layout-r10/atlas.json",
+      "url": "city-layout-r10/atlas.json",
+      "status": "passed",
+      "started_seconds": 3.747,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.198,
+      "sha256": "2a2d342ada421c0a0891720283c6b8c1f13347ae1857a4f36131ae2c4b3b7e00",
+      "bytes": 2356100,
+      "suggested_filename": "atlas.json"
+    },
+    {
+      "path": "city-layout-r10/source-review.json",
+      "url": "city-layout-r10/source-review.json",
+      "status": "passed",
+      "started_seconds": 3.954,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.22,
+      "sha256": "8e4d558d9b65677f112ae3916a319d679b27f3d706cd66beb855549ab8466ca7",
+      "bytes": 369328,
+      "suggested_filename": "source-review.json"
+    },
+    {
+      "path": "city-layout-r10/manifest.json",
+      "url": "city-layout-r10/manifest.json",
+      "status": "passed",
+      "started_seconds": 4.182,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.192,
+      "sha256": "da3abd01caf3806e253e9449d5d13c29e890d7df50e53d37214f398d9da3e4bc",
+      "bytes": 102089,
+      "suggested_filename": "manifest.json"
+    },
+    {
+      "path": "downloads/city-layout-r10.zip",
+      "url": "downloads/city-layout-r10.zip",
+      "status": "passed",
+      "started_seconds": 4.383,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.202,
+      "sha256": "c13fc987079f9603c8ad9f4f334d3da4b378bf740a9911710e1b08ed3400b0ab",
+      "bytes": 3550201,
+      "suggested_filename": "city-layout-r10.zip"
+    }
+  ],
+  "attempt_path": null,
+  "screenshots": {
+    "mobile-entry.png": "914e21b11d9c323d534a910c1ec77b838c9fda87c3e3ac7e38fbc3341c45998e",
+    "mobile-restored-filter.png": "f8715dab63db96f339825d00c78c0865a1f10e6544ede7a9583e1b3bb4630f4b",
+    "mobile-overview-scrolled.png": "1c9674843df63614aa6ef671240dfca7da419ec1dc73c2c74fd5cb3fcafa6fce",
+    "mobile-map-overview.png": "3cba12aee8afecbed10c47fdc684d3c765dccbef63da3371fc158e3ed93f357d",
+    "mobile-map-R01.png": "a146b815ecfa70328f26d262fa64819245d2c8e21a9ac0158909b15736e43ec2",
+    "mobile-map-R02.png": "a0259157851ef63bbe1092fc9b44553c4b6444efac40544af0e6e39b80d08044",
+    "mobile-map-R03.png": "632f5a8d3ee27f4c75fc71f4b614fa201b19a6d1ef08c2110b72f7b91e68d14a",
+    "mobile-map-R04.png": "a0cda7cdd135ef8e5e2f625da7230ab7acd7b6189f172804a35f70451b6e8060",
+    "mobile-map-R05.png": "7b417eaefca055d6118087f5b610bdbc3bb39baba3218270eab209d210deb0f0",
+    "mobile-map-R06.png": "75c7412a5ae953c9f99dbcf1c374c3dcd37cef8156dc97b596d13b9f1a42a97b",
+    "mobile-map-R07.png": "94f6b04b39f695e1a2131137c445e1a2152f9dc457ac1ad0c2c38ee2c21c36ba",
+    "mobile-map-R08.png": "0da3a4c74e762ae64a74f0136eb83ab952c256b54a0f84fc385a5440cdbcfa05",
+    "mobile-map-R09.png": "5b1f669b6b3bc420edf313ed755ad562056223075d6310ed4a65b5d2ef837d83",
+    "mobile-map-R10.png": "ab2f249b763a049bb7a442eae061b17e08c6de4796ed07805f72b4919ac60375",
+    "mobile-map-R11.png": "33fb4856b47a3b8dc8f916a29fa4c6e0a2ca02bf2d56f57714c4979dbe7bc2bd",
+    "mobile-deep-link.png": "ace75f463dfc187c69f96f31a832c0301396ab79ce59ed411fa19c9d286a22eb",
+    "mobile-offline.png": "d08ac914b4b3cc75c4258c61eaa6698eb03991ef324eebfe393a054763c9e22b",
+    "mobile-without-javascript.png": "cbcc66fb0a3785d74fb3d9e5d63ea97e26ed9076cb0339b868b86f69f88278be"
+  },
+  "errors": [],
+  "maps": {
+    "overview": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R01": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R02": {
+      "original": "0 0 1680 2376",
+      "zoomed": "168 237.60000000000002 1344 1900.8",
+      "panned": "369.6 522.72 1344 1900.8",
+      "keyboard": "369.6 237.60000000000002 1344 1900.8"
+    },
+    "R03": {
+      "original": "0 0 1680 2376",
+      "zoomed": "168 237.60000000000002 1344 1900.8",
+      "panned": "369.6 522.72 1344 1900.8",
+      "keyboard": "369.6 237.60000000000002 1344 1900.8"
+    },
+    "R04": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R05": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R06": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R07": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R08": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R09": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R10": {
+      "original": "0 0 1680 2376",
+      "zoomed": "168 237.60000000000002 1344 1900.8",
+      "panned": "369.6 522.72 1344 1900.8",
+      "keyboard": "369.6 237.60000000000002 1344 1900.8"
+    },
+    "R11": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    }
+  },
+  "source_commit": "f442bbff2603b0c3f4d591a77694b51e44ea7b28",
+  "layout_checks": [
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R01&basis=relation&q=R10-R01-01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R02",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R03",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R04",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R05",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R06",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R07",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R08",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R09",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R10",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R11",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html?region=R03#region-R03",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "file:///tmp/tmpd4uh5ijc/index.html?region=R07&q=R10-R07-01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:39961/luoyang-city/luoyang-city-layout.html#decision-R10-R01-01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    }
+  ],
+  "mobile_native_scroll": 540,
+  "pdf_pages": 16,
+  "status": "passed"
+}

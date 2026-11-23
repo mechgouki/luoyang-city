@@ -1,0 +1,33 @@
+{
+  "schema": "luoyang-r12-archive-scope-v1",
+  "generated_at_utc": "2026-11-23T14:09:34.316754+00:00",
+  "assembly_scope": {
+    "path": "assembly-scope.json",
+    "bytes": 640372,
+    "sha256": "6e7e4b33bdd90dc21f7f605b9a2c5ff346f8abcdacc9d3c88794374a92393f7a",
+    "git_blob_sha1": "d55b2cc6f1f909bbe935044bfa19e9054c6be365"
+  },
+  "assembly_counts": {
+    "source_files": 2089,
+    "source_bytes": 5032458421,
+    "copied_files": 2066,
+    "copied_bytes": 610204961,
+    "excluded_files": 23,
+    "excluded_bytes": 4422253460,
+    "copied_cas_objects": 1617,
+    "unchanged_terrain_objects": 7,
+    "terrain_logical_exceptions": 49,
+    "actions_wrappers": 16,
+    "unchanged_ingest_files": 16
+  },
+  "file_count_before_indexes": 2067,
+  "generated_indexes_added_after_assembly": [
+    "archive-inventory.json",
+    "archive-scope.json",
+    "archive-sensitive-scan.json"
+  ],
+  "rule": "No additional exclusions. Original browser downloads, including ZIPs, remain in CAS. Only the exact assembly-scope transport-wrapper and fixed prior-terrain exceptions apply.",
+  "pages_retention": "Every Pages member has an identity ledger; only selected Pages bytes are retained. Unretained old members are not a claim of permanent byte preservation or cross-release equality.",
+  "final_complete_counts": "Read the external frozen-upload-manifest, which includes the three index files themselves.",
+  "archive_verification": "Independent remote commit/tree/blob verification is performed after freezing; this scope document does not certify an upload."
+}

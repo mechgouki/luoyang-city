@@ -1,0 +1,213 @@
+{
+  "schema": "luoyang-failed-production-evidence-collection-v1",
+  "collected_at_utc": "2026-11-23T12:21:37.945009+00:00",
+  "status": "evidence_collected_for_failed_production_not_release_acceptance",
+  "repository": "mechgouki/luoyang-city",
+  "run_id": 45169490719,
+  "run_attempt": 1,
+  "run_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45169490719",
+  "run_status": "completed",
+  "run_conclusion": "failure",
+  "production_commit": "fa5398b0a8ecbd14d4a40f1fdd249b441e6be0b5",
+  "production_tree": "a1282920a1f4e49583d7dbf6ad9a89f0a9a42fca",
+  "production_build_checkout_log_commit": "fa5398b0a8ecbd14d4a40f1fdd249b441e6be0b5",
+  "pr_number": 84,
+  "pr_head": "32b61d81e8fc942fdc51624949c56ac6cb4b53e0",
+  "pr_tested_merge": "531baa07af399f0ee647b95c44ab6695bd7303e4",
+  "pr_tested_tree": "a1282920a1f4e49583d7dbf6ad9a89f0a9a42fca",
+  "production_matches_pr_tested_tree": true,
+  "jobs": [
+    {
+      "id": 137674976778,
+      "name": "build",
+      "conclusion": "success",
+      "log": {
+        "path": "/workspace/r12-evidence-staging/production-45169490719-a1/logs/job-137674976778-raw.log",
+        "bytes": 285688,
+        "sha256": "7258ba9a17403ba0b6155e146167b592820a42effc3a141ed3bacefb28e1842c"
+      }
+    },
+    {
+      "id": 137682160283,
+      "name": "deploy",
+      "conclusion": "success",
+      "log": {
+        "path": "/workspace/r12-evidence-staging/production-45169490719-a1/logs/job-137682160283-raw.log",
+        "bytes": 4587,
+        "sha256": "2e7be4c0f49eb972584a6c544eeaf6e8715993bc9743dd77c8bcf46bc20aafa0"
+      }
+    },
+    {
+      "id": 137682378624,
+      "name": "verify-live",
+      "conclusion": "failure",
+      "log": {
+        "path": "/workspace/r12-evidence-staging/production-45169490719-a1/logs/job-137682378624-raw.log",
+        "bytes": 15417,
+        "sha256": "95503a1816228e34a8a5485c2f21505a66ef3e5bd075490034c550dfc769fb43"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": 14818285152,
+      "name": "live-acceptance-evidence",
+      "api_source_file": "api/api-artifacts-final.json",
+      "api_source_pointer": "/artifacts/0",
+      "zip": "live-acceptance-evidence.zip",
+      "bytes": 47258,
+      "sha256": "2af2aacb71ed63a9235e66dd6a27026eff9382fd26e1e7102c45c53bd33b56a2",
+      "file_id": "file_00000000b6c481fbb48d2a88f5992f3f",
+      "download_host": "sdmntprwestcentralus.oaiusercontent.com",
+      "expires_at": "2026-12-23T12:16:43Z",
+      "ingest_manifest": "/workspace/r12-evidence-staging/cas/ingests/production-45169490719-a1-live-failed.json",
+      "member_count": 1,
+      "logical_retained_bytes": 185721,
+      "unique_retained_bytes": 185721
+    },
+    {
+      "artifact_id": 14817671031,
+      "name": "browser-build-evidence",
+      "api_source_file": "api/api-artifacts-final.json",
+      "api_source_pointer": "/artifacts/1",
+      "zip": "browser-build-evidence.zip",
+      "bytes": 286995857,
+      "sha256": "f09917984ccd39b5a7835a29e1ccc9d5c72da50491d4142e2c182c1d23c5ccd9",
+      "file_id": "file_000000005eb881f5bc123ea0175aae3f",
+      "download_host": "sdmntprcentralus.oaiusercontent.com",
+      "expires_at": "2026-12-07T12:08:46Z",
+      "ingest_manifest": "/workspace/r12-evidence-staging/cas/ingests/production-45169490719-a1-build-before-live-failure.json",
+      "member_count": 736,
+      "logical_retained_bytes": 342871143,
+      "unique_retained_bytes": 288796179
+    },
+    {
+      "artifact_id": 14816163855,
+      "name": "github-pages",
+      "api_source_file": "api/api-artifacts-final.json",
+      "api_source_pointer": "/artifacts/2",
+      "zip": "github-pages.zip",
+      "bytes": 364256631,
+      "sha256": "be02e387a6988b6a747958dbe6a7ff1a1a9570bda54766e6d152f3bb8ff00c3d",
+      "file_id": "file_0000000068d881f5903437d961ab25d7",
+      "download_host": "sdmntprcentralus.oaiusercontent.com",
+      "expires_at": "2026-11-30T12:08:56Z",
+      "ingest_manifest": "/workspace/r12-evidence-staging/cas/ingests/production-45169490719-a1-pages-before-live-failure.json",
+      "member_count": 959,
+      "logical_retained_bytes": 11715606,
+      "unique_retained_bytes": 11715606
+    }
+  ],
+  "pages": {
+    "source_commit": "fa5398b0a8ecbd14d4a40f1fdd249b441e6be0b5",
+    "member_count": 959,
+    "full_member_inventory_verified": true,
+    "build_info_identity": {
+      "path": "build-info.json",
+      "bytes": 806833,
+      "sha256": "837ec28d4702884a10f69a62771d6ca0a7e244bb3b96b496af329e193559f8ca",
+      "git_blob_sha1": "10fc9cff0e194a7d4cc5c2f3cccf2421eecb728b",
+      "retained_path": "objects/sha256/837ec28d4702884a10f69a62771d6ca0a7e244bb3b96b496af329e193559f8ca"
+    },
+    "recorded_files_sha256_count": 959,
+    "empty_build_control_not_in_tar": [
+      ".nojekyll"
+    ],
+    "image_status": "needs_revision",
+    "review_status": "rejected_needs_revision",
+    "homepage_replacement_approved": false
+  },
+  "failed_live": {
+    "status": "failed",
+    "error": "No module named 'PIL'",
+    "resource_entries_recorded": 958,
+    "http_retries": 1,
+    "browser_steps_skipped": true,
+    "full_live_acceptance_passed": false
+  },
+  "build_browser_download_cross_check": {
+    "schema": "luoyang-browser-download-cas-check-v1",
+    "status": "passed",
+    "source_commit": "fa5398b0a8ecbd14d4a40f1fdd249b441e6be0b5",
+    "pages_label": "production-45169490719-a1-pages-before-live-failure",
+    "evidence_label": "production-45169490719-a1-build-before-live-failure",
+    "publication_status": "needs_revision",
+    "review_status": "rejected_needs_revision",
+    "devices": [
+      {
+        "device": "desktop",
+        "report": "panorama-v14-browser/desktop-report.json",
+        "unique_downloads": 27,
+        "actual_click_attempts": 27,
+        "passed_click_attempts": 27,
+        "screenshots": 3,
+        "status": "passed"
+      },
+      {
+        "device": "mobile",
+        "report": "panorama-v14-browser/mobile-report.json",
+        "unique_downloads": 27,
+        "actual_click_attempts": 27,
+        "passed_click_attempts": 27,
+        "screenshots": 3,
+        "status": "passed"
+      }
+    ],
+    "note": "Checks retained original reports and bytes only; does not rerun browser interactions or certify image geometry."
+  },
+  "raw_api_metadata_files": [
+    {
+      "path": "/workspace/r12-evidence-staging/production-45169490719-a1/api/api-artifacts-final.json",
+      "bytes": 2113,
+      "sha256": "9a21cd2f8ce81443c0e18aded9443ed7089c4b33c3c1589c43c4c647ecced4ce"
+    },
+    {
+      "path": "/workspace/r12-evidence-staging/production-45169490719-a1/api/api-git-commit-fa5398b0a8ecbd14d4a40f1fdd249b441e6be0b5-final.json",
+      "bytes": 2977,
+      "sha256": "8aa2d5356df9cd3d12cb8e81ec46381fd45f049d599399ce7fc052f0709986ef"
+    },
+    {
+      "path": "/workspace/r12-evidence-staging/production-45169490719-a1/api/api-jobs-attempt1-final.json",
+      "bytes": 8202,
+      "sha256": "8ba425e64c823bd09fc8bb693b872549790a15dc8f073f2253c4b08e1f51413f"
+    },
+    {
+      "path": "/workspace/r12-evidence-staging/production-45169490719-a1/api/api-pr84-final.json",
+      "bytes": 19405,
+      "sha256": "cc6cfd1b119bc5f94edf7e3cc22bce065aa687f8a1390cb2cdcc92552f6c1ef4"
+    },
+    {
+      "path": "/workspace/r12-evidence-staging/production-45169490719-a1/api/api-run-final.json",
+      "bytes": 12616,
+      "sha256": "22e48063d91bdda46920aa9057c40c471f2443e2194549e7afc84a7011852d2b"
+    }
+  ],
+  "preserved_initial_files": [
+    {
+      "path": "/workspace/r12-evidence-staging/production-45169490719-a1/api/api-git-commit-fa5398b0a8ecbd14d4a40f1fdd249b441e6be0b5-initial.json",
+      "bytes": 2977,
+      "sha256": "8aa2d5356df9cd3d12cb8e81ec46381fd45f049d599399ce7fc052f0709986ef"
+    },
+    {
+      "path": "/workspace/r12-evidence-staging/production-45169490719-a1/api/api-jobs-initial.json",
+      "bytes": 3518,
+      "sha256": "af90be01b8062093e112ae3ac281bec12169828631767e4b89e648bbf00230ed"
+    },
+    {
+      "path": "/workspace/r12-evidence-staging/production-45169490719-a1/api/api-pr-after-merge-initial.json",
+      "bytes": 19405,
+      "sha256": "cc6cfd1b119bc5f94edf7e3cc22bce065aa687f8a1390cb2cdcc92552f6c1ef4"
+    },
+    {
+      "path": "/workspace/r12-evidence-staging/production-45169490719-a1/api/api-run-initial.json",
+      "bytes": 12613,
+      "sha256": "a60fc18f4436e62347b99cc29f7284f4c06fa1d498213c2bb2a24d2d26e7b3cc"
+    }
+  ],
+  "metadata_extraction_note": "Single artifact JSON is selected from the full run artifacts API; exact source response and JSON pointer retained. No successful direct-artifact API read is claimed.",
+  "signed_download_urls_retained": false,
+  "prior_pr_artifacts_redownloaded": false,
+  "repository_source_modified": false,
+  "remote_mutations": false,
+  "remaining": "Install required pinned Pillow in verify-live and complete a newly identified production success chain; preserve this failure independently. This record does not certify image geometry or grant homepage replacement approval."
+}

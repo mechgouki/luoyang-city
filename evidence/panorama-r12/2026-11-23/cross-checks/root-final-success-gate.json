@@ -1,0 +1,36 @@
+{
+  "schema": "luoyang-r12-root-production-success-gate-v1",
+  "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+  "run_id": 45182742216,
+  "run_attempt": 1,
+  "run_status": "completed",
+  "run_conclusion": "success",
+  "jobs": [
+    {
+      "id": 137720438238,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T13:19:16Z",
+      "completed_at": "2026-11-23T13:32:23Z"
+    },
+    {
+      "id": 137727902581,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T13:32:28Z",
+      "completed_at": "2026-11-23T13:32:45Z"
+    },
+    {
+      "id": 137728114930,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T13:32:48Z",
+      "completed_at": "2026-11-23T13:51:21Z"
+    }
+  ],
+  "main": "4579a6b8990a91780bf83391967c301218c0711e",
+  "scope": "Independent root API read confirms exact source and all three jobs successful. Raw complete production API/log/artifact records and public byte checks are retained separately."
+}

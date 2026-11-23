@@ -1,0 +1,121 @@
+{
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "R6.1 entrance preserves its 21 records; complete catalog, coverage and exclusions are present",
+    "All six categories filter correctly; exact documentary ID, persistent filters, no-result and reset work",
+    "Palace and ward deep links open; a new search clears an older anchor and survives reload",
+    "Evidence returns to the existing source/index item with highlight and keyboard focus; required layers, reload and map-to-card round trip work",
+    "Source, inference and unknown layers persist; magnification and keyboard horizontal panning work",
+    "Disconnected ZIP restores a ward deep link, searches a gate record, and preserves it after reload",
+    "Native details open by an actual click without JavaScript",
+    "All six advertised downloads were actually downloaded and matched release SHA-256"
+  ],
+  "downloads": {
+    "all-roads/city-all-roads.svg": "bbe92a2f8255598d8045116a85637bd5faf664552d42ef202ed58104328c24b0",
+    "all-roads/records.csv": "e532d7dfab82b90b34c9e889f1299bf5a5cfa1e71d622e6a47d49d27029a1987",
+    "all-roads/records.json": "38cb75632a06d2fbda39ecf0d317edf602b53156a533e354a3b2b24eb4215753",
+    "all-roads/coverage.csv": "1255359e18d6a4366bc72663e1222a387ba8c7788b8156b3e51a151dd5b53f44",
+    "all-roads/manifest.json": "ec552f482b5573fb3b251c37767a71d6dfb2b8417c8aa9a8344b0cbf940e5f3a",
+    "downloads/luoyang-all-roads.zip": "5bbd737f2830adb4f803338497110ae573833e772826898b589189d6e006cba0"
+  },
+  "screenshots": {
+    "mobile-whole-atlas.png": "b6e375c1e20bff3b6637c130ccd1f8d069e6634f35c0b265728f0a1189bf57ab",
+    "mobile-palace-evidence.png": "6f9d2a648fe7e7f1197a4a62cfad43ed53c570560e4279e177085d00d800694a",
+    "mobile-ward-evidence.png": "d41849687cdf7f4fadeb1ff2702f0650ca317f8024e4b262ae4a4523b00a69fd",
+    "mobile-ward-bridge-map.png": "cd5e40143b30f928bc358a8cae4d208b2bbd16e07549cee2c927a96c0f6f1627"
+  },
+  "errors": [],
+  "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+  "record_count": 84,
+  "layout_checks": [
+    {
+      "url": "http://127.0.0.1:40445/luoyang-city/luoyang-all-roads.html",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40445/luoyang-city/luoyang-all-roads.html#P01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40445/luoyang-city/luoyang-all-roads.html#F01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40445/luoyang-city/luoyang-all-roads.html#P01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40445/luoyang-city/luoyang-all-roads.html#F01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40445/luoyang-city/luoyang-all-roads.html#P01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "file:///tmp/tmpys4d__fx/index.html?q=G01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40445/luoyang-city/luoyang-all-roads.html#F01",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": "auto",
+      "tolerance": 1
+    }
+  ],
+  "homepage": {
+    "current": "panorama-approved-v12",
+    "archived": "panorama-approved-v11"
+  },
+  "status": "passed"
+}

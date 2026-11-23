@@ -1,0 +1,30 @@
+{
+  "schema": "luoyang-browser-download-cas-check-v1",
+  "status": "passed",
+  "source_commit": "fa5398b0a8ecbd14d4a40f1fdd249b441e6be0b5",
+  "pages_label": "production-45169490719-a1-pages-before-live-failure",
+  "evidence_label": "production-45169490719-a1-build-before-live-failure",
+  "publication_status": "needs_revision",
+  "review_status": "rejected_needs_revision",
+  "devices": [
+    {
+      "device": "desktop",
+      "report": "panorama-v14-browser/desktop-report.json",
+      "unique_downloads": 27,
+      "actual_click_attempts": 27,
+      "passed_click_attempts": 27,
+      "screenshots": 3,
+      "status": "passed"
+    },
+    {
+      "device": "mobile",
+      "report": "panorama-v14-browser/mobile-report.json",
+      "unique_downloads": 27,
+      "actual_click_attempts": 27,
+      "passed_click_attempts": 27,
+      "screenshots": 3,
+      "status": "passed"
+    }
+  ],
+  "note": "Checks retained original reports and bytes only; does not rerun browser interactions or certify image geometry."
+}

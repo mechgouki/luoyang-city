@@ -1,0 +1,425 @@
+{
+  "schema": "luoyang-yongning-local-structure-review-v2",
+  "study_id": "yongning-local-structure-study-02",
+  "reviewer": "/root/next_image_strategy",
+  "reviewed_at_shanghai": "2026-11-23T20:32:23.558991+08:00",
+  "scope": "Independent review of square local artistic structure study, not a seventh full panorama or a homepage candidate.",
+  "status": "suitable_as_local_structure_reference_with_partial_ground_checks",
+  "image": {
+    "file": "structure-study-02.png",
+    "sha256": "7456b5d932128ab74c5770dedfa5866f05b806f9fa08ff3214c884f5fe1ac70a",
+    "bytes": 1304233,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "actually_viewed": true
+  },
+  "layout_reference": {
+    "file": "square-layout.png",
+    "sha256": "c47d1e563003f22c0b75c723b81aee9b972abeab2505237274b1c71a07f71689",
+    "bytes": 107164,
+    "size_px": [
+      1536,
+      1536
+    ],
+    "actually_viewed": true
+  },
+  "decisions": {
+    "full_panorama_attempt_number": null,
+    "local_study_only": true,
+    "suitable_as_local_structure_and_material_reference": true,
+    "layout_authority_remains_frozen_svg": true,
+    "whole_geometry_fidelity_passed": false,
+    "ready_for_direct_panorama_reintegration": false,
+    "accepted_as_homepage_candidate": false,
+    "homepage_replacement_approved": false,
+    "historical_elevation_reconstructed": false,
+    "new_ancient_coordinates": 0,
+    "new_verified_building_heights": 0,
+    "existing_six_panorama_reviews_modified": false,
+    "first_local_study_review_modified": false
+  },
+  "display_frame_check": {
+    "input_canvas_px": [
+      1536,
+      1536
+    ],
+    "output_canvas_px": [
+      1254,
+      1254
+    ],
+    "scale_x": 0.81640625,
+    "scale_y": 0.81640625,
+    "aspect_ratio_preserved": true,
+    "uniform_frame_scale_available": true,
+    "source_viewBox": [
+      530,
+      270,
+      680,
+      680
+    ],
+    "source_svg_path": "research/panorama-r12/massing-yongning-clean.svg",
+    "source_svg_sha256": "310331b205c29682f9dee3ac742adeb17ac0da3eb401d64f4ed97f14a70e940b",
+    "note": "统一系数只定义输入输出画布的显示对应；它不证明生成图所有物体逐点遵守该变换。"
+  },
+  "inspection_method": {
+    "actual_images": "Both original PNGs inspected with view_image. No image pixels edited.",
+    "storey_count": "Independent occupied wall bands and principal roof levels counted; finial, plinth, brackets, rear hall and neighbouring gate excluded.",
+    "ground_comparison": "Expected positions computed from frozen projection.json plus the recorded SVG display transform and the single canvas scale 1254/1536. No fitted alignment, recentering, per-object translation or anisotropic scaling. Selected visible southern masonry/base edges were manually located with read-only RGB samples at named x coordinates.",
+    "measurement_limits": "Source edge centreline, raster stroke width, generated shadows and depicted masonry foot cannot support subpixel accuracy. Expected values are computed coordinates, while observed ranges are approximate manual readings with about ±4px visual uncertainty. No historical distances or survey errors inferred."
+  },
+  "checks": [
+    {
+      "id": "S02-GATE-COUNT",
+      "label": "南门三层",
+      "status": "passed_for_visible_storey_count",
+      "storeys_counted": 3,
+      "observed": "低矮门楼可辨底层贯通门洞、上部中层和顶层，共三组独立有立面的木构楼层及主檐。",
+      "image_region_px": [
+        435,
+        1040,
+        250,
+        155
+      ],
+      "approximate_wall_band_y_ranges_bottom_to_top": [
+        [
+          1147,
+          1171
+        ],
+        [
+          1115,
+          1129
+        ],
+        [
+          1086,
+          1101
+        ]
+      ],
+      "limit": "只判视觉层数；门洞数、开间与屋顶细节仍为艺术表达。"
+    },
+    {
+      "id": "S02-TOWER-COUNT",
+      "label": "木塔九层",
+      "status": "passed_for_visible_storey_count",
+      "storeys_counted": 9,
+      "observed": "塔身自下而上九个主要立面层均能独立辨认；后殿屋顶、金刹杆、斗栱和台基均未计层。",
+      "image_region_px": [
+        490,
+        145,
+        195,
+        850
+      ],
+      "approximate_wall_band_y_ranges_bottom_to_top": [
+        [
+          907,
+          953
+        ],
+        [
+          815,
+          860
+        ],
+        [
+          728,
+          772
+        ],
+        [
+          641,
+          684
+        ],
+        [
+          552,
+          596
+        ],
+        [
+          469,
+          512
+        ],
+        [
+          386,
+          429
+        ],
+        [
+          304,
+          346
+        ],
+        [
+          217,
+          263
+        ]
+      ],
+      "limit": "没有因此确认实际塔高、层高、收分或结构。"
+    },
+    {
+      "id": "S02-SEPARATION",
+      "label": "门塔独立基脚",
+      "status": "passed_for_visual_separation",
+      "observed": "塔台基在上方，门楼另处于前方南墙线附近，二者之间留有可见地面与灰色地基参照线，没有融合成连续塔身。",
+      "image_region_px": [
+        435,
+        895,
+        280,
+        300
+      ],
+      "limit": "独立基脚可辨不等于整块基址多边形已通过几何检查。"
+    },
+    {
+      "id": "S02-HALL-ORDER",
+      "label": "佛殿在塔后",
+      "status": "passed_for_relative_visual_order",
+      "observed": "后殿两翼显露于塔身两侧，中央被塔遮挡，保持在塔后；没有向塔南搬移。",
+      "image_region_px": [
+        465,
+        660,
+        275,
+        180
+      ],
+      "limit": "中央及后侧边界遮挡，完整殿基未核。"
+    },
+    {
+      "id": "S02-ASPECT",
+      "label": "统一画幅比例",
+      "status": "passed_for_canvas_aspect_ratio",
+      "observed": "输入1536×1536，输出1254×1254；横纵均为0.81640625，消除第一张局部试片的非统一画幅比例问题。",
+      "limit": "输出分辨率未达到提示的1536×1536；仅宽高比与单一显示缩放成立。"
+    },
+    {
+      "id": "S02-GROUND-SAMPLES",
+      "label": "同名可见南缘有限对照",
+      "status": "limited_agreement_not_whole_geometry_pass",
+      "observed": "塔座三处可见南缘、南门三处南缘与后殿两侧可见南缘，整体位于按同一显示比例得到的目标附近。塔座约差-1.3至+1.7px；南门约向前1.1至4.3px；后殿局部约差-3.1至+0.3px。这些差值接近约读和线宽不确定性，仅支持有限的局部一致。",
+      "limit": "不拟合图像去降低残差，不把几处采样推广为全部角点、边界、轴线或历史定位通过。"
+    },
+    {
+      "id": "S02-GEOMETRY-COMPLETE",
+      "label": "完整地面几何及相机保真",
+      "status": "not_verified",
+      "observed": "没有逐点验证全部构件四角、后侧边界、墙段端点与间隔；若干部位遮挡，生成器仍重绘了基座、屋檐和导线。",
+      "limit": "方形与局部前缘接近都不能代替完整几何验证，不能直接无审查回嵌全景。"
+    },
+    {
+      "id": "S02-PANORAMA",
+      "label": "全景候选门槛",
+      "status": "outside_study_scope_not_passed",
+      "observed": "本图不包含宫城二、三号门及整个城市，也没有进行全景回嵌后的实际成图检查。",
+      "limit": "原V14六次失败和首页V12状态均不受本图影响。"
+    }
+  ],
+  "ground_comparison": {
+    "source_projection_path": "research/panorama-r12/projection.json",
+    "source_projection_sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+    "mapping_from_original_panorama_coordinate": "x=(5.2*u-2360)*1254/680; y=(5.2*v-1720)*1254/680",
+    "alignment_parameters_fitted_to_generated_image": false,
+    "expected_ground_rings_in_output_frame": {
+      "YN11-TOWER-PLINTH": [
+        [
+          503.7032,
+          915.9354
+        ],
+        [
+          678.4038,
+          923.2457
+        ],
+        [
+          669.6855,
+          987.4223
+        ],
+        [
+          492.5489,
+          979.9629
+        ],
+        [
+          503.7032,
+          915.9354
+        ]
+      ],
+      "YN11-BUDDHA-HALL": [
+        [
+          490.9492,
+          776.7001
+        ],
+        [
+          729.9484,
+          786.7743
+        ],
+        [
+          726.5732,
+          826.8098
+        ],
+        [
+          483.7844,
+          817.0489
+        ],
+        [
+          490.9492,
+          776.7001
+        ]
+      ],
+      "YN11-GATE-S": [
+        [
+          455.4019,
+          1134.1399
+        ],
+        [
+          665.6976,
+          1142.665
+        ],
+        [
+          659.1169,
+          1175.2859
+        ],
+        [
+          449.7818,
+          1166.2334
+        ],
+        [
+          455.4019,
+          1134.1399
+        ]
+      ]
+    },
+    "sampled_named_front_edges": [
+      {
+        "component_id": "YN11-TOWER-PLINTH",
+        "edge": "south/front ground-outline edge between source ring vertices 3 and 2",
+        "sample_x_px": 500,
+        "expected_source_edge_y_px": 980.28,
+        "observed_visible_masonry_or_base_front_edge_y_interval_px": [
+          981,
+          982
+        ],
+        "signed_difference_interval_px": [
+          0.72,
+          1.72
+        ],
+        "reading_uncertainty_px_approx": 4,
+        "comparison_status": "limited_agreement_with_manual_reading_uncertainty"
+      },
+      {
+        "component_id": "YN11-TOWER-PLINTH",
+        "edge": "south/front ground-outline edge between source ring vertices 3 and 2",
+        "sample_x_px": 580,
+        "expected_source_edge_y_px": 983.65,
+        "observed_visible_masonry_or_base_front_edge_y_interval_px": [
+          983,
+          984
+        ],
+        "signed_difference_interval_px": [
+          -0.65,
+          0.35
+        ],
+        "reading_uncertainty_px_approx": 4,
+        "comparison_status": "limited_agreement_with_manual_reading_uncertainty"
+      },
+      {
+        "component_id": "YN11-TOWER-PLINTH",
+        "edge": "south/front ground-outline edge between source ring vertices 3 and 2",
+        "sample_x_px": 665,
+        "expected_source_edge_y_px": 987.22,
+        "observed_visible_masonry_or_base_front_edge_y_interval_px": [
+          986,
+          987
+        ],
+        "signed_difference_interval_px": [
+          -1.22,
+          -0.22
+        ],
+        "reading_uncertainty_px_approx": 4,
+        "comparison_status": "limited_agreement_with_manual_reading_uncertainty"
+      },
+      {
+        "component_id": "YN11-GATE-S",
+        "edge": "south/front ground-outline edge between source ring vertices 3 and 2",
+        "sample_x_px": 460,
+        "expected_source_edge_y_px": 1166.68,
+        "observed_visible_masonry_or_base_front_edge_y_interval_px": [
+          1170,
+          1171
+        ],
+        "signed_difference_interval_px": [
+          3.32,
+          4.32
+        ],
+        "reading_uncertainty_px_approx": 4,
+        "comparison_status": "limited_agreement_with_manual_reading_uncertainty"
+      },
+      {
+        "component_id": "YN11-GATE-S",
+        "edge": "south/front ground-outline edge between source ring vertices 3 and 2",
+        "sample_x_px": 550,
+        "expected_source_edge_y_px": 1170.57,
+        "observed_visible_masonry_or_base_front_edge_y_interval_px": [
+          1173,
+          1174
+        ],
+        "signed_difference_interval_px": [
+          2.43,
+          3.43
+        ],
+        "reading_uncertainty_px_approx": 4,
+        "comparison_status": "limited_agreement_with_manual_reading_uncertainty"
+      },
+      {
+        "component_id": "YN11-GATE-S",
+        "edge": "south/front ground-outline edge between source ring vertices 3 and 2",
+        "sample_x_px": 650,
+        "expected_source_edge_y_px": 1174.89,
+        "observed_visible_masonry_or_base_front_edge_y_interval_px": [
+          1176,
+          1177
+        ],
+        "signed_difference_interval_px": [
+          1.11,
+          2.11
+        ],
+        "reading_uncertainty_px_approx": 4,
+        "comparison_status": "limited_agreement_with_manual_reading_uncertainty"
+      },
+      {
+        "component_id": "YN11-BUDDHA-HALL",
+        "edge": "south/front ground-outline edge between source ring vertices 3 and 2",
+        "sample_x_px": 500,
+        "expected_source_edge_y_px": 817.7,
+        "observed_visible_masonry_or_base_front_edge_y_interval_px": [
+          817,
+          818
+        ],
+        "signed_difference_interval_px": [
+          -0.7,
+          0.3
+        ],
+        "reading_uncertainty_px_approx": 4,
+        "comparison_status": "limited_agreement_with_manual_reading_uncertainty"
+      },
+      {
+        "component_id": "YN11-BUDDHA-HALL",
+        "edge": "south/front ground-outline edge between source ring vertices 3 and 2",
+        "sample_x_px": 710,
+        "expected_source_edge_y_px": 826.14,
+        "observed_visible_masonry_or_base_front_edge_y_interval_px": [
+          823,
+          824
+        ],
+        "signed_difference_interval_px": [
+          -3.14,
+          -2.14
+        ],
+        "reading_uncertainty_px_approx": 4,
+        "comparison_status": "limited_agreement_with_manual_reading_uncertainty"
+      }
+    ],
+    "footprint_corner_registration_completed": false
+  },
+  "remaining_limits": [
+    "全部地面轮廓、寺墙线段端点及遮挡部位没有完成对应核验。",
+    "输出仍是生成重绘，不能作为地面布局的新权威或反向改写冻结H。",
+    "尚未回嵌全景；宫城及全城图像的既有阻断项没有被本局部试片解决。",
+    "全部屋顶、木构细节、高度和材质保持艺术试绘身份。"
+  ],
+  "allowed_summary": [
+    "第二张局部试片保留了三层南门、九层木塔和独立基脚，并修复了第一张画幅比例不一致的问题。",
+    "几处同名可见基脚前缘大体跟随冻结投影，完整几何仍未核定。",
+    "这版适合作下一轮全景编辑的局部结构与材质参考；布局仍以冻结SVG为准，回嵌后须重新验收。"
+  ],
+  "next_action": "下一轮以冻结全景/局部SVG作为布局主输入，以本试片为结构与材质辅助参考；保留同一相机与地面变换，不把本图未经核定的全部轮廓当作已验证模型。全景回嵌后重新计层、核基脚及复查宫城等未解决项。"
+}

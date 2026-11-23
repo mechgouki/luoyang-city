@@ -1,0 +1,959 @@
+{
+  "schema": "luoyang-v14-independent-candidate-review-v1",
+  "research_version": "R12.1",
+  "candidate_revision": "panorama-candidate-v14",
+  "baseline_production_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+  "reviewer": "/root/homepage_plan_audit",
+  "created_at_shanghai": "2026-11-23T18:13:50.403157+08:00",
+  "status": "rejected_for_geometry_and_unverified_tower_count",
+  "candidate_image": {
+    "file": "/workspace/scratch/b7f9dff5a3b9/generated_images/exec-e5b03077-1960-400b-b062-7ccb117290e4.png",
+    "sha256": "706257abbefb963847f6211464f751e3fa1b386d20528df740277bd43377a339",
+    "size_px": [
+      1672,
+      941
+    ],
+    "bytes": 3842371,
+    "actually_viewed": true
+  },
+  "baseline_image": {
+    "file": "research/city-spatial-r9/panorama-v13-r2-source.png",
+    "sha256": "b2bc1486c1e6a7461fcbafd7234b4e15365cc3f65d3f454eb20882818284ade4",
+    "size_px": [
+      1672,
+      941
+    ],
+    "actually_viewed": true,
+    "initial_observation": "南门呈窄塔楼式；新刊基址可约束更横向展开的形体。原始屏幕像素比例不能直接替代平面宽深比例。"
+  },
+  "allowed_statuses": [
+    "pending_actual_candidate",
+    "passed_for_visual_feature",
+    "passed_for_relative_composition",
+    "passed_for_source_guided_candidate",
+    "passed_for_record",
+    "not_verifiable_from_image",
+    "failed",
+    "conditional_with_recorded_limits"
+  ],
+  "decision_policy": {
+    "must_failures_block_candidate_acceptance": true,
+    "not_verifiable_is_not_passed": true,
+    "uncertainty_without_source_upgrade_may_be_recorded": true,
+    "exact_metric_fidelity_not_claimed_from_raster": true,
+    "homepage_replacement_approved": false,
+    "entire_scene_historically_validated": false,
+    "accepted_new_field_measurements": 0,
+    "accepted_new_bank_geometries": 0,
+    "accepted_new_ancient_coordinates": 0
+  },
+  "checks": [
+    {
+      "id": "V14-B01",
+      "label": "三重南门不得退回两层",
+      "category": "preserve_v13r2",
+      "priority": "must",
+      "status": "passed_for_visual_feature",
+      "source_refs": [
+        {
+          "file": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/checks/0",
+          "source_sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+        }
+      ],
+      "acceptance_criteria": [
+        "底层门洞加上部两层独立木构层可辨",
+        "三组主檐须属于南门自身"
+      ],
+      "rejection_or_hold_conditions": [
+        "仅两层可辨",
+        "借后方木塔檐层凑门楼层数",
+        "无法辨认则记not_verifiable，不默认通过"
+      ],
+      "limit": "本项是既有V13r2成果保留；不据此认定开间、门洞数、屋顶构造或历史完整立面。",
+      "inspection_method": "actual_image_inspection",
+      "observed": "实际可辨底层门洞、上方两层独立木构和三组主檐，门楼自身为3层；未把后方木塔檐计入。",
+      "image_regions_px": [
+        [
+          495,
+          445,
+          56,
+          61
+        ]
+      ]
+    },
+    {
+      "id": "V14-B02",
+      "label": "九层木塔不得退回其他层数",
+      "category": "preserve_v13r2",
+      "priority": "must",
+      "status": "not_verifiable_from_image",
+      "source_refs": [
+        {
+          "file": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/checks/2",
+          "source_sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+        }
+      ],
+      "acceptance_criteria": [
+        "由上到下实际数出九层主要木构楼层／主檐",
+        "若局部遮挡，需可见侧面足以独立连续计数"
+      ],
+      "rejection_or_hold_conditions": [
+        "把金刹、台基计为楼层",
+        "把塔前门楼檐计入木塔",
+        "计数不确定仍声称九层已核验"
+      ],
+      "limit": "只核视觉楼层；塔高、层高、收分、金刹比例仍为展示取值。",
+      "inspection_method": "actual_image_inspection",
+      "observed": "7倍只读局部可数7层完整木构，最低第8层部分被门楼遮挡；不能独立数出9层，不补计假定隐藏楼层。",
+      "image_regions_px": [
+        [
+          480,
+          315,
+          75,
+          155
+        ]
+      ]
+    },
+    {
+      "id": "V14-B03",
+      "label": "寺门—寺墙从属及宫寺主路关系",
+      "category": "preserve_v13r2",
+      "priority": "must",
+      "status": "passed_for_relative_composition",
+      "source_refs": [
+        {
+          "file": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/checks/1",
+          "source_sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+        },
+        {
+          "file": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/checks/3",
+          "source_sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+        }
+      ],
+      "acceptance_criteria": [
+        "寺南墙两翼接入南门底层",
+        "南望北读法下寺院在宫前入口以南、主路以西",
+        "宫城与寺院有清楚区分"
+      ],
+      "rejection_or_hold_conditions": [
+        "南门移到寺墙以外或成为城市城门",
+        "寺墙与前景城市南墙合并",
+        "宫寺或主路东西关系倒置"
+      ],
+      "limit": "仅核相对构图，不证明道路连续段、城墙、宫寺距离或院界实测。",
+      "inspection_method": "actual_image_inspection",
+      "observed": "南门与寺南墙相接，寺院仍位于宫前入口以南、主路方向以西；寺墙与前景城市南墙有间隔。具体占地偏差见N01—N03。",
+      "image_regions_px": [
+        [
+          405,
+          300,
+          430,
+          225
+        ]
+      ]
+    },
+    {
+      "id": "V14-B04",
+      "label": "浮桥与水体表达不误升证据",
+      "category": "preserve_v13r2",
+      "priority": "must",
+      "status": "passed_for_visual_feature",
+      "source_refs": [
+        {
+          "file": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/checks/4",
+          "source_sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+        },
+        {
+          "file": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/known_limits/3",
+          "source_sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+        }
+      ],
+      "acceptance_criteria": [
+        "保留浮桥时可辨舟体支承木桥面",
+        "不新增未经证明的连续三桥链或渠口"
+      ],
+      "rejection_or_hold_conditions": [
+        "把既有浮桥换成石拱桥",
+        "把图像新河岸或桥头称为R11核定位置"
+      ],
+      "limit": "桥长、舟数、河宽、古岸和桥头仍为示意；允许艺术水面，但必须在导览写明。",
+      "inspection_method": "actual_image_inspection",
+      "observed": "浮桥舟体与木桥面仍可辨，未改石拱桥。新图河岸/洲渚及桥头仍为艺术改动，不能推为古岸定位。",
+      "image_regions_px": [
+        [
+          730,
+          605,
+          305,
+          220
+        ]
+      ]
+    },
+    {
+      "id": "V14-N01",
+      "label": "永宁南门宽深、长轴与整体投影",
+      "category": "new_r11_spatial_change",
+      "priority": "must",
+      "status": "failed",
+      "source_refs": [
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/14",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/south_gate_mean_opposite_edge_lengths_m",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/south_gate_long_edge_azimuth_deg_from_source_marked_north",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        }
+      ],
+      "acceptance_criteria": [
+        "占地组织采用长边近东西、与南墙方向相协调",
+        "较V13r2的窄塔楼式门面，形成横向展开的南门形体",
+        "与同一相机投影底稿比较45.7×19.0米图读轮廓，不以原始屏幕宽深比代替平面比例"
+      ],
+      "rejection_or_hold_conditions": [
+        "南门明显旋转90度",
+        "仅加宽屋檐而基部仍脱离院墙与底稿",
+        "没有透视参照却声称米制尺寸验收通过"
+      ],
+      "limit": "约2.41长深比来自刊图等比读数；透视成图不是量测图，立面宽度还受屋檐与台基影响。",
+      "inspection_method": "actual_image_plus_same_camera_layout_reference",
+      "observed": "三层门恢复，但门槛约(521,499)，目标(512,451)，向前约48px；门楼基部正面约42–48px宽，目标22.5px。",
+      "image_regions_px": [
+        [
+          495,
+          445,
+          56,
+          61
+        ]
+      ]
+    },
+    {
+      "id": "V14-N02",
+      "label": "塔座—佛殿—南门作为同源平面整体",
+      "category": "new_r11_spatial_change",
+      "priority": "must",
+      "status": "failed",
+      "source_refs": [
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/8",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/7",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/13",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/14",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/15",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/calibration",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        }
+      ],
+      "acceptance_criteria": [
+        "塔座、塔北佛殿、南门与西门的相对位置参照同一刊图整体",
+        "塔地基大框、塔座与塔身分别理解，不画成三座建筑",
+        "实际成图与透视底稿对照核查主构件偏移和遮挡"
+      ],
+      "rejection_or_hold_conditions": [
+        "把塔北佛殿移到塔南",
+        "佛殿套用太极殿尺度",
+        "对不同构件各自美术重排后声称按原图接入",
+        "将地基轮廓当塔院围墙"
+      ],
+      "limit": "图示佛殿框不是本轮新核完整实测殿基；城市绝对落位仍为候选。",
+      "inspection_method": "actual_image_plus_same_camera_layout_reference",
+      "observed": "佛殿被明显挪到塔右后方，台基中心约(553,419)，相对目标(517,414)偏右约36px。塔座中心仍被门遮挡，左侧可见基脚约y457–460，目标塔座中心y430。构件没有整体遵守同一源图投影。",
+      "image_regions_px": [
+        [
+          480,
+          315,
+          122,
+          165
+        ]
+      ]
+    },
+    {
+      "id": "V14-N03",
+      "label": "永宁寺墙、门缺口及未描构件",
+      "category": "new_r11_spatial_change",
+      "priority": "must",
+      "status": "failed",
+      "source_refs": [
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/0",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/1",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/2",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/3",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/4",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/5",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/6",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/16",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/17",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/untraced_or_unresolved",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/temple_wall_width_mean_m",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/temple_wall_depth_mean_m",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        }
+      ],
+      "acceptance_criteria": [
+        "采用新刊七段墙的局部关系，不把06a残墙与新图拼成联合院界",
+        "已知南、西门与墙线的从属一致",
+        "对未明北门、东门完整外形、僧房、回廊保留图示／艺术概化身份"
+      ],
+      "rejection_or_hold_conditions": [
+        "由四门文字对称复制四座相同门楼并声称原图支持",
+        "把左侧模式图的僧房／回廊复制为考古轮廓",
+        "分别拉伸X/Y迎合212×301米旧表"
+      ],
+      "limit": "新刊约212×292米与旧表差异保留；上部围墙艺术表达不等于七墙均为同层发掘实线。",
+      "inspection_method": "actual_image_inspection",
+      "observed": "寺墙地面人工约读x416–617、y397–500，底稿x459–565、y399–454，宽与进深均约为目标1.9倍。北侧接近但左右和南侧仍扩大。",
+      "image_regions_px": [
+        [
+          405,
+          385,
+          222,
+          125
+        ]
+      ]
+    },
+    {
+      "id": "V14-N04",
+      "label": "阊阖入口层次与门阙关系",
+      "category": "new_r11_spatial_change",
+      "priority": "must",
+      "status": "conditional_with_recorded_limits",
+      "source_refs": [
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/0",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/1",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/2",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/3",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/4",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/5",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/6",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/7",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/8",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/9",
+          "source_sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d"
+        },
+        {
+          "file": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/0",
+          "source_sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107"
+        }
+      ],
+      "acceptance_criteria": [
+        "主入口可与后方宫门层次区分",
+        "主门和两侧阙体的画面关系参考S37构件",
+        "开放连接线不被讲成有核定宽度的完整地上连廊"
+      ],
+      "rejection_or_hold_conditions": [
+        "用地下基础虚线外框直接决定上部建筑体量",
+        "把连接线扩展成精确完整廊房并声称来源已证",
+        "仅画通用对称门楼而宣称10构件已逐项实现"
+      ],
+      "limit": "三条门道可辨段是局部平面信息；上部阙楼、屋顶和连廊仍需另证。",
+      "inspection_method": "actual_image_inspection",
+      "observed": "阊阖主入口约(650,322)，比前两张接近目标(650,315)。两侧小阙约x624/674，相对目标约634/666仍分得更开；10构件不能逐一从栅格上确认，不能写为S37精确落实通过。",
+      "image_regions_px": [
+        [
+          610,
+          295,
+          83,
+          35
+        ]
+      ]
+    },
+    {
+      "id": "V14-N05",
+      "label": "宫城中轴前后层次与未闭合距离",
+      "category": "new_r11_spatial_change",
+      "priority": "must",
+      "status": "failed",
+      "source_refs": [
+        {
+          "file": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/1",
+          "source_sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107"
+        },
+        {
+          "file": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/2",
+          "source_sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107"
+        },
+        {
+          "file": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/3",
+          "source_sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107"
+        },
+        {
+          "file": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/unresolved_conflicts/0",
+          "source_sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107"
+        }
+      ],
+      "acceptance_criteria": [
+        "阊阖—二门—三门—太极区的前后层次能读出",
+        "不同层级建筑避免机械等距和重复同式大殿",
+        "最终说明保留近端约95/80米链与全轴距离未闭合"
+      ],
+      "rejection_or_hold_conditions": [
+        "把来源间约502/574米差异强行拟合后声称实测轴线",
+        "将三号门早期南半残部尺度画成已证完整门址",
+        "用含后期遗构的完整门殿组填满盛时层"
+      ],
+      "limit": "尺度片闭合只表示约束，未还原完整真实边界；图像中的距离只能是候选展示。",
+      "inspection_method": "actual_image_inspection",
+      "observed": "太极主要殿身地面大致接近目标(631,240)，台基/出阶更大且略偏前；二、三号门仍未在主轴上独立读出。宫城被画成大面积单一裸土场，不能由底稿资料空缺推出历史为空场。",
+      "image_regions_px": [
+        [
+          390,
+          120,
+          470,
+          210
+        ]
+      ]
+    },
+    {
+      "id": "V14-N06",
+      "label": "街坊疏密与对象身份保持",
+      "category": "new_r11_spatial_change",
+      "priority": "should",
+      "status": "conditional_with_recorded_limits",
+      "source_refs": [
+        {
+          "file": "docs/city-plan-r11-object-method.md",
+          "locator": "哪些对象可以得到候选点；方向求解与未满足项；时相和构件控制",
+          "source_sha256": "af9af957f885a776111b2f76d119fff998f4a4e33d90143a3b4f6d7ad47a34ce"
+        }
+      ],
+      "acceptance_criteria": [
+        "普通房群可作无名艺术背景，大小、高低、间隙避免机械复制",
+        "命名对象采用可支持的相对方向，未知地块保留概化",
+        "不得把群签展开成等大、等距、同纬的一排命名院落"
+      ],
+      "rejection_or_hold_conditions": [
+        "由339条记录推出339座建筑",
+        "将165个未定位项逐个填成地块",
+        "把候选点的24米显示间隔或110米初始化步长用作古代尺度"
+      ],
+      "limit": "更自然的疏密是构图改善，不能宣称全城人口、房屋数、坊界密度由R11证实。",
+      "inspection_method": "actual_image_inspection",
+      "observed": "外围无名房群有自然疏密，但宫城出现大面积单一空场。背景艺术体量可概化，资料缺少不能等同历史占地空缺。",
+      "image_regions_px": [
+        [
+          0,
+          0,
+          1672,
+          600
+        ]
+      ]
+    },
+    {
+      "id": "V14-R01",
+      "label": "宫城2013来源类型不得变成建筑足迹",
+      "category": "evidence_red_line",
+      "priority": "must",
+      "status": "passed_for_record",
+      "source_refs": [
+        {
+          "file": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/source_legend",
+          "source_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b"
+        },
+        {
+          "file": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/phase",
+          "source_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b"
+        },
+        {
+          "file": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/default_visible",
+          "source_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b"
+        },
+        {
+          "file": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/components/10",
+          "source_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b"
+        },
+        {
+          "file": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/components/20",
+          "source_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b"
+        },
+        {
+          "file": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/components/21",
+          "source_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b"
+        },
+        {
+          "file": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/components/22",
+          "source_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b"
+        },
+        {
+          "file": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/components/19",
+          "source_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b"
+        }
+      ],
+      "acceptance_criteria": [
+        "24项只作独立结构对照且在说明中保留来源身份",
+        "调查点、版筑范围、道路带分别对待"
+      ],
+      "rejection_or_hold_conditions": [
+        "三个等大调查黑块各变成同尺寸宫门",
+        "灰色版筑面直接变成完整殿身／屋顶",
+        "华林园南道路带变成闭合北宫墙"
+      ],
+      "limit": "所有24构件phase_unknown；不能当作516—528同层清单。",
+      "inspection_method": "image_inspection_plus_record_audit",
+      "observed": "冻结projection.json保持原哈希，2013宫城层未进入clean导图；本项只确认输入来源排除，不使画出的宫城空场或建筑获得证据。",
+      "image_regions_px": []
+    },
+    {
+      "id": "V14-R02",
+      "label": "外郭范围、未知城墙与古岸不升级",
+      "category": "evidence_red_line",
+      "priority": "must",
+      "status": "not_verifiable_from_image",
+      "source_refs": [
+        {
+          "file": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/rendering_rules",
+          "source_sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107"
+        },
+        {
+          "file": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/known_limits/3",
+          "source_sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+        }
+      ],
+      "acceptance_criteria": [
+        "候选说明明确外郭范围不是连续实测墙",
+        "未知南墙、宣阳门、河岸及桥头的艺术处理逐项披露"
+      ],
+      "rejection_or_hold_conditions": [
+        "把外郭虚线轮廓直接立成全圈城墙并称R11所证",
+        "把现代洛水当北魏古岸",
+        "以新增画面岸线宣称获得新的历史地理定位"
+      ],
+      "limit": "图像可以展示完整艺术场景，但不能把这些新增表面几何计作考古结论。",
+      "inspection_method": "image_inspection_plus_record_audit",
+      "observed": "前景南城墙、城门、洛水岸线和桥头仍完整具象；没有从图像确认其历史精确位置，必须继续标注示意身份。",
+      "image_regions_px": [
+        [
+          0,
+          350,
+          1672,
+          591
+        ]
+      ]
+    },
+    {
+      "id": "V14-R03",
+      "label": "时相与定位等级保持",
+      "category": "evidence_red_line",
+      "priority": "must",
+      "status": "not_verifiable_from_image",
+      "source_refs": [
+        {
+          "file": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/phase",
+          "source_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629"
+        },
+        {
+          "file": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/phase",
+          "source_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b"
+        },
+        {
+          "file": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/verified_shared_controls",
+          "source_sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107"
+        },
+        {
+          "file": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/field_registration_verified",
+          "source_sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107"
+        },
+        {
+          "file": "docs/city-plan-r11-object-method.md",
+          "locator": "时相和构件控制",
+          "source_sha256": "af9af957f885a776111b2f76d119fff998f4a4e33d90143a3b4f6d7ad47a34ce"
+        }
+      ],
+      "acceptance_criteria": [
+        "研究说明保持516—528综合目标",
+        "7候选绑定和0已核现场共同控制点如实登记",
+        "后出塔等不能因背景需要冒充盛时既成建筑"
+      ],
+      "rejection_or_hold_conditions": [
+        "把532平等寺塔或永熙大觉寺砖塔明确画入目标既成景物",
+        "将未知时相默认当516—528",
+        "因透视投影或图像逼真而提升证据等级"
+      ],
+      "limit": "普通无名背景塔不能单靠图像认定是哪座史载塔，须核对创作记录和标注。",
+      "inspection_method": "image_inspection_plus_record_audit",
+      "observed": "无逐项时相标识，仍不能由本图验证全景共时；综合时层和候选绑定的限制继续存在。",
+      "image_regions_px": []
+    },
+    {
+      "id": "V14-R04",
+      "label": "实际候选身份与首页批准分离",
+      "category": "delivery_control",
+      "priority": "must",
+      "status": "passed_for_record",
+      "source_refs": [
+        {
+          "file": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/homepage_replacement_approved",
+          "source_sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+        }
+      ],
+      "acceptance_criteria": [
+        "审查绑定实际候选PNG SHA256、尺寸、字节和生成提示",
+        "未查看图片的项目保持pending",
+        "新图在用户审看前保持candidate_for_review"
+      ],
+      "rejection_or_hold_conditions": [
+        "依据提示词直接判定成图通过",
+        "把V13r2既有三层门／九层塔称为R11新增考古发现",
+        "视觉验收后擅自将首页替换批准标为true"
+      ],
+      "limit": "本审查仅产生独立视觉／证据意见，不代替主控站点验收或用户首页替换决定。",
+      "inspection_method": "file_identity_plus_record_audit",
+      "observed": "已亲读实际PNG和三个只读放大视窗，绑定本图身份，未按提示词预判。此图不接纳，首页替换批准仍false。",
+      "image_regions_px": []
+    },
+    {
+      "id": "V14-R05",
+      "label": "资料空缺不等于历史为空地",
+      "category": "evidence_red_line",
+      "priority": "must",
+      "status": "failed",
+      "source_refs": [
+        {
+          "file": "docs/city-plan-r11-coordinate-method.md",
+          "locator": "3.尺度片与尚未闭合的中轴；东堂、太极北院、东北院未知几何不补绘"
+        },
+        {
+          "file": "docs/city-plan-r11-object-method.md",
+          "locator": "交付性质；无证几何为空，不构成不存在的证明"
+        }
+      ],
+      "observed": "成图把宫城大范围画成单一裸土空场。此空场是新增艺术假设，不能作为R11稀疏事实几何的历史结论；在盛时全景中不宜把证据导图的空白直接画成已知空置。",
+      "limit": "这不授权将未知区域填成已核名殿院；可采用明示概化的无名宫区体量或景观，但不得主张精确足迹。",
+      "image_regions_px": [
+        [
+          390,
+          120,
+          470,
+          210
+        ]
+      ]
+    }
+  ],
+  "inspection_sequence": [
+    "记录实际PNG尺寸、字节、SHA256；只读查看完整图",
+    "放大南门独立数三层、木塔独立数九层，记录可辨／遮挡",
+    "对照同相机透视底稿核门基、塔座、佛殿、寺墙及主路关系",
+    "检查阊阖与宫城前后层次，审查2013来源类型没有变形为建筑结论",
+    "检查全城重复形态、浮桥和背景；核时相及未定对象说明",
+    "逐项写观察、像素区域和状态；失败或不可辨不得记通过"
+  ],
+  "reviewed_at_shanghai": "2026-11-23T18:42:18.162722+08:00",
+  "attempt": 3,
+  "review_scope": "全图；永宁、阊阖、太极及宫城空场表达",
+  "projection_reference": {
+    "file": "/workspace/luoyang-r12/research/panorama-r12/projection.json",
+    "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+    "frozen_equal_to_attempt1_and_2": true,
+    "matrix_id": "r12-shared-ground-homography-v1",
+    "actually_read": true
+  },
+  "homepage_replacement_approved": false,
+  "entire_scene_historically_validated": false,
+  "source_projection_fidelity_passed": false,
+  "baseline_preservation_passed": false,
+  "visible_storey_counts": {
+    "south_gate": {
+      "complete_principal_storeys": 3,
+      "target_three_verified": true,
+      "count_confidence": "high"
+    },
+    "tower": {
+      "complete_principal_storeys_visible": 7,
+      "additional_partially_visible_possible_storeys": 1,
+      "target_nine_verified": false,
+      "count_confidence": "high_for_visible_seven_low_for_hidden_lower_parts",
+      "counting_rule": "不计金刹、台基和南门；最下第8层部分可见，未见第9层可独立辨识证据。"
+    }
+  },
+  "manual_ground_observations": {
+    "method": "实际PNG及只读视窗人工约读，通常5–10px不确定；不是实测，屋顶、出阶和墙高不自动等同地面轮廓。",
+    "yongning_wall_group": {
+      "observed_ground_bbox_approx_px": [
+        416,
+        397,
+        617,
+        500
+      ],
+      "reference_ground_bbox_px": [
+        458.9863396322854,
+        399.25559465852564,
+        565.1938056375262,
+        454.20724977101935
+      ],
+      "approx_width_factor": 1.89,
+      "approx_depth_factor": 1.87
+    },
+    "south_gate": {
+      "observed_threshold_approx_px": [
+        521,
+        499
+      ],
+      "observed_front_ground_width_approx_px": [
+        42,
+        48
+      ],
+      "reference_centre_px": [
+        512.0081860083162,
+        451.18463474780685
+      ],
+      "difference_approx_px": [
+        9,
+        48
+      ]
+    },
+    "tower": {
+      "ground_centre_observed": null,
+      "ground_centre_status": "obscured_by_gate",
+      "visible_left_plinth_side_approx_px": [
+        490,
+        459
+      ],
+      "visible_plinth_side_y_range_approx_px": [
+        457,
+        460
+      ],
+      "reference_centre_px": [
+        514.9006122570361,
+        430.01190105600415
+      ]
+    },
+    "buddha_hall": {
+      "observed_front_base_centre_approx_px": [
+        553,
+        419
+      ],
+      "reference_centre_px": [
+        517.1312055313214,
+        414.3775877733241
+      ],
+      "difference_approx_px": [
+        36,
+        5
+      ]
+    },
+    "changhe": {
+      "observed_gate_ground_centre_approx_px": [
+        650,
+        322
+      ],
+      "reference_centre_px": [
+        650.0396191150815,
+        315.00708377834303
+      ],
+      "observed_que_centres_x_approx_px": [
+        624,
+        674
+      ],
+      "reference_que_centres_x_approx_px": [
+        634,
+        666
+      ],
+      "assessment": "明显接近但不写精确落图通过"
+    },
+    "taiji": {
+      "main_body_ground_approx_px": [
+        631,
+        243
+      ],
+      "reference_centre_px": [
+        630.9844694746023,
+        239.98594820228536
+      ],
+      "visible_plinth_and_steps_bbox_approx_px": [
+        598,
+        239,
+        662,
+        251
+      ],
+      "assessment": "主体接近目标；台阶/台基与源尺度片口径不等，二三门缺漏仍阻断总体中轴通过"
+    }
+  },
+  "retained_improvements": [
+    "南门恢复底层加上两层，3层可独立读清",
+    "阊阖与太极地面大体位置较前两张接近冻结底稿",
+    "寺院与主路大方向、浮桥舟体保留"
+  ],
+  "required_next_corrections": [
+    "冻结同一H，不为图像改投影。",
+    "永宁寺仍应缩回x459–565,y399–454；南墙和南门上收约45–50px，基部宽回到源投影量级。",
+    "佛殿从塔右后方移回约(517,414)，不要为让塔身好看而偏移殿址。",
+    "塔座回到(515,430)附近；塔的9层用上部高度和清楚侧面解决，不通过放大院落或把塔脚南移实现。",
+    "保留本张已实现的3层南门，但门基必须跟随冻结底稿。",
+    "阊阖两侧阙仍需向主门收拢，二、三号门按源候选层次补为可辨但适度概化的构件。",
+    "不要将宫城事实底稿空白画成确知裸土大场；未知上部空间可用明示艺术概化的宫区层次补充，不升级为考古殿院。"
+  ],
+  "qa_views": [
+    {
+      "file": "/workspace/scratch/b7f9dff5a3b9/homepage_r11_review/attempt3-yongning.svg",
+      "rendered_preview": "/workspace/scratch/b7f9dff5a3b9/homepage_r11_review/attempt3-yongning.png",
+      "viewbox_original_px": [
+        350,
+        265,
+        310,
+        265
+      ],
+      "uniform_zoom": 5,
+      "original_pixels_modified": false
+    },
+    {
+      "file": "/workspace/scratch/b7f9dff5a3b9/homepage_r11_review/attempt3-palace.svg",
+      "rendered_preview": "/workspace/scratch/b7f9dff5a3b9/homepage_r11_review/attempt3-palace.png",
+      "viewbox_original_px": [
+        370,
+        100,
+        530,
+        240
+      ],
+      "uniform_zoom": 3,
+      "original_pixels_modified": false
+    },
+    {
+      "file": "/workspace/scratch/b7f9dff5a3b9/homepage_r11_review/attempt3-tower-gate.svg",
+      "rendered_preview": "/workspace/scratch/b7f9dff5a3b9/homepage_r11_review/attempt3-tower-gate.png",
+      "viewbox_original_px": [
+        480,
+        315,
+        75,
+        195
+      ],
+      "uniform_zoom": 7,
+      "original_pixels_modified": false
+    }
+  ]
+}

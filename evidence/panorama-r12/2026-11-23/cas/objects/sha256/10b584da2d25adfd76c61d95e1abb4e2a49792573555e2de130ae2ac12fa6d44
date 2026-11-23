@@ -1,0 +1,138 @@
+{
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "Both homepage entries preserve approved V12 and lead to the explicitly unapproved V13 candidate",
+    "Full and mobile images retain natural proportions; keyboard comparison and URL-restored view modes work",
+    "Every reviewed change is rendered; shareable evidence anchors and return-to-image links work",
+    "Every advertised candidate and evidence download matches its released bytes",
+    "Without JavaScript both complete artworks and all evidence remain readable"
+  ],
+  "downloads": {
+    "panorama-v13/v13.webp": "ddded211c38b2c27e2268c74d22a9151f861ac335e90118c5d244a2effbb9a78",
+    "panorama-v13/review.json": "7e990d960c5cc59b632fea547d6c70918fac32f321c231ebfb450f3bb2b29dd9",
+    "panorama-v13/generation-prompt.txt": "aa796e5110cc562e534ec53c555ee57d355c5320c003d95dd0b89ca941cecee2",
+    "panorama-v13/source-audit.json": "7a8d2e3677399c441813fc51780f3b72e3732c7924c92a088fb19be1510155a3",
+    "panorama-v13/visual-audit.json": "de7ddef132cdaeb98529554041f56031bb5a6552111d4af7c592f866d25cd660",
+    "panorama-v13/candidate-review.json": "9c88a2ca8de49009e21ae826675b9f462852df7f5c6d460f5ce367ab22a38c49",
+    "panorama-v13/manifest.json": "0f63abaca0c60e4cbc2078c54c85949de1a97900ba8d5498bf0c7613f5e1e640"
+  },
+  "screenshots": {
+    "mobile-comparison.png": "adda52b8ecd2a6017c6e3e85a00ebad20469293417bd4dbeba2cbecfa3f47456",
+    "mobile-without-javascript.png": "a04aa647a9ad03d4c976a40f71b0a94793e36560131ae09f56116ef5f8ce684e"
+  },
+  "image_dimensions": [
+    {
+      "version": "v13",
+      "width": 960,
+      "height": 541,
+      "box": {
+        "x": 0,
+        "y": 672.109375,
+        "width": 390,
+        "height": 219.78125,
+        "top": 672.109375,
+        "right": 390,
+        "bottom": 891.890625,
+        "left": 0
+      },
+      "fit": "contain",
+      "current": "http://127.0.0.1:44377/luoyang-city/panorama-v13/v13-small.webp"
+    },
+    {
+      "version": "v12",
+      "width": 960,
+      "height": 540,
+      "box": {
+        "x": 0,
+        "y": 672.109375,
+        "width": 390,
+        "height": 219.375,
+        "top": 672.109375,
+        "right": 390,
+        "bottom": 891.484375,
+        "left": 0
+      },
+      "fit": "contain",
+      "current": "http://127.0.0.1:44377/luoyang-city/panorama-v13/v12-small.webp"
+    }
+  ],
+  "errors": [],
+  "source_commit": "b45630734b0e98a64f85ad659b0456a509a095b6",
+  "layout_checks": [
+    {
+      "url": "http://127.0.0.1:44377/luoyang-city/luoyang-panorama-v13.html",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:44377/luoyang-city/luoyang-panorama-v13.html",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:44377/luoyang-city/luoyang-panorama-v13.html",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:44377/luoyang-city/luoyang-panorama-v13.html?view=v12",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:44377/luoyang-city/luoyang-panorama-v13.html?view=compare",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:44377/luoyang-city/luoyang-panorama-v13.html?view=compare#comparison",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:44377/luoyang-city/luoyang-panorama-v13.html",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    }
+  ],
+  "status": "passed"
+}

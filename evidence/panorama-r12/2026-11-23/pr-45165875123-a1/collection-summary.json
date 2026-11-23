@@ -1,0 +1,52 @@
+{
+  "schema": "luoyang-r12-pr-collection-v1",
+  "status": "failed_run_collected",
+  "pr": 84,
+  "run_id": 45165875123,
+  "run_attempt": 1,
+  "pr_head_sha": "8ea1672521afeb754a7e80f9b76ea335b0b159ee",
+  "tested_merge_sha_from_checkout_log": "3bfe863f7c03df7b68c3340204032dac8f6ef44c",
+  "tested_tree_sha": "509429cc1c1c62a4e10d4c28ace942e03dc6f626",
+  "tested_parents": [
+    "129abaee724870ec00bc25c6e2fd2998a215063b",
+    "8ea1672521afeb754a7e80f9b76ea335b0b159ee"
+  ],
+  "run_conclusion": "failure",
+  "jobs": [
+    {
+      "id": 137662550993,
+      "name": "build",
+      "conclusion": "failure"
+    },
+    {
+      "id": 137664053740,
+      "name": "deploy",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 137664054624,
+      "name": "verify-live",
+      "conclusion": "skipped"
+    }
+  ],
+  "failing_step": "Check the built prosperity maps and their evidence",
+  "failing_test": "test_a_new_outer_zip_checksum_cannot_hide_changed_inner_evidence",
+  "expected_error_text": "Offline evidence differs",
+  "actual_error_text": "('downloads/city-spatial-r9.zip', 'Earlier public inventory changed')",
+  "pinned_browser_executed": false,
+  "pages_artifact_created": false,
+  "production_deployed": false,
+  "build_log_bytes": 153330,
+  "build_log_sha256": "300d088bc0563c31331b628b4a32331e02d7557f9cba1905c955351f23683d45",
+  "artifact_id": 14813492886,
+  "artifact_digest_verified": true,
+  "artifact_members": 40,
+  "cas_ingest": "../cas/ingests/pr-45165875123-a1-build-failed.json",
+  "raw_api_complete": {
+    "jobs_total": 3,
+    "jobs_received": 3,
+    "artifacts_total": 1,
+    "artifacts_received": 1
+  },
+  "note": "Actual failed PR preserved. No rerun or remote mutation performed. Pages/browser gates were not executed and are not reported as passed."
+}

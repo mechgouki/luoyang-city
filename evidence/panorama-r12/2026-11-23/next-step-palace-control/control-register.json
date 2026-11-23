@@ -1,0 +1,1078 @@
+{
+  "schema": "luoyang-palace-frozen-ground-control-window-v1",
+  "created_at_shanghai": "2026-11-23T21:12:03.233065+08:00",
+  "purpose": "Next-step source-ground control for Changhe Gate, Gate 2, surviving southern Gate 3 scale patch and Taiji; not a complete palace model or a new historical reconstruction.",
+  "source_svg": "research/panorama-r12/projection-clean.svg",
+  "source_sha256": "da975e1b4b3326bd976ff2ad9cd95b6aec230146422112971bcab58abe161c36",
+  "source_viewBox": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "display_viewBox": [
+    590,
+    220,
+    110,
+    110
+  ],
+  "display_size_px": [
+    1536,
+    1536
+  ],
+  "uniform_scale": 13.963636363636363,
+  "forward_display_formula": "display_x=(source_u-590)*1536/110; display_y=(source_v-220)*1536/110",
+  "inverse_display_formula": "source_u=display_x*110/1536+590; source_v=display_y*110/1536+220",
+  "operation": "Only outer SVG width, height and viewBox changed. Every byte after the original opening svg tag remains unchanged. No child element, path, style, matrix or source visibility rule edited.",
+  "source_children_bytes_unchanged": true,
+  "ground_homography": [
+    [
+      0.38,
+      0.0383708090217182,
+      424.9862599932897
+    ],
+    [
+      0.0,
+      -0.08848822067306178,
+      206.51863997840601
+    ],
+    [
+      0.0,
+      0.00012,
+      1.0
+    ]
+  ],
+  "ground_homography_modified": false,
+  "source_geometry_modified": false,
+  "source_visibility_modified": false,
+  "height_parameters_modified": false,
+  "new_height_parameters": 0,
+  "new_ancient_coordinates": 0,
+  "field_registration_verified": false,
+  "primary_objects_count": 13,
+  "primary_objects": [
+    {
+      "id": "r11-changhe-gate-main-base",
+      "component_id": "gate-main-base",
+      "label": "主门基主体边缘",
+      "geometry_role": "local_plan_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              640.3070877509183,
+              312.94275333336486
+            ],
+            [
+              659.6244157790242,
+              313.4992288748852
+            ],
+            [
+              659.9417534035429,
+              317.07141422332114
+            ],
+            [
+              640.13748482662,
+              316.49897714906473
+            ],
+            [
+              640.3070877509183,
+              312.94275333336486
+            ]
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        640.13748482662,
+        312.94275333336486,
+        659.9417534035429,
+        317.07141422332114
+      ],
+      "source_ground_centre_px": [
+        649.8967405088844,
+        315.00303453465636
+      ],
+      "display_bbox_px": [
+        700.101606306258,
+        1297.8188101822584,
+        976.6412111621985,
+        1355.4699295183752
+      ],
+      "display_centre_px": [
+        836.3763038331489,
+        1326.5878276839287
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-main-base",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/0",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "量读主体四边的简化折线；南北突出漫道和左右连接部分另列，不是整个门阙群外轮廓。每点按原生图约 ±2 像素量读，不提取柱网。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-changhe-gate-passage-west",
+      "component_id": "gate-passage-west",
+      "label": "西门道可辨段",
+      "geometry_role": "local_plan_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              643.9210725714718,
+              314.081698917242
+            ],
+            [
+              646.3374764826403,
+              314.1513770875445
+            ],
+            [
+              646.3989257574932,
+              315.4669628936107
+            ],
+            [
+              643.9794948790476,
+              315.3971104138741
+            ],
+            [
+              643.9210725714718,
+              314.081698917242
+            ]
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        643.9210725714718,
+        314.081698917242,
+        646.3989257574932,
+        315.4669628936107
+      ],
+      "source_ground_centre_px": [
+        645.1591835974568,
+        314.7738749560475
+      ],
+      "display_bbox_px": [
+        752.9342497252785,
+        1313.7226321534886,
+        787.5340905773596,
+        1333.0659545871456
+      ],
+      "display_centre_px": [
+        770.2227818699427,
+        1323.3879266589906
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-passage-west",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/1",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "门道两旁夯土基座之间可辨的中段；端部取相邻基座端线，不表示封闭墙，也不将全进深都算作门道。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-changhe-gate-passage-central",
+      "component_id": "gate-passage-central",
+      "label": "中门道可辨段",
+      "geometry_role": "local_plan_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              649.1745333385466,
+              314.2331849358803
+            ],
+            [
+              651.2763420775642,
+              314.2937914813449
+            ],
+            [
+              651.3439790554153,
+              315.60973388044334
+            ],
+            [
+              649.2395370406509,
+              315.5489754346925
+            ],
+            [
+              649.1745333385466,
+              314.2331849358803
+            ]
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        649.1745333385466,
+        314.2331849358803,
+        651.3439790554153,
+        315.60973388044334
+      ],
+      "source_ground_centre_px": [
+        650.2585469433221,
+        314.9210092406611
+      ],
+      "display_bbox_px": [
+        826.2916655273409,
+        1315.837927831928,
+        856.5850166283442,
+        1335.0595567305543
+      ],
+      "display_centre_px": [
+        841.4284373176617,
+        1325.4424563059583
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-passage-central",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/2",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "只圈出原图中门道的可辨中段；南北廊、漫道不并入这个长度。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-changhe-gate-passage-east",
+      "component_id": "gate-passage-east",
+      "label": "东门道可辨段",
+      "geometry_role": "local_plan_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              654.2192805180368,
+              314.37865246613984
+            ],
+            [
+              656.2165447268188,
+              314.43624431477014
+            ],
+            [
+              656.2903736522483,
+              315.752543592555
+            ],
+            [
+              654.2906056326108,
+              315.69480737263433
+            ],
+            [
+              654.2192805180368,
+              314.37865246613984
+            ]
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        654.2192805180368,
+        314.37865246613984,
+        656.2903736522483,
+        315.752543592555
+      ],
+      "source_ground_centre_px": [
+        655.2541509719831,
+        315.0651496599346
+      ],
+      "display_bbox_px": [
+        896.7346806882234,
+        1317.869183527189,
+        925.6546720895757,
+        1337.0536996196772
+      ],
+      "display_centre_px": [
+        911.1852353906005,
+        1327.4551807059959
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-passage-east",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/3",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "只圈出原图东门道的可辨中段；宽度来自小图读数，不能用作精确通行宽度。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-changhe-gate-west-que",
+      "component_id": "gate-west-que",
+      "label": "西阙基可见边缘",
+      "geometry_role": "local_plan_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            627.1274651264838,
+            321.2805030094598
+          ],
+          [
+            628.0790110944994,
+            321.3081417724761
+          ],
+          [
+            628.0933199239158,
+            321.799064918147
+          ],
+          [
+            631.055377901605,
+            321.8851413278571
+          ],
+          [
+            631.3795586687799,
+            322.10493764069486
+          ],
+          [
+            640.4822896296431,
+            322.3695127308639
+          ],
+          [
+            640.5604636891024,
+            319.119505169447
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        627.1274651264838,
+        319.119505169447,
+        640.5604636891024,
+        322.3695127308639
+      ],
+      "source_ground_centre_px": [
+        634.0121240979564,
+        320.7420134188969
+      ],
+      "display_bbox_px": [
+        518.4344221298101,
+        1384.0687267297326,
+        706.0079293314669,
+        1429.4506504964268
+      ],
+      "display_centre_px": [
+        614.5692964951005,
+        1406.724841922051
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-west-que",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/4",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "保留南、东侧可辨实线；北部受到黑色探方边框截断，未闭合成完整阙基，也不把探方框认作建筑边。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-changhe-gate-east-que",
+      "component_id": "gate-east-que",
+      "label": "东阙基可见边缘",
+      "geometry_role": "local_plan_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            659.4612366032825,
+            319.63229876379404
+          ],
+          [
+            659.5492393107221,
+            322.9237025595842
+          ],
+          [
+            669.09019435549,
+            323.2010148125629
+          ],
+          [
+            669.1795274673575,
+            322.95792675059346
+          ],
+          [
+            671.8300774510113,
+            323.0349484439484
+          ],
+          [
+            671.8964873176695,
+            322.47569869112766
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        659.4612366032825,
+        319.63229876379404,
+        671.8964873176695,
+        323.2010148125629
+      ],
+      "source_ground_centre_px": [
+        665.3044765430276,
+        321.41364972552134
+      ],
+      "display_bbox_px": [
+        969.9314492967445,
+        1391.2291900107966,
+        1143.5727683630946,
+        1441.0614432008783
+      ],
+      "display_centre_px": [
+        1051.5243270008216,
+        1416.1033270763705
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-east-que",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/5",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "保留西、南侧可辨实线与折角；没有用黑色探方边框补齐东北轮廓。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-changhe-gate-west-underground",
+      "component_id": "gate-west-underground",
+      "label": "西阙地下基础示意边缘",
+      "geometry_role": "local_plan_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            627.0237137268806,
+            321.3475318688969
+          ],
+          [
+            626.9366754883454,
+            322.0108695142252
+          ],
+          [
+            628.6347092537878,
+            322.23560057626
+          ],
+          [
+            628.653456647024,
+            322.8679779676325
+          ],
+          [
+            643.2718017451091,
+            323.2932047482602
+          ],
+          [
+            643.200866522569,
+            319.2308813244252
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        626.9366754883454,
+        319.2308813244252,
+        643.2718017451091,
+        323.2932047482602
+      ],
+      "source_ground_centre_px": [
+        635.2699251274543,
+        321.2581460318541
+      ],
+      "display_bbox_px": [
+        515.7703050008954,
+        1385.623942857428,
+        743.8680680044323,
+        1442.3487499393427
+      ],
+      "display_centre_px": [
+        632.1327726888157,
+        1413.931930044799
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-west-underground",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/6",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "跟读原图“地下基础夯土”外缘虚线；保留虚线语义及开放端，不把它混为地上建筑外墙。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-changhe-gate-east-underground",
+      "component_id": "gate-east-underground",
+      "label": "东阙地下基础示意边缘",
+      "geometry_role": "local_plan_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            657.2426452126766,
+            319.568014267722
+          ],
+          [
+            657.3755889154507,
+            323.7737692203398
+          ],
+          [
+            671.9093308123231,
+            324.16139515872567
+          ],
+          [
+            672.0570270720212,
+            323.25213958556606
+          ],
+          [
+            672.9763440174479,
+            322.787585077744
+          ],
+          [
+            674.139922327639,
+            322.7863136120308
+          ],
+          [
+            674.2280631081725,
+            322.54341544567984
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        657.2426452126766,
+        319.568014267722,
+        674.2280631081725,
+        324.16139515872567
+      ],
+      "source_ground_centre_px": [
+        665.383022881595,
+        321.859725053445
+      ],
+      "display_bbox_px": [
+        938.9518458788299,
+        1390.3315446838271,
+        1176.1300448559357,
+        1454.4718451254782
+      ],
+      "display_centre_px": [
+        1052.6211195102724,
+        1422.3321607462865
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-east-underground",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/7",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "原图“地下基础夯土”下侧和西侧可辨虚线；局部模糊，量读取 ±3 像素，不补未识别的外缘。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-changhe-gate-west-link",
+      "component_id": "gate-west-link",
+      "label": "门基至西阙连接路径",
+      "geometry_role": "local_plan_direction_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            640.2728584686649,
+            314.6674570172422
+          ],
+          [
+            638.0658481681256,
+            314.6037751082372
+          ],
+          [
+            638.2033620137257,
+            318.145591596204
+          ],
+          [
+            639.6796315276396,
+            318.1883317402429
+          ],
+          [
+            640.3237375940071,
+            318.485480664296
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        638.0658481681256,
+        314.6037751082372,
+        640.3237375940071,
+        318.485480664296
+      ],
+      "source_ground_centre_px": [
+        639.2814733456709,
+        316.54105378679895
+      ],
+      "display_bbox_px": [
+        671.1740253294632,
+        1321.0127142386573,
+        702.7023722217714,
+        1375.2154390941696
+      ],
+      "display_centre_px": [
+        688.1485732631858,
+        1348.0641692411198
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-west-link",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/8",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "按图中黄色连接基址的连续路径取中心示意线，只表达连接走向；线宽无尺寸含义，不证明屋顶、廊高或北端与西阙的完整接口。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-changhe-gate-east-link",
+      "component_id": "gate-east-link",
+      "label": "门基至东阙连接路径",
+      "geometry_role": "local_plan_direction_trace",
+      "placement_status": "candidate_source_symbol_attachment",
+      "source_projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            659.7271196973411,
+            315.22879806856486
+          ],
+          [
+            662.0419805792135,
+            315.2955919347009
+          ],
+          [
+            662.253915527832,
+            318.737426662879
+          ],
+          [
+            660.2481526247068,
+            318.67936285438276
+          ],
+          [
+            660.066087823195,
+            319.16173313260396
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        659.7271196973411,
+        315.22879806856486,
+        662.253915527832,
+        319.16173313260396
+      ],
+      "source_ground_centre_px": [
+        661.0449971051889,
+        317.1915988025837
+      ],
+      "display_bbox_px": [
+        973.6441441374175,
+        1329.7403075755965,
+        1008.9274022795445,
+        1384.6583826516332
+      ],
+      "display_centre_px": [
+        992.0465050324565,
+        1357.1481432797143
+      ],
+      "source_refs": [
+        {
+          "id": "S37-gate-east-link",
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components/9",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "宫城阊阖门平剖图；附录37，PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        }
+      ],
+      "limits": [
+        "按可辨连接基址取中心示意线；过探方间缺口至东阙只保存拓扑关系，不跨缺口补出实测边线。",
+        "原图局部轮廓与尺度保留；母图平移、朝向为候选工作绑定。",
+        "图示原点与06a门符是否同一物理中心未证；两阙开放边不补闭合。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-gate2-scale",
+      "component_id": "palace-gate2-base-scale",
+      "label": "二号宫门约44.5×24米尺度片",
+      "geometry_role": "scale_template",
+      "placement_status": "candidate_dimension_template",
+      "source_projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              637.7191406570613,
+              303.3836234501169
+            ],
+            [
+              656.3998769976029,
+              303.5043786455221
+            ],
+            [
+              655.5318430284804,
+              300.20965388421877
+            ],
+            [
+              636.9103293670396,
+              300.08966187485134
+            ],
+            [
+              637.7191406570613,
+              303.3836234501169
+            ]
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        636.9103293670396,
+        300.08966187485134,
+        656.3998769976029,
+        303.5043786455221
+      ],
+      "source_ground_centre_px": [
+        646.6390929441079,
+        301.79421514485176
+      ],
+      "display_bbox_px": [
+        655.0387809797528,
+        1118.342914907015,
+        927.183736984709,
+        1166.024778177472
+      ],
+      "display_centre_px": [
+        790.887697837725,
+        1142.144676931748
+      ],
+      "source_refs": [
+        {
+          "id": "palace-gate2-base-scale",
+          "path": "research/prosperity-v4/axis-measurements.json",
+          "pointer": "/second_gate",
+          "sha256": "8b054867c5e8755dba0fb9fe1b4127237f06ed78d3f4427f6ad4b62d6201ef5c",
+          "locator": "钱国祥2012中日合作考古报告，印刷第28—30页二号宫门段；23／24米异报另见primary-source-audit",
+          "url": "https://www.kuba.co.jp/nabunken1020/img/nabunken20121020.pdf"
+        }
+      ],
+      "limits": [
+        "95米为阊阖门以北的报告约距，量测基点未定；本图将其临时作为模板参照点间距。",
+        "早报南北23米与后报24米分开保留；三通道不据数量补柱网或门阙。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-gate3-surviving-scale",
+      "component_id": "palace-gate3-south-remnant-scale",
+      "label": "三号宫门早期南半残存约40×10米",
+      "geometry_role": "partial_surviving_scale_template",
+      "placement_status": "candidate_dimension_template",
+      "source_projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              635.7450224265868,
+              291.547362376246
+            ],
+            [
+              652.3453152091598,
+              291.65345028057055
+            ],
+            [
+              651.9923815157456,
+              290.3092274258427
+            ],
+            [
+              635.4138072830177,
+              290.20341648489364
+            ],
+            [
+              635.7450224265868,
+              291.547362376246
+            ]
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        635.4138072830177,
+        290.20341648489364,
+        652.3453152091598,
+        291.65345028057055
+      ],
+      "source_ground_centre_px": [
+        643.873592526854,
+        290.92792221475787
+      ],
+      "display_bbox_px": [
+        634.1418907883201,
+        980.2949792799693,
+        870.5673105569953,
+        1000.5427239177851
+      ],
+      "display_centre_px": [
+        752.2712556477074,
+        990.4117138351644
+      ],
+      "source_refs": [
+        {
+          "id": "palace-gate3-south-remnant-scale",
+          "path": "research/prosperity-v4/axis-measurements.json",
+          "pointer": "/third_gate/early",
+          "sha256": "8b054867c5e8755dba0fb9fe1b4127237f06ed78d3f4427f6ad4b62d6201ef5c",
+          "locator": "钱国祥2012中日合作考古报告，印刷第28—30页三号宫门早期南部残存段",
+          "url": "https://www.kuba.co.jp/nabunken1020/img/nabunken20121020.pdf"
+        }
+      ],
+      "limits": [
+        "40×10米只表达早期残存南半部尺度，不代表完整门基。",
+        "80米北向约距端点未定；残存尺度片参照点只用于候选布置。",
+        "中期55×45米夯土与北朝晚期柱网不并入516—528盛时图。"
+      ],
+      "height_added_by_this_window": false
+    },
+    {
+      "id": "r11-taiji-scale",
+      "component_id": "taiji-main-base-scale",
+      "label": "太极殿遗址约100×60米尺度片",
+      "geometry_role": "scale_template",
+      "placement_status": "candidate_dimension_template",
+      "source_projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              612.0565027492737,
+              243.5071087243833
+            ],
+            [
+              651.619443205519,
+              243.74817543163968
+            ],
+            [
+              649.6181876736651,
+              236.46122050806156
+            ],
+            [
+              610.3494957436855,
+              236.22372097293103
+            ],
+            [
+              612.0565027492737,
+              243.5071087243833
+            ]
+          ]
+        ]
+      },
+      "source_ground_bbox_px": [
+        610.3494957436855,
+        236.22372097293103,
+        651.619443205519,
+        243.74817543163968
+      ],
+      "source_ground_centre_px": [
+        630.9050399369422,
+        239.97146638257016
+      ],
+      "display_bbox_px": [
+        284.1529587481896,
+        226.5421401311097,
+        860.431497851611,
+        331.61088602725954
+      ],
+      "display_centre_px": [
+        571.183103119484,
+        278.8742942147978
+      ],
+      "source_refs": [
+        {
+          "id": "taiji-main-base-scale",
+          "path": "research/prosperity-v1/building-dimensions.json",
+          "pointer": "/massing_items/2",
+          "sha256": "ca9a5cf39563408142ab306a435bce3687ab9ce65088975f57c107a1dcbaee87",
+          "locator": "申遗附表M03／太极殿；PDF第1930—1931页，约100×60米基址尺度",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1930"
+        }
+      ],
+      "limits": [
+        "表列100×60米仅为基址约数；P4.2另列北边102.3、南边98.4、南北58—61.5米。",
+        "没有把这些边长拼成新的实测梯形；原图符中心和宫轴朝向均为候选工作参照。"
+      ],
+      "height_added_by_this_window": false
+    }
+  ],
+  "display_context": "Other original SVG contents remain intact and are merely clipped by the viewport; visible near-gate road and palace-wall traces are not a complete courtyard boundary.",
+  "no_new_upper_structure": [
+    "Existing R12 massing has only the Changhe main gate and Taiji upper placeholders in this region.",
+    "Gate 2 and Gate 3 do not receive upper bodies or height parameters in this control window.",
+    "Gate 3 remains the early surviving southern 40×10m scale patch, never a complete gate footprint."
+  ],
+  "independent_2013_markers_not_merged": [
+    {
+      "id": "r11-palace2013-P13-MARK-GATE1",
+      "source_ground_centre_px": [
+        650.0000000379441,
+        315.0000000301331
+      ],
+      "visible_in_clean_guide": false,
+      "reason": "2013宫城概览逐项时相未知，独立对照层不作为本轮地上建筑底稿。"
+    },
+    {
+      "id": "r11-palace2013-P13-MARK-GATE2",
+      "source_ground_centre_px": [
+        647.6198704466934,
+        298.02127760462093
+      ],
+      "visible_in_clean_guide": false,
+      "reason": "2013宫城概览逐项时相未知，独立对照层不作为本轮地上建筑底稿。"
+    },
+    {
+      "id": "r11-palace2013-P13-MARK-GATE3",
+      "source_ground_centre_px": [
+        645.4457262889182,
+        282.5119563544837
+      ],
+      "visible_in_clean_guide": false,
+      "reason": "2013宫城概览逐项时相未知，独立对照层不作为本轮地上建筑底稿。"
+    }
+  ],
+  "unresolved_axis_conflict": {
+    "id": "palace-axis-length",
+    "source_path": "research/prosperity-v4/primary-source-audit.json",
+    "source_pointer": "/alternatives",
+    "source_map_symbol_distance_m_approx": 573.9,
+    "reported_chain_totals_m": [
+      375,
+      475
+    ],
+    "other_report_total_m": 460,
+    "same_endpoints_verified": false,
+    "adopted_policy": "保留06a两端点和95/80米近端候选链，不拉伸成闭合轴线。"
+  },
+  "source_inputs_sha256": {
+    "research/panorama-r12/projection-clean.svg": "da975e1b4b3326bd976ff2ad9cd95b6aec230146422112971bcab58abe161c36",
+    "research/panorama-r12/projection.json": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+    "research/panorama-r12/massing-display-parameters.json": "c3a040261f10b7159053a3c702d105ce52f020a47945d6f8d80f4d8b2e75ff29",
+    "research/prosperity-v3/gate-plan.json": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+    "research/prosperity-v3/sources/changhe-plan-native.jpeg": "8f3b722fc60cdf29ec04553022185d3c5b073ba7454be9430c97197a8da24cc7",
+    "research/city-plan-r11/frame-bindings.json": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+    "research/prosperity-v4/axis-measurements.json": "8b054867c5e8755dba0fb9fe1b4127237f06ed78d3f4427f6ad4b62d6201ef5c",
+    "research/prosperity-v4/primary-source-audit.json": "a7253522b17c90ec6d5bfdba9863e46efac6822c1e53697029bab9369ab92e78",
+    "research/panorama-r12/reviews/v14-attempt5-review.json": "63d50a665ae7f20cc679132f6f693045fcac4c3863033283c9280ab2e4476bc3",
+    "research/panorama-r12/reviews/v14-attempt6-review.json": "f0c45c44a08bad5e3bbf078811591f13e7f02be1ce6d957a546b3fcce08c154b"
+  },
+  "outputs": {
+    "svg": {
+      "file": "palace-ground-control.svg",
+      "sha256": "5c4e5a4eb285e219026940d909cc6c49e1d800f4f9c4f78b798ad6b925af3221",
+      "bytes": 23354
+    },
+    "png": {
+      "file": "palace-ground-control.png",
+      "sha256": "2a2b925834f3ccac2c67d9d27cd9f0449417718c7fcac77d1316464f1d38e84e",
+      "bytes": 35514,
+      "size_px": [
+        1536,
+        1536
+      ]
+    }
+  },
+  "visual_inspection_status": "actual_png_viewed_ground_control_window_usable_with_original_stroke_limits",
+  "historical_claim": "Display enlargement of existing candidate ground evidence only; no chronology, shared controls, footprint completion or elevation fidelity is newly established.",
+  "visual_inspection": {
+    "method": "Independent actual view of the 1536×1536 CairoSVG PNG; original projection overview, massing overview and S37 native gate plan also viewed.",
+    "primary_objects_inside_viewport": 13,
+    "four_groups_visible_in_order": [
+      "Changhe Gate components",
+      "Gate 2 scale template",
+      "Gate 3 early surviving southern-part scale template",
+      "Taiji scale template"
+    ],
+    "readable_use": [
+      "Locate the four existing ground-control groups in the unchanged projection.",
+      "Use register source coordinates and source geometry to identify all 13 objects.",
+      "Compare future separately identified objects to the same frozen projection."
+    ],
+    "limitations": [
+      "Original strokes enlarge uniformly with the viewport; the Changhe component strokes overlap densely.",
+      "Gate 3 is a shallow surviving-part template whose interior is partly obscured by the original stroke.",
+      "Stroke width is not building width; visual gaps or white areas are not evidence of absent buildings or permission to add walls.",
+      "For component boundaries, open ends and underground/direction semantics, read the exact register coordinates and original native local plan.",
+      "No full palace plan, elevation, historical phase synchronization or field registration is established."
+    ],
+    "geometry_pass_claim": false,
+    "new_panorama_candidate": false,
+    "homepage_approval": false
+  }
+}

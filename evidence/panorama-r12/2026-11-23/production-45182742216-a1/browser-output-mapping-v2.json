@@ -1,0 +1,428 @@
+{
+  "schema": "luoyang-browser-output-mapping-v2",
+  "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+  "method_version": "check_original_browser_reports_v2.py",
+  "default_directory_mapping": "prefix the full existing build directory with live-",
+  "directory_overrides": {
+    "prosperity-city-common-p470-browser": "live-city-common-p470-browser",
+    "prosperity-city-north-p471-browser": "live-city-north-p471-browser"
+  },
+  "override_scope": "Only these two exact directory names are overridden; no generic removal of prosperity prefixes.",
+  "workflow_source": {
+    "path": "/workspace/r12-evidence-staging/production-45182742216-a1/source-files/pages.yml",
+    "bytes": 21518,
+    "sha256": "8db121edd86089cdad99d7a954afbdced0bb34dec0d0717b2dec1ac666e215c3",
+    "git_blob_sha1": "db95e37e34ef8fee4485f68f87b361f1559ec00a"
+  },
+  "build_job_log": {
+    "path": "/workspace/r12-evidence-staging/production-45182742216-a1/logs/job-137720438238-raw.log",
+    "bytes": 283712,
+    "sha256": "1fcb8753efc4d2e13234bf2c3c128b4f022da3e43ee9cdcb53bf44c1bf60c767",
+    "git_blob_sha1": "8f8f9b5e831f53d55d28f2a42e3dccd2f05ecd2f"
+  },
+  "live_job_log": {
+    "path": "/workspace/r12-evidence-staging/production-45182742216-a1/logs/job-137728114930-raw.log",
+    "bytes": 67031,
+    "sha256": "1683223a7e50c2299e4550fe20b80e976cf96f00f5ac8eb3d9012b399d1ff2be",
+    "git_blob_sha1": "9532c6da0a8f529f6ab025652a332511e8717b82"
+  },
+  "alias_source_proof": [
+    {
+      "script": "tests/browser_city_common_p470.py",
+      "build_default_directory": "prosperity-city-common-p470-browser",
+      "live_explicit_directory": "live-city-common-p470-browser",
+      "source": {
+        "path": "/workspace/r12-evidence-staging/production-45182742216-a1/source-files/browser_city_common_p470.py",
+        "bytes": 21730,
+        "sha256": "67db1c3f314b1d8adc5679b401e98481bf8d96cf65f4d43cc8dc24ac2e8fe905",
+        "git_blob_sha1": "1ed89048b770bef3ab68a9c5f18c7626bd3a3dd6"
+      },
+      "argparse_default_line": "parser.add_argument(\"--output\", default=\"artifacts/prosperity-city-common-p470-browser\")",
+      "build_runtime_command": "2026-11-23T13:22:14.0125614Z     python tests/browser_city_common_p470.py",
+      "live_runtime_command": "2026-11-23T13:40:55.9866991Z     python tests/browser_city_common_p470.py --base-url \"$SITE_URL\" --output artifacts/live-city-common-p470-browser"
+    },
+    {
+      "script": "tests/browser_city_north_p471.py",
+      "build_default_directory": "prosperity-city-north-p471-browser",
+      "live_explicit_directory": "live-city-north-p471-browser",
+      "source": {
+        "path": "/workspace/r12-evidence-staging/production-45182742216-a1/source-files/browser_city_north_p471.py",
+        "bytes": 28188,
+        "sha256": "b7c3c5caf8a9045ca7e9ff573dfc0c8f54472aef4129e861d37d903dceaa4b9a",
+        "git_blob_sha1": "433ce66fad469a3bf8f93fa740240aab963f34df"
+      },
+      "argparse_default_line": "parser.add_argument(\"--output\", default=\"artifacts/prosperity-city-north-p471-browser\")",
+      "build_runtime_command": "2026-11-23T13:22:14.0125954Z     python tests/browser_city_north_p471.py",
+      "live_runtime_command": "2026-11-23T13:40:55.9867655Z     python tests/browser_city_north_p471.py --base-url \"$SITE_URL\" --output artifacts/live-city-north-p471-browser"
+    }
+  ],
+  "actual_live_output_directories": [
+    "live-all-road-atlas-r62-browser",
+    "live-browser",
+    "live-city-atlas-r4-browser",
+    "live-city-b8-browser",
+    "live-city-common-p470-browser",
+    "live-city-layout-r10-browser",
+    "live-city-nodes-r7-browser",
+    "live-city-north-p471-browser",
+    "live-city-panorama-r5-browser",
+    "live-city-plan-r11-browser",
+    "live-city-spatial-r9-browser",
+    "live-city-west-p472-browser",
+    "live-dual-browser",
+    "live-homepage-approved-v9-browser",
+    "live-homepage-v1-browser",
+    "live-luonan-b7-browser",
+    "live-north-b4-browser",
+    "live-panorama-v13-browser",
+    "live-panorama-v13-r2-browser",
+    "live-panorama-v14-browser",
+    "live-prosperity-architecture-p44-browser",
+    "live-prosperity-axis-sources-p41-browser",
+    "live-prosperity-axis-v4-browser",
+    "live-prosperity-backbone-p469-browser",
+    "live-prosperity-city-distribution-p451-browser",
+    "live-prosperity-core-v2-browser",
+    "live-prosperity-gate-v3-browser",
+    "live-prosperity-hydro-roads-p46-browser",
+    "live-prosperity-palace-boundaries-p43-browser",
+    "live-prosperity-road-functions-p452-browser",
+    "live-prosperity-street-clusters-p453-browser",
+    "live-prosperity-taiji-courts-p42-browser",
+    "live-prosperity-v1-browser",
+    "live-road-atlas-r6-browser",
+    "live-southeast-b6-browser",
+    "live-v26-browser",
+    "live-v27-browser",
+    "live-v28-browser",
+    "live-v29-browser",
+    "live-v30-browser",
+    "live-west-b3-browser",
+    "live-west-roads-b5-browser"
+  ],
+  "script_commands": [
+    {
+      "script": "tests/browser_city_common_p470.py",
+      "build_command": "2026-11-23T13:22:14.0125614Z     python tests/browser_city_common_p470.py",
+      "live_command": "2026-11-23T13:40:55.9866991Z     python tests/browser_city_common_p470.py --base-url \"$SITE_URL\" --output artifacts/live-city-common-p470-browser",
+      "live_output_directory": "live-city-common-p470-browser"
+    },
+    {
+      "script": "tests/browser_city_north_p471.py",
+      "build_command": "2026-11-23T13:22:14.0125954Z     python tests/browser_city_north_p471.py",
+      "live_command": "2026-11-23T13:40:55.9867655Z     python tests/browser_city_north_p471.py --base-url \"$SITE_URL\" --output artifacts/live-city-north-p471-browser",
+      "live_output_directory": "live-city-north-p471-browser"
+    },
+    {
+      "script": "tests/browser_city_west_p472.py",
+      "build_command": "2026-11-23T13:22:14.0126220Z     python tests/browser_city_west_p472.py",
+      "live_command": "2026-11-23T13:40:55.9868361Z     python tests/browser_city_west_p472.py --base-url \"$SITE_URL\" --output artifacts/live-city-west-p472-browser",
+      "live_output_directory": "live-city-west-p472-browser"
+    },
+    {
+      "script": "tests/browser_city_atlas_r4.py",
+      "build_command": "2026-11-23T13:22:14.0126472Z     python tests/browser_city_atlas_r4.py",
+      "live_command": "2026-11-23T13:40:55.9869046Z     python tests/browser_city_atlas_r4.py --base-url \"$SITE_URL\" --output artifacts/live-city-atlas-r4-browser",
+      "live_output_directory": "live-city-atlas-r4-browser"
+    },
+    {
+      "script": "tests/browser_city_panorama_r5.py",
+      "build_command": "2026-11-23T13:22:14.0126734Z     python tests/browser_city_panorama_r5.py",
+      "live_command": "2026-11-23T13:40:55.9869900Z     python tests/browser_city_panorama_r5.py --base-url \"$SITE_URL\" --output artifacts/live-city-panorama-r5-browser",
+      "live_output_directory": "live-city-panorama-r5-browser"
+    },
+    {
+      "script": "tests/browser_road_atlas_r6.py",
+      "build_command": "2026-11-23T13:22:14.0127187Z     python tests/browser_road_atlas_r6.py",
+      "live_command": "2026-11-23T13:40:55.9870538Z     python tests/browser_road_atlas_r6.py --base-url \"$SITE_URL\" --output artifacts/live-road-atlas-r6-browser",
+      "live_output_directory": "live-road-atlas-r6-browser"
+    },
+    {
+      "script": "tests/browser_all_road_atlas_r62.py",
+      "build_command": "2026-11-23T13:22:14.0127448Z     python tests/browser_all_road_atlas_r62.py",
+      "live_command": "2026-11-23T13:40:55.9871174Z     python tests/browser_all_road_atlas_r62.py --base-url \"$SITE_URL\" --output artifacts/live-all-road-atlas-r62-browser",
+      "live_output_directory": "live-all-road-atlas-r62-browser"
+    },
+    {
+      "script": "tests/browser_city_nodes_r7.py",
+      "build_command": "2026-11-23T13:22:14.0127709Z     python tests/browser_city_nodes_r7.py",
+      "live_command": "2026-11-23T13:40:55.9871826Z     python tests/browser_city_nodes_r7.py --base-url \"$SITE_URL\" --output artifacts/live-city-nodes-r7-browser",
+      "live_output_directory": "live-city-nodes-r7-browser"
+    },
+    {
+      "script": "tests/browser_panorama_v13.py",
+      "build_command": "2026-11-23T13:22:14.0127956Z     python tests/browser_panorama_v13.py",
+      "live_command": "2026-11-23T13:40:55.9872485Z     python tests/browser_panorama_v13.py --base-url \"$SITE_URL\" --commit \"$GITHUB_SHA\" --output artifacts/live-panorama-v13-browser",
+      "live_output_directory": "live-panorama-v13-browser"
+    },
+    {
+      "script": "tests/browser_city_spatial_r9.py",
+      "build_command": "2026-11-23T13:22:14.0128211Z     python tests/browser_city_spatial_r9.py",
+      "live_command": "2026-11-23T13:40:55.9873248Z     python tests/browser_city_spatial_r9.py --base-url \"$SITE_URL\" --commit \"$GITHUB_SHA\" --output artifacts/live-city-spatial-r9-browser",
+      "live_output_directory": "live-city-spatial-r9-browser"
+    },
+    {
+      "script": "tests/browser_panorama_v13_r2.py",
+      "build_command": "2026-11-23T13:22:14.0128467Z     python tests/browser_panorama_v13_r2.py",
+      "live_command": "2026-11-23T13:40:55.9873975Z     python tests/browser_panorama_v13_r2.py --base-url \"$SITE_URL\" --commit \"$GITHUB_SHA\" --output artifacts/live-panorama-v13-r2-browser",
+      "live_output_directory": "live-panorama-v13-r2-browser"
+    },
+    {
+      "script": "tests/browser_city_layout_r10.py",
+      "build_command": "2026-11-23T13:22:14.0128720Z     python tests/browser_city_layout_r10.py",
+      "live_command": "2026-11-23T13:40:55.9874691Z     python tests/browser_city_layout_r10.py --base-url \"$SITE_URL\" --commit \"$GITHUB_SHA\" --output artifacts/live-city-layout-r10-browser",
+      "live_output_directory": "live-city-layout-r10-browser"
+    },
+    {
+      "script": "tests/browser_city_plan_r11.py",
+      "build_command": "2026-11-23T13:22:14.0128971Z     python tests/browser_city_plan_r11.py",
+      "live_command": "2026-11-23T13:40:55.9875491Z     python tests/browser_city_plan_r11.py --base-url \"$SITE_URL\" --commit \"$GITHUB_SHA\" --output artifacts/live-city-plan-r11-browser",
+      "live_output_directory": "live-city-plan-r11-browser"
+    },
+    {
+      "script": "tests/browser_panorama_v14.py",
+      "build_command": "2026-11-23T13:22:14.0129214Z     python tests/browser_panorama_v14.py",
+      "live_command": "2026-11-23T13:40:55.9876209Z     python tests/browser_panorama_v14.py --base-url \"$SITE_URL\" --commit \"$GITHUB_SHA\" --output artifacts/live-panorama-v14-browser",
+      "live_output_directory": "live-panorama-v14-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_gate_v3.py",
+      "build_command": "2026-11-23T13:22:14.0130055Z     python tests/browser_prosperity_gate_v3.py",
+      "live_command": "2026-11-23T13:40:55.9876929Z     python tests/browser_prosperity_gate_v3.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-gate-v3-browser",
+      "live_output_directory": "live-prosperity-gate-v3-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_axis_v4.py",
+      "build_command": "2026-11-23T13:22:14.0130322Z     python tests/browser_prosperity_axis_v4.py",
+      "live_command": "2026-11-23T13:40:55.9877598Z     python tests/browser_prosperity_axis_v4.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-axis-v4-browser",
+      "live_output_directory": "live-prosperity-axis-v4-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_axis_sources_p41.py",
+      "build_command": "2026-11-23T13:22:14.0130615Z     python tests/browser_prosperity_axis_sources_p41.py",
+      "live_command": "2026-11-23T13:40:55.9878301Z     python tests/browser_prosperity_axis_sources_p41.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-axis-sources-p41-browser",
+      "live_output_directory": "live-prosperity-axis-sources-p41-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_taiji_courts_p42.py",
+      "build_command": "2026-11-23T13:22:14.0130925Z     python tests/browser_prosperity_taiji_courts_p42.py",
+      "live_command": "2026-11-23T13:40:55.9879061Z     python tests/browser_prosperity_taiji_courts_p42.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-taiji-courts-p42-browser",
+      "live_output_directory": "live-prosperity-taiji-courts-p42-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_palace_boundaries_p43.py",
+      "build_command": "2026-11-23T13:22:14.0131243Z      python tests/browser_prosperity_palace_boundaries_p43.py",
+      "live_command": "2026-11-23T13:40:55.9880240Z      python tests/browser_prosperity_palace_boundaries_p43.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-palace-boundaries-p43-browser",
+      "live_output_directory": "live-prosperity-palace-boundaries-p43-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_architecture_p44.py",
+      "build_command": "2026-11-23T13:22:14.0131563Z     python tests/browser_prosperity_architecture_p44.py",
+      "live_command": "2026-11-23T13:40:55.9881071Z     python tests/browser_prosperity_architecture_p44.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-architecture-p44-browser",
+      "live_output_directory": "live-prosperity-architecture-p44-browser"
+    },
+    {
+      "script": "tests/browser_v25.py",
+      "build_command": "2026-11-23T13:22:14.0131845Z     python tests/browser_v25.py",
+      "live_command": "2026-11-23T13:40:55.9881900Z     python tests/browser_v25.py --base-url \"$SITE_URL\" --output artifacts/live-browser",
+      "live_output_directory": "live-browser"
+    },
+    {
+      "script": "tests/browser_v26.py",
+      "build_command": "2026-11-23T13:22:14.0132080Z     python tests/browser_v26.py",
+      "live_command": "2026-11-23T13:40:55.9882412Z     python tests/browser_v26.py --base-url \"$SITE_URL\" --output artifacts/live-v26-browser",
+      "live_output_directory": "live-v26-browser"
+    },
+    {
+      "script": "tests/browser_v27.py",
+      "build_command": "2026-11-23T13:22:14.0132306Z     python tests/browser_v27.py",
+      "live_command": "2026-11-23T13:40:55.9883209Z     python tests/browser_v27.py --base-url \"$SITE_URL\" --output artifacts/live-v27-browser",
+      "live_output_directory": "live-v27-browser"
+    },
+    {
+      "script": "tests/browser_v28.py",
+      "build_command": "2026-11-23T13:22:14.0132518Z     python tests/browser_v28.py",
+      "live_command": "2026-11-23T13:40:55.9883748Z     python tests/browser_v28.py --base-url \"$SITE_URL\" --output artifacts/live-v28-browser",
+      "live_output_directory": "live-v28-browser"
+    },
+    {
+      "script": "tests/browser_v29.py",
+      "build_command": "2026-11-23T13:22:14.0132732Z     python tests/browser_v29.py",
+      "live_command": "2026-11-23T13:40:55.9884255Z     python tests/browser_v29.py --base-url \"$SITE_URL\" --output artifacts/live-v29-browser",
+      "live_output_directory": "live-v29-browser"
+    },
+    {
+      "script": "tests/browser_v30.py",
+      "build_command": "2026-11-23T13:22:14.0132945Z     python tests/browser_v30.py",
+      "live_command": "2026-11-23T13:40:55.9884788Z     python tests/browser_v30.py --base-url \"$SITE_URL\" --output artifacts/live-v30-browser",
+      "live_output_directory": "live-v30-browser"
+    },
+    {
+      "script": "tests/browser_dual.py",
+      "build_command": "2026-11-23T13:22:14.0133165Z     python tests/browser_dual.py",
+      "live_command": "2026-11-23T13:40:55.9885304Z     python tests/browser_dual.py --base-url \"$SITE_URL\" --output artifacts/live-dual-browser",
+      "live_output_directory": "live-dual-browser"
+    },
+    {
+      "script": "tests/browser_west_b3.py",
+      "build_command": "2026-11-23T13:22:14.0133402Z     python tests/browser_west_b3.py",
+      "live_command": "2026-11-23T13:40:55.9885846Z     python tests/browser_west_b3.py --base-url \"$SITE_URL\" --output artifacts/live-west-b3-browser",
+      "live_output_directory": "live-west-b3-browser"
+    },
+    {
+      "script": "tests/browser_north_b4.py",
+      "build_command": "2026-11-23T13:22:14.0133648Z     python tests/browser_north_b4.py",
+      "live_command": "2026-11-23T13:40:55.9886428Z     python tests/browser_north_b4.py --base-url \"$SITE_URL\" --output artifacts/live-north-b4-browser",
+      "live_output_directory": "live-north-b4-browser"
+    },
+    {
+      "script": "tests/browser_west_roads_b5.py",
+      "build_command": "2026-11-23T13:22:14.0133901Z     python tests/browser_west_roads_b5.py",
+      "live_command": "2026-11-23T13:40:55.9887002Z     python tests/browser_west_roads_b5.py --base-url \"$SITE_URL\" --output artifacts/live-west-roads-b5-browser",
+      "live_output_directory": "live-west-roads-b5-browser"
+    },
+    {
+      "script": "tests/browser_southeast_b6.py",
+      "build_command": "2026-11-23T13:22:14.0134180Z     python tests/browser_southeast_b6.py",
+      "live_command": "2026-11-23T13:40:55.9887629Z     python tests/browser_southeast_b6.py --base-url \"$SITE_URL\" --output artifacts/live-southeast-b6-browser",
+      "live_output_directory": "live-southeast-b6-browser"
+    },
+    {
+      "script": "tests/browser_luonan_b7.py",
+      "build_command": "2026-11-23T13:22:14.0134430Z     python tests/browser_luonan_b7.py",
+      "live_command": "2026-11-23T13:40:55.9888208Z     python tests/browser_luonan_b7.py --base-url \"$SITE_URL\" --output artifacts/live-luonan-b7-browser",
+      "live_output_directory": "live-luonan-b7-browser"
+    },
+    {
+      "script": "tests/browser_city_b8.py",
+      "build_command": "2026-11-23T13:22:14.0134672Z     python tests/browser_city_b8.py",
+      "live_command": "2026-11-23T13:40:55.9889057Z     python tests/browser_city_b8.py --base-url \"$SITE_URL\" --output artifacts/live-city-b8-browser",
+      "live_output_directory": "live-city-b8-browser"
+    },
+    {
+      "script": "tests/browser_homepage_v1.py",
+      "build_command": "2026-11-23T13:22:14.0134915Z     python tests/browser_homepage_v1.py",
+      "live_command": "2026-11-23T13:40:55.9889831Z     python tests/browser_homepage_v1.py --base-url \"$SITE_URL\" --output artifacts/live-homepage-v1-browser",
+      "live_output_directory": "live-homepage-v1-browser"
+    },
+    {
+      "script": "tests/browser_homepage_approved_v9.py",
+      "build_command": "2026-11-23T13:22:14.0135186Z     python tests/browser_homepage_approved_v9.py",
+      "live_command": "2026-11-23T13:40:55.9890478Z     python tests/browser_homepage_approved_v9.py --base-url \"$SITE_URL\" --output artifacts/live-homepage-approved-v9-browser",
+      "live_output_directory": "live-homepage-approved-v9-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_city_distribution_p451.py",
+      "build_command": "2026-11-23T13:22:14.0135685Z     python tests/browser_prosperity_city_distribution_p451.py",
+      "live_command": "2026-11-23T13:40:55.9891423Z     python tests/browser_prosperity_city_distribution_p451.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-city-distribution-p451-browser",
+      "live_output_directory": "live-prosperity-city-distribution-p451-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_road_functions_p452.py",
+      "build_command": "2026-11-23T13:22:14.0136020Z     python tests/browser_prosperity_road_functions_p452.py",
+      "live_command": "2026-11-23T13:40:55.9892292Z     python tests/browser_prosperity_road_functions_p452.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-road-functions-p452-browser",
+      "live_output_directory": "live-prosperity-road-functions-p452-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_street_clusters_p453.py",
+      "build_command": "2026-11-23T13:22:14.0136344Z     python tests/browser_prosperity_street_clusters_p453.py",
+      "live_command": "2026-11-23T13:40:55.9893180Z     python tests/browser_prosperity_street_clusters_p453.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-street-clusters-p453-browser",
+      "live_output_directory": "live-prosperity-street-clusters-p453-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_hydro_roads_p46.py",
+      "build_command": "2026-11-23T13:22:14.0129489Z     python tests/browser_prosperity_hydro_roads_p46.py",
+      "live_command": "2026-11-23T13:40:55.9893948Z     python tests/browser_prosperity_hydro_roads_p46.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-hydro-roads-p46-browser",
+      "live_output_directory": "live-prosperity-hydro-roads-p46-browser"
+    },
+    {
+      "script": "tests/browser_backbone_p469.py",
+      "build_command": "2026-11-23T13:22:14.0129796Z     python tests/browser_backbone_p469.py",
+      "live_command": "2026-11-23T13:40:55.9894752Z     python tests/browser_backbone_p469.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-backbone-p469-browser",
+      "live_output_directory": "live-prosperity-backbone-p469-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_v1.py",
+      "build_command": "2026-11-23T13:22:14.0136645Z     python tests/browser_prosperity_v1.py",
+      "live_command": "2026-11-23T13:40:55.9895407Z     python tests/browser_prosperity_v1.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-v1-browser",
+      "live_output_directory": "live-prosperity-v1-browser"
+    },
+    {
+      "script": "tests/browser_prosperity_core_v2.py",
+      "build_command": "2026-11-23T13:22:14.0137255Z     python tests/browser_prosperity_core_v2.py",
+      "live_command": "2026-11-23T13:40:55.9896037Z     python tests/browser_prosperity_core_v2.py --base-url \"$SITE_URL\" --output artifacts/live-prosperity-core-v2-browser",
+      "live_output_directory": "live-prosperity-core-v2-browser"
+    }
+  ],
+  "report_path_mapping": {
+    "all-road-atlas-r62-browser/desktop-report.json": "live-all-road-atlas-r62-browser/desktop-report.json",
+    "all-road-atlas-r62-browser/mobile-report.json": "live-all-road-atlas-r62-browser/mobile-report.json",
+    "browser/results.json": "live-browser/results.json",
+    "city-atlas-r4-browser/desktop-report.json": "live-city-atlas-r4-browser/desktop-report.json",
+    "city-atlas-r4-browser/mobile-report.json": "live-city-atlas-r4-browser/mobile-report.json",
+    "city-b8-browser/results.json": "live-city-b8-browser/results.json",
+    "city-layout-r10-browser/desktop-report.json": "live-city-layout-r10-browser/desktop-report.json",
+    "city-layout-r10-browser/mobile-report.json": "live-city-layout-r10-browser/mobile-report.json",
+    "city-nodes-r7-browser/desktop-report.json": "live-city-nodes-r7-browser/desktop-report.json",
+    "city-nodes-r7-browser/mobile-report.json": "live-city-nodes-r7-browser/mobile-report.json",
+    "city-panorama-r5-browser/desktop-report.json": "live-city-panorama-r5-browser/desktop-report.json",
+    "city-panorama-r5-browser/mobile-report.json": "live-city-panorama-r5-browser/mobile-report.json",
+    "city-plan-r11-browser/desktop-report.json": "live-city-plan-r11-browser/desktop-report.json",
+    "city-plan-r11-browser/mobile-report.json": "live-city-plan-r11-browser/mobile-report.json",
+    "city-plan-r11-browser/report.json": "live-city-plan-r11-browser/report.json",
+    "city-spatial-r9-browser/desktop-report.json": "live-city-spatial-r9-browser/desktop-report.json",
+    "city-spatial-r9-browser/mobile-report.json": "live-city-spatial-r9-browser/mobile-report.json",
+    "city-west-p472-browser/desktop-report.json": "live-city-west-p472-browser/desktop-report.json",
+    "city-west-p472-browser/mobile-report.json": "live-city-west-p472-browser/mobile-report.json",
+    "dual-browser/results.json": "live-dual-browser/results.json",
+    "homepage-approved-v9-browser/results.json": "live-homepage-approved-v9-browser/results.json",
+    "homepage-v1-browser/results.json": "live-homepage-v1-browser/results.json",
+    "luonan-b7-browser/results.json": "live-luonan-b7-browser/results.json",
+    "north-b4-browser/results.json": "live-north-b4-browser/results.json",
+    "panorama-v13-browser/desktop-report.json": "live-panorama-v13-browser/desktop-report.json",
+    "panorama-v13-browser/mobile-report.json": "live-panorama-v13-browser/mobile-report.json",
+    "panorama-v13-r2-browser/desktop-report.json": "live-panorama-v13-r2-browser/desktop-report.json",
+    "panorama-v13-r2-browser/mobile-report.json": "live-panorama-v13-r2-browser/mobile-report.json",
+    "panorama-v14-browser/desktop-report.json": "live-panorama-v14-browser/desktop-report.json",
+    "panorama-v14-browser/mobile-report.json": "live-panorama-v14-browser/mobile-report.json",
+    "prosperity-architecture-p44-browser/report.json": "live-prosperity-architecture-p44-browser/report.json",
+    "prosperity-axis-sources-p41-browser/report.json": "live-prosperity-axis-sources-p41-browser/report.json",
+    "prosperity-axis-v4-browser/report.json": "live-prosperity-axis-v4-browser/report.json",
+    "prosperity-backbone-p469-browser/p469-desktop-report.json": "live-prosperity-backbone-p469-browser/p469-desktop-report.json",
+    "prosperity-backbone-p469-browser/p469-mobile-report.json": "live-prosperity-backbone-p469-browser/p469-mobile-report.json",
+    "prosperity-city-common-p470-browser/p470-desktop-report.json": "live-city-common-p470-browser/p470-desktop-report.json",
+    "prosperity-city-common-p470-browser/p470-mobile-report.json": "live-city-common-p470-browser/p470-mobile-report.json",
+    "prosperity-city-distribution-p451-browser/report.json": "live-prosperity-city-distribution-p451-browser/report.json",
+    "prosperity-city-north-p471-browser/p471-desktop-report.json": "live-city-north-p471-browser/p471-desktop-report.json",
+    "prosperity-city-north-p471-browser/p471-mobile-report.json": "live-city-north-p471-browser/p471-mobile-report.json",
+    "prosperity-core-v2-browser/results.json": "live-prosperity-core-v2-browser/results.json",
+    "prosperity-gate-v3-browser/report.json": "live-prosperity-gate-v3-browser/report.json",
+    "prosperity-hydro-roads-p46-browser/p467-desktop-report.json": "live-prosperity-hydro-roads-p46-browser/p467-desktop-report.json",
+    "prosperity-hydro-roads-p46-browser/p467-mobile-report.json": "live-prosperity-hydro-roads-p46-browser/p467-mobile-report.json",
+    "prosperity-hydro-roads-p46-browser/p468-desktop-report.json": "live-prosperity-hydro-roads-p46-browser/p468-desktop-report.json",
+    "prosperity-hydro-roads-p46-browser/p468-mobile-report.json": "live-prosperity-hydro-roads-p46-browser/p468-mobile-report.json",
+    "prosperity-hydro-roads-p46-browser/report.json": "live-prosperity-hydro-roads-p46-browser/report.json",
+    "prosperity-palace-boundaries-p43-browser/report.json": "live-prosperity-palace-boundaries-p43-browser/report.json",
+    "prosperity-road-functions-p452-browser/report.json": "live-prosperity-road-functions-p452-browser/report.json",
+    "prosperity-street-clusters-p453-browser/report.json": "live-prosperity-street-clusters-p453-browser/report.json",
+    "prosperity-taiji-courts-p42-browser/report.json": "live-prosperity-taiji-courts-p42-browser/report.json",
+    "prosperity-v1-browser/results.json": "live-prosperity-v1-browser/results.json",
+    "road-atlas-r6-browser/desktop-report.json": "live-road-atlas-r6-browser/desktop-report.json",
+    "road-atlas-r6-browser/mobile-report.json": "live-road-atlas-r6-browser/mobile-report.json",
+    "southeast-b6-browser/results.json": "live-southeast-b6-browser/results.json",
+    "v26-browser/results.json": "live-v26-browser/results.json",
+    "v27-browser/results.json": "live-v27-browser/results.json",
+    "v28-browser/results.json": "live-v28-browser/results.json",
+    "v29-browser/results.json": "live-v29-browser/results.json",
+    "v30-browser/results.json": "live-v30-browser/results.json",
+    "west-b3-browser/results.json": "live-west-b3-browser/results.json",
+    "west-roads-b5-browser/results.json": "live-west-roads-b5-browser/results.json"
+  },
+  "initial_failed_derived_check": {
+    "path": "/workspace/r12-evidence-staging/production-45182742216-a1/live-all-browser-reports-check-initial-mapping.json",
+    "bytes": 25879,
+    "sha256": "73dbc3b273bf9dc234e9f50d92cc288b24ed8d09e9966b67578fb9b1d93f0a8a",
+    "git_blob_sha1": "d3af3d65c3746f54fc6eb66105cafb41bbb570cd"
+  },
+  "meaning": "Initial collector assumed a uniform live- prefix; actual workflow and script defaults prove exactly two exceptions. Original report bytes and all 62 report content checks remain required."
+}

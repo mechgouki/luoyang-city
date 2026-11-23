@@ -1,0 +1,16 @@
+{
+  "schema": "luoyang-r12-archive-parent-prefix-check-v1",
+  "checked_at_utc": "2026-11-23T12:51:11.506457+00:00",
+  "parent": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+  "tree": "14c9122f46408bdaa87597fa2991f334b820756c",
+  "evidence_prefix": "evidence/panorama-r12/2026-11-23/",
+  "existing_paths_under_prefix": [],
+  "prefix_absent_in_parent": true,
+  "method": "Read exact locally fetched Git commit/tree with git rev-parse and git ls-tree; independent remote archive verification later checks the same parent from a fresh remote fetch.",
+  "remote_main_observed_before_archival": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+  "remote_evidence_refs_observed_before_archival": {
+    "evidence/panorama-r12-20261123": null,
+    "evidence/panorama-r12-20261123-verification": null
+  },
+  "reference_observation": "Root git ls-remote --heads returned only refs/heads/main for these three requested refs; this is a pre-archive observation, not a final main-readback claim."
+}

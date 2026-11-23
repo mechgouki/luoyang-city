@@ -1,0 +1,139 @@
+{
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "checks": [
+    "The unified spatial figure and every reviewed decision load from the exact released commit",
+    "All four nodes and three evidence categories filter by real row IDs; combined search survives reload, and empty results reset correctly",
+    "Source and all four node windows have working zoom, button and keyboard panning, exact current-view reset and URL-restored view selection",
+    "Each node can be opened by a shareable evidence anchor despite conflicting filters, refreshed, and reached from its SVG link using the keyboard",
+    "Every real download matches its released SHA-256; the ZIP opens without a network and retains the complete map, evidence, filtering and reload state",
+    "With JavaScript disabled, the full map and all source-linked decisions remain readable and native evidence anchors work"
+  ],
+  "downloads": {
+    "city-spatial-r9/overview.svg": "f43809673dfe1da093d2f05f85f3b375e001c96fd56df7889f4d567a58574c7a",
+    "city-spatial-r9/decisions.csv": "e89c0f24ec22c3facbff0cfbe9ccdddcbadb241e6deee8e521b7eebe5ff6c685",
+    "city-spatial-r9/decisions.json": "4c9f649056185fbe39f11516bb0fbb394507ad01fd3679a8ae92e5362b6f405c",
+    "city-spatial-r9/source-audit.json": "96fb24ae78411773020e94607d8841ccb726ec2a2b07224161fb1e0ba321ff1e",
+    "city-spatial-r9/manifest.json": "b7d326a3c2e7e5f6b4723bb9d265dde7d3410870a23978ccbfee56d88a690ab4",
+    "downloads/city-spatial-r9.zip": "e9fb1a41c626b30576deddda3dff25c95a7a21c9dfe24d2185795b03a6b1b079"
+  },
+  "screenshots": {
+    "desktop-overview.png": "afdee3d53387690fb9b85cf52d64cf34d047c824e48447a0cd8bbd3ceb1133f5",
+    "desktop-filtered-evidence.png": "3d7b673fd413e6942325a592b63d265394337951c8a309ab80b4379b3413e0f2",
+    "desktop-map-reset.png": "d9010f8eb0e3d3d4acd15d9022282df7fc81ec65c99ecd53ae6a465b0b11e35c",
+    "desktop-node-evidence.png": "02d452a1b43a5418bda25bc0cd49871afe5c2d91df6e640736bc60e80f1f0520",
+    "desktop-offline.png": "78267dbba17125f8320ef861035ab68119d4d8a3dbbcfbf22a4f090ecdba38fb",
+    "desktop-without-javascript.png": "2738e232438dc76341d9be30cf3b94d3d3ac77211da45b9827388d290eb8f419"
+  },
+  "errors": [],
+  "viewboxes": {
+    "source": "20 100 1560 640",
+    "palace-yongning": "20 735 780 535",
+    "baima": "800 735 780 535",
+    "sima": "20 1260 780 535",
+    "jianchun": "800 1260 780 535",
+    "all": "0 0 1600 1860"
+  },
+  "source_commit": "b45630734b0e98a64f85ad659b0456a509a095b6",
+  "layout_checks": [
+    {
+      "url": "http://127.0.0.1:33881/luoyang-city/luoyang-city-spatial.html",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:33881/luoyang-city/luoyang-city-spatial.html?node=palace-yongning&basis=source&q=SP01",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:33881/luoyang-city/luoyang-city-spatial.html",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:33881/luoyang-city/luoyang-city-spatial.html#decision-SP01",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:33881/luoyang-city/luoyang-city-spatial.html#decision-SP06",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:33881/luoyang-city/luoyang-city-spatial.html#decision-SP11",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:33881/luoyang-city/luoyang-city-spatial.html#decision-SP16",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "file:///tmp/tmpi_3u9yw4/index.html?node=jianchun&q=SP16",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:33881/luoyang-city/luoyang-city-spatial.html#decision-SP01",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    }
+  ],
+  "pan_reset": {
+    "before": "98 788.5 624 428",
+    "buttons": "176 842 624 428",
+    "keyboard": "176 842 624 428"
+  },
+  "status": "passed"
+}

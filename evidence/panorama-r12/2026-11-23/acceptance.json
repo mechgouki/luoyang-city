@@ -1,0 +1,1388 @@
+{
+  "schema": "luoyang-r12-technical-release-acceptance-v1",
+  "status": "technical_acceptance_passed",
+  "repository": "mechgouki/luoyang-city",
+  "research_version": "R12.1",
+  "implementation_version": "panorama-review-v14",
+  "target_years": [
+    516,
+    528
+  ],
+  "page_url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html",
+  "homepage": {
+    "revision": "panorama-approved-v12",
+    "replacement_approved": false
+  },
+  "final_pr": {
+    "number": 86,
+    "run_id": 45180026243,
+    "run_attempt": 1,
+    "head_sha": "cd13600b360a71518c0444ea243a27ff05966880",
+    "tested_merge_sha": "f442bbff2603b0c3f4d591a77694b51e44ea7b28",
+    "tested_tree_sha": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+    "pages_source_commit": "f442bbff2603b0c3f4d591a77694b51e44ea7b28",
+    "identity_status": "three_way_identity_verified",
+    "run_conclusion": "success",
+    "collection_summary": {
+      "path": "pr-45180026243-a1/collection-summary.json",
+      "bytes": 2678,
+      "sha256": "c8abd9dcd5bc965e9889c247502881c4291f1ca525c929ddd991eee67667bddf"
+    },
+    "identity_check": {
+      "path": "pr-45180026243-a1/pages-identity-check.json",
+      "bytes": 911,
+      "sha256": "ef0e0a933cee12651db166380a7ada8e32e424f6652a6977e3ea3ced34854005"
+    },
+    "browser_download_check": {
+      "path": "pr-45180026243-a1/browser-download-cross-check.json",
+      "bytes": 960,
+      "sha256": "aa6bc374803a29f0ee41894ef338358a890f79ed4ddd28e450db09af1abcf847"
+    },
+    "change": "One workflow line: verify-live total timeout-minutes 20 to 40. HTTP, browser checks and individual step/request timeouts remain unchanged.",
+    "change_rationale": {
+      "path": "pr-45180026243-a1/timeout-budget-rationale.json",
+      "bytes": 3090,
+      "sha256": "bdd8a80983618550d2e9d47858314da0fd904bd926b1b314bf4e1c46b6818943"
+    }
+  },
+  "final_production": {
+    "commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+    "unique_parent": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+    "run_id": 45182742216,
+    "run_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45182742216",
+    "run_attempt": 1,
+    "run_status": "completed",
+    "run_conclusion": "success",
+    "run_created_at_utc": "2026-11-23T13:19:13Z",
+    "run_started_at_utc": "2026-11-23T13:19:13Z",
+    "run_updated_at_utc": "2026-11-23T13:51:22Z",
+    "ci_completed_at_utc": "2026-11-23T13:51:21+00:00",
+    "ci_completed_at_shanghai": "2026-11-23T21:51:21+08:00",
+    "ci_completion_time_basis": "Latest completed_at among this run attempt's three actual jobs; this is not the later evidence-review or archive-readback time.",
+    "matches_pr86_tested_tree": true,
+    "pr86_tested_merge": "f442bbff2603b0c3f4d591a77694b51e44ea7b28",
+    "pr86_tested_tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+    "checkout_log_commits": {
+      "build": "4579a6b8990a91780bf83391967c301218c0711e",
+      "verify-live": "4579a6b8990a91780bf83391967c301218c0711e"
+    },
+    "pages_source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "pages_build_info_sha256": "00c438d6dad74ad252785072f2adaea91281e0067d661950b09c882cdacab6b8",
+    "jobs": {
+      "build": {
+        "id": 137720438238,
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-23T13:19:16Z",
+        "completed_at_utc": "2026-11-23T13:32:23Z",
+        "started_at_shanghai": "2026-11-23T21:19:16+08:00",
+        "completed_at_shanghai": "2026-11-23T21:32:23+08:00",
+        "duration_seconds": 787,
+        "raw_log": {
+          "path": "production-45182742216-a1/logs/job-137720438238-raw.log",
+          "bytes": 283712,
+          "sha256": "1fcb8753efc4d2e13234bf2c3c128b4f022da3e43ee9cdcb53bf44c1bf60c767",
+          "git_blob_sha1": "8f8f9b5e831f53d55d28f2a42e3dccd2f05ecd2f"
+        }
+      },
+      "deploy": {
+        "id": 137727902581,
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-23T13:32:28Z",
+        "completed_at_utc": "2026-11-23T13:32:45Z",
+        "started_at_shanghai": "2026-11-23T21:32:28+08:00",
+        "completed_at_shanghai": "2026-11-23T21:32:45+08:00",
+        "duration_seconds": 17,
+        "raw_log": {
+          "path": "production-45182742216-a1/logs/job-137727902581-raw.log",
+          "bytes": 4586,
+          "sha256": "7cc3b55027e57c7c29cd76c85399587a4f5e98e22b2fd1780e76d04edfa1793c",
+          "git_blob_sha1": "b40ce083048f187ae13604444e71d196c9e80f0a"
+        }
+      },
+      "verify-live": {
+        "id": 137728114930,
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-23T13:32:48Z",
+        "completed_at_utc": "2026-11-23T13:51:21Z",
+        "started_at_shanghai": "2026-11-23T21:32:48+08:00",
+        "completed_at_shanghai": "2026-11-23T21:51:21+08:00",
+        "duration_seconds": 1113,
+        "raw_log": {
+          "path": "production-45182742216-a1/logs/job-137728114930-raw.log",
+          "bytes": 67031,
+          "sha256": "1683223a7e50c2299e4550fe20b80e976cf96f00f5ac8eb3d9012b399d1ff2be",
+          "git_blob_sha1": "9532c6da0a8f529f6ab025652a332511e8717b82"
+        }
+      }
+    },
+    "live_http_step": {
+      "name": "Check actual HTTPS resources and hashes",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 5,
+      "started_at": "2026-11-23T13:33:06Z",
+      "completed_at": "2026-11-23T13:40:27Z"
+    },
+    "live_browser_step": {
+      "name": "Exercise current and all earlier deployed map versions",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 7,
+      "started_at": "2026-11-23T13:40:55Z",
+      "completed_at": "2026-11-23T13:51:08Z"
+    },
+    "collection_summary": {
+      "path": "production-45182742216-a1/collection-summary.json",
+      "bytes": 45125,
+      "sha256": "75fdbbc1ed6543fca088b7d3b73260b1e5fdf95f7f9d95acaa508b4518203be0",
+      "git_blob_sha1": "90acb07fe815c9de6e88b9d067bcce897e346b90"
+    },
+    "run_api": {
+      "path": "production-45182742216-a1/api/api-run-final.json",
+      "bytes": 12734,
+      "sha256": "c4c798676eb3669de1809908977f12fa30dd187cb81110d1b4fc6ba875fb0600",
+      "git_blob_sha1": "c1b45c998cd12d670d24e8c85a81e516b1045219"
+    },
+    "attempt_jobs_api": {
+      "path": "production-45182742216-a1/api/api-jobs-attempt1-final.json",
+      "bytes": 8387,
+      "sha256": "632903cbcc92f3aba9a374557eadd5a711a479471295d46cceb4cd8cafc468a2",
+      "git_blob_sha1": "c85fbebbd665b921e9e2d69986cd29b6caa8d084"
+    },
+    "source_tree_identity": {
+      "path": "production-45182742216-a1/source-tree-identity-check.json",
+      "bytes": 647,
+      "sha256": "f1d4aed36adf990021e23331e525fb240dbbf771d3a827a0ce5c6966cc56953b",
+      "git_blob_sha1": "e1b282c5acde172762b7225b56a0e7f98cfe3335"
+    },
+    "pages_identity": {
+      "path": "production-45182742216-a1/pages-identity-check.json",
+      "bytes": 608,
+      "sha256": "ee0a5a65078fb5e2a00a1bf1bc1c9353a7e9c7d3198fbff858470dfb720ff0d9",
+      "git_blob_sha1": "43ff3ef246ef6f621a88e55d8a183da9d580b15b"
+    },
+    "source_manifest": {
+      "path": "source-identity/production-4579a6b8-source-manifest.json",
+      "bytes": 20387,
+      "sha256": "dfe8360d93316600b941df1fdbf936394ecacbbe397e37c6f01d2d189db0b9af",
+      "git_blob_sha1": "2a9ecaca4561285d1f0644fe7e6ff23229335166"
+    },
+    "artifacts": [
+      {
+        "phase": "live",
+        "id": 14825235104,
+        "name": "live-acceptance-evidence",
+        "github_api": {
+          "path": "production-45182742216-a1/api/artifact-14825235104-from-run-list.json",
+          "bytes": 699,
+          "sha256": "dba4cc503bf6fe994a2a86952dfe45931435c9e235b7b6994a15a39b35403728",
+          "git_blob_sha1": "1c0a5be664da2a2c309b1c65b1669afd690aedd3"
+        },
+        "download_receipt": {
+          "path": "production-45182742216-a1/download-receipt-14825235104.json",
+          "bytes": 360,
+          "sha256": "92134986aab4227cd257ea46afd7a164bb66db612db9a265024ad0506f609686",
+          "git_blob_sha1": "3c699f1fa5077b7af6b869c98242ad0d003a4854"
+        },
+        "transport_zip_bytes": 235818197,
+        "transport_zip_sha256": "a1844403572255ca167b7681c57a2825c77d710e35d99a74043cdfccc30bc027",
+        "github_api_digest_verified": true,
+        "expires_at": "2026-12-23T13:51:08Z",
+        "ingest": {
+          "path": "cas/ingests/production-45182742216-a1-live.json",
+          "bytes": 257397,
+          "sha256": "57d2e632198f1cc6e0e470a120fec7d3a3352bdb35c08b6a3144e3b0ba54f8a1",
+          "git_blob_sha1": "a28799915e2dc5cd284d2e62454d01acbef871c9"
+        },
+        "member_count": 691,
+        "retained_original_member_count": 691,
+        "note": "Pages retains a full member identity ledger and selected original bytes; browser artifacts retain every member. Actions wrapper ZIP is not part of the permanent payload."
+      },
+      {
+        "phase": "build",
+        "id": 14822698496,
+        "name": "browser-build-evidence",
+        "github_api": {
+          "path": "production-45182742216-a1/api/artifact-14822698496-from-run-list.json",
+          "bytes": 697,
+          "sha256": "909d1f560172cc0b29225d811dec172863410ee8f57cdb47f219e3fe173cb54c",
+          "git_blob_sha1": "0f14c7721d4d7ae4fed33a7d32e4f1d2474e37e0"
+        },
+        "download_receipt": {
+          "path": "production-45182742216-a1/download-receipt-14822698496.json",
+          "bytes": 354,
+          "sha256": "b6adef896e7083d021fe90572a02fd9229f89fc38e53e76da3d0fc34e7421228",
+          "git_blob_sha1": "768d2a5f64a9f1b22a78165c43c760f78be50768"
+        },
+        "transport_zip_bytes": 286930433,
+        "transport_zip_sha256": "4963b5b9beb6854e77eb503c39644a7bb8ac776de4e8a8df20afac57adb62698",
+        "github_api_digest_verified": true,
+        "expires_at": "2026-12-07T13:31:59Z",
+        "ingest": {
+          "path": "cas/ingests/production-45182742216-a1-build.json",
+          "bytes": 270150,
+          "sha256": "f5a1f062ac64c2ec66be7b65c0b25a4a6ab54eed425147a70c31ce5880f37d29",
+          "git_blob_sha1": "67241a90deb27fb106ea3a2d93e710e36be0190e"
+        },
+        "member_count": 736,
+        "retained_original_member_count": 736,
+        "note": "Pages retains a full member identity ledger and selected original bytes; browser artifacts retain every member. Actions wrapper ZIP is not part of the permanent payload."
+      },
+      {
+        "phase": "pages",
+        "id": 14822673608,
+        "name": "github-pages",
+        "github_api": {
+          "path": "production-45182742216-a1/api/artifact-14822673608-from-run-list.json",
+          "bytes": 687,
+          "sha256": "448550882eebbb1a4bce498fd85ca4f721baa94e530b5b86ad59b006de564c18",
+          "git_blob_sha1": "0c2729adb07f2da6f6d62eb2bc66c16d10a7f629"
+        },
+        "download_receipt": {
+          "path": "production-45182742216-a1/download-receipt-14822673608.json",
+          "bytes": 344,
+          "sha256": "b66b450bd10e654419e48079e3d2aa8f7264c526ce2d016cf52833d3be00c1c5",
+          "git_blob_sha1": "68a9fbb8051ff55da3c2f23f83a5a7419d884f8f"
+        },
+        "transport_zip_bytes": 364258961,
+        "transport_zip_sha256": "f92f0acf496e6d2af18df43cfa1e3e2ddb7f960297f5ca45c092032508dffdfa",
+        "github_api_digest_verified": true,
+        "expires_at": "2026-11-30T13:32:09Z",
+        "ingest": {
+          "path": "cas/ingests/production-45182742216-a1-pages.json",
+          "bytes": 235028,
+          "sha256": "fab151b1ff2dee6ad37d754e88ee24c56db6b7843b2cf21aa89df4063ff08669",
+          "git_blob_sha1": "3a33994aa989ea5cb90fdb09464dc4c41a06aae6"
+        },
+        "member_count": 959,
+        "retained_original_member_count": 42,
+        "note": "Pages retains a full member identity ledger and selected original bytes; browser artifacts retain every member. Actions wrapper ZIP is not part of the permanent payload."
+      }
+    ]
+  },
+  "final_verification": {
+    "technical_release_acceptance": "passed",
+    "source_identity": {
+      "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+      "tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+      "build_checkout_matches_pages": true,
+      "live_checkout_matches_pages": true,
+      "matches_successful_pr86_tested_tree": true,
+      "evidence": {
+        "path": "production-45182742216-a1/source-tree-identity-check.json",
+        "bytes": 647,
+        "sha256": "f1d4aed36adf990021e23331e525fb240dbbf771d3a827a0ce5c6966cc56953b",
+        "git_blob_sha1": "e1b282c5acde172762b7225b56a0e7f98cfe3335"
+      }
+    },
+    "complete_live_http": {
+      "status": "passed",
+      "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+      "checked_resource_count": 958,
+      "retry_count": 0,
+      "complete_published_manifest_path_set_matched": true,
+      "recorded_bytes_and_sha256_match_same_run_pages": true,
+      "excluded_empty_build_controls": [
+        ".nojekyll"
+      ],
+      "original_report": {
+        "path": "production-45182742216-a1/live-http-original.json",
+        "bytes": 231095,
+        "sha256": "8d655e347a9bb6fb55deeca4b5f5d625e62dd22b3ef97997ab0012683d51fc05",
+        "git_blob_sha1": "935c0365b823e01ba0d955f0904f33414c5218af"
+      },
+      "original_report_checked_at_field": "2026-11-23T13:33:41Z",
+      "completed_at_utc": "2026-11-23T13:40:27Z",
+      "completion_time_basis": "Actual final attempt job step completed_at; the report checked_at field is preserved as written and is not treated as completion time.",
+      "cross_check": {
+        "path": "production-45182742216-a1/live-http-manifest-cross-check.json",
+        "bytes": 751,
+        "sha256": "e779db2bdb4f368c6b3e957b948d9f5e4542ea0d58f418c383cb32b6d2786c9e",
+        "git_blob_sha1": "13e4dec56a3fd21da427975f62262dcad0d6d83b"
+      }
+    },
+    "complete_browser_report_inspection": {
+      "build": {
+        "check": {
+          "path": "production-45182742216-a1/build-all-browser-reports-check.json",
+          "bytes": 24957,
+          "sha256": "5d0363ff2e741f195bc9b24d9b6f5120952b8551e59d35b7134c3e3a88c385b7",
+          "git_blob_sha1": "abf9eeaaf027dc16a917d36e925ff1fc0d955fba"
+        },
+        "original_report_count": 62,
+        "browser_directory_count": 42,
+        "inspection_status": "passed",
+        "issues": [],
+        "literal_top_level_status_counts": {
+          "passed": 36,
+          "not_declared": 26
+        },
+        "report_files_declaring_source_commit": 30,
+        "report_files_without_source_commit": 32,
+        "all_declared_commits_match_current_production": true,
+        "screenshot_hash_reference_records_including_aggregate_duplicates": 225,
+        "unique_report_hash_registered_screenshot_paths": 215,
+        "counts_are_not_independent_test_totals": true
+      },
+      "live": {
+        "check": {
+          "path": "production-45182742216-a1/live-all-browser-reports-check-v2.json",
+          "bytes": 25486,
+          "sha256": "5d4c566ad1fc82296c24d1c5559c4d3fa8731cccdae56c88d8391d376b08063a",
+          "git_blob_sha1": "b4f36f5699f32ff6bde379a8fb5a0f66a0f6469e"
+        },
+        "original_report_count": 62,
+        "browser_directory_count": 42,
+        "inspection_status": "passed",
+        "issues": [],
+        "literal_top_level_status_counts": {
+          "passed": 36,
+          "not_declared": 26
+        },
+        "report_files_declaring_source_commit": 30,
+        "report_files_without_source_commit": 32,
+        "all_declared_commits_match_current_production": true,
+        "screenshot_hash_reference_records_including_aggregate_duplicates": 225,
+        "unique_report_hash_registered_screenshot_paths": 215,
+        "counts_are_not_independent_test_totals": true
+      },
+      "full_live_browser_suite_passed": true,
+      "original_reports_modified": false,
+      "browser_tests_rerun_by_document_author": false,
+      "counting_rule": "Report file counts are not independent test totals. The R11 aggregate duplicates two device reports. Missing legacy top-level status/source_commit fields remain undeclared; they are not fabricated from CI success."
+    },
+    "v14_real_browser_downloads": {
+      "build": {
+        "check": {
+          "path": "production-45182742216-a1/build-browser-download-cross-check.json",
+          "bytes": 976,
+          "sha256": "0ee398787614ee10313bb997c1637efb855adcd415497338ca45d417eca9b3fb",
+          "git_blob_sha1": "b37a999a3397ee29e406297584705b51f4298c0c"
+        },
+        "devices": [
+          {
+            "device": "desktop",
+            "report": "panorama-v14-browser/desktop-report.json",
+            "unique_downloads": 27,
+            "actual_click_attempts": 27,
+            "passed_click_attempts": 27,
+            "screenshots": 3,
+            "status": "passed"
+          },
+          {
+            "device": "mobile",
+            "report": "panorama-v14-browser/mobile-report.json",
+            "unique_downloads": 27,
+            "actual_click_attempts": 27,
+            "passed_click_attempts": 27,
+            "screenshots": 3,
+            "status": "passed"
+          }
+        ],
+        "same_run_pages_identity_verified": true
+      },
+      "live": {
+        "check": {
+          "path": "production-45182742216-a1/live-v14-browser-download-cross-check.json",
+          "bytes": 985,
+          "sha256": "bbdadde4d4ca34244052b9ee4fe771f9b8a482a3df99fc792e52ca05f3a5b024",
+          "git_blob_sha1": "eef884cfc04b68c2aa2f1e1fdc793eedb6e58368"
+        },
+        "devices": [
+          {
+            "device": "desktop",
+            "report": "live-panorama-v14-browser/desktop-report.json",
+            "unique_downloads": 27,
+            "actual_click_attempts": 27,
+            "passed_click_attempts": 27,
+            "screenshots": 3,
+            "status": "passed"
+          },
+          {
+            "device": "mobile",
+            "report": "live-panorama-v14-browser/mobile-report.json",
+            "unique_downloads": 27,
+            "actual_click_attempts": 27,
+            "passed_click_attempts": 27,
+            "screenshots": 3,
+            "status": "passed"
+          }
+        ],
+        "same_run_pages_identity_verified": true
+      }
+    },
+    "independent_public_readback": {
+      "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+      "status": "passed",
+      "verified_files": 42,
+      "required_downloads": 27,
+      "started_at": "2026-11-23T13:33:33.923961+00:00",
+      "finished_at": "2026-11-23T13:36:30.194801+00:00",
+      "retained_original_bytes_match_same_run_pages": true,
+      "readback_record": {
+        "path": "root-live-4579a6b8/readback.json",
+        "bytes": 33285,
+        "sha256": "0606b7506a882b0f9fe2d878057f4645603b978d5544464f4dac203ce4b9eb28",
+        "git_blob_sha1": "8edebf971d92dedbe7fa55fe5d58e7589488a699"
+      },
+      "build_info_actual_bytes_match_pages": true,
+      "release_source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+      "pages_build_info_check": {
+        "path": "root-live-4579a6b8/pages-build-info-cross-check.json",
+        "bytes": 870,
+        "sha256": "e37450949923ee330a8d45d07ca144612e9529475f45cd1371f6b6a815c3128a",
+        "git_blob_sha1": "d3f39369c062c7d3fe75628d57f6c0eaf12d6d08"
+      }
+    },
+    "root_interactive_observation_and_byte_continuity": {
+      "original_observation": {
+        "path": "root-ui-pre-fix/ui-inspection.json",
+        "bytes": 1146,
+        "sha256": "691a7e3825bbc24f477c6c891bbae4624c1176f854a23323c3c1e907c17a61b6",
+        "git_blob_sha1": "458a2e3715b12c108c3d73c49d6e7d8dc2daa3f5"
+      },
+      "original_observed_commit": "fa5398b0a8ecbd14d4a40f1fdd249b441e6be0b5",
+      "original_recorded_at_utc": "2026-11-23T12:33:43.934769+00:00",
+      "checks_observed_as_recorded": [
+        "Page title and top notice clearly say V14 trial not accepted.",
+        "Full blocker list appears before image controls.",
+        "Clicked side-by-side compare; V14 and V13 revision 2 appeared with distinct captions.",
+        "V14 not-accepted marker persisted after switching and URL encoded view=compare.",
+        "Marked the comparison page as the user-facing browser deliverable."
+      ],
+      "screenshots_saved": false,
+      "final_public_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+      "byte_continuity_status": "observed_page_and_display_assets_unchanged",
+      "same_actual_html_css_js_and_display_image_files": 9,
+      "continuity_evidence": {
+        "path": "root-live-4579a6b8/ui-publication-continuity.json",
+        "bytes": 3432,
+        "sha256": "b09b34068d9924c56f875f9b2daa0f81155bc26ca5bdbdb543c2713453cbefdb",
+        "git_blob_sha1": "78fdf6c868873f8767bca82e9add27658db5bcc3"
+      },
+      "second_root_browser_session_claimed": false,
+      "scope": "The earlier root interaction occurred on fa5398b. Nine actual published files are byte-identical on this final production. Current production desktop/mobile interactions are separately evidenced by the successful live CI reports."
+    },
+    "prior_versions_and_homepage": {
+      "ci_reported_protected_public_files": 917,
+      "ci_reported_reversible_homepages": 2,
+      "old_and_current_browser_report_scope": {
+        "path": "production-45182742216-a1/live-all-browser-reports-check-v2.json",
+        "bytes": 25486,
+        "sha256": "5d4c566ad1fc82296c24d1c5559c4d3fa8731cccdae56c88d8391d376b08063a",
+        "git_blob_sha1": "b4f36f5699f32ff6bde379a8fb5a0f66a0f6469e"
+      },
+      "homepage_revision": "panorama-approved-v12",
+      "homepage_replacement_approved": false,
+      "evidence": {
+        "path": "production-45182742216-a1/live-http-original.json",
+        "bytes": 231095,
+        "sha256": "8d655e347a9bb6fb55deeca4b5f5d625e62dd22b3ef97997ab0012683d51fc05",
+        "git_blob_sha1": "935c0365b823e01ba0d955f0904f33414c5218af"
+      },
+      "scope": "Homepage image revision remains approved V12. This is not a claim that navigation-entry HTML never changed; the preserved predecessor/publication contract records those changes."
+    }
+  },
+  "preserved_history": [
+    {
+      "phase": "pr84_initial_failed",
+      "run_id": 45165875123,
+      "run_attempt": 1,
+      "run_conclusion": "failure",
+      "jobs": [
+        {
+          "name": "build",
+          "id": 137662550993,
+          "conclusion": "failure"
+        },
+        {
+          "name": "deploy",
+          "id": 137664053740,
+          "conclusion": "skipped"
+        },
+        {
+          "name": "verify-live",
+          "id": 137664054624,
+          "conclusion": "skipped"
+        }
+      ],
+      "collection_summary": {
+        "path": "pr-45165875123-a1/collection-summary.json",
+        "bytes": 1771,
+        "sha256": "ee3e76b4d27f5b64310bf97175cb4fa65dfd64376aa9b406dac6ec85f224951b"
+      }
+    },
+    {
+      "phase": "pr84_fixed_pr_passed",
+      "run_id": 45167225217,
+      "run_attempt": 1,
+      "run_conclusion": "success",
+      "jobs": [
+        {
+          "name": "build",
+          "id": 137667206233,
+          "conclusion": "success"
+        },
+        {
+          "name": "deploy",
+          "id": 137673660784,
+          "conclusion": "skipped"
+        },
+        {
+          "name": "verify-live",
+          "id": 137673661493,
+          "conclusion": "skipped"
+        }
+      ],
+      "collection_summary": {
+        "path": "pr-45167225217-a1/collection-summary.json",
+        "bytes": 2439,
+        "sha256": "c4fa05700bf309b1ca78a281009d808e6176beee1eb382411f8233105c61075c"
+      }
+    },
+    {
+      "phase": "pr84_production_verification_failed",
+      "run_id": 45169490719,
+      "run_attempt": 1,
+      "run_conclusion": "failure",
+      "jobs": [
+        {
+          "name": "build",
+          "id": 137674976778,
+          "conclusion": "success"
+        },
+        {
+          "name": "deploy",
+          "id": 137682160283,
+          "conclusion": "success"
+        },
+        {
+          "name": "verify-live",
+          "id": 137682378624,
+          "conclusion": "failure"
+        }
+      ],
+      "collection_summary": {
+        "path": "production-45169490719-a1/collection-summary.json",
+        "bytes": 8946,
+        "sha256": "fd783f0a36a3ee47eb453f718043271defd2c90b595b634251fb852e078fabbe"
+      }
+    },
+    {
+      "phase": "pr85_runtime_fix_pr_passed",
+      "run_id": 45173171686,
+      "run_attempt": 1,
+      "run_conclusion": "success",
+      "jobs": [
+        {
+          "name": "build",
+          "id": 137687594389,
+          "conclusion": "success"
+        },
+        {
+          "name": "deploy",
+          "id": 137693922804,
+          "conclusion": "skipped"
+        },
+        {
+          "name": "verify-live",
+          "id": 137693924867,
+          "conclusion": "skipped"
+        }
+      ],
+      "collection_summary": {
+        "path": "pr-45173171686-a1/collection-summary.json",
+        "bytes": 2439,
+        "sha256": "1ca5721208fab0a94dfbd443c485f48e68d067698c552d82e23729ef619a253d"
+      }
+    },
+    {
+      "phase": "pr85_production_cancelled",
+      "run_id": 45175501815,
+      "run_attempt": 1,
+      "production_commit": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+      "production_tree": "14c9122f46408bdaa87597fa2991f334b820756c",
+      "run_conclusion": "cancelled",
+      "jobs": [
+        {
+          "name": "build",
+          "id": 137695561981,
+          "conclusion": "success"
+        },
+        {
+          "name": "deploy",
+          "id": 137702456392,
+          "conclusion": "success"
+        },
+        {
+          "name": "verify-live",
+          "id": 137702721577,
+          "conclusion": "cancelled"
+        }
+      ],
+      "collection_summary": {
+        "path": "production-45175501815-a1/collection-summary.json",
+        "bytes": 42011,
+        "sha256": "97e4957bae30a9dd851a030cc6fb38f6314754b96dbec836d773769a232644c9"
+      },
+      "live_http": {
+        "status": "passed_for_http_resources_only",
+        "source_commit": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+        "resource_count": 958,
+        "http_retries": 0,
+        "manifest_path_set_matches": true,
+        "all_recorded_byte_counts_match_actual_pages": true,
+        "all_recorded_sha256_match_manifest_and_actual_pages": true,
+        "empty_build_control_excluded": [
+          ".nojekyll"
+        ],
+        "ci_live_http_sha256": "518ebe7bd614f374eeb00652867d8ea7a44dd6d63669da8248c945254f386e70",
+        "overall_workflow_conclusion": "cancelled",
+        "full_live_browser_suite_passed": false
+      },
+      "live_v14_downloads": {
+        "schema": "luoyang-browser-download-cas-check-v1",
+        "status": "passed",
+        "source_commit": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+        "pages_label": "production-45175501815-a1-pages",
+        "evidence_label": "production-45175501815-a1-live-cancelled",
+        "publication_status": "needs_revision",
+        "review_status": "rejected_needs_revision",
+        "devices": [
+          {
+            "device": "desktop",
+            "report": "live-panorama-v14-browser/desktop-report.json",
+            "unique_downloads": 27,
+            "actual_click_attempts": 27,
+            "passed_click_attempts": 27,
+            "screenshots": 3,
+            "status": "passed"
+          },
+          {
+            "device": "mobile",
+            "report": "live-panorama-v14-browser/mobile-report.json",
+            "unique_downloads": 27,
+            "actual_click_attempts": 27,
+            "passed_click_attempts": 27,
+            "screenshots": 3,
+            "status": "passed"
+          }
+        ],
+        "note": "Checks retained original reports and bytes only; does not rerun browser interactions or certify image geometry."
+      },
+      "whole_live_browser_suite": {
+        "status": "cancelled_incomplete",
+        "passed": false,
+        "last_interrupted_script": "tests/browser_west_b3.py",
+        "b3_final_report_present": false,
+        "later_scripts_completed": false
+      },
+      "cancellation": {
+        "actual_github_conclusion": "cancelled",
+        "raw_log_evidence": "2026-11-23T13:07:24.7959391Z ##[error]The operation was canceled.",
+        "job_duration_seconds": 1223,
+        "configured_job_budget_minutes": 20,
+        "inference": "Cancellation timing is consistent with the configured 20-minute job budget; an explicit timeout cause has not been obtained.",
+        "explicit_timeout_annotation_obtained": false,
+        "check_run_access_limitation": {
+          "path": "api/live-check-run-access-limitation.json",
+          "bytes": 656,
+          "sha256": "5c535b5a5ce0703c848172ccd140979c915811348468d451bd677d5963a3b98f",
+          "git_blob_sha1": "d15645bf77c79c7755f1e48da542ba0336ce32e3"
+        },
+        "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/137702721577",
+        "always_upload_conclusion": "success",
+        "browser_step_budget_minutes": 12,
+        "browser_step_budget_sufficiency": "Not established by this cancelled attempt; requires a complete successful later production run."
+      },
+      "paths_relative_to": "production-45175501815-a1/",
+      "artifact_report_paths_are_logical_member_paths": true
+    },
+    {
+      "phase": "pr86_time_budget_pr_passed",
+      "run_id": 45180026243,
+      "run_attempt": 1,
+      "run_conclusion": "success",
+      "head_sha": "cd13600b360a71518c0444ea243a27ff05966880",
+      "tested_merge_sha": "f442bbff2603b0c3f4d591a77694b51e44ea7b28",
+      "tested_tree_sha": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+      "jobs": [
+        {
+          "id": 137711127116,
+          "name": "build",
+          "conclusion": "success"
+        },
+        {
+          "id": 137718208644,
+          "name": "deploy",
+          "conclusion": "skipped"
+        },
+        {
+          "id": 137718209423,
+          "name": "verify-live",
+          "conclusion": "skipped"
+        }
+      ],
+      "collection_summary": {
+        "path": "pr-45180026243-a1/collection-summary.json",
+        "bytes": 2678,
+        "sha256": "c8abd9dcd5bc965e9889c247502881c4291f1ca525c929ddd991eee67667bddf"
+      }
+    }
+  ],
+  "failure_explanations": {
+    "pr84_initial": "New publication inventory validation rejected the deliberately corrupted R9 ZIP before the legacy test reached its exact inner-evidence assertion. The fix retained both outer-layer rejection and the specific R9 inner-evidence check.",
+    "first_production": "build and deploy succeeded; verify-live failed with No module named PIL. Its production browser steps were skipped, not passed.",
+    "pr85_fix": "Install pillow==11.2.1 in verify-live, matching the existing build/recorded libwebp1.5.0 conversion contract; all gates remain.",
+    "pr85_production_cancelled": "HTTP verification passed for 958 resources with 0 retries and V14 desktop/mobile each passed 27 actual downloads. The whole live browser suite was cancelled during tests/browser_west_b3.py; later versions were not completed. GitHub conclusion is cancelled after a 1223-second job; the raw log says The operation was canceled. Timing is consistent with the 20-minute total budget, but no explicit timeout annotation was obtained.",
+    "pr86_fix": "Increase only verify-live total job budget from 20 to 40 minutes. Preserve all HTTP/browser gates and individual timeouts. PR86 build, actual Pages/checkout/tree identity and retained downloads passed; final production remains pending."
+  },
+  "panorama_image_review": {
+    "revision": "panorama-candidate-v14",
+    "status": "needs_revision",
+    "review_status": "rejected_needs_revision",
+    "source_png_sha256": "45813547ae4555e9b60226f72adfd6df75aa0a36324a23c50966adc3092a0fa6",
+    "full_panorama_attempts": 6,
+    "displayed_attempt": 5,
+    "latest_attempt": 6,
+    "all_six_attempts_rejected": true,
+    "homepage_replacement_approved": false,
+    "whole_panorama_geometry_passed": false,
+    "blocking_findings": [
+      "南门实际只能辨出两层，未保持三层楼观要求；后方木塔楼层不能并入门楼计数。",
+      "南门门槛约在画面(515,477)，以底稿同侧南缘约y452.4—453.3参照，画面上仍约前移24像素；门基正面约38—43像素，底稿约22.5像素，位置与尺度未落实。这是人工约读，不是门槛与底稿框心(512,451)之间的同名控制点残差。",
+      "佛殿虽已横向回到塔后中轴附近，可见前基约y426，与底稿同侧前缘约y416—417相比仍约偏前9—10像素；基宽约45—50像素，底稿约26像素。塔脚附近可见前缘约y440—445不能直接等同来源塔座边线，完整塔座中心仍受遮挡，不能宣布配准通过。",
+      "可见寺墙约在x454—578、y420—483，底稿约x459—565、y399—454，整体向前漂移约20—30像素，七段墙线未可靠落实。",
+      "宫城二、三号门尚不能分别可靠辨识，两阙关系与完整宫轴仍待改绘；大面积裸土宫区是待补的艺术概化，不能解释成资料已证空地。"
+    ],
+    "source_record": {
+      "commit": "4579a6b8990a91780bf83391967c301218c0711e",
+      "path": "research/panorama-r12/image-record.json",
+      "mode": "100644",
+      "git_blob": "369e5b96a805450a67d32197d8f784bf095e75a5",
+      "bytes": 61127,
+      "sha256": "3e57078b0f26f391b0f16cb83ad30e7288c871ac27de1ab76e73fd63e09a906a",
+      "source_manifest": {
+        "path": "source-identity/production-4579a6b8-source-manifest.json",
+        "bytes": 20387,
+        "sha256": "dfe8360d93316600b941df1fdbf936394ecacbbe397e37c6f01d2d189db0b9af",
+        "git_blob_sha1": "2a9ecaca4561285d1f0644fe7e6ff23229335166"
+      }
+    },
+    "meaning": "A successful technical release does not accept the generated image or grant homepage replacement approval.",
+    "attempt_statuses_as_published": [
+      {
+        "attempt": 1,
+        "status": "rejected",
+        "sha256": "95a7e00f66c2ecf5d8633e45c6d6f054503c36199d6a9a2aa0324c40ffd798f2",
+        "review_sha256": "8e891c8b064d72767defe7d034eec1da913c351b98d9520baa593131c9f7580a"
+      },
+      {
+        "attempt": 2,
+        "status": "rejected",
+        "sha256": "c68de9e7692cd3e5bc870c2fb5adba88c18f3352f2d8901b6da20a6614438ca2",
+        "review_sha256": "275393678024f360d41e1f850184f02fe4e1254396d7abe19db7d19d4f90821e"
+      },
+      {
+        "attempt": 3,
+        "status": "rejected",
+        "sha256": "706257abbefb963847f6211464f751e3fa1b386d20528df740277bd43377a339",
+        "review_sha256": "af5aac6d57a3d0e28f85d991cc31565e77ab6f69d09bb9e2d71415826d40e273"
+      },
+      {
+        "attempt": 4,
+        "status": "rejected",
+        "sha256": "9e97d69334bb105216ff4e46e22a9208518467055ce7e36c24524d52bf0b3557",
+        "review_sha256": "e99e91ab92b273f884f8737fa23b1642f12534f2109d2aaaa5f78ce7f58be16f"
+      },
+      {
+        "attempt": 5,
+        "status": "rejected",
+        "sha256": "45813547ae4555e9b60226f72adfd6df75aa0a36324a23c50966adc3092a0fa6",
+        "review_sha256": "63d50a665ae7f20cc679132f6f693045fcac4c3863033283c9280ab2e4476bc3"
+      },
+      {
+        "attempt": 6,
+        "status": "rejected",
+        "sha256": "8047a77d6df12e2ef32e2a6833fa0d20f106d2be6fbf48467cffb841c5bf5ef8",
+        "review_sha256": "f0c45c44a08bad5e3bbf078811591f13e7f02be1ce6d957a546b3fcce08c154b"
+      }
+    ]
+  },
+  "separate_local_structure_studies": {
+    "count": 2,
+    "counted_as_new_full_panorama_attempts": false,
+    "existing_six_reviews_modified": false,
+    "study_01": {
+      "image_sha256": "d63fd413527eebbf80486d5ade9fe7cc5a978f67495b4b34c41fc2e87f95aa8a",
+      "status": "local_structure_readability_improved_geometry_not_passed",
+      "review": {
+        "path": "next-step-yongning-study/independent-review.json",
+        "sha256": "13ab0a40c3b6b83960ca7aa894ac72646b5b6419cf51f557d24227f028939204"
+      },
+      "visible_storeys": {
+        "tower": 9,
+        "south_gate": 3
+      },
+      "canvas_aspect_preserved": false,
+      "whole_geometry_passed": false
+    },
+    "study_02": {
+      "image_sha256": "7456b5d932128ab74c5770dedfa5866f05b806f9fa08ff3214c884f5fe1ac70a",
+      "status": "suitable_as_local_structure_reference_with_partial_ground_checks",
+      "review": {
+        "path": "next-step-yongning-study/attempt-02/independent-review.json",
+        "sha256": "ce788a134e26bf1f81f631724f7c180f75ff6ea900512dfacde9c127f65b237a"
+      },
+      "visible_storeys": {
+        "tower": 9,
+        "south_gate": 3
+      },
+      "input_canvas": [
+        1536,
+        1536
+      ],
+      "output_canvas": [
+        1254,
+        1254
+      ],
+      "uniform_frame_scale": 0.81640625,
+      "same_named_visible_south_edge_samples": 8,
+      "ground_sample_status": "limited_agreement_not_whole_geometry_pass",
+      "reading_uncertainty_px_approx": 4,
+      "whole_geometry_passed": false,
+      "ready_for_direct_panorama_reintegration": false,
+      "accepted_as_homepage_candidate": false,
+      "layout_authority": "frozen SVG",
+      "use": "local structure and material reference only"
+    }
+  },
+  "research_limits": {
+    "source_geometries_in_common_projection": 89,
+    "source_vertices": 863,
+    "field_control_points_verified": 0,
+    "new_ancient_surveyed_coordinates": 0,
+    "new_shoreline_geometries": 0,
+    "new_verified_building_heights": 0,
+    "field_registration_verified": false,
+    "historical_elevation_reconstructed": false,
+    "frozen_ground_transform_may_be_changed_to_fit_generation": false,
+    "unknown_footprints_and_occluded_edges_remain_unverified": true
+  },
+  "next_step": [
+    "Use local study02 only as structure/material reference; frozen SVG remains the controlling layout input.",
+    "Check complete contours, corners, visible ground edges, wall endpoints and occlusion limits, then reintegrate using the same recorded display transform without per-object shifts or refitting H.",
+    "Use the 13-object palace ground viewport/register to retain Changhe components, Gate 2 and the surviving Gate 3 patch in the correct order; preserve open edges, scale-patch status and unresolved axis distances. Ground-up artistic hypotheses must remain identified as such.",
+    "Review actual panorama storey counts, separate gate/tower feet, full temple ground relations and palace-axis depth. After the complete candidate passes these checks, show that specific panorama to the user; retain homepage V12 until approval."
+  ],
+  "permanent_archive": {
+    "scope": "Protocol for assembling and independently verifying the technical-release archive; this document does not assert an archive commit or a completed archive readback.",
+    "sole_parent": "4579a6b8990a91780bf83391967c301218c0711e",
+    "only_added_prefix": "evidence/panorama-r12/2026-11-23/",
+    "parent_prefix_evidence": {
+      "path": "source-identity/archive-final-parent-scope.json",
+      "bytes": 526,
+      "sha256": "d5327160c62560db58abfd453bf9763029b6250275dce5889964f230c3a1384b"
+    },
+    "assembly_records_generated_by_parent": [
+      "assembly-scope.json",
+      "archive-inventory.json",
+      "archive-scope.json",
+      "archive-sensitive-scan.json"
+    ],
+    "assembly_record_rule": "Parent generates these records after assembly and includes them in the final frozen payload.",
+    "verification_rule": "Use the existing assemble/freeze/remote-byte-verify workflow. Verify the sole parent, prefix-only additions, all frozen paths/modes and independently fetched remote blob bytes.",
+    "external_results_location": "Actual remote archive commit and byte-readback proof belong in a separate verification branch and the final issue #52 handoff.",
+    "frozen_archive_is_not_rewritten_to_insert_its_own_commit_or_readback": true,
+    "main_is_not_modified_by_archive_preparation": true,
+    "retention_rule": "Retain actual browser-downloaded ZIP bytes; only verified Actions transport wrappers and exact fixed prior-terrain references may be omitted under assembly-scope."
+  },
+  "handoff": {
+    "scope": "Post-verification handoff protocol; no final issue comment or archive URL is asserted here.",
+    "issue_52_state": "OPEN",
+    "issue_47_state": "OPEN",
+    "already_sent_nonfinal_comments": [
+      {
+        "issue": 52,
+        "comment_id": 7102439255,
+        "url": "https://github.com/mechgouki/luoyang-city/issues/52#issuecomment-7102439255",
+        "purpose": "Technical pending continuation at 21:22 Shanghai, already sent by parent."
+      },
+      {
+        "issue": 47,
+        "comment_id": 7102531343,
+        "url": "https://github.com/mechgouki/luoyang-city/issues/47#issuecomment-7102531343",
+        "purpose": "Research checkpoint and next-step evidence, already sent by parent."
+      }
+    ],
+    "current_body_update_rule": "Re-read the latest issue body and replace only its R12 current-status block; preserve all historical sections and comments. Never overwrite current R12 progress with the initial R11 body snapshot.",
+    "final_handoff_rule": "Parent records actual archive/verification-branch links and independent remote readback in the final issue #52 handoff after those operations finish; #47 receives the corresponding research continuation. Existing failure/cancellation history remains.",
+    "proof_is_external_to_frozen_archive": true
+  },
+  "historical_build_report_inventory": {
+    "evidence": {
+      "path": "cross-checks/production-build-report-inventory.json",
+      "bytes": 492882,
+      "sha256": "8e26cadd314470f0914931cb997356c49d4c61ba171820167cb7cd289ba20eda"
+    },
+    "scope": "Only browser-build-evidence artifact14818624137 from cancelled historical production run45175501815; this is not the final production or live browser coverage.",
+    "summary": {
+      "artifact_member_count": 736,
+      "all_artifact_member_originals_verified": true,
+      "unique_cas_objects_verified": 618,
+      "browser_report_file_count": 62,
+      "browser_report_directory_count": 42,
+      "aggregate_report_file_count": 1,
+      "embedded_device_reports_also_retained_separately": 2,
+      "top_level_report_status_counts": {
+        "passed": 36,
+        "not_declared": 26
+      },
+      "report_files_with_source_commit_declared_anywhere": 30,
+      "report_files_without_source_commit": 32,
+      "all_declared_source_commits_match_artifact_head": true,
+      "report_files_with_hashed_screenshot_references": 30,
+      "hashed_screenshot_reference_records_including_aggregate_duplicates": 225,
+      "unique_screenshot_member_paths_verified_against_report_hash": 215,
+      "additional_path_only_screenshot_reference_records": 8,
+      "path_only_references_also_in_hash_registries": true,
+      "retained_raster_member_count": 419,
+      "raster_members_not_registered_in_selected_screenshot_hash_maps": 204,
+      "unregistered_raster_path_category_counts": {
+        "outside_downloads_directory": 196,
+        "under_downloads_directory": 8
+      },
+      "error_fields_inspected": 63,
+      "nonempty_error_fields": 0,
+      "anomaly_count": 0
+    },
+    "interpretation": "62 report files include one aggregate embedding two device reports. Only 36 explicitly declare top-level passed; 26 do not declare it. Thirty files declare source_commit, all matching 33c14be3; 32 do not. 225 hash references resolve to 215 unique screenshots. Do not call these counts independent test totals or label every raster file a screenshot."
+  },
+  "separate_palace_ground_control": {
+    "status": "actual_png_viewed_ground_control_window_usable_with_original_stroke_limits",
+    "readme": {
+      "path": "next-step-palace-control/README.md",
+      "bytes": 6304,
+      "sha256": "ad7c9a99beba38b95748e2a0ee477704e77d031f84c596ad349d256142332fdd"
+    },
+    "register": {
+      "path": "next-step-palace-control/control-register.json",
+      "bytes": 35296,
+      "sha256": "9f797bffae339c1d5e8b924d9fbdb51948fe5e1c9c243500a8957d80601247ed"
+    },
+    "source_svg": "research/panorama-r12/projection-clean.svg",
+    "source_sha256": "da975e1b4b3326bd976ff2ad9cd95b6aec230146422112971bcab58abe161c36",
+    "primary_objects_count": 13,
+    "groups_in_order": [
+      "Changhe Gate components",
+      "Gate 2 scale patch",
+      "Gate 3 early southern surviving scale patch",
+      "Taiji scale patch"
+    ],
+    "display_viewBox": [
+      590,
+      220,
+      110,
+      110
+    ],
+    "display_size_px": [
+      1536,
+      1536
+    ],
+    "uniform_scale": 13.963636363636363,
+    "source_children_bytes_unchanged": true,
+    "ground_homography_modified": false,
+    "source_geometry_modified": false,
+    "source_visibility_modified": false,
+    "height_parameters_modified": false,
+    "new_height_parameters": 0,
+    "new_ancient_coordinates": 0,
+    "field_registration_verified": false,
+    "unresolved_axis_conflict": {
+      "id": "palace-axis-length",
+      "source_path": "research/prosperity-v4/primary-source-audit.json",
+      "source_pointer": "/alternatives",
+      "source_map_symbol_distance_m_approx": 573.9,
+      "reported_chain_totals_m": [
+        375,
+        475
+      ],
+      "other_report_total_m": 460,
+      "same_endpoints_verified": false,
+      "adopted_policy": "保留06a两端点和95/80米近端候选链，不拉伸成闭合轴线。"
+    },
+    "no_new_upper_structure": [
+      "Existing R12 massing has only the Changhe main gate and Taiji upper placeholders in this region.",
+      "Gate 2 and Gate 3 do not receive upper bodies or height parameters in this control window.",
+      "Gate 3 remains the early surviving southern 40×10m scale patch, never a complete gate footprint."
+    ],
+    "independent_2013_markers_not_merged": [
+      {
+        "id": "r11-palace2013-P13-MARK-GATE1",
+        "source_ground_centre_px": [
+          650.0000000379441,
+          315.0000000301331
+        ],
+        "visible_in_clean_guide": false,
+        "reason": "2013宫城概览逐项时相未知，独立对照层不作为本轮地上建筑底稿。"
+      },
+      {
+        "id": "r11-palace2013-P13-MARK-GATE2",
+        "source_ground_centre_px": [
+          647.6198704466934,
+          298.02127760462093
+        ],
+        "visible_in_clean_guide": false,
+        "reason": "2013宫城概览逐项时相未知，独立对照层不作为本轮地上建筑底稿。"
+      },
+      {
+        "id": "r11-palace2013-P13-MARK-GATE3",
+        "source_ground_centre_px": [
+          645.4457262889182,
+          282.5119563544837
+        ],
+        "visible_in_clean_guide": false,
+        "reason": "2013宫城概览逐项时相未知，独立对照层不作为本轮地上建筑底稿。"
+      }
+    ],
+    "visual_inspection": {
+      "method": "Independent actual view of the 1536×1536 CairoSVG PNG; original projection overview, massing overview and S37 native gate plan also viewed.",
+      "primary_objects_inside_viewport": 13,
+      "four_groups_visible_in_order": [
+        "Changhe Gate components",
+        "Gate 2 scale template",
+        "Gate 3 early surviving southern-part scale template",
+        "Taiji scale template"
+      ],
+      "readable_use": [
+        "Locate the four existing ground-control groups in the unchanged projection.",
+        "Use register source coordinates and source geometry to identify all 13 objects.",
+        "Compare future separately identified objects to the same frozen projection."
+      ],
+      "limitations": [
+        "Original strokes enlarge uniformly with the viewport; the Changhe component strokes overlap densely.",
+        "Gate 3 is a shallow surviving-part template whose interior is partly obscured by the original stroke.",
+        "Stroke width is not building width; visual gaps or white areas are not evidence of absent buildings or permission to add walls.",
+        "For component boundaries, open ends and underground/direction semantics, read the exact register coordinates and original native local plan.",
+        "No full palace plan, elevation, historical phase synchronization or field registration is established."
+      ],
+      "geometry_pass_claim": false,
+      "new_panorama_candidate": false,
+      "homepage_approval": false
+    },
+    "limits": [
+      "Ground-control viewport only, not a complete palace model, elevation, full geometry pass or new panorama candidate.",
+      "Open gate/que/underground edges and connecting lines retain their original evidence roles; no courtyard, roof, width or height may be completed from them.",
+      "Original strokes were scaled with the viewport. Dense overlap and narrow Gate 3 traces require the source register/native image; stroke thickness, white space and dash gaps are not building dimensions or historical absence.",
+      "The existing candidate binding, uncertain measurement endpoints and conflicting axis reports remain unresolved."
+    ]
+  },
+  "research_checkpoint": {
+    "commit": "b91f102911753a95b378d88b1bbf80f8fd3599e2",
+    "tree": "874068c8e49fa7555a2c31c9fc7e1d813c58b32f",
+    "unique_parent": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+    "prefix": "research/panorama-r12/local-controls-20261123/",
+    "readme_url": "https://github.com/mechgouki/luoyang-city/blob/b91f102911753a95b378d88b1bbf80f8fd3599e2/research/panorama-r12/local-controls-20261123/README.md",
+    "remote_byte_verification_status": "passed",
+    "files_checked": 22,
+    "total_bytes": 3044036,
+    "original_staging_files_compared": 21,
+    "original_staging_files_unchanged": true,
+    "receipt": {
+      "path": "cross-checks/local-controls-remote-checkpoint.json",
+      "bytes": 2772,
+      "sha256": "0152f0d9981932a5a47d24348bececbcd170d4d41d6c90a483dd5366caee75b8"
+    },
+    "per_file_proof": {
+      "path": "cross-checks/local-controls-provenance/remote-verification.json",
+      "bytes": 21778,
+      "sha256": "562bdf9ae04a42a3063c94d5ff72d1262057d968b63b819343406b7c43bcb156"
+    },
+    "file_manifest": {
+      "path": "cross-checks/local-controls-provenance/file-manifest.json",
+      "bytes": 27846,
+      "sha256": "81b6d8305549666857901ebaf277e87693ac02ba5a1e7f82553bbcc9f320ec8f"
+    },
+    "scope": "Separate research checkpoint for two local Yongning studies plus the palace ground-control viewport. It does not certify the pending production release or approve a homepage image."
+  },
+  "source_current_state_identity": {
+    "commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "path": "research/current-state.json",
+    "mode": "100644",
+    "git_blob": "7dae2c65fd906c668db9f0c131ad285bcdb38ad6",
+    "bytes": 2420,
+    "sha256": "37fe3daee9cb9fdca6ec9e52493113fb5a333fd1601cd418dd5a759a6af917f9",
+    "source_manifest": {
+      "path": "source-identity/production-4579a6b8-source-manifest.json",
+      "bytes": 20387,
+      "sha256": "dfe8360d93316600b941df1fdbf936394ecacbbe397e37c6f01d2d189db0b9af",
+      "git_blob_sha1": "2a9ecaca4561285d1f0644fe7e6ff23229335166"
+    },
+    "source_publication_status": "pending_verification",
+    "meaning": "This exact main-branch source file is the preacceptance snapshot. The separately derived current-state-after-acceptance.json records the verified technical outcome without changing main or triggering a new deployment.",
+    "separate_after_acceptance_record": "current-state-after-acceptance.json",
+    "main_file_modified": false,
+    "new_deployment_triggered_by_this_record": false
+  },
+  "is_final_technical_acceptance": true,
+  "acceptance_scope": "Technical publication, source identity, complete production CI, preserved browser/download originals and independent public-resource readback. The panorama image remains rejected; archive publication/readback follows the separate protocol below.",
+  "technical_acceptance_recorded_at_utc": "2026-11-23T14:06:48.197032+00:00",
+  "technical_acceptance_recorded_at_shanghai": "2026-11-23T22:06:48.197032+08:00",
+  "evidence_review_completed_at_utc": "2026-11-23T14:02:03.111122+00:00",
+  "evidence_review_completed_at_shanghai": "2026-11-23T22:02:03.111122+08:00",
+  "collector_mapping_correction": {
+    "classification": "Derived collector path expectation correction; not a CI or browser-report failure.",
+    "initial_derived_check": {
+      "path": "production-45182742216-a1/live-all-browser-reports-check.json",
+      "bytes": 25879,
+      "sha256": "73dbc3b273bf9dc234e9f50d92cc288b24ed8d09e9966b67578fb9b1d93f0a8a",
+      "git_blob_sha1": "d3af3d65c3746f54fc6eb66105cafb41bbb570cd"
+    },
+    "preserved_initial_copy": {
+      "path": "production-45182742216-a1/live-all-browser-reports-check-initial-mapping.json",
+      "bytes": 25879,
+      "sha256": "73dbc3b273bf9dc234e9f50d92cc288b24ed8d09e9966b67578fb9b1d93f0a8a",
+      "git_blob_sha1": "d3af3d65c3746f54fc6eb66105cafb41bbb570cd"
+    },
+    "initial_status": "failed_on_four_expected_paths_only",
+    "corrected_check": {
+      "path": "production-45182742216-a1/live-all-browser-reports-check-v2.json",
+      "bytes": 25486,
+      "sha256": "5d4c566ad1fc82296c24d1c5559c4d3fa8731cccdae56c88d8391d376b08063a",
+      "git_blob_sha1": "b4f36f5699f32ff6bde379a8fb5a0f66a0f6469e"
+    },
+    "corrected_status": "passed",
+    "mapping_evidence": {
+      "path": "production-45182742216-a1/browser-output-mapping-v2.json",
+      "bytes": 28456,
+      "sha256": "4a5753f4a17a83c3f7c04c7f91e51e3a5661147405d96534b8b61037a53971b5",
+      "git_blob_sha1": "842a18db00c3c831a28ef331fc8105d7b7c1a558"
+    },
+    "exact_directory_overrides": {
+      "prosperity-city-common-p470-browser": "live-city-common-p470-browser",
+      "prosperity-city-north-p471-browser": "live-city-north-p471-browser"
+    },
+    "scope": "Only these two exact directory names are overridden; no generic removal of prosperity prefixes.",
+    "all_42_live_script_outputs_matched": true,
+    "all_62_original_report_contents_inspected": true,
+    "source_workflow_or_original_reports_changed": false,
+    "ci_failure": false
+  },
+  "evidence_inputs_verified": [
+    {
+      "path": "cas/ingests/production-45182742216-a1-build.json",
+      "bytes": 270150,
+      "sha256": "f5a1f062ac64c2ec66be7b65c0b25a4a6ab54eed425147a70c31ce5880f37d29",
+      "git_blob_sha1": "67241a90deb27fb106ea3a2d93e710e36be0190e"
+    },
+    {
+      "path": "cas/ingests/production-45182742216-a1-live.json",
+      "bytes": 257397,
+      "sha256": "57d2e632198f1cc6e0e470a120fec7d3a3352bdb35c08b6a3144e3b0ba54f8a1",
+      "git_blob_sha1": "a28799915e2dc5cd284d2e62454d01acbef871c9"
+    },
+    {
+      "path": "cas/ingests/production-45182742216-a1-pages.json",
+      "bytes": 235028,
+      "sha256": "fab151b1ff2dee6ad37d754e88ee24c56db6b7843b2cf21aa89df4063ff08669",
+      "git_blob_sha1": "3a33994aa989ea5cb90fdb09464dc4c41a06aae6"
+    },
+    {
+      "path": "cross-checks/local-controls-remote-checkpoint.json",
+      "bytes": 2772,
+      "sha256": "0152f0d9981932a5a47d24348bececbcd170d4d41d6c90a483dd5366caee75b8",
+      "git_blob_sha1": "6ed40a02cb7d0e87af5dfc8fe553db08f7cf5ac8"
+    },
+    {
+      "path": "production-45182742216-a1/api/api-jobs-attempt1-final.json",
+      "bytes": 8387,
+      "sha256": "632903cbcc92f3aba9a374557eadd5a711a479471295d46cceb4cd8cafc468a2",
+      "git_blob_sha1": "c85fbebbd665b921e9e2d69986cd29b6caa8d084"
+    },
+    {
+      "path": "production-45182742216-a1/api/api-run-final.json",
+      "bytes": 12734,
+      "sha256": "c4c798676eb3669de1809908977f12fa30dd187cb81110d1b4fc6ba875fb0600",
+      "git_blob_sha1": "c1b45c998cd12d670d24e8c85a81e516b1045219"
+    },
+    {
+      "path": "production-45182742216-a1/api/artifact-14822673608-from-run-list.json",
+      "bytes": 687,
+      "sha256": "448550882eebbb1a4bce498fd85ca4f721baa94e530b5b86ad59b006de564c18",
+      "git_blob_sha1": "0c2729adb07f2da6f6d62eb2bc66c16d10a7f629"
+    },
+    {
+      "path": "production-45182742216-a1/api/artifact-14822698496-from-run-list.json",
+      "bytes": 697,
+      "sha256": "909d1f560172cc0b29225d811dec172863410ee8f57cdb47f219e3fe173cb54c",
+      "git_blob_sha1": "0f14c7721d4d7ae4fed33a7d32e4f1d2474e37e0"
+    },
+    {
+      "path": "production-45182742216-a1/api/artifact-14825235104-from-run-list.json",
+      "bytes": 699,
+      "sha256": "dba4cc503bf6fe994a2a86952dfe45931435c9e235b7b6994a15a39b35403728",
+      "git_blob_sha1": "1c0a5be664da2a2c309b1c65b1669afd690aedd3"
+    },
+    {
+      "path": "production-45182742216-a1/browser-output-mapping-v2.json",
+      "bytes": 28456,
+      "sha256": "4a5753f4a17a83c3f7c04c7f91e51e3a5661147405d96534b8b61037a53971b5",
+      "git_blob_sha1": "842a18db00c3c831a28ef331fc8105d7b7c1a558"
+    },
+    {
+      "path": "production-45182742216-a1/build-all-browser-reports-check.json",
+      "bytes": 24957,
+      "sha256": "5d0363ff2e741f195bc9b24d9b6f5120952b8551e59d35b7134c3e3a88c385b7",
+      "git_blob_sha1": "abf9eeaaf027dc16a917d36e925ff1fc0d955fba"
+    },
+    {
+      "path": "production-45182742216-a1/build-browser-download-cross-check.json",
+      "bytes": 976,
+      "sha256": "0ee398787614ee10313bb997c1637efb855adcd415497338ca45d417eca9b3fb",
+      "git_blob_sha1": "b37a999a3397ee29e406297584705b51f4298c0c"
+    },
+    {
+      "path": "production-45182742216-a1/collection-summary.json",
+      "bytes": 45125,
+      "sha256": "75fdbbc1ed6543fca088b7d3b73260b1e5fdf95f7f9d95acaa508b4518203be0",
+      "git_blob_sha1": "90acb07fe815c9de6e88b9d067bcce897e346b90"
+    },
+    {
+      "path": "production-45182742216-a1/download-receipt-14822673608.json",
+      "bytes": 344,
+      "sha256": "b66b450bd10e654419e48079e3d2aa8f7264c526ce2d016cf52833d3be00c1c5",
+      "git_blob_sha1": "68a9fbb8051ff55da3c2f23f83a5a7419d884f8f"
+    },
+    {
+      "path": "production-45182742216-a1/download-receipt-14822698496.json",
+      "bytes": 354,
+      "sha256": "b6adef896e7083d021fe90572a02fd9229f89fc38e53e76da3d0fc34e7421228",
+      "git_blob_sha1": "768d2a5f64a9f1b22a78165c43c760f78be50768"
+    },
+    {
+      "path": "production-45182742216-a1/download-receipt-14825235104.json",
+      "bytes": 360,
+      "sha256": "92134986aab4227cd257ea46afd7a164bb66db612db9a265024ad0506f609686",
+      "git_blob_sha1": "3c699f1fa5077b7af6b869c98242ad0d003a4854"
+    },
+    {
+      "path": "production-45182742216-a1/live-all-browser-reports-check-initial-mapping.json",
+      "bytes": 25879,
+      "sha256": "73dbc3b273bf9dc234e9f50d92cc288b24ed8d09e9966b67578fb9b1d93f0a8a",
+      "git_blob_sha1": "d3af3d65c3746f54fc6eb66105cafb41bbb570cd"
+    },
+    {
+      "path": "production-45182742216-a1/live-all-browser-reports-check-v2.json",
+      "bytes": 25486,
+      "sha256": "5d4c566ad1fc82296c24d1c5559c4d3fa8731cccdae56c88d8391d376b08063a",
+      "git_blob_sha1": "b4f36f5699f32ff6bde379a8fb5a0f66a0f6469e"
+    },
+    {
+      "path": "production-45182742216-a1/live-all-browser-reports-check.json",
+      "bytes": 25879,
+      "sha256": "73dbc3b273bf9dc234e9f50d92cc288b24ed8d09e9966b67578fb9b1d93f0a8a",
+      "git_blob_sha1": "d3af3d65c3746f54fc6eb66105cafb41bbb570cd"
+    },
+    {
+      "path": "production-45182742216-a1/live-http-manifest-cross-check.json",
+      "bytes": 751,
+      "sha256": "e779db2bdb4f368c6b3e957b948d9f5e4542ea0d58f418c383cb32b6d2786c9e",
+      "git_blob_sha1": "13e4dec56a3fd21da427975f62262dcad0d6d83b"
+    },
+    {
+      "path": "production-45182742216-a1/live-http-original.json",
+      "bytes": 231095,
+      "sha256": "8d655e347a9bb6fb55deeca4b5f5d625e62dd22b3ef97997ab0012683d51fc05",
+      "git_blob_sha1": "935c0365b823e01ba0d955f0904f33414c5218af"
+    },
+    {
+      "path": "production-45182742216-a1/live-v14-browser-download-cross-check.json",
+      "bytes": 985,
+      "sha256": "bbdadde4d4ca34244052b9ee4fe771f9b8a482a3df99fc792e52ca05f3a5b024",
+      "git_blob_sha1": "eef884cfc04b68c2aa2f1e1fdc793eedb6e58368"
+    },
+    {
+      "path": "production-45182742216-a1/logs/job-137720438238-raw.log",
+      "bytes": 283712,
+      "sha256": "1fcb8753efc4d2e13234bf2c3c128b4f022da3e43ee9cdcb53bf44c1bf60c767",
+      "git_blob_sha1": "8f8f9b5e831f53d55d28f2a42e3dccd2f05ecd2f"
+    },
+    {
+      "path": "production-45182742216-a1/logs/job-137727902581-raw.log",
+      "bytes": 4586,
+      "sha256": "7cc3b55027e57c7c29cd76c85399587a4f5e98e22b2fd1780e76d04edfa1793c",
+      "git_blob_sha1": "b40ce083048f187ae13604444e71d196c9e80f0a"
+    },
+    {
+      "path": "production-45182742216-a1/logs/job-137728114930-raw.log",
+      "bytes": 67031,
+      "sha256": "1683223a7e50c2299e4550fe20b80e976cf96f00f5ac8eb3d9012b399d1ff2be",
+      "git_blob_sha1": "9532c6da0a8f529f6ab025652a332511e8717b82"
+    },
+    {
+      "path": "production-45182742216-a1/pages-build-info-original.json",
+      "bytes": 806833,
+      "sha256": "00c438d6dad74ad252785072f2adaea91281e0067d661950b09c882cdacab6b8",
+      "git_blob_sha1": "acd8c10bdbe1566ac685e2afae5dd15ba1364b74"
+    },
+    {
+      "path": "production-45182742216-a1/pages-identity-check.json",
+      "bytes": 608,
+      "sha256": "ee0a5a65078fb5e2a00a1bf1bc1c9353a7e9c7d3198fbff858470dfb720ff0d9",
+      "git_blob_sha1": "43ff3ef246ef6f621a88e55d8a183da9d580b15b"
+    },
+    {
+      "path": "production-45182742216-a1/source-files/pages.yml",
+      "bytes": 21518,
+      "sha256": "8db121edd86089cdad99d7a954afbdced0bb34dec0d0717b2dec1ac666e215c3",
+      "git_blob_sha1": "db95e37e34ef8fee4485f68f87b361f1559ec00a"
+    },
+    {
+      "path": "production-45182742216-a1/source-tree-identity-check.json",
+      "bytes": 647,
+      "sha256": "f1d4aed36adf990021e23331e525fb240dbbf771d3a827a0ce5c6966cc56953b",
+      "git_blob_sha1": "e1b282c5acde172762b7225b56a0e7f98cfe3335"
+    },
+    {
+      "path": "root-live-4579a6b8/pages-build-info-cross-check.json",
+      "bytes": 870,
+      "sha256": "e37450949923ee330a8d45d07ca144612e9529475f45cd1371f6b6a815c3128a",
+      "git_blob_sha1": "d3f39369c062c7d3fe75628d57f6c0eaf12d6d08"
+    },
+    {
+      "path": "root-live-4579a6b8/readback.json",
+      "bytes": 33285,
+      "sha256": "0606b7506a882b0f9fe2d878057f4645603b978d5544464f4dac203ce4b9eb28",
+      "git_blob_sha1": "8edebf971d92dedbe7fa55fe5d58e7589488a699"
+    },
+    {
+      "path": "root-live-4579a6b8/ui-publication-continuity.json",
+      "bytes": 3432,
+      "sha256": "b09b34068d9924c56f875f9b2daa0f81155bc26ca5bdbdb543c2713453cbefdb",
+      "git_blob_sha1": "78fdf6c868873f8767bca82e9add27658db5bcc3"
+    },
+    {
+      "path": "root-ui-pre-fix/ui-inspection.json",
+      "bytes": 1146,
+      "sha256": "691a7e3825bbc24f477c6c891bbae4624c1176f854a23323c3c1e907c17a61b6",
+      "git_blob_sha1": "458a2e3715b12c108c3d73c49d6e7d8dc2daa3f5"
+    },
+    {
+      "path": "source-identity/archive-final-parent-scope.json",
+      "bytes": 526,
+      "sha256": "d5327160c62560db58abfd453bf9763029b6250275dce5889964f230c3a1384b",
+      "git_blob_sha1": "87f4ae922d8201b62448317d26d36a48008b4589"
+    },
+    {
+      "path": "source-identity/production-4579a6b8-source-manifest.json",
+      "bytes": 20387,
+      "sha256": "dfe8360d93316600b941df1fdbf936394ecacbbe397e37c6f01d2d189db0b9af",
+      "git_blob_sha1": "2a9ecaca4561285d1f0644fe7e6ff23229335166"
+    }
+  ],
+  "evidence_review_method": "Read preserved final APIs/logs, same-run Pages/build/live CAS originals and independent root public bytes. Check report and download identities, source commits and completion evidence without rerunning project tests."
+}

@@ -1,0 +1,443 @@
+{
+  "base_url": "http://127.0.0.1:40915/luoyang-city/",
+  "device": "mobile",
+  "status": "passed",
+  "checks": [
+    "P468 visible entry actually opens P469",
+    "frame-06a: real tab, complete map screenshot, reload, zoom/native scroll/reset and modern-river scope",
+    "frame-qian2018: real tab, complete map screenshot, reload, zoom/native scroll/reset and modern-river scope",
+    "Daxia and Qianqiu SVG markers, Guangmo list choice and reload show only their assigned water evidence",
+    "Palace Changhe and Jianchun SVG clicks show original K01/K02 records, grades, bridge-event scope, reload and actual P453/back navigation",
+    "Jianchun entry and reload preserve the selected gate; both source diagrams load; control and date disclosures work",
+    "Combined map/anchor/W20 deep link, W20/W21 correction and ordinary source-method anchor survive reload",
+    "Actual browser downloads: two-page PDF, two SVGs, offline ZIP and all manifest JSON; 14 matching hashes",
+    "No-JS keeps both full maps, nine water contexts plus both original urban clusters and bridge events, 34 water rows, I09 correction and unknown boundaries",
+    "P469 header returns to P468"
+  ],
+  "download_sha256": {
+    "backbone-469/bundle-manifest.json": "57a30f3f24bc33d2cf0361e96377d2c4e9ab58424dca0d1cc777ae49654410a5",
+    "backbone-469/frame-06a.svg": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04",
+    "backbone-469/frame-qian2018.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+    "backbone-469/jianchun-plan-audit.json": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f",
+    "backbone-469/jianchun-source-context.svg": "eaf696a70f7df2d446305599c9c679ab2cb48032fe9f556b834b62a72799528d",
+    "backbone-469/jianchun-structure-reading.svg": "197be999a471879cf60884485ded7bd3fcbabfca52b897587d0c82f582a17377",
+    "backbone-469/readings.json": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+    "backbone-469/road01-image-access.json": "b98eb82115c972e1fec7001aa4d5dd8695216260582dfc6130dc7c0548d3df87",
+    "backbone-469/road01-source-audit.json": "7ecaf20678c961f281216e370019fe9206f68bc118375e532c85b92072b7ff2d",
+    "backbone-469/road02-access-20261119.json": "7ab1095c05960cbee6473aad0a2751767e285195c47a16b8a253fae6aa87eabe",
+    "backbone-469/source-frame-audit.json": "37f6fa59bdab5d2a7747ba328e34544b4d2c9a2c58ee51be71997b72460e9405",
+    "backbone-469/urban-contexts.json": "47817e58ea63ccea1c3f2c83e4914333c6886ac30c6c6af0c182e77da406e6d7",
+    "downloads/backbone-469.pdf": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6",
+    "downloads/backbone-469.zip": "b8a4de4bca3f5baa84361b876df3b453105a9e371314ba8b58d3a3401781c979"
+  },
+  "map_bounds": {
+    "frame-06a": {
+      "viewport": {
+        "x": 19,
+        "y": 23.953125,
+        "width": 352,
+        "height": 283.546875
+      },
+      "svg": {
+        "x": 19,
+        "y": 23.953125,
+        "width": 352,
+        "height": 283.546875
+      }
+    },
+    "frame-qian2018": {
+      "viewport": {
+        "x": 19,
+        "y": 23.953125,
+        "width": 352,
+        "height": 283.546875
+      },
+      "svg": {
+        "x": 19,
+        "y": 23.953125,
+        "width": 352,
+        "height": 283.546875
+      }
+    }
+  },
+  "contexts": {
+    "geo-daxia-gate": [
+      "P467/outer/O03",
+      "P467/inner/I01"
+    ],
+    "geo-qianqiu-gate": [
+      "P467/inner/I03",
+      "P467/inner/I04",
+      "P467/inner/I05",
+      "P468/palace-pools-audit/H03",
+      "P468/palace-pools-audit/H04"
+    ],
+    "geo-guangmo-gate": [
+      "P467/outer/O04",
+      "P467/outer/O05"
+    ]
+  },
+  "urban_contexts": {
+    "geo-changhe-palace-gate": {
+      "cluster": "K01",
+      "edge_ids": [
+        "K01E01",
+        "K01E02",
+        "K01E03",
+        "K01E04",
+        "K01E05",
+        "K01E06",
+        "K01E07",
+        "K01E08"
+      ],
+      "event_ids": [],
+      "source_page": "prosperity-street-clusters.html?cluster=K01&grade=all"
+    },
+    "geo-jianchun-gate": {
+      "cluster": "K02",
+      "edge_ids": [
+        "K02E01",
+        "K02E02",
+        "K02E03",
+        "K02E04",
+        "K02E05"
+      ],
+      "event_ids": [
+        "K02T01",
+        "K02T02"
+      ],
+      "source_page": "prosperity-street-clusters.html?cluster=K02&grade=all"
+    }
+  },
+  "errors": [],
+  "download_policy": {
+    "minimum_click_interval_seconds": 0.15,
+    "automatic_retries": 0,
+    "event_timeout_ms": 30000
+  },
+  "download_attempts": [
+    {
+      "path": "backbone-469/bundle-manifest.json",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/bundle-manifest.json",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#source-method",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:35.438948+00:00",
+      "attempt_started_seconds": 2.4215999928856036e-05,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/bundle-manifest.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 0.020463008999968224,
+      "click_call_started_utc": "2026-11-23T13:28:35.459400+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/bundle-manifest.json",
+      "suggested_filename": "bundle-manifest.json",
+      "bytes": 3424,
+      "sha256": "57a30f3f24bc33d2cf0361e96377d2c4e9ab58424dca0d1cc777ae49654410a5",
+      "completed_seconds": 2.5341231389999166
+    },
+    {
+      "path": "backbone-469/frame-06a.svg",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/frame-06a.svg",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-06a",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:37.974386+00:00",
+      "attempt_started_seconds": 2.5354598459999806,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/frame-06a.svg",
+      "download_attribute": "",
+      "click_call_started_seconds": 2.597621143999959,
+      "click_call_started_utc": "2026-11-23T13:28:38.036558+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/frame-06a.svg",
+      "suggested_filename": "frame-06a.svg",
+      "bytes": 37894,
+      "sha256": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04",
+      "completed_seconds": 2.63662125999997
+    },
+    {
+      "path": "backbone-469/frame-qian2018.svg",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/frame-qian2018.svg",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:38.076824+00:00",
+      "attempt_started_seconds": 2.6378965549999975,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/frame-qian2018.svg",
+      "download_attribute": "",
+      "click_call_started_seconds": 2.748727621999933,
+      "click_call_started_utc": "2026-11-23T13:28:38.187665+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/frame-qian2018.svg",
+      "suggested_filename": "frame-qian2018.svg",
+      "bytes": 16502,
+      "sha256": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+      "completed_seconds": 2.7664308710000114
+    },
+    {
+      "path": "backbone-469/jianchun-plan-audit.json",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/jianchun-plan-audit.json",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:38.206725+00:00",
+      "attempt_started_seconds": 2.767797893999955,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/jianchun-plan-audit.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 2.8998958839999887,
+      "click_call_started_utc": "2026-11-23T13:28:38.338834+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/jianchun-plan-audit.json",
+      "suggested_filename": "jianchun-plan-audit.json",
+      "bytes": 15772,
+      "sha256": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f",
+      "completed_seconds": 2.953793502999929
+    },
+    {
+      "path": "backbone-469/jianchun-source-context.svg",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/jianchun-source-context.svg",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:38.394022+00:00",
+      "attempt_started_seconds": 2.955095508999989,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/jianchun-source-context.svg",
+      "download_attribute": "",
+      "click_call_started_seconds": 3.0502054510000107,
+      "click_call_started_utc": "2026-11-23T13:28:38.489144+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/jianchun-source-context.svg",
+      "suggested_filename": "jianchun-source-context.svg",
+      "bytes": 7572,
+      "sha256": "eaf696a70f7df2d446305599c9c679ab2cb48032fe9f556b834b62a72799528d",
+      "completed_seconds": 3.1036205749999226
+    },
+    {
+      "path": "backbone-469/jianchun-structure-reading.svg",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/jianchun-structure-reading.svg",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:38.543969+00:00",
+      "attempt_started_seconds": 3.105043842999976,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/jianchun-structure-reading.svg",
+      "download_attribute": "",
+      "click_call_started_seconds": 3.201662175000024,
+      "click_call_started_utc": "2026-11-23T13:28:38.640601+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/jianchun-structure-reading.svg",
+      "suggested_filename": "jianchun-structure-reading.svg",
+      "bytes": 3955,
+      "sha256": "197be999a471879cf60884485ded7bd3fcbabfca52b897587d0c82f582a17377",
+      "completed_seconds": 3.2157966190000025
+    },
+    {
+      "path": "backbone-469/readings.json",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/readings.json",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:38.655977+00:00",
+      "attempt_started_seconds": 3.2170480989999533,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/readings.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 3.3528331259999504,
+      "click_call_started_utc": "2026-11-23T13:28:38.791771+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/readings.json",
+      "suggested_filename": "readings.json",
+      "bytes": 468561,
+      "sha256": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+      "completed_seconds": 3.3922024249999367
+    },
+    {
+      "path": "backbone-469/road01-image-access.json",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/road01-image-access.json",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:38.832920+00:00",
+      "attempt_started_seconds": 3.3939949069999784,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/road01-image-access.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 3.504029859999946,
+      "click_call_started_utc": "2026-11-23T13:28:38.942969+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/road01-image-access.json",
+      "suggested_filename": "road01-image-access.json",
+      "bytes": 1977,
+      "sha256": "b98eb82115c972e1fec7001aa4d5dd8695216260582dfc6130dc7c0548d3df87",
+      "completed_seconds": 3.5324566539999296
+    },
+    {
+      "path": "backbone-469/road01-source-audit.json",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/road01-source-audit.json",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:38.973256+00:00",
+      "attempt_started_seconds": 3.534327855000015,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/road01-source-audit.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 3.6550343049999583,
+      "click_call_started_utc": "2026-11-23T13:28:39.093973+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/road01-source-audit.json",
+      "suggested_filename": "road01-source-audit.json",
+      "bytes": 9392,
+      "sha256": "7ecaf20678c961f281216e370019fe9206f68bc118375e532c85b92072b7ff2d",
+      "completed_seconds": 3.6827229659999148
+    },
+    {
+      "path": "backbone-469/road02-access-20261119.json",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/road02-access-20261119.json",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:39.122908+00:00",
+      "attempt_started_seconds": 3.683979552999972,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/road02-access-20261119.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 3.805879250999965,
+      "click_call_started_utc": "2026-11-23T13:28:39.244818+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/road02-access-20261119.json",
+      "suggested_filename": "road02-access-20261119.json",
+      "bytes": 8823,
+      "sha256": "7ab1095c05960cbee6473aad0a2751767e285195c47a16b8a253fae6aa87eabe",
+      "completed_seconds": 3.885710084999914
+    },
+    {
+      "path": "backbone-469/source-frame-audit.json",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/source-frame-audit.json",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:39.325928+00:00",
+      "attempt_started_seconds": 3.8870007030000124,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/source-frame-audit.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 3.9565458339999395,
+      "click_call_started_utc": "2026-11-23T13:28:39.395484+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/source-frame-audit.json",
+      "suggested_filename": "source-frame-audit.json",
+      "bytes": 38599,
+      "sha256": "37f6fa59bdab5d2a7747ba328e34544b4d2c9a2c58ee51be71997b72460e9405",
+      "completed_seconds": 3.9830007619999606
+    },
+    {
+      "path": "backbone-469/urban-contexts.json",
+      "url": "http://127.0.0.1:40915/luoyang-city/backbone-469/urban-contexts.json",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:39.423285+00:00",
+      "attempt_started_seconds": 3.9843569189999926,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/urban-contexts.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 4.107843604999971,
+      "click_call_started_utc": "2026-11-23T13:28:39.546782+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/backbone-469/urban-contexts.json",
+      "suggested_filename": "urban-contexts.json",
+      "bytes": 33551,
+      "sha256": "47817e58ea63ccea1c3f2c83e4914333c6886ac30c6c6af0c182e77da406e6d7",
+      "completed_seconds": 4.141426808999995
+    },
+    {
+      "path": "downloads/backbone-469.pdf",
+      "url": "http://127.0.0.1:40915/luoyang-city/downloads/backbone-469.pdf",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:39.581805+00:00",
+      "attempt_started_seconds": 4.142877466999948,
+      "responses": [],
+      "request_failures": [],
+      "href": "./downloads/backbone-469.pdf",
+      "download_attribute": "",
+      "click_call_started_seconds": 4.257471306999946,
+      "click_call_started_utc": "2026-11-23T13:28:39.696410+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/downloads/backbone-469.pdf",
+      "suggested_filename": "backbone-469.pdf",
+      "bytes": 1051225,
+      "sha256": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6",
+      "completed_seconds": 4.306421741000008
+    },
+    {
+      "path": "downloads/backbone-469.zip",
+      "url": "http://127.0.0.1:40915/luoyang-city/downloads/backbone-469.zip",
+      "status": "passed",
+      "page_url": "http://127.0.0.1:40915/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T13:28:39.746638+00:00",
+      "attempt_started_seconds": 4.3077115789999425,
+      "responses": [],
+      "request_failures": [],
+      "href": "./downloads/backbone-469.zip",
+      "download_attribute": "",
+      "click_call_started_seconds": 4.407383356999958,
+      "click_call_started_utc": "2026-11-23T13:28:39.846322+00:00",
+      "download_url": "http://127.0.0.1:40915/luoyang-city/downloads/backbone-469.zip",
+      "suggested_filename": "backbone-469.zip",
+      "bytes": 1211901,
+      "sha256": "b8a4de4bca3f5baa84361b876df3b453105a9e371314ba8b58d3a3401781c979",
+      "completed_seconds": 4.515099035999924
+    }
+  ],
+  "download_target": null
+}

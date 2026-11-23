@@ -1,0 +1,30 @@
+{
+  "schema": "luoyang-r12-local-controls-provenance-retention-v1",
+  "records": [
+    {
+      "source_record": "remote-verification.json",
+      "retained_record": "remote-verification.json",
+      "bytes": 21778,
+      "sha256": "562bdf9ae04a42a3063c94d5ff72d1262057d968b63b819343406b7c43bcb156"
+    },
+    {
+      "source_record": "file-manifest.json",
+      "retained_record": "file-manifest.json",
+      "bytes": 27846,
+      "sha256": "81b6d8305549666857901ebaf277e87693ac02ba5a1e7f82553bbcc9f320ec8f"
+    },
+    {
+      "source_record": "receipts/remote-branch-fetch.json",
+      "retained_record": "remote-branch-fetch.json",
+      "bytes": 554,
+      "sha256": "91264297881bb550e204808591afab35a544ec4e473f447929786104ac9653a5"
+    },
+    {
+      "source_record": "files/README.md",
+      "retained_record": "checkpoint-README.md",
+      "bytes": 4157,
+      "sha256": "f2e111169d35878c3f12ce5936f4f2e7f7b125a17a23e16a46573aa2effcafaa"
+    }
+  ],
+  "scope": "The full independent per-file remote verification, its frozen expected file manifest, the actual fresh branch-fetch receipt and the remote checkpoint README are retained here. This does not copy the bare object store, transport data or every intermediate request receipt. Original 21 research files remain separately in next-step-yongning-study and next-step-palace-control; the research checkpoint commit is independently addressable."
+}

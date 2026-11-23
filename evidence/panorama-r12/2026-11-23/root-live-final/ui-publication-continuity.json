@@ -1,0 +1,68 @@
+{
+  "schema": "luoyang-r12-root-ui-publication-continuity-v1",
+  "checked_at_utc": "2026-11-23T12:51:30.009337+00:00",
+  "status": "observed_page_and_display_assets_unchanged",
+  "original_interactive_observation": "root-ui-pre-fix/ui-inspection.json",
+  "observed_source_commit": "fa5398b0a8ecbd14d4a40f1fdd249b441e6be0b5",
+  "final_public_source_commit": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+  "final_public_readback": "root-live-final/readback.json",
+  "matched_files": [
+    {
+      "path": "luoyang-panorama-v14.html",
+      "before_sha256": "9faa8fcf5143056cd03e814b35b03d1f641cd324a888aa8f7b5d2b756ea562fe",
+      "final_public_sha256": "9faa8fcf5143056cd03e814b35b03d1f641cd324a888aa8f7b5d2b756ea562fe",
+      "same_actual_bytes": true
+    },
+    {
+      "path": "panorama-v14/review.css",
+      "before_sha256": "d75dadf608000019fff8179a1d296ede00d1ac53d2b2bee3db3789fc5e6963be",
+      "final_public_sha256": "d75dadf608000019fff8179a1d296ede00d1ac53d2b2bee3db3789fc5e6963be",
+      "same_actual_bytes": true
+    },
+    {
+      "path": "panorama-v14/review.js",
+      "before_sha256": "729e2a3a3e736b48b5879f4cbcc93f4277e281bd8fbd6f07dede5524caed5e17",
+      "final_public_sha256": "729e2a3a3e736b48b5879f4cbcc93f4277e281bd8fbd6f07dede5524caed5e17",
+      "same_actual_bytes": true
+    },
+    {
+      "path": "panorama-v14/v14.webp",
+      "before_sha256": "bd1c3c44f836a1473f3deeda73b48a6f558812b58a7a300beebf291b5e157066",
+      "final_public_sha256": "bd1c3c44f836a1473f3deeda73b48a6f558812b58a7a300beebf291b5e157066",
+      "same_actual_bytes": true
+    },
+    {
+      "path": "panorama-v14/v14-small.webp",
+      "before_sha256": "3a36f9b4729891bdae2edaf9b264792ea459adca5864768252b1e97f7443ed0f",
+      "final_public_sha256": "3a36f9b4729891bdae2edaf9b264792ea459adca5864768252b1e97f7443ed0f",
+      "same_actual_bytes": true
+    },
+    {
+      "path": "panorama-v14/v13r2.webp",
+      "before_sha256": "1dcddaf559dce7dc47017b3c257d684c78ffef9b4c459eab869a9ca782cbdf57",
+      "final_public_sha256": "1dcddaf559dce7dc47017b3c257d684c78ffef9b4c459eab869a9ca782cbdf57",
+      "same_actual_bytes": true
+    },
+    {
+      "path": "panorama-v14/v13r2-small.webp",
+      "before_sha256": "abcc8c8581f4f2bd710ccbe4e960f0aa9236cdd176a8f0c0304262f8f6530be2",
+      "final_public_sha256": "abcc8c8581f4f2bd710ccbe4e960f0aa9236cdd176a8f0c0304262f8f6530be2",
+      "same_actual_bytes": true
+    },
+    {
+      "path": "panorama-v14/v12.webp",
+      "before_sha256": "d8d5be74d123b5eeaac50ce68955787e26686b92c1a30031f6c3289692fbf4c2",
+      "final_public_sha256": "d8d5be74d123b5eeaac50ce68955787e26686b92c1a30031f6c3289692fbf4c2",
+      "same_actual_bytes": true
+    },
+    {
+      "path": "panorama-v14/v12-small.webp",
+      "before_sha256": "eb836bc7ba458ae392c313c030ee7ed9654bd838bb46b62e8fdf418e5e369f21",
+      "final_public_sha256": "eb836bc7ba458ae392c313c030ee7ed9654bd838bb46b62e8fdf418e5e369f21",
+      "same_actual_bytes": true
+    }
+  ],
+  "explicit_scope": "The root clicked and observed the publicly deployed pre-fix page. The final public HTML, CSS, JS and six display images have identical actual bytes. This record is a byte-identity bridge, not a claim of a second root browser session after the fix. Final production CI separately exercises the deployed page on desktop and mobile.",
+  "review_status": "rejected_needs_revision",
+  "homepage_replacement_approved": false
+}

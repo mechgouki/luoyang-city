@@ -1,0 +1,24 @@
+{
+  "schema": "luoyang-r12-archive-sensitive-scan-v1",
+  "generated_at_utc": "2026-11-23T14:09:34.316754+00:00",
+  "status": "passed_for_listed_patterns",
+  "files_considered": 2067,
+  "utf8_text_files_scanned": 1300,
+  "utf8_text_bytes_scanned": 95220700,
+  "binary_files_not_text_scanned": 767,
+  "rules": {
+    "github_token": "(?:ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9]{20,}",
+    "github_fine_grained_token": "github_pat_[A-Za-z0-9_]{40,}",
+    "private_key_header": "-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----",
+    "azure_signed_query": "(?i)[?&]sig=[A-Za-z0-9%+/=_-]{20,}",
+    "aws_signed_query": "(?i)[?&]X-Amz-Signature=[0-9a-f]{40,}",
+    "openai_key": "sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{32,}"
+  },
+  "matches": [],
+  "generated_indexes_excluded": [
+    "archive-inventory.json",
+    "archive-scope.json",
+    "archive-sensitive-scan.json"
+  ],
+  "scope": "Limited scan of actual UTF-8 text payloads, including extensionless CAS text objects. Binary files and ZIP payloads are not unpacked by this scan. This is not an exhaustive security certification. Raw matched secret values are never emitted."
+}

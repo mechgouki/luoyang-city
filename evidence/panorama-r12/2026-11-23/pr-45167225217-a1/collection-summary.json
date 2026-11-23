@@ -1,0 +1,71 @@
+{
+  "schema": "luoyang-r12-pr-collection-v1",
+  "status": "successful_pr_collected_and_downloads_verified",
+  "pr": 84,
+  "run_id": 45167225217,
+  "run_attempt": 1,
+  "pr_head_sha": "32b61d81e8fc942fdc51624949c56ac6cb4b53e0",
+  "tested_merge_sha_from_checkout_log": "531baa07af399f0ee647b95c44ab6695bd7303e4",
+  "tested_tree_sha": "a1282920a1f4e49583d7dbf6ad9a89f0a9a42fca",
+  "actual_pages_source_commit": "531baa07af399f0ee647b95c44ab6695bd7303e4",
+  "run_conclusion": "success",
+  "jobs": [
+    {
+      "id": 137667206233,
+      "name": "build",
+      "conclusion": "success"
+    },
+    {
+      "id": 137673660784,
+      "name": "deploy",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 137673661493,
+      "name": "verify-live",
+      "conclusion": "skipped"
+    }
+  ],
+  "build_log_bytes": 284734,
+  "build_log_sha256": "925a33fff440df3e0473da27b229c38abcc866d937c60669fb45766e3f1ee195",
+  "pages_artifact_id": 14814968778,
+  "browser_build_artifact_id": 14815333395,
+  "artifact_digests_verified": true,
+  "pages_members": 959,
+  "pages_empty_control_excluded": [
+    ".nojekyll"
+  ],
+  "browser_build_members": 736,
+  "browser_download_check": {
+    "schema": "luoyang-browser-download-cas-check-v1",
+    "status": "passed",
+    "source_commit": "531baa07af399f0ee647b95c44ab6695bd7303e4",
+    "pages_label": "pr-45167225217-a1-pages",
+    "evidence_label": "pr-45167225217-a1-build",
+    "publication_status": "needs_revision",
+    "review_status": "rejected_needs_revision",
+    "devices": [
+      {
+        "device": "desktop",
+        "report": "panorama-v14-browser/desktop-report.json",
+        "unique_downloads": 27,
+        "actual_click_attempts": 27,
+        "passed_click_attempts": 27,
+        "screenshots": 3,
+        "status": "passed"
+      },
+      {
+        "device": "mobile",
+        "report": "panorama-v14-browser/mobile-report.json",
+        "unique_downloads": 27,
+        "actual_click_attempts": 27,
+        "passed_click_attempts": 27,
+        "screenshots": 3,
+        "status": "passed"
+      }
+    ],
+    "note": "Checks retained original reports and bytes only; does not rerun browser interactions or certify image geometry."
+  },
+  "production_deployed_by_this_pr": false,
+  "note": "PR build passed; deploy/live intentionally skipped. Complete actual artifacts and logs retained. Actual Pages source matches checkout and Git tree. Technical success does not change rejected image status."
+}

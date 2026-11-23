@@ -1,0 +1,214 @@
+{
+  "schema": "luoyang-r12-image-attempts-v1",
+  "all_attempts_rejected": true,
+  "accepted_attempt": null,
+  "homepage_replacement_approved": false,
+  "attempts": [
+    {
+      "attempt": 1,
+      "path": "research/panorama-r12/attempts/attempt-1.png",
+      "generated_file": "exec-911deadc-1e4f-4409-b804-0257cc78ad36.png",
+      "sha256": "95a7e00f66c2ecf5d8633e45c6d6f054503c36199d6a9a2aa0324c40ffd798f2",
+      "bytes": 3419613,
+      "size_px": [
+        1672,
+        941
+      ],
+      "status": "rejected",
+      "review_path": "research/panorama-r12/reviews/v14-attempt1-review.json",
+      "review_sha256": "8e891c8b064d72767defe7d034eec1da913c351b98d9520baa593131c9f7580a",
+      "reason": "rejected_for_geometry_and_baseline_regression",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "research/city-spatial-r9/panorama-v13-r2-source.png",
+          "role": "edit_target",
+          "sha256": "b2bc1486c1e6a7461fcbafd7234b4e15365cc3f65d3f454eb20882818284ade4"
+        },
+        {
+          "order": 2,
+          "path": "research/panorama-r12/projection-clean.png",
+          "role": "same_frame_ground_layout",
+          "sha256": "8b833d49e31f0cf3369888370ceb063a4eb2aa4ca6f5b4cdbad487932ba607db"
+        },
+        {
+          "order": 3,
+          "path": "research/panorama-r12/projection-yongning-clean.png",
+          "role": "enlarged_same_projection",
+          "sha256": "4c77c6efcf58543831aa53350fe66724d3423968730d638111017c9a352607db"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "path": "research/panorama-r12/attempts/attempt-2.png",
+      "generated_file": "exec-a87e0de8-c43a-463b-b818-43ae50969867.png",
+      "sha256": "c68de9e7692cd3e5bc870c2fb5adba88c18f3352f2d8901b6da20a6614438ca2",
+      "bytes": 3444620,
+      "size_px": [
+        1672,
+        941
+      ],
+      "status": "rejected",
+      "review_path": "research/panorama-r12/reviews/v14-attempt2-review.json",
+      "review_sha256": "275393678024f360d41e1f850184f02fe4e1254396d7abe19db7d19d4f90821e",
+      "reason": "rejected_for_geometry_and_baseline_regression",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "research/panorama-r12/attempts/attempt-1.png",
+          "role": "edit_target",
+          "sha256": "95a7e00f66c2ecf5d8633e45c6d6f054503c36199d6a9a2aa0324c40ffd798f2"
+        },
+        {
+          "order": 2,
+          "path": "research/panorama-r12/projection-clean.png",
+          "role": "same_frame_ground_layout",
+          "sha256": "8b833d49e31f0cf3369888370ceb063a4eb2aa4ca6f5b4cdbad487932ba607db"
+        },
+        {
+          "order": 3,
+          "path": "research/city-spatial-r9/panorama-v13-r2-source.png",
+          "role": "prior_storey_reference",
+          "sha256": "b2bc1486c1e6a7461fcbafd7234b4e15365cc3f65d3f454eb20882818284ade4"
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "path": "research/panorama-r12/attempts/attempt-3.png",
+      "generated_file": "exec-e5b03077-1960-400b-b062-7ccb117290e4.png",
+      "sha256": "706257abbefb963847f6211464f751e3fa1b386d20528df740277bd43377a339",
+      "bytes": 3842371,
+      "size_px": [
+        1672,
+        941
+      ],
+      "status": "rejected",
+      "review_path": "research/panorama-r12/reviews/v14-attempt3-review.json",
+      "review_sha256": "af5aac6d57a3d0e28f85d991cc31565e77ab6f69d09bb9e2d71415826d40e273",
+      "reason": "rejected_for_geometry_and_unverified_tower_count",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "research/panorama-r12/massing-overview-clean.png",
+          "role": "primary_layout_and_massing",
+          "sha256": "c517953a882f9f020cb8cfb3ef909f540a4eafcbc65cdbb54c10de5557c4b7b2"
+        },
+        {
+          "order": 2,
+          "path": "research/city-spatial-r9/panorama-v13-r2-source.png",
+          "role": "style_and_scene_reference",
+          "sha256": "b2bc1486c1e6a7461fcbafd7234b4e15365cc3f65d3f454eb20882818284ade4"
+        },
+        {
+          "order": 3,
+          "path": "research/panorama-r12/generation-inputs/attempt3-massing-yongning-counted.png",
+          "role": "enlarged_storey_reference",
+          "sha256": "59d442d954e45eeafa573163eb783634e78d448675cd36795f3a43af63e0f45f"
+        }
+      ]
+    },
+    {
+      "attempt": 4,
+      "path": "research/panorama-r12/attempts/attempt-4.png",
+      "generated_file": "exec-5da556dc-e14f-4d2e-a92e-6eb3372886b4.png",
+      "sha256": "9e97d69334bb105216ff4e46e22a9208518467055ce7e36c24524d52bf0b3557",
+      "bytes": 3339646,
+      "size_px": [
+        1672,
+        941
+      ],
+      "status": "rejected",
+      "review_path": "research/panorama-r12/reviews/v14-attempt4-review.json",
+      "review_sha256": "e99e91ab92b273f884f8737fa23b1642f12534f2109d2aaaa5f78ce7f58be16f",
+      "reason": "rejected_pending_gate_storey_and_remaining_ground_alignment",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "research/panorama-r12/attempts/attempt-3.png",
+          "role": "edit_target",
+          "sha256": "706257abbefb963847f6211464f751e3fa1b386d20528df740277bd43377a339"
+        },
+        {
+          "order": 2,
+          "path": "research/panorama-r12/massing-overview-clean.png",
+          "role": "same_frame_ground_and_massing",
+          "sha256": "c517953a882f9f020cb8cfb3ef909f540a4eafcbc65cdbb54c10de5557c4b7b2"
+        }
+      ]
+    },
+    {
+      "attempt": 5,
+      "path": "research/panorama-r12/panorama-v14-source.png",
+      "generated_file": "exec-9fdf3c6d-51bd-4a14-a1a4-15f1e5da65cb.png",
+      "sha256": "45813547ae4555e9b60226f72adfd6df75aa0a36324a23c50966adc3092a0fa6",
+      "bytes": 3292093,
+      "size_px": [
+        1672,
+        941
+      ],
+      "status": "rejected",
+      "review_path": "research/panorama-r12/reviews/v14-attempt5-review.json",
+      "review_sha256": "63d50a665ae7f20cc679132f6f693045fcac4c3863033283c9280ab2e4476bc3",
+      "reason": "rejected_geometry_drift_and_two_storey_gate",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "research/panorama-r12/attempts/attempt-4.png",
+          "role": "edit_target",
+          "sha256": "9e97d69334bb105216ff4e46e22a9208518467055ce7e36c24524d52bf0b3557"
+        },
+        {
+          "order": 2,
+          "path": "research/panorama-r12/massing-overview-clean.png",
+          "role": "same_frame_ground_and_massing",
+          "sha256": "c517953a882f9f020cb8cfb3ef909f540a4eafcbc65cdbb54c10de5557c4b7b2"
+        }
+      ]
+    },
+    {
+      "attempt": 6,
+      "path": "research/panorama-r12/attempts/attempt-6.png",
+      "generated_file": "exec-353a43ae-1a51-419b-a2d1-4ba2ab8ae5ef.png",
+      "sha256": "8047a77d6df12e2ef32e2a6833fa0d20f106d2be6fbf48467cffb841c5bf5ef8",
+      "bytes": 3253956,
+      "size_px": [
+        1672,
+        941
+      ],
+      "status": "rejected",
+      "review_path": "research/panorama-r12/reviews/v14-attempt6-review.json",
+      "review_sha256": "f0c45c44a08bad5e3bbf078811591f13e7f02be1ce6d957a546b3fcce08c154b",
+      "reason": "rejected_two_storey_gate_and_ground_projection_unmet",
+      "display_role": "appendix_not_primary",
+      "prompt_path": "research/panorama-r12/attempts/attempt-6-prompt.txt",
+      "prompt_sha256": "08177233cc5ce81f3c00c54fdb20d0f0a0703150d7f7cd0c0e0f3e66bffe8725",
+      "inputs": [
+        {
+          "order": 1,
+          "path": "research/panorama-r12/panorama-v14-source.png",
+          "role": "edit_target",
+          "sha256": "45813547ae4555e9b60226f72adfd6df75aa0a36324a23c50966adc3092a0fa6"
+        },
+        {
+          "order": 2,
+          "path": "research/panorama-r12/massing-overview-clean.png",
+          "role": "same_frame_ground_and_massing",
+          "sha256": "c517953a882f9f020cb8cfb3ef909f540a4eafcbc65cdbb54c10de5557c4b7b2"
+        },
+        {
+          "order": 3,
+          "path": "research/panorama-r12/massing-yongning-counted.png",
+          "role": "enlarged_storey_reference",
+          "sha256": "2b615238bfb489df7e5280eddf5698ac694d3ed824d3fef4d446be6ce1279bd9"
+        }
+      ]
+    }
+  ],
+  "input_identity_notice": "第三次计层图在生成后补充可见限制句；此记录引用生成时的原字节归档，不能以新版hash替代。",
+  "displayed_attempt": 5,
+  "latest_attempt": 6,
+  "total_attempts": 6,
+  "display_policy": "主显示第五次及其完整偏差档案；第六次未通过局部修订作为独立附录，图像与观察不得跨轮混用。"
+}

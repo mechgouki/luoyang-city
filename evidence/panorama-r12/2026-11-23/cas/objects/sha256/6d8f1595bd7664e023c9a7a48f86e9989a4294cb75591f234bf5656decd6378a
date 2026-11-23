@@ -1,0 +1,1314 @@
+{
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+    "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden",
+    "Buttons and keyboard zoom/pan/reset keep the same plane; a visible, hit-verified tower-polygon click and a separate restored-label click select their own evidence",
+    "Feature-ID search, the 宣忠 alias, saved feature zoom and empty/reset search work; choosing R04 clears the old feature and reload restores the regional camera",
+    "All 339 coverage IDs and group/query counters agree; unplaced search overrides stale filters, table focus returns to real geometry, and no action rewrites coordinates",
+    "Every download is a genuine paced click with released hash, retained bytes and a single attempt; PDF paper sizes/text/embedded fonts and every ZIP member are checked; the offline UI runs with network disabled",
+    "Without JavaScript the common-plane SVG, every feature and all 339 catalog objects remain readable; native evidence links and disclosure controls work"
+  ],
+  "screenshots": {
+    "mobile-all.png": "8fd1cbeaa27ce5a4c044d261ad97122c0f2259ed5cd3c14d734523ece6d3c73d",
+    "mobile-yongning-selected.png": "03e1571ce196b247e97fb8e604775a85a487c00ab6b1773b598796ad7a5c3489",
+    "mobile-palace-comparison.png": "41faa83b69977b2892ef7676416da270533a69a2f64be9b94e958181391ac9af",
+    "mobile-offline.png": "a213388ac1de112b04adea2d049bdc0b9cff8aa33419238e6cf8947954de9f34",
+    "mobile-without-javascript.png": "fa8680755b888f3323b4f716d40b8569a3a1dac871c847f3871ad9c50fd1547c"
+  },
+  "downloads": {
+    "downloads/city-plan-r11.pdf": "eedf7ff3dde67b428007cbcc0158a60a05456564ac35fa6ac624fdd53cb74f81",
+    "downloads/city-plan-r11.zip": "f6c3da4e9e05b559032aa8da084e352e8b27d65407da291e27c011f9ba6f07a3",
+    "city-plan-r11/maps/all.svg": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+    "city-plan-r11/maps/core.svg": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+    "city-plan-r11/maps/changhe.svg": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+    "city-plan-r11/maps/yongning.svg": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+    "city-plan-r11/maps/palace2013.svg": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+    "city-plan-r11/maps/R01.svg": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+    "city-plan-r11/maps/R02.svg": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+    "city-plan-r11/maps/R03.svg": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4",
+    "city-plan-r11/maps/R04.svg": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+    "city-plan-r11/maps/R05.svg": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+    "city-plan-r11/maps/R06.svg": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+    "city-plan-r11/maps/R07.svg": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+    "city-plan-r11/maps/R08.svg": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398",
+    "city-plan-r11/maps/R09.svg": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+    "city-plan-r11/maps/R10.svg": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+    "city-plan-r11/maps/R11.svg": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+    "city-plan-r11/maps/method.svg": "86c634f14eac46a179678d90558eb8a4212ea3c40b38cc32ae32b9948484fcdd",
+    "city-plan-r11/coverage.csv": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+    "city-plan-r11/features.csv": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+    "city-plan-r11/constraints.csv": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+    "city-plan-r11/source-index.csv": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+    "city-plan-r11/plan.json": "2647cbc4710dfd399b74fe1bfda9bd55274e542708a21b909bcee6a48c593c79",
+    "city-plan-r11/source-index.json": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+    "city-plan-r11/manifest.json": "a70e61e248c326458829d907b9d195c95ee34163266485a7c561ffe7f75370fe"
+  },
+  "retained_downloads": {
+    "downloads/city-plan-r11.pdf": {
+      "sha256": "eedf7ff3dde67b428007cbcc0158a60a05456564ac35fa6ac624fdd53cb74f81",
+      "bytes": 2126411,
+      "retained_path": "downloads/mobile/downloads/city-plan-r11.pdf"
+    },
+    "downloads/city-plan-r11.zip": {
+      "sha256": "f6c3da4e9e05b559032aa8da084e352e8b27d65407da291e27c011f9ba6f07a3",
+      "bytes": 5825555,
+      "retained_path": "downloads/mobile/downloads/city-plan-r11.zip"
+    },
+    "city-plan-r11/maps/all.svg": {
+      "sha256": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+      "bytes": 241292,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/all.svg"
+    },
+    "city-plan-r11/maps/core.svg": {
+      "sha256": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+      "bytes": 219792,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/core.svg"
+    },
+    "city-plan-r11/maps/changhe.svg": {
+      "sha256": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+      "bytes": 204387,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/changhe.svg"
+    },
+    "city-plan-r11/maps/yongning.svg": {
+      "sha256": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+      "bytes": 210297,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/yongning.svg"
+    },
+    "city-plan-r11/maps/palace2013.svg": {
+      "sha256": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+      "bytes": 227900,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/palace2013.svg"
+    },
+    "city-plan-r11/maps/R01.svg": {
+      "sha256": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+      "bytes": 204611,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R01.svg"
+    },
+    "city-plan-r11/maps/R02.svg": {
+      "sha256": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+      "bytes": 244773,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R02.svg"
+    },
+    "city-plan-r11/maps/R03.svg": {
+      "sha256": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4",
+      "bytes": 226390,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R03.svg"
+    },
+    "city-plan-r11/maps/R04.svg": {
+      "sha256": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+      "bytes": 217640,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R04.svg"
+    },
+    "city-plan-r11/maps/R05.svg": {
+      "sha256": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+      "bytes": 211466,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R05.svg"
+    },
+    "city-plan-r11/maps/R06.svg": {
+      "sha256": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+      "bytes": 210174,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R06.svg"
+    },
+    "city-plan-r11/maps/R07.svg": {
+      "sha256": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+      "bytes": 223642,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R07.svg"
+    },
+    "city-plan-r11/maps/R08.svg": {
+      "sha256": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398",
+      "bytes": 237956,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R08.svg"
+    },
+    "city-plan-r11/maps/R09.svg": {
+      "sha256": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+      "bytes": 213188,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R09.svg"
+    },
+    "city-plan-r11/maps/R10.svg": {
+      "sha256": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+      "bytes": 240735,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R10.svg"
+    },
+    "city-plan-r11/maps/R11.svg": {
+      "sha256": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+      "bytes": 207619,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/R11.svg"
+    },
+    "city-plan-r11/maps/method.svg": {
+      "sha256": "86c634f14eac46a179678d90558eb8a4212ea3c40b38cc32ae32b9948484fcdd",
+      "bytes": 3695,
+      "retained_path": "downloads/mobile/city-plan-r11/maps/method.svg"
+    },
+    "city-plan-r11/coverage.csv": {
+      "sha256": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+      "bytes": 602403,
+      "retained_path": "downloads/mobile/city-plan-r11/coverage.csv"
+    },
+    "city-plan-r11/features.csv": {
+      "sha256": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+      "bytes": 363737,
+      "retained_path": "downloads/mobile/city-plan-r11/features.csv"
+    },
+    "city-plan-r11/constraints.csv": {
+      "sha256": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+      "bytes": 452311,
+      "retained_path": "downloads/mobile/city-plan-r11/constraints.csv"
+    },
+    "city-plan-r11/source-index.csv": {
+      "sha256": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+      "bytes": 1288590,
+      "retained_path": "downloads/mobile/city-plan-r11/source-index.csv"
+    },
+    "city-plan-r11/plan.json": {
+      "sha256": "2647cbc4710dfd399b74fe1bfda9bd55274e542708a21b909bcee6a48c593c79",
+      "bytes": 5538357,
+      "retained_path": "downloads/mobile/city-plan-r11/plan.json"
+    },
+    "city-plan-r11/source-index.json": {
+      "sha256": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+      "bytes": 1492949,
+      "retained_path": "downloads/mobile/city-plan-r11/source-index.json"
+    },
+    "city-plan-r11/manifest.json": {
+      "sha256": "a70e61e248c326458829d907b9d195c95ee34163266485a7c561ffe7f75370fe",
+      "bytes": 106604,
+      "retained_path": "downloads/mobile/city-plan-r11/manifest.json"
+    }
+  },
+  "download_attempts": [
+    {
+      "path": "downloads/city-plan-r11.pdf",
+      "href": "downloads/city-plan-r11.pdf",
+      "status": "passed",
+      "started_seconds": 0.02,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.276,
+      "sha256": "eedf7ff3dde67b428007cbcc0158a60a05456564ac35fa6ac624fdd53cb74f81",
+      "bytes": 2126411,
+      "suggested_filename": "city-plan-r11.pdf"
+    },
+    {
+      "path": "downloads/city-plan-r11.zip",
+      "href": "downloads/city-plan-r11.zip",
+      "status": "passed",
+      "started_seconds": 0.297,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.3,
+      "sha256": "f6c3da4e9e05b559032aa8da084e352e8b27d65407da291e27c011f9ba6f07a3",
+      "bytes": 5825555,
+      "suggested_filename": "city-plan-r11.zip"
+    },
+    {
+      "path": "city-plan-r11/maps/all.svg",
+      "href": "city-plan-r11/maps/all.svg",
+      "status": "passed",
+      "started_seconds": 0.708,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.206,
+      "sha256": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+      "bytes": 241292,
+      "suggested_filename": "all.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/core.svg",
+      "href": "city-plan-r11/maps/core.svg",
+      "status": "passed",
+      "started_seconds": 0.914,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.199,
+      "sha256": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+      "bytes": 219792,
+      "suggested_filename": "core.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/changhe.svg",
+      "href": "city-plan-r11/maps/changhe.svg",
+      "status": "passed",
+      "started_seconds": 1.113,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.2,
+      "sha256": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+      "bytes": 204387,
+      "suggested_filename": "changhe.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/yongning.svg",
+      "href": "city-plan-r11/maps/yongning.svg",
+      "status": "passed",
+      "started_seconds": 1.313,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.199,
+      "sha256": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+      "bytes": 210297,
+      "suggested_filename": "yongning.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/palace2013.svg",
+      "href": "city-plan-r11/maps/palace2013.svg",
+      "status": "passed",
+      "started_seconds": 1.512,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.201,
+      "sha256": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+      "bytes": 227900,
+      "suggested_filename": "palace2013.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R01.svg",
+      "href": "city-plan-r11/maps/R01.svg",
+      "status": "passed",
+      "started_seconds": 1.713,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.245,
+      "sha256": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+      "bytes": 204611,
+      "suggested_filename": "R01.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R02.svg",
+      "href": "city-plan-r11/maps/R02.svg",
+      "status": "passed",
+      "started_seconds": 1.957,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.221,
+      "sha256": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+      "bytes": 244773,
+      "suggested_filename": "R02.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R03.svg",
+      "href": "city-plan-r11/maps/R03.svg",
+      "status": "passed",
+      "started_seconds": 2.179,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.209,
+      "sha256": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4",
+      "bytes": 226390,
+      "suggested_filename": "R03.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R04.svg",
+      "href": "city-plan-r11/maps/R04.svg",
+      "status": "passed",
+      "started_seconds": 2.387,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.226,
+      "sha256": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+      "bytes": 217640,
+      "suggested_filename": "R04.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R05.svg",
+      "href": "city-plan-r11/maps/R05.svg",
+      "status": "passed",
+      "started_seconds": 2.613,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.2,
+      "sha256": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+      "bytes": 211466,
+      "suggested_filename": "R05.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R06.svg",
+      "href": "city-plan-r11/maps/R06.svg",
+      "status": "passed",
+      "started_seconds": 2.813,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.2,
+      "sha256": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+      "bytes": 210174,
+      "suggested_filename": "R06.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R07.svg",
+      "href": "city-plan-r11/maps/R07.svg",
+      "status": "passed",
+      "started_seconds": 3.013,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.199,
+      "sha256": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+      "bytes": 223642,
+      "suggested_filename": "R07.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R08.svg",
+      "href": "city-plan-r11/maps/R08.svg",
+      "status": "passed",
+      "started_seconds": 3.212,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.201,
+      "sha256": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398",
+      "bytes": 237956,
+      "suggested_filename": "R08.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R09.svg",
+      "href": "city-plan-r11/maps/R09.svg",
+      "status": "passed",
+      "started_seconds": 3.414,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.232,
+      "sha256": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+      "bytes": 213188,
+      "suggested_filename": "R09.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R10.svg",
+      "href": "city-plan-r11/maps/R10.svg",
+      "status": "passed",
+      "started_seconds": 3.646,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.2,
+      "sha256": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+      "bytes": 240735,
+      "suggested_filename": "R10.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/R11.svg",
+      "href": "city-plan-r11/maps/R11.svg",
+      "status": "passed",
+      "started_seconds": 3.846,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.2,
+      "sha256": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+      "bytes": 207619,
+      "suggested_filename": "R11.svg"
+    },
+    {
+      "path": "city-plan-r11/maps/method.svg",
+      "href": "city-plan-r11/maps/method.svg",
+      "status": "passed",
+      "started_seconds": 4.046,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.202,
+      "sha256": "86c634f14eac46a179678d90558eb8a4212ea3c40b38cc32ae32b9948484fcdd",
+      "bytes": 3695,
+      "suggested_filename": "method.svg"
+    },
+    {
+      "path": "city-plan-r11/coverage.csv",
+      "href": "city-plan-r11/coverage.csv",
+      "status": "passed",
+      "started_seconds": 4.249,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.202,
+      "sha256": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+      "bytes": 602403,
+      "suggested_filename": "coverage.csv"
+    },
+    {
+      "path": "city-plan-r11/features.csv",
+      "href": "city-plan-r11/features.csv",
+      "status": "passed",
+      "started_seconds": 4.45,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.196,
+      "sha256": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+      "bytes": 363737,
+      "suggested_filename": "features.csv"
+    },
+    {
+      "path": "city-plan-r11/constraints.csv",
+      "href": "city-plan-r11/constraints.csv",
+      "status": "passed",
+      "started_seconds": 4.647,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.202,
+      "sha256": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+      "bytes": 452311,
+      "suggested_filename": "constraints.csv"
+    },
+    {
+      "path": "city-plan-r11/source-index.csv",
+      "href": "city-plan-r11/source-index.csv",
+      "status": "passed",
+      "started_seconds": 4.849,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.212,
+      "sha256": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+      "bytes": 1288590,
+      "suggested_filename": "source-index.csv"
+    },
+    {
+      "path": "city-plan-r11/plan.json",
+      "href": "city-plan-r11/plan.json",
+      "status": "passed",
+      "started_seconds": 5.061,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.302,
+      "sha256": "2647cbc4710dfd399b74fe1bfda9bd55274e542708a21b909bcee6a48c593c79",
+      "bytes": 5538357,
+      "suggested_filename": "plan.json"
+    },
+    {
+      "path": "city-plan-r11/source-index.json",
+      "href": "city-plan-r11/source-index.json",
+      "status": "passed",
+      "started_seconds": 5.363,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.233,
+      "sha256": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+      "bytes": 1492949,
+      "suggested_filename": "source-index.json"
+    },
+    {
+      "path": "city-plan-r11/manifest.json",
+      "href": "city-plan-r11/manifest.json",
+      "status": "passed",
+      "started_seconds": 5.596,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.216,
+      "sha256": "a70e61e248c326458829d907b9d195c95ee34163266485a7c561ffe7f75370fe",
+      "bytes": 106604,
+      "suggested_filename": "manifest.json"
+    }
+  ],
+  "errors": [],
+  "views": {
+    "all": {
+      "camera": [
+        -8897.73838734748,
+        -10399.939438444711,
+        19006.34052403307,
+        25483.36159646892
+      ],
+      "palace_visible": false
+    },
+    "core": {
+      "camera": [
+        -1528.4513130418388,
+        -1329.7640276791585,
+        3505.1668629828223,
+        4699.665067686466
+      ],
+      "palace_visible": false
+    },
+    "changhe": {
+      "camera": [
+        379.2157914137824,
+        723.9198946637306,
+        238.68264217243518,
+        320.0214196725388
+      ],
+      "palace_visible": false
+    },
+    "yongning": {
+      "camera": [
+        -279.4966352551296,
+        1038.1291178450774,
+        800.8682805102592,
+        1073.7898733098448
+      ],
+      "palace_visible": false
+    },
+    "palace2013": {
+      "camera": [
+        -883.8018138021762,
+        -1923.7918312626944,
+        3175.7525826043525,
+        4257.9922895253885
+      ],
+      "palace_visible": true
+    },
+    "R01": {
+      "camera": [
+        -433.0210864213186,
+        -3221.378837322194,
+        2934.8054164024043,
+        3934.93463651719
+      ],
+      "palace_visible": true
+    },
+    "R02": {
+      "camera": [
+        -4502.9446805491925,
+        -3754.530590460851,
+        6815.318250800363,
+        9137.856872581491
+      ],
+      "palace_visible": true
+    },
+    "R03": {
+      "camera": [
+        -1495.4966002219344,
+        -2947.349531969602,
+        4408.354375571456,
+        5910.642738196366
+      ],
+      "palace_visible": true
+    },
+    "R04": {
+      "camera": [
+        844.9137183745916,
+        -2812.679518080933,
+        4274.284846568584,
+        5730.884710483017
+      ],
+      "palace_visible": true
+    },
+    "R05": {
+      "camera": [
+        -4550.7208905466905,
+        -1081.946036320338,
+        5293.631469556248,
+        7097.606439628488
+      ],
+      "palace_visible": true
+    },
+    "R06": {
+      "camera": [
+        -971.2353867597626,
+        -454.01416033624423,
+        2523.2202805504135,
+        3383.0886443134036
+      ],
+      "palace_visible": true
+    },
+    "R07": {
+      "camera": [
+        -1251.7072469852792,
+        -933.0063595998818,
+        3877.2372201021167,
+        5198.530350974905
+      ],
+      "palace_visible": true
+    },
+    "R08": {
+      "camera": [
+        -1414.7316954251378,
+        -2167.2037063066964,
+        4996.847576098294,
+        6699.683900913913
+      ],
+      "palace_visible": true
+    },
+    "R09": {
+      "camera": [
+        1239.4383078307646,
+        -919.3688758820347,
+        3765.633117710917,
+        5048.893565645922
+      ],
+      "palace_visible": true
+    },
+    "R10": {
+      "camera": [
+        -3731.6516390655943,
+        -3473.0806280009288,
+        9484.071800437092,
+        12716.073922373755
+      ],
+      "palace_visible": true
+    },
+    "R11": {
+      "camera": [
+        -2068.7844456416606,
+        -106.34198860405422,
+        5806.433155360821,
+        7785.161772550821
+      ],
+      "palace_visible": true
+    }
+  },
+  "source_commit": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+  "layout_checks": [
+    {
+      "url": "http://127.0.0.1:41223/luoyang-city/luoyang-city-plan.html?view=all&layers=source%2Ctrace%2Cscale%2Ccandidate",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:41223/luoyang-city/luoyang-city-plan.html?view=yongning&layers=source%2Ctrace%2Cscale%2Ccandidate&feature=r11-yongning-YN11-TOWER-PLINTH",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:41223/luoyang-city/luoyang-city-plan.html?view=R04&layers=source%2Ctrace%2Cscale%2Ccandidate#entity-ic_jinglin",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "file:///tmp/city-plan-r11-offline-b296zkis/index.html?view=yongning",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:41223/luoyang-city/luoyang-city-plan.html#feature-r11-yongning-YN11-TOWER-PLINTH",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    }
+  ],
+  "tower_hit_test": {
+    "overview_center": {
+      "screen": {
+        "x": 202.78872680664062,
+        "y": 474.15296936035156
+      },
+      "offset": {
+        "x": 9.68756103515625,
+        "y": 9.616928100585938
+      },
+      "target_box": {
+        "x": 193.10116577148438,
+        "y": 464.5360412597656,
+        "width": 19.3751220703125,
+        "height": 19.233856201171875
+      },
+      "hit_tag": "path",
+      "hit_feature": null,
+      "hit_label": "r11-yongning-YN11-TOWER-FOUNDATION"
+    },
+    "world_point": [
+      140.27373235,
+      -1579.8474241000001
+    ],
+    "zoomed_camera": [
+      0.5017316744464182,
+      1413.5459226668552,
+      240.87154665110714,
+      322.95626366628886
+    ],
+    "labels_visible": false,
+    "selected_point": {
+      "screen": {
+        "x": 223.73883815597748,
+        "y": 411.26260887410035
+      },
+      "offset": {
+        "x": 35.0522231657431,
+        "y": 9.023045885819101
+      },
+      "target_box": {
+        "x": 188.68661499023438,
+        "y": 402.23956298828125,
+        "width": 64.41989135742188,
+        "height": 63.950225830078125
+      },
+      "hit_tag": "path",
+      "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+      "hit_label": null
+    },
+    "independent_label": {
+      "id": "geo-yongning-pagoda-reference",
+      "screen": {
+        "x": 289.6314926147461,
+        "y": 448.7149658203125
+      },
+      "offset": {
+        "x": 58.50000762939453,
+        "y": 7.500030517578125
+      },
+      "target_box": {
+        "x": 231.13148498535156,
+        "y": 441.2149353027344,
+        "width": 117.00001525878906,
+        "height": 15.00006103515625
+      },
+      "hit_tag": "text",
+      "hit_feature": null,
+      "hit_label": "geo-yongning-pagoda-reference"
+    }
+  },
+  "manual_view_after_feature": {
+    "view": "R04",
+    "camera": [
+      844.9137183745916,
+      -2812.679518080933,
+      4274.284846568584,
+      5730.884710483017
+    ],
+    "stale_feature_query_removed": true
+  },
+  "attempt_path": null,
+  "pdf": {
+    "pages": 17,
+    "pages_checked": [
+      {
+        "page": 1,
+        "width_pt": 1683.77953,
+        "height_pt": 1190.55118,
+        "chinese_characters": 618
+      },
+      {
+        "page": 2,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 468
+      },
+      {
+        "page": 3,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 256
+      },
+      {
+        "page": 4,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 375
+      },
+      {
+        "page": 5,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 679
+      },
+      {
+        "page": 6,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 247
+      },
+      {
+        "page": 7,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 723
+      },
+      {
+        "page": 8,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 518
+      },
+      {
+        "page": 9,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 416
+      },
+      {
+        "page": 10,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 355
+      },
+      {
+        "page": 11,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 331
+      },
+      {
+        "page": 12,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 493
+      },
+      {
+        "page": 13,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 697
+      },
+      {
+        "page": 14,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 345
+      },
+      {
+        "page": 15,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 679
+      },
+      {
+        "page": 16,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 315
+      },
+      {
+        "page": 17,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764,
+        "chinese_characters": 584
+      }
+    ],
+    "fonts": [
+      {
+        "page": 1,
+        "name": "/JBSGSV+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 151636
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 1,
+        "name": "/QLTAKN+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 2214
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 2,
+        "name": "/SMUDLU+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 144547
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 2,
+        "name": "/PLINZX+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 2800
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 3,
+        "name": "/TZVWOV+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 125173
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 3,
+        "name": "/XZKADT+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 2223
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 4,
+        "name": "/DOKDDP+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 129197
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 4,
+        "name": "/IAPGPC+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1964
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 5,
+        "name": "/FZNORH+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 148623
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 5,
+        "name": "/QZEDJZ+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 2902
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 6,
+        "name": "/EJNLOE+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 129125
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 6,
+        "name": "/TLYTPZ+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1187
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 7,
+        "name": "/MIBYEV+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 161939
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 7,
+        "name": "/IMWXVQ+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1258
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 8,
+        "name": "/UZINQS+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 149678
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 8,
+        "name": "/CTVCIG+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1490
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 9,
+        "name": "/HQNTWX+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 142210
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 9,
+        "name": "/AAHUVT+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 2079
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 10,
+        "name": "/BEWVQC+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 139774
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 10,
+        "name": "/NLUCMD+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1277
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 11,
+        "name": "/AIALAN+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 136926
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 11,
+        "name": "/SPOXLR+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1898
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 12,
+        "name": "/RRFSDQ+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 146028
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 12,
+        "name": "/BZVDYX+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1435
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 13,
+        "name": "/CXIAFJ+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 156766
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 13,
+        "name": "/RZQKZG+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1625
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 14,
+        "name": "/CBWYOJ+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 134622
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 14,
+        "name": "/HICYFJ+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1604
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 15,
+        "name": "/JNQHFT+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 158609
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 15,
+        "name": "/BHIIQH+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1963
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 16,
+        "name": "/FVHPMZ+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 134238
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 16,
+        "name": "/VXVIGC+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 1507
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 17,
+        "name": "/OLZMDK+NotoSansCJKsc-Regular",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 152984
+          }
+        ],
+        "type3_embedded_charprocs": false
+      },
+      {
+        "page": 17,
+        "name": "/TCZJUN+CairoFont-1-0",
+        "subtype": "/CIDFontType0",
+        "embedded_programs": [
+          {
+            "type": "/FontFile3",
+            "bytes": 7755
+          }
+        ],
+        "type3_embedded_charprocs": false
+      }
+    ],
+    "font_names": [
+      "/AAHUVT+CairoFont-1-0",
+      "/AIALAN+NotoSansCJKsc-Regular",
+      "/BEWVQC+NotoSansCJKsc-Regular",
+      "/BHIIQH+CairoFont-1-0",
+      "/BZVDYX+CairoFont-1-0",
+      "/CBWYOJ+NotoSansCJKsc-Regular",
+      "/CTVCIG+CairoFont-1-0",
+      "/CXIAFJ+NotoSansCJKsc-Regular",
+      "/DOKDDP+NotoSansCJKsc-Regular",
+      "/EJNLOE+NotoSansCJKsc-Regular",
+      "/FVHPMZ+NotoSansCJKsc-Regular",
+      "/FZNORH+NotoSansCJKsc-Regular",
+      "/HICYFJ+CairoFont-1-0",
+      "/HQNTWX+NotoSansCJKsc-Regular",
+      "/IAPGPC+CairoFont-1-0",
+      "/IMWXVQ+CairoFont-1-0",
+      "/JBSGSV+NotoSansCJKsc-Regular",
+      "/JNQHFT+NotoSansCJKsc-Regular",
+      "/MIBYEV+NotoSansCJKsc-Regular",
+      "/NLUCMD+CairoFont-1-0",
+      "/OLZMDK+NotoSansCJKsc-Regular",
+      "/PLINZX+CairoFont-1-0",
+      "/QLTAKN+CairoFont-1-0",
+      "/QZEDJZ+CairoFont-1-0",
+      "/RRFSDQ+NotoSansCJKsc-Regular",
+      "/RZQKZG+CairoFont-1-0",
+      "/SMUDLU+NotoSansCJKsc-Regular",
+      "/SPOXLR+CairoFont-1-0",
+      "/TCZJUN+CairoFont-1-0",
+      "/TLYTPZ+CairoFont-1-0",
+      "/TZVWOV+NotoSansCJKsc-Regular",
+      "/UZINQS+NotoSansCJKsc-Regular",
+      "/VXVIGC+CairoFont-1-0",
+      "/XZKADT+CairoFont-1-0"
+    ],
+    "all_fonts_embedded": true,
+    "sha256": "eedf7ff3dde67b428007cbcc0158a60a05456564ac35fa6ac624fdd53cb74f81",
+    "reused_identical_verified_pdf": true
+  },
+  "offline_members": 32,
+  "offline_network_requests": [],
+  "offline_network_disabled": true,
+  "status": "passed",
+  "elapsed_seconds": 30.012
+}

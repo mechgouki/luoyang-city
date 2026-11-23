@@ -1,0 +1,40 @@
+{
+  "base_url": "http://127.0.0.1:44869/luoyang-city/",
+  "device": "desktop",
+  "status": "passed",
+  "checks": [
+    "P4.6.7 visibly corrects W20 濛汜池 before entering the supplementary maps",
+    "P4.6.6 → P4.6.7 → P4.6.8 entry opens 5 maps, each initially showing all evidence",
+    "Map 1: default layer, list and SVG selection, three filters, map/segment reload and evidence anchor",
+    "Map 2: default layer, list and SVG selection, three filters, map/segment reload and evidence anchor",
+    "Map 3: default layer, list and SVG selection, three filters, map/segment reload and evidence anchor",
+    "Map 4: default layer, list and SVG selection, three filters, map/segment reload and evidence anchor",
+    "Map 5: default layer, list and SVG selection, three filters, map/segment reload and evidence anchor",
+    "Reported measurements navigation and reload preserve a nonempty table without horizontal page overflow",
+    "Zoom, keyboard pan, touch drag on mobile or mouse drag on desktop, and full-view reset",
+    "Public PDF has 5 pages; all JSON and SVG downloads match build-info; only flow routes carry arrows, including 7 arrowless containment relations",
+    "No-JS view keeps all 5 maps and every evidence row, with no horizontal page overflow",
+    "P4.6.7 W20 correction opens its documented map with all evidence and survives reload",
+    "P4.6.8 header returns to P4.6.7, then P4.6.6, preserving the existing browser-test chain"
+  ],
+  "download_sha256": {
+    "downloads/water-468.pdf": "c9e562c6c8f27a5fd1d316e9a5f6e2f6db13f7a95d9d0b41d3219501e572eb3f",
+    "water-468/moats-zhangfang-source-audit.json": "9ac22ed0522904f509df88b36a049b6a5ff46f055b5989276cd170ea685a7ccd",
+    "water-468/palace-original-access.json": "1739c58d337f93f4ec4d2623e1cbae86a531b723945b40e23cf4d20c6067b48b",
+    "water-468/palace-pools-correction-source-audit.json": "f6718739ebe82c70df63130c62d6801f3670f88b22ccb25e45926641978e9077",
+    "water-468/pools-source-audit.json": "a8919dfbfa73e5978cc11bbf802cef84a8756978cfa006b6a5df0388c117eb93",
+    "water-468/readings.json": "6703af3308fff4e266c3e50c6fcd2d8f8e357c08ceb678f0e327d37dbd18467d",
+    "water-468/scan-access-pools.json": "f3e803f9f8585461e80d5a933e7e00638f7c36319d6c9b1f870a01d4f94b712b",
+    "water-468/source-access-pools.json": "41528ebee6848627078ebc2ba6e8b013351fb923a86a75ad768c3e57850a9798",
+    "water-468/west-palace-source-audit.json": "1cece99ecb4e0e65c0d4f8ff7e2e8646d493052e38541eec80be31f3cb783134",
+    "water-468/west-moats.svg": "ecaca52557fa00da77268a475a476f301aeb51cdab4d53cbde850a4258dd7fe4",
+    "water-468/palace-water.svg": "4d5f7f0e78263a406f11f1406619a58566135283918da8a216c17f033fb1eece",
+    "water-468/fanghu-zhaoyi.svg": "8a615ffa626d23ed459df41e6030326e3e31a5229f3ecf62611189252005a2cf",
+    "water-468/independent-pools.svg": "01be03d7f070c3ece9a86501ea6098e485c581ea475486801b124341ae279f70",
+    "water-468/palace-pools-audit.svg": "704a65e920eeac819bec6e9de1456efbfda00833fdd3ae679d391042040897c0"
+  },
+  "errors": [],
+  "pool_correction_map": "palace-pools-audit",
+  "map_count": 5,
+  "containment_segments": 7
+}

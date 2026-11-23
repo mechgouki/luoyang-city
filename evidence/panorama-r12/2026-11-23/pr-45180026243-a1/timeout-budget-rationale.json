@@ -1,0 +1,71 @@
+{
+  "schema": "luoyang-r12-live-timeout-budget-rationale-v1",
+  "recorded_at_utc": "2026-11-23T13:05:02.408502+00:00",
+  "change": {
+    "file": ".github/workflows/pages.yml",
+    "job": "verify-live",
+    "timeout_minutes_before": 20,
+    "timeout_minutes_after": 40,
+    "changed_line_count": 1,
+    "parent_commit": "33c14be30f737598fd2b53354f1db14ff424a9ff",
+    "expected_tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+    "workflow_blob_before": "005f363f8ba4381aa6b9aa2d4e52f2c4af620e65",
+    "workflow_blob_after": "db95e37e34ef8fee4485f68f87b361f1559ec00a",
+    "local_worktree": "/workspace/luoyang-r12-live-timeout",
+    "local_branch": "fix/r12-live-verifier-time-budget",
+    "local_commits_created": 0,
+    "remote_changes_by_this_agent": false,
+    "unchanged": "All HTTP/browser commands, individual step/request timeouts, dependency pins and acceptance gates."
+  },
+  "raw_timing_evidence": {
+    "path": "production-45175501815-a1/api/monitor-jobs-029.json",
+    "bytes": 8062,
+    "sha256": "0243bbd65eac4858c560a5946f869ac7c6e3472b9e8f715c694219057bd767d7",
+    "workflow_run_id": 45175501815,
+    "build_job_id": 137695561981,
+    "live_job_id": 137702721577,
+    "build_browser_step": {
+      "name": "Exercise current and all earlier map interactions",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 12,
+      "started_at": "2026-11-23T12:36:53Z",
+      "completed_at": "2026-11-23T12:46:17Z"
+    },
+    "live_http_step": {
+      "name": "Check actual HTTPS resources and hashes",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 5,
+      "started_at": "2026-11-23T12:47:20Z",
+      "completed_at": "2026-11-23T12:58:50Z"
+    },
+    "live_job_started_at": "2026-11-23T12:47:12Z",
+    "live_browser_step_at_snapshot": {
+      "name": "Exercise current and all earlier deployed map versions",
+      "status": "in_progress",
+      "conclusion": null,
+      "number": 7,
+      "started_at": "2026-11-23T12:59:19Z",
+      "completed_at": null
+    }
+  },
+  "budget_calculation": {
+    "actual_successful_http_seconds": 690,
+    "same_run_successful_build_browser_seconds": 564,
+    "actual_live_pre_browser_elapsed_seconds": 727,
+    "old_job_budget_seconds": 1200,
+    "old_remaining_seconds_at_live_browser_start": 473,
+    "old_remaining_minus_build_browser_seconds": -91,
+    "estimated_total_using_build_browser_duration_before_evidence_upload_seconds": 1291,
+    "inference": "Same-run build browser duration is a planning comparator, not a claim that public-site browser duration must be identical. The original live result remains pending at this snapshot."
+  },
+  "validation": {
+    "diff_check": "passed",
+    "diff_numstat": "1 insert, 1 delete in one workflow file",
+    "local_workflow_blob_matches_remote_pr86": true,
+    "local_tree_matches_remote_pr86": true,
+    "full_tests_rerun": false
+  },
+  "adoption_condition": "Parent decides whether to merge only after actual original production failure and successful PR validation; if original production succeeds, this standby PR is not adopted."
+}

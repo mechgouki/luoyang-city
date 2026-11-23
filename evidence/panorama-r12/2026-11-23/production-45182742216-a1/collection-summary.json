@@ -1,0 +1,1179 @@
+{
+  "schema": "luoyang-production-evidence-collection-v3",
+  "collected_at_utc": "2026-11-23T13:58:40.825259+00:00",
+  "status": "production_technical_acceptance_verified_evidence_collected",
+  "repository": "mechgouki/luoyang-city",
+  "run_id": 45182742216,
+  "run_attempt": 1,
+  "run_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45182742216",
+  "run_event": "push",
+  "run_status": "completed",
+  "run_conclusion": "success",
+  "production_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+  "production_tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+  "production_parents": [
+    "33c14be30f737598fd2b53354f1db14ff424a9ff"
+  ],
+  "production_build_checkout_log_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+  "pr_number": 86,
+  "pr_head": "cd13600b360a71518c0444ea243a27ff05966880",
+  "pr_successful_run_id": 45180026243,
+  "pr_tested_merge": "f442bbff2603b0c3f4d591a77694b51e44ea7b28",
+  "pr_tested_tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+  "production_matches_pr_tested_tree": true,
+  "source_identity_check": {
+    "path": "source-tree-identity-check.json",
+    "bytes": 647,
+    "sha256": "f1d4aed36adf990021e23331e525fb240dbbf771d3a827a0ce5c6966cc56953b",
+    "git_blob_sha1": "e1b282c5acde172762b7225b56a0e7f98cfe3335"
+  },
+  "jobs": [
+    {
+      "id": 137720438238,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T13:19:16Z",
+      "completed_at": "2026-11-23T13:32:23Z",
+      "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/137720438238",
+      "duration_seconds": 787,
+      "raw_log": {
+        "path": "logs/job-137720438238-raw.log",
+        "bytes": 283712,
+        "sha256": "1fcb8753efc4d2e13234bf2c3c128b4f022da3e43ee9cdcb53bf44c1bf60c767",
+        "git_blob_sha1": "8f8f9b5e831f53d55d28f2a42e3dccd2f05ecd2f"
+      },
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-23T13:19:16Z",
+          "completed_at": "2026-11-23T13:19:18Z",
+          "duration_seconds": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-23T13:19:18Z",
+          "completed_at": "2026-11-23T13:19:24Z",
+          "duration_seconds": 6
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-23T13:19:24Z",
+          "completed_at": "2026-11-23T13:19:25Z",
+          "duration_seconds": 1
+        },
+        {
+          "name": "Install pinned terrain and document dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-23T13:19:25Z",
+          "completed_at": "2026-11-23T13:19:36Z",
+          "duration_seconds": 11
+        },
+        {
+          "name": "Install pinned rendering font outside the published directory",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-23T13:19:36Z",
+          "completed_at": "2026-11-23T13:19:38Z",
+          "duration_seconds": 2
+        },
+        {
+          "name": "Check current summaries and prepare unchanged baseline PDF",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-23T13:19:38Z",
+          "completed_at": "2026-11-23T13:19:38Z",
+          "duration_seconds": 0
+        },
+        {
+          "name": "Check baseline data and JavaScript",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-23T13:19:38Z",
+          "completed_at": "2026-11-23T13:19:40Z",
+          "duration_seconds": 2
+        },
+        {
+          "name": "Check all spatial, temporal, terrain and dual-map semantics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-23T13:19:40Z",
+          "completed_at": "2026-11-23T13:19:46Z",
+          "duration_seconds": 6
+        },
+        {
+          "name": "Build all published research stages in preserved order",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-23T13:19:46Z",
+          "completed_at": "2026-11-23T13:21:20Z",
+          "duration_seconds": 94
+        },
+        {
+          "name": "Check the built prosperity maps and their evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-23T13:21:20Z",
+          "completed_at": "2026-11-23T13:21:46Z",
+          "duration_seconds": 26
+        },
+        {
+          "name": "Fetch pinned browser runtime with preinstalled dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-23T13:21:46Z",
+          "completed_at": "2026-11-23T13:22:14Z",
+          "duration_seconds": 28
+        },
+        {
+          "name": "Exercise current and all earlier map interactions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-11-23T13:22:14Z",
+          "completed_at": "2026-11-23T13:31:59Z",
+          "duration_seconds": 585
+        },
+        {
+          "name": "Preserve build and browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-11-23T13:31:59Z",
+          "completed_at": "2026-11-23T13:32:09Z",
+          "duration_seconds": 10
+        },
+        {
+          "name": "Upload verified Pages artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-23T13:32:09Z",
+          "completed_at": "2026-11-23T13:32:20Z",
+          "duration_seconds": 11
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-11-23T13:32:20Z",
+          "completed_at": "2026-11-23T13:32:20Z",
+          "duration_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-11-23T13:32:20Z",
+          "completed_at": "2026-11-23T13:32:20Z",
+          "duration_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-11-23T13:32:20Z",
+          "completed_at": "2026-11-23T13:32:21Z",
+          "duration_seconds": 1
+        }
+      ]
+    },
+    {
+      "id": 137727902581,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T13:32:28Z",
+      "completed_at": "2026-11-23T13:32:45Z",
+      "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/137727902581",
+      "duration_seconds": 17,
+      "raw_log": {
+        "path": "logs/job-137727902581-raw.log",
+        "bytes": 4586,
+        "sha256": "7cc3b55027e57c7c29cd76c85399587a4f5e98e22b2fd1780e76d04edfa1793c",
+        "git_blob_sha1": "b40ce083048f187ae13604444e71d196c9e80f0a"
+      },
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-23T13:32:29Z",
+          "completed_at": "2026-11-23T13:32:31Z",
+          "duration_seconds": 2
+        },
+        {
+          "name": "Read existing Pages configuration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-23T13:32:31Z",
+          "completed_at": "2026-11-23T13:32:31Z",
+          "duration_seconds": 0
+        },
+        {
+          "name": "Deploy verified website",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-23T13:32:31Z",
+          "completed_at": "2026-11-23T13:32:44Z",
+          "duration_seconds": 13
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-23T13:32:44Z",
+          "completed_at": "2026-11-23T13:32:44Z",
+          "duration_seconds": 0
+        }
+      ]
+    },
+    {
+      "id": 137728114930,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T13:32:48Z",
+      "completed_at": "2026-11-23T13:51:21Z",
+      "check_run_url": "https://api.github.com/repos/mechgouki/luoyang-city/check-runs/137728114930",
+      "duration_seconds": 1113,
+      "raw_log": {
+        "path": "logs/job-137728114930-raw.log",
+        "bytes": 67031,
+        "sha256": "1683223a7e50c2299e4550fe20b80e976cf96f00f5ac8eb3d9012b399d1ff2be",
+        "git_blob_sha1": "9532c6da0a8f529f6ab025652a332511e8717b82"
+      },
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-23T13:32:49Z",
+          "completed_at": "2026-11-23T13:32:51Z",
+          "duration_seconds": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-23T13:32:51Z",
+          "completed_at": "2026-11-23T13:33:00Z",
+          "duration_seconds": 9
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-23T13:33:00Z",
+          "completed_at": "2026-11-23T13:33:01Z",
+          "duration_seconds": 1
+        },
+        {
+          "name": "Install pinned image verification dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-23T13:33:01Z",
+          "completed_at": "2026-11-23T13:33:06Z",
+          "duration_seconds": 5
+        },
+        {
+          "name": "Check actual HTTPS resources and hashes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-23T13:33:06Z",
+          "completed_at": "2026-11-23T13:40:27Z",
+          "duration_seconds": 441
+        },
+        {
+          "name": "Fetch the same pinned browser runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-23T13:40:27Z",
+          "completed_at": "2026-11-23T13:40:55Z",
+          "duration_seconds": 28
+        },
+        {
+          "name": "Exercise current and all earlier deployed map versions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-23T13:40:55Z",
+          "completed_at": "2026-11-23T13:51:08Z",
+          "duration_seconds": 613
+        },
+        {
+          "name": "Preserve live acceptance evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-23T13:51:08Z",
+          "completed_at": "2026-11-23T13:51:18Z",
+          "duration_seconds": 10
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-23T13:51:18Z",
+          "completed_at": "2026-11-23T13:51:18Z",
+          "duration_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-23T13:51:18Z",
+          "completed_at": "2026-11-23T13:51:18Z",
+          "duration_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-23T13:51:18Z",
+          "completed_at": "2026-11-23T13:51:18Z",
+          "duration_seconds": 0
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "live-acceptance-evidence",
+      "id": 14825235104,
+      "api_metadata": "api/artifact-14825235104-from-run-list.json",
+      "metadata_source": "api/api-artifacts-final.json",
+      "metadata_json_pointer": "/artifacts/0",
+      "download_receipt": {
+        "path": "download-receipt-14825235104.json",
+        "bytes": 360,
+        "sha256": "92134986aab4227cd257ea46afd7a164bb66db612db9a265024ad0506f609686",
+        "git_blob_sha1": "3c699f1fa5077b7af6b869c98242ad0d003a4854"
+      },
+      "zip_path": "downloads/live-acceptance-evidence.zip",
+      "zip_bytes": 235818197,
+      "zip_sha256": "a1844403572255ca167b7681c57a2825c77d710e35d99a74043cdfccc30bc027",
+      "github_api_digest_matches": true,
+      "workflow_run_head_sha": "4579a6b8990a91780bf83391967c301218c0711e",
+      "cas_label": "production-45182742216-a1-live",
+      "cas_ingest": {
+        "path": "/workspace/r12-evidence-staging/cas/ingests/production-45182742216-a1-live.json",
+        "bytes": 257397,
+        "sha256": "57d2e632198f1cc6e0e470a120fec7d3a3352bdb35c08b6a3144e3b0ba54f8a1",
+        "git_blob_sha1": "a28799915e2dc5cd284d2e62454d01acbef871c9"
+      },
+      "member_count": 691,
+      "logical_retained_bytes": 278220455,
+      "unique_retained_bytes": 224147381
+    },
+    {
+      "name": "browser-build-evidence",
+      "id": 14822698496,
+      "api_metadata": "api/artifact-14822698496-from-run-list.json",
+      "metadata_source": "api/api-artifacts-post-build.json",
+      "metadata_json_pointer": "/artifacts/0",
+      "download_receipt": {
+        "path": "download-receipt-14822698496.json",
+        "bytes": 354,
+        "sha256": "b6adef896e7083d021fe90572a02fd9229f89fc38e53e76da3d0fc34e7421228",
+        "git_blob_sha1": "768d2a5f64a9f1b22a78165c43c760f78be50768"
+      },
+      "zip_path": "downloads/browser-build-evidence.zip",
+      "zip_bytes": 286930433,
+      "zip_sha256": "4963b5b9beb6854e77eb503c39644a7bb8ac776de4e8a8df20afac57adb62698",
+      "github_api_digest_matches": true,
+      "workflow_run_head_sha": "4579a6b8990a91780bf83391967c301218c0711e",
+      "cas_label": "production-45182742216-a1-build",
+      "cas_ingest": {
+        "path": "/workspace/r12-evidence-staging/cas/ingests/production-45182742216-a1-build.json",
+        "bytes": 270150,
+        "sha256": "f5a1f062ac64c2ec66be7b65c0b25a4a6ab54eed425147a70c31ce5880f37d29",
+        "git_blob_sha1": "67241a90deb27fb106ea3a2d93e710e36be0190e"
+      },
+      "member_count": 736,
+      "logical_retained_bytes": 342806168,
+      "unique_retained_bytes": 288733094
+    },
+    {
+      "name": "github-pages",
+      "id": 14822673608,
+      "api_metadata": "api/artifact-14822673608-from-run-list.json",
+      "metadata_source": "api/api-artifacts-post-build.json",
+      "metadata_json_pointer": "/artifacts/1",
+      "download_receipt": {
+        "path": "download-receipt-14822673608.json",
+        "bytes": 344,
+        "sha256": "b66b450bd10e654419e48079e3d2aa8f7264c526ce2d016cf52833d3be00c1c5",
+        "git_blob_sha1": "68a9fbb8051ff55da3c2f23f83a5a7419d884f8f"
+      },
+      "zip_path": "downloads/github-pages.zip",
+      "zip_bytes": 364258961,
+      "zip_sha256": "f92f0acf496e6d2af18df43cfa1e3e2ddb7f960297f5ca45c092032508dffdfa",
+      "github_api_digest_matches": true,
+      "workflow_run_head_sha": "4579a6b8990a91780bf83391967c301218c0711e",
+      "cas_label": "production-45182742216-a1-pages",
+      "cas_ingest": {
+        "path": "/workspace/r12-evidence-staging/cas/ingests/production-45182742216-a1-pages.json",
+        "bytes": 235028,
+        "sha256": "fab151b1ff2dee6ad37d754e88ee24c56db6b7843b2cf21aa89df4063ff08669",
+        "git_blob_sha1": "3a33994aa989ea5cb90fdb09464dc4c41a06aae6"
+      },
+      "member_count": 959,
+      "logical_retained_bytes": 11715606,
+      "unique_retained_bytes": 11715606
+    }
+  ],
+  "pages": {
+    "status": "production_build_identity_verified_not_live_acceptance",
+    "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "tree": "69aef90f87200463e97a4f5331be90029cc0c9c2",
+    "build_log_checkout_sha": "4579a6b8990a91780bf83391967c301218c0711e",
+    "pages_members": 959,
+    "files_sha256_count": 959,
+    "build_info_sha256": "00c438d6dad74ad252785072f2adaea91281e0067d661950b09c882cdacab6b8",
+    "review_status": "rejected_needs_revision",
+    "publication_status": "needs_revision",
+    "homepage_revision": "panorama-approved-v12",
+    "homepage_replacement_approved": false,
+    "download_count": 27
+  },
+  "live_http": {
+    "schema": "luoyang-live-http-pages-manifest-check-v1",
+    "status": "passed",
+    "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "resource_count": 958,
+    "http_retries": 0,
+    "manifest_path_set_matches": true,
+    "all_recorded_byte_counts_match_actual_pages": true,
+    "all_recorded_sha256_match_manifest_and_actual_pages": true,
+    "empty_build_control_excluded": [
+      ".nojekyll"
+    ],
+    "ci_live_http_sha256": "8d655e347a9bb6fb55deeca4b5f5d625e62dd22b3ef97997ab0012683d51fc05",
+    "http_report_checked_at_field": "2026-11-23T13:33:41Z",
+    "completion_time_source": "Final attempt jobs API step completed_at; checked_at in the original HTTP report is not reinterpreted as completion time.",
+    "overall_workflow_conclusion": "success"
+  },
+  "live_http_manifest_check_file": {
+    "path": "live-http-manifest-cross-check.json",
+    "bytes": 751,
+    "sha256": "e779db2bdb4f368c6b3e957b948d9f5e4542ea0d58f418c383cb32b6d2786c9e",
+    "git_blob_sha1": "13e4dec56a3fd21da427975f62262dcad0d6d83b"
+  },
+  "build_v14_browser_download_cross_check": {
+    "schema": "luoyang-browser-download-cas-check-v1",
+    "status": "passed",
+    "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "pages_label": "production-45182742216-a1-pages",
+    "evidence_label": "production-45182742216-a1-build",
+    "publication_status": "needs_revision",
+    "review_status": "rejected_needs_revision",
+    "devices": [
+      {
+        "device": "desktop",
+        "report": "panorama-v14-browser/desktop-report.json",
+        "unique_downloads": 27,
+        "actual_click_attempts": 27,
+        "passed_click_attempts": 27,
+        "screenshots": 3,
+        "status": "passed"
+      },
+      {
+        "device": "mobile",
+        "report": "panorama-v14-browser/mobile-report.json",
+        "unique_downloads": 27,
+        "actual_click_attempts": 27,
+        "passed_click_attempts": 27,
+        "screenshots": 3,
+        "status": "passed"
+      }
+    ],
+    "note": "Checks retained original reports and bytes only; does not rerun browser interactions or certify image geometry."
+  },
+  "live_v14_browser_download_cross_check": {
+    "schema": "luoyang-browser-download-cas-check-v1",
+    "status": "passed",
+    "source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "pages_label": "production-45182742216-a1-pages",
+    "evidence_label": "production-45182742216-a1-live",
+    "publication_status": "needs_revision",
+    "review_status": "rejected_needs_revision",
+    "devices": [
+      {
+        "device": "desktop",
+        "report": "live-panorama-v14-browser/desktop-report.json",
+        "unique_downloads": 27,
+        "actual_click_attempts": 27,
+        "passed_click_attempts": 27,
+        "screenshots": 3,
+        "status": "passed"
+      },
+      {
+        "device": "mobile",
+        "report": "live-panorama-v14-browser/mobile-report.json",
+        "unique_downloads": 27,
+        "actual_click_attempts": 27,
+        "passed_click_attempts": 27,
+        "screenshots": 3,
+        "status": "passed"
+      }
+    ],
+    "note": "Checks retained original reports and bytes only; does not rerun browser interactions or certify image geometry."
+  },
+  "all_browser_reports": {
+    "status": "passed",
+    "build": {
+      "check": {
+        "path": "build-all-browser-reports-check.json",
+        "bytes": 24957,
+        "sha256": "5d0363ff2e741f195bc9b24d9b6f5120952b8551e59d35b7134c3e3a88c385b7",
+        "git_blob_sha1": "abf9eeaaf027dc16a917d36e925ff1fc0d955fba"
+      },
+      "report_count": 62,
+      "browser_directory_count": 42,
+      "issues": [],
+      "method_version": "check_original_browser_reports.py"
+    },
+    "live": {
+      "check": {
+        "path": "live-all-browser-reports-check-v2.json",
+        "bytes": 25486,
+        "sha256": "5d4c566ad1fc82296c24d1c5559c4d3fa8731cccdae56c88d8391d376b08063a",
+        "git_blob_sha1": "b4f36f5699f32ff6bde379a8fb5a0f66a0f6469e"
+      },
+      "report_count": 62,
+      "browser_directory_count": 42,
+      "issues": [],
+      "method_version": "check_original_browser_reports_v2.py",
+      "output_mapping": {
+        "path": "browser-output-mapping-v2.json",
+        "bytes": 28456,
+        "sha256": "4a5753f4a17a83c3f7c04c7f91e51e3a5661147405d96534b8b61037a53971b5",
+        "git_blob_sha1": "842a18db00c3c831a28ef331fc8105d7b7c1a558"
+      }
+    },
+    "full_live_browser_suite_passed": true,
+    "original_reports_modified": false,
+    "browser_rerun_by_collector": false
+  },
+  "collector_mapping_correction": {
+    "initial_derived_report": {
+      "path": "live-all-browser-reports-check.json",
+      "bytes": 25879,
+      "sha256": "73dbc3b273bf9dc234e9f50d92cc288b24ed8d09e9966b67578fb9b1d93f0a8a",
+      "git_blob_sha1": "d3af3d65c3746f54fc6eb66105cafb41bbb570cd"
+    },
+    "preserved_initial_copy": {
+      "path": "live-all-browser-reports-check-initial-mapping.json",
+      "bytes": 25879,
+      "sha256": "73dbc3b273bf9dc234e9f50d92cc288b24ed8d09e9966b67578fb9b1d93f0a8a",
+      "git_blob_sha1": "d3af3d65c3746f54fc6eb66105cafb41bbb570cd"
+    },
+    "initial_status": "failed_on_four_expected_paths_only",
+    "reason": "Collector v1 assumed every live output directory is live- plus its build directory. Exact final workflow and P470/P471 defaults prove two named exceptions.",
+    "source_proof": {
+      "path": "browser-output-mapping-v2.json",
+      "bytes": 28456,
+      "sha256": "4a5753f4a17a83c3f7c04c7f91e51e3a5661147405d96534b8b61037a53971b5",
+      "git_blob_sha1": "842a18db00c3c831a28ef331fc8105d7b7c1a558"
+    },
+    "corrected_derived_report": {
+      "path": "live-all-browser-reports-check-v2.json",
+      "bytes": 25486,
+      "sha256": "5d4c566ad1fc82296c24d1c5559c4d3fa8731cccdae56c88d8391d376b08063a",
+      "git_blob_sha1": "b4f36f5699f32ff6bde379a8fb5a0f66a0f6469e"
+    },
+    "corrected_status": "passed",
+    "all_62_original_report_contents_inspected": true,
+    "source_workflow_or_original_reports_changed": false,
+    "ci_failure": false,
+    "methods": [
+      {
+        "path": "/workspace/r12-evidence-tools/check_original_browser_reports.py",
+        "bytes": 4862,
+        "sha256": "328d1327b7eece87cc56cacd8aabfa29991fa57b415b4512b40224e12591ac8a",
+        "git_blob_sha1": "87f80ad8a42589586f29a3660045b789321cc2f4"
+      },
+      {
+        "path": "/workspace/r12-evidence-tools/check_original_browser_reports_v2.py",
+        "bytes": 6145,
+        "sha256": "e6a4a81fb0d64b409f5edcf34f1329986559068356d797a4974fbef80d200e60",
+        "git_blob_sha1": "8f595c9460083d4fce2815f772bff52ad9828eee"
+      }
+    ]
+  },
+  "root_independent_public_readback": {
+    "directory": "/workspace/r12-evidence-staging/root-live-4579a6b8",
+    "files": [
+      "readback.json",
+      "pages-build-info-cross-check.json",
+      "ui-publication-continuity.json"
+    ],
+    "provenance": "Root agent reported these independently collected results; this collector did not reread or modify those files.",
+    "reported_status": "passed",
+    "reported_completed_at_utc": "2026-11-23T13:36:30Z",
+    "reported_files": 42,
+    "reported_downloads": 27,
+    "reported_build_info_bytes": 806833,
+    "reported_build_info_sha256": "00c438d6dad74ad252785072f2adaea91281e0067d661950b09c882cdacab6b8",
+    "reported_build_info_actual_bytes_equal_production_pages": true,
+    "reported_release_source_commit": "4579a6b8990a91780bf83391967c301218c0711e",
+    "reported_ui_byte_continuity_count": 9,
+    "second_manual_interaction_on_this_production_claimed": false
+  },
+  "raw_api_metadata_files": [
+    {
+      "path": "api/api-artifacts-final.json",
+      "bytes": 2117,
+      "sha256": "53e02ab3c425a0a48a481e57f6feba19c7d7a68e4aace7768d65fcc5764ae251",
+      "git_blob_sha1": "562f1e53bc0ec6ec4a3f5fb8006c98c78beea55d"
+    },
+    {
+      "path": "api/api-artifacts-post-build.json",
+      "bytes": 1417,
+      "sha256": "962f64274e8ddcb5d0dc6e09e481ec73b3fd0015726203cd1f099914514bfc44",
+      "git_blob_sha1": "c804d74175a8b6931fbc0652e5bff3eddfcca7f3"
+    },
+    {
+      "path": "api/api-git-commit-4579a6b8990a91780bf83391967c301218c0711e.json",
+      "bytes": 2901,
+      "sha256": "5906ea0b8f79ec27eae60b4696681415c04437b41aa7200dd68ad0e35f9a4654",
+      "git_blob_sha1": "7b04eb2302616003cbf4798326c597029e26d104"
+    },
+    {
+      "path": "api/api-jobs-attempt1-final.json",
+      "bytes": 8387,
+      "sha256": "632903cbcc92f3aba9a374557eadd5a711a479471295d46cceb4cd8cafc468a2",
+      "git_blob_sha1": "c85fbebbd665b921e9e2d69986cd29b6caa8d084"
+    },
+    {
+      "path": "api/api-jobs-attempt1-initial.json",
+      "bytes": 3518,
+      "sha256": "c17cd8b51594e158ca0f88e5f7b11da2e68a19341a2bdfaf7334c7b4f28b0661",
+      "git_blob_sha1": "d3e66d2a584194e6352dd2eb4b3b09a11cfdd015"
+    },
+    {
+      "path": "api/api-pr86-after-merge-initial.json",
+      "bytes": 18378,
+      "sha256": "6046bbac407bdfc468db83d7f2289fd78b94eb0c2ff904524e1dd8ff79657db9",
+      "git_blob_sha1": "f3942b19056e9004d4ca068e215358e606e3d020"
+    },
+    {
+      "path": "api/api-pr86-final.json",
+      "bytes": 18378,
+      "sha256": "05fdd77e861f912d2c4a77f3a7193921cc0d9842ba90269f6b64d80c8be29050",
+      "git_blob_sha1": "6941bac596f4aa897d7f51c0cd2bff166e835aee"
+    },
+    {
+      "path": "api/api-run-discovery.json",
+      "bytes": 12767,
+      "sha256": "5164eff71088d75ef2ed89fa22b4242027cb44920c58de98456b56bc143b7e03",
+      "git_blob_sha1": "a904fda9aea5fcdfdf56702aa3db02eaa229b87a"
+    },
+    {
+      "path": "api/api-run-final.json",
+      "bytes": 12734,
+      "sha256": "c4c798676eb3669de1809908977f12fa30dd187cb81110d1b4fc6ba875fb0600",
+      "git_blob_sha1": "c1b45c998cd12d670d24e8c85a81e516b1045219"
+    },
+    {
+      "path": "api/api-run-initial.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/artifact-14822673608-from-run-list.json",
+      "bytes": 687,
+      "sha256": "448550882eebbb1a4bce498fd85ca4f721baa94e530b5b86ad59b006de564c18",
+      "git_blob_sha1": "0c2729adb07f2da6f6d62eb2bc66c16d10a7f629"
+    },
+    {
+      "path": "api/artifact-14822698496-from-run-list.json",
+      "bytes": 697,
+      "sha256": "909d1f560172cc0b29225d811dec172863410ee8f57cdb47f219e3fe173cb54c",
+      "git_blob_sha1": "0f14c7721d4d7ae4fed33a7d32e4f1d2474e37e0"
+    },
+    {
+      "path": "api/artifact-14825235104-from-run-list.json",
+      "bytes": 699,
+      "sha256": "dba4cc503bf6fe994a2a86952dfe45931435c9e235b7b6994a15a39b35403728",
+      "git_blob_sha1": "1c0a5be664da2a2c309b1c65b1669afd690aedd3"
+    },
+    {
+      "path": "api/monitor-jobs-001.json",
+      "bytes": 3518,
+      "sha256": "c17cd8b51594e158ca0f88e5f7b11da2e68a19341a2bdfaf7334c7b4f28b0661",
+      "git_blob_sha1": "d3e66d2a584194e6352dd2eb4b3b09a11cfdd015"
+    },
+    {
+      "path": "api/monitor-jobs-002.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-003.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-004.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-005.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-006.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-007.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-008.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-009.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-010.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-011.json",
+      "bytes": 3647,
+      "sha256": "e7bd864abaf8fa62cc50289cbf8122d8b5792869d3442d54df8003b27f9b273c",
+      "git_blob_sha1": "0c63cdce5ef904e5c4d7fecb147e6a4d7af38e77"
+    },
+    {
+      "path": "api/monitor-jobs-012.json",
+      "bytes": 4911,
+      "sha256": "22307cc71b5166fb4bdaa7abd985f907e2b5f614dcc03f1b886ba15a75a60383",
+      "git_blob_sha1": "03059f61ede05aebd3e9df1b2b56fcc90760f57b"
+    },
+    {
+      "path": "api/monitor-jobs-013.json",
+      "bytes": 7976,
+      "sha256": "96ebb8268a363ab7d765458dcbf880da47b6861545974805960715a2459208e0",
+      "git_blob_sha1": "5068e65b135edb919b650252b38aa6c09a2ad9ad"
+    },
+    {
+      "path": "api/monitor-jobs-014.json",
+      "bytes": 7976,
+      "sha256": "96ebb8268a363ab7d765458dcbf880da47b6861545974805960715a2459208e0",
+      "git_blob_sha1": "5068e65b135edb919b650252b38aa6c09a2ad9ad"
+    },
+    {
+      "path": "api/monitor-jobs-015.json",
+      "bytes": 7976,
+      "sha256": "96ebb8268a363ab7d765458dcbf880da47b6861545974805960715a2459208e0",
+      "git_blob_sha1": "5068e65b135edb919b650252b38aa6c09a2ad9ad"
+    },
+    {
+      "path": "api/monitor-jobs-016.json",
+      "bytes": 7976,
+      "sha256": "96ebb8268a363ab7d765458dcbf880da47b6861545974805960715a2459208e0",
+      "git_blob_sha1": "5068e65b135edb919b650252b38aa6c09a2ad9ad"
+    },
+    {
+      "path": "api/monitor-jobs-017.json",
+      "bytes": 7976,
+      "sha256": "96ebb8268a363ab7d765458dcbf880da47b6861545974805960715a2459208e0",
+      "git_blob_sha1": "5068e65b135edb919b650252b38aa6c09a2ad9ad"
+    },
+    {
+      "path": "api/monitor-jobs-018.json",
+      "bytes": 7976,
+      "sha256": "96ebb8268a363ab7d765458dcbf880da47b6861545974805960715a2459208e0",
+      "git_blob_sha1": "5068e65b135edb919b650252b38aa6c09a2ad9ad"
+    },
+    {
+      "path": "api/monitor-jobs-019.json",
+      "bytes": 7976,
+      "sha256": "96ebb8268a363ab7d765458dcbf880da47b6861545974805960715a2459208e0",
+      "git_blob_sha1": "5068e65b135edb919b650252b38aa6c09a2ad9ad"
+    },
+    {
+      "path": "api/monitor-jobs-020.json",
+      "bytes": 7976,
+      "sha256": "96ebb8268a363ab7d765458dcbf880da47b6861545974805960715a2459208e0",
+      "git_blob_sha1": "5068e65b135edb919b650252b38aa6c09a2ad9ad"
+    },
+    {
+      "path": "api/monitor-jobs-021.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-022.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-023.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-024.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-025.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-026.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-027.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-028.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-029.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-030.json",
+      "bytes": 8062,
+      "sha256": "4e59fedd1c4aa74edfa1cb37fac13c6063e515095eb0110ef455b12ce20cd1eb",
+      "git_blob_sha1": "a09ca6fb2976885169369e13459c7fdeae69026f"
+    },
+    {
+      "path": "api/monitor-jobs-031.json",
+      "bytes": 8387,
+      "sha256": "632903cbcc92f3aba9a374557eadd5a711a479471295d46cceb4cd8cafc468a2",
+      "git_blob_sha1": "c85fbebbd665b921e9e2d69986cd29b6caa8d084"
+    },
+    {
+      "path": "api/monitor-run-001.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-002.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-003.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-004.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-005.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-006.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-007.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-008.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-009.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-010.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-011.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/monitor-run-012.json",
+      "bytes": 12731,
+      "sha256": "4c536402e81172569f83d29622aac7f753b48c7d1285641391f0d3438e723581",
+      "git_blob_sha1": "36da7ebc334f38a45ea6eb6289d2b27184629b1b"
+    },
+    {
+      "path": "api/monitor-run-013.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-014.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-015.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-016.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-017.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-018.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-019.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-020.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-021.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-022.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-023.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-024.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-025.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-026.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-027.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-028.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-029.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-030.json",
+      "bytes": 12731,
+      "sha256": "ed94baffa2305ed617986601074a1a5c5f10a3d2c921b352597bce9a9d209be8",
+      "git_blob_sha1": "e1d2b8823d81267b5f2ac9df00342d637f55ad0a"
+    },
+    {
+      "path": "api/monitor-run-031.json",
+      "bytes": 12734,
+      "sha256": "c4c798676eb3669de1809908977f12fa30dd187cb81110d1b4fc6ba875fb0600",
+      "git_blob_sha1": "c1b45c998cd12d670d24e8c85a81e516b1045219"
+    }
+  ],
+  "preserved_initial_files": [
+    {
+      "path": "api/api-run-discovery.json",
+      "bytes": 12767,
+      "sha256": "5164eff71088d75ef2ed89fa22b4242027cb44920c58de98456b56bc143b7e03",
+      "git_blob_sha1": "a904fda9aea5fcdfdf56702aa3db02eaa229b87a"
+    },
+    {
+      "path": "api/api-run-initial.json",
+      "bytes": 12731,
+      "sha256": "eabf6200c5ba5bccc0829b3f68150a0ebd7735a0c9a7528ed7bb017eeb480ead",
+      "git_blob_sha1": "dcf20480ee7908b1bdded5b4c4271ad3174ae6b8"
+    },
+    {
+      "path": "api/api-jobs-attempt1-initial.json",
+      "bytes": 3518,
+      "sha256": "c17cd8b51594e158ca0f88e5f7b11da2e68a19341a2bdfaf7334c7b4f28b0661",
+      "git_blob_sha1": "d3e66d2a584194e6352dd2eb4b3b09a11cfdd015"
+    },
+    {
+      "path": "api/api-pr86-after-merge-initial.json",
+      "bytes": 18378,
+      "sha256": "6046bbac407bdfc468db83d7f2289fd78b94eb0c2ff904524e1dd8ff79657db9",
+      "git_blob_sha1": "f3942b19056e9004d4ca068e215358e606e3d020"
+    }
+  ],
+  "fixed_source_files": [
+    {
+      "path": "source-files/browser_city_common_p470.py",
+      "bytes": 21730,
+      "sha256": "67db1c3f314b1d8adc5679b401e98481bf8d96cf65f4d43cc8dc24ac2e8fe905",
+      "git_blob_sha1": "1ed89048b770bef3ab68a9c5f18c7626bd3a3dd6"
+    },
+    {
+      "path": "source-files/browser_city_north_p471.py",
+      "bytes": 28188,
+      "sha256": "b7c3c5caf8a9045ca7e9ff573dfc0c8f54472aef4129e861d37d903dceaa4b9a",
+      "git_blob_sha1": "433ce66fad469a3bf8f93fa740240aab963f34df"
+    },
+    {
+      "path": "source-files/pages.yml",
+      "bytes": 21518,
+      "sha256": "8db121edd86089cdad99d7a954afbdced0bb34dec0d0717b2dec1ac666e215c3",
+      "git_blob_sha1": "db95e37e34ef8fee4485f68f87b361f1559ec00a"
+    }
+  ],
+  "metadata_extraction_note": "Per-artifact metadata is an exact selected object from the retained full run artifact-list API. Raw full API responses, initial observations and complete returned job logs are retained. The original ZIP bytes were downloaded and verified against GitHub digest and size before CAS ingestion.",
+  "signed_download_urls_retained": false,
+  "prior_pr_artifacts_redownloaded": false,
+  "repository_source_modified_by_collector": false,
+  "ref_tree_commit_mutations_by_collector": false,
+  "image_status": {
+    "publication_status": "needs_revision",
+    "review_status": "rejected_needs_revision",
+    "homepage_revision": "panorama-approved-v12",
+    "homepage_replacement_approved": false,
+    "technical_acceptance_does_not_approve_image_geometry": true
+  },
+  "immutable_build_blob_preupload_receipt": {
+    "path": "/workspace/r12-cas-upload-receipts-delta-production-4579-build.json",
+    "bytes": 156633,
+    "sha256": "00d70735af9a713fc1e6ef1a28df4118f1eedad46d39b83946568a4bb76b0220",
+    "git_blob_sha1": "995b1a6e44446cbe2a78580fbd2b3bbe3e67e99b"
+  },
+  "next_owner_actions_at_collection": [
+    "Collector will separately freeze and preupload only missing immutable live CAS objects with actual GitHub SHA receipts.",
+    "Root owns final archival assembly, frozen tree, independent remote readback and issue handoff.",
+    "This technical acceptance does not authorize replacing the approved V12 homepage image."
+  ]
+}
