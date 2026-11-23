@@ -1,0 +1,1041 @@
+{
+  "version": "dual-southeast-inner-b6",
+  "base_commit": "6e9d817fac023a70c2d5d8be237c1d245f3f4880",
+  "scope": "R08东阳、清阳／青阳、开阳门内既有锚点及非定位关系群；胡统只作相关旁注，禅虚仍归R01。保留前批全部定位与时层边界。",
+  "region": {
+    "id": "L08",
+    "source_region": "R08",
+    "name": "东阳、清阳与开阳门内",
+    "bbox": [
+      6500,
+      4110,
+      1710,
+      2870
+    ],
+    "bbox_meaning": "沿用R08文献示意画布的x、y、width、height；不是古地理坐标或遗址范围。"
+  },
+  "sources": [
+    {
+      "id": "Z1",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷1·周祖谟电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/1",
+      "checked": "2026-11-13",
+      "basis": "本批直接核读电子正文与相关校语；未核古刻书影。现代整理本及其中引书不增加独立古籍来源家族。"
+    },
+    {
+      "id": "F1",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷1·范祥雍电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/1",
+      "checked": "2026-11-13",
+      "basis": "本批直接核读电子正文与相关校语；未核古刻书影。现代整理本及其中引书不增加独立古籍来源家族。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EI01",
+      "source_region": "R08",
+      "title": "东墙二门与南墙开阳：同名异写不增门",
+      "entities": [
+        "gate_dongyang",
+        "gate_qingyang",
+        "gate_kaiyang",
+        "gate_jianchun"
+      ],
+      "quote": "次南曰東陽門。……次南曰青陽門。……東頭第一門，曰開陽門。",
+      "quote_source": "Z1",
+      "quote_locator": "原序·东面、南面城门总叙；周电子本文152、156、161行，范250—251行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引；开阳句的门字为周本正文采用、校语明示的补字",
+      "reading": "东阳、青阳在东墙门序中依次位于建春以南；开阳是南墙东首门。范本城门总叙也作青阳，修梵条却保留清阳；周在修梵条校为青阳。因此不是周、范两书各自始终采用一个不同名称。",
+      "drawing": "保留 gate_dongyang、gate_qingyang、gate_kaiyang 三个既有门锚点；清阳／青阳并记，均用不数层的通用城门类型。东阳、清阳符号与R09共享，不重复造门。",
+      "limit": "门序不提供门间距离、门楼层数、门洞数或内外道路连续形状；开阳门的汉代飞柱故事不是北魏建筑测量。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "修梵条改清为青；南门条第一门的门字，周注说明据集证本补。"
+        },
+        {
+          "source": "F1",
+          "reading": "总叙正文作青阳，校语认为青字不误；修梵条正文仍作清阳。南门总数三校为四，不影响本批开阳的东首身份。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "gate_dongyang",
+          "relation": "south_of",
+          "object": "gate_jianchun",
+          "basis": "direct"
+        },
+        {
+          "subject": "gate_qingyang",
+          "relation": "south_of",
+          "object": "gate_dongyang",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI02",
+      "source_region": "R08",
+      "title": "昭仪道南一里：行像记载不是路线",
+      "entities": [
+        "ic_zhaoyi",
+        "gate_dongyang",
+        "ic_dongyang_avenue",
+        "v3_jingming"
+      ],
+      "quote": "在東陽門內一里御道南。……寺有一佛二菩薩……四月七日常出詣景明。",
+      "quote_source": "Z1",
+      "quote_locator": "卷一·昭仪尼寺条开头及三像行像段；范B12n0078_p0394a06起",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "昭仪尼寺的门内与御道南是直接定位语，一里仍缺量距端点。三尊塑像与赴景明的节日活动属于寺内名物及活动关系，不是两寺间的道路勘测。太后临朝的宦官背景不能替代明确的建寺年或塑像完成年。",
+      "drawing": "在 ic_zhaoyi 原锚点使用空心、无塔尼寺类型；旁图保留门内一里与道南文字，行像可用非地理关联说明。",
+      "limit": "不把一里换算为像素或古经纬度，不画确定巡游路径；一佛二菩萨不是三座殿、三座塔或三处寺址。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "ic_zhaoyi",
+          "relation": "inside_gate",
+          "object": "gate_dongyang",
+          "basis": "direct",
+          "distance_text": "一里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "ic_zhaoyi",
+          "relation": "south_of",
+          "object": "ic_dongyang_avenue",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_zhaoyi",
+          "relation": "ritual_visit_to",
+          "object": "v3_jingming",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用 undated：本批未取得足以锁定528年河阴之变前这一寺院形态的证据；空心不表示必定晚出。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI03",
+      "source_region": "R08",
+      "title": "太仓、导官同在道北；东西关系另属注引",
+      "entities": [
+        "ic_taicang_wei",
+        "ic_daoguan",
+        "ic_dongyang_avenue",
+        "gate_dongyang",
+        "ic_taicang_jin"
+      ],
+      "quote": "東陽門內道北〔有〕太倉導官二署。",
+      "quote_source": "Z1",
+      "quote_locator": "卷一·昭仪尼寺条夹叙官署；范B12n0078_p0394a06—07",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文采用校补、删衍后的周本读法；有字为显式校补，东西关系仅在校读解释中列注引",
+      "reading": "正文直接给出东阳门内道北的两署。周补有并删太下衍北；范同样删去太北仓的北。周注所引《河南志》另说导官在太仓西，须与正文层分开；本批没有把这段注引算作第二个独立来源家族。",
+      "drawing": "导官、北魏太仓沿原锚点换为官署类型，名称保留太仓署〔北魏〕；两署道北可用实线关系，既有东西排布只沿用旧示意并注明注引层。",
+      "limit": "正文的并列不规定两署东西先后、相邻或共院；北魏东阳门内太仓不得与建春门内晋太仓旧址合并，署名也不提供仓房数量和尺寸。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "〔有〕属周补；太下北字作衍文删去。导官西于太仓出自周注所引元《河南志》。"
+        },
+        {
+          "source": "F1",
+          "reading": "保留太《北》仓的删字标识，认为北字涉上文道北误衍。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "ic_taicang_wei",
+          "relation": "inside_gate",
+          "object": "gate_dongyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_daoguan",
+          "relation": "inside_gate",
+          "object": "gate_dongyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_taicang_wei",
+          "relation": "north_of",
+          "object": "ic_dongyang_avenue",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_daoguan",
+          "relation": "north_of",
+          "object": "ic_dongyang_avenue",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_daoguan",
+          "relation": "west_of",
+          "object": "ic_taicang_wei",
+          "basis": "commentary_citation"
+        },
+        {
+          "subject": "ic_taicang_wei",
+          "relation": "not_identical",
+          "object": "ic_taicang_jin",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "identity_policy": "distinct_existing_entities",
+      "identity_pair": [
+        "ic_taicang_wei",
+        "ic_taicang_jin"
+      ]
+    },
+    {
+      "id": "EI04",
+      "source_region": "R08",
+      "title": "治粟里的东南：参照对象未完全写明",
+      "entities": [
+        "ic_zhisu",
+        "ic_daoguan",
+        "ic_taicang_wei"
+      ],
+      "quote": "東南治粟里，倉司官屬住其內。",
+      "quote_source": "F1",
+      "quote_locator": "卷一·昭仪尼寺条两署之后；B12n0078_p0394a07—08",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "东南紧承两署叙述，既可按近前导官理解，也可能以二署为合称参照；原句未重写参照名。范校引《河南志》作导官署南且无东字，是另一层文字，不能静默合成唯一方向。",
+      "drawing": "保留 ic_zhisu 非定位附注，写东南〔参照回指未定〕与仓司官属居处；需要关系线时用解释性虚线，不补里界。",
+      "limit": "治粟的居住功能不证明整里专属于仓司，更不能从道北的两署向东南推出治粟必在御道哪一侧。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "F1",
+          "reading": "校语所引元《河南志》作治粟里在导官署南，较正文少东。"
+        },
+        {
+          "source": "Z1",
+          "reading": "正文保留东南；导官在太仓西是另一注引关系，不消除东南的代词省略。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "ic_zhisu",
+          "relation": "southeast_of",
+          "object": "ic_daoguan",
+          "basis": "interpretation",
+          "alternative_reference": "二署合称；并非正文唯一指定的参照对象"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "non_entailments": [
+        "不从导官或太仓的道北关系继承治粟里的路侧。"
+      ]
+    },
+    {
+      "id": "EI05",
+      "source_region": "R08",
+      "title": "昭仪池不是翟泉；石崇旧池另属赵逸说",
+      "entities": [
+        "ic_zhaoyi_pool",
+        "ic_zhaoyi",
+        "ic_diquan",
+        "ic_taicang_wei",
+        "ic_taicang_jin",
+        "ic_lvzhu"
+      ],
+      "quote": "昭儀寺有池……明非翟泉也。……趙逸云：「此地是晉侍中石崇家池，池南有綠珠樓。」",
+      "quote_source": "F1",
+      "quote_locator": "卷一·昭仪寺池辨误段；B12n0078_p0395a01—04",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "作者以晋、今太仓分处建春与东阳门内，反驳学徒把昭仪池认作翟泉；此为明确的否定同一关系。石崇家池与绿珠楼则由后文赵逸发言引入，须保留旧址叙述的说话者与历史层。",
+      "drawing": "关系板分别列昭仪池与翟泉，并明确不得合并；保留池与昭仪、北魏太仓西南的关系。主图不另重画水岸，也不因旧池传说新造绿珠楼建筑。",
+      "limit": "本条没有池岸形状、面积、水位或与城内诸海连通的信息；绿珠楼的旧址说不能证明516—528年仍有楼，池也不能移到晋太仓旁以求同名一致。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "F1",
+          "reading": "此地今在太仓西南的今在两字，范疑倒置，语义仍指今太仓。"
+        },
+        {
+          "source": "Z1",
+          "reading": "周明确解释该太仓为今太仓，并分辨建春门内晋太仓。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "ic_zhaoyi_pool",
+          "relation": "within",
+          "object": "ic_zhaoyi",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_zhaoyi_pool",
+          "relation": "southwest_of",
+          "object": "ic_taicang_wei",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_zhaoyi_pool",
+          "relation": "not_identical",
+          "object": "ic_diquan",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_lvzhu",
+          "relation": "south_of",
+          "object": "ic_zhaoyi_pool",
+          "basis": "reported_historical_identification"
+        }
+      ],
+      "temporal_note": "昭仪池为本条所述池；石崇旧池和绿珠楼属于晋事追述，不自动视为北魏仍存建筑。",
+      "geographic_coordinates": null,
+      "identity_policy": "distinct_existing_entities",
+      "identity_pair": [
+        "ic_zhaoyi_pool",
+        "ic_diquan"
+      ]
+    },
+    {
+      "id": "EI06",
+      "source_region": "R08",
+      "title": "愿会以池为参照，王翊宅与寺为转换关系",
+      "entities": [
+        "ic_yuanhui",
+        "ic_zhaoyi_pool",
+        "ic_wangyi_house"
+      ],
+      "quote": "池西南有願會寺，中書侍郎王翊捨宅所立也。",
+      "quote_source": "Z1",
+      "quote_locator": "卷一·昭仪寺池后附愿会；范B12n0078_p0395a05—06",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "西南的直接参照是昭仪寺池；王翊舍宅说明宅与寺的前后关系。周、范都据传记及异本将中书舍人校为侍郎，但官衔校读不给宅寺新的地理坐标。",
+      "drawing": "保留愿会与王翊宅在E02非定位关系群中，标池西南及宅→寺，不新增两个独立院址。",
+      "limit": "不能把池西南直接改写为昭仪寺中心西南，不能继承昭仪的东阳御道南；王翊姓名与官衔也不提供院落规模。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "正文采用中书侍郎，校语说明通行本作舍人。"
+        },
+        {
+          "source": "F1",
+          "reading": "显示中书舍人（侍郎），据传记、墓志及其他引文校为侍郎。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "ic_yuanhui",
+          "relation": "southwest_of",
+          "object": "ic_zhaoyi_pool",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_wangyi_house",
+          "relation": "predecessor_of",
+          "object": "ic_yuanhui",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用 undated；王翊卒年及其官衔不等同建寺日期，本批不将寺院状态升级为河阴之变前实证。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI07",
+      "source_region": "R08",
+      "title": "愿会五重是神桑；砍伐时层须标注推定",
+      "entities": [
+        "ic_yuanhui"
+      ],
+      "quote": "佛堂前生桑樹一株……凡為五重……帝聞而惡之……命給事黃門侍郎元紀伐殺之。",
+      "quote_source": "Z1",
+      "quote_locator": "卷一·愿会寺神桑段；周电子本文292行，范572行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "五重修饰神桑枝叶的层次，不是五层佛塔。正文称帝而未写年号；周把此帝推为出帝，并以元纪永熙中任官解释，是校者推定的较晚事件层。",
+      "drawing": "在构件与时层板用文字说明神桑及砍伐事件；若注明永熙532—534年，必须同时写周注推定。愿会主图仍不落点，不画五层塔。",
+      "limit": "树木的五尺、五重是神异叙述中的尺寸，不用于院落比例或寺址量测；砍伐神桑不表示寺院同期新建或被毁。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "周注以出帝解释帝，并将元纪任官联系永熙；不是正文明确纪年。"
+        },
+        {
+          "source": "F1",
+          "reading": "正文保留帝与元纪，不直接写出帝或永熙年号；给事中之中字另有异文。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "愿会寺仍 undated；神桑砍伐的永熙时段只作为周注推定，不倒填为寺院始建年。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI08",
+      "source_region": "R08",
+      "title": "宜寿与光明：代词回指和宅寺链分开",
+      "entities": [
+        "ic_yishou",
+        "ic_yuanhui",
+        "ic_zhaoyi",
+        "ic_duanhui_house",
+        "ic_guangming"
+      ],
+      "quote": "寺南有宜壽里，內有苞信縣令叚（段）暉宅……暉遂捨宅為光明寺。",
+      "quote_source": "F1",
+      "quote_locator": "卷一·愿会神桑段之后的宜寿、光明故事；B12n0078_p0395a11—15",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "寺南以最近的愿会寺为工作读法，但原文未重写寺名；若回指昭仪，关系会改变，故不得伪装成明示定位。段晖宅在宜寿里是直接叙述；光明在同里由宅改寺叙事承接，属于解释性的地点延续。",
+      "drawing": "在E02群中保留愿会—〔寺南回指〕—宜寿及段宅→光明，使用虚线或问号标回指；不把光明改成主图独立寺点。",
+      "limit": "不能通过寺南链给光明添加东阳御道南、与修梵先后等新约束；宅改寺不证明原宅建筑原封不动，也不提供光明院界。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "F1",
+          "reading": "段字在电子本显示叚（段）的校正；寺南不补寺名。"
+        },
+        {
+          "source": "Z1",
+          "reading": "正文作段晖，另分寺南句；同样未把所指寺名写进原句。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "ic_yishou",
+          "relation": "south_of",
+          "object": "ic_yuanhui",
+          "basis": "interpretation",
+          "alternative_reference": "若回指主条昭仪，则此边需改变"
+        },
+        {
+          "subject": "ic_duanhui_house",
+          "relation": "in_ward",
+          "object": "ic_yishou",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_duanhui_house",
+          "relation": "predecessor_of",
+          "object": "ic_guangming",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_guangming",
+          "relation": "in_ward",
+          "object": "ic_yishou",
+          "basis": "interpretation"
+        }
+      ],
+      "temporal_note": "光明沿用 undated；宅寺转换的先后清楚，转换年月未明。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI09",
+      "source_region": "R08",
+      "title": "晋泰始像铭不等于光明建寺纪年",
+      "entities": [
+        "ic_guangming",
+        "ic_duanhui_house"
+      ],
+      "quote": "晉泰始二年五月十五日侍中中書監荀勗造。……暉遂捨宅為光明寺。……時人咸云此是荀勗故宅。",
+      "quote_source": "Z1",
+      "quote_locator": "卷一·光明寺掘像故事；周电子本文294行，范573行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "泰始二年为故事中掘出像的题记日期，周注换算为266年；不是段晖舍宅或光明寺建立之年。荀勗故宅由时人认定引入，不是独立完成的遗址鉴定。",
+      "drawing": "时层板分列晋像铭—段晖宅—舍宅为寺三层，后两层不补年份；荀勗故宅只保留为传称，不增独立坐标或院落。",
+      "limit": "不能把像高三尺用作寺院尺度，也不能把266年标成光明寺始建年；发光、喝贼等神异情节不转为可量测建筑事实。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "据异文校太始为泰始、中书令为中书监，正文采用泰始与监。"
+        },
+        {
+          "source": "F1",
+          "reading": "正文保留太始，校语记引文作泰；中书监与令异文分列。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "266年只归所引像铭；寺院建立年月不明，维持 undated。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI10",
+      "source_region": "R08",
+      "title": "胡统在永宁以南，五重仅作非定位构件",
+      "entities": [
+        "ic_hutong",
+        "ic_yongning"
+      ],
+      "quote": "在永寧南一里許。寶塔五重，金剎高聳。……常入宮與太后說法。",
+      "quote_source": "F1",
+      "quote_locator": "卷一·胡统寺条；B12n0078_p0399a01起",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "一里许是相对永宁的南向距离，没有御道侧别。太后从姑建寺、诸尼常入宫说法支持太后在世的寺院活动层；宝塔五重为正文形制描述，未另给塔的开工、竣工日期。",
+      "drawing": "沿用E01非定位旁注，保持南永宁关系；五重塔可放非定位构件说明，不为胡统新增世界坐标、院落或路侧。",
+      "limit": "不能从永宁御道西继承胡统也在道西；一里许不能以两个寺门、塔心或院界间距定量落图。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "ic_hutong",
+          "relation": "south_of",
+          "object": "ic_yongning",
+          "basis": "direct",
+          "distance_text": "一里許",
+          "distance_endpoints": null
+        }
+      ],
+      "temporal_note": "保留基线 attested_by_528 的寺院活动判断；五重描述未另有竣工纪年，亦不改为主图塔节点。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI11",
+      "source_region": "R08",
+      "title": "修梵的道北明确，金刚不是塔",
+      "entities": [
+        "ic_xiufan",
+        "gate_qingyang",
+        "ic_qingyang_avenue"
+      ],
+      "quote": "修梵寺，在清陽門內御道北。……修梵寺有金剛。",
+      "quote_source": "F1",
+      "quote_locator": "卷一·修梵寺条；B12n0078_p0400a01起",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "门内与道北均为直接位置语；金刚属于造像名物，周释为金刚力士。有关鸟雀及菩提达摩评价的叙事不增加门距、建筑层数或明确建寺年。",
+      "drawing": "ic_xiufan 原位换空心、无塔寺院类型；道北关系保留。金刚仅在构件板文字说明，门名并记清阳／青阳。",
+      "limit": "不能因金刚一词补金刚塔，不能从雕墙峻宇、比屋连甍反算殿数、墙高或寺院面积。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "本条清校为青；金刚解释为力士，属于注释。"
+        },
+        {
+          "source": "F1",
+          "reading": "本条正文保留清阳，门序总叙则作青阳；不拆成两个门。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "ic_xiufan",
+          "relation": "inside_gate",
+          "object": "gate_qingyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_xiufan",
+          "relation": "north_of",
+          "object": "ic_qingyang_avenue",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用 undated，空心不表示寺院必在528年之后才建。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI12",
+      "source_region": "R08",
+      "title": "嵩明在修梵西，不自动继承御道北",
+      "entities": [
+        "ic_songming",
+        "ic_xiufan",
+        "ic_qingyang_avenue"
+      ],
+      "quote": "嵩明寺……復在修梵寺西。並雕墻峻宇，比屋連甍，亦是名寺也。",
+      "quote_source": "Z1",
+      "quote_locator": "卷一·修梵条附嵩明；范B12n0078_p0400a01",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "嵩明西于修梵是直接约束；两寺并称华美不能变成共院、同一排临街建筑或相接寺界。周用嵩，范将蒿校为嵩；寺名异文不产生第二寺址。",
+      "drawing": "保留 ic_songming 原锚点，改空心、无塔寺院类型；关系图仅画嵩明→修梵的西向关系，旧示意同列不附加共同道北断言。",
+      "limit": "西于已知道北的寺并不能在缺少边界、距离与道路形状时为本寺独立证明路侧；不补寺间小路或共墙。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "正文作嵩明。"
+        },
+        {
+          "source": "F1",
+          "reading": "正文示蒿（嵩），校语说明嵩见诸本、说郛，采用嵩。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "ic_songming",
+          "relation": "west_of",
+          "object": "ic_xiufan",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用 undated。",
+      "geographic_coordinates": null,
+      "non_entailments": [
+        "ic_songming north_of ic_qingyang_avenue 不由本句直接推出。"
+      ],
+      "forbidden_inferences": [
+        {
+          "subject": "ic_songming",
+          "relation": "north_of",
+          "object": "ic_qingyang_avenue",
+          "reason": "原文相对寺院的方位不得无证继承为御道路侧。"
+        }
+      ],
+      "route_side_transfer_allowed": false
+    },
+    {
+      "id": "EI13",
+      "source_region": "R08",
+      "title": "永和寺北须回指；南北池与六宅不成测绘坊图",
+      "entities": [
+        "ic_yonghe",
+        "ic_xiufan",
+        "ic_songming",
+        "ic_yonghe_pool_north",
+        "ic_yonghe_pool_south"
+      ],
+      "quote": "寺北有永和里……里南北皆有池……今猶有水，冬夏不竭。里中……等六宅。",
+      "quote_source": "F1",
+      "quote_locator": "卷一·修梵寺条附永和里；B12n0078_p0400a05起",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "寺北前最近的明称是修梵寺有金刚，故回指修梵有近文支持；但原句仍未重写寺名，本批保留解释层与回指不确定性。两池分居里南北；长孙稚、郭祚、邢鸾／巒、元洪超、许伯桃、尉成兴六宅只列同里，不给内部次序。",
+      "drawing": "保留旧永和里与两池的示意关系，不新增坊墙、水岸或六宅点位；寺北关系标回指解释，不用硬边界。冬夏不竭只注在本组池水。",
+      "limit": "不能把永和明确锁为修梵院墙北，更不把寺北无条件转成御道北；池水未证与昭仪池、翟泉或城内渠道相连。董卓宅、造池与宝物叙述是历史追述，不是六宅同时营建的证明。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "正文将邢鸾校为邢巒，长孙稚官衔有补字；未在寺北句补寺名。"
+        },
+        {
+          "source": "F1",
+          "reading": "保留邢鸾及相关异文；没有据此排定六宅空间位置。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "ic_yonghe",
+          "relation": "north_of",
+          "object": "ic_xiufan",
+          "basis": "interpretation",
+          "referent_note": "近前修梵寺有金刚支持此读，寺北原句仍未点名"
+        },
+        {
+          "subject": "ic_yonghe_pool_north",
+          "relation": "north_of",
+          "object": "ic_yonghe",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_yonghe_pool_south",
+          "relation": "south_of",
+          "object": "ic_yonghe",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "正文当世贵里与董卓旧事分层；六位宅主的官衔列举不证明六宅在516—528某一年全部同期存在。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI14",
+      "source_region": "R08",
+      "title": "景林道东与园在寺西：两个参照不可偷换",
+      "entities": [
+        "ic_jinglin",
+        "ic_jinglin_garden",
+        "gate_kaiyang",
+        "ic_kaiyang_avenue"
+      ],
+      "quote": "景林寺，在開陽門內御道東。……寺西有園，多饒奇果。",
+      "quote_source": "F1",
+      "quote_locator": "卷一·景林寺条；B12n0078_p0402a06—07起",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "景林直接在开阳门内御道东；园的西向参照是景林寺，不是开阳御道。园可能仍在道东，也可能有别的道路关系，本条不能决定。",
+      "drawing": "景林原位换空心无塔寺院类型；寺西园沿既有锚点使用园类型，明确园与御道关系未详。",
+      "limit": "不得把寺西园改写成御道西园；讲殿叠起、房庑连属与奇果不提供建筑层数、殿宇数量、园界或果树株数。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "ic_jinglin",
+          "relation": "inside_gate",
+          "object": "gate_kaiyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_jinglin",
+          "relation": "east_of",
+          "object": "ic_kaiyang_avenue",
+          "basis": "direct"
+        },
+        {
+          "subject": "ic_jinglin_garden",
+          "relation": "west_of",
+          "object": "ic_jinglin",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "景林沿用 undated；园本条无独立始建年，不增具体年代。",
+      "geographic_coordinates": null,
+      "non_entailments": [
+        "ic_jinglin_garden west_of ic_kaiyang_avenue 不由寺西一语推出。"
+      ],
+      "forbidden_inferences": [
+        {
+          "subject": "ic_jinglin_garden",
+          "relation": "west_of",
+          "object": "ic_kaiyang_avenue",
+          "reason": "原文相对寺院的方位不得无证继承为御道路侧。"
+        }
+      ],
+      "route_side_transfer_allowed": false
+    },
+    {
+      "id": "EI15",
+      "source_region": "R08",
+      "title": "禅房内祇洹精舍：小型名物不是新增寺址",
+      "entities": [
+        "ic_jinglin",
+        "ic_jinglin_garden"
+      ],
+      "quote": "中有禪房一所，內置祇洹精舍，形製雖小，巧構難〈比〉。",
+      "quote_source": "F1",
+      "quote_locator": "卷一·景林寺西园与禅房段；范电子本文582行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引；〈比〉保留范本校补标识",
+      "reading": "在寺西园叙述中，禅房内又置小型祇洹精舍，层级应保留。周将其解释为依天竺精舍式样所作，是对小型名物的解释，不是测得完整印度寺院副本。",
+      "drawing": "构件板仅说明园—禅房—房内小型精舍的文字层级；不新增祇洹寺ID、坐标或独立寺院图符。",
+      "limit": "不能据精舍一词添塔，不能按禅阁或形制虽小推定建筑层数、缩尺比例和房间平面；中有的承接也不提供禅房在园内的精确方位。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "正文作祗洹，注释指出佛典多作祇；解释为禅房内依天竺式样所作。"
+        },
+        {
+          "source": "F1",
+          "reading": "正文作祇洹，巧构难比的比字用〈〉标校补。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "禅房与小型精舍没有另立制作或落成年份；不据构件存在升级景林的 undated 状态。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "EI16",
+      "source_region": "R08",
+      "title": "景林石铭与普泰任官：传记年不能给全寺定年",
+      "entities": [
+        "ic_jinglin",
+        "ic_jinglin_garden",
+        "ic_sinong"
+      ],
+      "quote": "有石銘一所，國子博士盧白頭為其文。……普泰初，起家為國子博士。",
+      "quote_source": "F1",
+      "quote_locator": "卷一·景林寺条末石铭与卢白头小传；范电子本文584行，周309—311行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "石铭有撰者而未录其纪年；普泰初属于卢白头任官的传记句。周注又引普泰初复除国子博士等传记材料，不能把官衔出现直接读成石铭落成日，更不能把景林全寺或西园都定为531年新建。",
+      "drawing": "时层板分别列无纪年石铭与普泰初任官文字，寺院与园保持原有未定状态；不用后出任官背景替代建筑年月。",
+      "limit": "不得将普泰初自动移作景林始建年、修建年或石铭刻立年。后续建春门内官署是另起地点叙述，司农寺为官署，不因排在景林之后就属于景林院内。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "校注所引传记有普泰初复除的表述；建春门段说明另为一条。"
+        },
+        {
+          "source": "F1",
+          "reading": "普泰初在卢白头小传内；建春门条校语讨论旧版排为子注的版面，不把其中官署并入景林。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "普泰531年仅作为所引任官语境；景林、园、石铭各自的营建或刻立年月仍未由本条确定。",
+      "geographic_coordinates": null
+    }
+  ],
+  "ancient_absolute_positions_added": 0,
+  "source_family_count": 1,
+  "existing_entity_usage": {
+    "main_node_ids": [
+      "ic_daoguan",
+      "ic_taicang_wei",
+      "ic_zhaoyi",
+      "ic_songming",
+      "ic_xiufan",
+      "ic_jinglin_garden",
+      "ic_jinglin"
+    ],
+    "city_gate_ids": [
+      "gate_dongyang",
+      "gate_qingyang",
+      "gate_kaiyang"
+    ],
+    "shared_gate_ids_with_R09": [
+      "gate_dongyang",
+      "gate_qingyang"
+    ],
+    "road_reference_ids": [
+      "ic_dongyang_avenue",
+      "ic_qingyang_avenue",
+      "ic_kaiyang_avenue"
+    ],
+    "sidecar_or_group_ids": [
+      "ic_yuanhui",
+      "ic_yishou",
+      "ic_guangming",
+      "ic_wangyi_house",
+      "ic_duanhui_house",
+      "ic_zhisu",
+      "ic_lvzhu",
+      "ic_hutong"
+    ],
+    "water_and_ward_reference_ids": [
+      "ic_zhaoyi_pool",
+      "ic_yonghe",
+      "ic_yonghe_pool_north",
+      "ic_yonghe_pool_south"
+    ],
+    "identity_or_context_only_ids": [
+      "ic_diquan",
+      "ic_taicang_jin",
+      "ic_yongning",
+      "v3_jingming",
+      "gate_jianchun",
+      "ic_sinong",
+      "n_chanxu"
+    ]
+  },
+  "main_glyph_policy": {
+    "changed_groups": 10,
+    "node_groups": 7,
+    "city_gate_groups": 3,
+    "shared_city_gate_groups_with_R09": 2,
+    "move_existing_anchors": false,
+    "new_world_nodes": 0,
+    "temple_towers_in_main_map": false,
+    "main_temple_type": "昭仪、嵩明、修梵、景林沿既有undated时态用空心无塔类型；空心不等于判定晚出。",
+    "office_nodes": [
+      "ic_daoguan",
+      "ic_taicang_wei"
+    ],
+    "garden_nodes": [
+      "ic_jinglin_garden"
+    ],
+    "nonspatial_tower_annotation": [
+      "ic_hutong"
+    ],
+    "new_water_outline": false,
+    "pool_policy": "昭仪池无179 markers中的独立替换目标；主图不重画水岸，关系板保留独立水体及否定同一关系。",
+    "gate_type": "沿旧门锚点，通用不数层；东阳、清阳与R09共用一组门符。"
+  },
+  "node_recommendations": [
+    {
+      "id": "ic_daoguan",
+      "label": "导官署",
+      "existing_canvas_anchor": [
+        7140,
+        4450
+      ],
+      "anchor_meaning": "沿用data/markers.json的文献示意画布位置，不是古经纬度。",
+      "suggested_type": "office",
+      "temporal_state": null
+    },
+    {
+      "id": "ic_taicang_wei",
+      "label": "太仓署〔北魏〕",
+      "existing_canvas_anchor": [
+        7490,
+        4450
+      ],
+      "anchor_meaning": "沿用data/markers.json的文献示意画布位置，不是古经纬度。",
+      "suggested_type": "office",
+      "temporal_state": null
+    },
+    {
+      "id": "ic_zhaoyi",
+      "label": "昭仪尼寺",
+      "existing_canvas_anchor": [
+        7520,
+        4990
+      ],
+      "anchor_meaning": "沿用data/markers.json的文献示意画布位置，不是古经纬度。",
+      "suggested_type": "temple_open_no_tower",
+      "temporal_state": "undated"
+    },
+    {
+      "id": "ic_songming",
+      "label": "嵩明寺",
+      "existing_canvas_anchor": [
+        7160,
+        5940
+      ],
+      "anchor_meaning": "沿用data/markers.json的文献示意画布位置，不是古经纬度。",
+      "suggested_type": "temple_open_no_tower",
+      "temporal_state": "undated"
+    },
+    {
+      "id": "ic_xiufan",
+      "label": "修梵寺",
+      "existing_canvas_anchor": [
+        7510,
+        5940
+      ],
+      "anchor_meaning": "沿用data/markers.json的文献示意画布位置，不是古经纬度。",
+      "suggested_type": "temple_open_no_tower",
+      "temporal_state": "undated"
+    },
+    {
+      "id": "ic_jinglin_garden",
+      "label": "景林寺西园",
+      "existing_canvas_anchor": [
+        7300,
+        6450
+      ],
+      "anchor_meaning": "沿用data/markers.json的文献示意画布位置，不是古经纬度。",
+      "suggested_type": "garden",
+      "temporal_state": null
+    },
+    {
+      "id": "ic_jinglin",
+      "label": "景林寺",
+      "existing_canvas_anchor": [
+        7650,
+        6450
+      ],
+      "anchor_meaning": "沿用data/markers.json的文献示意画布位置，不是古经纬度。",
+      "suggested_type": "temple_open_no_tower",
+      "temporal_state": "undated"
+    }
+  ],
+  "notes": [
+    "source_region逐条标为R08，表示本批研究归属；胡统、翟泉、晋太仓、司农寺等关联实体并不因此迁入R08。",
+    "六寺昭仪、愿会、光明、修梵、嵩明、景林继续undated；胡统继续attested_by_528且只在非定位旁注。此批不改data/entities.json或旧时层数据。",
+    "图示锚点为旧排版约定。导官与太仓的东西排布、嵩明与修梵同列、园与道路位置，均不可反过来增强正文约束。",
+    "永和寺北的近前修梵寺有金刚支持回指修梵，但仍应明确为解释性关系。宜寿寺南以愿会为工作读法，原文未重写寺名。",
+    "旧址传说、神异叙事、帝王或撰者传记、器物题记与寺院营建必须各分时层；不把547年总序废墟概述自动分配为逐寺已证毁灭。",
+    "未见名为阐虚的既有实体；现有n_chanxu为卷五大夏门道禅虚寺，仍归R01，不另造城内阐虚寺。",
+    "没有新增古经纬度、院落边界、建筑尺寸、水岸或坊内宅第坐标。"
+  ],
+  "improvements": [
+    {
+      "id": "BI01",
+      "title": "清／青不是两套整理本一对一异写",
+      "evidence": [
+        "EI01",
+        "EI11"
+      ],
+      "change": "明确范本同卷总叙青阳、修梵清阳的内部异写，避免拆门或误述为周范整本分歧。"
+    },
+    {
+      "id": "BI02",
+      "title": "器物铭与人物任官不移作寺院年代",
+      "evidence": [
+        "EI09",
+        "EI16"
+      ],
+      "change": "光明266年归像铭，景林普泰初归卢白头任官语境；两个寺的始建年均不据此补入。"
+    },
+    {
+      "id": "BI03",
+      "title": "重新标明永和回指的强度与限度",
+      "evidence": [
+        "EI13"
+      ],
+      "change": "指出近前已重提修梵寺，说明工作读法的依据，同时保留寺北未点名的解释层。"
+    },
+    {
+      "id": "BI04",
+      "title": "五重神桑和房内精舍不扩成塔寺",
+      "evidence": [
+        "EI07",
+        "EI15"
+      ],
+      "change": "分开植物叙述、禅房内小型名物与独立寺院/佛塔，避免由建筑词汇机械造图。"
+    }
+  ]
+}

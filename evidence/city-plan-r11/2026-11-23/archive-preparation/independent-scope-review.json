@@ -1,0 +1,24 @@
+{
+  "schema": "luoyang-r11-independent-scope-review-v1",
+  "recorded_utc": "2026-11-23T03:24:02.161148+00:00",
+  "reviewer_agent": "/root/r11_layout_inventory",
+  "reviewed_objects": [
+    "config/preupload-batch2-scope.json",
+    "methods/prepare_preupload_batch.py",
+    "listed_source_identity_and_qa_summaries"
+  ],
+  "status": "no_required_correction_identified",
+  "findings": [
+    "e137 retains CI success alongside two separately recorded manual layout issues",
+    "Local post-fix is a not-yet-deployed candidate",
+    "PR83 actual execution is tested merge1faf; final129 only shares verified source tree",
+    "Global final acceptance remains false before final gate",
+    "Final129 source selection contains fact JSON, method documentation and renderer, no original third-party PDF, raster, crop or source-backed overlay",
+    "Known forbidden source hashes and verified wrapper/tar omissions are explicitly accounted"
+  ],
+  "limits": [
+    "Read-only semantic review, not a repeated per-file byte verification or per-image audit",
+    "scanned_text_file_or_zip_member_count counts text credential-pattern scans, not image copyright inspections",
+    "No archive files or remote state were edited during this review"
+  ]
+}

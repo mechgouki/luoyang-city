@@ -1,0 +1,203 @@
+{
+  "recorded_at": "2026-11-23T03:00:00.116Z",
+  "pr": 83,
+  "run_id": 45101964789,
+  "url": "https://github.com/mechgouki/luoyang-city/actions/runs/45101964789",
+  "head_sha": "45d6069c0a5a58979b7c5a6bde8e4594e219237a",
+  "status": "completed",
+  "conclusion": "success",
+  "tested_merge": "1faf2a4380e1e4676f78f5533ed045ceffe3a4ae",
+  "tested_tree": "f6ed7ac2587da1f5639b76bc4c2b86097eed796d",
+  "tested_merge_parents": [
+    "e137f473278282c6c30a29e2c018de666577889a",
+    "45d6069c0a5a58979b7c5a6bde8e4594e219237a"
+  ],
+  "checkout_evidence": {
+    "path": "/tmp/r11-production-watch/pr83/build-137454637578.log",
+    "sha256": "83477ffae5c321babc7472b82e5600372a075e1a43cdc15a9e9d62410cb46bcb",
+    "bytes": 277058,
+    "checkout_log_utc": "2026-11-23T02:45:08.6688376Z",
+    "r11_verify_source_commit_matches": true
+  },
+  "jobs": [
+    {
+      "id": 137454637578,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T02:45:04Z",
+      "completed_at": "2026-11-23T02:57:41Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-23T02:45:05Z",
+          "completed_at": "2026-11-23T02:45:06Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-23T02:45:06Z",
+          "completed_at": "2026-11-23T02:45:08Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-23T02:45:08Z",
+          "completed_at": "2026-11-23T02:45:08Z"
+        },
+        {
+          "name": "Install pinned terrain and document dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-23T02:45:08Z",
+          "completed_at": "2026-11-23T02:45:19Z"
+        },
+        {
+          "name": "Install pinned rendering font outside the published directory",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-23T02:45:19Z",
+          "completed_at": "2026-11-23T02:45:22Z"
+        },
+        {
+          "name": "Check current summaries and prepare unchanged baseline PDF",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-23T02:45:22Z",
+          "completed_at": "2026-11-23T02:45:22Z"
+        },
+        {
+          "name": "Check baseline data and JavaScript",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-23T02:45:22Z",
+          "completed_at": "2026-11-23T02:45:24Z"
+        },
+        {
+          "name": "Check all spatial, temporal, terrain and dual-map semantics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-23T02:45:24Z",
+          "completed_at": "2026-11-23T02:45:29Z"
+        },
+        {
+          "name": "Build all published research stages in preserved order",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-23T02:45:29Z",
+          "completed_at": "2026-11-23T02:46:45Z"
+        },
+        {
+          "name": "Check the built prosperity maps and their evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-23T02:46:45Z",
+          "completed_at": "2026-11-23T02:47:01Z"
+        },
+        {
+          "name": "Fetch pinned browser runtime with preinstalled dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-23T02:47:01Z",
+          "completed_at": "2026-11-23T02:47:30Z"
+        },
+        {
+          "name": "Exercise current and all earlier map interactions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-11-23T02:47:30Z",
+          "completed_at": "2026-11-23T02:57:18Z"
+        },
+        {
+          "name": "Preserve build and browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-11-23T02:57:18Z",
+          "completed_at": "2026-11-23T02:57:28Z"
+        },
+        {
+          "name": "Upload verified Pages artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-23T02:57:28Z",
+          "completed_at": "2026-11-23T02:57:38Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-11-23T02:57:38Z",
+          "completed_at": "2026-11-23T02:57:39Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-11-23T02:57:39Z",
+          "completed_at": "2026-11-23T02:57:39Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-11-23T02:57:39Z",
+          "completed_at": "2026-11-23T02:57:39Z"
+        }
+      ]
+    },
+    {
+      "id": 137458304302,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-11-23T02:57:41Z",
+      "completed_at": "2026-11-23T02:57:41Z",
+      "steps": []
+    },
+    {
+      "id": 137458304850,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-11-23T02:57:42Z",
+      "completed_at": "2026-11-23T02:57:41Z",
+      "steps": []
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 14786715111,
+      "name": "github-pages",
+      "size_in_bytes": 354417121,
+      "digest": "sha256:ced72c83cbe68b4ed2256b3af7fad0bc6330abf43824cf4205441f6e9a627629"
+    },
+    {
+      "id": 14786177506,
+      "name": "browser-build-evidence",
+      "size_in_bytes": 244010328,
+      "digest": "sha256:b790bd838063569fed7fac3c16208946e52b20e5162f0268884bf4bec7004c0e"
+    }
+  ],
+  "production_verification_pending_for": "129abaee724870ec00bc25c6e2fd2998a215063b"
+}

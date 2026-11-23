@@ -1,0 +1,270 @@
+{
+  "schema": "luoyang-r11-partial-browser-byte-check-v1",
+  "run_id": 45096652591,
+  "accepted_release": false,
+  "source_commit": "2cf09df9d588cf1cf440a8517a1f8950e4bc2b4b",
+  "devices": {
+    "desktop": {
+      "status": "passed",
+      "elapsed_seconds": 30.751,
+      "download_count": 26,
+      "screenshot_count": 5,
+      "error": null,
+      "checks_completed": [
+        "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+        "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden",
+        "Buttons and keyboard zoom/pan/reset keep the same plane, and a real tower-polygon click opens its source/placement evidence",
+        "Feature-ID search, the 宣忠 alias, saved feature zoom and empty/reset search work; choosing R04 clears the old feature and reload restores the regional camera",
+        "All 339 coverage IDs and group/query counters agree; unplaced search overrides stale filters, table focus returns to real geometry, and no action rewrites coordinates",
+        "Every download is a genuine paced click with released hash, retained bytes and a single attempt; PDF paper sizes/text/embedded fonts and every ZIP member are checked; the offline UI runs with network disabled",
+        "Without JavaScript the common-plane SVG, every feature and all 339 catalog objects remain readable; native evidence links and disclosure controls work"
+      ]
+    },
+    "mobile": {
+      "status": "failed",
+      "elapsed_seconds": 8.499,
+      "download_count": 0,
+      "screenshot_count": 2,
+      "error": "Locator expected to have text '木塔基座主体图示轮廓'\nActual value: 木塔地基图示范围 \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#selected-title\")\n    9 × locator resolved to <h3 id=\"selected-title\">木塔地基图示范围</h3>\n      - unexpected value \"木塔地基图示范围\"\n",
+      "checks_completed": [
+        "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+        "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden"
+      ]
+    }
+  },
+  "retained_files_actually_hashed": [
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "downloads/city-plan-r11.pdf",
+      "bytes": 2126360,
+      "sha256": "9a8389f84b30b94f966349add407f3893ba40518542b0ff03624b1aed0178e5a"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "downloads/city-plan-r11.zip",
+      "bytes": 5825701,
+      "sha256": "eb8e6b6b2c880636c4b9f1c8b3197b2e758038cd956f82781fd1779d04ed4e1b"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/all.svg",
+      "bytes": 241292,
+      "sha256": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/core.svg",
+      "bytes": 219792,
+      "sha256": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/changhe.svg",
+      "bytes": 204387,
+      "sha256": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/yongning.svg",
+      "bytes": 210297,
+      "sha256": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/palace2013.svg",
+      "bytes": 227900,
+      "sha256": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R01.svg",
+      "bytes": 204611,
+      "sha256": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R02.svg",
+      "bytes": 244773,
+      "sha256": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R03.svg",
+      "bytes": 226225,
+      "sha256": "057dcce1204b2f9bc4526e4f968b869f9cd6a994ff1aa53b8c86261ae1c212ad"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R04.svg",
+      "bytes": 217640,
+      "sha256": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R05.svg",
+      "bytes": 211466,
+      "sha256": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R06.svg",
+      "bytes": 210174,
+      "sha256": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R07.svg",
+      "bytes": 223642,
+      "sha256": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R08.svg",
+      "bytes": 237792,
+      "sha256": "1803bcc9c3027cf8386539206699d421f715d8855c72566b49a726a63707c8b6"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R09.svg",
+      "bytes": 213188,
+      "sha256": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R10.svg",
+      "bytes": 240735,
+      "sha256": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/R11.svg",
+      "bytes": 207619,
+      "sha256": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/maps/method.svg",
+      "bytes": 3695,
+      "sha256": "f557bd902a21a10fe7a148d2f01e26b016596366272a9f50a8080d278ec024a4"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/coverage.csv",
+      "bytes": 602403,
+      "sha256": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/features.csv",
+      "bytes": 363737,
+      "sha256": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/constraints.csv",
+      "bytes": 452311,
+      "sha256": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/source-index.csv",
+      "bytes": 1288590,
+      "sha256": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/plan.json",
+      "bytes": 5538357,
+      "sha256": "ae59c63950ebf4a9849a24ddc68d958241fae3de119973aaa8b73ead7f24cdc9"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/source-index.json",
+      "bytes": 1492949,
+      "sha256": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5"
+    },
+    {
+      "kind": "actual_download",
+      "device": "desktop",
+      "path": "city-plan-r11/manifest.json",
+      "bytes": 106604,
+      "sha256": "94a507fbfb4c34407c551fb2c0f5161b9a4de67a4ce79b89afa194f83634b044"
+    },
+    {
+      "kind": "screenshot",
+      "device": "desktop",
+      "path": "desktop-all.png",
+      "bytes": 156976,
+      "sha256": "4910dfa99b02d53b0b114c8711d6e40a1349faa9882a88bf4d8be866d76fcf4f"
+    },
+    {
+      "kind": "screenshot",
+      "device": "desktop",
+      "path": "desktop-yongning-selected.png",
+      "bytes": 120313,
+      "sha256": "99ef03e3685f3a07339f83ef380282de0e91b59e9a8e64948b445777b53d330e"
+    },
+    {
+      "kind": "screenshot",
+      "device": "desktop",
+      "path": "desktop-palace-comparison.png",
+      "bytes": 245115,
+      "sha256": "3d89858f1c6f834dedf06a4a6079d020990675004c763278339fe6b1f8d1b90f"
+    },
+    {
+      "kind": "screenshot",
+      "device": "desktop",
+      "path": "desktop-offline.png",
+      "bytes": 67617,
+      "sha256": "3f9745b7751a35a44b32c3847df11e5a80d73f1ff6fdff9640cf9fd7fcd7f3de"
+    },
+    {
+      "kind": "screenshot",
+      "device": "desktop",
+      "path": "desktop-without-javascript.png",
+      "bytes": 371443,
+      "sha256": "65111180aae6aefc7c022c1cca9202aea18b613c7a8181ac92ecb0f34b5fc6fb"
+    },
+    {
+      "kind": "screenshot",
+      "device": "mobile",
+      "path": "mobile-all.png",
+      "bytes": 55439,
+      "sha256": "8fd1cbeaa27ce5a4c044d261ad97122c0f2259ed5cd3c14d734523ece6d3c73d"
+    },
+    {
+      "kind": "screenshot",
+      "device": "mobile",
+      "path": "mobile-failure.png",
+      "bytes": 84497,
+      "sha256": "b7c1760149205ab7d85bddad6ef29b8aa8ae37cb953603686870ea0f80b4880c"
+    }
+  ],
+  "all_available_file_bytes_match_reports": true,
+  "limit": "Desktop completion and retained screenshots do not make the failed overall workflow a release acceptance."
+}

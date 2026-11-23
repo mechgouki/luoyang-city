@@ -1,0 +1,847 @@
+{
+  "version": "dual-luonan-groups-b7",
+  "base_commit": "9d0580332d635beb1d68963ae6c032598c2ff515",
+  "scope": "R11四馆四里目录、馆里安置过程、季节性入侍、域外来源与归正寺宅寺时层；保留既有群组及非定位状态。",
+  "region": {
+    "id": "L10",
+    "source_region": "R11",
+    "name": "洛南馆里与市场",
+    "bbox": [
+      4100,
+      8720,
+      4350,
+      2230
+    ],
+    "bbox_meaning": "沿用R11文献示意画布的x、y、width、height；不是古地理坐标或实测里坊范围。"
+  },
+  "sources": [
+    {
+      "id": "Z3",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷3·周祖谟电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/3",
+      "checked": "2026-11-13",
+      "basis": "直接核读卷三电子正文及校语，原文、校补、注引史书与本项目解释分开；未核古刻书影，也未独立复核注中所引魏书、梁书、河南志。两个整理本仍属同一古籍来源家族。"
+    },
+    {
+      "id": "F3",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷3·范祥雍电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/3",
+      "checked": "2026-11-13",
+      "basis": "直接核读卷三电子正文及校语，原文、校补、注引史书与本项目解释分开；未核古刻书影，也未独立复核注中所引魏书、梁书、河南志。两个整理本仍属同一古籍来源家族。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "LG01",
+      "source_region": "R11",
+      "title": "洛南馆里段：两侧与区间，不补连续道路",
+      "entities": [
+        "road_siyi",
+        "bridge_yong",
+        "altar_yuanqiu",
+        "water_yi",
+        "luoshui",
+        "guan_jinling",
+        "guan_yanran",
+        "guan_fusang",
+        "guan_yanzi",
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi"
+      ],
+      "quote": "永橋以南，圜丘以北，伊洛之間，夾御道，東有四夷館……道西有四夷里。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·永桥后四夷馆里段首；CBETA B12n0077 p0160a06—08；Z3电子本文63行，F3第34行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "采用周整理后的句读，馆里段位于永桥以南、圜丘以北、伊洛之间；四馆在御道东，四里在道西。这里的区间约束与两侧关系可保留，但不含御道长度、曲直、两岸河槽或馆里边界。",
+      "drawing": "沿用road_siyi与两个既有群组；只标道东四馆、道西四里。圜丘继续作方向参照，伊水不从这句话补画精确河道。",
+      "limit": "不由夹御道推定四组馆里一一对街、同纬或共享横巷，也不把这段御道无证延成长直线接入宫前主轴。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "夹御道以后的馆里目录，周据元《河南志》整理；详LG02。"
+        },
+        {
+          "source": "F3",
+          "reading": "正文显示目录补文和道西四馆之馆改里；圜、圆、员列作异写，不新立三个祭坛。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "road_siyi",
+          "relation": "south_of",
+          "object": "bridge_yong",
+          "basis": "direct"
+        },
+        {
+          "subject": "road_siyi",
+          "relation": "north_of",
+          "object": "altar_yuanqiu",
+          "basis": "direct"
+        },
+        {
+          "subject": "road_siyi",
+          "relation": "between",
+          "object": null,
+          "basis": "regional_description",
+          "object_ids": [
+            "water_yi",
+            "luoshui"
+          ],
+          "object_label": "伊洛之间（区域描述，非两处候选参照）"
+        },
+        {
+          "subject": "guan_jinling",
+          "relation": "east_of",
+          "object": "road_siyi",
+          "basis": "adopted_editorial_reading"
+        },
+        {
+          "subject": "guan_yanran",
+          "relation": "east_of",
+          "object": "road_siyi",
+          "basis": "adopted_editorial_reading"
+        },
+        {
+          "subject": "guan_fusang",
+          "relation": "east_of",
+          "object": "road_siyi",
+          "basis": "adopted_editorial_reading"
+        },
+        {
+          "subject": "guan_yanzi",
+          "relation": "east_of",
+          "object": "road_siyi",
+          "basis": "adopted_editorial_reading"
+        },
+        {
+          "subject": "li_guizheng",
+          "relation": "west_of",
+          "object": "road_siyi",
+          "basis": "adopted_editorial_reading"
+        },
+        {
+          "subject": "li_guide",
+          "relation": "west_of",
+          "object": "road_siyi",
+          "basis": "adopted_editorial_reading"
+        },
+        {
+          "subject": "li_muhua",
+          "relation": "west_of",
+          "object": "road_siyi",
+          "basis": "adopted_editorial_reading"
+        },
+        {
+          "subject": "li_muyi",
+          "relation": "west_of",
+          "object": "road_siyi",
+          "basis": "adopted_editorial_reading"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "regional_bounds_are_measured": false,
+      "continuous_straight_road_established": false,
+      "one_to_one_opposite_street_established": false,
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "LG02",
+      "source_region": "R11",
+      "title": "四馆四里目录经校补；编号不是空间排序",
+      "entities": [
+        "guan_jinling",
+        "guan_yanran",
+        "guan_fusang",
+        "guan_yanzi",
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi"
+      ],
+      "quote": "一曰金陵，二曰燕然，三曰扶桑，四曰崦嵫。……一曰歸正，二曰歸德，三曰慕化，四曰慕義。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·四夷馆里目录及周、范校语；Z3电子本文63行，F3第34行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "采用周校释正文的目录短引；馆名及馆里区分涉及校补，非声称底本完整无异",
+      "reading": "周按元《河南志》把馆舍与里巷两类名单分清。范对馆名和道西句使用补文标记，并把道西四馆的馆校为里。两整理本的采用文本均支持四馆加四里，不能把底本缺文或馆里误字读成八馆。",
+      "drawing": "保留道东一组四馆目录、道西一组四里目录；目录序数只作为文本列名，可在非地理制度表中列四行，不在母图拆成四排或八处街址。",
+      "limit": "一二三四不是南北、东西或前后排列；同序号的馆与里形成制度对应，还不足以证实正对街面。两整理本也不算两份独立地理证据。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "周说明底本在夹御道后缺馆名等文，并据元《河南志》校正整段。"
+        },
+        {
+          "source": "F3",
+          "reading": "以〈〉补出馆名与道西句；道西四馆（里）显示馆字改里，不能抹去校补层。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "catalogue_hall_ids": [
+        "guan_jinling",
+        "guan_yanran",
+        "guan_fusang",
+        "guan_yanzi"
+      ],
+      "catalogue_ward_ids": [
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi"
+      ],
+      "catalogue_order_is_spatial": false,
+      "spatial_order_established": false,
+      "one_to_one_opposite_street_established": false,
+      "individual_footprints_allowed": false,
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "LG03",
+      "source_region": "R11",
+      "title": "吴人：金陵馆到归正里，三年属于待遇叙述",
+      "entities": [
+        "guan_jinling",
+        "li_guizheng"
+      ],
+      "quote": "吳人投國者，處金陵館。三年已後，賜宅歸正里。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·四夷馆里段吴人安置语；Z3电子本文63行，F3第34行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "原文以吴人投国者为叙述类别，明确先处金陵馆、三年后赐宅归正里。这是馆舍接待与里内授宅的制度关系，不是馆址移成里址，也不是所有住民的逐年居住履历。",
+      "drawing": "制度流程表画金陵馆→归正里，边注三年已后；箭头只表示安置阶段，不能放成有地理长度和过街位置的迁居路线。",
+      "limit": "三年不等于两地距离，不提供馆、宅营建年；本句也不证明归正里仅有一种居民身份，或每个来者恰满三年同时迁出。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "三年是本句的相对等待期，没有给出统一起算年或馆里建成年。",
+      "geographic_coordinates": null,
+      "process": {
+        "people_category_literal": "吳人投國者",
+        "accommodation_entity_id": "guan_jinling",
+        "subsequent_residential_ward_id": "li_guizheng",
+        "waiting_period_literal": "三年已後",
+        "waiting_period_years": 3,
+        "waiting_period_explicit": true,
+        "relation_kind": "institutional_accommodation_to_residence",
+        "is_spatial_opposition": false,
+        "journey_geometry": null
+      },
+      "institutional_correspondence_established": true,
+      "opposite_street_established": false,
+      "absolute_year_from_waiting_period_allowed": false
+    },
+    {
+      "id": "LG04",
+      "source_region": "R11",
+      "title": "北来安置：燕然馆到归德里也明记三年",
+      "entities": [
+        "guan_yanran",
+        "li_guide"
+      ],
+      "quote": "北夷來附者處燕然館，三年已後，賜宅歸德里。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·四夷馆里段北夷安置语；Z3电子本文66行，F3第34行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "这一组同样明写三年后的赐宅程序。北夷是古籍在此采用的分类用语，不是把所有北来个人的身份、停留时间或日后去向都归成同一种事实。",
+      "drawing": "制度表列燕然馆→归德里，单列三年已后。空间图仍分别归入四馆、四里群，不把这对机构横向锁定在同一街口。",
+      "limit": "不能据燕然为山名的命名解释，把燕然馆搬到洛阳以北，也不能把馆名、来人方向变成馆在四馆群中的最北位置。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "明确的是这条制度叙述中的三年等待期；下文个案与季节性入侍另记，不同于统一建成年。",
+      "geographic_coordinates": null,
+      "process": {
+        "people_category_literal": "北夷來附者",
+        "accommodation_entity_id": "guan_yanran",
+        "subsequent_residential_ward_id": "li_guide",
+        "waiting_period_literal": "三年已後",
+        "waiting_period_years": 3,
+        "waiting_period_explicit": true,
+        "relation_kind": "institutional_accommodation_to_residence",
+        "is_spatial_opposition": false,
+        "journey_geometry": null
+      },
+      "institutional_correspondence_established": true,
+      "opposite_street_established": false,
+      "name_origin_determines_local_position": false
+    },
+    {
+      "id": "LG05",
+      "source_region": "R11",
+      "title": "正光元年来朝个案：朝班位置不是城市位置",
+      "entities": [
+        "guan_yanran",
+        "li_guide"
+      ],
+      "quote": "正光元年……可班郍肱蕃王儀同之間。……又處之燕然館，賜宅歸德里。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·郁久闾阿那肱来朝与常景议朝班段；Z3电子本文67行，F3第34行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "常景讨论蕃王、仪同之间的朝班等级，随后另叙燕然馆和归德里的住宿、授宅安排。两种处置不能合成王府之间的地理位置。该个案虽有正光元年，却未另写来朝至授宅的间隔。",
+      "drawing": "在流程旁以文字区分朝班待遇、处馆、赐宅三件事，不绘王府夹间、不新增这位来朝者的宅址，也不自动给赐宅填入523年。",
+      "limit": "不能把叙事邻接当作即日完成，亦不能从一般三年规则算出这一个案的精确授宅年；正光元年不是燕然馆或归德里的始建年。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "周据异本补正蠕蠕主与郁久闾等文字，采用阿那肱，并在注中列史书异名。"
+        },
+        {
+          "source": "F3",
+          "reading": "正文保留缺字及改字标识，校语说明姓氏、主字与名的字形；这些异写不产生多个接待馆。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "正光元年（520）为此来朝事件的正文纪年；不是馆里建成年。个案赐宅的独立日期未记。",
+      "geographic_coordinates": null,
+      "event_year_ce": 520,
+      "event_scope": "court_reception_and_accommodation_case",
+      "court_rank_is_geographic_relation": false,
+      "individual_housing_date_ce": null,
+      "individual_waiting_period_years": null,
+      "event_year_is_building_date": false
+    },
+    {
+      "id": "LG06",
+      "source_region": "R11",
+      "title": "雁臣秋来春去：季节性入侍不同于永久落户",
+      "entities": [
+        "guan_yanran",
+        "li_guide"
+      ],
+      "quote": "北夷酋長遣子入侍者，常秋來春去，避中國之熱，時人謂之雁臣。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·北夷来朝段末雁臣语；Z3电子本文67行，F3第34行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "这一句限定对象为酋长遣子入侍者，叙述常见的秋来春去及其理由。它说明同段含有往返而非只进不出的过程，但没有重写每位入侍者具体住哪一馆、在哪一里领宅。",
+      "drawing": "在北来流程旁用秋来／春去的季节注记，不画全年固定住址，不给每人分宅，也不把循环箭头用作城内送迎路线。",
+      "limit": "常字不是每人每年都如此；未给月份、日数、往返人数或路径。不能把季节性入侍、一般三年授宅与个案待遇合成一个无例外的自动流程。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "F3",
+          "reading": "正文作鴈臣，与周本雁臣为字形差异。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "季节模式无独立年度与精确日期；不据此为馆里增加始建、停用或拆迁年。",
+      "geographic_coordinates": null,
+      "process_subject_literal": "北夷酋長遣子入侍者",
+      "seasonal_pattern": {
+        "arrival": "秋",
+        "departure": "春",
+        "qualifier": "常",
+        "exact_calendar_dates": null
+      },
+      "accommodation_assignment_in_this_sentence": null,
+      "permanent_residence_for_all_established": false,
+      "route_geometry": null
+    },
+    {
+      "id": "LG07",
+      "source_region": "R11",
+      "title": "东、西两组有馆里对应，但没有明写三年",
+      "entities": [
+        "guan_fusang",
+        "li_muhua",
+        "guan_yanzi",
+        "li_muyi"
+      ],
+      "quote": "東夷來附者，處扶桑館，賜宅慕化里。西夷來附者，處崦嵫館，賜宅慕義里。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·四夷馆里段东、西来附者；Z3电子本文68行，F3第34行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "扶桑—慕化、崦嵫—慕义的制度对应由正文直接给出；两句没有重写三年已后。与前两组并读，可以列四种安置对应，却不能把缺写的等待期当作已明确同为三年，也不能反过来判为即时授宅。",
+      "drawing": "制度表为东、西两行保留等待期未记；空值表示未知，不用0年。母图仍为馆里群组，不按来人东西方向重新排列四馆。",
+      "limit": "制度表的同行并不代表道路两侧正相对；来人方向和扶桑、崦嵫的命名典故也不决定它们在洛阳四馆内部的东西次序。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "F3",
+          "reading": "西夷句列有处／处之异文，不补三年文字。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "东、西两组授宅等待时间未明写；本批不从吴、北两句移入三年。",
+      "geographic_coordinates": null,
+      "processes": [
+        {
+          "people_category_literal": "東夷來附者",
+          "accommodation_entity_id": "guan_fusang",
+          "subsequent_residential_ward_id": "li_muhua",
+          "waiting_period_literal": null,
+          "waiting_period_years": null,
+          "waiting_period_explicit": false,
+          "relation_kind": "institutional_accommodation_to_residence",
+          "is_spatial_opposition": false,
+          "journey_geometry": null
+        },
+        {
+          "people_category_literal": "西夷來附者",
+          "accommodation_entity_id": "guan_yanzi",
+          "subsequent_residential_ward_id": "li_muyi",
+          "waiting_period_literal": null,
+          "waiting_period_years": null,
+          "waiting_period_explicit": false,
+          "relation_kind": "institutional_accommodation_to_residence",
+          "is_spatial_opposition": false,
+          "journey_geometry": null
+        }
+      ],
+      "all_four_waiting_periods_explicitly_three_years": false,
+      "omitted_waiting_period_means_immediate": false,
+      "opposite_street_established": false
+    },
+    {
+      "id": "LG08",
+      "source_region": "R11",
+      "title": "葱岭至大秦属于域外往来叙述，不落入洛阳街址",
+      "entities": [
+        "guan_yanzi",
+        "li_muyi"
+      ],
+      "quote": "自葱嶺已西，至於大秦，百國千城，莫不款附。商胡販客，日奔塞下。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·西来附者及商胡贩客段；Z3电子本文68行，F3第34行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "葱岭、大秦等在此构成域外来源与远方往来的叙述范围，不是四馆群内的新地点。百国千城与日奔塞下表现往来广、频，并未给出可量测的城市数量、日流量或逐段旅程。",
+      "drawing": "以域外来源文字说明连接崦嵫—慕义流程；不把葱岭、大秦、塞下增为洛阳点位，不画从每个远国进入各馆的确定通行线。",
+      "limit": "也不能以金陵、燕然、扶桑、崦嵫的名称来源作为洛阳馆舍经纬度。本文的政治归附话语与实际迁居、商旅活动须分别阅读，不能假定所有商客最终都领宅。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "周据异本将欢校作款，采用款附。"
+        },
+        {
+          "source": "F3",
+          "reading": "正文保留欢附，校语列异本欵；不能把这种文字差异变成不同的来客路线。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "external_place_names": [
+        "葱岭",
+        "大秦"
+      ],
+      "external_names_are_luoyang_sites": false,
+      "new_local_entity_ids": [],
+      "exact_origin_count": null,
+      "daily_arrival_count": null,
+      "all_merchants_received_residences_established": false,
+      "journey_geometry": null
+    },
+    {
+      "id": "LG09",
+      "source_region": "R11",
+      "title": "附化万余家与阊阖填列：不生成户数网格或新城门",
+      "entities": [
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi"
+      ],
+      "quote": "樂中國土風因而宅者，不可勝數。是以附化之民，萬有餘家。門巷修整，閶闔填列。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·附化居民与街巷描述；Z3电子本文68行，F3第34行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "前文商业往来之后另叙喜爱当地风土而定居的人，不能把两群无条件视为同一名单。万有余家保留为原书概数，统计时点与覆盖范围没有单独厘清；阊阖在门巷描写中按门户理解，不是新点名宫前或城西阊阖门。",
+      "drawing": "图旁保留概数与街巷描写，四里仍用无内部排序的目录群；不分配一万多个宅点，不按户数推里坊面积，不加阊阖城门。",
+      "limit": "不能把万余家平均分成四个等大里坊，也不无条件把概数全划给慕义里。门巷、青槐、绿树／绿柳等景物不提供门数、道路宽度、树株数或排他性的居住分区。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "后文采用绿柳垂庭，校语说明原作树；不转为可计数的树种布局。"
+        },
+        {
+          "source": "F3",
+          "reading": "后文正文保留绿树，列异本作柳。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "household_count_literal": "萬有餘家",
+      "exact_household_count": null,
+      "population_scope_and_date_fixed": false,
+      "household_grid_allowed": false,
+      "changhe_reading": "contextual_generic_gateways",
+      "specific_changhe_gate_identification_established": false,
+      "forbidden_existing_entity_identifications": [
+        "ic_changhe_palace",
+        "gate_changhe_west"
+      ],
+      "changhe_reading_basis": "contextual_interpretation"
+    },
+    {
+      "id": "LG10",
+      "source_region": "R11",
+      "title": "萧正德：来降、处馆、筑宅与纪年异记分层",
+      "entities": [
+        "guan_jinling",
+        "li_guizheng",
+        "house_xiaozhengde",
+        "v3_guizheng"
+      ],
+      "quote": "正光四年中，蕭衍子西豐侯蕭正德來降，處金陵館，為築宅歸正里。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·四夷馆里段萧正德；CBETA B12n0077 p0161a06—08；另参同卷正觉寺水厄段周注（电子本文57、64行）",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "卷三此处周、范正文均记正光四年（523）来降并处金陵馆、筑宅归正里。周在同卷正觉寺水厄段的注释又转引《魏书》作正光三年（522），并讨论另一史载的年代问题；本批没有独立核史传，不能把注引当作另经核验的来源家族。",
+      "drawing": "流程板依次写来降→金陵馆→归正里筑宅，正文523与周注转引522并列为纪年异记；萧正德宅保持E03旁注，不另分配宅址。",
+      "limit": "来降纪年不等于筑宅完工年，更不等于归正寺成立年；不能把一般三年授宅句强套此人再计算出一个确定宅寺年代。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "四馆段正文正光四年；同卷正觉寺条周注转引魏书为正光三年，属于校注引史层。"
+        },
+        {
+          "source": "F3",
+          "reading": "四馆段正文同为正光四年，没有在本句改成三年。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "house_xiaozhengde",
+          "relation": "within",
+          "object": "li_guizheng",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "来降纪年：正文正光四年523；周注转引史载正光三年522。本批未裁决，且二者都不是归正寺的独立创建纪年。",
+      "geographic_coordinates": null,
+      "arrival_date_readings": [
+        {
+          "year_ce": 523,
+          "literal": "正光四年",
+          "layer": "adopted_primary_text",
+          "sources": [
+            "Z3",
+            "F3"
+          ]
+        },
+        {
+          "year_ce": 522,
+          "literal": "正光三年",
+          "layer": "Z3_commentary_cites_Wei_shu_not_independently_checked",
+          "sources": [
+            "Z3"
+          ]
+        }
+      ],
+      "arrival_year_selected": null,
+      "arrival_year_is_temple_foundation_year": false,
+      "independent_chronicle_check": false,
+      "house_construction_completion_year_ce": null,
+      "process": {
+        "person_name": "萧正德",
+        "stages": [
+          "来降",
+          "处金陵馆",
+          "筑宅归正里"
+        ],
+        "accommodation_entity_id": "guan_jinling",
+        "residential_ward_id": "li_guizheng",
+        "residence_entity_id": "house_xiaozhengde",
+        "waiting_period_in_this_case_years": null,
+        "journey_geometry": null
+      }
+    },
+    {
+      "id": "LG11",
+      "source_region": "R11",
+      "title": "归正寺宅改寺：后字是周补，建寺年仍未定",
+      "entities": [
+        "house_xiaozhengde",
+        "li_guizheng",
+        "v3_guizheng"
+      ],
+      "quote": "為築宅歸正里，正德捨宅為歸正寺。",
+      "quote_source": "F3",
+      "quote_locator": "卷三·萧正德宅改归正寺句；F3电子本文34行，Z3第64行",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "范正文在筑宅后接舍宅为寺；周在舍宅句前另增后字，校语说明据元《河南志》补入。两本均有宅改寺叙事，但后不是未经过校读的共同底本文字，也没有单列寺院创建年。归正寺的里属沿原宅上下文登记。",
+      "drawing": "保留house_xiaozhengde→v3_guizheng的前身关系，寺院仍undated、nonspatial_annotation；在既有里内寺院关系群中说明，不新造寺点、塔或院墙。",
+      "limit": "不能把523直接写成归正寺始建年，也不能按523加三年写成526建寺；更不能从整个馆里组有某年活动，继承为该寺当年已成。宅改寺不证明原宅建筑未改动，里属不等于获得沿街地址或寺门朝向。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "周正文作后正德舍宅，校语明确后字各本无、据元《河南志》增。"
+        },
+        {
+          "source": "F3",
+          "reading": "本句正文无后字，直接承接筑宅与舍宅为寺。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "house_xiaozhengde",
+          "relation": "predecessor_of",
+          "object": "v3_guizheng",
+          "basis": "direct"
+        },
+        {
+          "subject": "v3_guizheng",
+          "relation": "within",
+          "object": "li_guizheng",
+          "basis": "inherited_residence_membership"
+        }
+      ],
+      "temporal_note": "保持undated；创建年、完工年未知。萧正德来降纪年和吴人一般三年授宅制度均不能替代本寺的独立年代证据。",
+      "geographic_coordinates": null,
+      "temple_foundation_year_ce": null,
+      "temple_completion_year_ce": null,
+      "temple_temporal_state": "undated",
+      "inherits_group_event_year": false,
+      "three_year_rule_sets_temple_date": false,
+      "new_independent_anchor_allowed": false,
+      "main_scene_mode": "nonspatial_annotation",
+      "tower_added_to_main": false
+    }
+  ],
+  "source_family_count": 1,
+  "ancient_absolute_positions_added": 0,
+  "existing_entity_usage": {
+    "main_node_ids": [],
+    "group_member_ids": [
+      "guan_jinling",
+      "guan_yanran",
+      "guan_fusang",
+      "guan_yanzi",
+      "li_guizheng",
+      "li_guide",
+      "li_muhua",
+      "li_muyi"
+    ],
+    "nonspatial_ids": [
+      "v3_guizheng",
+      "house_xiaozhengde"
+    ],
+    "road_reference_ids": [
+      "road_siyi"
+    ],
+    "context_only_ids": [
+      "bridge_yong",
+      "altar_yuanqiu",
+      "water_yi",
+      "luoshui"
+    ],
+    "unchanged_shared_group_member_ids": [
+      "v3_puti"
+    ]
+  },
+  "institutional_correspondences": [
+    {
+      "people_category_literal": "吳人投國者",
+      "accommodation_entity_id": "guan_jinling",
+      "subsequent_residential_ward_id": "li_guizheng",
+      "waiting_period_literal": "三年已後",
+      "waiting_period_years": 3,
+      "waiting_period_explicit": true,
+      "relation_kind": "institutional_accommodation_to_residence",
+      "is_spatial_opposition": false,
+      "journey_geometry": null
+    },
+    {
+      "people_category_literal": "北夷來附者",
+      "accommodation_entity_id": "guan_yanran",
+      "subsequent_residential_ward_id": "li_guide",
+      "waiting_period_literal": "三年已後",
+      "waiting_period_years": 3,
+      "waiting_period_explicit": true,
+      "relation_kind": "institutional_accommodation_to_residence",
+      "is_spatial_opposition": false,
+      "journey_geometry": null
+    },
+    {
+      "people_category_literal": "東夷來附者",
+      "accommodation_entity_id": "guan_fusang",
+      "subsequent_residential_ward_id": "li_muhua",
+      "waiting_period_literal": null,
+      "waiting_period_years": null,
+      "waiting_period_explicit": false,
+      "relation_kind": "institutional_accommodation_to_residence",
+      "is_spatial_opposition": false,
+      "journey_geometry": null
+    },
+    {
+      "people_category_literal": "西夷來附者",
+      "accommodation_entity_id": "guan_yanzi",
+      "subsequent_residential_ward_id": "li_muyi",
+      "waiting_period_literal": null,
+      "waiting_period_years": null,
+      "waiting_period_explicit": false,
+      "relation_kind": "institutional_accommodation_to_residence",
+      "is_spatial_opposition": false,
+      "journey_geometry": null
+    }
+  ],
+  "main_glyph_policy": {
+    "move_existing_anchors": false,
+    "new_world_nodes": 0,
+    "split_group_into_site_nodes": false,
+    "individual_hall_or_ward_footprints": false,
+    "catalogue_order_is_spatial": false,
+    "one_to_one_opposite_street_established": false,
+    "new_temple_anchor": false,
+    "new_tower_in_main": false,
+    "new_route_geometry": false,
+    "temple_group_policy": "归正寺保持未定年代的非定位附注；不继承群组事件年。"
+  },
+  "group_recommendations": [
+    {
+      "ids": [
+        "guan_jinling",
+        "guan_yanran",
+        "guan_fusang",
+        "guan_yanzi"
+      ],
+      "existing_canvas_anchor": [
+        7320,
+        9645
+      ],
+      "marker_kind": "group",
+      "suggested_type": "馆舍目录群；可统一更新组标签或目录样式，不拆四处馆址"
+    },
+    {
+      "ids": [
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi"
+      ],
+      "existing_canvas_anchor": [
+        5050,
+        9680
+      ],
+      "marker_kind": "group",
+      "suggested_type": "里名目录群；保留道西，不排四里街址"
+    },
+    {
+      "ids": [
+        "v3_guizheng",
+        "v3_puti"
+      ],
+      "existing_canvas_anchor": [
+        5050,
+        10180
+      ],
+      "marker_kind": "group",
+      "suggested_type": "既有里内寺院关系组；归正寺未定年代，菩提由并行子线核对，不拆寺点"
+    }
+  ],
+  "notes": [
+    "馆与里的四种对应是安置过程，不是地理对街。制度表可按原文列四行，表格行序没有地图排序意义。",
+    "吴、北两组才明写三年；东、西两组等待期未记。null表示未知，不表示零年或即时授宅。",
+    "目录校补、朝班等级、域外往来、居民概数均不能生成洛阳新街址。人物居处变化只按明确叙述记录，不自行画送迎路线。",
+    "萧宝寅迁居、归正里吴人坊及鱼市、永桥和圜丘范围由同批另一文献子线分别建证；此文件不为这些个案重复创建实体。",
+    "群组示意坐标仅供排版；四馆、四里和归正寺的既有ID、目标与非定位状态均保留。",
+    "未经逐寺核实，不把547年总序荒毁印象自动给归正寺分配明确毁寺结论。"
+  ],
+  "improvements": [
+    {
+      "id": "LGI01",
+      "title": "三年等待期按原句分别登记",
+      "evidence": [
+        "LG03",
+        "LG04",
+        "LG07"
+      ],
+      "change": "只给吴、北两行写3年；东、西两行保留未知，避免四组统一时钟。"
+    },
+    {
+      "id": "LGI02",
+      "title": "分开长期安置、朝班待遇与季节性入侍",
+      "evidence": [
+        "LG05",
+        "LG06"
+      ],
+      "change": "朝班之间不是城市之间；雁臣往返不合成全员永久落户，不生成送迎路线。"
+    },
+    {
+      "id": "LGI03",
+      "title": "归正寺年代不从来降或制度规则倒算",
+      "evidence": [
+        "LG10",
+        "LG11"
+      ],
+      "change": "正文523与周注转引522并列；后字校补单列。归正寺仍undated，不据523+3造526建寺。"
+    },
+    {
+      "id": "LGI04",
+      "title": "域外地名与阊阖修辞不转为本地实体",
+      "evidence": [
+        "LG08",
+        "LG09"
+      ],
+      "change": "葱岭、大秦只作来源叙述，阊阖按街巷门户语境理解，万余家不生成宅点或坊界。"
+    }
+  ]
+}

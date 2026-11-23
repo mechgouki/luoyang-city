@@ -1,0 +1,526 @@
+{
+  "schema": "luoyang-city-plan-r11-object-method-1",
+  "research_version": "R11",
+  "baseline_commit": "a2d1aac203d468ab0584a09f2c9ec0bfc6dd372b",
+  "target_period": "516—528年河阴事件前的盛时综合，非单年测绘",
+  "coordinate_contract": "源图和候选点使用同一PROJECTION绘图框架；候选坐标是可审查的布局假设，不是新考古坐标。文字只控制所述方向，未述轴、距离、院界与同期性继续未定。",
+  "inputs": {
+    "catalog": "data/entities.json",
+    "r10": "research/city-layout-r10/regions.json",
+    "markers": "data/markers.json",
+    "scene": "data/research-baseline-scene-v23.json",
+    "semantic_audit": "data/research-semantic-display-audit-v24.json",
+    "temporal": "data/research-prosperity_overrides.json",
+    "regions": "data/regions.json"
+  },
+  "registration": {
+    "method": "least_squares_affine_of_nine_named_gate_display_references",
+    "purpose": "旧文献图到共同母图的工作配准，仅初始化候选点；不转换或调整源几何。",
+    "controls": [
+      {
+        "entity_id": "ic_changhe_palace",
+        "source_feature_id": "geo-changhe-palace-gate"
+      },
+      {
+        "entity_id": "ic_qianqiu_gate",
+        "source_feature_id": "geo-qianqiu-gate"
+      },
+      {
+        "entity_id": "gate_jianchun",
+        "source_feature_id": "geo-jianchun-gate"
+      },
+      {
+        "entity_id": "gate_daxia",
+        "source_feature_id": "geo-daxia-gate"
+      },
+      {
+        "entity_id": "gate_guangmo",
+        "source_feature_id": "geo-guangmo-gate"
+      },
+      {
+        "entity_id": "gate_xiyang",
+        "source_feature_id": "geo-xiyang-gate"
+      },
+      {
+        "entity_id": "gate_dongyang",
+        "source_feature_id": "geo-dongyang-gate"
+      },
+      {
+        "entity_id": "gate_qingyang",
+        "source_feature_id": "geo-qingyang-gate"
+      },
+      {
+        "entity_id": "gate_ximing",
+        "source_feature_id": "geo-ximing-gate"
+      }
+    ],
+    "excluded_pairs": [
+      {
+        "entity_id": "ic_yongning",
+        "reason": "旧marker是全寺图签，源Point是塔基符号，不能当同一物理控制点。"
+      },
+      {
+        "entity_id": "ic_jinyong",
+        "reason": "旧marker是全金墉情境框中心，源Point仅金墉丙城参考；不是同一测点。"
+      },
+      {
+        "entity_id": "gate_xuanyang",
+        "reason": "尚无对应source Point，不能补作校准控制。"
+      }
+    ],
+    "geographic_registration_verified": false,
+    "residual_meaning": "两个既有表达系统之间的绘图差，不是考古测量误差、定位精度或统计置信区间。"
+  },
+  "solver": {
+    "method": "deterministic_cyclic_projection_of_single_axis_inequalities",
+    "display_margin_m": 24.0,
+    "propagation_seed_step_m": 110.0,
+    "max_iterations": 500,
+    "numeric_tolerance_m": 0.001,
+    "distance_evidence_used": false,
+    "margin_note": "24仅为候选签的单轴显示间隔；110仅为缺种子对象的公开初始化步长，均非原文里距或建筑间距。",
+    "fixed_source_geometry_modified": false,
+    "unanchored_direction_groups": "retain_unplaced",
+    "other_axis_policy": "free unless separately constrained; no shared street, alignment, or equal spacing inferred"
+  },
+  "canonical_entities": {
+    "ic_jianzhong": "ic_liuteng_house",
+    "house_duzixiu": "v2_lingying",
+    "ic_taicang_jin": "ic_donggong_reserved",
+    "ic_wangyi_house": "ic_yuanhui",
+    "ic_duanhui_house": "ic_guangming",
+    "v2_guijue": "house_liuhu",
+    "v2_jianzhong": "house_yangchun",
+    "house_gaoxian": "v3_zhaofu",
+    "v3_gaoyang": "house_gaoyang"
+  },
+  "canonical_entity_note": "合并仅是R10已明确的主层地点签／宅寺叙事归属，不主张前后建筑轮廓完全重合；原339 ID及其各自时相始终保留。",
+  "node_object_bindings": {
+    "R07-P01-tower": "component-yongning-tower",
+    "R07-P01-hall": "component-yongning-buddha-hall",
+    "R03-P04-tianyuan": "object-ic_tianyuan"
+  },
+  "source_object_bindings": {
+    "object-ic_yongning": {
+      "feature_ids": [
+        "geo-yongning-temple-walls"
+      ],
+      "feature_prefixes": [
+        "r11-yongning-YN11-WALL-"
+      ],
+      "evaluation_proxy": "published_plan_wall_envelope_only",
+      "label": "永宁寺〔已见墙迹／候选院墙〕",
+      "evaluation_feature_ids": [
+        "r11-yongning-YN11-WALL-N",
+        "r11-yongning-YN11-WALL-W-N",
+        "r11-yongning-YN11-WALL-W-S",
+        "r11-yongning-YN11-WALL-E-N",
+        "r11-yongning-YN11-WALL-E-S",
+        "r11-yongning-YN11-WALL-S-W",
+        "r11-yongning-YN11-WALL-S-E"
+      ],
+      "evaluation_limit": "仅以新刊7段墙形成候选刊图包络，不表示完整古院界；06a残墙保留为独立对照源，不参与此proxy。"
+    },
+    "component-yongning-tower": {
+      "feature_ids": [
+        "geo-yongning-pagoda-reference",
+        "r11-yongning-YN11-TOWER-FOUNDATION",
+        "r11-yongning-YN11-TOWER-PLINTH"
+      ],
+      "evaluation_feature_ids": [
+        "r11-yongning-YN11-TOWER-PLINTH"
+      ],
+      "evaluation_proxy": "published_tower_plinth_envelope",
+      "label": "永宁寺九层塔〔塔基构件〕"
+    },
+    "component-yongning-buddha-hall": {
+      "feature_ids": [
+        "r11-yongning-YN11-BUDDHA-HALL"
+      ],
+      "evaluation_proxy": "published_hall_site_box_not_complete_hall_plan",
+      "label": "永宁寺佛殿〔刊载基址框〕"
+    },
+    "object-ic_jinyong": {
+      "feature_ids": [
+        "geo-jinyong-bing-wall",
+        "geo-jinyong-bing-reference"
+      ],
+      "evaluation_proxy": "bing_city_fragments_not_full_jinyong",
+      "label": "金墉城〔丙城局部来源参照〕"
+    }
+  },
+  "long_reference_entities": [
+    "luoshui",
+    "mangshan",
+    "water_yi",
+    "w_zhangfanggou",
+    "altar_yuanqiu"
+  ],
+  "reference_note": "长河、山域、沟界和只有区间参照的圜丘不以单点顶替全对象；现代背景线不绑定成北魏水道。",
+  "force_unplaced": {
+    "ic_luoyang_small": "补句与回指候选，不能把图卡中心当址点。",
+    "ic_diaotai_palace": "所在台／山有异读，暂不确定同体及位置。",
+    "a_wangnan": "仅有承明门通行关联，未给寺址和路侧。",
+    "v2_taiwei_oldstupa": "府址未交代，不按卷次或同名太尉府落位。",
+    "house_zhangjingren": "市北与孝义里参照待协调。",
+    "li_zhaoyi": "仅知城东大区间。",
+    "n_chongli": "有僧籍和518叙事，洛阳寺址未明。",
+    "ic_sanji_jinyang": "晋阳叙事，非本洛阳城内对象。",
+    "excluded_luozhiyuan_house": "志怪叙事地点，不作为已证物理宅址。"
+  },
+  "directional_groups": [
+    {
+      "id": "group-jianchun-three-offices",
+      "entity_ids": [
+        "ic_goudun",
+        "ic_diannong",
+        "ic_jitian"
+      ],
+      "feature_ref": "central_jianchun_offices",
+      "label": "沟渎／典农／籍田三署〔共同道南，内部无序〕"
+    },
+    {
+      "id": "group-market-north-wards",
+      "entity_ids": [
+        "w_cixiao",
+        "w_fengzhong"
+      ],
+      "feature_ref": "market_north_wards",
+      "label": "慈孝／奉终〔市北，内部无序〕"
+    },
+    {
+      "id": "group-market-east-wards",
+      "entity_ids": [
+        "w_tongshang",
+        "w_dahuo"
+      ],
+      "feature_ref": "market_east_wards",
+      "label": "通商／大货〔市东，内部无序〕"
+    },
+    {
+      "id": "group-market-west-wards",
+      "entity_ids": [
+        "w_yangu",
+        "w_zhishang"
+      ],
+      "feature_ref": "market_west_wards",
+      "label": "延酤／治觞〔市西，内部无序〕"
+    },
+    {
+      "id": "group-market-south-wards",
+      "entity_ids": [
+        "w_tiaoyin",
+        "w_yuelv"
+      ],
+      "feature_ref": "market_south_wards",
+      "label": "调音／乐律〔市南，内部无序〕"
+    },
+    {
+      "id": "group-four-foreign-lodgings",
+      "entity_ids": [
+        "guan_jinling",
+        "guan_yanran",
+        "guan_fusang",
+        "guan_yanzi"
+      ],
+      "feature_ref": "losouth_four_lodgings",
+      "label": "金陵／燕然／扶桑／崦嵫四馆〔道东，南北无序〕"
+    },
+    {
+      "id": "group-four-foreign-wards",
+      "entity_ids": [
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi"
+      ],
+      "feature_ref": "losouth_four_wards",
+      "label": "归正／归德／慕化／慕义四里〔道西，南北无序〕"
+    }
+  ],
+  "directional_group_note": "群签是有方向依据的共同阅读位置，不代表成员同址、相邻、同纬或各自独立测点。各entity/object仍单列；各自geometry为空，以公开的群签proxy评估对应方向。",
+  "supplemental_catalog_relations": [
+    {
+      "entity_id": "ic_yijing_well",
+      "constraint_index": 0,
+      "type": "north_of",
+      "target_entity_id": "ic_yijing",
+      "note": "里北门外的北向，不推井的精确距离或里门位置。"
+    },
+    {
+      "entity_id": "ic_henan_yin",
+      "constraint_index": 0,
+      "target_entity_id": "ic_diquan"
+    },
+    {
+      "entity_id": "ic_hualin_ice",
+      "constraint_index": 0,
+      "target_entity_id": "ic_tianyuan"
+    },
+    {
+      "entity_id": "ic_xuanwu_pool",
+      "constraint_index": 0,
+      "target_entity_id": "ic_jingyang_hill"
+    },
+    {
+      "entity_id": "ic_diquan",
+      "constraint_index": 0,
+      "target_entity_id": "ic_taicang_jin",
+      "note": "仅用范正文南；周补西不叠加成第二项确定方向。"
+    },
+    {
+      "entity_id": "li_jianyang",
+      "constraint_index": 0,
+      "target_entity_id": "water_yangqu"
+    },
+    {
+      "entity_id": "li_jianyang",
+      "constraint_index": 1,
+      "target_entity_id": "road_jianchun"
+    },
+    {
+      "entity_id": "li_dongan",
+      "constraint_index": 1,
+      "target_entity_id": "road_dongyang"
+    },
+    {
+      "entity_id": "li_huiwen",
+      "constraint_index": 0,
+      "target_entity_id": "road_dongyang"
+    },
+    {
+      "entity_id": "li_jingyi",
+      "constraint_index": 0,
+      "target_entity_id": "road_dongyang",
+      "conditional": true,
+      "note": "沿用周南／范西版本条件；不是新的无争议路侧。"
+    },
+    {
+      "entity_id": "li_xiaojing",
+      "constraint_index": 0,
+      "target_entity_id": "road_qingyang"
+    },
+    {
+      "entity_id": "li_jingning",
+      "constraint_index": 0,
+      "target_entity_id": "road_qingyang"
+    },
+    {
+      "entity_id": "w_dashi",
+      "constraint_index": 1,
+      "target_entity_id": "road_xiyang"
+    },
+    {
+      "entity_id": "v3_muzheng",
+      "constraint_index": 0,
+      "target_entity_id": "v3_mingtang",
+      "note": "孝昌初临时活动位置签，不作永久建筑。"
+    },
+    {
+      "entity_id": "li_zhonggan",
+      "constraint_index": 0,
+      "target_entity_id": "house_gaoyang"
+    },
+    {
+      "entity_id": "v3_longhua",
+      "constraint_index": 0,
+      "target_entity_id": "v3_baode"
+    },
+    {
+      "entity_id": "v3_zhuisheng",
+      "constraint_index": 0,
+      "target_entity_id": "v3_baode"
+    },
+    {
+      "entity_id": "w_qianjin",
+      "constraint_index": 0,
+      "target_entity_id": "w_changfenqiao"
+    },
+    {
+      "entity_id": "road_siyi",
+      "constraint_index": 0,
+      "target_entity_id": "bridge_yong"
+    }
+  ],
+  "gate_contexts": [
+    {
+      "entity_id": "ic_xiyang_avenue",
+      "gate_entity_id": "gate_xiyang",
+      "relation": "east_of",
+      "catalog_constraint_index": 0,
+      "context": "西墙门内的道段；不定贯城街线。"
+    },
+    {
+      "entity_id": "ic_qianqiu_road",
+      "gate_entity_id": "ic_qianqiu_gate",
+      "relation": "east_of",
+      "catalog_constraint_index": 0,
+      "context": "宫西门内的道段；不定端点。"
+    },
+    {
+      "entity_id": "ic_dongyang_avenue",
+      "gate_entity_id": "gate_dongyang",
+      "relation": "west_of",
+      "catalog_constraint_index": 0,
+      "context": "东墙门内的道段。"
+    },
+    {
+      "entity_id": "ic_qingyang_avenue",
+      "gate_entity_id": "gate_qingyang",
+      "relation": "west_of",
+      "catalog_constraint_index": 0,
+      "context": "东墙门内的道段。"
+    },
+    {
+      "entity_id": "ic_kaiyang_avenue",
+      "gate_entity_id": "gate_kaiyang",
+      "relation": "north_of",
+      "catalog_constraint_index": 0,
+      "context": "南墙门内的道段；门址候选不升格。"
+    },
+    {
+      "entity_id": "ic_jianchun_avenue",
+      "gate_entity_id": "gate_jianchun",
+      "relation": "west_of",
+      "catalog_constraint_index": 0,
+      "context": "东墙门内的道段。"
+    },
+    {
+      "entity_id": "road_jianchun",
+      "gate_entity_id": "gate_jianchun",
+      "relation": "east_of",
+      "catalog_constraint_index": 0,
+      "context": "东墙门外的道段。"
+    },
+    {
+      "entity_id": "water_yangqu",
+      "gate_entity_id": "gate_jianchun",
+      "relation": "east_of",
+      "catalog_constraint_index": 0,
+      "context": "本条建春门外阳渠的局部参照；不是全渠线。"
+    },
+    {
+      "entity_id": "road_dongyang",
+      "gate_entity_id": "gate_dongyang",
+      "relation": "east_of",
+      "catalog_constraint_index": 0,
+      "context": "东墙门外的道段。"
+    },
+    {
+      "entity_id": "road_qingyang",
+      "gate_entity_id": "gate_qingyang",
+      "relation": "east_of",
+      "catalog_constraint_index": 0,
+      "context": "东墙门外的道段。"
+    },
+    {
+      "entity_id": "road_xuanyang",
+      "gate_entity_id": "gate_xuanyang",
+      "relation": "south_of",
+      "catalog_constraint_index": 0,
+      "context": "南墙门外的道段；不接成永桥全路。"
+    },
+    {
+      "entity_id": "road_jinyang",
+      "gate_entity_id": "gate_jinyang",
+      "relation": "south_of",
+      "catalog_constraint_index": 0,
+      "context": "南墙门外的道段；门址仍未定。"
+    },
+    {
+      "entity_id": "road_ximing",
+      "gate_entity_id": "gate_ximing",
+      "relation": "west_of",
+      "catalog_constraint_index": 0,
+      "context": "西墙门外的道侧参照。"
+    },
+    {
+      "entity_id": "road_xiyang",
+      "gate_entity_id": "gate_xiyang",
+      "relation": "west_of",
+      "catalog_constraint_index": 0,
+      "context": "西墙门外的道侧参照。"
+    },
+    {
+      "entity_id": "road_changhe_west",
+      "gate_entity_id": "gate_changhe_west",
+      "relation": "west_of",
+      "catalog_constraint_index": 0,
+      "context": "城西阊阖门外的局部道段；不与宫阊阖道路合并。"
+    },
+    {
+      "entity_id": "road_daxia",
+      "gate_entity_id": "gate_daxia",
+      "relation": "north_of",
+      "catalog_constraint_index": 0,
+      "conditional": true,
+      "context": "门外从既有校补；不恢复整条直街。"
+    },
+    {
+      "entity_id": "road_guangmo",
+      "gate_entity_id": "gate_guangmo",
+      "relation": "north_of",
+      "catalog_constraint_index": 0,
+      "context": "北墙门外道段。"
+    },
+    {
+      "entity_id": "w_changfenqiao",
+      "gate_entity_id": "gate_changhe_west",
+      "relation": "west_of",
+      "catalog_constraint_index": 0,
+      "context": "西墙门外七里仅保留原单位；不与拟合米制换算。"
+    },
+    {
+      "entity_id": "v3_baode",
+      "gate_entity_id": "gate_kaiyang",
+      "relation": "south_of",
+      "catalog_constraint_index": 0,
+      "context": "门外三里只作南墙外大区间；道路侧别与到门直线未知。"
+    },
+    {
+      "entity_id": "v3_gaoyang",
+      "gate_entity_id": "gate_jinyang",
+      "relation": "south_of",
+      "catalog_constraint_index": 0,
+      "context": "津阳门外三里只作南墙外大区间；不确定门址。"
+    }
+  ],
+  "reviewed_extra_relations": [
+    {
+      "id": "R11-X01",
+      "from_entity_id": "gate_xuanyang",
+      "to_entity_id": "ic_changhe_palace",
+      "type": "south_of",
+      "r10_decision_id": "R10-R10-09",
+      "label": "宣阳北对宫门：仅南北次序，不同轴",
+      "note": "按现存R10判断接入；不使用北对推相同x。"
+    },
+    {
+      "id": "R11-X02",
+      "from_entity_id": "bridge_yong",
+      "to_entity_id": "gate_xuanyang",
+      "type": "south_of",
+      "r10_decision_id": "R10-R10-09",
+      "label": "宣阳南直浮桁：南向参照，桥头未知",
+      "conditional": true,
+      "note": "浮桁与永桥为工作对应；不生成街线或古岸。"
+    },
+    {
+      "id": "R11-X03",
+      "from_entity_id": "n_yongping",
+      "to_entity_id": "road_guangmo",
+      "type": "east_of",
+      "source_entity_id": "n_yongping",
+      "label": "永平里道东〔段中所指〕",
+      "note": "仅共同路侧，不把凝玄寺当里中心。"
+    }
+  ],
+  "supplemental_containments": [
+    {
+      "entity_id": "ic_bajiao_well",
+      "target_entity_id": "ic_lingyun_platform",
+      "constraint_index": 0,
+      "note": "井在台上。井已另有凉风观在其北的独立方向；此处只把该方向组接入台／园的广域情境，不给普通成员生成坐标。"
+    }
+  ]
+}

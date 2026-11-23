@@ -1,0 +1,108 @@
+{
+  "schema": "luoyang-r11-final-ci-local-collection-v1",
+  "run_id": 45103224890,
+  "commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+  "tree": "f6ed7ac2587da1f5639b76bc4c2b86097eed796d",
+  "status": "downloads_logs_and_extractions_verified",
+  "production_acceptance": "pending_final_live_workflow_and_parent_review",
+  "artifacts": [
+    {
+      "artifact_id": 14786931999,
+      "path": "/tmp/r11-final-ci-collection/evidence.zip",
+      "bytes": 244018652,
+      "sha256": "587fb1594bd4454b287c19ae58aa6beaed474cbd0eb53c1bf06b07be2e616d51",
+      "github_metadata_verified": true,
+      "signed_download_url_retained": false
+    },
+    {
+      "artifact_id": 14786269477,
+      "path": "/tmp/r11-final-ci-collection/github-pages.zip",
+      "bytes": 354420138,
+      "sha256": "719e137375792bd1360459612e6e6660ac745f43c738d1da560cd89ea2dd8221",
+      "github_metadata_verified": true,
+      "signed_download_url_retained": false
+    }
+  ],
+  "logs": [
+    {
+      "job_id": 137458587738,
+      "kind": "build",
+      "path": "/tmp/r11-final-ci-collection/build-137458587738.log",
+      "bytes": 275833,
+      "sha256": "ee8d8e098b8e66054fb4559763fadb49c2d6f817f06d4e58230e6d72052f64de"
+    },
+    {
+      "job_id": 137462473919,
+      "kind": "deploy",
+      "path": "/tmp/r11-final-ci-collection/deploy-137462473919.log",
+      "bytes": 4587,
+      "sha256": "d019ca63b664f6839f6fdf3630d5ddd97ea47db507fcbbfc8cfd98ab853048d6"
+    }
+  ],
+  "extractions": [
+    {
+      "schema": "luoyang-r11-artifact-extraction-v1",
+      "status": "passed",
+      "artifact_zip": "evidence.zip",
+      "artifact_bytes": 244018652,
+      "artifact_sha256": "587fb1594bd4454b287c19ae58aa6beaed474cbd0eb53c1bf06b07be2e616d51",
+      "github_digest_verified": true,
+      "file_count": 672,
+      "extracted_bytes": 297376434,
+      "signed_download_url_retained": false,
+      "errors": []
+    },
+    {
+      "schema": "luoyang-r11-artifact-extraction-v1",
+      "status": "passed",
+      "artifact_zip": "github-pages.zip",
+      "artifact_bytes": 354420138,
+      "artifact_sha256": "719e137375792bd1360459612e6e6660ac745f43c738d1da560cd89ea2dd8221",
+      "github_digest_verified": true,
+      "file_count": 1,
+      "extracted_bytes": 431308800,
+      "signed_download_url_retained": false,
+      "errors": []
+    }
+  ],
+  "build_checkout_verified": true,
+  "r11_build_verify": {
+    "features": 237,
+    "coverage": 339,
+    "constraints": 302,
+    "layers": {
+      "source": 28,
+      "trace": 33,
+      "scale": 4,
+      "palace": 24,
+      "candidate": 148
+    },
+    "entity_placement_groups": {
+      "source": 11,
+      "candidate": 163,
+      "unplaced": 165
+    },
+    "sources": {
+      "files": 35,
+      "pointers": 1614
+    },
+    "status": "passed",
+    "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+    "same_geometry_views": 16,
+    "csv_rows": {
+      "features": 237,
+      "coverage": 339,
+      "constraints": 302,
+      "source-index": 1614
+    },
+    "pdf_pages": 17,
+    "downloads": 26,
+    "protected_public_files": 885,
+    "offline_members": 32
+  },
+  "artifact_download_calls_per_id": 1,
+  "local_transfer_attempts_per_id": 1,
+  "collection_signed_download_urls_written": false,
+  "pages_tar_not_unpacked": true,
+  "live_artifact_and_log_owner": "r11_primary_plans"
+}

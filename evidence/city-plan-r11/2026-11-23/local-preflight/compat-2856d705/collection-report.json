@@ -1,0 +1,75 @@
+{
+  "schema": "luoyang-r11-compatibility-local-preflight-v1",
+  "stage": "local-preflight",
+  "is_ci_evidence": false,
+  "is_production_acceptance": false,
+  "captured_utc": "2026-11-23T01:49:13.811871+00:00",
+  "pr_number": 82,
+  "associated_head_reported_by_parent": "2856d7055f2ed685ca5d4e2efd8cab7f63b2eae2",
+  "associated_tree_reported_by_parent": "49ea9ba636ec0dace7bb94e653979476c5f23c88",
+  "commit_identity_independently_fetched_during_this_collection": false,
+  "reported_changed_files": [
+    "tools/city_layout_r10_contract.py",
+    "tests/test_city_layout_r10.py"
+  ],
+  "test_count": 263,
+  "all_five_logs_pass": true,
+  "copied_original_bytes": true,
+  "logs": [
+    {
+      "path": "compat-prosperity-tests.txt",
+      "source_path": "/tmp/r11-layout-inventory/compat-prosperity-tests.txt",
+      "bytes": 37661,
+      "sha256": "129a9f814ffaf445f6eb60c9517f2f6c253e2aa34d82642d6112a907394bbdd0",
+      "gitblob": "20c424cf6d8feaa67b2b848f7ae59602a7fe407f",
+      "tests_run": 218,
+      "duration_text": "7.421s",
+      "unittest_conclusion": "OK"
+    },
+    {
+      "path": "compat-r10-tests.txt",
+      "source_path": "/tmp/r11-layout-inventory/compat-r10-tests.txt",
+      "bytes": 3515,
+      "sha256": "8ebac4ecfc578b8bb5714569b8b4186d15c6c0ecde96f13ef6d6c08e9e86e746",
+      "gitblob": "a383d0357db8e52e30c0de02312499a415d3e2f4",
+      "tests_run": 18,
+      "duration_text": "8.495s",
+      "unittest_conclusion": "OK"
+    },
+    {
+      "path": "compat-r11-tests.txt",
+      "source_path": "/tmp/r11-layout-inventory/compat-r11-tests.txt",
+      "bytes": 2482,
+      "sha256": "7c796b6246bff01ec82eb43363ba4efa7db48dfff7949d0384e372d24825646a",
+      "gitblob": "578497fecd749fff32122b109485e323acee22f1",
+      "tests_run": 13,
+      "duration_text": "0.281s",
+      "unittest_conclusion": "OK"
+    },
+    {
+      "path": "compat-r9-panorama-tests.txt",
+      "source_path": "/tmp/r11-layout-inventory/compat-r9-panorama-tests.txt",
+      "bytes": 694,
+      "sha256": "a600167cb14fd76bbbe741f8c58bd0b2aa5e86e539ede7eb79d3149440d0ebcf",
+      "gitblob": "b9709d65ed78f87c9de336cd571595e9e9229204",
+      "tests_run": 4,
+      "duration_text": "3.415s",
+      "unittest_conclusion": "OK"
+    },
+    {
+      "path": "compat-r9-tests.txt",
+      "source_path": "/tmp/r11-layout-inventory/compat-r9-tests.txt",
+      "bytes": 1893,
+      "sha256": "d9c12b48f39f2db83a20ac2e7729ddac5ce8aed06d41911f866ce681b3658bd3",
+      "gitblob": "aeeeec181a0d830e665dc0d925df292f6d46a1ee",
+      "tests_run": 10,
+      "duration_text": "0.772s",
+      "unittest_conclusion": "OK"
+    }
+  ],
+  "limitations": [
+    "These are local preflight logs, not GitHub Actions output.",
+    "Successful CI and production gates remain pending and must be archived separately."
+  ],
+  "remote_writes": 0
+}

@@ -1,0 +1,30 @@
+{
+  "status": "deployed_interface_identity_verified",
+  "checked_at_utc": "2026-11-23T03:14:50.002337+00:00",
+  "manual_ui_review_source_commit": "e137f473278282c6c30a29e2c018de666577889a",
+  "final_deployed_source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+  "manual_ui_review_report": "/tmp/r11-live-review/public-ui-review.json",
+  "checks": [
+    {
+      "component": "city-plan-r11/atlas.js",
+      "byte_identical": true,
+      "bytes": 15467,
+      "sha256": "9edf43f2e1d58029a45f085688bdbf18e4b0cc96ec1adfd2b7e7c3eb4b1dc1a1"
+    },
+    {
+      "component": "city-plan-r11/atlas.css",
+      "byte_identical": true,
+      "bytes": 10045,
+      "sha256": "3d25a9fc2542fd0dd7f644c1c9344ce48aa8b965211755fb13a2b01fceb66166"
+    },
+    {
+      "component": "published HTML initial city-plan-map SVG",
+      "byte_identical": true,
+      "bytes": 211215,
+      "sha256": "2f7f5ae035a86ff6aa0c42e467e2f86fbdb854309de6c0b194c63a03d69325ed"
+    }
+  ],
+  "scope": "The manually reviewed JavaScript, CSS and initial interactive map are byte-identical in the actual new public page. This is not a claim of another manual browser session. Final desktop/mobile, download and legacy UI acceptance is recorded separately by production run 45103224890.",
+  "final_full_live_workflow_status_when_recorded": "pending",
+  "review_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html?view=all&layers=source%2Ctrace%2Cscale%2Ccandidate#plan-reader"
+}

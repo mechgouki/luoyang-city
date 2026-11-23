@@ -1,0 +1,3057 @@
+{
+  "version": "prosperity-water-p467",
+  "title": "河流与水道：城内外的连接与分期",
+  "target_period": [
+    516,
+    528
+  ],
+  "summary": "把绕城水道、入城园池、城东校读、不同年代的引洛工程，以及伊洛和西北来水分别画清。流向、相连、相邻、提议与复原解释使用不同线型；尚不能定位的接续处保留空缺。",
+  "geographic_coordinates": null,
+  "coordinate_system": "页面布局坐标，仅用于关系图",
+  "new_metric_measurements": 0,
+  "new_516_528_bank_geometry": null,
+  "scope_completion": "本册完成所列文献关系及争议表达；不宣称全部河流岸线或各年通水已经完成。",
+  "sources": [
+    {
+      "id": "S16",
+      "title": "郦道元《水经注》卷十六·穀水",
+      "url": "https://zh.wikisource.org/zh-hant/水經注/16",
+      "locator": "",
+      "type": "通行转录；本轮发现一处漏字与一处误字，关键句另校四部丛刊本"
+    },
+    {
+      "id": "SB16",
+      "title": "《水经注》四部丛刊本卷十六，景上海涵芬楼藏武英殿聚珍版本",
+      "url": "https://zh.wikisource.org/wiki/水經注_(四部叢刊本)/卷第十六",
+      "locator": "",
+      "type": "可逐叶回查的古籍转录；指定原叶另附 URL"
+    },
+    {
+      "id": "S15",
+      "title": "郦道元《水经注》卷十五·洛水、瀍水、涧水",
+      "url": "https://zh.wikisource.org/zh-hant/水經注/15",
+      "locator": "",
+      "type": "原典转录"
+    },
+    {
+      "id": "G1",
+      "title": "杨衒之《洛阳伽蓝记》卷一·城内",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷一",
+      "locator": "",
+      "type": "原典转录"
+    },
+    {
+      "id": "G2",
+      "title": "杨衒之《洛阳伽蓝记》卷二·城东",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷二",
+      "locator": "",
+      "type": "原典转录"
+    },
+    {
+      "id": "G4",
+      "title": "杨衒之《洛阳伽蓝记》卷四·城西",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷四",
+      "locator": "",
+      "type": "原典转录"
+    },
+    {
+      "id": "W7",
+      "title": "《魏书》卷七下·高祖纪下，太和二十年九月丁亥",
+      "url": "https://zh.wikisource.org/wiki/魏書/卷7下",
+      "locator": "",
+      "type": "原典转录；项目 source-checks 已有该条，本轮复核不计新发现"
+    },
+    {
+      "id": "W53",
+      "title": "《魏书》卷五十三·李冲传，高祖泛舟洪池段",
+      "url": "https://zh.wikisource.org/wiki/魏書/卷53",
+      "locator": "",
+      "type": "原典转录；项目 source-checks 已有该条，本轮复核不计新发现"
+    },
+    {
+      "id": "HUANG2026",
+      "title": "黄学超《汉魏洛阳城周边的水利建设》，《中国历史地理论丛》2026年第3辑，28—42、52页，第一节",
+      "url": "https://www.sohu.com/a/1082362449_121124389",
+      "locator": "",
+      "type": "当代作者的错简校读与复原解释；不是传本原文或实测全线"
+    },
+    {
+      "id": "XIONG",
+      "title": "熊会贞《水经注疏要删》卷十六按语",
+      "url": "https://www.shidianguji.com/book/CADAL11201767/chapter/1l7ronkbbhyk4",
+      "locator": "“左合七里涧”及“至此下或言阳渠”下按语",
+      "type": "学者解释；未取得实测汇口"
+    },
+    {
+      "id": "FAC43",
+      "title": "四部丛刊本《水经注》卷十六原叶43",
+      "url": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/43",
+      "locator": "原叶43：青阳门右下注阳渠；本轮已目核影印图",
+      "type": "古籍影印原叶"
+    },
+    {
+      "id": "FAC11",
+      "title": "四部丛刊本《水经注》卷十六原叶11",
+      "url": "https://zh.wikisource.org/wiki/Page:Sibu_Congkan0294-酈道元-水經注-12-06.djvu/11",
+      "locator": "原叶11：太和四／七年校注、决湖以注瀍水；本轮已目核",
+      "type": "古籍影印原叶"
+    },
+    {
+      "id": "REPORT22",
+      "title": "《洛阳汉唐运河遗址调查与古沉船发掘报告》2022年公开样章",
+      "url": "https://www.ecsponline.com/book_2019/2022/yz/9787030738288-001001-curved-sam.pdf",
+      "locator": "第一章印页8；图2-2印页21／数字44，图2-2-4折页／数字45尚未取得",
+      "type": "调查报告样章；平面、剖面原图待授权"
+    },
+    {
+      "id": "P462",
+      "title": "P4.6.2 城东阳渠既有调查转引记录",
+      "url": "https://mechgouki.github.io/luoyang-city/network-462/east.json",
+      "locator": "east-03、east-04；依据黄学超2026、梁克敏2022转引2011简报",
+      "type": "项目已存的二手调查记录；2011原图未取得"
+    },
+    {
+      "id": "P466",
+      "title": "P4.6.6 城南两条大道、谷水与永桥",
+      "url": "https://mechgouki.github.io/luoyang-city/prosperity-south-p466.html",
+      "locator": "已验收城南基线；永桥四里、引洛在津阳街东及辟雍180米干道",
+      "type": "项目封存基线，本轮无新增量测"
+    },
+    {
+      "id": "G3",
+      "title": "《洛阳伽蓝记》卷三·城南",
+      "url": "https://zh.wikisource.org/wiki/洛陽伽藍記/卷三",
+      "locator": "宣阳门外至永桥、永桥以南御道",
+      "type": "原典转录"
+    }
+  ],
+  "plates": [
+    {
+      "id": "outer",
+      "title": "绕城干流与城东南支",
+      "subtitle": "按文献的方位与行程排布，北在上；城框只帮助辨认内外，不表示实测距离。",
+      "default_layer": "text",
+      "nodes": [
+        {
+          "id": "qianjin",
+          "label": "千金堨下",
+          "x": 105,
+          "y": 205,
+          "kind": "place"
+        },
+        {
+          "id": "old-channel",
+          "label": "旧渎、皋门桥\n至西梁水段",
+          "x": 275,
+          "y": 205,
+          "kind": "place",
+          "label_dy": -40
+        },
+        {
+          "id": "jinyong",
+          "label": "金墉城北",
+          "x": 455,
+          "y": 205,
+          "kind": "place"
+        },
+        {
+          "id": "daxia",
+          "label": "大夏门下",
+          "x": 615,
+          "y": 205,
+          "kind": "place"
+        },
+        {
+          "id": "guangmo",
+          "label": "广莫门北",
+          "x": 785,
+          "y": 205,
+          "kind": "place"
+        },
+        {
+          "id": "jianchun",
+          "label": "建春门\n石桥下",
+          "x": 870,
+          "y": 310,
+          "kind": "gate",
+          "label_dx": 18,
+          "label_dy": -8,
+          "label_anchor": "start"
+        },
+        {
+          "id": "mashi",
+          "label": "马市石桥",
+          "x": 935,
+          "y": 410,
+          "kind": "gate",
+          "label_dy": 30
+        },
+        {
+          "id": "west-changhe",
+          "label": "西城阊阖门\n（汉上西门）",
+          "x": 220,
+          "y": 325,
+          "kind": "gate",
+          "label_dx": -22,
+          "label_dy": -8,
+          "label_anchor": "end"
+        },
+        {
+          "id": "ximing",
+          "label": "西明门",
+          "x": 220,
+          "y": 485,
+          "kind": "gate",
+          "label_dx": -22,
+          "label_dy": 6,
+          "label_anchor": "end"
+        },
+        {
+          "id": "jinyang",
+          "label": "津阳门南",
+          "x": 330,
+          "y": 580,
+          "kind": "place"
+        },
+        {
+          "id": "xuanyang",
+          "label": "宣阳门南",
+          "x": 475,
+          "y": 580,
+          "kind": "place"
+        },
+        {
+          "id": "south-east-gates",
+          "label": "平昌门南—明堂北\n—开阳门南",
+          "x": 655,
+          "y": 580,
+          "kind": "place",
+          "label_dy": -46
+        },
+        {
+          "id": "southeast",
+          "label": "城东南隅",
+          "x": 805,
+          "y": 580,
+          "kind": "place",
+          "label_dy": 32
+        },
+        {
+          "id": "hongchi-direction",
+          "label": "阮曲 → 鸿池",
+          "x": 940,
+          "y": 580,
+          "kind": "end",
+          "label_dy": -23
+        },
+        {
+          "id": "qingyang-east",
+          "label": "青阳门东",
+          "x": 805,
+          "y": 480,
+          "kind": "place",
+          "label_dx": 17,
+          "label_dy": 5,
+          "label_anchor": "start"
+        },
+        {
+          "id": "dongyang-east",
+          "label": "东阳门东",
+          "x": 805,
+          "y": 385,
+          "kind": "place",
+          "label_dx": -18,
+          "label_dy": 5,
+          "label_anchor": "end"
+        },
+        {
+          "id": "luoyang-gou",
+          "label": "故太仓西\n→ 洛阳沟",
+          "x": 755,
+          "y": 295,
+          "kind": "end",
+          "label_dx": -20,
+          "label_dy": -9,
+          "label_anchor": "end"
+        },
+        {
+          "id": "qingyang-right",
+          "label": "青阳门右\n下注阳渠",
+          "x": 625,
+          "y": 480,
+          "kind": "end",
+          "label_dy": -40
+        }
+      ],
+      "segments": [
+        {
+          "id": "O01",
+          "from": "qianjin",
+          "to": "old-channel",
+          "label": "千金堨下东注及旧渎行程",
+          "points": [
+            [
+              105,
+              205
+            ],
+            [
+              275,
+              205
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "千金堨、西晋修堰与北魏修复段；石人西胁旧议之后、皋门桥之前",
+          "quote": "水歷堨東注，謂之千金渠；朝廷太和中脩復故堨。\n準之於文，北引渠東合舊瀆。舊瀆又東；謂之臯門橋。穀水又東，又結石梁，跨水制城，西梁也。",
+          "reading": "前半为水道命名，后半明确北魏朝廷太和中修复；没有精确到496。；北魏修复叙述之后接水道行程；更早石人西胁文字本身是将来修渠的建议。",
+          "limit": "可区分堰体与堰下千金渠，不能从同属太和推定为496通洛入穀的同一工程。；北引渠与旧渎的汇接可存为关系，但尚无现代点位；不能据西梁出现就定它为北、西两条环城支的分水点。",
+          "legacy_water_ids": [
+            "W04",
+            "W07"
+          ],
+          "evidence_ids": [
+            "E05",
+            "E06"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O02",
+          "from": "old-channel",
+          "to": "jinyong",
+          "label": "沿北绕水段到金墉城北",
+          "points": [
+            [
+              275,
+              205
+            ],
+            [
+              455,
+              205
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "金墉城北至大夏门",
+          "quote": "穀水又東逕金墉城北；穀水逕洛陽小城北；又東歷大夏門下。",
+          "reading": "郦注行水叙述，沿线有高祖迁洛居金墉等北魏内容。",
+          "limit": "只承接原典北绕行程；不在西梁设置两条环城支的分水点。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E08"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O03",
+          "from": "jinyong",
+          "to": "daxia",
+          "label": "金墉城北 → 大夏门下",
+          "points": [
+            [
+              455,
+              205
+            ],
+            [
+              615,
+              205
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "金墉城北至大夏门",
+          "quote": "穀水又東逕金墉城北；穀水逕洛陽小城北；又東歷大夏門下。",
+          "reading": "郦注行水叙述，沿线有高祖迁洛居金墉等北魏内容。",
+          "limit": "可纳盛时文献层的相对行程，不提供距城墙多少米或逐年流量。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E08"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O04",
+          "from": "daxia",
+          "to": "guangmo",
+          "label": "经宣武观至广莫门北",
+          "points": [
+            [
+              615,
+              205
+            ],
+            [
+              785,
+              205
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "回叙大夏门另一水与东北城段",
+          "quote": "其一水自大夏門東逕宣武觀；穀水又東逕廣莫門北；又東屈南，逕建春門石橋下。",
+          "reading": "郦注行水叙述；《伽蓝记》另记孝昌三年该桥毁损。",
+          "limit": "与入华林园支分别保存；可定东行转南，不能由广莫门北水段推到邙山北路终点。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E11"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O05",
+          "from": "guangmo",
+          "to": "jianchun",
+          "label": "广莫门北 → 建春门石桥下",
+          "points": [
+            [
+              785,
+              205
+            ],
+            [
+              870,
+              205
+            ],
+            [
+              870,
+              310
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16",
+            "G2"
+          ],
+          "locator": "回叙大夏门另一水与东北城段；明悬尼寺、建春门外石桥段",
+          "quote": "其一水自大夏門東逕宣武觀；穀水又東逕廣莫門北；又東屈南，逕建春門石橋下。\n穀水周圍繞城，至建春門外，東入陽渠石橋；逮我孝昌三年，大雨頹橋。",
+          "reading": "郦注行水叙述；《伽蓝记》另记孝昌三年该桥毁损。；孝昌三年即527，在目标时段内发生桥毁；桥建造铭属东汉阳嘉四年。",
+          "limit": "与入华林园支分别保存；可定东行转南，不能由广莫门北水段推到邙山北路终点。；527事件用于桥梁状态分期，不自动推出水道停流。与卷16建春桥下转东关系可互校。",
+          "legacy_water_ids": [
+            "W04",
+            "W06"
+          ],
+          "evidence_ids": [
+            "E11",
+            "E28"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O06",
+          "from": "jianchun",
+          "to": "mashi",
+          "label": "由乐里道东出阳渠至马市桥",
+          "points": [
+            [
+              870,
+              310
+            ],
+            [
+              870,
+              410
+            ],
+            [
+              935,
+              410
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "建春门石桥之后、马市石桥之前",
+          "quote": "其水依柱，又自樂里道屈而東出陽渠；又東逕馬市石橋。",
+          "reading": "郦注行水叙述，桥铭另属东汉。",
+          "limit": "由北环城来的水向东出至阳渠；并非环城水从这里全数向南。",
+          "legacy_water_ids": [
+            "W06"
+          ],
+          "evidence_ids": [
+            "E12"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "label_position": [
+            870,
+            375
+          ]
+        },
+        {
+          "id": "O07",
+          "from": "west-changhe",
+          "to": "ximing",
+          "label": "西城阊阖门以下南行",
+          "points": [
+            [
+              220,
+              325
+            ],
+            [
+              220,
+              485
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "回叙西城外谷水南行",
+          "quote": "穀水自閶闔門而南逕土山東；南出逕西陽門；穀水又南逕白馬寺東；又南逕平樂觀東；又南逕西明門。",
+          "reading": "郦注现状行程中穿插古迹和门名沿革。",
+          "limit": "这里的白马寺是本段西城水道语境；不移用今天白马寺坐标。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E19"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O08",
+          "from": "ximing",
+          "to": "qingyang-right",
+          "label": "西明门左支经太社、太庙下注阳渠",
+          "points": [
+            [
+              220,
+              485
+            ],
+            [
+              625,
+              480
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "SB16",
+            "FAC43"
+          ],
+          "locator": "西明门向东入城支、青阳门",
+          "quote": "門左枝渠東派入城逕太社前又東逕太廟南又東于靑陽門右下注陽渠。",
+          "reading": "郦注行水叙述。",
+          "limit": "普通转录“下涇陽渠”不取；四部本为下注阳渠，没有新水名“泾阳渠”。",
+          "legacy_water_ids": [
+            "W04",
+            "W06"
+          ],
+          "evidence_ids": [
+            "E20"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O09",
+          "from": "ximing",
+          "to": "jinyang",
+          "label": "西明门 → 津阳门南",
+          "points": [
+            [
+              220,
+              485
+            ],
+            [
+              220,
+              580
+            ],
+            [
+              330,
+              580
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "津阳门至太学石经北",
+          "quote": "穀水又南，東屈逕津陽門南；又東逕宣陽門南；又東逕平昌門南；又逕明堂北；又東逕開陽門南；又東逕國子太學石經北。",
+          "reading": "已在P4.6.6核过的城南序列；本轮重用于连通表，不计新量测。",
+          "limit": "灵台北/北望有句读异文，继续仅写灵台附近；不按文字次序制造地面折线。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E21"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O10",
+          "from": "jinyang",
+          "to": "xuanyang",
+          "label": "津阳门南 → 宣阳门南",
+          "points": [
+            [
+              330,
+              580
+            ],
+            [
+              475,
+              580
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "津阳门至太学石经北",
+          "quote": "穀水又南，東屈逕津陽門南；又東逕宣陽門南；又東逕平昌門南；又逕明堂北；又東逕開陽門南；又東逕國子太學石經北。",
+          "reading": "已在P4.6.6核过的城南序列；本轮重用于连通表，不计新量测。",
+          "limit": "灵台北/北望有句读异文，继续仅写灵台附近；不按文字次序制造地面折线。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E21"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O11",
+          "from": "xuanyang",
+          "to": "south-east-gates",
+          "label": "宣阳门南 → 平昌门南—明堂北—开阳门南",
+          "points": [
+            [
+              475,
+              580
+            ],
+            [
+              655,
+              580
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "津阳门至太学石经北",
+          "quote": "穀水又南，東屈逕津陽門南；又東逕宣陽門南；又東逕平昌門南；又逕明堂北；又東逕開陽門南；又東逕國子太學石經北。",
+          "reading": "已在P4.6.6核过的城南序列；本轮重用于连通表，不计新量测。",
+          "limit": "灵台北/北望有句读异文，继续仅写灵台附近；不按文字次序制造地面折线。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E21"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O12",
+          "from": "south-east-gates",
+          "to": "southeast",
+          "label": "经太学石经北至城东南隅",
+          "points": [
+            [
+              655,
+              580
+            ],
+            [
+              805,
+              580
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "津阳门至太学石经北；太学石经段后、城东南隅支",
+          "quote": "穀水又南，東屈逕津陽門南；又東逕宣陽門南；又東逕平昌門南；又逕明堂北；又東逕開陽門南；又東逕國子太學石經北。\n穀水於城東南隅枝分北注，逕青陽門東；又北逕東陽門東；又北逕故太倉西；又北入洛陽溝。",
+          "reading": "已在P4.6.6核过的城南序列；本轮重用于连通表，不计新量测。；郦注行水叙述，所引太仓运船千计是更早《洛阳地记》资料。",
+          "limit": "灵台北/北望有句读异文，继续仅写灵台附近；不按文字次序制造地面折线。；原句终点名洛阳沟，没有直说此沟就是建春—乐里道所入的东北阳渠。先不强连为一个具地点的汇水口。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E21",
+            "E22"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O13",
+          "from": "southeast",
+          "to": "qingyang-east",
+          "label": "城东南隅北注支",
+          "points": [
+            [
+              805,
+              580
+            ],
+            [
+              805,
+              480
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "太学石经段后、城东南隅支",
+          "quote": "穀水於城東南隅枝分北注，逕青陽門東；又北逕東陽門東；又北逕故太倉西；又北入洛陽溝。",
+          "reading": "郦注行水叙述，所引太仓运船千计是更早《洛阳地记》资料。",
+          "limit": "原句终点名洛阳沟，没有直说此沟就是建春—乐里道所入的东北阳渠。先不强连为一个具地点的汇水口。",
+          "legacy_water_ids": [
+            "W04",
+            "W32"
+          ],
+          "evidence_ids": [
+            "E22"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O14",
+          "from": "qingyang-east",
+          "to": "dongyang-east",
+          "label": "青阳门东 → 东阳门东",
+          "points": [
+            [
+              805,
+              480
+            ],
+            [
+              805,
+              385
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "太学石经段后、城东南隅支",
+          "quote": "穀水於城東南隅枝分北注，逕青陽門東；又北逕東陽門東；又北逕故太倉西；又北入洛陽溝。",
+          "reading": "郦注行水叙述，所引太仓运船千计是更早《洛阳地记》资料。",
+          "limit": "原句终点名洛阳沟，没有直说此沟就是建春—乐里道所入的东北阳渠。先不强连为一个具地点的汇水口。",
+          "legacy_water_ids": [
+            "W32"
+          ],
+          "evidence_ids": [
+            "E22"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "O15",
+          "from": "dongyang-east",
+          "to": "luoyang-gou",
+          "label": "东阳门东 → 故太仓西→ 洛阳沟",
+          "points": [
+            [
+              805,
+              385
+            ],
+            [
+              805,
+              295
+            ],
+            [
+              755,
+              295
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "太学石经段后、城东南隅支",
+          "quote": "穀水於城東南隅枝分北注，逕青陽門東；又北逕東陽門東；又北逕故太倉西；又北入洛陽溝。",
+          "reading": "郦注行水叙述，所引太仓运船千计是更早《洛阳地记》资料。",
+          "limit": "原句终点名洛阳沟，没有直说此沟就是建春—乐里道所入的东北阳渠。先不强连为一个具地点的汇水口。",
+          "legacy_water_ids": [
+            "W32"
+          ],
+          "evidence_ids": [
+            "E22"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "label_position": [
+            805,
+            340
+          ]
+        },
+        {
+          "id": "O16",
+          "from": "southeast",
+          "to": "hongchi-direction",
+          "label": "东行阮曲注鸿池的方向",
+          "points": [
+            [
+              805,
+              580
+            ],
+            [
+              940,
+              580
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "城东南分支后回到东流水、方湖与阮曲",
+          "quote": "穀水又東，左迆為池。又東，右出為方湖；穀水又東南轉屈而東注，謂之阮曲；穀水又東注鴻池陂。",
+          "reading": "郦注行水叙述；方湖水衡署及阮氏故居为历史说明。",
+          "limit": "左池和右出方湖属于侧出，不把主流依次穿过两池；古步数不转为未经复核的坐标。",
+          "legacy_water_ids": [
+            "W30"
+          ],
+          "evidence_ids": [
+            "E23"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        }
+      ],
+      "notes": [
+        "北绕与西南绕两路的分水位置未明；上图未在千金堨或西梁补画分水口。",
+        "建春桥于527年大雨中颓毁；此事不等于谷水停流。西明入城支原叶作“下注阳渠”。",
+        "城东南北注支止于“洛阳沟”；尚不把它与建春—乐里道的阳渠强接为同一汇口。"
+      ],
+      "annotations": [
+        {
+          "x": 280,
+          "y": 274,
+          "text": "城西两路接续处未定",
+          "max_chars": 18
+        },
+        {
+          "x": 365,
+          "y": 363,
+          "text": "西城南行段：土山东 → 西阳门\n→ 白马寺东 → 平乐观东",
+          "max_chars": 24
+        },
+        {
+          "x": 350,
+          "y": 438,
+          "text": "西明门左支：太社前 → 太庙南",
+          "max_chars": 24
+        },
+        {
+          "x": 330,
+          "y": 615,
+          "text": "南行水段经过灵台附近、太学石经北",
+          "max_chars": 32
+        }
+      ],
+      "reference_boxes": [
+        {
+          "x": 325,
+          "y": 310,
+          "width": 425,
+          "height": 205,
+          "label": "内城方位参照"
+        }
+      ]
+    },
+    {
+      "id": "inner",
+      "title": "入城支渠与园池",
+      "subtitle": "按连接关系分行排布，各行不共用位置或距离；同名水段不据此合成一处实测河口。",
+      "default_layer": "text",
+      "nodes": [
+        {
+          "id": "north-in",
+          "label": "大夏门东来水",
+          "x": 110,
+          "y": 215,
+          "kind": "place"
+        },
+        {
+          "id": "tianyuan",
+          "label": "华林园·天渊池",
+          "x": 390,
+          "y": 215,
+          "kind": "pool"
+        },
+        {
+          "id": "county-south-pool",
+          "label": "洛阳县南池\n（郦注称故翟泉）",
+          "x": 790,
+          "y": 215,
+          "kind": "pool",
+          "label_dy": -40
+        },
+        {
+          "id": "west-in",
+          "label": "西城阊阖门\n高渠入城",
+          "x": 105,
+          "y": 330,
+          "kind": "gate",
+          "label_dy": -40
+        },
+        {
+          "id": "qianqiu",
+          "label": "千秋门附近",
+          "x": 355,
+          "y": 330,
+          "kind": "gate"
+        },
+        {
+          "id": "lingzhi-jiulong",
+          "label": "灵芝／九龙池组",
+          "x": 630,
+          "y": 300,
+          "kind": "pool"
+        },
+        {
+          "id": "palace-changhe",
+          "label": "宫城南阊阖门前",
+          "x": 355,
+          "y": 440,
+          "kind": "gate",
+          "label_dy": 29
+        },
+        {
+          "id": "dongyang-out",
+          "label": "东阳门桥下\n→ 阳渠",
+          "x": 880,
+          "y": 440,
+          "kind": "end",
+          "label_dy": -40
+        },
+        {
+          "id": "south-channel",
+          "label": "南渠（接续未定）",
+          "x": 660,
+          "y": 505,
+          "kind": "end",
+          "label_dy": 28
+        },
+        {
+          "id": "gu-pools",
+          "label": "谷水",
+          "x": 110,
+          "y": 590,
+          "kind": "place"
+        },
+        {
+          "id": "imperial-pools",
+          "label": "宫苑诸海",
+          "x": 350,
+          "y": 590,
+          "kind": "pool",
+          "label_dy": -16
+        },
+        {
+          "id": "diquan-linked",
+          "label": "翟泉",
+          "x": 630,
+          "y": 590,
+          "kind": "pool"
+        },
+        {
+          "id": "yangqu-linked",
+          "label": "阳渠",
+          "x": 880,
+          "y": 590,
+          "kind": "place"
+        }
+      ],
+      "segments": [
+        {
+          "id": "I01",
+          "from": "north-in",
+          "to": "tianyuan",
+          "label": "大夏门东来水 → 华林园·天渊池",
+          "points": [
+            [
+              110,
+              215
+            ],
+            [
+              390,
+              215
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "大夏门后、华林园与天渊池段",
+          "quote": "穀水又東，枝分南入華林園；其水東注天淵池。",
+          "reading": "郦注行水叙述。",
+          "limit": "这是北城来水分入园池的一支；不把分支点移到千金堨。",
+          "legacy_water_ids": [
+            "W04",
+            "W16"
+          ],
+          "evidence_ids": [
+            "E09"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "I02",
+          "from": "tianyuan",
+          "to": "county-south-pool",
+          "label": "天渊池东出园、经听讼观南入南池",
+          "points": [
+            [
+              390,
+              215
+            ],
+            [
+              790,
+              215
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "天渊池东出华林园、听讼观后",
+          "quote": "其水自天淵池東出華林園，逕聽訟觀南；池水又東流入洛陽縣之南池。",
+          "reading": "郦注行水叙述。",
+          "limit": "天渊池和洛阳县南池是先后节点，不是同一池的任意别名。郦注将后池认作故翟泉，另有古翟泉定位争论。",
+          "legacy_water_ids": [
+            "W15",
+            "W16"
+          ],
+          "evidence_ids": [
+            "E10"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "I03",
+          "from": "west-in",
+          "to": "qianqiu",
+          "label": "高渠东入城至千秋门",
+          "points": [
+            [
+              105,
+              330
+            ],
+            [
+              355,
+              330
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "阳渠南暨阊阖城门、入城高渠段；望先寺后、故金市南、千秋门",
+          "quote": "陽渠水南暨閶闔門，漢之上西門者也；太和遷都，徙門南側，其水北乘高渠，枝分上下，歷故石橋東入城，逕望先寺。\n渠水又東歷故金市南，直千秋門；又枝流入石逗伏流，注靈芝九龍池；遂因用之。",
+          "reading": "北魏迁都后城门变化，叙述与旧桥并存。；古石渠在魏太和迁洛修宫时揭检后沿用。",
+          "limit": "此阊阖是西城门，不是宫城南正门；“上下”不擅释成北、南两条大支。原文没有点名北、西环城支在哪座堰桥分开。；目的池原文连称灵芝九龙池；可按园池组保留，不能当作天渊池或洛阳县南池。原典此句不另给北向角度。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E14",
+            "E15"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "I04",
+          "from": "qianqiu",
+          "to": "lingzhi-jiulong",
+          "label": "石逗伏流入灵芝／九龙池组",
+          "points": [
+            [
+              355,
+              330
+            ],
+            [
+              500,
+              330
+            ],
+            [
+              500,
+              300
+            ],
+            [
+              630,
+              300
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "望先寺后、故金市南、千秋门",
+          "quote": "渠水又東歷故金市南，直千秋門；又枝流入石逗伏流，注靈芝九龍池；遂因用之。",
+          "reading": "古石渠在魏太和迁洛修宫时揭检后沿用。",
+          "limit": "目的池原文连称灵芝九龙池；可按园池组保留，不能当作天渊池或洛阳县南池。原典此句不另给北向角度。",
+          "legacy_water_ids": [
+            "W28"
+          ],
+          "evidence_ids": [
+            "E15"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "label_position": [
+            500,
+            315
+          ]
+        },
+        {
+          "id": "I05",
+          "from": "qianqiu",
+          "to": "palace-changhe",
+          "label": "千秋门支南行后东转宫前",
+          "points": [
+            [
+              355,
+              330
+            ],
+            [
+              355,
+              440
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "千秋门南流至宫门前",
+          "quote": "其一水自千秋門南流逕神虎門下；又南逕通門、掖門西，又南流東轉，逕閶闔門南。",
+          "reading": "郦注宫城现状与曹魏沿革叠述。",
+          "limit": "此阊阖为宫城正南门，须与E14西城阊阖分成两个实体。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E16"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "I06",
+          "from": "palace-changhe",
+          "to": "dongyang-out",
+          "label": "宫前东渠经司马门南等处出东阳门",
+          "points": [
+            [
+              355,
+              440
+            ],
+            [
+              880,
+              440
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "铜驼街东向主渠、司空府和太仓南",
+          "quote": "渠水自銅駝街東逕司馬門南；渠水歷司空府前，逕太倉南，出東陽門石橋下，注陽渠。",
+          "reading": "郦注行水叙述；其间对杜预所谓翟泉另说今无水。",
+          "limit": "可证一条出东阳门入阳渠的流向；不同古翟泉论说不能借名合池。",
+          "legacy_water_ids": [
+            "W04",
+            "W06"
+          ],
+          "evidence_ids": [
+            "E18"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "label_position": [
+            760,
+            440
+          ]
+        },
+        {
+          "id": "I07",
+          "from": "palace-changhe",
+          "to": "south-channel",
+          "label": "铜驼街两侧支（西侧示意）",
+          "points": [
+            [
+              355,
+              440
+            ],
+            [
+              470,
+              440
+            ],
+            [
+              470,
+              505
+            ],
+            [
+              660,
+              505
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "登闻鼓后、铜驼街及永宁寺段",
+          "quote": "渠水又枝分，夾路南出；水西有永寧寺，熙平中始創也；渠水又西歷廟社之間，南注南渠。",
+          "reading": "“夹路南出”支持两侧分支；后文西历庙社间、南注南渠是合叙，各支如何接续并未逐一说明。",
+          "limit": "两条线表示街道两侧关系，共用末端仅为原典合叙的显示安排，不表示两个已证汇水孔；南渠不自动并入城南外谷水。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E17"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "label_position": [
+            470,
+            478
+          ]
+        },
+        {
+          "id": "I08",
+          "from": "palace-changhe",
+          "to": "south-channel",
+          "label": "铜驼街两侧支（东侧示意）",
+          "points": [
+            [
+              355,
+              440
+            ],
+            [
+              510,
+              440
+            ],
+            [
+              510,
+              518
+            ],
+            [
+              660,
+              518
+            ],
+            [
+              660,
+              505
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "登闻鼓后、铜驼街及永宁寺段",
+          "quote": "渠水又枝分，夾路南出；水西有永寧寺，熙平中始創也；渠水又西歷廟社之間，南注南渠。",
+          "reading": "“夹路南出”支持两侧分支；后文西历庙社间、南注南渠是合叙，各支如何接续并未逐一说明。",
+          "limit": "两条线表示街道两侧关系，共用末端仅为原典合叙的显示安排，不表示两个已证汇水孔；南渠不自动并入城南外谷水。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [
+            "E17"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "label_position": [
+            570,
+            518
+          ]
+        },
+        {
+          "id": "I09",
+          "from": "gu-pools",
+          "to": "imperial-pools",
+          "label": "谷水注宫苑诸海",
+          "points": [
+            [
+              110,
+              590
+            ],
+            [
+              350,
+              590
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "G1"
+          ],
+          "locator": "城内华林园、诸海段",
+          "quote": "凡此諸海，皆有石竇流於地下，西通穀水，東連陽渠，亦與翟泉相連；穀水注之不竭。",
+          "reading": "杨衒之追记洛阳宫苑及高祖、世宗建设；没有逐年通水表。",
+          "limit": "谷水注池可记flow；东连阳渠、与翟泉相连先记connection。诸海是池群，不是同一水体的多个别称。",
+          "legacy_water_ids": [
+            "W17",
+            "W18",
+            "W19",
+            "W20",
+            "W21",
+            "W34"
+          ],
+          "evidence_ids": [
+            "E27"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "I10",
+          "from": "imperial-pools",
+          "to": "diquan-linked",
+          "label": "诸海与翟泉地下相连",
+          "points": [
+            [
+              350,
+              590
+            ],
+            [
+              630,
+              590
+            ]
+          ],
+          "relationship_type": "connection",
+          "period_class": "text_context",
+          "source_ids": [
+            "G1"
+          ],
+          "locator": "城内华林园、诸海段",
+          "quote": "凡此諸海，皆有石竇流於地下，西通穀水，東連陽渠，亦與翟泉相連；穀水注之不竭。",
+          "reading": "杨衒之追记洛阳宫苑及高祖、世宗建设；没有逐年通水表。",
+          "limit": "谷水注池可记flow；东连阳渠、与翟泉相连先记connection。诸海是池群，不是同一水体的多个别称。",
+          "legacy_water_ids": [
+            "W15",
+            "W34"
+          ],
+          "evidence_ids": [
+            "E27"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "I11",
+          "from": "imperial-pools",
+          "to": "yangqu-linked",
+          "label": "诸海与阳渠地下相连",
+          "points": [
+            [
+              350,
+              590
+            ],
+            [
+              350,
+              617
+            ],
+            [
+              880,
+              617
+            ],
+            [
+              880,
+              590
+            ]
+          ],
+          "relationship_type": "connection",
+          "period_class": "text_context",
+          "source_ids": [
+            "G1"
+          ],
+          "locator": "城内华林园、诸海段",
+          "quote": "凡此諸海，皆有石竇流於地下，西通穀水，東連陽渠，亦與翟泉相連；穀水注之不竭。",
+          "reading": "杨衒之追记洛阳宫苑及高祖、世宗建设；没有逐年通水表。",
+          "limit": "谷水注池可记flow；东连阳渠、与翟泉相连先记connection。诸海是池群，不是同一水体的多个别称。",
+          "legacy_water_ids": [
+            "W06",
+            "W34"
+          ],
+          "evidence_ids": [
+            "E27"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "label_position": [
+            755,
+            617
+          ]
+        }
+      ],
+      "notes": [
+        "西城阊阖门与宫城南阊阖门分为两个节点；“枝分上下”不擅释成北、南两条渠。",
+        "天渊池、灵芝／九龙池组、洛阳县南池分列；地下“通、连”只画无箭头连接。",
+        "铜驼街两侧支渠南注“南渠”，末端不自动并入城南外谷水；图上不恢复未经量测的走线。"
+      ],
+      "annotations": [
+        {
+          "x": 155,
+          "y": 366,
+          "text": "经望先寺、故金市南",
+          "max_chars": 18
+        },
+        {
+          "x": 414,
+          "y": 375,
+          "text": "千秋门 → 神虎门 → 通门、掖门西",
+          "max_chars": 28
+        },
+        {
+          "x": 490,
+          "y": 420,
+          "text": "东行经司马门南、司空府前、太仓南",
+          "max_chars": 29
+        },
+        {
+          "x": 490,
+          "y": 486,
+          "text": "铜驼街两侧分支",
+          "max_chars": 18
+        },
+        {
+          "x": 75,
+          "y": 547,
+          "text": "地下石窦连通：各池分列",
+          "max_chars": 47
+        }
+      ],
+      "reference_boxes": []
+    },
+    {
+      "id": "east-readings",
+      "title": "七里涧的两种读法与调查止点",
+      "subtitle": "上两行并列学者解释；下行是已存的宽年代渠迹转引。三行不能拼成一条盛时通航线。",
+      "default_layer": "all",
+      "nodes": [
+        {
+          "id": "x-hongchi",
+          "label": "鸿池下游",
+          "x": 140,
+          "y": 235,
+          "kind": "pond"
+        },
+        {
+          "id": "x-qili",
+          "label": "城北东侧水下流\n（熊释为七里涧）",
+          "x": 445,
+          "y": 205,
+          "kind": "place",
+          "label_dy": -32
+        },
+        {
+          "id": "x-confluence",
+          "label": "城南、城北水合一\n（熊会贞解释）",
+          "x": 770,
+          "y": 235,
+          "kind": "unknown",
+          "label_dy": -40
+        },
+        {
+          "id": "h-mashi",
+          "label": "马市石桥以东",
+          "x": 130,
+          "y": 385,
+          "kind": "gate"
+        },
+        {
+          "id": "h-qili",
+          "label": "北来七里涧",
+          "x": 445,
+          "y": 322,
+          "kind": "place",
+          "label_dy": -16
+        },
+        {
+          "id": "h-junction",
+          "label": "阳渠受水处",
+          "x": 445,
+          "y": 385,
+          "kind": "unknown",
+          "label_dy": 30
+        },
+        {
+          "id": "h-hongchi",
+          "label": "鸿池以西\n（黄图示关系）",
+          "x": 780,
+          "y": 385,
+          "kind": "pond",
+          "label_dy": -40
+        },
+        {
+          "id": "survey-hongchi",
+          "label": "鸿池东侧旧渠",
+          "x": 130,
+          "y": 545,
+          "kind": "site"
+        },
+        {
+          "id": "survey-tangquan",
+          "label": "汤泉村东南",
+          "x": 435,
+          "y": 545,
+          "kind": "site"
+        },
+        {
+          "id": "survey-dongtun",
+          "label": "东屯村东山嘴南\n调查止点",
+          "x": 670,
+          "y": 545,
+          "kind": "end",
+          "label_dy": -40
+        },
+        {
+          "id": "inferred-mouth",
+          "label": "黑石峡南口一带\n地势推测，非实见口",
+          "x": 900,
+          "y": 545,
+          "kind": "unknown",
+          "label_dy": -40,
+          "label_anchor": "end",
+          "label_dx": 60
+        }
+      ],
+      "segments": [
+        {
+          "id": "EAST01",
+          "from": "x-hongchi",
+          "to": "x-confluence",
+          "label": "鸿池以下汇合的熊氏读法",
+          "points": [
+            [
+              140,
+              235
+            ],
+            [
+              770,
+              235
+            ]
+          ],
+          "relationship_type": "hypothesis",
+          "period_class": "interpretation",
+          "source_ids": [
+            "S16",
+            "XIONG"
+          ],
+          "locator": "鸿池横塘及其后东流水",
+          "quote": "其水又東，左合七里澗。",
+          "reading": "熊会贞据传本文序解释：城南水出鸿池后与城北东侧下流合一；后者称七里涧。",
+          "limit": "这是文本解释，不是已测得的鸿池东出口、汇口或516—528连续通航线。",
+          "legacy_water_ids": [
+            "W30",
+            "W31"
+          ],
+          "evidence_ids": [
+            "E24"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "EAST02",
+          "from": "x-qili",
+          "to": "x-confluence",
+          "label": "熊氏所释七里涧汇入关系",
+          "points": [
+            [
+              445,
+              205
+            ],
+            [
+              770,
+              235
+            ]
+          ],
+          "relationship_type": "hypothesis",
+          "period_class": "interpretation",
+          "source_ids": [
+            "XIONG"
+          ],
+          "locator": "“左合七里涧”下注",
+          "quote": "",
+          "reading": "七里涧被解释为城北、城东一带水流的下流异名，汇入鸿池以下水段。",
+          "limit": "与下一行北来独立支流的模型并列，不能同时采用为一个确定网络。",
+          "legacy_water_ids": [
+            "W31"
+          ],
+          "evidence_ids": [],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "EAST03",
+          "from": "h-mashi",
+          "to": "h-junction",
+          "label": "七里涧段接在马市桥段后的校读",
+          "points": [
+            [
+              130,
+              385
+            ],
+            [
+              445,
+              385
+            ]
+          ],
+          "relationship_type": "hypothesis",
+          "period_class": "interpretation",
+          "source_ids": [
+            "HUANG2026"
+          ],
+          "locator": "第一节，节引《谷水注》后“这段文字”一段；节引末句为亳殷南",
+          "quote": "移接起句：其水又东，左合七里涧；接入位置：又东迳马市石桥。",
+          "reading": "现代校读方案，作者将该部分归于北支，把南支叙述止于鸿池；与传本文序不同。",
+          "limit": "文章说起句以后的文字但未给逐字止句；实际节引覆盖旅人桥、郦食其庙南、亳殷南。不可声称已独立核定偃师城南、入洛尾句也全部移接。官方注释指向杨萧杨2021年讨论358—369页，未在本轮获取该文原页。",
+          "legacy_water_ids": [
+            "W06",
+            "W31"
+          ],
+          "evidence_ids": [
+            "E33"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "EAST04",
+          "from": "h-qili",
+          "to": "h-junction",
+          "label": "黄图示北来七里涧汇入阳渠",
+          "points": [
+            [
+              445,
+              322
+            ],
+            [
+              445,
+              385
+            ]
+          ],
+          "relationship_type": "hypothesis",
+          "period_class": "interpretation",
+          "source_ids": [
+            "HUANG2026"
+          ],
+          "locator": "第一节，节引《谷水注》后“这段文字”一段；节引末句为亳殷南",
+          "quote": "移接起句：其水又东，左合七里涧；接入位置：又东迳马市石桥。",
+          "reading": "黄文图1、图4把七里涧画成从北来、在鸿池以西汇入阳渠的支流；此行采用其图示关系。",
+          "limit": "后出复原解释，无新增汇口坐标；“左合”的汇入方向与另一读法相同，接收水支的归属不同。",
+          "legacy_water_ids": [
+            "W31"
+          ],
+          "evidence_ids": [
+            "E33"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "EAST05",
+          "from": "h-junction",
+          "to": "h-hongchi",
+          "label": "黄图示汇口在鸿池以西",
+          "points": [
+            [
+              445,
+              385
+            ],
+            [
+              780,
+              385
+            ]
+          ],
+          "relationship_type": "hypothesis",
+          "period_class": "interpretation",
+          "source_ids": [
+            "HUANG2026"
+          ],
+          "locator": "第一节，节引《谷水注》后“这段文字”一段；节引末句为亳殷南",
+          "quote": "移接起句：其水又东，左合七里涧；接入位置：又东迳马市石桥。",
+          "reading": "仅显示黄图中阳渠受七里涧与鸿池的东西关系，不用此段证明北魏池东航运。",
+          "limit": "鸿池与北支的完整接续仍须原校勘、原调查图及分期证据。",
+          "legacy_water_ids": [
+            "W06",
+            "W30"
+          ],
+          "evidence_ids": [
+            "E33"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "EAST06",
+          "from": "survey-hongchi",
+          "to": "survey-tangquan",
+          "label": "鸿池以东旧渠调查转引",
+          "points": [
+            [
+              130,
+              545
+            ],
+            [
+              435,
+              545
+            ]
+          ],
+          "relationship_type": "connection",
+          "period_class": "broad_survey",
+          "source_ids": [
+            "P462",
+            "HUANG2026"
+          ],
+          "locator": "P4.6.2 east.json：池东至汤泉村东南段",
+          "quote": "",
+          "reading": "已存转引辨识到鸿池以东的古渠遗迹；调查时代范围宽，不能直接全部归北魏盛时。",
+          "limit": "2011原刊20—25页及原图仍未取得；图段是相对顺序，没有新增测点。",
+          "legacy_water_ids": [
+            "W06",
+            "W30"
+          ],
+          "evidence_ids": [],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "EAST07",
+          "from": "survey-tangquan",
+          "to": "survey-dongtun",
+          "label": "转引所及东屯村东调查止点",
+          "points": [
+            [
+              435,
+              545
+            ],
+            [
+              670,
+              545
+            ]
+          ],
+          "relationship_type": "connection",
+          "period_class": "broad_survey",
+          "source_ids": [
+            "P462",
+            "HUANG2026"
+          ],
+          "locator": "P4.6.2 east.json：east-04",
+          "quote": "",
+          "reading": "旧调查转引止于东屯村东山嘴南；继续东行一段受洛水冲毁。",
+          "limit": "黑石峡南口一带是地势推测，不用线连接为已实见的入洛口。",
+          "legacy_water_ids": [
+            "W06"
+          ],
+          "evidence_ids": [],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        }
+      ],
+      "notes": [
+        "两种读法都把七里涧看作汇入接收水道；没有“主流流入七里涧”的确定箭头。",
+        "黄学超节引与移接讨论所列至亳殷南；杨萧杨2021年原校勘页358—369仍待核读。",
+        "2011年简报原图未得；调查止点以后有冲毁缺口，未新增河宽、水深、岸线或入洛口坐标。"
+      ],
+      "annotations": [
+        {
+          "x": 55,
+          "y": 164,
+          "text": "A 熊会贞解释",
+          "max_chars": 26
+        },
+        {
+          "x": 55,
+          "y": 295,
+          "text": "B 黄学超2026援引校读及图示",
+          "max_chars": 28
+        },
+        {
+          "x": 55,
+          "y": 475,
+          "text": "C 旧调查转引：汉魏等宽年代遗迹",
+          "max_chars": 28
+        },
+        {
+          "x": 718,
+          "y": 575,
+          "text": "缺失段不作实线接续",
+          "max_chars": 18
+        },
+        {
+          "x": 90,
+          "y": 610,
+          "text": "卷十六偃师城南谷水入洛、卷十五阳渠注洛的局部记载仍保留；不能倒推一个精确入洛口。",
+          "max_chars": 61
+        }
+      ],
+      "reference_boxes": []
+    },
+    {
+      "id": "phases",
+      "title": "两处引洛与河渠分期",
+      "subtitle": "并列不同地点、时代及证据性质；图中位置只用于比较，不构成城西至城南的连续平面。",
+      "default_layer": "all",
+      "nodes": [
+        {
+          "id": "west-luo",
+          "label": "洛水旧枝渎",
+          "x": 105,
+          "y": 235,
+          "kind": "place"
+        },
+        {
+          "id": "west-wangcheng",
+          "label": "河南王城西旧渠",
+          "x": 330,
+          "y": 235,
+          "kind": "site"
+        },
+        {
+          "id": "west-gu",
+          "label": "谷水",
+          "x": 505,
+          "y": 235,
+          "kind": "place"
+        },
+        {
+          "id": "south-luo",
+          "label": "城南古洛河",
+          "x": 650,
+          "y": 235,
+          "kind": "place"
+        },
+        {
+          "id": "south-diversion",
+          "label": "津阳门外大街东\n引洛渠",
+          "x": 845,
+          "y": 235,
+          "kind": "site",
+          "label_dy": -40
+        },
+        {
+          "id": "south-yangqu",
+          "label": "城南阳渠",
+          "x": 940,
+          "y": 315,
+          "kind": "end",
+          "label_dx": -10,
+          "label_dy": 33,
+          "label_anchor": "end"
+        },
+        {
+          "id": "plan496-luo",
+          "label": "洛水",
+          "x": 105,
+          "y": 405,
+          "kind": "place"
+        },
+        {
+          "id": "plan496-gu",
+          "label": "谷水",
+          "x": 330,
+          "y": 405,
+          "kind": "place"
+        },
+        {
+          "id": "plan-hongchi",
+          "label": "洪池",
+          "x": 610,
+          "y": 405,
+          "kind": "pool"
+        },
+        {
+          "id": "plan-luo",
+          "label": "洛水",
+          "x": 845,
+          "y": 405,
+          "kind": "place"
+        },
+        {
+          "id": "qianjin-weir",
+          "label": "千金堰",
+          "x": 100,
+          "y": 565,
+          "kind": "site"
+        },
+        {
+          "id": "changfen-bridge",
+          "label": "长分桥",
+          "x": 310,
+          "y": 565,
+          "kind": "site"
+        },
+        {
+          "id": "flood-gu",
+          "label": "涨水时谷水",
+          "x": 615,
+          "y": 565,
+          "kind": "place"
+        },
+        {
+          "id": "flood-luo",
+          "label": "洛水",
+          "x": 850,
+          "y": 565,
+          "kind": "place"
+        }
+      ],
+      "segments": [
+        {
+          "id": "P01",
+          "from": "west-luo",
+          "to": "west-wangcheng",
+          "label": "洛水至河南王城西废枝渎",
+          "points": [
+            [
+              105,
+              235
+            ],
+            [
+              330,
+              235
+            ]
+          ],
+          "relationship_type": "connection",
+          "period_class": "older_event",
+          "source_ids": [
+            "S15",
+            "SB16"
+          ],
+          "locator": "洛水枝渎，经河南县王城西、郏鄏陌后；穀城南、河南王城西北石碛段",
+          "quote": "枝瀆又北入穀，蓋經始周啟，瀆久廢不脩矣。\n洛水枝流入焉今無水也；磧南出為死穀北出為湖溝；魏太和四年〈案近刻訛作七年〉；決湖以注瀍水。",
+          "reading": "追述旧渠道，郦注明说久废。；旧河道和一次暴水后排湖事件；本条不擅定为496，也不据异本七年径定483。",
+          "limit": "不能画成516—528仍通水的西部引洛渠；与津阳门外城南引洛渠不等同。；四部本有四/七年校记；普通卷16漏录瀍字。只保留湖沟排水通瀍的历史关系及异文，未证盛时仍通。",
+          "legacy_water_ids": [
+            "W09"
+          ],
+          "evidence_ids": [
+            "E01",
+            "E02"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "P02",
+          "from": "west-wangcheng",
+          "to": "west-gu",
+          "label": "废枝渎旧入谷关系",
+          "points": [
+            [
+              330,
+              235
+            ],
+            [
+              505,
+              235
+            ]
+          ],
+          "relationship_type": "connection",
+          "period_class": "older_event",
+          "source_ids": [
+            "S15"
+          ],
+          "locator": "洛水枝渎，经河南县王城西、郏鄏陌后",
+          "quote": "枝瀆又北入穀，蓋經始周啟，瀆久廢不脩矣。",
+          "reading": "旧渠曾北入谷，但郦注明确“久废不修”；本图不画盛时通水箭头。",
+          "limit": "不能画成516—528仍通水的西部引洛渠；与津阳门外城南引洛渠不等同。",
+          "legacy_water_ids": [
+            "W09"
+          ],
+          "evidence_ids": [
+            "E01"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "P03",
+          "from": "south-luo",
+          "to": "south-diversion",
+          "label": "古洛至津阳街东引洛渠的报告关系",
+          "points": [
+            [
+              650,
+              235
+            ],
+            [
+              845,
+              235
+            ]
+          ],
+          "relationship_type": "connection",
+          "period_class": "older_event",
+          "source_ids": [
+            "REPORT22",
+            "P466"
+          ],
+          "locator": "2022报告样章印页8；P4.6.6 diversion",
+          "quote": "",
+          "reading": "报告把城南引洛联系东汉建武二十四年（48）的工程，并定位于津阳门外大街东侧。",
+          "limit": "图2-2和图2-2-4未取得；不能新增渠宽、渠深、北魏通水或桥头距离。",
+          "legacy_water_ids": [
+            "W01"
+          ],
+          "evidence_ids": [],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "P04",
+          "from": "south-diversion",
+          "to": "south-yangqu",
+          "label": "城南引洛北达阳渠的报告关系",
+          "points": [
+            [
+              845,
+              235
+            ],
+            [
+              940,
+              315
+            ]
+          ],
+          "relationship_type": "connection",
+          "period_class": "older_event",
+          "source_ids": [
+            "REPORT22",
+            "P466"
+          ],
+          "locator": "2022报告样章印页8",
+          "quote": "",
+          "reading": "报告叙述此渠北接城南阳渠；本图按关系排布，折线不表示流向角度。",
+          "limit": "不把报告讨论的汉代工程直接归入516—528年通水层。",
+          "legacy_water_ids": [
+            "W04"
+          ],
+          "evidence_ids": [],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "P05",
+          "from": "plan496-luo",
+          "to": "plan496-gu",
+          "label": "496年洛水入谷的将通记载",
+          "points": [
+            [
+              105,
+              405
+            ],
+            [
+              330,
+              405
+            ]
+          ],
+          "relationship_type": "proposal",
+          "period_class": "proposal",
+          "source_ids": [
+            "W7"
+          ],
+          "locator": "太和二十年九月丁亥",
+          "quote": "將通洛水入穀，帝親臨觀。",
+          "reading": "496年的筹划/施工观察，原文用将；非516—528水况或竣工记。",
+          "limit": "方向为洛→穀；条文没有鸿池、千金堨、津阳门或渠口位置。",
+          "legacy_water_ids": [
+            "W09"
+          ],
+          "evidence_ids": [
+            "E30"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "direction_proposed": "洛水→谷水",
+          "completed": false
+        },
+        {
+          "id": "P06",
+          "from": "plan-hongchi",
+          "to": "plan-luo",
+          "label": "洪池通洛的有条件提议",
+          "points": [
+            [
+              610,
+              405
+            ],
+            [
+              845,
+              405
+            ]
+          ],
+          "relationship_type": "proposal",
+          "period_class": "proposal",
+          "source_ids": [
+            "W53"
+          ],
+          "locator": "高祖自邺还京、泛舟洪池",
+          "quote": "朕欲從此通渠於洛；今溝渠若須二萬人以下、六十日有成者，宜以漸修之。",
+          "reading": "孝文帝的军运意向与有条件施工要求。",
+          "limit": "方向为洪池→洛，与496本纪方向相反；不拼成同一工程的成功或盛时通航证明。",
+          "legacy_water_ids": [
+            "W30"
+          ],
+          "evidence_ids": [
+            "E31"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false,
+          "direction_proposed": "洪池→洛水",
+          "completed": false
+        },
+        {
+          "id": "P07",
+          "from": "qianjin-weir",
+          "to": "changfen-bridge",
+          "label": "千金堰在长分桥西",
+          "points": [
+            [
+              100,
+              565
+            ],
+            [
+              310,
+              565
+            ]
+          ],
+          "relationship_type": "adjacency",
+          "period_class": "text_context",
+          "source_ids": [
+            "G4"
+          ],
+          "locator": "卷末长分桥及千金堰",
+          "quote": "出閶闔門城外七里，有長分橋；中朝時以穀水浚急；長則分流入洛；長分橋西，有千金堰。",
+          "reading": "保存堰在桥西的方位；两个对象之间不由此建立水流箭头。",
+          "limit": "保存有条件的历史泄洪关系；“桥西有堰”是方位adjacency，不是从桥流到堰的箭头；不可画成城南永桥。",
+          "legacy_water_ids": [
+            "W07"
+          ],
+          "evidence_ids": [
+            "E29"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "P08",
+          "from": "flood-gu",
+          "to": "flood-luo",
+          "label": "西晋旧事中的涨水分流入洛",
+          "points": [
+            [
+              615,
+              565
+            ],
+            [
+              850,
+              565
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "older_event",
+          "source_ids": [
+            "G4"
+          ],
+          "locator": "卷末长分桥及千金堰",
+          "quote": "出閶闔門城外七里，有長分橋；中朝時以穀水浚急；長則分流入洛；長分橋西，有千金堰。",
+          "reading": "中朝旧事解释长分桥名：谷水涨时分流入洛。仅作为有条件的历史流向展示。",
+          "limit": "保存有条件的历史泄洪关系；“桥西有堰”是方位adjacency，不是从桥流到堰的箭头；不可画成城南永桥。",
+          "legacy_water_ids": [
+            "W04",
+            "W01"
+          ],
+          "evidence_ids": [
+            "E29"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        }
+      ],
+      "notes": [
+        "“太和五年”石铭属魏明帝，换算为曹魏231；“朝廷太和中修复故堨”才是北魏修复语境。",
+        "城西废洛枝渎、城南津阳街东引洛渠、496年未定位工程分别保存，不以“引洛”同名合并。",
+        "永桥仍只定位宣阳门外四里、跨洛；古岸与桥头待2022平剖图。辟雍180米干道的盛时通水仍未证。"
+      ],
+      "annotations": [
+        {
+          "x": 55,
+          "y": 165,
+          "text": "A 城西旧渠：郦注明说“今无水／久废”",
+          "max_chars": 29
+        },
+        {
+          "x": 595,
+          "y": 165,
+          "text": "B 城南引洛：报告联系东汉48年工程",
+          "max_chars": 28
+        },
+        {
+          "x": 90,
+          "y": 285,
+          "text": "两条旧关系只在历史层展示",
+          "max_chars": 25
+        },
+        {
+          "x": 55,
+          "y": 350,
+          "text": "C 496年本纪：将通洛水入谷",
+          "max_chars": 26
+        },
+        {
+          "x": 555,
+          "y": 350,
+          "text": "D 李冲传：洪池通洛的条件性提议",
+          "max_chars": 29
+        },
+        {
+          "x": 55,
+          "y": 495,
+          "text": "E 千金堰在长分桥西：只是方位",
+          "max_chars": 29
+        },
+        {
+          "x": 555,
+          "y": 495,
+          "text": "F 中朝旧事：涨水才分流入洛",
+          "max_chars": 28
+        },
+        {
+          "x": 500,
+          "y": 610,
+          "text": "“将通”“朕欲”均不当作竣工记录",
+          "max_chars": 29
+        }
+      ],
+      "reference_boxes": []
+    },
+    {
+      "id": "regional",
+      "title": "伊洛与西北来水",
+      "subtitle": "各组分别说明相对方位、来水方向和旧今变化；不同面板不拼成同一比例、同一时点的地理线。",
+      "default_layer": "all",
+      "nodes": [
+        {
+          "id": "yique",
+          "label": "伊阙下伊水",
+          "x": 110,
+          "y": 235,
+          "kind": "place"
+        },
+        {
+          "id": "yi-east",
+          "label": "圜丘东侧伊水",
+          "x": 375,
+          "y": 235,
+          "kind": "place"
+        },
+        {
+          "id": "yi-luo",
+          "label": "洛水",
+          "x": 640,
+          "y": 235,
+          "kind": "place"
+        },
+        {
+          "id": "yuanqiu",
+          "label": "圜丘",
+          "x": 300,
+          "y": 290,
+          "kind": "site",
+          "label_dy": 26
+        },
+        {
+          "id": "zize",
+          "label": "梓泽",
+          "x": 95,
+          "y": 390,
+          "kind": "place"
+        },
+        {
+          "id": "chan",
+          "label": "瀍水",
+          "x": 250,
+          "y": 390,
+          "kind": "place"
+        },
+        {
+          "id": "chan-gu",
+          "label": "谷／千金渠",
+          "x": 425,
+          "y": 390,
+          "kind": "place"
+        },
+        {
+          "id": "jian-now",
+          "label": "涧水",
+          "x": 580,
+          "y": 385,
+          "kind": "place"
+        },
+        {
+          "id": "jian-network",
+          "label": "随谷水东行",
+          "x": 755,
+          "y": 385,
+          "kind": "place"
+        },
+        {
+          "id": "jian-luo",
+          "label": "洛水",
+          "x": 935,
+          "y": 385,
+          "kind": "place"
+        },
+        {
+          "id": "jian-old",
+          "label": "旧：与谷水乱流",
+          "x": 600,
+          "y": 458,
+          "kind": "place"
+        },
+        {
+          "id": "jian-old-luo",
+          "label": "南入洛水",
+          "x": 900,
+          "y": 458,
+          "kind": "place"
+        },
+        {
+          "id": "jingu",
+          "label": "金谷水",
+          "x": 110,
+          "y": 575,
+          "kind": "place"
+        },
+        {
+          "id": "jingu-gu",
+          "label": "谷水（金墉城以前）",
+          "x": 365,
+          "y": 575,
+          "kind": "place"
+        },
+        {
+          "id": "lake-flood",
+          "label": "暴水所成湖渚",
+          "x": 610,
+          "y": 575,
+          "kind": "lake"
+        },
+        {
+          "id": "hugou",
+          "label": "湖沟排水",
+          "x": 775,
+          "y": 575,
+          "kind": "place"
+        },
+        {
+          "id": "hugou-chan",
+          "label": "瀍水",
+          "x": 930,
+          "y": 575,
+          "kind": "place"
+        }
+      ],
+      "segments": [
+        {
+          "id": "R01",
+          "from": "yique",
+          "to": "yi-east",
+          "label": "伊阙下伊水 → 圜丘东侧伊水",
+          "points": [
+            [
+              110,
+              235
+            ],
+            [
+              375,
+              235
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S15"
+          ],
+          "locator": "卷十五《伊水》，末一经“又东北至洛阳县南，北入于洛”下注；圜丘与入洛两句",
+          "quote": "伊水自闕東北流。……伊水又東北至洛陽縣南，逕圜丘東，大魏郊天之所。……伊水又東北流，注於洛水。",
+          "reading": "郦注以大魏郊天之所指述圜丘，适合早六世纪文献相对层；不提供516–528逐年水况。",
+          "limit": "仅伊水在圜丘以东、东北入洛；不得由此确定圜丘现代坐标或伊洛汇口在永桥哪一侧。",
+          "legacy_water_ids": [
+            "W03"
+          ],
+          "evidence_ids": [
+            "WC-E01"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R02",
+          "from": "yi-east",
+          "to": "yi-luo",
+          "label": "圜丘东侧伊水 → 洛水",
+          "points": [
+            [
+              375,
+              235
+            ],
+            [
+              640,
+              235
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S15"
+          ],
+          "locator": "卷十五《伊水》，末一经“又东北至洛阳县南，北入于洛”下注；圜丘与入洛两句",
+          "quote": "伊水自闕東北流。……伊水又東北至洛陽縣南，逕圜丘東，大魏郊天之所。……伊水又東北流，注於洛水。",
+          "reading": "郦注以大魏郊天之所指述圜丘，适合早六世纪文献相对层；不提供516–528逐年水况。",
+          "limit": "仅伊水在圜丘以东、东北入洛；不得由此确定圜丘现代坐标或伊洛汇口在永桥哪一侧。",
+          "legacy_water_ids": [
+            "W03",
+            "W01"
+          ],
+          "evidence_ids": [
+            "WC-E01"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R03",
+          "from": "yuanqiu",
+          "to": "yi-east",
+          "label": "伊水在圜丘以东",
+          "points": [
+            [
+              300,
+              290
+            ],
+            [
+              375,
+              235
+            ]
+          ],
+          "relationship_type": "adjacency",
+          "period_class": "text_context",
+          "source_ids": [
+            "S15"
+          ],
+          "locator": "卷十五《伊水》，末一经“又东北至洛阳县南，北入于洛”下注；圜丘与入洛两句",
+          "quote": "伊水自闕東北流。……伊水又東北至洛陽縣南，逕圜丘東，大魏郊天之所。……伊水又東北流，注於洛水。",
+          "reading": "仅表示圜丘在本段伊水以西的相对方位，虚点线不表示水从坛址流出。",
+          "limit": "仅伊水在圜丘以东、东北入洛；不得由此确定圜丘现代坐标或伊洛汇口在永桥哪一侧。",
+          "legacy_water_ids": [
+            "W03"
+          ],
+          "evidence_ids": [
+            "WC-E01"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R04",
+          "from": "zize",
+          "to": "chan",
+          "label": "梓泽 → 瀍水",
+          "points": [
+            [
+              95,
+              390
+            ],
+            [
+              250,
+              390
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S15"
+          ],
+          "locator": "卷十五《瀍水》，首经下注梓泽段及“东与千金渠合”下注",
+          "quote": "瀍水出其北梓澤中；其水歷澤東南流。……水又東南流，注於穀。穀水自千金堨東注，謂之千金渠也。",
+          "reading": "郦注行程说明；首经及次经与注应区分，不据旧典重画瀍水直接南入洛。",
+          "limit": "可画梓泽—瀍水—穀/千金渠水段，合口只作拓扑节点；原句不提供千金堨体与汇口的地面间距，也不能把瀍、涧合成一个水名。",
+          "legacy_water_ids": [
+            "W05"
+          ],
+          "evidence_ids": [
+            "WC-E03"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R05",
+          "from": "chan",
+          "to": "chan-gu",
+          "label": "瀍水 → 谷／千金渠",
+          "points": [
+            [
+              250,
+              390
+            ],
+            [
+              425,
+              390
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S15"
+          ],
+          "locator": "卷十五《瀍水》，首经下注梓泽段及“东与千金渠合”下注",
+          "quote": "瀍水出其北梓澤中；其水歷澤東南流。……水又東南流，注於穀。穀水自千金堨東注，謂之千金渠也。",
+          "reading": "郦注行程说明；首经及次经与注应区分，不据旧典重画瀍水直接南入洛。",
+          "limit": "可画梓泽—瀍水—穀/千金渠水段，合口只作拓扑节点；原句不提供千金堨体与汇口的地面间距，也不能把瀍、涧合成一个水名。",
+          "legacy_water_ids": [
+            "W05",
+            "W07"
+          ],
+          "evidence_ids": [
+            "WC-E03"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R06",
+          "from": "jian-now",
+          "to": "jian-network",
+          "label": "涧水与谷水俱东行",
+          "points": [
+            [
+              580,
+              385
+            ],
+            [
+              755,
+              385
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S15"
+          ],
+          "locator": "卷十五《涧水》，末段“又按河南有离山水”至篇末",
+          "quote": "舊與穀水亂流，南入於洛；今穀水東入千金渠，澗水與之俱東入洛矣。",
+          "reading": "郦注对举旧与今，此段表示涧水随谷水东入千金渠网络；不另画独立贯城涧河。",
+          "limit": "篇内列多种涧水源流、名称候选并自言未详。可画旧/今关系对照，不强选一条源头、不把今涧河坐标套入、不另造一条独立贯城涧水线。",
+          "legacy_water_ids": [
+            "W04",
+            "W07"
+          ],
+          "evidence_ids": [
+            "WC-E04"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R07",
+          "from": "jian-network",
+          "to": "jian-luo",
+          "label": "随谷东行水系最终入洛",
+          "points": [
+            [
+              755,
+              385
+            ],
+            [
+              935,
+              385
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S15"
+          ],
+          "locator": "卷十五《涧水》，末段“又按河南有离山水”至篇末",
+          "quote": "舊與穀水亂流，南入於洛；今穀水東入千金渠，澗水與之俱東入洛矣。",
+          "reading": "“俱东入洛”保存为总体去向；此边不代替城内外各分支、鸿池东出口或实测入洛口。",
+          "limit": "篇内列多种涧水源流、名称候选并自言未详。可画旧/今关系对照，不强选一条源头、不把今涧河坐标套入、不另造一条独立贯城涧水线。",
+          "legacy_water_ids": [
+            "W04",
+            "W01"
+          ],
+          "evidence_ids": [
+            "WC-E04"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R08",
+          "from": "jian-old",
+          "to": "jian-old-luo",
+          "label": "旧涧谷水南入洛",
+          "points": [
+            [
+              600,
+              458
+            ],
+            [
+              900,
+              458
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "older_event",
+          "source_ids": [
+            "S15"
+          ],
+          "locator": "卷十五《涧水》，末段“又按河南有离山水”至篇末",
+          "quote": "舊與穀水亂流，南入於洛；今穀水東入千金渠，澗水與之俱東入洛矣。",
+          "reading": "“旧”南入洛与郦注“今”东行分列，本边不作为516—528常流。",
+          "limit": "篇内列多种涧水源流、名称候选并自言未详。可画旧/今关系对照，不强选一条源头、不把今涧河坐标套入、不另造一条独立贯城涧水线。",
+          "legacy_water_ids": [
+            "W04",
+            "W01"
+          ],
+          "evidence_ids": [
+            "WC-E04"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R09",
+          "from": "jingu",
+          "to": "jingu-gu",
+          "label": "金谷水 → 谷水（金墉城以前）",
+          "points": [
+            [
+              110,
+              575
+            ],
+            [
+              365,
+              575
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "text_context",
+          "source_ids": [
+            "S16"
+          ],
+          "locator": "卷十六《穀水》，西梁后、金墉城前；四部丛刊本影印第19叶对应网页",
+          "quote": "穀水又東，左會金谷水；金谷水又東南流入於穀。",
+          "reading": "郦注行水叙述中夹石崇旧居沿革。",
+          "limit": "金谷水为汇入穀水的独立支流，且叙述位于金墉城以前；不得与穀水上游或华林园池同名合并。",
+          "legacy_water_ids": [
+            "W33",
+            "W04"
+          ],
+          "evidence_ids": [
+            "WC-E05"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R10",
+          "from": "lake-flood",
+          "to": "hugou",
+          "label": "暴水积湖后开沟排水",
+          "points": [
+            [
+              610,
+              575
+            ],
+            [
+              775,
+              575
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "older_event",
+          "source_ids": [
+            "SB16"
+          ],
+          "locator": "卷十六《穀水》，河南王城西北石碛段；四部丛刊本影印第11叶对应网页",
+          "quote": "磧南出為死穀，北出為湖溝。魏太和四年，暴水流高三丈，此地下停流以成湖渚，造溝以通水，東西十里，決湖以注瀍水。",
+          "reading": "魏太和年间暴水排湖旧事；图例标历史事件，保留四/七年异文，不直接列为516–528实流水。",
+          "limit": "最低关系为湖渚经沟排向瀍水。黄学超推北魏复用湖沟另属现代解释，本图不将其升级为原典直接证明的盛时供水；十里不换算成实测长度。",
+          "legacy_water_ids": [
+            "W08"
+          ],
+          "evidence_ids": [
+            "WC-E06"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        },
+        {
+          "id": "R11",
+          "from": "hugou",
+          "to": "hugou-chan",
+          "label": "湖沟旧事中的排瀍方向",
+          "points": [
+            [
+              775,
+              575
+            ],
+            [
+              930,
+              575
+            ]
+          ],
+          "relationship_type": "flow",
+          "period_class": "older_event",
+          "source_ids": [
+            "SB16"
+          ],
+          "locator": "卷十六《穀水》，河南王城西北石碛段；四部丛刊本影印第11叶对应网页",
+          "quote": "磧南出為死穀，北出為湖溝。魏太和四年，暴水流高三丈，此地下停流以成湖渚，造溝以通水，東西十里，決湖以注瀍水。",
+          "reading": "魏太和年间暴水排湖旧事；图例标历史事件，保留四/七年异文，不直接列为516–528实流水。",
+          "limit": "最低关系为湖渚经沟排向瀍水。黄学超推北魏复用湖沟另属现代解释，本图不将其升级为原典直接证明的盛时供水；十里不换算成实测长度。",
+          "legacy_water_ids": [
+            "W08",
+            "W05"
+          ],
+          "evidence_ids": [
+            "WC-E06"
+          ],
+          "geographic_coordinates": null,
+          "annual_flow_516_528_confirmed": false
+        }
+      ],
+      "reference_boxes": [],
+      "annotations": [
+        {
+          "x": 55,
+          "y": 165,
+          "text": "A 伊水与洛水",
+          "max_chars": 23
+        },
+        {
+          "x": 710,
+          "y": 180,
+          "text": "伊阙后两条旧支：\n右出经合水、公路涧；\n左出积湖；均记“今无水”。",
+          "max_chars": 19
+        },
+        {
+          "x": 55,
+          "y": 340,
+          "text": "B 瀍水来水",
+          "max_chars": 23
+        },
+        {
+          "x": 555,
+          "y": 340,
+          "text": "C 涧水旧南流、今随谷东行",
+          "max_chars": 27
+        },
+        {
+          "x": 80,
+          "y": 444,
+          "text": "合口是关系节点，位置未定",
+          "max_chars": 24
+        },
+        {
+          "x": 565,
+          "y": 495,
+          "text": "源流与谷、涧通称：郦注自言未详",
+          "max_chars": 28
+        },
+        {
+          "x": 55,
+          "y": 525,
+          "text": "D 金谷水入谷",
+          "max_chars": 23
+        },
+        {
+          "x": 555,
+          "y": 525,
+          "text": "E 湖沟排瀍：历史暴水事件",
+          "max_chars": 27
+        }
+      ],
+      "notes": [
+        "伊水经圜丘东而东北入洛，可用作洛南相对骨架；不能由此确定永桥与伊洛汇口的地面位置。",
+        "瀍水、涧水分别命名；涧水旧南入洛与“今”随谷东行分层，两条伊水旧支均不列盛时常流。",
+        "湖沟“太和四／七年”保留版本差异；排湖入瀍的旧事不直接证明516—528年的湖沟供水。"
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "water02",
+      "label": "城南引洛、古洛河北岸与永桥桥头",
+      "missing": "2022报告图2-2（印21／数字44）和图2-2-4（折页／数字45）仍未取得可读原图。",
+      "decision": "取得后先对剖线方向与孔号，再量比例尺、淤积界面和分期；此前保留相对位置，不补桥头坐标。"
+    },
+    {
+      "id": "water01",
+      "label": "鸿池东部与七里涧归属",
+      "missing": "2011简报20—25页原图、杨萧杨2021年358—369页原校勘仍待取得。",
+      "decision": "并列熊会贞与黄学超的解释；原典局部方位可用，东出口、完整北魏航道和移接尾界继续留空。"
+    },
+    {
+      "id": "water03",
+      "label": "城内外水道的未定接续",
+      "missing": "城西两路分水点、铜驼街南渠的身份、洛阳沟接东北阳渠之口，以及园池地下石窦的实测路线尚无核定坐标。",
+      "decision": "采用已证的分段关系；只有文字明示方向的关系加箭头，同名门、池和不同汇口分列。"
+    },
+    {
+      "id": "water-regional",
+      "label": "盆地河流、壕沟及各池的完整形态",
+      "missing": "伊、瀍、涧水的文献来水关系已补入第5图，完整岸线、城壕的盛时接续与部分独立池形仍未取得分期定位。",
+      "decision": "已证相对骨架可继续用于城市布局；城壕不得被绕城谷水自动代替，未证岸线和孤立园池保留空白。"
+    }
+  ],
+  "legacy_water_coverage": [
+    {
+      "旧编号": "W01",
+      "旧称": "北魏洛水主河道",
+      "本册图段": "P03、P08、R02、R07、R08",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W02",
+      "旧称": "1997/1999近现代洛水参考线",
+      "本册图段": "—",
+      "状态": "仅作近现代参照，不纳古水系通水图"
+    },
+    {
+      "旧编号": "W03",
+      "旧称": "伊水",
+      "本册图段": "R01、R02、R03",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W04",
+      "旧称": "谷水／城周阳渠水系",
+      "本册图段": "O01、O02、O03、O04、O05、O07、O08、O09、O10、O11、O12、O13、I01、I03、I05、I06、I07、I08、P04、P08、R06、R07、R08、R09",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W05",
+      "旧称": "瀍水",
+      "本册图段": "R04、R05、R11",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W06",
+      "旧称": "北魏城东阳渠",
+      "本册图段": "O05、O06、O08、I06、I11、EAST03、EAST05、EAST06、EAST07",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W07",
+      "旧称": "千金堨／千金渠",
+      "本册图段": "O01、P07、R05、R06",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W08",
+      "旧称": "湖沟故道",
+      "本册图段": "R10、R11",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W09",
+      "旧称": "洛水枝渎（北魏引洛入谷候选）",
+      "本册图段": "P01、P02、P05",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W10",
+      "旧称": "张方沟／外郭城西侧排水渠",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W11",
+      "旧称": "内城西侧壕沟",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W12",
+      "旧称": "内城东侧壕沟",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W13",
+      "旧称": "宫城西墙汉晋河渠遗迹",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W14",
+      "旧称": "宫城西侧魏晋大型水利设施",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W15",
+      "旧称": "翟泉／苍龙海",
+      "本册图段": "I02、I10",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W16",
+      "旧称": "华林园大海／天渊池",
+      "本册图段": "I01、I02",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W17",
+      "旧称": "玄武池",
+      "本册图段": "I09",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W18",
+      "旧称": "流觞池",
+      "本册图段": "I09",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W19",
+      "旧称": "扶桑海",
+      "本册图段": "I09",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W20",
+      "旧称": "濛汜池",
+      "本册图段": "I09",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W21",
+      "旧称": "碧海曲池",
+      "本册图段": "I09",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W22",
+      "旧称": "昭仪寺池",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W23",
+      "旧称": "永和里北池",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W24",
+      "旧称": "永和里南池",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W25",
+      "旧称": "咸池",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W26",
+      "旧称": "土山鱼池",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W27",
+      "旧称": "景明寺三池",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W28",
+      "旧称": "九龙池（灵芝九龙池）",
+      "本册图段": "I04",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W29",
+      "旧称": "方湖",
+      "本册图段": "—",
+      "状态": "保留前册记录；本册未补绘其完整水线"
+    },
+    {
+      "旧编号": "W30",
+      "旧称": "鸿池陂",
+      "本册图段": "O16、EAST01、EAST05、EAST06、P06",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W31",
+      "旧称": "七里涧",
+      "本册图段": "EAST01、EAST02、EAST03、EAST04",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W32",
+      "旧称": "洛阳沟",
+      "本册图段": "O13、O14、O15",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W33",
+      "旧称": "金谷水",
+      "本册图段": "R09",
+      "状态": "本册分段或分期；不新增岸线"
+    },
+    {
+      "旧编号": "W34",
+      "旧称": "园池地下石窦联系",
+      "本册图段": "I09、I10、I11",
+      "状态": "本册分段或分期；不新增岸线"
+    }
+  ]
+}

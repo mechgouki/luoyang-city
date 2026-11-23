@@ -1,0 +1,917 @@
+{
+  "version": "P4.6.9",
+  "source_version": "prosperity-street-clusters-p453",
+  "source_path": "research/prosperity-v4/street-clusters-p453.json",
+  "source_sha256": "9b69da412a86d5e21e82b2cfdcac747b667ecad053de868618fd7474e4bcd116",
+  "source_inputs_sha256": {
+    "research/prosperity-v4/street-clusters-p453.json": "9b69da412a86d5e21e82b2cfdcac747b667ecad053de868618fd7474e4bcd116",
+    "research/prosperity-v1/text-review.json": "e897985535b46d802708e628da4bad5a40c667ad2283caad55aeb0b347cb3836",
+    "research/dual-b1/decisions.json": "aee1cdc54a4f0888f3793712c559a75489ea484e9786d2bfe370466faedfb26f"
+  },
+  "evidence_grades": {
+    "A": "原典明示的方位、所属或叙事先后；可编码定性关系，不能编码坐标",
+    "C": "解释层：句读承接、校补或跨句路侧转移需要说明，不得当成直接明文",
+    "B": "旧2012来源图概略遗址点或路迹，与文献关系另核；只能显示既有坐标",
+    "D": "未定位、不生成新实体或足迹"
+  },
+  "navigation": [
+    {
+      "mapped_feature_id": "geo-changhe-palace-gate",
+      "entity_id": "ic_changhe_palace",
+      "cluster_id": "K01",
+      "semantics": "context_link_only",
+      "source_binding": {
+        "feature_id": "geo-changhe-palace-gate",
+        "entity_id": "ic_changhe_palace",
+        "cluster_id": "K01",
+        "role": "P1 published generalized symbol center"
+      },
+      "page": "prosperity-street-clusters.html?cluster=K01&grade=all",
+      "limit": "既有门址只作阅读入口；这些城市关系没有取得新增位置、院界或道路坐标。"
+    },
+    {
+      "mapped_feature_id": "geo-jianchun-gate",
+      "entity_id": "gate_jianchun",
+      "cluster_id": "K02",
+      "semantics": "context_link_only",
+      "source_binding": {
+        "feature_id": "geo-jianchun-gate",
+        "entity_id": "gate_jianchun",
+        "cluster_id": "K02",
+        "role": "P1 published generalized city gate symbol center"
+      },
+      "page": "prosperity-street-clusters.html?cluster=K02&grade=all",
+      "limit": "既有门址只作阅读入口；这些城市关系没有取得新增位置、院界或道路坐标。"
+    }
+  ],
+  "clusters": [
+    {
+      "id": "K01",
+      "title": "宫前御道：寺院、两卫府与南北官学次序",
+      "reading_scope": "《洛阳伽蓝记》卷一永宁寺及宫前官署段",
+      "non_geographic": true,
+      "nodes": [
+        {
+          "id": "ic_palace_avenue",
+          "name": "宫前御道",
+          "role": "documentary_road",
+          "feature_id": null
+        },
+        {
+          "id": "ic_changhe_palace",
+          "name": "阊阖门（宫前）",
+          "role": "source_map_site_symbol",
+          "feature_id": "geo-changhe-palace-gate"
+        },
+        {
+          "id": "ic_yongning",
+          "name": "永宁寺",
+          "role": "source_map_complex_reference",
+          "feature_id": "geo-yongning-temple-walls"
+        },
+        {
+          "id": "ic_zuowei",
+          "name": "左卫府",
+          "role": "office",
+          "feature_id": null
+        },
+        {
+          "id": "ic_youwei",
+          "name": "右卫府",
+          "role": "office",
+          "feature_id": null
+        },
+        {
+          "id": "ic_situ",
+          "name": "司徒府",
+          "role": "office",
+          "feature_id": null
+        },
+        {
+          "id": "ic_guozixue",
+          "name": "国子学",
+          "role": "school",
+          "feature_id": null
+        },
+        {
+          "id": "ic_taiwei",
+          "name": "太尉府",
+          "role": "office",
+          "feature_id": null
+        }
+      ],
+      "edges": [
+        {
+          "id": "K01E01",
+          "subject": "ic_yongning",
+          "predicate": "west_of",
+          "object": "ic_palace_avenue",
+          "grade": "A",
+          "source_record": "v2.5:E01",
+          "quote": "在宮前閶闔門南一里御道西。",
+          "scope": "寺院在御道西；一里为古籍原文距离，不转换米",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E02",
+          "subject": "ic_yongning",
+          "predicate": "south_of",
+          "object": "ic_changhe_palace",
+          "grade": "A",
+          "source_record": "v2.5:E01",
+          "quote": "在宮前閶闔門南一里御道西。",
+          "scope": "南一里为文献方位与原文距离，不据此推断两点间实测GIS距离",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E03",
+          "subject": "ic_zuowei",
+          "predicate": "east_of",
+          "object": "ic_palace_avenue",
+          "grade": "A",
+          "source_record": "v2.5:E03",
+          "quote": "閶闔門前御道東有左衛府。",
+          "scope": "左卫御道东为明文",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E04",
+          "subject": "ic_youwei",
+          "predicate": "west_of",
+          "object": "ic_palace_avenue",
+          "grade": "A",
+          "source_record": "B1:B05",
+          "quote": "御道西有右衛府。",
+          "scope": "右卫御道西为正文语境",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E05",
+          "subject": "ic_situ",
+          "predicate": "south_of",
+          "object": "ic_zuowei",
+          "grade": "A",
+          "source_record": "v2.5:E03",
+          "quote": "府南有司徒府。",
+          "scope": "府为左卫府前句所承接；不表示已知距离",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E06",
+          "subject": "ic_guozixue",
+          "predicate": "south_of",
+          "object": "ic_situ",
+          "grade": "A",
+          "source_record": "v2.5:E04",
+          "quote": "司徒府南有國子學堂。",
+          "scope": "司徒府南为本句所属；国子学独立道路侧别未记",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E07",
+          "subject": "ic_taiwei",
+          "predicate": "east_of",
+          "object": "ic_yongning",
+          "grade": "A",
+          "source_record": "v2.5:E02",
+          "quote": "其寺東有太尉府。",
+          "scope": "寺东相对位置不能自动推出御道东",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K01E08",
+          "subject": "ic_taiwei",
+          "predicate": "west_of",
+          "object": "ic_palace_avenue",
+          "grade": "C",
+          "source_record": "B1:B03",
+          "quote": "御道西有右衛府，府南有太尉府。",
+          "scope": "道西来自整个官署段落承接的工作解释，非太尉直接独立路侧明文",
+          "geographic_line_allowed": false
+        }
+      ],
+      "uncertainty_notes": [
+        "铜驼大道2012来源图残线尚未证与本文宫前御道全段完全同体",
+        "同一宫前阊阖门不与城西同名城门合并；洛南'阊阖填列'不新增第三门",
+        "官署示意左右仅表达方位边，不提供单体院墙、占地或南北实测间距"
+      ],
+      "source_record_ids": [
+        "v2.5:E01",
+        "v2.5:E02",
+        "v2.5:E03",
+        "v2.5:E04",
+        "B1:B03",
+        "B1:B05",
+        "CB08",
+        "CB10"
+      ]
+    },
+    {
+      "id": "K02",
+      "title": "建春门：第一石桥、东石桥与桥北大道两里",
+      "reading_scope": "《洛阳伽蓝记》卷二建春门及东石桥段",
+      "non_geographic": true,
+      "nodes": [
+        {
+          "id": "gate_jianchun",
+          "name": "建春门",
+          "role": "source_map_site_symbol",
+          "feature_id": "geo-jianchun-gate"
+        },
+        {
+          "id": "bridge_jianchun",
+          "name": "建春门第一石桥",
+          "role": "documentary_bridge",
+          "feature_id": null
+        },
+        {
+          "id": "bridge_eaststone",
+          "name": "东石桥",
+          "role": "documentary_bridge",
+          "feature_id": null
+        },
+        {
+          "id": "road_eaststone_north",
+          "name": "东石桥北大道",
+          "role": "documentary_road",
+          "feature_id": null
+        },
+        {
+          "id": "li_jianyang",
+          "name": "建阳里",
+          "role": "documentary_neighborhood",
+          "feature_id": null
+        },
+        {
+          "id": "li_suimin",
+          "name": "绥民里",
+          "role": "documentary_neighborhood",
+          "feature_id": null
+        }
+      ],
+      "edges": [
+        {
+          "id": "K02E01",
+          "subject": "bridge_jianchun",
+          "predicate": "outside",
+          "object": "gate_jianchun",
+          "grade": "A",
+          "source_record": "B1:B06",
+          "quote": "至建春門外，東入陽渠石橋。",
+          "scope": "建春门外第一石桥；不能取现代阳渠河线恢复旧桥位",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K02E02",
+          "subject": "bridge_eaststone",
+          "predicate": "outside",
+          "object": "gate_jianchun",
+          "grade": "A",
+          "source_record": "B1:B07",
+          "quote": "出建春門外一里餘，至東石橋。",
+          "scope": "门外一里余不换算地图米值；两石桥不能并为一桥",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K02E03",
+          "subject": "road_eaststone_north",
+          "predicate": "north_of",
+          "object": "bridge_eaststone",
+          "grade": "A",
+          "source_record": "B1:B08",
+          "quote": "橋北大道西有建陽里，大道東有綏民里。",
+          "scope": "桥北大道为文献参照；缺独立地理路中线",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K02E04",
+          "subject": "li_jianyang",
+          "predicate": "west_of",
+          "object": "road_eaststone_north",
+          "grade": "A",
+          "source_record": "B1:B08",
+          "quote": "橋北大道西有建陽里。",
+          "scope": "只给坊里与桥北大道的路侧关系，不画坊墙",
+          "geographic_line_allowed": false
+        },
+        {
+          "id": "K02E05",
+          "subject": "li_suimin",
+          "predicate": "east_of",
+          "object": "road_eaststone_north",
+          "grade": "A",
+          "source_record": "B1:B08",
+          "quote": "大道東有綏民里。",
+          "scope": "不增加邻里间距或店铺分布",
+          "geographic_line_allowed": false
+        }
+      ],
+      "temporal_events": [
+        {
+          "id": "K02T01",
+          "subject": "bridge_jianchun",
+          "event": "孝昌三年（527）大雨頹橋",
+          "year": 527,
+          "source_record": "B1:B06",
+          "does_not_transfer_to": [
+            "bridge_eaststone",
+            "bridge_yong"
+          ],
+          "scope": "盛时组合窗口内发生过破坏，不能画成516—528整个时段恒定状态"
+        },
+        {
+          "id": "K02T02",
+          "subject": "bridge_eaststone",
+          "event": "晋太康元年造之正文记述",
+          "year": 280,
+          "source_record": "B1:B07",
+          "scope": "前代建造年份按古籍保留，不证明北魏桥梁上部结构始终同形"
+        }
+      ],
+      "uncertainty_notes": [
+        "桥北大道的方位并不自动与P1任何东西横街同体",
+        "两桥没有核定共同测线或现代河道精确坐标",
+        "魏晋旧桥背景与527破坏须与516—528盛时合成层分期显示"
+      ],
+      "source_record_ids": [
+        "B1:B06",
+        "B1:B07",
+        "B1:B08",
+        "CB13"
+      ]
+    }
+  ],
+  "source_records": {
+    "v2.5:E01": {
+      "source_path": "research/prosperity-v1/text-review.json",
+      "locator": "卷一·永宁寺开篇；沿用登记 B12n0078_p0341a04–05",
+      "links": [
+        {
+          "id": "F",
+          "title": "F本原文校读",
+          "url": "https://deerpark.app/cbeta/B0078/1"
+        },
+        {
+          "id": "Z",
+          "title": "Z本原文校读",
+          "url": "https://deerpark.app/cbeta/B0077/1"
+        }
+      ],
+      "record": {
+        "key": "v2.5:E01",
+        "batch": "v2.5",
+        "legacy_id": "E01",
+        "legacy_path": "research/v2.5/evidence.json",
+        "affected_entity_ids": [
+          "ic_yongning",
+          "ic_changhe_palace",
+          "ic_palace_avenue"
+        ],
+        "legacy_title": "v2.5:E01",
+        "legacy_quote": "在宮前閶闔門南一里御道西。",
+        "legacy_locator": "卷一·永宁寺开篇；沿用登记 B12n0078_p0341a04–05",
+        "quotation_class": "continuous_short_quote",
+        "source_checks": [
+          {
+            "declared_source_id": "F",
+            "declared_url": "https://deerpark.app/cbeta/B0078/1",
+            "source_snapshot_key": "B0078-1",
+            "retrieved_url": "https://deerpark.app/cbeta/B0078/1",
+            "edition_mirror_used": false,
+            "method": "ordered_normalized_character_match",
+            "status": "matched_in_nonmodern_note_text",
+            "segments": [
+              {
+                "normalized_offset": 16394,
+                "normalized_length": 12,
+                "excerpt_start": "在宮前閶闔門南一里御道西",
+                "line_start": "0341a04",
+                "line_end": "0341a04"
+              }
+            ],
+            "also_occurs_in_modern_note": false,
+            "edition_difference_review": null,
+            "independent_historical_corroboration": false
+          },
+          {
+            "declared_source_id": "Z",
+            "declared_url": "https://deerpark.app/cbeta/B0077/1",
+            "source_snapshot_key": "B0077-1",
+            "retrieved_url": "https://deerpark.app/cbeta/B0077/1",
+            "edition_mirror_used": false,
+            "method": "ordered_normalized_character_match",
+            "status": "matched_in_nonmodern_note_text",
+            "segments": [
+              {
+                "normalized_offset": 5092,
+                "normalized_length": 12,
+                "excerpt_start": "在宮前閶闔門南一里御道西",
+                "line_start": "0043a11",
+                "line_end": "0043a11"
+              }
+            ],
+            "also_occurs_in_modern_note": false,
+            "edition_difference_review": null,
+            "independent_historical_corroboration": false
+          }
+        ],
+        "legacy_evidence_layer": "正文＋异文记录",
+        "record_role": "historical_evidence_excerpt_and_interpretation",
+        "source_families": [
+          "L"
+        ],
+        "electronic_text_checked": true,
+        "legacy_quote_passed_normalized_sequence_check": true,
+        "manual_context_review": null,
+        "checked_scope": "引文字面与明确文本层；不升级空间、身份或年代证据等级。",
+        "legacy_reading_preserved": "范校记录旁引文献作东，当前工作文本取西。宫城阊阖门不可并作城西同名城门。",
+        "legacy_temporal_note_preserved": null,
+        "map_risks": [
+          "no_metric_or_absolute_location_from_quote_match",
+          "original_distance_or_size_not_modern_metres_or_map_pixels"
+        ],
+        "pending": [
+          "古刻、写本或书影逐叶校勘未做；电子匹配不等于所有版本同文。",
+          "实体同一性、同一时点存在及古代绝对位置不由字符串相合证明。"
+        ],
+        "geographic_coordinates": null
+      }
+    },
+    "v2.5:E03": {
+      "source_path": "research/prosperity-v1/text-review.json",
+      "locator": "卷一·永宁寺官署段；B12n0078_p0341a06",
+      "links": [
+        {
+          "id": "F",
+          "title": "F本原文校读",
+          "url": "https://deerpark.app/cbeta/B0078/1"
+        },
+        {
+          "id": "Z",
+          "title": "Z本原文校读",
+          "url": "https://deerpark.app/cbeta/B0077/1"
+        }
+      ],
+      "record": {
+        "key": "v2.5:E03",
+        "batch": "v2.5",
+        "legacy_id": "E03",
+        "legacy_path": "research/v2.5/evidence.json",
+        "affected_entity_ids": [
+          "ic_zuowei",
+          "ic_situ",
+          "ic_palace_avenue"
+        ],
+        "legacy_title": "v2.5:E03",
+        "legacy_quote": "閶闔門前御道東有左衛府。府南有司徒府。",
+        "legacy_locator": "卷一·永宁寺官署段；B12n0078_p0341a06",
+        "quotation_class": "continuous_short_quote",
+        "source_checks": [
+          {
+            "declared_source_id": "F",
+            "declared_url": "https://deerpark.app/cbeta/B0078/1",
+            "source_snapshot_key": "B0078-1",
+            "retrieved_url": "https://deerpark.app/cbeta/B0078/1",
+            "edition_mirror_used": false,
+            "method": "ordered_normalized_character_match",
+            "status": "matched_in_nonmodern_note_text",
+            "segments": [
+              {
+                "normalized_offset": 16428,
+                "normalized_length": 17,
+                "excerpt_start": "閶闔門前御道東有左衛府府南有司徒府",
+                "line_start": "0341a06",
+                "line_end": "0341a06"
+              }
+            ],
+            "also_occurs_in_modern_note": true,
+            "edition_difference_review": null,
+            "independent_historical_corroboration": false
+          },
+          {
+            "declared_source_id": "Z",
+            "declared_url": "https://deerpark.app/cbeta/B0077/1",
+            "source_snapshot_key": "B0077-1",
+            "retrieved_url": "https://deerpark.app/cbeta/B0077/1",
+            "edition_mirror_used": false,
+            "method": "ordered_normalized_character_match",
+            "status": "matched_in_nonmodern_note_text",
+            "segments": [
+              {
+                "normalized_offset": 5126,
+                "normalized_length": 17,
+                "excerpt_start": "閶闔門前御道東有左衛府府南有司徒府",
+                "line_start": "0044a08",
+                "line_end": "0044a09"
+              }
+            ],
+            "also_occurs_in_modern_note": false,
+            "edition_difference_review": null,
+            "independent_historical_corroboration": false
+          }
+        ],
+        "legacy_evidence_layer": "正文",
+        "record_role": "historical_evidence_excerpt_and_interpretation",
+        "source_families": [
+          "L"
+        ],
+        "electronic_text_checked": true,
+        "legacy_quote_passed_normalized_sequence_check": true,
+        "manual_context_review": null,
+        "checked_scope": "引文字面与明确文本层；不升级空间、身份或年代证据等级。",
+        "legacy_reading_preserved": "司徒府的道东位置还依赖连续段落归组，不是每句都重写路侧。",
+        "legacy_temporal_note_preserved": null,
+        "map_risks": [
+          "no_metric_or_absolute_location_from_quote_match"
+        ],
+        "pending": [
+          "古刻、写本或书影逐叶校勘未做；电子匹配不等于所有版本同文。",
+          "实体同一性、同一时点存在及古代绝对位置不由字符串相合证明。"
+        ],
+        "geographic_coordinates": null
+      }
+    },
+    "B1:B05": {
+      "source_path": "research/dual-b1/decisions.json",
+      "locator": "",
+      "links": [
+        {
+          "id": "Z1",
+          "title": "《洛阳伽蓝记校释》卷一／现有v2.5证据卡",
+          "url": "https://deerpark.app/cbeta/B0077/1",
+          "basis": "沿用已核电子文本与项目分层证据；未新增古刻逐页校勘"
+        }
+      ],
+      "record": {
+        "id": "B05",
+        "entity": "ic_taiwei",
+        "action": "differentiate_building_type",
+        "before": "官署、寺院均以单字识别",
+        "after": "官署用开敞的办公建筑图符；名称与候选标记分层",
+        "evidence": [
+          "E03",
+          "E04",
+          "E05"
+        ],
+        "source_ids": [
+          "Z1"
+        ],
+        "quote": "御道西有右衛府",
+        "limit": "不默认两列官署等宽、等深、相互正对。"
+      }
+    },
+    "v2.5:E04": {
+      "source_path": "research/prosperity-v1/text-review.json",
+      "locator": "卷一·永宁寺官署段；B12n0078_p0341a06–07",
+      "links": [
+        {
+          "id": "F",
+          "title": "F本原文校读",
+          "url": "https://deerpark.app/cbeta/B0078/1"
+        },
+        {
+          "id": "Z",
+          "title": "Z本原文校读",
+          "url": "https://deerpark.app/cbeta/B0077/1"
+        }
+      ],
+      "record": {
+        "key": "v2.5:E04",
+        "batch": "v2.5",
+        "legacy_id": "E04",
+        "legacy_path": "research/v2.5/evidence.json",
+        "affected_entity_ids": [
+          "ic_situ",
+          "ic_guozixue",
+          "ic_zongzheng",
+          "ic_taimiao",
+          "ic_hujun",
+          "ic_yiguan"
+        ],
+        "legacy_title": "v2.5:E04",
+        "legacy_quote": "司徒府南有國子學堂……國子南有宗正寺，寺南有太廟，廟南有護軍府，府南有衣冠里。",
+        "legacy_locator": "卷一·永宁寺官署段；B12n0078_p0341a06–07",
+        "quotation_class": "explicit_excerpt",
+        "source_checks": [
+          {
+            "declared_source_id": "F",
+            "declared_url": "https://deerpark.app/cbeta/B0078/1",
+            "source_snapshot_key": "B0078-1",
+            "retrieved_url": "https://deerpark.app/cbeta/B0078/1",
+            "edition_mirror_used": false,
+            "method": "ordered_normalized_character_match",
+            "status": "matched_in_nonmodern_note_text",
+            "segments": [
+              {
+                "normalized_offset": 16445,
+                "normalized_length": 9,
+                "excerpt_start": "司徒府南有國子學堂",
+                "line_start": "0341a06",
+                "line_end": "0341a07"
+              },
+              {
+                "normalized_offset": 16469,
+                "normalized_length": 24,
+                "excerpt_start": "國子南有宗正寺寺南有太廟廟南有護軍府",
+                "line_start": "0341a07",
+                "line_end": "0341a08"
+              }
+            ],
+            "also_occurs_in_modern_note": false,
+            "edition_difference_review": null,
+            "independent_historical_corroboration": false
+          },
+          {
+            "declared_source_id": "Z",
+            "declared_url": "https://deerpark.app/cbeta/B0077/1",
+            "source_snapshot_key": "B0077-1",
+            "retrieved_url": "https://deerpark.app/cbeta/B0077/1",
+            "edition_mirror_used": false,
+            "method": "ordered_normalized_character_match",
+            "status": "not_exactly_matched",
+            "segments": [],
+            "also_occurs_in_modern_note": false,
+            "edition_difference_review": {
+              "finding": "周本补學；本条旧引采用范本国子南，不能当两本无差别同文。",
+              "source_quote": "國子學南有宗正寺，寺南有太廟，廟南有護軍府，府南有衣冠里。",
+              "segments": [
+                {
+                  "normalized_offset": 5167,
+                  "normalized_length": 25,
+                  "excerpt_start": "國子學南有宗正寺寺南有太廟廟南有護軍",
+                  "line_start": "0044a12",
+                  "line_end": "0044a14"
+                }
+              ],
+              "method": "manual_difference_comparison",
+              "new_historical_discovery": false
+            },
+            "independent_historical_corroboration": false
+          }
+        ],
+        "legacy_evidence_layer": "正文＋断句／补字",
+        "record_role": "historical_evidence_excerpt_and_interpretation",
+        "source_families": [
+          "L"
+        ],
+        "electronic_text_checked": true,
+        "legacy_quote_passed_normalized_sequence_check": true,
+        "manual_context_review": null,
+        "checked_scope": "引文字面与明确文本层；不升级空间、身份或年代证据等级。",
+        "legacy_reading_preserved": "周断作国子学、堂内；范作国子学堂、内有。周据《河南志》补学字，南向次序不受此影响。",
+        "legacy_temporal_note_preserved": null,
+        "map_risks": [
+          "no_metric_or_absolute_location_from_quote_match",
+          "antecedent_or_scope_must_be_preserved"
+        ],
+        "pending": [
+          "古刻、写本或书影逐叶校勘未做；电子匹配不等于所有版本同文。",
+          "实体同一性、同一时点存在及古代绝对位置不由字符串相合证明。"
+        ],
+        "geographic_coordinates": null
+      }
+    },
+    "v2.5:E02": {
+      "source_path": "research/prosperity-v1/text-review.json",
+      "locator": "卷一·永宁寺四邻；B12n0078_p0341a05",
+      "links": [
+        {
+          "id": "F",
+          "title": "F本原文校读",
+          "url": "https://deerpark.app/cbeta/B0078/1"
+        },
+        {
+          "id": "Z",
+          "title": "Z本原文校读",
+          "url": "https://deerpark.app/cbeta/B0077/1"
+        }
+      ],
+      "record": {
+        "key": "v2.5:E02",
+        "batch": "v2.5",
+        "legacy_id": "E02",
+        "legacy_path": "research/v2.5/evidence.json",
+        "affected_entity_ids": [
+          "ic_yongning",
+          "ic_taiwei",
+          "ic_yongkang",
+          "ic_zhaoxuan",
+          "ic_yushi"
+        ],
+        "legacy_title": "v2.5:E02",
+        "legacy_quote": "其寺東有太尉府，西對永康里，南界昭玄曹，北鄰御史臺。",
+        "legacy_locator": "卷一·永宁寺四邻；B12n0078_p0341a05",
+        "quotation_class": "continuous_short_quote",
+        "source_checks": [
+          {
+            "declared_source_id": "F",
+            "declared_url": "https://deerpark.app/cbeta/B0078/1",
+            "source_snapshot_key": "B0078-1",
+            "retrieved_url": "https://deerpark.app/cbeta/B0078/1",
+            "edition_mirror_used": false,
+            "method": "ordered_normalized_character_match",
+            "status": "matched_in_nonmodern_note_text",
+            "segments": [
+              {
+                "normalized_offset": 16406,
+                "normalized_length": 22,
+                "excerpt_start": "其寺東有太尉府西對永康里南界昭玄曹北",
+                "line_start": "0341a05",
+                "line_end": "0341a05"
+              }
+            ],
+            "also_occurs_in_modern_note": false,
+            "edition_difference_review": null,
+            "independent_historical_corroboration": false
+          },
+          {
+            "declared_source_id": "Z",
+            "declared_url": "https://deerpark.app/cbeta/B0077/1",
+            "source_snapshot_key": "B0077-1",
+            "retrieved_url": "https://deerpark.app/cbeta/B0077/1",
+            "edition_mirror_used": false,
+            "method": "ordered_normalized_character_match",
+            "status": "matched_in_nonmodern_note_text",
+            "segments": [
+              {
+                "normalized_offset": 5104,
+                "normalized_length": 22,
+                "excerpt_start": "其寺東有太尉府西對永康里南界昭玄曹北",
+                "line_start": "0043a15",
+                "line_end": "0044a07"
+              }
+            ],
+            "also_occurs_in_modern_note": false,
+            "edition_difference_review": null,
+            "independent_historical_corroboration": false
+          }
+        ],
+        "legacy_evidence_layer": "正文",
+        "record_role": "historical_evidence_excerpt_and_interpretation",
+        "source_families": [
+          "L"
+        ],
+        "electronic_text_checked": true,
+        "legacy_quote_passed_normalized_sequence_check": true,
+        "manual_context_review": null,
+        "checked_scope": "引文字面与明确文本层；不升级空间、身份或年代证据等级。",
+        "legacy_reading_preserved": "寺东不等于道路东；南界与北邻不提供院界尺寸。",
+        "legacy_temporal_note_preserved": null,
+        "map_risks": [
+          "no_metric_or_absolute_location_from_quote_match",
+          "antecedent_or_scope_must_be_preserved"
+        ],
+        "pending": [
+          "古刻、写本或书影逐叶校勘未做；电子匹配不等于所有版本同文。",
+          "实体同一性、同一时点存在及古代绝对位置不由字符串相合证明。"
+        ],
+        "geographic_coordinates": null
+      }
+    },
+    "B1:B03": {
+      "source_path": "research/dual-b1/decisions.json",
+      "locator": "",
+      "links": [
+        {
+          "id": "Z1",
+          "title": "《洛阳伽蓝记校释》卷一／现有v2.5证据卡",
+          "url": "https://deerpark.app/cbeta/B0077/1",
+          "basis": "沿用已核电子文本与项目分层证据；未新增古刻逐页校勘"
+        }
+      ],
+      "record": {
+        "id": "B03",
+        "entity": "ic_taiwei",
+        "action": "retain_conditional_layout",
+        "before": "道西图位容易被当作独立明文",
+        "after": "图上显示条件标记并链接可行道东/道西例；不改变当前主案锚点",
+        "evidence": [
+          "E02",
+          "E05",
+          "E06",
+          "E07"
+        ],
+        "source_ids": [
+          "Z1"
+        ],
+        "quote": "其寺東有太尉府",
+        "limit": "寺东不单独推出道东；仍采用官署段落路侧继承的工作解释，身份异记不合并。"
+      }
+    },
+    "B1:B06": {
+      "source_path": "research/dual-b1/decisions.json",
+      "locator": "",
+      "links": [
+        {
+          "id": "Z2",
+          "title": "《洛阳伽蓝记校释》卷二",
+          "url": "https://deerpark.app/cbeta/B0077/2",
+          "basis": "B1重读两桥、桥北两里及景兴条电子正文与校语"
+        }
+      ],
+      "record": {
+        "id": "B06",
+        "entity": "bridge_jianchun",
+        "action": "bridge_component_state",
+        "before": "完整桥图符，527毁损仅在小注",
+        "after": "桥体增加527年颓桥的跨时期变化标记，另列桥体毁损与北柱记述",
+        "evidence": [
+          "N01",
+          "N17",
+          "T29-06"
+        ],
+        "source_ids": [
+          "Z2"
+        ],
+        "quote": "孝昌三年大雨頹橋",
+        "limit": "斜线表示盛时综合窗口内有变化，不表示516—528全程毁坏；修复时间未定。"
+      }
+    },
+    "B1:B07": {
+      "source_path": "research/dual-b1/decisions.json",
+      "locator": "",
+      "links": [
+        {
+          "id": "Z2",
+          "title": "《洛阳伽蓝记校释》卷二",
+          "url": "https://deerpark.app/cbeta/B0077/2",
+          "basis": "B1重读两桥、桥北两里及景兴条电子正文与校语"
+        }
+      ],
+      "record": {
+        "id": "B07",
+        "entity": "bridge_eaststone",
+        "action": "orientation_glyph",
+        "before": "南北桥图符与第一桥外观近似",
+        "after": "强化南北跨越，桥北大道与建阳/绥民两侧关系保持；不继承527事件",
+        "evidence": [
+          "N02",
+          "N03"
+        ],
+        "source_ids": [
+          "Z2"
+        ],
+        "quote": "南北而行",
+        "limit": "与水经马市桥同体仍是候选；桥位锚点和河槽形状沿用示意。"
+      }
+    },
+    "B1:B08": {
+      "source_path": "research/dual-b1/decisions.json",
+      "locator": "",
+      "links": [
+        {
+          "id": "Z2",
+          "title": "《洛阳伽蓝记校释》卷二",
+          "url": "https://deerpark.app/cbeta/B0077/2",
+          "basis": "B1重读两桥、桥北两里及景兴条电子正文与校语"
+        }
+      ],
+      "record": {
+        "id": "B08",
+        "entity": "bridge_eaststone",
+        "action": "preserve_side_relations",
+        "before": "两里范围易被误作实测坊界",
+        "after": "分区旁栏明确道路东西关系和两桥身份，范围只作阅读组织",
+        "evidence": [
+          "N02"
+        ],
+        "source_ids": [
+          "Z2"
+        ],
+        "quote": "橋北大道西有建陽里，大道東有綏民里",
+        "limit": "不增加里墙、店面或道路宽度。"
+      }
+    }
+  },
+  "entity_names": {
+    "ic_palace_avenue": "宫前御道",
+    "ic_changhe_palace": "阊阖门（宫前）",
+    "ic_yongning": "永宁寺",
+    "ic_zuowei": "左卫府",
+    "ic_youwei": "右卫府",
+    "ic_situ": "司徒府",
+    "ic_guozixue": "国子学",
+    "ic_taiwei": "太尉府",
+    "gate_jianchun": "建春门",
+    "bridge_jianchun": "建春门第一石桥",
+    "bridge_eaststone": "东石桥",
+    "road_eaststone_north": "东石桥北大道",
+    "li_jianyang": "建阳里",
+    "li_suimin": "绥民里",
+    "gate_xuanyang": "宣阳门",
+    "bridge_yong": "永桥",
+    "luoshui": "洛水",
+    "market_sitong": "四通市（永桥市）",
+    "market_fish": "鱼鳖市",
+    "li_guizheng": "归正里"
+  },
+  "counts": {
+    "gate_contexts": 2,
+    "existing_relations": 13,
+    "existing_events": 2
+  },
+  "new_historical_coordinates": 0,
+  "new_historical_relationships": 0,
+  "map_geometry_modified": false,
+  "scope": "复用P453已经审阅的城市关系和原门址参照，只新增P469网页联读入口；水系索引与独立地图不改。"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "south-water-roads-466",
+  "period": "北魏洛阳盛时，516—528年",
+  "sources": {
+    "q18": {"title":"钱国祥《汉魏洛阳城城门与宫院门的考察研究》","locator":"《华夏考古》2018年第6期，图一。下列像素取朱岩石2024年文印页17图6转载。","url":"https://www.sohu.com/a/298263205_199807","reprint":"https://www.jstage.jst.go.jp/article/actaasiatica/126/0/126_1262/_pdf/-char/en#page=17","pdf_sha256":"93a9ec94a8a29fc1537c3c30902299cf287a4cdf4c08b2ba75d35a1da4ff04fb","extract":"pdftocairo 或截图后像素会有差异。用 pdfimages -f 17 -l 17 -png 提取第一个图像，1145×951，原点在左上，右为东、下为南。","png_sha256":"ec31893f990e708058b9871b11130953d7ec64a2be3d0be0bfbaae5015d174ec"},
+    "south10": {"title":"汉魏洛阳故城南郊礼制建筑考古发掘项目成果选介","locator":"全国哲学社会科学规划办公室《国家社科基金项目成果选介汇编》第六辑，2010年。课题负责人钱国祥。南郊遗址分布、明堂、辟雍及总结各段。","url":"https://www.pishu.com.cn/skwx_ps/ps/literature?ID=8644335&SiteID=14","catalog":"https://www.pishu.com.cn/skwx_ps/initDatabaseDetail?contentId=8644335&contentType=literature&siteId=14"},
+    "gu16": {"title":"郦道元《水经注》卷十六·穀水","locator":"西明门以下，经津阳、宣阳、平昌、开阳至太学石经一段。","url":"https://www.shidianguji.com/book/NGJ89241200000329016941/chapter/1lvyb6bpa836u","parallel":"https://zh.wikisource.org/zh-hant/水經注/16"},
+    "g3": {"title":"杨衒之《洛阳伽蓝记》卷三·城南","locator":"大统寺一段所记明堂营建，宣阳门外至洛水浮桥、永桥以南的御道与四通市。","url":"https://www.shidianguji.com/book/NGJ89241199902232538648/chapter/1lvkouhpsdflr"},
+    "survey22": {"title":"洛阳市文物考古研究院等《洛阳汉唐运河遗址调查与古沉船发掘报告》","locator":"科学出版社，2022年。公开样章第一章印页8；插图及图版目录。","url":"https://www.ecsponline.com/goods.php?id=218604","sample":"https://www.ecsponline.com/book_2019/2022/yz/9787030738288-001001-curved-sam.pdf","sample_sha256":"fffbd4698ee3680909724c99c2e4ded4895d4d308bc372c4cfed578fb849fee7","reader":"https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=BEE866DDD5E330A68E053020B0A0A23B4000"},
+    "warehouse23": {"title":"洛阳市文物考古研究院《隋唐洛阳含嘉仓城考古发掘报告》","locator":"科学出版社，2023年，第2页图一。西大郊与永桥相对位置见P4.6.2的原图读点。","url":"https://www.ecsponline.com/book_2019/2023/yz/9787030737496-001001-curved-sam.pdf#page=34"}
+  },
+  "plan": {
+    "source":"q18", "kind":"后世学者的复原图", "image_size_px":[1145,951],
+    "scale_endpoints_px":[[980.5,933],[1072.5,933]], "scale_km":1,
+    "reading_row_y_px":604,
+    "road_edges_at_row_px":{"平昌":[630,633],"开阳":[669,672]},
+    "symbol_spacing_px":39, "map_spacing_approx_km":0.4,
+    "method":"在明堂图点以北的同一图行上，分别取双线路缘的中点；中点横向相差39像素，除以一公里比例尺92像素，结果取至0.1公里。路缘间的几像素是制图符号。不能据此给出古街的实宽、门间地面距离或道路沿途的恒定间距。",
+    "road_samples_px":{"津阳":[[507,549],[506.5,600],[506,638]],"宣阳":[[563,550],[562,604],[561,641]],"平昌":[[635,549],[631.5,604],[629,646],[627,678]],"开阳":[[674.5,549],[670.5,604],[667.5,647],[666.5,665]]},
+    "bridge_symbol_ends_px":[[561.5,641.5],[560.5,700]], "bridge_role":"原图黑色桥符号的上下端，非发掘的登陆点。",
+    "places_px":{"灵台":[611,655.5],"明堂":[647,656.5],"辟雍":[685.5,647.5],"太学":[712,630]},
+    "north_bank_sample_px":[[475,665],[486,658],[498,646],[507,643],[522,643],[543,645],[560,649],[580,653],[599,659],[611,662],[621,678],[635,692],[650,718],[656,726]],
+    "south_bank_sample_px":[[475,740],[481,741],[493,735],[506,727],[513,709],[515,697],[522,691],[537,688],[550,690],[560,697],[574,707],[585,723],[597,745],[608,760]],
+    "trace_note":"仅摘录标有古代洛河的河带局部。村落、现代河岸和谷水未叠加在本图；折线及道路样线的两端为本次截绘范围。"
+  },
+  "excavation": {
+    "source":"south10","region":"城南礼制遗址在古洛河北岸。调查时的洛河已冲毁辟雍引水干道北端。",
+    "order_west_to_east":["灵台","平城门外大道","明堂","开阳门外大道","辟雍"],"academy_relative_to_biyong":"东北",
+    "road_name_note":"成果选介用平城门外大道，北魏复原图用平昌门。按夹峙明堂的位置比较。郦注另记旧平城门已塞，古今各期门基仍须分辨。",
+    "phases":{"明堂":"北魏重修沿用早期夯土基址","太学":"课题组判北魏恢复","辟雍":"东汉、魏晋为主，北魏未见重修或改建","灵台":"灵台旧址在北魏改作寺院"},
+    "biyong":{"trunk_preserved_m":180,"trunk_width_m":[4,5],"fork_north_of_hall_approx_m":156,
+      "lateral_each_gt_m":180,"south_each_approx_m":400,"branch_width_m":[3,4],"local_branch_width_lt_m":2,
+      "north_end":"为调查时的洛河冲毁","south_ends":"东、西两支折南后均失去踪迹","water_source":null,"southern_closure":null,"flow_516_528":null,
+      "frame":"以分水处为原点，依据方位和长度作等比例正交示意。两侧各以180米为下限标示，其余数值保留约数。156米所指为殿基北面的相对量距，原文未明定殿基的具体测点。"},
+    "mingtang_rebuilt_platform_diameter_m":62.8
+  },
+  "texts": {
+    "source":"gu16","gu_downstream_order":["津阳门南","宣阳门南","灵台附近","平昌门南","明堂北","开阳门南","太学石经北"],
+    "lingtai_variant":"识典本在灵台北后断句，维基文库本在灵台后断句而以北字下属。只取谷水经过灵台附近。",
+    "bridge_source":["gu16","g3"],"north_axis":"迁置后的宣阳门北对阊阖门，南向洛水浮桥。","named_bridge":"永桥","gate_to_river_reported_li":4,"measure_origin":"宣阳门外","measure_target":"洛水浮桥处","modern_conversion":null,"south_axis":"过桥后御道朝圜丘，四通市在洛水南。",
+    "mingtang":{"source":"g3","relative_to_biyong":"西南","construction_era":"正光","era_ce":[520,525],"exact_year":null,"note":"正光中描述营建时间，未确定开工或落成的单一年份。原图两遗址的符号中心也呈西南与东北的相对关系。","era_table":"https://dict.revised.moe.edu.tw/appendix.jsp?ID=3&la=0&page=3&powerMode=0&ver=5"},
+    "named_on_each_source":{"gu16":"洛水浮桁","g3":"永桥"},"bank_landings":[null,null]
+  },
+  "diversion": {
+    "source":"survey22","source_period":"作者联系东汉建武二十四年（48）的引洛通漕工程",
+    "relative_to_road":"津阳门外大街东侧","south":"古洛河","north":"城南阳渠，报告比作今天龙虎滩村南一带的洛河","weir":"西大郊以北至大郊寨西南","bridge_comparison":"2023年示意图把永桥画在西大郊南面。",
+    "catalog_only":{"图版2-1、2-2":"孙家岗村西古洛河北岸断崖远、近景","图版2-3":"孙家岗村西南古洛河南岸断崖","图版2-4":"西大郊村西北曲河段的南岸、东岸","图版2-5、2-6":"津阳门大街路土、引洛渠淤土","图版2-7":"渠口西南角地貌"},
+    "next_figures":[{"id":"2-1","printed":"19","reader_page":42,"name":"调查水系部分及重点勘探位置示意图"},{"id":"2-2","printed":"21","reader_page":44,"name":"堰洛通漕遗址平面图"},{"id":"2-2-4","printed":"插页","reader_page":45,"name":"引洛渠钻探剖面图"}],
+    "section_read":false,"section_width_m":null,"section_depth_m":null,"dated_516_528_bank_xy":null,"intake_to_bridge_distance_m":null,
+    "next_action":"先用平面图定位剖线两端和方向，再逐孔抄录比例尺、淤积界面及断代依据，核对孙家岗与西大郊各段古岸能否归入516—528年。"
+  },
+  "modern_coordinates":null
+}

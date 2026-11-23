@@ -1,0 +1,443 @@
+{
+  "base_url": "https://mechgouki.github.io/luoyang-city/",
+  "device": "mobile",
+  "status": "passed",
+  "checks": [
+    "P468 visible entry actually opens P469",
+    "frame-06a: real tab, complete map screenshot, reload, zoom/native scroll/reset and modern-river scope",
+    "frame-qian2018: real tab, complete map screenshot, reload, zoom/native scroll/reset and modern-river scope",
+    "Daxia and Qianqiu SVG markers, Guangmo list choice and reload show only their assigned water evidence",
+    "Palace Changhe and Jianchun SVG clicks show original K01/K02 records, grades, bridge-event scope, reload and actual P453/back navigation",
+    "Jianchun entry and reload preserve the selected gate; both source diagrams load; control and date disclosures work",
+    "Combined map/anchor/W20 deep link, W20/W21 correction and ordinary source-method anchor survive reload",
+    "Actual browser downloads: two-page PDF, two SVGs, offline ZIP and all manifest JSON; 14 matching hashes",
+    "No-JS keeps both full maps, nine water contexts plus both original urban clusters and bridge events, 34 water rows, I09 correction and unknown boundaries",
+    "P469 header returns to P468"
+  ],
+  "download_sha256": {
+    "backbone-469/bundle-manifest.json": "923463365518568c9aea050cd1d182e73d2f0086bea85a3eabac4ce61850ddd1",
+    "backbone-469/frame-06a.svg": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04",
+    "backbone-469/frame-qian2018.svg": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+    "backbone-469/jianchun-plan-audit.json": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f",
+    "backbone-469/jianchun-source-context.svg": "eaf696a70f7df2d446305599c9c679ab2cb48032fe9f556b834b62a72799528d",
+    "backbone-469/jianchun-structure-reading.svg": "197be999a471879cf60884485ded7bd3fcbabfca52b897587d0c82f582a17377",
+    "backbone-469/readings.json": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+    "backbone-469/road01-image-access.json": "b98eb82115c972e1fec7001aa4d5dd8695216260582dfc6130dc7c0548d3df87",
+    "backbone-469/road01-source-audit.json": "7ecaf20678c961f281216e370019fe9206f68bc118375e532c85b92072b7ff2d",
+    "backbone-469/road02-access-20261119.json": "7ab1095c05960cbee6473aad0a2751767e285195c47a16b8a253fae6aa87eabe",
+    "backbone-469/source-frame-audit.json": "37f6fa59bdab5d2a7747ba328e34544b4d2c9a2c58ee51be71997b72460e9405",
+    "backbone-469/urban-contexts.json": "47817e58ea63ccea1c3f2c83e4914333c6886ac30c6c6af0c182e77da406e6d7",
+    "downloads/backbone-469.pdf": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6",
+    "downloads/backbone-469.zip": "dfdf40d3cc2442cce0fa3e4b5ee19414f93fc32e07a94aa18c61c8c74c61ebdb"
+  },
+  "map_bounds": {
+    "frame-06a": {
+      "viewport": {
+        "x": 19,
+        "y": 23.953125,
+        "width": 352,
+        "height": 283.546875
+      },
+      "svg": {
+        "x": 19,
+        "y": 23.953125,
+        "width": 352,
+        "height": 283.546875
+      }
+    },
+    "frame-qian2018": {
+      "viewport": {
+        "x": 19,
+        "y": 23.953125,
+        "width": 352,
+        "height": 283.546875
+      },
+      "svg": {
+        "x": 19,
+        "y": 23.953125,
+        "width": 352,
+        "height": 283.546875
+      }
+    }
+  },
+  "contexts": {
+    "geo-daxia-gate": [
+      "P467/outer/O03",
+      "P467/inner/I01"
+    ],
+    "geo-qianqiu-gate": [
+      "P467/inner/I03",
+      "P467/inner/I04",
+      "P467/inner/I05",
+      "P468/palace-pools-audit/H03",
+      "P468/palace-pools-audit/H04"
+    ],
+    "geo-guangmo-gate": [
+      "P467/outer/O04",
+      "P467/outer/O05"
+    ]
+  },
+  "urban_contexts": {
+    "geo-changhe-palace-gate": {
+      "cluster": "K01",
+      "edge_ids": [
+        "K01E01",
+        "K01E02",
+        "K01E03",
+        "K01E04",
+        "K01E05",
+        "K01E06",
+        "K01E07",
+        "K01E08"
+      ],
+      "event_ids": [],
+      "source_page": "prosperity-street-clusters.html?cluster=K01&grade=all"
+    },
+    "geo-jianchun-gate": {
+      "cluster": "K02",
+      "edge_ids": [
+        "K02E01",
+        "K02E02",
+        "K02E03",
+        "K02E04",
+        "K02E05"
+      ],
+      "event_ids": [
+        "K02T01",
+        "K02T02"
+      ],
+      "source_page": "prosperity-street-clusters.html?cluster=K02&grade=all"
+    }
+  },
+  "errors": [],
+  "download_policy": {
+    "minimum_click_interval_seconds": 0.15,
+    "automatic_retries": 0,
+    "event_timeout_ms": 30000
+  },
+  "download_attempts": [
+    {
+      "path": "backbone-469/bundle-manifest.json",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/bundle-manifest.json",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#source-method",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:49.506323+00:00",
+      "attempt_started_seconds": 2.2130000047582143e-05,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/bundle-manifest.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 0.01825179900004059,
+      "click_call_started_utc": "2026-11-23T03:23:49.524566+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/bundle-manifest.json",
+      "suggested_filename": "bundle-manifest.json",
+      "bytes": 3424,
+      "sha256": "923463365518568c9aea050cd1d182e73d2f0086bea85a3eabac4ce61850ddd1",
+      "completed_seconds": 3.0349935699999833
+    },
+    {
+      "path": "backbone-469/frame-06a.svg",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/frame-06a.svg",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-06a",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:52.542579+00:00",
+      "attempt_started_seconds": 3.0362768239999696,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/frame-06a.svg",
+      "download_attribute": "",
+      "click_call_started_seconds": 5.56077291400004,
+      "click_call_started_utc": "2026-11-23T03:23:55.067087+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/frame-06a.svg",
+      "suggested_filename": "frame-06a.svg",
+      "bytes": 37894,
+      "sha256": "b3d53efd6c45fcb92f28c10c298f114af723c69598597567dbc853c4368afa04",
+      "completed_seconds": 5.604011649999961
+    },
+    {
+      "path": "backbone-469/frame-qian2018.svg",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/frame-qian2018.svg",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:55.111536+00:00",
+      "attempt_started_seconds": 5.6052332410000645,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/frame-qian2018.svg",
+      "download_attribute": "",
+      "click_call_started_seconds": 5.71170792099997,
+      "click_call_started_utc": "2026-11-23T03:23:55.218024+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/frame-qian2018.svg",
+      "suggested_filename": "frame-qian2018.svg",
+      "bytes": 16502,
+      "sha256": "8513c668f3efd855c33b25d160cbc5d8f78cf7a44f6af5fdc35b349ad29aa0ba",
+      "completed_seconds": 5.752568835000034
+    },
+    {
+      "path": "backbone-469/jianchun-plan-audit.json",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/jianchun-plan-audit.json",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:55.260134+00:00",
+      "attempt_started_seconds": 5.753832005000049,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/jianchun-plan-audit.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 5.862356089000059,
+      "click_call_started_utc": "2026-11-23T03:23:55.368673+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/jianchun-plan-audit.json",
+      "suggested_filename": "jianchun-plan-audit.json",
+      "bytes": 15772,
+      "sha256": "4471b8a411b21ecfea42509d9a88584a8a4f5677b3ad49af7319bdca59f6751f",
+      "completed_seconds": 5.8918824419999964
+    },
+    {
+      "path": "backbone-469/jianchun-source-context.svg",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/jianchun-source-context.svg",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:55.399354+00:00",
+      "attempt_started_seconds": 5.893050571000003,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/jianchun-source-context.svg",
+      "download_attribute": "",
+      "click_call_started_seconds": 6.013505509999959,
+      "click_call_started_utc": "2026-11-23T03:23:55.519822+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/jianchun-source-context.svg",
+      "suggested_filename": "jianchun-source-context.svg",
+      "bytes": 7572,
+      "sha256": "eaf696a70f7df2d446305599c9c679ab2cb48032fe9f556b834b62a72799528d",
+      "completed_seconds": 6.055370476000007
+    },
+    {
+      "path": "backbone-469/jianchun-structure-reading.svg",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/jianchun-structure-reading.svg",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:55.562953+00:00",
+      "attempt_started_seconds": 6.05664909699999,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/jianchun-structure-reading.svg",
+      "download_attribute": "",
+      "click_call_started_seconds": 6.1633759579999605,
+      "click_call_started_utc": "2026-11-23T03:23:55.669692+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/jianchun-structure-reading.svg",
+      "suggested_filename": "jianchun-structure-reading.svg",
+      "bytes": 3955,
+      "sha256": "197be999a471879cf60884485ded7bd3fcbabfca52b897587d0c82f582a17377",
+      "completed_seconds": 6.2012992700000495
+    },
+    {
+      "path": "backbone-469/readings.json",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/readings.json",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:55.708797+00:00",
+      "attempt_started_seconds": 6.202495556000031,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/readings.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 6.312712080999972,
+      "click_call_started_utc": "2026-11-23T03:23:55.819029+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/readings.json",
+      "suggested_filename": "readings.json",
+      "bytes": 468561,
+      "sha256": "f82027d6affcc06c8d3e727f65f6ac29cd51111df04b4e01e1387841ee4b5c0a",
+      "completed_seconds": 6.367490596000039
+    },
+    {
+      "path": "backbone-469/road01-image-access.json",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/road01-image-access.json",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:55.875020+00:00",
+      "attempt_started_seconds": 6.368718487000024,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/road01-image-access.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 6.462078406000046,
+      "click_call_started_utc": "2026-11-23T03:23:55.968395+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/road01-image-access.json",
+      "suggested_filename": "road01-image-access.json",
+      "bytes": 1977,
+      "sha256": "b98eb82115c972e1fec7001aa4d5dd8695216260582dfc6130dc7c0548d3df87",
+      "completed_seconds": 6.485632137000039
+    },
+    {
+      "path": "backbone-469/road01-source-audit.json",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/road01-source-audit.json",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:55.993640+00:00",
+      "attempt_started_seconds": 6.487338901000044,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/road01-source-audit.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 6.613583696999967,
+      "click_call_started_utc": "2026-11-23T03:23:56.119900+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/road01-source-audit.json",
+      "suggested_filename": "road01-source-audit.json",
+      "bytes": 9392,
+      "sha256": "7ecaf20678c961f281216e370019fe9206f68bc118375e532c85b92072b7ff2d",
+      "completed_seconds": 6.642029623999974
+    },
+    {
+      "path": "backbone-469/road02-access-20261119.json",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/road02-access-20261119.json",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:56.149613+00:00",
+      "attempt_started_seconds": 6.643311241999982,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/road02-access-20261119.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 6.763880841000059,
+      "click_call_started_utc": "2026-11-23T03:23:56.270197+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/road02-access-20261119.json",
+      "suggested_filename": "road02-access-20261119.json",
+      "bytes": 8823,
+      "sha256": "7ab1095c05960cbee6473aad0a2751767e285195c47a16b8a253fae6aa87eabe",
+      "completed_seconds": 6.784574865999957
+    },
+    {
+      "path": "backbone-469/source-frame-audit.json",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/source-frame-audit.json",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:56.292002+00:00",
+      "attempt_started_seconds": 6.785698278000041,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/source-frame-audit.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 6.913826687999972,
+      "click_call_started_utc": "2026-11-23T03:23:56.420143+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/source-frame-audit.json",
+      "suggested_filename": "source-frame-audit.json",
+      "bytes": 38599,
+      "sha256": "37f6fa59bdab5d2a7747ba328e34544b4d2c9a2c58ee51be71997b72460e9405",
+      "completed_seconds": 6.93525342099997
+    },
+    {
+      "path": "backbone-469/urban-contexts.json",
+      "url": "https://mechgouki.github.io/luoyang-city/backbone-469/urban-contexts.json",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:56.442688+00:00",
+      "attempt_started_seconds": 6.93638436599997,
+      "responses": [],
+      "request_failures": [],
+      "href": "./backbone-469/urban-contexts.json",
+      "download_attribute": "",
+      "click_call_started_seconds": 7.063594449999982,
+      "click_call_started_utc": "2026-11-23T03:23:56.569911+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/backbone-469/urban-contexts.json",
+      "suggested_filename": "urban-contexts.json",
+      "bytes": 33551,
+      "sha256": "47817e58ea63ccea1c3f2c83e4914333c6886ac30c6c6af0c182e77da406e6d7",
+      "completed_seconds": 7.12506849600004
+    },
+    {
+      "path": "downloads/backbone-469.pdf",
+      "url": "https://mechgouki.github.io/luoyang-city/downloads/backbone-469.pdf",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:56.632625+00:00",
+      "attempt_started_seconds": 7.126322501000004,
+      "responses": [],
+      "request_failures": [],
+      "href": "./downloads/backbone-469.pdf",
+      "download_attribute": "",
+      "click_call_started_seconds": 7.213918043000035,
+      "click_call_started_utc": "2026-11-23T03:23:56.720234+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/downloads/backbone-469.pdf",
+      "suggested_filename": "backbone-469.pdf",
+      "bytes": 1051225,
+      "sha256": "f4e8e7f9a0642224c49d5b6b00d24d19afcb425fc8b2692a7a0a9e0932119ab6",
+      "completed_seconds": 7.2518334960000175
+    },
+    {
+      "path": "downloads/backbone-469.zip",
+      "url": "https://mechgouki.github.io/luoyang-city/downloads/backbone-469.zip",
+      "status": "passed",
+      "page_url": "https://mechgouki.github.io/luoyang-city/prosperity-backbone-p469.html#map=frame-qian2018",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "attempt_started_utc": "2026-11-23T03:23:56.759293+00:00",
+      "attempt_started_seconds": 7.252990624000063,
+      "responses": [],
+      "request_failures": [],
+      "href": "./downloads/backbone-469.zip",
+      "download_attribute": "",
+      "click_call_started_seconds": 7.3636283870000625,
+      "click_call_started_utc": "2026-11-23T03:23:56.869945+00:00",
+      "download_url": "https://mechgouki.github.io/luoyang-city/downloads/backbone-469.zip",
+      "suggested_filename": "backbone-469.zip",
+      "bytes": 1211899,
+      "sha256": "dfdf40d3cc2442cce0fa3e4b5ee19414f93fc32e07a94aa18c61c8c74c61ebdb",
+      "completed_seconds": 7.409609877999969
+    }
+  ],
+  "download_target": null
+}

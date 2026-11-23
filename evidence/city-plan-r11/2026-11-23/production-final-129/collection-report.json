@@ -1,0 +1,463 @@
+{
+  "schema": "luoyang-r11-final-production-collection-v1",
+  "recorded_utc": "2026-11-23T03:33:04.067890+00:00",
+  "repository": "mechgouki/luoyang-city",
+  "run_id": 45103224890,
+  "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+  "source_tree": "f6ed7ac2587da1f5639b76bc4c2b86097eed796d",
+  "run_status": "completed",
+  "run_conclusion": "success",
+  "accepted_final_release": true,
+  "all_three_gates_passed": true,
+  "jobs": [
+    {
+      "id": 137458587738,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T02:58:43Z",
+      "completed_at": "2026-11-23T03:11:17Z"
+    },
+    {
+      "id": 137462473919,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T03:11:22Z",
+      "completed_at": "2026-11-23T03:11:39Z"
+    },
+    {
+      "id": 137462590965,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T03:11:41Z",
+      "completed_at": "2026-11-23T03:24:29Z"
+    }
+  ],
+  "complete_decoded_job_logs": [
+    {
+      "kind": "build",
+      "job_id": 137458587738,
+      "path": "build-137458587738.log",
+      "bytes": 275833,
+      "sha256": "ee8d8e098b8e66054fb4559763fadb49c2d6f817f06d4e58230e6d72052f64de",
+      "gitblob": "39200336184f2cc0212f020acc2e850df2109853"
+    },
+    {
+      "kind": "deploy",
+      "job_id": 137462473919,
+      "path": "deploy-137462473919.log",
+      "bytes": 4587,
+      "sha256": "d019ca63b664f6839f6fdf3630d5ddd97ea47db507fcbbfc8cfd98ab853048d6",
+      "gitblob": "09d776322940d21c6879fcd81bda8d41985cc3ba"
+    },
+    {
+      "kind": "verify-live",
+      "job_id": 137462590965,
+      "path": "verify-live-137462590965.log",
+      "bytes": 64894,
+      "sha256": "b9da8cb2945c0b6d6fefe9fba4ecf9aa955b601e5cd6c56043e7eef3e28f3cd3",
+      "gitblob": "838e4ea342c8280d528a35c7a0b1d54d6c43ff6d"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 14787700568,
+      "node_id": "MDg6QXJ0aWZhY3QxNDc4NzcwMDU2OA==",
+      "name": "live-acceptance-evidence",
+      "size_in_bytes": 192898191,
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14787700568",
+      "archive_download_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14787700568/zip",
+      "expired": false,
+      "digest": "sha256:fa41b0ecf09680e6d576318f7fda1b0938906104c5c96d6b210e8e879c41454c",
+      "created_at": "2026-11-23T03:24:27Z",
+      "updated_at": "2026-11-23T03:24:27Z",
+      "expires_at": "2026-12-23T03:24:21Z",
+      "workflow_run": {
+        "id": 45103224890,
+        "repository_id": 1452939438,
+        "head_repository_id": 1452939438,
+        "head_branch": "main",
+        "head_sha": "129abaee724870ec00bc25c6e2fd2998a215063b"
+      }
+    },
+    {
+      "id": 14786931999,
+      "node_id": "MDg6QXJ0aWZhY3QxNDc4NjkzMTk5OQ==",
+      "name": "browser-build-evidence",
+      "size_in_bytes": 244018652,
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14786931999",
+      "archive_download_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14786931999/zip",
+      "expired": false,
+      "digest": "sha256:587fb1594bd4454b287c19ae58aa6beaed474cbd0eb53c1bf06b07be2e616d51",
+      "created_at": "2026-11-23T03:11:03Z",
+      "updated_at": "2026-11-23T03:11:03Z",
+      "expires_at": "2026-12-07T03:10:56Z",
+      "workflow_run": {
+        "id": 45103224890,
+        "repository_id": 1452939438,
+        "head_repository_id": 1452939438,
+        "head_branch": "main",
+        "head_sha": "129abaee724870ec00bc25c6e2fd2998a215063b"
+      }
+    },
+    {
+      "id": 14786269477,
+      "node_id": "MDg6QXJ0aWZhY3QxNDc4NjI2OTQ3Nw==",
+      "name": "github-pages",
+      "size_in_bytes": 354420138,
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14786269477",
+      "archive_download_url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/artifacts/14786269477/zip",
+      "expired": false,
+      "digest": "sha256:719e137375792bd1360459612e6e6660ac745f43c738d1da560cd89ea2dd8221",
+      "created_at": "2026-11-23T03:11:15Z",
+      "updated_at": "2026-11-23T03:11:15Z",
+      "expires_at": "2026-11-30T03:11:04Z",
+      "workflow_run": {
+        "id": 45103224890,
+        "repository_id": 1452939438,
+        "head_repository_id": 1452939438,
+        "head_branch": "main",
+        "head_sha": "129abaee724870ec00bc25c6e2fd2998a215063b"
+      }
+    }
+  ],
+  "http_public_count": 920,
+  "r11_browser_devices": {
+    "build_desktop": {
+      "status": "passed",
+      "elapsed_seconds": 34.098,
+      "check_groups": 7,
+      "downloads": 26,
+      "screenshots": 5,
+      "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+      "tower_hit_test": {
+        "overview_center": {
+          "screen": {
+            "x": 577.2783813476562,
+            "y": 651.2406311035156
+          },
+          "offset": {
+            "x": 27.70965576171875,
+            "y": 27.507659912109375
+          },
+          "target_box": {
+            "x": 549.5687255859375,
+            "y": 623.7329711914062,
+            "width": 55.4193115234375,
+            "height": 55.01531982421875
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "world_point": [
+          140.27373235,
+          -1579.8474241000001
+        ],
+        "zoomed_camera": [
+          0.5017316744464182,
+          1496.2233043748818,
+          240.87154665110714,
+          157.6015002502361
+        ],
+        "labels_visible": false,
+        "selected_point": {
+          "screen": {
+            "x": 637.2027102562037,
+            "y": 645.8335292179818
+          },
+          "offset": {
+            "x": 100.26105986557866,
+            "y": 25.808932050013027
+          },
+          "target_box": {
+            "x": 536.941650390625,
+            "y": 620.0245971679688,
+            "width": 184.262451171875,
+            "height": 182.9190673828125
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "independent_label": {
+          "id": "geo-yongning-pagoda-reference",
+          "screen": {
+            "x": 698.2447509765625,
+            "y": 725.9843444824219
+          },
+          "offset": {
+            "x": 58.5,
+            "y": 7.500091552734375
+          },
+          "target_box": {
+            "x": 639.7447509765625,
+            "y": 718.4842529296875,
+            "width": 117,
+            "height": 15.00018310546875
+          },
+          "hit_tag": "text",
+          "hit_feature": null,
+          "hit_label": "geo-yongning-pagoda-reference"
+        }
+      },
+      "pdf_pages": 17
+    },
+    "build_mobile": {
+      "status": "passed",
+      "elapsed_seconds": 30.678,
+      "check_groups": 7,
+      "downloads": 26,
+      "screenshots": 5,
+      "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+      "tower_hit_test": {
+        "overview_center": {
+          "screen": {
+            "x": 202.78872680664062,
+            "y": 474.15296936035156
+          },
+          "offset": {
+            "x": 9.68756103515625,
+            "y": 9.616928100585938
+          },
+          "target_box": {
+            "x": 193.10116577148438,
+            "y": 464.5360412597656,
+            "width": 19.3751220703125,
+            "height": 19.233856201171875
+          },
+          "hit_tag": "path",
+          "hit_feature": null,
+          "hit_label": "r11-yongning-YN11-TOWER-FOUNDATION"
+        },
+        "world_point": [
+          140.27373235,
+          -1579.8474241000001
+        ],
+        "zoomed_camera": [
+          0.5017316744464182,
+          1413.5459226668552,
+          240.87154665110714,
+          322.95626366628886
+        ],
+        "labels_visible": false,
+        "selected_point": {
+          "screen": {
+            "x": 223.73883815597748,
+            "y": 411.26260887410035
+          },
+          "offset": {
+            "x": 35.0522231657431,
+            "y": 9.023045885819101
+          },
+          "target_box": {
+            "x": 188.68661499023438,
+            "y": 402.23956298828125,
+            "width": 64.41989135742188,
+            "height": 63.950225830078125
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "independent_label": {
+          "id": "geo-yongning-pagoda-reference",
+          "screen": {
+            "x": 289.6314926147461,
+            "y": 448.7149658203125
+          },
+          "offset": {
+            "x": 58.50000762939453,
+            "y": 7.500030517578125
+          },
+          "target_box": {
+            "x": 231.13148498535156,
+            "y": 441.2149353027344,
+            "width": 117.00001525878906,
+            "height": 15.00006103515625
+          },
+          "hit_tag": "text",
+          "hit_feature": null,
+          "hit_label": "geo-yongning-pagoda-reference"
+        }
+      },
+      "pdf_pages": 17
+    },
+    "live_desktop": {
+      "status": "passed",
+      "elapsed_seconds": 27.269,
+      "check_groups": 7,
+      "downloads": 26,
+      "screenshots": 5,
+      "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+      "tower_hit_test": {
+        "overview_center": {
+          "screen": {
+            "x": 577.2783813476562,
+            "y": 651.2406311035156
+          },
+          "offset": {
+            "x": 27.70965576171875,
+            "y": 27.507659912109375
+          },
+          "target_box": {
+            "x": 549.5687255859375,
+            "y": 623.7329711914062,
+            "width": 55.4193115234375,
+            "height": 55.01531982421875
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "world_point": [
+          140.27373235,
+          -1579.8474241000001
+        ],
+        "zoomed_camera": [
+          0.5017316744464182,
+          1496.2233043748818,
+          240.87154665110714,
+          157.6015002502361
+        ],
+        "labels_visible": false,
+        "selected_point": {
+          "screen": {
+            "x": 637.2027102562037,
+            "y": 645.8335292179818
+          },
+          "offset": {
+            "x": 100.26105986557866,
+            "y": 25.808932050013027
+          },
+          "target_box": {
+            "x": 536.941650390625,
+            "y": 620.0245971679688,
+            "width": 184.262451171875,
+            "height": 182.9190673828125
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "independent_label": {
+          "id": "geo-yongning-pagoda-reference",
+          "screen": {
+            "x": 698.2447509765625,
+            "y": 725.9843444824219
+          },
+          "offset": {
+            "x": 58.5,
+            "y": 7.500091552734375
+          },
+          "target_box": {
+            "x": 639.7447509765625,
+            "y": 718.4842529296875,
+            "width": 117,
+            "height": 15.00018310546875
+          },
+          "hit_tag": "text",
+          "hit_feature": null,
+          "hit_label": "geo-yongning-pagoda-reference"
+        }
+      },
+      "pdf_pages": 17
+    },
+    "live_mobile": {
+      "status": "passed",
+      "elapsed_seconds": 30.925,
+      "check_groups": 7,
+      "downloads": 26,
+      "screenshots": 5,
+      "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+      "tower_hit_test": {
+        "overview_center": {
+          "screen": {
+            "x": 202.78872680664062,
+            "y": 474.15296936035156
+          },
+          "offset": {
+            "x": 9.68756103515625,
+            "y": 9.616928100585938
+          },
+          "target_box": {
+            "x": 193.10116577148438,
+            "y": 464.5360412597656,
+            "width": 19.3751220703125,
+            "height": 19.233856201171875
+          },
+          "hit_tag": "path",
+          "hit_feature": null,
+          "hit_label": "r11-yongning-YN11-TOWER-FOUNDATION"
+        },
+        "world_point": [
+          140.27373235,
+          -1579.8474241000001
+        ],
+        "zoomed_camera": [
+          0.5017316744464182,
+          1413.5459226668552,
+          240.87154665110714,
+          322.95626366628886
+        ],
+        "labels_visible": false,
+        "selected_point": {
+          "screen": {
+            "x": 223.73883815597748,
+            "y": 411.26260887410035
+          },
+          "offset": {
+            "x": 35.0522231657431,
+            "y": 9.023045885819101
+          },
+          "target_box": {
+            "x": 188.68661499023438,
+            "y": 402.23956298828125,
+            "width": 64.41989135742188,
+            "height": 63.950225830078125
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "independent_label": {
+          "id": "geo-yongning-pagoda-reference",
+          "screen": {
+            "x": 289.6314926147461,
+            "y": 448.7149658203125
+          },
+          "offset": {
+            "x": 58.50000762939453,
+            "y": 7.500030517578125
+          },
+          "target_box": {
+            "x": 231.13148498535156,
+            "y": 441.2149353027344,
+            "width": 117.00001525878906,
+            "height": 15.00006103515625
+          },
+          "hit_tag": "text",
+          "hit_feature": null,
+          "hit_label": "geo-yongning-pagoda-reference"
+        }
+      },
+      "pdf_pages": 17
+    }
+  },
+  "independent_cross_check": {
+    "path": "independent-cross-check/final-independent-cross-check.json",
+    "bytes": 44331,
+    "sha256": "aef408287a34d44dc5f0f36a190071071b8169e9629c403c805339e8b2961ecd",
+    "gitblob": "00ee4429d792e7933e1f751ef43d4777b917155a"
+  },
+  "pdf": {
+    "bytes": 2126410,
+    "sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+    "gitblob": "def7628b8ce5e0a0d959cf91a46d0e983c9abe0b"
+  },
+  "pdf_pages": 17,
+  "historical_pending_reports_preserved": true,
+  "limit": "Final acceptance belongs to commit129. Earlier collection-time pending records, failed PR records and e137 manual minor issues remain unchanged."
+}

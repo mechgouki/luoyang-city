@@ -1,0 +1,1057 @@
+{
+  "version": "dual-luonan-river-b7",
+  "base_commit": "9d0580332d635beb1d68963ae6c032598c2ff515",
+  "scope": "B7子线B：R11洛南永桥、两岸华表、归正里鱼鳖巷市、四通市、宝夤旧宅、菩提寺及白象狮子二坊。四夷馆里制度与萧正德宅寺另由子线A负责；行像只作卷三跨区背景，不扩展本批R11图幅，也不新增R10绘图。",
+  "region": {
+    "id": "L10",
+    "source_region": "R11",
+    "name": "洛南｜永桥、馆里与市场",
+    "bbox": [
+      4100,
+      8720,
+      4350,
+      2230
+    ],
+    "bbox_meaning": "沿用R11文献示意画布x、y、width、height；不是古址经纬度、实测城域或伊洛河道边界。"
+  },
+  "sources": [
+    {
+      "id": "Z3",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷3·周祖谟电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/3",
+      "checked": "2026-11-13",
+      "basis": "直接核读CBETA电子正文、完整段落及所标校语；正文、整理者校读和项目推论分开。未独立核读校注转引的史书、旧刻书影、碑拓或考古资料；四卷属于同一古籍来源家族。"
+    },
+    {
+      "id": "F3",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷3·范祥雍电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/3",
+      "checked": "2026-11-13",
+      "basis": "直接核读CBETA电子正文、完整段落及所标校语；正文、整理者校读和项目推论分开。未独立核读校注转引的史书、旧刻书影、碑拓或考古资料；四卷属于同一古籍来源家族。"
+    },
+    {
+      "id": "Z2",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷2·周祖谟电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/2",
+      "checked": "2026-11-13",
+      "basis": "直接核读CBETA电子正文、完整段落及所标校语；正文、整理者校读和项目推论分开。未独立核读校注转引的史书、旧刻书影、碑拓或考古资料；四卷属于同一古籍来源家族。"
+    },
+    {
+      "id": "F2",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷2·范祥雍电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/2",
+      "checked": "2026-11-13",
+      "basis": "直接核读CBETA电子正文、完整段落及所标校语；正文、整理者校读和项目推论分开。未独立核读校注转引的史书、旧刻书影、碑拓或考古资料；四卷属于同一古籍来源家族。"
+    }
+  ],
+  "source_family_count": 1,
+  "ancient_absolute_positions_added": 0,
+  "existing_entity_usage": {
+    "bridge_and_annotation_ids": [
+      "bridge_yong",
+      "v3_yong_huabiao"
+    ],
+    "road_reference_ids": [
+      "road_siyi"
+    ],
+    "direction_reference_ids": [
+      "altar_yuanqiu"
+    ],
+    "nonspatial_annotation_ids": [
+      "market_fish",
+      "market_sitong",
+      "house_xiaobaoyin",
+      "v3_puti",
+      "fang_whiteelephant",
+      "fang_lion"
+    ],
+    "ward_reference_ids": [
+      "li_guizheng",
+      "li_muyi"
+    ],
+    "water_reference_ids": [
+      "luoshui",
+      "water_yi"
+    ],
+    "context_only_ids": [
+      "gate_xuanyang",
+      "v3_jingming",
+      "ic_changhe_palace",
+      "li_yongan",
+      "li_xiaoyi",
+      "v3_guizheng"
+    ]
+  },
+  "interaction_audit": {
+    "baseline_marker_source": "data/markers.json",
+    "baseline_published_marker_source": "_site/data/markers.json",
+    "original_target_count": 179,
+    "bridge_yong_interactive_marker_present": false,
+    "road_siyi_interactive_marker_present": false,
+    "bridge_drawing_anchor": {
+      "xy": [
+        6100,
+        9000
+      ],
+      "coordinate_system": "existing_schematic_canvas_only",
+      "geographic": false,
+      "source": "tools/legacy_primitives.py bridge_yong and tools/build_rollout.py"
+    },
+    "existing_reading_markers": [
+      {
+        "ids": [
+          "v3_guizheng",
+          "v3_puti"
+        ],
+        "xy": [
+          5050,
+          10180
+        ],
+        "kind": "group",
+        "meaning": "里内寺院阅读组；不是同址或相邻"
+      },
+      {
+        "ids": [
+          "market_fish",
+          "house_xiaobaoyin"
+        ],
+        "xy": [
+          5050,
+          10540
+        ],
+        "kind": "group",
+        "meaning": "归正里附见阅读组；内部无定位"
+      },
+      {
+        "ids": [
+          "fang_whiteelephant",
+          "fang_lion"
+        ],
+        "xy": [
+          7320,
+          10185
+        ],
+        "kind": "group",
+        "meaning": "道东二坊阅读组；位置次序未明"
+      },
+      {
+        "ids": [
+          "market_sitong"
+        ],
+        "xy": [
+          7320,
+          10600
+        ],
+        "kind": "group",
+        "meaning": "洛水南市场关系；现图道东位置不是已证路侧"
+      },
+      {
+        "ids": [
+          "altar_yuanqiu"
+        ],
+        "xy": [
+          6100,
+          10810
+        ],
+        "kind": "node",
+        "meaning": "历史marker kind虽为node，entity仍direction_reference；只作方向"
+      }
+    ],
+    "coordinate_system": "existing_schematic_canvas_only",
+    "geographic": false,
+    "new_hit_targets_allowed": 0,
+    "existing_anchor_movement_allowed": false
+  },
+  "main_glyph_policy": {
+    "move_existing_anchors": false,
+    "new_world_nodes": 0,
+    "new_ancient_coordinates": 0,
+    "original_target_count": 179,
+    "footprints_reconstructed": false,
+    "recommendations": [
+      {
+        "entity_id": "bridge_yong",
+        "type": "floating_bridge",
+        "display": "通用浮桥类型；长度舟数不计",
+        "interactive_marker_present": false,
+        "evidence": [
+          "LR01",
+          "LR02"
+        ]
+      },
+      {
+        "entity_id": "v3_yong_huabiao",
+        "type": "bank_annotation",
+        "display": "两岸华表附注；二十丈不转比例",
+        "new_independent_anchor_allowed": false,
+        "evidence": [
+          "LR03"
+        ]
+      },
+      {
+        "entity_id": "altar_yuanqiu",
+        "type": "direction_reference",
+        "display": "圜丘方向〔未定位〕",
+        "altar_footprint": null,
+        "evidence": [
+          "LR04"
+        ]
+      },
+      {
+        "entity_id": "house_xiaobaoyin",
+        "type": "former_residence_annotation",
+        "display": "萧宝夤归正里旧宅〔后迁永安里〕",
+        "new_independent_anchor_allowed": false,
+        "evidence": [
+          "LR06"
+        ]
+      },
+      {
+        "entity_id": "market_fish",
+        "type": "lane_market_annotation",
+        "display": "归正里鱼鳖巷市〔内部无定位〕",
+        "new_independent_anchor_allowed": false,
+        "evidence": [
+          "LR07",
+          "LR08",
+          "LR09"
+        ]
+      },
+      {
+        "entity_id": "market_sitong",
+        "type": "market_annotation",
+        "display": "四通市／永桥市〔只知洛水南〕",
+        "new_independent_anchor_allowed": false,
+        "evidence": [
+          "LR10"
+        ]
+      },
+      {
+        "entity_id": "v3_puti",
+        "type": "undated_temple_annotation",
+        "display": "慕义里菩提寺〔年未定〕",
+        "symbol": "open_if_type_symbol_used",
+        "new_independent_anchor_allowed": false,
+        "evidence": [
+          "LR11"
+        ]
+      },
+      {
+        "entity_ids": [
+          "fang_whiteelephant",
+          "fang_lion"
+        ],
+        "type": "unordered_ward_group",
+        "display": "道东二坊〔分时〕",
+        "lion_alive_in_main_period_allowed": false,
+        "new_independent_anchor_allowed": false,
+        "evidence": [
+          "LR12",
+          "LR13",
+          "LR14"
+        ]
+      }
+    ]
+  },
+  "source_attribution_corrections": [
+    {
+      "id": "B7-R11-C1",
+      "evidence": "LR08",
+      "old_summary": "张景仁正光年初受宅若被理解为单一确定年代",
+      "verified_reading": "周正文正光初，范校景明初；个人受宅不能给巷市定创设年。",
+      "old_data_modified": false
+    },
+    {
+      "id": "B7-R11-C2",
+      "evidence": "LR06",
+      "old_summary": "萧宝夤宅若被当作516—528归正里现居宅",
+      "verified_reading": "世宗已准其迁入永安里；归正里只作旧宅附见，后续占用与存毁未知。",
+      "old_data_modified": false
+    },
+    {
+      "id": "B7-R11-C3",
+      "evidence": "LR01",
+      "old_summary": "永桥具有单独或共享的179目标marker",
+      "verified_reading": "基线及发布版markers均无bridge_yong；既有绘图锚点不是独立交互目标。",
+      "old_data_modified": false
+    }
+  ],
+  "notes": [
+    "所有材料属于同一古籍来源家族；整理本及其转引史书、河南志不伪装成独立现场观察。",
+    "现图坐标只用于复核保留的示意锚点，不能反写为古址位置；非定位群组的物理屏幕位置不能提供路侧、邻接、距离或院界。",
+    "洛南市场记录不与城东小市混合，鱼鳖巷市不因同售鱼货与四通市强合；永桥市与四通市则是原文直接给出的同条别名。",
+    "宝夤与正德分人；张景仁迁居不使鱼市迁居；个人旧宅、寺院设立、建桥、作颂和动物入贡各自计时。",
+    "未以人口数、二十丈、原文里程、修辞交通或神异故事生成地形、测量点和工程尺度。",
+    "不把菩提故事中的城西里、市、华林都堂移到洛南；不把527建春桥毁损事件转给永桥。",
+    "水经注浮桁与永桥的独立身份问题沿用旧v2.7边界，本批未新核水经注，不据叠图宣告同体。",
+    "本数据不修改旧entities、markers或_site；不新增古址经纬度、伊水河槽、坊墙或圜丘坛址。"
+  ],
+  "evidence": [
+    {
+      "id": "LR01",
+      "title": "永桥：宣阳门外四里至洛水的浮桥",
+      "source_region": "R11",
+      "entities": [
+        "bridge_yong",
+        "gate_xuanyang",
+        "luoshui"
+      ],
+      "quote": "宣陽門外四里，至洛水上，作浮橋，所謂永橋也。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·龙华、追圣寺后永桥段；Z3 p0158a06—07；F3同段",
+      "quote_is_excerpt": false,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "四里是从宣阳门出至洛水桥位的原文距离，桥型明确为浮桥。可表达城门外、洛水上和跨河通行的相对关系；作字本身没有给出始建年或营建主体。",
+      "drawing": "沿用永桥既有绘图位置作通用浮桥类型，不增加独立点击目标；门至桥仅写原文四里，桥与水分开表达。",
+      "limit": "四里不换算米数，不反算河宽；浮桥不提供舟数、桥面宽、桩位、岸线形状或今日河道对应。门、桥与南御道的现图同轴只是显示安排。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "bridge_yong",
+          "relation": "outside",
+          "object": "gate_xuanyang",
+          "distance_original": "四里",
+          "distance_metric": null,
+          "basis": "direct_text"
+        },
+        {
+          "subject": "bridge_yong",
+          "relation": "crosses",
+          "object": "luoshui",
+          "basis": "bridge_type_and_Luo_context"
+        }
+      ],
+      "temporal_note": "桥的记述属于文献场景，建桥、重建和持续通行的起讫年月均未记。",
+      "geographic_coordinates": null,
+      "bridge_type": "floating_bridge",
+      "bridge_construction_year_ce": null,
+      "specific_pontoon_count": null,
+      "bridge_width": null,
+      "river_width": null,
+      "continuous_straight_axis_established": false,
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "LR02",
+      "title": "神龟作颂不是建桥纪年；水陆会通不是精确路网",
+      "source_region": "R11",
+      "entities": [
+        "bridge_yong",
+        "luoshui"
+      ],
+      "quote": "神龜中，常景為汭頌。……水陸兼會，周鄭交衢。爰勒洛汭，敢告中區。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·永桥段常景颂；F3同段汭颂／勒铭校语",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "神龟中标注常景作文的事件，不能倒填为永桥始建或完工。水陆兼会和周郑交衢是颂文的交通描写，可作通行背景，不能由此生成具体分叉、汇流、渡口或通往各地的实测路线。",
+      "drawing": "时层板单列神龟518—520作颂，桥型旁标建桥年未记；交通关系用文字说明，不为颂辞增加路线。",
+      "limit": "颂文不是桥梁工程记录，也未给某一年每日、全年皆可通行的保证。洛汭是文字地理参照，不能从其释义造出确定河曲。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "正文采用汭颂，周释为洛汭之颂，并列勒铭异文。"
+        },
+        {
+          "source": "F3",
+          "reading": "正文保留汭颂，校语列传本勒铭及所引文集洛桥铭题名；本批不把校语所引文集算作独立核读。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "神龟518—520为作颂时段，不等于桥始建、完工或维修时段。",
+      "geographic_coordinates": null,
+      "event": {
+        "kind": "inscription_or_commemoration",
+        "date_original": "神龟中",
+        "date_range_ce": [
+          518,
+          520
+        ],
+        "dated_object": "常景作颂",
+        "bridge_construction_dated": false
+      },
+      "bridge_construction_year_ce": null,
+      "all_year_passability_established": false,
+      "rhetoric_generates_network_edges": false
+    },
+    {
+      "id": "LR03",
+      "title": "永桥两岸华表：高度文字不转换成图尺",
+      "source_region": "R11",
+      "entities": [
+        "bridge_yong",
+        "v3_yong_huabiao"
+      ],
+      "quote": "南北兩岸有華表，舉高二十丈，華表上作鳳凰似欲沖天勢。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·常景颂后华表句；Z3 p0160a04；F3同段",
+      "quote_is_excerpt": false,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "正文给出南北两岸的附属标志及二十丈高度叙述。两岸不等于正文已确定每岸一根；周注所引河南志四华表仍是注引层。",
+      "drawing": "保持两岸华表为桥边附注或无比例类型说明，不拆出独立定位点，不用二十丈抬升模型、换算桥长或确定桥面标高。",
+      "limit": "凤翔姿态是文学描写，不提供精确造型；原文高度尚未经实物测量核验，正文根数和各柱平面位置均未给出。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "正文为两岸有华表，校注转引河南志有四华表；四根未当作两本正文共同记载。"
+        },
+        {
+          "source": "F3",
+          "reading": "正文同样写两岸有华表和二十丈；不由此确定每岸数量。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "v3_yong_huabiao",
+          "relation": "on_north_and_south_banks_at",
+          "object": "bridge_yong",
+          "basis": "direct_text"
+        }
+      ],
+      "temporal_note": "华表营造年未记；不自动与神龟作颂同年。",
+      "geographic_coordinates": null,
+      "component": {
+        "type": "bank_huabiao",
+        "height_original": "二十丈",
+        "height_metric": null,
+        "pillar_count_from_main_text": null,
+        "footprint": null
+      },
+      "new_independent_anchor_allowed": false,
+      "height_converted_to_map_scale": false,
+      "annotation_only": true
+    },
+    {
+      "id": "LR04",
+      "title": "永桥南、圜丘北、伊洛间是区域关系",
+      "source_region": "R11",
+      "entities": [
+        "bridge_yong",
+        "road_siyi",
+        "altar_yuanqiu",
+        "luoshui",
+        "water_yi"
+      ],
+      "quote": "永橋以南，圜丘以北，伊洛之間，夾御道。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·四夷馆里总叙起句；Z3 p0160a06—08；F3同段",
+      "quote_is_excerpt": false,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "这一组方位限定随后的馆里区域：桥南、圜丘北、伊洛之间并夹御道。圜丘在这里承担南向参照，不给坛址；伊洛之间也不提供两条古河道、区域轮廓或河岸距离。",
+      "drawing": "保留既有R11阅读框与圜丘方向参照，图面明确方向不等于实体坛址；伊水继续无定位，不延长、弯折或接合河槽。",
+      "limit": "不能把圜丘方向标记当作古坛坐标或按现图三点求交；四至文本不闭合成实测边界。御道轴线及馆里内部间距均未定。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "F3",
+          "reading": "圜、圆、员异写在校语中并列；不拆成不同祭坛。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "road_siyi",
+          "relation": "south_of",
+          "object": "bridge_yong",
+          "basis": "regional_context"
+        },
+        {
+          "subject": "road_siyi",
+          "relation": "north_of",
+          "object": "altar_yuanqiu",
+          "basis": "regional_context_direction_reference"
+        },
+        {
+          "subject": "road_siyi",
+          "relation": "between_water_regions",
+          "objects": [
+            "water_yi",
+            "luoshui"
+          ],
+          "basis": "regional_context_not_channel_geometry"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "direction_reference_only": true,
+      "altar_footprint": null,
+      "altar_absolute_position": null,
+      "river_channels_added": 0,
+      "riverbanks_reconstructed": false,
+      "region_bbox_is_geographic": false,
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "LR05",
+      "title": "行像进宣阳门不等于行像经过永桥",
+      "source_region": "R11",
+      "entities": [
+        "v3_jingming",
+        "gate_xuanyang",
+        "ic_changhe_palace",
+        "bridge_yong",
+        "road_siyi"
+      ],
+      "quote": "四月七日京師諸像皆來此寺，……至八日，以次入宣陽門，向閶闔宮前受皇帝散花。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·景明寺行像段；同卷永桥段另作普通交通参照",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "此寺指景明寺；行像叙述明确景明集像、宣阳入城和宫前受花。永桥段的出门至洛水关系与这条仪式行程不能因示意轴线重合而拼接。",
+      "drawing": "关系板把景明—宣阳—宫前的仪式行程作为跨区背景旁注，永桥和洛南御道保持另一个交通关系组；不增一条行像渡永桥的边。",
+      "limit": "未记经过永桥不等于证明所有参与者从未过桥；本批只说这段材料不足以建立仪式跨桥路径。月日保留古历，不换算公历。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "F3",
+          "reading": "至八月节的原读由范依校本改为至八日；本批采用经校后的行像日期，不把月节当作独立事件。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "v3_jingming",
+          "relation": "procession_to",
+          "object": "gate_xuanyang",
+          "basis": "direct_event_text"
+        },
+        {
+          "subject": "gate_xuanyang",
+          "relation": "procession_to",
+          "object": "ic_changhe_palace",
+          "basis": "direct_event_text"
+        }
+      ],
+      "temporal_note": "四月七日集像、八日入城是仪式叙述；未给本批可独立落到某公历年的桥梁通行事件。",
+      "geographic_coordinates": null,
+      "route_scope": "image_procession",
+      "procession_crosses_yong_established": false,
+      "ordinary_crossing_equals_procession": false,
+      "source_context_outside_R11_does_not_expand_map": true
+    },
+    {
+      "id": "LR06",
+      "title": "萧宝寅／宝夤归正里旧宅与后迁永安里",
+      "source_region": "R11",
+      "entities": [
+        "house_xiaobaoyin",
+        "li_guizheng",
+        "li_yongan",
+        "v3_guizheng"
+      ],
+      "quote": "景明初，偽齊建安王蕭寶寅來降，……為築宅於歸正里，……求入城內，世宗從之，賜宅於永安里。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·吴人金陵馆及萧宝寅迁宅段；Z3 p0161a01—06；F3同段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "同一人的安置先在归正里，后经世宗准许迁入城内永安里。宝寅与宝夤为本条姓名异写；这个人不是后文萧正德。该条没有说宝夤舍此宅为归正寺。",
+      "drawing": "既有归正里群组中的宅标改读为萧宝夤旧宅〔后迁永安里〕；永安里维持名录附见，不增迁入宅址，不把两次住址画成同时居住的两院。",
+      "limit": "世宗朝迁居发生在516—528主层之前，不能默认其在盛时仍住归正里；旧宅后来由谁占用或是否留存未记。不得把萧正德的宅改寺事件移植到本宅。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "正文采用宝寅，校语列宝夤异写；景明初保留原时段，不采用注引中未经独立核验的精确到达年。"
+        },
+        {
+          "source": "F3",
+          "reading": "正文宝寅，校语记部分传本作宝夤；迁归正、后入永安的次序相同。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "house_xiaobaoyin",
+          "relation": "inside",
+          "object": "li_guizheng",
+          "basis": "direct_text"
+        },
+        {
+          "subject": "house_xiaobaoyin",
+          "relation": "occupant_later_resided_in",
+          "object": "li_yongan",
+          "basis": "direct_text_person_moved_not_house_moved"
+        }
+      ],
+      "temporal_note": "景明初提供初来背景；迁入永安里在世宗朝，具体年未记。归正里宅在盛时只作旧宅附见，不推断宅已毁。",
+      "geographic_coordinates": null,
+      "date_original": "景明初；后请世宗准迁",
+      "move_reign": "世宗",
+      "move_year_ce": null,
+      "move_precedes_main_516_528": true,
+      "occupancy_continues_into_main_period_established": false,
+      "person_name_variants": [
+        "蕭寶寅",
+        "蕭寶夤"
+      ],
+      "different_person_from": "蕭正德",
+      "converted_to_guizheng_temple_established": false,
+      "new_independent_anchor_allowed": false,
+      "main_scene_name": "萧宝夤归正里旧宅〔后迁永安里〕"
+    },
+    {
+      "id": "LR07",
+      "title": "吴人坊是归正里俗称；鱼鳖市为里内巷市",
+      "source_region": "R11",
+      "entities": [
+        "market_fish",
+        "li_guizheng"
+      ],
+      "quote": "賜宅城南歸正里。民間號為吳人坊，南來投化者多居其內。……自立巷市。……時人謂為魚鱉市也。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·景宁寺后张景仁段；Z2 p0132a11—14；F2同段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "段落先回叙张景仁受宅归正里，吴人坊和后续里内巷市承接归正里。此为居民自立的巷市及俗称，不是新列出的独立坊或有已知界址的官方市场。",
+      "drawing": "保留market_fish与house_xiaobaoyin共享的归正里附见阅读锚点；在市场关系板把鱼鳖市列为归正里内的非定位附注，吴人坊标作里名的俗称。",
+      "limit": "叙述插在洛阳小市北张景仁宅之后，不使鱼鳖市继承小市北、孝义里或御道某侧的点位。共同里属不意味着鱼市紧邻宝夤宅。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "market_fish",
+          "relation": "inside",
+          "object": "li_guizheng",
+          "basis": "paragraph_referent"
+        },
+        {
+          "subject": "li_guizheng",
+          "relation": "also_called",
+          "object": "吳人坊",
+          "basis": "direct_text_local_name"
+        }
+      ],
+      "temporal_note": "巷市成立年未明；张景仁受宅或迁居的年号不自动成为市场创建年。",
+      "geographic_coordinates": null,
+      "ward_id": "li_guizheng",
+      "ward_alias": "吳人坊",
+      "market_kind": "self_organized_lane_market",
+      "inherit_position_from_paragraph_heading": false,
+      "fish_market_in_xiaoyi_established": false,
+      "fish_market_north_of_small_market_established": false,
+      "adjacent_to_xiaobaoyin_house_established": false,
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "LR08",
+      "title": "张景仁回叙：周正光、范景明；迁居不搬迁整个市场",
+      "source_region": "R11",
+      "entities": [
+        "market_fish",
+        "li_guizheng",
+        "li_xiaoyi"
+      ],
+      "quote": "正光年初從蕭寶夤歸化，拜羽林監，賜宅城南歸正里。……景仁住此以為恥，遂徙居孝義里焉。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·张景仁受宅、鱼鳖市与迁居连续段；F2正光校为景明",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "周正文保留正光年初并指出与所引史传不合；范将此年号改为景明。需要保留版本选择，不能无条件写成520年鱼市成立。随后移居孝义里的主语是张景仁，不是鱼市或全部归正里住民。",
+      "drawing": "在年代板并列正文正光初／范校景明初，市场仍留归正里附见，不在孝义里增加第二鱼市点。",
+      "limit": "这段迁居理由含作者叙事中的群体评价，本项目不据此评判人群或食品等级。个人迁居的精确年与鱼市始建、终止年均未明。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z2",
+          "reading": "正文正光年初；周注以宝夤归魏史传年代指出不合，但没有在正文改换年号。"
+        },
+        {
+          "source": "F2",
+          "reading": "明确把正光校为景明；本批并列，不抹去校改层。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "张景仁",
+          "relation": "moved_from",
+          "object": "li_guizheng",
+          "basis": "direct_personal_narrative"
+        },
+        {
+          "subject": "张景仁",
+          "relation": "moved_to",
+          "object": "li_xiaoyi",
+          "basis": "direct_personal_narrative"
+        }
+      ],
+      "temporal_note": "正光520—525／范校景明500—503只是年号范围；原文初字不等于必在元年。后述永安二年酒宴另属529事件，不能用于巷市建成年。",
+      "geographic_coordinates": null,
+      "date_readings": {
+        "Z2": {
+          "era": "正光年初",
+          "era_range_ce": [
+            520,
+            525
+          ]
+        },
+        "F2": {
+          "era": "景明年初",
+          "era_range_ce": [
+            500,
+            503
+          ]
+        }
+      },
+      "selected_arrival_year_ce": null,
+      "market_foundation_year_ce": null,
+      "market_moves_with_person": false,
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "LR09",
+      "title": "近伊洛、三千余家和水族口味不生成地形与户数网格",
+      "source_region": "R11",
+      "entities": [
+        "market_fish",
+        "li_guizheng",
+        "water_yi",
+        "luoshui"
+      ],
+      "quote": "近伊洛二水，任其習御。里三千餘家，自立巷市。所賣口味，多是水族。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·吴人坊及巷市连续说明；F2同段三千／十校语",
+      "quote_is_excerpt": false,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "近伊洛是宽泛的区域邻近，不能确定到哪一岸的距离。三千余家为正文数词，周注所引河南志为三十余家，范校语亦记千与十之异；本批不把任何一数当作精确人口普查。",
+      "drawing": "只在文字栏保留邻水背景、户数异文和多售水产的说明；不给归正里估算面积、每户地块或网格，也不按商品来源增画码头、渔港、支流。",
+      "limit": "多是水族不等于全部商品都是鱼鳖，也不能把商市功能变成排他的族群或职业分区。习御不提供具体船道、渔场或岸线。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z2",
+          "reading": "正文里三千余家；周注转引河南志作三十。"
+        },
+        {
+          "source": "F2",
+          "reading": "正文保留三千，校语记所引元河南志卷三千作十；本批将其作为注引数量异文，不当第二份现场统计。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "li_guizheng",
+          "relation": "near_water_regions",
+          "objects": [
+            "water_yi",
+            "luoshui"
+          ],
+          "basis": "direct_broad_region_text"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "population_statement": {
+        "main_text": "三千餘家",
+        "annotator_cited_variant": "三十餘家",
+        "adopted_exact_households": null,
+        "independent_census": false
+      },
+      "quantity_converted_to_area": false,
+      "distance_metric": null,
+      "river_channels_added": 0,
+      "exclusive_fish_trade_established": false,
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "LR10",
+      "title": "四通市俗称永桥市；与鱼鳖巷市保持分记录",
+      "source_region": "R11",
+      "entities": [
+        "market_sitong",
+        "market_fish",
+        "bridge_yong",
+        "luoshui",
+        "water_yi"
+      ],
+      "quote": "別立市於洛水南，號曰四通市。民間謂為永橋市。伊洛之魚，多於此賣，士庶須膾，皆詣取之。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·四夷馆里及附化商民叙述末；Z3 p0162a15附近；F3同段",
+      "quote_is_excerpt": false,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "本句直接确证四通市在洛水南，永桥市是同一市场的民间名称。卖伊洛鱼和人们前往采购说明商业活动，不指明桥头、道路侧别、所在里或港口位置。卷二鱼鳖市则有归正里巷市语境，材料未证明两者同体。",
+      "drawing": "市场关系板为四通／永桥市和归正里鱼鳖巷市保留两个记录；四通市继续使用既有非定位阅读锚点，并写仅知洛水南，不按其现图道东摆放反推原文。",
+      "limit": "别立不提供可量测的两市间距或确切新设年；两市都卖鱼不是同一性证据，也不证明历史上绝不相邻。俗称永桥市不能自动增添桥旁精确位置。",
+      "sources": [
+        "Z3",
+        "F3",
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "正文作洛水南、永桥市；周区分洛／乐和市／寺异文，避免误读为新寺。"
+        },
+        {
+          "source": "F3",
+          "reading": "范亦将乐校洛、市的寺字异文校正；正文永桥市名与四通市承接。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "market_sitong",
+          "relation": "south_of",
+          "object": "luoshui",
+          "basis": "direct_text"
+        },
+        {
+          "subject": "market_sitong",
+          "relation": "also_called",
+          "object": "永橋市",
+          "basis": "direct_text_local_name"
+        }
+      ],
+      "temporal_note": "四通市新设年未记；附化商民背景和采购描写不生成明确营建年。",
+      "geographic_coordinates": null,
+      "identity_policy": "preserve_two_market_records_until_independent_identity_evidence",
+      "fish_sitong_identity_established": false,
+      "merge_authorized": false,
+      "market_sitong_roadside": null,
+      "market_sitong_ward": null,
+      "adjacent_to_bridge_established": false,
+      "distance_to_bridge": null,
+      "market_foundation_year_ce": null,
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "LR11",
+      "title": "菩提寺只确证慕义里属；神异叙事不补寺年",
+      "source_region": "R11",
+      "entities": [
+        "v3_puti",
+        "li_muyi"
+      ],
+      "quote": "菩提寺，西域胡人所立也，在慕義里。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·菩提寺条首及后接达多发冢故事；Z3 p0165a02；F3同段",
+      "quote_is_excerpt": false,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "条首明确创立者群体和慕义里属，没有创寺年月、塔层或与其他寺的相对位置。后段达多发冢、太后与明帝问话属于故事时层，不能据此补成寺院的精确始建或完工日期。",
+      "drawing": "保留菩提与归正寺既有共同阅读锚点，不拆新寺址；以寺期未定的文字或空心类型说明其里属，不把共享锚点当作两寺同院、毗邻。",
+      "limit": "故事中的阜／准财里、大市北奉终里及华林都堂不是菩提寺的附属地址；不得将故事沿途地点搬进R11，复生叙述也不成为物理事实。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "v3_puti",
+          "relation": "inside",
+          "object": "li_muyi",
+          "basis": "direct_text"
+        }
+      ],
+      "temporal_note": "沿用undated；后接故事的太后、明帝语境只记叙事时层，不据此裁定寺院始建年或每年存续。",
+      "geographic_coordinates": null,
+      "main_temporal_state": "undated",
+      "temple_foundation_year_ce": null,
+      "narrative_event_dates_temple": false,
+      "shared_marker_proves_adjacency": false,
+      "shared_marker_proves_same_compound": false,
+      "new_independent_anchor_allowed": false,
+      "miracle_is_physical_fact": false
+    },
+    {
+      "id": "LR12",
+      "title": "白象、狮子二坊：桥南道东的无序组",
+      "source_region": "R11",
+      "entities": [
+        "fang_whiteelephant",
+        "fang_lion",
+        "bridge_yong",
+        "road_siyi"
+      ],
+      "quote": "永橋南道東有白象獅子二坊。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·四通市段后两坊条首；Z3 p0163a04；F3同段",
+      "quote_is_excerpt": false,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "桥南、道东是两坊共同的相对关系。白象、狮子的列举次序不等于南北先后、东西并排或相邻街坊；各坊的边界和内部兽舍均未写明。",
+      "drawing": "保留二坊共用的既有群组阅读锚点，以道东二坊〔分时〕及文本卡片表达；不拆两个独立落点、不画实测坊墙或两座同时养兽的院落。",
+      "limit": "正文此处只列坊名，实际动物到京和迁入的时间还要分别读下文；路侧关系也不能外推给前文四通市。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "fang_whiteelephant",
+          "relation": "south_of",
+          "object": "bridge_yong",
+          "basis": "direct_group_text"
+        },
+        {
+          "subject": "fang_lion",
+          "relation": "south_of",
+          "object": "bridge_yong",
+          "basis": "direct_group_text"
+        },
+        {
+          "subject": "fang_whiteelephant",
+          "relation": "east_of",
+          "object": "road_siyi",
+          "basis": "direct_group_text"
+        },
+        {
+          "subject": "fang_lion",
+          "relation": "east_of",
+          "object": "road_siyi",
+          "basis": "direct_group_text"
+        }
+      ],
+      "temporal_note": "两坊共同列名不等于两种动物在516—528年同时在场；动物时层见LR13、LR14。",
+      "geographic_coordinates": null,
+      "internal_order": null,
+      "adjacency_between_wards_established": false,
+      "ward_footprints": null,
+      "new_independent_anchor_allowed": false,
+      "roadside_inherited_by_sitong": false
+    },
+    {
+      "id": "LR13",
+      "title": "白象509年入贡不等于同年建坊",
+      "source_region": "R11",
+      "entities": [
+        "fang_whiteelephant"
+      ],
+      "quote": "白象者，永平二年乾陀羅國胡王所獻。……常養象於乘黃曹，……太后遂徙象於此坊。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·白象坊条；F3同段乾罗／乾陀罗及背设校语",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "永平二年（509）指白象入贡。叙事先说养于乘黄曹，后说胡太后迁象入此坊，两次场所和事件必须分开。迁坊没有独立年号，不能把509移植为白象坊的营建或启用年。",
+      "drawing": "时层卡片采用入贡509→先养乘黄曹→胡太后时徙坊的先后链；主图只保留坊名附注，不用动物图像断言整个盛时连续在场。",
+      "limit": "乘黄曹在本条未给确切地址，不能为迁象补出路线或新点；破墙拔树等故事不提供坊界、墙高、象舍尺寸或运输能力。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "正文采用乾陀罗；周注记录国名与所引史书有异，本批不据此新造域外地理对应。"
+        },
+        {
+          "source": "F3",
+          "reading": "正文乾罗，校语记录乾陀罗／乾陁罗写法；不因国名异写拆分两次入贡。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "永平二年509为入贡；后在胡太后时期徙坊，具体年未记。诏徙不提供建筑完工日期。",
+      "geographic_coordinates": null,
+      "events": [
+        {
+          "kind": "tribute_arrival",
+          "date_original": "永平二年",
+          "year_ce": 509
+        },
+        {
+          "kind": "initial_housing",
+          "place_name": "乘黄曹",
+          "year_ce": null
+        },
+        {
+          "kind": "relocation_to_ward",
+          "date_original": "太后遂徙",
+          "year_ce": null
+        }
+      ],
+      "ward_foundation_year_ce": null,
+      "arrival_is_ward_foundation": false,
+      "animal_presence_all_main_years_established": false,
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "LR14",
+      "title": "狮子到京、放归与途中杀弃属于较晚时层",
+      "source_region": "R11",
+      "entities": [
+        "fang_lion"
+      ],
+      "quote": "永安末，醜奴破滅，始達京師。……普泰元年，廣陵王即位，……獅子亦令送歸本國。……遂在路殺獅子而返。",
+      "quote_source": "Z3",
+      "quote_locator": "卷三·狮子坊叙事；Z3永安末及周注永安三年六月；F3同段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "正文把到京放在永安末；周注对应永安三年（530）的史载，本批将这一精确年标为注引而非独立核读。普泰元年（531）又有送归诏令，但叙事结果是途中被杀，并非实际到达本国。",
+      "drawing": "狮子在世、到京及送归故事只入528年河阴之后的较晚时层；516—528盛时母图不得据坊名摆放一头已在洛阳的狮子。两坊仍是无序文字组。",
+      "limit": "动物到京不等于狮子坊始建或启用日；未给抵京后的具体兽舍、迁坊路线或途中死亡地点。后出诏令也不证明整个坊址被废。",
+      "sources": [
+        "Z3",
+        "F3"
+      ],
+      "variants": [
+        {
+          "source": "Z3",
+          "reading": "正文波斯，周注所引史书记嚈哒；本批保留来源层级，不用现代地图强合贡使出发国。"
+        },
+        {
+          "source": "F3",
+          "reading": "正文同样采用波斯，校语并列史籍不同国名和醜奴破后的事件。两本整理仍是一古籍来源家族。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "正文永安末；Z3注引对应530。普泰元年531送归诏令及途中杀弃，均不进入516—528河阴之前的活狮场景。",
+      "geographic_coordinates": null,
+      "arrival_date_original": "永安末",
+      "arrival_era_range_ce": [
+        528,
+        530
+      ],
+      "annotator_correspondence_year_ce": 530,
+      "annotator_correspondence_basis": "Z3校注所引魏书孝庄帝纪；本批未独立核读该史书",
+      "return_order_year_ce": 531,
+      "actual_return_home_established": false,
+      "lion_alive_in_main_period_allowed": false,
+      "ward_foundation_year_ce": null,
+      "new_independent_anchor_allowed": false,
+      "post_heyin_event": true
+    }
+  ]
+}

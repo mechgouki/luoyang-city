@@ -1,0 +1,31 @@
+2026-11-23T01:52:01.0536802Z PASS P472 desktop: 6 groups, 7 downloads, 6 screenshots
+2026-11-23T01:52:05.0348189Z PASS P472 mobile: 6 groups, 7 downloads, 6 screenshots
+2026-11-23T01:55:10.6025374Z PASS R11 desktop: 7 groups, 26 downloads, 30.751s
+2026-11-23T01:55:19.5255594Z Traceback (most recent call last):
+2026-11-23T01:55:19.5262695Z   File "/work/tests/browser_city_plan_r11.py", line 595, in <module>
+2026-11-23T01:55:19.5265026Z     main()
+2026-11-23T01:55:19.5265378Z   File "/work/tests/browser_city_plan_r11.py", line 576, in main
+2026-11-23T01:55:19.5265705Z     report = exercise(browser, base, device, output, args.commit)
+2026-11-23T01:55:19.5266212Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-23T01:55:19.5266511Z   File "/work/tests/browser_city_plan_r11.py", line 325, in exercise
+2026-11-23T01:55:19.5266859Z     expect(page.locator("#selected-title")).to_have_text(features[TOWER]["label"])
+2026-11-23T01:55:19.5267334Z   File "/usr/local/lib/python3.12/dist-packages/playwright/sync_api/_generated.py", line 20086, in to_have_text
+2026-11-23T01:55:19.5273687Z     self._sync(
+2026-11-23T01:55:19.5274184Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+2026-11-23T01:55:19.5274614Z     return task.result()
+2026-11-23T01:55:19.5274829Z            ^^^^^^^^^^^^^
+2026-11-23T01:55:19.5275267Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_assertions.py", line 561, in to_have_text
+2026-11-23T01:55:19.5275791Z     await self._expect_impl(
+2026-11-23T01:55:19.5276226Z   File "/usr/local/lib/python3.12/dist-packages/playwright/_impl/_assertions.py", line 85, in _expect_impl
+2026-11-23T01:55:19.5276685Z     raise AssertionError(
+2026-11-23T01:55:19.5277175Z AssertionError: Locator expected to have text '木塔基座主体图示轮廓'
+2026-11-23T01:55:19.5277448Z Actual value: 木塔地基图示范围 
+2026-11-23T01:55:19.5277616Z Call log:
+2026-11-23T01:55:19.5277789Z   - Expect "to_have_text" with timeout 5000ms
+2026-11-23T01:55:19.5278016Z   - waiting for locator("#selected-title")
+2026-11-23T01:55:19.5278337Z     9 × locator resolved to <h3 id="selected-title">木塔地基图示范围</h3>
+2026-11-23T01:55:19.5278619Z       - unexpected value "木塔地基图示范围"
+2026-11-23T01:55:19.5278749Z 
+2026-11-23T01:55:19.6736601Z ##[error]Process completed with exit code 1.
+2026-11-23T01:55:19.6786290Z ##[group]Run actions/upload-artifact@v4
+2026-11-23T01:55:19.6786512Z with:

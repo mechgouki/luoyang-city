@@ -1,0 +1,1887 @@
+{
+  "schema_version": 1,
+  "id": "yongning-published-plan-r11",
+  "title": "永宁寺刊载总平面事实矢量输入",
+  "research_version": "R11",
+  "created_date": "2026-11-23",
+  "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+  "city_registration_verified": false,
+  "city_registration": {
+    "verified": false,
+    "geographic_crs": null,
+    "city_control_points": [],
+    "adopted_city_transform": null,
+    "candidate_binding_status": "另由R11母图登记记录；此文件仅保存源图事实矢量。",
+    "limits": [
+      "塔座图示中心若绑定06a塔符只是一点候选锚接，不是考古测绘公共控制。",
+      "北针是来源图标北，其与地理真北的外部对应未核验。",
+      "不以局部院界拟合/覆盖06a图示墙段，不更改原始坐标或既有基线。"
+    ]
+  },
+  "source_refs": [
+    {
+      "id": "DPM2025-HK-P61-F2R",
+      "source_role": "1996年考古发掘报告总平面的官方期刊重刊",
+      "author": "杭侃",
+      "article_title": "《洛阳伽蓝记》慧嶷故事四论",
+      "journal": "故宫博物院院刊",
+      "publication_year": 2025,
+      "issue": 11,
+      "cumulative_issue": 283,
+      "article_printed_pages": [
+        53,
+        67
+      ],
+      "hosting_institution": "故宫博物院",
+      "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+      "url_upload_path_date": "2026-03-03",
+      "pdf_page_count": 15,
+      "pdf_page_one_based": 9,
+      "printed_page": "061",
+      "figure": "图二右图",
+      "figure_label": "洛阳永宁寺遗址平面图",
+      "pdf_sha256": "2309c0444a7500fb3a461a67834c549423456eddf7ed2289afbe4c512d11b84e",
+      "pdf_bytes": 9784754,
+      "actually_read": "完整PDF第9页及内嵌右图原生像素；不是只读搜索摘要",
+      "cited_original_report": {
+        "author_institution": "中国社会科学院考古研究所",
+        "normalized_title": "北魏洛阳永宁寺——1979—1994年考古发掘报告",
+        "publisher": "中国大百科全书出版社",
+        "year": 1996,
+        "cited_page": 7,
+        "original_page_independently_obtained": false,
+        "original_figure_number_verified": false,
+        "caption_title_as_printed": "北魏洛阳永宁寺1979-1984年考古发掘报告",
+        "caption_note": "重刊图注把报告年代写为1979—1984；与1996报告规范书名1979—1994有别，保留此误记而不据此制造另一份报告。",
+        "title_crosscheck": {
+          "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/7827/1/BB30077989_139_152.pdf",
+          "author": "郭大顺",
+          "title": "朝阳北塔在东亚佛寺布局演变序列中的地位",
+          "printed_pages": [
+            144,
+            145
+          ],
+          "note": "注6列1996年正式报告书名为1979—1994年。"
+        }
+      },
+      "excluded_adjacent_figure": "同页图二左图为立塔为寺模式图，来自傅熹年主编《中国古代建筑史》第二卷p189；不作为永宁寺实物轮廓输入。"
+    }
+  ],
+  "source_raster": {
+    "width_px": 1203,
+    "height_px": 1077,
+    "sha256": "6034fac15441821e9e859573f9fbc4af3299efa533bc888af23db5dd83d87bc8",
+    "bytes": 116054,
+    "extraction": "PyMuPDF Document.extract_image(xref=139) from PDF file page9; embedded image1203×1077; no resizing or rotation before point selection",
+    "pdf_image_xref": 139,
+    "repository_image_copy_saved": false,
+    "copyright_handling": "仓库只保存人工提取的事实坐标、图号与校核元数据；整张原图未进入仓库。",
+    "pixel_axes": {
+      "origin": "原生图左上角",
+      "x": "向右",
+      "y": "向下"
+    }
+  },
+  "calibration": {
+    "scale_bar": {
+      "start_px": [
+        964,
+        1058
+      ],
+      "end_px": [
+        1121,
+        1058
+      ],
+      "length_m": 50,
+      "endpoint_tolerance_px": 2,
+      "interpretation": "0至50米水平图尺的端点；全图使用同一等比尺度。"
+    },
+    "north_arrow": {
+      "tail_px": [
+        36,
+        177
+      ],
+      "tip_px": [
+        21,
+        55
+      ],
+      "endpoint_tolerance_px": 2,
+      "interpretation": "原图左上角标北线；源图方位读数不等于已核验的地理真北。"
+    },
+    "local_origin_px": [
+      671.5,
+      586.5
+    ],
+    "local_origin_definition": "木塔基座主体外框包围盒中心；不计四侧凸出部分；仅为计算局部原点。",
+    "local_origin_trace_tolerance_px": 2,
+    "use_anisotropic_scaling": false,
+    "fit_to_tabulated_dimensions": false
+  },
+  "source_legend": {
+    "reference": "图二右下角图例",
+    "filled_symbol": "发掘柱础、砧石、础痕",
+    "open_symbol": "复原柱础、砧石、础痕",
+    "applies_to": "柱础、砧石、础痕等点状符号；不是所有墙线/基址边界的测绘分类",
+    "individual_point_symbols_traced": false
+  },
+  "phase": {
+    "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+    "historical_site_use_years_ce": [
+      516,
+      534
+    ],
+    "project_target_years_ce": [
+      516,
+      528
+    ],
+    "target_phase_independently_verified": false,
+    "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+  },
+  "components": [
+    {
+      "id": "YN11-WALL-N",
+      "component_id": "YN11-WALL-N",
+      "label": "北寺墙图示段",
+      "type": "wall",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          313,
+          54
+        ],
+        [
+          982,
+          49
+        ]
+      ],
+      "source_px": [
+        [
+          313,
+          54
+        ],
+        [
+          982,
+          49
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_wall_centerline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线（原图断续双线的中线；不推定实测/复原分类）",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "本图北墙没有可辨北门基址；不得自动切出或绘制北门。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-WALL-W-N",
+      "component_id": "YN11-WALL-W-N",
+      "label": "西寺墙北段",
+      "type": "wall",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          313,
+          54
+        ],
+        [
+          319,
+          554
+        ]
+      ],
+      "source_px": [
+        [
+          313,
+          54
+        ],
+        [
+          319,
+          554
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_wall_centerline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线（原图断续双线的中线；不推定实测/复原分类）",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-WALL-W-S",
+      "component_id": "YN11-WALL-W-S",
+      "label": "西寺墙南段",
+      "type": "wall",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          321,
+          636
+        ],
+        [
+          324,
+          937
+        ]
+      ],
+      "source_px": [
+        [
+          321,
+          636
+        ],
+        [
+          324,
+          937
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_wall_centerline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线（原图断续双线的中线；不推定实测/复原分类）",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-WALL-E-N",
+      "component_id": "YN11-WALL-E-N",
+      "label": "东寺墙北段",
+      "type": "wall",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          982,
+          49
+        ],
+        [
+          984,
+          519
+        ]
+      ],
+      "source_px": [
+        [
+          982,
+          49
+        ],
+        [
+          984,
+          519
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_wall_centerline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线（原图断续双线的中线；不推定实测/复原分类）",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "东门文字及标位使图线中断；中断长度不是测得的门宽。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-WALL-E-S",
+      "component_id": "YN11-WALL-E-S",
+      "label": "东寺墙南段",
+      "type": "wall",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          984,
+          639
+        ],
+        [
+          985,
+          981
+        ]
+      ],
+      "source_px": [
+        [
+          984,
+          639
+        ],
+        [
+          985,
+          981
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_wall_centerline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线（原图断续双线的中线；不推定实测/复原分类）",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "东门文字及标位使图线中断；中断长度不是测得的门宽。",
+        "原图该墙线比南墙交点略向南伸出；按图保留，不据此增造建筑。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-WALL-S-W",
+      "component_id": "YN11-WALL-S-W",
+      "label": "南寺墙西段",
+      "type": "wall",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          341,
+          968
+        ],
+        [
+          603,
+          966
+        ]
+      ],
+      "source_px": [
+        [
+          341,
+          968
+        ],
+        [
+          603,
+          966
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_wall_centerline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线（原图断续双线的中线；不推定实测/复原分类）",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "不跨接南门基址。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-WALL-S-E",
+      "component_id": "YN11-WALL-S-E",
+      "label": "南寺墙东段",
+      "type": "wall",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          747,
+          966
+        ],
+        [
+          984,
+          966
+        ]
+      ],
+      "source_px": [
+        [
+          747,
+          966
+        ],
+        [
+          984,
+          966
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_wall_centerline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线（原图断续双线的中线；不推定实测/复原分类）",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "不跨接南门基址。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-TOWER-FOUNDATION",
+      "component_id": "YN11-TOWER-FOUNDATION",
+      "label": "木塔地基图示范围",
+      "type": "foundation",
+      "geometry_type": "Polygon",
+      "coordinates_px": [
+        [
+          510,
+          439
+        ],
+        [
+          828,
+          435
+        ],
+        [
+          833,
+          734
+        ],
+        [
+          514,
+          738
+        ],
+        [
+          510,
+          439
+        ]
+      ],
+      "source_px": [
+        [
+          510,
+          439
+        ],
+        [
+          828,
+          435
+        ],
+        [
+          833,
+          734
+        ],
+        [
+          514,
+          738
+        ],
+        [
+          510,
+          439
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_foundation_outline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线闭合框",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "图中原标签为木塔地基；不把大方框当成塔身、塔檐或完整塔院。",
+        "原图为点划线框；此图没有解释其边界测绘分类。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-TOWER-PLINTH",
+      "component_id": "YN11-TOWER-PLINTH",
+      "label": "木塔基座主体图示轮廓",
+      "type": "plinth",
+      "geometry_type": "Polygon",
+      "coordinates_px": [
+        [
+          610,
+          526
+        ],
+        [
+          732,
+          525
+        ],
+        [
+          733,
+          647
+        ],
+        [
+          610,
+          648
+        ],
+        [
+          610,
+          526
+        ]
+      ],
+      "source_px": [
+        [
+          610,
+          526
+        ],
+        [
+          732,
+          525
+        ],
+        [
+          733,
+          647
+        ],
+        [
+          610,
+          648
+        ],
+        [
+          610,
+          526
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_plinth_outline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "主体外框实线；框内发掘/复原点状符号混合但本轮未逐点提取",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只描基座主体外框；不把内部发掘/复原柱础自动连成上部建筑、墙体或每层塔身。",
+        "局部原点取主体外框包围盒图示中心；不是现场测量点。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-TOWER-ACCESS-N",
+      "component_id": "YN11-TOWER-ACCESS-N",
+      "label": "塔基座北侧凸出部分",
+      "type": "plinth_access",
+      "geometry_type": "Polygon",
+      "coordinates_px": [
+        [
+          665,
+          525
+        ],
+        [
+          665,
+          513
+        ],
+        [
+          678,
+          513
+        ],
+        [
+          678,
+          525
+        ],
+        [
+          665,
+          525
+        ]
+      ],
+      "source_px": [
+        [
+          665,
+          525
+        ],
+        [
+          665,
+          513
+        ],
+        [
+          678,
+          513
+        ],
+        [
+          678,
+          525
+        ],
+        [
+          665,
+          525
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_plinth_projection",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "刊载图示线；未推定遗迹实测/复原分类",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "图示凸出部分按平面保留；未推定踏步级数、坡度、栏杆或上部形式。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-TOWER-ACCESS-E",
+      "component_id": "YN11-TOWER-ACCESS-E",
+      "label": "塔基座东侧凸出部分",
+      "type": "plinth_access",
+      "geometry_type": "Polygon",
+      "coordinates_px": [
+        [
+          733,
+          580
+        ],
+        [
+          751,
+          579
+        ],
+        [
+          758,
+          582
+        ],
+        [
+          758,
+          592
+        ],
+        [
+          733,
+          593
+        ],
+        [
+          733,
+          580
+        ]
+      ],
+      "source_px": [
+        [
+          733,
+          580
+        ],
+        [
+          751,
+          579
+        ],
+        [
+          758,
+          582
+        ],
+        [
+          758,
+          592
+        ],
+        [
+          733,
+          593
+        ],
+        [
+          733,
+          580
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_plinth_projection",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "刊载图示线；未推定遗迹实测/复原分类",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "图示凸出部分按平面保留；未推定踏步级数、坡度、栏杆或上部形式。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-TOWER-ACCESS-S",
+      "component_id": "YN11-TOWER-ACCESS-S",
+      "label": "塔基座南侧凸出部分",
+      "type": "plinth_access",
+      "geometry_type": "Polygon",
+      "coordinates_px": [
+        [
+          670,
+          648
+        ],
+        [
+          682,
+          648
+        ],
+        [
+          682,
+          660
+        ],
+        [
+          670,
+          660
+        ],
+        [
+          670,
+          648
+        ]
+      ],
+      "source_px": [
+        [
+          670,
+          648
+        ],
+        [
+          682,
+          648
+        ],
+        [
+          682,
+          660
+        ],
+        [
+          670,
+          660
+        ],
+        [
+          670,
+          648
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_plinth_projection",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "刊载图示线；未推定遗迹实测/复原分类",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "图示凸出部分按平面保留；未推定踏步级数、坡度、栏杆或上部形式。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-TOWER-ACCESS-W",
+      "component_id": "YN11-TOWER-ACCESS-W",
+      "label": "塔基座西侧凸出部分",
+      "type": "plinth_access",
+      "geometry_type": "Polygon",
+      "coordinates_px": [
+        [
+          610,
+          582
+        ],
+        [
+          599,
+          582
+        ],
+        [
+          599,
+          594
+        ],
+        [
+          610,
+          594
+        ],
+        [
+          610,
+          582
+        ]
+      ],
+      "source_px": [
+        [
+          610,
+          582
+        ],
+        [
+          599,
+          582
+        ],
+        [
+          599,
+          594
+        ],
+        [
+          610,
+          594
+        ],
+        [
+          610,
+          582
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_plinth_projection",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "刊载图示线；未推定遗迹实测/复原分类",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "图示凸出部分按平面保留；未推定踏步级数、坡度、栏杆或上部形式。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-BUDDHA-HALL",
+      "component_id": "YN11-BUDDHA-HALL",
+      "label": "佛殿基址图示框",
+      "type": "building_site",
+      "geometry_type": "Polygon",
+      "coordinates_px": [
+        [
+          584,
+          259
+        ],
+        [
+          753,
+          258
+        ],
+        [
+          755,
+          336
+        ],
+        [
+          584,
+          338
+        ],
+        [
+          584,
+          259
+        ]
+      ],
+      "source_px": [
+        [
+          584,
+          259
+        ],
+        [
+          753,
+          258
+        ],
+        [
+          755,
+          336
+        ],
+        [
+          584,
+          338
+        ],
+        [
+          584,
+          259
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_site_box",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "刊载图中的闭合矩形图示框",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只接受此刊载图标为佛殿基址的方框；不是新取得的佛殿完整发掘平面。",
+        "不得套用太极殿尺寸、柱网、廊庑或屋顶形式。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-GATE-S",
+      "component_id": "YN11-GATE-S",
+      "label": "南门基址图示轮廓",
+      "type": "gate_foundation",
+      "geometry_type": "Polygon",
+      "coordinates_px": [
+        [
+          603,
+          937
+        ],
+        [
+          747,
+          935
+        ],
+        [
+          746,
+          995
+        ],
+        [
+          603,
+          996
+        ],
+        [
+          603,
+          937
+        ]
+      ],
+      "source_px": [
+        [
+          603,
+          937
+        ],
+        [
+          747,
+          935
+        ],
+        [
+          746,
+          995
+        ],
+        [
+          603,
+          996
+        ],
+        [
+          603,
+          937
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_gate_foundation_outline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "实线/虚线混合闭合边界，内部发掘与复原柱础等符号混合",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "基址外框含实线和虚线段；未把每段判为同等实测精度。",
+        "只追摹基址边界，未从柱点推断门道数，也未引入三重楼观的立面。",
+        "长边可确定为图内大体东西方向；来源北针未外部注册，不能称测地真方位。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-GATE-W",
+      "component_id": "YN11-GATE-W",
+      "label": "西门基址图示轮廓",
+      "type": "gate_foundation",
+      "geometry_type": "Polygon",
+      "coordinates_px": [
+        [
+          314,
+          555
+        ],
+        [
+          338,
+          555
+        ],
+        [
+          338,
+          547
+        ],
+        [
+          371,
+          546
+        ],
+        [
+          371,
+          640
+        ],
+        [
+          338,
+          639
+        ],
+        [
+          338,
+          632
+        ],
+        [
+          314,
+          632
+        ],
+        [
+          314,
+          555
+        ]
+      ],
+      "source_px": [
+        [
+          314,
+          555
+        ],
+        [
+          338,
+          555
+        ],
+        [
+          338,
+          547
+        ],
+        [
+          371,
+          546
+        ],
+        [
+          371,
+          640
+        ],
+        [
+          338,
+          639
+        ],
+        [
+          338,
+          632
+        ],
+        [
+          314,
+          632
+        ],
+        [
+          314,
+          555
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_gate_foundation_outline",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "实线/虚线混合，东缘及部分南北缘为虚线",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "不把该轮廓等同于完整西门上部建筑。",
+        "实线/虚线混合，图例未独立解释门基边界分类。",
+        "奈良1995文字报告的西门地业及18.4 m东西长可作对读，不按其文字尺寸拉伸本图。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R",
+        "NARA1995-YN-TEXT"
+      ]
+    },
+    {
+      "id": "YN11-GATE-E-MARK",
+      "component_id": "YN11-GATE-E-MARK",
+      "label": "东门图示标位",
+      "type": "gate_marker",
+      "geometry_type": "Point",
+      "coordinates_px": [
+        984,
+        625
+      ],
+      "source_px": [
+        984,
+        625
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_symbol_location",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "刊载图示线；未推定遗迹实测/复原分类",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只记录东门字样下的图示小符号位置；不得把符号长宽当完整东门基址或门道净宽。",
+        "相邻寺墙图线中断包含文字覆盖区，其长度不得转换为门宽。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-CORNER-SW",
+      "component_id": "YN11-CORNER-SW",
+      "label": "西南角楼图示可辨边线",
+      "type": "corner_structure",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          324,
+          938
+        ],
+        [
+          324,
+          989
+        ],
+        [
+          342,
+          989
+        ],
+        [
+          341,
+          941
+        ],
+        [
+          331,
+          939
+        ]
+      ],
+      "source_px": [
+        [
+          324,
+          938
+        ],
+        [
+          324,
+          989
+        ],
+        [
+          342,
+          989
+        ],
+        [
+          341,
+          941
+        ],
+        [
+          331,
+          939
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_partial_boundary",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线/虚线混合的可辨开放边界",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "原图标有角楼；只保留可辨的开放边线，不闭合上缘局部不明部分。",
+        "不能由一个图示角楼推定其他三个角均存在同样建筑。"
+      ],
+      "entity_ids": [
+        "ic_yongning"
+      ],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-ROAD-JINYANG-W",
+      "component_id": "YN11-ROAD-JINYANG-W",
+      "label": "津阳门大道西侧图示线",
+      "type": "road_edge",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          72,
+          27
+        ],
+        [
+          81,
+          1036
+        ]
+      ],
+      "source_px": [
+        [
+          72,
+          27
+        ],
+        [
+          81,
+          1036
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_road_edge",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只在来源图裁切范围内保留图示线；不封闭图外边界，不延长到城门。",
+        "图中道路标名不等于已证明与城市总图某条道路全线重合。"
+      ],
+      "entity_ids": [],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-ROAD-JINYANG-E",
+      "component_id": "YN11-ROAD-JINYANG-E",
+      "label": "津阳门大道东侧图示线",
+      "type": "road_edge",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          194,
+          25
+        ],
+        [
+          209,
+          1035
+        ]
+      ],
+      "source_px": [
+        [
+          194,
+          25
+        ],
+        [
+          209,
+          1035
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_road_edge",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只在来源图裁切范围内保留图示线；不封闭图外边界，不延长到城门。",
+        "图中道路标名不等于已证明与城市总图某条道路全线重合。",
+        "本图内的津阳门大道不与项目road_jinyang（津阳门外御道）直接合并为同一段。"
+      ],
+      "entity_ids": [],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-DITCH-E-W",
+      "component_id": "YN11-DITCH-E-W",
+      "label": "寺东水沟西侧图示线",
+      "type": "watercourse_edge",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          1098,
+          17
+        ],
+        [
+          1101,
+          1034
+        ]
+      ],
+      "source_px": [
+        [
+          1098,
+          17
+        ],
+        [
+          1101,
+          1034
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_watercourse_edge",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "双点划线的西线",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "图中标水沟，只保留双线中这一侧；未证明与东阳渠、阳渠或其他城内水系的全程连接。",
+        "像素间距仅为图示线间距，不能自动认定沟槽实测净宽。"
+      ],
+      "entity_ids": [],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-DITCH-E-E",
+      "component_id": "YN11-DITCH-E-E",
+      "label": "寺东水沟东侧图示线",
+      "type": "watercourse_edge",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          1104,
+          17
+        ],
+        [
+          1107,
+          1034
+        ]
+      ],
+      "source_px": [
+        [
+          1104,
+          17
+        ],
+        [
+          1107,
+          1034
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_watercourse_edge",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "双点划线的东线",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "图中标水沟，只保留双线中这一侧；未证明与东阳渠、阳渠或其他城内水系的全程连接。",
+        "像素间距仅为图示线间距，不能自动认定沟槽实测净宽。"
+      ],
+      "entity_ids": [],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    },
+    {
+      "id": "YN11-ROAD-LANE-E",
+      "component_id": "YN11-ROAD-LANE-E",
+      "label": "寺东坊间路东侧图示线",
+      "type": "road_edge",
+      "geometry_type": "LineString",
+      "coordinates_px": [
+        [
+          1136,
+          17
+        ],
+        [
+          1139,
+          1034
+        ]
+      ],
+      "source_px": [
+        [
+          1136,
+          17
+        ],
+        [
+          1139,
+          1034
+        ]
+      ],
+      "coordinate_space": "yongning-dpm2025-fig2-right-native-px",
+      "evidence_status": "published_plan_trace",
+      "geometry_role": "published_road_edge",
+      "source_legend": {
+        "symbol_legend_ref": "source_legend",
+        "outline_line_style": "点划线",
+        "all_boundaries_excavated": false
+      },
+      "trace_uncertainty_px": 2,
+      "phase": {
+        "source_phase": "北魏永宁寺遗址；此图未分绘营建阶段",
+        "historical_site_use_years_ce": [
+          516,
+          534
+        ],
+        "project_target_years_ce": [
+          516,
+          528
+        ],
+        "target_phase_independently_verified": false,
+        "note": "遗址使用期与项目盛时综合范围相交；不可把刊载图中每条线确认为516—528某一年的同层遗迹。"
+      },
+      "limits": [
+        "只在来源图裁切范围内保留图示线；不封闭图外边界，不延长到城门。",
+        "图中道路标名不等于已证明与城市总图某条道路全线重合。",
+        "坊间路文字位于水沟双线以东、此单线以西；未另补图中没有的道路西缘。"
+      ],
+      "entity_ids": [],
+      "source_refs": [
+        "DPM2025-HK-P61-F2R"
+      ]
+    }
+  ],
+  "measurements": {
+    "pixel_to_m_equal_scale": 0.3184713375796178,
+    "scale_endpoint_length_px": 157,
+    "scale_endpoint_tolerance_px_each": 2,
+    "conservative_equal_scale_interval_m_per_px": [
+      0.3105590062111801,
+      0.32679738562091504
+    ],
+    "north_arrow_vector_px": [
+      -15,
+      -122
+    ],
+    "source_north_arrow_angle_deg_west_of_page_up": 7.009384256621249,
+    "tower_plinth_bbox_source_axes_m": [
+      39.17197452229299,
+      39.17197452229299
+    ],
+    "south_gate_bbox_source_axes_m": [
+      45.859872611464965,
+      19.426751592356688
+    ],
+    "south_gate_mean_opposite_edge_lengths_m": [
+      45.70340520380707,
+      18.950371457756365
+    ],
+    "temple_wall_corner_reference_px": {
+      "NW": [
+        313,
+        54
+      ],
+      "NE": [
+        982,
+        49
+      ],
+      "SW": [
+        324,
+        968
+      ],
+      "SE": [
+        984,
+        966
+      ]
+    },
+    "temple_wall_width_mean_m": 211.62766156672689,
+    "temple_wall_depth_mean_m": 291.5713966856655,
+    "comparisons": [
+      {
+        "baseline": "research/prosperity-v1/building-dimensions.json M06",
+        "baseline_m": [
+          45.5,
+          19.1
+        ],
+        "reading": "南门图读约45.7×19.0 m，与既有表值在图读精度内接近。图中长边大体东西，补充旧axis_assignment_from_table=null的图示方向证据。",
+        "baseline_modified": false
+      },
+      {
+        "baseline": "UNESCO1442 PDF1931/附录6 永宁寺院界表值",
+        "baseline_m": [
+          212,
+          301
+        ],
+        "reading": "本图等比读得寺墙东西平均约212m、南北约292m；边界口径、图像重刊或原资料差别未解，不作XY分别拉伸。",
+        "baseline_modified": false
+      }
+    ],
+    "quantities_are": "刊载图等比例像素读数；不是现场复测值、测地坐标或统计置信区间。",
+    "rounding_for_display": "图读长度一般只显示到整米或约数；内部浮点仅用于可复算。",
+    "west_gate_source_outline_m": {
+      "east_side": 29.936305732484076,
+      "west_side": 24.522292993630572,
+      "max_east_west": 18.152866242038215
+    },
+    "south_gate_long_edge_azimuth_deg_from_source_marked_north": 96.21366070388198,
+    "source_orientation_note": "约96.2°是相对本图所标北针的平面读数，不能称地理真方位；宜对外表述为长边近东西向。"
+  },
+  "untraced_or_unresolved": [
+    "北门：原图没有可辨基址，文献四面门不自动转成北墙开口。",
+    "塔柱础/砧石/础痕：图中混合发掘和复原点，本轮只存其分类说明，不逐点生成柱网。",
+    "僧房/廊房：本图没有完整可描的院内僧房建筑轮廓；不得从左侧模式图复制。",
+    "佛殿的完整发掘基础、上部规模和柱网：仍未取得可验证原页。",
+    "东门基址外形：只记录标位，不用符号尺寸补画完整东门。",
+    "院内普通道路、四门连接路、四面廊庑：没有可辨图线，不作补画。",
+    "寺东水沟与其他水系、津阳门大道与城外御道的连续对应：未作认定。"
+  ],
+  "validation": {
+    "manual_visual_review": true,
+    "raster_extraction_hash_checked": true,
+    "all_geometry_px_within_source_bounds": true,
+    "polygons_closed_only_where_published_boundary_is_readable": true,
+    "line_only_objects_not_filled": true,
+    "no_image_generation_or_raster_reconstruction": true
+  },
+  "supporting_source_refs": [
+    {
+      "id": "NARA1995-YN-TEXT",
+      "source_role": "中日联合调查参与者发表的原始调查说明；仅取得文字，图版留白",
+      "author": [
+        "玉田芳英",
+        "次山淳"
+      ],
+      "title": "北魏洛陽城永寧寺址の調査",
+      "publication": "奈良国立文化財研究所年報1995",
+      "printed_pages": [
+        2,
+        3
+      ],
+      "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/5227/1/AN00181387_1995_2_3.pdf",
+      "pdf_sha256": "f3af52c2676f72116102507d8459d923d488989d8d070f8752771c2fe6ea5189",
+      "actually_read": "PDF共2页，正文和图题可读；下方西门遗构平面图位置及次页图版实际留白。未声称获得西门原图。",
+      "reported_dimensions_m": {
+        "west_gate_east_side_approx": 30,
+        "west_gate_west_side_approx": 24,
+        "west_gate_east_west": 18.4,
+        "enclosure_1963_coring_east_west": 215,
+        "enclosure_1963_coring_north_south": 305
+      },
+      "use_limits": [
+        "与1996报告属于同一考古项目资料的对读，不计作独立发掘见证。",
+        "1963勘探院界215×305 m不用于拉伸当前刊载平面。",
+        "三门道及柱网是该报告推定，此轮没有据此新增柱点/门道几何。"
+      ]
+    }
+  ]
+}

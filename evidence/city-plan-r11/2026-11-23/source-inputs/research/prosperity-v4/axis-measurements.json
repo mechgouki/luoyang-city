@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0.0",
+  "version": "prosperity-axis-p4-metric-review",
+  "study_date": "2026-11-16",
+  "title": "盛时洛阳 P4：宫城三门分段量距、道路与太极殿遗址分期审阅",
+  "scope": "同一考古研究项目报告的相对量距和残存基址尺度比较；不是原始全城测量控制点，也不是516—528某单年同层完整复原",
+  "input_provenance": "文献与机构公开PDF内容已核；公开图版供读者打开核对。未获取原发掘DWG或独立公共控制点。",
+  "sources": [
+    {
+      "id": "QIAN2012",
+      "kind": "archaeologist_report_in_open_conference_pdf",
+      "author": "钱国祥",
+      "title": "汉魏洛阳故城北魏宫城中枢区南部的合作勘察",
+      "date": "2012-10",
+      "locator": "中文正文印刷第28—30页，二号、三号宫门段",
+      "url": "https://www.kuba.co.jp/nabunken1020/img/nabunken20121020.pdf",
+      "note": "中日合作考古报告会议公开版本；日文译稿及后续摘要可能同源，不计作独立测量"
+    },
+    {
+      "id": "NARA2013",
+      "kind": "institutional_excavation_summary_with_original_figure",
+      "author": "今井晃樹",
+      "title": "漢魏洛陽城―北魏宮城西南隅の調査成果―",
+      "date": "2013",
+      "locator": "奈文研紀要 2013 第52页 图69 北魏宮城の構造と調査地",
+      "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/6157/1/BA67898227_2013_052_053.pdf#page=1",
+      "note": "原刊图69显示城墙、宫门、太极殿相对格局及0—200m标尺，属研究说明图；不从缩略截图量读城市坐标；图示另见'1号门'标签，须核释"
+    },
+    {
+      "id": "XU2020",
+      "kind": "archaeological_research_review",
+      "author": "徐龙国",
+      "title": "两汉魏晋南北朝都城建筑的发展演变",
+      "date": "2020",
+      "locator": "《中原文物》2020年第3期，太极殿建筑组描述与图三",
+      "url": "https://hrczh.cass.cn/sxqy/kgx/202502/W020250228392257504164.pdf",
+      "note": "汇编既有太极殿考古发现，非本站独立测绘；图三有太极殿及东堂平面"
+    },
+    {
+      "id": "LUOYANG2024",
+      "kind": "archaeological_institution_public_report",
+      "author": "洛阳市考古研究院",
+      "title": "汉魏洛阳城宫城太极殿遗址",
+      "date": "2024-03-08",
+      "locator": "太极殿遗址位置及宫院描述",
+      "url": "https://lykgyjy.museumcloud.com.cn/xueshu/739.html",
+      "note": "报道阊阖门至太极殿约460m，未交代两端具体量测基点；不强行与分段累计475m作同一测线"
+    },
+    {
+      "id": "HENAN2017",
+      "kind": "provincial_institute_excavation_roundup",
+      "author": "河南省文物考古研究院网站",
+      "title": "2017年度汉魏洛阳城宫城太极殿宫院的考古发掘与收获",
+      "date": "2018",
+      "locator": "东北角院落、北廊庑和西侧宫门段",
+      "url": "https://www.hnswwkgyjy.cn/NewsView.php?News_ID=583",
+      "note": "东北角院落东—西96m、南北残27m；夹道4.7m，不是完整太极殿宫院总体尺寸"
+    },
+    {
+      "id": "UNESCO-S37",
+      "kind": "source_excavation_drawing",
+      "author": "联合国教科文组织申遗资料附件",
+      "title": "汉魏洛阳故城阊阖门平剖图",
+      "date": "2012",
+      "locator": "1442.pdf 文件第1962页附录37",
+      "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962",
+      "note": "P3已提取原生555×434 JPEG，读数不以新分段累计反调"
+    }
+  ],
+  "axis_segments": [
+    {
+      "id": "s1",
+      "from": "阊阖门",
+      "to": "二号宫门",
+      "length_m": 95,
+      "qualifier": "报道正北约95米；量测基点未标明",
+      "source_ids": [
+        "QIAN2012"
+      ],
+      "measured_absolute_coordinates": false
+    },
+    {
+      "id": "s2",
+      "from": "二号宫门",
+      "to": "三号宫门",
+      "length_m": 80,
+      "qualifier": "报道正北约80米；量测基点未标明",
+      "source_ids": [
+        "QIAN2012"
+      ],
+      "measured_absolute_coordinates": false
+    },
+    {
+      "id": "s3",
+      "from": "三号宫门",
+      "to": "太极殿",
+      "length_m": 300,
+      "qualifier": "报道太极殿正南约300米；量测基点未标明",
+      "source_ids": [
+        "QIAN2012"
+      ],
+      "measured_absolute_coordinates": false
+    }
+  ],
+  "chain_sum_m": 475,
+  "independent_report": {
+    "from": "阊阖门",
+    "to": "太极殿",
+    "distance_m": 460,
+    "approx": true,
+    "source_ids": [
+      "LUOYANG2024"
+    ],
+    "same_reference_points_verified": false
+  },
+  "comparison_difference_m": 15,
+  "comparison_status": "unspecified_reference_points_and_rounding; not a demonstrated archaeological contradiction",
+  "second_gate": {
+    "label": "二号宫门（研究者对应：止车门）",
+    "source_ids": [
+      "QIAN2012"
+    ],
+    "foundation_ew_m": 44.5,
+    "foundation_ns_m": 24,
+    "foundation_size_approx": true,
+    "passage_count": 3,
+    "paired_que": false,
+    "subsidiary_building_ns_m_approx": 16,
+    "subsidiary_offset_south_m": 5,
+    "subsidiary_offset_north_m": 3,
+    "ew_road_south_distance_report_m": 23,
+    "ew_road_north_distance_report_m": 40,
+    "ew_road_width_m_approx": 10,
+    "north_south_paved_road_width_m": [
+      7.9,
+      8.1
+    ],
+    "cart_rut_separation_m_approx": 1.2,
+    "road_reference_point_verified": false,
+    "interpretation": "道路宽度和距门远近有报道；23/40m不得未经核对变成以门址中心量取的精确道路边界",
+    "history": [
+      "魏晋始建",
+      "北魏修补沿用",
+      "北朝晚期略有改造"
+    ]
+  },
+  "third_gate": {
+    "label": "三号宫门（研究者对应：端门）",
+    "source_ids": [
+      "QIAN2012"
+    ],
+    "early": {
+      "period": "魏晋至北魏早期遗存（分期范围）",
+      "kind": "surviving_not_original_full_footprint",
+      "surviving_ew_m_approx": 40,
+      "surviving_ns_m_approx": 10,
+      "remarks": "早期基址仅南部残存；北部被中期夯土破坏，不将40×10当作原完整门基"
+    },
+    "middle": {
+      "period": "北魏晚期或以后（待核）",
+      "kind": "later_disturbance_ram_earth",
+      "ew_m_approx": 55,
+      "ns_m_approx": 45,
+      "remarks": "中期大型夯土包含北魏时期瓦片；不能仅凭包含物断言夯筑确在516—528年"
+    },
+    "late": {
+      "period": "北朝晚期／北周（报告判断）",
+      "kind": "later_column_grid_on_remnant",
+      "surviving_ew_m_approx": 40,
+      "surviving_ns_m_approx": 10,
+      "columns_east_west_rows": 14,
+      "remarks": "柱网布置于早期残存南半部，非同一时相的早期原始构造"
+    }
+  },
+  "taiji": {
+    "label": "太极殿与太极东堂",
+    "source_ids": [
+      "XU2020",
+      "LUOYANG2024"
+    ],
+    "main_hall": {
+      "north_width_m": 102.3,
+      "south_width_m": 98.4,
+      "ns_depth_m_reported": [
+        59,
+        61.5
+      ],
+      "shape_kind": "excavated_platform_outline_simplified_to_dimensioned_trapezoid",
+      "original_building_height_m": null
+    },
+    "east_hall": {
+      "ew_m": 48,
+      "ns_m": 23,
+      "reported_gap_from_main_east_m": 14,
+      "relative_ns_alignment_verified": false
+    },
+    "west_hall": {
+      "exists_recorded": true,
+      "footprint_measured_in_this_batch": false,
+      "geometry": null
+    },
+    "note": "东、西堂与主殿东西并列有研究证据；仅在本轮采用有公布数字的主殿和东堂，不能复制东堂尺寸生成西堂"
+  },
+  "northeast_court": {
+    "east_west_m": 96,
+    "north_south_surviving_m": 27,
+    "alley_width_m": 4.7,
+    "source_ids": [
+      "HENAN2017"
+    ],
+    "full_court_outline_verified": false
+  },
+  "original_figures": [
+    {
+      "id": "FIG-NARA-69",
+      "source_id": "NARA2013",
+      "label": "奈文研 2013 图69：北魏宫城结构和调查地",
+      "fig_kind": "published_interpretative_plan",
+      "figure_number": "图69",
+      "image_bytes_embedded": false,
+      "scale_bar_m": 200,
+      "registration_approved": false,
+      "unresolved_figure_label": "1号门与阊阖门同时标注：是否属于同一考古编号或另有参照，待结合原报告核对"
+    },
+    {
+      "id": "FIG-XU-3",
+      "source_id": "XU2020",
+      "label": "徐龙国图三：汉魏洛阳城太极殿、东堂遗址平面",
+      "fig_kind": "article_figure",
+      "image_bytes_embedded": false,
+      "registration_approved": false
+    },
+    {
+      "id": "FIG-UNESCO-S37",
+      "source_id": "UNESCO-S37",
+      "label": "阊阖门平剖原图",
+      "fig_kind": "archaeological_plan_excerpt",
+      "image_bytes_embedded": true,
+      "embedded_in_prior_p3": true,
+      "registration_approved": false
+    }
+  ],
+  "temporal_warning": "本文采多期考古遗存。不得合并魏晋—北魏早期残部、北魏晚期或之后夯土与北周柱网为一座516—528年完整宫门。",
+  "source_independence_note": "QIAN2012中文稿、同作者的日文译稿、后续概述与《考古》原发掘简报在同一考古来源链，不按文献条数重复计为独立测量。",
+  "registration": {
+    "verified_common_controls": 0,
+    "local_to_city_verified": false,
+    "absolute_points_added": 0,
+    "ancient_ground_surface_confirmed": false,
+    "roof_heights_confirmed": false
+  }
+}

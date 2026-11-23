@@ -1,0 +1,1363 @@
+{
+  "version": "dual-southeast-outer-b6",
+  "base_commit": "6e9d817fac023a70c2d5d8be237c1d245f3f4880",
+  "scope": "R09东阳、青／清阳门外诸里；门道、里属、宅寺时层和晚塔。既有R08门内专题由另一证据集负责，不扩建春门外或实测外郭。",
+  "region": {
+    "id": "L09",
+    "source_region": "R09",
+    "name": "东阳、青／清阳门外诸里",
+    "bbox": [
+      7700,
+      4050,
+      4200,
+      2700
+    ],
+    "bbox_meaning": "沿用R09文献示意画布x、y、width、height；不是古址经纬度、实测坊界或完整外郭范围。"
+  },
+  "sources": [
+    {
+      "id": "Z1",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷1·周祖谟电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/1",
+      "checked": "2026-11-13",
+      "basis": "直接核读CBETA电子正文及所标校语；原文、整理者校读与本项目判断分开。未核古刻书影、碑拓或独立考古材料；两种现代整理属于同一古籍来源家族。"
+    },
+    {
+      "id": "F1",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷1·范祥雍电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/1",
+      "checked": "2026-11-13",
+      "basis": "直接核读CBETA电子正文及所标校语；原文、整理者校读与本项目判断分开。未核古刻书影、碑拓或独立考古材料；两种现代整理属于同一古籍来源家族。"
+    },
+    {
+      "id": "Z2",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷2·周祖谟电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/2",
+      "checked": "2026-11-13",
+      "basis": "直接核读CBETA电子正文及所标校语；原文、整理者校读与本项目判断分开。未核古刻书影、碑拓或独立考古材料；两种现代整理属于同一古籍来源家族。"
+    },
+    {
+      "id": "F2",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷2·范祥雍电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/2",
+      "checked": "2026-11-13",
+      "basis": "直接核读CBETA电子正文及所标校语；原文、整理者校读与本项目判断分开。未核古刻书影、碑拓或独立考古材料；两种现代整理属于同一古籍来源家族。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EO01",
+      "title": "东墙门序与青／清阳的真实版本关系",
+      "source_region": "R09",
+      "entities": [
+        "gate_dongyang",
+        "gate_qingyang",
+        "gate_jianchun"
+      ],
+      "quote": "東面有三門：……北頭第一門，曰建春門。……次南曰東陽門。……次南曰青陽門。",
+      "quote_source": "Z1",
+      "quote_locator": "原序·东面三门总叙（Z1）；F1原序青阳门校语；F2景宁寺青字校语",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "东阳在建春南，青阳又在东阳南。周、范在原序均采用青阳；范认为青字不误，并未将本门校定为清阳。清阳是校注所列传本异文。",
+      "drawing": "保留gate_dongyang和gate_qingyang的旧锚点；青／清阳共用一个既有门ID，门符不数层。图题可沿用项目清阳简称，证据牌说明正文采用青。",
+      "limit": "本批只是东墙后两门的门外专题，不能改写成东墙仅两门；门序不提供门距、城墙测量或门外道路的直线长度。",
+      "sources": [
+        "Z1",
+        "F1",
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z1",
+          "reading": "正文作青陽；注记汉魏本清陽，并不取该读。"
+        },
+        {
+          "source": "F1",
+          "reading": "正文作青陽；校语反对吴氏一概改清的意见，认为作青不误。"
+        },
+        {
+          "source": "F2",
+          "reading": "景宁条正文作青；校语列吴琯本、汉魏本、吴集证本作清，下同。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "gate_dongyang",
+          "relation": "south_of",
+          "object": "gate_jianchun",
+          "basis": "direct"
+        },
+        {
+          "subject": "gate_qingyang",
+          "relation": "south_of",
+          "object": "gate_dongyang",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "identity_policy": "one_existing_gate_with_textual_name_variants",
+      "adopted_gate_name": "青陽門",
+      "fan_emends_qing_character_to_water_radical": false,
+      "legacy_note_correction": "旧research-places中周正文青／范校清的概括不准确；本批新证据明确纠正，不改写旧数据。"
+    },
+    {
+      "id": "EO02",
+      "title": "庄严：一里、道北与东安里",
+      "source_region": "R09",
+      "entities": [
+        "v2_zhuangyan",
+        "gate_dongyang",
+        "road_dongyang",
+        "li_dongan"
+      ],
+      "quote": "莊嚴寺，在東陽門外一里御道北，所謂東安里也。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·庄严寺首句；Z2 / CBETA B12n0077 p0111a10",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "庄严寺具有东阳门外一里、御道北和东安里里属三项文本约束；没有建寺年月。",
+      "drawing": "主图沿原锚点使用空心无塔寺符；一里只作原文里程标签，东安里用里属关系牌而不补坊墙。",
+      "limit": "不把一里换算成米或现址距离；不由庄严与秦太上君分别一里、二里而断言寺间恰好一里或两寺同纬。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "v2_zhuangyan",
+          "relation": "outside_gate",
+          "object": "gate_dongyang",
+          "basis": "direct",
+          "distance": 1,
+          "unit": "里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "v2_zhuangyan",
+          "relation": "north_of",
+          "object": "road_dongyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_zhuangyan",
+          "relation": "within",
+          "object": "li_dongan",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用undated；空心表示截至528年前的寺院状态未获限定，不等于寺必晚出。",
+      "geographic_coordinates": null,
+      "non_entailments": [
+        "庄严与秦太上君寺间恰一里",
+        "两寺处于同一直线或同纬",
+        "庄严寺始建于某个确定年份"
+      ]
+    },
+    {
+      "id": "EO03",
+      "title": "北为租场的指代与同名场地边界",
+      "source_region": "R09",
+      "entities": [
+        "v2_zhuangyan",
+        "li_dongan",
+        "v2_dongan_taxfield",
+        "v2_changmancang"
+      ],
+      "quote": "所謂東安里也。北為租塲。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·庄严寺首段；对照同卷明悬尼寺、龙华寺租场段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "北为租场紧接庄严寺和东安里，北向参照可落在寺或里，句中没有测量边界。建春段常满仓旧址改租场是另一组叙述，不能只因同名就合并。",
+      "drawing": "保留东安里北租场和常满仓旧址两个既有记录；关系板展示指代候选，不画贯通两区的大型仓场或新边界。",
+      "limit": "未定的是两组租场是否同一或连续，以及北字具体修饰哪一级对象；不是已证明两处绝对不同。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "v2_dongan_taxfield",
+          "relation": "north_of",
+          "object": null,
+          "basis": "reference_scope_ambiguous",
+          "object_candidates": [
+            "v2_zhuangyan",
+            "li_dongan"
+          ]
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "identity_policy": "separate_existing_records_identity_or_continuity_unresolved",
+      "non_entailments": [
+        "东安里北租场与常满仓旧址同一",
+        "两场之间存在连续边界"
+      ],
+      "subject_scope_resolved": false
+    },
+    {
+      "id": "EO04",
+      "title": "秦太上君寺：晖文里与为母追福",
+      "source_region": "R09",
+      "entities": [
+        "v2_qintaishangjun",
+        "gate_dongyang",
+        "road_dongyang",
+        "li_huiwen",
+        "v3_qintaigong_w",
+        "v3_qintaigong_e"
+      ],
+      "quote": "秦太上君寺，胡太后所立也。……為母追福，因以名焉。……在東陽門外二里御道北，所謂暉文里。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·秦太上君寺首段及追福子注；Z2 p0112a02、p0112a06、p0112a11",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "这是东阳门外二里、道北、晖文里的秦太上君寺，为母追福。君与公不能因字近而合并；城南为父的两寺继续用既有独立记录。",
+      "drawing": "沿原点使用无塔寺符，里程和里属分开登记；不把晖文里内四宅排成确定院落次序。",
+      "limit": "寺名或母亲死亡时间不能当作寺院完工日期；二里与外字有传本差异。未据本批新增精确营建年。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z2",
+          "reading": "门外之外字据河南志及吴集证补入。"
+        },
+        {
+          "source": "F2",
+          "reading": "同样补外；校语记吴琯、汉魏本无二里。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "v2_qintaishangjun",
+          "relation": "outside_gate",
+          "object": "gate_dongyang",
+          "basis": "direct",
+          "distance": 2,
+          "unit": "里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "v2_qintaishangjun",
+          "relation": "north_of",
+          "object": "road_dongyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_qintaishangjun",
+          "relation": "within",
+          "object": "li_huiwen",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用attested_by_528及胡太后立寺背景；本批不把其母卒年、追赠或寺名直接等同于建寺完工年。",
+      "geographic_coordinates": null,
+      "identity_policy": "mother_memorial_record_not_merged_with_father_memorial_pair"
+    },
+    {
+      "id": "EO05",
+      "title": "秦太上君五层浮图与高门向街",
+      "source_region": "R09",
+      "entities": [
+        "v2_qintaishangjun"
+      ],
+      "quote": "中有五層浮圖一所，修剎入雲，高門向街，佛事莊飾，等於永寧。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·秦太上君寺建筑段；Z2、F2",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "五层浮图一所是本文明确构件记录；高门向街只说明临街联系，没有朝南或门道轴线。等于永宁所比为佛事庄饰，不能复制永宁平面或塔高。",
+      "drawing": "主图不加塔；独立构件板可列五层文字型符号，标明该塔完成时间未独立定年，寺门绝对朝向未定。",
+      "limit": "修刹入云是形容，不能生成高度；禅堂、诵室与千数沙门不产生可数建筑行列、院界或同时人口统计。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "寺院attested_by_528不自动证明这座五层塔在516—528全段已成。",
+      "geographic_coordinates": null,
+      "component": {
+        "type": "tower",
+        "storeys": 5,
+        "count_as_described": 1,
+        "completion_year_ce": null,
+        "present_in_516_528_established": false,
+        "draw_in_main": false
+      },
+      "gate_absolute_orientation": null,
+      "non_entailments": [
+        "秦太上君寺门朝南",
+        "该寺与永宁寺平面同构",
+        "五层塔已于528年河阴之变前建成"
+      ]
+    },
+    {
+      "id": "EO06",
+      "title": "正始寺路侧是周南、范西的选择",
+      "source_region": "R09",
+      "entities": [
+        "v2_zhengshi",
+        "gate_dongyang",
+        "road_dongyang",
+        "li_jingyi"
+      ],
+      "quote": "正始寺，百官等所立也。正始中立，因以為名。在東陽門外御道南，所謂敬義里也。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·正始寺首段；Z2 p0116a12—14；F2同条御道西校语",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "正始年间立寺提供早于528的寺院时段。位置上周据所见传文改南，范电子正文保留西并列南字异本；本批沿既有主图采用周校南，不能称两本共同证明道南。",
+      "drawing": "保留原道南锚点；关系板标南†并列范正文西，不把传文御道西另画成一条不存在的新道路。",
+      "limit": "门外未载里数；选读不等于地理定论。若以后采用范西，须另行讨论御道参照，不直接旋转或挪动现有锚点。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z2",
+          "reading": "正文作御道南；校记原作西，依永乐大典所引及逸史本改南。"
+        },
+        {
+          "source": "F2",
+          "reading": "正文保留御道西；校语列吴琯、汉魏、真意堂本作南，又记元河南志作西。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "v2_zhengshi",
+          "relation": "outside_gate",
+          "object": "gate_dongyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_zhengshi",
+          "relation": "south_of",
+          "object": "road_dongyang",
+          "basis": "adopted_Z2_editorial_reading",
+          "claim_status": "selected_not_consensus"
+        },
+        {
+          "subject": "v2_zhengshi",
+          "relation": "within",
+          "object": "li_jingyi",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "正始年号504—508；立寺时段与捐款、后人刊碑分开，不能精确为504年建成。",
+      "geographic_coordinates": null,
+      "claim_status": "selected_editorial_reading",
+      "adopted_roadside": "south",
+      "fan_main_text_roadside": "west",
+      "foundation_reign": "正始",
+      "foundation_year_range_ce": [
+        504,
+        508
+      ]
+    },
+    {
+      "id": "EO07",
+      "title": "典虞曹只在敬义里，不是正始东邻",
+      "source_region": "R09",
+      "entities": [
+        "office_dianyu",
+        "li_jingyi",
+        "v2_zhengshi",
+        "road_dongyang"
+      ],
+      "quote": "所謂敬義里也。里內有典虞曹。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·正始寺条敬义里与典虞曹句；Z2 p0116a14—p0117a01；F2同条",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "正始与典虞曹共有敬义里里属；本句没有典虞在正始东、西、前后或隔墙关系。官署路侧若随里域说明，仍依赖EO06采用周校南这一前提。",
+      "drawing": "保留原有官署点击点，只改通用官署类型并标里内位置未定；关系板用同里归属分支，不画正始到典虞的东西箭头。",
+      "limit": "原画布把典虞点排在正始点东，是显示安排，不能回写为正文关系；典虞是官署，不因接在寺条内而绘成佛寺。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "office_dianyu",
+          "relation": "within",
+          "object": "li_jingyi",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_zhengshi",
+          "relation": "within",
+          "object": "li_jingyi",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "east_of_zhengshi_established": false,
+      "relative_position_with_zhengshi": null,
+      "non_entailments": [
+        "典虞曹在正始寺东",
+        "典虞曹与正始寺相邻或共墙",
+        "典虞曹具有独立明记的御道路侧"
+      ],
+      "non_entailment_constraints": [
+        {
+          "subject": "office_dianyu",
+          "relation": "east_of",
+          "object": "v2_zhengshi",
+          "basis": "not_established"
+        },
+        {
+          "subject": "office_dianyu",
+          "relation": "adjacent_to",
+          "object": "v2_zhengshi",
+          "basis": "not_established"
+        }
+      ]
+    },
+    {
+      "id": "EO08",
+      "title": "昭德里只在敬义里南",
+      "source_region": "R09",
+      "entities": [
+        "li_zhaode",
+        "li_jingyi"
+      ],
+      "quote": "敬義里南有昭德里。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·正始寺条后敬义里、昭德里段；Z2 p0117a08；F2同段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "句子给出两里南北关系；昭德里内列举五宅不等于五个等距街址。",
+      "drawing": "沿用里名与原群组表达；关系板只列昭德在敬义之南，不补独立昭德节点、坊门、巷道或里界。",
+      "limit": "不能从南有推出两里接壤、同一南北中轴或尺寸；亦不能把昭德里所有成员安排在正始寺正南。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z2",
+          "reading": "正文昭德；校语记逸史本招字，周不取。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "li_zhaode",
+          "relation": "south_of",
+          "object": "li_jingyi",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "non_entailments": [
+        "昭德里与敬义里接壤",
+        "昭德里中心位于正始寺正南"
+      ],
+      "new_independent_anchor_allowed": false
+    },
+    {
+      "id": "EO09",
+      "title": "平等：孝敬里旧宅改寺与两里道北",
+      "source_region": "R09",
+      "entities": [
+        "v2_pingdeng",
+        "gate_qingyang",
+        "road_qingyang",
+        "li_xiaojing",
+        "w_dajue"
+      ],
+      "quote": "平等寺，廣平武穆王懷捨宅所立也。……在青陽門外二里御道北，所謂孝敬里也。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·平等寺首段；Z2 p0123a06；F2同条",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "平等寺继承本条广平武穆王怀宅叙事，位于青阳门外二里、御道北、孝敬里。城西大觉也有广平王宅前身记载；同一主人或同类前身不提供两处同址证据。",
+      "drawing": "保留平等的原寺院锚点，与城西大觉独立；类型符不含晚出的五层塔，不把平台复道画成已知院落尺度。",
+      "limit": "舍宅所立没有在此句给出具体年月；不能把广平王谥号出现视作寺必在其死后建成，也不能据同人宅名合并东西两点。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "v2_pingdeng",
+          "relation": "outside_gate",
+          "object": "gate_qingyang",
+          "basis": "direct",
+          "distance": 2,
+          "unit": "里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "v2_pingdeng",
+          "relation": "north_of",
+          "object": "road_qingyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_pingdeng",
+          "relation": "within",
+          "object": "li_xiaojing",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_pingdeng",
+          "relation": "converted_from",
+          "object": null,
+          "basis": "direct",
+          "object_label": "广平武穆王怀宅（平等寺条）",
+          "mapped_entity_added": false
+        }
+      ],
+      "temporal_note": "寺院盛时依据见EO10；五层塔另见EO11，不能由舍宅句合并两种时层。",
+      "geographic_coordinates": null,
+      "identity_policy": "retain_existing_east_west_records_without_merging_same_patron_residences"
+    },
+    {
+      "id": "EO10",
+      "title": "527年平等寺门像叙事与造像冲突",
+      "source_region": "R09",
+      "entities": [
+        "v2_pingdeng"
+      ],
+      "quote": "孝昌三年十二月中，此像面有悲容，兩目垂淚，遍體皆濕，時人號曰佛汗。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·平等寺门像叙事；Z2 p0124a01；对照Z2首段所引北齐平等寺碑及F2同条",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "正文把寺门像活动置于孝昌三年，故可记录527年已叙及平等寺。但周所引北齐碑又记永安中铸像、永熙金涂，和527年的同一金像理解存在时序冲突。",
+      "drawing": "主图保留寺本体；事件板明确古籍祥异叙事与校注所引碑文时间不同，不绘流汗效果或将神异当物理测量。",
+      "limit": "527是正文事件纪年，不是造像年或建寺年；本批未独立检查碑拓，碑文只登记为周注所引，来源家族仍为1。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z2",
+          "reading": "周注所引北齐修平等寺碑载永安中造定光铜像、永熙金涂；与正文527年像事并列，未抹平冲突。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "沿用attested_by_528的寺本体时层；金像年代和物理身份未统一，不能据此指定盛时金像细部。",
+      "geographic_coordinates": null,
+      "attestation_year_ce": 527,
+      "event_scope": "temple_gate_image_narrative",
+      "miracle_is_physical_fact": false,
+      "inscription_independently_reexamined": false
+    },
+    {
+      "id": "EO11",
+      "title": "平等五层塔：532始造，533／534毕功",
+      "source_region": "R09",
+      "entities": [
+        "v2_pingdeng"
+      ],
+      "quote": "永熙元年平陽王入纂大業，始造五層塔一所。……至二年二月五日土木畢功，帝率百僚作萬僧會。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·平等寺末段；Z2 p0130a13—p0131a01；F2同段至二（三）年校语",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "始造塔、撰碑与土木毕功分别发生。周保留永熙二年（533）毕功，并认为后叙出奔段有脱年；范因下文奔长安、迁邺将二校为三年（534）。",
+      "drawing": "两案并列于晚出构件时层：532始造→533毕功（周）／534毕功（范校）。主图无五层塔，两个候选完工年不取平均。",
+      "limit": "寺在盛时存在不意味着塔已经存在；二月五日保持古历文字，不换算公历日；未独立核史传、碑文来裁决二／三年。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z2",
+          "reading": "采用二年二月五日；周注以所引史传支持二年，并将下文七月出奔视为另有脱年。"
+        },
+        {
+          "source": "F2",
+          "reading": "原读二，范校三；其依据是下文七月出奔及十月迁邺的同年叙述。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "532始造；完成年候选533、534均在516—528主层之外。",
+      "geographic_coordinates": null,
+      "component": {
+        "type": "tower",
+        "storeys": 5,
+        "construction_start_year_ce": 532,
+        "completion_year_candidates_ce": [
+          533,
+          534
+        ],
+        "completion_year_selected": null,
+        "draw_in_main": false
+      },
+      "main_period_tower_allowed": false,
+      "construction_start_is_completion": false
+    },
+    {
+      "id": "EO12",
+      "title": "景宁寺：三里道南的早期分宅",
+      "source_region": "R09",
+      "entities": [
+        "v2_jingning",
+        "gate_qingyang",
+        "road_qingyang",
+        "li_jingning",
+        "house_yangchun"
+      ],
+      "quote": "在青陽門外三里御道南，所謂景寧里也。高祖遷都洛邑，椿創居此里，遂分宅為寺，因以名之。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·景宁寺首段；Z2 p0131a11—14；F2同条",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "杨椿创居、分宅为景宁寺连在高祖迁洛叙事内；路侧南与三里在本条直接明记。这一较早的分宅叙事要与后文杨氏遇害后改建中分开。",
+      "drawing": "保留景宁寺原锚点和无塔寺符；关系板表现家宅的一部分改为景宁寺，不画分割线、余宅面积或两寺共墙。",
+      "limit": "迁洛背景不能精确代换成某日立寺；三里没有给出与孝义里三里或宝明寺的南北对齐关系。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "v2_jingning",
+          "relation": "outside_gate",
+          "object": "gate_qingyang",
+          "basis": "direct",
+          "distance": 3,
+          "unit": "里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "v2_jingning",
+          "relation": "south_of",
+          "object": "road_qingyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_jingning",
+          "relation": "within",
+          "object": "li_jingning",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_jingning",
+          "relation": "converted_from_part_of",
+          "object": "house_yangchun",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用高祖迁洛后创居、遂分宅的较早叙事链，attested_by_528；不另报确定完工年。",
+      "geographic_coordinates": null,
+      "partition_geometry": null,
+      "non_entailments": [
+        "景宁寺与孝义里同经线",
+        "景宁寺与后建中共享确定院墙"
+      ]
+    },
+    {
+      "id": "EO13",
+      "title": "城东建中：531后杨氏宅转换，不并城内",
+      "source_region": "R09",
+      "entities": [
+        "v2_jianzhong",
+        "v2_jingning",
+        "li_jingning",
+        "ic_jianzhong",
+        "ic_liuteng_house"
+      ],
+      "quote": "普泰中為尒朱世隆所誅，後捨宅為建中寺。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·景宁寺杨氏叙事末；Z2 p0132a03；对照Z1、F1城内建中寺条",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "杨氏遇害后的舍宅为寺发生在普泰事件之后；景宁里里属依本段家宅叙事承接。城内建中另有西阳门内延年里、刘腾宅背景，不据同名或尔朱世隆的共同出现合并。",
+      "drawing": "主图沿原锚点标杨氏宅〔后建中〕；关系板用早期分宅成景宁与后期宅改建中两条时序，城内建中只作跨记录辨析链接。",
+      "limit": "531为事件下限，不是已知的寺院完工年；没有资料证明后改寺的具体宅界、与景宁寺的东西先后或共墙。",
+      "sources": [
+        "Z2",
+        "F2",
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "v2_jianzhong",
+          "relation": "within",
+          "object": "li_jingning",
+          "basis": "inherited_residential_context"
+        },
+        {
+          "subject": "v2_jianzhong",
+          "relation": "converted_from",
+          "object": null,
+          "basis": "direct",
+          "object_label": "景宁条杨氏家宅",
+          "mapped_entity_added": false
+        }
+      ],
+      "temporal_note": "普泰元年531事件之后；上限和完工日未知。盛时不画建中寺状态。",
+      "geographic_coordinates": null,
+      "date_lower_bound_ce": 531,
+      "date_upper_bound_ce": null,
+      "identity_policy": "distinct_existing_records_no_automatic_merger",
+      "main_scene_type": "residence",
+      "main_scene_name": "杨氏宅〔后建中〕",
+      "non_entailments": [
+        "城东建中就是城内建中",
+        "城东建中在531年已建成",
+        "城东建中在景宁寺东"
+      ]
+    },
+    {
+      "id": "EO14",
+      "title": "孝义里、传称苏秦冢与冢旁宝明",
+      "source_region": "R09",
+      "entities": [
+        "li_xiaoyi",
+        "gate_qingyang",
+        "road_qingyang",
+        "tomb_suqin",
+        "v2_baoming"
+      ],
+      "quote": "出青陽門外三里，御道北有孝義里。里西北角有蘇秦冢，冢旁有寶明寺。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·景宁寺条后孝义里、苏秦冢、宝明寺段；Z2 p0132a08；F2同段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "三里、道北首先定位孝义里；西北角直接修饰苏秦冢，宝明只记冢旁。传称苏秦并未给出经现代考古核实的墓主身份。",
+      "drawing": "苏秦冢可在既有节点改为传称冢类型，宝明仍在既有点；关系板用冢位于里西北角、寺邻冢两种不同关系，不把寺安到角点。",
+      "limit": "冢旁不指定东南西北，不证明寺院占据里西北角；三里不能变成宝明寺点到门的精确距离，不补墓室、墓道、封土边界。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "li_xiaoyi",
+          "relation": "outside_gate",
+          "object": "gate_qingyang",
+          "basis": "direct",
+          "distance": 3,
+          "unit": "里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "li_xiaoyi",
+          "relation": "north_of",
+          "object": "road_qingyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "tomb_suqin",
+          "relation": "northwest_corner_of",
+          "object": "li_xiaoyi",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_baoming",
+          "relation": "near",
+          "object": "tomb_suqin",
+          "basis": "direct"
+        },
+        {
+          "subject": "v2_baoming",
+          "relation": "within",
+          "object": "li_xiaoyi",
+          "basis": "contextual_reading_of_tomb_side_temple"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "northwest_corner_applies_to": "tomb_suqin",
+      "baoming_at_ward_northwest_corner_established": false,
+      "tomb_owner_archaeologically_confirmed": false,
+      "tomb_geometry": null,
+      "non_entailments": [
+        "宝明寺正占孝义里西北角",
+        "宝明寺在苏秦冢某一确定方向",
+        "宝明寺到青阳门准确三里"
+      ],
+      "non_entailment_constraints": [
+        {
+          "subject": "v2_baoming",
+          "relation": "northwest_corner_of",
+          "object": "li_xiaoyi",
+          "basis": "not_established"
+        }
+      ]
+    },
+    {
+      "id": "EO15",
+      "title": "宝明两次记载的时层须附同一性条件",
+      "source_region": "R09",
+      "entities": [
+        "v2_baoming"
+      ],
+      "quote": "時太后聞之，遣黃門侍郎徐紇依慧嶷所說即訪寶明等寺。城東有寶明寺，……",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·崇真寺慧嶷故事末；对照景宁寺条后冢旁宝明寺",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "前段胡太后遣徐纥访问提供城东宝明寺的寺名与时代背景；后段冢旁宝明给出孝义里关联。现有数据库暂联为一个候选记录，但没有在这两句中完成同一性证明。",
+      "drawing": "不增第二点，不强拆成两寺，也不把候选同名联接写成定论。沿既有实心状态时必须保留该条件，证据板并列两次出现。",
+      "limit": "太后时代的活动线索不能无条件转移到另一次同名记载；故事中的冥界内容不构成地理或物理事实。未取得冢旁条独立的建寺年。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "沿用既有attested_by_528记录，但时层继承取决于两次宝明记载的候选同一性；不得抹去条件。",
+      "geographic_coordinates": null,
+      "identity_policy": "existing_candidate_link_identity_not_resolved",
+      "identity_assumption_required_for_dating": true,
+      "independent_pre528_attestation_of_tomb_side_record": false,
+      "miracle_is_physical_fact": false,
+      "non_entailments": [
+        "仅凭同名证实两次宝明完全同体",
+        "证明洛阳一定有两所宝明寺"
+      ]
+    },
+    {
+      "id": "EO16",
+      "title": "小市在孝义里东，路侧不能照搬",
+      "source_region": "R09",
+      "entities": [
+        "market_small",
+        "li_xiaoyi",
+        "road_qingyang"
+      ],
+      "quote": "孝義里東，即是洛陽小市。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二·景宁寺条后洛阳小市段；Z2 p0132a10；F2小寺（市）校语",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "唯一直接方位是小市在孝义里东。孝义里在御道北，而东于一个里域并不自动给出小市的御道路侧、同纬或门距。",
+      "drawing": "既有小市点击锚点保留，类型用开放的市场符号；旁图标路侧未明，不画市场围墙、摊位数或新增街道。",
+      "limit": "主图把小市排在道路北侧属于既有显示安排，不是新增的正文结论；不能以小寺误字新增寺院。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "F2",
+          "reading": "底本文字小寺，范据吴琯、汉魏、元河南志校为小市。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "market_small",
+          "relation": "east_of",
+          "object": "li_xiaoyi",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "road_side_explicit": false,
+      "road_side_inherited": false,
+      "non_entailments": [
+        "洛阳小市在清阳御道北",
+        "小市与孝义里中心同纬",
+        "小市距青阳门三里"
+      ],
+      "non_entailment_constraints": [
+        {
+          "subject": "market_small",
+          "relation": "north_of",
+          "object": "road_qingyang",
+          "basis": "not_established"
+        }
+      ]
+    },
+    {
+      "id": "EO17",
+      "title": "殖货里：里东、市北与归觉的群组位置",
+      "source_region": "R09",
+      "entities": [
+        "li_zhihuo",
+        "li_xiaoyi",
+        "market_small",
+        "v2_guijue",
+        "road_qingyang"
+      ],
+      "quote": "孝義里東市北殖貨里。里有太常民劉胡兄弟四人，以屠為業。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二末·殖货里刘胡兄弟段；Z2 p0139a05；F2同段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "本批沿用孝义里东、市北〔有〕殖货里的断读，把市接前文小市。刘胡兄弟宅只落实里属；不为东市再建一个独立市场，也不把群组标签变成宅院点。",
+      "drawing": "继续保留殖货里／小市北的群组阅读锚点。关系板画里与市、宅与里两级关系，路侧不从小市或孝义里继续传递。",
+      "limit": "断读和市的回指是上下文解释；不能以示意排列决定殖货里与孝义里边界，或决定归觉宅距市的准确方位、街址。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [
+        {
+          "source": "Z2",
+          "reading": "正文殖货；周列太平广记、大典、逸史作植货。"
+        },
+        {
+          "source": "F2",
+          "reading": "正文殖货；范列吴琯、汉魏及太平广记作植。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "li_zhihuo",
+          "relation": "east_of",
+          "object": "li_xiaoyi",
+          "basis": "adopted_punctuation"
+        },
+        {
+          "subject": "li_zhihuo",
+          "relation": "north_of",
+          "object": "market_small",
+          "basis": "adopted_contextual_reference"
+        },
+        {
+          "subject": "v2_guijue",
+          "relation": "within",
+          "object": "li_zhihuo",
+          "basis": "inherited_residence_membership"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "reading_status": "selected_punctuation_with_context",
+      "new_independent_anchor_allowed": false,
+      "road_side_inherited": false,
+      "non_entailments": [
+        "归觉寺具有独立街址",
+        "殖货里已知在清阳御道北",
+        "东市必须另增为第二市场"
+      ]
+    },
+    {
+      "id": "EO18",
+      "title": "归觉：永安宅改寺属于河阴之后",
+      "source_region": "R09",
+      "entities": [
+        "v2_guijue",
+        "li_zhihuo"
+      ],
+      "quote": "永安年中，胡殺猪，……胡即捨宅為歸覺寺，合家人入道焉。",
+      "quote_source": "Z2",
+      "quote_locator": "卷二末·殖货里刘胡兄弟、归觉寺段；Z2 p0139a05—07；F2同段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "舍宅改寺置于永安年号内，即528—530年，发生在528年河阴之变后的时代。不能把故事中的即时转换扩成准确建筑工期。",
+      "drawing": "主层群组仍标刘胡兄弟宅〔后归觉〕；独立时层牌记永安宅改寺，不加寺院定位点或具象神异场景。",
+      "limit": "不能简写为528年以后才建成，因为528本年仍包含永安；改寺前宅用层也不等于已证明此宅在516—528每一年存在。",
+      "sources": [
+        "Z2",
+        "F2"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "永安528—530，河阴之后；普泰元年像事为更晚的寺中叙事，不是建寺完工日。",
+      "geographic_coordinates": null,
+      "date_range_ce": [
+        528,
+        530
+      ],
+      "after_heyin_event": true,
+      "completion_year_ce": null,
+      "main_scene_type": "residence_group",
+      "main_scene_name": "刘胡兄弟宅〔后归觉〕",
+      "pre_conversion_residence_pre528_independently_attested": false,
+      "new_independent_anchor_allowed": false,
+      "miracle_is_physical_fact": false
+    }
+  ],
+  "ancient_absolute_positions_added": 0,
+  "source_family_count": 1,
+  "existing_entity_usage": {
+    "main_node_ids": [
+      "v2_zhuangyan",
+      "v2_qintaishangjun",
+      "v2_zhengshi",
+      "office_dianyu",
+      "v2_pingdeng",
+      "v2_baoming",
+      "market_small",
+      "v2_jingning",
+      "v2_jianzhong",
+      "tomb_suqin"
+    ],
+    "city_gate_ids": [
+      "gate_dongyang",
+      "gate_qingyang"
+    ],
+    "road_reference_ids": [
+      "road_dongyang",
+      "road_qingyang"
+    ],
+    "sidecar_or_group_ids": [
+      "li_dongan",
+      "li_huiwen",
+      "li_jingyi",
+      "li_zhaode",
+      "li_xiaojing",
+      "li_xiaoyi",
+      "li_jingning",
+      "li_zhihuo",
+      "v2_guijue"
+    ],
+    "identity_or_context_only_ids": [
+      "gate_jianchun",
+      "v2_dongan_taxfield",
+      "v2_changmancang",
+      "house_yangchun",
+      "ic_jianzhong",
+      "ic_liuteng_house",
+      "w_dajue",
+      "v3_qintaigong_w",
+      "v3_qintaigong_e"
+    ]
+  },
+  "main_glyph_policy": {
+    "changed_groups": 12,
+    "node_groups": 10,
+    "city_gate_groups": 2,
+    "move_existing_anchors": false,
+    "new_world_nodes": 0,
+    "temple_towers_in_main_map": false,
+    "main_temple_type": "无塔寺院类型；庄严空心，其他寺院沿既有时层，宝明保留同名暂联条件。",
+    "residence_nodes": [
+      "v2_jianzhong"
+    ],
+    "government_office_nodes": [
+      "office_dianyu"
+    ],
+    "market_nodes": [
+      "market_small"
+    ],
+    "traditionally_named_mound_nodes": [
+      "tomb_suqin"
+    ],
+    "conditional_tower_panel": [
+      "v2_qintaishangjun"
+    ],
+    "later_tower_panel": [
+      "v2_pingdeng"
+    ],
+    "nonspatial_group_preserved": [
+      "v2_guijue"
+    ],
+    "gate_type": "通用门符，不数层；同门青清异文不拆第二门。",
+    "anchor_reference": {
+      "coordinate_system": "existing_schematic_canvas_only",
+      "geographic": false,
+      "positions": {
+        "v2_zhuangyan": [
+          8300,
+          4500
+        ],
+        "v2_qintaishangjun": [
+          9900,
+          4480
+        ],
+        "v2_zhengshi": [
+          8450,
+          5060
+        ],
+        "office_dianyu": [
+          9070,
+          5060
+        ],
+        "v2_pingdeng": [
+          8510,
+          5880
+        ],
+        "v2_baoming": [
+          9900,
+          5915
+        ],
+        "market_small": [
+          10990,
+          5935
+        ],
+        "v2_jingning": [
+          8660,
+          6430
+        ],
+        "v2_jianzhong": [
+          9750,
+          6430
+        ],
+        "tomb_suqin": [
+          9330,
+          5895
+        ],
+        "gate_dongyang": [
+          7800,
+          4750
+        ],
+        "gate_qingyang": [
+          7800,
+          6100
+        ]
+      }
+    },
+    "recommendations": [
+      {
+        "entity_id": "v2_zhuangyan",
+        "type": "temple",
+        "main_name": "庄严寺〔年未定〕",
+        "prosperity_state": "undated",
+        "symbol": "open",
+        "tower_in_main": false,
+        "evidence": [
+          "EO02"
+        ]
+      },
+      {
+        "entity_id": "v2_qintaishangjun",
+        "type": "temple",
+        "main_name": "秦太上君寺",
+        "prosperity_state": "attested_by_528",
+        "symbol": "solid",
+        "tower_in_main": false,
+        "evidence": [
+          "EO04",
+          "EO05"
+        ]
+      },
+      {
+        "entity_id": "v2_zhengshi",
+        "type": "temple",
+        "main_name": "正始寺",
+        "prosperity_state": "attested_by_528",
+        "symbol": "solid",
+        "tower_in_main": false,
+        "roadside_qualifier": "道南†沿用周校；范正文西",
+        "evidence": [
+          "EO06",
+          "EO07"
+        ]
+      },
+      {
+        "entity_id": "office_dianyu",
+        "type": "government_office",
+        "main_name": "典虞曹",
+        "prosperity_state": "not_independently_dated",
+        "symbol": "office_type_only",
+        "location_qualifier": "敬义里内，非正始东邻定论",
+        "evidence": [
+          "EO07"
+        ]
+      },
+      {
+        "entity_id": "v2_pingdeng",
+        "type": "temple",
+        "main_name": "平等寺",
+        "prosperity_state": "attested_by_528",
+        "symbol": "solid",
+        "tower_in_main": false,
+        "evidence": [
+          "EO09",
+          "EO10",
+          "EO11"
+        ]
+      },
+      {
+        "entity_id": "v2_baoming",
+        "type": "temple",
+        "main_name": "宝明寺",
+        "prosperity_state": "attested_by_528_conditional_identity",
+        "symbol": "preserve_existing_with_identity_qualifier",
+        "tower_in_main": false,
+        "identity_qualifier": "两次记载暂联，冢旁条无独立前528纪年",
+        "evidence": [
+          "EO14",
+          "EO15"
+        ]
+      },
+      {
+        "entity_id": "market_small",
+        "type": "market",
+        "main_name": "洛阳小市",
+        "prosperity_state": "not_independently_dated",
+        "symbol": "open_market_type",
+        "location_qualifier": "孝义里东，御道路侧未明",
+        "evidence": [
+          "EO16"
+        ]
+      },
+      {
+        "entity_id": "v2_jingning",
+        "type": "temple",
+        "main_name": "景宁寺",
+        "prosperity_state": "attested_by_528",
+        "symbol": "solid",
+        "tower_in_main": false,
+        "evidence": [
+          "EO12",
+          "EO13"
+        ]
+      },
+      {
+        "entity_id": "v2_jianzhong",
+        "type": "residence",
+        "main_name": "杨氏宅〔后建中〕",
+        "prosperity_state": "later_temple",
+        "symbol": "residence",
+        "tower_in_main": false,
+        "evidence": [
+          "EO13"
+        ]
+      },
+      {
+        "entity_id": "tomb_suqin",
+        "type": "traditionally_named_mound",
+        "main_name": "苏秦冢〔传称〕",
+        "prosperity_state": "textual_landmark_not_archaeological_identification",
+        "symbol": "mound_without_verified_occupant",
+        "evidence": [
+          "EO14"
+        ]
+      },
+      {
+        "entity_id": "gate_dongyang",
+        "type": "city_gate",
+        "main_name": "东阳门",
+        "symbol": "generic_gate_no_storey_count",
+        "evidence": [
+          "EO01"
+        ]
+      },
+      {
+        "entity_id": "gate_qingyang",
+        "type": "city_gate",
+        "main_name": "青／清阳门",
+        "symbol": "generic_gate_no_storey_count",
+        "evidence": [
+          "EO01",
+          "EO09",
+          "EO14"
+        ]
+      },
+      {
+        "entity_id": "v2_guijue",
+        "type": "residence_group",
+        "main_name": "刘胡兄弟宅〔后归觉〕",
+        "prosperity_state": "later_temple",
+        "symbol": "preserve_nonspatial_group",
+        "new_independent_anchor_allowed": false,
+        "evidence": [
+          "EO17",
+          "EO18"
+        ]
+      }
+    ]
+  },
+  "source_attribution_corrections": [
+    {
+      "id": "B6-R09-C1",
+      "evidence": "EO01",
+      "old_summary": "周正文青／范校清",
+      "verified_reading": "周、范原序正文都采用青；范明确不赞成一概改清，卷二校语保留清字异本。",
+      "old_data_modified": false
+    },
+    {
+      "id": "B6-R09-C2",
+      "evidence": "EO06",
+      "old_summary": "正始寺道南未标版本选择",
+      "verified_reading": "周改南，范保留西；本批沿既有道南显示但标明采用周校，不称双本共证。",
+      "old_data_modified": false
+    }
+  ],
+  "notes": [
+    "四个电子卷册属于同一古籍来源家族；校注引述的史书或碑文没有被伪装成本批独立核读材料。",
+    "正文短引、整理者校语、现图安排与本项目推论分栏；中文省略号为本项目节录，不把现代夹注塞入古文。",
+    "保留旧entity ID、marker、339条实体与179点击结构；本数据不改旧JSON或锚点。",
+    "门外御道只作局部关系参照；不把门内外合成已知直线，不新增道路宽度、坊墙、院界、墓室或地点。",
+    "典虞与正始同里不等于东邻；冢在西北角不等于寺在西北角；孝义里道北不等于里东的小市道北。",
+    "归觉保留群组；景宁与城东建中分开时层；城内外建中、父母追福寺、东西广平王宅等不因名称相近而合并。",
+    "平等五层塔无论取533或534完成均晚于主层；秦太上君五层塔无独立完成年，主图也不加塔。",
+    "寺像、墓主显灵或猪乞命均为古籍叙事，不作为物理事实、考古鉴定或建筑尺寸来源。",
+    "所有寺院547年的个别全寺状态仍未逐一证实；不以城市总体荒废自动生成逐寺焚毁。"
+  ],
+  "improvements": [
+    {
+      "id": "B6-R09-I1",
+      "title": "更正两种整理本的门名与路侧归属",
+      "evidence": [
+        "EO01",
+        "EO06"
+      ],
+      "change": "青清与南西分别列出真实版本关系，保留现有ID和锚点而给选读加条件。"
+    },
+    {
+      "id": "B6-R09-I2",
+      "title": "阻止三类无证空间继承",
+      "evidence": [
+        "EO07",
+        "EO14",
+        "EO16",
+        "EO17"
+      ],
+      "change": "用结构化未成立关系保护典虞非已证东邻、宝明非已证西北角、小市及殖货未获御道路侧。"
+    },
+    {
+      "id": "B6-R09-I3",
+      "title": "寺本体、五层塔与金像分层",
+      "evidence": [
+        "EO05",
+        "EO10",
+        "EO11"
+      ],
+      "change": "无独立完工年的秦塔与532后平等塔分开；527像事与校注引碑的造像时间冲突保留。"
+    },
+    {
+      "id": "B6-R09-I4",
+      "title": "宅改寺与候选同名有条件继承",
+      "evidence": [
+        "EO12",
+        "EO13",
+        "EO15",
+        "EO18"
+      ],
+      "change": "杨氏早分宅、后建中及永安归觉各自定时；宝明前后同名保留身份条件。"
+    }
+  ]
+}

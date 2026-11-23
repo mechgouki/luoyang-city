@@ -1,0 +1,362 @@
+{
+  "schema": "luoyang-r11-failed-ci-collection-v1",
+  "collected_utc": "2026-11-23T01:47:46.536435+00:00",
+  "repository": "mechgouki/luoyang-city",
+  "pr_number": 82,
+  "run_id": 45095919491,
+  "run_attempt": 1,
+  "run_status": "completed",
+  "run_conclusion": "failure",
+  "accepted_release": false,
+  "pr_head_sha": "7455ad1fcf1be47b1496d6dc35ae616719248fb6",
+  "tested_merge_sha": "cbf55a55b3a5326677f7f0cdf3167b0a635a3b9e",
+  "head_tree_sha": "abf6f236cf2df0568a5c9bd165a9c39706c34fca",
+  "all_jobs": [
+    {
+      "id": 137435577868,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 137436258953,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 137436259974,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "skipped"
+    }
+  ],
+  "failed_steps": [
+    {
+      "name": "Check the built prosperity maps and their evidence",
+      "number": 10,
+      "conclusion": "failure"
+    }
+  ],
+  "failure_classification": {
+    "stage": "legacy semantic/publication contract regression",
+    "tests_run_in_failing_suite": 218,
+    "failures": 2,
+    "tests": [
+      "test_prosperity_city_atlas_r4.UnifiedAtlas.test_public_contract_and_predecessor_preservation",
+      "test_prosperity_city_panorama_r5.Panorama.test_release"
+    ],
+    "shared_assertion": "tools/city_panorama_r5_contract.py before_r5: digest(original)==entry_predecessors[path]",
+    "browser_tests_reached": false,
+    "r11_dedicated_test_step_reached": false,
+    "historical_source_change_required_by_this_failure": false,
+    "classification_basis": "Actual completed job steps, full decoded build log and extracted artifact members; this is not a diagnosis of a browser failure."
+  },
+  "artifact": {
+    "id": 14783282054,
+    "name": "browser-build-evidence",
+    "bytes": 51125238,
+    "sha256": "7cf76f5a6b16ff915fac325b599d2ebd9046c8d8a4cf086300af9db813e13368",
+    "github_digest_verified": true,
+    "member_count": 36,
+    "extracted_bytes": 64763475,
+    "expires_at": "2026-12-07T01:43:10Z"
+  },
+  "log_scope": "Complete decoded log saved for the sole executed job. deploy and verify-live were skipped and have no executed step logs.",
+  "download_signed_url_saved": false,
+  "text_sensitive_scan": {
+    "scanned_text_files": 41,
+    "findings_filenames_and_rules_only": []
+  },
+  "collected_files_before_this_report": [
+    {
+      "path": "api-artifacts-raw.json",
+      "bytes": 1024,
+      "sha256": "310c58a53d98ef2394991557535188765366ac9fc5d6c386174d1643994193a2",
+      "gitblob": "4a886faab05998e0424a16968538a3aa34aaf24a"
+    },
+    {
+      "path": "api-artifacts.json",
+      "bytes": 845,
+      "sha256": "c86f4fa0f2684444b9e5dc2652a8560d6006e854a2bade0e758c4233ce9cf21e",
+      "gitblob": "8cd195b892896cee7c2797c87dec70a374602aa3"
+    },
+    {
+      "path": "api-build-log-raw.json",
+      "bytes": 149057,
+      "sha256": "2ecf5c7236ea446e01435d3949e0bd11600b648057b5d772f5aa0f5f2929dda6",
+      "gitblob": "9e59356420aaa78b92671b00812e885cbf0de8a1"
+    },
+    {
+      "path": "api-jobs-full-raw.json",
+      "bytes": 13551,
+      "sha256": "f5ecc76f42b76425d107f7f9bebbe464ac64d6ccf6dcdbe1523c44b180ee3527",
+      "gitblob": "7edc5430c284dc6980aac5d996b2c9ba1955869f"
+    },
+    {
+      "path": "api-jobs-full.json",
+      "bytes": 8000,
+      "sha256": "b9aa2c007209a87110a40cbe989eb8086eab90d7d6ddb7a73db327d41d1da661",
+      "gitblob": "5f0b0b308810ba8d07e5db22b355b4e0486aeb84"
+    },
+    {
+      "path": "api-jobs-raw.json",
+      "bytes": 3954,
+      "sha256": "feac882cbb53584e476f3a0ca04d6cedeff3cd520f9dbc105609eced62a2ac02",
+      "gitblob": "f22bf07ccad4abd9c8a5fb088a2d68d3668817de"
+    },
+    {
+      "path": "api-jobs.json",
+      "bytes": 3553,
+      "sha256": "fc12bbfc88c877bc233ab4d3ca73876ea5f73163a95a2cb6250115c94b7c791c",
+      "gitblob": "d36b7b850284e5556b94da7ecb48cd9d69ccc140"
+    },
+    {
+      "path": "api-run-raw.json",
+      "bytes": 28319,
+      "sha256": "6cf376754c8c64c8b8b1956ea11e159d180b5b15c6a9e0b03715db9805efeef0",
+      "gitblob": "3236a152e46aea476649458e7da8b9e055b89b63"
+    },
+    {
+      "path": "api-run.json",
+      "bytes": 14551,
+      "sha256": "a06d2fd4561970f49f180f6c7e3b4a6d38a0f496c8d1eb042128405734dd0825",
+      "gitblob": "adcdde532b00062c675afdb125a8919aa893174c"
+    },
+    {
+      "path": "artifact-extraction.json",
+      "bytes": 6306,
+      "sha256": "e210ee88023b93d3b17e28f911761d0be11518f3c4e84904de8e50490a7dcb6f",
+      "gitblob": "8485573a96b05257a9cea6c4132f4adc0d758491"
+    },
+    {
+      "path": "artifacts/city-audit-b8-tests.txt",
+      "bytes": 1530,
+      "sha256": "0c6ed77ee8918474d618db24cf9628c8136b8a2d526f9ab74718c12a35e057d8",
+      "gitblob": "3b7eeba415309165894d88e03adbf901f736256d"
+    },
+    {
+      "path": "artifacts/city-review-b8-tests.txt",
+      "bytes": 1410,
+      "sha256": "d7c2950b312acca0e3090ea9beaf98f7a9cda708923df8cd16f7b0c06e0985a1",
+      "gitblob": "faf9661ce3ac3feac74f125f7520f3e4a570d71b"
+    },
+    {
+      "path": "artifacts/dual-semantic-tests.txt",
+      "bytes": 2251,
+      "sha256": "91d458ad9c02a97f44d0e74bb735174a774ed6dd9b53bda25f2666da283ebc70",
+      "gitblob": "4e2fd63167a4899b4f57de0aceab0b95d2bb2679"
+    },
+    {
+      "path": "artifacts/ground-review-b6-tests.txt",
+      "bytes": 1208,
+      "sha256": "09f4d5a9044b4a47badafc89bd4d343ef017cbdd6b827d05501bdd5a2d0981f0",
+      "gitblob": "be06b4c8733421e58128f8f004d665eca62f6bfd"
+    },
+    {
+      "path": "artifacts/historical-datum-b5-tests.txt",
+      "bytes": 1244,
+      "sha256": "8d8128b4f29f978af5b2c4249b398859023e12cf784beecb8f5130781c48b9af",
+      "gitblob": "c84b5c2fe5e04c3c4868e42153b8eb9411403a1d"
+    },
+    {
+      "path": "artifacts/historical-frame-b4-tests.txt",
+      "bytes": 1216,
+      "sha256": "dbb98e1b06d6cce0769df7fc8dd03457d37d7516233be1fbceb38c3a497069fe",
+      "gitblob": "da10be162736b0470db07ee2e438b7f78454eadd"
+    },
+    {
+      "path": "artifacts/homepage-approved-v9-build.json",
+      "bytes": 3332,
+      "sha256": "bacd28d838455b1a170a3b962fd03dc63818274149f3aea075c92fdb0f15e571",
+      "gitblob": "fd2ac73e8bb325658708789ca80a8db1258e84ff"
+    },
+    {
+      "path": "artifacts/homepage-build.json",
+      "bytes": 2517,
+      "sha256": "def26cd85b4df5db76ad9bdcb6572e8bc27884cf0895ab4fc955eff328b5f297",
+      "gitblob": "4ff39a035438f3ddb82f9383d6b1fcda39a78888"
+    },
+    {
+      "path": "artifacts/live-http-tests.txt",
+      "bytes": 827,
+      "sha256": "c3b4a39a0321a9b54d300bcea1574b6867d9364d7ad6a94d6647bdec48505c24",
+      "gitblob": "17a1e7b10f1a954bbf0436ea8f2c31495c1524d7"
+    },
+    {
+      "path": "artifacts/luonan-b7-tests.txt",
+      "bytes": 3580,
+      "sha256": "005d39475bdbef183ea099ee9b2915505e795a310c26ed2d190a5fbf47fcab22",
+      "gitblob": "56bc843ab940289365eb3863f42408f8abb9e984"
+    },
+    {
+      "path": "artifacts/north-b4-semantic-tests.txt",
+      "bytes": 1114,
+      "sha256": "275f593197f0334b8be6f8e9b4697fcc876f2b98db51209f1f45c9db039efcb1",
+      "gitblob": "9ae53d6242a2810d5a35b2d475da6140a229566f"
+    },
+    {
+      "path": "artifacts/pdf-font-resolution.txt",
+      "bytes": 56,
+      "sha256": "7c87a8898060ed9bbd1386c6eb1b45a62b2106dbbc014e7ea023c2d3eba1f365",
+      "gitblob": "41bbb2d111944b11eb3947555d00da433d520afa"
+    },
+    {
+      "path": "artifacts/prosperity-build.json",
+      "bytes": 506,
+      "sha256": "53b81cc53cd5c6bacd51648da96961eddcda89f33051be589624f64a9c0acf50",
+      "gitblob": "f20c88ac9598c36414c2fced1fe07af776b013b8"
+    },
+    {
+      "path": "artifacts/prosperity-core-build.json",
+      "bytes": 534,
+      "sha256": "b39c07eead6aa9885fa985e678e4b81ed705d335cba4bdbb03df249c98adb513",
+      "gitblob": "f7c781c2cd8a8470ccccf4fdd8b02866e88b260b"
+    },
+    {
+      "path": "artifacts/prosperity-gate-build.json",
+      "bytes": 614,
+      "sha256": "cefa45d3f8b267248fab06accd6fafa912d7fd8f06a9fa16c137a6757d1ecdd9",
+      "gitblob": "86cda1cda15f5420da6ca2783869e0fa1cebaf28"
+    },
+    {
+      "path": "artifacts/prosperity-semantic-tests.txt",
+      "bytes": 39947,
+      "sha256": "6681b9a362046c9091b6cbc4fd743d2bf146b6fd14830022cceb197478c4fa7b",
+      "gitblob": "e4b2594270f5b4b71b3bddbe434ab42345a0db0f"
+    },
+    {
+      "path": "artifacts/source-access-b8-tests.txt",
+      "bytes": 1036,
+      "sha256": "6112b2378fac47eecfa6eb8c663fe0604f78008be846d615f2d05d1650fe74ac",
+      "gitblob": "234cd62054a31f720b5e1cc2db950168e4e36413"
+    },
+    {
+      "path": "artifacts/source-continuity-b7-tests.txt",
+      "bytes": 1197,
+      "sha256": "d1f50c1a7e65a402604da5e86346dd1b61009d8ced0a9c8b212afcc630e3e67b",
+      "gitblob": "b204e01d41df660607d8c5cc3834d06d95c308d4"
+    },
+    {
+      "path": "artifacts/southeast-b6-tests.txt",
+      "bytes": 2945,
+      "sha256": "b12e8a02e6bb4ec7e71e06e848f3087b7f8bac85c546cf042b71dea2f80791c1",
+      "gitblob": "18384a629815db729cc842db391d5d2752c4f88a"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/SOURCE-NOTICE.txt",
+      "bytes": 1074,
+      "sha256": "1b5ce3e55ef1c036ca1120fa2cc5a109bb20d827f171562d1759784e7a6847a8",
+      "gitblob": "8a52bec240eb7732736928edfedc416e93d25367"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/metadata.json",
+      "bytes": 6233,
+      "sha256": "810e8643c190b86199d85b61067d8763dede54f3ae31c3cd6c7ceba94ccaf3a0",
+      "gitblob": "50d41c17065630fb74ce855bb8a12c7d6f9a4f58"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e"
+    },
+    {
+      "path": "artifacts/v26-calculation.json",
+      "bytes": 1470,
+      "sha256": "ab662fead8b26ff6686dc0bf9bad901622cf4a447f1764fc048d545a6475e48f",
+      "gitblob": "17ea6dc4855ff1df00c7082b71820db25b91fb40"
+    },
+    {
+      "path": "artifacts/v26-semantic-tests.txt",
+      "bytes": 2281,
+      "sha256": "936a1db63d10b43b5f7473ad7b43ad534a329e6100bdba2669a2a5dd7d2babae",
+      "gitblob": "f8ad6ca0a08027d02dc298f851986be3a90e39b3"
+    },
+    {
+      "path": "artifacts/v27-semantic-tests.txt",
+      "bytes": 3100,
+      "sha256": "98a682b5b54dcbc2f2107701fbc7d7ce3c7604324d4791f2bbfb335f2053f73c",
+      "gitblob": "20f17610b668931f496541b67e021117317c165f"
+    },
+    {
+      "path": "artifacts/v28-integration-audit.json",
+      "bytes": 2503,
+      "sha256": "52f08509c81410efdfdc6655143c38e64c132acc764724909eed3361d8f9f8a3",
+      "gitblob": "f4f959e23669a86a5d3dada4362b2de5390a00f6"
+    },
+    {
+      "path": "artifacts/v29-semantic-tests.txt",
+      "bytes": 2071,
+      "sha256": "202d776c2f6e22a50eb1a1e7f2ea6c933a5b41d59792ab25dc75e36964b5d396",
+      "gitblob": "dcd290e2666c3a0dd325dd7c3b13e0fd828be7f3"
+    },
+    {
+      "path": "artifacts/v30-semantic-tests.txt",
+      "bytes": 1451,
+      "sha256": "d8c3792a51dfb18bd6d4eaeb5627bf767b950b1597ecdd280a292a1eab9564b4",
+      "gitblob": "c2694aae017e51354893e88ddba3f8507327d846"
+    },
+    {
+      "path": "artifacts/west-b3-semantic-tests.txt",
+      "bytes": 872,
+      "sha256": "1832a6c4699b56e8c0bb3be1ff0225a468bf2208732a8569b8bc3f76f1ecacd0",
+      "gitblob": "9ffea4f3dd5f7217e4ccf1d8c4371d72d9aadc7a"
+    },
+    {
+      "path": "artifacts/west-roads-b5-tests.txt",
+      "bytes": 1154,
+      "sha256": "49386fd99b33cfc9c152bfdc7b01e6996ac407a55cd845d0edb447ee88f7cf43",
+      "gitblob": "48704ae34e19aca86fd724744bf6430d7d033982"
+    },
+    {
+      "path": "build-137435577868.log",
+      "bytes": 146145,
+      "sha256": "42adaa2246a6824d2de5c3d1b686d8fb4204e600987cd82fb214534d5c24d13d",
+      "gitblob": "5dcc2a1b5d0a2ed98548ea3f84b383e7fb37fadf"
+    },
+    {
+      "path": "evidence.zip",
+      "bytes": 51125238,
+      "sha256": "7cf76f5a6b16ff915fac325b599d2ebd9046c8d8a4cf086300af9db813e13368",
+      "gitblob": "35cdcdbf3cb9825192d1b59dd70e509db0f90278"
+    }
+  ],
+  "remote_writes": 0
+}

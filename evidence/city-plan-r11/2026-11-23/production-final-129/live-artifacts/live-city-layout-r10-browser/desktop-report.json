@@ -1,0 +1,648 @@
+{
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "checks": [
+    "All twelve inline figures, 339 original objects and 118 original road/water records load from the released commit",
+    "All region and basis filters match original record IDs and counters; combined query restores from URL, empty results and reset work",
+    "All twelve maps support zoom, four-direction buttons, keyboard panning and exact reset; each has an actual viewport screenshot",
+    "Each regional decision, object, road/water row, gap and region anchor overrides conflicting filters and reveals collapsed evidence; map links work by keyboard",
+    "All 21 real browser downloads match released hashes, the PDF has 16 readable pages matching the SVG continuations, and the complete ZIP works with network disabled and state restored",
+    "With JavaScript disabled all maps, original records and source excerpts remain readable through native links and disclosure controls"
+  ],
+  "downloads": {
+    "city-layout-r10/overview.svg": "43b83126cb35624fe2d3f6919ddbf3e8a66729ad33b30416cd3cdf00b60a625e",
+    "downloads/city-layout-r10.pdf": "adbff044fb69713612a185bf6c066bf18c0148827d366dfd057caa7564ec64ad",
+    "city-layout-r10/regions/R01.svg": "578db14263fe7b93fbb39690f606325ada8c561001788ff41a7d6dc19fc25652",
+    "city-layout-r10/regions/R02.svg": "1016488050bc5e47f40f358753247a9a3bf6e92d7829735ee76b3a49597dddeb",
+    "city-layout-r10/regions/R03.svg": "848e88b8c083fb4e2de137b147b49beee71717a7bc5586d8d6e0a8cb9099a8fc",
+    "city-layout-r10/regions/R04.svg": "9945e42e8a0a6b743bb2f595c520da149c7480e55c0a9d5cf72829c5c209411a",
+    "city-layout-r10/regions/R05.svg": "a9b721167d3d14cd8c9bca316b0b6b9cb4e33d21d2abab95c9368212c1dde43a",
+    "city-layout-r10/regions/R06.svg": "432003c80257222d7814ec24903aca7e6704e21a6bc6406b6dad05e9fad07a2e",
+    "city-layout-r10/regions/R07.svg": "b539e5f8e2dbd1b85790d2b3930114497363e93df40290539a66541d8227694d",
+    "city-layout-r10/regions/R08.svg": "169d7ed3d08ac673efcc8b8613bf359fbc67ae01e82ae3899efad4be8186046c",
+    "city-layout-r10/regions/R09.svg": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+    "city-layout-r10/regions/R10.svg": "29b412b0c6952621778b10db52933636cb314c13772fc77cb9b5efe614c26555",
+    "city-layout-r10/regions/R11.svg": "cb99773544118d5f9fc57cc8dc97291128bf4fd9f642eefe18df0d044e57aae6",
+    "city-layout-r10/coverage.csv": "01024de7120d24fb6ae13505e86f35c4616c275289cca88af2607f89efe7f94b",
+    "city-layout-r10/decisions.csv": "2ad35994c4aa6c753b02a4e362a21f6892e2b79072c49a723a7478957b38349e",
+    "city-layout-r10/gaps.csv": "a0cd837c0edfcb4dc9a95233466b57a1d0d8197fb6e783ed46db0757d6978783",
+    "city-layout-r10/networks.csv": "3cdfa8dbac49546a969f786241292da0c60d68ae650d5b3c21e1a304bb44f905",
+    "city-layout-r10/atlas.json": "b119578773ad1ae7b93f9b53ec65f1c59b466165cd3283b4ca9b9b58b818e534",
+    "city-layout-r10/source-review.json": "8e4d558d9b65677f112ae3916a319d679b27f3d706cd66beb855549ab8466ca7",
+    "city-layout-r10/manifest.json": "ea412802a5383957a2216741214c1033841c76adb0539862d17d98e88ae0090b",
+    "downloads/city-layout-r10.zip": "3ce51f07aedd223425e5f51057c50f5373f1669d87be4a30d7854654c6ee55a4"
+  },
+  "retained_downloads": {
+    "city-layout-r10/overview.svg": {
+      "sha256": "43b83126cb35624fe2d3f6919ddbf3e8a66729ad33b30416cd3cdf00b60a625e",
+      "bytes": 226268,
+      "retained_path": "downloads/desktop/city-layout-r10/overview.svg"
+    },
+    "downloads/city-layout-r10.pdf": {
+      "sha256": "adbff044fb69713612a185bf6c066bf18c0148827d366dfd057caa7564ec64ad",
+      "bytes": 2292513,
+      "retained_path": "downloads/desktop/downloads/city-layout-r10.pdf"
+    },
+    "city-layout-r10/regions/R01.svg": {
+      "sha256": "578db14263fe7b93fbb39690f606325ada8c561001788ff41a7d6dc19fc25652",
+      "bytes": 39963,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R01.svg"
+    },
+    "city-layout-r10/regions/R02.svg": {
+      "sha256": "1016488050bc5e47f40f358753247a9a3bf6e92d7829735ee76b3a49597dddeb",
+      "bytes": 106140,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R02.svg"
+    },
+    "city-layout-r10/regions/R03.svg": {
+      "sha256": "848e88b8c083fb4e2de137b147b49beee71717a7bc5586d8d6e0a8cb9099a8fc",
+      "bytes": 133657,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R03.svg"
+    },
+    "city-layout-r10/regions/R04.svg": {
+      "sha256": "9945e42e8a0a6b743bb2f595c520da149c7480e55c0a9d5cf72829c5c209411a",
+      "bytes": 80972,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R04.svg"
+    },
+    "city-layout-r10/regions/R05.svg": {
+      "sha256": "a9b721167d3d14cd8c9bca316b0b6b9cb4e33d21d2abab95c9368212c1dde43a",
+      "bytes": 80935,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R05.svg"
+    },
+    "city-layout-r10/regions/R06.svg": {
+      "sha256": "432003c80257222d7814ec24903aca7e6704e21a6bc6406b6dad05e9fad07a2e",
+      "bytes": 46456,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R06.svg"
+    },
+    "city-layout-r10/regions/R07.svg": {
+      "sha256": "b539e5f8e2dbd1b85790d2b3930114497363e93df40290539a66541d8227694d",
+      "bytes": 92613,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R07.svg"
+    },
+    "city-layout-r10/regions/R08.svg": {
+      "sha256": "169d7ed3d08ac673efcc8b8613bf359fbc67ae01e82ae3899efad4be8186046c",
+      "bytes": 77353,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R08.svg"
+    },
+    "city-layout-r10/regions/R09.svg": {
+      "sha256": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+      "bytes": 81037,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R09.svg"
+    },
+    "city-layout-r10/regions/R10.svg": {
+      "sha256": "29b412b0c6952621778b10db52933636cb314c13772fc77cb9b5efe614c26555",
+      "bytes": 113606,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R10.svg"
+    },
+    "city-layout-r10/regions/R11.svg": {
+      "sha256": "cb99773544118d5f9fc57cc8dc97291128bf4fd9f642eefe18df0d044e57aae6",
+      "bytes": 86166,
+      "retained_path": "downloads/desktop/city-layout-r10/regions/R11.svg"
+    },
+    "city-layout-r10/coverage.csv": {
+      "sha256": "01024de7120d24fb6ae13505e86f35c4616c275289cca88af2607f89efe7f94b",
+      "bytes": 141785,
+      "retained_path": "downloads/desktop/city-layout-r10/coverage.csv"
+    },
+    "city-layout-r10/decisions.csv": {
+      "sha256": "2ad35994c4aa6c753b02a4e362a21f6892e2b79072c49a723a7478957b38349e",
+      "bytes": 403923,
+      "retained_path": "downloads/desktop/city-layout-r10/decisions.csv"
+    },
+    "city-layout-r10/gaps.csv": {
+      "sha256": "a0cd837c0edfcb4dc9a95233466b57a1d0d8197fb6e783ed46db0757d6978783",
+      "bytes": 17283,
+      "retained_path": "downloads/desktop/city-layout-r10/gaps.csv"
+    },
+    "city-layout-r10/networks.csv": {
+      "sha256": "3cdfa8dbac49546a969f786241292da0c60d68ae650d5b3c21e1a304bb44f905",
+      "bytes": 375628,
+      "retained_path": "downloads/desktop/city-layout-r10/networks.csv"
+    },
+    "city-layout-r10/atlas.json": {
+      "sha256": "b119578773ad1ae7b93f9b53ec65f1c59b466165cd3283b4ca9b9b58b818e534",
+      "bytes": 2356100,
+      "retained_path": "downloads/desktop/city-layout-r10/atlas.json"
+    },
+    "city-layout-r10/source-review.json": {
+      "sha256": "8e4d558d9b65677f112ae3916a319d679b27f3d706cd66beb855549ab8466ca7",
+      "bytes": 369328,
+      "retained_path": "downloads/desktop/city-layout-r10/source-review.json"
+    },
+    "city-layout-r10/manifest.json": {
+      "sha256": "ea412802a5383957a2216741214c1033841c76adb0539862d17d98e88ae0090b",
+      "bytes": 102089,
+      "retained_path": "downloads/desktop/city-layout-r10/manifest.json"
+    },
+    "downloads/city-layout-r10.zip": {
+      "sha256": "3ce51f07aedd223425e5f51057c50f5373f1669d87be4a30d7854654c6ee55a4",
+      "bytes": 3549945,
+      "retained_path": "downloads/desktop/downloads/city-layout-r10.zip"
+    }
+  },
+  "download_attempts": [
+    {
+      "path": "city-layout-r10/overview.svg",
+      "url": "city-layout-r10/overview.svg",
+      "status": "passed",
+      "started_seconds": 0.01,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.24,
+      "sha256": "43b83126cb35624fe2d3f6919ddbf3e8a66729ad33b30416cd3cdf00b60a625e",
+      "bytes": 226268,
+      "suggested_filename": "overview.svg"
+    },
+    {
+      "path": "downloads/city-layout-r10.pdf",
+      "url": "downloads/city-layout-r10.pdf",
+      "status": "passed",
+      "started_seconds": 0.261,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.247,
+      "sha256": "adbff044fb69713612a185bf6c066bf18c0148827d366dfd057caa7564ec64ad",
+      "bytes": 2292513,
+      "suggested_filename": "city-layout-r10.pdf"
+    },
+    {
+      "path": "city-layout-r10/regions/R01.svg",
+      "url": "city-layout-r10/regions/R01.svg",
+      "status": "passed",
+      "started_seconds": 0.791,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.238,
+      "sha256": "578db14263fe7b93fbb39690f606325ada8c561001788ff41a7d6dc19fc25652",
+      "bytes": 39963,
+      "suggested_filename": "R01.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R02.svg",
+      "url": "city-layout-r10/regions/R02.svg",
+      "status": "passed",
+      "started_seconds": 1.04,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.23,
+      "sha256": "1016488050bc5e47f40f358753247a9a3bf6e92d7829735ee76b3a49597dddeb",
+      "bytes": 106140,
+      "suggested_filename": "R02.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R03.svg",
+      "url": "city-layout-r10/regions/R03.svg",
+      "status": "passed",
+      "started_seconds": 1.287,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.235,
+      "sha256": "848e88b8c083fb4e2de137b147b49beee71717a7bc5586d8d6e0a8cb9099a8fc",
+      "bytes": 133657,
+      "suggested_filename": "R03.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R04.svg",
+      "url": "city-layout-r10/regions/R04.svg",
+      "status": "passed",
+      "started_seconds": 1.533,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.294,
+      "sha256": "9945e42e8a0a6b743bb2f595c520da149c7480e55c0a9d5cf72829c5c209411a",
+      "bytes": 80972,
+      "suggested_filename": "R04.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R05.svg",
+      "url": "city-layout-r10/regions/R05.svg",
+      "status": "passed",
+      "started_seconds": 1.838,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.238,
+      "sha256": "a9b721167d3d14cd8c9bca316b0b6b9cb4e33d21d2abab95c9368212c1dde43a",
+      "bytes": 80935,
+      "suggested_filename": "R05.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R06.svg",
+      "url": "city-layout-r10/regions/R06.svg",
+      "status": "passed",
+      "started_seconds": 2.087,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.235,
+      "sha256": "432003c80257222d7814ec24903aca7e6704e21a6bc6406b6dad05e9fad07a2e",
+      "bytes": 46456,
+      "suggested_filename": "R06.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R07.svg",
+      "url": "city-layout-r10/regions/R07.svg",
+      "status": "passed",
+      "started_seconds": 2.334,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.231,
+      "sha256": "b539e5f8e2dbd1b85790d2b3930114497363e93df40290539a66541d8227694d",
+      "bytes": 92613,
+      "suggested_filename": "R07.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R08.svg",
+      "url": "city-layout-r10/regions/R08.svg",
+      "status": "passed",
+      "started_seconds": 2.576,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.228,
+      "sha256": "169d7ed3d08ac673efcc8b8613bf359fbc67ae01e82ae3899efad4be8186046c",
+      "bytes": 77353,
+      "suggested_filename": "R08.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R09.svg",
+      "url": "city-layout-r10/regions/R09.svg",
+      "status": "passed",
+      "started_seconds": 2.814,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.223,
+      "sha256": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+      "bytes": 81037,
+      "suggested_filename": "R09.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R10.svg",
+      "url": "city-layout-r10/regions/R10.svg",
+      "status": "passed",
+      "started_seconds": 3.048,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.207,
+      "sha256": "29b412b0c6952621778b10db52933636cb314c13772fc77cb9b5efe614c26555",
+      "bytes": 113606,
+      "suggested_filename": "R10.svg"
+    },
+    {
+      "path": "city-layout-r10/regions/R11.svg",
+      "url": "city-layout-r10/regions/R11.svg",
+      "status": "passed",
+      "started_seconds": 3.265,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.229,
+      "sha256": "cb99773544118d5f9fc57cc8dc97291128bf4fd9f642eefe18df0d044e57aae6",
+      "bytes": 86166,
+      "suggested_filename": "R11.svg"
+    },
+    {
+      "path": "city-layout-r10/coverage.csv",
+      "url": "city-layout-r10/coverage.csv",
+      "status": "passed",
+      "started_seconds": 3.504,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.248,
+      "sha256": "01024de7120d24fb6ae13505e86f35c4616c275289cca88af2607f89efe7f94b",
+      "bytes": 141785,
+      "suggested_filename": "coverage.csv"
+    },
+    {
+      "path": "city-layout-r10/decisions.csv",
+      "url": "city-layout-r10/decisions.csv",
+      "status": "passed",
+      "started_seconds": 3.764,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.233,
+      "sha256": "2ad35994c4aa6c753b02a4e362a21f6892e2b79072c49a723a7478957b38349e",
+      "bytes": 403923,
+      "suggested_filename": "decisions.csv"
+    },
+    {
+      "path": "city-layout-r10/gaps.csv",
+      "url": "city-layout-r10/gaps.csv",
+      "status": "passed",
+      "started_seconds": 4.007,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.218,
+      "sha256": "a0cd837c0edfcb4dc9a95233466b57a1d0d8197fb6e783ed46db0757d6978783",
+      "bytes": 17283,
+      "suggested_filename": "gaps.csv"
+    },
+    {
+      "path": "city-layout-r10/networks.csv",
+      "url": "city-layout-r10/networks.csv",
+      "status": "passed",
+      "started_seconds": 4.235,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.331,
+      "sha256": "3cdfa8dbac49546a969f786241292da0c60d68ae650d5b3c21e1a304bb44f905",
+      "bytes": 375628,
+      "suggested_filename": "networks.csv"
+    },
+    {
+      "path": "city-layout-r10/atlas.json",
+      "url": "city-layout-r10/atlas.json",
+      "status": "passed",
+      "started_seconds": 4.576,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.283,
+      "sha256": "b119578773ad1ae7b93f9b53ec65f1c59b466165cd3283b4ca9b9b58b818e534",
+      "bytes": 2356100,
+      "suggested_filename": "atlas.json"
+    },
+    {
+      "path": "city-layout-r10/source-review.json",
+      "url": "city-layout-r10/source-review.json",
+      "status": "passed",
+      "started_seconds": 4.869,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.234,
+      "sha256": "8e4d558d9b65677f112ae3916a319d679b27f3d706cd66beb855549ab8466ca7",
+      "bytes": 369328,
+      "suggested_filename": "source-review.json"
+    },
+    {
+      "path": "city-layout-r10/manifest.json",
+      "url": "city-layout-r10/manifest.json",
+      "status": "passed",
+      "started_seconds": 5.113,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.22,
+      "sha256": "ea412802a5383957a2216741214c1033841c76adb0539862d17d98e88ae0090b",
+      "bytes": 102089,
+      "suggested_filename": "manifest.json"
+    },
+    {
+      "path": "downloads/city-layout-r10.zip",
+      "url": "downloads/city-layout-r10.zip",
+      "status": "passed",
+      "started_seconds": 5.342,
+      "click_delay_ms": 150,
+      "duration_seconds": 0.249,
+      "sha256": "3ce51f07aedd223425e5f51057c50f5373f1669d87be4a30d7854654c6ee55a4",
+      "bytes": 3549945,
+      "suggested_filename": "city-layout-r10.zip"
+    }
+  ],
+  "attempt_path": null,
+  "screenshots": {
+    "desktop-entry.png": "bc9d7b91f234b1f13514cecabfda88bebbb01941773f99e8e6dbd9a6f2d77c93",
+    "desktop-restored-filter.png": "d7ce4ef107f750a3bcb684706f184b351c5564e14358be41d846999ace004a4f",
+    "desktop-map-overview.png": "2515673b246046da1b2ba77d652edf435ed338bf9b23d3e2086b01c28ba37ff9",
+    "desktop-map-R01.png": "0b6264516cb777b27975e8c7c3c6f5c7ba7c0a48b1926427bb1568ab8caa7e40",
+    "desktop-map-R02.png": "296630d517ecbfca58b3d0a89830c827e394959eb1be4d0e53a4e2dcaeee0df8",
+    "desktop-map-R03.png": "4c68576d2a2f04ea5733ad34e9c64d57c659df02ef32be0d9049e2004371e7ef",
+    "desktop-map-R04.png": "aa261be8ab082e4616dfad64bc0d30776ab0caffe1c97a147dea5039c9a7e492",
+    "desktop-map-R05.png": "15e714827ce68776476236e78a2ea419252ff8ba4abc9177b18fd396bb8ef563",
+    "desktop-map-R06.png": "6be790d739887b8daf20861805a3c490499cc33475d12cc73088bdbbf55eb7f3",
+    "desktop-map-R07.png": "0a634e6e2ed064386871a25f4287dbe5462bb1bd46ca4f40323a001c8ed4aee7",
+    "desktop-map-R08.png": "5281d14caa1fc3fd3e7b92504096a18265ca97759a4a732aea4f623b9d12b2ca",
+    "desktop-map-R09.png": "4ebdd7352a88fd063c4b26f122daf65c5a48c513714f7df210e0bb299fbfbc30",
+    "desktop-map-R10.png": "38c59279a34176e15a80b20637e274a45fd9e6a52c363b2efb93e29c71323bc8",
+    "desktop-map-R11.png": "da924da757150631f90f2e468f663607feb649883ecc58f8ab7ba1960cf42472",
+    "desktop-deep-link.png": "8b42aad1466d83582cae314b283e6e095bb648ee608c16d62fde042ac3a76d74",
+    "desktop-offline.png": "0b293a34f6be49aae60b5dee1c0e2259f1bd783c6fb3178194af1470bb794705",
+    "desktop-without-javascript.png": "402b86345317aa027f21d69938e41caf33fc4dacbae6fdd3a2ee04e15200192d"
+  },
+  "errors": [],
+  "maps": {
+    "overview": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R01": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R02": {
+      "original": "0 0 1680 2376",
+      "zoomed": "168 237.60000000000002 1344 1900.8",
+      "panned": "369.6 522.72 1344 1900.8",
+      "keyboard": "369.6 237.60000000000002 1344 1900.8"
+    },
+    "R03": {
+      "original": "0 0 1680 2376",
+      "zoomed": "168 237.60000000000002 1344 1900.8",
+      "panned": "369.6 522.72 1344 1900.8",
+      "keyboard": "369.6 237.60000000000002 1344 1900.8"
+    },
+    "R04": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R05": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R06": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R07": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R08": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R09": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    },
+    "R10": {
+      "original": "0 0 1680 2376",
+      "zoomed": "168 237.60000000000002 1344 1900.8",
+      "panned": "369.6 522.72 1344 1900.8",
+      "keyboard": "369.6 237.60000000000002 1344 1900.8"
+    },
+    "R11": {
+      "original": "0 0 1680 1188",
+      "zoomed": "168 118.80000000000001 1344 950.4",
+      "panned": "369.6 261.36 1344 950.4",
+      "keyboard": "369.6 118.80000000000001 1344 950.4"
+    }
+  },
+  "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+  "layout_checks": [
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R01&basis=relation&q=R10-R01-01",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R01",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R02",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R03",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R04",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R05",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R06",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R07",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R08",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R09",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R10",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R11",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html?region=R03#region-R03",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "file:///tmp/tmps2dyzk41/index.html?region=R07&q=R10-R07-01",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html#decision-R10-R01-01",
+      "ready_state": "complete",
+      "document_width": 1440,
+      "client_width": 1440,
+      "inner_width": 1440,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    }
+  ],
+  "pdf_pages": 16,
+  "status": "passed"
+}

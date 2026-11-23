@@ -1,0 +1,876 @@
+{
+  "schema": "luoyang-r11-final-independent-cross-check-v1",
+  "status": "passed",
+  "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+  "checked_at_utc": "2026-11-23T03:31:42Z",
+  "scope": "Final production only. Four retained browser download streams are rehashed; CI HTTPS hash records are matched to release metadata; root independent public retained bytes are rehashed. This is not a new browser or network run.",
+  "PUBLIC_COUNT": 920,
+  "ci_https_actual_report_rows": 920,
+  "ci_https_all_rows_passed_and_match_build_info": true,
+  "ci_https_http_retries": [],
+  "root_independent_public_files_rehashed": 35,
+  "unique_download_files": 26,
+  "four_browser_actual_downloads_rehashed": 104,
+  "four_browser_screenshots_rehashed": 20,
+  "four_browser_streams_ci_https_record_root_actual_bytes_equal": true,
+  "streams": {
+    "production-build-desktop": {
+      "status": "passed",
+      "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+      "check_groups": 7,
+      "checks": [
+        "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+        "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden",
+        "Buttons and keyboard zoom/pan/reset keep the same plane; a visible, hit-verified tower-polygon click and a separate restored-label click select their own evidence",
+        "Feature-ID search, the 宣忠 alias, saved feature zoom and empty/reset search work; choosing R04 clears the old feature and reload restores the regional camera",
+        "All 339 coverage IDs and group/query counters agree; unplaced search overrides stale filters, table focus returns to real geometry, and no action rewrites coordinates",
+        "Every download is a genuine paced click with released hash, retained bytes and a single attempt; PDF paper sizes/text/embedded fonts and every ZIP member are checked; the offline UI runs with network disabled",
+        "Without JavaScript the common-plane SVG, every feature and all 339 catalog objects remain readable; native evidence links and disclosure controls work"
+      ],
+      "actual_download_count": 26,
+      "single_attempt_paced_click_count": 26,
+      "retained_screenshot_count": 5,
+      "elapsed_seconds": 34.098,
+      "pdf_pages": 17,
+      "pdf_sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+      "all_fonts_embedded": true,
+      "tower_hit_test": {
+        "overview_center": {
+          "screen": {
+            "x": 577.2783813476562,
+            "y": 651.2406311035156
+          },
+          "offset": {
+            "x": 27.70965576171875,
+            "y": 27.507659912109375
+          },
+          "target_box": {
+            "x": 549.5687255859375,
+            "y": 623.7329711914062,
+            "width": 55.4193115234375,
+            "height": 55.01531982421875
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "world_point": [
+          140.27373235,
+          -1579.8474241000001
+        ],
+        "zoomed_camera": [
+          0.5017316744464182,
+          1496.2233043748818,
+          240.87154665110714,
+          157.6015002502361
+        ],
+        "labels_visible": false,
+        "selected_point": {
+          "screen": {
+            "x": 637.2027102562037,
+            "y": 645.8335292179818
+          },
+          "offset": {
+            "x": 100.26105986557866,
+            "y": 25.808932050013027
+          },
+          "target_box": {
+            "x": 536.941650390625,
+            "y": 620.0245971679688,
+            "width": 184.262451171875,
+            "height": 182.9190673828125
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "independent_label": {
+          "id": "geo-yongning-pagoda-reference",
+          "screen": {
+            "x": 698.2447509765625,
+            "y": 725.9843444824219
+          },
+          "offset": {
+            "x": 58.5,
+            "y": 7.500091552734375
+          },
+          "target_box": {
+            "x": 639.7447509765625,
+            "y": 718.4842529296875,
+            "width": 117,
+            "height": 15.00018310546875
+          },
+          "hit_tag": "text",
+          "hit_feature": null,
+          "hit_label": "geo-yongning-pagoda-reference"
+        }
+      },
+      "tower_own_visible_path_hit_assertions_passed": true,
+      "independent_label_hit_assertions_passed": true,
+      "strict_post_click_selection_check_group_passed": true,
+      "offline_network_disabled": true,
+      "offline_network_requests": []
+    },
+    "production-build-mobile": {
+      "status": "passed",
+      "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+      "check_groups": 7,
+      "checks": [
+        "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+        "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden",
+        "Buttons and keyboard zoom/pan/reset keep the same plane; a visible, hit-verified tower-polygon click and a separate restored-label click select their own evidence",
+        "Feature-ID search, the 宣忠 alias, saved feature zoom and empty/reset search work; choosing R04 clears the old feature and reload restores the regional camera",
+        "All 339 coverage IDs and group/query counters agree; unplaced search overrides stale filters, table focus returns to real geometry, and no action rewrites coordinates",
+        "Every download is a genuine paced click with released hash, retained bytes and a single attempt; PDF paper sizes/text/embedded fonts and every ZIP member are checked; the offline UI runs with network disabled",
+        "Without JavaScript the common-plane SVG, every feature and all 339 catalog objects remain readable; native evidence links and disclosure controls work"
+      ],
+      "actual_download_count": 26,
+      "single_attempt_paced_click_count": 26,
+      "retained_screenshot_count": 5,
+      "elapsed_seconds": 30.678,
+      "pdf_pages": 17,
+      "pdf_sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+      "all_fonts_embedded": true,
+      "tower_hit_test": {
+        "overview_center": {
+          "screen": {
+            "x": 202.78872680664062,
+            "y": 474.15296936035156
+          },
+          "offset": {
+            "x": 9.68756103515625,
+            "y": 9.616928100585938
+          },
+          "target_box": {
+            "x": 193.10116577148438,
+            "y": 464.5360412597656,
+            "width": 19.3751220703125,
+            "height": 19.233856201171875
+          },
+          "hit_tag": "path",
+          "hit_feature": null,
+          "hit_label": "r11-yongning-YN11-TOWER-FOUNDATION"
+        },
+        "world_point": [
+          140.27373235,
+          -1579.8474241000001
+        ],
+        "zoomed_camera": [
+          0.5017316744464182,
+          1413.5459226668552,
+          240.87154665110714,
+          322.95626366628886
+        ],
+        "labels_visible": false,
+        "selected_point": {
+          "screen": {
+            "x": 223.73883815597748,
+            "y": 411.26260887410035
+          },
+          "offset": {
+            "x": 35.0522231657431,
+            "y": 9.023045885819101
+          },
+          "target_box": {
+            "x": 188.68661499023438,
+            "y": 402.23956298828125,
+            "width": 64.41989135742188,
+            "height": 63.950225830078125
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "independent_label": {
+          "id": "geo-yongning-pagoda-reference",
+          "screen": {
+            "x": 289.6314926147461,
+            "y": 448.7149658203125
+          },
+          "offset": {
+            "x": 58.50000762939453,
+            "y": 7.500030517578125
+          },
+          "target_box": {
+            "x": 231.13148498535156,
+            "y": 441.2149353027344,
+            "width": 117.00001525878906,
+            "height": 15.00006103515625
+          },
+          "hit_tag": "text",
+          "hit_feature": null,
+          "hit_label": "geo-yongning-pagoda-reference"
+        }
+      },
+      "tower_own_visible_path_hit_assertions_passed": true,
+      "independent_label_hit_assertions_passed": true,
+      "strict_post_click_selection_check_group_passed": true,
+      "offline_network_disabled": true,
+      "offline_network_requests": []
+    },
+    "production-live-desktop": {
+      "status": "passed",
+      "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+      "check_groups": 7,
+      "checks": [
+        "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+        "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden",
+        "Buttons and keyboard zoom/pan/reset keep the same plane; a visible, hit-verified tower-polygon click and a separate restored-label click select their own evidence",
+        "Feature-ID search, the 宣忠 alias, saved feature zoom and empty/reset search work; choosing R04 clears the old feature and reload restores the regional camera",
+        "All 339 coverage IDs and group/query counters agree; unplaced search overrides stale filters, table focus returns to real geometry, and no action rewrites coordinates",
+        "Every download is a genuine paced click with released hash, retained bytes and a single attempt; PDF paper sizes/text/embedded fonts and every ZIP member are checked; the offline UI runs with network disabled",
+        "Without JavaScript the common-plane SVG, every feature and all 339 catalog objects remain readable; native evidence links and disclosure controls work"
+      ],
+      "actual_download_count": 26,
+      "single_attempt_paced_click_count": 26,
+      "retained_screenshot_count": 5,
+      "elapsed_seconds": 27.269,
+      "pdf_pages": 17,
+      "pdf_sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+      "all_fonts_embedded": true,
+      "tower_hit_test": {
+        "overview_center": {
+          "screen": {
+            "x": 577.2783813476562,
+            "y": 651.2406311035156
+          },
+          "offset": {
+            "x": 27.70965576171875,
+            "y": 27.507659912109375
+          },
+          "target_box": {
+            "x": 549.5687255859375,
+            "y": 623.7329711914062,
+            "width": 55.4193115234375,
+            "height": 55.01531982421875
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "world_point": [
+          140.27373235,
+          -1579.8474241000001
+        ],
+        "zoomed_camera": [
+          0.5017316744464182,
+          1496.2233043748818,
+          240.87154665110714,
+          157.6015002502361
+        ],
+        "labels_visible": false,
+        "selected_point": {
+          "screen": {
+            "x": 637.2027102562037,
+            "y": 645.8335292179818
+          },
+          "offset": {
+            "x": 100.26105986557866,
+            "y": 25.808932050013027
+          },
+          "target_box": {
+            "x": 536.941650390625,
+            "y": 620.0245971679688,
+            "width": 184.262451171875,
+            "height": 182.9190673828125
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "independent_label": {
+          "id": "geo-yongning-pagoda-reference",
+          "screen": {
+            "x": 698.2447509765625,
+            "y": 725.9843444824219
+          },
+          "offset": {
+            "x": 58.5,
+            "y": 7.500091552734375
+          },
+          "target_box": {
+            "x": 639.7447509765625,
+            "y": 718.4842529296875,
+            "width": 117,
+            "height": 15.00018310546875
+          },
+          "hit_tag": "text",
+          "hit_feature": null,
+          "hit_label": "geo-yongning-pagoda-reference"
+        }
+      },
+      "tower_own_visible_path_hit_assertions_passed": true,
+      "independent_label_hit_assertions_passed": true,
+      "strict_post_click_selection_check_group_passed": true,
+      "offline_network_disabled": true,
+      "offline_network_requests": []
+    },
+    "production-live-mobile": {
+      "status": "passed",
+      "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+      "check_groups": 7,
+      "checks": [
+        "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+        "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden",
+        "Buttons and keyboard zoom/pan/reset keep the same plane; a visible, hit-verified tower-polygon click and a separate restored-label click select their own evidence",
+        "Feature-ID search, the 宣忠 alias, saved feature zoom and empty/reset search work; choosing R04 clears the old feature and reload restores the regional camera",
+        "All 339 coverage IDs and group/query counters agree; unplaced search overrides stale filters, table focus returns to real geometry, and no action rewrites coordinates",
+        "Every download is a genuine paced click with released hash, retained bytes and a single attempt; PDF paper sizes/text/embedded fonts and every ZIP member are checked; the offline UI runs with network disabled",
+        "Without JavaScript the common-plane SVG, every feature and all 339 catalog objects remain readable; native evidence links and disclosure controls work"
+      ],
+      "actual_download_count": 26,
+      "single_attempt_paced_click_count": 26,
+      "retained_screenshot_count": 5,
+      "elapsed_seconds": 30.925,
+      "pdf_pages": 17,
+      "pdf_sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+      "all_fonts_embedded": true,
+      "tower_hit_test": {
+        "overview_center": {
+          "screen": {
+            "x": 202.78872680664062,
+            "y": 474.15296936035156
+          },
+          "offset": {
+            "x": 9.68756103515625,
+            "y": 9.616928100585938
+          },
+          "target_box": {
+            "x": 193.10116577148438,
+            "y": 464.5360412597656,
+            "width": 19.3751220703125,
+            "height": 19.233856201171875
+          },
+          "hit_tag": "path",
+          "hit_feature": null,
+          "hit_label": "r11-yongning-YN11-TOWER-FOUNDATION"
+        },
+        "world_point": [
+          140.27373235,
+          -1579.8474241000001
+        ],
+        "zoomed_camera": [
+          0.5017316744464182,
+          1413.5459226668552,
+          240.87154665110714,
+          322.95626366628886
+        ],
+        "labels_visible": false,
+        "selected_point": {
+          "screen": {
+            "x": 223.73883815597748,
+            "y": 411.26260887410035
+          },
+          "offset": {
+            "x": 35.0522231657431,
+            "y": 9.023045885819101
+          },
+          "target_box": {
+            "x": 188.68661499023438,
+            "y": 402.23956298828125,
+            "width": 64.41989135742188,
+            "height": 63.950225830078125
+          },
+          "hit_tag": "path",
+          "hit_feature": "r11-yongning-YN11-TOWER-PLINTH",
+          "hit_label": null
+        },
+        "independent_label": {
+          "id": "geo-yongning-pagoda-reference",
+          "screen": {
+            "x": 289.6314926147461,
+            "y": 448.7149658203125
+          },
+          "offset": {
+            "x": 58.50000762939453,
+            "y": 7.500030517578125
+          },
+          "target_box": {
+            "x": 231.13148498535156,
+            "y": 441.2149353027344,
+            "width": 117.00001525878906,
+            "height": 15.00006103515625
+          },
+          "hit_tag": "text",
+          "hit_feature": null,
+          "hit_label": "geo-yongning-pagoda-reference"
+        }
+      },
+      "tower_own_visible_path_hit_assertions_passed": true,
+      "independent_label_hit_assertions_passed": true,
+      "strict_post_click_selection_check_group_passed": true,
+      "offline_network_disabled": true,
+      "offline_network_requests": []
+    }
+  },
+  "pdf": {
+    "path": "/workspace/r11-evidence-archive/incoming/production-final-129/root-public/public/downloads/city-plan-r11.pdf",
+    "bytes": 2126410,
+    "sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+    "pages_independently_parsed": 17,
+    "metadata_commit_matches_final_release": true
+  },
+  "files": [
+    {
+      "path": "downloads/city-plan-r11.pdf",
+      "sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+      "production_streams": {
+        "production-build-desktop": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+        "production-build-mobile": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+        "production-live-desktop": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+        "production-live-mobile": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6"
+      },
+      "https_sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+      "status": "passed",
+      "root_independent_public_sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6",
+      "root_retained_bytes": 2126410,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "downloads/city-plan-r11.zip",
+      "sha256": "d2ca1ca471fc889d4f9d36ca807304d87523a51db4e066055e7467a2d029df3c",
+      "production_streams": {
+        "production-build-desktop": "d2ca1ca471fc889d4f9d36ca807304d87523a51db4e066055e7467a2d029df3c",
+        "production-build-mobile": "d2ca1ca471fc889d4f9d36ca807304d87523a51db4e066055e7467a2d029df3c",
+        "production-live-desktop": "d2ca1ca471fc889d4f9d36ca807304d87523a51db4e066055e7467a2d029df3c",
+        "production-live-mobile": "d2ca1ca471fc889d4f9d36ca807304d87523a51db4e066055e7467a2d029df3c"
+      },
+      "https_sha256": "d2ca1ca471fc889d4f9d36ca807304d87523a51db4e066055e7467a2d029df3c",
+      "status": "passed",
+      "root_independent_public_sha256": "d2ca1ca471fc889d4f9d36ca807304d87523a51db4e066055e7467a2d029df3c",
+      "root_retained_bytes": 5825574,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/all.svg",
+      "sha256": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+      "production_streams": {
+        "production-build-desktop": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+        "production-build-mobile": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+        "production-live-desktop": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+        "production-live-mobile": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0"
+      },
+      "https_sha256": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+      "status": "passed",
+      "root_independent_public_sha256": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+      "root_retained_bytes": 241292,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/core.svg",
+      "sha256": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+      "production_streams": {
+        "production-build-desktop": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+        "production-build-mobile": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+        "production-live-desktop": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+        "production-live-mobile": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2"
+      },
+      "https_sha256": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+      "status": "passed",
+      "root_independent_public_sha256": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+      "root_retained_bytes": 219792,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/changhe.svg",
+      "sha256": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+      "production_streams": {
+        "production-build-desktop": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+        "production-build-mobile": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+        "production-live-desktop": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+        "production-live-mobile": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e"
+      },
+      "https_sha256": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+      "status": "passed",
+      "root_independent_public_sha256": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+      "root_retained_bytes": 204387,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/yongning.svg",
+      "sha256": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+      "production_streams": {
+        "production-build-desktop": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+        "production-build-mobile": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+        "production-live-desktop": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+        "production-live-mobile": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8"
+      },
+      "https_sha256": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+      "status": "passed",
+      "root_independent_public_sha256": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+      "root_retained_bytes": 210297,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/palace2013.svg",
+      "sha256": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+      "production_streams": {
+        "production-build-desktop": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+        "production-build-mobile": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+        "production-live-desktop": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+        "production-live-mobile": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c"
+      },
+      "https_sha256": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+      "status": "passed",
+      "root_independent_public_sha256": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+      "root_retained_bytes": 227900,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R01.svg",
+      "sha256": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+      "production_streams": {
+        "production-build-desktop": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+        "production-build-mobile": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+        "production-live-desktop": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+        "production-live-mobile": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef"
+      },
+      "https_sha256": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+      "status": "passed",
+      "root_independent_public_sha256": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+      "root_retained_bytes": 204611,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R02.svg",
+      "sha256": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+      "production_streams": {
+        "production-build-desktop": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+        "production-build-mobile": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+        "production-live-desktop": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+        "production-live-mobile": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820"
+      },
+      "https_sha256": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+      "status": "passed",
+      "root_independent_public_sha256": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+      "root_retained_bytes": 244773,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R03.svg",
+      "sha256": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4",
+      "production_streams": {
+        "production-build-desktop": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4",
+        "production-build-mobile": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4",
+        "production-live-desktop": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4",
+        "production-live-mobile": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4"
+      },
+      "https_sha256": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4",
+      "status": "passed",
+      "root_independent_public_sha256": "b4ac0945f99b47b365ae01b8c355398233403a1418be37ce95d17b2be0b3e7d4",
+      "root_retained_bytes": 226390,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R04.svg",
+      "sha256": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+      "production_streams": {
+        "production-build-desktop": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+        "production-build-mobile": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+        "production-live-desktop": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+        "production-live-mobile": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32"
+      },
+      "https_sha256": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+      "status": "passed",
+      "root_independent_public_sha256": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+      "root_retained_bytes": 217640,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R05.svg",
+      "sha256": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+      "production_streams": {
+        "production-build-desktop": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+        "production-build-mobile": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+        "production-live-desktop": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+        "production-live-mobile": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1"
+      },
+      "https_sha256": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+      "status": "passed",
+      "root_independent_public_sha256": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+      "root_retained_bytes": 211466,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R06.svg",
+      "sha256": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+      "production_streams": {
+        "production-build-desktop": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+        "production-build-mobile": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+        "production-live-desktop": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+        "production-live-mobile": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec"
+      },
+      "https_sha256": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+      "status": "passed",
+      "root_independent_public_sha256": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+      "root_retained_bytes": 210174,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R07.svg",
+      "sha256": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+      "production_streams": {
+        "production-build-desktop": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+        "production-build-mobile": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+        "production-live-desktop": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+        "production-live-mobile": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7"
+      },
+      "https_sha256": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+      "status": "passed",
+      "root_independent_public_sha256": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+      "root_retained_bytes": 223642,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R08.svg",
+      "sha256": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398",
+      "production_streams": {
+        "production-build-desktop": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398",
+        "production-build-mobile": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398",
+        "production-live-desktop": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398",
+        "production-live-mobile": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398"
+      },
+      "https_sha256": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398",
+      "status": "passed",
+      "root_independent_public_sha256": "435038a0b0911a32763f4eab1845aae285d48e141e40b3e172d3b55792be6398",
+      "root_retained_bytes": 237956,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R09.svg",
+      "sha256": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+      "production_streams": {
+        "production-build-desktop": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+        "production-build-mobile": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+        "production-live-desktop": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+        "production-live-mobile": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c"
+      },
+      "https_sha256": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+      "status": "passed",
+      "root_independent_public_sha256": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+      "root_retained_bytes": 213188,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R10.svg",
+      "sha256": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+      "production_streams": {
+        "production-build-desktop": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+        "production-build-mobile": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+        "production-live-desktop": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+        "production-live-mobile": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84"
+      },
+      "https_sha256": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+      "status": "passed",
+      "root_independent_public_sha256": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+      "root_retained_bytes": 240735,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/R11.svg",
+      "sha256": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+      "production_streams": {
+        "production-build-desktop": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+        "production-build-mobile": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+        "production-live-desktop": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+        "production-live-mobile": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7"
+      },
+      "https_sha256": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+      "status": "passed",
+      "root_independent_public_sha256": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+      "root_retained_bytes": 207619,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/maps/method.svg",
+      "sha256": "dd33bfdb09cccce6e48e77b7d71a6f5658e68b828afa857e6945b79b2de97167",
+      "production_streams": {
+        "production-build-desktop": "dd33bfdb09cccce6e48e77b7d71a6f5658e68b828afa857e6945b79b2de97167",
+        "production-build-mobile": "dd33bfdb09cccce6e48e77b7d71a6f5658e68b828afa857e6945b79b2de97167",
+        "production-live-desktop": "dd33bfdb09cccce6e48e77b7d71a6f5658e68b828afa857e6945b79b2de97167",
+        "production-live-mobile": "dd33bfdb09cccce6e48e77b7d71a6f5658e68b828afa857e6945b79b2de97167"
+      },
+      "https_sha256": "dd33bfdb09cccce6e48e77b7d71a6f5658e68b828afa857e6945b79b2de97167",
+      "status": "passed",
+      "root_independent_public_sha256": "dd33bfdb09cccce6e48e77b7d71a6f5658e68b828afa857e6945b79b2de97167",
+      "root_retained_bytes": 3695,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/coverage.csv",
+      "sha256": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+      "production_streams": {
+        "production-build-desktop": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+        "production-build-mobile": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+        "production-live-desktop": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+        "production-live-mobile": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c"
+      },
+      "https_sha256": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+      "status": "passed",
+      "root_independent_public_sha256": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+      "root_retained_bytes": 602403,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/features.csv",
+      "sha256": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+      "production_streams": {
+        "production-build-desktop": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+        "production-build-mobile": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+        "production-live-desktop": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+        "production-live-mobile": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39"
+      },
+      "https_sha256": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+      "status": "passed",
+      "root_independent_public_sha256": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+      "root_retained_bytes": 363737,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/constraints.csv",
+      "sha256": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+      "production_streams": {
+        "production-build-desktop": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+        "production-build-mobile": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+        "production-live-desktop": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+        "production-live-mobile": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63"
+      },
+      "https_sha256": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+      "status": "passed",
+      "root_independent_public_sha256": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+      "root_retained_bytes": 452311,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/source-index.csv",
+      "sha256": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+      "production_streams": {
+        "production-build-desktop": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+        "production-build-mobile": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+        "production-live-desktop": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+        "production-live-mobile": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2"
+      },
+      "https_sha256": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+      "status": "passed",
+      "root_independent_public_sha256": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+      "root_retained_bytes": 1288590,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/plan.json",
+      "sha256": "1488cb64c5867fe857b82454b9d05e68c031b6eaf74feee07e316f574d51e98e",
+      "production_streams": {
+        "production-build-desktop": "1488cb64c5867fe857b82454b9d05e68c031b6eaf74feee07e316f574d51e98e",
+        "production-build-mobile": "1488cb64c5867fe857b82454b9d05e68c031b6eaf74feee07e316f574d51e98e",
+        "production-live-desktop": "1488cb64c5867fe857b82454b9d05e68c031b6eaf74feee07e316f574d51e98e",
+        "production-live-mobile": "1488cb64c5867fe857b82454b9d05e68c031b6eaf74feee07e316f574d51e98e"
+      },
+      "https_sha256": "1488cb64c5867fe857b82454b9d05e68c031b6eaf74feee07e316f574d51e98e",
+      "status": "passed",
+      "root_independent_public_sha256": "1488cb64c5867fe857b82454b9d05e68c031b6eaf74feee07e316f574d51e98e",
+      "root_retained_bytes": 5538357,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/source-index.json",
+      "sha256": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+      "production_streams": {
+        "production-build-desktop": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+        "production-build-mobile": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+        "production-live-desktop": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+        "production-live-mobile": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5"
+      },
+      "https_sha256": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+      "status": "passed",
+      "root_independent_public_sha256": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+      "root_retained_bytes": 1492949,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    },
+    {
+      "path": "city-plan-r11/manifest.json",
+      "sha256": "68cfb3b88dab179020c89b7e167d667c87a95de4891784db97f65866d702ec22",
+      "production_streams": {
+        "production-build-desktop": "68cfb3b88dab179020c89b7e167d667c87a95de4891784db97f65866d702ec22",
+        "production-build-mobile": "68cfb3b88dab179020c89b7e167d667c87a95de4891784db97f65866d702ec22",
+        "production-live-desktop": "68cfb3b88dab179020c89b7e167d667c87a95de4891784db97f65866d702ec22",
+        "production-live-mobile": "68cfb3b88dab179020c89b7e167d667c87a95de4891784db97f65866d702ec22"
+      },
+      "https_sha256": "68cfb3b88dab179020c89b7e167d667c87a95de4891784db97f65866d702ec22",
+      "status": "passed",
+      "root_independent_public_sha256": "68cfb3b88dab179020c89b7e167d667c87a95de4891784db97f65866d702ec22",
+      "root_retained_bytes": 106604,
+      "four_browser_streams_ci_https_record_root_actual_bytes_equal": true
+    }
+  ],
+  "source_evidence": [
+    {
+      "path": "/workspace/r11-evidence-archive/incoming/production-final-129/root-public/public/build-info.json",
+      "bytes": 677238,
+      "sha256": "00ed3d2f4758f3385d894b7d7babaa60fc8c0303599438425f7b01c088ecd7a5"
+    },
+    {
+      "path": "/workspace/r11-evidence-archive/incoming/production-final-129/live-artifacts/live-http.json",
+      "bytes": 222777,
+      "sha256": "28b120210cf38dfce9c4038d0b81ebb835cc5f4a85585b690dd1d929aa9a7a4b"
+    },
+    {
+      "path": "/workspace/r11-evidence-archive/incoming/production-final-129/root-public/public-readback-report.json",
+      "bytes": 8854,
+      "sha256": "c6aaa321e970695e353f5e74ca00ae30f79781c9cb492c0442bb2144b092372f"
+    },
+    {
+      "path": "/workspace/r11-evidence-archive/incoming/production-final-129/artifacts/city-plan-r11-browser/desktop-report.json",
+      "bytes": 40420,
+      "sha256": "e1f2c4a91f3c4be4144b5f381b5fc4728c2c5fd559555043689be5f237e8b8ef"
+    },
+    {
+      "path": "/workspace/r11-evidence-archive/incoming/production-final-129/artifacts/city-plan-r11-browser/mobile-report.json",
+      "bytes": 40409,
+      "sha256": "8fbaf8f76f260df779fa81bca7120646c3e66c178b4bf81357983df4b3919d1b"
+    },
+    {
+      "path": "/workspace/r11-evidence-archive/incoming/production-final-129/live-artifacts/live-city-plan-r11-browser/desktop-report.json",
+      "bytes": 40447,
+      "sha256": "8b714aeb6d7bb6c76f04874ce8cde2014eaba372e16944fca77cf25d5e589eb6"
+    },
+    {
+      "path": "/workspace/r11-evidence-archive/incoming/production-final-129/live-artifacts/live-city-plan-r11-browser/mobile-report.json",
+      "bytes": 40442,
+      "sha256": "803316fa763a735463bfc82e0fabdd2c4bc419b9ae1598ebba6e5174a1015eba"
+    }
+  ],
+  "retained_methods": [
+    {
+      "path": "/tmp/r11-final-independent-cross-check/verify_downloads.py",
+      "bytes": 4445,
+      "sha256": "75e5977117220a1627a286fc3d6f8aa350c2a55300b23a9dc11fe6dce2438748"
+    },
+    {
+      "path": "/tmp/r11-final-independent-cross-check/independent_final_cross_check.py",
+      "bytes": 9556,
+      "sha256": "5235be6d29bd3023c61cb95154909856c95bb55d5656514bb2988782fa0bf913"
+    }
+  ],
+  "helper_result": {
+    "path": "/tmp/r11-final-independent-cross-check/browser-https-cross-check.json",
+    "bytes": 19083,
+    "sha256": "352d2ba8c63ea3a7fb18956b2c5f4dd750526e95c8740bbcd981139ecac5f713"
+  },
+  "helper_command": [
+    "/tmp/r11-venv/bin/python",
+    "/tmp/r11-final-independent-cross-check/verify_downloads.py",
+    "--build-info",
+    "/workspace/r11-evidence-archive/incoming/production-final-129/root-public/public/build-info.json",
+    "--main-build",
+    "/workspace/r11-evidence-archive/incoming/production-final-129/artifacts/city-plan-r11-browser",
+    "--main-live",
+    "/workspace/r11-evidence-archive/incoming/production-final-129/live-artifacts/live-city-plan-r11-browser",
+    "--live-http",
+    "/workspace/r11-evidence-archive/incoming/production-final-129/live-artifacts/live-http.json",
+    "--output",
+    "/tmp/r11-final-independent-cross-check/browser-https-cross-check.json"
+  ],
+  "frozen_archive_inputs_modified": false,
+  "repository_modified": false,
+  "errors": []
+}

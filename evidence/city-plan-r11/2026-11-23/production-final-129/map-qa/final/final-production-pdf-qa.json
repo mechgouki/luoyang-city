@@ -1,0 +1,765 @@
+{
+  "schema_version": 1,
+  "stage": "final_deployed_production",
+  "stage_zh": "最终生产已发布；正式PDF与图纸专项复核",
+  "reviewed_at_utc": "2026-11-23T03:17:22Z",
+  "status": "final_production_pdf_and_map_visual_checks_passed",
+  "scope": "Only the final public PDF, its rendered pages, map SVG invariance, text, fonts, layout, and publication provenance. This report is not the whole-site verify-live gate.",
+  "whole_site_verify_live_status": "pending_at_review_assignment; parent-managed and not claimed completed by this report",
+  "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+  "source_pdf": {
+    "path": "/tmp/r11-final-live-review/public/downloads/city-plan-r11.pdf",
+    "bytes": 2126410,
+    "sha256": "2466af8e41776be7731a99e35bf9e417faf035e16116c7d6ee475c2927047fc6"
+  },
+  "source_pdf_public_url": "https://mechgouki.github.io/luoyang-city/downloads/city-plan-r11.pdf",
+  "source_from": "Actual final public bytes independently read back over HTTPS by parent; not local _site output or the pre-release PDF.",
+  "public_readback_evidence": {
+    "path": "/tmp/r11-final-live-review/public-readback-report.json",
+    "bytes": 8854,
+    "sha256": "c6aaa321e970695e353f5e74ca00ae30f79781c9cb492c0442bb2144b092372f"
+  },
+  "public_readback_status": "passed",
+  "pdf_pages": 17,
+  "pdf_metadata": {
+    "/Producer": "pypdf",
+    "/Title": "北魏洛阳 · 全城统一坐标复原工作平面 R11.1",
+    "/Subject": "516–528年综合；来源轮廓、候选接入与完整对象登记；非全城同期实测平面",
+    "/Creator": "luoyang-city / CairoSVG / pypdf",
+    "/Keywords": "R11.1; source_commit=129abaee724870ec00bc25c6e2fd2998a215063b"
+  },
+  "production_hash_matches_public_build_info": true,
+  "page_format_summary": {
+    "page_1": "A2 landscape",
+    "pages_2_through_17": "A3 landscape"
+  },
+  "render_engine": "pdftoppm / Poppler",
+  "render_dpi": 144,
+  "render_command": "pdftoppm -png -r 144 /tmp/r11-final-live-review/public/downloads/city-plan-r11.pdf /tmp/r11-final-live-review/figures/production-r11-page",
+  "all_17_pages_rendered": true,
+  "final_contact_sheet_reviewed": true,
+  "font_entries": 34,
+  "all_fonts_embedded": true,
+  "all_fonts_unicode_mapped": true,
+  "all_page_texts_unchanged_except_expected_commit_footer_update": true,
+  "production_to_production_pixel_comparison": {
+    "baseline_pdf": {
+      "path": "/tmp/r11-live-review/public/downloads/city-plan-r11.pdf",
+      "bytes": 2126262,
+      "sha256": "e6e702a2ee594d2e5679107d07d99d06a57e7eea6bb2f793baee00b2b9da6311"
+    },
+    "baseline_commit": "e137f473278282c6c30a29e2c018de666577889a",
+    "baseline_visual_review": {
+      "path": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json",
+      "bytes": 29351,
+      "sha256": "f1a11bcfa37c3abc1be7a925b9cbee0898b1aa1ae4cf8b78f33e5d70fc82a8e4"
+    },
+    "pixel_identical_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16
+    ],
+    "changed_pages": [
+      8,
+      13,
+      17
+    ],
+    "page_8_and_13_changes": "Only the label/leader positions in the lower-left scale-bar areas.",
+    "page_17_change": "Only the bottom footer source_commit string; method content unchanged.",
+    "unchanged_page_review_method": "Reuse the prior individual full-page visual review only after exact current/previous production pixel equality; also inspect the current 17-page contact sheet.",
+    "comparison_report": {
+      "path": "/tmp/r11-final-live-review/figures/final-production-render-comparison.json",
+      "bytes": 12420,
+      "sha256": "637df1d136d01e16dfedc6fa25cdb12f18d073afb540ec430292773a47d94f27"
+    }
+  },
+  "public_svg_comparison": {
+    "public_svg_count": 17,
+    "map_svg_count": 16,
+    "map_svgs_byte_identical_to_frozen_local_fix": true,
+    "method_svg_byte_identical_to_frozen_local_fix": false,
+    "method_svg_matches_after_only_expected_commit_replacement": true,
+    "method_exception_explanation": "Frozen local method.svg retained e137; final method.svg correctly prints 129abaee724870ec00bc25c6e2fd2998a215063b. Therefore 16 map SVGs are byte-identical, while the 17th SVG differs solely in that known footer value.",
+    "all_237_feature_records_unchanged_from_e137": true,
+    "all_16_views_unchanged_from_e137": true,
+    "all_237_feature_wrappers_unchanged_in_each_map_view": true,
+    "all_previous_label_ids_retained": true,
+    "moved_labels": [
+      {
+        "view_id": "R03",
+        "ids": [
+          "r11-candidate-object-road_xiyang"
+        ]
+      },
+      {
+        "view_id": "R08",
+        "ids": [
+          "r11-candidate-group-market-east-wards"
+        ]
+      }
+    ],
+    "comparison_report": {
+      "path": "/tmp/r11-final-live-review/figures/final-svg-comparison.json",
+      "bytes": 8273,
+      "sha256": "f45a391139564f40537e4e40a18a5bc7128ad251c5595aa0c2a38d6c2ce6ffa8"
+    },
+    "frozen_local_fix_directory": "/tmp/r11-scale-fix-qa/maps"
+  },
+  "resolved_issues": [
+    {
+      "id": "R11-PDF-P08-SCALE-LABEL",
+      "page": 8,
+      "view_id": "R03",
+      "affected_label": "西阳门外御道",
+      "previous_status": "open_minor_layout_in_e137_actual_production",
+      "previous_observation": "500 m比例尺的半透明白色底板覆盖该图签上半部；字的下半部仍可见。",
+      "final_status": "resolved_in_final_public_production",
+      "final_observation": "图签完整移至比例尺保留区之外；原点与图形保持原坐标，新增/调整引线说明图签位置。",
+      "verification": "Individually inspected final production full page and enlarged detail; original label ID retained and source geometry byte unchanged.",
+      "final_detail_png": {
+        "path": "/tmp/r11-final-live-review/figures/production-detail-p08-scale-label.png",
+        "bytes": 61936,
+        "sha256": "5c844adaad9d8dd550f000e420d9aff44e6eb42fa3602c4235bf7424f8aca60f",
+        "pixel_dimensions": [
+          1500,
+          380
+        ]
+      },
+      "production_before_after_comparison_png": {
+        "path": "/tmp/r11-final-live-review/figures/production-comparison-p08.png",
+        "bytes": 38991,
+        "sha256": "d0c973b63590625db29f2de2d4644f13d3535e2c3ef92d47214e643994285581",
+        "pixel_dimensions": [
+          750,
+          445
+        ]
+      },
+      "historical_coordinates_changed": false
+    },
+    {
+      "id": "R11-PDF-P13-SCALE-LABEL",
+      "page": 13,
+      "view_id": "R08",
+      "affected_label": "通商／大货〔市东，内部无序〕",
+      "previous_status": "open_minor_layout_in_e137_actual_production",
+      "previous_observation": "500 m比例尺的半透明白色底板覆盖该图签左段文字。",
+      "final_status": "resolved_in_final_public_production",
+      "final_observation": "图签完整移至比例尺保留区之外；原点与图形保持原坐标，新增/调整引线说明图签位置。",
+      "verification": "Individually inspected final production full page and enlarged detail; original label ID retained and source geometry byte unchanged.",
+      "final_detail_png": {
+        "path": "/tmp/r11-final-live-review/figures/production-detail-p13-scale-label.png",
+        "bytes": 77059,
+        "sha256": "531fd660de5532d2056171890a83f60f533a18528f1c216216ebe0821c10a9e6",
+        "pixel_dimensions": [
+          1500,
+          380
+        ]
+      },
+      "production_before_after_comparison_png": {
+        "path": "/tmp/r11-final-live-review/figures/production-comparison-p13.png",
+        "bytes": 45482,
+        "sha256": "840ab72d15229b3c26d2b9b56e327b3871806b7eec80ae1873ddf743e0a477f8",
+        "pixel_dimensions": [
+          750,
+          445
+        ]
+      },
+      "historical_coordinates_changed": false
+    }
+  ],
+  "unresolved_visual_issues_observed": [],
+  "not_issues": [
+    "Map-window edge clipping of features is intentional and does not define ancient ward or administrative boundaries.",
+    "Long documentary group labels use intentional ellipsis; complete records remain available in data.",
+    "The Yongning source-wall mismatch and 2013 palace comparison displacement intentionally preserve evidence differences; the layout fix did not alter them.",
+    "Candidate point signs and source symbols are not building footprints; this visual QA does not upgrade historical positional certainty."
+  ],
+  "contact_sheet": {
+    "path": "/tmp/r11-final-live-review/figures/production-r11-contact-sheet.png",
+    "bytes": 1635949,
+    "sha256": "57148d3681180de0b041904027482f1cdc97d0f52266cbb060bdba5b25eeb58e",
+    "pixel_dimensions": [
+      2650,
+      2636
+    ]
+  },
+  "chat_previews": [
+    {
+      "path": "/tmp/r11-final-live-review/figures/production-r11-all-preview.png",
+      "bytes": 714358,
+      "sha256": "aa1ef4dc614ea53f59792f4237068ea858086ee7708edfd5d924c5099267f3db",
+      "pixel_dimensions": [
+        2100,
+        1485
+      ]
+    },
+    {
+      "path": "/tmp/r11-final-live-review/figures/production-r11-yongning-preview.png",
+      "bytes": 522770,
+      "sha256": "6fca0098d630861ee78508d409495481c1fc405135d0095b1e503cad10a7ab6d",
+      "pixel_dimensions": [
+        2100,
+        1485
+      ]
+    }
+  ],
+  "font_report": {
+    "path": "/tmp/r11-final-live-review/figures/production-pdf-fonts.txt",
+    "bytes": 3384,
+    "sha256": "3397e23ee1d2908b20c2487ae46fca56997025109023b42c70084fd2dddcd5c3"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "view_id": "all",
+      "title": "全城 · 共同坐标复原平面",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-01.png",
+      "render_sha256": "73a4fb7ad8748b3626c4c7e073a91c76ef4233c3ae226353587975d3e30cefa7",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        3368,
+        2382
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1683.77953,
+      "height_pt": 1190.55118,
+      "text_chars": 875,
+      "chinese_characters": 618,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "全城外缘、图例与页脚完整；中部名称密集但可辨，长共同方向组名用省略号。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 2,
+      "view_id": "core",
+      "title": "宫城中轴—永宁寺 · 共同坐标取景",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-02.png",
+      "render_sha256": "c0191abce4341679cb62fa107d6cf676b90db598911a0831cfc5cdf2e0ab815c",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 677,
+      "chinese_characters": 468,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "中轴和永宁局部轮廓在同一框架；图框内道路延伸被正常取景裁切。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 3,
+      "view_id": "changhe",
+      "title": "阊阖门 · 原图构件接入",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-03.png",
+      "render_sha256": "c1d706ecc58425bd36350db9fb711828b6b634411476455e85aed859699bc02f",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 400,
+      "chinese_characters": 256,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "阊阖门主体、三门道、阙基开放边线与地下示意虚线均可辨。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 4,
+      "view_id": "yongning",
+      "title": "永宁寺 · 刊载平面接入",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-04.png",
+      "render_sha256": "8e5ec9997f189de251bb1a960d19a1ca9d8fc9562e6af233cc0eefd7c8a9e262",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 544,
+      "chinese_characters": 375,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "刊载寺墙与06a残墙各自保留；塔座、地基、门址、图示道路/水沟颜色与线型可区分。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 5,
+      "view_id": "palace2013",
+      "title": "宫城 · 2013年刊载概览对照",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-05.png",
+      "render_sha256": "4e7300fb359b544a459afedfb40a0be21dc130607e0864bca3571125416e2db8",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 919,
+      "chinese_characters": 679,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "蓝灰2013概览与绿色来源骨架同时可辨；夯土范围、隔壁、调查签未画成统一殿身。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 6,
+      "view_id": "R01",
+      "title": "R01 · 北门与北郊",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-06.png",
+      "render_sha256": "0ff388bffdc37bfda4c7ef6253857e22a5a3e97719b48a08b0262a5d280f260a",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 397,
+      "chinese_characters": 247,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "北门和北郊图签、北针、500m比例尺完整。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 7,
+      "view_id": "R02",
+      "title": "R02 · 西面门道",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-07.png",
+      "render_sha256": "43806397f9e5f2a4b55f11b7d5873f681cf5348fa3f027a3af75dbfd5d52edf5",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 1006,
+      "chinese_characters": 723,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "西侧与内城关系可读；取景边沿的道路/点符裁切符合窗口说明。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 8,
+      "view_id": "R03",
+      "title": "R03 · 宫苑与西北",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-08.png",
+      "render_sha256": "83f07dbc5f8b079ad1b09ca2f5f3e5cd6fbff718077d1f0f364898b87280542d",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": false,
+      "changed_pixel_bbox": [
+        223,
+        1311,
+        367,
+        1426
+      ],
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 738,
+      "chinese_characters": 518,
+      "text_unchanged_except_expected_commit_update": true,
+      "difference_explanation": "Only the lower-left scale-label area changes; label and leader move while feature geometry stays fixed.",
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": true,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Final public PDF rendered with pdftoppm at 144 dpi; individually reopened full page and enlarged scale-label detail; compared actual previous and final production raster pixels and unchanged feature SVG wrappers.",
+      "review_notes": "西阳门外御道完整可辨，已避开比例尺底板，保留指向原候选点的引线；标题、图例、页脚及其余图签正常。",
+      "resolved_issue_id": "R11-PDF-P08-SCALE-LABEL",
+      "detail_png": {
+        "path": "/tmp/r11-final-live-review/figures/production-detail-p08-scale-label.png",
+        "bytes": 61936,
+        "sha256": "5c844adaad9d8dd550f000e420d9aff44e6eb42fa3602c4235bf7424f8aca60f",
+        "pixel_dimensions": [
+          1500,
+          380
+        ]
+      }
+    },
+    {
+      "page": 9,
+      "view_id": "R04",
+      "title": "R04 · 建春门与城东北",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-09.png",
+      "render_sha256": "018fb88942f02e3e06a71ab9cd1ff14b5923fd28809dfdf2587ac8d7cc128596",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 617,
+      "chinese_characters": 416,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "建春门、东部候选图签及共同方向组名可读；未见页边文字裁切。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 10,
+      "view_id": "R05",
+      "title": "R05 · 大市与寿丘",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-10.png",
+      "render_sha256": "35a54ebf382f7811d831a26669529f67125828b7f4946c0f3abe2a07706d8201",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 552,
+      "chinese_characters": 355,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "大市周边四组共同方向签与寿丘范围点可辨，未生成坊界。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 11,
+      "view_id": "R06",
+      "title": "R06 · 西阳门内与永宁西邻",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-11.png",
+      "render_sha256": "aeae4dfe395547449e85bde3b9795ba70be9e9f27e80602ad2a9e2d8b561ce97",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 507,
+      "chinese_characters": 331,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "西阳门内—永宁西邻关系清晰；两套寺墙线保留差异。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 12,
+      "view_id": "R07",
+      "title": "R07 · 宫前御道",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-12.png",
+      "render_sha256": "a0e38accb376fa905156f73702cd98f5517e0adb25388d0b691ae073282f8398",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 718,
+      "chinese_characters": 493,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "宫前御道与宣阳门参照、来源门符和候选点可区分。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 13,
+      "view_id": "R08",
+      "title": "R08 · 城东南门内",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-13.png",
+      "render_sha256": "ae0ea3e4f7d9d997405ff7f663633d0ee539751467c31443f222544a8a0505a2",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": false,
+      "changed_pixel_bbox": [
+        285,
+        1352,
+        730,
+        1385
+      ],
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 975,
+      "chinese_characters": 697,
+      "text_unchanged_except_expected_commit_update": true,
+      "difference_explanation": "Only the lower-left scale-label area changes; label and leader move while feature geometry stays fixed.",
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": true,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Final public PDF rendered with pdftoppm at 144 dpi; individually reopened full page and enlarged scale-label detail; compared actual previous and final production raster pixels and unchanged feature SVG wrappers.",
+      "review_notes": "通商／大货〔市东，内部无序〕完整可辨，已避开比例尺底板，保留指向原候选点的引线；标题、图例、页脚及其余图签正常。",
+      "resolved_issue_id": "R11-PDF-P13-SCALE-LABEL",
+      "detail_png": {
+        "path": "/tmp/r11-final-live-review/figures/production-detail-p13-scale-label.png",
+        "bytes": 77059,
+        "sha256": "531fd660de5532d2056171890a83f60f533a18528f1c216216ebe0821c10a9e6",
+        "pixel_dimensions": [
+          1500,
+          380
+        ]
+      }
+    },
+    {
+      "page": 14,
+      "view_id": "R09",
+      "title": "R09 · 城东南门外",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-14.png",
+      "render_sha256": "b7f2416935d2394595ccb0dbf0551659366da0c7dd7674bc62600dd377db877c",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 529,
+      "chinese_characters": 345,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "城东南门外各文献候选图签、来源门点与道路可读。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 15,
+      "view_id": "R10",
+      "title": "R10 · 城南门道与寺学",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-15.png",
+      "render_sha256": "477c1090d5c2109cc55d78dfb6cdc0820e9d1ec21b9368f97689cea968ee6a87",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 971,
+      "chinese_characters": 679,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "门道与寺学广域图文字较密；长方向组名以省略号显示，图例/页脚完整。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 16,
+      "view_id": "R11",
+      "title": "R11 · 永桥与洛南",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-16.png",
+      "render_sha256": "1f4b0f0cf5194c4323e7987fd3a170c0e66a1fcdb24d781b5a423a03dd19f1aa",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": true,
+      "changed_pixel_bbox": null,
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 498,
+      "chinese_characters": 315,
+      "text_unchanged_except_expected_commit_update": true,
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": false,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Exact pixel equality between final public production render and the individually reviewed previous public production render, both at 144 dpi; final contact sheet reviewed. The current page was not redundantly reopened individually.",
+      "review_notes": "永桥、四里四馆共同方向签与洛南寺址状态可辨；长组名省略号明确。",
+      "prior_individual_review": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json"
+    },
+    {
+      "page": 17,
+      "view_id": "method",
+      "title": "共同坐标／证据与限制",
+      "render_path": "/tmp/r11-final-live-review/figures/production-r11-page-17.png",
+      "render_sha256": "05701a229313c38f64785fe94d6081ef9cfb5de824ced9a44f620f21b5ad85b9",
+      "render_dpi": 144,
+      "pixel_dimensions": [
+        2382,
+        1684
+      ],
+      "production_pixels_identical_to_e137": false,
+      "changed_pixel_bbox": [
+        582,
+        1608,
+        1019,
+        1626
+      ],
+      "width_pt": 1190.55118,
+      "height_pt": 841.889764,
+      "text_chars": 802,
+      "chinese_characters": 584,
+      "text_unchanged_except_expected_commit_update": true,
+      "difference_explanation": "Only the bottom source_commit footer changes to the final production commit; all method content stays unchanged.",
+      "final_contact_sheet_reviewed": true,
+      "current_full_page_reopened": true,
+      "unresolved_issue_ids": [],
+      "unintended_page_edge_text_clipping_observed": false,
+      "missing_or_garbled_glyphs_observed": false,
+      "header_footer_ok": true,
+      "legend_ok": true,
+      "review_method": "Final public method page individually reopened at 144 dpi. Actual production raster difference is restricted to the bottom source_commit footer; source SVG matches frozen method SVG after replacing exactly the old commit string with the final commit.",
+      "review_notes": "五种证据、共同坐标与限制说明完整；底部最终发布提交号可见且未越界，未见缺字、乱码或页边裁切。"
+    }
+  ],
+  "preserved_prior_qa": [
+    {
+      "stage": "previous_actual_production_with_two_minor_layout_issues",
+      "path": "/tmp/r11-live-review/figures",
+      "not_modified_by_current_review": true
+    },
+    {
+      "stage": "local_post_fix_candidate_not_deployed",
+      "path": "/tmp/r11-scale-fix-qa",
+      "not_modified_by_current_review": true
+    }
+  ],
+  "repository_modified_by_this_qa": false
+}

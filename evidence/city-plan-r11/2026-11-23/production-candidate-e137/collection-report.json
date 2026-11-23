@@ -1,0 +1,123 @@
+{
+  "schema": "luoyang-r11-intermediate-production-collection-v1",
+  "collected_utc": "2026-11-23T02:56:46.753825+00:00",
+  "role": "pre_fix_public_production",
+  "source_commit": "e137f473278282c6c30a29e2c018de666577889a",
+  "source_tree": "5eacab79b167e95c1aa4c87bd79226b3bb6f8ffe",
+  "workflow_run": 45099225785,
+  "run_attempt": 1,
+  "workflow_status": "completed",
+  "workflow_conclusion": "success",
+  "all_three_gates_success": true,
+  "jobs": [
+    {
+      "id": 137445941557,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T02:16:14Z",
+      "completed_at": "2026-11-23T02:28:57Z"
+    },
+    {
+      "id": 137449867620,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T02:29:02Z",
+      "completed_at": "2026-11-23T02:29:24Z"
+    },
+    {
+      "id": 137449999743,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-23T02:29:27Z",
+      "completed_at": "2026-11-23T02:47:54Z"
+    }
+  ],
+  "accepted_final_release": false,
+  "superseded_for_minor_layout_fixes": true,
+  "visual_qa": {
+    "pages_reviewed": 17,
+    "status": "review_complete_minor_layout_fixes_required",
+    "issues_file": "map-qa/pre-fix/production-pdf-visual-qa.json",
+    "finding_count": 2,
+    "not_a_ci_failure": true
+  },
+  "browser_downloads": {
+    "unique_files": 26,
+    "actual_build_and_live_downloads": 104,
+    "screenshots": {
+      "production-build-desktop": 5,
+      "production-build-mobile": 5,
+      "production-live-desktop": 5,
+      "production-live-mobile": 5
+    },
+    "six_path_byte_identity_verified": true
+  },
+  "ci_https_status": "passed",
+  "ci_https_resource_count": 920,
+  "root_public_https_resources_verified": 35,
+  "manual_ui_review": "root-public/public-ui-review.json",
+  "full_build_deploy_live_logs_retained": true,
+  "artifacts": [
+    {
+      "stage": "production-candidate-e137",
+      "run_id": 45099225785,
+      "status": "success",
+      "accepted_release": false,
+      "role": "pre_fix_public_production",
+      "path": "production-candidate-e137/github-pages.zip",
+      "extracted": "production-candidate-e137/pages-artifact",
+      "artifact_id": 14785670441,
+      "artifact_name": "github-pages",
+      "digest": "sha256:a4fea0dbc47701519de8ebbd95a37144c4b42ada824ea3cec899f571886d15d7",
+      "member_count": 1,
+      "extracted_bytes": 431308800,
+      "expires_at": "2026-11-30T02:28:45Z",
+      "collection_report": "production-candidate-e137/collection-report.json"
+    },
+    {
+      "stage": "production-candidate-e137",
+      "run_id": 45099225785,
+      "status": "success",
+      "accepted_release": false,
+      "role": "pre_fix_public_production",
+      "path": "production-candidate-e137/live-evidence.zip",
+      "extracted": "production-candidate-e137/live-artifacts",
+      "artifact_id": 14785449767,
+      "artifact_name": "live-acceptance-evidence",
+      "digest": "sha256:1b9723a7ee050d933f04b9253cdf7d81116643422157272be66e8cd800db4b1a",
+      "member_count": 629,
+      "extracted_bytes": 232813238,
+      "expires_at": "2026-12-23T02:47:44Z",
+      "collection_report": "production-candidate-e137/collection-report.json"
+    },
+    {
+      "stage": "production-candidate-e137",
+      "run_id": 45099225785,
+      "status": "success",
+      "accepted_release": false,
+      "role": "pre_fix_public_production",
+      "path": "production-candidate-e137/evidence.zip",
+      "extracted": "production-candidate-e137/artifacts",
+      "artifact_id": 14784254600,
+      "artifact_name": "browser-build-evidence",
+      "digest": "sha256:dbd99f528375593caefeb16bb947e4c468716b8737eac686a3dbeb069431bc0c",
+      "member_count": 672,
+      "extracted_bytes": 297358464,
+      "expires_at": "2026-12-07T02:28:37Z",
+      "collection_report": "production-candidate-e137/collection-report.json"
+    }
+  ],
+  "all_three_artifacts_downloaded_and_members_verified": true,
+  "third_party_source_figures_not_archived": true,
+  "signed_download_urls_retained": false,
+  "tree_commit_ref_writes": 0,
+  "research_limits": [
+    "516–528 composite window, not all contemporary surveyed building footprints",
+    "No new field coordinates or verified shared city controls",
+    "geo-outer-city-related-remains means 外郭相关遗存范围图示, not a continuous surveyed outer wall",
+    "Viewport edges are not historical ward boundaries"
+  ]
+}

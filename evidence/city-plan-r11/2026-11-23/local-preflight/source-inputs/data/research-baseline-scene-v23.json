@@ -1,0 +1,5605 @@
+{
+  "version": "2.3-plan",
+  "world_size": [
+    12000,
+    11000
+  ],
+  "coordinate_policy": "drawing coordinates only; geographic coordinates remain null; standalone panels use independent frames",
+  "time_frame": "516 to before the Heyin incident in 528; documentary composite",
+  "regions": [
+    {
+      "slug": "07_north_suburbs",
+      "title": "北门郊区 · 两条御道与闻义里",
+      "bbox": [
+        4250,
+        780,
+        7550,
+        1250
+      ],
+      "summary": [
+        "禅虚在大夏御道西；外字为周校补，寺前阅武场不定绝对侧别。",
+        "大夏东北的光风园承接旧宣武场；不与禅虚寺前场无证合并。",
+        "凝玄在永平里，范作凝圆；闻义里只落实城东北，里内宅第与制陶未定街址。"
+      ],
+      "focus_ids": [
+        "gate_daxia",
+        "gate_guangmo",
+        "n_chanxu",
+        "n_yuewuchang",
+        "n_guangfeng",
+        "n_ningxuan",
+        "n_yongping",
+        "n_wenyi",
+        "n_guowenyuan",
+        "n_songyun"
+      ],
+      "number": "R01",
+      "png": "regions/R01_north-suburbs.png",
+      "svg": "editable/R01_north-suburbs.svg"
+    },
+    {
+      "slug": "05_west_gates_temples",
+      "title": "城西门道 · 寺院与宅第",
+      "bbox": [
+        1180,
+        2400,
+        3330,
+        3850
+      ],
+      "summary": [
+        "按城西阊阖、西阳、西明三门道组织；道路只绘局部示意。",
+        "法云与宝光可作近邻；永明与王典御的路侧未定。",
+        "宣忠等后来寺院在盛时层回置宅名。"
+      ],
+      "focus_ids": [
+        "w_dajue",
+        "w_rongjue",
+        "w_yongming",
+        "w_yinian",
+        "w_fayun",
+        "w_baoguang",
+        "w_linhuaizhai",
+        "w_baima_xiyang",
+        "w_xuanzhong",
+        "w_wangdianyu",
+        "w_chongjue"
+      ],
+      "number": "R02",
+      "png": "regions/R02_west-gates-temples.png",
+      "svg": "editable/R02_west-gates-temples.svg"
+    },
+    {
+      "slug": "01_central_gardens",
+      "title": "宫苑与城内西北",
+      "bbox": [
+        4040,
+        1660,
+        4100,
+        2450
+      ],
+      "summary": [
+        "瑶光—千秋—西游园及华林园，沿用母图坐标。景阳山周边按周校试排，保留山／殿名物争议。",
+        "池岸与园界无测量依据；清暑殿与百果园未定次序。柰林群、钓台殿仍不分配确定地址。"
+      ],
+      "focus_ids": [
+        "ic_yaoguang",
+        "ic_jinyong",
+        "ic_xiyou_garden",
+        "ic_hualin",
+        "ic_diquan",
+        "ic_donggong_reserved"
+      ],
+      "number": "R03",
+      "png": "regions/R03_central-gardens.png",
+      "svg": "editable/R03_central-gardens.svg"
+    },
+    {
+      "slug": "04-east-north",
+      "title": "城东北｜建春门、两桥与建阳里",
+      "bbox": [
+        7700,
+        2100,
+        4200,
+        2750
+      ],
+      "summary": [
+        "建阳与绥民分居桥北大道两侧；建春门第一桥与东石桥分别表达。",
+        "谷水南流后折东接阳渠为局部拓扑；具体河槽、桥距和里界均为示意。"
+      ],
+      "focus_ids": [
+        "gate_jianchun",
+        "bridge_jianchun",
+        "bridge_eaststone",
+        "li_jianyang",
+        "v2_weichang",
+        "li_suimin",
+        "office_luoyang",
+        "li_chongyi",
+        "v2_lingying",
+        "bridge_qili",
+        "gate_sanmen",
+        "v2_mingxuan",
+        "v2_longhua"
+      ],
+      "number": "R04",
+      "png": "regions/R04_east-north.png",
+      "svg": "editable/R04_east-north.svg"
+    },
+    {
+      "slug": "06_west_market_shouqiu",
+      "title": "大市与寿丘 · 里坊和宽域",
+      "bbox": [
+        260,
+        4900,
+        4250,
+        4300
+      ],
+      "summary": [
+        "大市四向八里按无序组表示，并标正文所记行业；不把职业当成排他功能分区。",
+        "寿丘四至及东西二里、南北十五里只作原文范围；北达芒山见母图，局部图不是完整北界。",
+        "延酤／退酤等并记；阜财、金肆、开善仍为非定位附记，王宅与后出寺名分时层。"
+      ],
+      "focus_ids": [
+        "w_dashi",
+        "w_tongshang",
+        "w_dahuo",
+        "w_tiaoyin",
+        "w_yuelv",
+        "w_yangu",
+        "w_zhishang",
+        "w_cixiao",
+        "w_fengzhong",
+        "w_shouqiu",
+        "w_zhangfanggou",
+        "w_tushan_yuchi",
+        "w_lingxian",
+        "w_huangnv",
+        "w_heyang",
+        "w_hougang",
+        "w_zhuixian",
+        "w_hejian",
+        "w_fucai",
+        "w_jinsi",
+        "w_kaishan",
+        "w_wenbaitang",
+        "w_yingfengguan"
+      ],
+      "number": "R05",
+      "png": "regions/R05_west-market-shouqiu.png",
+      "svg": "editable/R05_west-market-shouqiu.svg"
+    },
+    {
+      "slug": "02_inner_west",
+      "title": "西阳门内与永宁寺西邻",
+      "bbox": [
+        4140,
+        3810,
+        2360,
+        2890
+      ],
+      "summary": [
+        "延年里、刘腾旧宅及官署向东关系，与永康里和永宁寺衔接。",
+        "建中寺用盛时宅名；同里未定的内部次序不分配独立院址。"
+      ],
+      "focus_ids": [
+        "ic_jianzhong",
+        "ic_changqiu",
+        "ic_yannian",
+        "ic_yongkang",
+        "ic_yongning"
+      ],
+      "number": "R06",
+      "png": "regions/R06_inner-west.png",
+      "svg": "editable/R06_inner-west.svg"
+    },
+    {
+      "slug": "03_palace_front",
+      "title": "宫前御道与永宁、景乐",
+      "bbox": [
+        4140,
+        3870,
+        4040,
+        3110
+      ],
+      "summary": [
+        "永宁四邻、景乐周边与两列官署保持同一母图位置。",
+        "南向箭头表示文献关系；路侧继承、官署间距与院落轮廓仍待定。"
+      ],
+      "focus_ids": [
+        "ic_yongning",
+        "ic_taiwei",
+        "ic_yushi",
+        "ic_zhaoxuan",
+        "ic_jingle",
+        "ic_hutong",
+        "ic_taimiao",
+        "ic_taishe"
+      ],
+      "number": "R07",
+      "png": "regions/R07_palace-front.png",
+      "svg": "editable/R07_palace-front.svg"
+    },
+    {
+      "slug": "04_inner_east",
+      "title": "东阳、清阳与开阳门内",
+      "bbox": [
+        6500,
+        4110,
+        1710,
+        2870
+      ],
+      "summary": [
+        "以三条入城道的已知侧别组织寺院、官署和独立水池。",
+        "愿会等关系群不自动继承路侧；寺院盛时年代未明者沿用空心符号。"
+      ],
+      "focus_ids": [
+        "ic_zhaoyi",
+        "ic_taicang_wei",
+        "ic_yuanhui",
+        "ic_guangming",
+        "ic_xiufan",
+        "ic_jinglin"
+      ],
+      "number": "R08",
+      "png": "regions/R08_inner-east.png",
+      "svg": "editable/R08_inner-east.svg"
+    },
+    {
+      "slug": "05-east-south",
+      "title": "城东南｜东阳、清阳门外诸里",
+      "bbox": [
+        7700,
+        4050,
+        4200,
+        2700
+      ],
+      "summary": [
+        "沿两条门外御道组织道北、道南诸里，范围不表示实际坊墙。",
+        "平等寺晚出的五层塔不入盛时；城东建中、归觉使用改寺前宅名。"
+      ],
+      "focus_ids": [
+        "gate_dongyang",
+        "v2_zhuangyan",
+        "v2_qintaishangjun",
+        "li_jingyi",
+        "v2_zhengshi",
+        "office_dianyu",
+        "li_zhaode",
+        "gate_qingyang",
+        "v2_pingdeng",
+        "v2_baoming",
+        "market_small",
+        "v2_guijue",
+        "v2_jingning",
+        "v2_jianzhong"
+      ],
+      "number": "R09",
+      "png": "regions/R09_east-south.png",
+      "svg": "editable/R09_east-south.svg"
+    },
+    {
+      "slug": "06-south-temples",
+      "title": "城南｜景明、王宅、寺学与礼制遗构",
+      "bbox": [
+        4100,
+        6630,
+        6250,
+        2600
+      ],
+      "summary": [
+        "景明院落为类型示意，七层塔完成时间未证；高阳王雍宅保持盛时名称。",
+        "大统、报德等路侧未记；灵台、辟雍为旧迹，明堂为正光营建。"
+      ],
+      "focus_ids": [
+        "gate_jinyang",
+        "v3_gaoyang",
+        "gate_xuanyang",
+        "v3_jingming",
+        "v3_datong",
+        "v3_zhaofu",
+        "v3_qintaigong_w",
+        "v3_qintaigong_e",
+        "gate_kaiyang",
+        "v3_baode",
+        "v3_hanguozixue",
+        "v3_zhengjue",
+        "v3_lingtai",
+        "v3_biyong",
+        "v3_mingtang",
+        "bridge_yong"
+      ],
+      "number": "R10",
+      "png": "regions/R10_south-temples.png",
+      "svg": "editable/R10_south-temples.svg"
+    },
+    {
+      "slug": "07-luosouth",
+      "title": "洛南｜永桥、四夷馆里与市场",
+      "bbox": [
+        4100,
+        8720,
+        4350,
+        2230
+      ],
+      "summary": [
+        "四馆道东、四里道西；内部位置与一一对街关系未证。",
+        "四通市仅知洛水南；远端圜丘只示方向，伊水不补精确河道。"
+      ],
+      "focus_ids": [
+        "bridge_yong",
+        "road_siyi",
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi",
+        "guan_jinling",
+        "guan_yanran",
+        "guan_fusang",
+        "guan_yanzi",
+        "v3_guizheng",
+        "v3_puti",
+        "market_fish",
+        "market_sitong",
+        "altar_yuanqiu"
+      ],
+      "number": "R11",
+      "png": "regions/R11_luosouth.png",
+      "svg": "editable/R11_luosouth.svg"
+    }
+  ],
+  "detail_regions": [
+    {
+      "slug": "d00_yongning_court",
+      "title": "永宁寺院内平面详图",
+      "bbox": [
+        4950,
+        4485,
+        910,
+        955
+      ],
+      "summary": [
+        "殿在塔北，四面各门；门的层数与北门无屋据原文。塔殿暂同轴，院界、占地、门居中均为试绘。",
+        "南门三道／三阁道的平面表达暂用三道开口，†保留校读和形制问题；不画成三座门楼。",
+        "千余间是僧房楼观的规模记载，图中少量虚线房块只示类型，不代表总栋数。",
+        "门外槐树与绿水有文献记载；具体水线、桥位及逐层三户六窗均未定，暂列说明。"
+      ],
+      "focus_ids": [
+        "ic_yongning"
+      ],
+      "sheet_code": "D01",
+      "sheet_kind": "detail",
+      "number": "D01",
+      "png": "details/D01_yongning-court.png",
+      "svg": "editable/D01_yongning-court.svg"
+    },
+    {
+      "slug": "d01_yongning_neighbors",
+      "title": "永宁寺与四邻详图",
+      "bbox": [
+        4350,
+        4080,
+        2910,
+        1650
+      ],
+      "summary": [
+        "同一母图局部放大：寺东太尉府、西对永康里、南界昭玄曹、北邻御史台。",
+        "寺内只细化正文可支持的殿塔与四门关系；院界、间距和开口形状均为试绘。"
+      ],
+      "focus_ids": [
+        "ic_yongning",
+        "ic_taiwei",
+        "ic_yongkang",
+        "ic_yushi",
+        "ic_zhaoxuan",
+        "ic_jingle"
+      ],
+      "sheet_code": "D02",
+      "sheet_kind": "detail",
+      "number": "D02",
+      "png": "details/D02_yongning-neighbors.png",
+      "svg": "editable/D02_yongning-neighbors.svg"
+    },
+    {
+      "slug": "d02_palace_gardens",
+      "title": "宫苑池台与景阳山关系详图",
+      "bbox": [
+        4900,
+        1950,
+        2900,
+        2110
+      ],
+      "summary": [
+        "千秋为宫西门，按《河南志》西对城阊阖关系暂排同高；†提示此为后出记载及绘图选择。",
+        "西游园保持门内道北；瑶光至千秋二里仅记原文，门距不换算比例。",
+        "景阳山群按周校试排；各池分别显示，钓台殿、柰林群、百果园仍保留未定项。"
+      ],
+      "focus_ids": [
+        "ic_xiyou_garden",
+        "ic_lingyun_platform",
+        "ic_lingzhi",
+        "ic_hualin",
+        "ic_tianyuan",
+        "ic_jingyang_hill",
+        "ic_xuanwu_pool",
+        "ic_qingshu",
+        "ic_baiguo",
+        "ic_diaotai_palace",
+        "ic_qianqiu_gate"
+      ],
+      "sheet_code": "D03",
+      "sheet_kind": "detail",
+      "number": "D03",
+      "png": "details/D03_palace-gardens.png",
+      "svg": "editable/D03_palace-gardens.svg"
+    },
+    {
+      "slug": "D-east-jianchun-jianyang",
+      "title": "建春两桥—建阳里｜寺群、土台与桥道关系",
+      "bbox": [
+        7720,
+        2170,
+        2520,
+        2130
+      ],
+      "summary": [
+        "第一桥示意跨南流谷水；东石桥按正文南北通行，桥北大道两侧为建阳与绥民。",
+        "水道折点、桥距和道路直线均为拓扑试绘；门外一里余保留原单位。",
+        "范注将两条租场解释为同处；527年第一桥颓毁另记，图符号不代替单年状态。"
+      ],
+      "focus_ids": [
+        "gate_jianchun",
+        "bridge_jianchun",
+        "bridge_eaststone",
+        "li_jianyang",
+        "v2_qiting",
+        "v2_weichang",
+        "li_suimin",
+        "office_luoyang",
+        "house_liuxuanming",
+        "v2_mingxuan",
+        "v2_longhua",
+        "v2_changmancang",
+        "v2_jingxing"
+      ],
+      "sheet_code": "D04",
+      "sheet_kind": "detail",
+      "number": "D04",
+      "png": "details/D04_east-jianchun-jianyang.png",
+      "svg": "editable/D04_east-jianchun-jianyang.svg"
+    },
+    {
+      "slug": "D-south-jingming-ritual",
+      "title": "景明—台学｜三池、寺学与礼制旧迹",
+      "bbox": [
+        6300,
+        7000,
+        3930,
+        1930
+      ],
+      "summary": [
+        "景明三池只表达数量；池形、院内位置与水功设施布局未定。",
+        "七层塔始造可据，528年前竣工未证；灵台砖塔仅附同址关系，造塔年未记。",
+        "灵台东为辟雍，明堂在辟雍西南，募征格在明堂北；报德路侧不定。"
+      ],
+      "focus_ids": [
+        "v3_jingming",
+        "v3_qintaigong_w",
+        "v3_qintaigong_e",
+        "v3_hanguozixue",
+        "v3_shijing",
+        "li_quanxue",
+        "li_yanxian",
+        "v3_zhengjue",
+        "v3_baode",
+        "v3_lingtai",
+        "v3_biyong",
+        "v3_mingtang",
+        "v3_muzheng",
+        "v3_lingtai_stupa"
+      ],
+      "sheet_code": "D05",
+      "sheet_kind": "detail",
+      "number": "D05",
+      "png": "details/D05_south-jingming-ritual.png",
+      "svg": "editable/D05_south-jingming-ritual.svg"
+    },
+    {
+      "slug": "D_west_market_axes",
+      "title": "大市四向 · 皇女台关系细图",
+      "bbox": [
+        1120,
+        5150,
+        3240,
+        3320
+      ],
+      "summary": [
+        "同一母图裁切；四向行业来自正文，里内铺面、作坊及两里先后均未定。",
+        "皇女台依市南主读，保留东南异文；台西县、台东宅沿用周本候选。",
+        "范本电子断句尚待纸本核对；阜财、金肆与开善的附记位置没有历史方位意义。"
+      ],
+      "focus_ids": [
+        "w_dashi",
+        "w_tongshang",
+        "w_dahuo",
+        "w_tiaoyin",
+        "w_yuelv",
+        "w_yangu",
+        "w_zhishang",
+        "w_cixiao",
+        "w_fengzhong",
+        "w_tushan_yuchi",
+        "w_huangnv",
+        "w_lingxian",
+        "w_heyang",
+        "w_hougang",
+        "w_fucai",
+        "w_jinsi",
+        "w_kaishan"
+      ],
+      "sheet_code": "D06",
+      "sheet_kind": "detail",
+      "number": "D06",
+      "png": "details/D06_west-market-axes.png",
+      "svg": "editable/D06_west-market-axes.svg"
+    }
+  ],
+  "street_sheets": [
+    {
+      "slug": "palace-yongning",
+      "title": "宫前御道 - 永宁寺与四邻",
+      "bbox": [
+        4320,
+        3830,
+        3370,
+        1980
+      ],
+      "source_note": "周《校释》卷一永宁、宫前官署、景乐诸条；范《校注》卷一。",
+      "panels": [
+        {
+          "title": "正文可落实",
+          "text": "永宁在宫门南、御道西；东有太尉府，西对永康里，北邻御史台，南界昭玄曹。"
+        },
+        {
+          "title": "本轮核校",
+          "text": "四邻与两列官署的方向分别检查。寺东的太尉府仍在御道西侧候选位置；道西判断来自段落承接。"
+        },
+        {
+          "title": "原文量距",
+          "text": "宫门南一里保留为文字量距。量距起讫、古里折算及图中院落占地尚未统一，不设置米制标尺。",
+          "tone": "gold"
+        },
+        {
+          "title": "继续保留",
+          "text": "官署宅院的围墙、开门方向与占地未知；南向序列不自动推出等距、相邻或全部临御道。",
+          "tone": "gold"
+        }
+      ],
+      "batch": 1,
+      "number": "S01",
+      "png": "streets/v23_S01_palace-yongning.png",
+      "svg": "editable/v23_S01_palace-yongning.svg"
+    },
+    {
+      "slug": "jianchun-two-bridges",
+      "title": "建春门 - 两桥、建阳与水道",
+      "bbox": [
+        7650,
+        2220,
+        2850,
+        2270
+      ],
+      "source_note": "周《校释》卷二明悬、龙华、魏昌、景兴条；范《校注》卷二。",
+      "panels": [
+        {
+          "title": "本轮实际改图",
+          "text": "建春门石桥据谷水关系作东西通行示意；东石桥保留正文的南北通行。桥北大道以道路表达。"
+        },
+        {
+          "title": "水道只落实联系",
+          "text": "谷水南流至建春桥附近，再向东与阳渠相接；折角、岸线与转折点均为拓扑示意。"
+        },
+        {
+          "title": "租场的解释层",
+          "text": "范注主张明悬东的常满仓租场与龙华南租场同址。图上采用此候选，并保留正文未明言的限制。",
+          "tone": "gold"
+        },
+        {
+          "title": "里程与时间",
+          "text": "东石桥门外一里余保留原文单位。527年桥毁、南柱埋没另列时间信息；桥符号只标通行关系。",
+          "tone": "gold"
+        }
+      ],
+      "batch": 1,
+      "number": "S02",
+      "png": "streets/v23_S02_jianchun-two-bridges.png",
+      "svg": "editable/v23_S02_jianchun-two-bridges.svg"
+    },
+    {
+      "slug": "xuanyang-jingming-schools",
+      "title": "宣阳门外 - 景明与城南台学",
+      "bbox": [
+        5520,
+        6630,
+        4780,
+        2630
+      ],
+      "source_note": "周《校释》卷三景明、秦太公、灵台明堂与报德诸条；范《校注》卷三。",
+      "panels": [
+        {
+          "title": "道路与寺院",
+          "text": "景明在宣阳门外、御道东。大统只知在景明西；秦太公二寺的内部东西关系分别保留。"
+        },
+        {
+          "title": "寺院平面层次",
+          "text": "三池仅表达数量，水功设施仅表达类型；七层塔保留始造与完成时点未定的区别。"
+        },
+        {
+          "title": "台学关系核校",
+          "text": "灵台东为辟雍，明堂在辟雍西南，募征活动点在明堂北。学堂与劝学里归属分开标注。"
+        },
+        {
+          "title": "无法落实的几何",
+          "text": "景明方五百步保留原单位；报德等处的道路侧别、里坊边界及砖塔造年仍待核定。",
+          "tone": "gold"
+        }
+      ],
+      "batch": 1,
+      "number": "S03",
+      "png": "streets/v23_S03_xuanyang-jingming-schools.png",
+      "svg": "editable/v23_S03_xuanyang-jingming-schools.svg"
+    },
+    {
+      "slug": "west-market-shouqiu",
+      "title": "城西大市 - 四向行业与寿丘宽域",
+      "bbox": [
+        240,
+        4570,
+        4280,
+        4630
+      ],
+      "batch": 2,
+      "source_note": "周《校释》、范《校注》卷四大市、寿丘、王宅与皇女台诸段。",
+      "panels": [
+        {
+          "title": "门道与四向行业",
+          "text": "大市在西阳门外四里、御道南。市东工巧屠贩，市南丝竹乐艺，市西酿酒，市北售棺与赁丧车；不定位单店。"
+        },
+        {
+          "title": "寿丘四至与原文尺度",
+          "text": "延酤／退酤以西、张方沟以东，南临洛水、北达芒山；东西二里、南北十五里不换算。此窗只见寿丘南段。"
+        },
+        {
+          "title": "十里、异名与未定位项",
+          "text": "四向八里之外，阜财／准财与金肆的侧别未记。开善在阜财内；齐谐是改名，乐律／乐肆和延酤／退酤均不另分一里。",
+          "tone": "gold"
+        },
+        {
+          "title": "皇女台与王宅时层",
+          "text": "皇女台市南主读，东南异文保留；县与侯刚宅沿周本，范电子断句待核。河间、东平仍标盛时王宅，不增画晚出寺院。",
+          "tone": "gold"
+        }
+      ],
+      "number": "S04",
+      "png": "streets/v23_S04_west-market-shouqiu.png",
+      "svg": "editable/v23_S04_west-market-shouqiu.svg"
+    },
+    {
+      "slug": "north-gates-jinyong",
+      "title": "城北两门 - 承明与金墉",
+      "bbox": [
+        3000,
+        780,
+        5850,
+        2450
+      ],
+      "source_note": "周《校释》卷一城门总叙、瑶光金墉段，卷五禅虚与凝玄条；范《校注》对应条。",
+      "panels": [
+        {
+          "title": "两门与北墙",
+          "text": "大夏在西、广莫在东；两门之间城上宫观相连。门距、同高及建筑栋数未记。"
+        },
+        {
+          "title": "门外两组",
+          "text": "禅虚御道西，外字为周校补；寺前阅武场不定侧。凝玄在广莫御道东、永平里，范作凝圆。"
+        },
+        {
+          "title": "承明通行关系",
+          "text": "承明当金墉城前东西大道，本图仅补接门的门外短段。王南寺附记通行关系；城前不自动等于南面。",
+          "tone": "gold"
+        },
+        {
+          "title": "金墉内部",
+          "text": "光极门与殿改为无序名物卡。正文未记门侧和门殿轴线，后出金墉图说另存，不并作确定平面。",
+          "tone": "gold"
+        }
+      ],
+      "batch": 2,
+      "layout": "wide",
+      "number": "S05",
+      "png": "streets/v23_S05_north-gates-jinyong.png",
+      "svg": "editable/v23_S05_north-gates-jinyong.svg"
+    }
+  ],
+  "standalone_panels": [
+    {
+      "slug": "A_west_bridge_weir",
+      "title": "长分桥—千金堰 · 区位与水工叙事",
+      "summary": [
+        "局部画布3000×1800；完全独立于母图，不参与全城距离。",
+        "长分桥在西阊阖门外七里；千金堰只知在桥西，原文未记距桥里程。",
+        "下半为中朝水工追叙，箭头不代表北魏河道，桥名异说与汉旧迹分别说明。"
+      ],
+      "features": [
+        {
+          "kind": "text",
+          "x": 150,
+          "y": 90,
+          "text": "独立关系附图 · 不参与全城距离；东西次序只依本段明记关系",
+          "size": 32,
+          "color": "ink",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "text",
+          "x": 150,
+          "y": 165,
+          "text": "桥堰区位",
+          "size": 40,
+          "color": "green",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "node",
+          "id": "w_qianjin",
+          "x": 500,
+          "y": 355,
+          "glyph": "site",
+          "label": "千金堰",
+          "note": "堰长、形制及距桥里程未记",
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "node",
+          "id": "w_changfenqiao",
+          "x": 1500,
+          "y": 355,
+          "glyph": "bridge",
+          "label": "长分桥",
+          "note": "图示符号不表示桥式或朝向",
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "node",
+          "id": "gate_changhe_west",
+          "x": 2500,
+          "y": 355,
+          "glyph": "site",
+          "label": "阊阖门〔城西门〕",
+          "note": "引用门名；不接入母图坐标",
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "relation",
+          "key": "panel_qianjin_west",
+          "points": [
+            [
+              1290,
+              265
+            ],
+            [
+              710,
+              265
+            ]
+          ],
+          "label": "桥西 · 距离未记",
+          "label_x": 800,
+          "label_y": 230,
+          "uncertain": false,
+          "ids": [
+            "w_changfenqiao",
+            "w_qianjin"
+          ],
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "relation",
+          "key": "panel_changfen_seven_li",
+          "points": [
+            [
+              2310,
+              265
+            ],
+            [
+              1690,
+              265
+            ]
+          ],
+          "label": "门外七里〔原文单位〕",
+          "label_x": 1730,
+          "label_y": 230,
+          "uncertain": false,
+          "ids": [
+            "gate_changhe_west",
+            "w_changfenqiao"
+          ],
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "group",
+          "key": "panel_bridge_old_name",
+          "x": 900,
+          "y": 535,
+          "w": 1200,
+          "h": 245,
+          "title": "桥名与汉旧迹附记",
+          "ids": [
+            "w_xiyangting"
+          ],
+          "labels": [
+            "夕阳亭〔汉旧迹〕"
+          ],
+          "note": "同书称张方桥为汉夕阳亭旧迹；不增画一座北魏亭。",
+          "cols": 1,
+          "located": false,
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "text",
+          "x": 150,
+          "y": 840,
+          "text": "长分／张方／张夫人：桥名来源有两说，作者未决；不拆成三座桥。",
+          "size": 29,
+          "color": "muted",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "area",
+          "key": "panel_hydraulic_history",
+          "x": 150,
+          "y": 915,
+          "w": 2700,
+          "h": 650,
+          "label": "中朝水工追叙 · 只示文本关系",
+          "style": "reserve",
+          "note": "以下水线是独立叙事符号；不是北魏河道图。",
+          "ids": [
+            "gushui",
+            "luoshui",
+            "w_changfenqiao"
+          ],
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "water",
+          "key": "panel_gushui_token",
+          "points": [
+            [
+              300,
+              1220
+            ],
+            [
+              650,
+              1220
+            ]
+          ],
+          "width": 70,
+          "label": "谷水",
+          "label_x": 405,
+          "label_y": 1165,
+          "closed": false,
+          "ids": [
+            "gushui"
+          ],
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "group",
+          "key": "panel_bridge_water_history",
+          "x": 1110,
+          "y": 1100,
+          "w": 780,
+          "h": 300,
+          "title": "石桥限水",
+          "ids": [
+            "w_changfenqiao"
+          ],
+          "labels": [
+            "长分桥命名一说"
+          ],
+          "note": "原文水涨分流入洛；具体结构未记。",
+          "cols": 1,
+          "located": false,
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "relation",
+          "key": "panel_gushui_to_bridge",
+          "points": [
+            [
+              705,
+              1220
+            ],
+            [
+              1070,
+              1220
+            ]
+          ],
+          "label": "注城下 · 立桥限水",
+          "label_x": 720,
+          "label_y": 1170,
+          "uncertain": false,
+          "ids": [
+            "gushui",
+            "w_changfenqiao"
+          ],
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "relation",
+          "key": "panel_water_to_luo",
+          "points": [
+            [
+              1930,
+              1220
+            ],
+            [
+              2380,
+              1220
+            ]
+          ],
+          "label": "分流入洛",
+          "label_x": 2010,
+          "label_y": 1170,
+          "uncertain": false,
+          "ids": [
+            "gushui",
+            "luoshui"
+          ],
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "water",
+          "key": "panel_luo_token",
+          "points": [
+            [
+              2440,
+              1220
+            ],
+            [
+              2750,
+              1220
+            ]
+          ],
+          "width": 70,
+          "label": "洛水",
+          "label_x": 2530,
+          "label_y": 1165,
+          "closed": false,
+          "ids": [
+            "luoshui"
+          ],
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "text",
+          "x": 215,
+          "y": 1490,
+          "text": "河道全程、入洛点及千金堰与各支流的连接，均不据此定线。",
+          "size": 30,
+          "color": "blue",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        },
+        {
+          "kind": "text",
+          "x": 150,
+          "y": 1680,
+          "text": "据周祖谟《校释》、范祥雍《校注》卷四长分桥、千金堰及夕阳亭记述。",
+          "size": 27,
+          "color": "muted",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_west_bridge_weir"
+        }
+      ],
+      "number": "B",
+      "png": "details/B_west-bridge-weir.png",
+      "svg": "editable/B_west-bridge-weir.svg"
+    },
+    {
+      "slug": "A_hejian_residence",
+      "title": "河间王琛宅 · 文柏堂与迎风馆",
+      "summary": [
+        "局部画布3000×1800；只示叙事从属关系，不作为宅院平面。",
+        "文柏堂属于王宅；迎风馆在后园。“后”不等于正北，两建筑相对方位未记。",
+        "河阴之后的寺园池渠描写留在后出层，不填入盛时院落。"
+      ],
+      "features": [
+        {
+          "kind": "text",
+          "x": 150,
+          "y": 90,
+          "text": "独立从属关系图 · 不参与全城距离；横向排版没有东西方位含义",
+          "size": 32,
+          "color": "ink",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "area",
+          "key": "panel_hejian_containment",
+          "x": 150,
+          "y": 250,
+          "w": 2700,
+          "h": 1080,
+          "label": "河间王琛宅 · 盛时名称",
+          "style": "ward",
+          "note": "此框只表达构件属于同一宅第叙述，不表示宅院边界。",
+          "ids": [
+            "w_hejian"
+          ],
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "node",
+          "id": "w_wenbaitang",
+          "x": 760,
+          "y": 650,
+          "glyph": "hall",
+          "label": "文柏堂",
+          "note": "同段记为王琛所造；内址未记",
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "text",
+          "x": 760,
+          "y": 890,
+          "text": "形如徽音殿",
+          "size": 31,
+          "color": "ink",
+          "anchor": "middle",
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "text",
+          "x": 760,
+          "y": 945,
+          "text": "形制比拟不能确定平面尺寸",
+          "size": 27,
+          "color": "muted",
+          "anchor": "middle",
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "text",
+          "x": 760,
+          "y": 1030,
+          "text": "文柏堂与后园的相互方位未记",
+          "size": 27,
+          "color": "muted",
+          "anchor": "middle",
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "area",
+          "key": "panel_hejian_rear_garden",
+          "x": 1500,
+          "y": 465,
+          "w": 1110,
+          "h": 680,
+          "label": "后园〔相对称谓〕",
+          "style": "garden",
+          "note": "绝对朝向、范围及主轴未记。",
+          "ids": [],
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "node",
+          "id": "w_yingfengguan",
+          "x": 2055,
+          "y": 780,
+          "glyph": "hall",
+          "label": "迎风馆",
+          "note": "明确建于后园；不把“后”换成正北",
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "text",
+          "x": 2055,
+          "y": 1030,
+          "text": "仅表达“馆在园内”的包含关系",
+          "size": 27,
+          "color": "green",
+          "anchor": "middle",
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "text",
+          "x": 1500,
+          "y": 1250,
+          "text": "井、池、回廊与两建筑的相对位置未据此定位",
+          "size": 27,
+          "color": "muted",
+          "anchor": "middle",
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "group",
+          "key": "panel_hejian_later_layer",
+          "x": 150,
+          "y": 1435,
+          "w": 2700,
+          "h": 240,
+          "title": "后出寺名与后园描写另分时间层",
+          "ids": [
+            "w_hejian"
+          ],
+          "labels": [
+            "河间寺〔河阴事后段落〕"
+          ],
+          "note": "后文所写池渠、石磴、飞梁，不据此反推盛时宅园的具体平面。",
+          "cols": 1,
+          "located": false,
+          "coordinate_frame": "panel:A_hejian_residence"
+        },
+        {
+          "kind": "text",
+          "x": 150,
+          "y": 1740,
+          "text": "据周《校释》、范《校注》卷四寿丘王宅及河间寺段。",
+          "size": 27,
+          "color": "muted",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_hejian_residence"
+        }
+      ],
+      "number": "C",
+      "png": "details/C_hejian-residence.png",
+      "svg": "editable/C_hejian-residence.svg"
+    },
+    {
+      "slug": "A_north_unlocated",
+      "title": "北邙与崇立寺 · 保留未定位信息",
+      "summary": [
+        "局部画布3000×1800；独立索引，不以图中位置表达全城方位或距离。",
+        "冯王、齐献武王两寺只落实到北邙山域，盛时年代另行保留。",
+        "崇立寺据518年使西域条有名；寺址无明文，寺名异文仍待辨。"
+      ],
+      "features": [
+        {
+          "kind": "text",
+          "x": 150,
+          "y": 90,
+          "text": "独立未定位附图 · 不参与全城距离；不以卷次代替寺院地址",
+          "size": 32,
+          "color": "ink",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_north_unlocated"
+        },
+        {
+          "kind": "area",
+          "key": "panel_north_mangshan_scope",
+          "x": 150,
+          "y": 235,
+          "w": 2700,
+          "h": 550,
+          "label": "北邙山上 · 仅知粗略地域",
+          "style": "range",
+          "note": "“山上”可核；两寺相互方位、距城门里程与范围均未给。",
+          "ids": [
+            "mangshan"
+          ],
+          "coordinate_frame": "panel:A_north_unlocated"
+        },
+        {
+          "kind": "group",
+          "key": "panel_north_mangshan_names",
+          "x": 300,
+          "y": 415,
+          "w": 2400,
+          "h": 280,
+          "title": "同属山域 · 组内不排空间先后",
+          "ids": [
+            "n_fengwang",
+            "n_qixianwu"
+          ],
+          "labels": [
+            "冯王寺〔盛时年代未定〕",
+            "齐献武王寺〔记名层待定〕"
+          ],
+          "note": "保留寺名与时间疑点，不把两寺画成全盛期已证实的地点。",
+          "cols": 2,
+          "located": false,
+          "coordinate_frame": "panel:A_north_unlocated"
+        },
+        {
+          "kind": "group",
+          "key": "panel_north_chongli_unlocated",
+          "x": 150,
+          "y": 1000,
+          "w": 2700,
+          "h": 360,
+          "title": "本书有僧籍记载 · 洛阳地址仍未给",
+          "ids": [
+            "n_chongli"
+          ],
+          "labels": [
+            "崇立寺〔神龟元年惠生取经条〕"
+          ],
+          "note": "据本书记年为518年。崇立／崇灵等异文待辨；不自动等同崇虚寺，也不因记在卷五而定在城北。",
+          "cols": 1,
+          "located": false,
+          "coordinate_frame": "panel:A_north_unlocated"
+        },
+        {
+          "kind": "text",
+          "x": 150,
+          "y": 1510,
+          "text": "后续续核版本、史传与地志中的地址记载，再推进寺名定位。",
+          "size": 30,
+          "color": "muted",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_north_unlocated"
+        },
+        {
+          "kind": "text",
+          "x": 150,
+          "y": 1690,
+          "text": "据周《校释》、范《校注》卷五宋云惠生使西域、京师建制及郭外寺院段。",
+          "size": 27,
+          "color": "muted",
+          "anchor": "start",
+          "coordinate_frame": "panel:A_north_unlocated"
+        }
+      ],
+      "number": "D",
+      "png": "details/D_north-unlocated.png",
+      "svg": "editable/D_north-unlocated.svg"
+    }
+  ],
+  "features": [
+    {
+      "kind": "area",
+      "key": "central_jinyong_range",
+      "x": 4470,
+      "y": 2030,
+      "w": 740,
+      "h": 430,
+      "label": "金墉城 · 范围示意",
+      "style": "range",
+      "ids": [
+        "ic_jinyong"
+      ],
+      "note": "西北角有据；城界与内部未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_smallcity_candidate",
+      "x": 4480,
+      "y": 2510,
+      "w": 600,
+      "h": 230,
+      "title": "洛阳小城 · 非定位附记",
+      "ids": [
+        "ic_luoyang_small"
+      ],
+      "labels": [
+        "金墉东〔补句回指候选〕"
+      ],
+      "cols": 1,
+      "note": "范围未定；此卡位置无地理意义",
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_yaoguang",
+      "x": 4750,
+      "y": 3410,
+      "glyph": "temple",
+      "label": "瑶光寺",
+      "dy": -80,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_qianqiu_gate",
+      "x": 5260,
+      "y": 3550,
+      "glyph": "gate_ew",
+      "label": "千秋门†",
+      "dy": 100,
+      "related_ids": [
+        "ic_qianqiu_road"
+      ],
+      "note": "宫西门；轴线试排†",
+      "dx": -80,
+      "anchor": "end",
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_yaoguang_qianqiu",
+      "points": [
+        [
+          4820,
+          3405
+        ],
+        [
+          5190,
+          3500
+        ]
+      ],
+      "label": "东去二里〔原文〕",
+      "uncertain": false,
+      "ids": [
+        "ic_yaoguang",
+        "ic_qianqiu_gate"
+      ],
+      "label_x": 4835,
+      "label_y": 3370,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_yaoguang_chengming",
+      "points": [
+        [
+          4670,
+          3310
+        ],
+        [
+          4520,
+          3140
+        ],
+        [
+          4470,
+          2480
+        ]
+      ],
+      "label": "北有承明",
+      "uncertain": false,
+      "ids": [
+        "ic_yaoguang",
+        "gate_chengming"
+      ],
+      "label_x": 4525,
+      "label_y": 3040,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "central_xiyou",
+      "x": 5330,
+      "y": 2080,
+      "w": 1080,
+      "h": 980,
+      "label": "西游园 · 范围示意",
+      "style": "garden",
+      "ids": [
+        "ic_xiyou_garden"
+      ],
+      "note": "千秋门内道北；院界未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_liangfeng_guan",
+      "x": 5580,
+      "y": 2270,
+      "glyph": "hall",
+      "label": "凉风观",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_lingyun_platform",
+      "x": 5580,
+      "y": 2630,
+      "glyph": "platform",
+      "label": "凌云台／八角井",
+      "dy": 65,
+      "related_ids": [
+        "ic_bajiao_well"
+      ],
+      "note": "井在台上",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "pool",
+      "key": "central_bihai",
+      "cx": 5580,
+      "cy": 2870,
+      "rx": 190,
+      "ry": 75,
+      "label": "碧海曲池\n台下；岸线未定",
+      "ids": [
+        "ic_bihai_pool"
+      ],
+      "size": 25,
+      "label_dy": -3,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_xuanci",
+      "x": 5960,
+      "y": 2600,
+      "glyph": "hall",
+      "label": "宣慈观",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_lingzhi",
+      "x": 6320,
+      "y": 2600,
+      "glyph": "platform",
+      "label": "灵芝钓台",
+      "dy": 65,
+      "note": "出于海中；岸线未定",
+      "size": 29,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_jiafu",
+      "x": 6320,
+      "y": 2250,
+      "glyph": "hall",
+      "label": "嘉福殿",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_xuanguang",
+      "x": 6320,
+      "y": 2960,
+      "glyph": "hall",
+      "label": "宣光殿",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_jiulong",
+      "x": 5960,
+      "y": 2930,
+      "glyph": "hall",
+      "label": "九龙殿",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_lingyun_xuanci",
+      "points": [
+        [
+          5700,
+          2590
+        ],
+        [
+          5840,
+          2590
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_lingyun_platform",
+        "ic_xuanci"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_xuanci_lingzhi",
+      "points": [
+        [
+          6070,
+          2580
+        ],
+        [
+          6200,
+          2580
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_xuanci",
+        "ic_lingzhi"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_nailin_group",
+      "x": 5320,
+      "y": 3190,
+      "w": 1060,
+      "h": 320,
+      "title": "柰林—都堂 · 未定位置关系组",
+      "ids": [
+        "ic_nailin",
+        "ic_maoci_stele",
+        "ic_maoci_hall",
+        "ic_dutang",
+        "ic_liushang",
+        "ic_fusang"
+      ],
+      "labels": [
+        "柰林〔全局位置未定〕",
+        "林南：苗茨碑",
+        "碑北：苗茨堂",
+        "林西：都堂",
+        "流觞池〔与都堂相关〕",
+        "堂东：扶桑海"
+      ],
+      "cols": 2,
+      "note": "局部方向可读；堂与碑、两池的互相位置未定",
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "central_hualin",
+      "x": 6470,
+      "y": 2070,
+      "w": 1200,
+      "h": 1260,
+      "label": "华林园 · 范围示意",
+      "style": "garden",
+      "ids": [
+        "ic_hualin"
+      ],
+      "note": "池岸、园界及图上距离均为示意",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "pool",
+      "key": "central_tianyuan",
+      "cx": 7220,
+      "cy": 2385,
+      "rx": 380,
+      "ry": 160,
+      "label": "",
+      "ids": [
+        "ic_tianyuan"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 7220,
+      "y": 2212,
+      "text": "天渊池",
+      "size": 32,
+      "color": "blue",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_jiuhua",
+      "x": 6980,
+      "y": 2360,
+      "glyph": "platform",
+      "label": "九华台\n台上：清凉殿",
+      "dy": 58,
+      "related_ids": [
+        "ic_qingliang"
+      ],
+      "size": 27,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_penglai",
+      "x": 7420,
+      "y": 2360,
+      "glyph": "garden",
+      "label": "蓬莱山\n山上：仙人馆",
+      "dy": 58,
+      "related_ids": [
+        "ic_xianren"
+      ],
+      "size": 27,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_hualin_ice",
+      "x": 6610,
+      "y": 2360,
+      "glyph": "house",
+      "label": "藏冰室",
+      "dy": 65,
+      "size": 27,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "key": "central_jingyang_caution",
+      "x": 6500,
+      "y": 2582,
+      "text": "景阳山群† · 按周校试排；山／殿待辨",
+      "size": 26,
+      "color": "muted",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "pool",
+      "key": "central_xuanwu",
+      "cx": 7020,
+      "cy": 2690,
+      "rx": 145,
+      "ry": 62,
+      "label": "玄武池",
+      "ids": [
+        "ic_xuanwu_pool"
+      ],
+      "size": 27,
+      "label_dy": 10,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_jingyang_hill",
+      "x": 7020,
+      "y": 2900,
+      "glyph": "site",
+      "label": "景阳山†\n〔景山殿待辨〕",
+      "dy": 58,
+      "size": 26,
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_henge",
+      "x": 6650,
+      "y": 2900,
+      "glyph": "garden",
+      "label": "姮娥峰\n峰上：露寒馆†",
+      "related_ids": [
+        "ic_luhan"
+      ],
+      "dy": 58,
+      "size": 26,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_xihe",
+      "x": 7410,
+      "y": 2900,
+      "glyph": "garden",
+      "label": "羲和岭\n岭上：温风室",
+      "related_ids": [
+        "ic_wenfeng"
+      ],
+      "dy": 58,
+      "size": 26,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_qingshu",
+      "x": 7020,
+      "y": 3180,
+      "glyph": "hall",
+      "label": "清暑殿",
+      "dy": 62,
+      "size": 28,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_linwei",
+      "x": 6640,
+      "y": 3180,
+      "glyph": "platform",
+      "label": "临危台",
+      "dy": 62,
+      "size": 27,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_linjian",
+      "x": 7420,
+      "y": 3180,
+      "glyph": "hall",
+      "label": "临涧亭",
+      "dy": 62,
+      "size": 27,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_jingyang_xuanwu",
+      "points": [
+        [
+          7020,
+          2845
+        ],
+        [
+          7020,
+          2768
+        ]
+      ],
+      "label": "山北",
+      "label_x": 7060,
+      "label_y": 2812,
+      "ids": [
+        "ic_jingyang_hill",
+        "ic_xuanwu_pool"
+      ],
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_jingyang_henge",
+      "points": [
+        [
+          6950,
+          2890
+        ],
+        [
+          6730,
+          2890
+        ]
+      ],
+      "label": "山西",
+      "label_x": 6790,
+      "label_y": 2865,
+      "ids": [
+        "ic_jingyang_hill",
+        "ic_henge"
+      ],
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_jingyang_xihe",
+      "points": [
+        [
+          7090,
+          2890
+        ],
+        [
+          7330,
+          2890
+        ]
+      ],
+      "label": "山东",
+      "label_x": 7160,
+      "label_y": 2865,
+      "ids": [
+        "ic_jingyang_hill",
+        "ic_xihe"
+      ],
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_jingyang_qingshu",
+      "points": [
+        [
+          7020,
+          3040
+        ],
+        [
+          7020,
+          3120
+        ]
+      ],
+      "label": "山南",
+      "label_x": 7060,
+      "label_y": 3090,
+      "ids": [
+        "ic_jingyang_hill",
+        "ic_qingshu"
+      ],
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_qingshu_linwei",
+      "points": [
+        [
+          6950,
+          3170
+        ],
+        [
+          6710,
+          3170
+        ]
+      ],
+      "label": "殿西",
+      "label_x": 6780,
+      "label_y": 3148,
+      "ids": [
+        "ic_qingshu",
+        "ic_linwei"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_qingshu_linjian",
+      "points": [
+        [
+          7090,
+          3170
+        ],
+        [
+          7340,
+          3170
+        ]
+      ],
+      "label": "殿东",
+      "label_x": 7160,
+      "label_y": 3148,
+      "ids": [
+        "ic_qingshu",
+        "ic_linjian"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_baiguo_unordered",
+      "x": 6485,
+      "y": 3335,
+      "w": 620,
+      "h": 220,
+      "title": "另记山南 · 彼此前后未定",
+      "ids": [
+        "ic_baiguo"
+      ],
+      "labels": [
+        "百果园"
+      ],
+      "cols": 1,
+      "located": false,
+      "note": "与清暑殿的相对次序未给；不绘林界",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "central_reserved_donggong",
+      "x": 7200,
+      "y": 3370,
+      "w": 520,
+      "h": 160,
+      "label": "拟建东宫空地",
+      "style": "reserve",
+      "ids": [
+        "ic_donggong_reserved",
+        "ic_taicang_jin"
+      ],
+      "note": "晋太仓旧址；未画成宫殿",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_jianchun_offices",
+      "x": 6490,
+      "y": 3590,
+      "w": 540,
+      "h": 290,
+      "title": "建春门内道南",
+      "ids": [
+        "ic_goudun",
+        "ic_diannong",
+        "ic_jitian"
+      ],
+      "cols": 1,
+      "note": "三署内部先后未定",
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_sinong",
+      "x": 6750,
+      "y": 3960,
+      "glyph": "office",
+      "label": "司农寺〔官署〕",
+      "dy": 65,
+      "note": "籍田南",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_henan_yin",
+      "x": 7120,
+      "y": 3650,
+      "glyph": "office",
+      "label": "河南尹廨",
+      "dy": 65,
+      "related_ids": [
+        "ic_buguang"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "pool",
+      "key": "central_diquan",
+      "cx": 7500,
+      "cy": 3810,
+      "rx": 160,
+      "ry": 75,
+      "label": "翟泉／苍龙海",
+      "ids": [
+        "ic_diquan"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "pool",
+      "key": "central_mengfan",
+      "cx": 4700,
+      "cy": 3950,
+      "rx": 155,
+      "ry": 65,
+      "label": "濛汜池",
+      "ids": [
+        "ic_mengfan_pool"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_yannian_sites",
+      "x": 4470,
+      "y": 4130,
+      "w": 680,
+      "h": 290,
+      "title": "延年里 · 道北",
+      "ids": [
+        "ic_jianzhong",
+        "ic_changqiu"
+      ],
+      "labels": [
+        "刘腾旧宅／后赐高阳王雍",
+        "长秋寺〔晋金市旧址〕"
+      ],
+      "cols": 1,
+      "note": "两处内部相对次序未定；长秋北有池",
+      "located": false,
+      "related_ids": [
+        "ic_yannian",
+        "ic_liuteng_house",
+        "ic_jinshi"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_taipu",
+      "x": 5360,
+      "y": 4210,
+      "glyph": "office",
+      "label": "太仆寺",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_chenghuang",
+      "x": 5670,
+      "y": 4210,
+      "glyph": "office",
+      "label": "乘黄署",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_wuku",
+      "x": 5960,
+      "y": 4210,
+      "glyph": "office",
+      "label": "武库署",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_house_taipu",
+      "points": [
+        [
+          5150,
+          4210
+        ],
+        [
+          5240,
+          4210
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_liuteng_house",
+        "ic_taipu"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_taipu_chenghuang",
+      "points": [
+        [
+          5450,
+          4200
+        ],
+        [
+          5570,
+          4200
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_taipu",
+        "ic_chenghuang"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_chenghuang_wuku",
+      "points": [
+        [
+          5770,
+          4200
+        ],
+        [
+          5860,
+          4200
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_chenghuang",
+        "ic_wuku"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_youwei",
+      "x": 5920,
+      "y": 4460,
+      "glyph": "office",
+      "label": "右卫府",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_zuowei",
+      "x": 6300,
+      "y": 4460,
+      "glyph": "office",
+      "label": "左卫府",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_yushi",
+      "x": 5450,
+      "y": 4335,
+      "glyph": "office",
+      "label": "御史台",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "compound",
+      "id": "ic_yongning",
+      "x": 5090,
+      "y": 4590,
+      "w": 620,
+      "h": 700,
+      "layout": "yongning",
+      "label": "永宁寺",
+      "note": "塔北佛殿；院界、轴线、间距为试绘",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "central_yongkang",
+      "x": 4470,
+      "y": 4820,
+      "w": 500,
+      "h": 750,
+      "label": "永康里†",
+      "style": "ward",
+      "ids": [
+        "ic_yongkang"
+      ],
+      "note": "御道南为校补；坊界未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_yuancha_house",
+      "x": 4720,
+      "y": 5240,
+      "glyph": "house",
+      "label": "元乂宅",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_taiwei",
+      "x": 5900,
+      "y": 4880,
+      "glyph": "office",
+      "label": "太尉府†",
+      "dy": 65,
+      "uncertain": true,
+      "note": "在永宁东；道西为段落继承",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_zhaoxuan",
+      "x": 5450,
+      "y": 5430,
+      "glyph": "office",
+      "label": "昭玄曹",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_jiangzuo",
+      "x": 5920,
+      "y": 5350,
+      "glyph": "office",
+      "label": "将作曹",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_jiuji",
+      "x": 5870,
+      "y": 5680,
+      "glyph": "site",
+      "label": "九级府",
+      "dy": 65,
+      "note": "性质未详",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_taishe",
+      "x": 5920,
+      "y": 6000,
+      "glyph": "site",
+      "label": "太社†",
+      "dy": 65,
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_lingyin",
+      "x": 5880,
+      "y": 6370,
+      "glyph": "site",
+      "label": "凌阴里",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_situ",
+      "x": 6320,
+      "y": 4870,
+      "glyph": "office",
+      "label": "司徒府",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_guozixue",
+      "x": 6360,
+      "y": 5260,
+      "glyph": "office",
+      "label": "国子学",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_zongzheng",
+      "x": 6310,
+      "y": 5600,
+      "glyph": "office",
+      "label": "宗正寺〔官署〕",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_taimiao",
+      "x": 6380,
+      "y": 5930,
+      "glyph": "site",
+      "label": "太庙†",
+      "dy": 65,
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_hujun",
+      "x": 6310,
+      "y": 6250,
+      "glyph": "office",
+      "label": "护军府",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_yiguan",
+      "x": 6360,
+      "y": 6560,
+      "glyph": "site",
+      "label": "衣冠里",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_youwei_taiwei",
+      "points": [
+        [
+          5920,
+          4570
+        ],
+        [
+          5900,
+          4750
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_youwei",
+        "ic_taiwei"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_taiwei_jiangzuo",
+      "points": [
+        [
+          5900,
+          5000
+        ],
+        [
+          5920,
+          5230
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_taiwei",
+        "ic_jiangzuo"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_jiangzuo_jiuji",
+      "points": [
+        [
+          5920,
+          5460
+        ],
+        [
+          5870,
+          5560
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_jiangzuo",
+        "ic_jiuji"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_jiuji_taishe",
+      "points": [
+        [
+          5870,
+          5790
+        ],
+        [
+          5920,
+          5880
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_jiuji",
+        "ic_taishe"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_taishe_lingyin",
+      "points": [
+        [
+          5920,
+          6110
+        ],
+        [
+          5880,
+          6250
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_taishe",
+        "ic_lingyin"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_zuowei_situ",
+      "points": [
+        [
+          6300,
+          4570
+        ],
+        [
+          6320,
+          4750
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_zuowei",
+        "ic_situ"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_situ_guozixue",
+      "points": [
+        [
+          6320,
+          4980
+        ],
+        [
+          6360,
+          5140
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_situ",
+        "ic_guozixue"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_guozixue_zongzheng",
+      "points": [
+        [
+          6360,
+          5370
+        ],
+        [
+          6310,
+          5480
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_guozixue",
+        "ic_zongzheng"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_zongzheng_taimiao",
+      "points": [
+        [
+          6310,
+          5710
+        ],
+        [
+          6380,
+          5810
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_zongzheng",
+        "ic_taimiao"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_taimiao_hujun",
+      "points": [
+        [
+          6380,
+          6040
+        ],
+        [
+          6310,
+          6130
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_taimiao",
+        "ic_hujun"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_hujun_yiguan",
+      "points": [
+        [
+          6310,
+          6360
+        ],
+        [
+          6360,
+          6440
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_hujun",
+        "ic_yiguan"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_hutong_roadside_unknown",
+      "x": 5090,
+      "y": 5740,
+      "w": 620,
+      "h": 230,
+      "title": "永宁以南 · 胡统寺",
+      "ids": [
+        "ic_hutong"
+      ],
+      "labels": [
+        "胡统寺"
+      ],
+      "cols": 1,
+      "note": "寺南一里许；御道路侧未定",
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_office_alternatives",
+      "x": 4500,
+      "y": 5970,
+      "w": 570,
+      "h": 330,
+      "title": "宫前官署 · 替代记载",
+      "ids": [
+        "ic_taifu_alternative",
+        "ic_sizhou"
+      ],
+      "labels": [
+        "《河南志》太府寺",
+        "《河南志》司州"
+      ],
+      "cols": 1,
+      "note": "文本替代、补充层；不另画确定院址",
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "central_yijing",
+      "x": 6520,
+      "y": 4410,
+      "w": 460,
+      "h": 280,
+      "label": "义井里",
+      "style": "ward",
+      "ids": [
+        "ic_yijing"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_yijing_well",
+      "x": 6750,
+      "y": 4240,
+      "glyph": "well",
+      "label": "义井甘井",
+      "dy": 65,
+      "note": "里北门外",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_jingle",
+      "x": 6750,
+      "y": 4870,
+      "glyph": "temple",
+      "label": "景乐寺†",
+      "dy": 65,
+      "uncertain": true,
+      "note": "御道东为校补",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_gaozhao_house",
+      "x": 7110,
+      "y": 4870,
+      "glyph": "house",
+      "label": "高肇宅",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_situ_jingle",
+      "points": [
+        [
+          6450,
+          4850
+        ],
+        [
+          6630,
+          4850
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_situ",
+        "ic_jingle"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_jingle_gaozhao",
+      "points": [
+        [
+          6870,
+          4850
+        ],
+        [
+          7000,
+          4850
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_jingle",
+        "ic_gaozhao_house"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_daoguan",
+      "x": 7140,
+      "y": 4450,
+      "glyph": "office",
+      "label": "导官署",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_taicang_wei",
+      "x": 7490,
+      "y": 4450,
+      "glyph": "office",
+      "label": "太仓署〔北魏〕",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_zhaoyi",
+      "x": 7520,
+      "y": 4990,
+      "glyph": "temple",
+      "label": "昭仪尼寺",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "pool",
+      "key": "central_zhaoyi_pool",
+      "cx": 7350,
+      "cy": 5190,
+      "rx": 160,
+      "ry": 75,
+      "label": "昭仪寺池",
+      "ids": [
+        "ic_zhaoyi_pool"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_yuanhui_chain",
+      "x": 6630,
+      "y": 5280,
+      "w": 470,
+      "h": 350,
+      "title": "昭仪池西南关系",
+      "ids": [
+        "ic_yuanhui",
+        "ic_yishou",
+        "ic_guangming"
+      ],
+      "labels": [
+        "愿会寺〔王翊宅改〕",
+        "寺南：宜寿里†",
+        "里内：光明寺"
+      ],
+      "cols": 1,
+      "note": "寺南回指待校；路侧未定",
+      "located": false,
+      "related_ids": [
+        "ic_wangyi_house",
+        "ic_duanhui_house"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_dongyang_ambiguous",
+      "x": 6620,
+      "y": 5770,
+      "w": 450,
+      "h": 260,
+      "title": "东阳门内 · 附注",
+      "ids": [
+        "ic_zhisu",
+        "ic_lvzhu"
+      ],
+      "labels": [
+        "治粟里：东南参照待定",
+        "绿珠楼：晋旧址叙述"
+      ],
+      "cols": 1,
+      "note": "两项均不另给精确院址",
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "pool",
+      "key": "central_yonghe_north_pool",
+      "cx": 7480,
+      "cy": 5440,
+      "rx": 125,
+      "ry": 55,
+      "label": "里北池",
+      "ids": [
+        "ic_yonghe_pool_north"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "central_yonghe",
+      "x": 7170,
+      "y": 5530,
+      "w": 530,
+      "h": 150,
+      "label": "永和里",
+      "style": "ward",
+      "ids": [
+        "ic_yonghe"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "pool",
+      "key": "central_yonghe_south_pool",
+      "cx": 7480,
+      "cy": 5750,
+      "rx": 125,
+      "ry": 55,
+      "label": "里南池",
+      "ids": [
+        "ic_yonghe_pool_south"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_songming",
+      "x": 7160,
+      "y": 5940,
+      "glyph": "temple",
+      "label": "嵩明寺",
+      "dy": 65,
+      "note": "修梵西；蒿字异文",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_xiufan",
+      "x": 7510,
+      "y": 5940,
+      "glyph": "temple",
+      "label": "修梵寺",
+      "dy": 65,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_songming_xiufan",
+      "points": [
+        [
+          7270,
+          5925
+        ],
+        [
+          7390,
+          5925
+        ]
+      ],
+      "label": "",
+      "uncertain": false,
+      "ids": [
+        "ic_songming",
+        "ic_xiufan"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_jinglin_garden",
+      "x": 7300,
+      "y": 6450,
+      "glyph": "garden",
+      "label": "寺西园",
+      "dy": 65,
+      "note": "与御道关系未详",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "ic_jinglin",
+      "x": 7650,
+      "y": 6450,
+      "glyph": "temple",
+      "label": "景林寺",
+      "dy": 65,
+      "note": "开阳门内御道东",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_diaotai_alternative",
+      "x": 5320,
+      "y": 3630,
+      "w": 1060,
+      "h": 225,
+      "title": "钓台殿† · 所在台／山有异解",
+      "ids": [
+        "ic_diaotai_palace"
+      ],
+      "labels": [
+        "华林园钓台殿〔不定点〕"
+      ],
+      "located": false,
+      "cols": 1,
+      "note": "周补〔台〕，释在九华台上；范存上／山异文",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_lingyun_liangfeng",
+      "points": [
+        [
+          5580,
+          2540
+        ],
+        [
+          5580,
+          2370
+        ]
+      ],
+      "label": "井北",
+      "label_x": 5605,
+      "label_y": 2460,
+      "ids": [
+        "ic_bajiao_well",
+        "ic_liangfeng_guan"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "central_qianqiu_citygate_alignment",
+      "points": [
+        [
+          5180,
+          3550
+        ],
+        [
+          4480,
+          3550
+        ]
+      ],
+      "label": "西对城阊阖〔《河南志》〕†",
+      "label_x": 4475,
+      "label_y": 3625,
+      "uncertain": true,
+      "ids": [
+        "ic_qianqiu_gate",
+        "gate_changhe_west"
+      ],
+      "note": "同高为后出文献关系试排；此线不是道路。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "central_jinyong_internal_names",
+      "x": 4490,
+      "y": 2140,
+      "w": 690,
+      "h": 300,
+      "title": "金墉名物 · 内部不定位",
+      "ids": [
+        "ic_guangji_gate",
+        "ic_guangji_palace"
+      ],
+      "labels": [
+        "光极门〔门侧未记〕",
+        "光极殿〔城内〕"
+      ],
+      "cols": 1,
+      "located": false,
+      "note": "仅示所属；卡内次序不代表门殿方位。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "north_wangnan_chengming_access",
+      "x": 3100,
+      "y": 1910,
+      "w": 1190,
+      "h": 330,
+      "title": "王南寺 · 承明通行关联",
+      "ids": [
+        "a_wangnan"
+      ],
+      "labels": [
+        "王南寺〔城西，回指待辨〕"
+      ],
+      "cols": 1,
+      "located": false,
+      "note": "高祖往寺论义而通承明；寺址、路侧未记。\n此框仅记通行叙事，不定位寺址。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "road",
+      "key": "north_chengming_local_avenue",
+      "points": [
+        [
+          3500,
+          2350
+        ],
+        [
+          4400,
+          2350
+        ]
+      ],
+      "width": 42,
+      "label": "承明东西大道〔门外局部〕",
+      "label_x": 3500,
+      "label_y": 2425,
+      "uncertain": true,
+      "ids": [
+        "gate_chengming"
+      ],
+      "note": "当金墉城前东西大道有明文；这里只画接门的外侧短段。前不换作南；不接穿金墉显示框，也不据此定位王南寺。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "key": "north_chengming_front_caution",
+      "x": 3500,
+      "y": 2485,
+      "text": "“城前”不等于南界；门内走线未定",
+      "size": 24,
+      "color": "muted",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "key": "north_wall_palace_continuity",
+      "x": 6100,
+      "y": 1905,
+      "text": "两门间城上宫观相连〔栋数、占地未记〕",
+      "size": 28,
+      "color": "green",
+      "anchor": "middle",
+      "ids": [
+        "gate_daxia",
+        "gate_guangmo"
+      ],
+      "note": "仅把文献叙述补入图面，不新增等距楼列、院墙或连续建筑足迹。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "east_jianyang",
+      "x": 8050,
+      "y": 2250,
+      "w": 1090,
+      "h": 1010,
+      "label": "建阳里",
+      "style": "ward",
+      "ids": [
+        "li_jianyang"
+      ],
+      "note": "道北、渠北；里界为显示范围",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "east_jianyang_temples",
+      "x": 8100,
+      "y": 2390,
+      "w": 980,
+      "h": 570,
+      "title": "寺名与土台 · 内部未定位",
+      "ids": [
+        "v2_yingluo",
+        "v2_cishan",
+        "v2_huihe",
+        "v2_tongjue",
+        "v2_huixuan",
+        "v2_zongsheng",
+        "v2_xiping",
+        "v2_chongzhen",
+        "v2_yinguo",
+        "v2_qiting"
+      ],
+      "note": "九寺无序；土台上二精舍不另增寺名。旗亭是旧址辨认。",
+      "cols": 2,
+      "located": true,
+      "labels": [
+        "璎珞寺",
+        "慈善寺",
+        "晖和寺",
+        "通觉寺",
+        "晖玄寺",
+        "宗圣寺",
+        "熙平寺",
+        "崇真寺",
+        "因果寺",
+        "土台〔传称旗亭〕"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_weichang",
+      "x": 8860,
+      "y": 3110,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": true,
+      "related_ids": [
+        "v2_horsemarket"
+      ],
+      "label": "魏昌尼寺",
+      "note": "里东南角；东临石桥",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "east_suimin",
+      "x": 9480,
+      "y": 2250,
+      "w": 730,
+      "h": 1010,
+      "label": "绥民里",
+      "style": "ward",
+      "ids": [
+        "li_suimin"
+      ],
+      "note": "县署临渠；确切渠段未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "office_luoyang",
+      "x": 9830,
+      "y": 2750,
+      "glyph": "office",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "洛阳县署",
+      "note": "里内、临渠水",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "east_chongyi",
+      "x": 10350,
+      "y": 2250,
+      "w": 740,
+      "h": 1010,
+      "label": "崇义里",
+      "style": "ward",
+      "ids": [
+        "li_chongyi"
+      ],
+      "note": "寺、宅、晋旧址为同址历时层",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_lingying",
+      "x": 10710,
+      "y": 2750,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "related_ids": [
+        "house_duzixiu",
+        "v2_taikang"
+      ],
+      "label": "灵应寺",
+      "note": "杜子休宅改；三层砖塔",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 10710,
+      "y": 3010,
+      "text": "旧址传称：晋太康寺",
+      "size": 26,
+      "color": "muted",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "bridge_qili",
+      "x": 11310,
+      "y": 2700,
+      "glyph": "bridge",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "七里桥",
+      "note": "桥名不作里程",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "gate_sanmen",
+      "x": 11650,
+      "y": 3000,
+      "glyph": "site",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "东郭三门",
+      "note": "一门三道；郭墙走向未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "chongyi_qili",
+      "points": [
+        [
+          11080,
+          2680
+        ],
+        [
+          11210,
+          2680
+        ]
+      ],
+      "label": "东",
+      "uncertain": false,
+      "ids": [
+        "li_chongyi",
+        "bridge_qili"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "qili_sanmen",
+      "points": [
+        [
+          11360,
+          2810
+        ],
+        [
+          11560,
+          2910
+        ]
+      ],
+      "label": "东一里",
+      "uncertain": false,
+      "ids": [
+        "bridge_qili",
+        "gate_sanmen"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "water",
+      "key": "east_gushui_local",
+      "points": [
+        [
+          8130,
+          3275
+        ],
+        [
+          8130,
+          3550
+        ],
+        [
+          8130,
+          3650
+        ]
+      ],
+      "width": 65,
+      "label": "谷水南流〔局部〕",
+      "label_x": 7860,
+      "label_y": 3360,
+      "closed": false,
+      "ids": [
+        "gushui"
+      ],
+      "note": "南逕建春门石桥下据范、周引《水经注》；只示局部拓扑，不补绕城全线。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "water",
+      "key": "east_yangqu",
+      "points": [
+        [
+          8130,
+          3650
+        ],
+        [
+          8470,
+          3650
+        ],
+        [
+          9250,
+          3650
+        ],
+        [
+          10150,
+          3650
+        ]
+      ],
+      "width": 65,
+      "label": "",
+      "closed": false,
+      "ids": [
+        "water_yangqu"
+      ],
+      "note": "谷水过第一桥后折东接阳渠；折点、线形与宽度仅为拓扑试绘。县署临渠段另未定。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "bridge_jianchun",
+      "x": 8130,
+      "y": 3550,
+      "glyph": "bridge_ew",
+      "dy": -120,
+      "anchor": "start",
+      "uncertain": false,
+      "dx": 180,
+      "label": "建春门石桥",
+      "note": "跨南流谷水〔示意〕；527年颓桥另记",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "bridge_eaststone",
+      "x": 9250,
+      "y": 3650,
+      "glyph": "bridge",
+      "dy": -195,
+      "anchor": "start",
+      "uncertain": false,
+      "dx": 150,
+      "label": "东石桥",
+      "note": "南北通行；门外一里余〔原文〕",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 9250,
+      "y": 2410,
+      "text": "桥北大道",
+      "size": 28,
+      "color": "muted",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "road",
+      "key": "bridge_north_avenue",
+      "points": [
+        [
+          9250,
+          2500
+        ],
+        [
+          9250,
+          3600
+        ]
+      ],
+      "label": "",
+      "uncertain": true,
+      "ids": [
+        "road_eaststone_north"
+      ],
+      "label_x": 9310,
+      "label_y": 3310,
+      "width": 38,
+      "note": "大道明文；直线、路宽与路口细节为试绘。建阳在西，绥民在东。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_mingxuan",
+      "x": 8230,
+      "y": 3820,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "明悬尼寺",
+      "note": "建春门石桥南；三层塔",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_longhua",
+      "x": 8770,
+      "y": 3820,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": true,
+      "label": "龙华寺〔城东〕",
+      "note": "阳渠南；年代未明",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "east_jingxing_roadside_note",
+      "x": 9410,
+      "y": 3770,
+      "w": 770,
+      "h": 240,
+      "title": "景兴 · 桥南沿道附记",
+      "ids": [
+        "v2_jingxing"
+      ],
+      "labels": [
+        "景兴尼寺"
+      ],
+      "note": "道侧未定；本框为非定位附记。",
+      "cols": 1,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_changmancang",
+      "x": 8770,
+      "y": 4140,
+      "glyph": "site",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": true,
+      "label": "租场〔常满仓旧址〕",
+      "note": "范注主张同址；主文未明言",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 10220,
+      "y": 4150,
+      "text": "两桥分列，谷水南流后折东；\n交接、折点和水渠线形均为拓扑试绘。",
+      "size": 25,
+      "color": "muted",
+      "anchor": "start",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_dongan_taxfield",
+      "x": 8250,
+      "y": 4190,
+      "glyph": "site",
+      "dy": 80,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "东安里北租场",
+      "note": "与常满仓租场身份未合",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "east_dongan",
+      "x": 8050,
+      "y": 4350,
+      "w": 1370,
+      "h": 340,
+      "label": "东安里",
+      "style": "ward",
+      "ids": [
+        "li_dongan"
+      ],
+      "note": "寺在门外一里、道北",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_zhuangyan",
+      "x": 8300,
+      "y": 4500,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": true,
+      "label": "庄严寺",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "east_dongan_houses",
+      "x": 8600,
+      "y": 4400,
+      "w": 770,
+      "h": 265,
+      "title": "同里宅第 · 内部未定位",
+      "ids": [
+        "house_simayue",
+        "house_daoxuan",
+        "house_lizhennu",
+        "house_gongsunxiang"
+      ],
+      "note": "宅名次序不表示位置。",
+      "cols": 2,
+      "located": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "east_huiwen",
+      "x": 9520,
+      "y": 4250,
+      "w": 2090,
+      "h": 440,
+      "label": "晖文里",
+      "style": "ward",
+      "ids": [
+        "li_huiwen"
+      ],
+      "note": "寺在门外二里、道北",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_qintaishangjun",
+      "x": 9900,
+      "y": 4480,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "秦太上君寺",
+      "note": "为太后之母追福",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "east_huiwen_houses",
+      "x": 10330,
+      "y": 4340,
+      "w": 1210,
+      "h": 310,
+      "title": "同里宅第 · 内部未定位",
+      "ids": [
+        "house_cuiguang",
+        "house_liyanshi",
+        "house_lishao",
+        "house_zhengdaozhao",
+        "house_xiuhe"
+      ],
+      "note": "仅修和在李延寔宅东；其余无序。前代旧主不另设点。",
+      "cols": 2,
+      "located": true,
+      "labels": [
+        "崔光宅",
+        "李延寔宅",
+        "李韶宅",
+        "郑道昭宅",
+        "修和宅〔李宅东〕"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "east_jingyi",
+      "x": 8050,
+      "y": 4900,
+      "w": 1450,
+      "h": 370,
+      "label": "敬义里",
+      "style": "ward",
+      "ids": [
+        "li_jingyi"
+      ],
+      "note": "御道南",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_zhengshi",
+      "x": 8450,
+      "y": 5060,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "正始寺",
+      "note": "正始年间立寺",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "office_dianyu",
+      "x": 9070,
+      "y": 5060,
+      "glyph": "office",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "典虞曹",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "east_zhaode_houses",
+      "x": 8050,
+      "y": 5340,
+      "w": 1450,
+      "h": 320,
+      "title": "昭德里 · 敬义里南",
+      "ids": [
+        "house_youzhao",
+        "house_libiao",
+        "house_cuixiu",
+        "house_changjing",
+        "house_zhanglun",
+        "v2_jingyangshan"
+      ],
+      "note": "宅第内部未定位；景阳山属张伦私园。",
+      "cols": 3,
+      "located": true,
+      "labels": [
+        "游肇宅",
+        "李彪宅",
+        "崔休宅",
+        "常景宅",
+        "张伦宅",
+        "园中景阳山"
+      ],
+      "related_ids": [
+        "li_zhaode"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "east_xiaojing",
+      "x": 8050,
+      "y": 5750,
+      "w": 980,
+      "h": 285,
+      "label": "孝敬里",
+      "style": "ward",
+      "ids": [
+        "li_xiaojing"
+      ],
+      "note": "门外二里，道北",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_pingdeng",
+      "x": 8510,
+      "y": 5880,
+      "glyph": "temple",
+      "dy": 60,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "平等寺",
+      "note": "盛时不画532年始造五层塔",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "east_xiaoyi",
+      "x": 9150,
+      "y": 5750,
+      "w": 1180,
+      "h": 285,
+      "label": "孝义里",
+      "style": "ward",
+      "ids": [
+        "li_xiaoyi"
+      ],
+      "note": "门外三里，道北",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "tomb_suqin",
+      "x": 9330,
+      "y": 5895,
+      "glyph": "site",
+      "dy": 80,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "苏秦冢〔传称〕",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_baoming",
+      "x": 9900,
+      "y": 5915,
+      "glyph": "temple",
+      "dy": 55,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "宝明寺",
+      "note": "冢旁",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "east_zhihuo",
+      "x": 10500,
+      "y": 5550,
+      "w": 1110,
+      "h": 300,
+      "title": "殖货里 · 小市北",
+      "ids": [
+        "v2_guijue"
+      ],
+      "note": "后改归觉寺；盛时用宅名，内部位置未定。",
+      "cols": 1,
+      "located": true,
+      "labels": [
+        "刘胡兄弟宅〔后归觉〕"
+      ],
+      "related_ids": [
+        "house_liuhu",
+        "li_zhihuo"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "market_small",
+      "x": 10990,
+      "y": 5935,
+      "glyph": "site",
+      "dy": 65,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "洛阳小市",
+      "note": "孝义里东",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "east_jingning",
+      "x": 8050,
+      "y": 6270,
+      "w": 2260,
+      "h": 380,
+      "label": "景宁里",
+      "style": "ward",
+      "ids": [
+        "li_jingning"
+      ],
+      "note": "门外三里，道南；宅寺院界未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_jingning",
+      "x": 8660,
+      "y": 6430,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "景宁寺",
+      "note": "杨椿分宅所立",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v2_jianzhong",
+      "x": 9750,
+      "y": 6430,
+      "glyph": "house",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "related_ids": [
+        "house_yangchun"
+      ],
+      "label": "杨氏宅〔后建中寺〕",
+      "note": "531后宅改寺；与城内建中分开",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 10600,
+      "y": 6400,
+      "text": "太庙另记清阳门外。\n路侧、同体与时期未定，\n只列异说，不补第二座建筑。",
+      "size": 29,
+      "color": "gold",
+      "anchor": "start",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "li_zhonggan",
+      "x": 4450,
+      "y": 7290,
+      "glyph": "site",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "中甘里",
+      "note": "高阳王宅北",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "compound",
+      "id": "v3_gaoyang",
+      "x": 4210,
+      "y": 7580,
+      "w": 510,
+      "h": 770,
+      "layout": "house",
+      "label": "高阳王雍宅",
+      "note": "津阳门外三里、道西；528变乱后改寺",
+      "related_ids": [
+        "house_gaoyang"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "compound",
+      "id": "v3_jingming",
+      "x": 6450,
+      "y": 7170,
+      "w": 900,
+      "h": 900,
+      "layout": "jingming",
+      "label": "景明寺",
+      "note": "方五百步〔原文〕；七层塔始造，竣工未证",
+      "internal_evidence": {
+        "pools": 3,
+        "water_power_facilities": [
+          "碾磑",
+          "舂簸"
+        ],
+        "source_quote": "寺有三池，萑蒲菱藕，水物生焉。……𥗇磑舂𥳽，皆用水功。",
+        "source_ref": "CBETA B12n0077 p0144a09–14",
+        "placement_policy": "只表示数量与设施类型；池形、池位、相互联系及水功设施位置均未记。"
+      },
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v3_datong",
+      "x": 5700,
+      "y": 7450,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": true,
+      "related_ids": [
+        "li_limin"
+      ],
+      "label": "大统寺〔利民里〕",
+      "note": "景明西；御道路侧未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "house_gaoxian",
+      "x": 5700,
+      "y": 7850,
+      "glyph": "house",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "高显略／高显洛宅",
+      "note": "大统寺南；非招福寺确址",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "datong_to_jingming",
+      "points": [
+        [
+          5870,
+          7440
+        ],
+        [
+          6310,
+          7440
+        ]
+      ],
+      "label": "景明在其东；路侧未定",
+      "uncertain": false,
+      "ids": [
+        "v3_datong",
+        "v3_jingming"
+      ],
+      "label_x": 5870,
+      "label_y": 7400,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "south_zhaofu_unfixed",
+      "x": 5100,
+      "y": 8290,
+      "w": 1050,
+      "h": 330,
+      "title": "招福寺 · 施主关联，寺址未定",
+      "ids": [
+        "v3_zhaofu"
+      ],
+      "note": "高氏造寺；没有明文证明就在其宅址。",
+      "cols": 1,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "south_qintai_pair",
+      "x": 6400,
+      "y": 8270,
+      "w": 1050,
+      "h": 530,
+      "label": "秦太上公二寺〔双女寺〕",
+      "style": "range",
+      "ids": [],
+      "note": "景明南一里，门邻洛水。\n院界、路侧与岸别未定。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v3_qintaigong_w",
+      "x": 6720,
+      "y": 8480,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "秦太上公西寺",
+      "note": "太后所立；五层塔记载",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v3_qintaigong_e",
+      "x": 7240,
+      "y": 8480,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": true,
+      "label": "秦太上公东寺",
+      "note": "皇姨所建；五层塔时相未证",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "qintai_east_order",
+      "points": [
+        [
+          6870,
+          8430
+        ],
+        [
+          7100,
+          8430
+        ]
+      ],
+      "label": "东",
+      "uncertain": false,
+      "ids": [
+        "v3_qintaigong_w",
+        "v3_qintaigong_e"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "south_quanxue",
+      "x": 7650,
+      "y": 7150,
+      "w": 1200,
+      "h": 1030,
+      "label": "劝学里与汉学堂旧迹",
+      "style": "ward",
+      "ids": [
+        "li_quanxue"
+      ],
+      "note": "学堂明文开阳御道东；里归属依上下文",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v3_hanguozixue",
+      "x": 8240,
+      "y": 7400,
+      "glyph": "site",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "related_ids": [
+        "v3_shijing"
+      ],
+      "label": "汉国子学堂旧址\n石经群",
+      "note": "石经在堂前；前向未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "south_quanxue_temples",
+      "x": 7720,
+      "y": 7690,
+      "w": 1060,
+      "h": 390,
+      "title": "里内三寺 · 内部未定位",
+      "ids": [
+        "v3_wenjue_dajue",
+        "v3_sanbao",
+        "v3_ningyuan"
+      ],
+      "note": "年代未明；文觉／大觉为名称异文。",
+      "cols": 1,
+      "located": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "south_baode_unassigned",
+      "x": 9090,
+      "y": 7310,
+      "w": 1030,
+      "h": 570,
+      "title": "报德参照群 · 路侧未记",
+      "ids": [
+        "v3_baode",
+        "v3_longhua",
+        "v3_zhuisheng"
+      ],
+      "note": "开阳门外三里；不因本框排版推成道东。",
+      "cols": 1,
+      "located": false,
+      "labels": [
+        "报德寺〔参照〕",
+        "其东：龙华寺〔城南〕",
+        "其东：追圣寺"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "south_yanxian",
+      "x": 9090,
+      "y": 8050,
+      "w": 1030,
+      "h": 380,
+      "label": "延贤里",
+      "style": "ward",
+      "ids": [
+        "li_yanxian"
+      ],
+      "note": "劝学里东",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v3_zhengjue",
+      "x": 9590,
+      "y": 8220,
+      "glyph": "temple",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "正觉寺",
+      "note": "王肃所立",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v3_lingtai",
+      "x": 8190,
+      "y": 8550,
+      "glyph": "platform",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "灵台旧基",
+      "note": "二寺之东；台上砖塔见定年附记",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v3_biyong",
+      "x": 9570,
+      "y": 8550,
+      "glyph": "site",
+      "dy": 75,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "辟雍旧迹",
+      "note": "灵台东",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v3_mingtang",
+      "x": 8970,
+      "y": 8790,
+      "glyph": "platform",
+      "dy": 65,
+      "anchor": "middle",
+      "uncertain": false,
+      "label": "明堂",
+      "note": "正光营建；四闼八窗；平面未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "lingtai_biyong",
+      "points": [
+        [
+          8380,
+          8520
+        ],
+        [
+          9380,
+          8520
+        ]
+      ],
+      "label": "东",
+      "uncertain": false,
+      "ids": [
+        "v3_lingtai",
+        "v3_biyong"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 4950,
+      "y": 8730,
+      "text": "城南各组的位置与间隔为统一排图假设；\n“路侧未记”的对象以关系框保留。",
+      "size": 29,
+      "color": "gold",
+      "anchor": "start",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "losouth_west_wards",
+      "x": 4250,
+      "y": 9350,
+      "w": 1600,
+      "h": 1340,
+      "label": "御道西 · 四夷里范围",
+      "style": "range",
+      "ids": [],
+      "note": "诸里内部次序未明",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "losouth_four_wards",
+      "x": 4320,
+      "y": 9480,
+      "w": 1460,
+      "h": 400,
+      "title": "四里列名 · 不排街址",
+      "ids": [
+        "li_guizheng",
+        "li_guide",
+        "li_muhua",
+        "li_muyi"
+      ],
+      "note": "仅知在道西，不定南北次序。",
+      "cols": 2,
+      "located": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "losouth_ward_temples",
+      "x": 4320,
+      "y": 9980,
+      "w": 1460,
+      "h": 400,
+      "title": "里内寺院 · 时相未明",
+      "ids": [
+        "v3_guizheng",
+        "v3_puti"
+      ],
+      "note": "归正寺属归正里；菩提寺属慕义里。",
+      "cols": 1,
+      "located": true,
+      "labels": [
+        "归正寺〔萧正德宅改〕",
+        "菩提寺〔慕义里〕"
+      ],
+      "related_ids": [
+        "house_xiaozhengde"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "losouth_guizheng_market",
+      "x": 4320,
+      "y": 10420,
+      "w": 1460,
+      "h": 240,
+      "title": "归正里附见 · 内部无定位",
+      "ids": [
+        "market_fish",
+        "house_xiaobaoyin"
+      ],
+      "note": "宝夤后迁城内永安里；宅、市内部关系未记。",
+      "cols": 2,
+      "located": true,
+      "labels": [
+        "鱼鳖市〔里内巷市〕",
+        "萧宝夤归正里旧宅"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "losouth_four_lodgings",
+      "x": 6370,
+      "y": 9390,
+      "w": 1900,
+      "h": 510,
+      "title": "御道东 · 四夷馆",
+      "ids": [
+        "guan_jinling",
+        "guan_yanran",
+        "guan_fusang",
+        "guan_yanzi"
+      ],
+      "note": "内部无序；安置对应不证明四组对街。",
+      "cols": 2,
+      "located": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "losouth_animals",
+      "x": 6370,
+      "y": 10010,
+      "w": 1900,
+      "h": 350,
+      "title": "道东二坊 · 位置次序未明",
+      "ids": [
+        "fang_whiteelephant",
+        "fang_lion"
+      ],
+      "note": "狮子入京约530前后；盛时不复原其盛况。",
+      "cols": 1,
+      "located": true,
+      "labels": [
+        "白象坊〔太后时代叙事〕",
+        "狮子坊〔盛时时相未证〕"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "losouth_market_unassigned",
+      "x": 6370,
+      "y": 10460,
+      "w": 1900,
+      "h": 280,
+      "title": "洛水南 · 市场关系",
+      "ids": [
+        "market_sitong"
+      ],
+      "note": "御道路侧、距桥距离与鱼鳖市关系未定。",
+      "cols": 1,
+      "located": false,
+      "labels": [
+        "四通市〔又称永桥市〕"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "altar_yuanqiu",
+      "x": 6100,
+      "y": 10810,
+      "glyph": "platform",
+      "dy": 60,
+      "anchor": "middle",
+      "uncertain": true,
+      "label": "圜丘方向",
+      "note": "距离、形状未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 4260,
+      "y": 10850,
+      "text": "诸馆里处伊洛之间；伊水河道未据此复原。",
+      "size": 28,
+      "color": "blue",
+      "anchor": "start",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 10050,
+      "y": 3598,
+      "text": "阳渠 · 局部线形示意",
+      "size": 28,
+      "color": "blue",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 4465,
+      "y": 8400,
+      "text": "津阳门外三里 · 道西\n528变乱后宅改寺",
+      "size": 25,
+      "color": "gold",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "east_suimin_house_note",
+      "x": 9530,
+      "y": 2940,
+      "w": 630,
+      "h": 260,
+      "title": "同里宅第附记",
+      "ids": [
+        "house_liuxuanming"
+      ],
+      "labels": [
+        "刘宣明宅"
+      ],
+      "note": "里内位置未详；神龟人物层。",
+      "cols": 1,
+      "located": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "east_taiwei_stupa_crossnote",
+      "x": 10220,
+      "y": 3670,
+      "w": 1490,
+      "h": 410,
+      "title": "跨区附记 · 太尉府前旧塔",
+      "ids": [
+        "v2_taiwei_oldstupa"
+      ],
+      "labels": [
+        "砖浮图〔赵逸谈旧〕"
+      ],
+      "note": "问答未交代府址；不据城东篇落点，不与宫前太尉同址。前向未定。",
+      "cols": 1,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "east_unfixed_residence_ward",
+      "x": 9780,
+      "y": 4910,
+      "w": 1820,
+      "h": 420,
+      "title": "城东附记 · 不作定点",
+      "ids": [
+        "house_zhangjingren",
+        "li_zhaoyi"
+      ],
+      "labels": [
+        "张景仁宅：市北＋孝义里〔待协调〕",
+        "昭义里：仅知城东〔勿并昭德〕"
+      ],
+      "note": "张宅前居城南归正里。此框只列约束，不表示两项相邻。",
+      "cols": 1,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "south_lingtai_stupa_note",
+      "x": 7680,
+      "y": 8200,
+      "w": 1160,
+      "h": 270,
+      "title": "灵台上附记 · 造塔年代未记",
+      "ids": [
+        "v3_lingtai_stupa"
+      ],
+      "labels": [
+        "汝南王砖浮图〔台上〕"
+      ],
+      "note": "只标同址关系；不画528年前已成塔。",
+      "cols": 1,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "v3_muzheng",
+      "x": 8970,
+      "y": 8470,
+      "glyph": "site",
+      "label": "募征格",
+      "dy": -100,
+      "anchor": "middle",
+      "note": "孝昌初；活动点，非建筑复原",
+      "uncertain": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "mingtang_muzheng_north",
+      "points": [
+        [
+          8970,
+          8730
+        ],
+        [
+          8970,
+          8535
+        ]
+      ],
+      "label": "堂北",
+      "label_x": 9020,
+      "label_y": 8680,
+      "uncertain": false,
+      "ids": [
+        "v3_mingtang",
+        "v3_muzheng"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "biyong_mingtang_southwest",
+      "points": [
+        [
+          9480,
+          8640
+        ],
+        [
+          9070,
+          8760
+        ]
+      ],
+      "label": "西南",
+      "label_x": 9290,
+      "label_y": 8760,
+      "uncertain": false,
+      "ids": [
+        "v3_biyong",
+        "v3_mingtang"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "road",
+      "key": "bridge_eaststone_south_road",
+      "points": [
+        [
+          9250,
+          3700
+        ],
+        [
+          9250,
+          4080
+        ]
+      ],
+      "width": 38,
+      "label": "桥南道",
+      "label_x": 9310,
+      "label_y": 4095,
+      "uncertain": true,
+      "related_ids": [
+        "bridge_eaststone",
+        "v2_jingxing"
+      ],
+      "note": "据石桥南道；只示短段，不定义景兴寺道侧或延伸街网。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "shouqiu_extent",
+      "x": 500,
+      "y": 900,
+      "w": 650,
+      "h": 7950,
+      "label": "寿丘里（王子坊）",
+      "style": "range",
+      "note": "南临洛水，北达芒山\n范围边线仅为显示假设",
+      "ids": [
+        "w_shouqiu"
+      ],
+      "documentary_extent": {
+        "west_of": "w_yangu",
+        "east_of": "w_zhangfanggou",
+        "southern_boundary": "luoshui",
+        "northern_extent": "mangshan",
+        "textual_dimensions": {
+          "east_west": 2,
+          "north_south": 15,
+          "unit": "里"
+        },
+        "geometry_role": "display_envelope_not_surveyed_boundary",
+        "named_ward_boundary_not_group_cell": true
+      },
+      "constraint_refs": [
+        "W23-18",
+        "W23-19",
+        "W23-20",
+        "W23-21",
+        "W23-22",
+        "W23-23"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "water",
+      "key": "zhangfanggou_local",
+      "points": [
+        [
+          370,
+          6250
+        ],
+        [
+          350,
+          6900
+        ]
+      ],
+      "width": 45,
+      "label": "张方沟（局部）",
+      "closed": false,
+      "ids": [
+        "w_zhangfanggou"
+      ],
+      "note": "寿丘西界参照；全线走向未定",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 825,
+      "y": 5840,
+      "text": "寿丘里",
+      "size": 38,
+      "color": "muted",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 825,
+      "y": 5905,
+      "text": "宽域范围",
+      "size": 27,
+      "color": "muted",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "shouqiu_residences",
+      "x": 540,
+      "y": 6560,
+      "w": 570,
+      "h": 420,
+      "title": "王宅 · 内部未定位",
+      "ids": [
+        "w_zhuixian",
+        "w_hejian"
+      ],
+      "labels": [
+        "东平王略宅†",
+        "河间王琛宅"
+      ],
+      "note": "文柏堂、迎风馆见王宅关系附图；后园朝向未记。\n追先寿丘地址为校补†",
+      "cols": 1,
+      "located": false,
+      "related_ids": [
+        "w_wenbaitang",
+        "w_yingfengguan"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "yinian_ward",
+      "x": 1700,
+      "y": 2600,
+      "w": 1120,
+      "h": 550,
+      "label": "宜年里",
+      "style": "ward",
+      "note": "永明寺西；坊界示意",
+      "ids": [
+        "w_yinian"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "yinian_houses",
+      "x": 1750,
+      "y": 2780,
+      "w": 1020,
+      "h": 300,
+      "title": "里内宅第 · 内部未定位",
+      "ids": [
+        "w_chenliu",
+        "w_huyuanji"
+      ],
+      "note": "两宅的相互方位未记",
+      "cols": 2,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "yongming_east_of_dajue",
+      "x": 3070,
+      "y": 2670,
+      "w": 1020,
+      "h": 370,
+      "title": "大觉寺以东 · 寺址未细定",
+      "ids": [
+        "w_yongming"
+      ],
+      "note": "与融觉的先后、路侧未记",
+      "cols": 1,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "yinian_west_yongming",
+      "points": [
+        [
+          3060,
+          3130
+        ],
+        [
+          2850,
+          3130
+        ]
+      ],
+      "label": "西",
+      "uncertain": false,
+      "ids": [
+        "w_yinian",
+        "w_yongming"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_dajue",
+      "x": 2250,
+      "y": 3830,
+      "glyph": "temple",
+      "label": "大觉寺",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "寺期未定；永熙砖塔不入本图",
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_rongjue",
+      "x": 3640,
+      "y": 3830,
+      "glyph": "temple",
+      "label": "融觉寺",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "城西阊阖门外御道南",
+      "uncertain": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "dajue_west_rongjue",
+      "points": [
+        [
+          3500,
+          4250
+        ],
+        [
+          2400,
+          4250
+        ]
+      ],
+      "label": "大觉在融觉西一里许",
+      "uncertain": false,
+      "ids": [
+        "w_dajue",
+        "w_rongjue"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_linhuaizhai",
+      "x": 2860,
+      "y": 3940,
+      "glyph": "house",
+      "label": "临淮王彧宅",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "法云寺北；间距未记",
+      "uncertain": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_fayun",
+      "x": 2860,
+      "y": 4400,
+      "glyph": "temple",
+      "label": "法云寺",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "具体年代未定",
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_baoguang",
+      "x": 3670,
+      "y": 4400,
+      "glyph": "temple",
+      "label": "宝光寺",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "西阳道北；具体年代未定",
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "fayun_baoguang_wall",
+      "points": [
+        [
+          2980,
+          4340
+        ],
+        [
+          3540,
+          4340
+        ]
+      ],
+      "label": "隔墙并门",
+      "uncertain": false,
+      "ids": [
+        "w_fayun",
+        "w_baoguang"
+      ],
+      "label_x": 3120,
+      "label_y": 4310,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "pool",
+      "key": "baoguang_xianchi",
+      "cx": 4070,
+      "cy": 4310,
+      "rx": 65,
+      "ry": 90,
+      "label": "咸池",
+      "ids": [
+        "w_xianchi"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 4050,
+      "y": 4535,
+      "text": "寺园中",
+      "size": 25,
+      "color": "blue",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_baima_xiyang",
+      "x": 2720,
+      "y": 5130,
+      "glyph": "temple",
+      "label": "白马寺〔西阳条〕",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "门外三里，道南；同名待核",
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_xuanzhong",
+      "x": 3620,
+      "y": 5130,
+      "glyph": "house",
+      "label": "城阳王徽宅",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "门外一里，道南；后为宣忠寺",
+      "uncertain": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "wangdianyu_unknown_roadside",
+      "x": 3800,
+      "y": 5410,
+      "w": 480,
+      "h": 300,
+      "title": "旧宅东 · 路侧未定",
+      "ids": [
+        "w_wangdianyu"
+      ],
+      "note": "只据“宣忠寺东”",
+      "cols": 1,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_chongjue",
+      "x": 3620,
+      "y": 5840,
+      "glyph": "temple",
+      "label": "冲觉寺",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "西明门外一里，道北",
+      "uncertain": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "dashi_extent",
+      "x": 2000,
+      "y": 6000,
+      "w": 750,
+      "h": 760,
+      "label": "洛阳大市",
+      "style": "range",
+      "note": "西阳门外四里，御道南",
+      "ids": [
+        "w_dashi"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 2375,
+      "y": 6290,
+      "text": "文献：周回八里",
+      "size": 36,
+      "color": "ink",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "x": 2375,
+      "y": 6360,
+      "text": "市形与实际边界未定",
+      "size": 28,
+      "color": "muted",
+      "anchor": "middle",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "market_north_wards",
+      "x": 2000,
+      "y": 5510,
+      "w": 750,
+      "h": 310,
+      "title": "市北 · 棺椁轜车",
+      "ids": [
+        "w_cixiao",
+        "w_fengzhong"
+      ],
+      "note": "售棺椁、赁丧车〔正文〕\n不据行业推定墓地或店铺。",
+      "cols": 2,
+      "located": true,
+      "constraint_refs": [
+        "W23-12",
+        "W23-13"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "market_east_wards",
+      "x": 3020,
+      "y": 6240,
+      "w": 1080,
+      "h": 310,
+      "title": "市东 · 工巧屠贩",
+      "ids": [
+        "w_tongshang",
+        "w_dahuo"
+      ],
+      "note": "工巧、屠贩为生〔正文〕\n两里先后与铺面位置未记。",
+      "cols": 2,
+      "located": true,
+      "constraint_refs": [
+        "W23-05",
+        "W23-06"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "market_west_wards",
+      "x": 1210,
+      "y": 6240,
+      "w": 650,
+      "h": 310,
+      "title": "市西 · 酿酒",
+      "ids": [
+        "w_yangu",
+        "w_zhishang"
+      ],
+      "note": "多以酿酒为业；不定位作坊。\n两里先后未记；寿丘在延酤以西。",
+      "cols": 2,
+      "located": true,
+      "labels": [
+        "延酤／退酤†",
+        "治觞里"
+      ],
+      "constraint_refs": [
+        "W23-09",
+        "W23-10",
+        "W23-11"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "market_south_wards",
+      "x": 2000,
+      "y": 7010,
+      "w": 750,
+      "h": 310,
+      "title": "市南 · 丝竹乐艺",
+      "ids": [
+        "w_tiaoyin",
+        "w_yuelv"
+      ],
+      "note": "丝竹讴歌、妙伎〔正文〕\n两里先后与演出场所未记。",
+      "cols": 2,
+      "located": true,
+      "labels": [
+        "调音里",
+        "乐律／乐肆†"
+      ],
+      "constraint_refs": [
+        "W23-07",
+        "W23-08"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "tushan_yuchi_region",
+      "x": 1200,
+      "y": 5220,
+      "w": 650,
+      "h": 500,
+      "label": "土山鱼池",
+      "style": "garden",
+      "note": "大市西北；汉营造为追述\n山池内部方位、范围未定",
+      "ids": [
+        "w_tushan_yuchi"
+      ],
+      "constraint_refs": [
+        "W23-04"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_lingxian",
+      "related_ids": [
+        "w_huangnv"
+      ],
+      "x": 2375,
+      "y": 7900,
+      "glyph": "temple",
+      "label": "灵仙寺 · 皇女台上†",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "市南主读；另有市东南异文",
+      "uncertain": false,
+      "semantic_relations": [
+        {
+          "predicate": "on_top_of",
+          "object_id": "w_huangnv",
+          "constraint_id": "W23-28",
+          "geometry_meaning": "shared_symbol_for_documented_topographic_support_not_identical_site_boundaries"
+        }
+      ],
+      "constraint_refs": [
+        "W23-27",
+        "W23-28"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_heyang",
+      "x": 1550,
+      "y": 7900,
+      "glyph": "office",
+      "label": "河阳县",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "按周本台西；县址范围未定",
+      "uncertain": true,
+      "constraint_refs": [
+        "W23-29"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "w_hougang",
+      "x": 3300,
+      "y": 7900,
+      "glyph": "house",
+      "label": "侯刚宅†",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "周本台东；范电子断句待核",
+      "uncertain": true,
+      "constraint_refs": [
+        "W23-30"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "n_chanxu",
+      "x": 4680,
+      "y": 1100,
+      "glyph": "temple",
+      "label": "禅虚寺†",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "大夏御道西；“外”为校补",
+      "uncertain": true,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "chanxu_front_ground",
+      "x": 4440,
+      "y": 1350,
+      "w": 480,
+      "h": 270,
+      "title": "寺前关联",
+      "ids": [
+        "n_yuewuchang"
+      ],
+      "labels": [
+        "阅武场"
+      ],
+      "note": "“前”的绝对方向未记",
+      "cols": 1,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "guangfeng_garden",
+      "x": 5300,
+      "y": 980,
+      "w": 850,
+      "h": 620,
+      "label": "光风园",
+      "style": "garden",
+      "note": "旧宣武场；不并阅武场\n大夏门东北；范围示意",
+      "ids": [
+        "n_guangfeng"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "yongping_ward",
+      "x": 7490,
+      "y": 980,
+      "w": 1130,
+      "h": 620,
+      "label": "永平里",
+      "style": "ward",
+      "note": "一里指寺；坊界未记",
+      "ids": [
+        "n_yongping"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "node",
+      "id": "n_ningxuan",
+      "x": 8040,
+      "y": 1260,
+      "glyph": "temple",
+      "label": "凝玄寺〔范作凝圆〕",
+      "dx": 0,
+      "dy": 75,
+      "anchor": "middle",
+      "note": "御道东；门外一里〔原文〕",
+      "uncertain": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "area",
+      "key": "wenyi_ward",
+      "x": 9400,
+      "y": 930,
+      "w": 2150,
+      "h": 680,
+      "label": "闻义里 · 城东北",
+      "style": "ward",
+      "note": "城东北仅粗向；与永平间距未定",
+      "ids": [
+        "n_wenyi"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "wenyi_houses",
+      "x": 9470,
+      "y": 1120,
+      "w": 2010,
+      "h": 420,
+      "title": "宅第与制陶记述 · 内部不定位",
+      "ids": [
+        "n_guowenyuan",
+        "n_songyun"
+      ],
+      "note": "另记造瓦、瓮者居里内；不据此定窑址。\n两宅相互方位未记。",
+      "cols": 2,
+      "located": false,
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "group",
+      "key": "market_unlocated_wards",
+      "x": 3000,
+      "y": 6980,
+      "w": 1150,
+      "h": 550,
+      "title": "附记 · 方位未定（非此处地块）",
+      "ids": [
+        "w_fucai",
+        "w_jinsi",
+        "w_kaishan"
+      ],
+      "labels": [
+        "阜财／准财里",
+        "金肆里",
+        "开善寺〔阜财里内〕"
+      ],
+      "note": "周作阜财，范存准财；全局方位未记。\n开善在里内；齐谐为改名，不增画一里。",
+      "cols": 1,
+      "located": false,
+      "constraint_refs": [
+        "W23-14",
+        "W23-15",
+        "W23-16",
+        "W23-17"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "market_south_huangnv",
+      "points": [
+        [
+          2375,
+          7460
+        ],
+        [
+          2375,
+          7760
+        ]
+      ],
+      "label": "市南†",
+      "label_x": 2430,
+      "label_y": 7640,
+      "uncertain": true,
+      "ids": [
+        "w_dashi",
+        "w_huangnv"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "huangnv_heyang_west",
+      "points": [
+        [
+          2200,
+          7830
+        ],
+        [
+          1720,
+          7830
+        ]
+      ],
+      "label": "台西",
+      "label_x": 1885,
+      "label_y": 7790,
+      "uncertain": false,
+      "ids": [
+        "w_huangnv",
+        "w_heyang"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "relation",
+      "key": "huangnv_hougang_east",
+      "points": [
+        [
+          2550,
+          7830
+        ],
+        [
+          3120,
+          7830
+        ]
+      ],
+      "label": "台东†〔周本主读〕",
+      "label_x": 2685,
+      "label_y": 7790,
+      "uncertain": true,
+      "ids": [
+        "w_huangnv",
+        "w_hougang"
+      ],
+      "constraint_refs": [
+        "W23-30"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "key": "north_wenyi_name_layers",
+      "x": 9440,
+      "y": 1670,
+      "text": "上商里为周、范校读；高祖改名闻义",
+      "size": 25,
+      "color": "muted",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "key": "shouqiu_east_west_limits",
+      "x": 825,
+      "y": 6030,
+      "text": "延酤／退酤以西\n张方沟以东",
+      "size": 27,
+      "color": "green",
+      "anchor": "middle",
+      "ids": [
+        "w_shouqiu"
+      ],
+      "constraint_refs": [
+        "W23-18",
+        "W23-19"
+      ],
+      "note": "文献四至的文字注记；不把延酤在无序市西组中的列位当作边线。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "key": "shouqiu_original_dimensions",
+      "x": 825,
+      "y": 6160,
+      "text": "东西二里 · 南北十五里\n〔原文量距；不折算〕",
+      "size": 25,
+      "color": "gold",
+      "anchor": "middle",
+      "ids": [
+        "w_shouqiu"
+      ],
+      "constraint_refs": [
+        "W23-22"
+      ],
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "key": "market_ward_count_note",
+      "x": 2375,
+      "y": 6460,
+      "text": "本段十里：四向八里\n另二里方位未定",
+      "size": 27,
+      "color": "green",
+      "anchor": "middle",
+      "ids": [
+        "w_dashi"
+      ],
+      "constraint_refs": [
+        "W23-15"
+      ],
+      "note": "仅说明该段十里列名的证据层次，不画十块标准方坊。",
+      "coordinate_frame": "world"
+    },
+    {
+      "kind": "text",
+      "key": "west_luo_repeated_label",
+      "x": 1900,
+      "y": 8940,
+      "text": "洛水〔河形示意〕",
+      "size": 32,
+      "fill": "blue",
+      "anchor": "middle",
+      "note": "同一母图在城西水段重复河名，避免S04有水线而无河名；不改变河形。",
+      "coordinate_frame": "world"
+    }
+  ],
+  "gates": [
+    [
+      "gate_chengming",
+      4400,
+      2350,
+      "w",
+      "承明门"
+    ],
+    [
+      "gate_changhe_west",
+      4400,
+      3550,
+      "w",
+      "阊阖〔城西〕"
+    ],
+    [
+      "gate_xiyang",
+      4400,
+      4750,
+      "w",
+      "西阳门"
+    ],
+    [
+      "gate_ximing",
+      4400,
+      6100,
+      "w",
+      "西明门"
+    ],
+    [
+      "gate_jianchun",
+      7800,
+      3550,
+      "e",
+      "建春门"
+    ],
+    [
+      "gate_dongyang",
+      7800,
+      4750,
+      "e",
+      "东阳门"
+    ],
+    [
+      "gate_qingyang",
+      7800,
+      6100,
+      "e",
+      "青 / 清阳门†"
+    ],
+    [
+      "gate_daxia",
+      5000,
+      1800,
+      "n",
+      "大夏门"
+    ],
+    [
+      "gate_guangmo",
+      7200,
+      1800,
+      "n",
+      "广莫门"
+    ],
+    [
+      "gate_jinyang",
+      4750,
+      6800,
+      "s",
+      "津阳门†"
+    ],
+    [
+      "gate_xuanyang",
+      6100,
+      6800,
+      "s",
+      "宣阳门"
+    ],
+    [
+      "gate_pingchang",
+      6800,
+      6800,
+      "s",
+      "平昌门"
+    ],
+    [
+      "gate_kaiyang",
+      7500,
+      6800,
+      "s",
+      "开阳门"
+    ],
+    [
+      "ic_changhe_palace",
+      6100,
+      3950,
+      "s",
+      "阊阖〔宫前〕"
+    ]
+  ],
+  "base_roads": [
+    {
+      "key": "palace_xuanyang",
+      "ids": [
+        "ic_palace_avenue",
+        "road_xuanyang"
+      ],
+      "points": [
+        [
+          6100,
+          3950
+        ],
+        [
+          6100,
+          8920
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "luosouth",
+      "ids": [
+        "road_siyi"
+      ],
+      "points": [
+        [
+          6100,
+          9200
+        ],
+        [
+          6100,
+          10600
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "changhe_west",
+      "ids": [
+        "road_changhe_west"
+      ],
+      "points": [
+        [
+          1400,
+          3550
+        ],
+        [
+          4400,
+          3550
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "xiyang",
+      "ids": [
+        "road_xiyang"
+      ],
+      "points": [
+        [
+          1300,
+          4750
+        ],
+        [
+          5050,
+          4750
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "ximing",
+      "ids": [
+        "road_ximing"
+      ],
+      "points": [
+        [
+          3300,
+          6100
+        ],
+        [
+          4400,
+          6100
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "jianchun",
+      "ids": [
+        "ic_jianchun_avenue",
+        "road_jianchun"
+      ],
+      "points": [
+        [
+          7100,
+          3550
+        ],
+        [
+          11600,
+          3550
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "dongyang",
+      "ids": [
+        "ic_dongyang_avenue",
+        "road_dongyang"
+      ],
+      "points": [
+        [
+          7000,
+          4750
+        ],
+        [
+          11600,
+          4750
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "qingyang",
+      "ids": [
+        "ic_qingyang_avenue",
+        "road_qingyang"
+      ],
+      "points": [
+        [
+          7000,
+          6100
+        ],
+        [
+          11600,
+          6100
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "daxia",
+      "ids": [
+        "road_daxia"
+      ],
+      "points": [
+        [
+          5000,
+          700
+        ],
+        [
+          5000,
+          1800
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "guangmo",
+      "ids": [
+        "road_guangmo"
+      ],
+      "points": [
+        [
+          7200,
+          700
+        ],
+        [
+          7200,
+          1800
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "jinyang",
+      "ids": [
+        "road_jinyang"
+      ],
+      "points": [
+        [
+          4750,
+          6800
+        ],
+        [
+          4750,
+          8150
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "kaiyang",
+      "ids": [
+        "road_kaiyang"
+      ],
+      "points": [
+        [
+          7500,
+          6250
+        ],
+        [
+          7500,
+          8450
+        ]
+      ],
+      "width": 50
+    },
+    {
+      "key": "qianqiu_inside",
+      "ids": [
+        "ic_qianqiu_road"
+      ],
+      "points": [
+        [
+          5260,
+          3550
+        ],
+        [
+          6400,
+          3550
+        ]
+      ],
+      "width": 42
+    }
+  ],
+  "source_record_count": 339,
+  "world_scene_sha256": "f735b92542c70ec83274c12aea4fc33520299425ac9e3570083713011d10cf29"
+}

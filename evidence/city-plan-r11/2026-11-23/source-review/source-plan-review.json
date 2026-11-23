@@ -1,0 +1,69 @@
+{
+  "schema": "luoyang-r11-primary-plan-visual-review-v1",
+  "stage": "research_source_extraction_review",
+  "production_pdf_acceptance": false,
+  "reviewer_task": "r11_primary_plans",
+  "source_reviews": [
+    {
+      "source_fact_json": "research/city-plan-r11/yongning-published-plan.json",
+      "source_fact_json_sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+      "reviewed_material_hashes": [
+        {
+          "working_filename": "dpm-p9-image-139.png",
+          "bytes": 116054,
+          "sha256": "6034fac15441821e9e859573f9fbc4af3299efa533bc888af23db5dd83d87bc8",
+          "actually_visually_reviewed": true,
+          "original_bytes_intentionally_not_archived": true
+        },
+        {
+          "working_filename": "yongning-trace-review.png",
+          "bytes": 216426,
+          "sha256": "4303b2a4c25b7957ff19b69693f54ebd57521ab306247d934402bc5ddb3028ac",
+          "actually_visually_reviewed": true,
+          "original_bytes_intentionally_not_archived": true
+        }
+      ],
+      "observed_findings": [
+        "Actual right-hand temple plan read; left-hand generic temple model excluded.",
+        "Seven temple-wall segments preserve gate gaps. No north gate invented; east gate only a point; southwest corner remains open.",
+        "South-gate image dimensions about 45.70 by 18.95 m; source-marked north makes long edge approximately east-west.",
+        "Temple wall source reading about 211.63 by 291.57 m remains different from 212 by 301 m table; XY scale is never forced.",
+        "Interrupted double-wall drawing is retained as point-dash centerline without asserting excavated/reconstructed wall status.",
+        "Only the new seven-wall source may drive this temple-envelope neighbour proxy; legacy 06a remnants remain independent evidence."
+      ]
+    },
+    {
+      "source_fact_json": "research/city-plan-r11/palace-2013-published-plan.json",
+      "source_fact_json_sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+      "reviewed_material_hashes": [
+        {
+          "working_filename": "nara2013-fig69-crop.png",
+          "bytes": 79063,
+          "sha256": "f63eaca7435a0ceae6cf2c3e13679b88522e61f8e78f59ad486670a22c31d8b9",
+          "actually_visually_reviewed": true,
+          "original_bytes_intentionally_not_archived": true
+        },
+        {
+          "working_filename": "palace2013-trace-review.png",
+          "bytes": 82211,
+          "sha256": "4d1011f90164a88c8872d3cedec1f946ba772f284f7ec5b95e389a3106706577",
+          "actually_visually_reviewed": true,
+          "original_bytes_intentionally_not_archived": true
+        }
+      ],
+      "observed_findings": [
+        "Native PDF vector extraction compared visually against actual figure 69.",
+        "Legend differentiates partition walls, rammed-earth areas and roads; no unprovided surveyed/reconstructed classification added.",
+        "Survey blocks are points, not gate foundations; open palace top is not closed and Hualin south band remains road.",
+        "Taiji and Zhaoyang areas are labelled nearby rammed-earth extents, not complete hall footprints.",
+        "Each component phase remains unknown; independent source-comparison layer defaults off.",
+        "Changhe-to-Taiji source symbol spacing 501.676862941 m differs from 06a 573.882342552 m; single-anchor binding retains the discrepancy."
+      ]
+    }
+  ],
+  "limits": [
+    "No third-party source PDF, crop or base-map overlay is included in this archive record.",
+    "This record concerns source extraction and its semantic limits; final production PDF QA is separately required.",
+    "No independently surveyed city-control point was obtained."
+  ]
+}

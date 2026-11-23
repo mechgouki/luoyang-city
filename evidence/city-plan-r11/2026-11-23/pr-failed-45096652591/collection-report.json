@@ -1,0 +1,2442 @@
+{
+  "schema": "luoyang-r11-failed-ci-collection-v1",
+  "collected_utc": "2026-11-23T01:59:06.721804+00:00",
+  "repository": "mechgouki/luoyang-city",
+  "pr_number": 82,
+  "run_id": 45096652591,
+  "run_attempt": 1,
+  "run_status": "completed",
+  "run_conclusion": "failure",
+  "accepted_release": false,
+  "pr_head_sha": "2856d7055f2ed685ca5d4e2efd8cab7f63b2eae2",
+  "tested_merge_sha": "2cf09df9d588cf1cf440a8517a1f8950e4bc2b4b",
+  "head_tree_sha": "49ea9ba636ec0dace7bb94e653979476c5f23c88",
+  "all_jobs": [
+    {
+      "id": 137437825533,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 137439717925,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 137439718520,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "skipped"
+    }
+  ],
+  "failed_steps": [
+    {
+      "name": "Exercise current and all earlier map interactions",
+      "number": 12,
+      "conclusion": "failure"
+    }
+  ],
+  "failure_classification": {
+    "stage": "R11 mobile browser real tower-shape click",
+    "test": "tests/browser_city_plan_r11.py exercise line 325",
+    "expected_selected_title": "木塔基座主体图示轮廓",
+    "actual_selected_title": "木塔地基图示范围",
+    "assertion_timeout_ms": 5000,
+    "observed_actual_samples": 9,
+    "r11_semantic_tests_passed": 13,
+    "r11_browser_devices": {
+      "desktop": {
+        "status": "passed",
+        "elapsed_seconds": 30.751,
+        "download_count": 26,
+        "screenshot_count": 5,
+        "error": null,
+        "checks_completed": [
+          "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+          "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden",
+          "Buttons and keyboard zoom/pan/reset keep the same plane, and a real tower-polygon click opens its source/placement evidence",
+          "Feature-ID search, the 宣忠 alias, saved feature zoom and empty/reset search work; choosing R04 clears the old feature and reload restores the regional camera",
+          "All 339 coverage IDs and group/query counters agree; unplaced search overrides stale filters, table focus returns to real geometry, and no action rewrites coordinates",
+          "Every download is a genuine paced click with released hash, retained bytes and a single attempt; PDF paper sizes/text/embedded fonts and every ZIP member are checked; the offline UI runs with network disabled",
+          "Without JavaScript the common-plane SVG, every feature and all 339 catalog objects remain readable; native evidence links and disclosure controls work"
+        ]
+      },
+      "mobile": {
+        "status": "failed",
+        "elapsed_seconds": 8.499,
+        "download_count": 0,
+        "screenshot_count": 2,
+        "error": "Locator expected to have text '木塔基座主体图示轮廓'\nActual value: 木塔地基图示范围 \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#selected-title\")\n    9 × locator resolved to <h3 id=\"selected-title\">木塔地基图示范围</h3>\n      - unexpected value \"木塔地基图示范围\"\n",
+        "checks_completed": [
+          "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+          "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden"
+        ]
+      }
+    },
+    "overall_browser_suite_completed": false,
+    "cause_determined_by_collection": false,
+    "classification_basis": "Actual run/job API, full decoded build log and extracted desktop/mobile reports; the repair agents determine whether click geometry, hit ordering or test targeting caused the mismatch."
+  },
+  "artifact": {
+    "id": 14783577243,
+    "name": "browser-build-evidence",
+    "bytes": 133220902,
+    "sha256": "446e434066373b041f861b601182a116edbb6803b22fa88cc2996ec8fd154502",
+    "github_digest_verified": true,
+    "member_count": 378,
+    "extracted_bytes": 171482631,
+    "expires_at": "2026-12-07T01:55:19Z"
+  },
+  "all_returned_artifacts_collected": true,
+  "log_scope": "Complete decoded log saved for the sole executed job. deploy and verify-live were skipped and have no executed step logs.",
+  "download_signed_url_saved": false,
+  "text_sensitive_scan": {
+    "scanned_text_files": 173,
+    "findings_filenames_and_rules_only": []
+  },
+  "collected_files_before_this_report": [
+    {
+      "path": "api-artifacts-raw.json",
+      "bytes": 1025,
+      "sha256": "0d4e970c7878d564e06e2fab71791f16b0d091e0aeb1180271d16e681f28fba5",
+      "gitblob": "2c4ee09cb9e55d70a4e6d3b15a9867d9557eeaa2"
+    },
+    {
+      "path": "api-artifacts.json",
+      "bytes": 846,
+      "sha256": "0aad19c7a38d0f14fc0fa00ccc8520d7f3739400990cd4461649781f325a994e",
+      "gitblob": "cf7974be2f150d1c5d2421755c7055c9e56f4018"
+    },
+    {
+      "path": "api-build-log-raw.json",
+      "bytes": 176543,
+      "sha256": "3c39835d0a65edbc5a6dbbb4002a94013d664af3267e85961cc31c5763cfc0bd",
+      "gitblob": "08fbd00d4772d49cbd41351c1eb09534546c6a26"
+    },
+    {
+      "path": "api-jobs-full-raw.json",
+      "bytes": 13551,
+      "sha256": "6699b940a631288d057c58522d0f3b846ca7ff58e5405907359709060ef635e7",
+      "gitblob": "1a27714be64f1643bcf279a28b4b095e23031335"
+    },
+    {
+      "path": "api-jobs-full.json",
+      "bytes": 8000,
+      "sha256": "1beb59ce6777072a341866c44ec5d3c275c71b0664c7891e448704f80e88be23",
+      "gitblob": "2407ccd12cea9611009120335d9416f164657882"
+    },
+    {
+      "path": "api-run-raw.json",
+      "bytes": 28581,
+      "sha256": "be0c8723625fa5574f0a87a16bdf3759cdccdb62a5b254b07aa46c05fa99bdd8",
+      "gitblob": "a55f962f60c948d300ec91b8f5329411181192f8"
+    },
+    {
+      "path": "api-run.json",
+      "bytes": 14680,
+      "sha256": "d652a722484226fbfc453f2bcbc58d31e1e79c6d08651678c059d2ce2a5a455e",
+      "gitblob": "c4fa1c1adb5a93e83832e9acff0eb77442e06990"
+    },
+    {
+      "path": "artifact-extraction.json",
+      "bytes": 72026,
+      "sha256": "e5a335db52ec14e624cebd069faf8fcc2f831e08f1bc8469245028e6c4a5c196",
+      "gitblob": "a36cb403d7e617f35588530df646219a1a95ceff"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/desktop-palace-evidence.png",
+      "bytes": 161668,
+      "sha256": "fbe88b385eb2f772f1da9d0fa56ea32cadf580c6df37f5ba2013475e5606588c",
+      "gitblob": "2781ad1f9e1acb919d38eff4dfcdc538bdbacf74"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/desktop-report.json",
+      "bytes": 4526,
+      "sha256": "25a41b430d5da710b6ade7c3ed2c1fa6d84b2db1ed84d92f3ffa40f693568abb",
+      "gitblob": "e4eadb1061e72d4053f483ef94e37a0083f2c0b6"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/desktop-ward-bridge-map.png",
+      "bytes": 170766,
+      "sha256": "d294e34d58cb2563f4ea22beb13e37d82a1d97dc980afd1c91be74e6da710108",
+      "gitblob": "3acc19edb4a9e6d0e199c7a814892e9a11e67b48"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/desktop-ward-evidence.png",
+      "bytes": 177693,
+      "sha256": "3e92eb6347a3712435ad9ef099bc7641eb39f39f7bd160848a728b33e341a1e4",
+      "gitblob": "f81b1aa881f3dd3b2fe4026a6d669317d04df123"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/desktop-whole-atlas.png",
+      "bytes": 163658,
+      "sha256": "b6557a16a3d08b050ec41da8b7fd1e42c50e106769258d580b0dd608e70e6565",
+      "gitblob": "9b6eb90c5adc3686c4499caab63c9f518d41d465"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/mobile-palace-evidence.png",
+      "bytes": 158434,
+      "sha256": "6f9d2a648fe7e7f1197a4a62cfad43ed53c570560e4279e177085d00d800694a",
+      "gitblob": "16ee723915c905d017ce20f408f76dd43d65554a"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/mobile-report.json",
+      "bytes": 4496,
+      "sha256": "4534bc4cb678d19a74019e83eda1c16143b8147f972482691ce3d6f035c7938d",
+      "gitblob": "8e19b4ddf85d366e532c7cbc26b890cb16f055cf"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/mobile-ward-bridge-map.png",
+      "bytes": 55539,
+      "sha256": "cd5e40143b30f928bc358a8cae4d208b2bbd16e07549cee2c927a96c0f6f1627",
+      "gitblob": "0d48fcb5a949ebc2d1880b3a50a5ddfd81308693"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/mobile-ward-evidence.png",
+      "bytes": 175770,
+      "sha256": "d41849687cdf7f4fadeb1ff2702f0650ca317f8024e4b262ae4a4523b00a69fd",
+      "gitblob": "03b01c6fe7569bf3e0dca47f918ed023f1b87184"
+    },
+    {
+      "path": "artifacts/all-road-atlas-r62-browser/mobile-whole-atlas.png",
+      "bytes": 53970,
+      "sha256": "b6e375c1e20bff3b6637c130ccd1f8d069e6634f35c0b265728f0a1189bf57ab",
+      "gitblob": "7c7c2edcd7ff94483e742932473d371756ef3f21"
+    },
+    {
+      "path": "artifacts/browser-runtime-digest.json",
+      "bytes": 112,
+      "sha256": "b97115d42a0afe42e713e1a27f776ae513b45e9070861024d7f5cb7066a11aa6",
+      "gitblob": "7c2490643f3791c044a83f03b216c78ea6bd8bb4"
+    },
+    {
+      "path": "artifacts/city-atlas-r4-browser/desktop-baoming.png",
+      "bytes": 105527,
+      "sha256": "3c3b83405887a5f52c27c68936ac32243b93a2b8e317939cdaab0b06a570f71e",
+      "gitblob": "5918fe6074a68bea1f46728652b8e1ea379eb5b8"
+    },
+    {
+      "path": "artifacts/city-atlas-r4-browser/desktop-corrected-reading.png",
+      "bytes": 108696,
+      "sha256": "9a7f5b03198d4b5dc7eb547886264ac44a69aa4704f855a5f2999704b216891b",
+      "gitblob": "e3db1b8f3c9d7274129bf43a5d656fa0582f73a1"
+    },
+    {
+      "path": "artifacts/city-atlas-r4-browser/desktop-overview.png",
+      "bytes": 146103,
+      "sha256": "a72309ffcc874fd70a24d7cfa8f33ae1d7bf9b3fe7b37b8906fe5fe6be2a701c",
+      "gitblob": "c5bb04ff14c987eee9406fd7aea9346ea238b0a9"
+    },
+    {
+      "path": "artifacts/city-atlas-r4-browser/desktop-report.json",
+      "bytes": 2920,
+      "sha256": "2b5e283079d5a46e29d38ee4bfe7a63bd530f7e1bc6bb7b67043d13843546d10",
+      "gitblob": "7853b6dc70513b538f860f697a6c75aec24d7191"
+    },
+    {
+      "path": "artifacts/city-atlas-r4-browser/mobile-baoming.png",
+      "bytes": 96811,
+      "sha256": "73a1d822643a0fd86aa7f121c14f3b537d9ddd1ead8aeae152e1690b2fe6a9ab",
+      "gitblob": "bf5337e08baafafd66555d997e8ed8f267a6deec"
+    },
+    {
+      "path": "artifacts/city-atlas-r4-browser/mobile-corrected-reading.png",
+      "bytes": 106783,
+      "sha256": "c10c1acb0f71c4b37d21abfdb9c64aec0128750abd7111061bc1faa74a4b26df",
+      "gitblob": "18aecb96e854b751430ee527fe18990fe2ef5d13"
+    },
+    {
+      "path": "artifacts/city-atlas-r4-browser/mobile-overview.png",
+      "bytes": 35258,
+      "sha256": "9cb3dca4699a699c9fbe273e8842022cfb7f12bbba0bd1fae24236ffc68ca103",
+      "gitblob": "0c4fea7011755e540414280fe8e85ba821ff7063"
+    },
+    {
+      "path": "artifacts/city-atlas-r4-browser/mobile-report.json",
+      "bytes": 2907,
+      "sha256": "fd6327ab1ca9ade5e262969fdf9bed3811d3c71fef4b1ef5fe2d02b5a32bd3c4",
+      "gitblob": "36bb6e44115b91b5dcbc5958be3faa4be2c09eff"
+    },
+    {
+      "path": "artifacts/city-audit-b8-tests.txt",
+      "bytes": 1530,
+      "sha256": "0c6ed77ee8918474d618db24cf9628c8136b8a2d526f9ab74718c12a35e057d8",
+      "gitblob": "3b7eeba415309165894d88e03adbf901f736256d"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-deep-link.png",
+      "bytes": 192734,
+      "sha256": "8b42aad1466d83582cae314b283e6e095bb648ee608c16d62fde042ac3a76d74",
+      "gitblob": "fc20765abfded4bac33b9c2a8ac78300ae21d334"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-entry.png",
+      "bytes": 285310,
+      "sha256": "bc9d7b91f234b1f13514cecabfda88bebbb01941773f99e8e6dbd9a6f2d77c93",
+      "gitblob": "071bbefe33df722a958aac808f9349a841c86eb4"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R01.png",
+      "bytes": 220401,
+      "sha256": "0b6264516cb777b27975e8c7c3c6f5c7ba7c0a48b1926427bb1568ab8caa7e40",
+      "gitblob": "f71418a79763503e4c60e270c6116ee4a19b1c1f"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R02.png",
+      "bytes": 500864,
+      "sha256": "296630d517ecbfca58b3d0a89830c827e394959eb1be4d0e53a4e2dcaeee0df8",
+      "gitblob": "0f98d677dd4673754298e4e761ef15c5af7a5f6b"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R03.png",
+      "bytes": 533054,
+      "sha256": "4c68576d2a2f04ea5733ad34e9c64d57c659df02ef32be0d9049e2004371e7ef",
+      "gitblob": "a3e3701375b1d9b09a604499acf58f737104692d"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R04.png",
+      "bytes": 333631,
+      "sha256": "aa261be8ab082e4616dfad64bc0d30776ab0caffe1c97a147dea5039c9a7e492",
+      "gitblob": "641423c314254ee01b12ceb0155a4270d2b689e7"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R05.png",
+      "bytes": 306973,
+      "sha256": "15e714827ce68776476236e78a2ea419252ff8ba4abc9177b18fd396bb8ef563",
+      "gitblob": "ebe1f80048a3c9a6c0149bdfa1f460596020f731"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R06.png",
+      "bytes": 246059,
+      "sha256": "6be790d739887b8daf20861805a3c490499cc33475d12cc73088bdbbf55eb7f3",
+      "gitblob": "5fb48d756da434c0460b31026bbeb755f42f17b2"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R07.png",
+      "bytes": 348457,
+      "sha256": "0a634e6e2ed064386871a25f4287dbe5462bb1bd46ca4f40323a001c8ed4aee7",
+      "gitblob": "b48ac8fbc4553bb05f4f097099b6ee5276a08fde"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R08.png",
+      "bytes": 320269,
+      "sha256": "5281d14caa1fc3fd3e7b92504096a18265ca97759a4a732aea4f623b9d12b2ca",
+      "gitblob": "dd77cbbc715807ae697481c42589c1f5486ebb87"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R09.png",
+      "bytes": 326603,
+      "sha256": "4ebdd7352a88fd063c4b26f122daf65c5a48c513714f7df210e0bb299fbfbc30",
+      "gitblob": "19f076873dae31874c6a4c916c5d9bd3805aca4a"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R10.png",
+      "bytes": 532757,
+      "sha256": "38c59279a34176e15a80b20637e274a45fd9e6a52c363b2efb93e29c71323bc8",
+      "gitblob": "70fd7859ca6f446235a0e6b5efe87de4f679b408"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-R11.png",
+      "bytes": 337142,
+      "sha256": "da924da757150631f90f2e468f663607feb649883ecc58f8ab7ba1960cf42472",
+      "gitblob": "af9bbd199275c35346c447688a1cf9823f6deea7"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-map-overview.png",
+      "bytes": 251644,
+      "sha256": "2515673b246046da1b2ba77d652edf435ed338bf9b23d3e2086b01c28ba37ff9",
+      "gitblob": "38ca57ef3fdb53329700aaed8b9338b52267364f"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-offline.png",
+      "bytes": 206615,
+      "sha256": "0b293a34f6be49aae60b5dee1c0e2259f1bd783c6fb3178194af1470bb794705",
+      "gitblob": "7a30b107d17f6a3790dcd01893e82460557354bf"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-report.json",
+      "bytes": 25368,
+      "sha256": "9a9cd0bf6e5021cf61db72c0d1406ebe2db749448e901ad5b386bf2e0ddf2bea",
+      "gitblob": "3fa8d6814e47c32e51a0a4ecce17c05326be5a02"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-restored-filter.png",
+      "bytes": 172155,
+      "sha256": "d7ce4ef107f750a3bcb684706f184b351c5564e14358be41d846999ace004a4f",
+      "gitblob": "1d748ea97e5c51298a3dee9c5ea3d975e9322b53"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/desktop-without-javascript.png",
+      "bytes": 185024,
+      "sha256": "402b86345317aa027f21d69938e41caf33fc4dacbae6fdd3a2ee04e15200192d",
+      "gitblob": "547eaf5ed34009e3acd18d5febfd381ffeaefcb0"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/atlas.json",
+      "bytes": 2356100,
+      "sha256": "7b3d0d4f5e7fafccaad950846d89a79d6f85c567832329dbc974561b87fa069a",
+      "gitblob": "c745d78bc6b2003fa973a2fc6d114ab8db89aaba"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/coverage.csv",
+      "bytes": 141785,
+      "sha256": "01024de7120d24fb6ae13505e86f35c4616c275289cca88af2607f89efe7f94b",
+      "gitblob": "ff2238b18376862f3045e34052b908009ed51537"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/decisions.csv",
+      "bytes": 403923,
+      "sha256": "e051b00fd37befbac03b525ed807fdb8d15335fddba1b087d399d20f87888ea9",
+      "gitblob": "e318a8fabf2c791bc46e75546645d219de56662d"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/gaps.csv",
+      "bytes": 17283,
+      "sha256": "a0cd837c0edfcb4dc9a95233466b57a1d0d8197fb6e783ed46db0757d6978783",
+      "gitblob": "168e04dbe042f68254485cd10503a8468a21ed6f"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/manifest.json",
+      "bytes": 102089,
+      "sha256": "352d7bb699631d1016a6a393ea909cdcac07c1ca68e94b52bea960cecca91054",
+      "gitblob": "86a12f450b3be03b28033c5c7aa67055b67ecb38"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/networks.csv",
+      "bytes": 375628,
+      "sha256": "3cdfa8dbac49546a969f786241292da0c60d68ae650d5b3c21e1a304bb44f905",
+      "gitblob": "0d5d368934d5a617e0b081a65aaac67e6dcd7720"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/overview.svg",
+      "bytes": 226268,
+      "sha256": "43b83126cb35624fe2d3f6919ddbf3e8a66729ad33b30416cd3cdf00b60a625e",
+      "gitblob": "b7ff4bc2f3a71e60f3dd2650039e9a66e9060825"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R01.svg",
+      "bytes": 39963,
+      "sha256": "578db14263fe7b93fbb39690f606325ada8c561001788ff41a7d6dc19fc25652",
+      "gitblob": "5c93b79844590f84f0b853ea68aee046f7c58211"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R02.svg",
+      "bytes": 106140,
+      "sha256": "1016488050bc5e47f40f358753247a9a3bf6e92d7829735ee76b3a49597dddeb",
+      "gitblob": "b02111c299596acc589e1b72daed6b19fdb3313b"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R03.svg",
+      "bytes": 133657,
+      "sha256": "848e88b8c083fb4e2de137b147b49beee71717a7bc5586d8d6e0a8cb9099a8fc",
+      "gitblob": "7ae174da7a5ec314a616ccf9c8de1ab8649df1c4"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R04.svg",
+      "bytes": 80972,
+      "sha256": "9945e42e8a0a6b743bb2f595c520da149c7480e55c0a9d5cf72829c5c209411a",
+      "gitblob": "8962a178482f1eeb8fbdbfddac130d8bd415a337"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R05.svg",
+      "bytes": 80935,
+      "sha256": "a9b721167d3d14cd8c9bca316b0b6b9cb4e33d21d2abab95c9368212c1dde43a",
+      "gitblob": "bfaf114fe526707aa59175b01b63671324ac44ba"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R06.svg",
+      "bytes": 46456,
+      "sha256": "432003c80257222d7814ec24903aca7e6704e21a6bc6406b6dad05e9fad07a2e",
+      "gitblob": "64ba57f501db829243795135c15f60d036528362"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R07.svg",
+      "bytes": 92613,
+      "sha256": "b539e5f8e2dbd1b85790d2b3930114497363e93df40290539a66541d8227694d",
+      "gitblob": "d365f42b2f4246491a4d3293324b1b03831f5149"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R08.svg",
+      "bytes": 77353,
+      "sha256": "169d7ed3d08ac673efcc8b8613bf359fbc67ae01e82ae3899efad4be8186046c",
+      "gitblob": "47d1b398e6ae4b733bc05400dd831e5300857535"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R09.svg",
+      "bytes": 81037,
+      "sha256": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+      "gitblob": "70701a0db23ccd9df6c21398220b1ff16068d941"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R10.svg",
+      "bytes": 113606,
+      "sha256": "29b412b0c6952621778b10db52933636cb314c13772fc77cb9b5efe614c26555",
+      "gitblob": "3aa047ca983606a10ebe47b71fd8638d5bcdf2d3"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/regions/R11.svg",
+      "bytes": 86166,
+      "sha256": "cb99773544118d5f9fc57cc8dc97291128bf4fd9f642eefe18df0d044e57aae6",
+      "gitblob": "100e3f13a3c98db94de498179b13868f6ff84f0e"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/city-layout-r10/source-review.json",
+      "bytes": 369328,
+      "sha256": "8e4d558d9b65677f112ae3916a319d679b27f3d706cd66beb855549ab8466ca7",
+      "gitblob": "053d430008672cd2647625e8d91437070dbdb1b4"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.pdf",
+      "bytes": 2292369,
+      "sha256": "5b270cf25e00fd1e857df4beb059617982a31eb18c3a2354f34501617553e030",
+      "gitblob": "e04486b3d0e3adea1266b79023987df2a41e06ea"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/desktop/downloads/city-layout-r10.zip",
+      "bytes": 3549671,
+      "sha256": "7bb8004c4c4a82b09ed1bad26c6a1e3638bc8e30885433369077471341e181ea",
+      "gitblob": "37266ed3e4d8945b6c07379cc6533b2f0a4902b6"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/atlas.json",
+      "bytes": 2356100,
+      "sha256": "7b3d0d4f5e7fafccaad950846d89a79d6f85c567832329dbc974561b87fa069a",
+      "gitblob": "c745d78bc6b2003fa973a2fc6d114ab8db89aaba"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/coverage.csv",
+      "bytes": 141785,
+      "sha256": "01024de7120d24fb6ae13505e86f35c4616c275289cca88af2607f89efe7f94b",
+      "gitblob": "ff2238b18376862f3045e34052b908009ed51537"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/decisions.csv",
+      "bytes": 403923,
+      "sha256": "e051b00fd37befbac03b525ed807fdb8d15335fddba1b087d399d20f87888ea9",
+      "gitblob": "e318a8fabf2c791bc46e75546645d219de56662d"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/gaps.csv",
+      "bytes": 17283,
+      "sha256": "a0cd837c0edfcb4dc9a95233466b57a1d0d8197fb6e783ed46db0757d6978783",
+      "gitblob": "168e04dbe042f68254485cd10503a8468a21ed6f"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/manifest.json",
+      "bytes": 102089,
+      "sha256": "352d7bb699631d1016a6a393ea909cdcac07c1ca68e94b52bea960cecca91054",
+      "gitblob": "86a12f450b3be03b28033c5c7aa67055b67ecb38"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/networks.csv",
+      "bytes": 375628,
+      "sha256": "3cdfa8dbac49546a969f786241292da0c60d68ae650d5b3c21e1a304bb44f905",
+      "gitblob": "0d5d368934d5a617e0b081a65aaac67e6dcd7720"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/overview.svg",
+      "bytes": 226268,
+      "sha256": "43b83126cb35624fe2d3f6919ddbf3e8a66729ad33b30416cd3cdf00b60a625e",
+      "gitblob": "b7ff4bc2f3a71e60f3dd2650039e9a66e9060825"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R01.svg",
+      "bytes": 39963,
+      "sha256": "578db14263fe7b93fbb39690f606325ada8c561001788ff41a7d6dc19fc25652",
+      "gitblob": "5c93b79844590f84f0b853ea68aee046f7c58211"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R02.svg",
+      "bytes": 106140,
+      "sha256": "1016488050bc5e47f40f358753247a9a3bf6e92d7829735ee76b3a49597dddeb",
+      "gitblob": "b02111c299596acc589e1b72daed6b19fdb3313b"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R03.svg",
+      "bytes": 133657,
+      "sha256": "848e88b8c083fb4e2de137b147b49beee71717a7bc5586d8d6e0a8cb9099a8fc",
+      "gitblob": "7ae174da7a5ec314a616ccf9c8de1ab8649df1c4"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R04.svg",
+      "bytes": 80972,
+      "sha256": "9945e42e8a0a6b743bb2f595c520da149c7480e55c0a9d5cf72829c5c209411a",
+      "gitblob": "8962a178482f1eeb8fbdbfddac130d8bd415a337"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R05.svg",
+      "bytes": 80935,
+      "sha256": "a9b721167d3d14cd8c9bca316b0b6b9cb4e33d21d2abab95c9368212c1dde43a",
+      "gitblob": "bfaf114fe526707aa59175b01b63671324ac44ba"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R06.svg",
+      "bytes": 46456,
+      "sha256": "432003c80257222d7814ec24903aca7e6704e21a6bc6406b6dad05e9fad07a2e",
+      "gitblob": "64ba57f501db829243795135c15f60d036528362"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R07.svg",
+      "bytes": 92613,
+      "sha256": "b539e5f8e2dbd1b85790d2b3930114497363e93df40290539a66541d8227694d",
+      "gitblob": "d365f42b2f4246491a4d3293324b1b03831f5149"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R08.svg",
+      "bytes": 77353,
+      "sha256": "169d7ed3d08ac673efcc8b8613bf359fbc67ae01e82ae3899efad4be8186046c",
+      "gitblob": "47d1b398e6ae4b733bc05400dd831e5300857535"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R09.svg",
+      "bytes": 81037,
+      "sha256": "0e1ba51777b0db1989cc16eae6cf8e5dd6debb9437a88f4e9070780d14685399",
+      "gitblob": "70701a0db23ccd9df6c21398220b1ff16068d941"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R10.svg",
+      "bytes": 113606,
+      "sha256": "29b412b0c6952621778b10db52933636cb314c13772fc77cb9b5efe614c26555",
+      "gitblob": "3aa047ca983606a10ebe47b71fd8638d5bcdf2d3"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/regions/R11.svg",
+      "bytes": 86166,
+      "sha256": "cb99773544118d5f9fc57cc8dc97291128bf4fd9f642eefe18df0d044e57aae6",
+      "gitblob": "100e3f13a3c98db94de498179b13868f6ff84f0e"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/city-layout-r10/source-review.json",
+      "bytes": 369328,
+      "sha256": "8e4d558d9b65677f112ae3916a319d679b27f3d706cd66beb855549ab8466ca7",
+      "gitblob": "053d430008672cd2647625e8d91437070dbdb1b4"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/downloads/city-layout-r10.pdf",
+      "bytes": 2292369,
+      "sha256": "5b270cf25e00fd1e857df4beb059617982a31eb18c3a2354f34501617553e030",
+      "gitblob": "e04486b3d0e3adea1266b79023987df2a41e06ea"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/downloads/mobile/downloads/city-layout-r10.zip",
+      "bytes": 3549671,
+      "sha256": "7bb8004c4c4a82b09ed1bad26c6a1e3638bc8e30885433369077471341e181ea",
+      "gitblob": "37266ed3e4d8945b6c07379cc6533b2f0a4902b6"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-deep-link.png",
+      "bytes": 73517,
+      "sha256": "ace75f463dfc187c69f96f31a832c0301396ab79ce59ed411fa19c9d286a22eb",
+      "gitblob": "bece408af9f3f2298fb88d0de6b7e7dd57c72c5b"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-entry.png",
+      "bytes": 121889,
+      "sha256": "914e21b11d9c323d534a910c1ec77b838c9fda87c3e3ac7e38fbc3341c45998e",
+      "gitblob": "c432c3239e1748dc2c32a57c67cc51a314af725e"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R01.png",
+      "bytes": 76618,
+      "sha256": "a146b815ecfa70328f26d262fa64819245d2c8e21a9ac0158909b15736e43ec2",
+      "gitblob": "4208dbfdce0ab997206ac6eb07139bebf2fb674b"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R02.png",
+      "bytes": 148103,
+      "sha256": "a0259157851ef63bbe1092fc9b44553c4b6444efac40544af0e6e39b80d08044",
+      "gitblob": "aba6ce1358d36f3b5ccde3d0aa5cfc2593ab1b87"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R03.png",
+      "bytes": 153614,
+      "sha256": "632f5a8d3ee27f4c75fc71f4b614fa201b19a6d1ef08c2110b72f7b91e68d14a",
+      "gitblob": "5504a6e4564e63bb85df39e256e07d65ec04ceba"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R04.png",
+      "bytes": 102242,
+      "sha256": "a0cda7cdd135ef8e5e2f625da7230ab7acd7b6189f172804a35f70451b6e8060",
+      "gitblob": "642f23d83664a437ff0b330efa9d67953ade52ea"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R05.png",
+      "bytes": 94704,
+      "sha256": "7b417eaefca055d6118087f5b610bdbc3bb39baba3218270eab209d210deb0f0",
+      "gitblob": "b5a503117e40e1a8015b8482f890fc19c479cda1"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R06.png",
+      "bytes": 93828,
+      "sha256": "75c7412a5ae953c9f99dbcf1c374c3dcd37cef8156dc97b596d13b9f1a42a97b",
+      "gitblob": "1685fa0dba47814304f20abc9b2ff2b660f84f7b"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R07.png",
+      "bytes": 112015,
+      "sha256": "94f6b04b39f695e1a2131137c445e1a2152f9dc457ac1ad0c2c38ee2c21c36ba",
+      "gitblob": "20b4a7fe3df312577bd04e2e0a6ccbb3d853c79f"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R08.png",
+      "bytes": 102832,
+      "sha256": "0da3a4c74e762ae64a74f0136eb83ab952c256b54a0f84fc385a5440cdbcfa05",
+      "gitblob": "294b4fbada4e42ed1e3ad2ca81dd75532015f01f"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R09.png",
+      "bytes": 102717,
+      "sha256": "5b1f669b6b3bc420edf313ed755ad562056223075d6310ed4a65b5d2ef837d83",
+      "gitblob": "7d592afa0efcb67597cc6347caa3df9c2abb476a"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R10.png",
+      "bytes": 182897,
+      "sha256": "ab2f249b763a049bb7a442eae061b17e08c6de4796ed07805f72b4919ac60375",
+      "gitblob": "74f530175d15d1fea4eb324dad09bc147ca949e7"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-R11.png",
+      "bytes": 101543,
+      "sha256": "33fb4856b47a3b8dc8f916a29fa4c6e0a2ca02bf2d56f57714c4979dbe7bc2bd",
+      "gitblob": "18f7432b95891e23591bb60b87e6007b3f7cf4a1"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-map-overview.png",
+      "bytes": 95571,
+      "sha256": "3cba12aee8afecbed10c47fdc684d3c765dccbef63da3371fc158e3ed93f357d",
+      "gitblob": "0f69ec48d7b871719d77bfdffb55e758a497e782"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-offline.png",
+      "bytes": 70859,
+      "sha256": "d08ac914b4b3cc75c4258c61eaa6698eb03991ef324eebfe393a054763c9e22b",
+      "gitblob": "9e3e7b8d10e862fdca5738a2b96e4a06328201ef"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-overview-scrolled.png",
+      "bytes": 56591,
+      "sha256": "1c9674843df63614aa6ef671240dfca7da419ec1dc73c2c74fd5cb3fcafa6fce",
+      "gitblob": "3459f6267b639911d1a88d4f4dc04844912e5520"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-report.json",
+      "bytes": 25411,
+      "sha256": "4aa9c0912fe603c1b568a1b0380edde3b409ddda62b20c33fd108d34289c2d8a",
+      "gitblob": "13eef349c60f164eb5d6b3fb08b5f9f549f7ccc4"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-restored-filter.png",
+      "bytes": 77986,
+      "sha256": "f8715dab63db96f339825d00c78c0865a1f10e6544ede7a9583e1b3bb4630f4b",
+      "gitblob": "f8f2fbcb088c46a6888cf47c1d387df5d2776d5a"
+    },
+    {
+      "path": "artifacts/city-layout-r10-browser/mobile-without-javascript.png",
+      "bytes": 94217,
+      "sha256": "cbcc66fb0a3785d74fb3d9e5d63ea97e26ed9076cb0339b868b86f69f88278be",
+      "gitblob": "98477d2d6e00324f9793bb58f2104969a75b9cbf"
+    },
+    {
+      "path": "artifacts/city-layout-r10-tests.txt",
+      "bytes": 3515,
+      "sha256": "19631ccd5fe7c3d0b134be65e70ccd4546592f39f237c4e504097561c2c7cfc0",
+      "gitblob": "7236047097e2d0c14002fd28ce51b08f8f387c27"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-baima-evidence.png",
+      "bytes": 297679,
+      "sha256": "8f63e548fbd1f7506177de11d638d1d0f019f3db2cc4c587fa3cf0753edc652e",
+      "gitblob": "c8d6df6a80b7935afe91675cdded13dccd0fd6cc"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-baima-map.png",
+      "bytes": 175375,
+      "sha256": "28a34894cd12aa8df9121802916df8702dffb534c521e377317997378b947878",
+      "gitblob": "dd9fd3569c4b78634160e8170a0ed044d4f0bc18"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-jianchun-evidence.png",
+      "bytes": 309205,
+      "sha256": "c66264597c1b605bed348b12bae2bc8dbccb194204d4de23ecd632930cd5a390",
+      "gitblob": "2575fa47e8a2d25488be11a1b3e7ca0b7cabe92d"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-jianchun-map.png",
+      "bytes": 182046,
+      "sha256": "d1f77626ac7a383fddde8e3cb7a2afb95aa5ceb96a818116f4b541ce91c6788c",
+      "gitblob": "58232ee73dadf3badb7f1c37cc363a5c7f261f2f"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-offline-v12.png",
+      "bytes": 2132315,
+      "sha256": "d05c8c3caf28db0e9badbf5f351724c8663a750831536aaa62f79c1817c51ea3",
+      "gitblob": "e91655931eea7d844fbe24011d0667c57cf646bd"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-overview-reset.png",
+      "bytes": 144399,
+      "sha256": "fb98b4fd8c87c78655207129db1646a405e35122b1b1df15c74bd42895017985",
+      "gitblob": "39fd2d1e3023b970a3a46af1a27b636b755828ca"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-overview.png",
+      "bytes": 144399,
+      "sha256": "fb98b4fd8c87c78655207129db1646a405e35122b1b1df15c74bd42895017985",
+      "gitblob": "39fd2d1e3023b970a3a46af1a27b636b755828ca"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-palace-yongning-evidence.png",
+      "bytes": 332432,
+      "sha256": "620926df319ed29fb51a7bd9a94243482a8578956b06e06b2783f98242897259",
+      "gitblob": "1f096aa957a8630cc947ecf52f318d578e1a6360"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-palace-yongning-map.png",
+      "bytes": 165298,
+      "sha256": "fce176db5f574e162952738c32aa59d398b0970611fcc84186e7294f2cfd699e",
+      "gitblob": "f4a8699070ca5f3f5cbdfda04bd4cabf23ed7795"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-report.json",
+      "bytes": 8017,
+      "sha256": "659e323b56d34093a5688c807a9e3a14f6c5579289394a38f6cedd93dd5a0d73",
+      "gitblob": "abf9d1e9550629b6cb429085db3363c228c18018"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-sima-evidence.png",
+      "bytes": 257331,
+      "sha256": "134167760d746d80f59b80ec137263f7ac4a531c5d73aa1359e6811c980efda0",
+      "gitblob": "6f92830c739e8ed7aefe8b7c54db65d78a67a772"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-sima-map.png",
+      "bytes": 135157,
+      "sha256": "9e905d428b0f7a0e083d3b7266da60c0982fe83136c8d591e7de4a2dec895346",
+      "gitblob": "919af034da6c98537f9318d496ca81e10a21811d"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-v12-guide.png",
+      "bytes": 2135071,
+      "sha256": "7361255da14e5b8cd1247de0631c666ca540d834d4c55d726b97626c453f9771",
+      "gitblob": "734ce45c15f87aebb4914e317bb1ee125606b38d"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-warehouse-scope.png",
+      "bytes": 114799,
+      "sha256": "1a4c34fac885403d5cd3491ca135e144913c30b0d64a4e19b7969c7fcbf18972",
+      "gitblob": "42e81ce676fcc8cd30779bdb4ee22b71013ee588"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/desktop-without-javascript.png",
+      "bytes": 297644,
+      "sha256": "1b8a93a024e8b1ca0ff962e4eb333c8e894c377fabf41f93905ce848423dbef1",
+      "gitblob": "2775f04a7484f9933e2173876fa745032b9557a8"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-baima-evidence.png",
+      "bytes": 265603,
+      "sha256": "cd17ade60b8684654ac80785348833cfe847351c7bc04f0e6013067d96d77bcc",
+      "gitblob": "490001fef07bae42901882cc024384ab20804d80"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-baima-map.png",
+      "bytes": 52607,
+      "sha256": "bf9650d2210f3ed58ff2a7d9fccdd80fe429852a3686ae30757eb157a15b0604",
+      "gitblob": "a80b2534387b78bd3fb2e91676decaa1464a08ee"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-jianchun-evidence.png",
+      "bytes": 281691,
+      "sha256": "2b869371f4c0bb5f0370ca2b44f6366e134612b547d1cee241114e41d5c3df0c",
+      "gitblob": "c1919c40eadbcc0c01fa800b4102ff1eab65e002"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-jianchun-map.png",
+      "bytes": 71622,
+      "sha256": "9b27c3f5e505b4eeb86ec19ccd246982846100d74f8ab7975f1edcbfbdb8458a",
+      "gitblob": "087afad7c9a1394d977edbdb7aa65502868fbb25"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-offline-v12.png",
+      "bytes": 175040,
+      "sha256": "3276c3645f02d0fb35f99072904ee0d40210a510637aa4c9f43d5fe4fd2070a8",
+      "gitblob": "7bb64c2042db61b1ee4a3944d503556ad44212f0"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-overview-reset.png",
+      "bytes": 45269,
+      "sha256": "10b49fcb4407e712bcb685ebc20f0db36470660ef6b4674896bceb18690ad968",
+      "gitblob": "2e72402e6077405f5dcf1c7c35a55d2429bdbe95"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-overview.png",
+      "bytes": 45269,
+      "sha256": "e1211571777ac97091922eb2ad25b86e072c7e53809808bcd9843bc99978f510",
+      "gitblob": "8ab04b68eced77ae8a7a26d8ad73351b90af8fc1"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-palace-yongning-evidence.png",
+      "bytes": 340231,
+      "sha256": "0bbcf17fdd421ed5de02300cf2c77138be6d21a2ccb76675377ce0a86b972f85",
+      "gitblob": "4724f9a6d6cb25c0cd138cb3026a85c70873125a"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-palace-yongning-map.png",
+      "bytes": 64126,
+      "sha256": "e4c2cbbdb842dcc84871e9eb8700a8bb2947b1c9ec04a6b6d80714ec499b1aa3",
+      "gitblob": "3d6be2a4c7b5438bf6e0ff8065b17f9b3683fe12"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-report.json",
+      "bytes": 7959,
+      "sha256": "cdd5784176c76d6c20d97755fe6f4ca3fc36e8f3256be141ad5beb1f60554dab",
+      "gitblob": "b4f8edc754cf1c1b50a9990b8ee5cce39e473f24"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-sima-evidence.png",
+      "bytes": 229327,
+      "sha256": "16b5cdccc6e389118e9870d3dec58eba43fec04bc10761e90a11a3ffb89d20a3",
+      "gitblob": "12e82f3bb564cd3230e09d4daa6a64d4751f78ef"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-sima-map.png",
+      "bytes": 52696,
+      "sha256": "c29027dafd80defe261c0244f5136f195a820a27033506641e8762b9fd6cd426",
+      "gitblob": "e21559ef6d17ba8f00d08bf2cc9238adbf7b230e"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-v12-guide.png",
+      "bytes": 174981,
+      "sha256": "a577fd004adedbdd49eca31360394bd95ccc82a45be7fcf6a090de9dbdc56a4a",
+      "gitblob": "694ba8c7f2950e22168fcf82ca664a0bde5bad35"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-warehouse-scope.png",
+      "bytes": 102473,
+      "sha256": "0507c85372818084a9d78ce3c4b5055b6ee018544d1c2e9e89029b37a821cbc8",
+      "gitblob": "6f6794ca95f373032928e693150f777663a0fbab"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-browser/mobile-without-javascript.png",
+      "bytes": 303929,
+      "sha256": "771bf151e9b0e4a6ad6fa25bf95d11c99a5c1f390b369c5236b84f1afd1192ce",
+      "gitblob": "091a8901b2352226a9142ef89a6d22ac9b053f8b"
+    },
+    {
+      "path": "artifacts/city-nodes-r7-tests.txt",
+      "bytes": 3041,
+      "sha256": "615870bd446137e39231992f1c4420a6d88b0002b791a6a2117b66096385fb8a",
+      "gitblob": "bd47ed6355396d7a614f104e9bdc0ca958ae208a"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/desktop-core.png",
+      "bytes": 71448,
+      "sha256": "e577fee4d2eb5a1256d895a23ca33bb43fc1272623b50eb2bfd458ac873d1a7c",
+      "gitblob": "21b287ac01e8f7d5f3f137b353b0bb05ff77bdde"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/desktop-landmarks.png",
+      "bytes": 2007135,
+      "sha256": "091f5ade709be8f18624fa392eea4c3fef2f91ea659119f474140773426e30b9",
+      "gitblob": "4c3ecaceb22dbe4235b61a62d51761d9c81d4001"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/desktop-palace-east.png",
+      "bytes": 201419,
+      "sha256": "89f469fc5e5568bdea6f75ae45727054a92b24a284cac0a9ba861e7fd2ffd923",
+      "gitblob": "ac156f79c8e34c74d7dc191e3f1d083b99fe3d31"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/desktop-report.json",
+      "bytes": 3126,
+      "sha256": "7bf0cec21311e48d2da407311664412340d78679c7c2af057b84c302b75277e1",
+      "gitblob": "48de95cee91e8da10b9b894fa9d962e0175e5e2d"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/desktop-sima-road.png",
+      "bytes": 144270,
+      "sha256": "75a00ea02342ccc7b320f40cdfab1da91a1d72442fdfd60a75741221872998cd",
+      "gitblob": "e05f6cb4e75ff74fc0157d9601e3d083ec48f7b8"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/desktop-water.png",
+      "bytes": 164726,
+      "sha256": "1d00e4985476b486afc98ecc7a47106901cb10f62ff23bdefacc87bfa9c18746",
+      "gitblob": "46b02c74237d6dbdfa1ceb8cd52994177d049c31"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/mobile-core.png",
+      "bytes": 13222,
+      "sha256": "992b43f96574c4532858b68728a4f75198fa9b627d25d9e9c60f9d117fe42ef8",
+      "gitblob": "a37f6bd0aa7c5ce676fd7e6ce4fc31e9678cfb07"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/mobile-landmarks.png",
+      "bytes": 157400,
+      "sha256": "a2fa26fe263729c9e1f3eacdd2bb4bc5a39c217e7707fe68bed62c6985e73e68",
+      "gitblob": "0339e7b9b75aa31e9d206942c87db63ccea60962"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/mobile-palace-east.png",
+      "bytes": 35540,
+      "sha256": "091ff23868522e23be86b89d3a35083308b7d76e73b6849ad869a701ef2bd396",
+      "gitblob": "b0fc052088e969099940f3d0a66a88b816b15e6c"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/mobile-report.json",
+      "bytes": 3106,
+      "sha256": "3531030b44e367a084f3cb8cb2e97be319f05357d84a2716ff59d13f0e6b646e",
+      "gitblob": "d2c4ee1e8dcf3eb37a62c404e23090b10b20553c"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/mobile-sima-road.png",
+      "bytes": 25236,
+      "sha256": "7ff0ce3a1dce961786bc2a2ce79c963d21b14a4c101c0c9fbcdbdc38d1ba0d5a",
+      "gitblob": "30d7fc23192ba889798d86ff7bf3c70e562ec39a"
+    },
+    {
+      "path": "artifacts/city-panorama-r5-browser/mobile-water.png",
+      "bytes": 88633,
+      "sha256": "e7bff1b74fe4195b9c53c9840ee546b83294b3c919140a9602542a0842fa22a6",
+      "gitblob": "bdadeea626fadbe7139669ae1bf509dee5b19915"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/desktop-all.png",
+      "bytes": 156976,
+      "sha256": "4910dfa99b02d53b0b114c8711d6e40a1349faa9882a88bf4d8be866d76fcf4f",
+      "gitblob": "01c34f26b6f89f3d4eb670583fe3937e33684fbd"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/desktop-offline.png",
+      "bytes": 67617,
+      "sha256": "3f9745b7751a35a44b32c3847df11e5a80d73f1ff6fdff9640cf9fd7fcd7f3de",
+      "gitblob": "84ea43d4afe22ac61c78f544d9a3a93ad5af620f"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/desktop-palace-comparison.png",
+      "bytes": 245115,
+      "sha256": "3d89858f1c6f834dedf06a4a6079d020990675004c763278339fe6b1f8d1b90f",
+      "gitblob": "432db1d6021df96be1bc9bfb38b9ebe891fcc757"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/desktop-report.json",
+      "bytes": 38649,
+      "sha256": "0fcf50ee43f696b5d311963c5d17e0ebab31f96a2f548db632df2c58720bb0f2",
+      "gitblob": "1ce53bde542d03aa2271972efed3f3dfc07e2eb5"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/desktop-without-javascript.png",
+      "bytes": 371443,
+      "sha256": "65111180aae6aefc7c022c1cca9202aea18b613c7a8181ac92ecb0f34b5fc6fb",
+      "gitblob": "439271f956bf00abf64e6c7548b418d680fff565"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/desktop-yongning-selected.png",
+      "bytes": 120313,
+      "sha256": "99ef03e3685f3a07339f83ef380282de0e91b59e9a8e64948b445777b53d330e",
+      "gitblob": "891b6138a1534cc7d179d3b5ff01e1d3f117b60d"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/constraints.csv",
+      "bytes": 452311,
+      "sha256": "79ec82e9d067f39c912a3372cd95d1f7ff0ae1f175d5fe0c88095bc2779c3e63",
+      "gitblob": "55a24ef4ef65ecf8188771d65368ab99c30aec85"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/coverage.csv",
+      "bytes": 602403,
+      "sha256": "4027744cbce6efde74c0b7805eea713fbcd62537b846876849a6dde1ea734e7c",
+      "gitblob": "aa8069110a2f69e560e5b7c5fe5c16f1c5a1a0d3"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/features.csv",
+      "bytes": 363737,
+      "sha256": "3d51c68fea94f8fd657df637ef20480ecab4c6abcb97e09339c7c31230395a39",
+      "gitblob": "f85df762d788cea09ff5fd0eb6d7db26df53cc61"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/manifest.json",
+      "bytes": 106604,
+      "sha256": "94a507fbfb4c34407c551fb2c0f5161b9a4de67a4ce79b89afa194f83634b044",
+      "gitblob": "10564966ff955074aef3021f46e73b2c7500164a"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R01.svg",
+      "bytes": 204611,
+      "sha256": "de5e9d453c7964e14d91893a890b0681706780eaf15e7e0532849e46a5168bef",
+      "gitblob": "27365c92a89fe6b26739356d73b947d9d699baf8"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R02.svg",
+      "bytes": 244773,
+      "sha256": "0add98ed4836bd0ce16cc83328e60b0d58f4df93ed7a00015adb59562f069820",
+      "gitblob": "e6db641229e143bc824bc086af862b108893a4ce"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R03.svg",
+      "bytes": 226225,
+      "sha256": "057dcce1204b2f9bc4526e4f968b869f9cd6a994ff1aa53b8c86261ae1c212ad",
+      "gitblob": "4188266863c04493f0f3527edf90fbd9c58b5b36"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R04.svg",
+      "bytes": 217640,
+      "sha256": "e9a4f801db8e397b1779da0eb2f964bb8d7facaf2e288ab072d278be046cae32",
+      "gitblob": "2bcff7689c6ae88091c9f5f4615b00f392c263e4"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R05.svg",
+      "bytes": 211466,
+      "sha256": "7b6d67d00af5f5a1cb265ee7e0a943eb2198cb02d9f618a809d74959c0446bd1",
+      "gitblob": "b4abb1a5e68107f89eec5525f124f5312537d748"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R06.svg",
+      "bytes": 210174,
+      "sha256": "31b988311f1f6bcee639b79fbc2601aee2bd029ca269f3a82bc5880ccfb289ec",
+      "gitblob": "b0d9bf39d84b0801f3cd1b8eeb8c28947a667760"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R07.svg",
+      "bytes": 223642,
+      "sha256": "92ab2514c6544785a8f60c2bed3cc3351094fe49c193f8ff12c3ead207ab6bb7",
+      "gitblob": "6070b70eed22f3d9829c398a227a1756f26b54de"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R08.svg",
+      "bytes": 237792,
+      "sha256": "1803bcc9c3027cf8386539206699d421f715d8855c72566b49a726a63707c8b6",
+      "gitblob": "91cb3fade8b8318eb9d4014c40e8155a02188b76"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R09.svg",
+      "bytes": 213188,
+      "sha256": "5564d1ef58ecabcd5699bb94af2bbdffb5297467b8a4e2fbeb67efeeb352a83c",
+      "gitblob": "112ffea87f7a6795e3d28f7ae8c3682b9f136836"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R10.svg",
+      "bytes": 240735,
+      "sha256": "f924a442e49eaade77f4bbb79ed6f06d81f6b3efd0350569ddad3f0252921c84",
+      "gitblob": "e04ceef217a427a115dd2024cab8d534486fa96f"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/R11.svg",
+      "bytes": 207619,
+      "sha256": "915f55507b956fb11b68e9f866b7a676c9bb184465932f14068331230b28f2d7",
+      "gitblob": "ef6159383e9eb61a1cce0425d843b43da1a07f6c"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/all.svg",
+      "bytes": 241292,
+      "sha256": "1661595764b3c94ec916e8d5c240b43a761b2ef551da8e8d7cd595d386b2d1a0",
+      "gitblob": "ca2f645e955788a943ab85ec4abde885868586ee"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/changhe.svg",
+      "bytes": 204387,
+      "sha256": "8635f247f734115ab24e213f47acb8248b21637f9182e37e8e09177f666c529e",
+      "gitblob": "0faef29246441f3669184dfe135f0160b1948933"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/core.svg",
+      "bytes": 219792,
+      "sha256": "8e4923a8e206b6aef117c778cbca6dd799a48a4cfc48807ebcac5b3dc91d43c2",
+      "gitblob": "4c920ccdfe1554875e3106ee5d680b54a6ad23b9"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/method.svg",
+      "bytes": 3695,
+      "sha256": "f557bd902a21a10fe7a148d2f01e26b016596366272a9f50a8080d278ec024a4",
+      "gitblob": "1837a6f1c0edfd480b6f70b63d8d0f083b815dcc"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/palace2013.svg",
+      "bytes": 227900,
+      "sha256": "a4dae1b9b699c12806cfc5b9d6af525570e809c1818389caccbe563f386cfb6c",
+      "gitblob": "ab62f8d3783abddaa37d6e7b81b017f70f9fac0b"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/maps/yongning.svg",
+      "bytes": 210297,
+      "sha256": "d587ebf533e38ceb3f86cfe90383e16ad0f66a223ef19a3fef8dfed0d2cec0b8",
+      "gitblob": "4ca006843ebece6b28850cf9e756fa7a4cedaf98"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/plan.json",
+      "bytes": 5538357,
+      "sha256": "ae59c63950ebf4a9849a24ddc68d958241fae3de119973aaa8b73ead7f24cdc9",
+      "gitblob": "839cf5fbc4439546ea0685b32b47b29f044ac102"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/source-index.csv",
+      "bytes": 1288590,
+      "sha256": "7f849ab142a283c7c7e27ae649b1f67a30c733f8264b95b3892778bffe2010a2",
+      "gitblob": "e1f68e44d4068b268f2771b7ab2a125f5a9b498f"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/city-plan-r11/source-index.json",
+      "bytes": 1492949,
+      "sha256": "8c3dc1c1113ded0e48df448e8673e7b8ac5d62afd3decd87a33a1c485b68bde5",
+      "gitblob": "435363939301ea3d1908d8ded972443d4dd17eab"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/downloads/city-plan-r11.pdf",
+      "bytes": 2126360,
+      "sha256": "9a8389f84b30b94f966349add407f3893ba40518542b0ff03624b1aed0178e5a",
+      "gitblob": "6953ab4af3d601b73325bbaf0e66fabaf8ffb958"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/downloads/desktop/downloads/city-plan-r11.zip",
+      "bytes": 5825701,
+      "sha256": "eb8e6b6b2c880636c4b9f1c8b3197b2e758038cd956f82781fd1779d04ed4e1b",
+      "gitblob": "e42818b33ffc69ebae382c8879cf9c43b6e27ddf"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/mobile-all.png",
+      "bytes": 55439,
+      "sha256": "8fd1cbeaa27ce5a4c044d261ad97122c0f2259ed5cd3c14d734523ece6d3c73d",
+      "gitblob": "634f6f7e1eeb2d52af785d3def4aa9e324371d76"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/mobile-failure.png",
+      "bytes": 84497,
+      "sha256": "b7c1760149205ab7d85bddad6ef29b8aa8ae37cb953603686870ea0f80b4880c",
+      "gitblob": "6cdf6ee5b3cfaec7c9dc500e700c72944d985a04"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/mobile-report.json",
+      "bytes": 4698,
+      "sha256": "e59e2bcdf38a58d321bf61b23ab12ff5ed1c7bd043a7fb184758a47f578e2412",
+      "gitblob": "9eb15a5b73c84f46ed9919812ae3c1c9be8cd3e8"
+    },
+    {
+      "path": "artifacts/city-plan-r11-browser/report.json",
+      "bytes": 49590,
+      "sha256": "247fd75333c245dd1854821dc71e434c4381640ac609cc48779969c10f23e5ec",
+      "gitblob": "29c0987357a98711d3d489f689bc4bdc4a46c13a"
+    },
+    {
+      "path": "artifacts/city-plan-r11-tests.txt",
+      "bytes": 2482,
+      "sha256": "d59ccece98ed796c0023307e4f8d7f39d0ae42c40b652219ddddb49729e0f65f",
+      "gitblob": "ed1f9c610c9c5788497b0055b6a04366def1cd96"
+    },
+    {
+      "path": "artifacts/city-plan-r11-verify.json",
+      "bytes": 546,
+      "sha256": "f3ba93fc3babf2138e7da0f5a8b9b6dd876bb72e98e415081b5e82df3f229216",
+      "gitblob": "9485024227f06c0bac0631fa2e6b40f6636a3d8a"
+    },
+    {
+      "path": "artifacts/city-review-b8-tests.txt",
+      "bytes": 1410,
+      "sha256": "0b33dc915e0169fd281056793529f77dca3632b1add769150e2d982d238c7124",
+      "gitblob": "0129dce2c420b95a1abc5860fb5eca5c2d326284"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/desktop-filtered-evidence.png",
+      "bytes": 265557,
+      "sha256": "008ac7fa76f70940285cb809062ddd6589ca2b22a2d11a886e405b8f4e6b746c",
+      "gitblob": "2b1a2d3a474ab1c3bacd3d1ef4b94b27435400a7"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/desktop-map-reset.png",
+      "bytes": 200016,
+      "sha256": "d9010f8eb0e3d3d4acd15d9022282df7fc81ec65c99ecd53ae6a465b0b11e35c",
+      "gitblob": "79a0e8c893e097869f2a7444c685ddc633f8e441"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/desktop-node-evidence.png",
+      "bytes": 235507,
+      "sha256": "02d452a1b43a5418bda25bc0cd49871afe5c2d91df6e640736bc60e80f1f0520",
+      "gitblob": "587806b3639b38f5ffe42d4f67c8da88897d7f30"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/desktop-offline.png",
+      "bytes": 303194,
+      "sha256": "78267dbba17125f8320ef861035ab68119d4d8a3dbbcfbf22a4f090ecdba38fb",
+      "gitblob": "c123dae44503b01874be7efc5ee8690d713c5cf8"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/desktop-overview.png",
+      "bytes": 194583,
+      "sha256": "afdee3d53387690fb9b85cf52d64cf34d047c824e48447a0cd8bbd3ceb1133f5",
+      "gitblob": "3be3ae4d5bc1ea12dc81641e341c8f444ef47564"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/desktop-report.json",
+      "bytes": 5369,
+      "sha256": "7c4ea7d0d6938a1cc27ebf9b8be88697882a42c207d29b84eff84aef55e143f8",
+      "gitblob": "927f00df133eb62efcff34f2480c8d441aa14f8b"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/desktop-without-javascript.png",
+      "bytes": 317395,
+      "sha256": "2738e232438dc76341d9be30cf3b94d3d3ac77211da45b9827388d290eb8f419",
+      "gitblob": "8fa1d5ef2312e218631c49a196daa55ae28d5874"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/mobile-filtered-evidence.png",
+      "bytes": 76664,
+      "sha256": "b4a89a0e5477cdbe3507ac873dc06dc229d599a435dbada075a4da688904c1cb",
+      "gitblob": "17c99315d940b617961e384037886ce005866737"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/mobile-map-reset.png",
+      "bytes": 85381,
+      "sha256": "21534eeb61c44b0ec3945d46d011cf805094cd5d0daefb4e7a0d2ad371334f70",
+      "gitblob": "6229485240d9eed8651ef2b78914853d59331b04"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/mobile-node-evidence.png",
+      "bytes": 88870,
+      "sha256": "d83ae49221143e5224eb09527ecc8b77e5f9dcc4ebecb9fa4f77dd2cc74648b1",
+      "gitblob": "46d6966ab601641e6d56b8b94ddca940ba52d4ca"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/mobile-offline.png",
+      "bytes": 63979,
+      "sha256": "a7634e50da1da95d779e70cccb7d26c4b4332190b1ceb0e2b2965c29b6ebb346",
+      "gitblob": "0617c4d4ccbebf5f98ad6a8c82bfc88a71b4a816"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/mobile-overview.png",
+      "bytes": 86785,
+      "sha256": "addc2d6a2e284ccc994bdc749569311262093773fd9f65f97967f6f7d29aa120",
+      "gitblob": "21e62c327a1d13b201bf91be1dd115111a75a5c7"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/mobile-report.json",
+      "bytes": 5334,
+      "sha256": "0ed004080dc6fb380001e1281a16a9b8f96a7d3a43bc17f2161dad00fb9d005d",
+      "gitblob": "95337cbd152c29f47f4a80b2b957edb7b1c601b0"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-browser/mobile-without-javascript.png",
+      "bytes": 81047,
+      "sha256": "1aa084a756be3d874cf965ab13be4cea567d615cd7d128a54fe54ef86f57ca2d",
+      "gitblob": "09bf91599f3f5cff1fd32525700afef911244502"
+    },
+    {
+      "path": "artifacts/city-spatial-r9-tests.txt",
+      "bytes": 1893,
+      "sha256": "8645d2ed39fe2e930a4e75de17a50398f53dfefc8d14239070ee9a269d70d799",
+      "gitblob": "b18376e7e8cdc72d5c02ba8fd51652d43d2f584f"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/desktop-edited-reading.png",
+      "bytes": 146168,
+      "sha256": "0b7c412a9202360c1a4196010b22635f0612c817d5613abbab4e9e9036452c15",
+      "gitblob": "802013922169de3569abbb4d90fd3b1f1cae46c7"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/desktop-nojs-period.png",
+      "bytes": 113056,
+      "sha256": "a2cf83a2eeaaecba64217ecb35a761d682b7763b33eebd429df017db1952edd3",
+      "gitblob": "9f9aa44bda1cc3239a9913e9195d6fa011454d27"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/desktop-offline-baima.png",
+      "bytes": 115334,
+      "sha256": "3bbd753d6f51937d6db3e97b8d96ca281f39deeab49fca6f8d90f9fb35dd0d36",
+      "gitblob": "27ff43448135dfcddb8ca6146313fb906e9c0d11"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/desktop-relations.png",
+      "bytes": 131804,
+      "sha256": "f8a492f9bdc09dd1a260ee3e5feb2deb7c1cfbd46ef4a62af50c759cd8efa739",
+      "gitblob": "ba99e573e46a7cca5c984160128e7c6864167eb7"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/desktop-report.json",
+      "bytes": 2202,
+      "sha256": "dbf2e41bdb1c00c77d50e9d9a12f1e7c31f5cadd8cac5cb7a5ed027e44272bd1",
+      "gitblob": "be38e4cc831811232ddd809a3da5b634c094d4f8"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/desktop-source.png",
+      "bytes": 58730,
+      "sha256": "16ecf2d44fa916d574e011b50892809d8a9f62322c3e895a1fd005072fa7983b",
+      "gitblob": "5ecfe868b434866c7ed3f5ef19b80ce30cc520fc"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/desktop-unlocated.png",
+      "bytes": 8459,
+      "sha256": "81ad7eb7e89732d6320c386fa75a9c0f74282d690ba2b5f6b06200134885ef18",
+      "gitblob": "1aedebb50f4ce53c9170e19e5da7da743e5789ff"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/desktop/bundle-manifest.json",
+      "bytes": 6594,
+      "sha256": "ab307cc189baea5c703522d404b15fb0540c0ac5d58e67acf6bc017f51a20db9",
+      "gitblob": "73ca68f5943194d4afab31a95f925ab1308942e5"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/desktop/crosswalk.json",
+      "bytes": 7971,
+      "sha256": "32d615c3435bb9dcda0a8a588601188c78441bd4a557f860da40973b86d3aea6",
+      "gitblob": "c71a7f81fe39798378080404cdb7ac1fb1e8ca5a"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/desktop/evidence.csv",
+      "bytes": 38696,
+      "sha256": "87e3a0b30d013245c4750451de4a69adcaa274c494644f8dc45416adfdf88212",
+      "gitblob": "ce9d056c84861ad5b667a207cac01f364c1aef53"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/desktop/readings.json",
+      "bytes": 213408,
+      "sha256": "dec5beaa1b6a4b8616b743aefad0418c3d1f456adf10bc8f1cffdddc06dd865f",
+      "gitblob": "f76fceab6e890c76598579355da913456fdb4bef"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/desktop/west-472.zip",
+      "bytes": 78701,
+      "sha256": "e4ddf97075f39ab50a11a3ea796d68fad587ae26aecbe52928e64584fd206d32",
+      "gitblob": "08a47a869c0ef0ebbbcf4b019638f95a2d1029fb"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/desktop/west-relations.svg",
+      "bytes": 8608,
+      "sha256": "a7f7b2d1d9652a1e4b5f1598f9a3f271afe68eac41bbef5ee2001a09d92ee7b2",
+      "gitblob": "a72c4cb762f56c317c288587527cb4fdd1213adc"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/desktop/west-source.svg",
+      "bytes": 25353,
+      "sha256": "127d86abf37868e634a97fefd71f5be80fcd6e09ffd6dd0a41681fa13bf13105",
+      "gitblob": "180ab4913ff084a08c61f54706bc713cda7e536e"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/mobile/bundle-manifest.json",
+      "bytes": 6594,
+      "sha256": "ab307cc189baea5c703522d404b15fb0540c0ac5d58e67acf6bc017f51a20db9",
+      "gitblob": "73ca68f5943194d4afab31a95f925ab1308942e5"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/mobile/crosswalk.json",
+      "bytes": 7971,
+      "sha256": "32d615c3435bb9dcda0a8a588601188c78441bd4a557f860da40973b86d3aea6",
+      "gitblob": "c71a7f81fe39798378080404cdb7ac1fb1e8ca5a"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/mobile/evidence.csv",
+      "bytes": 38696,
+      "sha256": "87e3a0b30d013245c4750451de4a69adcaa274c494644f8dc45416adfdf88212",
+      "gitblob": "ce9d056c84861ad5b667a207cac01f364c1aef53"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/mobile/readings.json",
+      "bytes": 213408,
+      "sha256": "dec5beaa1b6a4b8616b743aefad0418c3d1f456adf10bc8f1cffdddc06dd865f",
+      "gitblob": "f76fceab6e890c76598579355da913456fdb4bef"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/mobile/west-472.zip",
+      "bytes": 78701,
+      "sha256": "e4ddf97075f39ab50a11a3ea796d68fad587ae26aecbe52928e64584fd206d32",
+      "gitblob": "08a47a869c0ef0ebbbcf4b019638f95a2d1029fb"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/mobile/west-relations.svg",
+      "bytes": 8608,
+      "sha256": "a7f7b2d1d9652a1e4b5f1598f9a3f271afe68eac41bbef5ee2001a09d92ee7b2",
+      "gitblob": "a72c4cb762f56c317c288587527cb4fdd1213adc"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/downloads/mobile/west-source.svg",
+      "bytes": 25353,
+      "sha256": "127d86abf37868e634a97fefd71f5be80fcd6e09ffd6dd0a41681fa13bf13105",
+      "gitblob": "180ab4913ff084a08c61f54706bc713cda7e536e"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/mobile-edited-reading.png",
+      "bytes": 143716,
+      "sha256": "e0f6e0ca51ec12e68df059317cbccc1d8d6fee8ae10f5733e9850c3e9cdf1014",
+      "gitblob": "d0c99d8c0b2a015ffa248da1867be18828edb98f"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/mobile-nojs-period.png",
+      "bytes": 112567,
+      "sha256": "4f9ddb5cd651ed01f79bcc8ba77012f8b6e9cf01498c5304c54a4205f8b25e80",
+      "gitblob": "b371e2a84364d9a7799f28ada92e6965940575dc"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/mobile-offline-baima.png",
+      "bytes": 113897,
+      "sha256": "ee08fe442842e166a9aef5c9a3823d06a4ca854bbf82460e8fc88e3651d05871",
+      "gitblob": "db51d8de469c5cee6210f73a20c09127149c40bf"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/mobile-relations.png",
+      "bytes": 66436,
+      "sha256": "8873773f9a1f6a232de5570faeacc92388d79efe6e85cd56ef9c5f48bf66925b",
+      "gitblob": "6a1a9547c357f9b02e9701a635da53bec26c0c61"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/mobile-report.json",
+      "bytes": 2190,
+      "sha256": "04a42f86f4b1628e55ff2b39cd53272ead8a6cfc17c0d7b2165fbfeb83c09815",
+      "gitblob": "92982fb63c4fa887a85b586d7af21632bc793602"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/mobile-source.png",
+      "bytes": 30448,
+      "sha256": "955e0550047bec84c211796c368fd27071fe1e176107fab6367effe1d3f82daf",
+      "gitblob": "45c4ef2944f06c3c4dbd9a674fb831cfd3c7b3e4"
+    },
+    {
+      "path": "artifacts/city-west-p472-browser/mobile-unlocated.png",
+      "bytes": 8357,
+      "sha256": "2a347eff5bc7e25f662cc5b25a0194090b2b6520afb53f74026c176e7c3d2abb",
+      "gitblob": "52fdf00f4631cb9c4cd897c89ad5c9c0eda24b49"
+    },
+    {
+      "path": "artifacts/dual-semantic-tests.txt",
+      "bytes": 2251,
+      "sha256": "9d80d9d69b4e34169b02e728eb996d516c4ffcfbff561562cb8d3dea6b79c165",
+      "gitblob": "1f0efa0ccb1ee2c9f71afb94bca96fd8047377a4"
+    },
+    {
+      "path": "artifacts/ground-review-b6-tests.txt",
+      "bytes": 1208,
+      "sha256": "9357cc0e0d07d5347aad0f0caad9df81cbfab1379af98cad1017bfbfd3608e99",
+      "gitblob": "d42af6cfea94bf2bc3b2e0f13c43cac00115c316"
+    },
+    {
+      "path": "artifacts/historical-datum-b5-tests.txt",
+      "bytes": 1244,
+      "sha256": "8d8128b4f29f978af5b2c4249b398859023e12cf784beecb8f5130781c48b9af",
+      "gitblob": "c84b5c2fe5e04c3c4868e42153b8eb9411403a1d"
+    },
+    {
+      "path": "artifacts/historical-frame-b4-tests.txt",
+      "bytes": 1216,
+      "sha256": "dbb98e1b06d6cce0769df7fc8dd03457d37d7516233be1fbceb38c3a497069fe",
+      "gitblob": "da10be162736b0470db07ee2e438b7f78454eadd"
+    },
+    {
+      "path": "artifacts/homepage-approved-v9-build.json",
+      "bytes": 3332,
+      "sha256": "30a9d80994feda9da9fe8e4193525486d78dffde74ca7ea55dd7fed3a4290256",
+      "gitblob": "8c9e8ef4937454ab20f28707b39c2715a7b0822f"
+    },
+    {
+      "path": "artifacts/homepage-approved-v9-tests.txt",
+      "bytes": 1022,
+      "sha256": "cb581ce06f8783bae5cd13ff228ab3a318a971f3c0b0ace2183006eab1ffd6c1",
+      "gitblob": "e9fa9b7fdcfe2791e7e5a626af280cc790265188"
+    },
+    {
+      "path": "artifacts/homepage-build.json",
+      "bytes": 2517,
+      "sha256": "8fbf6e34d794f2b326ad979fb74299aeedc3d1178a2208d5ca9ddfc72625356f",
+      "gitblob": "6791f13ef328b2691f3967c26468f10edbb5e594"
+    },
+    {
+      "path": "artifacts/live-http-tests.txt",
+      "bytes": 827,
+      "sha256": "c3b4a39a0321a9b54d300bcea1574b6867d9364d7ad6a94d6647bdec48505c24",
+      "gitblob": "17a1e7b10f1a954bbf0436ea8f2c31495c1524d7"
+    },
+    {
+      "path": "artifacts/luonan-b7-tests.txt",
+      "bytes": 3580,
+      "sha256": "3a95e169cdf8fdc0dd53e3d60974dcd08f2ee479cc218715a2a7c5a5d4422dd9",
+      "gitblob": "bd692f552cc29b1e82213b8103d1639ff734f308"
+    },
+    {
+      "path": "artifacts/north-b4-semantic-tests.txt",
+      "bytes": 1114,
+      "sha256": "275f593197f0334b8be6f8e9b4697fcc876f2b98db51209f1f45c9db039efcb1",
+      "gitblob": "9ae53d6242a2810d5a35b2d475da6140a229566f"
+    },
+    {
+      "path": "artifacts/panorama-v13-browser/desktop-comparison.png",
+      "bytes": 2010675,
+      "sha256": "10cadcb9287a10596fbbcbb5535d93067b603bd0749503cbc60d0940d81be485",
+      "gitblob": "84bcec9eba9d86c937b683d13cc744d815c7d35f"
+    },
+    {
+      "path": "artifacts/panorama-v13-browser/desktop-report.json",
+      "bytes": 4560,
+      "sha256": "5c0dbbfe943e0aaea20d442d59c231f8dfe64e6361f61ad88f8fdbc65379be72",
+      "gitblob": "937d6cae0400286c189c57ec1b613aaeebf8e9c1"
+    },
+    {
+      "path": "artifacts/panorama-v13-browser/desktop-without-javascript.png",
+      "bytes": 5527487,
+      "sha256": "66e30295969195da0b127bf86683ca0e4a5c76558dcc29826b3d594a6d24cfa8",
+      "gitblob": "3346a0c531292dd0b5aad5950e1a0f87d3543fd2"
+    },
+    {
+      "path": "artifacts/panorama-v13-browser/mobile-comparison.png",
+      "bytes": 1218516,
+      "sha256": "adda52b8ecd2a6017c6e3e85a00ebad20469293417bd4dbeba2cbecfa3f47456",
+      "gitblob": "fed55d2dfd35d73aef4aa03f2b471f3f2230730c"
+    },
+    {
+      "path": "artifacts/panorama-v13-browser/mobile-report.json",
+      "bytes": 4545,
+      "sha256": "2c1e87f116a09765ba51d35841a539609ffd5aa3f9e86132ff4efefd07d9f2b6",
+      "gitblob": "2bd93ec8837703417a69dca950d7226004c2046a"
+    },
+    {
+      "path": "artifacts/panorama-v13-browser/mobile-without-javascript.png",
+      "bytes": 1211353,
+      "sha256": "a04aa647a9ad03d4c976a40f71b0a94793e36560131ae09f56116ef5f8ce684e",
+      "gitblob": "035769c856e7466b505a543d87cad9294bd4795c"
+    },
+    {
+      "path": "artifacts/panorama-v13-r2-browser/desktop-comparison.png",
+      "bytes": 2592474,
+      "sha256": "231b9b35b804117c90e333c9d8198dc9a51d9378e501da14b57ab243a55d89ad",
+      "gitblob": "e8381c22eae0dbc0ad7cbf4d831a441c77dc2008"
+    },
+    {
+      "path": "artifacts/panorama-v13-r2-browser/desktop-report.json",
+      "bytes": 6106,
+      "sha256": "a4cbfcd35ea91b7899c14f5f5635925b4fd4c5e6a600e7016f7d003c276dbfb9",
+      "gitblob": "85cde14bcedfdd505f9a8edf5b90e3a3c90df1a0"
+    },
+    {
+      "path": "artifacts/panorama-v13-r2-browser/desktop-without-javascript.png",
+      "bytes": 8320608,
+      "sha256": "2189fcc16bfe8b8667d2db412596f3f50b475b1aef05c2af164741681c5b35fb",
+      "gitblob": "81548ed6a1f9d723e64d6b26d3293d4fe7a80ec9"
+    },
+    {
+      "path": "artifacts/panorama-v13-r2-browser/mobile-comparison.png",
+      "bytes": 1577070,
+      "sha256": "b67526c778461ae744433ae463dd6637e5893dd7d633fed7ac06ffac47b3a38c",
+      "gitblob": "d501cb6c1b960a7dcf9a121d0a8bada2ab4d00c7"
+    },
+    {
+      "path": "artifacts/panorama-v13-r2-browser/mobile-report.json",
+      "bytes": 6061,
+      "sha256": "2a85b17055ff21563fa9ffe5845549c82bffbd3051b60b5f94321020722175c9",
+      "gitblob": "3f96ec433ed0e4ad2922012665f4ac995bc40087"
+    },
+    {
+      "path": "artifacts/panorama-v13-r2-browser/mobile-without-javascript.png",
+      "bytes": 1770209,
+      "sha256": "3c1450170c2a73806ed395f2d49881da3b5e2ad9e06ea2ed8cfae33df6c689fc",
+      "gitblob": "afcace7ff8df2b8882da9ba63f3230b19addfbf1"
+    },
+    {
+      "path": "artifacts/panorama-v13-r2-tests.txt",
+      "bytes": 694,
+      "sha256": "62f8de7649d4cf725c3acba43f2b93400c91482215c4b5fd4dbaba9db598d6f0",
+      "gitblob": "8222a051e4cf8be14c497c4809b1a1cc6ea4297e"
+    },
+    {
+      "path": "artifacts/panorama-v13-tests.txt",
+      "bytes": 702,
+      "sha256": "1cb7ca0a2579fbbb5c55b0386a8f483e397c338136efe88b75d8d38c5aed1130",
+      "gitblob": "aa6b045b5951805af88c9321435ec41ac1757367"
+    },
+    {
+      "path": "artifacts/pdf-font-resolution.txt",
+      "bytes": 56,
+      "sha256": "7c87a8898060ed9bbd1386c6eb1b45a62b2106dbbc014e7ea023c2d3eba1f365",
+      "gitblob": "41bbb2d111944b11eb3947555d00da433d520afa"
+    },
+    {
+      "path": "artifacts/prosperity-build.json",
+      "bytes": 506,
+      "sha256": "165dca1029d79e55de9576bb6004cee48414fb59e50ec521b3ace77518721f4a",
+      "gitblob": "6ac755094780530d2c33e88ce8b9726345e4e254"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/desktop/common-470/bundle-manifest.json",
+      "bytes": 4726,
+      "sha256": "e6f3080fe9e78554d6353dd7889c4f8b10ed35a3e3d73c14a5e250cc866d7773",
+      "gitblob": "2e07dc70de3af14e9f622d99c2fb54c7455ebf91"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/desktop/common-470/city-common.svg",
+      "bytes": 43433,
+      "sha256": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89",
+      "gitblob": "a1a265776307c178615ba9578808184ebbb880a8"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/desktop/common-470/places.csv",
+      "bytes": 1340,
+      "sha256": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232",
+      "gitblob": "1892ca7affc3278bc01632c4bfdce8171097d169"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/desktop/common-470/readings.json",
+      "bytes": 471604,
+      "sha256": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870",
+      "gitblob": "913372a5dc0ed7f88ee00a8e01b49802927bab09"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/desktop/common-470/reuse-plan.json",
+      "bytes": 6752,
+      "sha256": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+      "gitblob": "248b87ea711600cbbc6b55237ce0abb36d527b9d"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/desktop/downloads/common-470.zip",
+      "bytes": 117625,
+      "sha256": "aa6e85054b37f5d5360bd51a71d0b3725f3d5e6d3e82ee558eb7e310470302cc",
+      "gitblob": "0155ce3f38c04809ca24a01eebe99298ef9237d0"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/mobile/common-470/bundle-manifest.json",
+      "bytes": 4726,
+      "sha256": "e6f3080fe9e78554d6353dd7889c4f8b10ed35a3e3d73c14a5e250cc866d7773",
+      "gitblob": "2e07dc70de3af14e9f622d99c2fb54c7455ebf91"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/mobile/common-470/city-common.svg",
+      "bytes": 43433,
+      "sha256": "487669bf93a45fcfbf9504af8173367353063dcd125c753c0f373cce6455cc89",
+      "gitblob": "a1a265776307c178615ba9578808184ebbb880a8"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/mobile/common-470/places.csv",
+      "bytes": 1340,
+      "sha256": "896b7dd57b771c358e96f5f180cfb661f3f34ccc8338bb769501989ec3d55232",
+      "gitblob": "1892ca7affc3278bc01632c4bfdce8171097d169"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/mobile/common-470/readings.json",
+      "bytes": 471604,
+      "sha256": "768500687a709c37065424699aac9b456b44b3936985e01745d11752cad0c870",
+      "gitblob": "913372a5dc0ed7f88ee00a8e01b49802927bab09"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/mobile/common-470/reuse-plan.json",
+      "bytes": 6752,
+      "sha256": "35cbec92956e5444e10a3014646592dc77a4cb27590527d57eb990a1c9751346",
+      "gitblob": "248b87ea711600cbbc6b55237ce0abb36d527b9d"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/downloads/mobile/downloads/common-470.zip",
+      "bytes": 117625,
+      "sha256": "aa6e85054b37f5d5360bd51a71d0b3725f3d5e6d3e82ee558eb7e310470302cc",
+      "gitblob": "0155ce3f38c04809ca24a01eebe99298ef9237d0"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-deep-link.png",
+      "bytes": 143578,
+      "sha256": "f19e3438022475e9537585fa22c9210814c416c57ff82542623249d9662196e4",
+      "gitblob": "43b3059cdd6fbb6aa14b4be4ddee29005f6c7e89"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-functions-T04.png",
+      "bytes": 52430,
+      "sha256": "225ac0ccd3df7439c9360619fa9d3989808ede3fc6490627f5f2404fc05d772e",
+      "gitblob": "47eeb44abaa83c2e9fd240674ce5f49be721d1b9"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-initial.png",
+      "bytes": 125262,
+      "sha256": "bd1c14c0cfab03f3bb55315ba7e11faeb282cabfc322dbf9e8ea19f87d15994d",
+      "gitblob": "f59ef218c5d2db0dd67c33721422b940c75b1988"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-map-default.png",
+      "bytes": 154596,
+      "sha256": "946f632b638c84f36ae9acccc5c7f81918ab53a7459fb94ea5f3401422c0071e",
+      "gitblob": "c934498065e26906ff07838beca23297a41c260a"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-map-modern.png",
+      "bytes": 168368,
+      "sha256": "24601597a18e809efc0c77931cbf618bbeb3d02473cb43c0d2a8f65f5ebe2cfd",
+      "gitblob": "d395ec4b5b314e9635c390b05bc08ca7334a19b6"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-map-zoom.png",
+      "bytes": 168347,
+      "sha256": "1840c0064aac71fa876a54e2a10c9d6ee540d8e347bb7c186011de73f4962ed3",
+      "gitblob": "83668acd05e8f974f3c4ee9cbedcceefd4a12789"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-nojs-C04.png",
+      "bytes": 64519,
+      "sha256": "38e3093eb59aca41f7fc044c4104ed09ff3cc77349b95a95e357351b902397c9",
+      "gitblob": "ce8cf856fa4aeb8ffe0238498537168c5ca1f170"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-nojs-K03.png",
+      "bytes": 164703,
+      "sha256": "0f8041db2e0a62feafc38c2100a9e16c67c2de01e0964c8ffd9f6d4992709f88",
+      "gitblob": "99ca37fd9cc5c769c6c3e648ca5b8623d9079e84"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-nojs-map.png",
+      "bytes": 154349,
+      "sha256": "a5522c5c49cff2ac4164c8de3efa7b26a1dedea700f0647b0cf1fa46b624b166",
+      "gitblob": "f2a927dda8a5af2377c837861f40722b7242c58b"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-place-C01.png",
+      "bytes": 53324,
+      "sha256": "d549f00d8c624b31d4b556fa58ae23ae7b82b02e597b1697bbd59e042e41fc39",
+      "gitblob": "ab48d69d58c2376a78e74a6df743f4d8cbb82279"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-place-C02.png",
+      "bytes": 59633,
+      "sha256": "84c103188ae1af01b04d68935a0424712393898efd4fb22d177a6f092b9643a6",
+      "gitblob": "8e5a5d03b7cb958375deb332f099cf4d402fbe85"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-place-C03.png",
+      "bytes": 58815,
+      "sha256": "7e804078435817eccb211c2c67b6ca540b80701afc2d89e8e86c9c2745b3b3a8",
+      "gitblob": "193d164b5c9de5cf8916ed10bf17a6d5425a5a4a"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-place-C04.png",
+      "bytes": 64491,
+      "sha256": "4dbb4857cfe50a24b0504aa1a2ccb39180bb8e80471055226b5ced927e14cac3",
+      "gitblob": "9717abd6dceb8069ac3e3d697c76627736703284"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-report.json",
+      "bytes": 5994,
+      "sha256": "ed8147f55fc5353116ebec0c7bc8150002ec133feea1628166299d24fdb233c8",
+      "gitblob": "86d4fe6682588df937335f694a3b1763ea00c39b"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-scene-K01.png",
+      "bytes": 213075,
+      "sha256": "52ff7e97f560b2cbf773eb0179d55c4e637e48a86cf640c996ab86b223276379",
+      "gitblob": "605bd9b78631df189c74e89c0a210587596b6032"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-scene-K02.png",
+      "bytes": 200264,
+      "sha256": "9a34409a7a87b2e0b4c2d715f4a3b53287e035b2b43ad612131aa513208ccec5",
+      "gitblob": "d6a55925d9ec299b92983327d2b4d4f8f0bce2db"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-desktop-scene-K03.png",
+      "bytes": 164719,
+      "sha256": "c520c2089acaa2d5041daf1a60c53a56de79ec526ec05ba8dc8487b51f15d348",
+      "gitblob": "ffd5996afd0918fba48bcdbe9dc1b5a7e3ddc776"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-deep-link.png",
+      "bytes": 33830,
+      "sha256": "9e25cfc54042b84fe8b3215ae2e69c2b6de5e66ef9f07b57b2ed14c9490891c9",
+      "gitblob": "ec1fdc15cb76eef5642421ce46de623b8e6389d3"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-functions-T04.png",
+      "bytes": 44764,
+      "sha256": "dc6edb928a2e133a4813fae2b41557019ac843bed4be2dc9da024e48b397fdcb",
+      "gitblob": "a3c68a1dc39818ab027baf037fa4188b2ea3f919"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-initial.png",
+      "bytes": 82093,
+      "sha256": "e5a3b33cc17a4944f15c6a3104f5ff694871eb8ef5a657027abcca315a92eaca",
+      "gitblob": "726dd4043e80157621368b7c75a9f03ab0cec328"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-map-default.png",
+      "bytes": 38057,
+      "sha256": "22c8d564984aa29db55fb94320173f6920be8773153787978922069f61b11d98",
+      "gitblob": "424e775b9f33a130f9efe90faf8c45540a48da40"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-map-modern.png",
+      "bytes": 41631,
+      "sha256": "e2441fc26016fc681073031ce92d0abe05d2a5a355a0d7fd8bb8541ee3e473b2",
+      "gitblob": "5b84b4cf3d4dc3925547cd68f017d271a69c5c28"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-map-zoom.png",
+      "bytes": 82893,
+      "sha256": "cef47e32efa81664cd32d4e128a96be8045372ca0fc35b08e46d51e360cfd6af",
+      "gitblob": "63c30dd13cc17e06ef3eeebf78d1644079550b86"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-nojs-C04.png",
+      "bytes": 64467,
+      "sha256": "af335c587f324ee1d2ca758876a585df16e591ab9bc1221b9cd00bb957809eeb",
+      "gitblob": "feb1e3d8d9a50a2ac2c5fb0b73119da921c5b192"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-nojs-K03.png",
+      "bytes": 197096,
+      "sha256": "82455ba82be5aa106af6951ab00f705b1b1ac863d814e418daeb4469d4a9cd5a",
+      "gitblob": "9f3e796e926a0c669f2055516b4b05cd5c669586"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-nojs-map.png",
+      "bytes": 38051,
+      "sha256": "1ed4e756c8fd6129f49b7ca927492a2777eb5ac944a8dca008103e10d946fe0e",
+      "gitblob": "fce12cf46ad378b3e70e41c08e96a5bbc11b658c"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-place-C01.png",
+      "bytes": 53319,
+      "sha256": "21f6127ecfd84f42c796da4d4d7a1928dae69efbd446b757b4c1396f69291a41",
+      "gitblob": "7feb8b3465bc29faf0106adcd095d118810e21db"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-place-C02.png",
+      "bytes": 59742,
+      "sha256": "55b252e6fd3675ca80cc4ee6f6c87023a5fdab4e98984ac08b9a53e8031638cc",
+      "gitblob": "e4a0b56a1d50fe23575047aff182018a2415b929"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-place-C03.png",
+      "bytes": 58834,
+      "sha256": "d4fda8b28c7fcec581e374597f39d85532be58de890b42d435e67f1c9241a879",
+      "gitblob": "4a6c2cc406848dcd70730f7f89d3b81f97638b77"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-place-C04.png",
+      "bytes": 64468,
+      "sha256": "be0d13130e5fa4a42b6c568bcdfa96b418b1ef561ed0328b5910143abe520bd6",
+      "gitblob": "0029fab91d470dcfdb2c944afaed319886593dbf"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-report.json",
+      "bytes": 5976,
+      "sha256": "a561c65ab63f955144861038f01247b8b98d43e3a866e8946f88169c3def6e96",
+      "gitblob": "1938e86a1a3a0ad854a9c8509e51ed4d763700e0"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-scene-K01.png",
+      "bytes": 271035,
+      "sha256": "077832e78911cc06f4df3144e2dc896fab3f4e4aaed4a35076af8dbc6155c9fc",
+      "gitblob": "d3774696b9cc50d5507f1e8fb1b47daf5bf17f57"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-scene-K02.png",
+      "bytes": 229464,
+      "sha256": "1ec0a524e5aa9a997bbc59a97173deae3d3c66a774569297fd75bcd6853ddbd1",
+      "gitblob": "4196d8269b3184be853d7fb44bcf36185590b129"
+    },
+    {
+      "path": "artifacts/prosperity-city-common-p470-browser/p470-mobile-scene-K03.png",
+      "bytes": 197109,
+      "sha256": "e900ca3d39c838d2cdf6ed8c871fd47afa2c2ef0eafc49dc6f8f12cce1f3977c",
+      "gitblob": "865581c74888a6043094c4cdd5b88e1e6ae8b6a0"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/desktop/downloads/north-471.zip",
+      "bytes": 189989,
+      "sha256": "528b334d90ce6b3721865c205329ff198017e497f7be7b8d72f73d9c0b6cfc36",
+      "gitblob": "bf4fc7034e07bc46aac9ec9356efb21d6ab184db"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/desktop/north-471/bundle-manifest.json",
+      "bytes": 7917,
+      "sha256": "f57f603965cdab5ace28f0053d87b2187561db3fb70546f6de5e19cc4cea2c84",
+      "gitblob": "9a91f85a1f53c13e8b907ec4b060e6d1ce8f4632"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/desktop/north-471/city-overview.svg",
+      "bytes": 57193,
+      "sha256": "b1fe93b79986d41158d00b7fcb79b4a52ea1234915489827dd0a28f2541849e3",
+      "gitblob": "e044c537c0b5f54832314ac48e3100ae8b86ecaf"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/desktop/north-471/evidence.csv",
+      "bytes": 8177,
+      "sha256": "32828311a27257a0af0a043b29b6707124c389ae3603c1cbf8b01b503fbedd1c",
+      "gitblob": "19383500f3a9cd99a3c95487cf82d6c2a2612a55"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/desktop/north-471/north-detail.svg",
+      "bytes": 56889,
+      "sha256": "454ca63a992761d02d8370142e6658bd11ab13f613f06fb337cc64088e62d43c",
+      "gitblob": "5c8bb8619e06d3f3eb9a6da08a378f4c5c06aaa1"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/desktop/north-471/readings.json",
+      "bytes": 779099,
+      "sha256": "883ba2756666b9926bdbd065cd3dca81de7bd2f011ab9021f42f6da687a59fab",
+      "gitblob": "9d72358e376f0a635f1552d90602109e4bfef2eb"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/desktop/north-471/reuse-plan.json",
+      "bytes": 7896,
+      "sha256": "ff2fb3e449207797e0d2bd941c89eb07257be2efe578e136db79fc4d7bc56d17",
+      "gitblob": "3844e90ef59674a762ef05f6c61e71c2568122d2"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/mobile/downloads/north-471.zip",
+      "bytes": 189989,
+      "sha256": "528b334d90ce6b3721865c205329ff198017e497f7be7b8d72f73d9c0b6cfc36",
+      "gitblob": "bf4fc7034e07bc46aac9ec9356efb21d6ab184db"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/mobile/north-471/bundle-manifest.json",
+      "bytes": 7917,
+      "sha256": "f57f603965cdab5ace28f0053d87b2187561db3fb70546f6de5e19cc4cea2c84",
+      "gitblob": "9a91f85a1f53c13e8b907ec4b060e6d1ce8f4632"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/mobile/north-471/city-overview.svg",
+      "bytes": 57193,
+      "sha256": "b1fe93b79986d41158d00b7fcb79b4a52ea1234915489827dd0a28f2541849e3",
+      "gitblob": "e044c537c0b5f54832314ac48e3100ae8b86ecaf"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/mobile/north-471/evidence.csv",
+      "bytes": 8177,
+      "sha256": "32828311a27257a0af0a043b29b6707124c389ae3603c1cbf8b01b503fbedd1c",
+      "gitblob": "19383500f3a9cd99a3c95487cf82d6c2a2612a55"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/mobile/north-471/north-detail.svg",
+      "bytes": 56889,
+      "sha256": "454ca63a992761d02d8370142e6658bd11ab13f613f06fb337cc64088e62d43c",
+      "gitblob": "5c8bb8619e06d3f3eb9a6da08a378f4c5c06aaa1"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/mobile/north-471/readings.json",
+      "bytes": 779099,
+      "sha256": "883ba2756666b9926bdbd065cd3dca81de7bd2f011ab9021f42f6da687a59fab",
+      "gitblob": "9d72358e376f0a635f1552d90602109e4bfef2eb"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/downloads/mobile/north-471/reuse-plan.json",
+      "bytes": 7896,
+      "sha256": "ff2fb3e449207797e0d2bd941c89eb07257be2efe578e136db79fc4d7bc56d17",
+      "gitblob": "3844e90ef59674a762ef05f6c61e71c2568122d2"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-NG15-correction.png",
+      "bytes": 93441,
+      "sha256": "6f974874c6b6ed9262d80f59fdb46bfc0c1468aa22ab37140817cdabcff0356b",
+      "gitblob": "b13e569f37f8c10ffd170ce72dadaa550c466795"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-card-N01.png",
+      "bytes": 66518,
+      "sha256": "1af40d514c4d51251f100dbc559485d4dd6c1cad78d22fedbed8c76a5e6278af",
+      "gitblob": "39c97f51cd3ae7e19f20d227f003211a923614b4"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-card-N02.png",
+      "bytes": 68453,
+      "sha256": "42d8c34a93d8ae26cd0b58eff0b3d6568c64670a90d297851078ca51d0d31d22",
+      "gitblob": "346347e8c5aa40460b4a19729e5026af5d7e2525"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-card-N03.png",
+      "bytes": 61522,
+      "sha256": "15e1ac44849458b6cd1916f47ff26e4c7bcc71751f5613052bf65b4dc93166de",
+      "gitblob": "ce172ed58f273439fc778278bc0d87fab82514af"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-deep-link.png",
+      "bytes": 84773,
+      "sha256": "13ae505365d376d3375e8a335605ec29b648f9ff361799f761dca56dd26f7466",
+      "gitblob": "9d786434a5bfefb7ce76f2a40fef9b3e17901132"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-fallback-NG15.png",
+      "bytes": 93437,
+      "sha256": "ef164bf4cbcbabda4b5982f089faebd8d5f5391d582556077ce4726a16913d06",
+      "gitblob": "aa0108fd4f611640e3541e303f8d30cdcc4f6c0c"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-group-G01.png",
+      "bytes": 427644,
+      "sha256": "aca7e9a8d63c0b64861be3106543af7cc98ffa291796cf5b51c3da9c4e5543d8",
+      "gitblob": "a15ed264026c74faabd34126f78439c45d58836d"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-group-G02.png",
+      "bytes": 264929,
+      "sha256": "4a4555f3ac6fc9caa16bbd39b990b0035bfdd7e443656e7a3b26e26e99a9b1f3",
+      "gitblob": "571666098febdf812c8f83944f35893cd11a0404"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-group-G03.png",
+      "bytes": 268415,
+      "sha256": "53e37f06bedaa1c6c65d5f09b28c03e9085083a552bf40a8bf759260fb67c554",
+      "gitblob": "e61ae20fc7de553f6abcf2a25c85dfd57d424f18"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-initial.png",
+      "bytes": 112378,
+      "sha256": "a1afb65c87fd9d4272d1d1385f9f1a180a9667ce78cfe5d9255dfc7321c91ab1",
+      "gitblob": "ee300bde505fa3d55971dc085cbb161a0957f061"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-map-north.png",
+      "bytes": 131459,
+      "sha256": "1fb0653f05234a4debd94f57f34379a51c7c02754ab18c52754b46e820ff2e19",
+      "gitblob": "1423e2049ec84be631fe50444d5a96a2207b84d8"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-map-overview.png",
+      "bytes": 168778,
+      "sha256": "ba0b4bc22eeb7b500620f32ba58034956a3b2f9e30caf93b8fbbe3e6f7db4920",
+      "gitblob": "fb6127a0799bc9537b295161ac057dcfb0dbaed5"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-map-zoom.png",
+      "bytes": 120735,
+      "sha256": "44c060fbef5e28086478806ebace08af7f89ac3fdd79b48e8e2df7b72796ee46",
+      "gitblob": "f7a51f8201c6e0fe059880de85d84bf0bd1df068"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-nojs-N03.png",
+      "bytes": 61518,
+      "sha256": "405576bf43d46d3a0e4ee8fe92151b9b742020adc61babe1fe0624785e91c713",
+      "gitblob": "ca229778df0118b8dbe0262d483ac93ba7a87977"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-nojs-NG15.png",
+      "bytes": 93438,
+      "sha256": "1a3fffd3bc1c980ac2e99d4a6cda0e215a5251e58fa550e76f824128fbf4461e",
+      "gitblob": "f90f4b60beb554d70d0740a8a8527290b385a6e6"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-nojs-maps.png",
+      "bytes": 131143,
+      "sha256": "456eaa5da5f96c68c00e9f7bf7700c0318f66044c36ba6ef7b2f145232ab03e6",
+      "gitblob": "382ff328e457e853605dfe51328a4219c169dd2d"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-report.json",
+      "bytes": 10349,
+      "sha256": "f6dc469b35dedacc7a8961a109189980a7bbaab54974e9598670843952b7aea3",
+      "gitblob": "181b2715d23bacb5f64fe880196e9998842f929f"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-desktop-water-roads.png",
+      "bytes": 475919,
+      "sha256": "dc23ab80e8fcc577213e85562afe573591b52da49c2c2cf5b5c1d7a289c0efd6",
+      "gitblob": "edb244132064125813cc52cf2ca56cbbeb32ad9d"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-NG15-correction.png",
+      "bytes": 92654,
+      "sha256": "5a89fefef8bcf9562f658b4637e2e0032778845a84941f98437d6d3ac6b2609a",
+      "gitblob": "e5adc1fed32bc8f831d2f2fc8c9c88193d91280a"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-card-N01.png",
+      "bytes": 67590,
+      "sha256": "012e2a5855c79d0648e38aae5eaba9fc955998a2aba5b3976103f88a1ef8a4fd",
+      "gitblob": "766e558d0521e21ad20559e79387488fc689ac7d"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-card-N02.png",
+      "bytes": 69445,
+      "sha256": "dd83cc357d619b188460223f0642efcaf9112e0d18157669bf538e286d2bac3a",
+      "gitblob": "479abea3e8c455bf577bf581d51728373c89c681"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-card-N03.png",
+      "bytes": 62154,
+      "sha256": "2faacaa65de65f262f363bfb3210667d19fe7c71a94d6ddff8bc771f86a3df04",
+      "gitblob": "ab9cf25a36dc9d1b46fd3bd3291cd2d08f922842"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-deep-link.png",
+      "bytes": 83947,
+      "sha256": "b1ab1dd23952cb982d221f99720fdb7c77ed4708c139e5d0b156cb6847569547",
+      "gitblob": "5860c8e8d507e7c454ba4b1f1b4ddc5444fadc4d"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-fallback-NG15.png",
+      "bytes": 92647,
+      "sha256": "d8883c84ffcde084eadf594dc8b5702088b9202b94039ccfcf643876e8f9dc70",
+      "gitblob": "8df59859649b84a87aa315abe93e822f3f29ceb9"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-group-G01.png",
+      "bytes": 435365,
+      "sha256": "c26e0aa6b2fe48bdf4f821e0eb7824d534e24772aa49e2ef046d40fab56676e4",
+      "gitblob": "26ad2d99fd69ee17a4612f189de9ef2dbe549cf7"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-group-G02.png",
+      "bytes": 280744,
+      "sha256": "3b8ac37bcd4c7740b4da13b04791b8c775bf1ed1450d49f6b3812d3b07d05e7f",
+      "gitblob": "fbc5af4df67869ae2224b2073017c46abf3c99d0"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-group-G03.png",
+      "bytes": 299333,
+      "sha256": "6f8ec046a93f21eb1b273050d2ec234c4e953223b896bf5fd5bb40b0f36f8485",
+      "gitblob": "a6a2c0dee7032f591194865c00a3fb6ac7f35653"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-initial.png",
+      "bytes": 82010,
+      "sha256": "f9d9c67be0ebea8e4f8c8ddf162742eb0e3ae7bb9e3c1f813a0d0348a7f9282b",
+      "gitblob": "e38b82ec63fb2a53d9c5c1b06c939314fa6f5764"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-map-north.png",
+      "bytes": 36541,
+      "sha256": "4464988a105b21d8787712e49eb4062e67b3692224ee4a60cc5d1112b3d16c1d",
+      "gitblob": "dfd8abdeb88c19be3cecfa3f155f2ab238e297e6"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-map-overview.png",
+      "bytes": 40197,
+      "sha256": "856501c376002eb483287306ea52947b8903eff44022316ea6888513f4452975",
+      "gitblob": "d5556a0e210ca24756519b5dac5f0131f841dbf3"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-map-zoom.png",
+      "bytes": 43178,
+      "sha256": "23b661bf2a8b7d264c133cfc33afe461587b33d8525509d6ef6afb9dbf68f9d9",
+      "gitblob": "1cce363c49d26a73f28e440e3b74522d3476be6b"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-nojs-N03.png",
+      "bytes": 62154,
+      "sha256": "880d9a69a9513fe94eb83ceb99be83227934c1c2c72dac9edab361da814df76f",
+      "gitblob": "1309d5028fc782d73c64d7c0ae9c051a0070b50d"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-nojs-NG15.png",
+      "bytes": 92347,
+      "sha256": "9e48083df9741a5b9010b1e52c3930b212850394556ce6ccef91176a8f703525",
+      "gitblob": "27f5fd33f6b9c78daaae8f7b45b3a5b3b62182e5"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-nojs-maps.png",
+      "bytes": 36446,
+      "sha256": "098bbcdfc888a21ec41cfdfe896e8fc3d377174b1dfa0d75509c2bada89a1282",
+      "gitblob": "4014db7687cff2548cf3da8131b59c0a778e7da1"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-report.json",
+      "bytes": 10322,
+      "sha256": "005f0005da61909d86b6b4ed671c738f032ce1138135841312757d8cdb35ba04",
+      "gitblob": "47299b460c3e8c73612739e534921422f271c733"
+    },
+    {
+      "path": "artifacts/prosperity-city-north-p471-browser/p471-mobile-water-roads.png",
+      "bytes": 588734,
+      "sha256": "b63777b577b289086d023f1bb7e25b2b3c113b0325fcdc44ce2f352277e128e7",
+      "gitblob": "abcc1145160579038ec42bc4b02725c639e8f50d"
+    },
+    {
+      "path": "artifacts/prosperity-core-build.json",
+      "bytes": 534,
+      "sha256": "daaa229b31b8b1b40547779e9b3b0d70500650cb9a8eb87873f82551e40f1243",
+      "gitblob": "e504f9d4a793e5e67d3127a742c11b45e2c00901"
+    },
+    {
+      "path": "artifacts/prosperity-gate-build.json",
+      "bytes": 614,
+      "sha256": "6649e8dfa763b56a3193c1eb637f78f52b152f0a0a3ab5e40647eb73451e4f6c",
+      "gitblob": "5bda9ff6eab3e9d63f7092192042949f318051e5"
+    },
+    {
+      "path": "artifacts/prosperity-semantic-tests.txt",
+      "bytes": 37661,
+      "sha256": "d680efe1e87514bb507916fa05e26456f2d561bcb8da84d2c2b3655bddfd2c4c",
+      "gitblob": "d284ea076d017241a0bf294250caeac2b25501ef"
+    },
+    {
+      "path": "artifacts/road-atlas-r6-browser/desktop-baima-evidence.png",
+      "bytes": 245854,
+      "sha256": "07b115e3ccb5b4afc8b8044fdca81d8ac7b3d2b90571ac717fdc63b6b5ada4bf",
+      "gitblob": "4ab3f94ab507238281fe72d5b7545226b0d1941c"
+    },
+    {
+      "path": "artifacts/road-atlas-r6-browser/desktop-map.png",
+      "bytes": 273588,
+      "sha256": "f6056448b0838ac6c89733acb7835b3016648549112d3cea618a7ca5fcd68e70",
+      "gitblob": "66d556a24ea4e465db50cee471db8ef6e20e325a"
+    },
+    {
+      "path": "artifacts/road-atlas-r6-browser/desktop-report.json",
+      "bytes": 3665,
+      "sha256": "ae51c9b8c734dad174b89c8706e2d2619c3f98fd867f0e056f87e01945105429",
+      "gitblob": "099be0ec91ef5a573266cf045be4d8a6af320589"
+    },
+    {
+      "path": "artifacts/road-atlas-r6-browser/desktop-unknown-endpoint.png",
+      "bytes": 248828,
+      "sha256": "d625bbef302b78957254fbba151aa2fada44b1986623845edc4d412ea69a4577",
+      "gitblob": "de724e2fe1ae3f4bf27bee00ccb47ccea5504c15"
+    },
+    {
+      "path": "artifacts/road-atlas-r6-browser/mobile-baima-evidence.png",
+      "bytes": 243338,
+      "sha256": "ea45f183403062ecdcd6ab15885a732034b2c46d986f92d88e3825f24acd11b4",
+      "gitblob": "207b9a2b3c74e7d66ab995a417463748e19fcffd"
+    },
+    {
+      "path": "artifacts/road-atlas-r6-browser/mobile-map.png",
+      "bytes": 87408,
+      "sha256": "fbf8a810166be4ac68b42a5ccc05dafcbb1829321c25a69ae4a2c3d8965ff7bb",
+      "gitblob": "248e96890f9082055a3791da850276c92529f518"
+    },
+    {
+      "path": "artifacts/road-atlas-r6-browser/mobile-report.json",
+      "bytes": 3639,
+      "sha256": "654c9da1898826ddc7735df4d518f6de24f381d7a7eea52302cead9e6f31cae6",
+      "gitblob": "e7470105f473d8bd6955de82f364464d4e9ab277"
+    },
+    {
+      "path": "artifacts/road-atlas-r6-browser/mobile-unknown-endpoint.png",
+      "bytes": 248260,
+      "sha256": "3add8d899dfc86a9011f2eef2b8e6c50ed9e4e4d2d1201a45a979dfe94fc14ee",
+      "gitblob": "27154d017a14f82d3f85e881b89b59dd1b7b9e11"
+    },
+    {
+      "path": "artifacts/source-access-b8-tests.txt",
+      "bytes": 1036,
+      "sha256": "6112b2378fac47eecfa6eb8c663fe0604f78008be846d615f2d05d1650fe74ac",
+      "gitblob": "234cd62054a31f720b5e1cc2db950168e4e36413"
+    },
+    {
+      "path": "artifacts/source-continuity-b7-tests.txt",
+      "bytes": 1197,
+      "sha256": "2a098c8974a9cab9be1eb03cfbee6cebfe4b8f1cb603ad58d6b4b69db1d39619",
+      "gitblob": "e39c19cba6c66c0e19654ce6990a9aee690b9829"
+    },
+    {
+      "path": "artifacts/southeast-b6-tests.txt",
+      "bytes": 2945,
+      "sha256": "39fb4012ee43d78165f285db2def1827c06a1aac09c27d1b0cff0d5057420599",
+      "gitblob": "4b2ab87d0f46f991c49b3eb98214edaaab864e81"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/SOURCE-NOTICE.txt",
+      "bytes": 1074,
+      "sha256": "1b5ce3e55ef1c036ca1120fa2cc5a109bb20d827f171562d1759784e7a6847a8",
+      "gitblob": "8a52bec240eb7732736928edfedc416e93d25367"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/contours-25m-wgs84.geojson",
+      "bytes": 15273937,
+      "sha256": "b30d9562d81b4715f2d69e668f4e6f320759bec8fb50767f2c894b35fd15c5a0",
+      "gitblob": "cda3b24ee07481318dbf90843529e9c06e264c82"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/display-dsm-sigma90m.tif",
+      "bytes": 6851561,
+      "sha256": "f77f2de3a4f5189649ce3131c216ceb4af2148f4756aeb3684c54ce4e78261a3",
+      "gitblob": "70b9c40542d93db2e5a7ff718c0726429da61a64"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/hillshade-display.tif",
+      "bytes": 6771495,
+      "sha256": "e5f41eb4bb2073d44e9c1075cf13abc011bcd30c4a3306540e66489d8dbc0c05",
+      "gitblob": "ec2fab4297d489d9054d2493b9cac76cf71eaca2"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/metadata.json",
+      "bytes": 6233,
+      "sha256": "810e8643c190b86199d85b61067d8763dede54f3ae31c3cd6c7ceba94ccaf3a0",
+      "gitblob": "50d41c17065630fb74ce855bb8a12c7d6f9a4f58"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/modern-dsm-30m.tif",
+      "bytes": 7714150,
+      "sha256": "571979daec3184d9859384603ae651765e3e8148296a339d7f84aee3ebc5726e",
+      "gitblob": "9abc79322044deb759a648cf4517a3d8c0473a53"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/native-samples-wgs84.tif",
+      "bytes": 8890254,
+      "sha256": "fe2e3a0a768440d67a3714ea51e17162b654437e0a63105f6fa4d77bde77dbe2",
+      "gitblob": "de155e753264c97ec3f6409edb1f1eb5a8678f9a"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/slope-display-sigma90m-deg.tif",
+      "bytes": 9198058,
+      "sha256": "be066ac622014c8d8bb136d2afb2cb63abafbc87bda547d14d1558256ae6df42",
+      "gitblob": "8374a5f64ce5dc39a9a8ec456125c8003a0c76be"
+    },
+    {
+      "path": "artifacts/terrain-products-v30/slope-native-scale-deg.tif",
+      "bytes": 9974747,
+      "sha256": "73d2a4dbf6017260df1cee90442e691d6deed085199f8152a0e42ba48b94da26",
+      "gitblob": "9f8d321e9db56b6b43b2157ff33ec9717ffa0f7e"
+    },
+    {
+      "path": "artifacts/v26-calculation.json",
+      "bytes": 1470,
+      "sha256": "ab662fead8b26ff6686dc0bf9bad901622cf4a447f1764fc048d545a6475e48f",
+      "gitblob": "17ea6dc4855ff1df00c7082b71820db25b91fb40"
+    },
+    {
+      "path": "artifacts/v26-semantic-tests.txt",
+      "bytes": 2281,
+      "sha256": "c12c7ec3e504eb0e2bce10f13e3ec2ada1559ea66021e19497a0deaf930b03e7",
+      "gitblob": "4138b8057900da02b0a626bb1cf647f1afa3ab91"
+    },
+    {
+      "path": "artifacts/v27-semantic-tests.txt",
+      "bytes": 3100,
+      "sha256": "98a682b5b54dcbc2f2107701fbc7d7ce3c7604324d4791f2bbfb335f2053f73c",
+      "gitblob": "20f17610b668931f496541b67e021117317c165f"
+    },
+    {
+      "path": "artifacts/v28-integration-audit.json",
+      "bytes": 2503,
+      "sha256": "121c67aa03b84d08f85b3773addd07dbe0206037e61b4d5cfd1dcb0bf6d907f1",
+      "gitblob": "19b0cb6b9cec476e042660fdd3827188d1959d40"
+    },
+    {
+      "path": "artifacts/v29-semantic-tests.txt",
+      "bytes": 2071,
+      "sha256": "202d776c2f6e22a50eb1a1e7f2ea6c933a5b41d59792ab25dc75e36964b5d396",
+      "gitblob": "dcd290e2666c3a0dd325dd7c3b13e0fd828be7f3"
+    },
+    {
+      "path": "artifacts/v30-semantic-tests.txt",
+      "bytes": 1451,
+      "sha256": "4a166c8e78a6033097f0725b121064d7681b16613cb09167912306b8a9ee5b89",
+      "gitblob": "eb585c72f18a481727a7f0d4ddf1fffa342f281b"
+    },
+    {
+      "path": "artifacts/west-b3-semantic-tests.txt",
+      "bytes": 872,
+      "sha256": "1832a6c4699b56e8c0bb3be1ff0225a468bf2208732a8569b8bc3f76f1ecacd0",
+      "gitblob": "9ffea4f3dd5f7217e4ccf1d8c4371d72d9aadc7a"
+    },
+    {
+      "path": "artifacts/west-roads-b5-tests.txt",
+      "bytes": 1154,
+      "sha256": "49386fd99b33cfc9c152bfdc7b01e6996ac407a55cd845d0edb447ee88f7cf43",
+      "gitblob": "48704ae34e19aca86fd724744bf6430d7d033982"
+    },
+    {
+      "path": "build-137437825533.log",
+      "bytes": 172842,
+      "sha256": "b5c12c70e2365cd280dd09c320c8d365d4718fda1282a92ac3ca7edc7231a2c4",
+      "gitblob": "53de519a3077f28165efea79efe3c6837750e507"
+    },
+    {
+      "path": "evidence.zip",
+      "bytes": 133220902,
+      "sha256": "446e434066373b041f861b601182a116edbb6803b22fa88cc2996ec8fd154502",
+      "gitblob": "be8078b45ac337936274eee07514924121b50a38"
+    },
+    {
+      "path": "failure-log-excerpt.txt",
+      "bytes": 2517,
+      "sha256": "6784f862137abb37b7c0f9a79e80c394c6c78f4a98109f17a26670e9892342ef",
+      "gitblob": "2bd698f5321f7d0733fee3bd7a199c67f8823fd8"
+    },
+    {
+      "path": "partial-browser-byte-check.json",
+      "bytes": 9906,
+      "sha256": "8ac80f66837e2f20941f0bab362c1495d3198ff18765a3f6ff6cf7991d07163f",
+      "gitblob": "a329153113b7d0bc0d67c545912b5fe9ad7b1002"
+    }
+  ],
+  "remote_writes": 0
+}

@@ -1,0 +1,182 @@
+{
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "Released commit, embedded data, all 16 views, 339 catalog entries and immutable source-geometry hashes agree",
+    "All viewports preserve geometric paths; five layer controls and labels work; palace remains an explicit comparison and the legacy envelope stays hidden"
+  ],
+  "screenshots": {
+    "mobile-all.png": "8fd1cbeaa27ce5a4c044d261ad97122c0f2259ed5cd3c14d734523ece6d3c73d",
+    "mobile-failure.png": "b7c1760149205ab7d85bddad6ef29b8aa8ae37cb953603686870ea0f80b4880c"
+  },
+  "downloads": {},
+  "retained_downloads": {},
+  "download_attempts": [],
+  "errors": [],
+  "views": {
+    "all": {
+      "camera": [
+        -8897.73838734748,
+        -10399.939438444711,
+        19006.34052403307,
+        25483.36159646892
+      ],
+      "palace_visible": false
+    },
+    "core": {
+      "camera": [
+        -1528.4513130418388,
+        -1329.7640276791585,
+        3505.1668629828223,
+        4699.665067686466
+      ],
+      "palace_visible": false
+    },
+    "changhe": {
+      "camera": [
+        379.2157914137824,
+        723.9198946637306,
+        238.68264217243518,
+        320.0214196725388
+      ],
+      "palace_visible": false
+    },
+    "yongning": {
+      "camera": [
+        -279.4966352551296,
+        1038.1291178450774,
+        800.8682805102592,
+        1073.7898733098448
+      ],
+      "palace_visible": false
+    },
+    "palace2013": {
+      "camera": [
+        -883.8018138021762,
+        -1923.7918312626944,
+        3175.7525826043525,
+        4257.9922895253885
+      ],
+      "palace_visible": true
+    },
+    "R01": {
+      "camera": [
+        -433.0210864213186,
+        -3221.378837322194,
+        2934.8054164024043,
+        3934.93463651719
+      ],
+      "palace_visible": true
+    },
+    "R02": {
+      "camera": [
+        -4502.9446805491925,
+        -3754.530590460851,
+        6815.318250800363,
+        9137.856872581491
+      ],
+      "palace_visible": true
+    },
+    "R03": {
+      "camera": [
+        -1495.4966002219344,
+        -2947.349531969602,
+        4408.354375571456,
+        5910.642738196366
+      ],
+      "palace_visible": true
+    },
+    "R04": {
+      "camera": [
+        844.9137183745916,
+        -2812.679518080933,
+        4274.284846568584,
+        5730.884710483017
+      ],
+      "palace_visible": true
+    },
+    "R05": {
+      "camera": [
+        -4550.7208905466905,
+        -1081.946036320338,
+        5293.631469556248,
+        7097.606439628488
+      ],
+      "palace_visible": true
+    },
+    "R06": {
+      "camera": [
+        -971.2353867597626,
+        -454.01416033624423,
+        2523.2202805504135,
+        3383.0886443134036
+      ],
+      "palace_visible": true
+    },
+    "R07": {
+      "camera": [
+        -1251.7072469852792,
+        -933.0063595998818,
+        3877.2372201021167,
+        5198.530350974905
+      ],
+      "palace_visible": true
+    },
+    "R08": {
+      "camera": [
+        -1414.7316954251378,
+        -2167.2037063066964,
+        4996.847576098294,
+        6699.683900913913
+      ],
+      "palace_visible": true
+    },
+    "R09": {
+      "camera": [
+        1239.4383078307646,
+        -919.3688758820347,
+        3765.633117710917,
+        5048.893565645922
+      ],
+      "palace_visible": true
+    },
+    "R10": {
+      "camera": [
+        -3731.6516390655943,
+        -3473.0806280009288,
+        9484.071800437092,
+        12716.073922373755
+      ],
+      "palace_visible": true
+    },
+    "R11": {
+      "camera": [
+        -2068.7844456416606,
+        -106.34198860405422,
+        5806.433155360821,
+        7785.161772550821
+      ],
+      "palace_visible": true
+    }
+  },
+  "source_commit": "2cf09df9d588cf1cf440a8517a1f8950e4bc2b4b",
+  "layout_checks": [
+    {
+      "url": "http://127.0.0.1:42135/luoyang-city/luoyang-city-plan.html?view=all&layers=source%2Ctrace%2Cscale%2Ccandidate",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    }
+  ],
+  "status": "failed",
+  "error": "Locator expected to have text '木塔基座主体图示轮廓'\nActual value: 木塔地基图示范围 \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#selected-title\")\n    9 × locator resolved to <h3 id=\"selected-title\">木塔地基图示范围</h3>\n      - unexpected value \"木塔地基图示范围\"\n",
+  "url": "http://127.0.0.1:42135/luoyang-city/luoyang-city-plan.html?view=yongning&layers=source%2Ctrace%2Cscale%2Ccandidate&feature=r11-yongning-YN11-TOWER-FOUNDATION",
+  "elapsed_seconds": 8.499
+}

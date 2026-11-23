@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "source_commit": "e137f473278282c6c30a29e2c018de666577889a",
+  "review_date_shanghai": "2026-11-23",
+  "method": "Manual direct interaction through the cloud browser with visible UI state, independent of CI browser tests.",
+  "final_url": "https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html?view=all&layers=source%2Ctrace%2Cscale%2Ccandidate#plan-reader",
+  "checks": [
+    {"name": "production identity", "observed": "Page title is 洛阳 · 全城统一坐标复原工作平面 R11.1; footer displays production source commit e137f473278282c6c30a29e2c018de666577889a."},
+    {"name": "published counts", "observed": "Visible counters display 28 source framework features, 33 local plan components, 148 candidate/collective signs, and 339 catalog records."},
+    {"name": "view control", "observed": "Selected 永宁寺 · 刊载平面接入 through the actual dropdown; URL updates to view=yongning. All 16 labeled options are present."},
+    {"name": "tower search and selection", "observed": "Searched 木塔基座; one visible result 木塔基座主体图示轮廓; clicked the result. Evidence panel states 局部原图轮廓 · 候选接入, preserves the source scale, and explicitly distinguishes the source-drawn plinth from unproven columns, walls, upper stories, surveyed origin, and city-frame binding."},
+    {"name": "alias search", "observed": "Searched 宣忠; one visible result 城阳王徽宅. Clicked it and observed feature=r11-candidate-object-w_xuanzhong. The panel states 文献方位 · 候选点 and says that it is not a measured building center or land boundary and that drawing distances are not ancient distances."},
+    {"name": "return to all-city overview", "observed": "Used 清空 and the 全城 · 共同坐标复原平面 dropdown option; search and feature parameters removed. Source, trace, scale and candidate layers remain enabled; independent palace2013 comparison remains disabled; labels enabled."},
+    {"name": "live deliverable", "observed": "The final all-city map and controls rendered visibly; the reviewed live tab was marked as the deliverable."}
+  ],
+  "scope": "A focused independent manual review of the actual deployed page. This is not a substitute for the separate full desktop/mobile, download, offline, no-JavaScript and legacy-version CI gates. Browser-produced screenshots are not duplicated here; raw CI screenshots remain in the permanent evidence archive."
+}

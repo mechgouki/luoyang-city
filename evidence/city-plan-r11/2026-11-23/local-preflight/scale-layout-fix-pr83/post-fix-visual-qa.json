@@ -1,0 +1,482 @@
+{
+  "qa_stage": "local_post_fix_candidate_not_deployed",
+  "status": "local_visual_checks_passed_production_reverification_pending",
+  "reviewed_at_utc": "2026-11-23T02:47:07.512574+00:00",
+  "baseline_production_pdf": {
+    "path": "/tmp/r11-live-review/public/downloads/city-plan-r11.pdf",
+    "sha256": "e6e702a2ee594d2e5679107d07d99d06a57e7eea6bb2f793baee00b2b9da6311",
+    "source_commit": "e137f473278282c6c30a29e2c018de666577889a",
+    "visual_qa": "/tmp/r11-live-review/figures/production-pdf-visual-qa.json",
+    "visual_qa_sha256": "f1a11bcfa37c3abc1be7a925b9cbee0898b1aa1ae4cf8b78f33e5d70fc82a8e4"
+  },
+  "fixed_local_pdf": {
+    "path": "/tmp/r11-scale-fix-qa/city-plan-r11-layout-fix-local.pdf",
+    "sha256": "fca009c53519e9ade3a8217e77949c863658ad7df89e6018eb7e823d5eea9984",
+    "pages": 17,
+    "render_dpi": 144,
+    "metadata_source_commit_note": "Frozen public plan data still identifies e137f473; this is a local QA build, not proof that a new commit is live."
+  },
+  "patch": {
+    "changed_file": "tools/city_plan_r11_maps.py",
+    "file_sha256": "9fe97d96bc43449e6254db0f393d6cf67383cee0323a25ff1363afe0d083c678",
+    "git_diff_sha256": "ba2eebff1286b239309a8634b2c37f796d7067f68c35198f455ee8cc382aa15d",
+    "patch_path": "/tmp/r11-scale-fix-qa/maps-scale-clearance.patch",
+    "frozen": true
+  },
+  "scope": "Only static sheet label clearance around the scale backing, plus fallback text positions and leader lines. No source geometry, candidate coordinates, view bounds or web behavior changed.",
+  "resolved_issues": [
+    {
+      "id": "R11-PDF-P08-SCALE-LABEL",
+      "page": 8,
+      "view_id": "R03",
+      "severity": "minor_layout",
+      "affected_label": "西阳门外御道",
+      "observation": "500 m比例尺的半透明白色底板覆盖该图签上半部；字的下半部仍可见。",
+      "cause": "静态图纸比例尺最后覆盖在名称层上；标签排版未为比例尺留出占用区。",
+      "detail_png": "/tmp/r11-live-review/figures/qa-detail-p08-scale-label.png",
+      "source_geometry_affected": false,
+      "status": "resolved_in_local_render"
+    },
+    {
+      "id": "R11-PDF-P13-SCALE-LABEL",
+      "page": 13,
+      "view_id": "R08",
+      "severity": "minor_layout",
+      "affected_label": "通商／大货〔市东，内部无序〕",
+      "observation": "500 m比例尺的半透明白色底板覆盖该图签左段文字。",
+      "cause": "同上，比例尺占用区未参与静态标签避让。",
+      "detail_png": "/tmp/r11-live-review/figures/qa-detail-p13-scale-label.png",
+      "source_geometry_affected": false,
+      "status": "resolved_in_local_render"
+    }
+  ],
+  "unresolved_issues": [],
+  "all_previous_labels_retained": true,
+  "all_237_feature_wrappers_in_all_16_views_byte_identical": true,
+  "all_view_attributes_unchanged": true,
+  "default_world_svg_byte_identical": true,
+  "same_environment_changed_pages": [
+    8,
+    13
+  ],
+  "same_environment_identical_other_pages": 15,
+  "all_17_page_texts_unchanged": true,
+  "all_34_fonts_embedded": true,
+  "invariance_report": "/tmp/r11-scale-fix-qa/layout-invariance.json",
+  "raster_comparison_report": "/tmp/r11-scale-fix-qa/same-runtime-raster-comparison.json",
+  "production_local_font_note": "Raw public PDF uses a CairoFont-1-0 bold subset; this local runtime uses an embedded NotoSansCJKsc-Bold subset. Direct production/local raster comparison therefore has title/heading glyph differences. The controlled same-runtime comparison separates that from the two layout changes.",
+  "checks": {
+    "existing_13_semantic_tests": "passed",
+    "python_compile_warnings_as_errors": "passed",
+    "git_diff_check": "passed",
+    "full_release_CI_and_live_production_PDF": "parent-managed, pending"
+  },
+  "contact_sheet": "/tmp/r11-scale-fix-qa/figures/local-fixed-contact-sheet.png",
+  "pages": [
+    {
+      "page": 1,
+      "view_id": "all",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-01.png",
+      "render_sha256": "8ce06561d2745e149531df7f8cde32b6f2cfcc4a1f259f549fce33febbd49591",
+      "text_and_paper_checks": {
+        "page": 1,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 618,
+        "width_pt": 1683.77953,
+        "height_pt": 1190.55118
+      },
+      "same_runtime_raster_comparison": {
+        "page": 1,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 2,
+      "view_id": "core",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-02.png",
+      "render_sha256": "20892ceb25516748123a95625bf1ca824f8f0214a90a3730730cde46514e178e",
+      "text_and_paper_checks": {
+        "page": 2,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 468,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 2,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 3,
+      "view_id": "changhe",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-03.png",
+      "render_sha256": "42207ff791f924dbf0b91257333f62973bc130019a85ee3563a3deb3052d8b24",
+      "text_and_paper_checks": {
+        "page": 3,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 256,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 3,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 4,
+      "view_id": "yongning",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-04.png",
+      "render_sha256": "39d6be32b1df2e68ab25d6e8409c309472d6d2fdcd6d5898d37a13c3b9fd8b1d",
+      "text_and_paper_checks": {
+        "page": 4,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 375,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 4,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 5,
+      "view_id": "palace2013",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-05.png",
+      "render_sha256": "6a421622330165750da049230fa45996b573dec5c229b3709e3acc31401dd32e",
+      "text_and_paper_checks": {
+        "page": 5,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 679,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 5,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 6,
+      "view_id": "R01",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-06.png",
+      "render_sha256": "8180324c1ae6ee167927cb24de2bf8bb558c2c94af0818c31ef8d13a295d6743",
+      "text_and_paper_checks": {
+        "page": 6,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 247,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 6,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 7,
+      "view_id": "R02",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-07.png",
+      "render_sha256": "fb23462eb5fbfc1792bcec26fad6a6aadaf216da20ab3a585c523aa1654793a9",
+      "text_and_paper_checks": {
+        "page": 7,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 723,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 7,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 8,
+      "view_id": "R03",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-08.png",
+      "render_sha256": "660181e57994f9ccf114b4b79db22fcfc0323f63abe252a3bf0732cc53947220",
+      "text_and_paper_checks": {
+        "page": 8,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 518,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 8,
+        "same_runtime_before_and_after_pixels_equal": false,
+        "difference_bbox_pixels": [
+          223,
+          1311,
+          367,
+          1426
+        ]
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Reopened full 144 dpi page and dedicated enlarged label/scale crop; original offending label is visibly complete, away from scale backing, with leader to unchanged anchor.",
+      "full_page_reopened_after_fix": true,
+      "resolved_issue": "R11-PDF-P08-SCALE-LABEL",
+      "detail_png": "/tmp/r11-scale-fix-qa/figures/fixed-detail-p08-scale-label.png"
+    },
+    {
+      "page": 9,
+      "view_id": "R04",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-09.png",
+      "render_sha256": "fa97d3d6ba60b65c1dd6db73ebdcc6b77f1112d509260bb511c83550a2467de2",
+      "text_and_paper_checks": {
+        "page": 9,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 416,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 9,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 10,
+      "view_id": "R05",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-10.png",
+      "render_sha256": "fea755e7d50ced87c5198a8439b0341a10306f079e7f5d5966339aae86346256",
+      "text_and_paper_checks": {
+        "page": 10,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 355,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 10,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 11,
+      "view_id": "R06",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-11.png",
+      "render_sha256": "8b0737b6e1a3818039b886fc09cceec858a56d39b4fa4d276476ee3e0eadfb39",
+      "text_and_paper_checks": {
+        "page": 11,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 331,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 11,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 12,
+      "view_id": "R07",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-12.png",
+      "render_sha256": "2a69bc0d74f65910e0669c0b73098819c02eb2a7dea0278dd7f8866bb4382207",
+      "text_and_paper_checks": {
+        "page": 12,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 493,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 12,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 13,
+      "view_id": "R08",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-13.png",
+      "render_sha256": "501aed132415ebdfe27aa6c65d686a8012130d161a87b7dfc9e009538e7ae8eb",
+      "text_and_paper_checks": {
+        "page": 13,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 697,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 13,
+        "same_runtime_before_and_after_pixels_equal": false,
+        "difference_bbox_pixels": [
+          285,
+          1352,
+          730,
+          1385
+        ]
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Reopened full 144 dpi page and dedicated enlarged label/scale crop; original offending label is visibly complete, away from scale backing, with leader to unchanged anchor.",
+      "full_page_reopened_after_fix": true,
+      "resolved_issue": "R11-PDF-P13-SCALE-LABEL",
+      "detail_png": "/tmp/r11-scale-fix-qa/figures/fixed-detail-p13-scale-label.png"
+    },
+    {
+      "page": 14,
+      "view_id": "R09",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-14.png",
+      "render_sha256": "4e109297d430636c0cee7901d55f7c31d72b7e11e35a087cb50a6cb72fbb696e",
+      "text_and_paper_checks": {
+        "page": 14,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 345,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 14,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 15,
+      "view_id": "R10",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-15.png",
+      "render_sha256": "7ad233122a448034af6d5c1928baee63c6ca9e8d71d4015a4e55ac2987cf22b7",
+      "text_and_paper_checks": {
+        "page": 15,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 679,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 15,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 16,
+      "view_id": "R11",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-16.png",
+      "render_sha256": "9f2e40637dbce2eb9fdb6a7c264789960e62702221985850c702c5727d7d49eb",
+      "text_and_paper_checks": {
+        "page": 16,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 315,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 16,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    },
+    {
+      "page": 17,
+      "view_id": "method",
+      "render_path": "/tmp/r11-scale-fix-qa/figures/fixed-r11-page-17.png",
+      "render_sha256": "8106f0afd347bdf0ca58abce5247d2430336660f84889e980123a1568468c2d9",
+      "text_and_paper_checks": {
+        "page": 17,
+        "same_extracted_text_as_original_production": true,
+        "chinese_characters": 584,
+        "width_pt": 1190.55118,
+        "height_pt": 841.889764
+      },
+      "same_runtime_raster_comparison": {
+        "page": 17,
+        "same_runtime_before_and_after_pixels_equal": true,
+        "difference_bbox_pixels": null
+      },
+      "postfix_contact_sheet_reviewed": true,
+      "title_footer_legend_appear_correct": true,
+      "unresolved_issue_ids": [],
+      "review_method": "Original production page individually inspected; unchanged-layout page is pixel-identical in the controlled same-runtime comparison; newly rendered page also reviewed in the complete contact sheet.",
+      "full_page_reopened_after_fix": false
+    }
+  ]
+}

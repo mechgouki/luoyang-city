@@ -1,0 +1,1075 @@
+{
+  "version": "dual-west-roads-b5",
+  "base_commit": "d3f1177488275062e89977926908460b331c5e4f",
+  "scope": "R02城西阊阖、西阳、西明三门道及寺宅层次；白马两条记录的身份边界；保留B1、宫苑B2、城西B3、北门B4。",
+  "region": {
+    "id": "L07",
+    "source_region": "R02",
+    "name": "城西三门道与寺宅层次",
+    "bbox": [
+      1180,
+      2400,
+      3330,
+      3850
+    ],
+    "bbox_meaning": "沿用R02的文献示意画布x、y、width、height；裁切范围不是古地理坐标。"
+  },
+  "sources": [
+    {
+      "id": "Z1",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷1·周祖谟电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/1",
+      "checked": "2026-11-13",
+      "basis": "本批直接核读电子正文及相关校语；未核古刻书影。两种现代整理仍属同一古籍来源家族。"
+    },
+    {
+      "id": "F1",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷1·范祥雍电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/1",
+      "checked": "2026-11-13",
+      "basis": "本批直接核读电子正文及相关校语；未核古刻书影。两种现代整理仍属同一古籍来源家族。"
+    },
+    {
+      "id": "Z4",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷4·周祖谟电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/4",
+      "checked": "2026-11-13",
+      "basis": "本批直接核读电子正文及相关校语；未核古刻书影。两种现代整理仍属同一古籍来源家族。"
+    },
+    {
+      "id": "F4",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷4·范祥雍电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/4",
+      "checked": "2026-11-13",
+      "basis": "本批直接核读电子正文及相关校语；未核古刻书影。两种现代整理仍属同一古籍来源家族。"
+    },
+    {
+      "id": "Z5",
+      "family": "L",
+      "title": "《洛阳伽蓝记校释》卷5·周祖谟电子整理本",
+      "url": "https://deerpark.app/cbeta/B0077/5",
+      "checked": "2026-11-13",
+      "basis": "本批直接核读电子正文及相关校语；未核古刻书影。两种现代整理仍属同一古籍来源家族。"
+    },
+    {
+      "id": "F5",
+      "family": "L",
+      "title": "《洛阳伽蓝记校注》卷5·范祥雍电子整理本",
+      "url": "https://deerpark.app/cbeta/B0078/5",
+      "checked": "2026-11-13",
+      "basis": "本批直接核读电子正文及相关校语；未核古刻书影。两种现代整理仍属同一古籍来源家族。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "WR01",
+      "title": "三门道置于西墙四门次序中",
+      "entities": [
+        "gate_ximing",
+        "gate_xiyang",
+        "gate_changhe_west",
+        "gate_chengming"
+      ],
+      "quote": "西面有四門：……南頭第一門，曰西明門。……次北曰西陽門。……次北曰閶闔門。……次北曰承明門。",
+      "quote_source": "Z1",
+      "quote_locator": "原序·西面城门总叙",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "本批选择西明、西阳、城西阊阖三条门道；北面的承明仍属于同一西墙门序，由B4继续承接。",
+      "drawing": "保持三个原门锚点，使用不数层的通用门符；旁图只表达由南向北的门序。",
+      "limit": "三门道是专题取样，不是西墙只有三门；门序不提供门距、城墙长度、路宽或三路互通。",
+      "sources": [
+        "Z1",
+        "F1"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "gate_xiyang",
+          "relation": "north_of",
+          "object": "gate_ximing",
+          "basis": "direct"
+        },
+        {
+          "subject": "gate_changhe_west",
+          "relation": "north_of",
+          "object": "gate_xiyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "gate_chengming",
+          "relation": "north_of",
+          "object": "gate_changhe_west",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": null,
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR02",
+      "title": "城西阊阖与宫前阊阖分开",
+      "entities": [
+        "gate_changhe_west",
+        "ic_changhe_palace"
+      ],
+      "quote": "在宮前閶闔門南一里御道西。",
+      "quote_source": "Z1",
+      "quote_locator": "卷一·永宁寺首段（引句主语为永宁寺）",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "永宁条限定宫前阊阖；西墙总叙与融觉条限定城西阊阖。周注另明确二门同名而非一门。",
+      "drawing": "沿用gate_changhe_west和ic_changhe_palace两个ID；B5门符只改城西门，不将宫前御道续接为城西门道。",
+      "limit": "本引句的南一里描述永宁寺，不能误挂到两个阊阖门之间；同名不构成同址证据。",
+      "sources": [
+        "Z1",
+        "F1",
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": null,
+      "geographic_coordinates": null,
+      "identity_policy": "distinct_existing_entities"
+    },
+    {
+      "id": "WR03",
+      "title": "融觉寺只明记阊阖门外道南",
+      "entities": [
+        "w_rongjue",
+        "gate_changhe_west",
+        "road_changhe_west"
+      ],
+      "quote": "融覺寺，清河文獻王懌所立也，在閶闔門外御道南。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·融觉寺首句；Z4第78段、F4融觉条",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "门外与御道南是两项直接约束；此门承接城西门身份。",
+      "drawing": "原锚点替换为无塔寺院类型，保持原门外及道南关系；寺塔移入独立构件与时层板。",
+      "limit": "没有距门里数；不以御道线长代表里程，不由此赋予永明、大觉相同路侧。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "w_rongjue",
+          "relation": "outside_gate",
+          "object": "gate_changhe_west",
+          "basis": "direct"
+        },
+        {
+          "subject": "w_rongjue",
+          "relation": "south_of",
+          "object": "road_changhe_west",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用attested_by_528；本批不从追谥文献或所立二字另定具体建寺年。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR04",
+      "title": "融觉五层塔与一里／三里异读",
+      "entities": [
+        "w_rongjue",
+        "w_chongjue"
+      ],
+      "quote": "有五層浮圖一所，與沖覺寺齊等。……佛殿僧房，充溢三里。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·融觉寺首段建筑记述",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文及周校选定读法；三里属于校改",
+      "reading": "五层是塔的类型记述；周取三里为校改，范正文仍列一里并保留异文。齐等作为文字比较保留。",
+      "drawing": "主图只用寺院类型；五层塔在构件与时层板显示，并注落成年未单记；范围异读并列成文本。",
+      "limit": "不把齐等转为同高同形，不画一里或三里寺界，不推算面积、开间或建筑数量；不以塔图证明528年前完工。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [
+        {
+          "source": "Z4",
+          "reading": "周以《续高僧传》相关记述改传文一里为三里。"
+        },
+        {
+          "source": "F4",
+          "reading": "范正文作一里，校语记部分本无一字，并对照另一文献三里说；本批不独立核该引书原卷。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "寺院盛时状态与所述塔的单独竣工年分开；塔完工年份未明。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR05",
+      "title": "大觉在融觉西一里许",
+      "entities": [
+        "w_dajue",
+        "w_rongjue"
+      ],
+      "quote": "在融覺寺西一里許。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·大觉寺首段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "西是相对方向，一里许保留原单位与约数。",
+      "drawing": "保留既有大觉、融觉锚点及关系；附图用有向关系和一里许文字，不把连线画成道路。",
+      "limit": "量距端点未记，不以塔心或院墙为端点；西不等于同纬，距离不换算示意图长度。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "w_dajue",
+          "relation": "west_of",
+          "object": "w_rongjue",
+          "basis": "direct",
+          "distance": 1,
+          "unit": "里许",
+          "distance_endpoints": null
+        }
+      ],
+      "temporal_note": "大觉仍为undated；空间关系本身不解决其初设寺年。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR06",
+      "title": "永明与融觉的东西先后未定",
+      "entities": [
+        "w_yongming",
+        "w_dajue",
+        "w_rongjue"
+      ],
+      "quote": "在融覺寺西一里許。……永明寺，宣武皇帝所立也，在大覺寺東。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·大觉寺、永明寺首句；跨条节录",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "只得大觉西于融觉、永明东于大觉；二者都在大觉以东不构成永明与融觉之间的比较。",
+      "drawing": "画大觉分别关联融觉与永明的两条独立关系；永明继续置于非定位旁注，不排成唯一三寺序列。",
+      "limit": "至少容许大觉—永明—融觉、大觉—融觉—永明两种东西次序，也未排除永明与融觉东西坐标相同而南北不同；三种说明均非选定复原案。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "w_dajue",
+          "relation": "west_of",
+          "object": "w_rongjue",
+          "basis": "direct",
+          "distance": 1,
+          "unit": "里许",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "w_yongming",
+          "relation": "east_of",
+          "object": "w_dajue",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用永明attested_by_528；不因与大觉相邻叙述而统一两寺年代。",
+      "geographic_coordinates": null,
+      "non_entailments": [
+        "永明西于融觉",
+        "永明东于融觉",
+        "永明与融觉同纬",
+        "永明在城西阊阖门御道南或北",
+        "大觉与融觉同一路侧"
+      ],
+      "admissible_order_examples": [
+        [
+          "w_dajue",
+          "w_yongming",
+          "w_rongjue"
+        ],
+        [
+          "w_dajue",
+          "w_rongjue",
+          "w_yongming"
+        ]
+      ],
+      "order_examples_are_geographic_solutions": false
+    },
+    {
+      "id": "WR07",
+      "title": "永明的安置功能和数量叙述",
+      "entities": [
+        "w_yongming"
+      ],
+      "quote": "世宗故立此寺以憩之。房廡連亘，一千餘間。……百國沙門，三千餘人。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·永明寺首段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "以憩之承接异国沙门来洛；房庑和僧人数量保留为古籍叙述口径。",
+      "drawing": "在永明旁注列接待外来沙门、房庑、竹松等无方位构成信息；不为数量生成重复院落。",
+      "limit": "千余间不是可画的平面开间表，三千余人不是指定单年统计；没有寺门、塔、院墙或御道路侧位置。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "宣武所立支持既有盛时以前建寺层；本条未给具体建立年或各构件竣工年。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR08",
+      "title": "大觉宅改寺与居堂字样的版本条件",
+      "entities": [
+        "w_dajue"
+      ],
+      "quote": "大覺寺，廣平王懷捨宅〔立〕也，……懷所居之堂，上置七佛。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·大觉寺首句及堂内七佛段；跨段节录",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "校订正文；〔立〕为周补，堂句懷为周校改",
+      "reading": "宅改寺可保留；周将堂句主语读为怀，范仍留环字并解释其可通。堂与七佛属于构成叙述，七佛不是七层塔。",
+      "drawing": "主图以空心无塔寺院类型保留年未定；旁板显示宅→寺，堂与七佛只列名物，不摹定原宅院格局。",
+      "limit": "不能把周校怀所居之堂当作版本无争议的旧宅大厅原样保留证据；七佛数量不得移作塔层数。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [
+        {
+          "source": "Z4",
+          "reading": "首句补立；堂句以怀校正传文环。"
+        },
+        {
+          "source": "F4",
+          "reading": "首句无立字；堂句正文留环，认为可作环绕解释，不采改怀。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "保留undated；施主姓名与宅改寺叙述不足在本批确定初设寺的公元年。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR09",
+      "title": "大觉永熙砖塔是后出构件",
+      "entities": [
+        "w_dajue"
+      ],
+      "quote": "永熙年中，平陽王即位，造磚浮圖一所。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·大觉寺后段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "砖塔营造属于永熙年间，即既有年表的532—534层；这不是宅改寺本身的定年。",
+      "drawing": "主图不加塔；独立构件与时层板标永熙砖塔、层数未记、晚于盛时窗口。",
+      "limit": "原文只说一所，未记七层或其他层数；不按塔晚出删除年未定的寺院，不以造字推确切完工日。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "明确晚于516—528盛时综合窗口；寺本体初设年仍未定。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR10",
+      "title": "大觉眺望方向不提供测量交会点",
+      "entities": [
+        "w_dajue"
+      ],
+      "quote": "北瞻芒嶺，南眺洛汭，東望宮闕，西顧旗亭",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·大觉寺景观段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "保留四向眺望及碑文面水背山、左朝右市的景观叙述；具体观察点和目标物坐标未明。",
+      "drawing": "在说明板列景观方向，地图不新增旗亭点或通视射线，不用现代山脊反算寺址。",
+      "limit": "旗亭的门亭解释来自周注而非古籍句中城门标识；不能据此增加大觉到阊阖门的精确前后次序、观景高度或方位角。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [
+        {
+          "source": "Z4",
+          "reading": "周注将旗亭释为阊阖门外门亭；这是解释层。"
+        },
+        {
+          "source": "F4",
+          "reading": "范正文神皋由禅字校改；此语仍属景观形容，不给可测地形值。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "w_dajue",
+          "relation": "landscape_view_directions",
+          "object": "mang_luoside_palace_qiting_unspecified",
+          "basis": "qualitative_text",
+          "mapped_entity_added": false
+        }
+      ],
+      "temporal_note": "景观描写不能单独证明建筑在某一盛时年份的完整状态。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR11",
+      "title": "宝光在西阳门外御道北",
+      "entities": [
+        "w_baoguang",
+        "gate_xiyang",
+        "road_xiyang"
+      ],
+      "quote": "寶光寺，在西陽門外御道北。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·宝光寺首句",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "门外与道北分别存为约束；宝光／光宝属传本异名，不新增一寺。",
+      "drawing": "原锚点改为空心无塔寺院类型，年未定标记保留。",
+      "limit": "没有距门里数；不继承附近白马或宣忠的一里、三里量距。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [
+        {
+          "source": "Z4",
+          "reading": "周正文取宝光，校语保留大典及逸史本光宝。"
+        },
+        {
+          "source": "F4",
+          "reading": "范正文宝光，校语记吴琯等本及《说郛》作光宝。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "w_baoguang",
+          "relation": "outside_gate",
+          "object": "gate_xiyang",
+          "basis": "direct"
+        },
+        {
+          "subject": "w_baoguang",
+          "relation": "north_of",
+          "object": "road_xiyang",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用undated；本批未取得把寺与其全部构件限定于528年前的新增证据。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR12",
+      "title": "宝光三层塔的石基不等于全塔石造",
+      "entities": [
+        "w_baoguang"
+      ],
+      "quote": "有三層浮圖一所，以石為基，形製甚古",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·宝光寺建筑段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "明记三层与石基；形制甚古是正文观察性描述，不能据此独立定为晋代原物。",
+      "drawing": "三层塔及石基只进入构件与时层板；主图维持空心无塔寺院类型。",
+      "limit": "以石为基不证明上部全部石造；没有塔高、基座尺寸、平面形状、门殿相对位置或竣工年。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "三层为所述类型，具体构件年代未定；不把塔像作为516—528已完工证据。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR13",
+      "title": "宝光晋寺说与普泰门毁分层",
+      "entities": [
+        "w_baoguang"
+      ],
+      "quote": "隱士趙逸見而嘆曰：……「晉朝石塔寺，今為寶光寺也。」……寺門無何都崩",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·宝光寺赵逸说及普泰末段；跨段节录",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文所载人物发言与后续事件，不同叙事层分列",
+      "reading": "晋石塔寺同址归于文中赵逸之说；普泰末屯兵及门毁是另一事件层。",
+      "drawing": "把人物同址说与普泰末事件分别记录；只把门毁附于寺门构件，不画全寺焚毁。",
+      "limit": "传闻不变为连续建筑年表；寺门都崩不等于寺院整体消失，更不能据531—532语境倒推528前每个构件已存在。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "普泰末属盛时窗口之后；赵逸说不能自动补成盛时连续存续证据。",
+      "geographic_coordinates": null,
+      "event_scope": "temple_gate_only_for_collapse"
+    },
+    {
+      "id": "WR14",
+      "title": "法云与宝光近邻但不补院墙平面",
+      "entities": [
+        "w_fayun",
+        "w_baoguang"
+      ],
+      "quote": "在寶光寺西，隔牆並門。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·法云寺首段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "西向关系与隔墙并门分为方向、近邻两类。",
+      "drawing": "沿用两锚点，用关系符及隔墙并门文字；示意分隔线不进入母图作为真实墙线。",
+      "limit": "没有门朝向、墙体走向、两院面积或并列门间距；不能把法云的道北说成独立原文明记。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "w_fayun",
+          "relation": "west_of",
+          "object": "w_baoguang",
+          "basis": "direct"
+        },
+        {
+          "subject": "w_fayun",
+          "relation": "adjacent_separated_by_wall",
+          "object": "w_baoguang",
+          "basis": "direct",
+          "quote": "隔牆並門",
+          "wall_geometry": null,
+          "gate_orientation": null
+        }
+      ],
+      "temporal_note": "法云与宝光均保持undated；空间近邻不自动统一两寺建立时间。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR15",
+      "title": "法云胡饰与祗洹不另造寺点",
+      "entities": [
+        "w_fayun"
+      ],
+      "quote": "作祗洹寺一所，……佛殿僧房，皆為胡飾。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·法云寺摩罗营造段；跨句节录",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "祗洹一所承接法云寺叙述；周留寺字，范将寺字作为衍文处理。胡饰是文本装饰分类。",
+      "drawing": "主图为空心无塔寺院类型；构成栏列佛殿、僧房与胡饰文字，不生成另一处祗洹寺或具体异域建筑式样。",
+      "limit": "没有殿房数、朝向或院落足迹；丈六等佛像比喻不转成殿高或塔高；本条未记塔。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [
+        {
+          "source": "Z4",
+          "reading": "正文作祗洹寺一所，校语记逸史本无寺字。"
+        },
+        {
+          "source": "F4",
+          "reading": "以寺为衍文，取祗洹一所；本批不把这种差别变成两个地名。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "保留undated；摩罗活动与器物在寺叙述不单独确定建寺年。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR16",
+      "title": "临淮王宅只得法云寺北",
+      "entities": [
+        "w_linhuaizhai",
+        "w_fayun"
+      ],
+      "quote": "寺北有侍中尚書令臨淮王彧宅。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·法云寺后临淮王宅段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "寺北的寺承接法云；宅内南馆、后园的游憩叙述不改变宅与寺的外部关系。",
+      "drawing": "临淮王彧宅在原锚点替换为宅第类型；不添加围墙、分院或园池足迹。",
+      "limit": "北不等于共墙、相接或正对；不能以尚书令官衔给住宅营建定年。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "w_linhuaizhai",
+          "relation": "north_of",
+          "object": "w_fayun",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用原宅记录；不从后出官衔反推某年宅第才建立。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR17",
+      "title": "冲觉宅改寺与西明门道",
+      "entities": [
+        "w_chongjue",
+        "gate_ximing",
+        "road_ximing"
+      ],
+      "quote": "沖覺寺，太傅清河王懌捨宅所立也。……在西明門外一里御道北。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·冲觉寺首句；略去夹注",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "宅改寺、门外一里和道北分别保存；这是一条西明门道记录。",
+      "drawing": "原锚点替换为无塔寺院类型；旁板显示原宅、寺院、追福建塔三个层次。",
+      "limit": "一里端点不明，不从原宅西北楼、园池和文学比拟摹成寺院平面；不得与西阳门道相接混同。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "w_chongjue",
+          "relation": "outside_gate",
+          "object": "gate_ximing",
+          "basis": "direct",
+          "distance": 1,
+          "unit": "里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "w_chongjue",
+          "relation": "north_of",
+          "object": "road_ximing",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用寺院attested_by_528；宅、寺、塔不是同一时点全部新建。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR18",
+      "title": "冲觉追福建塔不能视为盛时全程完工",
+      "entities": [
+        "w_chongjue"
+      ],
+      "quote": "孝昌元年，太后還總萬機，……為文獻追福，建五層浮圖一所，工作與瑤光寺相似也。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·冲觉寺元怿追赠及建塔段；跨段节录",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "追福建塔在孝昌元年太后复政之后的叙事背景中；五层有明文，独立竣工年未记。",
+      "drawing": "五层塔只放构件与时层板，标525年复政后工程背景、528前完工未证；主图寺型不添塔。",
+      "limit": "不能把525年当作完工年；工作相似不提供相同高度、尺寸、院落或营造日期。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "沿用five_storey_after_525_completion_before_cutoff_unproved；不改为528年前必定竣工。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR19",
+      "title": "宣忠所在地保留西阳门道约束",
+      "entities": [
+        "w_xuanzhong",
+        "gate_xiyang",
+        "road_xiyang"
+      ],
+      "quote": "在西陽門外一里御道南。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·宣忠寺首句",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "地点记录属于后来宣忠寺条；本项目盛时图在同一示意锚点回置其原宅身份。",
+      "drawing": "沿用原锚点与一里、道南关系，主图名称为城阳王徽宅〔后宣忠〕，使用宅型。",
+      "limit": "不把后宣忠寺名直接放进516—528寺院层，不从一里推出宅墙形状或寺址实测中心。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "w_xuanzhong",
+          "relation": "outside_gate",
+          "object": "gate_xiyang",
+          "basis": "direct",
+          "distance": 1,
+          "unit": "里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "w_xuanzhong",
+          "relation": "south_of",
+          "object": "road_xiyang",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用later_temple；地点与用途时间分别登记。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR20",
+      "title": "宣忠分原宅、许愿与兑现舍宅",
+      "entities": [
+        "w_xuanzhong"
+      ],
+      "quote": "徽願入洛陽，捨宅為寺。及北海敗散，國道重暉，遂捨宅焉。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·宣忠寺永安中北海王入洛段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "许愿发生于胜负未决，兑现舍宅在北海败散后；周、范均校永康为永安。",
+      "drawing": "构件与时层板依次列原宅、战时许愿、529年事件后的舍宅；主图仍保留宅型。",
+      "limit": "所立二字不能单独前推建寺；兑现舍宅也不是完整建筑竣工报告，不补出529年具体建造日。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [
+        {
+          "source": "Z4",
+          "reading": "正文永安；周以别本校正传文永康，并以元颢事件解释。"
+        },
+        {
+          "source": "F4",
+          "reading": "正文标永康（安），同以永安读；没有与周相异的早建寺年代。"
+        }
+      ],
+      "constraints": [],
+      "temporal_note": "沿用元颢529年败散后的寺院状态；不前推至525或528年。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR21",
+      "title": "王典御留非定位旁注",
+      "entities": [
+        "w_wangdianyu",
+        "w_xuanzhong"
+      ],
+      "quote": "宣忠寺東王典御寺，閹官王桃湯所立也。……門有三層浮圖一所",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·王典御寺首句与门塔段；跨段节录",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "相对东向有明文，门有三层塔是单独构件叙述；以后来宣忠寺名作地理参照不自动把两寺定为同年始建。",
+      "drawing": "王典御保持appendix:E06非定位旁注；三层塔只作为旁注构件，不新添道路节点。",
+      "limit": "东不等于同纬、共墙或确定道南；门有不提供寺门朝向、塔与门的精确平面或528前竣工证据。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [
+        {
+          "subject": "w_wangdianyu",
+          "relation": "east_of",
+          "object": "w_xuanzhong",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用attested_by_528及原有施主证据链；本批不把宣忠的529年改寺事件套给王典御。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR22",
+      "title": "宜年两宅与舍半宅不拆成寺院地块",
+      "entities": [
+        "w_yinian",
+        "w_yongming",
+        "w_chenliu",
+        "w_huyuanji"
+      ],
+      "quote": "寺西有宜年里，里內有陳留王景皓、侍中安定公胡元吉等二宅。……遂捨半宅安置佛徒",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·永明寺后宜年里及景皓宅段；跨段节录",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": true,
+      "textual_layer": "古籍正文及宜年校订读法",
+      "reading": "寺西承接永明；两宅是里内无序成员；舍半宅的主语承接景皓，表示住宅部分用于安置佛徒。",
+      "drawing": "宜年与永明维持关系旁注；两宅继续合在里内目录，不拆新锚点；半宅用用途文字，不画一分为二的院落。",
+      "limit": "宜年在永明西不确定其与大觉、融觉的相对先后；半宅没有分割方向、面积单位或独立寺名，不能自动增设一座寺。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [
+        {
+          "source": "Z4",
+          "reading": "周据《元河南志》改宜牛为宜年。"
+        },
+        {
+          "source": "F4",
+          "reading": "范同取宜年，保留宜牛传文。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "w_yinian",
+          "relation": "west_of",
+          "object": "w_yongming",
+          "basis": "direct"
+        },
+        {
+          "subject": "w_chenliu",
+          "relation": "within",
+          "object": "w_yinian",
+          "basis": "direct"
+        },
+        {
+          "subject": "w_huyuanji",
+          "relation": "within",
+          "object": "w_yinian",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "永安二年像事不是舍半宅的独立起始年；不把后续神异事件转换为改寺年表。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR23",
+      "title": "白马西阳条的三里与道南",
+      "entities": [
+        "w_baima_xiyang",
+        "gate_xiyang",
+        "road_xiyang"
+      ],
+      "quote": "寺在西陽門外三里御道南。",
+      "quote_source": "Z4",
+      "quote_locator": "卷四·白马寺首段",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "保留西阳门外三里及道南两类约束；三里为所取正文读法，范校记所引《太平御览》无三里字。",
+      "drawing": "原锚点改为空心无塔寺院类型，明确标签白马寺〔西阳条〕及年未定。",
+      "limit": "量距端点未记；汉明帝所立是本书建寺传统，不能单独证明同一寺塔在516—528连续存续，也不借现代白马寺补坐标。",
+      "sources": [
+        "Z4",
+        "F4"
+      ],
+      "variants": [
+        {
+          "source": "F4",
+          "reading": "范正文有三里，校语记《太平御览》引文无三里；本批未独立校该引书。"
+        }
+      ],
+      "constraints": [
+        {
+          "subject": "w_baima_xiyang",
+          "relation": "outside_gate",
+          "object": "gate_xiyang",
+          "basis": "direct",
+          "distance": 3,
+          "unit": "里",
+          "distance_endpoints": null
+        },
+        {
+          "subject": "w_baima_xiyang",
+          "relation": "south_of",
+          "object": "road_xiyang",
+          "basis": "direct"
+        }
+      ],
+      "temporal_note": "沿用undated；不由汉代建寺传统把全部建筑定为盛时必存。",
+      "geographic_coordinates": null
+    },
+    {
+      "id": "WR24",
+      "title": "白马两条记录保留身份待考",
+      "entities": [
+        "w_baima_xiyang",
+        "r_baima_chanjian"
+      ],
+      "quote": "京西瀍澗有白馬寺、照樂寺。",
+      "quote_source": "Z5",
+      "quote_locator": "卷五·京师总叙末郭外寺名单",
+      "quote_is_excerpt": true,
+      "ellipsis_is_editorial": false,
+      "textual_layer": "古籍正文短引（按所标电子整理本，夹注分离）",
+      "reading": "卷四西阳门外条与卷五京西瀍涧附见条各有定位语；本批保留两条既有记录，不以同名强合，也不宣称已经证明为两座不同寺。",
+      "drawing": "本批只改西阳条原图符；瀍涧条维持既有附见位置及ID，界面标明身份未决。",
+      "limit": "没有完成两条同一性论证；名单次序不构成白马与照乐的东西序，郭外总叙不提供现代经纬度。",
+      "sources": [
+        "Z5",
+        "F5",
+        "Z4",
+        "F4"
+      ],
+      "variants": [],
+      "constraints": [],
+      "temporal_note": "两条均保留undated；不互相借年代补成连续建寺史。",
+      "geographic_coordinates": null,
+      "identity_policy": "two_records_same_site_unresolved"
+    }
+  ],
+  "ancient_absolute_positions_added": 0,
+  "source_family_count": 1,
+  "existing_entity_usage": {
+    "main_node_ids": [
+      "w_dajue",
+      "w_rongjue",
+      "w_fayun",
+      "w_baoguang",
+      "w_linhuaizhai",
+      "w_baima_xiyang",
+      "w_xuanzhong",
+      "w_chongjue"
+    ],
+    "city_gate_ids": [
+      "gate_changhe_west",
+      "gate_xiyang",
+      "gate_ximing"
+    ],
+    "road_reference_ids": [
+      "road_changhe_west",
+      "road_xiyang",
+      "road_ximing"
+    ],
+    "sidecar_or_group_ids": [
+      "w_yongming",
+      "w_wangdianyu",
+      "w_yinian",
+      "w_chenliu",
+      "w_huyuanji"
+    ],
+    "identity_or_context_only_ids": [
+      "ic_changhe_palace",
+      "gate_chengming",
+      "r_baima_chanjian"
+    ]
+  },
+  "main_glyph_policy": {
+    "changed_groups": 11,
+    "node_groups": 8,
+    "city_gate_groups": 3,
+    "move_existing_anchors": false,
+    "new_world_nodes": 0,
+    "temple_towers_in_main_map": false,
+    "main_temple_type": "无塔寺院类型；空心／盛时时态按既有实体保留",
+    "residence_nodes": [
+      "w_linhuaizhai",
+      "w_xuanzhong"
+    ],
+    "conditional_tower_panel": [
+      "w_rongjue",
+      "w_chongjue",
+      "w_baoguang"
+    ],
+    "later_tower_panel": [
+      "w_dajue"
+    ],
+    "nonspatial_tower_annotation": [
+      "w_wangdianyu"
+    ],
+    "gate_type": "通用城门符号，不数层；宫前阊阖不在本批改符范围"
+  },
+  "notes": [
+    "六个电子卷册来自同一部古籍的两种现代整理，不算六份独立目击材料。",
+    "字段分开古文短引、校读、解释、画法和限制；省略号由本项目加入，未把现代注释伪装成古籍正文。",
+    "图符只替换原有11组类型，八个节点和三座城门均不移锚；寺塔只在独立构件与时层板或既有旁注表达。",
+    "同向于第三点不产生两点之间的确定次序；关系图上的线、卡片位置和空白均不增加道路、同纬或里程测量。",
+    "三门道只作局部路侧参照，不增加路网互通、道路宽度、曲折或实测中心线。",
+    "大觉、宝光、法云、白马西阳条仍为年未定；宣忠在盛时图仍显示原宅；不把后出塔或改寺事件推回516—528。",
+    "不补院墙、建筑尺寸、开间、现代坐标或古地貌；现有咸池等未列为本批类型改动的对象不扩展。"
+  ],
+  "improvements": [
+    {
+      "id": "B5-I1",
+      "title": "明确三寺只是偏序关系",
+      "evidence": [
+        "WR05",
+        "WR06",
+        "WR22"
+      ],
+      "change": "给出两个均容许的东西次序，并保留同一东西坐标而南北不同的可能，防止旁图强排永明与融觉。"
+    },
+    {
+      "id": "B5-I2",
+      "title": "寺院与塔构件分开定年",
+      "evidence": [
+        "WR04",
+        "WR09",
+        "WR12",
+        "WR18",
+        "WR21"
+      ],
+      "change": "主图不加塔；融觉五层、冲觉追福建塔、宝光三层和大觉永熙砖塔分别进入有条件的构件时层。"
+    },
+    {
+      "id": "B5-I3",
+      "title": "新增版本差异的图示约束",
+      "evidence": [
+        "WR04",
+        "WR08",
+        "WR15",
+        "WR23"
+      ],
+      "change": "一里／三里、怀／环、祗洹寺字及白马三里引文异记均入账；不同读法不被图形消解。"
+    },
+    {
+      "id": "B5-I4",
+      "title": "宅用转换按事件阶段区分",
+      "evidence": [
+        "WR17",
+        "WR20",
+        "WR22"
+      ],
+      "change": "原宅、建寺或舍宅、追福塔分层；舍半宅安置佛徒不直接变成新寺与两块院落。"
+    },
+    {
+      "id": "B5-I5",
+      "title": "建筑材料与事件范围收紧",
+      "evidence": [
+        "WR12",
+        "WR13",
+        "WR14"
+      ],
+      "change": "石基不等于全塔石造，寺门崩不等于全寺毁，隔墙并门不提供可绘的墙线与门向。"
+    },
+    {
+      "id": "B5-I6",
+      "title": "保持同名实体和同名记录边界",
+      "evidence": [
+        "WR02",
+        "WR24"
+      ],
+      "change": "城西／宫前阊阖是已区分实体；白马西阳／瀍涧是同一性待考的两条记录，二者判断强度不混用。"
+    }
+  ]
+}
