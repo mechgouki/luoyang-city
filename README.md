@@ -4,9 +4,9 @@
 仓库：`mechgouki/luoyang-city`；既有研究工作线：**B1—B8**。
 
 <!-- current-state:start -->
-当前状态（2026-11-22）：研究 **R10.1 / city-layout-r10**（全城总平面与十一片区布局系统深化）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-23）：研究 **R11.1 / city-plan-r11**（全城统一坐标复原工作平面）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html) · [上一已验收发布 `1a988bc`](https://github.com/mechgouki/luoyang-city/actions/runs/44998481483) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/32621e28d2c917338b29996c3248e509ea5bcea8/evidence/city-spatial-r9/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html) · [上一已验收发布 `a2d1aac`](https://github.com/mechgouki/luoyang-city/actions/runs/45035882296) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/e5340efff1ae72e9fbdc7ecf48cc79527438eaa4/evidence/city-layout-r10/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->
@@ -22,6 +22,8 @@
 ## 当前成果与正式入口
 
 正式网站：[mechgouki.github.io/luoyang-city](https://mechgouki.github.io/luoyang-city/)。现有GitHub Actions在main提交后自动构建、部署、验收；无需重新设置Pages。每批正式完成以对应提交的build、deploy、verify-live全部成功为准。
+
+**R11.1 全城统一坐标复原工作平面**提供[可回查的共同母图](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html)：保留28项来源骨架，接入阊阖门与永宁寺33项局部原图构件、4个有据尺度片、独立可切换的2013宫城刊图24项对照要素，以及148个文献候选位置签。全城、局部和十一片区共16个取景使用同一几何，附17页矢量PDF、4份CSV、完整JSON与离线包。339项目录逐项交代，165项仍保留未定位；共同绘图坐标不等于完成全城实测配准或每栋建筑的真实轮廓。[研究范围与依据](docs/city-plan-r11-research.md)。首页图像继续V12，正式发布与长期验收见#52。
 
 **R10.1 全城总平面与十一片区布局系统深化**把来源总图与各区内部关系接入[城市布局图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html)。全城图保留28项古迹来源几何与既有缺口；十一片区分别展开方位、通行次序、成员归属和沿革，不把无序名录画成街坊坐标。339个原对象、84条道路证据和34项水系索引均保留完整去向，提供逐项“空间判断—依据—图面变化”、16页PDF、12张SVG、4份CSV及离线包。[本轮研究与完成范围](docs/city-layout-r10-research.md)。首页继续使用V12，全景候选保留V13二修；新增古代坐标、古岸和定位等级提升均为0。正式上线及长期验收证据以#52的本轮交接为准。
 
@@ -43,6 +45,7 @@ P3把阊阖门从外接尺度片推进到[局部考古平面](https://mechgouki.
 
 | 工作线 | 内容 | 入口 |
 | --- | --- | --- |
+| 盛时R11.1 | 全城统一坐标母图、三组原图来源、十一片区同坐标取景、339项去向与302条关系、17页图册 | [全城复原工作平面](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html) |
 | 盛时R10.1 | 全城总平面、十一片区深化、339对象与118条路水记录覆盖、逐项依据和16页图册 | [城市布局图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html) |
 | 盛时R6.2 | 84条道路、门道与桥道证据，339实体覆盖核对；分级图、逐路表、离线包 | [全城道路总览](https://mechgouki.github.io/luoyang-city/luoyang-all-roads.html) |
 | 盛时R6.1 | 原有21条主干道来源与三处接续专题 | [主干道来源图](https://mechgouki.github.io/luoyang-city/luoyang-road-atlas.html) |

@@ -89,6 +89,10 @@ SITE = [
         ('node', '--check', 'web/city-layout-r10.js'),
         ('python', 'tools/city_layout_r10.py'),
     ]),
+    ('R11.1 shared-coordinate city reconstruction plan', [
+        ('node', '--check', 'web/city-plan-r11.js'),
+        ('python', 'tools/city_plan_r11.py'),
+    ]),
 ]
 
 

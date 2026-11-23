@@ -56,6 +56,8 @@ def add_home(content):
 
 def restore_r9_context(info, reader):
     """Validate R10's additions, then supply the exact prior release and homes."""
+    from city_plan_r11_contract import restore_r10_context
+    info, reader = restore_r10_context(info, reader)
     if KEY not in info:
         return info, reader
     get = lru_cache(maxsize=None)(reader)
