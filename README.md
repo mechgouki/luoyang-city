@@ -4,9 +4,9 @@
 仓库：`mechgouki/luoyang-city`；既有研究工作线：**B1—B8**。
 
 <!-- current-state:start -->
-当前状态（2026-11-23）：研究 **R11.1 / city-plan-r11**（全城统一坐标复原工作平面）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-23）：研究 **R12.1 / panorama-review-v14**（共同透视底稿与试绘审查（试绘未通过））；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html) · [上一已验收发布 `a2d1aac`](https://github.com/mechgouki/luoyang-city/actions/runs/45035882296) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/e5340efff1ae72e9fbdc7ecf48cc79527438eaa4/evidence/city-layout-r10/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html) · [上一已验收发布 `129abae`](https://github.com/mechgouki/luoyang-city/actions/runs/45103224890) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/b276f8e9495be7d4e8a38ddfa65ffc2bf9e85611/evidence/city-plan-r11/2026-11-23/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->
@@ -22,6 +22,8 @@
 ## 当前成果与正式入口
 
 正式网站：[mechgouki.github.io/luoyang-city](https://mechgouki.github.io/luoyang-city/)。现有GitHub Actions在main提交后自动构建、部署、验收；无需重新设置Pages。每批正式完成以对应提交的build、deploy、verify-live全部成功为准。
+
+**R12.1 共同透视底稿与试绘审查：底稿已形成，全景校正尚未完成。** 本轮将 R11 的来源几何送入同一个可复算的地面透视，形成全城总览、永宁寺局部底稿、计层示意与逐项依据／偏差对照。V14 主显示保留第五次未通过试绘：南门层数、门基与寺墙位置、佛殿和塔座尺度及宫城关系仍有未解决问题；追加试绘单独留存，不覆盖该张的审查档案。[R12 审查页](https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html)的技术发布与图像视觉通过分别判断，当前不预先宣告上线验收，实际发布状态见[#52](https://github.com/mechgouki/luoyang-city/issues/52)。[透视方法](docs/panorama-r12-projection.md)与[审查状态说明](docs/panorama-v14.md)保留候选绑定和艺术高度的边界；首页继续采用已批准 V12，V13 二修原样保留。
 
 **R11.1 全城统一坐标复原工作平面**提供[可回查的共同母图](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html)：保留28项来源骨架，接入阊阖门与永宁寺33项局部原图构件、4个有据尺度片、独立可切换的2013宫城刊图24项对照要素，以及148个文献候选位置签。全城、局部和十一片区共16个取景使用同一几何，附17页矢量PDF、4份CSV、完整JSON与离线包。339项目录逐项交代，165项仍保留未定位；共同绘图坐标不等于完成全城实测配准或每栋建筑的真实轮廓。[研究范围与依据](docs/city-plan-r11-research.md)。首页图像继续V12，正式发布与长期验收见#52。
 

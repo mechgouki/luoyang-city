@@ -1,0 +1,747 @@
+{
+  "schema": "luoyang-r12-failed-sample-alignment-audit-v1",
+  "research_version": "R12.1",
+  "attempt": 5,
+  "status": "rejected_sample_diagnostic_not_accepted_candidate",
+  "source_image": {
+    "path": "research/panorama-r12/panorama-v14-source.png",
+    "sha256": "45813547ae4555e9b60226f72adfd6df75aa0a36324a23c50966adc3092a0fa6",
+    "original_review_path": "/workspace/scratch/b7f9dff5a3b9/generated_images/exec-9fdf3c6d-51bd-4a14-a1a4-15f1e5da65cb.png",
+    "canvas_px": [
+      1672,
+      941
+    ],
+    "modified": false,
+    "embedded_in_diagram": false
+  },
+  "review": {
+    "path": "research/panorama-r12/reviews/v14-attempt5-review.json",
+    "sha256": "63d50a665ae7f20cc679132f6f693045fcac4c3863033283c9280ab2e4476bc3",
+    "status": "rejected_geometry_drift_and_two_storey_gate",
+    "manual_observation_pointer": "/manual_ground_observations"
+  },
+  "source_inputs_sha256": {
+    "research/city-plan-r11/frame-bindings.json": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+    "research/city-plan-r11/palace-2013-published-plan.json": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+    "research/city-plan-r11/yongning-published-plan.json": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+    "research/city-spatial-r9/panorama-v13-r2-source.png": "b2bc1486c1e6a7461fcbafd7234b4e15365cc3f65d3f454eb20882818284ade4",
+    "research/prosperity-v1/building-dimensions.json": "ca9a5cf39563408142ab306a435bce3687ab9ce65088975f57c107a1dcbaee87",
+    "research/prosperity-v1/geographic-evidence.json": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79",
+    "research/prosperity-v3/gate-plan.json": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+    "research/prosperity-v4/axis-measurements.json": "8b054867c5e8755dba0fb9fe1b4127237f06ed78d3f4427f6ad4b62d6201ef5c",
+    "research/prosperity-v4/city-distribution-p451.json": "8749bac2e6f56f017b99790b11d757edb165a4903749665a30b67c5430f932f9",
+    "research/prosperity-v4/primary-source-audit.json": "a7253522b17c90ec6d5bfdba9863e46efac6822c1e53697029bab9369ab92e78",
+    "tools/city_plan_r11_geometry.py": "1a930b9360a1d7259328e279283c78ae048d36af178d708a53d9537b468848b1",
+    "tools/panorama_r12_projection.py": "2dcb6574bf6f8685d8196b1f3934b9b5edb94186cb5cf6120d4169bc40fa3f52",
+    "tools/prosperity_gate_geometry.py": "18b381629e2bc4c3fb490fa35c771627007d083305e6bbf972e5bf1813d3112e",
+    "tools/prosperity_maps.py": "b4a41e3787a9d60d639170ce238e65916fb3f4c0df9ad1f9654cf2153ebe1d23",
+    "research/panorama-r12/projection.json": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+    "research/panorama-r12/reviews/v14-attempt5-review.json": "63d50a665ae7f20cc679132f6f693045fcac4c3863033283c9280ab2e4476bc3",
+    "research/panorama-r12/panorama-v14-source.png": "45813547ae4555e9b60226f72adfd6df75aa0a36324a23c50966adc3092a0fa6",
+    "tools/panorama_r12_alignment.py": "ba3ea574bbffcfe3e6313d6fe0a262d53866c96fed8c42f9112654cd0b462b7a"
+  },
+  "ground_projection": {
+    "path": "research/panorama-r12/projection.json",
+    "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+    "matrix_id": "r12-shared-ground-homography-v1",
+    "source_xy_m_to_canvas_homography": [
+      [
+        0.38,
+        0.0383708090217182,
+        424.9862599932897
+      ],
+      [
+        0.0,
+        -0.08848822067306178,
+        206.51863997840601
+      ],
+      [
+        0.0,
+        0.00012,
+        1.0
+      ]
+    ],
+    "modified": false
+  },
+  "drawing": {
+    "canvas_px": [
+      1920,
+      1430
+    ],
+    "original_pixel_window": [
+      440,
+      390,
+      590,
+      495
+    ],
+    "uniform_display_scale": 4.6,
+    "panel_origins_px": [
+      [
+        120,
+        275
+      ],
+      [
+        1040,
+        275
+      ]
+    ],
+    "mapping": "panel_pixel = panel_origin + 4.6 * (original_pixel - [440,390])",
+    "manual_width_display": "Interval bars are centred on the approximate reference point solely for display; they are not traced foundation edges.",
+    "tower_bracket": "The gutter bracket uses only source-image y; its drawing x is not an observed tower coordinate."
+  },
+  "frozen_target_features": [
+    {
+      "id": "r11-yongning-YN11-WALL-N",
+      "label": "北寺墙图示段",
+      "geometry_role": "published_wall_centerline",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            467.4742873083488,
+            399.25559465852564
+          ],
+          [
+            565.1938056375262,
+            403.28067049282544
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        467.4742873083488,
+        399.25559465852564,
+        565.1938056375262,
+        403.28067049282544
+      ],
+      "ground_centre_px": [
+        516.2476894771431,
+        401.26457552317635
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-WALL-N",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/0",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；北寺墙图示段",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "本图北墙没有可辨北门基址；不得自动切出或绘制北门。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    },
+    {
+      "id": "r11-yongning-YN11-WALL-W-N",
+      "label": "西寺墙北段",
+      "geometry_role": "published_wall_centerline",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            467.4742873083488,
+            399.25559465852564
+          ],
+          [
+            462.72010468931427,
+            425.8613778027575
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        462.72010468931427,
+        399.25559465852564,
+        467.4742873083488,
+        425.8613778027575
+      ],
+      "ground_centre_px": [
+        465.12469450226286,
+        412.40459663957864
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-WALL-W-N",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/1",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；西寺墙北段",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    },
+    {
+      "id": "r11-yongning-YN11-WALL-W-S",
+      "label": "西寺墙南段",
+      "geometry_role": "published_wall_centerline",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            462.0709022051143,
+            430.3509122441442
+          ],
+          [
+            458.9863396322854,
+            447.102034510924
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        458.9863396322854,
+        430.3509122441442,
+        462.0709022051143,
+        447.102034510924
+      ],
+      "ground_centre_px": [
+        460.5396039645665,
+        438.6668285041268
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-WALL-W-S",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/2",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；西寺墙南段",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    },
+    {
+      "id": "r11-yongning-YN11-WALL-E-N",
+      "label": "东寺墙北段",
+      "geometry_role": "published_wall_centerline",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            565.1938056375262,
+            403.28067049282544
+          ],
+          [
+            562.324737795491,
+            428.4097351759129
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        562.324737795491,
+        403.28067049282544,
+        565.1938056375262,
+        428.4097351759129
+      ],
+      "ground_centre_px": [
+        563.7749008464285,
+        415.70831328057636
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-WALL-E-N",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/3",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；东寺墙北段",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "东门文字及标位使图线中断；中断长度不是测得的门宽。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    },
+    {
+      "id": "r11-yongning-YN11-WALL-E-S",
+      "label": "东寺墙南段",
+      "geometry_role": "published_wall_centerline",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            561.4949404537969,
+            435.0006315707283
+          ],
+          [
+            559.2307430698497,
+            454.20724977101935
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        559.2307430698497,
+        435.0006315707283,
+        561.4949404537969,
+        454.20724977101935
+      ],
+      "ground_centre_px": [
+        560.3720395964349,
+        444.52591774808974
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-WALL-E-S",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/4",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；东寺墙南段",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "东门文字及标位使图线中断；中断长度不是测得的门宽。",
+        "原图该墙线比南墙交点略向南伸出；按图保留，不据此增造建筑。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    },
+    {
+      "id": "r11-yongning-YN11-WALL-S-W",
+      "label": "南寺墙西段",
+      "geometry_role": "published_wall_centerline",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            461.1970087794827,
+            448.97062716885563
+          ],
+          [
+            501.04857202698804,
+            450.6819099481842
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        461.1970087794827,
+        448.97062716885563,
+        501.04857202698804,
+        450.6819099481842
+      ],
+      "ground_centre_px": [
+        481.10842979016445,
+        449.8256518933795
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-WALL-S-W",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/5",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；南寺墙西段",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "不跨接南门基址。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    },
+    {
+      "id": "r11-yongning-YN11-WALL-S-E",
+      "label": "南寺墙东段",
+      "geometry_role": "published_wall_centerline",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            522.9909441184601,
+            451.6870194761671
+          ],
+          [
+            559.1853791043394,
+            453.3449704817419
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        522.9909441184601,
+        451.6870194761671,
+        559.1853791043394,
+        453.3449704817419
+      ],
+      "ground_centre_px": [
+        541.0755538921585,
+        452.51541745976397
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-WALL-S-E",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/6",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；南寺墙东段",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "不跨接南门基址。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    },
+    {
+      "id": "r11-yongning-YN11-TOWER-PLINTH",
+      "label": "木塔基座主体图示轮廓",
+      "geometry_role": "published_plinth_outline",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              506.37317533111303,
+              426.2845122531554
+            ],
+            [
+              524.591242822159,
+              427.0468413449574
+            ],
+            [
+              523.682089361853,
+              433.7392898588529
+            ],
+            [
+              505.20998169191324,
+              432.96140816381563
+            ],
+            [
+              506.37317533111303,
+              426.2845122531554
+            ]
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        505.20998169191324,
+        426.2845122531554,
+        524.591242822159,
+        433.7392898588529
+      ],
+      "ground_centre_px": [
+        514.9257235013174,
+        430.0000000248516
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-TOWER-PLINTH",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/8",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；木塔基座主体图示轮廓",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "只描基座主体外框；不把内部发掘/复原柱础自动连成上部建筑、墙体或每层塔身。",
+        "局部原点取主体外框包围盒图示中心；不是现场测量点。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    },
+    {
+      "id": "r11-yongning-YN11-BUDDHA-HALL",
+      "label": "佛殿基址图示框",
+      "geometry_role": "published_site_box",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              505.04315824575576,
+              411.7648273296947
+            ],
+            [
+              529.9664043355086,
+              412.81538167358065
+            ],
+            [
+              529.6144320495563,
+              416.9903482169535
+            ],
+            [
+              504.29600672713417,
+              415.972467017574
+            ],
+            [
+              505.04315824575576,
+              411.7648273296947
+            ]
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        504.29600672713417,
+        411.7648273296947,
+        529.9664043355086,
+        416.9903482169535
+      ],
+      "ground_centre_px": [
+        517.1453515299111,
+        414.3716608423706
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-BUDDHA-HALL",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/13",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；佛殿基址图示框",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "只接受此刊载图标为佛殿基址的方框；不是新取得的佛殿完整发掘平面。",
+        "不得套用太极殿尺寸、柱网、廊庑或屋顶形式。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    },
+    {
+      "id": "r11-yongning-YN11-GATE-S",
+      "label": "南门基址图示轮廓",
+      "geometry_role": "published_gate_foundation_outline",
+      "placement_status": "candidate_source_symbol_attachment",
+      "projected_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              501.33622901835747,
+              449.0392434976136
+            ],
+            [
+              523.2662157738057,
+              449.92826333235286
+            ],
+            [
+              522.5799773250873,
+              453.3300259980001
+            ],
+            [
+              500.75015624282673,
+              452.3860135403606
+            ],
+            [
+              501.33622901835747,
+              449.0392434976136
+            ]
+          ]
+        ]
+      },
+      "ground_bbox_px": [
+        500.75015624282673,
+        449.0392434976136,
+        523.2662157738057,
+        453.3300259980001
+      ],
+      "ground_centre_px": [
+        512.0238528806669,
+        451.1807623298396
+      ],
+      "source_refs": [
+        {
+          "id": "yongning-published-YN11-GATE-S",
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/14",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "杭侃《洛阳伽蓝记》慧嶷故事四论，《故宫博物院院刊》2025年第11期，印页061图二右图／PDF第9页；重刊1996年永宁寺考古报告总平面；南门基址图示轮廓",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf",
+          "published_source_ids": [
+            "DPM2025-HK-P61-F2R"
+          ]
+        }
+      ],
+      "limits": [
+        "基址外框含实线和虚线段；未把每段判为同等实测精度。",
+        "只追摹基址边界，未从柱点推断门道数，也未引入三重楼观的立面。",
+        "长边可确定为图内大体东西方向；来源北针未外部注册，不能称测地真方位。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。",
+        "塔座图示中心向06a广义塔符候选绑定；同一物理中心及外部真北均未验证。"
+      ]
+    }
+  ],
+  "manual_ground_observations": {
+    "method": "人工在原图及只读放大上约读，主要点位约±5px、墙段约±10px；专门区分门槛、台阶、基宽与檐宽；不作精密历史量测。",
+    "yongning_low_wall_group": {
+      "observed_ground_bbox_approx_px": [
+        454,
+        420,
+        578,
+        483
+      ],
+      "observed_material_identity": "低墙/篱墙式艺术表达；不判定其已证材质",
+      "reference_ground_bbox_px": [
+        458.9863396322854,
+        399.25559465852564,
+        565.1938056375262,
+        454.20724977101935
+      ],
+      "assessment": "较目标整体偏前20–30px、略宽"
+    },
+    "south_gate": {
+      "observed_threshold_approx_px": [
+        515,
+        477
+      ],
+      "observed_building_front_base_width_approx_px": [
+        38,
+        43
+      ],
+      "observed_roof_eave_width_approx_px": [
+        48,
+        55
+      ],
+      "observed_stair_front_width_approx_px": [
+        56,
+        63
+      ],
+      "observed_stair_front_y_approx_px": [
+        486,
+        490
+      ],
+      "reference_centre_px": [
+        512.0081860083162,
+        451.18463474780685
+      ],
+      "difference_threshold_approx_px": [
+        3,
+        26
+      ],
+      "roof_and_stairs_used_as_source_foundation": false
+    },
+    "tower": {
+      "full_ground_centre_observed": null,
+      "lowest_timber_body_front_approx_px": [
+        516,
+        440
+      ],
+      "plinth_or_stair_front_y_approx_px": [
+        441,
+        445
+      ],
+      "reference_plinth_bbox_px": [
+        505.20998169191324,
+        426.2845122531554,
+        524.591242822159,
+        433.7392898588529
+      ],
+      "assessment": "较第四张塔基前移；前缘与原图中心口径不等，不能仅凭一个点声称精确"
+    },
+    "buddha_hall": {
+      "observed_building_front_base_centre_approx_px": [
+        517,
+        426
+      ],
+      "observed_building_front_base_width_approx_px": [
+        45,
+        50
+      ],
+      "reference_centre_px": [
+        517.1312055313214,
+        414.3775877733241
+      ],
+      "difference_approx_px": [
+        0,
+        12
+      ],
+      "roof_or_stairs_used_as_source_foundation": false
+    }
+  },
+  "visible_storey_counts": {
+    "south_gate": {
+      "complete_principal_storeys_clearly_visible": 2,
+      "target_three_verified": false,
+      "count_confidence": "high",
+      "rear_tower_level_not_counted": true
+    },
+    "tower": {
+      "total_independently_identified_principal_storeys": 9,
+      "target_nine_verified": true,
+      "extra_narrow_top_eave_band_present": true,
+      "extra_eave_band_counted_as_storey": false,
+      "count_confidence": "medium_high_due_small_raster_and_extra_top_eave",
+      "counting_rule": "主要木构层9；最上部附加窄檐带不算独立第10层，金刹/塔座/门楼均不算。"
+    }
+  },
+  "target_projected_bbox_width_px": {
+    "tower": 19.38126113024572,
+    "hall": 25.670397608374458,
+    "gate": 22.516059530978964
+  },
+  "field_registration_verified": false,
+  "new_ancient_coordinates": 0,
+  "homepage_replacement_approved": false,
+  "source_projection_fidelity_passed": false,
+  "obscured_tower_ground_centre_estimated": false,
+  "limits": [
+    "Frozen plan geometry and image manual observations have different evidence roles.",
+    "Thresholds, front-base points, stairs and source footprint centres are not interchangeable control points.",
+    "No observed foundation depth or full tower centre is invented.",
+    "Coordinates are pixels of the actual fifth image, not new measured historic locations.",
+    "The diagram explains this failed sample; it does not certify the full city or any upper structure."
+  ],
+  "outputs_sha256": {
+    "alignment-audit.svg": "3f46e8708a682e7ae1ad85cc66901b5d741f455e5ee7f0729012d6073b7a8ad6",
+    "alignment-audit.png": "391bb6ff57054d6e7c8d6c6d29392428b552093a36b260cb2ad4e96e1a6c6952"
+  }
+}

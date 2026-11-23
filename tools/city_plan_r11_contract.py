@@ -27,6 +27,8 @@ def digest(raw):
 
 
 def strip_current_entries(content):
+    from panorama_v14_contract import strip_current_entries as strip_v14_entries
+    content = strip_v14_entries(content)
     from city_layout_r10_contract import HOME_ENTRY as anchor
     if b'id="r11-plan-entry"' not in content:
         return content
@@ -44,6 +46,8 @@ def add_home(content):
 
 def restore_r10_context(info, reader):
     """Validate additions before exposing the exact previous publication bytes."""
+    from panorama_v14_contract import restore_r11_context
+    info, reader = restore_r11_context(info, reader)
     if KEY not in info:
         return info, reader
     get = lru_cache(maxsize=None)(reader)

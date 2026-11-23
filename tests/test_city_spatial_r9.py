@@ -250,6 +250,7 @@ class SpatialLiveContract(unittest.TestCase):
             verify_page(changed, self.data, self.info["files_sha256"])
 
     def test_a_new_outer_zip_checksum_cannot_hide_changed_inner_evidence(self):
+        from city_layout_r10_contract import restore_r9_context
         from zipfile import ZIP_DEFLATED
         contents = io.BytesIO()
         with ZipFile(self.site / self.meta["bundle"]) as original, ZipFile(contents, "w", ZIP_DEFLATED) as changed:
@@ -261,8 +262,28 @@ class SpatialLiveContract(unittest.TestCase):
         info["files_sha256"][self.meta["bundle"]] = digest(corrupted)
         def read(path):
             return corrupted if path == self.meta["bundle"] else (self.site / path).read_bytes()
-        with self.assertRaisesRegex(AssertionError, "Offline evidence differs"):
+
+        # Later publication layers may reject the changed predecessor inventory
+        # before the R9 verifier reaches the contents of the offline bundle.
+        with self.subTest(context="complete publication"), self.assertRaises(AssertionError):
             verify_live_spatial(info, read)
+
+        # Validate and restore the genuine predecessor before injecting the same
+        # corruption, so R9's own inner-evidence check is exercised independently.
+        restored, read_r9 = restore_r9_context(self.info, lambda path: (self.site / path).read_bytes())
+        for key in ("panorama_review_v14", "city_plan_r11", "city_layout_r10"):
+            self.assertNotIn(key, restored)
+        self.assertEqual(verify_live_spatial(restored, read_r9)["status"], "passed")
+        info_r9 = copy.deepcopy(restored)
+        info_r9["files_sha256"][self.meta["bundle"]] = digest(corrupted)
+
+        def read_corrupted_r9(path):
+            return corrupted if path == self.meta["bundle"] else read_r9(path)
+
+        with self.subTest(context="verified R9 view"), self.assertRaisesRegex(
+                AssertionError, "Offline evidence differs") as failure:
+            verify_live_spatial(info_r9, read_corrupted_r9)
+        self.assertEqual(failure.exception.args[0], (DATA, "Offline evidence differs"))
 
 
 if __name__ == "__main__":

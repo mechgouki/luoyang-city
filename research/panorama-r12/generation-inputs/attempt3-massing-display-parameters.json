@@ -1,0 +1,167 @@
+{
+  "schema": "luoyang-r12-illustrative-massing-v1",
+  "ground_projection_path": "research/panorama-r12/projection.json",
+  "ground_projection_sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+  "ground_matrix": [
+    [
+      0.38,
+      0.0383708090217182,
+      424.9862599932897
+    ],
+    [
+      0.0,
+      -0.08848822067306178,
+      206.51863997840601
+    ],
+    [
+      0.0,
+      0.00012,
+      1.0
+    ]
+  ],
+  "z0_uses_frozen_ground_projection": true,
+  "third_coordinate_role": "artistic_display_units_not_metres",
+  "projection_extension": "u=(H_row0 dot [x,y,1])/w; v=((H_row1 dot [x,y,1])-z_display)/w",
+  "tower_storeys": 9,
+  "south_gate_storeys": 3,
+  "storey_reference": "research/city-spatial-r9/panorama-candidate-review.json /checks/0 and /checks/2; these preserve the prior reviewed visual typology, not a new elevation measurement.",
+  "display_parameters": {
+    "tower": {
+      "floor_units": 6.2,
+      "roof_rise_units": 2.0,
+      "body_scale_inside_plinth": 0.82,
+      "linear_taper_per_level": 0.057,
+      "finial_units": 10
+    },
+    "south_gate": {
+      "floor_units": 2.0,
+      "roof_rise_units": 0.8,
+      "body_scale_inside_foundation": 0.87,
+      "linear_taper_per_level": 0.025
+    },
+    "buddha_hall": {
+      "floor_units": 8,
+      "roof_rise_units": 3,
+      "body_scale_inside_published_frame": 0.86
+    },
+    "taiji": {
+      "floor_units": 13,
+      "roof_rise_units": 4,
+      "body_scale_inside_scale_patch": 0.82
+    },
+    "changhe": {
+      "floor_units": 7,
+      "roof_rise_units": 2.5,
+      "body_scale_inside_source_base": 0.82
+    }
+  },
+  "source_inputs_sha256": {
+    "research/city-plan-r11/frame-bindings.json": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+    "research/city-plan-r11/palace-2013-published-plan.json": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+    "research/city-plan-r11/yongning-published-plan.json": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+    "research/city-spatial-r9/panorama-v13-r2-source.png": "b2bc1486c1e6a7461fcbafd7234b4e15365cc3f65d3f454eb20882818284ade4",
+    "research/prosperity-v1/building-dimensions.json": "ca9a5cf39563408142ab306a435bce3687ab9ce65088975f57c107a1dcbaee87",
+    "research/prosperity-v1/geographic-evidence.json": "80a2e5457789d0056bafe5cb5eb5df73bea23fb2e9d733a784ed0068562ead79",
+    "research/prosperity-v3/gate-plan.json": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+    "research/prosperity-v4/axis-measurements.json": "8b054867c5e8755dba0fb9fe1b4127237f06ed78d3f4427f6ad4b62d6201ef5c",
+    "research/prosperity-v4/city-distribution-p451.json": "8749bac2e6f56f017b99790b11d757edb165a4903749665a30b67c5430f932f9",
+    "research/prosperity-v4/primary-source-audit.json": "a7253522b17c90ec6d5bfdba9863e46efac6822c1e53697029bab9369ab92e78",
+    "tools/city_plan_r11_geometry.py": "1a930b9360a1d7259328e279283c78ae048d36af178d708a53d9537b468848b1",
+    "tools/panorama_r12_projection.py": "2dcb6574bf6f8685d8196b1f3934b9b5edb94186cb5cf6120d4169bc40fa3f52",
+    "tools/prosperity_gate_geometry.py": "18b381629e2bc4c3fb490fa35c771627007d083305e6bbf972e5bf1813d3112e",
+    "tools/prosperity_maps.py": "b4a41e3787a9d60d639170ce238e65916fb3f4c0df9ad1f9654cf2153ebe1d23",
+    "research/city-spatial-r9/panorama-candidate-review.json": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+  },
+  "source_r11_geometry_modified": false,
+  "illustrative_layer_centres_px": {
+    "r11-taiji-scale": [
+      [
+        630.9050399272769,
+        233.24110439239897
+      ]
+    ],
+    "r11-changhe-gate-main-base": [
+      [
+        649.9999998040162,
+        311.0977576433361
+      ]
+    ],
+    "r11-yongning-YN11-BUDDHA-HALL": [
+      [
+        517.2248616491718,
+        409.50086088014757
+      ]
+    ],
+    "r11-yongning-YN11-TOWER-PLINTH": [
+      [
+        514.9625802091239,
+        426.16437032054466
+      ],
+      [
+        514.9625802091239,
+        417.13604502583684
+      ],
+      [
+        514.9625802091239,
+        408.10771973112895
+      ],
+      [
+        514.9625802091239,
+        399.0793944364211
+      ],
+      [
+        514.9625802091239,
+        390.05106914171324
+      ],
+      [
+        514.9625802091239,
+        381.02274384700536
+      ],
+      [
+        514.9625802091239,
+        371.99441855229753
+      ],
+      [
+        514.9625802091239,
+        362.9660932575897
+      ],
+      [
+        514.9625802091239,
+        353.9377679628818
+      ]
+    ],
+    "r11-yongning-YN11-GATE-S": [
+      [
+        511.97937875699836,
+        449.9091303487505
+      ],
+      [
+        511.97937875699836,
+        446.8367198646912
+      ],
+      [
+        511.97937875699836,
+        443.76430938063186
+      ]
+    ]
+  },
+  "new_verified_building_heights": 0,
+  "new_ancient_coordinates": 0,
+  "field_registration_verified": false,
+  "not_historical_reconstruction": true,
+  "limits": [
+    "Only ground rings have the cited source roles. No upper-storey footprint, height, roof or taper is claimed as excavated.",
+    "Scale patches remain approximate scale patches, not measured complete building footprints.",
+    "No additional temple wall, north gate, cloister or symmetric corner tower is generated.",
+    "The 2x overview PNG only increases display resolution; the 1672x941 vector frame and H remain unchanged.",
+    "The 5.2x detail is a display enlargement of the same assembly; it must not be pasted into the city at enlarged size."
+  ],
+  "outputs_sha256": {
+    "massing-yongning-counted.png": "59d442d954e45eeafa573163eb783634e78d448675cd36795f3a43af63e0f45f",
+    "massing-yongning-clean.svg": "310331b205c29682f9dee3ac742adeb17ac0da3eb401d64f4ed97f14a70e940b",
+    "massing-overview-clean.png": "c517953a882f9f020cb8cfb3ef909f540a4eafcbc65cdbb54c10de5557c4b7b2",
+    "massing-yongning-clean.png": "1232dedd57c3edaa926048e2af71960a2cec40729b61f5ff33a22a3dab39be1e",
+    "massing-yongning-counted.svg": "3e5e749c693f085f08243d0c743fa7717fdc72885ca4deacafdd6201424e2202",
+    "massing-overview-clean.svg": "bdcdee1ad3d2aed70a39c8fb218cd223239042392dd639c5d2d41f9fd0f45512"
+  }
+}

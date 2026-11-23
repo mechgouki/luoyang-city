@@ -1,0 +1,845 @@
+{
+  "schema": "luoyang-panorama-v14-change-evidence-draft-v1",
+  "status": "draft_pending_actual_image_review",
+  "research_version": "R12.1",
+  "candidate_version": "V14空间校正版候选",
+  "baseline_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+  "homepage_replacement_approved": false,
+  "actual_image_review_completed": false,
+  "source_png_sha256": null,
+  "entire_scene_historically_validated": false,
+  "usage": "这是来源依据与拟检项草稿，不是成图检查报告；observation、change及treatment_type须在最终PNG审核后按实际结果改写。不得直接并入已验收image-record。",
+  "finalization_requirements": [
+    "先冻结最终source_png及SHA-256，再逐项填写实际观察与变化；保留失败或未实现目标。",
+    "treatment_type从null改为changed、retained或not_located，必须由最终实图与来源的比较支持，不能仅复制planned_treatment_type。",
+    "完整图与手机图均从同一PNG按固定转换合同生成；审查、独立审查与图像记录全部绑定同一PNG身份。",
+    "相同H底稿的正确性不代替生成图的实际吻合度；按地面基脚估读，记录遮挡与误差。",
+    "外部落位未验证、新增古代坐标0、艺术高度与未知完整形制等限制继续保留。"
+  ],
+  "source_inputs_sha256": {
+    "research/city-plan-r11/yongning-published-plan.json": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+    "research/city-plan-r11/palace-2013-published-plan.json": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+    "research/city-plan-r11/frame-bindings.json": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+    "research/prosperity-v3/gate-plan.json": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+    "research/prosperity-v1/building-dimensions.json": "ca9a5cf39563408142ab306a435bce3687ab9ce65088975f57c107a1dcbaee87",
+    "research/prosperity-v4/axis-measurements.json": "8b054867c5e8755dba0fb9fe1b4127237f06ed78d3f4427f6ad4b62d6201ef5c",
+    "research/panorama-r12/projection.json": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+    "research/city-spatial-r9/panorama-image-record.json": "5d72c08ee3be927c51345b946f5fc955a23d0c4ec28c55fdde13c976d3a97955",
+    "research/city-spatial-r9/panorama-candidate-review.json": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401"
+  },
+  "changes": [
+    {
+      "id": "common-ground-frame",
+      "title": "共同平面进入统一透视底稿",
+      "review_status": "pending_actual_image_review",
+      "observation": "待最终实图审核：对照完整候选图与同一H底稿，检查寺院、宫门和太极的地面占位是否趋近共同框架；逐项记录偏差，不能用局部独立缩放冒充全城一致。",
+      "evidence": "R12底稿用同一投影矩阵处理R11的89项几何；两处构图锚点只是旧图附近的艺术位置。底稿保留来源几何身份，新增古代坐标及已证现场共同控制均为0。",
+      "change": "待最终实图审核后填写实际采用的变化、未达到的目标及残余偏差；当前只记录依据和拟检项，不代表成图已经实现。",
+      "limitation": "统一投影使来源内部尺度可以一并检查，但没有解决外部落位、真北、历史相机和古代地面；不能把地面底稿当建筑屋顶或立面。",
+      "treatment_type": null,
+      "planned_treatment_type": "changed",
+      "planned_adjustment": "对照完整候选图与同一H底稿，检查寺院、宫门和太极的地面占位是否趋近共同框架；逐项记录偏差，不能用局部独立缩放冒充全城一致。",
+      "review_criteria": [
+        "最终PNG与审查报告绑定同一SHA-256。",
+        "比较地面基脚，不把塔顶或屋脊当锚点。",
+        "任何尚未贴合底稿的对象在成图观察中明列；不得借底稿合格宣布成图合格。"
+      ],
+      "component_ids": [
+        "geo-yongning-pagoda-reference",
+        "geo-changhe-palace-gate",
+        "geo-taiji-hall-reference"
+      ],
+      "source_refs": [
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/source_xy_m_to_canvas_homography",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "全部几何共用的H矩阵"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/display_anchors",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "两个艺术构图锚点及非现场控制声明"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/validation",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "来源几何身份、单一矩阵和数量检查"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/field_registration_verified",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "外部注册仍未验证",
+          "source_value": false
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/new_ancient_coordinates",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "新增古代坐标为0",
+          "source_value": 0
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "R11坐标方法与外部落位限制",
+          "url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/docs/city-plan-r11-coordinate-method.md"
+        },
+        {
+          "label": "全城共同平面",
+          "url": "./luoyang-city-plan.html#plan-reader"
+        }
+      ],
+      "actual_image_measurements": null,
+      "source_png_sha256": null
+    },
+    {
+      "id": "yongning-whole-footprint",
+      "title": "永宁寺整组占地与寺墙长宽",
+      "review_status": "pending_actual_image_review",
+      "observation": "待最终实图审核：整组检查寺墙、塔基、佛殿和南门的相对比例与占地；避免只缩小单个门楼而仍把寺院整体画得过宽。",
+      "evidence": "永宁刊图以50米／157像素的统一图尺换算，寺墙平均东西约212米、南北约292米；与既有表列212×301米（UNESCO1442 PDF1931附录6）的差异保留。23项构件共同接入R11；R12底稿的七段寺墙地面包围框约为x459—565、y399—454像素，画布1672×941。",
+      "change": "待最终实图审核后填写实际采用的变化、未达到的目标及残余偏差；当前只记录依据和拟检项，不代表成图已经实现。",
+      "limitation": "这些是刊图量读和虚拟投影显示数值，不是现场复测；刊图塔座中心向06a概略塔符的候选绑定尚无外部控制。底稿框限用于比较地面占位，不能量取屋顶外檐。",
+      "treatment_type": null,
+      "planned_treatment_type": "changed",
+      "planned_adjustment": "整组检查寺墙、塔基、佛殿和南门的相对比例与占地；避免只缩小单个门楼而仍把寺院整体画得过宽。",
+      "review_criteria": [
+        "按最终图地面围墙或基脚估读寺院范围，并写清遮挡及读点误差。",
+        "七段寺墙和内部主构件作为同一组比较，不另行改变寺院内部比例。",
+        "不得把候选图视觉框直接写成精确古代米制坐标。"
+      ],
+      "component_ids": [
+        "YN11-WALL-N",
+        "YN11-WALL-W-N",
+        "YN11-WALL-W-S",
+        "YN11-WALL-E-N",
+        "YN11-WALL-E-S",
+        "YN11-WALL-S-W",
+        "YN11-WALL-S-E"
+      ],
+      "source_refs": [
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/calibration/scale_bar",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "50米尺端点与统一等比换算",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/temple_wall_width_mean_m",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "寺墙东西平均图读宽度",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json",
+          "source_value": 211.62766156672689
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/temple_wall_depth_mean_m",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "寺墙南北平均图读深度",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json",
+          "source_value": 291.5713966856655
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/comparisons/1",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "212×301米表值与刊图等比读数差异",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/5",
+          "sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+          "locator": "整组候选绑定与保留限制",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/frame-bindings.json"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/key_ground_bounds/yongning_wall_segments",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "同一H中的七段寺墙地面范围"
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "永宁寺刊载原图：印页061图二右图／PDF第9页",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf#page=9"
+        },
+        {
+          "label": "R11永宁寺共同平面与来源说明",
+          "url": "./luoyang-city-plan.html?view=yongning#plan-reader"
+        }
+      ],
+      "actual_image_measurements": null,
+      "source_png_sha256": null
+    },
+    {
+      "id": "south-gate-ground-and-storeys",
+      "title": "寺南门约45.7×19米基址与三重楼观分项核查",
+      "review_status": "pending_actual_image_review",
+      "observation": "待最终实图审核：检查南门地面基址横长纵浅、位于南寺墙入口；分别确认底层和其上两层主要木构空间可辨，并与前景城市南墙分开。",
+      "evidence": "刊载原图南门相对边平均长约45.7×19.0米，长边近东西；方向仅相对来源北针。三重楼观来自既有《洛阳伽蓝记》校读，V13r2已单列为三层视觉检查，不由此平面图反推。",
+      "change": "待最终实图审核后填写实际采用的变化、未达到的目标及残余偏差；当前只记录依据和拟检项，不代表成图已经实现。",
+      "limitation": "平面描线含实线和虚线；未知门道宽、柱网、楼层高度、屋顶收分和真方位。不能拿透视像素宽深比直接除出45.7／19，也不能把三道檐线自动当三层楼。",
+      "treatment_type": null,
+      "planned_treatment_type": "changed",
+      "planned_adjustment": "检查南门地面基址横长纵浅、位于南寺墙入口；分别确认底层和其上两层主要木构空间可辨，并与前景城市南墙分开。",
+      "review_criteria": [
+        "门基与南寺墙两翼衔接；没有前移到另一重围墙或城门。",
+        "地面长边方向及相对塔座尺度参照共同投影，不以屋檐宽代替基址宽。",
+        "独立可数三层主要楼层；后方塔檐、台基、重檐均不额外计层。"
+      ],
+      "component_ids": [
+        "YN11-GATE-S",
+        "YN11-WALL-S-W",
+        "YN11-WALL-S-E"
+      ],
+      "source_refs": [
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/14",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "南门基址图示轮廓",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/south_gate_mean_opposite_edge_lengths_m",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "约45.7×19.0米的直接计算项",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json",
+          "source_value": [
+            45.70340520380707,
+            18.950371457756365
+          ]
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/south_gate_long_edge_azimuth_deg_from_source_marked_north",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "相对图标北约96.2度，显示为长边近东西",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json",
+          "source_value": 96.21366070388198
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/key_ground_bounds/yongning_south_gate",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "统一H中的南门地面框"
+        },
+        {
+          "path": "research/city-spatial-r9/panorama-image-record.json",
+          "pointer": "/changes/0/evidence",
+          "sha256": "5d72c08ee3be927c51345b946f5fc955a23d0c4ec28c55fdde13c976d3a97955",
+          "locator": "V13r2保留的南门三重文献依据",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-spatial-r9/panorama-image-record.json",
+          "source_value": "《洛阳伽蓝记》永宁寺段分述四面寺门，南门为三重，东西门两重，北门不施屋。三重是形制依据，不能直接恢复全部构件和精确高度。"
+        },
+        {
+          "path": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/checks/0",
+          "sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401",
+          "locator": "前版三层视觉检查口径，不能作为新图通过证据",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-spatial-r9/panorama-candidate-review.json"
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "永宁寺刊载原图：印页061图二右图／PDF第9页",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf#page=9"
+        },
+        {
+          "label": "R11永宁寺共同平面与来源说明",
+          "url": "./luoyang-city-plan.html?view=yongning#plan-reader"
+        },
+        {
+          "label": "南门三重原文电子校释",
+          "url": "https://deerpark.app/cbeta/B0077/1"
+        },
+        {
+          "label": "前版V13r2检查口径",
+          "url": "./panorama-v13-r2/candidate-review.json"
+        }
+      ],
+      "actual_image_measurements": null,
+      "source_png_sha256": null
+    },
+    {
+      "id": "tower-plinth-and-nine-storeys",
+      "title": "约39米塔座、木塔地基与九层塔身分别处理",
+      "review_status": "pending_actual_image_review",
+      "observation": "待最终实图审核：检查塔座相对南门和寺院的地面尺度；逐层确认九层主要木构楼层，另计金刹与台基，避免较小寺院中的塔身因遮挡而不可数。",
+      "evidence": "刊图塔座主体外框在原图轴向约39.2×39.2米，四侧突出部分另列；更大的点划线框标为木塔地基，不能当塔身或塔院。九层塔身属于原有文献及视觉检查要求，平面资料未给出可复原的米制塔高。",
+      "change": "待最终实图审核后填写实际采用的变化、未达到的目标及残余偏差；当前只记录依据和拟检项，不代表成图已经实现。",
+      "limitation": "39米为刊图量读约数，不据此改写旧表值或强行缩放。柱础符号含发掘与复原两类，本轮未逐点提取；层高、收分、屋顶和金刹仍含展示取值。",
+      "treatment_type": null,
+      "planned_treatment_type": "changed",
+      "planned_adjustment": "检查塔座相对南门和寺院的地面尺度；逐层确认九层主要木构楼层，另计金刹与台基，避免较小寺院中的塔身因遮挡而不可数。",
+      "review_criteria": [
+        "塔座主体、四面突出踏道与木塔地基大框没有混成同一轮廓。",
+        "九层楼身逐层可辨，并记录门楼遮挡影响；只看檐口数量不足以通过。",
+        "不把未量得的塔高、金刹高度或收分写成历史已核尺寸。"
+      ],
+      "component_ids": [
+        "YN11-TOWER-FOUNDATION",
+        "YN11-TOWER-PLINTH",
+        "YN11-TOWER-ACCESS-N",
+        "YN11-TOWER-ACCESS-E",
+        "YN11-TOWER-ACCESS-S",
+        "YN11-TOWER-ACCESS-W"
+      ],
+      "source_refs": [
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/7",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "木塔地基点划线框与限制",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/8",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "塔座主体轮廓",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/measurements/tower_plinth_bbox_source_axes_m",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "塔座约39米方形的图读计算项",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json",
+          "source_value": [
+            39.17197452229299,
+            39.17197452229299
+          ]
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/key_ground_bounds/yongning_tower_plinth",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "统一H中的塔座地面框"
+        },
+        {
+          "path": "research/city-spatial-r9/panorama-image-record.json",
+          "pointer": "/changes/2/evidence",
+          "sha256": "5d72c08ee3be927c51345b946f5fc955a23d0c4ec28c55fdde13c976d3a97955",
+          "locator": "既有九层木塔与塔北佛殿依据",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-spatial-r9/panorama-image-record.json",
+          "source_value": "永宁寺九层木塔见文献，1995年日中联合调查报告亦述及木塔。塔北佛殿的方位有文献与既有布局研究支持。"
+        },
+        {
+          "path": "research/city-spatial-r9/panorama-candidate-review.json",
+          "pointer": "/checks/2",
+          "sha256": "ae831dd6d73e3146823a11cd013740fd1d3596bef90f0790585fb32dabb9d401",
+          "locator": "前版九层视觉检查口径，不能作为新图通过证据",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-spatial-r9/panorama-candidate-review.json"
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "永宁寺刊载原图：印页061图二右图／PDF第9页",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf#page=9"
+        },
+        {
+          "label": "R11永宁寺共同平面与来源说明",
+          "url": "./luoyang-city-plan.html?view=yongning#plan-reader"
+        },
+        {
+          "label": "日中联合调查报告：印页2—3",
+          "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/5227/1/AN00181387_1995_2_3.pdf"
+        },
+        {
+          "label": "前版V13r2九层检查口径",
+          "url": "./panorama-v13-r2/candidate-review.json"
+        }
+      ],
+      "actual_image_measurements": null,
+      "source_png_sha256": null
+    },
+    {
+      "id": "buddha-hall-and-wall-gaps",
+      "title": "塔北佛殿、寺墙与未明门址各按图线性质处理",
+      "review_status": "pending_actual_image_review",
+      "observation": "待最终实图审核：检查佛殿仍在塔北、寺墙围合和主构件相对距离遵从同一底稿；未证房群与通路在说明中明确为概括。",
+      "evidence": "刊图佛殿基址图示框位于塔北，七段寺墙保留线性质。东门只有标位Point；北门没有可追摹轮廓，西南角边线不补闭合，不能按寺院文字总间数生成僧房格网。",
+      "change": "待最终实图审核后填写实际采用的变化、未达到的目标及残余偏差；当前只记录依据和拟检项，不代表成图已经实现。",
+      "limitation": "佛殿框不是新取得的完整发掘平面，不能套用太极殿尺寸、柱网或屋顶。图例的发掘／复原分类针对点状柱础等符号，不能泛化为每段墙界的测绘性质。",
+      "treatment_type": null,
+      "planned_treatment_type": "changed",
+      "planned_adjustment": "检查佛殿仍在塔北、寺墙围合和主构件相对距离遵从同一底稿；未证房群与通路在说明中明确为概括。",
+      "review_criteria": [
+        "佛殿没有移到塔南或按太极殿尺寸复制。",
+        "成图中的北门、东门形体、回廊和僧房若仍出现，明确标为艺术概括而非本轮新证。",
+        "没有把来源文字遮挡造成的寺墙缺口量成门宽。"
+      ],
+      "component_ids": [
+        "YN11-BUDDHA-HALL",
+        "YN11-GATE-E-MARK",
+        "YN11-CORNER-SW"
+      ],
+      "source_refs": [
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/13",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "佛殿基址图示框及限制",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/16",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "东门只作Point标位",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/components/17",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "西南角楼开放边",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/yongning-published-plan.json",
+          "pointer": "/source_legend",
+          "sha256": "50ec5765675214909d5887f0f58ace2da9b812d98c4489bfd06d52fe249e5629",
+          "locator": "柱础类点状符号图例的适用范围",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/yongning-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/5/retained_limits",
+          "sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+          "locator": "北门、僧房等未补绘限制",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/frame-bindings.json",
+          "source_value": [
+            "06a七段寺墙另层原样保留",
+            "东门标位不扩大成完整门基",
+            "北门没有可追摹轮廓就不补绘",
+            "柱础实测/复原符号不混用",
+            "不按一千余间生成僧房网格"
+          ]
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/key_ground_bounds/yongning_buddha_hall",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "统一H中的塔北佛殿地面框"
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "永宁寺刊载原图：印页061图二右图／PDF第9页",
+          "url": "https://img.dpm.org.cn/Uploads/file/2026/03/03/1772531673ogEopWUYs218985.pdf#page=9"
+        },
+        {
+          "label": "R11永宁寺共同平面与来源说明",
+          "url": "./luoyang-city-plan.html?view=yongning#plan-reader"
+        }
+      ],
+      "actual_image_measurements": null,
+      "source_png_sha256": null
+    },
+    {
+      "id": "changhe-local-outline",
+      "title": "阊阖门主基、三通道与两阙开放边",
+      "review_status": "pending_actual_image_review",
+      "observation": "待最终实图审核：对照统一H检查宫门基脚及两侧可见边的相对安排，避免把完整对称门阙楼群或未知廊屋写为新核实建筑。",
+      "evidence": "S37来源图经自身20米图尺换算后，10项局部构件保留主门基、三通道可辨中段、两阙边线、地下虚线与连接路径。表列44.5×24.4米作为独立核对，不反向缩放S37描线；R11只是把图示原点向06a宫门图符作候选绑定。",
+      "change": "待最终实图审核后填写实际采用的变化、未达到的目标及残余偏差；当前只记录依据和拟检项，不代表成图已经实现。",
+      "limitation": "两阙和连接路径不构成已证完整上部楼阁或回廊；图线缺口保持缺口。图标北、局部原点和外部地理位置尚未用共同测点验证。",
+      "treatment_type": null,
+      "planned_treatment_type": "changed",
+      "planned_adjustment": "对照统一H检查宫门基脚及两侧可见边的相对安排，避免把完整对称门阙楼群或未知廊屋写为新核实建筑。",
+      "review_criteria": [
+        "主门基与三条可辨通道的证据性质保留，不声称柱网或门道全长已知。",
+        "开放基础边不在证据底稿中被自动闭合；成图中完整上部形体单列展示性质。",
+        "门基表值与S37图尺读数的差异不通过移动或拉伸源几何消除。"
+      ],
+      "component_ids": [
+        "gate-main-base",
+        "gate-passage-west",
+        "gate-passage-central",
+        "gate-passage-east",
+        "gate-west-que",
+        "gate-east-que",
+        "gate-west-underground",
+        "gate-east-underground",
+        "gate-west-link",
+        "gate-east-link"
+      ],
+      "source_refs": [
+        {
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/components",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "S37的10项轮廓及图线分类",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/prosperity-v3/gate-plan.json"
+        },
+        {
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/diagnostics/dimension_check",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "图尺与44.5×24.4米表值分开核对",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/prosperity-v3/gate-plan.json"
+        },
+        {
+          "path": "research/prosperity-v3/gate-plan.json",
+          "pointer": "/city_link",
+          "sha256": "c9e93585cd7895530705a93169141a030072504039cc7fce4494e58684d4235d",
+          "locator": "原来源外部落位未解，不改写来源标志",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/prosperity-v3/gate-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/0",
+          "sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+          "locator": "R11候选绑定和开放边保留约定",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/frame-bindings.json"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/key_ground_bounds/changhe_main_base",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "统一H中的主门基地面框"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/key_ground_bounds/changhe_west_que_visible_edge",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "西阙只包含可见边"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/key_ground_bounds/changhe_east_que_visible_edge",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "东阙只包含可见边"
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "阊阖门S37平剖图：PDF第1962页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1962"
+        },
+        {
+          "label": "阊阖门Cgm-3表列尺度：PDF第1927页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1927"
+        }
+      ],
+      "actual_image_measurements": null,
+      "source_png_sha256": null
+    },
+    {
+      "id": "taiji-and-palace-depth",
+      "title": "太极尺度片与宫门轴线距离分开判断",
+      "review_status": "pending_actual_image_review",
+      "observation": "待最终实图审核：比较最终图宫门到太极的地面纵深与共同投影安排，说明真正改到哪里；不得为同时贴合两幅来源而重估尺度或造出精确闭合宫轴。",
+      "evidence": "R11太极约100×60米只是遗址尺度片，放在06a同名概略图符上。奈良2013阊阖—太极图示中心距约501.7米，06a同名图符约573.9米，差约72.2米；不同图源的差异没有被拉伸消除。R12同一H把太极尺度片地面中心投到约631、240像素；旧全景粗读约610、175没有参与拟合。",
+      "change": "待最终实图审核后填写实际采用的变化、未达到的目标及残余偏差；当前只记录依据和拟检项，不代表成图已经实现。",
+      "limitation": "像素差是艺术构图参照，不是遗址偏移量。100×60米不是屋顶轮廓；夯土深约6米不能当台高。二号／三号门95／80米约距端点未定，三号—太极200／300米冲突仍保留。",
+      "treatment_type": null,
+      "planned_treatment_type": "changed",
+      "planned_adjustment": "比较最终图宫门到太极的地面纵深与共同投影安排，说明真正改到哪里；不得为同时贴合两幅来源而重估尺度或造出精确闭合宫轴。",
+      "review_criteria": [
+        "用殿基地面落点判断，不以殿顶或背后房群当太极中心。",
+        "新图如果未贴合约631、240的底稿位置，实际偏差须列入成图限制。",
+        "不生成未证完整宫院、成对阙或晚期三号门55×45米夯土形体作为盛时已定结论。"
+      ],
+      "component_ids": [
+        "r11-taiji-scale",
+        "r11-gate2-scale",
+        "r11-gate3-surviving-scale",
+        "geo-changhe-palace-gate",
+        "geo-taiji-hall-reference"
+      ],
+      "source_refs": [
+        {
+          "path": "research/prosperity-v1/building-dimensions.json",
+          "pointer": "/massing_items/2",
+          "sha256": "ca9a5cf39563408142ab306a435bce3687ab9ce65088975f57c107a1dcbaee87",
+          "locator": "太极约100×60米尺度片及6米深度禁用项",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/prosperity-v1/building-dimensions.json"
+        },
+        {
+          "path": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/1",
+          "sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+          "locator": "太极候选尺度片绑定",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/frame-bindings.json"
+        },
+        {
+          "path": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/2",
+          "sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+          "locator": "二号门约95米端点未定",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/frame-bindings.json"
+        },
+        {
+          "path": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/3",
+          "sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+          "locator": "三号门早期残存片和约80米端点未定",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/frame-bindings.json"
+        },
+        {
+          "path": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/unresolved_conflicts/0",
+          "sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+          "locator": "宫轴长度冲突保留",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/frame-bindings.json"
+        },
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/measurements/changhe_to_taiji_source_symbol_centers_m",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "2013刊图同名图示中心距",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json",
+          "source_value": 501.6768629410758
+        },
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/measurements/source06a_same_named_symbol_centers_m",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "06a同名图符中心距",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json",
+          "source_value": 573.8823425517132
+        },
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/measurements/source_pair_difference_m",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "来源间图示距离差",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json",
+          "source_value": 72.20547961063744
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/old_taiji_composition_reference",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "旧构图参照未参与H拟合"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/key_ground_bounds/taiji_scale_patch",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "统一H中的太极尺度片地面框"
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "奈良2013图69：印页52／PDF第1页",
+          "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/6157/1/BA67898227_2013_052_053.pdf#page=1"
+        },
+        {
+          "label": "R11宫城刊图来源与处理说明",
+          "url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/docs/city-plan-r11-palace2013-source.md"
+        },
+        {
+          "label": "太极遗址表列尺寸：PDF第1930页",
+          "url": "https://whc.unesco.org/uploads/nominations/1442.pdf#page=1930"
+        }
+      ],
+      "actual_image_measurements": null,
+      "source_png_sha256": null
+    },
+    {
+      "id": "palace-2013-comparison-role",
+      "title": "2013宫城刊图继续作为独立对照层",
+      "review_status": "pending_actual_image_review",
+      "observation": "待最终实图审核：审核最终图是否误把2013刊图的黑块、灰块或横路直接补成同层建筑与北宫墙；证据导览保留其比较作用和未解决差异。",
+      "evidence": "奈良2013图69提取24项：9项隔壁线、6项版筑范围、5项道路带、4项调查位置Point。默认隐藏并作为独立刊图对照；R12保留数据身份但不把该层24项送进清洁艺术导图。华林园南横带在图例中是道路，黑色调查块不代表门基，灰色版筑范围不代表殿身。",
+      "change": "待最终实图审核后填写实际采用的变化、未达到的目标及残余偏差；当前只记录依据和拟检项，不代表成图已经实现。",
+      "limitation": "图69是结构与调查地概览，逐构件细分时相未定；不能直接当516—528同一年的完整宫城布局。调查图符约72×37米与已知阊阖门基尺度不同，不能以图符造门楼。",
+      "treatment_type": null,
+      "planned_treatment_type": "not_located",
+      "planned_adjustment": "审核最终图是否误把2013刊图的黑块、灰块或横路直接补成同层建筑与北宫墙；证据导览保留其比较作用和未解决差异。",
+      "review_criteria": [
+        "黑色调查位置符不在说明中称为新核门基轮廓。",
+        "太极附近灰色版筑框不在说明中称为完整殿身或屋顶。",
+        "最上方横路不用于封闭北宫墙；2013独立图层没有静默合入06a墙网。"
+      ],
+      "component_ids": [
+        "P13-RAMMED-TAIJI",
+        "P13-ROAD-HUALIN-S",
+        "P13-MARK-GATE1",
+        "P13-MARK-GATE2",
+        "P13-MARK-GATE3",
+        "P13-MARK-SW5"
+      ],
+      "source_refs": [
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/source_refs/0",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "今井晃樹2013、印页52图69的来源身份",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/layer_role",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "独立刊图对照层角色",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json",
+          "source_value": "independent_published_palace_overview_comparison"
+        },
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/default_visible",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "默认隐藏状态",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json",
+          "source_value": false
+        },
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/components/10",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "太极附近版筑范围",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/components/19",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "华林园南横带为道路",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/components/20",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "阊阖／1号门调查标位Point",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json"
+        },
+        {
+          "path": "research/city-plan-r11/palace-2013-published-plan.json",
+          "pointer": "/measurements/gate_black_symbol_size_m",
+          "sha256": "1c541fa221638c8687736210896d40442eb5c8adf91b25082dd5a70af794943b",
+          "locator": "调查图符尺寸不能当门基",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/palace-2013-published-plan.json",
+          "source_value": [
+            71.9668288233702,
+            37.04175012967584
+          ]
+        },
+        {
+          "path": "research/city-plan-r11/frame-bindings.json",
+          "pointer": "/bindings/6",
+          "sha256": "ad097390cf18cb7093f0d1ce4033b4c5bd98cfe8869669060376be8fc5d91107",
+          "locator": "独立候选绑定与分期限制",
+          "repository_url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/research/city-plan-r11/frame-bindings.json"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/validation/palace2013_drawn_as_contemporary_buildings",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "未把该层画成同期建筑的底稿检查",
+          "source_value": false
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "奈良2013图69：印页52／PDF第1页",
+          "url": "https://repository.nabunken.go.jp/dspace/bitstream/11177/6157/1/BA67898227_2013_052_053.pdf#page=1"
+        },
+        {
+          "label": "R11宫城刊图来源与处理说明",
+          "url": "https://github.com/mechgouki/luoyang-city/blob/129abaee724870ec00bc25c6e2fd2998a215063b/docs/city-plan-r11-palace2013-source.md"
+        }
+      ],
+      "actual_image_measurements": null,
+      "source_png_sha256": null
+    },
+    {
+      "id": "unlocated-city-details",
+      "title": "外郭、北宫界与普通街坊保留未定范围",
+      "review_status": "pending_actual_image_review",
+      "observation": "待最终实图审核：在最终图与首页依据导览中区分本轮有来源的地面修正和其余展示背景，对误变得精确的墙线、岸线、门址和房群逐项记录。",
+      "evidence": "R11／R12仍将外郭相关遗存范围视为来源范围示意，将旧宫城北边闭合包络视为显示推定；两者均不进入清洁艺术导图。R12没有新增古岸几何、已证建筑高度或历史相机，底稿不补出北门、僧房和无证院内路。",
+      "change": "待最终实图审核后填写实际采用的变化、未达到的目标及残余偏差；当前只记录依据和拟检项，不代表成图已经实现。",
+      "limitation": "全景中完整城墙、河岸、桥头、普通街坊及密集屋顶仍包含艺术概化；本轮不能据此宣布全城全部院落、建筑和同期边界已考古复原。",
+      "treatment_type": null,
+      "planned_treatment_type": "not_located",
+      "planned_adjustment": "在最终图与首页依据导览中区分本轮有来源的地面修正和其余展示背景，对误变得精确的墙线、岸线、门址和房群逐项记录。",
+      "review_criteria": [
+        "外郭范围线不被解释为连续实测城墙。",
+        "北宫界的视觉闭合若仍存在，说明其显示推定性质。",
+        "河宽、古岸、桥长、舟数及普通房屋数量不因候选图修订升级为新核数据。"
+      ],
+      "component_ids": [
+        "geo-palace-layout-envelope",
+        "geo-outer-city-related-remains"
+      ],
+      "source_refs": [
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/features/3",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "旧宫城显示包络及北界限制"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/features/27",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "外郭相关范围线而非城墙"
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/new_ancient_bank_geometries",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "新增古岸几何为0",
+          "source_value": 0
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/assigned_building_heights",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "未赋予历史建筑高度",
+          "source_value": 0
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/historic_camera_reconstructed",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "未恢复历史相机",
+          "source_value": false
+        },
+        {
+          "path": "research/panorama-r12/projection.json",
+          "pointer": "/limits",
+          "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+          "locator": "R12底稿对未定构件与艺术表达的限制",
+          "source_value": [
+            "同方向虚拟视点底稿，不是旧图逐像素测绘配准；构图锚点不增加历史定位可靠性。",
+            "同一H作用于全部R11几何；局部详图只作等比显示放大，不把寺院单独放大后塞回全城。",
+            "所有线均为地面投影，不能当屋顶、完整房基或可直接量测的历史建筑立面。",
+            "永宁寺南门源图长宽与塔座的关系通过共同投影表达，不能拿最终透视像素宽深比直接核45.7/19。",
+            "旧全景寺院相对较宽、宫城纵深安排与本投影不一致；新图允许改变这些艺术占地。",
+            "宫城2013层、外郭范围线、旧宫城北界闭合包络以及旧06a寺墙不进入清洁艺术导图。",
+            "原图北门、僧房、回廊与无证院内道路没有补出；木塔地基大框不作塔身或院墙。",
+            "516—528综合研究层；不同来源的线不因此成为同一年实测完整建筑。"
+          ]
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "R11全城平面及对象性质",
+          "url": "./luoyang-city-plan.html#plan-reader"
+        },
+        {
+          "label": "既有城市空间判断",
+          "url": "./luoyang-city-spatial.html#decisions"
+        }
+      ],
+      "actual_image_measurements": null,
+      "source_png_sha256": null
+    }
+  ]
+}
