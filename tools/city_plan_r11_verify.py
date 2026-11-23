@@ -143,6 +143,8 @@ def svg_geometry(raw):
 
 
 def verify(info,reader,*,build_control_reader=None):
+    from panorama_v14_contract import restore_r11_context
+    info,reader=restore_r11_context(info,reader)
     get=lru_cache(maxsize=None)(reader);hashes=info['files_sha256'];meta=info[KEY]
     assert meta['version']==VERSION and meta['research_version']==RESEARCH_VERSION
     assert json.loads(get(MANIFEST))==meta

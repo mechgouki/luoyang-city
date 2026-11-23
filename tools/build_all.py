@@ -93,6 +93,10 @@ SITE = [
         ('node', '--check', 'web/city-plan-r11.js'),
         ('python', 'tools/city_plan_r11.py'),
     ]),
+    ('R12.1 common-plane-guided V14 panorama candidate', [
+        ('node', '--check', 'web/panorama-v14.js'),
+        ('python', 'tools/panorama_v14.py'),
+    ]),
 ]
 
 

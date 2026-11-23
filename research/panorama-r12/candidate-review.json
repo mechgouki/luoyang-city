@@ -1,0 +1,132 @@
+{
+  "schema": "luoyang-r12-public-render-review-v1",
+  "research_version": "R12.1",
+  "attempt": 5,
+  "source_png_sha256": "45813547ae4555e9b60226f72adfd6df75aa0a36324a23c50966adc3092a0fa6",
+  "review_status": "rejected_needs_revision",
+  "homepage_replacement_approved": false,
+  "blocking_findings": [
+    "南门实际只能辨出两层，未保持三层楼观要求；后方木塔楼层不能并入门楼计数。",
+    "南门门槛约在画面(515,477)，以底稿同侧南缘约y452.4—453.3参照，画面上仍约前移24像素；门基正面约38—43像素，底稿约22.5像素，位置与尺度未落实。这是人工约读，不是门槛与底稿框心(512,451)之间的同名控制点残差。",
+    "佛殿虽已横向回到塔后中轴附近，可见前基约y426，与底稿同侧前缘约y416—417相比仍约偏前9—10像素；基宽约45—50像素，底稿约26像素。塔脚附近可见前缘约y440—445不能直接等同来源塔座边线，完整塔座中心仍受遮挡，不能宣布配准通过。",
+    "可见寺墙约在x454—578、y420—483，底稿约x459—565、y399—454，整体向前漂移约20—30像素，七段墙线未可靠落实。",
+    "宫城二、三号门尚不能分别可靠辨识，两阙关系与完整宫轴仍待改绘；大面积裸土宫区是待补的艺术概化，不能解释成资料已证空地。"
+  ],
+  "all_attempts_rejected": true,
+  "total_attempts": 6,
+  "displayed_attempt": 5,
+  "latest_attempt": 6,
+  "source_projection_fidelity_passed": false,
+  "entire_scene_historically_validated": false,
+  "source_projection_completed": true,
+  "actual_image_review_completed": true,
+  "visible_storey_counts": {
+    "south_gate": {
+      "complete_principal_storeys_clearly_visible": 2,
+      "target_three_verified": false,
+      "count_confidence": "high",
+      "rear_tower_level_not_counted": true
+    },
+    "tower": {
+      "total_independently_identified_principal_storeys": 9,
+      "target_nine_verified": true,
+      "extra_narrow_top_eave_band_present": true,
+      "extra_eave_band_counted_as_storey": false,
+      "count_confidence": "medium_high_due_small_raster_and_extra_top_eave",
+      "counting_rule": "主要木构层9；最上部附加窄檐带不算独立第10层，金刹/塔座/门楼均不算。"
+    }
+  },
+  "manual_ground_observations": {
+    "method": "人工在原图及只读放大上约读，主要点位约±5px、墙段约±10px；专门区分门槛、台阶、基宽与檐宽；不作精密历史量测。",
+    "yongning_low_wall_group": {
+      "observed_ground_bbox_approx_px": [
+        454,
+        420,
+        578,
+        483
+      ],
+      "observed_material_identity": "低墙/篱墙式艺术表达；不判定其已证材质",
+      "reference_ground_bbox_px": [
+        458.9863396322854,
+        399.25559465852564,
+        565.1938056375262,
+        454.20724977101935
+      ],
+      "assessment": "较目标整体偏前20–30px、略宽"
+    },
+    "south_gate": {
+      "observed_threshold_approx_px": [
+        515,
+        477
+      ],
+      "observed_building_front_base_width_approx_px": [
+        38,
+        43
+      ],
+      "observed_roof_eave_width_approx_px": [
+        48,
+        55
+      ],
+      "observed_stair_front_width_approx_px": [
+        56,
+        63
+      ],
+      "observed_stair_front_y_approx_px": [
+        486,
+        490
+      ],
+      "reference_centre_px": [
+        512.0081860083162,
+        451.18463474780685
+      ],
+      "difference_threshold_approx_px": [
+        3,
+        26
+      ],
+      "roof_and_stairs_used_as_source_foundation": false
+    },
+    "tower": {
+      "full_ground_centre_observed": null,
+      "lowest_timber_body_front_approx_px": [
+        516,
+        440
+      ],
+      "plinth_or_stair_front_y_approx_px": [
+        441,
+        445
+      ],
+      "reference_plinth_bbox_px": [
+        505.20998169191324,
+        426.2845122531554,
+        524.591242822159,
+        433.7392898588529
+      ],
+      "assessment": "较第四张塔基前移；前缘与原图中心口径不等，不能仅凭一个点声称精确"
+    },
+    "buddha_hall": {
+      "observed_building_front_base_centre_approx_px": [
+        517,
+        426
+      ],
+      "observed_building_front_base_width_approx_px": [
+        45,
+        50
+      ],
+      "reference_centre_px": [
+        517.1312055313214,
+        414.3775877733241
+      ],
+      "difference_approx_px": [
+        0,
+        12
+      ],
+      "roof_or_stairs_used_as_source_foundation": false
+    }
+  },
+  "measurement_notice": "图面位置为人工约读，通常有约5—10像素读数不确定性，并受遮挡、台基高度和可见边缘辨识影响；不作考古量测。第五次门槛约y477与底稿中心y451不是同名控制点；以同侧来源南缘y452.4—453.3参照，画面上约前移24像素。佛殿可见前基约y426与同侧来源前缘y416—417参照，约差9—10像素；不能把与来源框心y414相减所得12像素称为精确位移。塔脚附近可见边缘不自动等于塔座接地边或框心，遮挡部位保持未核。原始独立审查与偏差图保留原字节，其中异名参考点间的连线或差值只作画面诊断，均不构成同名控制点残差或遗址误差。",
+  "independent_review": {
+    "path": "research/panorama-r12/reviews/v14-attempt5-review.json",
+    "sha256": "63d50a665ae7f20cc679132f6f693045fcac4c3863033283c9280ab2e4476bc3"
+  },
+  "publication_meaning": "发布底稿与失败原因供回查；不等于接纳全景，更不批准替换首页。"
+}

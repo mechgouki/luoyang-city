@@ -6,10 +6,11 @@
     528
   ],
   "research": {
-    "version": "R11.1",
-    "implementation_version": "city-plan-r11",
-    "title": "全城统一坐标复原工作平面",
-    "url": "https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html"
+    "version": "R12.1",
+    "implementation_version": "panorama-review-v14",
+    "title": "共同透视底稿与试绘审查（试绘未通过）",
+    "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html",
+    "publication_status": "pending_verification"
   },
   "homepage": {
     "revision": "panorama-approved-v12",
@@ -20,22 +21,27 @@
   "geometry_baseline": "v2.4",
   "historical_research_series": "B1—B8",
   "last_verified_release": {
-    "source_commit": "a2d1aac203d468ab0584a09f2c9ec0bfc6dd372b",
-    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45035882296",
-    "acceptance_url": "https://github.com/mechgouki/luoyang-city/blob/e5340efff1ae72e9fbdc7ecf48cc79527438eaa4/evidence/city-layout-r10/2026-11-22/README.md",
+    "source_commit": "129abaee724870ec00bc25c6e2fd2998a215063b",
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45103224890",
+    "acceptance_url": "https://github.com/mechgouki/luoyang-city/blob/b276f8e9495be7d4e8a38ddfa65ffc2bf9e85611/evidence/city-plan-r11/2026-11-23/README.md",
     "status": "build, deploy and verify-live passed",
-    "verified_at_beijing": "2026-11-22 23:28:24"
+    "verified_at_beijing": "2026-11-23 11:44:19"
   },
   "handoff_url": "https://github.com/mechgouki/luoyang-city/issues/52",
   "research_log_url": "https://github.com/mechgouki/luoyang-city/issues/47",
   "meaning": "当前研究批次、首页图像、封存底图与上一已验收发布分别登记。历史批次文件只记录当时的状态；本表不把尚未发布的工作称为已上线。",
   "homepage_candidate": {
-    "revision": "panorama-candidate-v13-r2",
-    "status": "candidate_for_review",
+    "revision": "panorama-candidate-v14",
+    "status": "needs_revision",
+    "review_status": "rejected_needs_revision",
     "homepage_replacement_approved": false,
-    "gate_visual_issue_resolved": true,
+    "gate_visual_issue_resolved": false,
     "historical_gate_reconstruction_completed": false,
-    "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v13-r2.html",
-    "meaning": "V13r2作为既有候选保留；R11把全城来源骨架、局部轮廓与文献候选点接入共同母图。本轮不改候选图像，首页继续V12；工作坐标统一不等于全部建筑实测定位，正式发布验收另见交接。"
+    "displayed_attempt": 5,
+    "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html",
+    "meaning": "R12共同透视底稿与偏差档案已形成，V14全景空间校正尚未完成。主显示保留第五次未通过试绘及其完整偏差审查；追加试绘单独附录回查，各轮结论不互相覆盖。V13r2作为既有候选保留，首页继续已批准的V12。图像未通过与页面技术发布分别登记；本轮正式发布验收尚待完成，不能将底稿成立或审查页发布表述为全景已校正通过。",
+    "latest_attempt": 6,
+    "total_attempts": 6,
+    "all_attempts_rejected": true
   }
 }

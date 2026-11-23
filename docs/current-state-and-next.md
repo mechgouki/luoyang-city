@@ -1,16 +1,20 @@
 # 洛阳城复原：当前状态与续接顺序
 
 <!-- current-state:start -->
-当前状态（2026-11-23）：研究 **R11.1 / city-plan-r11**（全城统一坐标复原工作平面）；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-23）：研究 **R12.1 / panorama-review-v14**（共同透视底稿与试绘审查（试绘未通过））；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html) · [上一已验收发布 `a2d1aac`](https://github.com/mechgouki/luoyang-city/actions/runs/45035882296) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/e5340efff1ae72e9fbdc7ecf48cc79527438eaa4/evidence/city-layout-r10/2026-11-22/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html) · [上一已验收发布 `129abae`](https://github.com/mechgouki/luoyang-city/actions/runs/45103224890) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/b276f8e9495be7d4e8a38ddfa65ffc2bf9e85611/evidence/city-plan-r11/2026-11-23/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](../research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->
 
-本批推进到[全城统一坐标复原工作平面](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html)，见[R11.1研究与交付说明](city-plan-r11-research.md)。28项来源骨架、33项局部原图构件、4个有据尺度片、24项宫城刊图对照要素与148个文献候选位置签共用母图；16个取景和17页图册不再独立排位。339项目录全部登记，165项仍无可成立的落位；原定位等级不升级，古岸不补绘，候选接入不冒充实测共同控制。最终发布验收以交接#52为准。
+本批为 **R12.1 共同透视底稿与试绘审查**，见[透视方法](panorama-r12-projection.md)及[图像状态与发布合同](panorama-v14.md)。共同地面透视总览、永宁寺局部底稿、计层示意和逐项依据／偏差档案已形成；**V14 全景空间校正尚未完成，主显示第五次试绘仍为 `needs_revision / rejected_needs_revision`**。追加试绘另列独立附录，按各自实际审查记录判断，不覆盖第五次的图像与偏差档案。首页继续使用已批准的 V12，V13 二修保留原图与原审查。本轮审查页的技术验收另行完成，不能将发布失败试绘的档案当作图像通过或首页替换批准。
 
-下一步有效增量是取得可明确对号的原平面与共同测量控制，补强尚未定位的坊院、宫院内部边界、白马坊路网及城南水岸，逐项替换候选假定。原图缺件不能用通用院落、房屋密度或旧显示矩形填充。2022年渠道报告继续按既定范围暂缓。
+**当前续接顺序：**先完成 R12 审查页的构建、桌面／手机、实际下载、正式部署与回读验收，保留未通过状态和全部阻断项；随后按已冻结的共同底稿继续修订永宁寺南门三层形制、门基／塔座／佛殿与寺墙的占地关系，以及阊阖门和宫城前后层次。下一张图必须逐项复查真实成图，不因提示词、底稿正确或局部改善预先判定整张通过，也不把生成图的漂移写回地面矩阵。连续试绘不能稳定服从几何时，应继续使用可控制的局部示意明确差异，保留全景未完成状态。达到候选要求后，再交用户审看具体图像；首页替换仍须该项批准。
+
+上一已验收研究版本为[全城统一坐标复原工作平面](https://mechgouki.github.io/luoyang-city/luoyang-city-plan.html)，见[R11.1研究与交付说明](city-plan-r11-research.md)。28项来源骨架、33项局部原图构件、4个有据尺度片、24项宫城刊图对照要素与148个文献候选位置签共用母图；16个取景和17页图册不再独立排位。339项目录全部登记，165项仍无可成立的落位；原定位等级不升级，古岸不补绘，候选接入不冒充实测共同控制。R11 正式提交为 `129abaee724870ec00bc25c6e2fd2998a215063b`，于2026年11月23日11:44:19（上海）完成验收；[生产运行](https://github.com/mechgouki/luoyang-city/actions/runs/45103224890)与[长期档案](https://github.com/mechgouki/luoyang-city/blob/b276f8e9495be7d4e8a38ddfa65ffc2bf9e85611/evidence/city-plan-r11/2026-11-23/README.md)作为本轮前驱依据，不能与尚待验收的 R12 混同。
+
+研究补证继续以可明确对号的原平面与共同测量控制为有效增量，补强尚未定位的坊院、宫院内部边界、白马坊路网及城南水岸，逐项替换候选假定。原图缺件不能用通用院落、房屋密度或旧显示矩形填充。2022年渠道报告继续按既定范围暂缓。
 
 前一批[全城总平面与十一片区关系图集](https://mechgouki.github.io/luoyang-city/luoyang-city-layout.html)及[R10.1说明](city-layout-r10-research.md)原样保留，包含339对象、84条道路证据与34项水系索引完整去向；R11没有覆盖其历史字节。
 
