@@ -1,0 +1,82 @@
+{
+  "schema": "luoyang-yongning-local-study-generation-v1",
+  "recorded_at": "2026-11-23T12:36:16.797705+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "transparent_background": false,
+  "full_panorama_attempt_count_changed": false,
+  "homepage_replacement_approved": false,
+  "prior_full_panorama_trials": 6,
+  "study_scope": "Local illustrative rendering studies only; no new archaeological heights, coordinates or elevation evidence.",
+  "attempts": [
+    {
+      "number": 1,
+      "prompt": {
+        "path": "prompt.txt",
+        "bytes": 2603,
+        "sha256": "7bcd11baa358ce0318fab5b2e58ac07ddca88d4c0a6f2f352338197a9027ccc2"
+      },
+      "ordered_references": [
+        {
+          "path": "yongning-study-layout.png",
+          "bytes": 87228,
+          "sha256": "1da891db6a546d0236ae89edbd8c932f1cbcc3871c81c7fb71ba8c2d88348b84"
+        }
+      ],
+      "source_svg": {
+        "path": "yongning-study-layout.svg",
+        "bytes": 50482,
+        "sha256": "760bc3c3839831170699789faedf98b9c634c7a03d44717418d8b641c7a43625"
+      },
+      "raw_output": {
+        "path": "structure-study-01.png",
+        "bytes": 1302962,
+        "sha256": "d63fd413527eebbf80486d5ade9fe7cc5a978f67495b4b34c41fc2e87f95aa8a"
+      },
+      "actual_review": {
+        "path": "independent-review.json",
+        "bytes": 7795,
+        "sha256": "13ab0a40c3b6b83960ca7aa894ac72646b5b6419cf51f557d24227f028939204"
+      }
+    },
+    {
+      "number": 2,
+      "prompt": {
+        "path": "attempt-02/prompt.txt",
+        "bytes": 2121,
+        "sha256": "e380ae06d570fddf0732aea1b1857fb7c446c7bbd59f8e8e9b94c678a8de2ae2"
+      },
+      "ordered_references": [
+        {
+          "path": "attempt-02/square-layout.png",
+          "bytes": 107164,
+          "sha256": "c47d1e563003f22c0b75c723b81aee9b972abeab2505237274b1c71a07f71689"
+        },
+        {
+          "path": "structure-study-01.png",
+          "bytes": 1302962,
+          "sha256": "d63fd413527eebbf80486d5ade9fe7cc5a978f67495b4b34c41fc2e87f95aa8a"
+        }
+      ],
+      "reference_roles": [
+        "Controlling geometry and square display window",
+        "Materials and storey readability only; not placement"
+      ],
+      "source_svg": {
+        "path": "attempt-02/square-layout.svg",
+        "bytes": 50482,
+        "sha256": "4d338e711a7c331cec527e15b793145639357daf675a730a2f3c7300388f5b3d"
+      },
+      "raw_output": {
+        "path": "attempt-02/structure-study-02.png",
+        "bytes": 1304233,
+        "sha256": "7456b5d932128ab74c5770dedfa5866f05b806f9fa08ff3214c884f5fe1ac70a"
+      },
+      "actual_review": {
+        "path": "attempt-02/independent-review.json",
+        "bytes": 14393,
+        "sha256": "ce788a134e26bf1f81f631724f7c180f75ff6ea900512dfacde9c127f65b237a"
+      }
+    }
+  ],
+  "next_step": "Use square study 02 as local structure/material reference with the frozen SVG as layout master; verify complete contours, occluded relationships and the eventual full panorama independently."
+}

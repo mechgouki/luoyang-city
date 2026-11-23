@@ -1,0 +1,215 @@
+{
+  "schema": "luoyang-yongning-local-structure-review-v1",
+  "study_id": "yongning-local-structure-study-01",
+  "reviewer": "/root/next_image_strategy",
+  "reviewed_at_shanghai": "2026-11-23T20:27:16.344522+08:00",
+  "scope": "Independent visual review of a local artistic structure study; not a seventh full panorama.",
+  "status": "local_structure_readability_improved_geometry_not_passed",
+  "source_image": {
+    "file": "structure-study-01.png",
+    "sha256": "d63fd413527eebbf80486d5ade9fe7cc5a978f67495b4b34c41fc2e87f95aa8a",
+    "bytes": 1302962,
+    "size_px": [
+      1088,
+      1445
+    ],
+    "actually_viewed": true
+  },
+  "layout_reference": {
+    "file": "yongning-study-layout.png",
+    "sha256": "1da891db6a546d0236ae89edbd8c932f1cbcc3871c81c7fb71ba8c2d88348b84",
+    "bytes": 87228,
+    "size_px": [
+      1280,
+      1360
+    ],
+    "actually_viewed": true
+  },
+  "reference_provenance": {
+    "source_file": "research/panorama-r12/massing-yongning-clean.svg",
+    "source_sha256": "310331b205c29682f9dee3ac742adeb17ac0da3eb401d64f4ed97f14a70e940b",
+    "display_window_file": "display-window.json",
+    "viewBox": [
+      530,
+      270,
+      640,
+      680
+    ],
+    "reference_render_px": [
+      1280,
+      1360
+    ],
+    "ground_projection_modified": false
+  },
+  "decisions": {
+    "full_panorama_attempt_number": null,
+    "local_study_only": true,
+    "geometry_fidelity_passed": false,
+    "ready_for_direct_panorama_reintegration": false,
+    "accepted_as_homepage_candidate": false,
+    "homepage_replacement_approved": false,
+    "historical_elevation_reconstructed": false,
+    "new_ancient_coordinates": 0,
+    "new_verified_building_heights": 0,
+    "existing_six_panorama_reviews_modified": false
+  },
+  "inspection_method": {
+    "actual_images": "Both original local PNGs inspected with view_image; no generated-image pixels modified.",
+    "visual_counting": "Counted independent occupied wall/column bands and their principal roof levels; finial, plinth, brackets and neighbouring buildings excluded.",
+    "coordinates": "Image regions and wall-band y ranges below are approximate manual screen readings for locating observations, not surveyed or historical measurements.",
+    "geometry_comparison": "Compared composition, separate ground contacts and relative order against the controlling diagram. No camera registration or numeric ground-footprint fit is claimed."
+  },
+  "checks": [
+    {
+      "id": "S01-GATE-COUNT",
+      "label": "南门自身三层可辨",
+      "status": "passed_for_visible_storey_count",
+      "observed": "底层可见贯通门洞；上方两层各有独立窗格/木构立面带和主檐，共三层。没有借用后方木塔的楼层。",
+      "image_region_px": [
+        380,
+        1195,
+        260,
+        175
+      ],
+      "storeys_counted": 3,
+      "approximate_wall_band_y_ranges_bottom_to_top": [
+        [
+          1315,
+          1353
+        ],
+        [
+          1279,
+          1301
+        ],
+        [
+          1243,
+          1265
+        ]
+      ],
+      "limit": "只说明此试片的楼层可读性。门道数、开间、层高、屋顶与斗栱细节均未据此成为历史复原结论。"
+    },
+    {
+      "id": "S01-TOWER-COUNT",
+      "label": "木塔九个主要楼层可独立计数",
+      "status": "passed_for_visible_storey_count",
+      "observed": "塔身自下而上可辨九个主要木构立面层；金刹/杆、基座、斗栱与后殿屋面不计入层数。",
+      "image_region_px": [
+        435,
+        170,
+        230,
+        970
+      ],
+      "storeys_counted": 9,
+      "approximate_wall_band_y_ranges_bottom_to_top": [
+        [
+          1054,
+          1108
+        ],
+        [
+          955,
+          1005
+        ],
+        [
+          851,
+          904
+        ],
+        [
+          749,
+          804
+        ],
+        [
+          648,
+          704
+        ],
+        [
+          546,
+          601
+        ],
+        [
+          446,
+          501
+        ],
+        [
+          346,
+          399
+        ],
+        [
+          247,
+          298
+        ]
+      ],
+      "limit": "这是该张艺术试片的视觉计层，不证明塔高、各层实际尺寸或立面结构。"
+    },
+    {
+      "id": "S01-SEPARATION",
+      "label": "南门和塔座显示为独立构筑物",
+      "status": "passed_for_visual_separation",
+      "observed": "木塔自己的台基与前方南门底层分离，塔台基前缘至门屋顶之间仍有清楚空白地面，未再把两座建筑串成一个连续塔身。",
+      "image_region_px": [
+        380,
+        990,
+        310,
+        390
+      ],
+      "limit": "独立基脚可读性改善不等于两处地面轮廓已精确服从冻结投影。"
+    },
+    {
+      "id": "S01-HALL-ORDER",
+      "label": "佛殿位于塔后并自然遮挡",
+      "status": "passed_for_relative_visual_order",
+      "observed": "后殿两翼从塔身两侧显露，中央被塔遮挡，保持殿在塔后的相对关系；没有将佛殿移到塔南。",
+      "image_region_px": [
+        405,
+        775,
+        315,
+        200
+      ],
+      "limit": "完整殿基被遮挡，不能只凭此图核定其全部基址或与刊图框的精确吻合。"
+    },
+    {
+      "id": "S01-GUIDE-SEMANTICS",
+      "label": "平面研究线继续以导线表达",
+      "status": "passed_for_visible_guide_semantics",
+      "observed": "青绿色寺墙线段、灰色大地基虚框及西侧橙色标记仍是平面线条，未变成新增回廊、北门或另一座门楼。",
+      "limit": "生成器重新绘制了线条的形状、粗细与间隔，不能把输出中的导线当作原SVG的精确矢量几何。"
+    },
+    {
+      "id": "S01-CANVAS",
+      "label": "原画幅和统一显示变换",
+      "status": "failed",
+      "observed": "输入1280×1360，输出1088×1445；横向尺度比0.85、纵向尺度比1.0625，不是同一个等比例显示缩放。输出宽高比为输入的0.8。",
+      "input_canvas_px": [
+        1280,
+        1360
+      ],
+      "output_canvas_px": [
+        1088,
+        1445
+      ],
+      "canvas_dimension_ratios": {
+        "width": 0.85,
+        "height": 1.0625,
+        "output_aspect_over_input_aspect": 0.8
+      },
+      "limit": "这里比较的是画布尺寸，不宣称生成器对每个像素都实施了这两个固定缩放因子。"
+    },
+    {
+      "id": "S01-FOOTPRINTS",
+      "label": "建筑基部和导线保持冻结几何",
+      "status": "not_passed",
+      "observed": "生成图对门楼、塔台基和后殿轮廓作了重绘；即便按各画幅的相对位置粗比，门檐、台基与若干导线的宽度及偏置也不能确认逐点一致。没有建立同名地面边缘注册或有效残差报告。",
+      "limit": "不能用可读性改善、几处大体位置接近或同样保留色线替代几何验证。"
+    }
+  ],
+  "blocking_findings": [
+    "画幅比例改变，不能直接应用输入局部视窗的唯一逆显示变换回嵌全景。",
+    "建筑基部与导线经生成重绘，尚未验证其逐点服从冻结地面轮廓。",
+    "此试片没有处理宫城二、三号门、阊阖门构件或整座城市全景，不能代替原V14阻断项的复查。"
+  ],
+  "progress_statements_allowed": [
+    "独立局部试片已清楚表现三层南门和九层木塔。",
+    "塔、门基脚及塔后佛殿的视觉关系比此前全景更容易辨认。",
+    "画幅和轮廓仍有漂移，局部试片尚不能直接回嵌或批准为首页图。"
+  ],
+  "next_action": "保留此图作为楼层/材质参考；下一步恢复同一画幅与可核地面轮廓，再作受控回嵌试验并独立审查全景。不得通过改动冻结H或独立挪动历史地面要素去迎合本图。"
+}
