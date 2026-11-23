@@ -95,7 +95,7 @@ def label_priority(f):
             len(f.get("label", "")), f["id"])
 
 
-def labels(root, features, box, width, height, *, all_labels=False, show_palace=False):
+def labels(root, features, box, width, height, *, all_labels=False, show_palace=False, reserved_boxes=()):
     """Place only text around fixed anchors; every moved label has a leader."""
     x0, y0, x1, y1 = box
     unit = (x1-x0)/width
@@ -122,13 +122,27 @@ def labels(root, features, box, width, height, *, all_labels=False, show_palace=
         candidates = [(axp+10, ayp-7), (axp+10, ayp+19), (axp-tw-10, ayp-7),
                       (axp-tw-10, ayp+19), (axp+10, ayp-30), (axp+10, ayp+42),
                       (axp-tw-10, ayp-30), (axp-tw-10, ayp+42)]
+        # Printed overlays are hard exclusions, not labels whose overlap may
+        # be tolerated. Extra positions preserve names near a reserved corner.
+        fallback = []
+        for rx0, ry0, rx1, ry1 in reserved_boxes:
+            fallback.extend([(axp+10, ry0-6), (rx1+6, ayp-7),
+                             (rx0-tw-6, ayp-7), (axp+10, ry1+fs+6)])
         best = None
-        for tx, ty in candidates:
-            tx = max(8, min(width-tw-8, tx)); ty = max(fs+8, min(height-8, ty))
-            rect = (tx-3, ty-fs-2, tx+tw+3, ty+4)
-            overlap = sum(max(0, min(rect[2], o[2])-max(rect[0], o[0]))*max(0, min(rect[3], o[3])-max(rect[1], o[1])) for o in occupied)
-            score = overlap*100 + abs(tx-axp) + abs(ty-ayp)
-            if best is None or score < best[0]: best = score, tx, ty, rect, overlap
+        for options in (candidates, fallback):
+            for tx, ty in options:
+                tx = max(8, min(width-tw-8, tx)); ty = max(fs+8, min(height-8, ty))
+                rect = (tx-3, ty-fs-2, tx+tw+3, ty+4)
+                if any(rect[0] < r[2] and rect[2] > r[0] and rect[1] < r[3] and rect[3] > r[1]
+                       for r in reserved_boxes):
+                    continue
+                overlap = sum(max(0, min(rect[2], o[2])-max(rect[0], o[0]))*max(0, min(rect[3], o[3])-max(rect[1], o[1])) for o in occupied)
+                score = overlap*100 + abs(tx-axp) + abs(ty-ayp)
+                if best is None or score < best[0]: best = score, tx, ty, rect, overlap
+            if best is not None:
+                break
+        if best is None:
+            continue
         _, tx, ty, rect, overlap = best
         if overlap > 0 and not all_labels:
             continue
@@ -137,7 +151,7 @@ def labels(root, features, box, width, height, *, all_labels=False, show_palace=
         occupied.append(rect)
         group = el(label_group, "g", data_label_for=f["id"], data_layer=l)
         wx, wy = x0+tx*unit, -y1+ty*unit
-        if abs(ty-ayp) > 22 or tx < axp:
+        if abs(ty-ayp) > 22 or tx < axp or tx > axp+22:
             el(group, "path", d=f"M{ax} {ay}L{wx + min(max(axp-tx,0),tw)*unit} {wy-5*unit}",
                stroke=COLORS[l], stroke_width=.65*unit, fill="none", opacity=.8)
         el(group, "rect", x=wx-3*unit, y=wy-(fs+2)*unit, width=(tw+6)*unit, height=(fs+6)*unit,
@@ -146,7 +160,7 @@ def labels(root, features, box, width, height, *, all_labels=False, show_palace=
     return label_group
 
 
-def world_svg(data, box, width=1200, height=760, *, identifier="city-plan-map", title="全城统一坐标复原工作平面", href_base="", all_labels=False, show_palace=False):
+def world_svg(data, box, width=1200, height=760, *, identifier="city-plan-map", title="全城统一坐标复原工作平面", href_base="", all_labels=False, show_palace=False, reserved_label_boxes=()):
     x0, y0, x1, y1 = frame_box(box, width, height, 0)
     box = [x0,y0,x1,y1]
     unit = (x1-x0)/width
@@ -205,7 +219,7 @@ def world_svg(data, box, width=1200, height=760, *, identifier="city-plan-map", 
                  stroke_dasharray=" ".join(str(float(v)*unit) for v in dash.split()) if dash else None,
                  data_dash_px=dash,stroke_linejoin="round",stroke_linecap="round")
             if envelope: p.set("stroke-dasharray",f"{3*unit} {6*unit}")
-    labels(root,features,box,width,height,all_labels=all_labels,show_palace=show_palace)
+    labels(root,features,box,width,height,all_labels=all_labels,show_palace=show_palace,reserved_boxes=reserved_label_boxes)
     return root
 
 
@@ -217,12 +231,15 @@ def sheet(data, view):
     text(root,65,107,view["title"],37,fill="#243d37",font_weight=600)
     text(root,65,145,view.get("subtitle","同一母图的取景；片区窗口不是历史边界。"),19,fill="#67726a")
     el(root,"path",d=f"M65 169H{W-65}",stroke="#cdd4ca",stroke_width=1)
-    m=world_svg(data,view["bbox"],W-130,965,identifier="map-"+view["id"],title=view["title"],href_base=BASE,all_labels=True,show_palace=view["id"]=="palace2013")
-    m.set("x","65");m.set("y","190");root.append(m)
-    box=json.loads(m.get("data-bounds"));unit=(box[2]-box[0])/(W-130)
-    text(root,W-90,225,"北 ↑",21,fill="#315f57",text_anchor="end")
+    box=frame_box(view["bbox"],W-130,965,0);unit=(box[2]-box[0])/(W-130)
     scale_m=1000 if box[2]-box[0]>5000 else 500 if box[2]-box[0]>2500 else 200 if box[2]-box[0]>1000 else 100 if box[2]-box[0]>400 else 20
     x,y=100,1120; length=scale_m/unit
+    # Scale backing in map-local display units, including four units of air.
+    # This affects printed label placement only; geometry and views stay fixed.
+    scale_clearance=(x-12-65-4, y-32-190-4, x+length+73-65+4, y+20-190+4)
+    m=world_svg(data,view["bbox"],W-130,965,identifier="map-"+view["id"],title=view["title"],href_base=BASE,all_labels=True,show_palace=view["id"]=="palace2013",reserved_label_boxes=(scale_clearance,))
+    m.set("x","65");m.set("y","190");root.append(m)
+    text(root,W-90,225,"北 ↑",21,fill="#315f57",text_anchor="end")
     el(root,"rect",x=x-12,y=y-32,width=length+85,height=52,rx=3,fill="#faf9f4",fill_opacity=.94)
     el(root,"path",d=f"M{x} {y-6}V{y}H{x+length}V{y-6}",fill="none",stroke="#354c43",stroke_width=2)
     text(root,x,y-13,f"{scale_m} m",16,fill="#354c43")
