@@ -1,0 +1,1324 @@
+{
+  "schema": "luoyang-yongning-study02-ground-audit-v1",
+  "reviewed_at_utc": "2026-11-24T08:29:58.334900+00:00",
+  "status": "visible_outline_audited_geometry_not_passed",
+  "actual_view_performed": true,
+  "image": {
+    "path": "/workspace/r12-inputs/yongning-study/attempt-02/structure-study-02.png",
+    "bytes": 1304233,
+    "sha256": "7456b5d932128ab74c5770dedfa5866f05b806f9fa08ff3214c884f5fe1ac70a",
+    "size_px": [
+      1254,
+      1254
+    ]
+  },
+  "guide": {
+    "path": "/workspace/r12-inputs/yongning-study/attempt-02/square-layout.png",
+    "bytes": 107164,
+    "sha256": "c47d1e563003f22c0b75c723b81aee9b972abeab2505237274b1c71a07f71689",
+    "size_px": [
+      1536,
+      1536
+    ]
+  },
+  "source_projection": {
+    "path": "/workspace/luoyang-r12-next/research/panorama-r12/projection.json",
+    "bytes": 477547,
+    "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4"
+  },
+  "source_massing_parameters": {
+    "path": "/workspace/luoyang-r12-next/research/panorama-r12/massing-display-parameters.json",
+    "bytes": 9611,
+    "sha256": "c3a040261f10b7159053a3c702d105ce52f020a47945d6f8d80f4d8b2e75ff29"
+  },
+  "source_display_window": {
+    "path": "/workspace/r12-inputs/yongning-study/attempt-02/display-window.json",
+    "bytes": 391,
+    "sha256": "a970bad79975f6274dfdc3144d24af58a09b43770e05ee8084fb40b15aac6f10"
+  },
+  "prior_review_preserved": "/workspace/r12-inputs/yongning-study/attempt-02/independent-review.json",
+  "coordinate_frame": {
+    "size_px": [
+      1254,
+      1254
+    ],
+    "origin": "top-left; x right, y down",
+    "H": [
+      [
+        0.38,
+        0.0383708090217182,
+        424.9862599932897
+      ],
+      [
+        0.0,
+        -0.08848822067306178,
+        206.51863997840601
+      ],
+      [
+        0.0,
+        0.00012,
+        1.0
+      ]
+    ],
+    "matrix_id": "r12-shared-ground-homography-v1",
+    "mapping_from_frozen_panorama": "x=(5.2*u-2360)*1254/680; y=(5.2*v-1720)*1254/680",
+    "mapping_fitted_to_image": false,
+    "anisotropic_scaling": false,
+    "source_geometry_changed": false
+  },
+  "method": "Actual full PNG and guide viewed. Frozen source coordinates transformed only by recorded display mapping. Visible lower material boundaries and side silhouettes manually read; selected pixel RGB probes distinguish material from blue/purple/orange/green guide strokes. Coordinates are image readings with roughly2.5..3.5px uncertainty, not survey measurements; no pixel file was changed.",
+  "key_findings": [
+    "Tower front-edge y samples are near the source, but east masonry side extends about5..8px right of the source edge; southeast lower foot is about8px right. This lateral drift was not tested by the prior front-y-only samples.",
+    "South-gate front lower edge is about2..4px down/forward at sampled x, and its visible lower east side about5px to the right; back corners are hidden.",
+    "Hall central front ground edge is occluded by tower. Left exposed lower ledge corner lies about5px west of the published site-box corner; that box is not a new complete excavated hall footprint.",
+    "All seven wall source lines have only colored guide depictions here. No physical wall body, wall thickness or physical endpoint can be verified.",
+    "The gray outer tower-foundation frame is not a tower court or above-ground wall. Blue plinth projections are guide marks or occluded; source does not establish stairs, steps, ramps, rails or their heights."
+  ],
+  "expected_primary_source_rings_px": {
+    "YN11-TOWER-PLINTH": [
+      [
+        503.703238,
+        915.935364
+      ],
+      [
+        678.403789,
+        923.245652
+      ],
+      [
+        669.685542,
+        987.422296
+      ],
+      [
+        492.548895,
+        979.962868
+      ],
+      [
+        503.703238,
+        915.935364
+      ]
+    ],
+    "YN11-BUDDHA-HALL": [
+      [
+        490.949156,
+        776.700127
+      ],
+      [
+        729.948426,
+        786.774325
+      ],
+      [
+        726.573218,
+        826.809798
+      ],
+      [
+        483.784413,
+        817.048916
+      ],
+      [
+        490.949156,
+        776.700127
+      ]
+    ],
+    "YN11-GATE-S": [
+      [
+        455.401886,
+        1134.139851
+      ],
+      [
+        665.697559,
+        1142.665029
+      ],
+      [
+        659.116936,
+        1175.285932
+      ],
+      [
+        449.781792,
+        1166.233407
+      ],
+      [
+        455.401886,
+        1134.139851
+      ]
+    ]
+  },
+  "observed_visible_paths": [
+    {
+      "id": "T-front",
+      "component_id": "YN11-TOWER-PLINTH",
+      "classification": "visible_lower_masonry_edge_ground_contact_proxy",
+      "observed_polyline_px": [
+        [
+          492,
+          981
+        ],
+        [
+          500,
+          981.5
+        ],
+        [
+          580,
+          984
+        ],
+        [
+          665,
+          986.5
+        ],
+        [
+          677.5,
+          986.5
+        ]
+      ],
+      "uncertainty_px": 3,
+      "note": "砖石最下缘接触蓝色导线；不把蓝线外侧当作砖石。南凸部未画成实体。"
+    },
+    {
+      "id": "T-west-side",
+      "component_id": "YN11-TOWER-PLINTH",
+      "classification": "visible_masonry_side_outline_ground_level_uncertain",
+      "observed_polyline_px": [
+        [
+          503,
+          918
+        ],
+        [
+          500.5,
+          925
+        ],
+        [
+          497,
+          948
+        ],
+        [
+          492,
+          977
+        ],
+        [
+          492,
+          981
+        ]
+      ],
+      "uncertainty_px": 3,
+      "note": "可见西侧材料轮廓；上段不能确认为后侧地面接触边。"
+    },
+    {
+      "id": "T-east-side",
+      "component_id": "YN11-TOWER-PLINTH",
+      "classification": "visible_masonry_side_outline_ground_level_uncertain",
+      "observed_polyline_px": [
+        [
+          683,
+          923
+        ],
+        [
+          681.5,
+          940
+        ],
+        [
+          678.5,
+          970
+        ],
+        [
+          677.5,
+          986.5
+        ]
+      ],
+      "uncertainty_px": 3,
+      "note": "右侧砖石轮廓连续可见，向冻结东边界外扩约5至8像素；后角层位不明，不能称四角配准。"
+    },
+    {
+      "id": "H-front-west",
+      "component_id": "YN11-BUDDHA-HALL",
+      "classification": "visible_lower_ledge_edge_compared_to_published_site_box",
+      "observed_polyline_px": [
+        [
+          478.5,
+          817.5
+        ],
+        [
+          500,
+          818
+        ],
+        [
+          520,
+          819
+        ]
+      ],
+      "uncertainty_px": 3
+    },
+    {
+      "id": "H-front-east",
+      "component_id": "YN11-BUDDHA-HALL",
+      "classification": "visible_lower_ledge_edge_compared_to_published_site_box",
+      "observed_polyline_px": [
+        [
+          662,
+          822
+        ],
+        [
+          710,
+          824.5
+        ],
+        [
+          728.5,
+          824.5
+        ]
+      ],
+      "uncertainty_px": 3
+    },
+    {
+      "id": "H-west-side",
+      "component_id": "YN11-BUDDHA-HALL",
+      "classification": "visible_side_ledge_outline_ground_level_uncertain",
+      "observed_polyline_px": [
+        [
+          483.5,
+          778
+        ],
+        [
+          480.5,
+          800
+        ],
+        [
+          478.5,
+          817.5
+        ]
+      ],
+      "uncertainty_px": 3
+    },
+    {
+      "id": "H-east-side",
+      "component_id": "YN11-BUDDHA-HALL",
+      "classification": "visible_side_ledge_outline_ground_level_uncertain",
+      "observed_polyline_px": [
+        [
+          731,
+          786
+        ],
+        [
+          730.5,
+          805
+        ],
+        [
+          728.5,
+          824.5
+        ]
+      ],
+      "uncertainty_px": 3
+    },
+    {
+      "id": "G-front",
+      "component_id": "YN11-GATE-S",
+      "classification": "visible_lower_base_edge_ground_contact_proxy",
+      "observed_polyline_px": [
+        [
+          448.5,
+          1170
+        ],
+        [
+          460,
+          1171
+        ],
+        [
+          550,
+          1173.5
+        ],
+        [
+          650,
+          1177
+        ],
+        [
+          665.5,
+          1177.5
+        ]
+      ],
+      "uncertainty_px": 3.5,
+      "note": "最下部灰褐色基座/地坪边，橙色粗线和抗锯齿使端点约读；不把橙线宽度计入基址。"
+    },
+    {
+      "id": "G-west-front-side",
+      "component_id": "YN11-GATE-S",
+      "classification": "visible_lower_side_outline_ground_contact_proxy",
+      "observed_polyline_px": [
+        [
+          452,
+          1150
+        ],
+        [
+          448.5,
+          1170
+        ]
+      ],
+      "uncertainty_px": 3.5
+    },
+    {
+      "id": "G-east-front-side",
+      "component_id": "YN11-GATE-S",
+      "classification": "visible_lower_side_outline_ground_contact_proxy",
+      "observed_polyline_px": [
+        [
+          669,
+          1151
+        ],
+        [
+          666.5,
+          1165
+        ],
+        [
+          665.5,
+          1177.5
+        ]
+      ],
+      "uncertainty_px": 3.5
+    }
+  ],
+  "measurements": [
+    {
+      "id": "T-F500",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        500,
+        981.5
+      ],
+      "expected_px": [
+        500,
+        980.277
+      ],
+      "residual_dx_dy_px": [
+        0,
+        1.223
+      ],
+      "compared_axis": "y",
+      "classification": "visible_lower_masonry_edge_ground_contact_proxy",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "T-F580",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        580,
+        984
+      ],
+      "expected_px": [
+        580,
+        983.646
+      ],
+      "residual_dx_dy_px": [
+        0,
+        0.354
+      ],
+      "compared_axis": "y",
+      "classification": "visible_lower_masonry_edge_ground_contact_proxy",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "T-F665",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        665,
+        986.5
+      ],
+      "expected_px": [
+        665,
+        987.225
+      ],
+      "residual_dx_dy_px": [
+        0,
+        -0.725
+      ],
+      "compared_axis": "y",
+      "classification": "visible_lower_masonry_edge_ground_contact_proxy",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "T-E940",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        681.5,
+        940
+      ],
+      "expected_px": [
+        676.128,
+        940
+      ],
+      "residual_dx_dy_px": [
+        5.372,
+        0
+      ],
+      "compared_axis": "x",
+      "classification": "visible_masonry_side_outline_ground_level_uncertain",
+      "reading_uncertainty_px": 2.5
+    },
+    {
+      "id": "T-E970",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        678.5,
+        970
+      ],
+      "expected_px": [
+        672.052,
+        970
+      ],
+      "residual_dx_dy_px": [
+        6.448,
+        0
+      ],
+      "compared_axis": "x",
+      "classification": "visible_masonry_side_outline_ground_level_uncertain",
+      "reading_uncertainty_px": 2.5
+    },
+    {
+      "id": "T-E984",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        677.5,
+        984
+      ],
+      "expected_px": [
+        670.15,
+        984
+      ],
+      "residual_dx_dy_px": [
+        7.35,
+        0
+      ],
+      "compared_axis": "x",
+      "classification": "visible_masonry_side_outline_ground_level_uncertain",
+      "reading_uncertainty_px": 2.5
+    },
+    {
+      "id": "T-SE",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        677.5,
+        986.5
+      ],
+      "expected_px": [
+        669.686,
+        987.422
+      ],
+      "residual_dx_dy_px": [
+        7.814,
+        -0.922
+      ],
+      "compared_axis": "xy",
+      "classification": "visible_lower_masonry_corner_ground_contact_proxy",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "G-F460",
+      "component_id": "YN11-GATE-S",
+      "observed_px": [
+        460,
+        1171
+      ],
+      "expected_px": [
+        460,
+        1166.675
+      ],
+      "residual_dx_dy_px": [
+        0,
+        4.325
+      ],
+      "compared_axis": "y",
+      "classification": "visible_lower_base_edge_ground_contact_proxy",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "G-F550",
+      "component_id": "YN11-GATE-S",
+      "observed_px": [
+        550,
+        1173.5
+      ],
+      "expected_px": [
+        550,
+        1170.567
+      ],
+      "residual_dx_dy_px": [
+        0,
+        2.933
+      ],
+      "compared_axis": "y",
+      "classification": "visible_lower_base_edge_ground_contact_proxy",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "G-F650",
+      "component_id": "YN11-GATE-S",
+      "observed_px": [
+        650,
+        1177
+      ],
+      "expected_px": [
+        650,
+        1174.892
+      ],
+      "residual_dx_dy_px": [
+        0,
+        2.108
+      ],
+      "compared_axis": "y",
+      "classification": "visible_lower_base_edge_ground_contact_proxy",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "G-E1165",
+      "component_id": "YN11-GATE-S",
+      "observed_px": [
+        666.5,
+        1165
+      ],
+      "expected_px": [
+        661.192,
+        1165
+      ],
+      "residual_dx_dy_px": [
+        5.308,
+        0
+      ],
+      "compared_axis": "x",
+      "classification": "visible_lower_side_outline_ground_contact_proxy",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "H-F500",
+      "component_id": "YN11-BUDDHA-HALL",
+      "observed_px": [
+        500,
+        818
+      ],
+      "expected_px": [
+        500,
+        817.701
+      ],
+      "residual_dx_dy_px": [
+        0,
+        0.299
+      ],
+      "compared_axis": "y",
+      "classification": "visible_lower_ledge_edge_compared_to_published_site_box",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "H-F710",
+      "component_id": "YN11-BUDDHA-HALL",
+      "observed_px": [
+        710,
+        824.5
+      ],
+      "expected_px": [
+        710,
+        826.144
+      ],
+      "residual_dx_dy_px": [
+        0,
+        -1.644
+      ],
+      "compared_axis": "y",
+      "classification": "visible_lower_ledge_edge_compared_to_published_site_box",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "H-SW",
+      "component_id": "YN11-BUDDHA-HALL",
+      "observed_px": [
+        478.5,
+        817.5
+      ],
+      "expected_px": [
+        483.784,
+        817.049
+      ],
+      "residual_dx_dy_px": [
+        -5.284,
+        0.451
+      ],
+      "compared_axis": "xy",
+      "classification": "visible_lower_ledge_corner_compared_to_published_site_box",
+      "reading_uncertainty_px": 3
+    },
+    {
+      "id": "H-W800",
+      "component_id": "YN11-BUDDHA-HALL",
+      "observed_px": [
+        480.5,
+        800
+      ],
+      "expected_px": [
+        486.812,
+        800
+      ],
+      "residual_dx_dy_px": [
+        -6.312,
+        0
+      ],
+      "compared_axis": "x",
+      "classification": "visible_side_ledge_outline_ground_level_uncertain",
+      "reading_uncertainty_px": 3
+    }
+  ],
+  "edge_visibility_coverage": {
+    "YN11-TOWER-PLINTH": {
+      "north_v0_v1": "Own tower obscures most rear ground contact; small lateral material/top-rim fragments do not prove the rear ground corners.",
+      "east_v1_v2": "Visible side masonry silhouette; lower southeast foot approximately readable; upper side level ambiguous.",
+      "south_v2_v3": "Visible lower masonry edge across front; adjacent blue guide and unrendered south projection are excluded.",
+      "west_v3_v0": "Visible side masonry silhouette and southwest foot; rear corner ground level not established."
+    },
+    "YN11-BUDDHA-HALL": {
+      "north_v0_v1": "Hidden by own superstructure and foreground tower; no ground points assigned.",
+      "east_v1_v2": "Thin side ledge visible, but top/ground distinction uncertain.",
+      "south_v2_v3": "Two separated lower ledge segments visible; central approximately x=521..661 is hidden by tower.",
+      "west_v3_v0": "Thin side ledge visible; southwest lower ledge is about5px west of published site-box vertex."
+    },
+    "YN11-GATE-S": {
+      "north_v0_v1": "Ground rear edge hidden by gate superstructure/roof; no ground points assigned.",
+      "east_v1_v2": "Only lower/front side segment visible.",
+      "south_v2_v3": "Lower base front edge visible, about2..4px forward/down at sampled x.",
+      "west_v3_v0": "Only lower/front side segment visible."
+    }
+  },
+  "source_wall_lines": [
+    {
+      "component_id": "YN11-WALL-N",
+      "source_role": "published_wall_centerline",
+      "expected_line_px": [
+        [
+          130.685783,
+          656.743944
+        ],
+        [
+          1067.758482,
+          695.342053
+        ]
+      ],
+      "source_endpoint_ids": [
+        "YN11-WALL-N-0",
+        "YN11-WALL-N-1"
+      ],
+      "observed_physical_wall_endpoints_px": null,
+      "classification": "guide_only_no_physical_wall",
+      "physical_wall_geometry_passed": false,
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "本图北墙没有可辨北门基址；不得自动切出或绘制北门。"
+      ]
+    },
+    {
+      "component_id": "YN11-WALL-W-N",
+      "source_role": "published_wall_centerline",
+      "expected_line_px": [
+        [
+          130.685783,
+          656.743944
+        ],
+        [
+          85.095969,
+          911.877753
+        ]
+      ],
+      "source_endpoint_ids": [
+        "YN11-WALL-W-N-0",
+        "YN11-WALL-W-N-1"
+      ],
+      "observed_physical_wall_endpoints_px": null,
+      "classification": "guide_only_no_physical_wall",
+      "physical_wall_geometry_passed": false,
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。"
+      ]
+    },
+    {
+      "component_id": "YN11-WALL-W-S",
+      "source_role": "published_wall_centerline",
+      "expected_line_px": [
+        [
+          78.870499,
+          954.929748
+        ],
+        [
+          49.291358,
+          1115.563157
+        ]
+      ],
+      "source_endpoint_ids": [
+        "YN11-WALL-W-S-0",
+        "YN11-WALL-W-S-1"
+      ],
+      "observed_physical_wall_endpoints_px": null,
+      "classification": "guide_only_no_physical_wall",
+      "physical_wall_geometry_passed": false,
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "刊载平面描线按同一图尺等比转换；不与06a寺墙残段强制拟合。"
+      ]
+    },
+    {
+      "component_id": "YN11-WALL-E-N",
+      "source_role": "published_wall_centerline",
+      "expected_line_px": [
+        [
+          1067.758482,
+          695.342053
+        ],
+        [
+          1040.245809,
+          936.315002
+        ]
+      ],
+      "source_endpoint_ids": [
+        "YN11-WALL-E-N-0",
+        "YN11-WALL-E-N-1"
+      ],
+      "observed_physical_wall_endpoints_px": null,
+      "classification": "guide_only_no_physical_wall",
+      "physical_wall_geometry_passed": false,
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "东门文字及标位使图线中断；中断长度不是测得的门宽。"
+      ]
+    },
+    {
+      "component_id": "YN11-WALL-E-S",
+      "source_role": "published_wall_centerline",
+      "expected_line_px": [
+        [
+          1032.288541,
+          999.517821
+        ],
+        [
+          1010.57622,
+          1183.697992
+        ]
+      ],
+      "source_endpoint_ids": [
+        "YN11-WALL-E-S-0",
+        "YN11-WALL-E-S-1"
+      ],
+      "observed_physical_wall_endpoints_px": null,
+      "classification": "guide_only_no_physical_wall",
+      "physical_wall_geometry_passed": false,
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "东门文字及标位使图线中断；中断长度不是测得的门宽。"
+      ]
+    },
+    {
+      "component_id": "YN11-WALL-S-W",
+      "source_role": "published_wall_centerline",
+      "expected_line_px": [
+        [
+          70.490375,
+          1133.481861
+        ],
+        [
+          452.643424,
+          1149.892056
+        ]
+      ],
+      "source_endpoint_ids": [
+        "YN11-WALL-S-W-0",
+        "YN11-WALL-S-W-1"
+      ],
+      "observed_physical_wall_endpoints_px": null,
+      "classification": "guide_only_no_physical_wall",
+      "physical_wall_geometry_passed": false,
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "不跨接南门基址。"
+      ]
+    },
+    {
+      "component_id": "YN11-WALL-S-E",
+      "source_role": "published_wall_centerline",
+      "expected_line_px": [
+        [
+          663.057865,
+          1159.530466
+        ],
+        [
+          1010.141206,
+          1175.42924
+        ]
+      ],
+      "source_endpoint_ids": [
+        "YN11-WALL-S-E-0",
+        "YN11-WALL-S-E-1"
+      ],
+      "observed_physical_wall_endpoints_px": null,
+      "classification": "guide_only_no_physical_wall",
+      "physical_wall_geometry_passed": false,
+      "limits": [
+        "只追摹刊载寺墙双线的中线，不以两条印刷线间距反推墙厚。",
+        "线形按原图保留；未用212×301 m表值分别拉伸X/Y。",
+        "不跨接南门基址。"
+      ]
+    }
+  ],
+  "other_source_controls": [
+    {
+      "component_id": "YN11-TOWER-FOUNDATION",
+      "source_role": "published_foundation_outline",
+      "geometry_type": "Polygon",
+      "expected_geometry_px": [
+        [
+          [
+            369.207771,
+            864.360525
+          ],
+          [
+            822.820857,
+            882.536394
+          ],
+          [
+            807.088825,
+            1040.148989
+          ],
+          [
+            345.643411,
+            1021.389549
+          ],
+          [
+            369.207771,
+            864.360525
+          ]
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_guide_only_no_material_counterpart",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "图中原标签为木塔地基；不把大方框当成塔身、塔檐或完整塔院。"
+    },
+    {
+      "component_id": "YN11-TOWER-ACCESS-N",
+      "source_role": "published_plinth_projection",
+      "geometry_type": "Polygon",
+      "expected_geometry_px": [
+        [
+          [
+            582.481276,
+            918.943063
+          ],
+          [
+            583.527655,
+            912.681345
+          ],
+          [
+            602.123346,
+            913.514979
+          ],
+          [
+            601.087328,
+            919.777635
+          ],
+          [
+            582.481276,
+            918.943063
+          ]
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_plinth_projection_occluded_by_tower",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "图示凸出部分按平面保留；未推定踏步级数、坡度、栏杆或上部形式。"
+    },
+    {
+      "component_id": "YN11-TOWER-ACCESS-E",
+      "source_role": "published_plinth_projection",
+      "geometry_type": "Polygon",
+      "expected_geometry_px": [
+        [
+          [
+            675.274374,
+            952.122177
+          ],
+          [
+            701.205507,
+            952.759355
+          ],
+          [
+            711.014497,
+            954.787613
+          ],
+          [
+            710.199154,
+            960.044696
+          ],
+          [
+            674.192722,
+            958.954091
+          ],
+          [
+            675.274374,
+            952.122177
+          ]
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_guide_only_no_material_counterpart",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "图示凸出部分按平面保留；未推定踏步级数、坡度、栏杆或上部形式。"
+    },
+    {
+      "component_id": "YN11-TOWER-ACCESS-S",
+      "source_role": "published_plinth_projection",
+      "geometry_type": "Polygon",
+      "expected_geometry_px": [
+        [
+          [
+            578.884723,
+            983.858024
+          ],
+          [
+            596.159077,
+            984.63738
+          ],
+          [
+            595.113082,
+            990.980161
+          ],
+          [
+            577.829042,
+            990.199925
+          ],
+          [
+            578.884723,
+            983.858024
+          ]
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_guide_only_no_material_counterpart",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "图示凸出部分按平面保留；未推定踏步级数、坡度、栏杆或上部形式。"
+    },
+    {
+      "component_id": "YN11-TOWER-ACCESS-W",
+      "source_role": "published_plinth_projection",
+      "geometry_type": "Polygon",
+      "expected_geometry_px": [
+        [
+          [
+            498.599056,
+            945.234095
+          ],
+          [
+            482.825894,
+            944.524687
+          ],
+          [
+            481.719842,
+            950.822214
+          ],
+          [
+            497.501813,
+            951.532422
+          ],
+          [
+            498.599056,
+            945.234095
+          ]
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_guide_only_no_material_counterpart",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "图示凸出部分按平面保留；未推定踏步级数、坡度、栏杆或上部形式。"
+    },
+    {
+      "component_id": "YN11-GATE-W",
+      "source_role": "published_gate_foundation_outline",
+      "geometry_type": "Polygon",
+      "expected_geometry_px": [
+        [
+          [
+            77.848582,
+            912.078639
+          ],
+          [
+            112.109639,
+            913.617589
+          ],
+          [
+            112.982887,
+            909.446311
+          ],
+          [
+            160.196752,
+            911.040089
+          ],
+          [
+            150.101576,
+            960.264566
+          ],
+          [
+            102.900968,
+            957.60514
+          ],
+          [
+            103.671131,
+            953.926267
+          ],
+          [
+            69.287476,
+            952.376178
+          ],
+          [
+            77.848582,
+            912.078639
+          ]
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_guide_only_no_material_counterpart",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "不把该轮廓等同于完整西门上部建筑。"
+    },
+    {
+      "component_id": "YN11-GATE-E-MARK",
+      "source_role": "published_symbol_location",
+      "geometry_type": "Point",
+      "expected_geometry_px": [
+        1033.221525,
+        992.107359
+      ],
+      "visible_in_clean_guide": false,
+      "classification": "point_marker_excluded_from_clean_guide_not_gate_footprint",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "只记录东门字样下的图示小符号位置；不得把符号长宽当完整东门基址或门道净宽。"
+    },
+    {
+      "component_id": "YN11-CORNER-SW",
+      "source_role": "published_partial_boundary",
+      "geometry_type": "LineString",
+      "expected_geometry_px": [
+        [
+          49.177193,
+          1116.103841
+        ],
+        [
+          43.340149,
+          1143.747161
+        ],
+        [
+          69.565092,
+          1144.949773
+        ],
+        [
+          73.54642,
+          1118.856811
+        ],
+        [
+          59.236904,
+          1117.110006
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_guide_only_no_material_counterpart",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "原图标有角楼；只保留可辨的开放边线，不闭合上缘局部不明部分。"
+    },
+    {
+      "component_id": "YN11-ROAD-JINYANG-W",
+      "source_role": "published_road_edge",
+      "geometry_type": "LineString",
+      "expected_geometry_px": [
+        [
+          -201.785196,
+          628.622167
+        ],
+        [
+          -316.345425,
+          1153.05844
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "outside_image_frame",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "只在来源图裁切范围内保留图示线；不封闭图外边界，不延长到城门。"
+    },
+    {
+      "component_id": "YN11-ROAD-JINYANG-E",
+      "source_role": "published_road_edge",
+      "geometry_type": "LineString",
+      "expected_geometry_px": [
+        [
+          -31.922761,
+          635.064841
+        ],
+        [
+          -129.731131,
+          1161.084846
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "outside_image_frame",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "只在来源图裁切范围内保留图示线；不封闭图外边界，不延长到城门。"
+    },
+    {
+      "component_id": "YN11-DITCH-E-W",
+      "source_role": "published_watercourse_edge",
+      "geometry_type": "LineString",
+      "expected_geometry_px": [
+        [
+          1232.651085,
+          686.455687
+        ],
+        [
+          1177.707992,
+          1220.620436
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_guide_only_no_material_counterpart",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "图中标水沟，只保留双线中这一侧；未证明与东阳渠、阳渠或其他城内水系的全程连接。"
+    },
+    {
+      "component_id": "YN11-DITCH-E-E",
+      "source_role": "published_watercourse_edge",
+      "geometry_type": "LineString",
+      "expected_geometry_px": [
+        [
+          1241.081256,
+          686.82498
+        ],
+        [
+          1186.548241,
+          1221.026709
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_guide_only_no_material_counterpart",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "图中标水沟，只保留双线中这一侧；未证明与东阳渠、阳渠或其他城内水系的全程连接。"
+    },
+    {
+      "component_id": "YN11-ROAD-LANE-E",
+      "source_role": "published_road_edge",
+      "geometry_type": "LineString",
+      "expected_geometry_px": [
+        [
+          1286.051786,
+          688.794966
+        ],
+        [
+          1233.706815,
+          1223.193984
+        ]
+      ],
+      "visible_in_clean_guide": true,
+      "classification": "source_guide_only_no_material_counterpart",
+      "observed_physical_outline_px": null,
+      "first_source_limit": "只在来源图裁切范围内保留图示线；不封闭图外边界，不延长到城门。"
+    }
+  ],
+  "occluded_source_segments": [
+    {
+      "component_id": "YN11-WALL-N",
+      "expected_segment_px": [
+        [
+          508,
+          672.286
+        ],
+        [
+          683,
+          679.494
+        ]
+      ],
+      "occluder": "tower and rear-hall upper silhouettes",
+      "classification": "source_line_obscured_by_artwork_not_verified_wall"
+    },
+    {
+      "component_id": "YN11-TOWER-PLINTH",
+      "source_edge": "north_v0_v1",
+      "approximate_occluding_image_region_xyxy": [
+        516,
+        906,
+        661,
+        956
+      ],
+      "classification": "rear_ground_contact_hidden; do_not_invent_observed_corners"
+    },
+    {
+      "component_id": "YN11-BUDDHA-HALL",
+      "source_edge": "south_v3_v2",
+      "expected_segment_px": [
+        [
+          521,
+          818.545
+        ],
+        [
+          661,
+          824.174
+        ]
+      ],
+      "occluder": "tower body",
+      "classification": "ground_boundary_occluded"
+    },
+    {
+      "component_id": "YN11-GATE-S",
+      "source_edge": "north_v0_v1",
+      "expected_segment_px": [
+        [
+          455.401886,
+          1134.139851
+        ],
+        [
+          665.697559,
+          1142.665029
+        ]
+      ],
+      "occluder": "own gate roof and upper structure",
+      "classification": "rear_ground_boundary_occluded"
+    },
+    {
+      "component_id": "YN11-WALL-S-W",
+      "expected_endpoint_px": [
+        452.643424,
+        1149.892056
+      ],
+      "occluder": "south-gate lower artwork",
+      "classification": "source_wall_endpoint_only_no_physical_wall"
+    },
+    {
+      "component_id": "YN11-WALL-S-E",
+      "expected_endpoint_px": [
+        663.057865,
+        1159.530466
+      ],
+      "occluder": "south-gate lower artwork",
+      "classification": "source_wall_endpoint_only_no_physical_wall"
+    }
+  ],
+  "overlay_instructions": [
+    "Draw frozen source geometries as separate thin analysis marks; use exact transformed source rings and seven source wall segments.",
+    "Observed lower material edges may use a second color. Side silhouettes with uncertain ground level must have a different dashed style.",
+    "Occluded segments show source position only; do not assign observed coordinates.",
+    "Do not trace the generated colored guide as masonry or enlarge the old gray tower-foundation rectangle into a courtyard.",
+    "Keep source plinth projections as low-information footprint controls; never label them confirmed stairways."
+  ],
+  "next_image_priority": [
+    "Remove copied colored controls from artistic image while retaining an independent exact overlay.",
+    "Constrain tower southeast and east lower masonry extent to the source ring; also constrain south-gate east side and front edge. Do not translate source coordinates.",
+    "Preserve tower9/gate3/readable separate bases and rear-hall order; test these again on the actual correction.",
+    "If plinth projections receive artistic material, keep their source footprints and avoid inferred steps, slope, rails or unsupported upper construction.",
+    "No wall or hidden-edge pass may be inferred from line removal or source overlay alone."
+  ],
+  "decisions": {
+    "complete_visible_parts_classified": true,
+    "all_physical_footprint_corners_registered": false,
+    "whole_ground_geometry_passed": false,
+    "direct_panorama_reintegration_approved": false,
+    "new_historical_geometry_or_height_claim": false
+  }
+}

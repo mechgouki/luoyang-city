@@ -215,10 +215,13 @@ def verify(info, reader, *, build_control_reader=None):
     for item in guides:
         assert "guide-" + item["id"] in anchors
         assert any(tag == "img" and attrs.get("src") == "./" + item["published_path"] for tag, attrs in doc.elements)
+    from yongning_study import verify as verify_yongning_study
+    study = verify_yongning_study(info, get)
     return dict(status="passed", source_commit=info["source_commit"], candidate_revision=meta["candidate_revision"],
                 homepage_revision=V12.revision, homepage_replacement_approved=False, change_count=meta["change_count"],
                 downloads=len(doc.downloads), projection_guides=len(guides), verified_cross_page_anchors=len(checked),
                 protected_public_files=len(meta["protected_files_sha256"]), reversible_homepages=len(HOME_PAGES),
                 new_ancient_coordinates=0, new_shoreline_geometries=0, field_registration_verified=False,
                 publication_verification="passed", image_accepted_for_user_review=meta["status"] == "candidate_for_review",
+                yongning_study=study,
                 **presentation)

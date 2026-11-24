@@ -293,6 +293,9 @@ def build(site=ROOT / "_site"):
             inputs.update(json.loads(source_file(item["path"]).read_bytes())["source_inputs_sha256"])
     for suffix in ("css", "js"):
         copy_input("web/panorama-v14." + suffix, FOLDER + "/review." + suffix)
+    from yongning_study import build as build_yongning_study
+    study = build_yongning_study(site, info["source_commit"])
+    assets.extend([*study["files_sha256"], study["manifest"]])
     data = dict(schema="luoyang-panorama-v14-review-v1", research_version=RESEARCH_VERSION,
                 implementation_version=VERSION, source_commit=info["source_commit"],
                 target_years=[516, 528], candidate=copy.deepcopy(record), images=images,
@@ -305,7 +308,7 @@ def build(site=ROOT / "_site"):
     downloads = [images["v14"]["full"], original_target, RECORD, prompt,
                  *audit_sources, *[x["published_path"] for x in supporting if x["download"]], MANIFEST]
     assert len(downloads) == len(set(downloads))
-    (site / PAGE).write_text(make_page(data, downloads), encoding="utf-8")
+    (site / PAGE).write_text(make_page(data, downloads, study=study), encoding="utf-8")
     assets.append(PAGE)
     before_homes, after_homes = {}, {}
     for page in HOME_PAGES:
@@ -331,7 +334,8 @@ def build(site=ROOT / "_site"):
                 new_ancient_coordinates=0, new_shoreline_geometries=0, field_registration_verified=False,
                 homepage_before_sha256=before_homes, homepage_after_sha256=after_homes,
                 predecessor_release=dict(path=RELEASE_ARCHIVE, sha256=digest(release_raw)),
-                protected_files_sha256=protected, build_control_files_sha256=controls)
+                protected_files_sha256=protected, build_control_files_sha256=controls,
+                yongning_study=study)
     dump(site / MANIFEST, meta)
     info[KEY] = meta
     release["extensions"] = sorted(set(release["extensions"]) | {VERSION})

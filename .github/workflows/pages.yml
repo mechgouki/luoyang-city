@@ -134,6 +134,8 @@ jobs:
           python tools/city_plan_r11.py --verify | tee artifacts/city-plan-r11-verify.json
           python -m unittest discover -s tests -p 'test_panorama_v14.py' -v 2>&1 | tee artifacts/panorama-v14-tests.txt
           python tools/panorama_v14.py --verify | tee artifacts/panorama-v14-verify.json
+          python -m unittest discover -s tests -p 'test_yongning_study.py' -v 2>&1 | tee artifacts/yongning-study-tests.txt
+          python tools/yongning_study.py --verify | tee artifacts/yongning-study-verify.json
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
@@ -162,6 +164,7 @@ jobs:
               python tests/browser_city_layout_r10.py
               python tests/browser_city_plan_r11.py
               python tests/browser_panorama_v14.py
+              python tests/browser_yongning_study.py
               python tests/browser_prosperity_hydro_roads_p46.py
               python tests/browser_backbone_p469.py
               python tests/browser_prosperity_gate_v3.py
@@ -197,6 +200,16 @@ jobs:
         with:
           name: browser-build-evidence
           path: artifacts
+          retention-days: 14
+      - name: Preserve focused Yongning study build evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: yongning-study-build-evidence
+          path: |
+            artifacts/yongning-study-tests.txt
+            artifacts/yongning-study-verify.json
+            artifacts/yongning-study-browser/
           retention-days: 14
       - name: Upload verified Pages artifact
         uses: actions/upload-pages-artifact@v4
@@ -270,6 +283,7 @@ jobs:
               python tests/browser_city_layout_r10.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-city-layout-r10-browser
               python tests/browser_city_plan_r11.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-city-plan-r11-browser
               python tests/browser_panorama_v14.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-panorama-v14-browser
+              python tests/browser_yongning_study.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-yongning-study-browser
               python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser
               python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser
               python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser
@@ -305,4 +319,11 @@ jobs:
         with:
           name: live-acceptance-evidence
           path: artifacts
+          retention-days: 30
+      - name: Preserve focused Yongning study live evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: yongning-study-live-evidence
+          path: artifacts/live-yongning-study-browser/
           retention-days: 30
