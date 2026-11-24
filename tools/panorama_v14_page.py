@@ -5,7 +5,9 @@ from pathlib import PurePosixPath
 from panorama_v14_contract import FOLDER, MANIFEST, RECORD
 
 
-def make_page(data, downloads):
+def make_page(data, downloads, *, study=None):
+    from yongning_study import ENTRY as study_entry
+    study_link = study_entry if study is not None else ""
     candidate, images = data["candidate"], data["images"]
     rejected = candidate["status"] == "needs_revision"
     assert data["status"] == candidate["status"]
@@ -77,7 +79,7 @@ def make_page(data, downloads):
 <main id="main"><div class="intro wrap"><p class="eyebrow">共同平面与试绘审查 · R12.1</p><h1>{heading}</h1>
 <p class="lead">{lead}</p>
 <p class="review-status" id="review-status" data-status="{data['status']}"><strong>{status_heading}</strong> {status_text}</p>
-<p class="reading-path"><a href="#projection">查看透视布局底稿</a><a href="#change-table">查看改动对照表</a><a href="#changes">回查逐项依据</a></p></div>
+<p class="reading-path"><a href="#projection">查看透视布局底稿</a><a href="#change-table">查看改动对照表</a><a href="#changes">回查逐项依据</a>{study_link}</p></div>
 {blockers}
 <section id="comparison" aria-labelledby="comparison-title"><div class="section-heading wrap"><div><h2 id="comparison-title">完整画面对照</h2><p>三幅图保持各自完整比例；并排模式比较 V14 与 V13 二修。</p></div>
 <div id="view-controls" class="view-controls" role="group" aria-label="选择对照方式" hidden><button type="button" data-view="v14" aria-pressed="true">{button_label}</button><button type="button" data-view="v13r2" aria-pressed="false">V13 二修</button><button type="button" data-view="v12" aria-pressed="false">V12 首页</button><button type="button" data-view="compare" aria-pressed="false">前后并排</button></div></div>

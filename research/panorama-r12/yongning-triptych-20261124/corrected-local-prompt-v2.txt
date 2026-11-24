@@ -1,0 +1,12 @@
+Use case: precise-object-edit. This is a second targeted correction of an architectural plate. Image 1 is the clean artwork to edit. Image 2 is exactly the same image with thin magenta polygons marking the true target GROUND-CONTACT outlines of the three bases.
+
+Change ONLY the visible masonry bases/plinths of the tower, south gate, and rear hall. Preserve every roof, wall band, occupied floor, building centreline, building height, camera, ivory background, and square framing. Keep nine tower storeys and three gate storeys. Do not redesign the buildings. Output the same 1254-square framing.
+
+The magenta polygons in image 2 mark the BOTTOM ground-contact perimeter, NOT the TOP of a plinth. Last time extra stone skirts were incorrectly added OUTSIDE and BELOW those target outlines. This time TRIM that extra masonry away; do not add a platform below the marked ground.
+
+In the 1254 x 1254 reference coordinate system:
+- Tower base contact polygon: (503.70,915.94) back-left, (678.40,923.25) back-right, (669.69,987.42) front-right, (492.55,979.96) front-left. The visible southeast/right base edge must end at x669.7,y987.4 instead of extending to x678 at its front corner. Do not enlarge the tower's occupied first storey to fill the base. Roof overhang may remain outside the footprint.
+- South gate contact polygon: (455.40,1134.14), (665.70,1142.67), (659.12,1175.29), (449.78,1166.23). Remove the projecting bottom stone skirt currently around y1183–1188. The actual lowest front contact edge should run from (449.8,1166.2) to (659.1,1175.3), not below it. A minimal flush sill is enough; no new terrace, steps, railings, side projections or large platform. Keep the three-storey gate in exactly the same position above this base.
+- Rear hall contact polygon: (490.95,776.70), (729.95,786.77), (726.57,826.81), (483.78,817.05). Trim the extra stone overhang on the left (currently near x470) back to the marked left ground edge. The centre remains naturally hidden behind the tower; do not move the hall or tower to expose it.
+
+Use the annotated second image as a precise clipping boundary for the ground footprint; its magenta and white strokes must NOT appear in the result. No other colored lines, text, labels, extra structures, walls or scenery. Keep the same restrained ivory/brown/gray architecture and subtle lighting. The goal is visibly tighter, smaller base footprints following the existing guide, not a new composition.

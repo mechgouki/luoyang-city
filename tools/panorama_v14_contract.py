@@ -87,6 +87,14 @@ def restore_r11_context(info, reader):
     assert json.loads(get(MANIFEST)) == meta
     assert digest(get(MANIFEST)) == hashes[MANIFEST]
     new_paths = {p for p in hashes if p.startswith(FOLDER + "/") and p != MANIFEST} | {PAGE}
+    if "yongning_study" in meta:
+        from yongning_study import PAGE as STUDY_PAGE, MANIFEST as STUDY_MANIFEST, VERSION as STUDY_VERSION
+        study = meta["yongning_study"]
+        assert study["page"] == STUDY_PAGE and study["manifest"] == STUDY_MANIFEST and study["version"] == STUDY_VERSION
+        assert study["source_commit"] == info["source_commit"]
+        assert study["homepage_replacement_approved"] is study["full_panorama_accepted"] is False
+        assert json.loads(get(STUDY_MANIFEST)) == study
+        new_paths.add(STUDY_PAGE)
     assert set(meta["files_sha256"]) == new_paths, "R12 inventory escaped its publication scope"
     for path, checksum in meta["files_sha256"].items():
         assert digest(get(path)) == checksum == hashes[path], (path, "R12 resource bytes changed")

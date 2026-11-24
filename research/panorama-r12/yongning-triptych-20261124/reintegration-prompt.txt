@@ -1,0 +1,19 @@
+Use case: composite-local-architecture-into-existing-panorama.
+Create a careful Yongning Temple reintegration PREVIEW by EDITING image 1. Image 1 is the full existing 1672 x 941 city panorama and must remain the base composition. Image 2 is the selected 1254 x 1254 corrected architectural plate: use its tower, rear hall, and separate south gate as the architectural reference. Image 3 is image 1 with exact ground-footprint guide polygons and a dashed editing area; remove all guide colors and lines in the final output.
+
+Preserve image 1's 1672 x 941 wide framing, camera, horizon, palace, river, bridge, big city gate and other city blocks. Change only the small Yongning Temple area on the left of centre around x515,y420, within approximately x442..594, y322..496. Do not zoom, recrop, refit perspective or move the whole temple to a different city block.
+
+Replace the existing tower and overlarge, too-far-south temple gate with image 2's slender NINE-storey wooden tower, small THREE-storey south gate, and low rear Buddha hall. Precisely nine occupied tower storeys with nine distinct roof tiers, and three occupied gate storeys, not just three roof decorations. Keep the tower and gate clearly separate and leave a ground gap between their independent feet. The rear hall remains behind the tower and partly occluded.
+
+The exact placement of image 2 in image 1 is given by this fixed display mapping, not an artistic rescale:
+u=(x*680/1254+2360)/5.2 ; v=(y*680/1254+1720)/5.2.
+In other words the entire square architectural reference maps to the rectangle x453.846..584.615 and y330.769..461.538 in the panorama. Its white/ivory background must NOT be pasted: integrate the buildings into the existing warm earth temple court, matching the full panorama's light and small-scale material texture.
+The tower finial is near x515,y336. The tower ground base is the four-point polygon [(506.37,426.28),(524.59,427.05),(523.68,433.74),(505.21,432.96)]. Roof eaves may overhang this base, but do not enlarge the ground footprint.
+The rear hall ground box is [(505.04,411.76),(529.97,412.82),(529.61,416.99),(504.30,415.97)].
+The south gate ground-contact ring is [(501.34,449.04),(523.27,449.93),(522.58,453.33),(500.75,452.39)]. It must be a small gate centred near x512,y451, with the roof around y440, NOT the existing oversized gate whose feet are around y477.
+
+Very important cleanup: remove the entire old too-far-south temple gate, old front stairs and wrong temple-wall edges down to y490. Do not leave a duplicate gate, phantom base, extra stairs, empty rectangle seam, or an isolated old wall below the new gate. Reintegrate that cleared strip with plain earth and the immediately adjacent street context, keeping the outer city wall at y510 and the big central city gate unchanged.
+
+For the temple's boundary, the thin green guide consists of source wall centreline segments, with top edge from (467.47,399.26) to (565.19,403.28), west sides ending near (458.99,447.10), east sides ending near (559.23,454.21), and south segments either side of the new gate at y449..453. Use only a restrained low boundary along those shown segments. Do not close unexplained gaps into invented towers, do not add a north gate, duplicated corner towers, cloisters or new side buildings. Do not turn the larger underground foundation outline into a raised courtyard or second enclosure. No invented monumental stairs or balustrades.
+
+Match the full panorama's existing painterly architectural rendering, daylight and earth tones, with modest quiet masonry bases and dark gray roofs. Make a seamless plausible visual preview. No labels, text, arrows, colored guide marks, grid, border, inset or watermark. Keep all unrelated scenery as close to image 1 as possible.

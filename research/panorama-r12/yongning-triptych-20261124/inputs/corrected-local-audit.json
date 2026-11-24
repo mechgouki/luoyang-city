@@ -1,0 +1,767 @@
+{
+  "schema": "luoyang-yongning-corrected-local-audit-v1",
+  "reviewed_at_utc": "2026-11-24T08:33:34.700710+00:00",
+  "status": "usable_as_preview_structure_reference_geometric_correction_not_passed",
+  "image": {
+    "path": "/workspace/luoyang-r12-next/research/panorama-r12/yongning-triptych-20261124/corrected-local.png",
+    "bytes": 1530840,
+    "sha256": "5eca8cfc379a90d2d1e4d96e019d699d86fe30d8ee769142e30e661ab18efbb1",
+    "size_px": [
+      1254,
+      1254
+    ]
+  },
+  "actual_image_viewed": true,
+  "exact_target_guide": {
+    "path": "/workspace/luoyang-r12-next/research/panorama-r12/yongning-triptych-20261124/inputs/correction-ground-guide.png",
+    "bytes": 1129945,
+    "sha256": "73957b4c2aea7fc1c421bb6dfdbf66d5bbf16972ff80bbe875184016677820d5",
+    "size_px": [
+      1254,
+      1254
+    ]
+  },
+  "exact_target_guide_actually_viewed": true,
+  "old_study_audit": {
+    "path": "/workspace/r12-inputs/study02-ground-audit.json",
+    "sha256": "9a2e297bef26201d4cf2410f1eec44c5b11de83200be13f4b0d7898fc7adfaf4"
+  },
+  "coordinate_frame": {
+    "size_px": [
+      1254,
+      1254
+    ],
+    "origin": "top-left; x right, y down",
+    "H": [
+      [
+        0.38,
+        0.0383708090217182,
+        424.9862599932897
+      ],
+      [
+        0.0,
+        -0.08848822067306178,
+        206.51863997840601
+      ],
+      [
+        0.0,
+        0.00012,
+        1.0
+      ]
+    ],
+    "matrix_id": "r12-shared-ground-homography-v1",
+    "mapping_from_frozen_panorama": "x=(5.2*u-2360)*1254/680; y=(5.2*v-1720)*1254/680",
+    "mapping_fitted_to_image": false,
+    "anisotropic_scaling": false,
+    "source_geometry_changed": false
+  },
+  "expected_primary_source_rings_px": {
+    "YN11-TOWER-PLINTH": [
+      [
+        503.703238,
+        915.935364
+      ],
+      [
+        678.403789,
+        923.245652
+      ],
+      [
+        669.685542,
+        987.422296
+      ],
+      [
+        492.548895,
+        979.962868
+      ],
+      [
+        503.703238,
+        915.935364
+      ]
+    ],
+    "YN11-BUDDHA-HALL": [
+      [
+        490.949156,
+        776.700127
+      ],
+      [
+        729.948426,
+        786.774325
+      ],
+      [
+        726.573218,
+        826.809798
+      ],
+      [
+        483.784413,
+        817.048916
+      ],
+      [
+        490.949156,
+        776.700127
+      ]
+    ],
+    "YN11-GATE-S": [
+      [
+        455.401886,
+        1134.139851
+      ],
+      [
+        665.697559,
+        1142.665029
+      ],
+      [
+        659.116936,
+        1175.285932
+      ],
+      [
+        449.781792,
+        1166.233407
+      ],
+      [
+        455.401886,
+        1134.139851
+      ]
+    ]
+  },
+  "visual_checks": [
+    {
+      "id": "tower_count",
+      "status": "passed_for_visible_count",
+      "count": 9,
+      "wall_bands_bottom_to_top_y": [
+        [
+          909,
+          955
+        ],
+        [
+          817,
+          861
+        ],
+        [
+          731,
+          773
+        ],
+        [
+          642,
+          686
+        ],
+        [
+          551,
+          600
+        ],
+        [
+          468,
+          512
+        ],
+        [
+          385,
+          429
+        ],
+        [
+          303,
+          347
+        ],
+        [
+          216,
+          264
+        ]
+      ],
+      "limit": "Finial, plinth, brackets and rear-hall roof excluded; no height or construction proof."
+    },
+    {
+      "id": "south_gate_count",
+      "status": "passed_for_visible_count",
+      "count": 3,
+      "wall_bands_bottom_to_top_y": [
+        [
+          1147,
+          1171
+        ],
+        [
+          1115,
+          1130
+        ],
+        [
+          1087,
+          1102
+        ]
+      ]
+    },
+    {
+      "id": "three_object_separation",
+      "status": "passed_for_visual_readability",
+      "observation": "Gate is separate in front; tower stands on its own base; rear hall remains behind tower, its centre obscured."
+    },
+    {
+      "id": "overall_frame",
+      "status": "same_square_canvas_and_no_obvious_whole_scene_recomposition",
+      "canvas_px": [
+        1254,
+        1254
+      ],
+      "observation": "Spire, tower axis and gate superstructure remain in approximately the former positions. This does not prove pixelwise camera fidelity or unchanged building widths."
+    },
+    {
+      "id": "control_marks",
+      "status": "passed_for_visible_removal",
+      "observation": "Green, gray, blue, purple, orange and magenta guide strokes are no longer visible. No complete physical temple enclosure has been substituted."
+    },
+    {
+      "id": "plinth_projections",
+      "status": "not_verified_or_not_distinctly_rendered",
+      "observation": "No separate N/E/S/W source plinth projection can be confidently matched as a complete visible physical projection. No step counts, ramps or rails inferred."
+    }
+  ],
+  "measurements": [
+    {
+      "id": "T-F500",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        500,
+        985.5
+      ],
+      "expected_px": [
+        500,
+        980.277
+      ],
+      "residual_dx_dy_px": [
+        0,
+        5.223
+      ],
+      "comparison_axis": "y",
+      "classification": "visible_masonry_ground_contact",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.0,
+        0.545
+      ],
+      "old_study_observed_px": [
+        500,
+        981.5
+      ],
+      "observed_change_from_old_px": [
+        0,
+        4.0
+      ]
+    },
+    {
+      "id": "T-F580",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        580,
+        987.5
+      ],
+      "expected_px": [
+        580,
+        983.646
+      ],
+      "residual_dx_dy_px": [
+        0,
+        3.854
+      ],
+      "comparison_axis": "y",
+      "classification": "visible_masonry_ground_contact",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.0,
+        0.402
+      ],
+      "old_study_observed_px": [
+        580,
+        984
+      ],
+      "observed_change_from_old_px": [
+        0,
+        3.5
+      ]
+    },
+    {
+      "id": "T-F665",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        665,
+        989.5
+      ],
+      "expected_px": [
+        665,
+        987.225
+      ],
+      "residual_dx_dy_px": [
+        0,
+        2.275
+      ],
+      "comparison_axis": "y",
+      "classification": "visible_masonry_ground_contact",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.0,
+        0.237
+      ],
+      "old_study_observed_px": [
+        665,
+        986.5
+      ],
+      "observed_change_from_old_px": [
+        0,
+        3.0
+      ]
+    },
+    {
+      "id": "T-E940",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        680.5,
+        940
+      ],
+      "expected_px": [
+        676.128,
+        940
+      ],
+      "residual_dx_dy_px": [
+        4.372,
+        0
+      ],
+      "comparison_axis": "x",
+      "classification": "visible_side_masonry_outline_ground_level_uncertain",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.456,
+        0.0
+      ],
+      "old_study_observed_px": [
+        681.5,
+        940
+      ],
+      "observed_change_from_old_px": [
+        -1.0,
+        0
+      ]
+    },
+    {
+      "id": "T-E970",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        678.5,
+        970
+      ],
+      "expected_px": [
+        672.052,
+        970
+      ],
+      "residual_dx_dy_px": [
+        6.448,
+        0
+      ],
+      "comparison_axis": "x",
+      "classification": "visible_side_masonry_outline_ground_level_uncertain",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.672,
+        0.0
+      ],
+      "old_study_observed_px": [
+        678.5,
+        970
+      ],
+      "observed_change_from_old_px": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "id": "T-E984",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        677.5,
+        984
+      ],
+      "expected_px": [
+        670.15,
+        984
+      ],
+      "residual_dx_dy_px": [
+        7.35,
+        0
+      ],
+      "comparison_axis": "x",
+      "classification": "visible_side_masonry_outline_ground_level_uncertain",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.766,
+        0.0
+      ],
+      "old_study_observed_px": [
+        677.5,
+        984
+      ],
+      "observed_change_from_old_px": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "id": "T-SE",
+      "component_id": "YN11-TOWER-PLINTH",
+      "observed_px": [
+        677.5,
+        989.5
+      ],
+      "expected_px": [
+        669.686,
+        987.422
+      ],
+      "residual_dx_dy_px": [
+        7.814,
+        2.078
+      ],
+      "comparison_axis": "xy",
+      "classification": "visible_masonry_ground_contact",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.815,
+        0.217
+      ],
+      "old_study_observed_px": [
+        677.5,
+        986.5
+      ],
+      "observed_change_from_old_px": [
+        0.0,
+        3.0
+      ]
+    },
+    {
+      "id": "G-F460",
+      "component_id": "YN11-GATE-S",
+      "observed_px": [
+        460,
+        1184.5
+      ],
+      "expected_px": [
+        460,
+        1166.675
+      ],
+      "residual_dx_dy_px": [
+        0,
+        17.825
+      ],
+      "comparison_axis": "y",
+      "classification": "visible_masonry_ground_contact",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.0,
+        1.859
+      ],
+      "old_study_observed_px": [
+        460,
+        1171
+      ],
+      "observed_change_from_old_px": [
+        0,
+        13.5
+      ]
+    },
+    {
+      "id": "G-F550",
+      "component_id": "YN11-GATE-S",
+      "observed_px": [
+        550,
+        1186
+      ],
+      "expected_px": [
+        550,
+        1170.567
+      ],
+      "residual_dx_dy_px": [
+        0,
+        15.433
+      ],
+      "comparison_axis": "y",
+      "classification": "visible_masonry_ground_contact",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.0,
+        1.609
+      ],
+      "old_study_observed_px": [
+        550,
+        1173.5
+      ],
+      "observed_change_from_old_px": [
+        0,
+        12.5
+      ]
+    },
+    {
+      "id": "G-F650",
+      "component_id": "YN11-GATE-S",
+      "observed_px": [
+        650,
+        1187.5
+      ],
+      "expected_px": [
+        650,
+        1174.892
+      ],
+      "residual_dx_dy_px": [
+        0,
+        12.608
+      ],
+      "comparison_axis": "y",
+      "classification": "visible_masonry_ground_contact",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.0,
+        1.315
+      ],
+      "old_study_observed_px": [
+        650,
+        1177
+      ],
+      "observed_change_from_old_px": [
+        0,
+        10.5
+      ]
+    },
+    {
+      "id": "G-E1165",
+      "component_id": "YN11-GATE-S",
+      "observed_px": [
+        670.5,
+        1165
+      ],
+      "expected_px": [
+        661.192,
+        1165
+      ],
+      "residual_dx_dy_px": [
+        9.308,
+        0
+      ],
+      "comparison_axis": "x",
+      "classification": "visible_lower_side_masonry_outline",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.971,
+        0.0
+      ],
+      "old_study_observed_px": [
+        666.5,
+        1165
+      ],
+      "observed_change_from_old_px": [
+        4.0,
+        0
+      ]
+    },
+    {
+      "id": "H-F500",
+      "component_id": "YN11-BUDDHA-HALL",
+      "observed_px": [
+        500,
+        827.5
+      ],
+      "expected_px": [
+        500,
+        817.701
+      ],
+      "residual_dx_dy_px": [
+        0,
+        9.799
+      ],
+      "comparison_axis": "y",
+      "classification": "visible_lower_ledge_compared_to_published_site_box",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.0,
+        1.022
+      ],
+      "old_study_observed_px": [
+        500,
+        818
+      ],
+      "observed_change_from_old_px": [
+        0,
+        9.5
+      ]
+    },
+    {
+      "id": "H-F710",
+      "component_id": "YN11-BUDDHA-HALL",
+      "observed_px": [
+        710,
+        829.5
+      ],
+      "expected_px": [
+        710,
+        826.144
+      ],
+      "residual_dx_dy_px": [
+        0,
+        3.356
+      ],
+      "comparison_axis": "y",
+      "classification": "visible_lower_ledge_compared_to_published_site_box",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        0.0,
+        0.35
+      ],
+      "old_study_observed_px": [
+        710,
+        824.5
+      ],
+      "observed_change_from_old_px": [
+        0,
+        5.0
+      ]
+    },
+    {
+      "id": "H-SW",
+      "component_id": "YN11-BUDDHA-HALL",
+      "observed_px": [
+        469.5,
+        827
+      ],
+      "expected_px": [
+        483.784,
+        817.049
+      ],
+      "residual_dx_dy_px": [
+        -14.284,
+        9.951
+      ],
+      "comparison_axis": "xy",
+      "classification": "visible_lower_ledge_compared_to_published_site_box",
+      "reading_uncertainty_px": 2,
+      "residual_in_original_panorama_px": [
+        -1.49,
+        1.038
+      ],
+      "old_study_observed_px": [
+        478.5,
+        817.5
+      ],
+      "observed_change_from_old_px": [
+        -9.0,
+        9.5
+      ]
+    }
+  ],
+  "visible_lower_contours": [
+    {
+      "component_id": "YN11-TOWER-PLINTH",
+      "classification": "visible_ground_contact_front",
+      "polyline_px": [
+        [
+          487.5,
+          985
+        ],
+        [
+          500,
+          985.5
+        ],
+        [
+          580,
+          987.5
+        ],
+        [
+          665,
+          989.5
+        ],
+        [
+          677.5,
+          989.5
+        ]
+      ],
+      "uncertainty_px": 2
+    },
+    {
+      "component_id": "YN11-BUDDHA-HALL",
+      "classification": "visible_lower_ledge_west_front",
+      "polyline_px": [
+        [
+          469.5,
+          827
+        ],
+        [
+          500,
+          827.5
+        ],
+        [
+          520,
+          828
+        ]
+      ],
+      "uncertainty_px": 2
+    },
+    {
+      "component_id": "YN11-BUDDHA-HALL",
+      "classification": "visible_lower_ledge_east_front",
+      "polyline_px": [
+        [
+          662,
+          829
+        ],
+        [
+          710,
+          829.5
+        ],
+        [
+          729,
+          829.5
+        ]
+      ],
+      "uncertainty_px": 2
+    },
+    {
+      "component_id": "YN11-GATE-S",
+      "classification": "visible_ground_contact_front",
+      "polyline_px": [
+        [
+          441.5,
+          1183.5
+        ],
+        [
+          460,
+          1184.5
+        ],
+        [
+          550,
+          1186
+        ],
+        [
+          650,
+          1187.5
+        ],
+        [
+          667,
+          1188
+        ]
+      ],
+      "uncertainty_px": 2
+    }
+  ],
+  "remaining_occlusion": "The rear ground edges of all three buildings remain behind their own upper structures; the hall front centre remains behind the tower. No observed rear-corner coordinates are assigned. Source wall endpoints are absent as physical walls and cannot pass wall geometry review.",
+  "comparison_with_old_study": {
+    "tower_east": "No material inward correction established: upper side sample moves inward about1px, lower samples unchanged within reading uncertainty; remaining outward residual is about4.4..7.4px, southeast foot about7.8px right.",
+    "tower_front": "New visible stone front edge lies about2.3..5.2px below the source; it is about3..4px below old sampled lower edges.",
+    "south_gate_front": "Correction goal not achieved. New stone base extends about12.6..17.8px below source front, around10.5..13.5px below the old visible lower edge.",
+    "south_gate_east": "At y1165 the visible lower side is about9.3px to the right of source, about4px farther right than old reading.",
+    "rear_hall": "The added/exposed stone ledge front is about3.4..9.8px below source at sampled x. Approximate southwest lower corner is14.3px left and10px down from the published site-box corner. Source role remains a published site box, not a complete excavated footprint."
+  },
+  "method": "Actual corrected PNG and exact target-overlay PNG viewed. Read-only RGB probes checked strong masonry-to-ivory transitions; antialiasing/shadows give approximately2px reading uncertainty. Expected values use the same frozen H/display transform, with no fitted alignment or source edits. Side silhouettes with uncertain height are distinguished from lower contact edges.",
+  "preview_use": {
+    "allowed": "May be used immediately as the artistic structure/material reference for the requested full-panorama preview, while showing residuals in the comparison deliverable.",
+    "geometry_passed": false,
+    "homepage_replacement_approved": false,
+    "local_to_original_panorama_scale": 0.10428168322905165,
+    "typical_remaining_source_residual_in_original_panorama_px": "about0.2..1.9px at the sampled lower edges; this display conversion does not cancel the local geometry discrepancy.",
+    "reintegration_notes": [
+      "Use the inverse recorded display transform for placement; do not fit a new H or move source geometry.",
+      "Clean the old displaced gate/wall artwork across its full original-image region; the local crop ending near original y461.54 is not itself a sufficient cleanup mask for artwork extending to y490.",
+      "Preserve9/3 and the separate rear-hall order, then inspect the actually generated panorama for duplicated gates, remaining old walls, new base drift, seam edges and changes outside the authorized area."
+    ]
+  },
+  "recommended_next_correction": "For any later precise revision, remove the newly extended front stone apron rather than moving frozen controls; align the outermost masonry foot, not the top ledge or wood sill, with each source ring. Keep naturally hidden rear portions hidden. Do not delay the requested preview solely because this local iteration retains explicitly reported residuals."
+}
