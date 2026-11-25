@@ -1,0 +1,103 @@
+{
+  "schema": "luoyang-checkpoint-independent-preflight-v1",
+  "started_at_utc": "2026-11-25T08:57:10.915462+00:00",
+  "completed_at_utc": "2026-11-25T08:57:11.827123+00:00",
+  "workspace": "/workspace/scratch/f1dbf35eff8a/luoyang-evidence",
+  "staged_tree": "ac50efd31c75e7c1b21401b393a3060db8f8f315",
+  "status": "passed",
+  "scope": "Read-only frozen index, inventory and source-byte verification, claimed API/artifact report facts, saved HTTP bytes, manually viewed lazy-load prepaint/painted screenshots, trial rejection state. No CI rerun, network request, or ZIP redownload. No frozen payload edits.",
+  "issues": [],
+  "checks": {
+    "staged_tree": {
+      "expected": "ac50efd31c75e7c1b21401b393a3060db8f8f315",
+      "index_matches_tree": true,
+      "added_paths": 379,
+      "base_commit": "bbfbac9022e133e61836614f3b120cf42efde43e"
+    },
+    "inventories": [
+      {
+        "prefix": "evidence/yongning-triptych/2026-11-25",
+        "files_including_index": 368,
+        "listed_bytes": 107698699,
+        "index_bytes": 96562,
+        "index_sha256": "223003e0bac0fe67eb6a7105390bf54473202e7d6596bb145644178410829ae3",
+        "index_git_blob_sha": "303c7dbdfcf4a04b749ee10aa827245a1b3b4b89",
+        "total_bytes_including_index": 107795261
+      },
+      {
+        "prefix": "research/panorama-r12/local-refinement-20261125",
+        "files_including_index": 11,
+        "listed_bytes": 1567546,
+        "index_bytes": 2458,
+        "index_sha256": "029e6eb8810ae7f98ef450e768df7dff4aca1656ae5d72f51c11ced86ade74e8",
+        "index_git_blob_sha": "7d98c9dbd5f359d37e742c907942cba26d64e10b",
+        "total_bytes_including_index": 1570004
+      }
+    ],
+    "production_claims": {
+      "same_tree": true,
+      "public_resources": 968,
+      "retries": [
+        {
+          "path": "anchor-461/roads.json",
+          "failed_attempt": 1,
+          "next_attempt": 2,
+          "retry_number": 1,
+          "status": 503,
+          "reason": "HTTP 503: Service Unavailable",
+          "delay_seconds": 1.0
+        }
+      ],
+      "first_live_failure_log_preserved": true,
+      "attempt_2_live_completed_at": "2026-11-24T13:09:37Z",
+      "first_failure_report_has_screenshot": false
+    },
+    "saved_http_readback": {
+      "unique_resources": 46,
+      "build_info_start_end_identical": true,
+      "source_inputs_verified_against_base_git_blobs": 45,
+      "source_pngs_verified_against_base_git_blobs": 3,
+      "previous_49_file_check_claimed": false
+    },
+    "retained_browser_results": {
+      "reports": 6,
+      "download_events": 48,
+      "screenshot_entries": 18,
+      "not_unique_file_counts": true
+    },
+    "manual_browser": {
+      "initial_lazy_unloaded_then_loaded": true,
+      "prepaint_and_painted_screenshots_independently_viewed": true,
+      "manual_download_clicks": 0,
+      "mobile_manual_session": false,
+      "claims_match_readme": true
+    },
+    "local_trial": {
+      "status": "partial_gate_improvement_complete_visible_geometry_failed_do_not_reintegrate",
+      "ground_geometry_passed": false,
+      "ready_for_reintegration": false,
+      "site_images_replaced": false,
+      "new_panorama_generated": false,
+      "measurement_count": 26,
+      "gate_front_samples": [
+        {
+          "id": "G-F460",
+          "improvement": 4.5,
+          "remaining_dy": 8.325
+        },
+        {
+          "id": "G-F550",
+          "improvement": 5.5,
+          "remaining_dy": 6.433
+        },
+        {
+          "id": "G-F650",
+          "improvement": 6.0,
+          "remaining_dy": 4.608
+        }
+      ],
+      "image_sha256": "820b276856b72f25f42a868c5c75cafde037ea9d766fd51f40e8921c5c228e06",
+      "frozen_inputs_verified": 4
+    }
+  }
+}
