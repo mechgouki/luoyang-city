@@ -1,0 +1,44 @@
+{
+  "schema": "luoyang-yongning-local-refinement-source-v1",
+  "date_shanghai": "2026-11-25",
+  "base_commit": "bbfbac9022e133e61836614f3b120cf42efde43e",
+  "tool": "image_gen.imagegen",
+  "mode": "built_in_edit",
+  "attempt": 3,
+  "kind": "local_study_not_panorama",
+  "actual_input_images": [
+    "research/panorama-r12/yongning-triptych-20261124/corrected-local.png",
+    "research/panorama-r12/yongning-triptych-20261124/inputs/correction-v2-ground-guide.png"
+  ],
+  "input_sha256": {
+    "research/panorama-r12/yongning-triptych-20261124/corrected-local.png": "c1a831ed0fac45daccede52a10a3cd50a0225617148698cd9c766dc5cd36b9c5",
+    "research/panorama-r12/yongning-triptych-20261124/inputs/correction-v2-ground-guide.png": "82be51476048312331ae0e4b675ae61d55984c516eb86375c2c92140998b7c6b",
+    "research/panorama-r12/projection.json": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+    "research/panorama-r12/yongning-triptych-20261124/geometry.json": "eeade262b6eb0b6601861d44d7331069ea55860ba4fdad4c8e0412776b29753b"
+  },
+  "output": {
+    "path": "research/panorama-r12/local-refinement-20261125/corrected-local-v3.png",
+    "sha256": "820b276856b72f25f42a868c5c75cafde037ea9d766fd51f40e8921c5c228e06",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "prompt": {
+    "path": "prompt-v3.txt",
+    "sha256": "76fb22388efc100b737e97db1d8b2fe742984b40564e121e06ccdd1a6e03fe89"
+  },
+  "audit": {
+    "path": "audit-v3.json",
+    "sha256": "c22dd9e9a7e1e068971e70e62efd9239e4fe117a2be08af66e245d36729cd1a3"
+  },
+  "second_reference_role": "Use frozen magenta polygons only; its older underlying artwork is not the edit target",
+  "disposition": "rejected_for_reintegration_partial_gate_improvement",
+  "ground_homography_modified": false,
+  "per_object_transform_fitted": false,
+  "full_panorama_accepted": false,
+  "homepage_replacement_approved": false,
+  "new_panorama_generated": false,
+  "site_images_replaced": false,
+  "original_generator_output": "generated_images/exec-f5f3d322-1873-4385-90ba-d40f985522bc.png"
+}

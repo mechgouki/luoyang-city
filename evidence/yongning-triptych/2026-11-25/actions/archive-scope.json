@@ -1,0 +1,66 @@
+{
+  "schema": "luoyang-yongning-evidence-scope-v1",
+  "source_commit": "bbfbac9022e133e61836614f3b120cf42efde43e",
+  "workflow_run_id": 45363321713,
+  "purpose": "Retain all actual JSON/text/log reports, all Yongning study screenshots and actual browser downloads, and legacy failure screenshots from the production build, first live failure, and second live success. This is a scoped archive, not an archive of every old-feature screenshot or byte of the deployed site.",
+  "artifacts": [
+    {
+      "artifact_id": 14907375554,
+      "archive_prefix": "build",
+      "members": 762,
+      "retained_members": 128,
+      "retained_bytes": 26964503,
+      "omitted_members": 634,
+      "omitted_bytes": 342303813
+    },
+    {
+      "artifact_id": 14907296897,
+      "archive_prefix": "live-attempt1",
+      "members": 457,
+      "retained_members": 57,
+      "retained_bytes": 26995953,
+      "omitted_members": 400,
+      "omitted_bytes": 175870997
+    },
+    {
+      "artifact_id": 14922084390,
+      "archive_prefix": "live-attempt2",
+      "members": 715,
+      "retained_members": 88,
+      "retained_bytes": 27095675,
+      "omitted_members": 627,
+      "omitted_bytes": 277549210
+    },
+    {
+      "artifact_id": 14905768569,
+      "archive_prefix": "build",
+      "members": 26,
+      "all_members_match_full_artifact": true,
+      "duplicate_members_not_copied": 26
+    },
+    {
+      "artifact_id": 14907970758,
+      "archive_prefix": "live-attempt1",
+      "members": 24,
+      "all_members_match_full_artifact": true,
+      "duplicate_members_not_copied": 24
+    },
+    {
+      "artifact_id": 14923201195,
+      "archive_prefix": "live-attempt2",
+      "members": 24,
+      "all_members_match_full_artifact": true,
+      "duplicate_members_not_copied": 24
+    }
+  ],
+  "excluded_transport_zips": "All six original ZIPs were actually downloaded and validated against GitHub size and SHA-256. ZIP transport containers are not duplicated in the long-term payload. Each member has its own byte count, SHA-256 and explicit retention decision.",
+  "focused_artifact_deduplication": "Focused artifacts have been byte-compared against full artifacts and point to the one exact retained member path.",
+  "missing_historical_manual_session": "No claim is made to recover the previous session's 49-file independent local verification or manual browser captures unless a separate extant original is supplied.",
+  "failure_evidence": {
+    "attempt1_report": "live-attempt1/live-prosperity-axis-v4-browser/report.json",
+    "report_contents": "checks=[], errors=[], base_url only; the failure occurred before the script had saved its first screenshot",
+    "failure_screenshot_present": false,
+    "raw_failure_assertion": "SVG preview must be visible",
+    "raw_failure_traceback_source": "Separate original GitHub job log, being collected by recovery agent; not inferred from empty report"
+  }
+}

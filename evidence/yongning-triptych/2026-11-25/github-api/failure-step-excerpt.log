@@ -1,0 +1,7 @@
+2026-11-24T09:40:51.0101058Z Traceback (most recent call last):
+2026-11-24T09:40:51.0107665Z   File "/work/tests/browser_prosperity_axis_v4.py", line 65, in <module>
+2026-11-24T09:40:51.0108248Z     assert elem.evaluate("(img)=>img.complete && img.naturalWidth>0"),"SVG preview must be visible"
+2026-11-24T09:40:51.0118407Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-24T09:40:51.0118796Z AssertionError: SVG preview must be visible
+2026-11-24T09:40:51.1230705Z ##[error]Process completed with exit code 1.
+2026-11-24T09:40:51.1293599Z ##[group]Run actions/upload-artifact@v4

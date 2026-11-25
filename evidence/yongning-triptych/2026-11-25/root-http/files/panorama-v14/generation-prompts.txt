@@ -1,0 +1,119 @@
+R12.1 / V14 — built-in image_gen edit
+Attempt 1: shared-ground-projection correction
+Inputs, in order:
+1. research/city-spatial-r9/panorama-v13-r2-source.png (edit target)
+2. research/panorama-r12/projection-clean.png (full-frame ground layout)
+3. research/panorama-r12/projection-yongning-clean.png (same projection, 5.2x display enlargement)
+
+Use case: precise-object-edit / historical-scene.
+Asset: V14 spatially corrected candidate for the Northern Wei Luoyang project, composite study period 516–528 CE. Produce one full-width, high-detail 16:9 historical city panorama, preferably 3840×2160.
+
+INPUT ROLES:
+Image 1 is the existing V13r2 panorama to revise. Preserve its south-looking-north direction, full-city framing, distant hills and inhabited landscape, foreground river and wooden pontoon bridge composition, and general earthy architectural illustration treatment.
+Image 2 is the authoritative NEW ground-layout drawing in the exact same 1672×941 canvas proportions. It specifies ground footprints and relative placement, not roof silhouettes. Rebuild the central palace and Yongning temple to this layout even where they differ strongly from Image 1.
+Image 3 is a 5.2× display enlargement of the SAME temple ground projection. It only clarifies local relationships; DO NOT paste this enlarged temple at its magnified size into the city.
+
+CRITICAL SPATIAL CHANGES:
+The old temple and central palace buildings were greatly oversized. Make the temple enclosure visibly narrower and smaller within the city. In the full frame its GROUND bounds are x27.45–33.80%, y42.43–48.27%. The nine-storey timber pagoda's ground plinth center stays near x30.8%, y45.7%; its ground width is only about1.16% of the full image. Keep NINE distinctly readable principal timber storeys, a separate finial, and a credible slender timber profile; the finial and foundation do not count as storeys. Vertical height remains illustrative, not measured.
+Temple south gate: ground center x30.62%, y47.95%, ground width1.35% of full frame, thus slightly WIDER than the pagoda's ground plinth. Depict a broad, shallow-front-to-back THREE-STOREY gatehouse, bottom entrance storey plus two separate windowed timber storeys with three principal roof tiers, not a skinny miniature pagoda. It belongs to and joins the temple SOUTH wall at its base; keep a substantial urban gap between this temple and the foreground CITY wall.
+Buddha hall: behind/north of the pagoda, ground center x30.93%, y44.04%, ground width1.54%. Preserve courtyard ground space between hall, tower and gate. The purple footprint in the diagram is this hall; blue is tower PLINTH; orange are south/west gates; green broken lines are wall segments. The dashed grey large square around the plinth denotes underground foundation extent ONLY: do not turn it into a second enclosure, tower body, raised broad terrace or pavilion ring.
+Temple walls and west gate follow Image 3 as a single projected assembly. Do not introduce a complete ring cloister, four symmetric corner pavilions, a new north gate or rows of named monk halls. Keep modest open yard and sparse planting where no building footprint is supplied.
+Palace: Changhe main gate GROUND center x38.88%, y33.48%, width1.18% of full frame; paired que reference positions just forward/left and right as in Image2. Use restrained ground-linked gate structures, not a huge generic palace gate consuming the courtyard. The palace axis recedes toward a Taiji hall GROUND center x37.73%, y25.50%, ground width about2.47%. Adjust the palace compound depth and main building footprint to this shared ground layout; do not preserve the old enormous hall or repeated equally spaced identical palace courts. The intermediary small ochre scale patches indicate relative gate sequence, not permission to invent exact room plans.
+All rebuilding must share one perspective. Do not enlarge the temple independently merely to make it spectacular. Keep it west of the palace-front main avenue and south of the palace, with an obvious real urban interval.
+
+RENDERING:
+Maintain a grand inhabited city through breadth, varied anonymous courtyard clusters and natural differences in roof height/density, not giant out-of-scale monuments or repeated identical precincts. Period-appropriate restrained timber, grey roofs, earth-toned walls. Architectural edges and roofs should be clear rather than artificial tilt-shift blur or toy plastic texture. Preserve the baseline's general atmosphere and full-frame composition; retain small unevenly distributed figures/carts as secondary context. No captions, no labels, no diagram colors or vector lines in the rendered picture, no watermark.
+The diagrams contain incomplete source lines and provisional placement. Do NOT add an outer-city wall from their overall range, copy any survey marker as a building, or invent a new exact watercourse/stone bridge. Foreground city wall, river/bridge landings and uncharted background remain an acknowledged inherited artistic setting. This is a SOURCE-GUIDED CANDIDATE, not a surveyed reconstruction.
+
+Attempt 2: targeted temple footprint and storey correction after rejected attempt 1
+Inputs: attempt1 generated PNG; projection-clean.png; original V13r2 PNG as storey reference.
+
+Use case: precise-object-edit, historical Northern Wei city panorama.
+Edit Image1, the FIRST V14 attempt. Image2 is the exact shared ground projection. Image3 is the previous V13r2 reference for the THREE-STOREY temple gate and NINE-STOREY timber pagoda only, NOT its oversized temple footprint.
+This pass changes ONLY Yongning temple and the land immediately vacated by shrinking it. Preserve all other city/palace/river/bridge composition.
+
+The temple must become SMALLER. Its current ground wall rectangle is approximately x386–619,y355–483 in a1672×941 frame. Replace it with the source-guided footprint approximately x459–565,y399–454. This is about45% of its current ground width and depth, located slightly farther down on the page. Temple width is only6.35% of the image width. Do not keep the old wide temple or shift the entire temple north. Fill the released footprint with ordinary anonymous city yards, narrow lanes and planting, not another temple.
+Use the actual colored footprints in Image2 for all ground bases. Tower plinth center(515,430), bbox505–525/426–434. South gate ground center(512,451), bbox501–523/449–453. Buddha hall ground center(517,414), bbox504–530/412–417. Temple south wall must sit aroundy451, leaving an obvious urban strip before the city's front wall near y530. Ground positions are the feet of buildings; their roofs extend UPWARD in the scene.
+
+Do not shrink the vertical pagoda into an illegible stump: give it NINE clearly separated timber STOREYS, with nine principal roofs and a short separate finial. Count actual complete storeys from bottom to top; neither the finial nor the base counts as a storey. A slender tall timber tower is intended, with ground plinth only20px wide at this framing. Preserve the previous reference's nine-storey typology while placing it on the smaller ground base.
+South gate must have THREE distinct occupied levels: ground-level entrance with timber first floor directly above, AND a second upper timber floor above that. Three main roofs belong to the gate itself. Do not borrow the pagoda roof behind it as a gate storey. It must be a broad shallow building whose ground width is slightly larger than the pagoda base, not a thin tower. Its base joins both wings of the south temple wall.
+The hall is behind the pagoda within the compact temple. Do not add a full ring of cloisters, four matching corner towers, a guessed north gate, or a square second wall around the tower foundation. Keep the source-related west gate modest. Architecture may overlap visually in perspective, but all bases must remain in the given ground footprint.
+
+Keep the existing architectural illustration style, terrain, sky, whole-city breadth and secondary activity. No captions or guide lines. Render one16:9 panorama with the highest available resolved detail. This correction is a source-guided visual candidate; heights and the inherited unverified river/city-wall setting remain artistic.
+
+Attempt 3: source-ground massing sketch to rendering after two rejected attempts
+Inputs: massing-overview-clean.png; original V13r2 PNG as scene/style reference; massing-yongning-counted.png as enlarged module-count reference.
+The massing SVG is a deterministic drawing aid; vertical units, roofs and taper are explicitly artistic and do not alter R11 or the frozen ground projection.
+
+Use case: sketch-to-render / historical-scene.
+Create the next Northern Wei Luoyang panorama candidate, composite study period516–528 CE, by rendering the exact structure of IMAGE1 into a finished city panorama.
+
+IMAGE1 is the PRIMARY LAYOUT AND MASSING TARGET: a3344×1882 architectural guide. Preserve the positions and relative ground sizes of its palace, temple, tower, hall and gate. The ground drawing has one common perspective. Do not enlarge monuments to fill the scene.
+IMAGE2 is the older finished panorama, to supply the overall full-city view, atmosphere, distant hills, foreground river and wooden pontoon bridge, inhabited city texture, architectural materials and illustration style ONLY. Its old palace and temple sizes and internal positions are WRONG for this edit; do not copy them.
+IMAGE3 is a magnified view of the SAME temple with nine tower storeys and three gate storeys explicitly counted. This is only a detailed structural reference. Its labels, numbers, white background, colors and linework must not appear in the final artwork.
+
+RENDER THE GUIDE'S COMPOSITION:
+The small Yongning temple ground enclosure occupies only x27.45–33.80%,y42.43–48.27% of the full frame. Its south gate meets its single south wall around x30.62%,y47.95%. Leave a broad strip of ordinary city blocks between that temple and the foreground city wall; do not add a second small front wall or a second archway.
+Tower ground center x30.8%,y45.7%. The tower is a slender timber structure with EXACTLY NINE complete occupied storeys and nine principal roof tiers, then a separate short finial. Copy the nine stacked modules of IMAGE1/3 faithfully. Do not count a finial, basement or adjacent gate roof as one of the nine.
+The temple south gate has EXACTLY THREE distinct occupied storeys and three main roof tiers. Its ground footprint is a little wider than the tower's base. Follow IMAGE3: the gate is a separate low broad structure in front of the tower, with a visible patch of courtyard between them; no merging into a single twelve-storey structure and no hiding the lowest tower floor behind a huge gate.
+The hall sits behind/north of the tower and may be partly occluded naturally. It does not spread across the whole temple courtyard. No symmetric corner-tower set, complete cloister ring or guessed north gate.
+Palace entrance: keep the small gate and tightly grouped paired que near x38.9%,y33.5%; the whole gate/que ensemble is about2.7% of canvas width. The principal Taiji hall's ground center is x37.7%,y25.5%, its ground width about2.5% of the canvas. Keep the guide's restrained building scale and extensive unfilled courtyard space, and its sequence of entrance elements. Do not make an enormous main hall consuming most of the palace. Do not symmetrize the enclosure around a new axis or close an uncertain rear boundary with a new hard wall.
+
+FINISH:
+A grand, detailed whole-city historical architectural panorama, south looking north. Use timber, subdued grey roof tiles, earth-toned walls, varied anonymous courtyard clusters, nonuniform tree cover and sparse uneven small people/carts. Match IMAGE2's broad setting and natural light, but draw clearly resolved architecture rather than toy plastic forms or miniature blur. Roof shapes and heights in the guide are only simple illustrative placeholders: give them period-appropriate restrained timber details while preserving module counts, base locations, scale and silhouette hierarchy.
+Do not reproduce any diagram, text, numbers, legend, colored outline or watermark. Do not invent a new outer wall, river course or stone bridge. The inherited foreground setting is artistic, not a newly surveyed historic shoreline.
+One complete high-resolution16:9 landscape panorama, preferably retain the3344×1882 input canvas, not a collage and not a close-up.
+
+Attempt 4: local temple reduction after independent rejection of attempt 3
+Inputs: attempt3 PNG (706257abbefb963847f6211464f751e3fa1b386d20528df740277bd43377a339); massing-overview-clean.png (c517953a882f9f020cb8cfb3ef909f540a4eafcbc65cdbb54c10de5557c4b7b2).
+
+Edit the FIRST image only. The SECOND image is a same-frame ground/massing guide, not a style reference.
+
+Make one precise local correction: SHRINK THE ENTIRE YONGNING TEMPLE GROUP to about 55% of its present width and 55% of its present ground depth, including its tower and south gate, and place it on the small temple footprint in image 2. Do not redraw or move the palace, main city gate, foreground city wall, river, pontoon bridge, hills or the rest of the city.
+
+In the 1672 x 941 composition:
+- The temple's present enclosure is about x417–617 and reaches y500. The REPLACEMENT enclosure must be only x459–565, with the south wall at y451. The north wall is near y400.
+- Tower feet at (515,430); south-gate feet at (512,451); Buddha-hall feet at (517,414). Use these as building FEET, not roof tops.
+- The temple must now be separated from the large foreground city wall by a broad visible strip of ordinary city houses and lanes (roughly y455–515). Fill the vacated old temple footprint with anonymous low courtyard houses. Do not leave a phantom wall, second south wall or extra gate in that strip.
+- Shrink the tower's height together with its width, redrawing it as exactly NINE separate occupied timber storeys (the current tower does NOT yet show nine; add the missing complete timber module and reveal the lowest module above its plinth) and nine main roof tiers, then a separate short finial. It will be a slender landmark, not a giant close-up.
+- Make the separate low broad temple entrance exactly THREE storeys, each with its own complete timber level and principal roof. Its 23px ground width is slightly wider than the tower's 20px base. Do not let the south gate merge into the tower behind it.
+- Keep the hall compact behind the tower and leave the unknown temple spaces open. No new cloister ring, north gate or corner towers.
+
+Keep the whole image in its original wide aspect ratio and historical illustration style. The compact temple must remain a small component in a broad city panorama. No text, numbers, color outlines or guides in the final image. Preserve every other part of image 1.
+
+Attempt 5: preserve nine-storey tower; revise gate, hall and source walls. RESULT REJECTED after actual inspection.
+Inputs: attempt4 PNG; unchanged massing-overview-clean.png. Exact input/output identities are in generation-attempts.json and generation-inputs/.
+
+Precise local edit of image 1, a historical panorama. Image 2 is the frozen same-frame layout guide. Keep the newly compact temple and the NINE-STOREY pagoda from image 1. The nine tower storeys are now correct: do not change their count, scale, location or silhouette.
+
+Correct only the temple's south gate, rear hall and low enclosure walls:
+1. SOUTH GATE: Move the feet of the small temple gate from roughly (521,464) to (512,451) in the 1672x941 canvas. Give it THREE unmistakable complete occupied levels: a ground entrance level, a middle timber level with visible windows, and a top timber level with visible windows. Each level has its own principal roof; a narrow solid band under an eave is NOT a complete floor. Make this a low, broad, shallow gate, about23px ground width, a little wider than the pagoda's20px plinth. Its total silhouette should stay low (about16–18px high), leaving the tower's lower side visible behind it. Show the three levels through clear horizontal window bands, not by making a tall skinny gate tower.
+2. REAR BUDDHA HALL: The hall is mistakenly to the RIGHT of the tower. Move it LEFT by about31px and BACK by about4px, to ground center(517,414), and reduce its ground width to about26px. It must sit directly BEHIND the pagoda on the temple axis. The pagoda should naturally hide most of its centre; a modest roof portion may be visible on either side. Do not move the hall sideways for visibility. Replace its old right-hand location with open temple yard.
+3. ENCLOSURE: Show the modest low earth-coloured temple wall segments from image2 at their exact ground locations. The single south wall aroundy451 must join the two sides of the gate. Do not substitute a hedge for the wall. Retain the west entrance opening and the source wall gaps; no new north gate, cloister ring or corner pavilions. Overall temple ground bounds remain aboutx459–565,y399–454. Do not enlarge the enclosure.
+
+Preserve the whole rest of the panorama, the correct nine-storey pagoda, the city blocks separating temple from foreground city wall, the palace, main city gate, river, wooden pontoon bridge, hills and full-width16:9 framing. No labels, diagram lines, text or watermark. Keep the historical timber illustration style.
+
+
+Attempt 6: local gate and temple correction; independent inspection rejected the result. APPENDIX ONLY.
+Inputs, in order:
+1. research/panorama-r12/panorama-v14-source.png (fifth attempt, edit target)
+2. research/panorama-r12/massing-overview-clean.png (same-frame spatial guide)
+3. research/panorama-r12/massing-yongning-counted.png (enlarged storey reference)
+Actual source prompt: research/panorama-r12/attempts/attempt-6-prompt.txt
+Outcome: rejected_two_storey_gate_and_ground_projection_unmet. Main display and its alignment audit remain bound to attempt 5.
+
+Use case: precise-object-edit, historical-scene.
+Edit the FIRST attached image, a complete 1672x941 Northern Wei Luoyang panorama, only inside the small Yongning Temple ensemble at x440–590, y320–495. Keep the full original framing, horizon, river, floating bridge, surrounding city, large central foreground city gate and distant palace unchanged. This is a local correction, not a fresh scene.
+Image 2 is the same-frame spatial guide at 2x resolution, not a style reference. Image 3 is an enlarged schematic of the SAME temple with counted floors, not an image to paste. Render natural timber/earth/tile architecture matching image 1; no labels, schematics, or guide lines in the output.
+
+The target is the small courtyard under the tall pagoda LEFT of the central street. NOT the large city gate at (800,530), and NOT the distant palace gate at (650,315). Rebuild this temple as a compact whole moved a little BACK/NORTH in image space. Do not simply add a floor while retaining its oversized forward ground placement.
+
+Ground placement specifications on the original 1672x941 canvas:
+- Low temple walls follow the guide envelope x459–565, y399–454. Current walls are too far forward: erase the old southern foreground part and restore ordinary surroundings there. Do not turn the guide gaps into invented elaborate gates/corridors.
+- Tall pagoda plinth has ground envelope x505–525,y426–434, ground centre near (515,430). Keep the pagoda tall and slender with exactly NINE clearly articulated principal timber storeys; finial is not a floor. Do not shift its foot towards the viewer.
+- Buddha hall is BEHIND the pagoda, on the same slightly sloping axis, ground enclosure x504–530,y412–417. It is a modest single hall and can be largely occluded by the pagoda. Shrink its footprint from the current huge width; no side displacement.
+- Temple SOUTH GATE ground foundation envelope x501–524,y449–454, ground centre (512,451). This is approximately HALF the current gate foundation width, and about 25px farther back than the existing gate. It belongs to the low temple south wall. The short courtyard between tower and gate must match this guide.
+
+CRITICAL SOUTH GATE: show THREE independent occupied storeys in this ONE FRONT building. A ground storey with a visible through passage, a middle timber storey with its own clearly visible columns/windows, and an upper timber storey with its own clearly visible columns/windows. Give each storey enough visible wall to distinguish it; three dark tiled roof tiers separated by wall bands, not extra ornamental eaves. Total visual gate height about 25–30px can make the three storeys legible while the ground footprint stays small. Do NOT count any of the tower behind as a gate floor. Make the two upper floors a clearly continuous part of the gate itself.
+Retain the northern pagoda's nine principal floors while editing the front gate. Roof overhangs and steps may extend modestly beyond the foundation, but no giant gate terrace. Heights and roofs here are artistic, not an archaeological elevation.
+Return ONLY the complete edited wide panorama, no comparison panels, no text, no crop, no arrows.

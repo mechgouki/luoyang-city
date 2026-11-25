@@ -1,0 +1,159 @@
+{
+  "schema": "luoyang-yongning-triptych-api-facts-v1",
+  "captured_at_utc": "2026-11-25 08:44:06 UTC",
+  "repository": "mechgouki/luoyang-city",
+  "pr": {
+    "number": 87,
+    "url": "https://github.com/mechgouki/luoyang-city/pull/87",
+    "head_sha": "c3b9dc8a0da9cda023a26a10aa63d06bd9c8d2f7",
+    "merged": true,
+    "merged_at_utc": "2026-11-24T09:14:33Z",
+    "merge_commit_sha": "bbfbac9022e133e61836614f3b120cf42efde43e",
+    "comments": 0,
+    "review_comments": 0,
+    "body_mentions_49_file_readback": false,
+    "body_provides_external_49_file_evidence_download": false
+  },
+  "current_main_sha": "bbfbac9022e133e61836614f3b120cf42efde43e",
+  "tested_merge_sha": "4eedbf6c452ab6d1cb3bccf2864c182201c68eb3",
+  "tested_merge_tree_sha": "92fa3faf994ed1172512697b18024a5c9948d54b",
+  "production_tree_sha": "92fa3faf994ed1172512697b18024a5c9948d54b",
+  "pr_head_tree_sha": "92fa3faf994ed1172512697b18024a5c9948d54b",
+  "same_tree_verified_from_git_commit_api": true,
+  "pr_checkout_log": "pr-build.log",
+  "checkout_excerpt": "pr-checkout-excerpt.log",
+  "pr_run": {
+    "id": 45360973001,
+    "url": "https://github.com/mechgouki/luoyang-city/actions/runs/45360973001",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 138330671821,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "started_at": "2026-11-24T08:59:46Z",
+        "completed_at": "2026-11-24T09:13:12Z",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45360973001/job/138330671821"
+      },
+      {
+        "id": 138337829896,
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "skipped",
+        "run_attempt": 1,
+        "started_at": "2026-11-24T09:13:13Z",
+        "completed_at": "2026-11-24T09:13:12Z",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45360973001/job/138337829896"
+      },
+      {
+        "id": 138337830362,
+        "name": "verify-live",
+        "status": "completed",
+        "conclusion": "skipped",
+        "run_attempt": 1,
+        "started_at": "2026-11-24T09:13:13Z",
+        "completed_at": "2026-11-24T09:13:12Z",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45360973001/job/138337830362"
+      }
+    ]
+  },
+  "production_run": {
+    "id": 45363321713,
+    "url": "https://github.com/mechgouki/luoyang-city/actions/runs/45363321713",
+    "status": "completed",
+    "conclusion": "success",
+    "current_attempt": 2,
+    "attempt_1_jobs": [
+      {
+        "id": 138338586238,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "started_at": "2026-11-24T09:14:38Z",
+        "completed_at": "2026-11-24T09:27:12Z",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45363321713/job/138338586238"
+      },
+      {
+        "id": 138345449989,
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "started_at": "2026-11-24T09:27:18Z",
+        "completed_at": "2026-11-24T09:27:39Z",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45363321713/job/138345449989"
+      },
+      {
+        "id": 138345692599,
+        "name": "verify-live",
+        "status": "completed",
+        "conclusion": "failure",
+        "run_attempt": 1,
+        "started_at": "2026-11-24T09:27:42Z",
+        "completed_at": "2026-11-24T09:41:03Z",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45363321713/job/138345692599"
+      }
+    ],
+    "attempt_2_jobs": [
+      {
+        "id": 138457232585,
+        "name": "verify-live",
+        "status": "completed",
+        "conclusion": "success",
+        "run_attempt": 2,
+        "started_at": "2026-11-24T12:51:25Z",
+        "completed_at": "2026-11-24T13:09:37Z",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45363321713/job/138457232585"
+      },
+      {
+        "id": 138457232767,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "run_attempt": 2,
+        "started_at": "2026-11-24T09:14:38Z",
+        "completed_at": "2026-11-24T09:27:12Z",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45363321713/job/138457232767"
+      },
+      {
+        "id": 138457233414,
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success",
+        "run_attempt": 2,
+        "started_at": "2026-11-24T09:27:18Z",
+        "completed_at": "2026-11-24T09:27:39Z",
+        "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45363321713/job/138457233414"
+      }
+    ],
+    "attempt_2_build_and_deploy_retain_original_times": true,
+    "interpretation": "The failed live verification was rerun. Attempt 2 lists previously successful build/deploy with unchanged original execution times; this collection does not claim a second build or deployment."
+  },
+  "failed_live": {
+    "job_id": 138345692599,
+    "test_file": "tests/browser_prosperity_axis_v4.py",
+    "line": 65,
+    "assertion": "SVG preview must be visible",
+    "cause": "Not diagnosed by these records; preserve the assertion failure without assigning a network or timing cause.",
+    "raw_log": "production-attempt-1-verify-live.log",
+    "excerpt": "failure-step-excerpt.log"
+  },
+  "final_live": {
+    "job_id": 138457232585,
+    "conclusion": "success",
+    "completed_at_utc": "2026-11-24T13:09:37Z",
+    "completed_at_shanghai": "2026-11-24 21:09:37 Asia/Shanghai",
+    "raw_log": "production-attempt-2-verify-live.log"
+  },
+  "limitations": [
+    "This collection did not perform an independent current live website readback.",
+    "This collection did not download or verify artifact ZIP bytes; archive_prepare owns that work.",
+    "Successful technical publication does not change the image review: whole ground geometry, full panorama and homepage replacement remain unaccepted per published review.",
+    "PR body lists local checks and future evidence preservation but contains no 49-file independent readback archive or external download URL.",
+    "Full original decoded logs are preserved; API JSON is the returned content serialization with terminal LF normalization."
+  ]
+}

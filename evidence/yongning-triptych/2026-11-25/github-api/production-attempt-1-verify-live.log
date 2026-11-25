@@ -1,0 +1,395 @@
+﻿2026-11-24T09:27:43.4309972Z Current runner version: '2.338.2'
+2026-11-24T09:27:43.4329283Z ##[group]Runner Image Provisioner
+2026-11-24T09:27:43.4329939Z Hosted Compute Agent
+2026-11-24T09:27:43.4330376Z Version: 20261111.635
+2026-11-24T09:27:43.4330822Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-24T09:27:43.4331331Z Build Date: 2026-11-11T01:49:01Z
+2026-11-24T09:27:43.4331860Z Worker ID: {908e8f4c-7baa-4fb8-b626-4da0626ff13b}
+2026-11-24T09:27:43.4332357Z Region: us-west-2
+2026-11-24T09:27:43.4332742Z Cloud: AWS
+2026-11-24T09:27:43.4333119Z ##[endgroup]
+2026-11-24T09:27:43.4333982Z ##[group]Operating System
+2026-11-24T09:27:43.4334427Z Ubuntu
+2026-11-24T09:27:43.4334778Z 24.04.5
+2026-11-24T09:27:43.4335114Z LTS
+2026-11-24T09:27:43.4335488Z ##[endgroup]
+2026-11-24T09:27:43.4335864Z ##[group]Runner Image
+2026-11-24T09:27:43.4336685Z Image: ubuntu-24.04
+2026-11-24T09:27:43.4337105Z Version: 20261116.133.1
+2026-11-24T09:27:43.4338062Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261116.133/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-24T09:27:43.4339160Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261116.133
+2026-11-24T09:27:43.4339922Z ##[endgroup]
+2026-11-24T09:27:43.4340669Z ##[group]GITHUB_TOKEN Permissions
+2026-11-24T09:27:43.4342292Z Contents: read
+2026-11-24T09:27:43.4342692Z Metadata: read
+2026-11-24T09:27:43.4343080Z ##[endgroup]
+2026-11-24T09:27:43.4344541Z Secret source: Actions
+2026-11-24T09:27:43.4345158Z Cache mode: write
+2026-11-24T09:27:43.4345794Z Prepare workflow directory
+2026-11-24T09:27:43.4575125Z Prepare all required actions
+2026-11-24T09:27:43.4611895Z Getting action download info
+2026-11-24T09:27:43.8403457Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-24T09:27:45.8038727Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-24T09:27:45.9941486Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-24T09:27:46.3020486Z Complete job name: verify-live
+2026-11-24T09:27:46.3671511Z ##[group]Run actions/checkout@v4
+2026-11-24T09:27:46.3671964Z with:
+2026-11-24T09:27:46.3672306Z   repository: mechgouki/luoyang-city
+2026-11-24T09:27:46.3674310Z   token: ***
+2026-11-24T09:27:46.3674735Z   ssh-strict: true
+2026-11-24T09:27:46.3675081Z   ssh-user: git
+2026-11-24T09:27:46.3675444Z   persist-credentials: true
+2026-11-24T09:27:46.3675839Z   clean: true
+2026-11-24T09:27:46.3676117Z   sparse-checkout-cone-mode: true
+2026-11-24T09:27:46.3676408Z   fetch-depth: 1
+2026-11-24T09:27:46.3676879Z   fetch-tags: false
+2026-11-24T09:27:46.3677156Z   show-progress: true
+2026-11-24T09:27:46.3677460Z   lfs: false
+2026-11-24T09:27:46.3677703Z   submodules: false
+2026-11-24T09:27:46.3677963Z   set-safe-directory: true
+2026-11-24T09:27:46.3678275Z   allow-unsafe-pr-checkout: false
+2026-11-24T09:27:46.3678803Z ##[endgroup]
+2026-11-24T09:27:50.5236034Z Syncing repository: mechgouki/luoyang-city
+2026-11-24T09:27:50.5239647Z ##[group]Getting Git version info
+2026-11-24T09:27:50.5240306Z Working directory is '/home/runner/work/luoyang-city/luoyang-city'
+2026-11-24T09:27:50.5240971Z [command]/usr/bin/git version
+2026-11-24T09:27:50.7775838Z git version 2.56.1
+2026-11-24T09:27:50.7791317Z ##[endgroup]
+2026-11-24T09:27:50.7801673Z Temporarily overriding HOME='/home/runner/work/_temp/c0096660-eca8-4389-807d-88dc4d13f7ab' before making global git config changes
+2026-11-24T09:27:50.7802532Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T09:27:50.7805894Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luoyang-city/luoyang-city
+2026-11-24T09:27:50.8199812Z Deleting the contents of '/home/runner/work/luoyang-city/luoyang-city'
+2026-11-24T09:27:50.8202710Z ##[group]Initializing the repository
+2026-11-24T09:27:50.8206988Z [command]/usr/bin/git init /home/runner/work/luoyang-city/luoyang-city
+2026-11-24T09:27:50.8781176Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-24T09:27:50.8782503Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-24T09:27:50.8783017Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-24T09:27:50.8783467Z hint: call:
+2026-11-24T09:27:50.8783767Z hint:
+2026-11-24T09:27:50.8784097Z hint: 	git config --global init.defaultBranch <name>
+2026-11-24T09:27:50.8784427Z hint:
+2026-11-24T09:27:50.8784760Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-24T09:27:50.8785230Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-24T09:27:50.8785622Z hint:
+2026-11-24T09:27:50.8785869Z hint: 	git branch -m <name>
+2026-11-24T09:27:50.8786130Z hint:
+2026-11-24T09:27:50.8786707Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-24T09:27:50.8791465Z Initialized empty Git repository in /home/runner/work/luoyang-city/luoyang-city/.git/
+2026-11-24T09:27:50.8801827Z [command]/usr/bin/git remote add origin https://github.com/mechgouki/luoyang-city
+2026-11-24T09:27:50.8850351Z ##[endgroup]
+2026-11-24T09:27:50.8851062Z ##[group]Disabling automatic garbage collection
+2026-11-24T09:27:50.8853295Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-24T09:27:50.8876729Z ##[endgroup]
+2026-11-24T09:27:50.8877210Z ##[group]Setting up auth
+2026-11-24T09:27:50.8881563Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T09:27:50.8910623Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-24T09:27:51.1800153Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T09:27:51.1822706Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-24T09:27:51.1970633Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T09:27:51.1994360Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-24T09:27:51.2144405Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-24T09:27:51.2171632Z ##[endgroup]
+2026-11-24T09:27:51.2172136Z ##[group]Fetching the repository
+2026-11-24T09:27:51.2182269Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bbfbac9022e133e61836614f3b120cf42efde43e:refs/remotes/origin/main
+2026-11-24T09:27:58.8589583Z From https://github.com/mechgouki/luoyang-city
+2026-11-24T09:27:58.8590450Z  * [new ref]         bbfbac9022e133e61836614f3b120cf42efde43e -> origin/main
+2026-11-24T09:27:58.8595494Z ##[endgroup]
+2026-11-24T09:27:58.8596085Z ##[group]Determining the checkout info
+2026-11-24T09:27:58.8597144Z ##[endgroup]
+2026-11-24T09:27:58.8600775Z [command]/usr/bin/git sparse-checkout disable
+2026-11-24T09:27:58.8665713Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-24T09:27:58.8691091Z ##[group]Checking out the ref
+2026-11-24T09:27:58.8694240Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-24T09:27:59.2448300Z Switched to a new branch 'main'
+2026-11-24T09:27:59.2454632Z branch 'main' set up to track 'origin/main'.
+2026-11-24T09:27:59.2471790Z ##[endgroup]
+2026-11-24T09:27:59.2510835Z [command]/usr/bin/git log -1 --format=%H
+2026-11-24T09:27:59.2531203Z bbfbac9022e133e61836614f3b120cf42efde43e
+2026-11-24T09:27:59.2737905Z ##[group]Run actions/setup-python@v5
+2026-11-24T09:27:59.2738205Z with:
+2026-11-24T09:27:59.2738434Z   python-version: 3.11
+2026-11-24T09:27:59.2738706Z   check-latest: false
+2026-11-24T09:27:59.2740555Z   token: ***
+2026-11-24T09:27:59.2740893Z   update-environment: true
+2026-11-24T09:27:59.2741144Z   allow-prereleases: false
+2026-11-24T09:27:59.2741397Z   freethreaded: false
+2026-11-24T09:27:59.2741645Z ##[endgroup]
+2026-11-24T09:27:59.3739218Z ##[group]Installed versions
+2026-11-24T09:27:59.5558215Z (node:2155) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-24T09:27:59.5559023Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-24T09:27:59.5577810Z Successfully set up CPython (3.11.18)
+2026-11-24T09:27:59.5578634Z ##[endgroup]
+2026-11-24T09:27:59.5683427Z ##[group]Run python -m pip install pillow==11.2.1
+2026-11-24T09:27:59.5683835Z [36;1mpython -m pip install pillow==11.2.1[0m
+2026-11-24T09:27:59.7986989Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:27:59.7987293Z env:
+2026-11-24T09:27:59.7987645Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:27:59.7988085Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-24T09:27:59.7988468Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:27:59.7988878Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:27:59.7989217Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:27:59.7989599Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-24T09:27:59.7989915Z ##[endgroup]
+2026-11-24T09:28:04.1593441Z Collecting pillow==11.2.1
+2026-11-24T09:28:04.2148075Z   Downloading pillow-11.2.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+2026-11-24T09:28:04.2300967Z Downloading pillow-11.2.1-cp311-cp311-manylinux_2_28_x86_64.whl (4.6 MB)
+2026-11-24T09:28:04.3426457Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 129.0 MB/s  0:00:00
+2026-11-24T09:28:04.8989467Z Installing collected packages: pillow
+2026-11-24T09:28:05.0803144Z Successfully installed pillow-11.2.1
+2026-11-24T09:28:05.1351017Z ##[group]Run python tools/verify_live.py --base-url "$SITE_URL" --commit "$GITHUB_SHA"
+2026-11-24T09:28:05.1351611Z [36;1mpython tools/verify_live.py --base-url "$SITE_URL" --commit "$GITHUB_SHA"[0m
+2026-11-24T09:28:05.1378378Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:28:05.1378793Z env:
+2026-11-24T09:28:05.1379071Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:28:05.1379476Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-24T09:28:05.1379863Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:28:05.1380236Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:28:05.1380615Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:28:05.1380951Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-24T09:28:05.1381296Z   SITE_URL: https://mechgouki.github.io/luoyang-city/
+2026-11-24T09:28:05.1381587Z ##[endgroup]
+2026-11-24T09:35:19.4021390Z LIVE PASS: 968 public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: 0
+2026-11-24T09:35:19.4673999Z ##[group]Run docker pull mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-24T09:35:19.4674503Z [36;1mdocker pull mcr.microsoft.com/playwright/python:v1.57.0-noble[0m
+2026-11-24T09:35:19.4674855Z [36;1mmkdir -p artifacts[0m
+2026-11-24T09:35:19.4675379Z [36;1mdocker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json[0m
+2026-11-24T09:35:19.4703115Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:35:19.4703376Z env:
+2026-11-24T09:35:19.4703742Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:35:19.4704124Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-24T09:35:19.4704501Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:35:19.4704848Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:35:19.4705186Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:35:19.4705800Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-24T09:35:19.4706093Z ##[endgroup]
+2026-11-24T09:35:21.1642630Z v1.57.0-noble: Pulling from playwright/python
+2026-11-24T09:35:21.3282034Z 02de03a7213b: Pulling fs layer
+2026-11-24T09:35:21.3282374Z 7b5874a20bcf: Pulling fs layer
+2026-11-24T09:35:21.3282640Z 4b7186aead47: Pulling fs layer
+2026-11-24T09:35:21.3283239Z b7c8fb4e771e: Pulling fs layer
+2026-11-24T09:35:21.3283562Z b7c8fb4e771e: Waiting
+2026-11-24T09:35:21.8142815Z 02de03a7213b: Verifying Checksum
+2026-11-24T09:35:21.8164150Z 02de03a7213b: Download complete
+2026-11-24T09:35:21.9282819Z 7b5874a20bcf: Verifying Checksum
+2026-11-24T09:35:21.9283194Z 7b5874a20bcf: Download complete
+2026-11-24T09:35:22.0155210Z 4b7186aead47: Verifying Checksum
+2026-11-24T09:35:22.0155713Z 4b7186aead47: Download complete
+2026-11-24T09:35:22.4812362Z 02de03a7213b: Pull complete
+2026-11-24T09:35:23.5893635Z 7b5874a20bcf: Pull complete
+2026-11-24T09:35:23.8785245Z 4b7186aead47: Pull complete
+2026-11-24T09:35:25.1474723Z b7c8fb4e771e: Verifying Checksum
+2026-11-24T09:35:25.1475126Z b7c8fb4e771e: Download complete
+2026-11-24T09:35:34.3417324Z b7c8fb4e771e: Pull complete
+2026-11-24T09:35:34.3444749Z Digest: sha256:3de745b23fc4b33fccbcb3f592ee52dd5c80ce79f19f839c825ce23364e403c1
+2026-11-24T09:35:34.3453396Z Status: Downloaded newer image for mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-24T09:35:34.3460170Z mcr.microsoft.com/playwright/python:v1.57.0-noble
+2026-11-24T09:35:34.3641036Z ##[group]Run docker run --rm --init --ipc=host \
+2026-11-24T09:35:34.3641506Z [36;1mdocker run --rm --init --ipc=host \[0m
+2026-11-24T09:35:34.3641857Z [36;1m  --mount "type=bind,source=$GITHUB_WORKSPACE,target=/work" \[0m
+2026-11-24T09:35:34.3642258Z [36;1m  --workdir /work --env SITE_URL --env GITHUB_SHA \[0m
+2026-11-24T09:35:34.3642620Z [36;1m  mcr.microsoft.com/playwright/python:v1.57.0-noble \[0m
+2026-11-24T09:35:34.3642910Z [36;1m  bash -euo pipefail -c '[0m
+2026-11-24T09:35:34.3643356Z [36;1m    python -m pip install --disable-pip-version-check --timeout 30 --retries 2 playwright==1.57.0 pypdf==5.9.0[0m
+2026-11-24T09:35:34.3644020Z [36;1m    python tests/browser_city_common_p470.py --base-url "$SITE_URL" --output artifacts/live-city-common-p470-browser[0m
+2026-11-24T09:35:34.3644642Z [36;1m    python tests/browser_city_north_p471.py --base-url "$SITE_URL" --output artifacts/live-city-north-p471-browser[0m
+2026-11-24T09:35:34.3645356Z [36;1m    python tests/browser_city_west_p472.py --base-url "$SITE_URL" --output artifacts/live-city-west-p472-browser[0m
+2026-11-24T09:35:34.3645934Z [36;1m    python tests/browser_city_atlas_r4.py --base-url "$SITE_URL" --output artifacts/live-city-atlas-r4-browser[0m
+2026-11-24T09:35:34.3646714Z [36;1m    python tests/browser_city_panorama_r5.py --base-url "$SITE_URL" --output artifacts/live-city-panorama-r5-browser[0m
+2026-11-24T09:35:34.3647297Z [36;1m    python tests/browser_road_atlas_r6.py --base-url "$SITE_URL" --output artifacts/live-road-atlas-r6-browser[0m
+2026-11-24T09:35:34.3647948Z [36;1m    python tests/browser_all_road_atlas_r62.py --base-url "$SITE_URL" --output artifacts/live-all-road-atlas-r62-browser[0m
+2026-11-24T09:35:34.3648551Z [36;1m    python tests/browser_city_nodes_r7.py --base-url "$SITE_URL" --output artifacts/live-city-nodes-r7-browser[0m
+2026-11-24T09:35:34.3649170Z [36;1m    python tests/browser_panorama_v13.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-panorama-v13-browser[0m
+2026-11-24T09:35:34.3649844Z [36;1m    python tests/browser_city_spatial_r9.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-city-spatial-r9-browser[0m
+2026-11-24T09:35:34.3650508Z [36;1m    python tests/browser_panorama_v13_r2.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-panorama-v13-r2-browser[0m
+2026-11-24T09:35:34.3651211Z [36;1m    python tests/browser_city_layout_r10.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-city-layout-r10-browser[0m
+2026-11-24T09:35:34.3651976Z [36;1m    python tests/browser_city_plan_r11.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-city-plan-r11-browser[0m
+2026-11-24T09:35:34.3652619Z [36;1m    python tests/browser_panorama_v14.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-panorama-v14-browser[0m
+2026-11-24T09:35:34.3653297Z [36;1m    python tests/browser_yongning_study.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-yongning-study-browser[0m
+2026-11-24T09:35:34.3653977Z [36;1m    python tests/browser_prosperity_gate_v3.py --base-url "$SITE_URL" --output artifacts/live-prosperity-gate-v3-browser[0m
+2026-11-24T09:35:34.3654608Z [36;1m    python tests/browser_prosperity_axis_v4.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-v4-browser[0m
+2026-11-24T09:35:34.3655289Z [36;1m    python tests/browser_prosperity_axis_sources_p41.py --base-url "$SITE_URL" --output artifacts/live-prosperity-axis-sources-p41-browser[0m
+2026-11-24T09:35:34.3656043Z [36;1m    python tests/browser_prosperity_taiji_courts_p42.py --base-url "$SITE_URL" --output artifacts/live-prosperity-taiji-courts-p42-browser[0m
+2026-11-24T09:35:34.3656915Z [36;1m     python tests/browser_prosperity_palace_boundaries_p43.py --base-url "$SITE_URL" --output artifacts/live-prosperity-palace-boundaries-p43-browser[0m
+2026-11-24T09:35:34.3657910Z [36;1m    python tests/browser_prosperity_architecture_p44.py --base-url "$SITE_URL" --output artifacts/live-prosperity-architecture-p44-browser[0m
+2026-11-24T09:35:34.3658664Z [36;1m    python tests/browser_v25.py --base-url "$SITE_URL" --output artifacts/live-browser[0m
+2026-11-24T09:35:34.3659332Z [36;1m    python tests/browser_v26.py --base-url "$SITE_URL" --output artifacts/live-v26-browser[0m
+2026-11-24T09:35:34.3659887Z [36;1m    python tests/browser_v27.py --base-url "$SITE_URL" --output artifacts/live-v27-browser[0m
+2026-11-24T09:35:34.3660400Z [36;1m    python tests/browser_v28.py --base-url "$SITE_URL" --output artifacts/live-v28-browser[0m
+2026-11-24T09:35:34.3660888Z [36;1m    python tests/browser_v29.py --base-url "$SITE_URL" --output artifacts/live-v29-browser[0m
+2026-11-24T09:35:34.3661377Z [36;1m    python tests/browser_v30.py --base-url "$SITE_URL" --output artifacts/live-v30-browser[0m
+2026-11-24T09:35:34.3661872Z [36;1m    python tests/browser_dual.py --base-url "$SITE_URL" --output artifacts/live-dual-browser[0m
+2026-11-24T09:35:34.3662405Z [36;1m    python tests/browser_west_b3.py --base-url "$SITE_URL" --output artifacts/live-west-b3-browser[0m
+2026-11-24T09:35:34.3662967Z [36;1m    python tests/browser_north_b4.py --base-url "$SITE_URL" --output artifacts/live-north-b4-browser[0m
+2026-11-24T09:35:34.3663525Z [36;1m    python tests/browser_west_roads_b5.py --base-url "$SITE_URL" --output artifacts/live-west-roads-b5-browser[0m
+2026-11-24T09:35:34.3664118Z [36;1m    python tests/browser_southeast_b6.py --base-url "$SITE_URL" --output artifacts/live-southeast-b6-browser[0m
+2026-11-24T09:35:34.3664677Z [36;1m    python tests/browser_luonan_b7.py --base-url "$SITE_URL" --output artifacts/live-luonan-b7-browser[0m
+2026-11-24T09:35:34.3665245Z [36;1m    python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser[0m
+2026-11-24T09:35:34.3665792Z [36;1m    python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser[0m
+2026-11-24T09:35:34.3666425Z [36;1m    python tests/browser_homepage_approved_v9.py --base-url "$SITE_URL" --output artifacts/live-homepage-approved-v9-browser[0m
+2026-11-24T09:35:34.3667309Z [36;1m    python tests/browser_prosperity_city_distribution_p451.py --base-url "$SITE_URL" --output artifacts/live-prosperity-city-distribution-p451-browser[0m
+2026-11-24T09:35:34.3668140Z [36;1m    python tests/browser_prosperity_road_functions_p452.py --base-url "$SITE_URL" --output artifacts/live-prosperity-road-functions-p452-browser[0m
+2026-11-24T09:35:34.3668914Z [36;1m    python tests/browser_prosperity_street_clusters_p453.py --base-url "$SITE_URL" --output artifacts/live-prosperity-street-clusters-p453-browser[0m
+2026-11-24T09:35:34.3669753Z [36;1m    python tests/browser_prosperity_hydro_roads_p46.py --base-url "$SITE_URL" --output artifacts/live-prosperity-hydro-roads-p46-browser[0m
+2026-11-24T09:35:34.3670496Z [36;1m    python tests/browser_backbone_p469.py --base-url "$SITE_URL" --output artifacts/live-prosperity-backbone-p469-browser[0m
+2026-11-24T09:35:34.3671156Z [36;1m    python tests/browser_prosperity_v1.py --base-url "$SITE_URL" --output artifacts/live-prosperity-v1-browser[0m
+2026-11-24T09:35:34.3671794Z [36;1m    python tests/browser_prosperity_core_v2.py --base-url "$SITE_URL" --output artifacts/live-prosperity-core-v2-browser[0m
+2026-11-24T09:35:34.3672258Z [36;1m  '[0m
+2026-11-24T09:35:34.3703239Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-24T09:35:34.3703574Z env:
+2026-11-24T09:35:34.3703860Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:35:34.3704253Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-24T09:35:34.3704635Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:35:34.3705016Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:35:34.3705350Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:35:34.3705730Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-24T09:35:34.3706225Z   SITE_URL: https://mechgouki.github.io/luoyang-city/
+2026-11-24T09:35:34.3706693Z ##[endgroup]
+2026-11-24T09:35:38.2928097Z Collecting playwright==1.57.0
+2026-11-24T09:35:38.3501689Z   Downloading playwright-1.57.0-py3-none-manylinux1_x86_64.whl.metadata (3.5 kB)
+2026-11-24T09:35:38.3736299Z Collecting pypdf==5.9.0
+2026-11-24T09:35:38.3810225Z   Downloading pypdf-5.9.0-py3-none-any.whl.metadata (7.1 kB)
+2026-11-24T09:35:38.4020839Z Collecting pyee<14,>=13 (from playwright==1.57.0)
+2026-11-24T09:35:38.4096741Z   Downloading pyee-13.0.1-py3-none-any.whl.metadata (3.0 kB)
+2026-11-24T09:35:38.5394224Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright==1.57.0)
+2026-11-24T09:35:38.5471047Z   Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-11-24T09:35:38.5658455Z Collecting typing-extensions (from pyee<14,>=13->playwright==1.57.0)
+2026-11-24T09:35:38.5734775Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-24T09:35:38.5839755Z Downloading playwright-1.57.0-py3-none-manylinux1_x86_64.whl (46.0 MB)
+2026-11-24T09:35:38.9836719Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 MB 120.9 MB/s  0:00:00
+2026-11-24T09:35:38.9916123Z Downloading pypdf-5.9.0-py3-none-any.whl (313 kB)
+2026-11-24T09:35:39.0015712Z Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)
+2026-11-24T09:35:39.0052804Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 621.4/621.4 kB 174.1 MB/s  0:00:00
+2026-11-24T09:35:39.0129215Z Downloading pyee-13.0.1-py3-none-any.whl (15 kB)
+2026-11-24T09:35:39.0216910Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-24T09:35:39.0715680Z Installing collected packages: typing-extensions, pypdf, greenlet, pyee, playwright
+2026-11-24T09:35:39.9237654Z 
+2026-11-24T09:35:39.9248958Z Successfully installed greenlet-3.5.6 playwright-1.57.0 pyee-13.0.1 pypdf-5.9.0 typing-extensions-4.16.0
+2026-11-24T09:35:39.9250527Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-11-24T09:35:47.6980991Z PASS P4.7 desktop: four map cards, three scenes, six downloads and no-JS
+2026-11-24T09:35:53.6593143Z PASS P4.7 mobile: four map cards, three scenes, six downloads and no-JS
+2026-11-24T09:36:03.5559204Z PASS P4.7.1 desktop: two maps, three entries, 16 readings, seven downloads and no-JS
+2026-11-24T09:36:12.2510336Z PASS P4.7.1 mobile: two maps, three entries, 16 readings, seven downloads and no-JS
+2026-11-24T09:36:18.2595795Z PASS P472 desktop: 6 groups, 7 downloads, 6 screenshots
+2026-11-24T09:36:22.6394306Z PASS P472 mobile: 6 groups, 7 downloads, 6 screenshots
+2026-11-24T09:39:41.0968598Z PASS R11 desktop: 7 groups, 26 downloads, 26.67s
+2026-11-24T09:40:07.1512701Z PASS R11 mobile: 7 groups, 26 downloads, 26.045s
+2026-11-24T09:40:22.7763811Z PASS V14 desktop: 6 groups, 27 downloads, 15.22s
+2026-11-24T09:40:32.2908821Z PASS V14 mobile: 6 groups, 27 downloads, 9.497s
+2026-11-24T09:40:37.7289374Z PASS Yongning study desktop: 3 groups, 8 downloads, 5.065s
+2026-11-24T09:40:40.4701452Z PASS Yongning study mobile: 3 groups, 8 downloads, 2.725s
+2026-11-24T09:40:42.0082644Z PASS opening comparison shows both original JPEG and aligned ten-source-pixel traces with working overlay controls
+2026-11-24T09:40:42.2803421Z PASS desktop source-backed plan occupies the main workspace and verifies its release
+2026-11-24T09:40:42.3132882Z PASS comparison tracing selects the evidence-backed component and updates its deep link
+2026-11-24T09:40:42.3455102Z PASS keyboard map selection and native component selector expose the actual source notes
+2026-11-24T09:40:44.3727856Z PASS zoom, keyboard camera controls, drag, reset, and component framing work
+2026-11-24T09:40:45.5835489Z PASS three views, original-layer state, reload, and browser history retain deep-link selection
+2026-11-24T09:40:45.9387428Z PASS share URL fallback, unknown-state normalization, and in-page original comparison work
+2026-11-24T09:40:47.1954092Z PASS every advertised SVG, source raster, PDF, ZIP, CSV, JSON, and method download resolves
+2026-11-24T09:40:48.2262912Z PASS mobile layout has no overflow and keeps view, source, component, and download controls usable
+2026-11-24T09:40:49.0064581Z PASS without JavaScript the static plan, initial evidence, original, and complete download list remain
+2026-11-24T09:40:49.6365130Z PASS a failed data request preserves static reading and direct downloads
+2026-11-24T09:40:51.0101058Z Traceback (most recent call last):
+2026-11-24T09:40:51.0107665Z   File "/work/tests/browser_prosperity_axis_v4.py", line 65, in <module>
+2026-11-24T09:40:51.0108248Z     assert elem.evaluate("(img)=>img.complete && img.naturalWidth>0"),"SVG preview must be visible"
+2026-11-24T09:40:51.0118407Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-24T09:40:51.0118796Z AssertionError: SVG preview must be visible
+2026-11-24T09:40:51.1230705Z ##[error]Process completed with exit code 1.
+2026-11-24T09:40:51.1293599Z ##[group]Run actions/upload-artifact@v4
+2026-11-24T09:40:51.1293869Z with:
+2026-11-24T09:40:51.1294101Z   name: live-acceptance-evidence
+2026-11-24T09:40:51.1294348Z   path: artifacts
+2026-11-24T09:40:51.1294608Z   retention-days: 30
+2026-11-24T09:40:51.1294830Z   if-no-files-found: warn
+2026-11-24T09:40:51.1295072Z   compression-level: 6
+2026-11-24T09:40:51.1295299Z   overwrite: false
+2026-11-24T09:40:51.1295519Z   include-hidden-files: false
+2026-11-24T09:40:51.1295774Z env:
+2026-11-24T09:40:51.1296022Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:40:51.1296382Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-24T09:40:51.1297019Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:40:51.1297360Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:40:51.1297809Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:40:51.1298277Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-24T09:40:51.1298631Z ##[endgroup]
+2026-11-24T09:40:51.2501583Z (node:4382) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-24T09:40:51.2502308Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-24T09:40:51.3881080Z With the provided path, there will be 457 files uploaded
+2026-11-24T09:40:51.3885989Z Artifact name is valid!
+2026-11-24T09:40:51.3886339Z Root directory input is valid!
+2026-11-24T09:40:52.2385450Z Beginning upload of artifact content to blob storage
+2026-11-24T09:40:52.5215551Z (node:4382) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-24T09:40:53.6080766Z Uploaded bytes 8388608
+2026-11-24T09:40:53.9613146Z Uploaded bytes 16777216
+2026-11-24T09:40:54.0793679Z Uploaded bytes 25165824
+2026-11-24T09:40:54.1307191Z Uploaded bytes 33554432
+2026-11-24T09:40:54.2716171Z Uploaded bytes 41943040
+2026-11-24T09:40:54.4519774Z Uploaded bytes 50331648
+2026-11-24T09:40:54.5469558Z Uploaded bytes 58720256
+2026-11-24T09:40:54.7894431Z Uploaded bytes 67108864
+2026-11-24T09:40:55.0079583Z Uploaded bytes 75497472
+2026-11-24T09:40:55.3202325Z Uploaded bytes 83886080
+2026-11-24T09:40:55.4438850Z Uploaded bytes 92274688
+2026-11-24T09:40:55.7670782Z Uploaded bytes 100663296
+2026-11-24T09:40:55.9023279Z Uploaded bytes 109051904
+2026-11-24T09:40:56.1689542Z Uploaded bytes 117440512
+2026-11-24T09:40:56.4228881Z Uploaded bytes 125829120
+2026-11-24T09:40:56.6410856Z Uploaded bytes 134217728
+2026-11-24T09:40:56.8771837Z Uploaded bytes 142606336
+2026-11-24T09:40:57.1883601Z Uploaded bytes 150994944
+2026-11-24T09:40:57.4613732Z Uploaded bytes 159383552
+2026-11-24T09:40:57.5486820Z Uploaded bytes 159474521
+2026-11-24T09:40:57.6406205Z Finished uploading artifact content to blob storage!
+2026-11-24T09:40:57.6407592Z SHA256 digest of uploaded artifact zip is 6885f782b013c2f471acd3872b67121b8c17cad672c7f6ac69549ec6715d7803
+2026-11-24T09:40:57.6410472Z Finalizing artifact upload
+2026-11-24T09:40:58.2132556Z Artifact live-acceptance-evidence.zip successfully finalized. Artifact ID 14907296897
+2026-11-24T09:40:58.2133520Z Artifact live-acceptance-evidence has been successfully uploaded! Final size is 159474521 bytes. Artifact ID is 14907296897
+2026-11-24T09:40:58.2140429Z Artifact download URL: https://github.com/mechgouki/luoyang-city/actions/runs/45363321713/artifacts/14907296897
+2026-11-24T09:40:58.2321563Z ##[group]Run actions/upload-artifact@v4
+2026-11-24T09:40:58.2321980Z with:
+2026-11-24T09:40:58.2322319Z   name: yongning-study-live-evidence
+2026-11-24T09:40:58.2322723Z   path: artifacts/live-yongning-study-browser/
+2026-11-24T09:40:58.2323139Z   retention-days: 30
+2026-11-24T09:40:58.2323428Z   if-no-files-found: warn
+2026-11-24T09:40:58.2323809Z   compression-level: 6
+2026-11-24T09:40:58.2324101Z   overwrite: false
+2026-11-24T09:40:58.2324400Z   include-hidden-files: false
+2026-11-24T09:40:58.2324755Z env:
+2026-11-24T09:40:58.2325125Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:40:58.2325686Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-24T09:40:58.2326215Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:40:58.2327032Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:40:58.2327480Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-24T09:40:58.2328135Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-24T09:40:58.2328543Z ##[endgroup]
+2026-11-24T09:40:58.3569017Z (node:4397) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-24T09:40:58.3569620Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-24T09:40:58.3643674Z With the provided path, there will be 24 files uploaded
+2026-11-24T09:40:58.3647349Z Artifact name is valid!
+2026-11-24T09:40:58.3647906Z Root directory input is valid!
+2026-11-24T09:40:58.7761703Z Beginning upload of artifact content to blob storage
+2026-11-24T09:40:59.0367708Z (node:4397) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-24T09:41:00.2250812Z Uploaded bytes 8388608
+2026-11-24T09:41:00.4093464Z Uploaded bytes 16777216
+2026-11-24T09:41:00.6637592Z Uploaded bytes 21914744
+2026-11-24T09:41:00.7532756Z Finished uploading artifact content to blob storage!
+2026-11-24T09:41:00.7533890Z SHA256 digest of uploaded artifact zip is aa7cf1ae3b588572aeb63b56875d339c631cbbe26e0e64e9ffccf32867dda52a
+2026-11-24T09:41:00.7534922Z Finalizing artifact upload
+2026-11-24T09:41:01.1841678Z Artifact yongning-study-live-evidence.zip successfully finalized. Artifact ID 14907970758
+2026-11-24T09:41:01.1842574Z Artifact yongning-study-live-evidence has been successfully uploaded! Final size is 21914744 bytes. Artifact ID is 14907970758
+2026-11-24T09:41:01.1846685Z Artifact download URL: https://github.com/mechgouki/luoyang-city/actions/runs/45363321713/artifacts/14907970758
+2026-11-24T09:41:01.2041478Z Post job cleanup.
+2026-11-24T09:41:01.2681349Z [command]/usr/bin/git version
+2026-11-24T09:41:01.2714100Z git version 2.56.1
+2026-11-24T09:41:01.2747275Z Temporarily overriding HOME='/home/runner/work/_temp/a7af57fa-c5d5-41fc-b471-ae3dc5e0cc37' before making global git config changes
+2026-11-24T09:41:01.2748381Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T09:41:01.2751133Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luoyang-city/luoyang-city
+2026-11-24T09:41:01.2780520Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T09:41:01.2804330Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-24T09:41:01.2967861Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T09:41:01.2988650Z http.https://github.com/.extraheader
+2026-11-24T09:41:01.2995229Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-24T09:41:01.3020089Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-24T09:41:01.3198172Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T09:41:01.3227075Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-24T09:41:01.3512064Z Cleaning up orphan processes
+2026-11-24T09:41:01.3884363Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

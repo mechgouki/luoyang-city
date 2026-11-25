@@ -1,0 +1,17 @@
+Use case: precise-object-edit.
+Asset: a carefully corrected architectural study for the Yongning Temple research project.
+Input image 1 is the exact edit target: the latest clean square illustration. Input image 2 is ONLY a frozen positional guide; use its thin magenta polygons as the target ground-contact perimeters, not its older building artwork.
+
+Change only the bottom masonry and lowest ground-contact edges of the three buildings. Keep this exact square framing, camera, tower and gate centrelines, tower height, roof positions, lighting, colors, background, and all upper structure. Preserve nine occupied tower storeys and three occupied south-gate storeys. The Buddha hall remains behind the tower and partly hidden. Make no new courtyard or walls.
+
+The source frame is 1254 x 1254; keep the same normalized canvas proportions and object locations. Do not zoom or move the whole composition. The three desired ground-contact quadrilaterals in this frame are:
+Tower: back-left (503.70,915.94), back-right (678.40,923.25), front-right (669.69,987.42), front-left (492.55,979.96).
+South gate: (455.40,1134.14), (665.70,1142.67), (659.12,1175.29), (449.78,1166.23).
+Rear hall: (490.95,776.70), (729.95,786.77), (726.57,826.81), (483.78,817.05).
+
+Precise correction of image 1:
+1. SOUTH GATE is the main error. Raise its visible lowest front ground-contact edge by 11–13 pixels so it ends on the target from (449.8,1166.2) to (659.1,1175.3). Remove the excess bottom part of the lowest wall/base band instead of moving its three roofs. The three occupied levels must remain clearly separate. Trim the right base edge left about 3 pixels. No stone skirt below the target, no stairs or added platform.
+2. TOWER base is now slightly TOO NARROW. Restore a very small amount at the sides: its front-left corner should extend left about 6 pixels to (492.5,980.0); its front-right about 3 pixels right to (669.7,987.4). Keep its already-correct front edge vertical position. Do not shrink it again, move the tower, widen the tower body or change any roofs.
+3. REAR HALL visible left-front base corner needs to move right about 6 pixels and up about 6 pixels to (483.8,817.0). Its right-front base corner should extend right about 7 pixels to (726.6,826.8). Preserve the hall and natural occlusion behind the tower.
+
+These colored outlines indicate the BOTTOM contact with the ground, not the top of a new plinth. The result must be clean: no magenta, white guide strokes, captions, survey marks, labels, added architecture, trees or scenery. Keep all unedited areas visually identical. Deliver one square clean illustration.

@@ -1,0 +1,128 @@
+{
+  "schema": "luoyang-github-api-recovery-provenance-v1",
+  "retrieved_at_utc": "2026-11-25 08:44:06 UTC",
+  "repository": "mechgouki/luoyang-city",
+  "scope": "Read-only GitHub API metadata and decoded original job logs. No site readback, artifact ZIP download, remote mutation, or image acceptance is asserted by this collection.",
+  "serialization": "API content strings and decoded log strings saved as UTF-8 text; a terminal LF is added only when absent. These are connector responses, not HTTP response headers or original compressed transport containers.",
+  "files": [
+    {
+      "path": "pr-87.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/pulls/87",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 18397,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "pr-87-comments.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/issues/87/comments?per_page=100",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 2,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "production-run.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/45363321713",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 12600,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "production-attempt-1.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/45363321713/attempts/1",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 12537,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "production-attempt-2.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/45363321713/attempts/2",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 12622,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "production-attempt-1-jobs.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/45363321713/attempts/1/jobs?per_page=100",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 8761,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "production-attempt-2-jobs.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/45363321713/attempts/2/jobs?per_page=100",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 8767,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "pr-run.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/45360973001",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 12415,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "pr-run-jobs.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/runs/45360973001/jobs?filter=all&per_page=100",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 6047,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "main-branch.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/branches/main",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 5473,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "pr-tested-merge-commit.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits/4eedbf6c452ab6d1cb3bccf2864c182201c68eb3",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 2685,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "production-commit.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits/bbfbac9022e133e61836614f3b120cf42efde43e",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 2921,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "pr-head-commit.json",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/git/commits/c3b9dc8a0da9cda023a26a10aa63d06bd9c8d2f7",
+      "kind": "GitHub API response JSON",
+      "source_js_character_count": 1210,
+      "source_ended_with_lf": false
+    },
+    {
+      "path": "production-attempt-1-verify-live.log",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/138345692599/logs",
+      "kind": "decoded-original-job-log",
+      "source_js_character_count": 35866,
+      "source_ended_with_lf": true
+    },
+    {
+      "path": "production-attempt-2-verify-live.log",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/138457232585/logs",
+      "kind": "decoded-original-job-log",
+      "source_js_character_count": 70016,
+      "source_ended_with_lf": true
+    },
+    {
+      "path": "production-build.log",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/138338586238/logs",
+      "kind": "decoded-original-job-log",
+      "source_js_character_count": 293947,
+      "source_ended_with_lf": true
+    },
+    {
+      "path": "pr-build.log",
+      "url": "https://api.github.com/repos/mechgouki/luoyang-city/actions/jobs/138330671821/logs",
+      "kind": "decoded-original-job-log",
+      "source_js_character_count": 294992,
+      "source_ended_with_lf": true
+    }
+  ]
+}
