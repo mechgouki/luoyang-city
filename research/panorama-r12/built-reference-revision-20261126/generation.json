@@ -1,0 +1,126 @@
+{
+  "schema": "luoyang-yongning-built-reference-revision-v1",
+  "date": "2026-11-26",
+  "timezone": "Asia/Shanghai",
+  "user_request": "请参考日本法隆寺的塔和国内时代接近的塔实体图 做下改定",
+  "base_checkpoint_commit": "92bcc1920fe467bdf38e25d817e4700d8dd99974",
+  "production_commit_at_start": "bbfbac9022e133e61836614f3b120cf42efde43e",
+  "tool": "image_gen.imagegen built-in",
+  "pixel_postprocessing": false,
+  "selected_attempt": 3,
+  "generated_image_count": 3,
+  "new_panorama_count": 0,
+  "source_target": {
+    "path": "research/panorama-r12/local-refinement-20261125/corrected-local-v3.png",
+    "bytes": 1306115,
+    "sha256": "820b276856b72f25f42a868c5c75cafde037ea9d766fd51f40e8921c5c228e06",
+    "git_blob_sha1": "8ce60f269dd5eccdf5dc351b5f092e3845ce4759",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "ground_guide": {
+    "path": "research/panorama-r12/yongning-triptych-20261124/inputs/correction-v2-ground-guide.png",
+    "bytes": 1282247,
+    "sha256": "82be51476048312331ae0e4b675ae61d55984c516eb86375c2c92140998b7c6b",
+    "git_blob_sha1": "b849f6756d23166bcb32db02daa0a838841ed1ca",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "projection": {
+    "path": "research/panorama-r12/projection.json",
+    "bytes": 477547,
+    "sha256": "7c73146df4d75a5c8faea528aaf0cb25076f5c96e68ffb2ce6a3343b2db6fdb4",
+    "git_blob_sha1": "4d594b75f5ebfbb9b1ab61a52a27c14e03ec9d32"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "inputs_in_order": [
+        "V3 edit target",
+        "Horyuji official photo: REF-HORYUJI",
+        "Songyue self-photograph: REF-SONGYUE",
+        "Simen original news aerial: REF-SIMEN"
+      ],
+      "output": {
+        "path": "research/panorama-r12/built-reference-revision-20261126/yongning-v4-attempt1.png",
+        "bytes": 1658659,
+        "sha256": "93314eb1ea8e3d8b87c72cf6448f07a97926b6c8e5b1077ca20f7f6a886677f7",
+        "git_blob_sha1": "d27fc6233acf3709283bf61c3b7094d9f5843732",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "prompt": {
+        "path": "research/panorama-r12/built-reference-revision-20261126/prompt-v4.txt",
+        "bytes": 5061,
+        "sha256": "64d7fb65f0c0b9b1c4add363245171bde1cf03d68409cb7953a5fa5d88d9f1e2",
+        "git_blob_sha1": "c81717fcbdd9a9f6128fe20bbc3aeadd8cb1c681"
+      },
+      "selected": false
+    },
+    {
+      "attempt": 2,
+      "inputs_in_order": [
+        "attempt1 edit target",
+        "V3 layout reference"
+      ],
+      "output": {
+        "path": "research/panorama-r12/built-reference-revision-20261126/yongning-v4-attempt2.png",
+        "bytes": 1725034,
+        "sha256": "2c76c1f19d21c2c8b61a32a717e89d8139b8a50773dc4e6aeecec68909232bd9",
+        "git_blob_sha1": "6b6cfa4fa5497ddd9fa9fca4313ecc154bec5c88",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "prompt": {
+        "path": "research/panorama-r12/built-reference-revision-20261126/prompt-v4-attempt2.txt",
+        "bytes": 2666,
+        "sha256": "ce08016bfb4d58733162bf9909cc5af2241928549cdf38a03c88c2faa511a362",
+        "git_blob_sha1": "537fb55291106e27f767be377ee346d64526f8b4"
+      },
+      "selected": false
+    },
+    {
+      "attempt": 3,
+      "inputs_in_order": [
+        "V3 edit target",
+        "attempt2 architectural form reference",
+        "frozen ground guide"
+      ],
+      "output": {
+        "path": "research/panorama-r12/built-reference-revision-20261126/yongning-built-reference-v4.png",
+        "bytes": 1668571,
+        "sha256": "79bd1f46cedfdf4b517aaea592da499744e42992d2860affb3146ca554a3acd6",
+        "git_blob_sha1": "904195fcd209fa5f97794f052dd58d0bd4f5b6d5",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "prompt": {
+        "path": "research/panorama-r12/built-reference-revision-20261126/prompt-v4-attempt3.txt",
+        "bytes": 2282,
+        "sha256": "6962c71b1aa5cbddaa0b951a763881d31264536e2794b17d3145c36813e06356",
+        "git_blob_sha1": "7c7adabc5805090714845be81ca2fc7a0f781eb5"
+      },
+      "selected": true
+    }
+  ],
+  "selected_image": {
+    "path": "research/panorama-r12/built-reference-revision-20261126/yongning-built-reference-v4.png",
+    "bytes": 1668571,
+    "sha256": "79bd1f46cedfdf4b517aaea592da499744e42992d2860affb3146ca554a3acd6",
+    "git_blob_sha1": "904195fcd209fa5f97794f052dd58d0bd4f5b6d5",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  }
+}

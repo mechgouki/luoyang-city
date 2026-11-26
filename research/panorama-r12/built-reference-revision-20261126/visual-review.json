@@ -1,0 +1,164 @@
+{
+  "schema": "luoyang-yongning-built-reference-visual-review-v1",
+  "reviewed_at_utc": "2026-11-26T08:32:10.827939+00:00",
+  "status": "selected_illustrative_typology_revision_with_remaining_geometry_limits",
+  "review_scope": "Independent actual visual inspection of the final local image; emphasis on architectural appearance, visible occupied storeys, main footprint scale and object relationships. Not a complete pixel/ground-geometry re-audit.",
+  "image": {
+    "path": "research/panorama-r12/built-reference-revision-20261126/yongning-built-reference-v4.png",
+    "sha256": "79bd1f46cedfdf4b517aaea592da499744e42992d2860affb3146ca554a3acd6",
+    "bytes": 1668571,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "selected_generation_attempt": 3,
+    "actually_viewed": true
+  },
+  "baseline": {
+    "path": "research/panorama-r12/local-refinement-20261125/corrected-local-v3.png",
+    "sha256": "820b276856b72f25f42a868c5c75cafde037ea9d766fd51f40e8921c5c228e06",
+    "audit_path": "research/panorama-r12/local-refinement-20261125/audit-v3.json",
+    "actually_viewed_this_session": true
+  },
+  "summary_zh": "第三次局部生成保留九层塔身和三层南门；较V3的出檐、收分、承托层次、门窗与塔刹表现明显改善。主塔基座恢复到接近V3的主要尺度与位置，第一张严重放大的问题已纠正。后殿仍略偏左、偏低；完整基址与全景未通过。可选为本轮形制改定图，不可直接回嵌或替换首页。",
+  "visible_storey_checks": {
+    "tower": {
+      "clearly_discernible_occupied_storeys": 9,
+      "count_method": "Bottom entrance storey plus eight separate upper wall/column/window bands; roofs, bracket zones, rear hall and finial excluded.",
+      "bottom_to_top_observation_windows_y_px_approx": [
+        [
+          899,
+          958
+        ],
+        [
+          800,
+          831
+        ],
+        [
+          717,
+          742
+        ],
+        [
+          642,
+          667
+        ],
+        [
+          564,
+          590
+        ],
+        [
+          491,
+          515
+        ],
+        [
+          418,
+          443
+        ],
+        [
+          344,
+          369
+        ],
+        [
+          273,
+          299
+        ]
+      ],
+      "window_role": "Approximate locations of visible bodies to make the visual count reproducible; not recovered floor heights or measured floor boundaries.",
+      "passed_for_visible_count": true
+    },
+    "south_gate": {
+      "clearly_discernible_occupied_storeys": 3,
+      "count_method": "Ground entrance body plus two upper occupied body bands. Three roof strips alone are not used as proof.",
+      "passed_for_visible_count": true
+    },
+    "historic_storey_heights_or_upper_structure_verified": false
+  },
+  "appearance_findings_zh": [
+    "各层出檐更深，屋面坡度较缓，屋檐、斗栱承托与柱身的层次更清楚；不再主要依靠长条墙身堆叠。",
+    "下部较宽、上部渐收，底层入口和门窗虚实得到明确表达，九层之间仍能辨认实际墙身。",
+    "木色、浅色墙面、灰瓦和檐下阴影形成较自然的材质与空间关系。",
+    "塔刹由旧版光杆改为有分节、盘状构件及顶部装置的轮廓，仍位于塔身中轴，不计作第十层。",
+    "改定后仍是一幅基于参照的艺术立面方案；图像中具体斗栱、窗格、塔刹构件不因此成为永宁寺出土形制。"
+  ],
+  "relationship_checks": {
+    "square_canvas_and_general_camera_retained": true,
+    "tower_axis_approximately_retained": true,
+    "tower_and_south_gate_have_distinct_bases": true,
+    "south_gate_stays_in_front_of_tower": true,
+    "rear_hall_stays_behind_tower_and_partly_occluded": true,
+    "no_extra_north_gate_or_complete_temple_enclosure_added": true,
+    "upper_roof_positions_preserved_pixel_for_pixel": false,
+    "source_ground_homography_refitted": false,
+    "source_homography_check_basis": "Same frozen source/audit used as comparison; this review does not fit a transform to the generated image."
+  },
+  "major_geometry_observations": {
+    "method": "Approximate manual reading of the full native-size image; no fitted registration, new source geometry, complex overlay or complete per-edge pixel audit. Approximate V4 limits have about ±4px reading uncertainty.",
+    "tower_plinth": {
+      "v3_visible_extent_from_saved_audit_px_approx": {
+        "xmin": 494,
+        "xmax": 677.5,
+        "front_y_max": 984.5
+      },
+      "v4_visible_extent_px_approx": {
+        "xmin": 492,
+        "xmax": 678,
+        "front_y_max": 981
+      },
+      "finding": "Main scale and position are again close to V3; the first V4 attempt’s much broader and lower platform is no longer present. This is not complete correspondence to the frozen source ring.",
+      "whole_outline_passed": false
+    },
+    "rear_hall": {
+      "v3_visible_extent_from_saved_audit_px_approx": {
+        "xmin": 475.5,
+        "xmax": 730.5,
+        "front_y_max": 825.5
+      },
+      "v4_visible_extent_px_approx": {
+        "xmin": 451,
+        "xmax": 720,
+        "front_y_max": 838
+      },
+      "finding": "Still shifted somewhat left and down relative to V3: left edge about20–25px farther left and lower visible front edge about10–15px lower. Central footprint remains hidden behind tower.",
+      "whole_outline_passed": false
+    },
+    "south_gate": {
+      "finding": "Three-storey gate and its overall position/size remain visually close to V3; no obvious new large displacement. Earlier source-footprint errors are not presumed repaired.",
+      "whole_outline_passed": false
+    },
+    "temple_wall_endpoints": {
+      "status": "no_physical_walls_or_endpoints_verified",
+      "passed": false
+    }
+  },
+  "reference_verification_scope": {
+    "historical_photo_research": "Handled separately in the parent research/source notes; this visual reviewer did not independently redo source authentication.",
+    "this_review_certifies": "Observed improvement of form and material expression plus retained visible storey counts, not historical exactness."
+  },
+  "iteration_identity": {
+    "generated_local_images_this_revision": 3,
+    "selected_local_attempt": 3,
+    "new_full_panoramas_generated_by_this_revision": 0,
+    "three_images_are_not_three_new_panoramas": true,
+    "old_rejected_panorama_records_modified": false
+  },
+  "decisions": {
+    "selected_as_illustrative_typology_revision": true,
+    "appearance_improved_vs_v3": true,
+    "visible_nine_tower_storeys_passed": true,
+    "visible_three_gate_storeys_passed": true,
+    "main_tower_scale_recovered_vs_attempt1": true,
+    "whole_ground_geometry_passed": false,
+    "ready_for_reintegration": false,
+    "full_panorama_accepted": false,
+    "homepage_replacement_approved": false,
+    "new_ancient_coordinates": 0,
+    "new_verified_building_heights": 0
+  },
+  "remaining_limits_zh": [
+    "后殿仍略偏左、偏低，不能写成基址均已恢复。",
+    "主塔基本尺度回到V3附近不等于所有角点、侧缘和遮挡段均吻合冻结来源。",
+    "本次没有重新核定实体寺墙、全部基脚和完整全景。",
+    "旧V3的已知几何欠缺未被本轮外观改定自动消除。",
+    "新外观不构成考古立面复原或首页替换批准。"
+  ]
+}
