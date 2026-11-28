@@ -129,6 +129,7 @@ def exercise(browser, base, device, output, expected_commit=None):
             checked_bytes("index.html")
             checked_bytes(FOLDER + "/topic.css")
             checked_bytes(FOLDER + "/homepage.css")
+            assert checked_bytes(meta["homepage_stylesheet"]) == checked_bytes(FOLDER + "/homepage.css")
             report["checks"].append("Live build identity, release, V15 metadata and current page/image/style bytes match the same source commit and SHA-256 manifest")
 
             def check_image(selector, allowed_dimensions, role):
@@ -169,6 +170,7 @@ def exercise(browser, base, device, output, expected_commit=None):
             navigation = page.goto(base, wait_until="load")
             assert navigation and navigation.ok
             expect(page.locator("#home-hero")).to_have_attribute("data-hero-revision", meta["hero_revision"])
+            expect(page.locator('link[data-homepage-layout="yongning-v15"]')).to_have_attribute("href", "./" + meta["homepage_stylesheet"])
             expected_hero_sizes = {hero["asset"]: (hero["width"], hero["height"]),
                                    hero["small_asset"]: (hero["small_width"], hero["small_height"])}
             check_image("#home-hero img", expected_hero_sizes, "current-homepage-hero")

@@ -58,8 +58,13 @@ def feature():
     return (ROOT / "web/homepage-yongning-v15.html").read_bytes()
 
 
+def style_asset():
+    checksum = digest((ROOT / "web/homepage-yongning-v15.css").read_bytes())
+    return "_assets/" + checksum[:20] + "-homepage-yongning-v15.css"
+
+
 def style_tag():
-    return b'<link rel="stylesheet" href="./yongning-v6/homepage.css" data-homepage-layout="yongning-v15">'
+    return f'<link rel="stylesheet" href="./{style_asset()}" data-homepage-layout="yongning-v15">'.encode()
 
 
 def replace_once(raw, old, new):
@@ -137,8 +142,9 @@ def restore_v14_context(info, reader):
     expected_paths = set(old["files_sha256"]) | set(meta["files_sha256"]) | {META}
     assert set(hashes) == expected_paths, "V15 inventory changed outside its scope"
     assert set(meta["files_sha256"]) == set(hashes) - set(old["files_sha256"]) - {META}
-    image_paths = {meta["hero"]["asset"], meta["hero"]["small_asset"]}
-    assert all(p.startswith((FOLDER + "/", ARCHIVE)) or p == PAGE or p in image_paths for p in meta["files_sha256"])
+    assert meta["homepage_stylesheet"] == style_asset()
+    asset_paths = {meta["hero"]["asset"], meta["hero"]["small_asset"], meta["homepage_stylesheet"]}
+    assert all(p.startswith((FOLDER + "/", ARCHIVE)) or p == PAGE or p in asset_paths for p in meta["files_sha256"])
     protected = set(old["files_sha256"]) - MUTABLE
     assert len(protected) == meta["protected_public_file_count"]
     assert all(hashes[path] == old["files_sha256"][path] for path in protected), "Earlier resource hash changed"
@@ -220,6 +226,7 @@ def verify(info, reader):
     assert get(PAGE) == (ROOT / "web/yongning-v6.html").read_bytes(), "Study content differs from reviewed source"
     assert get(FOLDER + "/topic.css") == (ROOT / "web/yongning-v6.css").read_bytes(), "Study presentation differs from reviewed source"
     assert get(FOLDER + "/homepage.css") == (ROOT / "web/homepage-yongning-v15.css").read_bytes(), "Homepage presentation differs from reviewed source"
+    assert get(meta["homepage_stylesheet"]) == get(FOLDER + "/homepage.css"), "Fingerprinted homepage stylesheet differs"
     assert len(topic.ids) == len(set(topic.ids))
     assert {"height", "colour", "mechanics", "sources", "v6-elevation", "research-verdict"} <= set(topic.ids)
     for link in topic.links:
@@ -263,6 +270,7 @@ def publish(site=SITE):
             shutil.copyfile(path, target)
     copies = [(ROOT / "web/yongning-v6.html", PAGE), (ROOT / "web/yongning-v6.css", FOLDER + "/topic.css"),
               (ROOT / "web/homepage-yongning-v15.css", FOLDER + "/homepage.css"),
+              (ROOT / "web/homepage-yongning-v15.css", style_asset()),
               (ART / "image-record.json", FOLDER + "/homepage-image-record.json"),
               (ART / "generation-prompts.txt", FOLDER + "/homepage-generation-prompts.txt"),
               (ART / "visual-review.md", FOLDER + "/homepage-visual-review.md")]
@@ -291,7 +299,7 @@ def publish(site=SITE):
     assert META not in added
     meta = dict(version=VERSION, research_version="V6", hero_revision=REVISION, hero=hero, metadata=META,
                 source_commit=info["source_commit"], research_source_commit="d6e1754fa5b9dd6f3bb79ac3d152ccb6e104eac0",
-                study_page=PAGE, authorization_date="2026-11-28", authorization_quote=AUTHORIZATION,
+                study_page=PAGE, homepage_stylesheet=style_asset(), authorization_date="2026-11-28", authorization_quote=AUTHORIZATION,
                 scope="homepage_tower_edit_and_research_feature", structural_feasibility="not_established",
                 new_ancient_coordinates=0, historical_ground_truth_upgraded=False,
                 previous_revision="panorama-approved-v12", previous_metadata="homepage/approval-v12.json",
