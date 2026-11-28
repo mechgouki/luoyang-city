@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-28",
+  "tool": "image_gen.imagegen",
+  "selected_file": "yongning-v5-concept.png",
+  "selected_is_original_tool_bytes": true,
+  "post_generation_pixel_edits": false,
+  "attempts": [
+    {
+      "file": "generated_images/exec-f389910e-fbaa-4815-8bda-fb26760e2062.png",
+      "bytes": 2414726,
+      "sha256": "dd0bbb73189eb7e2c4850d09ee9bcb2b9c8a65a402e690fb9f2aeeaebb44b2e2",
+      "attempt": 1,
+      "prompt_file": "prompt-v5.txt",
+      "status": "rejected: 8 wall storeys and squat proportions",
+      "included_image_in_checkpoint": false
+    },
+    {
+      "file": "generated_images/exec-42557639-46f7-48af-ae76-a03d3be68b35.png",
+      "bytes": 2248508,
+      "sha256": "78a01cb0a9ed51cb3e9906125ca17ae28a5221f53a1d240e34b616183aca20b7",
+      "attempt": 2,
+      "prompt_file": "prompt-v5-correction.txt",
+      "status": "superseded: 9 storeys but 10 gold discs; side bays simplified",
+      "included_image_in_checkpoint": false
+    },
+    {
+      "file": "generated_images/exec-ee3f927c-7cae-48ea-b893-9c87c8079b0a.png",
+      "bytes": 2153850,
+      "sha256": "22134d8770e21efb406af96ac971c83b8f9843a8b8d6da8688de9311303eb447",
+      "attempt": 3,
+      "prompt_file": "prompt-v5-detail.txt",
+      "status": "superseded after lower exterior plaster colour evidence",
+      "included_image_in_checkpoint": false
+    },
+    {
+      "file": "generated_images/exec-67d9b6af-1c5a-4d22-9b65-0ca14843649d.png",
+      "bytes": 2086502,
+      "sha256": "e673a465a052631f4e72994f288687a6c0fee56a3cbe314bfd4615309ecc5fcd",
+      "attempt": 4,
+      "prompt_file": "prompt-v5-colour.txt",
+      "status": "selected: 9 storeys, 8 upper balconies, 11 gold discs, red lower exterior",
+      "included_image_in_checkpoint": true
+    }
+  ],
+  "reference_roles": [
+    {
+      "role": "design proportion guide",
+      "file": "our-elevation.png",
+      "note": "Generation input was an intermediate revision of this diagram. Later QA corrected annotations, removed below-ground hatching, narrowed illustrative stair and changed lower plaster red. Exact input PNG hash was not captured; current final PNG is not mislabelled as byte-identical input."
+    },
+    {
+      "role": "modern model typological reference",
+      "url": "https://commons.wikimedia.org/wiki/File:20251018_Model_of_Yongning_Temple_Pagoda.jpg",
+      "credit": "Windmemories, CC BY-SA 4.0; model designer unverified"
+    },
+    {
+      "role": "extant early timber material/eaves reference",
+      "url": "https://kunishitei.bunka.go.jp/bsys/maindetails/102/2683",
+      "note": "Horyuji is later, five-storey, with ground skirt; not a direct proportional template."
+    }
+  ],
+  "image_scope": "Standalone interpretive pagoda; no site/world-coordinate registration, no panorama placement acceptance",
+  "remaining_visual_limitations": [
+    "side facade openings not exactly nine bays/three doors plus six windows",
+    "render is not metrically calibrated to 147m",
+    "upper floor openings and historical ornament not fully evidenced"
+  ],
+  "intermediate_archive_note": "Prompt chain and hashes retained here. Only the selected generated image is copied into this repository checkpoint; intermediate original outputs remain session generation artifacts.",
+  "read_original_evidence": [
+    {
+      "file": "research-web-20261128/scholarly/zhang-qingjie-2021-yungang-excavation.pdf",
+      "bytes": 3468091,
+      "sha256": "200f4687c299b9bb7f5d769a0fe3d03e2cbf4a7cdfd5218249b89dd6113b3534"
+    },
+    {
+      "file": "research-web-20261128/evidence/sources/dpm2025.pdf",
+      "bytes": 9784754,
+      "sha256": "2309c0444a7500fb3a461a67834c549423456eddf7ed2289afbe4c512d11b84e"
+    }
+  ]
+}

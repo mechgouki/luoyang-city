@@ -1,0 +1,276 @@
+{
+  "date": "2026-11-28",
+  "scope": "公开网络可核永宁寺复原图谱；原始受版权保护图版仅留出处，不随仓库再分发。",
+  "limits": [
+    "杨1992、钟1998原刊全文尚未取得；其方案经王贵祥的署名论文转载图识别。",
+    "高度引文另以张庆捷2021原刊第62页脚注核验，但仍是对杨、钟原文的二手转引。",
+    "图号必须连同所在文献使用，不能将王2022的转载图号当作杨/钟原刊图号。",
+    "九层主体与平坐、栏杆、附属檐不混计；未核实者不补造暗层数量。"
+  ],
+  "schemes": [
+    {
+      "id": "yang-1992",
+      "author": "杨鸿勋",
+      "year": 1992,
+      "publication": "《关于北魏洛阳永宁寺塔复原草图的说明》，《文物》1992年第9期",
+      "later_version": "《北魏洛阳永宁寺塔复原研究》，《杨鸿勋建筑考古学论文集》增订版，清华大学出版社，2008：328–341",
+      "figure_locator": "王2022图3透视（该网页实际缺图），图4剖面；该原刊图注回溯2007《汉魏洛阳城遗址研究》208、206页",
+      "local_figure": "yang-section-reproduced-wang-fig04.jpg",
+      "height": {
+        "body_zhang": 49,
+        "body_m_quoted": 133.7,
+        "total_zhang_approx": 54,
+        "total_m_approx": 147,
+        "quality": "张庆捷2021，刊页62注①，二手转引；不是亲见杨1992高度原段"
+      },
+      "visible_stories": 9,
+      "hidden_stories": "未独立核实",
+      "plan": "方形；原刊各层柱网未取得",
+      "core": "土木混合；土坯芯约六层，至第七层地面（王2022对杨方案的描述）",
+      "diagnostic_visual": "高首层；土芯明显收分；外缘反复出现厚重承托。角小塔、券形门窗的解释来自王2022评议。",
+      "assumptions": "石塔形式向大木塔的转译；首层与上层高度分配。",
+      "evidence": [
+        "wang2022",
+        "zhang2021"
+      ],
+      "original_read": false
+    },
+    {
+      "id": "zhong-1998",
+      "author": "钟晓青",
+      "year": 1998,
+      "publication": "《北魏洛阳永宁寺塔复原探讨》，《文物》1998年第5期，51–64页",
+      "figure_locator": "王2022图6（立面、剖面并列）；其图注来源2007《汉魏洛阳城遗址研究》311页；钟原刊图号未核",
+      "local_figure": "zhong-elevation-section-reproduced-wang-fig06.jpg",
+      "height": {
+        "body_zhang_approx": 45,
+        "body_m_approx": 123,
+        "under_disc_zhang": 49,
+        "total_zhang_approx": 55,
+        "total_m_approx": 150,
+        "quality": "张庆捷2021，刊页62注①，二手转引；该注文字句序不顺，暂不作为钟原文逐字引文"
+      },
+      "visible_stories": 9,
+      "hidden_stories": "有平坐；独立暗层数量未核实",
+      "plan": "方形；王2022以此首层平面为后续基础",
+      "core": "土坯芯约七层，至第八层地面（王2022的评述）",
+      "diagnostic_visual": "九重木构外观；较高首层；各层栏杆/平坐清晰；与杨的石塔式转译有明显差别。",
+      "assumptions": "上部柱网连续方式、土芯高度及收分。",
+      "warning": "网文所称133.6m不能直接认作含刹总高；49丈×0.2727m/尺=133.623m。",
+      "evidence": [
+        "wang2022",
+        "zhang2021",
+        "vanderbilt-bibliography"
+      ],
+      "original_read": false
+    },
+    {
+      "id": "wang-2013",
+      "author": "王贵祥",
+      "year": 2013,
+      "publication": "《关于北魏洛阳永宁寺塔复原的再研究》，《建筑史》第32辑，25–51页",
+      "figure_locator": "王2022回顾部分：图9比例、图10剖面、图11立面（不是2013原刊图号）",
+      "local_figure": "wang2013-elevation-reproduced-wang2022-fig11.jpg",
+      "height": {
+        "total_zhang": 56,
+        "roof_structure_zhang": 49,
+        "total_m_approx": 153,
+        "quality": "56丈见王2022回顾；153m为约数，不伪称2013给出的精确米值",
+        "recalculation_if_2022_ruler_used_m": 152.768
+      },
+      "visible_stories": 9,
+      "hidden_stories": "平坐另列，不补造独立暗层数",
+      "plan": "九个标准间及角部小间；早期方案顶层通面广81尺",
+      "core": "退台土坯芯至第六层地面",
+      "assumptions": "七模数；首层柱高35尺、顶层19尺；不是新考古实测。",
+      "evidence": [
+        "wang2022",
+        "tsinghua2013"
+      ],
+      "original_read": "2022作者本人回顾全文；未下载2013原刊"
+    },
+    {
+      "id": "wang-2022",
+      "author": "王贵祥",
+      "year": 2022,
+      "publication": "《北魏洛阳永宁寺塔可能原状再探讨》，《建筑史学刊》3(3)：110–121",
+      "figure_locator": "图12首层；图16剖面；图17立面；图20尺寸；图21比例；图22/23渲染；图24鸟瞰",
+      "local_figures": [
+        "wang2022-ground-plan-fig12.jpg",
+        "wang2022-elevation-fig17.jpg",
+        "wang2022-section-dimensions-fig20.jpg"
+      ],
+      "height": {
+        "total_zhang": 56.2,
+        "ruler_m": 0.2728,
+        "total_m_printed": 153.31,
+        "roof_structure_zhang": 49,
+        "spire_base_elevation_in_fig21_zhang": 50.4,
+        "quality": "作者正文及公开原刊扫描文字；当前网站图20 JPG不显示文字标注，不能称在本地JPG上读到了153.31"
+      },
+      "visible_stories": 9,
+      "hidden_stories": "平坐另列，未单独声称暗层数量",
+      "plan": "首层108尺→顶层72尺；九标准间+角部小间",
+      "core": "退台土坯芯至第六层；上部木柱",
+      "assumptions": "九模数；柱高36→18尺；层高/收分、土芯高度是推演。",
+      "render_credits": {
+        "fig22": "唐恒鲁渲染",
+        "fig23": "邢宗满渲染",
+        "fig24": "邢宗满绘制"
+      },
+      "evidence": [
+        "wang2022",
+        "wang2022-scan"
+      ],
+      "original_read": "署名期刊账号转载全文；公开原刊扫描文字；6张转载图片已目检"
+    },
+    {
+      "id": "qian-2017",
+      "author": "钱国祥",
+      "year": 2017,
+      "publication": "《北朝佛寺木塔的比较研究》，《中原文物》2017年第4期",
+      "figure_locator": "刊页48图三：塔基平面；刊页49图四：木塔与塔心结构。王倩2022刊页63图3合并转载。",
+      "local_source": "longmen-article-with-qian-figures.pdf",
+      "local_page_render": "longmen-article-with-qian-figures-page4.png",
+      "height": {
+        "interpreted_total_m_approx": 133,
+        "body_m_approx": 100,
+        "status": "根代理已核钱文第五节2(3)及2(6)，作者明确给出解释；与原文金盘下端点的读法须分别呈现。",
+        "locator": "https://www.sohu.com/a/198920371_199807 ，第五节2(3)、2(6)"
+      },
+      "visible_stories": 9,
+      "hidden_stories": "未确认",
+      "plan": "124柱位、5圈；方形台基38.2m；土坯芯19.8m；首层绕芯礼佛回廊；北侧登塔线索",
+      "core": "图示高位刹柱础石、承础石及地下舍利石函；部分明确标注复原",
+      "assumptions": "中心刹柱与失存础石/石函的复原不能混作现存出土物。",
+      "attribution_limit": "钱氏确有约133m总高解释；图四作为其论文刊载的考古解释图，图形自身的早期来源/绘者仍未核，不据此断言其是一套独立新画的完整外观方案。",
+      "name_correction": "河南博物院作者页、原刊目录均为钱国祥；王倩2022实际图注误印钱国翔，搜索索引又呈现钱国围。",
+      "evidence": [
+        "qian2017",
+        "qian-author",
+        "qian-contents",
+        "wangqian2022"
+      ],
+      "original_read": "社科院考古所账号转载全文；河南博物院原刊图像链接404；王倩原刊转载图已目检"
+    },
+    {
+      "id": "chen-mingda",
+      "author": "陈明达",
+      "year": "1980年代；另有1990专著相关章节",
+      "publication": "王2022回顾所引《中国古代建筑技术史》；另《中国古代木结构建筑技术》有永宁寺章节",
+      "height": {
+        "upper_bound_m": 75.6,
+        "upper_bound_zhang": 27.1,
+        "quality": "王2022转述的木构合理性上限；并非考古测定"
+      },
+      "figure_locator": "未取得可核原图",
+      "visible_stories": "未据原图核实",
+      "hidden_stories": "未核实，不把应县五明四暗移作陈的永宁寺方案",
+      "plan": "未核",
+      "core": "未核",
+      "evidence": [
+        "wang2022"
+      ],
+      "original_read": false
+    },
+    {
+      "id": "fu-xinian",
+      "author": "傅熹年",
+      "publication": "《中国古代建筑史》第2卷主编；比例研究被王贵祥引用",
+      "figure_locator": "部分转引以主编署名；本轮未确认可独立归给傅本人、且不同于钟晓青图的方案",
+      "height": "未核",
+      "visible_stories": "未独立核",
+      "hidden_stories": "未核",
+      "plan": "未核",
+      "core": "未核",
+      "warning": "主编书目署名不自动等于图像作者；保留未核，不强行凑成独立方案。",
+      "evidence": [
+        "wang2022",
+        "eeo-2025"
+      ],
+      "original_read": false
+    },
+    {
+      "id": "zhang-yuhuan-2000",
+      "author": "张驭寰",
+      "year": 2000,
+      "publication": "《对北魏洛阳永宁寺塔的复原研究》，《建筑史论文集》第13辑（书目线索）",
+      "verification": "中科院自然科学史研究所官网确认同题论文收入2018《科学技术史研究六十年》第3卷",
+      "figure_locator": "原论文图号及原图未取得",
+      "height": "不据二手重绘补写原文完整高度定义",
+      "evidence": [
+        "zhang-cas",
+        "thesis-bibliography"
+      ],
+      "original_read": false
+    },
+    {
+      "id": "star-2020-zhang-redraw",
+      "author": "陈随／星球研究所（绘图）；高度数据自张驭寰",
+      "year": 2020,
+      "publication": "《塔｜从佛国到人间》，2020-07-28，星球研究所官方澎湃号",
+      "figure_locator": "永宁寺与胡夫金字塔、自由女神像比较图，无学术原刊图号",
+      "height_m_reported": 110,
+      "source_url": "https://m.thepaper.cn/newsDetail_forward_8454521?from=sina",
+      "evidence_status": "已读取原发布页HTML并下载、实际查看原图；正文、图中均为约110m；图内列张驭寰论文及2000年，页面署陈随/星球研究所制图。",
+      "warning": "张数据的科普重绘；不称张驭寰亲绘原图，也不把其色彩/外观细节当原论文结论。",
+      "image_url": "https://imagepphcloud.thepaper.cn/pph/image/79/869/82.jpg",
+      "local_figure": "star2020-zhang-data-redraw-comparison.jpg",
+      "visible_stories": 9,
+      "hidden_stories": "图未表达，不能据此判定",
+      "diagnostic_visual": "九重方塔、四坡瓦顶、朱白墙面与长塔刹；没有王/钟方案那样清晰的逐层外平坐。这些是该重绘的视觉表达。"
+    }
+  ],
+  "image_families": [
+    {
+      "family": "王论文网络传播",
+      "members": [
+        "建筑史学刊官方澎湃号2022",
+        "大作社2023同题转载"
+      ],
+      "relationship": "同文、同图号转载，不是独立研究。网页均保留图3、图23标题但缺对应图片。"
+    },
+    {
+      "family": "杨/钟旧图",
+      "members": [
+        "杨1992/钟1998",
+        "2007汉魏洛阳城遗址研究",
+        "王2022图3/4/6"
+      ],
+      "relationship": "王原刊明确回指2007书页，需保留首创作者和转载链。"
+    },
+    {
+      "family": "钱图再编",
+      "members": [
+        "钱2017图三、图四",
+        "王倩2022图3整版拼列"
+      ],
+      "relationship": "后文明确注明原刊页48/49；新增钱国翔误字，不是新增复原方案。"
+    },
+    {
+      "family": "星球重绘",
+      "members": [
+        "张驭寰2000论文数据",
+        "陈随/星球2020比较图",
+        "新浪、搜狐等同文转载"
+      ],
+      "relationship": "科普图像再表达；数据来源和制图者分别列。"
+    }
+  ],
+  "sources": {
+    "wang2022": "https://www.thepaper.cn/newsDetail_forward_20252956",
+    "wang2022_repost": "https://www.dazuoshe.com/xueshugunwangguixiangbeiweil.html",
+    "wang2022-scan": "https://www.scribd.com/document/1022809479/北魏洛阳永宁寺塔可能原状再探讨",
+    "tsinghua2013": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=05805001",
+    "qian2017": "https://www.sohu.com/a/198920371_199807",
+    "qian-author": "https://www.chnmus.net/sitesources/hnsbwy/page_pc/xsyj/%E3%80%8Azyww%E3%80%8B/xzft/article2f445c3a23e2434d9aa532ce765a15f8.html",
+    "qian-contents": "https://www.chnmus.net/sitesources/hnsbwy/page_pc/xsyj/%E3%80%8Azyww%E3%80%8B/zxml/article6fb9c5566a7849628b77898473842ed4.html",
+    "zhang2021": "https://ygx.sxu.edu.cn/db/%E6%9C%9F%E5%88%8A/20230329new/%E4%BA%91%E5%86%88%E7%9F%B3%E7%AA%9F%E5%B1%B1%E9%A1%B6%E4%BD%9B%E6%95%99%E5%AF%BA%E9%99%A2%E9%81%97%E5%9D%80%E8%80%83%E5%8F%A4%E6%94%B6%E8%8E%B7.pdf",
+    "wangqian2022": "https://ygx.sxu.edu.cn/db/%E6%9C%9F%E5%88%8A/20230419/24679_%E5%8C%97%E6%9C%9D%E7%9F%B3%E7%AA%9F%E8%89%BA%E6%9C%AF%E4%B8%AD%E7%9A%84%E5%A4%96%E6%9D%A5%E5%85%83%E7%B4%A0%EF%BC%9A%E4%BB%A5%E9%BE%99%E9%97%A8%E5%8C%97%E9%AD%8F%E7%AA%9F%E9%BE%9B%E4%B8%BA%E4%BE%8B.pdf",
+    "vanderbilt-bibliography": "https://cdn.vanderbilt.edu/t2-my/my-prd/wp-content/uploads/sites/1671/2014/12/Perfecting-the-Mountain21.pdf",
+    "zhang-cas": "https://www.ihns.ac.cn/yjcg/xszz/zztj/202212/t20221207_6570715.html",
+    "thesis-bibliography": "https://ygx.sxu.edu.cn/db/%E5%AD%A6%E4%BD%8D/D01923213.pdf",
+    "eeo-2025": "https://www.eeo.com.cn/2025/0813/744520.shtml"
+  },
+  "height_note": "约数、测量端点与原文是否直接取得分别列出；不得把49丈/133.6m自动当所有方案的总高。"
+}

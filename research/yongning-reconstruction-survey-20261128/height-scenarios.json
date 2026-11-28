@@ -1,0 +1,61 @@
+{
+  "calculated_on": "2026-11-28",
+  "formula": "1丈=10尺；米数=丈数×10×假定每尺米数",
+  "is_measurement": false,
+  "is_confidence_interval": false,
+  "scenarios": [
+    {
+      "chi_cm": 26.8,
+      "status": "新井研究的拟合方案",
+      "to_below_disc_49zhang_m": 131.32,
+      "40zhang_baseline_m": 107.2,
+      "luoyang_body_90zhang_m": 241.2,
+      "luoyang_total_1000chi_m": 268.0,
+      "south_gate_20zhang_m": 53.6
+    },
+    {
+      "chi_cm": 27.3,
+      "status": "本项目近似工作尺，亦接近38.2米/140尺的条件反推",
+      "to_below_disc_49zhang_m": 133.77,
+      "40zhang_baseline_m": 109.2,
+      "luoyang_body_90zhang_m": 245.7,
+      "luoyang_total_1000chi_m": 273.0,
+      "south_gate_20zhang_m": 54.6
+    },
+    {
+      "chi_cm": 27.97,
+      "status": "北魏中尺的研究值，未证适用于永宁工程",
+      "to_below_disc_49zhang_m": 137.053,
+      "40zhang_baseline_m": 111.88,
+      "luoyang_body_90zhang_m": 251.73,
+      "luoyang_total_1000chi_m": 279.7,
+      "south_gate_20zhang_m": 55.94
+    },
+    {
+      "chi_cm": 29.59,
+      "status": "北魏后尺的研究值，未证适用于永宁工程",
+      "to_below_disc_49zhang_m": 144.991,
+      "40zhang_baseline_m": 118.36,
+      "luoyang_body_90zhang_m": 266.31,
+      "luoyang_total_1000chi_m": 295.9,
+      "south_gate_20zhang_m": 59.18
+    }
+  ],
+  "working_147m_scene": {
+    "source_status": "复原工作假设，不是古籍或考古直接给出的总高",
+    "ground_datum_z_m": 0,
+    "reported_plinth_height_m": 2.2,
+    "assumed_chi_cm": 27.3,
+    "assumed_below_disc_z_m": 133.77,
+    "additional_upper_element_assumption_m": 13,
+    "assumed_apex_z_m": 146.77,
+    "plinth_must_not_be_added_twice": true,
+    "unresolved": [
+      "文献金露盘下与具体屋面/刹座的几何对应",
+      "额外13m的比较复原依据",
+      "古籍身高与总高记述差异"
+    ]
+  },
+  "low_height_alternative_note": "75.6m等低案的作者与推导由复原图比较子任务核验；本文件不将其包装为三书共同测值。",
+  "selected_v5_parameters_note": "本文件13m增量算146.77m为近147m示例；最终立面选择顶点147.00m，故增量为13.23m。以design-parameters.json为最终绘图参数，均为假设。"
+}

@@ -1,0 +1,350 @@
+{
+  "id": "YONGNING-V5-INDEPENDENT-VISUAL-REVIEW-20261128",
+  "reviewer": "geometry_review",
+  "scope": "独立核数与参数图/概念图表达一致性；没有工程验算、实物高度认定或旧全景回嵌验收",
+  "elevation": {
+    "file": {
+      "path": "/workspace/scratch/f1dbf35eff8a/luoyang-city/research/yongning-reconstruction-survey-20261128/our-elevation.png",
+      "sha256": "1ede991b3e1ebe18922776f4e7d49ed6767d37580712fdf19862e49e328553eb",
+      "dimensions_px": [
+        1280,
+        1800
+      ],
+      "actually_viewed": true
+    },
+    "initial_png_sha256": "e4af9ffc3c9a12613e1e5f5ae46356d2916ee109d027b7fca2ad31efb8b5b4cd",
+    "status": "pass_as_explicit_conditional_parameter_diagram",
+    "wall_storeys_observed": 9,
+    "upper_external_balconies_observed": 8,
+    "main_roof_levels_observed": 9,
+    "gold_discs_in_exact_vector": 11,
+    "gold_disc_count_basis": "已实看图并核 draw_elevation.py 的 11 个 ellipse 与 design-parameters.json；不使用生成效果图替代。",
+    "total_height_m": 147,
+    "total_height_status": "assumed_scenario_not_measurement",
+    "height_arithmetic_check": {
+      "chi_m_assumed": 0.273,
+      "zhang": 49,
+      "gold_disc_datum_m": 133.77,
+      "additional_height_m": 13.23,
+      "total_m": 147,
+      "pass": true
+    },
+    "initial_issues_and_final_resolution": [
+      {
+        "issue": "逐层降低的笼统文字与第九墙身8m、第八墙身6.076m不符，顶层屋顶起高亦另行放大。",
+        "resolution": "最终图改为下部层间递减、顶层另行分配，参数文件也明确此限制。",
+        "verified": "reopened_final_png_and_read_updated_script"
+      },
+      {
+        "issue": "地面以下38.2m宽、3.7m深斜线矩形可能误读为确定地下基剖面。",
+        "resolution": "已删除；最终图明确地下部分未画剖面。",
+        "verified": "reopened_final_png"
+      },
+      {
+        "issue": "原示意踏道顶宽9m/底宽11.4m与源平面及约4.5m东侧踏道不同口径。",
+        "resolution": "现改4.5m示意，参数明确只参考钱国祥2017东侧踏道，不宣称南面已实测。",
+        "verified": "reopened_final_png_and_read_updated_script"
+      }
+    ],
+    "remaining_limits": [
+      "九层、台基表值与选择的工作总高分开；147m不是文献直接给定数值。",
+      "上层九开间、外平坐具体式样、斗栱与彩色分配均为解释性假设。",
+      "塔心原高/终止层、暗层、材料、榫卯、荷载和风震未验算。"
+    ]
+  },
+  "attempt1": {
+    "file": {
+      "path": "/workspace/scratch/f1dbf35eff8a/generated_images/exec-f389910e-fbaa-4815-8bda-fb26760e2062.png",
+      "sha256": "dd0bbb73189eb7e2c4850d09ee9bcb2b9c8a65a402e690fb9f2aeeaebb44b2e2",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "actually_viewed": true
+    },
+    "status": "reject_for_nine_storey_task",
+    "wall_storeys_observed": 8,
+    "upper_external_balconies_observed": 7,
+    "main_roof_levels_observed": 8,
+    "reason": "缺一个实际墙身层；塔刹座、托架或栏杆带不能补算楼层。",
+    "appearance_observation": "相对V4，多开间、平坐、材料层次进步；但整体矮宽，人物尺度也不能支持147m的量测宣称。"
+  },
+  "attempt2": {
+    "file": {
+      "path": "/workspace/scratch/f1dbf35eff8a/generated_images/exec-42557639-46f7-48af-ae76-a03d3be68b35.png",
+      "sha256": "78a01cb0a9ed51cb3e9906125ca17ae28a5221f53a1d240e34b616183aca20b7",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "actually_viewed": true
+    },
+    "status": "accept_as_concept_image_only_with_disclosed_discrepancies",
+    "wall_storeys_observed": 9,
+    "upper_external_balconies_observed": 8,
+    "main_roof_levels_observed": 9,
+    "wall_tier_visual_locator_y_px_bottom_to_top": [
+      1328,
+      1170,
+      1047,
+      925,
+      812,
+      700,
+      590,
+      485,
+      382
+    ],
+    "locator_uncertainty_px": 15,
+    "locator_note": "仅供复核分层位置，非边界测量或真实尺寸换算。",
+    "gold_discs_observed": 10,
+    "gold_disc_count_confidence": "high_after_exact_crop_3x_inspection",
+    "gold_disc_expected_in_parameter_diagram": 11,
+    "gold_disc_count_pass": false,
+    "gold_disc_note": "下部圆鼓及方座不是盘片，不据提示词凑足十一重。",
+    "ground_front_openings": {
+      "bays_observed": 9,
+      "door_groups_observed": 3,
+      "window_groups_observed": 6,
+      "door_leaf_note": "三组双扇门不误数成六个门洞。",
+      "pass_for_visible_front_only": true
+    },
+    "ground_oblique_side_openings": {
+      "groups_clearly_readable": 5,
+      "approximate_pattern": "两窗＋一门＋两窗",
+      "status": "not_a_faithful_three_doors_six_windows_repetition",
+      "caveat": "透视图可见左斜面已明显简化；不是四面总数的通过依据。"
+    },
+    "all_storeys_all_faces_opening_totals_verified": false,
+    "opening_count_note": "只能清读底层正面；侧面简化，上部受斜缩/栏杆遮挡，后两面不可见。四面每层十二门二十四窗不能宣布已复现。",
+    "proportion": {
+      "status": "conceptual_not_147m_reproduction",
+      "observation": "补齐九层并收窄后比首稿高挑；不能从透视、人像或像素尺度反推147m。",
+      "authoritative_dimensions": "独立立面参数图及其JSON，而非此生成PNG。"
+    },
+    "architectural_improvements": [
+      "九个柱墙层可分别辨识；平坐/栏杆独立于屋檐与斗栱带。",
+      "正面多开间、双扇门、浅色墙片、深色瓦面和朱红木构形成可读差别。",
+      "完整塔刹、基台和阶道均入画，两面可见；没有将后殿穿接进塔身。"
+    ],
+    "rendered_details_not_confirmed": [
+      "石栏杆具体形制和材料细部",
+      "阶道数量/宽度/级数及平台细部",
+      "斗栱比例/榫卯关系",
+      "九层每面门窗完整数量",
+      "金盘十一重",
+      "147m真实尺度、各层高度和收分的严格复现"
+    ],
+    "selection_status": "superseded_by_attempt3_local_edit"
+  },
+  "analysis_viewports": [
+    {
+      "path": "/workspace/scratch/f1dbf35eff8a/research-web-20261128/visual-survey/v5-attempt2-finial-analysis.png",
+      "source_crop_xyxy": [
+        470,
+        80,
+        555,
+        275
+      ],
+      "resampling": "nearest_3x",
+      "purpose": "count_gold_discs",
+      "original_unchanged": true
+    },
+    {
+      "path": "/workspace/scratch/f1dbf35eff8a/research-web-20261128/visual-survey/v5-attempt2-ground-openings-analysis.png",
+      "source_crop_xyxy": [
+        300,
+        1260,
+        735,
+        1405
+      ],
+      "resampling": "nearest_3x",
+      "purpose": "count_visible_ground_floor_opening_groups",
+      "original_unchanged": true
+    },
+    {
+      "path": "/workspace/scratch/f1dbf35eff8a/research-web-20261128/visual-survey/v5-attempt3-finial-analysis.png",
+      "source_crop_xyxy": [
+        465,
+        80,
+        560,
+        275
+      ],
+      "resampling": "nearest_3x",
+      "purpose": "verify_final_eleven_gold_discs",
+      "original_unchanged": true
+    },
+    {
+      "path": "/workspace/scratch/f1dbf35eff8a/research-web-20261128/visual-survey/v5-attempt3-ground-openings-analysis.png",
+      "source_crop_xyxy": [
+        295,
+        1260,
+        735,
+        1405
+      ],
+      "resampling": "nearest_3x",
+      "purpose": "verify_final_visible_ground_opening_groups",
+      "original_unchanged": true
+    }
+  ],
+  "final_decision": {
+    "selected_concept_attempt": 4,
+    "nine_storey_and_eight_balcony_gate_pass": true,
+    "full_parameter_reproduction_pass": false,
+    "historical_geometry_pass": false,
+    "engineering_assessed": false,
+    "ready_for_old_panorama_reintegration": false,
+    "do_not_generate_further_for_optional_proportional_polish": true,
+    "publication_condition": "作为九层、八平坐、十一金盘、初层朱色外墙的概念效果采用；继续说明侧立面门窗简化，全塔四面总数未验、生成效果并非147m比例复现。",
+    "gold_disc_count_gate_pass": true,
+    "visible_ground_front_three_doors_six_windows_pass": true,
+    "ground_oblique_side_nine_bays_pass": false,
+    "generation_summary": "本轮两次概念生成、一次局部金盘修正、一次初层外墙校色，共四候选；不是四幅城市全景。",
+    "further_generation_requested": false,
+    "ground_exterior_wall_red_gate_pass": true,
+    "selected_file_sha256": "e673a465a052631f4e72994f288687a6c0fee56a3cbe314bfd4615309ecc5fcd"
+  },
+  "attempt3": {
+    "file": {
+      "path": "/workspace/scratch/f1dbf35eff8a/generated_images/exec-ee3f927c-7cae-48ea-b893-9c87c8079b0a.png",
+      "sha256": "22134d8770e21efb406af96ac971c83b8f9843a8b8d6da8688de9311303eb447",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "actually_viewed": true
+    },
+    "status": "selected_final_concept_image_after_local_disc_count_edit",
+    "wall_storeys_observed": 9,
+    "upper_external_balconies_observed": 8,
+    "main_roof_levels_observed": 9,
+    "wall_tier_visual_locator_y_px_bottom_to_top": [
+      1328,
+      1170,
+      1047,
+      925,
+      812,
+      700,
+      590,
+      485,
+      382
+    ],
+    "locator_uncertainty_px": 15,
+    "locator_note": "仅供复核分层位置，非边界测量或真实尺寸换算。",
+    "gold_discs_observed": 11,
+    "gold_disc_count_confidence": "high_after_exact_crop_3x_inspection",
+    "gold_disc_expected_in_parameter_diagram": 11,
+    "gold_disc_count_pass": true,
+    "gold_disc_note": "独立盘片十一道可清楚计数；方座、下部支座和宝瓶均未额外算盘。",
+    "ground_front_openings": {
+      "bays_observed": 9,
+      "door_groups_observed": 3,
+      "window_groups_observed": 6,
+      "door_leaf_note": "三组双扇门不误数成六个门洞。",
+      "pass_for_visible_front_only": true
+    },
+    "ground_oblique_side_openings": {
+      "groups_readable_approximately": 8,
+      "approximate_pattern": "三窗＋两组门＋三窗",
+      "count_confidence": "medium_due_to_oblique_view_and_small_pixels",
+      "status": "improved_but_not_a_clear_three_doors_six_windows_repetition",
+      "caveat": "本轮侧面确有变化，不能沿用上一稿五组开口结论；中央只清楚呈现约两组门，完整九间及四面总数不予通过。"
+    },
+    "all_storeys_all_faces_opening_totals_verified": false,
+    "opening_count_note": "底层正面仍可清楚读为3组双扇门＋6窗；左斜面约8组开口，中央似2组门，仍不是每面3门6窗的忠实复现。上层、背面和四面总数未验。",
+    "proportion": {
+      "status": "conceptual_not_147m_reproduction",
+      "observation": "补齐九层并收窄后比首稿高挑；不能从透视、人像或像素尺度反推147m。",
+      "authoritative_dimensions": "独立立面参数图及其JSON，而非此生成PNG。"
+    },
+    "architectural_improvements": [
+      "九个柱墙层可分别辨识；平坐/栏杆独立于屋檐与斗栱带。",
+      "正面多开间、双扇门、浅色墙片、深色瓦面和朱红木构形成可读差别。",
+      "完整塔刹、基台和阶道均入画，两面可见；没有将后殿穿接进塔身。"
+    ],
+    "rendered_details_not_confirmed": [
+      "石栏杆具体形制和材料细部",
+      "阶道数量/宽度/级数及平台细部",
+      "斗栱比例/榫卯关系",
+      "九层每面门窗完整数量",
+      "147m真实尺度、各层高度和收分的严格复现"
+    ],
+    "review_scope": "有限终检：九墙身层、八平坐、九主檐、十一金盘及底层可见门窗；未重复像素几何审计。",
+    "local_edit_invariants": "实见九墙身、八平坐、九主檐保持；不声称其他像素逐一未变。",
+    "selection_status": "superseded_by_attempt4_ground_wall_recolor"
+  },
+  "attempt4": {
+    "file": {
+      "path": "/workspace/scratch/f1dbf35eff8a/generated_images/exec-67d9b6af-1c5a-4d22-9b65-0ca14843649d.png",
+      "sha256": "e673a465a052631f4e72994f288687a6c0fee56a3cbe314bfd4615309ecc5fcd",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "actually_viewed": true
+    },
+    "status": "selected_final_concept_image_after_ground_wall_red_recolor",
+    "wall_storeys_observed": 9,
+    "upper_external_balconies_observed": 8,
+    "main_roof_levels_observed": 9,
+    "wall_tier_visual_locator_y_px_bottom_to_top": [
+      1328,
+      1170,
+      1047,
+      925,
+      812,
+      700,
+      590,
+      485,
+      382
+    ],
+    "locator_uncertainty_px": 15,
+    "locator_note": "仅供复核分层位置，非边界测量或真实尺寸换算。",
+    "gold_discs_observed": 11,
+    "gold_disc_count_confidence": "high_in_final_whole_image_view; eleven separate discs visible",
+    "gold_disc_expected_in_parameter_diagram": 11,
+    "gold_disc_count_pass": true,
+    "gold_disc_note": "独立盘片十一道可清楚计数；方座、下部支座和宝瓶均未额外算盘。",
+    "ground_front_openings": {
+      "bays_observed": 9,
+      "door_groups_observed": 3,
+      "window_groups_observed": 6,
+      "door_leaf_note": "三组双扇门不误数成六个门洞。",
+      "pass_for_visible_front_only": true
+    },
+    "ground_oblique_side_openings": {
+      "groups_readable_approximately": 8,
+      "approximate_pattern": "三窗＋两组门＋三窗",
+      "count_confidence": "medium_due_to_oblique_view_and_small_pixels",
+      "status": "improved_but_not_a_clear_three_doors_six_windows_repetition",
+      "caveat": "本轮侧面确有变化，不能沿用上一稿五组开口结论；中央只清楚呈现约两组门，完整九间及四面总数不予通过。",
+      "review_status": "prior_limit_retained; no new detailed side-opening audit in the one-view color pass"
+    },
+    "all_storeys_all_faces_opening_totals_verified": false,
+    "opening_count_note": "底层正面仍可清楚读为3组双扇门＋6窗；左斜面约8组开口，中央似2组门，仍不是每面3门6窗的忠实复现。上层、背面和四面总数未验。",
+    "proportion": {
+      "status": "conceptual_not_147m_reproduction",
+      "observation": "补齐九层并收窄后比首稿高挑；不能从透视、人像或像素尺度反推147m。",
+      "authoritative_dimensions": "独立立面参数图及其JSON，而非此生成PNG。"
+    },
+    "architectural_improvements": [
+      "九个柱墙层可分别辨识；平坐/栏杆独立于屋檐与斗栱带。",
+      "正面多开间、双扇门、浅色墙片、深色瓦面和朱红木构形成可读差别。",
+      "完整塔刹、基台和阶道均入画，两面可见；没有将后殿穿接进塔身。"
+    ],
+    "rendered_details_not_confirmed": [
+      "石栏杆具体形制和材料细部",
+      "阶道数量/宽度/级数及平台细部",
+      "斗栱比例/榫卯关系",
+      "九层每面门窗完整数量",
+      "147m真实尺度、各层高度和收分的严格复现"
+    ],
+    "review_scope": "按根任务仅一次最终整体看图：9墙身、8上层平坐、9主檐、11金盘保持；底层外墙朱色生效。未扩展检查或再生成。",
+    "local_edit_invariants": "整体目读9墙身、8上层平坐、9主檐、11独立金盘保持；不声称全图其余像素完全相同。",
+    "color_check": {
+      "ground_floor_exterior_wall_color": "vermilion_red",
+      "pass": true,
+      "observed_change": "初层原浅色窗下墙与墙面现为朱红/赭红；石台基仍与墙色分开。",
+      "source_basis": "根告知已核钱国祥2017外皮涂朱色；本轮子审只核图像颜色是否生效，不重做文献校读。"
+    }
+  }
+}
