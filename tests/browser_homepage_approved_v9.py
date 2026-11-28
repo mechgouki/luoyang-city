@@ -22,7 +22,7 @@ server=None
 temporary=None
 checks=[]
 errors=[]
-report={"schema":"luoyang-homepage-full-frame-v12", "status":"running",
+report={"schema":"luoyang-homepage-full-frame", "status":"running",
         "checks":checks, "errors":errors, "layouts":[], "screenshots":{}, "asset_sha256":{}}
 active_page=None
 if args.base_url:
@@ -68,7 +68,7 @@ def full_frame_layout(page):
     }""")
     image=geometry["image"]
     assert geometry["object_fit"]=="contain",geometry
-    assert abs(image["height"]-image["width"]*941/1672)<=1,geometry
+    assert abs(image["height"]-image["width"]*geometry["natural_height"]/geometry["natural_width"])<=1,geometry
     assert image["left"]>=-1 and image["right"]<=page.viewport_size["width"]+1,geometry
     assert image["width"]>=page.viewport_size["width"]*.75,geometry
     assert geometry["caption"]["top"]>=image["bottom"]-1,geometry
@@ -89,13 +89,12 @@ try:
                 assert response.status==200,path
                 return response.json()
             info=get_json("build-info.json")
-            approval=get_json("homepage/approval-v12.json")
-            h=approval["hero"]
-            report.update(source_commit=info["source_commit"],hero_revision=h["revision"],source_png_sha256=h["source_sha256"])
-            assert approval["source_commit"]==info["source_commit"]
-            previous_approval=get_json(approval["previous_metadata"])
+            v12=get_json("homepage/approval-v12.json")
+            legacy=v12["hero"]
+            assert v12["source_commit"]==info["source_commit"]
+            previous_approval=get_json(v12["previous_metadata"])
             previous=previous_approval["hero"]
-            assert previous["revision"]==approval["previous_revision"]=="panorama-approved-v11"
+            assert previous["revision"]==v12["previous_revision"]=="panorama-approved-v11"
             assert previous["selection_number"]=="07"
             assert previous["source_sha256"]=="4d45e831b59f2f7550fe7129455f1da823098e8f34cf633223cd584d5b64a5bf"
             earlier=get_json(previous_approval["previous_metadata"])["hero"]
@@ -103,29 +102,43 @@ try:
             assert earlier["source_sha256"]=="262e0797c09788f7871bca81c05d5e2c15d5ebc7ab8cf6c559ced68cf883a41e"
             old=get_json("homepage/history/panorama-interim-v8.json")
             assert old["hero"]["revision"]=="panorama-interim-v8"
-            assert h["revision"]=="panorama-approved-v12" and h["status"]=="approved"
-            assert h["selection_label"]=="全幅取景版" and h["display_mode"]=="full_frame"
-            assert h["based_on_revision"]==previous["revision"]
-            assert h["source_sha256"]=="c7954dfc3ee659de756c62d0f634e40eddfd2ecc93cc8b833f53f6c0e0dc69ca"
-            assert h["approval_date"]=="2026-11-21"
-            for asset_key,sha_key in (("asset","asset_sha256"),("small_asset","small_asset_sha256")):
-                asset=h[asset_key]
-                response=metadata_context.request.get(base+asset)
-                assert response.status==200 and response.headers.get("content-type","").startswith("image/"),asset
-                actual=checksum(response.body())
-                assert actual==h[sha_key]==info["files_sha256"][asset],asset
-                report["asset_sha256"][asset]=actual
+            assert legacy["revision"]=="panorama-approved-v12" and legacy["status"]=="approved"
+            assert legacy["selection_label"]=="全幅取景版" and legacy["display_mode"]=="full_frame"
+            assert legacy["based_on_revision"]==previous["revision"]
+            assert legacy["source_sha256"]=="c7954dfc3ee659de756c62d0f634e40eddfd2ecc93cc8b833f53f6c0e0dc69ca"
+            assert legacy["approval_date"]=="2026-11-21"
+            current_home=info.get("homepage_yongning_v15")
+            approval=get_json(current_home["metadata"]) if current_home else v12
+            h=approval["hero"]
+            assert approval["source_commit"]==info["source_commit"]
+            assert h["status"]=="approved"
+            if current_home:
+                assert h["revision"]==current_home["hero_revision"]=="panorama-yongning-v15"
+                assert h["approval_date"]=="2026-11-28"
+            else:
+                assert h["revision"]=="panorama-approved-v12"
+            report.update(source_commit=info["source_commit"],hero_revision=h["revision"],source_sha256=h["source_sha256"],
+                          source_kind=h.get("source_kind", "approved_source_png"),
+                          preserved_v12_revision=legacy["revision"],preserved_v12_source_png_sha256=legacy["source_sha256"])
+            for artwork in [legacy]+([h] if current_home else []):
+                for asset_key,sha_key in (("asset","asset_sha256"),("small_asset","small_asset_sha256")):
+                    asset=artwork[asset_key]
+                    response=metadata_context.request.get(base+asset)
+                    assert response.status==200 and response.headers.get("content-type","").startswith("image/"),asset
+                    actual=checksum(response.body())
+                    assert actual==artwork[sha_key]==info["files_sha256"][asset],asset
+                    report["asset_sha256"][asset]=actual
             for entry in ("index.html","v3.0-dual.html"):
                 response=metadata_context.request.get(base+entry)
                 assert response.status==200,entry
                 raw=response.body()
-                assert raw.count(b'data-hero-revision="panorama-approved-v12"')==1
+                assert raw.count(f'data-hero-revision="{h["revision"]}"'.encode())==1
                 assert h["asset"].encode() in raw and h["small_asset"].encode() in raw
                 archived=metadata_context.request.get(base+"homepage/history/"+entry.replace(".html","-before-v12.html"))
                 assert archived.status==200,entry
                 assert b'data-hero-revision="panorama-approved-v11"' in archived.body()
-                assert checksum(archived.body())==approval["previous_html_sha256"][entry]
-            ok("Both homepage URLs use the approved full-frame source; actual WebP hashes and the v11 archive match their provenance")
+                assert checksum(archived.body())==v12["previous_html_sha256"][entry]
+            ok("Both homepage URLs use the current approved full-frame source; current and V12 WebP hashes, the V12 provenance chain and V11 archive remain verified")
 
         devices=(("desktop",1500,960),("wide",1920,1080),("tablet",768,1024),("mobile",390,844))
         for label,width,height in devices:
@@ -141,7 +154,8 @@ try:
                     ready(page)
                     image=page.locator("#home-hero img")
                     image.wait_for(state="visible")
-                    expected_width=960 if is_mobile else 1672
+                    expected_size=(h["small_width"],h["small_height"]) if is_mobile else (h["width"],h["height"])
+                    expected_width=expected_size[0]
                     page.wait_for_function("width=>{const im=document.querySelector('#home-hero img');return im&&im.complete&&im.naturalWidth===width;}",arg=expected_width)
                     assert page.locator("#home-hero").get_attribute("data-hero-revision")==h["revision"]
                     assert image.get_attribute("src").endswith(h["asset"])
@@ -149,7 +163,7 @@ try:
                     expect(page.locator("#home-hero")).to_contain_text("研究性复原示意")
                     assert page.locator("#home-questions a[data-question]").count()==3
                     geometry=full_frame_layout(page)
-                    assert (geometry["natural_width"],geometry["natural_height"])==((960,540) if is_mobile else (1672,941))
+                    assert (geometry["natural_width"],geometry["natural_height"])==expected_size
                     expected_asset=h["small_asset"] if is_mobile else h["asset"]
                     assert geometry["current_source"].endswith("/"+expected_asset),geometry
                     # Check the image response the page actually selected, in addition to the declared asset.

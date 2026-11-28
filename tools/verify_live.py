@@ -21,10 +21,11 @@ for attempt in range(12):
  except Exception:
   if attempt==11:raise
   time.sleep(10)
-results=[];excluded=['.nojekyll']
+results=[];excluded=['.nojekyll'];verified_bytes={}
 def check(item):
  path,digest=item;body=get(path);actual=hashlib.sha256(body).hexdigest()
  if actual!=digest:raise ValueError(f'{path}: SHA-256 mismatch')
+ verified_bytes[path]=body
  return {'path':path,'bytes':len(body),'sha256':actual,'status':'passed'}
 try:
  required_b7_assets={
@@ -52,6 +53,12 @@ try:
  assert required_homepage_assets.issubset(info['files_sha256']), 'Missing homepage metadata or preservation record'
  public_files=[(path,digest) for path,digest in info['files_sha256'].items() if path not in excluded]
  with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:results=list(pool.map(check,public_files))
+ # Reuse only the actual HTTPS bodies whose hashes were verified just above.
+ # build-info.json stays uncached so deployment identity checks remain fresh.
+ get=lambda path: verified_bytes[path] if path in verified_bytes else fetcher.get(path)
+ from homepage_yongning_v15 import verify as verify_homepage_v15, restore_v14_context
+ current_homepage_report=verify_homepage_v15(info,get)
+ info,get=restore_v14_context(info,get)
  assert info['counts']['sheets']==37 and info['counts']['entities']==339
  assert len(json.loads(get('data/research-v25.json'))['evidence'])==18
  assert len(json.loads(get('data/milestone-v26.json'))['atoms'])==69
@@ -878,7 +885,7 @@ try:
  assert set(common['preservation']['protected_files_sha256'])<=set(protected) and backbone['page'] in protected
  assert all(info['files_sha256'][path]==digest for path,digest in protected.items())
 
- report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
+ report={'base_url':base,'commit':info['source_commit'],'status':'passed','checked_files':len(results),'homepage_yongning_v15':current_homepage_report,'build_control_not_published':excluded,'network_counts':net['metrics'],'chronology_counts':chrono['metrics'],'terrain_counts':info['terrain_counts'],'dual_counts':info['dual_counts'],'north_b4':info['north_b4'],'historical_grid_points':26,'files':results,'checked_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  report['http_retries']=fetcher.retries
  report['west_roads_b5']=info['west_roads_b5'];report['historical_datum_b5']=info['historical_datum_b5']
  report['southeast_b6']=info['southeast_b6'];report['ground_review_b6']=ground['review_counts']

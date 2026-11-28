@@ -1,0 +1,1174 @@
+{
+  "schema": "yongning-v15-native-svg-projection-v1",
+  "date": "2026-11-28",
+  "status": "native_svg_candidate_for_visual_review_not_published_approval",
+  "canvas_px": [
+    1672,
+    941
+  ],
+  "transparent_background": true,
+  "embedded_bitmap_count": 0,
+  "source_parameters_path": "yongning-structure-colour-v6-20261128/design-parameters.json",
+  "source_parameters_sha256": "39e899ee513bc0200fefc2255052f7d4d09e81395341ccac6b5fa078a50621ee",
+  "source_height_algorithm_path": "yongning-structure-colour-v6-20261128/draw_scaled_elevation.py",
+  "source_height_algorithm_sha256": "56109ed4061ff0ca3cce448635e9d37fc3a269cb7f397cd5b33337b6eadf142d",
+  "source_parameter_id": "YONGNING-V6-SCALED-COLOUR-CONDITIONAL-147",
+  "script_sha256": "4c939030d98802a50595ed7c0d9f3e60b476c92ab605e1f581e4fb9d265eddac",
+  "svg_sha256": "75e37f274e7c64f4bdc95e3c5ec518202e2113139032cb79777106cb983ff060",
+  "display_projection": {
+    "kind": "affine_2_5D_artistic_display_not_historical_camera_registration",
+    "model_axes": {
+      "X": "right/east",
+      "Y": "back/north",
+      "Z": "up"
+    },
+    "formula": "u=origin_x+1.32X+0.10Y; v=origin_y+0.03X-0.42Y-1.30Z",
+    "matrix_2x4": [
+      [
+        1.32,
+        0.1,
+        0,
+        517.91
+      ],
+      [
+        0.03,
+        -0.42,
+        -1.3,
+        394.978
+      ]
+    ],
+    "translation_rule": "Set projected plinth front-edge midpoint (0,-base_width/2,0) exactly to (516,403).",
+    "axis_ground_screen_px": [
+      517.91,
+      394.978
+    ],
+    "front_plinth_ground_midpoint_screen_px": [
+      516.0,
+      403.0
+    ],
+    "front_plinth_top_midpoint_screen_px": [
+      516.0,
+      400.14
+    ],
+    "apex_screen_px": [
+      517.91,
+      203.878
+    ],
+    "base_ground_corners_screen_px": [
+      [
+        490.788,
+        402.427
+      ],
+      [
+        541.212,
+        403.573
+      ],
+      [
+        545.032,
+        387.529
+      ],
+      [
+        494.608,
+        386.383
+      ]
+    ],
+    "base_top_corners_screen_px": [
+      [
+        490.788,
+        399.567
+      ],
+      [
+        541.212,
+        400.713
+      ],
+      [
+        545.032,
+        384.669
+      ],
+      [
+        494.608,
+        383.523
+      ]
+    ],
+    "original_r12_frozen_H_used": false,
+    "source_ground_homography_modified": false,
+    "not_registration_to_archaeology_or_historic_camera": true
+  },
+  "exact_group_counts": {
+    "wall-storey": 9,
+    "main-roof": 9,
+    "external-balcony": 8,
+    "gold-disc": 11
+  },
+  "floors": [
+    {
+      "id": "floor-01",
+      "floor_datum_m": 2.2,
+      "body_width_m": 29.4,
+      "wall_height_m": 11.78,
+      "bracket_band_height_m": 2.09,
+      "front_wall_screen_px": [
+        [
+          497.036,
+          397.851
+        ],
+        [
+          535.844,
+          398.733
+        ],
+        [
+          535.844,
+          383.419
+        ],
+        [
+          497.036,
+          382.537
+        ]
+      ],
+      "right_wall_screen_px": [
+        [
+          535.844,
+          398.733
+        ],
+        [
+          538.784,
+          386.385
+        ],
+        [
+          538.784,
+          371.071
+        ],
+        [
+          535.844,
+          383.419
+        ]
+      ],
+      "front_wall_mid_screen_px": [
+        516.44,
+        390.635
+      ],
+      "front_visible_wall_height_before_occlusion_px": 15.314,
+      "front_bays": 9,
+      "front_door_bays": 3,
+      "front_window_bays": 6,
+      "roof": {
+        "id": "roof-01",
+        "eave_datum_m": 16.07,
+        "peak_m": 19.95,
+        "outer_width_m": 38.2,
+        "inner_ridge_width_m": 21.168,
+        "outer_corner_screen_px": [
+          [
+            490.788,
+            380.821
+          ],
+          [
+            541.212,
+            381.967
+          ],
+          [
+            545.032,
+            365.923
+          ],
+          [
+            494.608,
+            364.777
+          ]
+        ],
+        "front_eave_mid_screen_px": [
+          516.0,
+          381.8815
+        ],
+        "peak_axis_screen_px": [
+          517.91,
+          369.043
+        ]
+      },
+      "balcony": null
+    },
+    {
+      "id": "floor-02",
+      "floor_datum_m": 21.2,
+      "body_width_m": 28.5,
+      "wall_height_m": 10.54,
+      "bracket_band_height_m": 1.87,
+      "front_wall_screen_px": [
+        [
+          497.675,
+          372.9755
+        ],
+        [
+          535.295,
+          373.8305
+        ],
+        [
+          535.295,
+          360.1285
+        ],
+        [
+          497.675,
+          359.2735
+        ]
+      ],
+      "right_wall_screen_px": [
+        [
+          535.295,
+          373.8305
+        ],
+        [
+          538.145,
+          361.8605
+        ],
+        [
+          538.145,
+          348.1585
+        ],
+        [
+          535.295,
+          360.1285
+        ]
+      ],
+      "front_wall_mid_screen_px": [
+        516.485,
+        366.552
+      ],
+      "front_visible_wall_height_before_occlusion_px": 13.702,
+      "front_bays": 9,
+      "front_door_bays": 3,
+      "front_window_bays": 6,
+      "roof": {
+        "id": "roof-02",
+        "eave_datum_m": 33.61,
+        "peak_m": 36.95,
+        "outer_width_m": 37.3,
+        "inner_ridge_width_m": 20.52,
+        "outer_corner_screen_px": [
+          [
+            491.427,
+            357.8435
+          ],
+          [
+            540.663,
+            358.9625
+          ],
+          [
+            544.393,
+            343.2965
+          ],
+          [
+            495.157,
+            342.1775
+          ]
+        ],
+        "front_eave_mid_screen_px": [
+          516.045,
+          358.8905
+        ],
+        "peak_axis_screen_px": [
+          517.91,
+          346.943
+        ]
+      },
+      "balcony": {
+        "id": "balcony-02",
+        "floor_datum_m": 21.2,
+        "outer_width_m": 31.3,
+        "rail_top_m": 22.9,
+        "front_rail_endpoints_px": [
+          [
+            495.687,
+            371.3115
+          ],
+          [
+            537.003,
+            372.2505
+          ]
+        ]
+      }
+    },
+    {
+      "id": "floor-03",
+      "floor_datum_m": 38.2,
+      "body_width_m": 27.5,
+      "wall_height_m": 9.61,
+      "bracket_band_height_m": 1.705,
+      "front_wall_screen_px": [
+        [
+          498.385,
+          350.6805
+        ],
+        [
+          534.685,
+          351.5055
+        ],
+        [
+          534.685,
+          339.0125
+        ],
+        [
+          498.385,
+          338.1875
+        ]
+      ],
+      "right_wall_screen_px": [
+        [
+          534.685,
+          351.5055
+        ],
+        [
+          537.435,
+          339.9555
+        ],
+        [
+          537.435,
+          327.4625
+        ],
+        [
+          534.685,
+          339.0125
+        ]
+      ],
+      "front_wall_mid_screen_px": [
+        516.535,
+        344.8465
+      ],
+      "front_visible_wall_height_before_occlusion_px": 12.493,
+      "front_bays": 9,
+      "front_door_bays": 3,
+      "front_window_bays": 6,
+      "roof": {
+        "id": "roof-03",
+        "eave_datum_m": 49.515,
+        "peak_m": 52.45,
+        "outer_width_m": 36.3,
+        "inner_ridge_width_m": 19.8,
+        "outer_corner_screen_px": [
+          [
+            492.137,
+            336.972
+          ],
+          [
+            540.053,
+            338.061
+          ],
+          [
+            543.683,
+            322.815
+          ],
+          [
+            495.767,
+            321.726
+          ]
+        ],
+        "front_eave_mid_screen_px": [
+          516.095,
+          338.004
+        ],
+        "peak_axis_screen_px": [
+          517.91,
+          326.793
+        ]
+      },
+      "balcony": {
+        "id": "balcony-03",
+        "floor_datum_m": 38.2,
+        "outer_width_m": 30.3,
+        "rail_top_m": 39.900000000000006,
+        "front_rail_endpoints_px": [
+          [
+            496.397,
+            349.0165
+          ],
+          [
+            536.393,
+            349.9255
+          ]
+        ]
+      }
+    },
+    {
+      "id": "floor-04",
+      "floor_datum_m": 53.7,
+      "body_width_m": 26.4,
+      "wall_height_m": 8.68,
+      "bracket_band_height_m": 1.54,
+      "front_wall_screen_px": [
+        [
+          499.166,
+          330.316
+        ],
+        [
+          534.014,
+          331.108
+        ],
+        [
+          534.014,
+          319.824
+        ],
+        [
+          499.166,
+          319.032
+        ]
+      ],
+      "right_wall_screen_px": [
+        [
+          534.014,
+          331.108
+        ],
+        [
+          536.654,
+          320.02
+        ],
+        [
+          536.654,
+          308.736
+        ],
+        [
+          534.014,
+          319.824
+        ]
+      ],
+      "front_wall_mid_screen_px": [
+        516.59,
+        325.07
+      ],
+      "front_visible_wall_height_before_occlusion_px": 11.284,
+      "front_bays": 9,
+      "front_door_bays": 3,
+      "front_window_bays": 6,
+      "roof": {
+        "id": "roof-04",
+        "eave_datum_m": 63.92,
+        "peak_m": 66.45,
+        "outer_width_m": 35.2,
+        "inner_ridge_width_m": 19.008,
+        "outer_corner_screen_px": [
+          [
+            492.918,
+            318.031
+          ],
+          [
+            539.382,
+            319.087
+          ],
+          [
+            542.902,
+            304.303
+          ],
+          [
+            496.438,
+            303.247
+          ]
+        ],
+        "front_eave_mid_screen_px": [
+          516.15,
+          319.0465
+        ],
+        "peak_axis_screen_px": [
+          517.91,
+          308.593
+        ]
+      },
+      "balcony": {
+        "id": "balcony-04",
+        "floor_datum_m": 53.7,
+        "outer_width_m": 29.2,
+        "rail_top_m": 55.400000000000006,
+        "front_rail_endpoints_px": [
+          [
+            497.178,
+            328.652
+          ],
+          [
+            535.722,
+            329.528
+          ]
+        ]
+      }
+    },
+    {
+      "id": "floor-05",
+      "floor_datum_m": 67.7,
+      "body_width_m": 25.2,
+      "wall_height_m": 7.936,
+      "bracket_band_height_m": 1.4080000000000001,
+      "front_wall_screen_px": [
+        [
+          500.018,
+          311.882
+        ],
+        [
+          533.282,
+          312.638
+        ],
+        [
+          533.282,
+          302.3212
+        ],
+        [
+          500.018,
+          301.5652
+        ]
+      ],
+      "right_wall_screen_px": [
+        [
+          533.282,
+          312.638
+        ],
+        [
+          535.802,
+          302.054
+        ],
+        [
+          535.802,
+          291.7372
+        ],
+        [
+          533.282,
+          302.3212
+        ]
+      ],
+      "front_wall_mid_screen_px": [
+        516.65,
+        307.1016
+      ],
+      "front_visible_wall_height_before_occlusion_px": 10.3168,
+      "front_bays": 9,
+      "front_door_bays": 3,
+      "front_window_bays": 6,
+      "roof": {
+        "id": "roof-05",
+        "eave_datum_m": 77.044,
+        "peak_m": 79.25,
+        "outer_width_m": 34.0,
+        "inner_ridge_width_m": 18.144,
+        "outer_corner_screen_px": [
+          [
+            493.77,
+            300.7358
+          ],
+          [
+            538.65,
+            301.7558
+          ],
+          [
+            542.05,
+            287.4758
+          ],
+          [
+            497.17,
+            286.4558
+          ]
+        ],
+        "front_eave_mid_screen_px": [
+          516.21,
+          301.7333
+        ],
+        "peak_axis_screen_px": [
+          517.91,
+          291.953
+        ]
+      },
+      "balcony": {
+        "id": "balcony-05",
+        "floor_datum_m": 67.7,
+        "outer_width_m": 28.0,
+        "rail_top_m": 69.4,
+        "front_rail_endpoints_px": [
+          [
+            498.03,
+            310.218
+          ],
+          [
+            534.99,
+            311.058
+          ]
+        ]
+      }
+    },
+    {
+      "id": "floor-06",
+      "floor_datum_m": 80.5,
+      "body_width_m": 24.0,
+      "wall_height_m": 7.316000000000001,
+      "bracket_band_height_m": 1.298,
+      "front_wall_screen_px": [
+        [
+          500.87,
+          295.008
+        ],
+        [
+          532.55,
+          295.728
+        ],
+        [
+          532.55,
+          286.2172
+        ],
+        [
+          500.87,
+          285.4972
+        ]
+      ],
+      "right_wall_screen_px": [
+        [
+          532.55,
+          295.728
+        ],
+        [
+          534.95,
+          285.648
+        ],
+        [
+          534.95,
+          276.1372
+        ],
+        [
+          532.55,
+          286.2172
+        ]
+      ],
+      "front_wall_mid_screen_px": [
+        516.71,
+        290.6126
+      ],
+      "front_visible_wall_height_before_occlusion_px": 9.510800000000001,
+      "front_bays": 9,
+      "front_door_bays": 3,
+      "front_window_bays": 6,
+      "roof": {
+        "id": "roof-06",
+        "eave_datum_m": 89.114,
+        "peak_m": 91.05,
+        "outer_width_m": 32.8,
+        "inner_ridge_width_m": 17.28,
+        "outer_corner_screen_px": [
+          [
+            494.622,
+            284.8108
+          ],
+          [
+            537.918,
+            285.7948
+          ],
+          [
+            541.198,
+            272.0188
+          ],
+          [
+            497.902,
+            271.0348
+          ]
+        ],
+        "front_eave_mid_screen_px": [
+          516.27,
+          285.7903
+        ],
+        "peak_axis_screen_px": [
+          517.91,
+          276.613
+        ]
+      },
+      "balcony": {
+        "id": "balcony-06",
+        "floor_datum_m": 80.5,
+        "outer_width_m": 26.8,
+        "rail_top_m": 82.2,
+        "front_rail_endpoints_px": [
+          [
+            498.882,
+            293.344
+          ],
+          [
+            534.258,
+            294.148
+          ]
+        ]
+      }
+    },
+    {
+      "id": "floor-07",
+      "floor_datum_m": 92.3,
+      "body_width_m": 22.8,
+      "wall_height_m": 6.696000000000001,
+      "bracket_band_height_m": 1.1880000000000002,
+      "front_wall_screen_px": [
+        [
+          501.722,
+          279.434
+        ],
+        [
+          531.818,
+          280.118
+        ],
+        [
+          531.818,
+          271.4132
+        ],
+        [
+          501.722,
+          270.7292
+        ]
+      ],
+      "right_wall_screen_px": [
+        [
+          531.818,
+          280.118
+        ],
+        [
+          534.098,
+          270.542
+        ],
+        [
+          534.098,
+          261.8372
+        ],
+        [
+          531.818,
+          271.4132
+        ]
+      ],
+      "front_wall_mid_screen_px": [
+        516.77,
+        275.4236
+      ],
+      "front_visible_wall_height_before_occlusion_px": 8.7048,
+      "front_bays": 9,
+      "front_door_bays": 3,
+      "front_window_bays": 6,
+      "roof": {
+        "id": "roof-07",
+        "eave_datum_m": 100.184,
+        "peak_m": 101.85,
+        "outer_width_m": 31.6,
+        "inner_ridge_width_m": 16.416,
+        "outer_corner_screen_px": [
+          [
+            495.474,
+            270.1858
+          ],
+          [
+            537.186,
+            271.1338
+          ],
+          [
+            540.346,
+            257.8618
+          ],
+          [
+            498.634,
+            256.9138
+          ]
+        ],
+        "front_eave_mid_screen_px": [
+          516.33,
+          271.1473
+        ],
+        "peak_axis_screen_px": [
+          517.91,
+          262.573
+        ]
+      },
+      "balcony": {
+        "id": "balcony-07",
+        "floor_datum_m": 92.3,
+        "outer_width_m": 25.6,
+        "rail_top_m": 94.0,
+        "front_rail_endpoints_px": [
+          [
+            499.734,
+            277.77
+          ],
+          [
+            533.526,
+            278.538
+          ]
+        ]
+      }
+    },
+    {
+      "id": "floor-08",
+      "floor_datum_m": 103.1,
+      "body_width_m": 21.6,
+      "wall_height_m": 6.0760000000000005,
+      "bracket_band_height_m": 1.078,
+      "front_wall_screen_px": [
+        [
+          502.574,
+          265.16
+        ],
+        [
+          531.086,
+          265.808
+        ],
+        [
+          531.086,
+          257.9092
+        ],
+        [
+          502.574,
+          257.2612
+        ]
+      ],
+      "right_wall_screen_px": [
+        [
+          531.086,
+          265.808
+        ],
+        [
+          533.246,
+          256.736
+        ],
+        [
+          533.246,
+          248.8372
+        ],
+        [
+          531.086,
+          257.9092
+        ]
+      ],
+      "front_wall_mid_screen_px": [
+        516.83,
+        261.5346
+      ],
+      "front_visible_wall_height_before_occlusion_px": 7.898800000000001,
+      "front_bays": 9,
+      "front_door_bays": 3,
+      "front_window_bays": 6,
+      "roof": {
+        "id": "roof-08",
+        "eave_datum_m": 110.25399999999999,
+        "peak_m": 111.64999999999999,
+        "outer_width_m": 30.400000000000002,
+        "inner_ridge_width_m": 15.552,
+        "outer_corner_screen_px": [
+          [
+            496.326,
+            256.8608
+          ],
+          [
+            536.454,
+            257.7728
+          ],
+          [
+            539.494,
+            245.0048
+          ],
+          [
+            499.366,
+            244.0928
+          ]
+        ],
+        "front_eave_mid_screen_px": [
+          516.39,
+          257.8043
+        ],
+        "peak_axis_screen_px": [
+          517.91,
+          249.833
+        ]
+      },
+      "balcony": {
+        "id": "balcony-08",
+        "floor_datum_m": 103.1,
+        "outer_width_m": 24.400000000000002,
+        "rail_top_m": 104.8,
+        "front_rail_endpoints_px": [
+          [
+            500.586,
+            263.496
+          ],
+          [
+            532.794,
+            264.228
+          ]
+        ]
+      }
+    },
+    {
+      "id": "floor-09",
+      "floor_datum_m": 112.89999999999999,
+      "body_width_m": 20.4,
+      "wall_height_m": 8.0,
+      "bracket_band_height_m": 1.8,
+      "front_wall_screen_px": [
+        [
+          503.426,
+          252.186
+        ],
+        [
+          530.354,
+          252.798
+        ],
+        [
+          530.354,
+          242.398
+        ],
+        [
+          503.426,
+          241.786
+        ]
+      ],
+      "right_wall_screen_px": [
+        [
+          530.354,
+          252.798
+        ],
+        [
+          532.394,
+          244.23
+        ],
+        [
+          532.394,
+          233.83
+        ],
+        [
+          530.354,
+          242.398
+        ]
+      ],
+      "front_wall_mid_screen_px": [
+        516.89,
+        247.292
+      ],
+      "front_visible_wall_height_before_occlusion_px": 10.4,
+      "front_bays": 9,
+      "front_door_bays": 3,
+      "front_window_bays": 6,
+      "roof": {
+        "id": "roof-09",
+        "eave_datum_m": 122.69999999999999,
+        "peak_m": 131.8,
+        "outer_width_m": 29.2,
+        "inner_ridge_width_m": 4.0,
+        "outer_corner_screen_px": [
+          [
+            497.178,
+            240.447
+          ],
+          [
+            535.722,
+            241.323
+          ],
+          [
+            538.642,
+            229.059
+          ],
+          [
+            500.098,
+            228.183
+          ]
+        ],
+        "front_eave_mid_screen_px": [
+          516.45,
+          241.3725
+        ],
+        "peak_axis_screen_px": [
+          517.91,
+          223.638
+        ]
+      },
+      "balcony": {
+        "id": "balcony-09",
+        "floor_datum_m": 112.89999999999999,
+        "outer_width_m": 23.2,
+        "rail_top_m": 114.6,
+        "front_rail_endpoints_px": [
+          [
+            501.438,
+            250.522
+          ],
+          [
+            532.062,
+            251.218
+          ]
+        ]
+      }
+    }
+  ],
+  "gold_discs": [
+    {
+      "id": "disc-01",
+      "z_m": 134.17000000000002,
+      "radius_m_assumed": 1.9,
+      "screen_centre_px": [
+        517.91,
+        220.557
+      ],
+      "screen_rx_px": 2.508,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-02",
+      "z_m": 134.99,
+      "radius_m_assumed": 1.805,
+      "screen_centre_px": [
+        517.91,
+        219.491
+      ],
+      "screen_rx_px": 2.3826,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-03",
+      "z_m": 135.81,
+      "radius_m_assumed": 1.71,
+      "screen_centre_px": [
+        517.91,
+        218.425
+      ],
+      "screen_rx_px": 2.2572,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-04",
+      "z_m": 136.63000000000002,
+      "radius_m_assumed": 1.6149999999999998,
+      "screen_centre_px": [
+        517.91,
+        217.359
+      ],
+      "screen_rx_px": 2.1317999999999997,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-05",
+      "z_m": 137.45000000000002,
+      "radius_m_assumed": 1.52,
+      "screen_centre_px": [
+        517.91,
+        216.293
+      ],
+      "screen_rx_px": 2.0064,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-06",
+      "z_m": 138.27,
+      "radius_m_assumed": 1.4249999999999998,
+      "screen_centre_px": [
+        517.91,
+        215.227
+      ],
+      "screen_rx_px": 1.8809999999999998,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-07",
+      "z_m": 139.09,
+      "radius_m_assumed": 1.3299999999999998,
+      "screen_centre_px": [
+        517.91,
+        214.161
+      ],
+      "screen_rx_px": 1.7555999999999998,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-08",
+      "z_m": 139.91000000000003,
+      "radius_m_assumed": 1.2349999999999999,
+      "screen_centre_px": [
+        517.91,
+        213.095
+      ],
+      "screen_rx_px": 1.6301999999999999,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-09",
+      "z_m": 140.73000000000002,
+      "radius_m_assumed": 1.14,
+      "screen_centre_px": [
+        517.91,
+        212.029
+      ],
+      "screen_rx_px": 1.5048,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-10",
+      "z_m": 141.55,
+      "radius_m_assumed": 1.045,
+      "screen_centre_px": [
+        517.91,
+        210.963
+      ],
+      "screen_rx_px": 1.3794,
+      "screen_ry_px": 0.28023952095808385
+    },
+    {
+      "id": "disc-11",
+      "z_m": 142.37,
+      "radius_m_assumed": 0.95,
+      "screen_centre_px": [
+        517.91,
+        209.897
+      ],
+      "screen_rx_px": 1.254,
+      "screen_ry_px": 0.28023952095808385
+    }
+  ],
+  "v6_parameters_preserved": {
+    "base_width_m": 38.2,
+    "base_height_m": 2.2,
+    "total_height_m_assumed": 147.0,
+    "floor_datums_m_assumed": [
+      2.2,
+      21.2,
+      38.2,
+      53.7,
+      67.7,
+      80.5,
+      92.3,
+      103.1,
+      112.89999999999999
+    ],
+    "body_widths_m_assumed": [
+      29.4,
+      28.5,
+      27.5,
+      26.4,
+      25.2,
+      24.0,
+      22.8,
+      21.6,
+      20.4
+    ],
+    "eaves_overhang_per_side_m_assumed": 4.4
+  },
+  "illustrative_detail_choices": {
+    "visible_front": "nine bays; central three door bays and six window bays; upper assignment assumed",
+    "right_side": "same bay rhythm projected on narrow side; not all bays distinguishable at native panorama size",
+    "post_glyph_width_m": 0.46,
+    "post_glyph_is_not_engineering_section": true,
+    "roof_curvature": "V6 main eave and peak datums retained; small quadratic curvature is an illustration choice",
+    "balcony_projection_per_side_m": 1.4,
+    "rail_height_above_floor_m": 1.7,
+    "disc_glyph_vertical_radius_px": 0.28023952095808385,
+    "disc_depth_note": "Thin elliptical glyph scaled from V6's drawing; not measured disk geometry",
+    "access_width_m": 4.5,
+    "access_depth": "inset step glyph only; no new external south ramp footprint inferred",
+    "light": "warm afternoon front/left light; right faces quieter and darker",
+    "wall_colours": "vermilion first-storey infill; pale warm-gray upper infill is an unverified display assumption",
+    "texture": "native gradients and fine deterministic tile/wood lines; no raster texture"
+  },
+  "research_limits": [
+    "层高、收分、出檐和上层开间数仅供本次可复算绘图；小数不代表历史精度。",
+    "已作参数化力学筛查；原材、节点、塔心连接与地基未定，整体可行性尚未确立。不是施工图。",
+    "浅暖灰为未知表面占位示意，不声称塔上层原为白墙",
+    "投影用于方案在艺术背景中的构图，不是历史相机配准或实测147m。",
+    "SVG构件计数可精确核验；缩小后的每个细部是否可辨仍需实际成图审查。",
+    "未嵌入背景、未宣布首页成图通过，未修改旧V12或R12/V14冻结底稿。"
+  ],
+  "checks": {
+    "nine_wall_groups": true,
+    "nine_main_roof_groups": true,
+    "eight_balcony_groups": true,
+    "eleven_disc_groups": true,
+    "front_ground_midpoint_exact": true,
+    "no_embedded_bitmaps": true,
+    "svg_ids_unique": true
+  }
+}

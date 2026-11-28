@@ -1,0 +1,20 @@
+/* Current homepage layer. Historical V12 CSS and pages remain archived. */
+.home-hero img{aspect-ratio:auto;object-fit:contain;width:100%;height:auto;min-height:0;max-height:none}
+.home-image-note a{color:inherit;text-underline-offset:3px}
+.home-yongning{max-width:1370px;margin:0 auto;padding:76px clamp(24px,5vw,78px);display:grid;grid-template-columns:minmax(240px,.88fr) minmax(0,1.12fr);gap:clamp(35px,6vw,100px);align-items:center;border-bottom:1px solid #d5d9cc;color:#223d34;scroll-margin-top:30px}
+.home-yongning-plate{display:block;background:#faf8f2;border:1px solid #dddccf;box-shadow:0 12px 35px #193b2e09;color:#506252;text-decoration:none;max-width:390px;width:100%;justify-self:center;transition:box-shadow .2s ease}
+.home-yongning-plate:hover{box-shadow:0 14px 38px #193b2e1a}
+.home-yongning-plate img{display:block;width:100%;height:auto;object-fit:contain;aspect-ratio:1280/1800}
+.home-yongning-plate>span{display:flex;justify-content:space-between;padding:14px 20px;border-top:1px solid #e5e1d6;font-size:12px;letter-spacing:.06em}
+.home-yongning-copy .home-kicker{color:#8e503b;font-size:11px;letter-spacing:.15em;margin:0 0 20px}
+.home-yongning h2{font:500 clamp(29px,3vw,46px)/1.5 "Noto Serif CJK SC","Songti SC",serif;letter-spacing:.06em;margin:0 0 22px;text-wrap:balance}
+.home-yongning-deck{font-size:16px;line-height:1.95;max-width:32em;color:#526258;margin:0 0 30px}
+.home-yongning-numbers{display:grid;grid-template-columns:1fr 1fr 1fr;margin:0 0 26px;padding:22px 0;border-block:1px solid #cdd3c5;gap:18px}
+.home-yongning-numbers>div{min-width:0}.home-yongning-numbers dt{font:500 clamp(25px,2.5vw,37px)/1.25 Georgia,"Noto Serif CJK SC",serif;color:#274b3e}.home-yongning-numbers dt small{font-size:14px;font-family:inherit}.home-yongning-numbers dd{font-size:11px;line-height:1.8;margin:9px 0 0;color:#647265}
+.home-yongning-verdict{font-size:13px;line-height:1.95;color:#667164;max-width:42em;margin:0 0 26px}
+.home-yongning-cta{display:inline-flex;justify-content:space-between;align-items:center;gap:30px;min-height:48px;padding:12px 20px;background:#234839;color:#fff;text-decoration:none;font-size:13px;line-height:1.7}
+.home-yongning-cta:hover{background:#38624d}.home-yongning-chapters{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:21px}.home-yongning-chapters a{font-size:12px;color:#526d5b;text-underline-offset:4px}
+.home-yongning a:focus-visible{outline:3px solid #9e6b44;outline-offset:5px}
+@media(max-width:850px){.home-yongning{padding:44px 28px;gap:30px;grid-template-columns:minmax(200px,.9fr) minmax(0,1.1fr)}.home-yongning h2{font-size:29px;letter-spacing:.02em}.home-yongning-deck{font-size:13px}.home-yongning-numbers{gap:10px}.home-yongning-numbers dt{font-size:27px}.home-yongning-numbers dd{font-size:10px}.home-yongning-cta{font-size:12px;gap:14px;padding-inline:15px}}
+@media(max-width:600px){.home-yongning{grid-template-columns:1fr;padding:38px 24px 44px;gap:30px}.home-yongning-copy{grid-row:1}.home-yongning h2{font-size:30px;margin-bottom:16px}.home-yongning-copy .home-kicker{margin-bottom:15px}.home-yongning-deck{font-size:13px;margin-bottom:23px}.home-yongning-numbers{margin-bottom:20px;padding-block:19px}.home-yongning-numbers dt{font-size:29px}.home-yongning-verdict{font-size:12px}.home-yongning-plate{max-width:360px}.home-yongning-cta{font-size:13px;gap:25px}.masthead .topnav a{padding-inline:3px}}
+@media(prefers-reduced-motion:reduce){.home-yongning-plate{transition:none}}

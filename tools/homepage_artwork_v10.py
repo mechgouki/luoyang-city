@@ -190,6 +190,9 @@ def publish(site):
 
 
 def verify(info, release, get):
+    from homepage_yongning_v15 import restore_v14_context
+    info, get = restore_v14_context(info, get)
+    release = json.loads(get("release.json"))
     hashes = info["files_sha256"]
     pages = {name: get(V10.archive(name)) for name in PAGES}
     for previous, artwork, details in RELEASES:

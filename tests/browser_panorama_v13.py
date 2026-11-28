@@ -29,6 +29,13 @@ def exercise(browser, base, device, output, expected_commit=None):
         try:
             info = context.request.get(base + "build-info.json").json()
             meta = info[KEY]
+            current_home = info.get("homepage_yongning_v15")
+            home_metadata = current_home["metadata"] if current_home else "homepage/approval-v12.json"
+            home_approval = context.request.get(base + home_metadata).json()
+            home_hero = home_approval["hero"]
+            assert home_approval["source_commit"] == info["source_commit"]
+            assert home_hero["revision"] == (current_home["hero_revision"] if current_home else "panorama-approved-v12")
+            assert home_hero["status"] == "approved"
             report["source_commit"] = info["source_commit"]
             assert meta["source_commit"] == info["source_commit"]
             if expected_commit:
@@ -36,14 +43,15 @@ def exercise(browser, base, device, output, expected_commit=None):
             assert meta["homepage_replacement_approved"] is False
             for home in ("index.html", "v3.0-dual.html"):
                 page.goto(base + home, wait_until="load")
-                expect(page.locator('[data-hero-revision="panorama-approved-v12"]')).to_be_visible()
+                expect(page.locator('#home-hero')).to_have_attribute("data-hero-revision", home_hero["revision"])
+                expect(page.locator('#home-hero')).to_be_visible()
                 page.locator("#r8-panorama-entry").click()
                 page.wait_for_url("**/" + PAGE, wait_until="load")
                 expect(page.locator("#review-status")).to_contain_text("待审看")
                 expect(page.locator("#figure-v13")).to_be_visible()
                 expect(page.locator("#figure-v12")).to_be_hidden()
                 assert_loaded_viewport(page, tolerance=1, report=report)
-            report["checks"].append("Both homepage entries preserve approved V12 and lead to the explicitly unapproved V13 candidate")
+            report["checks"].append("Both current homepage entries lead to the explicitly unapproved V13 candidate and its preserved V12 comparison")
 
             for version in ("v13", "v12"):
                 page.locator(f'button[data-view="{version}"]').click()

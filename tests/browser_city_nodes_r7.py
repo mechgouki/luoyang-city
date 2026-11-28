@@ -44,6 +44,13 @@ def exercise(browser, base, device, output, expected_commit=None):
         try:
             info = context.request.get(base + "build-info.json").json()
             meta = info[KEY]
+            current_home = info.get("homepage_yongning_v15")
+            home_metadata = current_home["metadata"] if current_home else "homepage/approval-v12.json"
+            home_approval = context.request.get(base + home_metadata).json()
+            home_hero = home_approval["hero"]
+            assert home_approval["source_commit"] == info["source_commit"]
+            assert home_hero["revision"] == (current_home["hero_revision"] if current_home else "panorama-approved-v12")
+            assert home_hero["status"] == "approved"
             data = context.request.get(base + "city-nodes/readings.json").json()
             assert meta["source_commit"] == data["source_commit"] == info["source_commit"]
             if expected_commit:
@@ -55,7 +62,8 @@ def exercise(browser, base, device, output, expected_commit=None):
 
             for homepage in ("index.html", "v3.0-dual.html"):
                 page.goto(base + homepage, wait_until="load")
-                expect(page.locator('[data-hero-revision="panorama-approved-v12"]')).to_be_visible()
+                expect(page.locator('#home-hero')).to_have_attribute("data-hero-revision", home_hero["revision"])
+                expect(page.locator('#home-hero')).to_be_visible()
                 page.locator("#r7-home-guide").click()
                 page.wait_for_url("**/" + PAGE + "#panorama")
                 expect(page.locator(".guide-card")).to_have_count(6)
@@ -75,7 +83,7 @@ def exercise(browser, base, device, output, expected_commit=None):
                         assert overlap_x <= 0 or overlap_y <= 0, "Picture guide targets overlap"
                 fits(page)
             capture(page.locator(".panorama-figure"), "v12-guide")
-            report["checks"].append("Both V12 home entries reach the six-point guide; desktop/mobile image dimensions and full-frame proportions remain intact")
+            report["checks"].append("Both current homepage entries reach the preserved V12 six-point guide; desktop/mobile image dimensions and full-frame proportions remain intact")
 
             page.goto(base + "luoyang-all-roads.html", wait_until="load")
             expect(page.locator("details[data-record]")).to_have_count(84)

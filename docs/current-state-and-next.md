@@ -1,9 +1,9 @@
 # 洛阳城复原：当前状态与续接顺序
 
 <!-- current-state:start -->
-当前状态（2026-11-23）：研究 **R12.1 / panorama-review-v14**（共同透视底稿与试绘审查（试绘未通过））；首页为用户批准的 **全幅取景版 `panorama-approved-v12`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-28）：研究 **V6 / homepage-yongning-v15**（永宁寺塔高度、结构与色彩专题）；首页为用户批准的 **永宁寺塔依V6修订的全幅图 `panorama-yongning-v15`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html) · [上一已验收发布 `129abae`](https://github.com/mechgouki/luoyang-city/actions/runs/45103224890) · [长期验收证据](https://github.com/mechgouki/luoyang-city/blob/b276f8e9495be7d4e8a38ddfa65ffc2bf9e85611/evidence/city-plan-r11/2026-11-23/README.md) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-yongning-v6.html) · [上一已验收发布 `bbfbac9`](https://github.com/mechgouki/luoyang-city/actions/runs/45363321713) · [长期验收证据](https://github.com/mechgouki/luoyang-city/tree/d6e1754fa5b9dd6f3bb79ac3d152ccb6e104eac0/evidence/yongning-triptych/2026-11-25) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](../research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->

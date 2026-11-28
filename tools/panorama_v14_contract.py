@@ -47,6 +47,8 @@ def digest(raw):
 
 
 def strip_current_entries(content):
+    from homepage_yongning_v15 import restore_home as restore_v15_home
+    content = restore_v15_home(content)
     from city_plan_r11_contract import HOME_ENTRY as anchor
     marker = b'id="r12-panorama-entry"'
     if marker not in content:
@@ -67,6 +69,8 @@ def add_home(content, status="candidate_for_review"):
 
 def restore_r11_context(info, reader):
     """Validate this addition before exposing the exact previous inventory/bytes."""
+    from homepage_yongning_v15 import restore_v14_context
+    info, reader = restore_v14_context(info, reader)
     if KEY not in info:
         return info, reader
     get = lru_cache(maxsize=None)(reader)
