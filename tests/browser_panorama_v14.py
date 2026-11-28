@@ -31,6 +31,13 @@ def exercise(browser, base, device, output, expected_commit=None):
         try:
             info = context.request.get(base + "build-info.json").json()
             meta = info[KEY]
+            current_home = info.get("homepage_yongning_v15")
+            home_metadata = current_home["metadata"] if current_home else "homepage/approval-v12.json"
+            home_approval = context.request.get(base + home_metadata).json()
+            home_hero = home_approval["hero"]
+            assert home_approval["source_commit"] == info["source_commit"]
+            assert home_hero["revision"] == (current_home["hero_revision"] if current_home else "panorama-approved-v12")
+            assert home_hero["status"] == "approved"
             report["source_commit"] = info["source_commit"]
             assert meta["source_commit"] == info["source_commit"]
             if expected_commit:
@@ -46,9 +53,17 @@ def exercise(browser, base, device, output, expected_commit=None):
             release = context.request.get(base + "release.json").json()
             assert release[KEY + "_status"] == meta["status"]
             assert release[KEY + "_review_status"] == meta["review_status"]
+            review_release = release
+            if current_home:
+                archived_release = context.request.get(base + current_home["previous_release"])
+                assert archived_release.status == 200
+                assert hashlib.sha256(archived_release.body()).hexdigest() == info["files_sha256"][current_home["previous_release"]]
+                review_release = archived_release.json()
+                assert review_release[KEY + "_status"] == meta["status"]
+                assert review_release[KEY + "_review_status"] == meta["review_status"]
             if rejected:
                 assert meta["review_status"] == "rejected_needs_revision" and meta["blocking_findings"]
-                assert "V14试绘审查·未通过" in release["current_milestone"]
+                assert "V14试绘审查·未通过" in review_release["current_milestone"]
             else:
                 assert meta["review_status"] in {"accepted_for_user_review", "accepted_for_user_review_with_known_limits"}
                 assert not meta["blocking_findings"]
@@ -84,7 +99,8 @@ def exercise(browser, base, device, output, expected_commit=None):
 
             for home in ("index.html", "v3.0-dual.html"):
                 page.goto(base + home, wait_until="load")
-                expect(page.locator('[data-hero-revision="panorama-approved-v12"]')).to_be_visible()
+                expect(page.locator('#home-hero')).to_have_attribute("data-hero-revision", home_hero["revision"])
+                expect(page.locator('#home-hero')).to_be_visible()
                 expect(page.locator("#r11-plan-entry")).to_have_count(1)
                 expect(page.locator("#r9-panorama-entry")).to_have_count(1)
                 if rejected:
@@ -96,7 +112,7 @@ def exercise(browser, base, device, output, expected_commit=None):
                 expect(page.locator("#figure-v13r2")).to_be_hidden()
                 expect(page.locator("#figure-v12")).to_be_hidden()
                 assert_loaded_viewport(page, tolerance=1, report=report)
-            report["checks"].append("Both homepage entries preserve approved V12 and old links; image, review and release states agree, and every rejected-image blocker is visible before the image")
+            report["checks"].append("Both current homepage entries retain the old review links and V12 comparison; image, review and release states agree, and every rejected-image blocker is visible before the image")
 
             for kind in ("v14", "v13r2", "v12"):
                 page.locator(f'button[data-view="{kind}"]').click()

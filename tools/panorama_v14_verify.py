@@ -111,6 +111,8 @@ def verify_review_presentation(raw, data):
 
 
 def verify(info, reader, *, build_control_reader=None):
+    from homepage_yongning_v15 import restore_v14_context
+    info, reader = restore_v14_context(info, reader)
     get = lru_cache(maxsize=None)(reader)
     hashes, meta = info["files_sha256"], info[KEY]
     old_info, old_reader = restore_r11_context(info, get)

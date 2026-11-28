@@ -97,6 +97,9 @@ SITE = [
         ('node', '--check', 'web/panorama-v14.js'),
         ('python', 'tools/panorama_v14.py'),
     ]),
+    ('V6 Yongning height, mechanics and colour study with V15 homepage', [
+        ('python', 'tools/homepage_yongning_v15.py'),
+    ]),
 ]
 
 

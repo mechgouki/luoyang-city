@@ -1,0 +1,87 @@
+{
+  "schema": "homepage-v15-generation-attempts-v1",
+  "attempts": [
+    {
+      "id": "whole-1",
+      "generator": "built-in image_gen",
+      "original_filename": "exec-eca20a84-6c59-431f-9f84-1f044df618eb.png",
+      "sha256": "0b64fce889f9003a73f140d0e3ac45d8ae2891a5ad427daf828e64eec91bec54",
+      "bytes": 3334006,
+      "status": "rejected",
+      "reason": "7 wall storeys; footing moved approximately +67 px",
+      "retained_in_repository": false
+    },
+    {
+      "id": "whole-2",
+      "generator": "built-in image_gen",
+      "original_filename": "exec-319a6424-af6d-4a62-a9f5-d202e4db376f.png",
+      "sha256": "bb29508419b0eaca15ecd8431c5b07954a1e7411a55a00670b44a07f8c98c175",
+      "bytes": 3465441,
+      "status": "rejected",
+      "reason": "7 wall storeys; footing moved approximately +52 px; overlong finial",
+      "retained_in_repository": false
+    },
+    {
+      "id": "whole-3",
+      "generator": "built-in image_gen",
+      "original_filename": "exec-6419b700-6545-4a07-8791-f37f89ed4353.png",
+      "sha256": "8542f5abf6c59f727097fcb7a5c322f91edef442b91bf851d98c926669ed3b82",
+      "bytes": 3099939,
+      "status": "rejected",
+      "reason": "Did not establish the required nine occupied storeys; not promoted",
+      "retained_in_repository": false
+    },
+    {
+      "id": "cleared-background",
+      "generator": "built-in image_gen",
+      "original_filename": "exec-31e35cf8-eefc-479b-873d-d6e95d11c75a.png",
+      "sha256": "328fe9f7c09d3983705b205566125dfc4ac020589f8a86b0c763c813b1e2abf9",
+      "bytes": 3464490,
+      "status": "background_only",
+      "reason": "Tower removed; accepted only as background material, never as complete reconstruction",
+      "retained_in_repository": true
+    },
+    {
+      "id": "whole-4",
+      "generator": "built-in image_gen",
+      "original_filename": "exec-a1f83b0b-94b8-4039-9d9d-b89febda5fe7.png",
+      "sha256": "e7eb45b246c70a078a73e5a60ff1bdc6bc84f3c0ce835c3d937f3865f7c7f61d",
+      "bytes": 3367697,
+      "status": "rejected",
+      "reason": "Incorrect occupied storey count and moved tower/temple gate",
+      "retained_in_repository": false
+    },
+    {
+      "id": "isolated-1",
+      "generator": "built-in image_gen",
+      "original_filename": "exec-e2ea5191-7d76-4987-9ff4-cf6f89eb80c8.png",
+      "sha256": "9beb0450027483b05c1aaa66da308247117dcb73306eb0fe92202cccafd3d734",
+      "bytes": 1938689,
+      "status": "rejected",
+      "reason": "8 wall storeys, 8 roofs and 7 balconies; 11 discs",
+      "retained_in_repository": false
+    },
+    {
+      "id": "isolated-2",
+      "generator": "built-in image_gen",
+      "original_filename": "exec-578e9b19-fa6d-41dc-922c-d04d0dedcdbf.png",
+      "sha256": "cfc1663c110f0ac09d662dd87397221c2a612e62431af4e5ecd2990a71d12626",
+      "bytes": 1373889,
+      "status": "rejected",
+      "reason": "Still 8 occupied storeys after requested addition",
+      "retained_in_repository": false
+    },
+    {
+      "id": "whole-5",
+      "generator": "built-in image_gen",
+      "original_filename": "exec-bc75128e-4f56-4d3b-add3-d50615f75ead.png",
+      "sha256": "ca1671da1c044dead50a16f74add188756d60885ccc93fe71e9cca0f181e92a3",
+      "bytes": 3203297,
+      "status": "rejected",
+      "reason": "Nine-level copy and footing placement were not retained",
+      "retained_in_repository": false
+    }
+  ],
+  "record_scope": "All prompt texts and output fingerprints retained; only the selected background bitmap is checked into this repository. Rejected outputs were not used in the final tower.",
+  "final_method": "V6 native SVG tower geometry over the generated background; exact geometry is not inferred from image generation"
+}

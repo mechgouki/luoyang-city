@@ -234,14 +234,21 @@ def exercise(browser, base, device, output):
             assert current["previous_revision"] == approval["hero"]["revision"]
             assert current["hero"]["revision"] == "panorama-approved-v12"
             assert current["hero"]["source_sha256"] == "c7954dfc3ee659de756c62d0f634e40eddfd2ecc93cc8b833f53f6c0e0dc69ca"
+            current_home = info.get("homepage_yongning_v15")
+            home_metadata = current_home["metadata"] if current_home else "homepage/approval-v12.json"
+            home_approval = context.request.get(base + home_metadata).json()
+            home_hero = home_approval["hero"]
+            assert home_approval["source_commit"] == info["source_commit"]
+            assert home_hero["revision"] == (current_home["hero_revision"] if current_home else "panorama-approved-v12")
+            assert home_hero["status"] == "approved"
             for name in ("index.html", "v3.0-dual.html"):
                 raw = context.request.get(base + name).body()
-                assert b'data-hero-revision="panorama-approved-v12"' in raw
-                assert current["hero"]["asset"].encode() in raw
+                assert raw.count(f'data-hero-revision="{home_hero["revision"]}"'.encode()) == 1
+                assert home_hero["asset"].encode() in raw and home_hero["small_asset"].encode() in raw
                 archived = context.request.get(base + "homepage/history/" + name.replace(".html", "-before-v12.html")).body()
                 assert b'data-hero-revision="panorama-approved-v11"' in archived
                 assert hashlib.sha256(archived).hexdigest() == current["previous_html_sha256"][name]
-            report["homepage"] = dict(current=current["hero"]["revision"], archived=approval["hero"]["revision"])
+            report["homepage"] = dict(current=home_hero["revision"], archived=approval["hero"]["revision"])
             assert not report["errors"], report["errors"]
             report["status"] = "passed"
         except Exception as error:

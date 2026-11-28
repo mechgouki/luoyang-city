@@ -136,6 +136,8 @@ jobs:
           python tools/panorama_v14.py --verify | tee artifacts/panorama-v14-verify.json
           python -m unittest discover -s tests -p 'test_yongning_study.py' -v 2>&1 | tee artifacts/yongning-study-tests.txt
           python tools/yongning_study.py --verify | tee artifacts/yongning-study-verify.json
+          python -m unittest discover -s tests -p 'test_homepage_yongning_v15.py' -v 2>&1 | tee artifacts/homepage-yongning-v15-tests.txt
+          python tools/homepage_yongning_v15.py --verify | tee artifacts/homepage-yongning-v15-verify.json
       - name: Fetch pinned browser runtime with preinstalled dependencies
         timeout-minutes: 6
         run: |
@@ -188,6 +190,7 @@ jobs:
               python tests/browser_city_b8.py
               python tests/browser_homepage_v1.py
               python tests/browser_homepage_approved_v9.py
+              python tests/browser_homepage_yongning_v15.py
               python tests/browser_prosperity_city_distribution_p451.py
               python tests/browser_prosperity_road_functions_p452.py
               python tests/browser_prosperity_street_clusters_p453.py
@@ -216,6 +219,16 @@ jobs:
         with:
           path: _site
           retention-days: 7
+      - name: Preserve focused V6 homepage and study evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: homepage-yongning-v15-build-evidence
+          path: |
+            artifacts/homepage-yongning-v15-tests.txt
+            artifacts/homepage-yongning-v15-verify.json
+            artifacts/homepage-yongning-v15-browser/
+          retention-days: 30
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
@@ -305,6 +318,7 @@ jobs:
               python tests/browser_city_b8.py --base-url "$SITE_URL" --output artifacts/live-city-b8-browser
               python tests/browser_homepage_v1.py --base-url "$SITE_URL" --output artifacts/live-homepage-v1-browser
               python tests/browser_homepage_approved_v9.py --base-url "$SITE_URL" --output artifacts/live-homepage-approved-v9-browser
+              python tests/browser_homepage_yongning_v15.py --base-url "$SITE_URL" --commit "$GITHUB_SHA" --output artifacts/live-homepage-yongning-v15-browser
               python tests/browser_prosperity_city_distribution_p451.py --base-url "$SITE_URL" --output artifacts/live-prosperity-city-distribution-p451-browser
               python tests/browser_prosperity_road_functions_p452.py --base-url "$SITE_URL" --output artifacts/live-prosperity-road-functions-p452-browser
               python tests/browser_prosperity_street_clusters_p453.py --base-url "$SITE_URL" --output artifacts/live-prosperity-street-clusters-p453-browser
@@ -326,4 +340,11 @@ jobs:
         with:
           name: yongning-study-live-evidence
           path: artifacts/live-yongning-study-browser/
+          retention-days: 30
+      - name: Preserve focused V6 homepage and study live evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: homepage-yongning-v15-live-evidence
+          path: artifacts/live-homepage-yongning-v15-browser/
           retention-days: 30

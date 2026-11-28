@@ -116,6 +116,11 @@ class ApprovedPanoramaH2(unittest.TestCase):
             self.assertIn(V11.small.encode(),archived)
 
     def test_release_provenance_matches_all_versions(self):
+        import sys
+        sys.path.insert(0,str(ROOT/"tools"))
+        from homepage_yongning_v15 import restore_v14_context
+        _, legacy_reader=restore_v14_context(self.info,lambda path:(SITE/path).read_bytes())
+        legacy_release=json.loads(legacy_reader("release.json"))
         current=read(SITE/"homepage/approval-v12.json")
         previous=read(SITE/current["previous_metadata"])
         earlier=read(SITE/previous["previous_metadata"])
@@ -129,9 +134,9 @@ class ApprovedPanoramaH2(unittest.TestCase):
         self.assertEqual(previous["hero"]["selection_number"],"07")
         self.assertEqual(previous["hero"]["source_sha256"],"4d45e831b59f2f7550fe7129455f1da823098e8f34cf633223cd584d5b64a5bf")
         self.assertEqual(earlier["hero"]["source_sha256"],"262e0797c09788f7871bca81c05d5e2c15d5ebc7ab8cf6c559ced68cf883a41e")
-        self.assertEqual(self.release["homepage_hero_revision"],current["hero"]["revision"])
-        self.assertEqual(self.release["homepage_hero_status"],"approved")
-        self.assertIn(VERSION,self.release["extensions"])
+        self.assertEqual(legacy_release["homepage_hero_revision"],current["hero"]["revision"])
+        self.assertEqual(legacy_release["homepage_hero_status"],"approved")
+        self.assertIn(VERSION,legacy_release["extensions"])
         self.assertEqual(self.info["homepage"]["hero_revision"],OLD_REV)
         self.assertEqual(self.info["homepage"]["hero_status"],"interim")
         self.assertEqual(self.info["homepage_approved_v9"]["hero_revision"],REV)

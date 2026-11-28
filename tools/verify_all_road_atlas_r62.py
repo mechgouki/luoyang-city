@@ -312,6 +312,8 @@ def _preservation(meta, info, get):
 
 
 def verify(info, reader):
+    from homepage_yongning_v15 import restore_v14_context
+    info, reader = restore_v14_context(info, reader)
     get = lru_cache(maxsize=None)(reader)
     hashes = info["files_sha256"]
     meta = info[KEY]

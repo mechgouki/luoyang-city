@@ -1,0 +1,60 @@
+{
+  "schema": "homepage-yongning-v15-image-record-v1",
+  "hero": {
+    "revision": "panorama-yongning-v15",
+    "asset": "_assets/f5294572cc87abc5133d-luoyang-panorama-yongning-v15.webp",
+    "small_asset": "_assets/c54d37c01b435644194a-luoyang-panorama-yongning-v15-small.webp",
+    "asset_sha256": "f5294572cc87abc5133d70ec3189fc6d6a8ff8785630c56483d0b2c67e6bebf1",
+    "small_asset_sha256": "c54d37c01b435644194ae1ecf47e46878ab0bb47e54a8e10e308b192aa9e0c45",
+    "width": 1672,
+    "height": 941,
+    "small_width": 960,
+    "small_height": 540,
+    "alt": "北魏洛阳研究性复原全景，永宁寺塔依V6候选方案重绘为九层九檐；朱红门墙、灰瓦与金色刹饰，147米为方案选择，结构可行性尚未确立。",
+    "source_sha256": "5acd4448aabf3dee9344e9b74df78d6995ee12f3fb6472c9e15bbfb3eb3e14de",
+    "source_kind": "native_svg_scene_with_generated_background",
+    "status": "approved",
+    "approval_date": "2026-11-28",
+    "based_on_revision": "panorama-approved-v12"
+  },
+  "full_source": "web/assets/luoyang-panorama-yongning-v15.webp",
+  "small_source": "web/assets/luoyang-panorama-yongning-v15-small.webp",
+  "scene_files_sha256": {
+    "draw_tower_scene.py": "4c939030d98802a50595ed7c0d9f3e60b476c92ab605e1f581e4fb9d265eddac",
+    "tower-layer.svg": "75e37f274e7c64f4bdc95e3c5ec518202e2113139032cb79777106cb983ff060",
+    "tower-projection.json": "a3549a9836c4d8dd7538c219b32a67e204422b8d5a6d6b3b26c856beff5cd2b6",
+    "render_scene.mjs": "9a90737f8f19e05fdb2a2895f46aed389cd3e741a8321e2ede7704b91b6137da",
+    "homepage-scene.svg": "5acd4448aabf3dee9344e9b74df78d6995ee12f3fb6472c9e15bbfb3eb3e14de",
+    "courtyard-background.png": "328fe9f7c09d3983705b205566125dfc4ac020589f8a86b0c763c813b1e2abf9",
+    "generation-attempts.json": "6a2072e53cdcbbc5326d8e01013ec9dfa387475d92ce0bb93d2d3562db22786e"
+  },
+  "visual_review": {
+    "accepted_for_publication": true,
+    "scope": "Implementation review under explicit user instruction to put V6 on the homepage and improve the panorama; not a claim that the user separately approved the exact final pixels.",
+    "review_file": "visual-review.md"
+  },
+  "research_version": "V6",
+  "research_source_commit": "d6e1754fa5b9dd6f3bb79ac3d152ccb6e104eac0",
+  "elevation_sha256": "b8825ca58939751a2ec411ab86cd63ea6eaaad41b6dac7ceb98a32f37a4a0d30",
+  "exact_counts": {
+    "wall-storey": 9,
+    "main-roof": 9,
+    "external-balcony": 8,
+    "gold-disc": 11
+  },
+  "projection_scope": "affine artistic display; not historical camera registration or a city-wide metric survey",
+  "structural_feasibility": "not_established",
+  "background_scope": "Generated edit of V12. Surrounding pixels are not claimed byte-identical to V12.",
+  "generation_records": "generation-attempts.json",
+  "native_scene": "homepage-scene.svg",
+  "rendered_png_sha256": "874a5e77eabd278a73e744d1608fe75dec032d7d4faa53dab7aeffba598adb2d",
+  "rendered_png_repository_retention": "reproducible intermediate; committed deliverables are native scene, background, and both WebP sizes",
+  "source_ground_homography_modified": false,
+  "new_ancient_coordinates": 0,
+  "rendering_dependencies": {
+    "sharp": "0.35.5",
+    "librsvg": "2.63.2",
+    "libvips": "8.18.7",
+    "libwebp": "1.6.0"
+  }
+}
