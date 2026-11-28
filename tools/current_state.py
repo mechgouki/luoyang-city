@@ -16,7 +16,7 @@ def summary(data, source_link):
     return '\n'.join([
         START,
         f"当前状态（{data['updated_at_beijing']}）：研究 **{research['version']} / {research['implementation_version']}**（{research['title']}）；"
-        f"首页为用户批准的 **{home['label']} `{home['revision']}`**；几何封存基线 **{data['geometry_baseline']}**。研究时段为 **{years} 年**。",
+        f"首页修订为 **{home['label']} `{home['revision']}`**（{home['review_status_label']}）；几何封存基线 **{data['geometry_baseline']}**。研究时段为 **{years} 年**。",
         '',
         f"[正式首页]({home['url']}) · [现行研究入口]({research['url']}) · "
         f"[上一已验收发布 `{release['source_commit'][:7]}`]({release['workflow_url']}) · "

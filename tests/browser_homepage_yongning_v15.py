@@ -121,6 +121,26 @@ def exercise(browser, base, device, output, expected_commit=None):
             assert release["yongning_tower_study_version"] == "V6"
             hero = meta["hero"]
             assert hero["revision"] == meta["hero_revision"] and hero["status"] == "approved"
+            assert meta["version"] == "homepage-yongning-v16" and hero["revision"] == "panorama-yongning-v16"
+            assert hero["approval_scope"] == "implementation_review_under_user_instruction"
+            assert hero["user_final_pixels_approved"] is False
+            current_record = json.loads(checked_bytes(meta["current_image_record"]))
+            assert current_record["hero"] == hero
+            assert current_record["visual_review"]["accepted_for_publication"] is True
+            assert current_record["visual_review"]["reviewed_image_sha256"] == hero["source_sha256"]
+            assert current_record["visual_review"]["scope"] == "visual_scene_consistency_not_archaeological_registration"
+            assert current_record["city_wide_metric_registration"] is False
+            assert current_record["source_ground_homography_modified"] is False
+            assert hero["source_kind"] == "imagegen_local_edit_native_scene_assembly"
+            assert current_record["source_png_outside_edit_rectangle_pixels_identical"] is True
+            assert current_record["published_lossy_webp_pixel_identity_claimed"] is False
+            supersedes = current_record["supersedes"]
+            assert meta["supersedes"] == supersedes
+            assert supersedes["revision"] == "panorama-yongning-v15"
+            assert supersedes["visual_status"] == "rejected_by_user" and supersedes["technical_acceptance_status"] == "passed"
+            report["spatial_review_scope"] = current_record["visual_review"]["scope"]
+            report["superseded_visual_status"] = supersedes["visual_status"]
+            report["superseded_technical_status"] = supersedes["technical_acceptance_status"]
             for asset, checksum in (("asset", "asset_sha256"), ("small_asset", "small_asset_sha256")):
                 assert hashes[hero[asset]] == hero[checksum]
                 checked_bytes(hero[asset])
@@ -130,7 +150,8 @@ def exercise(browser, base, device, output, expected_commit=None):
             checked_bytes(FOLDER + "/topic.css")
             checked_bytes(FOLDER + "/homepage.css")
             assert checked_bytes(meta["homepage_stylesheet"]) == checked_bytes(FOLDER + "/homepage.css")
-            report["checks"].append("Live build identity, release, V15 metadata and current page/image/style bytes match the same source commit and SHA-256 manifest")
+            report["checks"].append("Live build identity, release, V16 metadata and current page/image/style bytes match the same source commit and SHA-256 manifest")
+            report["checks"].append("The image-specific spatial review is recorded without claiming archaeological registration; V15 remains technically verified and visually rejected by the user")
 
             def check_image(selector, allowed_dimensions, role):
                 image = page.locator(selector)
@@ -308,7 +329,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base-url")
     parser.add_argument("--commit")
-    parser.add_argument("--output", default="artifacts/homepage-yongning-v15-browser")
+    parser.add_argument("--output", default="artifacts/homepage-yongning-v16-browser")
     parser.add_argument("--browser-executable")
     args = parser.parse_args()
     output = ROOT / args.output

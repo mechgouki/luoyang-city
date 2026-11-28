@@ -1,7 +1,7 @@
-"""Acceptance of the actual V15 layer, its research limits and its predecessor.
+"""Acceptance of the current homepage, its research limits and preserved history.
 
 Run after the normal build. These tests deliberately require the real publication
-output: an absent V15 build is an error, not a skipped acceptance gate. Mutations
+output: an absent current build is an error, not a skipped acceptance gate. Mutations
 are supplied through an in-memory reader; no published file is edited.
 """
 import copy
@@ -59,7 +59,7 @@ class HomepageYongningV15Acceptance(unittest.TestCase):
     def setUpClass(cls):
         cls.info = json.loads((SITE / "build-info.json").read_bytes())
         if publisher.KEY not in cls.info:
-            raise AssertionError("Build the actual V15 publication before running its acceptance tests")
+            raise AssertionError("Build the actual current publication before running its acceptance tests")
         cls.meta = cls.info[publisher.KEY]
         cls.read = staticmethod(lru_cache(maxsize=None)(lambda path: (SITE / path).read_bytes()))
         cls.previous = json.loads(cls.read(cls.meta["previous_build_info"]))
@@ -223,6 +223,39 @@ class HomepageYongningV15Acceptance(unittest.TestCase):
         info["unrelated_research_revision"] = "unexpected"
         with self.assertRaises(AssertionError):
             publisher.verify(info, read)
+
+    def test_current_scene_review_and_rejected_v15_have_distinct_status(self):
+        art = json.loads(self.read(self.meta["current_image_record"]))
+        self.assertEqual(art["hero"]["source_kind"], "imagegen_local_edit_native_scene_assembly")
+        self.assertFalse(art["hero"]["user_final_pixels_approved"])
+        self.assertTrue(art["visual_review"]["accepted_for_publication"])
+        self.assertEqual(art["visual_review"]["reviewed_image_sha256"], art["hero"]["source_sha256"])
+        self.assertEqual(set(art["visual_review"]["spatial_checks"]), set(publisher.SPATIAL_CHECKS))
+        self.assertTrue(all(art["visual_review"]["spatial_checks"].values()))
+        self.assertFalse(art["city_wide_metric_registration"])
+        self.assertFalse(art["source_ground_homography_modified"])
+        self.assertFalse(art["surrounding_pixels_claimed_identical"])
+        self.assertTrue(art["source_png_outside_edit_rectangle_pixels_identical"])
+        self.assertFalse(art["published_lossy_webp_pixel_identity_claimed"])
+        self.assertEqual(art["supersedes"]["visual_status"], "rejected_by_user")
+        self.assertEqual(art["supersedes"]["technical_acceptance_status"], "passed")
+        self.assertEqual(art["supersedes"]["user_feedback"], publisher.CORRECTION)
+        self.assertEqual(self.baseline["superseded_visual_status"], "rejected_by_user")
+
+    def test_scene_source_and_historical_v15_cannot_be_changed_even_with_rewritten_hashes(self):
+        paths = [publisher.SCENE_FOLDER + "/source-scene.png", self.meta["current_image_record"],
+                 publisher.SCENE_FOLDER + "/homepage-scene.svg", publisher.SCENE_FOLDER + "/scene-assembly.json",
+                 publisher.SCENE_FOLDER + "/scene-background-v12.webp", publisher.SCENE_FOLDER + "/temple-edit-candidate-04.png",
+                 "yongning-v6/homepage-image-record.json", "yongning-v6/homepage/tower-layer.svg",
+                 publisher.legacy_record()["hero"]["asset"]]
+        for path in paths:
+            with self.subTest(path=path):
+                self.assert_rejected({path: self.read(path) + b"\nchanged\n"}, rehash=True)
+
+    def test_current_metadata_cannot_erase_user_rejection(self):
+        altered = copy.deepcopy(self.meta["supersedes"])
+        altered["visual_status"] = "approved_by_user"
+        self.assert_rejected({}, metadata_changes={"supersedes": altered})
 
 
 if __name__ == "__main__":

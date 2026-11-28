@@ -4,9 +4,9 @@
 仓库：`mechgouki/luoyang-city`；既有研究工作线：**B1—B8**。
 
 <!-- current-state:start -->
-当前状态（2026-11-28）：研究 **V6 / homepage-yongning-v15**（永宁寺塔高度、结构与色彩专题）；首页为用户批准的 **永宁寺塔依V6修订的全幅图 `panorama-yongning-v15`**；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
+当前状态（2026-11-28）：研究 **V6 / homepage-yongning-v16**（永宁寺塔高度、结构与色彩专题）；首页修订为 **结合原图空间环境修订的全幅图 `panorama-yongning-v16`**（空间视觉复核通过，待对应提交的正式发布验收）；几何封存基线 **v2.4**。研究时段为 **516—528 年**。
 
-[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-yongning-v6.html) · [上一已验收发布 `bbfbac9`](https://github.com/mechgouki/luoyang-city/actions/runs/45363321713) · [长期验收证据](https://github.com/mechgouki/luoyang-city/tree/d6e1754fa5b9dd6f3bb79ac3d152ccb6e104eac0/evidence/yongning-triptych/2026-11-25) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
+[正式首页](https://mechgouki.github.io/luoyang-city/) · [现行研究入口](https://mechgouki.github.io/luoyang-city/luoyang-yongning-v6.html) · [上一已验收发布 `148436e`](https://github.com/mechgouki/luoyang-city/actions/runs/46138856161) · [长期验收证据](https://github.com/mechgouki/luoyang-city/tree/a5e0e67d1a6ac30025611599fbeb6d617ca599f2/evidence/homepage-yongning-v15/2026-11-28) · [最新交接 #52](https://github.com/mechgouki/luoyang-city/issues/52)。
 
 以上摘要由[当前状态登记](research/current-state.json)生成。首页、研究批次和封存底图的版本分别理解；旧批次中的 V9／V11 与旧进度仅为历史记录。新一批正式完成仍以对应发布提交的构建、部署与正式站验收为准。
 <!-- current-state:end -->
