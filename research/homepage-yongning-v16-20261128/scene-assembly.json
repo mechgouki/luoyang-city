@@ -1,0 +1,38 @@
+{
+  "schema": "homepage-yongning-v16-native-scene-assembly-v1",
+  "source_kind": "imagegen_local_edit_native_scene_assembly",
+  "canvas": {
+    "width": 1672,
+    "height": 941
+  },
+  "background": {
+    "file": "scene-background-v12.webp",
+    "sha256": "d8d5be74d123b5eeaac50ce68955787e26686b92c1a30031f6c3289692fbf4c2",
+    "revision": "panorama-approved-v12",
+    "source": "web/assets/luoyang-panorama-approved-v12.webp"
+  },
+  "local_edit": {
+    "file": "temple-edit-candidate-04.png",
+    "sha256": "3735aaf12ec08d59b5687ca42b64b3720266c85c901de7c75e11e65940f38631",
+    "selected_attempt": 4,
+    "rectangle_px": {
+      "x": 380,
+      "y": 180,
+      "width": 270,
+      "height": 270
+    },
+    "feather_px": 2,
+    "reference_crop": "original V12 rectangle x380 y180 width270 height270; imagegen edited at higher resolution",
+    "new_vector_tower_geometry": false,
+    "feather_scope": "Two pixels inside each of the four rectangle edges; mask blends only edge scenery. The tower raster is not blurred or redrawn."
+  },
+  "pixel_preservation_scope": "Decoded RGB outside the local-edit rectangle is checked on source-scene.png only; lossy WebP encodings are excluded from pixel-identity claims.",
+  "historical_camera_calibration": false,
+  "city_wide_metric_registration": false,
+  "source_ground_homography_modified": false,
+  "new_ancient_coordinates": 0,
+  "unfeathered_trial": {
+    "source_png_sha256": "c17b30a61548ff3a3a35425d63a04d9882c6318798560459546edbafdece14b3",
+    "review": "Full scene spatial review passed; a faint hard join in ground and tree texture led to the 2px inner-edge mask."
+  }
+}

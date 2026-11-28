@@ -7,32 +7,37 @@
   ],
   "research": {
     "version": "V6",
-    "implementation_version": "homepage-yongning-v15",
+    "implementation_version": "homepage-yongning-v16",
     "title": "永宁寺塔高度、结构与色彩专题",
     "url": "https://mechgouki.github.io/luoyang-city/luoyang-yongning-v6.html",
-    "publication_status": "authorized_pending_build_deploy_and_live_verification",
+    "publication_status": "v6_study_published_v16_scene_revision_pending_build_deploy_and_live_verification",
     "structural_feasibility": "not_established",
     "research_source_commit": "d6e1754fa5b9dd6f3bb79ac3d152ccb6e104eac0"
   },
   "homepage": {
-    "revision": "panorama-yongning-v15",
-    "label": "永宁寺塔依V6修订的全幅图",
-    "approved_date": "2026-11-28",
-    "approval_scope": "用户授权专题入首页，并据V6改进首页大图；不提升历史事实与结构可行性",
-    "url": "https://mechgouki.github.io/luoyang-city/"
+    "revision": "panorama-yongning-v16",
+    "label": "结合原图空间环境修订的全幅图",
+    "approval_scope": "用户要求修正V15空间环境；新图像实施审查不冒充用户对最终像素的单独批准",
+    "url": "https://mechgouki.github.io/luoyang-city/",
+    "review_status": "implementation_visual_review_passed_pending_production_verification",
+    "review_status_label": "空间视觉复核通过，待对应提交的正式发布验收",
+    "user_final_pixels_approved": false,
+    "reviewed_source_png_sha256": "06334a3728da4e5408debac7fea66b6dc5d58e44c52ecaf397331128a1547244",
+    "visual_review_file": "research/homepage-yongning-v16-20261128/visual-review.md"
   },
   "geometry_baseline": "v2.4",
   "historical_research_series": "B1—B8",
   "last_verified_release": {
-    "source_commit": "bbfbac9022e133e61836614f3b120cf42efde43e",
-    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/45363321713",
-    "acceptance_url": "https://github.com/mechgouki/luoyang-city/tree/d6e1754fa5b9dd6f3bb79ac3d152ccb6e104eac0/evidence/yongning-triptych/2026-11-25",
-    "status": "build, deploy and verify-live passed; attempt 2",
-    "verified_at_beijing": "2026-11-24 21:09:38"
+    "source_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46138856161",
+    "acceptance_url": "https://github.com/mechgouki/luoyang-city/tree/a5e0e67d1a6ac30025611599fbeb6d617ca599f2/evidence/homepage-yongning-v15/2026-11-28",
+    "status": "build, deploy and verify-live passed; subsequent user visual rejection is retained separately",
+    "verified_at_beijing": "2026-11-28 19:38:44",
+    "visual_status": "rejected_by_user"
   },
   "handoff_url": "https://github.com/mechgouki/luoyang-city/issues/52",
   "research_log_url": "https://github.com/mechgouki/luoyang-city/issues/47",
-  "meaning": "当前研究批次、首页图像、封存底图与上一已验收发布分别登记。历史批次文件只记录当时的状态；本表不把尚未发布的工作称为已上线。",
+  "meaning": "研究专题、当前图像修订、封存底图与上一技术验收发布分别登记。V15技术门禁通过后被用户视觉否定；V16须完成图像审查和对应提交的生产验收才称为上线。",
   "homepage_candidate": {
     "revision": "panorama-candidate-v14",
     "status": "needs_revision",
@@ -42,9 +47,20 @@
     "historical_gate_reconstruction_completed": false,
     "displayed_attempt": 5,
     "url": "https://mechgouki.github.io/luoyang-city/luoyang-panorama-v14.html",
-    "meaning": "此项保留R12/V14当时的未通过试绘记录。六次V14图均不升级为通过；本次用户另行授权按V6修订原V12首页中的主塔，当前首页状态以homepage字段与实际发布验收为准。frozen H仍归V13-R2至V14研究系列。",
+    "meaning": "此项保留R12/V14当时的未通过试绘记录；六次V14图均不升级为通过。V15技术发布成功但被用户视觉否定；V16依据原V12场景修正主塔与空间环境，当前状态以homepage字段与对应提交的正式验收为准。frozen H仍归V13-R2至V14研究系列。",
     "latest_attempt": 6,
     "total_attempts": 6,
     "all_attempts_rejected": true
+  },
+  "homepage_previous": {
+    "revision": "panorama-yongning-v15",
+    "visual_status": "rejected_by_user",
+    "user_feedback": "首页大图已按这张图调整，这个图不对的 完全没有考虑好原图的空间环境，请修改",
+    "technical_acceptance_status": "passed",
+    "source_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+    "workflow_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46138856161",
+    "evidence_commit": "a5e0e67d1a6ac30025611599fbeb6d617ca599f2",
+    "evidence_path": "evidence/homepage-yongning-v15/2026-11-28",
+    "original_image_record_sha256": "295cd309c701f03e0663da45ba853a7556851a4341e3cdbe4825fd0528e29847"
   }
 }

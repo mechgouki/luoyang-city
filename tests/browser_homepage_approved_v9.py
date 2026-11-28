@@ -113,7 +113,7 @@ try:
             assert approval["source_commit"]==info["source_commit"]
             assert h["status"]=="approved"
             if current_home:
-                assert h["revision"]==current_home["hero_revision"]=="panorama-yongning-v15"
+                assert h["revision"]==current_home["hero_revision"]=="panorama-yongning-v16"
                 assert h["approval_date"]=="2026-11-28"
             else:
                 assert h["revision"]=="panorama-approved-v12"
