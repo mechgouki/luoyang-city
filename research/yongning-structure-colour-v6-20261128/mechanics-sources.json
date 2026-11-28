@@ -1,0 +1,1030 @@
+{
+  "id": "YONGNING-V5-MECHANICS-INPUTS-20261128",
+  "date": "2026-11-28",
+  "status": "research_sensitivity_screen_not_structural_design_or_FE_verification",
+  "conclusion": "V5 does not define sufficient member, joint, load or boundary inputs to assess structural feasibility; global non-overturning is not buildability.",
+  "design_input": {
+    "path": "/workspace/scratch/f1dbf35eff8a/luoyang-city/research/yongning-reconstruction-survey-20261128/design-parameters.json",
+    "sha256": "eb5379b7ed461432fefd2c10bd99ae41b2d26b63de4053ab1fbc252303fd5088",
+    "data": {
+      "id": "YONGNING-V5-CONDITIONAL-147",
+      "date": "2026-11-28",
+      "status": "explicit_visual_reconstruction_scenario_not_measured_original",
+      "storeys": 9,
+      "base_width_m": 38.2,
+      "base_height_m": 2.2,
+      "base_source": "钱国祥2017，木塔基座含包壁宽约38.2米、高约2.2米",
+      "chi_m_assumed": 0.273,
+      "lower_edge_of_gold_discs_height_m_assumed": 133.77,
+      "total_height_m_assumed": 147.0,
+      "height_above_gold_disc_datum_m_assumed": 13.22999999999999,
+      "height_endpoint_warning": "金露盘下不自动等于檐顶或完整塔身；147m不是文献直接数值。",
+      "ground_floor_body_width_m_assumed": 29.4,
+      "body_widths_m_assumed": [
+        29.4,
+        28.5,
+        27.5,
+        26.4,
+        25.2,
+        24.0,
+        22.8,
+        21.6,
+        20.4
+      ],
+      "first_eight_level_increments_m_assumed": [
+        19.0,
+        17.0,
+        15.5,
+        14.0,
+        12.8,
+        11.8,
+        10.8,
+        9.8
+      ],
+      "ninth_wall_height_m_assumed": 8.0,
+      "ninth_bracket_band_height_m_assumed": 1.8,
+      "ninth_roof_peak_height_m_assumed": 131.8,
+      "eaves_overhang_per_side_m_assumed": 4.4,
+      "bays_per_front_elevation": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "upper_bays_warning": "初层九间得到文献与柱网研究支持；上层沿用九间属于本案简化假设。",
+      "gold_discs_chosen": 11,
+      "gold_discs_variant": "周祖谟校释取十一；范祥雍校注正文保留三十并列十一异文。",
+      "exterior_balconies": "八道上层木构平坐，类型学复原，并非遗址实测上部",
+      "earth_core": "基部19.8m、残高约3.7m有考古依据；不指定原塔心终止层，不绘完整确定剖面。",
+      "precise_values_warning": "层高、收分、出檐和上层开间数仅供本次可复算绘图；小数不代表历史精度。",
+      "engineering_warning": "未作原材、节点、地基和风震结构验算；不是可施工方案。",
+      "front_access_width_m_illustrative": 4.5,
+      "access_warning": "4.5m参考钱国祥2017东侧踏道宽；正立面踏道仅示意，不宣称南道实测。",
+      "height_progression_warning": "前八个层间递减；顶层墙身及完整攒尖屋面另行分配，不宣称九层墙身严格单调。",
+      "colour": {
+        "ground_outer_plaster": "朱色：钱国祥2017明确记录初层前檐墙外皮涂朱色",
+        "doors": "朱漆：洛阳伽蓝记",
+        "upper_light_infill": "本案视觉推定，未据初层遗迹推广为已知配色",
+        "roof": "灰色瓦面为示意，不据画面认定釉色或精确颜料"
+      },
+      "floor_datums_m_assumed": [
+        2.2,
+        21.2,
+        38.2,
+        53.7,
+        67.7,
+        80.5,
+        92.3,
+        103.1,
+        112.89999999999999
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "W1",
+      "authors": [
+        "Christopher Adam Senalik",
+        "Benjamin Farber"
+      ],
+      "year": 2021,
+      "title": "Chapter 5: Mechanical properties of wood",
+      "publisher": "USDA Forest Service, Forest Products Laboratory",
+      "primary": true,
+      "url": "https://research.fs.usda.gov/treesearch/62244",
+      "pdf_url": "https://research.fs.usda.gov/download/treesearch/62244.pdf",
+      "local_pdf": "usda-wood-handbook-2021-ch05.pdf",
+      "read_status": "official PDF read; table 5-3a p5-7 visually checked",
+      "locator": "Table 5-3a, printed p5-7; definitions p5-2 and p5-3",
+      "species_example_only": "Douglas-fir, Coast; not identification of Yongning timber",
+      "clear_wood_average_values": [
+        {
+          "moisture": "green",
+          "bending_E_GPa": 10.8,
+          "compression_parallel_max_MPa": 26.1,
+          "compression_perpendicular_proportional_limit_MPa": 2.6
+        },
+        {
+          "moisture": "12%",
+          "bending_E_GPa": 13.4,
+          "compression_parallel_max_MPa": 49.9,
+          "compression_perpendicular_proportional_limit_MPa": 5.5
+        }
+      ],
+      "limits": [
+        "Small-clear average properties are not allowable design stresses",
+        "Bending E includes shear deflection; it is not identical to axial-test E",
+        "Species, moisture, grade, defects, duration and joint geometry remain unknown for V5"
+      ]
+    },
+    {
+      "id": "W2",
+      "authors": [
+        "Christopher Adam Senalik",
+        "Benjamin Farber"
+      ],
+      "year": 2021,
+      "title": "Chapter 7: Stress grades and design properties for lumber, round timber, and ties",
+      "publisher": "USDA Forest Service, Forest Products Laboratory",
+      "primary": true,
+      "url": "https://research.fs.usda.gov/treesearch/62252",
+      "pdf_url": "https://research.fs.usda.gov/download/treesearch/62252.pdf",
+      "read_status": "official publication page and abstract; PDF not downloaded",
+      "use": "Grade, size and moisture adjustments; structural design properties are distinct from clear-wood means"
+    },
+    {
+      "id": "W3",
+      "authors": [
+        "Marco T. Lo Ricco",
+        "Mohamed Omar Amini",
+        "Douglas R. Rammer"
+      ],
+      "year": 2021,
+      "title": "Chapter 9: Structural analysis equations",
+      "publisher": "USDA Forest Service, Forest Products Laboratory",
+      "primary": true,
+      "url": "https://research.fs.usda.gov/treesearch/62251",
+      "pdf_url": "https://research.fs.usda.gov/download/treesearch/62251.pdf",
+      "local_pdf": "usda-wood-handbook-2021-ch09.pdf",
+      "read_status": "official PDF read; printed p9-13 visually checked",
+      "locator": "p9-13 equations 9-25 and 9-26; p9-14 nonlinear/intermediate-column discussion; p9-16 interaction",
+      "use": "Euler ideal elastic column screen, radius of gyration, non-linear and interaction cautions"
+    },
+    {
+      "id": "J1",
+      "authors": [
+        "Ben Sha",
+        "Hao Wang",
+        "Aiqun Li"
+      ],
+      "year": 2019,
+      "title": "The Influence of the Damage of Mortise-Tenon Joint on the Cyclic Performance of the Traditional Chinese Timber Frame",
+      "journal": "Applied Sciences",
+      "volume_issue_article": "9(16),3429",
+      "doi": "10.3390/app9163429",
+      "primary": true,
+      "url": "https://www.mdpi.com/2076-3417/9/16/3429",
+      "read_status": "publisher full HTML read",
+      "verified_findings": [
+        "Contact-based FE model compared with timber-frame cyclic test",
+        "Gaps and tenon damage reduce stiffness and energy dissipation"
+      ],
+      "limits": "Scaled frame based on Yingzaofashi; not Northern Wei pagoda test; do not transplant joint parameters"
+    },
+    {
+      "id": "J2",
+      "authors": [
+        "Yang Deng",
+        "Yuhang Li",
+        "Aiqun Li"
+      ],
+      "year": 2023,
+      "title": "Seismic safety assessments of historical timber buildings using updated finite element models: Case study of Yingxian wooden pagoda, China",
+      "journal": "Journal of Building Engineering",
+      "volume_article": "63,105454",
+      "doi": "10.1016/j.jobe.2022.105454",
+      "primary": true,
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352710222014607",
+      "read_status": "publisher search-index abstract and section text; direct open 403; full PDF not read",
+      "verified_findings": [
+        "Shear-plastic-hinge DG and bending-plastic-hinge mortise-tenon joint models",
+        "Initial inclination and field-monitoring-based model updating"
+      ],
+      "limits": "Yingxian case-specific results do not verify Yongning; published issue is 2023 despite 2022 in DOI"
+    },
+    {
+      "id": "J3",
+      "authors": [
+        "Xiaobin Song",
+        "Yajie Wu",
+        "Kai Li",
+        "Liangcheng Jin",
+        "Feiming Chen",
+        "Xiao Liu",
+        "Xiaojing Dou"
+      ],
+      "year": 2019,
+      "title": "Mechanical behavior of a Chinese traditional timber pagoda during construction",
+      "journal": "Engineering Structures",
+      "volume_article": "196,109302",
+      "doi": "10.1016/j.engstruct.2019.109302",
+      "primary": true,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0141029619300628",
+      "read_status": "publisher search-index abstract and section text; direct open 403; full PDF not read",
+      "verified_findings": [
+        "Construction monitoring and OpenSees modelling of a seven-storey timber pagoda in Shanghai",
+        "Main-structure height 40.3 m",
+        "Added mass and stiffness affect frequencies differently across construction stages"
+      ],
+      "limits": "Modern 40.3 m case; no geometric or safety extrapolation to a 147 m Northern Wei reconstruction"
+    },
+    {
+      "id": "E1",
+      "authors": [
+        "Fernando Ávila",
+        "Mario Fagone",
+        "Rafael Gallego",
+        "Esther Puertas",
+        "Giovanna Ranocchiai"
+      ],
+      "year": 2023,
+      "title": "Experimental and numerical evaluation of the compressive and shear behavior of unstabilized rammed earth",
+      "journal": "Materials and Structures",
+      "volume_article": "56:118",
+      "doi": "10.1617/s11527-023-02206-9",
+      "primary": true,
+      "url": "https://link.springer.com/article/10.1617/s11527-023-02206-9",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1617/s11527-023-02206-9.pdf",
+      "local_pdf": "unstabilized-earth-2023.pdf",
+      "read_status": "publisher full text and PDF read; PDF p6 Table 2 visually checked",
+      "locator": "PDF p6 Table 2; p7 Table 3 and stiffness discussion",
+      "material": "Unstabilized rammed earth from Seggiano, Italy; not adobe masonry and not Northern Wei sample",
+      "values": {
+        "compression_mean_MPa": 1.4,
+        "cylinder_test_density_mean_kg_m3_as_printed": 1940,
+        "panel_test_density_mean_kg_m3": 1920,
+        "shear_strength_mean_MPa": 0.14,
+        "proctor_max_dry_density_kg_m3": 1830,
+        "E_MPa_from_diagonal_shear_and_assumed_nu": 655,
+        "E_MPa_apparent_from_machine_displacement_compression": 80
+      },
+      "correction": {
+        "url": "https://link.springer.com/article/10.1617/s11527-024-02396-w",
+        "date": "2024-05-28",
+        "nature": "Open Choice / CC BY 4.0 change only, not a numerical correction"
+      },
+      "limits": "Laboratory means, small sample, soil/manufacturing/moisture-specific; not design allowables"
+    },
+    {
+      "id": "E2",
+      "authors": [
+        "João Luís Parracha",
+        "José Lima",
+        "Maria Teresa Freire",
+        "Micael Ferreira",
+        "Paulina Faria"
+      ],
+      "doi": "10.1080/15583058.2019.1668986",
+      "title": "Vernacular Earthen Buildings from Leiria, Portugal—Material Characterization",
+      "journal": "International Journal of Architectural Heritage",
+      "primary": true,
+      "url": "https://doi.org/10.1080/15583058.2019.1668986",
+      "author_manuscript_url": "https://research.unl.pt/ws/files/17145015/Parracha_et_al_Leiria_vernacular_earth_buildings_material_charact_LJAH19_manuscript.pdf",
+      "repository_record": "https://run.unl.pt/entities/publication/8806a8a4-dd93-46b6-af2c-08193fbbdb02",
+      "read_status": "Institutional author manuscript read through web PDF text; local download returned 403; no local PDF saved",
+      "locator": "author manuscript p17 Table 7",
+      "samples": [
+        {
+          "id": "A1",
+          "type": "adobe",
+          "density_kg_m3": 1730,
+          "density_sd": 60,
+          "compression_MPa": 1.06,
+          "compression_sd": 0.22
+        },
+        {
+          "id": "A2",
+          "type": "adobe",
+          "density_kg_m3": 1400,
+          "density_sd": 50,
+          "compression_MPa": 0.69,
+          "compression_sd": 0.35
+        },
+        {
+          "id": "A3",
+          "type": "adobe",
+          "density_kg_m3": 1450,
+          "density_sd": 30,
+          "compression_MPa": null
+        },
+        {
+          "id": "T1",
+          "type": "rammed earth",
+          "density_kg_m3": 1510,
+          "compression_MPa": 0.44
+        },
+        {
+          "id": "T2",
+          "type": "rammed earth",
+          "density_kg_m3": 1360,
+          "compression_MPa": 0.74
+        },
+        {
+          "id": "T3",
+          "type": "rammed earth",
+          "density_kg_m3": 1790,
+          "compression_MPa": 0.73
+        }
+      ],
+      "limits": "Material samples from specific vernacular buildings; not universal masonry/core capacity and not Yongning evidence"
+    }
+  ],
+  "sensitivity_assumptions_not_historical_measurements": {
+    "timber_E_GPa": [
+      6,
+      8,
+      12
+    ],
+    "round_column_d_m": [
+      0.6,
+      0.8,
+      1.0
+    ],
+    "column_unbraced_L_m": [
+      19,
+      9.5
+    ],
+    "effective_length_K": [
+      1,
+      2
+    ],
+    "earth_core_gamma_kN_m3": [
+      14,
+      18,
+      20
+    ],
+    "earth_core_H_m": [
+      3.7,
+      20,
+      40,
+      60,
+      80
+    ],
+    "wind_net_pressure_kPa": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "wind_warning": "Not a Luoyang code pressure or return-period wind speed; no complete wind action model has been established",
+    "column_warning": "19m is a floor increment, not measured clear or unbraced column length. K=1 and K=2 are idealizations, not bounding all sway mechanisms.",
+    "core_warning": "All core heights above surviving remains and constant-prism geometry are sensitivity cases, not archaeological claims. No core-to-timber composite action assumed.",
+    "strength_warning": "No design compressive strength assigned; USDA clear-wood averages and earthen laboratory means are not allowable structural strengths."
+  },
+  "equations": {
+    "Euler": "N_E = pi^2 E I / (K L)^2; A=pi d^2/4; I=pi d^4/64; r=d/4",
+    "axial": "sigma=N/A; needs grade/defect/moisture/duration/buckling/combined-bending checks",
+    "bearing": "sigma_perp=R/A_contact, with actual contact area and grain orientation",
+    "PDelta": "theta=P*Delta/(V*h); 1/(1-theta) is a simplified diagnostic, not a frame solution or pass criterion",
+    "wind": "F_i=p_i*A_i; V=sum(F_i); M=sum(F_i*z_i)",
+    "foundation_rigid_full_contact_only": "e=M/W; q_max,min=W/A*(1 +/- 6e/B); e<=B/6 for no tension in this model",
+    "sliding_simple": "V<=mu*N_effective; requires contact and anchorage model",
+    "core": "W=sum(gamma_i*A_i*h_i); sigma(z)=W_above(z)/A_net(z); constant prism sigma_self=gamma*H"
+  },
+  "computed_examples": {
+    "Euler_grid": [
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 19,
+        "K_assumed": 1,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 126.66666666666667,
+        "Euler_ideal_MN": 1.0435630517053816,
+        "Euler_ideal_stress_MPa": 3.6908492912661033
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 19,
+        "K_assumed": 2,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 253.33333333333334,
+        "Euler_ideal_MN": 0.2608907629263454,
+        "Euler_ideal_stress_MPa": 0.9227123228165258
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 9.5,
+        "K_assumed": 1,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 63.333333333333336,
+        "Euler_ideal_MN": 4.174252206821526,
+        "Euler_ideal_stress_MPa": 14.763397165064413
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 9.5,
+        "K_assumed": 2,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 126.66666666666667,
+        "Euler_ideal_MN": 1.0435630517053816,
+        "Euler_ideal_stress_MPa": 3.6908492912661033
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 19,
+        "K_assumed": 1,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 95.0,
+        "Euler_ideal_MN": 3.298174583167626,
+        "Euler_ideal_stress_MPa": 6.561509851139739
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 19,
+        "K_assumed": 2,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 190.0,
+        "Euler_ideal_MN": 0.8245436457919065,
+        "Euler_ideal_stress_MPa": 1.6403774627849348
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 9.5,
+        "K_assumed": 1,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 47.5,
+        "Euler_ideal_MN": 13.192698332670505,
+        "Euler_ideal_stress_MPa": 26.246039404558957
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 9.5,
+        "K_assumed": 2,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 95.0,
+        "Euler_ideal_MN": 3.298174583167626,
+        "Euler_ideal_stress_MPa": 6.561509851139739
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 19,
+        "K_assumed": 1,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 76.0,
+        "Euler_ideal_MN": 8.052184040936586,
+        "Euler_ideal_stress_MPa": 10.252359142405842
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 19,
+        "K_assumed": 2,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 152.0,
+        "Euler_ideal_MN": 2.0130460102341465,
+        "Euler_ideal_stress_MPa": 2.5630897856014605
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 9.5,
+        "K_assumed": 1,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 38.0,
+        "Euler_ideal_MN": 32.208736163746345,
+        "Euler_ideal_stress_MPa": 41.00943656962337
+      },
+      {
+        "E_GPa_assumed": 6,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 9.5,
+        "K_assumed": 2,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 76.0,
+        "Euler_ideal_MN": 8.052184040936586,
+        "Euler_ideal_stress_MPa": 10.252359142405842
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 19,
+        "K_assumed": 1,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 126.66666666666667,
+        "Euler_ideal_MN": 1.391417402273842,
+        "Euler_ideal_stress_MPa": 4.9211323883548035
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 19,
+        "K_assumed": 2,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 253.33333333333334,
+        "Euler_ideal_MN": 0.3478543505684605,
+        "Euler_ideal_stress_MPa": 1.2302830970887009
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 9.5,
+        "K_assumed": 1,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 63.333333333333336,
+        "Euler_ideal_MN": 5.565669609095368,
+        "Euler_ideal_stress_MPa": 19.684529553419214
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 9.5,
+        "K_assumed": 2,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 126.66666666666667,
+        "Euler_ideal_MN": 1.391417402273842,
+        "Euler_ideal_stress_MPa": 4.9211323883548035
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 19,
+        "K_assumed": 1,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 95.0,
+        "Euler_ideal_MN": 4.3975661108901685,
+        "Euler_ideal_stress_MPa": 8.748679801519653
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 19,
+        "K_assumed": 2,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 190.0,
+        "Euler_ideal_MN": 1.0993915277225421,
+        "Euler_ideal_stress_MPa": 2.1871699503799134
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 9.5,
+        "K_assumed": 1,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 47.5,
+        "Euler_ideal_MN": 17.590264443560674,
+        "Euler_ideal_stress_MPa": 34.994719206078614
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 9.5,
+        "K_assumed": 2,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 95.0,
+        "Euler_ideal_MN": 4.3975661108901685,
+        "Euler_ideal_stress_MPa": 8.748679801519653
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 19,
+        "K_assumed": 1,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 76.0,
+        "Euler_ideal_MN": 10.73624538791545,
+        "Euler_ideal_stress_MPa": 13.669812189874458
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 19,
+        "K_assumed": 2,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 152.0,
+        "Euler_ideal_MN": 2.6840613469788623,
+        "Euler_ideal_stress_MPa": 3.4174530474686144
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 9.5,
+        "K_assumed": 1,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 38.0,
+        "Euler_ideal_MN": 42.9449815516618,
+        "Euler_ideal_stress_MPa": 54.67924875949783
+      },
+      {
+        "E_GPa_assumed": 8,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 9.5,
+        "K_assumed": 2,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 76.0,
+        "Euler_ideal_MN": 10.73624538791545,
+        "Euler_ideal_stress_MPa": 13.669812189874458
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 19,
+        "K_assumed": 1,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 126.66666666666667,
+        "Euler_ideal_MN": 2.087126103410763,
+        "Euler_ideal_stress_MPa": 7.381698582532207
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 19,
+        "K_assumed": 2,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 253.33333333333334,
+        "Euler_ideal_MN": 0.5217815258526908,
+        "Euler_ideal_stress_MPa": 1.8454246456330516
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 9.5,
+        "K_assumed": 1,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 63.333333333333336,
+        "Euler_ideal_MN": 8.348504413643052,
+        "Euler_ideal_stress_MPa": 29.526794330128826
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 0.6,
+        "L_m_assumed": 9.5,
+        "K_assumed": 2,
+        "area_m2": 0.2827433388230814,
+        "I_m4": 0.0063617251235193305,
+        "slenderness_KL_r": 126.66666666666667,
+        "Euler_ideal_MN": 2.087126103410763,
+        "Euler_ideal_stress_MPa": 7.381698582532207
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 19,
+        "K_assumed": 1,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 95.0,
+        "Euler_ideal_MN": 6.596349166335252,
+        "Euler_ideal_stress_MPa": 13.123019702279478
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 19,
+        "K_assumed": 2,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 190.0,
+        "Euler_ideal_MN": 1.649087291583813,
+        "Euler_ideal_stress_MPa": 3.2807549255698696
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 9.5,
+        "K_assumed": 1,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 47.5,
+        "Euler_ideal_MN": 26.38539666534101,
+        "Euler_ideal_stress_MPa": 52.49207880911791
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 0.8,
+        "L_m_assumed": 9.5,
+        "K_assumed": 2,
+        "area_m2": 0.5026548245743669,
+        "I_m4": 0.02010619298297468,
+        "slenderness_KL_r": 95.0,
+        "Euler_ideal_MN": 6.596349166335252,
+        "Euler_ideal_stress_MPa": 13.123019702279478
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 19,
+        "K_assumed": 1,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 76.0,
+        "Euler_ideal_MN": 16.104368081873172,
+        "Euler_ideal_stress_MPa": 20.504718284811684
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 19,
+        "K_assumed": 2,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 152.0,
+        "Euler_ideal_MN": 4.026092020468293,
+        "Euler_ideal_stress_MPa": 5.126179571202921
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 9.5,
+        "K_assumed": 1,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 38.0,
+        "Euler_ideal_MN": 64.41747232749269,
+        "Euler_ideal_stress_MPa": 82.01887313924674
+      },
+      {
+        "E_GPa_assumed": 12,
+        "d_m_assumed": 1.0,
+        "L_m_assumed": 9.5,
+        "K_assumed": 2,
+        "area_m2": 0.7853981633974483,
+        "I_m4": 0.04908738521234052,
+        "slenderness_KL_r": 76.0,
+        "Euler_ideal_MN": 16.104368081873172,
+        "Euler_ideal_stress_MPa": 20.504718284811684
+      }
+    ],
+    "constant_prism_core_grid": [
+      {
+        "H_m_assumed": 3.7,
+        "gamma_kN_m3_assumed": 14,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 1450.5480000000002,
+        "weight_MN": 20.307672000000004,
+        "mass_t_g9_80665": 2070.806238623791,
+        "base_self_stress_MPa": 0.051800000000000006
+      },
+      {
+        "H_m_assumed": 3.7,
+        "gamma_kN_m3_assumed": 18,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 1450.5480000000002,
+        "weight_MN": 26.109864000000005,
+        "mass_t_g9_80665": 2662.465163944875,
+        "base_self_stress_MPa": 0.0666
+      },
+      {
+        "H_m_assumed": 3.7,
+        "gamma_kN_m3_assumed": 20,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 1450.5480000000002,
+        "weight_MN": 29.010960000000008,
+        "mass_t_g9_80665": 2958.2946266054164,
+        "base_self_stress_MPa": 0.074
+      },
+      {
+        "H_m_assumed": 20,
+        "gamma_kN_m3_assumed": 14,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 7840.8,
+        "weight_MN": 109.7712,
+        "mass_t_g9_80665": 11193.547235804275,
+        "base_self_stress_MPa": 0.28
+      },
+      {
+        "H_m_assumed": 20,
+        "gamma_kN_m3_assumed": 18,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 7840.8,
+        "weight_MN": 141.1344,
+        "mass_t_g9_80665": 14391.703588891212,
+        "base_self_stress_MPa": 0.36
+      },
+      {
+        "H_m_assumed": 20,
+        "gamma_kN_m3_assumed": 20,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 7840.8,
+        "weight_MN": 156.816,
+        "mass_t_g9_80665": 15990.78176543468,
+        "base_self_stress_MPa": 0.4
+      },
+      {
+        "H_m_assumed": 40,
+        "gamma_kN_m3_assumed": 14,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 15681.6,
+        "weight_MN": 219.5424,
+        "mass_t_g9_80665": 22387.09447160855,
+        "base_self_stress_MPa": 0.56
+      },
+      {
+        "H_m_assumed": 40,
+        "gamma_kN_m3_assumed": 18,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 15681.6,
+        "weight_MN": 282.2688,
+        "mass_t_g9_80665": 28783.407177782425,
+        "base_self_stress_MPa": 0.72
+      },
+      {
+        "H_m_assumed": 40,
+        "gamma_kN_m3_assumed": 20,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 15681.6,
+        "weight_MN": 313.632,
+        "mass_t_g9_80665": 31981.56353086936,
+        "base_self_stress_MPa": 0.8
+      },
+      {
+        "H_m_assumed": 60,
+        "gamma_kN_m3_assumed": 14,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 23522.4,
+        "weight_MN": 329.3136,
+        "mass_t_g9_80665": 33580.64170741283,
+        "base_self_stress_MPa": 0.84
+      },
+      {
+        "H_m_assumed": 60,
+        "gamma_kN_m3_assumed": 18,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 23522.4,
+        "weight_MN": 423.4032,
+        "mass_t_g9_80665": 43175.110766673635,
+        "base_self_stress_MPa": 1.08
+      },
+      {
+        "H_m_assumed": 60,
+        "gamma_kN_m3_assumed": 20,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 23522.4,
+        "weight_MN": 470.448,
+        "mass_t_g9_80665": 47972.34529630404,
+        "base_self_stress_MPa": 1.2
+      },
+      {
+        "H_m_assumed": 80,
+        "gamma_kN_m3_assumed": 14,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 31363.2,
+        "weight_MN": 439.0848,
+        "mass_t_g9_80665": 44774.1889432171,
+        "base_self_stress_MPa": 1.12
+      },
+      {
+        "H_m_assumed": 80,
+        "gamma_kN_m3_assumed": 18,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 31363.2,
+        "weight_MN": 564.5376,
+        "mass_t_g9_80665": 57566.81435556485,
+        "base_self_stress_MPa": 1.44
+      },
+      {
+        "H_m_assumed": 80,
+        "gamma_kN_m3_assumed": 20,
+        "constant_base_side_m": 19.8,
+        "volume_m3": 31363.2,
+        "weight_MN": 627.264,
+        "mass_t_g9_80665": 63963.12706173872,
+        "base_self_stress_MPa": 1.6
+      }
+    ],
+    "PDelta_simple_amplification": [
+      {
+        "theta_assumed": 0.1,
+        "amplification": 1.1111111111111112
+      },
+      {
+        "theta_assumed": 0.2,
+        "amplification": 1.25
+      },
+      {
+        "theta_assumed": 0.3,
+        "amplification": 1.4285714285714286
+      }
+    ],
+    "contact_bearing_examples": [
+      {
+        "R_MN_assumed": 1,
+        "contact_area_m2_assumed": 0.2,
+        "stress_MPa": 5.0
+      },
+      {
+        "R_MN_assumed": 1,
+        "contact_area_m2_assumed": 0.5,
+        "stress_MPa": 2.0
+      }
+    ],
+    "all_examples_are_calculations_from_assumptions_not_verified_capacities": true
+  },
+  "Yongning_specific_FE_search": {
+    "scope": "Public web searches performed 2026-11-28; not exhaustive proprietary databases",
+    "queries": [
+      "永宁寺塔 有限元",
+      "永宁寺塔 结构分析",
+      "永宁寺 木塔 有限元分析",
+      "永宁寺塔 抗风 计算",
+      "Yongning pagoda finite element"
+    ],
+    "result": "No publicly verifiable primary FE paper on Northern Wei Luoyang Yongning Pagoda located in this search",
+    "excluded_false_positive": {
+      "object": "Xi'an City Wall Yongning Gate embrasured watchtower",
+      "url": "https://gxbwk.njournal.sdu.edu.cn/EN/abstract/abstract1312.shtml",
+      "reason": "Different building, not Yongning Temple pagoda"
+    }
+  },
+  "unresolved_gates": [
+    "Member schedule and actual unbraced lengths",
+    "Vertical load path and tributary mass per column",
+    "Mortise-tenon and DG contact dimensions, force-rotation/slip relations",
+    "Lateral resisting system and diaphragm stiffness",
+    "Core taper, height, chambers, strength and timber-core connections",
+    "Wind/seismic actions and initial imperfections",
+    "Foundation bearing, local contact, soil wetting/collapse and differential settlement",
+    "Construction-stage stability"
+  ],
+  "source_artifacts": [
+    {
+      "file": "unstabilized-earth-2023-page5.png",
+      "bytes": 525283,
+      "sha256": "88c12b8c8b585df38c097b23b539ca85467edc3bb6fd9a20898b33cb45b7568a",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    },
+    {
+      "file": "unstabilized-earth-2023-page6.png",
+      "bytes": 225629,
+      "sha256": "82d41cc3941165b81ea038ce1cb7708bad8cdb12055f5e518ca529603bddc3fb",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    },
+    {
+      "file": "unstabilized-earth-2023-page7.png",
+      "bytes": 199466,
+      "sha256": "8c98ebfd26160ee1fdc8791dc6ae228caff5422aad6017cb1429166800b4824b",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    },
+    {
+      "file": "unstabilized-earth-2023.pdf",
+      "bytes": 2181057,
+      "sha256": "f24aa3e9b7f87a9fcc39275ead1b147ed28fe931d8c43e359703076b554c3872",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    },
+    {
+      "file": "usda-ch05-page5-7.png",
+      "bytes": 229223,
+      "sha256": "4986164885e0a80c27d68a80ad20cc6dedc516ab9294d11e8af19092353c8db9",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    },
+    {
+      "file": "usda-ch09-page13.png",
+      "bytes": 179938,
+      "sha256": "a2d348d6ce1348cb80d69dce2f7bce63caf16676288d98b3e2a8827f7c2b9db3",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    },
+    {
+      "file": "usda-ch09-page14.png",
+      "bytes": 209337,
+      "sha256": "08b7044cedafd2e9ed9c25c3977127a1b7d7354c6afa4a5c11fc70c94283ec30",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    },
+    {
+      "file": "usda-ch09-page16.png",
+      "bytes": 211205,
+      "sha256": "94a7f1deca458df855012320da09b241cb6f47406d85b293c3865af136252acf",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    },
+    {
+      "file": "usda-wood-handbook-2021-ch05.pdf",
+      "bytes": 5244804,
+      "sha256": "724c99666ad364c4bd13022b5b1db09bb391166eace37bd920fee1f8d2d23204",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    },
+    {
+      "file": "usda-wood-handbook-2021-ch09.pdf",
+      "bytes": 3164540,
+      "sha256": "1f5b4af2a17d440145ced055870261cf6501aad632815f91ccbd19b85989c789",
+      "purpose": "local internal evidence; not automatically authorized for republication"
+    }
+  ]
+}
