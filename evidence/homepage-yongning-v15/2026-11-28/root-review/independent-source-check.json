@@ -1,0 +1,73 @@
+{
+  "checked_at_utc": "2026-11-28 11:26:39 UTC",
+  "repository": "mechgouki/luoyang-city",
+  "source_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+  "read_method": "GitHub connector fetch_file pinned to source_commit; direct textual examination of native SVG element attributes, independent of image-record declarations",
+  "source_files": [
+    {
+      "path": "research/homepage-yongning-v15-20261128/tower-layer.svg",
+      "git_blob_sha": "c0b4f0a0b7c0b420a58e2a7b91c6a7d67d1eef2a"
+    },
+    {
+      "path": "research/yongning-structure-colour-v6-20261128/design-parameters.json",
+      "git_blob_sha": "99ad583dfeb459a66a5c14e8f93102022124b9e8"
+    }
+  ],
+  "method": "Count actual data-kind attributes in SVG; extract each data-occupied-storey, data-floor-z-m, data-body-width-m and compare with V6 floor_datums_m_assumed/body_widths_m_assumed arrays using absolute height tolerance 1e-8 m.",
+  "counts": {
+    "wall-storey": 9,
+    "main-roof": 9,
+    "external-balcony": 8,
+    "gold-disc": 11
+  },
+  "floors": [
+    {
+      "storey": 1,
+      "floor_z_m": 2.2,
+      "body_width_m": 29.4
+    },
+    {
+      "storey": 2,
+      "floor_z_m": 21.2,
+      "body_width_m": 28.5
+    },
+    {
+      "storey": 3,
+      "floor_z_m": 38.2,
+      "body_width_m": 27.5
+    },
+    {
+      "storey": 4,
+      "floor_z_m": 53.7,
+      "body_width_m": 26.4
+    },
+    {
+      "storey": 5,
+      "floor_z_m": 67.7,
+      "body_width_m": 25.2
+    },
+    {
+      "storey": 6,
+      "floor_z_m": 80.5,
+      "body_width_m": 24
+    },
+    {
+      "storey": 7,
+      "floor_z_m": 92.3,
+      "body_width_m": 22.8
+    },
+    {
+      "storey": 8,
+      "floor_z_m": 103.1,
+      "body_width_m": 21.6
+    },
+    {
+      "storey": 9,
+      "floor_z_m": 112.9,
+      "body_width_m": 20.4
+    }
+  ],
+  "parameters_match": true,
+  "result": "passed",
+  "scope_limit": "Native source count and parameter consistency only. Does not independently validate raster visibility, historical geometry, full-city scale, structural feasibility, deployment, browser behaviour or artifact archive completeness."
+}

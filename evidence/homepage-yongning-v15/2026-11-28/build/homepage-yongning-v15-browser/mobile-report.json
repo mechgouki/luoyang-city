@@ -1,0 +1,376 @@
+{
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "Live build identity, release, V15 metadata and current page/image/style bytes match the same source commit and SHA-256 manifest",
+    "The actual homepage CTA reaches the V6 topic; both entry and topic retain the unestablished-feasibility statement",
+    "Current desktop/mobile hero and both study plates load at manifest-matching natural dimensions without cropping; the actual original-image link opens the complete PNG",
+    "All four chapter links are exercised by real clicks and survive reload with their headings visible and no document overflow",
+    "Keyboard chapter navigation, native expanded layer heights, three drift cases and the complete mechanics chart retain their model boundaries",
+    "One real click for each SVG/CSV download retains parseable bytes with SHA-256 exactly matching this live build; no synthetic download substitutes"
+  ],
+  "screenshots": {
+    "mobile-homepage-hero.png": "664d20976ef646f10e4b219477820f39510bea2ea79ed2069933b355495b6b50",
+    "mobile-homepage-study-entry.png": "09348a247e3b81f0fbc06b429692294dbce5cd0c909ec7f6edcd73fb2da17e3e",
+    "mobile-topic-complete-elevation.png": "07a84900e00a8a973a0cb1edee26f22032f39db6e724e5d21e69667cbbc0a61e",
+    "mobile-chapter-height.png": "a8f477d0c2f27dde2d056133df83fe6b0349fc00c91e8d43e351ab9a72039162",
+    "mobile-chapter-colour.png": "d57737238a74a326948ad301355ef7524c9d2d2d6c830d34351f303db47ec9b2",
+    "mobile-chapter-mechanics.png": "df2e09e330bcada791f8981188462dfc4de5109878f66e1c0f5fdab216cf17a2",
+    "mobile-chapter-sources.png": "417e297b514d16f4ce14cd4d731e9bcec91416395104f08172afcfad1cceff83",
+    "mobile-lateral-scenarios.png": "47413e8d998d827590eababfdc2924dfad270483e2b58890ac449172320834ea"
+  },
+  "downloads": {
+    "yongning-v6/yongning-v6-scaled-elevation.svg": "3b55d1357cc4ce424975958abb45df41e4261cd5cbb922de28c02d86ee7f8847",
+    "yongning-v6/lateral-sensitivity.csv": "ec2a1c1de58dd34513146e5c35cc5dd3585e3d7bb9745fd079c3c05568e3599d"
+  },
+  "retained_downloads": {
+    "yongning-v6/yongning-v6-scaled-elevation.svg": {
+      "bytes": 160811,
+      "sha256": "3b55d1357cc4ce424975958abb45df41e4261cd5cbb922de28c02d86ee7f8847",
+      "retained_path": "downloads/mobile/yongning-v6/yongning-v6-scaled-elevation.svg"
+    },
+    "yongning-v6/lateral-sensitivity.csv": {
+      "bytes": 8580,
+      "sha256": "ec2a1c1de58dd34513146e5c35cc5dd3585e3d7bb9745fd079c3c05568e3599d",
+      "retained_path": "downloads/mobile/yongning-v6/lateral-sensitivity.csv"
+    }
+  },
+  "download_attempts": [
+    {
+      "path": "yongning-v6/yongning-v6-scaled-elevation.svg",
+      "attempt": 1,
+      "status": "passed",
+      "selector": "#download-elevation-svg",
+      "bytes": 160811,
+      "sha256": "3b55d1357cc4ce424975958abb45df41e4261cd5cbb922de28c02d86ee7f8847",
+      "suggested_filename": "yongning-v6-scaled-elevation.svg"
+    },
+    {
+      "path": "yongning-v6/lateral-sensitivity.csv",
+      "attempt": 1,
+      "status": "passed",
+      "selector": "#sources a[download][href=\"./yongning-v6/lateral-sensitivity.csv\"]",
+      "data_rows": 53,
+      "bytes": 8580,
+      "sha256": "ec2a1c1de58dd34513146e5c35cc5dd3585e3d7bb9745fd079c3c05568e3599d",
+      "suggested_filename": "lateral-sensitivity.csv"
+    }
+  ],
+  "fetched_files": {
+    "homepage/approval-v15.json": {
+      "bytes": 7044,
+      "sha256": "f0e3eeecc4477c7aabb6924d624a16ecf9330e43fc2fb73a0352e99ef91ec7f9"
+    },
+    "release.json": {
+      "bytes": 4557,
+      "sha256": "5211df4d2ca802773e8571be2d2d237f39e92308c8a6775160858e7c6b25ea0b"
+    },
+    "_assets/f5294572cc87abc5133d-luoyang-panorama-yongning-v15.webp": {
+      "bytes": 666230,
+      "sha256": "f5294572cc87abc5133d70ec3189fc6d6a8ff8785630c56483d0b2c67e6bebf1"
+    },
+    "_assets/c54d37c01b435644194a-luoyang-panorama-yongning-v15-small.webp": {
+      "bytes": 279428,
+      "sha256": "c54d37c01b435644194ae1ecf47e46878ab0bb47e54a8e10e308b192aa9e0c45"
+    },
+    "yongning-v6/yongning-v6-scaled-elevation.png": {
+      "bytes": 348251,
+      "sha256": "b8825ca58939751a2ec411ab86cd63ea6eaaad41b6dac7ceb98a32f37a4a0d30"
+    },
+    "luoyang-yongning-v6.html": {
+      "bytes": 24083,
+      "sha256": "40db989d69545aa89b958e4e7410a7a163a8decafd692ad912d62367cc26db66"
+    },
+    "index.html": {
+      "bytes": 29025,
+      "sha256": "af004ecdf0003fa947fa17db6bc47ca7764c4e5e904901b7e87976806e9a499b"
+    },
+    "yongning-v6/topic.css": {
+      "bytes": 24332,
+      "sha256": "ecef69a2715d8d826581dbef2615ea4514835dff5ed5a0ed73b2485c47683b26"
+    },
+    "yongning-v6/homepage.css": {
+      "bytes": 3458,
+      "sha256": "228a56e2793978b77a7f72f1b5e80131da700fa254617ee11529477eb183c241"
+    },
+    "_assets/228a56e2793978b77a7f-homepage-yongning-v15.css": {
+      "bytes": 3458,
+      "sha256": "228a56e2793978b77a7f72f1b5e80131da700fa254617ee11529477eb183c241"
+    },
+    "yongning-v6/mechanics-summary.png": {
+      "bytes": 357747,
+      "sha256": "049394f521388297dcb4868a7c775ba47bf3da87fd038ebcdbb6baa52db8d6db"
+    }
+  },
+  "image_dimensions": [
+    {
+      "source": "http://127.0.0.1:40135/luoyang-city/_assets/c54d37c01b435644194a-luoyang-panorama-yongning-v15-small.webp",
+      "width": 960,
+      "height": 540,
+      "box": {
+        "x": 0,
+        "y": 100,
+        "width": 390,
+        "height": 219.375,
+        "top": 100,
+        "right": 390,
+        "bottom": 319.375,
+        "left": 0
+      },
+      "fit": "contain",
+      "clipped": [],
+      "role": "current-homepage-hero",
+      "path": "_assets/c54d37c01b435644194a-luoyang-panorama-yongning-v15-small.webp",
+      "bytes": 279428,
+      "sha256": "c54d37c01b435644194ae1ecf47e46878ab0bb47e54a8e10e308b192aa9e0c45"
+    },
+    {
+      "source": "http://127.0.0.1:40135/luoyang-city/yongning-v6/yongning-v6-scaled-elevation.png",
+      "width": 1280,
+      "height": 1800,
+      "box": {
+        "x": 25,
+        "y": 182.65625,
+        "width": 340,
+        "height": 478.125,
+        "top": 182.65625,
+        "right": 365,
+        "bottom": 660.78125,
+        "left": 25
+      },
+      "fit": "contain",
+      "clipped": [],
+      "role": "homepage-study-plate",
+      "path": "yongning-v6/yongning-v6-scaled-elevation.png",
+      "bytes": 348251,
+      "sha256": "b8825ca58939751a2ec411ab86cd63ea6eaaad41b6dac7ceb98a32f37a4a0d30"
+    },
+    {
+      "source": "http://127.0.0.1:40135/luoyang-city/yongning-v6/yongning-v6-scaled-elevation.png",
+      "width": 1280,
+      "height": 1800,
+      "box": {
+        "x": 21,
+        "y": 354.171875,
+        "width": 348,
+        "height": 489.375,
+        "top": 354.171875,
+        "right": 369,
+        "bottom": 843.546875,
+        "left": 21
+      },
+      "fit": "contain",
+      "clipped": [],
+      "role": "topic-full-elevation",
+      "path": "yongning-v6/yongning-v6-scaled-elevation.png",
+      "bytes": 348251,
+      "sha256": "b8825ca58939751a2ec411ab86cd63ea6eaaad41b6dac7ceb98a32f37a4a0d30"
+    },
+    {
+      "source": "http://127.0.0.1:40135/luoyang-city/yongning-v6/mechanics-summary.png",
+      "width": 2380,
+      "height": 1598,
+      "box": {
+        "x": 21,
+        "y": 354.484375,
+        "width": 348,
+        "height": 233.65625,
+        "top": 354.484375,
+        "right": 369,
+        "bottom": 588.140625,
+        "left": 21
+      },
+      "fit": "contain",
+      "clipped": [],
+      "role": "mechanics-summary",
+      "path": "yongning-v6/mechanics-summary.png",
+      "bytes": 357747,
+      "sha256": "049394f521388297dcb4868a7c775ba47bf3da87fd038ebcdbb6baa52db8d6db"
+    }
+  ],
+  "anchor_checks": [
+    {
+      "anchor": "height",
+      "click": true,
+      "reload": true,
+      "heading_in_viewport": true
+    },
+    {
+      "anchor": "colour",
+      "click": true,
+      "reload": true,
+      "heading_in_viewport": true
+    },
+    {
+      "anchor": "mechanics",
+      "click": true,
+      "reload": true,
+      "heading_in_viewport": true
+    },
+    {
+      "anchor": "sources",
+      "click": true,
+      "reload": true,
+      "heading_in_viewport": true
+    }
+  ],
+  "errors": [],
+  "java_script_enabled": true,
+  "source_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+  "build_info_sha256": "702a428b7651f92fdfc3f345d9fd0c97f33ddc0590d6af9b403f315981b6ad4f",
+  "hero_revision": "panorama-yongning-v15",
+  "study_page": "luoyang-yongning-v6.html",
+  "layout_checks": [
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#height",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#height",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#colour",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#colour",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#mechanics",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#mechanics",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#sources",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#sources",
+      "ready_state": "complete",
+      "document_width": 390,
+      "client_width": 390,
+      "inner_width": 390,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#height",
+      "ready_state": "complete",
+      "document_width": 395,
+      "client_width": 390,
+      "inner_width": 395,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#mechanics",
+      "ready_state": "complete",
+      "document_width": 395,
+      "client_width": 390,
+      "inner_width": 395,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    },
+    {
+      "url": "http://127.0.0.1:40135/luoyang-city/luoyang-yongning-v6.html#mechanics",
+      "ready_state": "complete",
+      "document_width": 395,
+      "client_width": 390,
+      "inner_width": 395,
+      "body_margin": "0px",
+      "map_overflow_x": null,
+      "tolerance": 1
+    }
+  ],
+  "original_image_open": {
+    "url": "http://127.0.0.1:40135/luoyang-city/yongning-v6/yongning-v6-scaled-elevation.png",
+    "width": 1280,
+    "height": 1800,
+    "sha256": "b8825ca58939751a2ec411ab86cd63ea6eaaad41b6dac7ceb98a32f37a4a0d30"
+  },
+  "status": "passed",
+  "elapsed_seconds": 2.175
+}

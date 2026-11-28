@@ -1,0 +1,46 @@
+{
+  "repository": "mechgouki/luoyang-city",
+  "run_id": 46138856161,
+  "run_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46138856161",
+  "run_attempt": 1,
+  "source_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 140960106486,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-28T11:13:24Z",
+      "completed_at": "2026-11-28T11:26:23Z",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46138856161/job/140960106486"
+    },
+    {
+      "id": 140963263237,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-28T11:26:29Z",
+      "completed_at": "2026-11-28T11:26:48Z",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46138856161/job/140963263237"
+    },
+    {
+      "id": 140963359960,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-28T11:26:50Z",
+      "completed_at": "2026-11-28T11:38:44Z",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46138856161/job/140963359960"
+    }
+  ],
+  "http_verification": {
+    "source": "verify-live-job.log",
+    "line": "LIVE PASS: 1009 public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: 0",
+    "public_asset_count": 1009,
+    "http_retries": 0
+  },
+  "retrieval": "Run/jobs API JSON and complete decoded job logs were retrieved through GitHub connector after terminal success. API JSON files contain the returned JSON string with a trailing LF. Logs preserve complete decoded tool content, with a trailing LF if absent. artifacts JSON preserves the connector's normalized artifact inventory. Transport ZIP bytes are not represented by these log files.",
+  "no_actions_retried": true
+}

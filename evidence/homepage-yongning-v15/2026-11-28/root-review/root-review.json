@@ -1,0 +1,56 @@
+{
+  "schema": "luoyang-root-review-v1",
+  "recorded_at_utc": "2026-11-28 11:24:38 UTC",
+  "source_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+  "source_pr": 88,
+  "workflow_run_id": 46138856161,
+  "production_verification": "passed",
+  "source_images": [
+    {
+      "path": "research/yongning-structure-colour-v6-20261128/yongning-v6-scaled-elevation.png",
+      "width": 1280,
+      "height": 1800,
+      "sha256": "b8825ca58939751a2ec411ab86cd63ea6eaaad41b6dac7ceb98a32f37a4a0d30"
+    },
+    {
+      "path": "web/assets/luoyang-panorama-yongning-v15.webp",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f5294572cc87abc5133d70ec3189fc6d6a8ff8785630c56483d0b2c67e6bebf1"
+    }
+  ],
+  "source_image_review": [
+    "Root inspected both original image files; an independent agent also inspected them.",
+    "The V6 plate contains nine storeys, the full base and finial, 0-147m scale, 133.77m pan-bottom endpoint, and explicit research limitations.",
+    "The V15 tower has nine visible wall-body storeys and corresponds to the V6 colour selection. Eleven finial discs are not independently countable in the small panorama; their count is supported by native source components.",
+    "The panorama tower has a flatter rendering style than the painted background; eave articulation is weaker at panorama scale. The review does not establish perfect painterly integration.",
+    "147m remains a design scenario and overall structural feasibility is not established."
+  ],
+  "pre_deployment_browser_observation": {
+    "url": "https://mechgouki.github.io/luoyang-city/",
+    "result": "The previous homepage was still displayed while build was in progress; no V6 topic entry was visible yet."
+  },
+  "production_workflow": {
+    "run_id": 46138856161,
+    "attempt": 1,
+    "source_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+    "jobs": [
+      {
+        "name": "build",
+        "conclusion": "success",
+        "completed_at": "2026-11-28T11:26:23Z"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "completed_at": "2026-11-28T11:26:48Z"
+      },
+      {
+        "name": "verify-live",
+        "conclusion": "success",
+        "completed_at": "2026-11-28T11:38:44Z"
+      }
+    ],
+    "independently_confirmed_at_utc": "2026-11-28 11:40:19 UTC"
+  }
+}

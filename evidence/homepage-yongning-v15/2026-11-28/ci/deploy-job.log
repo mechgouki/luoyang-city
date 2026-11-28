@@ -1,0 +1,71 @@
+﻿2026-11-28T11:26:29.8547118Z Current runner version: '2.338.2'
+2026-11-28T11:26:29.8565941Z ##[group]Runner Image Provisioner
+2026-11-28T11:26:29.8566583Z Hosted Compute Agent
+2026-11-28T11:26:29.8567027Z Version: 20261111.635
+2026-11-28T11:26:29.8567771Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-28T11:26:29.8568314Z Build Date: 2026-11-11T01:49:01Z
+2026-11-28T11:26:29.8568822Z Worker ID: {94182868-e026-486a-8952-ec0635be4c57}
+2026-11-28T11:26:29.8569322Z Region: us-west-2
+2026-11-28T11:26:29.8569701Z Cloud: AWS
+2026-11-28T11:26:29.8570149Z ##[endgroup]
+2026-11-28T11:26:29.8571120Z ##[group]Operating System
+2026-11-28T11:26:29.8571565Z Ubuntu
+2026-11-28T11:26:29.8571931Z 24.04.5
+2026-11-28T11:26:29.8572282Z LTS
+2026-11-28T11:26:29.8572681Z ##[endgroup]
+2026-11-28T11:26:29.8573065Z ##[group]Runner Image
+2026-11-28T11:26:29.8573482Z Image: ubuntu-24.04
+2026-11-28T11:26:29.8573884Z Version: 20261122.23.1
+2026-11-28T11:26:29.8574834Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261122.23/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-28T11:26:29.8575992Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261122.23
+2026-11-28T11:26:29.8576680Z ##[endgroup]
+2026-11-28T11:26:29.8577766Z ##[group]GITHUB_TOKEN Permissions
+2026-11-28T11:26:29.8579757Z Contents: read
+2026-11-28T11:26:29.8580155Z Metadata: read
+2026-11-28T11:26:29.8580548Z Pages: write
+2026-11-28T11:26:29.8580940Z ##[endgroup]
+2026-11-28T11:26:29.8582465Z Secret source: Actions
+2026-11-28T11:26:29.8583151Z Cache mode: write
+2026-11-28T11:26:29.8583639Z Prepare workflow directory
+2026-11-28T11:26:29.8812728Z Prepare all required actions
+2026-11-28T11:26:29.8849009Z Getting action download info
+2026-11-28T11:26:30.2458835Z Download action repository 'actions/configure-pages@v5' (SHA:983d7736d9b0ae728b81ab479565c72886d7745b)
+2026-11-28T11:26:31.4855523Z Download action repository 'actions/deploy-pages@v4' (SHA:d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e)
+2026-11-28T11:26:31.9019840Z Complete job name: deploy
+2026-11-28T11:26:31.9650444Z ##[group]Run actions/configure-pages@v5
+2026-11-28T11:26:31.9651640Z with:
+2026-11-28T11:26:31.9658493Z   token: ***
+2026-11-28T11:26:31.9659312Z   enablement: false
+2026-11-28T11:26:31.9660292Z ##[endgroup]
+2026-11-28T11:26:34.1120203Z ##[group]Run actions/deploy-pages@v4
+2026-11-28T11:26:34.1120463Z with:
+2026-11-28T11:26:34.1122272Z   token: ***
+2026-11-28T11:26:34.1122456Z   timeout: 600000
+2026-11-28T11:26:34.1122662Z   error_count: 10
+2026-11-28T11:26:34.1122838Z   reporting_interval: 5000
+2026-11-28T11:26:34.1123040Z   artifact_name: github-pages
+2026-11-28T11:26:34.1123243Z   preview: false
+2026-11-28T11:26:34.1123417Z env:
+2026-11-28T11:26:34.1123577Z   GITHUB_PAGES: true
+2026-11-28T11:26:34.1123752Z ##[endgroup]
+2026-11-28T11:26:34.2519042Z (node:2041) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-28T11:26:34.2519668Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-28T11:26:34.5580985Z Fetching artifact metadata for "github-pages" in this workflow run
+2026-11-28T11:26:34.8127106Z Found 4 artifact(s)
+2026-11-28T11:26:34.8969897Z Creating Pages deployment with payload:
+2026-11-28T11:26:34.8970273Z {
+2026-11-28T11:26:34.8970586Z 	"artifact_id": 15261232657,
+2026-11-28T11:26:34.8970954Z 	"pages_build_version": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+2026-11-28T11:26:34.9005254Z 	"oidc_token": "***"
+2026-11-28T11:26:34.9005677Z }
+2026-11-28T11:26:36.0392409Z Created deployment for 148436edc7707bc4e002d634d6f74b8e3c2ac22c, ID: 148436edc7707bc4e002d634d6f74b8e3c2ac22c
+2026-11-28T11:26:41.1030174Z Getting Pages deployment status...
+2026-11-28T11:26:41.3375603Z Current status: deployment_in_progress
+2026-11-28T11:26:46.3380378Z Getting Pages deployment status...
+2026-11-28T11:26:46.5565363Z Reported success!
+2026-11-28T11:26:46.5762074Z Evaluate and set job outputs
+2026-11-28T11:26:46.5775601Z Set output 'page_url'
+2026-11-28T11:26:46.5776790Z Evaluate and set environment url
+2026-11-28T11:26:46.5779908Z Evaluated environment url: https://mechgouki.github.io/luoyang-city/
+2026-11-28T11:26:46.5780552Z Cleaning up orphan processes
+2026-11-28T11:26:46.6022943Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/configure-pages@v5, actions/deploy-pages@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

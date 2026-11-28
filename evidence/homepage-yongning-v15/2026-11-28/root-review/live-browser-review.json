@@ -1,0 +1,31 @@
+{
+  "schema": "luoyang-live-browser-review-v1",
+  "recorded_at_utc": "2026-11-28 11:29:20 UTC",
+  "browser": "Cloud Chrome via cua_repl",
+  "source_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+  "workflow_run_id": 46138856161,
+  "urls": {
+    "home": "https://mechgouki.github.io/luoyang-city/",
+    "topic": "https://mechgouki.github.io/luoyang-city/luoyang-yongning-v6.html",
+    "mechanics": "https://mechgouki.github.io/luoyang-city/luoyang-yongning-v6.html#mechanics",
+    "build_info": "https://mechgouki.github.io/luoyang-city/build-info.json"
+  },
+  "actual_interactions": [
+    "Reloaded public homepage after deployment and observed the V15 hero, 永宁寺专题 navigation, and home-yongning feature.",
+    "Clicked 阅读高度、结构与色彩专题 from the homepage; the V6 topic loaded.",
+    "Inspected topic screenshot and loaded elevation image (natural dimensions 1280 x 1800, complete=true).",
+    "Clicked 力学与边界, reloaded the #mechanics deep link, and inspected the restored section with scenario values and limitations.",
+    "Opened the production build-info.json as a browser document and matched source_commit, research version and image hashes.",
+    "Returned via 首页 and marked the homepage as the user-facing browser deliverable."
+  ],
+  "manifest_fields_observed": {
+    "source_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+    "version": "homepage-yongning-v15",
+    "hero_revision": "panorama-yongning-v15",
+    "research_version": "V6",
+    "structural_feasibility": "not_established",
+    "hero_sha256": "f5294572cc87abc5133d70ec3189fc6d6a8ff8785630c56483d0b2c67e6bebf1",
+    "elevation_sha256": "b8825ca58939751a2ec411ab86cd63ea6eaaad41b6dac7ceb98a32f37a4a0d30"
+  },
+  "scope_note": "This manual browser record is additional evidence. The build and live CI artifacts hold the desktop/mobile matrix, actual downloads and full protected-map checks; their terminal result is recorded separately."
+}
