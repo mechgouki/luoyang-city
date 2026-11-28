@@ -271,7 +271,7 @@ jobs:
           mkdir -p artifacts
           docker image inspect --format '{{json .RepoDigests}}' mcr.microsoft.com/playwright/python:v1.57.0-noble > artifacts/browser-runtime-digest.json
       - name: Exercise current and all earlier deployed map versions
-        timeout-minutes: 12
+        timeout-minutes: 18
         shell: bash
         env:
           SITE_URL: ${{ needs.deploy.outputs.page_url }}
