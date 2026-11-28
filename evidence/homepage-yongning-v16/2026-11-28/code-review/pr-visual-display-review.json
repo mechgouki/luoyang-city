@@ -1,0 +1,153 @@
+{
+  "schema": "homepage-yongning-v16-pr-visual-display-review-v1",
+  "review_date": "2026-11-28",
+  "status": "passed",
+  "scope": "visual inspection of retained real PR CI screenshots only",
+  "pull_request": 89,
+  "build_context": "PR merge-preview local CI served build; not production acceptance",
+  "source_commit": "e87654ef7665afa136953f981e195bfdd57b2b39",
+  "source_commit_kind": "pull_request_merge_preview",
+  "production_acceptance_claimed": false,
+  "hero_revision": "panorama-yongning-v16",
+  "screenshots_reviewed": [
+    {
+      "path": "pr/build/homepage-yongning-v16-browser/desktop-homepage-hero.png",
+      "sha256": "4db34d6b03329e5d4debed4494d3f69e3d83cdfc197990689425fd5fa7249d7e",
+      "dimensions_px": [
+        1440,
+        1191
+      ],
+      "actually_viewed": true
+    },
+    {
+      "path": "pr/build/homepage-yongning-v16-browser/mobile-homepage-hero.png",
+      "sha256": "a856e22e3a55634ebe5d2385bf8b14e4182f996ba0d0a526868beb77225e6913",
+      "dimensions_px": [
+        390,
+        547
+      ],
+      "actually_viewed": true
+    },
+    {
+      "path": "pr/build/homepage-yongning-v16-browser/desktop-homepage-study-entry.png",
+      "sha256": "cc1036e186c26cabc9a7d911a21c5fcc562ab99c76f410e64fd1ac348f4d8ecb",
+      "dimensions_px": [
+        1370,
+        747
+      ],
+      "actually_viewed": true
+    },
+    {
+      "path": "pr/build/homepage-yongning-v16-browser/mobile-homepage-study-entry.png",
+      "sha256": "09348a247e3b81f0fbc06b429692294dbce5cd0c909ec7f6edcd73fb2da17e3e",
+      "dimensions_px": [
+        390,
+        1134
+      ],
+      "actually_viewed": true
+    }
+  ],
+  "report_context": {
+    "desktop": {
+      "path": "pr/build/homepage-yongning-v16-browser/desktop-report.json",
+      "sha256": "a8ae3f05dff989ee00b142423d645c352f9f0ba6a0a8dc246c51299b395efd0b",
+      "source_commit": "e87654ef7665afa136953f981e195bfdd57b2b39",
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "reported_status": "passed",
+      "hero_image": {
+        "source": "http://127.0.0.1:46689/luoyang-city/_assets/498fe95e89a1ac25b50a-luoyang-panorama-yongning-v16.webp",
+        "width": 1672,
+        "height": 941,
+        "box": {
+          "x": 0,
+          "y": 82,
+          "width": 1440,
+          "height": 810.421875,
+          "top": 82,
+          "right": 1440,
+          "bottom": 892.421875,
+          "left": 0
+        },
+        "fit": "contain",
+        "clipped": [],
+        "role": "current-homepage-hero",
+        "path": "_assets/498fe95e89a1ac25b50a-luoyang-panorama-yongning-v16.webp",
+        "bytes": 755412,
+        "sha256": "498fe95e89a1ac25b50ad7c23eac5a2c4c4f4522057712655cf1bc9088539dca"
+      }
+    },
+    "mobile": {
+      "path": "pr/build/homepage-yongning-v16-browser/mobile-report.json",
+      "sha256": "6aadbcb8a1ce7165560170acd0710f9e5d912c58eea654eb308d5ba12c68179d",
+      "source_commit": "e87654ef7665afa136953f981e195bfdd57b2b39",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "reported_status": "passed",
+      "hero_image": {
+        "source": "http://127.0.0.1:46689/luoyang-city/_assets/6cfef20fc373e13d14e2-luoyang-panorama-yongning-v16-small.webp",
+        "width": 960,
+        "height": 540,
+        "box": {
+          "x": 0,
+          "y": 100,
+          "width": 390,
+          "height": 219.375,
+          "top": 100,
+          "right": 390,
+          "bottom": 319.375,
+          "left": 0
+        },
+        "fit": "contain",
+        "clipped": [],
+        "role": "current-homepage-hero",
+        "path": "_assets/6cfef20fc373e13d14e2-luoyang-panorama-yongning-v16-small.webp",
+        "bytes": 284372,
+        "sha256": "6cfef20fc373e13d14e2d0beba66dc1d6a3c977d27396ac908e500ed299e3823"
+      }
+    }
+  },
+  "visual_findings": [
+    {
+      "check": "desktop_complete_panorama",
+      "status": "passed",
+      "observation": "桌面真实CI截图显示完整横向画幅；地平线、左右城区、前景河流与浮桥均保留，永宁寺塔从金刹至台基完整可见，没有裁切。"
+    },
+    {
+      "check": "mobile_same_landscape_and_uncropped_tower",
+      "status": "passed",
+      "observation": "390px手机截图按完整画幅等比缩小，城市、寺院、河流与浮桥的相对关系与桌面一致；塔顶与塔脚均在画面内，没有把塔放大裁切为另一构图。缩小后不据此逐个认证楼层细部。"
+    },
+    {
+      "check": "desktop_topic_card",
+      "status": "passed",
+      "observation": "桌面专题入口呈图文两列；V6复原图完整显示，九层、147m、38.2m信息以及方案限制、阅读专题和完整复原图入口均正常呈现，没有可见重叠或截断。"
+    },
+    {
+      "check": "mobile_topic_card",
+      "status": "passed",
+      "observation": "手机专题入口转为上下排布，标题、三项指标、147m与结构可行性限制文字、专题按钮和章节链接均可见；复原图卡片保留从标题到塔基与附注的完整画幅，查看完整复原图入口清楚。"
+    }
+  ],
+  "source_assets_in_ci_reports": {
+    "full_hero_sha256": "498fe95e89a1ac25b50ad7c23eac5a2c4c4f4522057712655cf1bc9088539dca",
+    "small_hero_sha256": "6cfef20fc373e13d14e2d0beba66dc1d6a3c977d27396ac908e500ed299e3823",
+    "v6_elevation_sha256": "b8825ca58939751a2ec411ab86cd63ea6eaaad41b6dac7ceb98a32f37a4a0d30"
+  },
+  "changes_made": {
+    "website_code": false,
+    "images": false,
+    "additional_browser_test_run": false,
+    "review_record_only": true
+  },
+  "limits": [
+    "本记录仅审看既有真实PR CI截图与其报告，不冒称生产正式站验收。",
+    "报告内127.0.0.1构建来自PR合并预演提交e87654ef7665afa136953f981e195bfdd57b2b39；不能替代生产提交、部署或verify-live身份。",
+    "手机全景缩小后塔的细部较小，完整展示通过不等于十一盘或147m得到像素证明。",
+    "未重新触发浏览器测试、未修改成图；正文及截图复核不构成用户批准最终像素。"
+  ]
+}

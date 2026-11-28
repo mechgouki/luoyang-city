@@ -1,0 +1,136 @@
+{
+  "repository": "mechgouki/luoyang-city",
+  "run_id": 46145496695,
+  "run_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46145496695",
+  "run_attempt": 1,
+  "source_commit": "6b06b815e3e2afd2d8612c761ffbaf1fdee9af6a",
+  "status": "completed",
+  "conclusion": "success",
+  "verified_at_utc": "2026-11-28T13:02:58Z",
+  "verified_at_beijing": "2026-11-28 21:02:58",
+  "jobs": [
+    {
+      "id": 140980533162,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-28T12:36:28Z",
+      "completed_at": "2026-11-28T12:49:16Z",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46145496695/job/140980533162"
+    },
+    {
+      "id": 140983729195,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-28T12:49:20Z",
+      "completed_at": "2026-11-28T12:49:37Z",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46145496695/job/140983729195"
+    },
+    {
+      "id": 140983814911,
+      "name": "verify-live",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-28T12:49:39Z",
+      "completed_at": "2026-11-28T13:02:58Z",
+      "html_url": "https://github.com/mechgouki/luoyang-city/actions/runs/46145496695/job/140983814911"
+    }
+  ],
+  "http_verification": {
+    "source": "verify-live-job.log",
+    "line": "2026-11-28T12:50:28.9958834Z LIVE PASS: 1031 public assets verified, including B1-B8, H1 and prosperity P1-P3; HTTP retries: 0",
+    "public_asset_count": 1031,
+    "http_retries": 0
+  },
+  "focused_artifacts": {
+    "build": {
+      "artifact_id": 15264170978,
+      "artifact_name": "homepage-yongning-v16-build-evidence",
+      "archive_bytes": 4223171,
+      "archive_sha256": "8078bb7e5f6a51a318bbd18dcc5b089c9ff9c89d35584f9536c05570b955677a",
+      "file_count": 25,
+      "uncompressed_bytes": 4596891
+    },
+    "live": {
+      "artifact_id": 15264686006,
+      "artifact_name": "homepage-yongning-v16-live-evidence",
+      "archive_bytes": 4220619,
+      "archive_sha256": "9ea659f5e858e7f749ec4379384b44f54ccc5a1d551e31c3e23a54d857494b72",
+      "file_count": 23,
+      "uncompressed_bytes": 4593979
+    }
+  },
+  "current_layer_verification": {
+    "status": "passed",
+    "source_commit": "6b06b815e3e2afd2d8612c761ffbaf1fdee9af6a",
+    "hero_revision": "panorama-yongning-v16",
+    "study_page": "luoyang-yongning-v6.html",
+    "study_elevation_sha256": "b8825ca58939751a2ec411ab86cd63ea6eaaad41b6dac7ceb98a32f37a4a0d30",
+    "new_assets": 62,
+    "protected_public_files": 966,
+    "reversible_homepages": 2,
+    "structural_feasibility": "not_established",
+    "downloads": 7,
+    "current_scene_source_kind": "imagegen_local_edit_native_scene_assembly",
+    "spatial_review_scope": "visual_scene_consistency_not_archaeological_registration",
+    "superseded_visual_status": "rejected_by_user",
+    "superseded_technical_status": "passed"
+  },
+  "browser_reports": {
+    "build": {
+      "desktop": {
+        "status": "passed",
+        "source_commit": "6b06b815e3e2afd2d8612c761ffbaf1fdee9af6a",
+        "hero_revision": "panorama-yongning-v16",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "errors": [],
+        "screenshots": 8,
+        "retained_downloads": 2
+      },
+      "mobile": {
+        "status": "passed",
+        "source_commit": "6b06b815e3e2afd2d8612c761ffbaf1fdee9af6a",
+        "hero_revision": "panorama-yongning-v16",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "errors": [],
+        "screenshots": 8,
+        "retained_downloads": 2
+      }
+    },
+    "live": {
+      "desktop": {
+        "status": "passed",
+        "source_commit": "6b06b815e3e2afd2d8612c761ffbaf1fdee9af6a",
+        "hero_revision": "panorama-yongning-v16",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "errors": [],
+        "screenshots": 8,
+        "retained_downloads": 2
+      },
+      "mobile": {
+        "status": "passed",
+        "source_commit": "6b06b815e3e2afd2d8612c761ffbaf1fdee9af6a",
+        "hero_revision": "panorama-yongning-v16",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "errors": [],
+        "screenshots": 8,
+        "retained_downloads": 2
+      }
+    }
+  },
+  "retrieval": "Terminal run/jobs API JSON, normalized artifact metadata and complete decoded applicable job logs from GitHub connector. Both focused ZIPs checked against GitHub size and SHA-256; every file member retained with an inventory. Temporary signed download URLs and transport ZIPs are excluded from permanent archive scope.",
+  "acceptance_scope": "Technical CI and actual HTTPS browser validation of this main commit. Independent root browser and spatial reviews are separate evidence. This does not establish historical camera registration, city-wide metric calibration or structural feasibility."
+}

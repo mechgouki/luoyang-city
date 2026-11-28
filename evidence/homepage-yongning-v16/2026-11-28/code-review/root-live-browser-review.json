@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "review": "root live browser acceptance, V16 spatial revision",
+  "recorded_at_utc": "2026-11-28T12:53:48Z",
+  "source_commit": "6b06b815e3e2afd2d8612c761ffbaf1fdee9af6a",
+  "source_branch_head": "9a43689450faef0d4bf1c99b622d00d32e30b6c2",
+  "production_run_id": 46145496695,
+  "scope": "Actual production page observed through CUA after deploy; this record does not assert completion of the still-running full verify-live job.",
+  "homepage": {
+    "url": "https://mechgouki.github.io/luoyang-city/",
+    "revision": "panorama-yongning-v16",
+    "current_src": "https://mechgouki.github.io/luoyang-city/_assets/498fe95e89a1ac25b50a-luoyang-panorama-yongning-v16.webp",
+    "intrinsic_dimensions": [
+      1672,
+      941
+    ],
+    "displayed_dimensions": [
+      1348,
+      758.640625
+    ],
+    "viewport": [
+      1363,
+      936
+    ],
+    "object_fit": "contain",
+    "full_frame_uncropped": true,
+    "visual_observations": [
+      "The tower reads as part of the original oblique aerial view, with roof tops and side faces consistent with the adjacent buildings.",
+      "The foot sits inside the temple courtyard; the entrance gate, open forecourt and hall behind remain legible.",
+      "The original wider city, river, bridge, palace and street composition remain visible.",
+      "No visible square patch edge at normal full-page viewing size.",
+      "The visible caption identifies the V16 spatial revision."
+    ]
+  },
+  "topic_navigation": {
+    "activated_link_name": "永宁寺专题",
+    "destination": "https://mechgouki.github.io/luoyang-city/luoyang-yongning-v6.html",
+    "title": "永宁寺塔 V6 · 高度、色彩与力学｜北魏洛阳文献地图",
+    "elevation_url": "https://mechgouki.github.io/luoyang-city/yongning-v6/yongning-v6-scaled-elevation.png",
+    "elevation_intrinsic_dimensions": [
+      1280,
+      1800
+    ],
+    "elevation_object_fit": "contain",
+    "svg_download_url": "https://mechgouki.github.io/luoyang-city/yongning-v6/yongning-v6-scaled-elevation.svg",
+    "four_chapter_navigation_visible": true,
+    "candidate_height_and_structural_limit_visible": true,
+    "return_link_name": "首页",
+    "return_url": "https://mechgouki.github.io/luoyang-city/index.html",
+    "returned_revision": "panorama-yongning-v16",
+    "passed": true
+  },
+  "live_build_info": {
+    "url": "https://mechgouki.github.io/luoyang-city/build-info.json",
+    "source_commit": "6b06b815e3e2afd2d8612c761ffbaf1fdee9af6a",
+    "version": "homepage-yongning-v16",
+    "hero_revision": "panorama-yongning-v16",
+    "files_sha256_entries": 1032,
+    "asset_sha256": "498fe95e89a1ac25b50ad7c23eac5a2c4c4f4522057712655cf1bc9088539dca",
+    "small_asset_sha256": "6cfef20fc373e13d14e2d0beba66dc1d6a3c977d27396ac908e500ed299e3823",
+    "source_sha256": "06334a3728da4e5408debac7fea66b6dc5d58e44c52ecaf397331128a1547244",
+    "source_kind": "imagegen_local_edit_native_scene_assembly",
+    "user_final_pixels_approved": false,
+    "approval_scope": "implementation_review_under_user_instruction"
+  },
+  "user_final_pixels_approved": false,
+  "visual_review_passed": true,
+  "production_tab_marked_deliverable": true,
+  "temporary_local_preview_tab_closed": true,
+  "limitations": [
+    "Root review used the actual desktop cloud browser at 1363×936; the separate CI desktop/mobile reports cover their own recorded viewports and interactions.",
+    "Rendered visual acceptance is not archaeological camera calibration or proof of original tower height.",
+    "The exact unchanged-pixel guarantee applies to decoded V12 RGB versus source-scene.png outside the local edit rectangle; it does not claim exact equality for lossy WebP.",
+    "The 147 m total height remains a candidate scheme and overall structural feasibility is not established."
+  ]
+}

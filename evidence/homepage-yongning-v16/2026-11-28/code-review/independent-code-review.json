@@ -1,0 +1,107 @@
+{
+  "schema": "luoyang-v16-independent-code-review-v1",
+  "reviewer": "/root/v16_code_review",
+  "recorded_at_utc": "2026-11-28T12:21:24Z",
+  "recorded_at_beijing": "2026-11-28 20:21:24",
+  "predecessor_commit": "148436edc7707bc4e002d634d6f74b8e3c2ac22c",
+  "reviewed_worktree": "luoyang-v16",
+  "result": "no_blocking_issue_found_in_reviewed_scope",
+  "scope": "current publisher/legacy protection plus localized scene assembly; not production acceptance or user pixel approval",
+  "source_png_sha256": "06334a3728da4e5408debac7fea66b6dc5d58e44c52ecaf397331128a1547244",
+  "checks": {
+    "old_ci_gate_commands_retained": true,
+    "legacy_art_independent_verification_passed": true,
+    "legacy_source_mapped_public_files": 45,
+    "two_homepage_exact_restoration_retained": true,
+    "prior_public_resource_hash_protection_retained": true,
+    "hash_self_reference_found": false,
+    "v12_public_background_bytes_equal": true,
+    "scene_source_hashes_match_audit": true,
+    "source_png_size": [
+      1672,
+      941
+    ],
+    "source_png_outside_rectangle_independently_equal": true,
+    "outside_pixel_comparison_method": "Pillow RGB ImageChops over four complementary rectangles",
+    "edit_rectangle_px": {
+      "x": 380,
+      "y": 180,
+      "width": 270,
+      "height": 270
+    },
+    "feather_inside_edges_px": 2,
+    "all_current_scene_files_present": true,
+    "current_scene_file_count": 10,
+    "render_script_node_syntax_check_passed": true,
+    "published_lossy_webp_pixel_identity_claimed": false,
+    "new_vector_tower_geometry": false,
+    "project_files_modified_by_reviewer": false
+  },
+  "files_at_recording": [
+    {
+      "path": "tools/homepage_yongning_v15.py",
+      "bytes": 29565,
+      "sha256": "e4cb9d11ee0e20d9d110e34ab7815997389da35aacabe530301e24f30fd3fc60"
+    },
+    {
+      "path": "tests/test_homepage_yongning_v15.py",
+      "bytes": 13702,
+      "sha256": "80ccfac8a71565a123e3a62afe96ec7a6e2e23f76019ab67cbf85f4a2b03a3f5"
+    },
+    {
+      "path": "tests/browser_homepage_yongning_v15.py",
+      "bytes": 21688,
+      "sha256": "cda35e425ecdc2e93e89c316857ff73213af50d451050939df62de0ea82bdea4"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 23751,
+      "sha256": "d7b309d5ee99dec87df2d85b8d75ae3d2d80fdd7532d14d58695a4af114c625b"
+    },
+    {
+      "path": "docs/homepage-yongning-v16-release-notes.md",
+      "bytes": 4647,
+      "sha256": "b838cbc67b35e2550a5f8d7c3e8df5de57ab610b4607f391d7f65d8898b2af2f"
+    },
+    {
+      "path": "research/homepage-yongning-v16-20261128/scene-assembly.json",
+      "bytes": 1624,
+      "sha256": "7ac20aa766971d129f2593bf08b61583aa62566cc5e692b8ac772e3d35ebc9ac"
+    },
+    {
+      "path": "research/homepage-yongning-v16-20261128/render_scene.mjs",
+      "bytes": 5879,
+      "sha256": "efe429acb1410f03c7f7e6bd67900268eadbd14c3a12a8e47d843006bdd3987b"
+    },
+    {
+      "path": "research/homepage-yongning-v16-20261128/render-audit.json",
+      "bytes": 1824,
+      "sha256": "08a156af242a61eb0acc8d30b6192022a3769fc4079ffa7078d22453cd88982b"
+    },
+    {
+      "path": "research/homepage-yongning-v16-20261128/homepage-scene.svg",
+      "bytes": 1544,
+      "sha256": "efb15ecf622fbfb36783cfbcb6a032d4199229b1f90be8acc10b9a7562cd9002"
+    },
+    {
+      "path": "research/homepage-yongning-v16-20261128/source-scene.png",
+      "bytes": 4550336,
+      "sha256": "06334a3728da4e5408debac7fea66b6dc5d58e44c52ecaf397331128a1547244"
+    },
+    {
+      "path": "research/homepage-yongning-v16-20261128/temple-edit-candidate-04.png",
+      "bytes": 2522557,
+      "sha256": "3735aaf12ec08d59b5687ca42b64b3720266c85c901de7c75e11e65940f38631"
+    },
+    {
+      "path": "research/homepage-yongning-v16-20261128/scene-background-v12.webp",
+      "bytes": 778852,
+      "sha256": "d8d5be74d123b5eeaac50ce68955787e26686b92c1a30031f6c3289692fbf4c2"
+    }
+  ],
+  "pending_at_review": [
+    "Bind final spatial review and image record.",
+    "Run unchanged mandatory CI gates on committed source.",
+    "Confirm production build/deploy/verify-live and live source identity."
+  ]
+}
