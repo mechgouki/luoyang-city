@@ -8,6 +8,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 from panorama_v14_contract import restore_r11_context
+from homepage_yongning_v15 import restore_v14_context
 from yongning_study import FOLDER, MANIFEST, PAGE, verify
 
 
@@ -42,10 +43,14 @@ class YongningDelivery(unittest.TestCase):
                 return content + b"tampered" if path == target else content
             with self.subTest(path=target), self.assertRaises(AssertionError):
                 verify(self.info, changed)
-        info = copy.deepcopy(self.info)
+        # Exercise this historical layer's own inventory error after validating
+        # and restoring the current V15 envelope. V15 also rejects the mutation,
+        # but its earlier diagnostic is intentionally a different contract.
+        predecessor, reader = restore_v14_context(self.info, lambda path: (self.site / path).read_bytes())
+        info = copy.deepcopy(predecessor)
         info["files_sha256"]["unregistered-study-page.html"] = "0" * 64
         with self.assertRaisesRegex(AssertionError, "predecessor inventory is incomplete"):
-            restore_r11_context(info, lambda path: (self.site / path).read_bytes())
+            restore_r11_context(info, reader)
 
 
 if __name__ == "__main__":
